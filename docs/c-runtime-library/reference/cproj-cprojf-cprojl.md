@@ -33,36 +33,21 @@ f1_keywords:
 - complex/cproj
 - complex/cprojf
 - complex/cprojl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cproj function
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 830f2e6e59c5f94b68bf2ecccda39e6a2a9e3b9c
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: a627a629bc095ecc01f7f7f3b866c05047205340
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 Recupera a projeção de um número complexo na esfera de Reimann.  

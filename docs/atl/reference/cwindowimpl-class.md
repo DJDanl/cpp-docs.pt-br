@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,42 +20,26 @@ f1_keywords:
 - ATLWIN/ATL::GetWndClassInfo
 - ATLWIN/ATL::WindowProc
 - ATLWIN/ATL::m_pfnSuperWindowProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e9145c3c91eb9507f6383e8971325e5eaab53c3c
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ba2633fe88b83dda2f0d0edcf58d477f8f760b89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 Fornece métodos para criar ou subclasses de uma janela.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -112,7 +95,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  `CWindowImpl::Create`cria uma janela com base nas informações de classe de janela que são gerenciadas pelo [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`contém o [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro, o que significa `CWndClassInfo` registra uma nova classe de janela. Se você quiser superclasse uma classe de janela existente, derive sua classe de `CWindowImpl` e incluir o [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro. Nesse caso, `CWndClassInfo` registra uma classe de janela que é baseada em uma classe existente, mas usa `CWindowImpl::WindowProc`. Por exemplo:  
   
- [!code-cpp[NVC_ATL_Windowing º 43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
 >  Porque `CWndClassInfo` gerencia as informações para apenas uma classe de janela, cada janela criada por meio de uma instância de `CWindowImpl` baseia-se na mesma classe de janela.  
@@ -132,7 +115,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 |--------------------------------|---------|  
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Usando o windows no ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|  
-|Assistente de Projeto da ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
+|Assistente de projeto ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CMessageMap](../../atl/reference/cmessagemap-class.md)  
@@ -173,10 +156,10 @@ HWND Create(
  [in] Especifica o nome da janela. O valor padrão é **nulo**.  
   
  `dwStyle`  
- [in] O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
   
  `dwExStyle`  
- [in] O estilo de janela estendidos. Esse valor é combinado com o estilo fornecido pela classe características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] O estilo de janela estendidos. Esse valor é combinado com o estilo fornecido pela classe características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
  `MenuOrID`  
  [in] Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu da janela. O valor padrão é **0U**.  
@@ -371,4 +354,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

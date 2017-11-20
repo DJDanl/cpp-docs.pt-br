@@ -1,39 +1,37 @@
 ---
-title: "operator SIZEOF | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator SIZEOF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sizeof operator"
-  - "operator SIZEOF"
+title: operador SIZEOF | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: operator SIZEOF
+dev_langs: C++
+helpviewer_keywords:
+- sizeof operator
+- operator SIZEOF
 ms.assetid: a14ed307-7d01-4be5-982f-64982a348589
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f4d745cb1b68d673742727caca51a751cab76899
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operator SIZEOF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna o número de bytes em  *variável* ou `type`.  
+# <a name="operator-sizeof"></a>operador SIZEOF
+Retorna o número de bytes em *variável* ou `type`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 SIZEOF {variable | type}  
 ```  
   
-## Consulte também  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de operadores](../../assembler/masm/operators-reference.md)

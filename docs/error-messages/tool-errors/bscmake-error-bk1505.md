@@ -1,44 +1,25 @@
 ---
-title: BSCMAKE erro BK1505 | Documentos do Microsoft
+title: BSCMAKE erro BK1505 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- BK1505
-dev_langs:
-- C++
-helpviewer_keywords:
-- BK1505
+f1_keywords: BK1505
+dev_langs: C++
+helpviewer_keywords: BK1505
 ms.assetid: a25765f8-e950-4ca8-9f16-419d779e2744
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1e31e97d85479c54809e82051743189587b7ad00
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 4f7a3eda6a15f7a785c5780a74ca602c128d007c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bscmake-error-bk1505"></a>Erro BK1505 (BSCMAKE)
 não é possível ler do arquivo 'nome do arquivo' [: motivo]  
@@ -49,4 +30,4 @@ não é possível ler do arquivo 'nome do arquivo' [: motivo]
   
 1.  Corrupção de arquivo.  
   
-2.  Para o compilador ficando sem espaço em disco ou está sendo interrompido enquanto cria o arquivo. SBR o truncamento do arquivo.
+2.  Arquivo de truncamento para o compilador ficando sem espaço em disco ou que está sendo interrompida ao criar o arquivo. SBR.

@@ -1,46 +1,43 @@
 ---
-title: "generate_n (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::generate_n"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função generate_n [STL/CLR]"
+title: generate_n (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::generate_n
+dev_langs: C++
+helpviewer_keywords: generate_n function [STL/CLR]
 ms.assetid: 2f56e649-7a6f-4861-ae49-d0b25f5cd50c
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 15a6d68913bd64d8f5022efa4344c1e3749451f9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# generate_n (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Atribui os valores gerados por um objeto de função para um número especificado de elementos é um intervalo e retorna a posição um passado o último atribuído o valor.  
+# <a name="generaten-stlclr"></a>generate_n (STL/CLR)
+Atribui os valores gerados por um objeto de função a um número especificado de elementos em um intervalo e retorna para uma posição antes do último valor atribuído.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _OutIt, class _Diff, class _Fn0> inline  
     void generate_n(_OutIt _Dest, _Diff _Count, _Fn0 _Func);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `generate_n`STL.  Para obter mais informações, consulte [generate\_n](../Topic/generate_n.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `generate_n`. Para obter mais informações, consulte [generate_n](../standard-library/algorithm-functions.md#generate_n).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,48 +1,28 @@
 ---
-title: "Compilador aviso (nível 1) C4662 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4662 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4662
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4662
+f1_keywords: C4662
+dev_langs: C++
+helpviewer_keywords: C4662
 ms.assetid: 7efda273-d04a-47b7-ad65-ff1ff94b5ffc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 530e49e1d82cf635e84f21738fd26f6fa42eee78
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 575d0493b57b5d41e57244bbed4e2ce0899dc274
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4662"></a>Compilador C4662 de aviso (nível 1)
-instanciação explícita; classe de modelo 'identifier1' não tem nenhuma definição da qual specialize 'identifier2'  
+instanciação explícita; classe de template 'identifier1' não possui nenhuma definição de qual especializar 'identifier2'  
   
  A classe de modelo especificada foi declarada, mas não definida.  
   

@@ -1,29 +1,27 @@
 ---
-title: "Coment&#225;rios em makefile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "makefiles, comentários"
+title: "Comentários em Makefile | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7edfd0759c91adc75b77b0b320e2469722f5efc7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Coment&#225;rios em makefile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Antecedeu um comentário com um sinal de número \(\#\).  NMAKE ignora o texto de sinal numérico para o caractere de nova linha seguinte.  Exemplos:  
+# <a name="comments-in-a-makefile"></a>Comentários em makefile
+Preceder um comentário com um sinal numérico (#). NMAKE ignora o texto do sinal de número para o próximo caractere de nova linha. Exemplos:  
   
 ```  
 # Comment on line by itself  
@@ -43,11 +41,11 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this  
 ```  
   
- Para especificar um sinal numérico literal, coloque um sinal de intercalação \(**^**\), como segue:  
+ Para especificar um sinal numérico literal, preceda-o com um sinal de intercalação (**^**), da seguinte maneira:  
   
 ```  
 DEF = ^#define  #Macro for a C preprocessing directive  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conteúdo de um makefile](../build/contents-of-a-makefile.md)

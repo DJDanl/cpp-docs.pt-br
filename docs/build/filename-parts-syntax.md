@@ -1,53 +1,52 @@
 ---
-title: "Sintaxe de partes do nome de arquivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sintaxe de partes de nome de arquivo em NMAKE"
-  - "programa NMAKE, sintaxe"
-  - "sintaxe, partes de nome de arquivo"
+title: Sintaxe de partes de nome de arquivo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- syntax, filename-parts
+- filename-parts syntax in NMAKE
+- NMAKE program, syntax
 ms.assetid: 48fe38e0-3f3b-40e6-894c-330ee775a656
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Sintaxe de partes do nome de arquivo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-a sintaxe de Nome de arquivo partes em comandos representa componentes do primeiro nome de arquivo dependente \(que pode ser um dependente implícito\).  Os componentes de nome de arquivo são a unidade do arquivo, o caminho, o nome de base, e a extensão conforme especificado, porque não existe no disco.  Use **%s** para representar o nome de arquivo completo.  Use **%&#124;***partes*\[\]**F** \(um caractere de barra vertical segue o símbolo de porcentagem\) para representar partes do nome de arquivo, onde *as partes* pode ser nulo ou mais das letras, em qualquer ordem.  
+# <a name="filename-parts-syntax"></a>Sintaxe de partes do nome de arquivo
+Sintaxe de partes de nome de arquivo em comandos representa os componentes do nome de arquivo dependente primeiro (o que pode ser um dependente implícito). Componentes de nome de arquivo são unidade do arquivo, caminho, nome de base e extensão conforme especificado, não como ele existe no disco. Use **%s** representar o nome de arquivo completo. Use **% &#124;** [*partes*]**F** (uma barra vertical caractere segue o símbolo de porcentagem) para representar partes do nome de arquivo, onde *partes* pode ser zero ou mais das seguintes letras, em qualquer ordem.  
   
 |Letra|Descrição|  
-|-----------|---------------|  
-|Nenhuma letra|Nome completo \(mesmo que **%s**\)|  
-|**d**|Unidade|  
-|**p**|Path|  
-|**f**|Nome da base de Arquivo|  
-|**e**|Extensão de Arquivo|  
+|------------|-----------------|  
+|Nenhuma letra|Nome completo (mesmo que **%s**)|  
+|**d**|Dirigir|  
+|**p**|Caminho|  
+|**f**|Nome base do arquivo|  
+|**e**|Extensão de arquivo|  
   
- Por exemplo, se o nome de arquivo é c:\\prog.exe:  
+ Por exemplo, se o nome do arquivo é c:\prog.exe:  
   
--   %s será c:\\prog.exe  
+-   %s será c:\prog.exe  
   
--   %&#124;F\- 2.0 será c:\\prog.exe  
+-   % &#124; F será c:\prog.exe  
   
--   %&#124;o dF será c  
+-   % &#124; será de dF com c  
   
--   %&#124;o PF será c:\\  
+-   % &#124; pF será c:\  
   
--   %&#124;fF será prog  
+-   % &#124; fF será prog  
   
--   %&#124;eF é exe  
+-   % &#124; eF será exe  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Comandos em um makefile](../build/commands-in-a-makefile.md)

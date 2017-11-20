@@ -1,35 +1,33 @@
 ---
-title: "IRowsetLocateImpl::GetRowsByBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl::GetRowsByBookmark"
-  - "IRowsetLocateImpl.GetRowsByBookmark"
-  - "GetRowsByBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetRowsByBookmark"
+title: 'Irowsetlocateimpl:: Getrowsbybookmark | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetLocateImpl::GetRowsByBookmark
+- IRowsetLocateImpl.GetRowsByBookmark
+- GetRowsByBookmark
+dev_langs: C++
+helpviewer_keywords: GetRowsByBookmark method
 ms.assetid: 07906e42-3582-427e-812a-aa19791e3c56
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 938a32796f61bbb1873866db6b6b81b017e0a1d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::GetRowsByBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pesquisa uma ou mais linhas que correspondem aos indicadores especificados.  
+# <a name="irowsetlocateimplgetrowsbybookmark"></a>IRowsetLocateImpl::GetRowsByBookmark
+Busca de uma ou mais linhas que correspondem os marcadores especificados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -43,18 +41,18 @@ Pesquisa uma ou mais linhas que correspondem aos indicadores especificados.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `hReserved`  
- \[in\] corresponde ao parâmetro de `hChapter` a [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx).  
+ [in] Corresponde à `hChapter` parâmetro [irowsetlocate:: Getrowsbybookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx).  
   
- Para outros parâmetros, consulte [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx)*na referência do programador de OLE DB*.  
+ Para outros parâmetros, consulte [irowsetlocate:: Getrowsbybookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx) no *referência do programador de DB OLE*.  
   
-## Comentários  
- O indicador pode ser um valor que você define ou OLE DB [indicadores padrão](https://msdn.microsoft.com/en-us/library/ms712954.aspx) \(**DBBMK\_FIRST** ou **DBBMK\_LAST**\).  Não altera a posição do cursor.  
+## <a name="remarks"></a>Comentários  
+ O indicador pode ser um valor que você define ou OLE DB [indicadores padrão](https://msdn.microsoft.com/en-us/library/ms712954.aspx) (**DBBMK_FIRST** ou **DBBMK_LAST**). Não altere a posição do cursor.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)   
  [IRowsetLocateImpl::GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)

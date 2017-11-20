@@ -1,45 +1,25 @@
 ---
-title: "Compilador aviso (nível 1) C4185 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4185 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4185
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4185
+f1_keywords: C4185
+dev_langs: C++
+helpviewer_keywords: C4185
 ms.assetid: 37e7063a-35b1-4e05-ae31-e811dced02b9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 37c3d99a912fbd6ab001ef40972057c9985c02ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: c3fde7c9cf849006e55a3b1f3c54926597bc0fdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4185"></a>Compilador C4185 de aviso (nível 1)
 Ignorando atributo #import desconhecido 'attribute'  

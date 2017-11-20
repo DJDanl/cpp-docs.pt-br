@@ -1,42 +1,39 @@
 ---
-title: "multiset::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro de tamanho [STL/CLR]"
+title: 'multiset:: Size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 29338f4f-c13e-4eb6-844d-1d94769553c8
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1fb3ec48a865a6a7fea38a73832ccf3386932080
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetsize-stlclr"></a>multiset::size (STL/CLR)
 Conta o número de elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 size_type size();  
 ```  
   
-## Comentários  
- A função de membro retorna o comprimento da sequência controlada.  Use\-a para determinar atualmente o número de elementos na sequência controlada.  Se tudo o que você precisa se preocupar é aproximadamente se a sequência tiver o tamanho diferente de zero, consulte [multiset::empty](../dotnet/multiset-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Comentários  
+ A função membro retorna o comprimento da sequência controlada. Você pode usá-lo para determinar o número de elementos no momento na sequência controlada. Se você se preocupa se a sequência tem tamanho diferente de zero, consulte [multiset:: Empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)`()`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_multiset_size.cpp   
@@ -70,15 +67,18 @@ int main()
   
 ```  
   
-  **um b c**  
-**size\(\) \= 3 começando com 3**  
-**size\(\) \= 0 depois de limpar**  
-**size\(\) \= 2 depois da adição de 2**   
-## Requisitos  
- cliext \<\/conjunto de**Cabeçalho:** \>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/set >  
   
-## Consulte também  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::empty](../dotnet/multiset-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [multiconjunto (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)

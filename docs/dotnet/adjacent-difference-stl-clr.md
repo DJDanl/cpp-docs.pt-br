@@ -1,33 +1,30 @@
 ---
-title: "adjacent_difference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::adjacent_difference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função adjacent_difference"
+title: adjacent_difference (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::adjacent_difference
+dev_langs: C++
+helpviewer_keywords: adjacent_difference function
 ms.assetid: 2b462e2e-b8f2-4b2e-9b87-5f688d8da9f4
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0be63f7032de5f6d3def4ba74f24a346785b7391
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# adjacent_difference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Computa as diferenças entre sucessivas cada elemento e seus serviços em um intervalo de entrada e saída dos resultados em um intervalo de destino ou calcula o resultado de um procedimento generalizado em que a operação de diferença é substituída por outra operação binária, especificada.  
+# <a name="adjacentdifference-stlclr"></a>adjacent_difference (STL/CLR)
+Calcula as diferenças sucessivas entre cada elemento e seu predecessor em um intervalo de entrada e gera os resultados em um intervalo de destino ou calcula o resultado de um procedimento generalizado, em que a operação de diferença é substituída por outra operação binária especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _InIt, class _OutIt> inline  
@@ -38,13 +35,13 @@ template<class _InIt, class _OutIt, class _Fn2> inline
         _OutIt _Dest, _Fn2 _Func);  
 ```  
   
-## Comentários  
- Essa função se comporta semelhante à função numérica `adjacent_difference`STL.  Para obter mais informações, consulte [adjacent\_difference](../Topic/adjacent_difference.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função numérica da biblioteca padrão C++ `adjacent_difference`. Para obter mais informações, consulte [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).  
   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/numérico\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/numeric >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [numérico](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>Consulte também  
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

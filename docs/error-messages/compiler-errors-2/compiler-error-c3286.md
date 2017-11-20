@@ -1,57 +1,37 @@
 ---
-title: C3286 de erro do compilador | Documentos do Microsoft
+title: C3286 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3286
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3286
+f1_keywords: C3286
+dev_langs: C++
+helpviewer_keywords: C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0204d184d0b0910120c5c40600b859deed32b20b
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: ea704fce0aebd3ffa83410104b38ceb5d359a6c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="compiler-error-c3286"></a>C3286 de erro do compilador
-'especificador de ': uma variável de iteração não pode ter qualquer especificadores de classe de armazenamento  
+# <a name="compiler-error-c3286"></a>C3286 de erro do compilador  
   
- Consulte [especificadores de classe de armazenamento (NOTINBUILD)](http://msdn.microsoft.com/en-us/10b3d22d-cb40-450b-994b-08cf9a211b6c) para obter mais informações.  
+> '*especificador*': uma variável de iteração não pode ter os especificadores de classe de armazenamento  
   
- Consulte [para cada um, em](../../dotnet/for-each-in.md) para obter mais informações.  
+Uma classe de armazenamento não pode ser especificada em uma variável de iteração. Para obter mais informações, consulte [classes de armazenamento (C++)](../../cpp/storage-classes-cpp.md) e [para cada um, no](../../dotnet/for-each-in.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3286.  
   
-```  
+O exemplo a seguir gera C3286 e também mostra o uso correto.  
+  
+```cpp  
 // C3286.cpp  
 // compile with: /clr  
 int main() {  

@@ -1,73 +1,64 @@
 ---
-title: "IDBSchemaRowsetImpl::CheckRestrictions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CheckRestrictions"
-  - "IDBSchemaRowsetImpl::CheckRestrictions"
-  - "IDBSchemaRowsetImpl.CheckRestrictions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método CheckRestrictions"
+title: 'Idbschemarowsetimpl:: Checkrestrictions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CheckRestrictions
+- IDBSchemaRowsetImpl::CheckRestrictions
+- IDBSchemaRowsetImpl.CheckRestrictions
+dev_langs: C++
+helpviewer_keywords: CheckRestrictions method
 ms.assetid: 3c9d77d2-0e4b-48fa-80db-d735da19f1cf
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d6e057c56e824327d726e073a02f0fa636553c40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IDBSchemaRowsetImpl::CheckRestrictions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verifica a validade das restrições em relação a um conjunto de linhas do esquema.  
+# <a name="idbschemarowsetimplcheckrestrictions"></a>IDBSchemaRowsetImpl::CheckRestrictions
+Verifica a validade de restrições em relação a um conjunto de linhas de esquema.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-HRESULT CheckRestrictions(  
-   REFGUID   
-rguidSchema  
-,  
-   ULONG   
-cRestrictions  
-,  
-   const VARIANT   
-rgRestrictions  
-[]  
+      HRESULT CheckRestrictions(  
+   REFGUID rguidSchema,  
+   ULONG cRestrictions,  
+   const VARIANT rgRestrictions[]  
 );  
-  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `rguidSchema`  
- \[in\] Uma referência para o GUID do conjunto de linhas de esquema solicitado \(por exemplo, `DBSCHEMA_TABLES`\).  
+ [in] Uma referência para o GUID do conjunto de linhas de esquema solicitado (por exemplo, `DBSCHEMA_TABLES`).  
   
  `cRestrictions`  
- \[in\] O número de restrições que o consumidor passado para o conjunto de linhas do esquema.  
+ [in] O número de restrições que o consumidor passado para o conjunto de linhas de esquema.  
   
  `rgRestrictions`  
- \[in\] Uma matriz de comprimento *cRestrictions* de valores de restrição a ser definido. Para obter mais informações, consulte a descrição do `rgRestrictions` parâmetro em [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
+ [in] Uma matriz de comprimento *cRestrictions* de valores de restrição a ser definido. Para obter mais informações, consulte a descrição do `rgRestrictions` parâmetro em [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
-## Comentários  
- Use `CheckRestrictions` para verificar a validade das restrições em relação a um conjunto de linhas do esquema. Ele verifica restrições para `DBSCHEMA_TABLES`, **DBSCHEMA\_COLUMNS**, e **DBSCHEMA\_PROVIDER\_TYPES** conjuntos de linhas do esquema. Chamá\-lo para determinar se um consumidor chamar **IDBSchemaRowset:: Getrowset** está correto. Se você deseja oferecer suporte a conjuntos de linhas de esquema diferentes daqueles listados acima, você deve criar sua própria função para realizar essa tarefa.  
+## <a name="remarks"></a>Comentários  
+ Use `CheckRestrictions` para verificar a validade de restrições em relação a um conjunto de linhas de esquema. Ele verifica restrições para `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, e **DBSCHEMA_PROVIDER_TYPES** conjuntos de linhas de esquema. Chamá-lo para determinar se um consumidor de chamada para **IDBSchemaRowset:: Getrowset** está correto. Se você desejar oferecer suporte a conjuntos de linhas de esquema diferente daqueles listados acima, você deve criar sua própria função para executar esta tarefa.  
   
- `CheckRestrictions` Determina se o consumidor está chamando [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) com a restrição correta e o tipo de restrição correto \(por exemplo, um `VT_BSTR` para uma cadeia de caracteres\) que o provedor oferece suporte. Ele também determina se o número correto de restrições é suportado. Por padrão, `CheckRestrictions` solicitará que o provedor, por meio de [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) chamar, quais restrições que ele oferece suporte em um determinado conjunto de linhas. Ele então compara as restrições do consumidor contra aqueles suportados pelo provedor e o êxito ou falha.  
+ `CheckRestrictions`Determina se o consumidor está chamando [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) com a restrição correta e o tipo de restrição correto (por exemplo, um `VT_BSTR` para uma cadeia de caracteres) que o provedor oferece suporte. Ele também determina se o número correto de restrições é suportado. Por padrão, `CheckRestrictions` pedirá que o provedor, por meio de [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) chamar, que oferece suporte em um determinado conjunto de linhas de restrições. Ele então compara as restrições do consumidor com aquelas com suporte do provedor e o êxito ou falha.  
   
- Para obter mais informações sobre conjuntos de linhas de esquema, consulte [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) no *referência do programador de DB OLE* no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obter mais informações sobre conjuntos de linhas de esquema, consulte [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) no *referência do programador de DB OLE* no SDK do Windows.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)   
- [IDBSchemaRowsetImpl Class Members](http://msdn.microsoft.com/pt-br/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
- [Classes Rowset do esquema e Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md)
+ [Membros de classe IDBSchemaRowsetImpl](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

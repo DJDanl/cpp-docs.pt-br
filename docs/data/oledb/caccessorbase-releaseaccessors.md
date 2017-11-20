@@ -1,35 +1,33 @@
 ---
-title: "CAccessorBase::ReleaseAccessors | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorBase::ReleaseAccessors"
-  - "CAccessorBase.ReleaseAccessors"
-  - "ReleaseAccessors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método ReleaseAccessors"
+title: 'Caccessorbase:: Releaseaccessors | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorBase::ReleaseAccessors
+- CAccessorBase.ReleaseAccessors
+- ReleaseAccessors
+dev_langs: C++
+helpviewer_keywords: ReleaseAccessors method
 ms.assetid: f08bc88e-0552-4a9c-9c65-b4061094649a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 313231e2c53a1e5afc409dd85b430d5029914b1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorBase::ReleaseAccessors
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="caccessorbasereleaseaccessors"></a>CAccessorBase::ReleaseAccessors
 Libera os acessadores criados pela classe.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,18 +36,18 @@ Libera os acessadores criados pela classe.
 );  
 ```  
   
-#### Parâmetros  
- *punk*  
- \[in\] ponteiro da interface de **IUnknown** para o objeto COM para que os acessadores foram criados.  
+#### <a name="parameters"></a>Parâmetros  
+ *pUnk*  
+ [in] Um ponteiro para um **IUnknown** interface para o objeto COM que os acessadores tem sido criados.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Chamado de [CAccessorRowset::Close](../Topic/CAccessorRowset::Close.md).  
+## <a name="remarks"></a>Comentários  
+ Chamado a partir do [caccessorrowset:: Close](../../data/oledb/caccessorrowset-close.md).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CAccessorBase](../../data/oledb/caccessorbase-class.md)

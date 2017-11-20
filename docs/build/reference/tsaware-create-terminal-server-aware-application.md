@@ -1,70 +1,69 @@
 ---
-title: "/TSAWARE (criar aplicativo com reconhecimento do Terminal Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tsaware"
-  - "VC.Project.VCLinkerTool.TerminalServerAware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /TSAWARE"
-  - "Terminal Server"
-  - "Terminal Server, aplicativos com reconhecimento de Terminal Server"
-  - "opção de vinculador TSAWARE"
-  - "opção de vinculador -TSAWARE"
+title: -TSAWARE (criar aplicativo com reconhecimento de servidor de Terminal) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /tsaware
+- VC.Project.VCLinkerTool.TerminalServerAware
+dev_langs: C++
+helpviewer_keywords:
+- Terminal Server
+- /TSAWARE linker option
+- Terminal Server, Terminal Server-aware applications
+- -TSAWARE linker option
+- TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: da606dfd1dd486b952d2181d196d5668a6198d69
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /TSAWARE (criar aplicativo com reconhecimento do Terminal Server)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (criar aplicativo com reconhecimento do Terminal Server)
 ```  
 /TSAWARE[:NO]  
 ```  
   
-## Comentários  
- As opções definidas de \/TSAWARE um sinalizador no campo de IMAGE\_OPTIONAL\_HEADER DllCharacteristics no cabeçalho opcional da imagem do programa.  Quando esse sinalizador é definido, o servidor de terminal não fará determinadas alterações no aplicativo.  
+## <a name="remarks"></a>Comentários  
+ A opção /TSAWARE define um sinalizador no campo DllCharacteristics IMAGE_OPTIONAL_HEADER cabeçalho opcional da imagem do programa. Quando esse sinalizador estiver definido, o servidor Host da Sessão da Área de Trabalho Remota não fará certas alterações no aplicativo.  
   
- Quando um aplicativo não esteja ciente o terminal server \(também conhecido como um aplicativo herdado\), o servidor de terminal faz determinadas alterações no aplicativo herdado fazê\-lo funcionar corretamente em um ambiente multiusuário.  Por exemplo, o servidor de terminal criará uma pasta virtual do windows, de modo que cada usuário obtém uma pasta do windows em vez de obter o diretório do Windows do sistema.  Isso concede acesso de usuários a seus próprios arquivos INI.  Além disso, o servidor de terminal torna alguns ajustes o Registro para um aplicativo herdado.  Essas alterações tornam a carga do aplicativo herdado no servidor de terminal.  
+ Quando um aplicativo não é Terminal Server aware (também conhecido como um aplicativo herdado), o servidor de Terminal faz algumas modificações para o aplicativo herdado para funcionar corretamente em um ambiente multiusuário. Por exemplo, Terminal Server criará uma pasta virtual do Windows, de modo que cada usuário obtenha uma pasta do Windows em vez de obter o diretório do Windows do sistema. Isso fornece aos usuários acesso aos seus próprios arquivos INI. Além disso, o servidor de Terminal torna alguns ajustes no registro para um aplicativo herdado. Essas modificações de carregamento lento do aplicativo herdado no servidor de Terminal.  
   
- Se um aplicativo é o terminal server ciente, nem deve confiar em arquivos INI ou gravar no Registro de **HKEY\_CURRENT\_USER** durante a instalação.  
+ Se um aplicativo com reconhecimento do Terminal Server, ele deve se basear em arquivos INI nem gravar o **HKEY_CURRENT_USER** registro durante a instalação.  
   
- Se você usar \/TSAWARE e seu aplicativo ainda usa arquivos INI, os arquivos serão compartilhados por todos os usuários do sistema.  Se isso for aceitável, você ainda pode vincular seu aplicativo com \/TSAWARE; se não for necessário usar \/TSAWARE:NO.  
+ Se você usar /TSAWARE e o aplicativo use arquivos INI, os arquivos serão compartilhados por todos os usuários do sistema. Se for aceitável, você ainda pode vincular seu aplicativo com /TSAWARE; Caso contrário, você precisará usar /TSAWARE: no.  
   
- A opção \/TSAWARE é habilitada por padrão para o Windows 2000 e versões posteriores, para o windows e aplicativos do console.  Consulte [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) e [\/VERSION](../Topic/-VERSION%20\(Version%20Information\).md) para obter informações.  
+ A opção /TSAWARE é habilitada por padrão no Windows 2000 e posterior, para Windows e aplicativos de console. Consulte [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) e [/VERSION](../../build/reference/version-version-information.md) para obter informações.  
   
- \/TSAWARE não é válido para drivers, VxDs, ou DLL.  
+ /TSAWARE não é válido para drivers, VxDs ou DLLs.  
   
- Se um aplicativo tiver sido vinculado com \/TSAWARE, o DUMPBIN [\/HEADERS](../../build/reference/headers.md) exibirá informações para esse efeito.  
+ Se um aplicativo foi vinculado com /TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) exibirá informações para esse efeito.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Sistema** .  
+3.  Clique o **sistema** página de propriedades.  
   
-4.  Modifique a propriedade de **Terminal Server** .  
+4.  Modificar o **do Terminal Server** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)   
- [Storing User\-Specific Information](http://msdn.microsoft.com/library/aa383452)   
- [Legacy Applications in a Terminal Services Environment](https://msdn.microsoft.com/en-us/library/aa382957.aspx)
+ [Opções do vinculador](../../build/reference/linker-options.md)   
+ [Armazenar informações específicas do usuário](http://msdn.microsoft.com/library/aa383452)   
+ [Aplicativos herdados em um ambiente de serviços de Terminal](https://msdn.microsoft.com/en-us/library/aa382957.aspx)

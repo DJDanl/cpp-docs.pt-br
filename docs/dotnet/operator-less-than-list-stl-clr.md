@@ -1,33 +1,30 @@
 ---
-title: "operador&lt; (list) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator< [STL/CLR]"
+title: operador&lt; (list) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: 6990fac2-3eeb-481f-b289-1c93f51422e4
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c7bb90de77600fcef5925268fb9d55785bcdef3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operador&lt; (list) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lista menor que a comparação.  
+# <a name="operatorlt-list-stlclr"></a>operador&lt; (list) (STL/CLR)
+Lista menor de comparação.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Value>  
@@ -35,17 +32,17 @@ template<typename Value>
         list<Value>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  esquerda  
- Contêiner esquerdo da ser comparada.  
+ Contêiner esquerdo a comparar.  
   
  direita  
- Contêiner direito da ser comparada.  
+ Contêiner direito a comparar.  
   
-## Comentários  
- A função do operador retornará true se, da mais baixa posição `i` para que `!(``right``[i] <` `left``[i])` ele também será true `left`que`[i] <` `right``[i]`.  Caso contrário, retorna `left``->size() <` `right``->size()` que você usa para testar se `left` é ordenado antes de `right` quando as duas listas são elemento comparado pelo elemento.  
+## <a name="remarks"></a>Comentários  
+ O operador função retornará true se, para a posição mais baixa `i` para o qual `!(right[i] < left[i])` é verdade que também `left[i] < right[i]`. Caso contrário, retornará `left->size() < right->size()` usá-lo para testar se `left` são ordenados antes `right` quando as duas listas são comparado elemento pelo elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_list_operator_lt.cpp   
@@ -84,19 +81,22 @@ int main()
   
 ```  
   
-  **um b c**  
- **um de b**  
-**\[um b c\] \< \[um b c\] é false**  
-**\[um b c\] \< \[\] de um b é true**   
-## Requisitos  
- cliext \<\/lista de**Cabeçalho:** \>  
+```Output  
+ a b c  
+ a b d  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [operador\=\= \(list\)](../dotnet/operator-equality-list-stl-clr.md)   
- [operador\!\= \(list\)](../dotnet/operator-inequality-list-stl-clr.md)   
- [operador\>\= \(list\)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
- [operador\> \(list\)](../Topic/operator%3E%20\(list\)%20\(STL-CLR\).md)   
- [operador\<\= \(list\)](../dotnet/operator-less-or-equal-list-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [operador = = (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
+ [operador! = (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   
+ [operador > = (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
+ [operador > (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)   
+ [operator<= (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)

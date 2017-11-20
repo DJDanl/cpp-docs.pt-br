@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 1) C4548 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4548 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4548
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4548
+f1_keywords: C4548
+dev_langs: C++
+helpviewer_keywords: C4548
 ms.assetid: 2cee817e-e463-4d90-bbd2-de120d48c101
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ddfe56f0042b0ee9b33cf29febfe4b88c1dc82f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 193e4ea9bfc6f5f93aa180eda6dfda968c7594bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4548"></a>Compilador C4548 de aviso (nível 1)
 expressão antes da vírgula não tem efeito; expressão esperada com efeito colateral  
   
- O compilador detectou uma expressão com vírgulas malformados.  
+ O compilador detectou uma expressão de vírgula mal formados.  
   
  Esse aviso é desativada por padrão. Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   

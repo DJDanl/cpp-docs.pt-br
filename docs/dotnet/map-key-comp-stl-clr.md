@@ -1,42 +1,39 @@
 ---
-title: "map::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro key_comp [STL/CLR]"
+title: 'Map:: key_comp (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 42607057-d0d7-48b9-aadf-f3336fcc50b4
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5e565cf9ad0c333d13e606f3d7408eee5842ed83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# map::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia o representante de ordenação para duas chaves.  
+# <a name="mapkeycomp-stlclr"></a>map::key_comp (STL/CLR)
+Copia o delegado de ordenação de duas chaves.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## Comentários  
- A função de membro retorna o delegado de classificação usado para ordenar a sequência controlada.  Use\-a para comparar duas chaves.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna o delegado de classificação usado para ordenar a sequência controlada. Você pode usá-lo para comparar duas chaves.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_map_key_comp.cpp   
@@ -72,18 +69,22 @@ int main()
   
 ```  
   
-  **compare \(L'a, L'a\) \= false**  
-**compare \(L'a, L'b\) \= retificam**  
-**compare \(L'b, L'a\) \= false**  
-**compare \(L'a, L'a\) \= false**  
-**compare \(L'a, L'b\) \= false**  
-**compare \(L'b, L'a\) \= retificam**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- cliext de**Namespace:**  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Consulte também  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_compare](../dotnet/map-key-compare-stl-clr.md)   
- [map::key\_type](../dotnet/map-key-type-stl-clr.md)
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [Map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)   
+ [map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)

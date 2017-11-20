@@ -1,57 +1,54 @@
 ---
-title: "/WINMD (Gera metadados do Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateWindowsMetadata"
-dev_langs: 
-  - "C++"
+title: -WINMD (gera metadados do Windows) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs: C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7e9c8a0c13256f83e4418d754d11fc69b060e034
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /WINMD (Gera metadados do Windows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Habilita a geração de um arquivo de metadados de Tempo de Execução do Windows \(.winmd\).  
+# <a name="winmd-generate-windows-metadata"></a>/WINMD (Gera metadados do Windows
+Habilita a geração de um arquivo de metadados de tempo de execução do Windows (. winmd).  
   
 ```  
-  
 /WINMD[:{NO|ONLY}]  
 ```  
   
-## Comentários  
- \/WINMD  
- A configuração padrão para aplicativos de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .  O vinculador gerencia o arquivo executável binário e os metadados de .winmd arquivo.  
+## <a name="remarks"></a>Comentários  
+ /WINMD  
+ A configuração padrão para [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativos. O vinculador gere o arquivo executável binário e o arquivo de metadados. winmd.  
   
- \/WINMD:NO  
- O vinculador gerencie somente o arquivo executável binário, mas não um arquivo de .winmd.  
+ /WINMD:NO  
+ O vinculador gere o arquivo binário executável, mas não é um arquivo. winmd.  
   
- \/WINMD:ONLY  
- O vinculador gerencie somente o arquivo de .winmd, mas não o arquivo executável binário.  
+ /WINMD: SOMENTE  
+ O vinculador gerará somente o arquivo. winmd, mas não o arquivo executável binário.  
   
- Por padrão, o nome do arquivo de saída tem o formato `binaryname`.winmd.  Para especificar um nome de arquivo diferente, use a opção de [\/WINMDFILE](../Topic/-WINMDFILE%20\(Specify%20winmd%20File\).md) .  
+ Por padrão, o nome do arquivo de saída tem a forma `binaryname`. winmd. Para especificar um nome de arquivo diferente, use o [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) opção.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Selecione a pasta do **Vinculador**.  
+2.  Selecione o **vinculador** pasta.  
   
-3.  Selecione a página de propriedades de **Metadados do Windows** .  
+3.  Selecione o **metadados do Windows** página de propriedades.  
   
-4.  Na caixa de listagem suspensa de **Gerar o Metadados do Windows** , selecione a opção desejada.  
+4.  No **gerar metadados do Windows** lista suspensa, selecione a opção desejada.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

@@ -1,33 +1,32 @@
 ---
-title: "Como recuperar o nome da m&#225;quina local (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nome do computador"
-  - "nome do computador, recuperando"
-  - "nome de máquina, recuperando"
+title: 'Como: recuperar o nome do computador Local (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- computer name, retrieving
+- machine name, retrieving
+- computer name
 ms.assetid: 6c7acb9a-3f9b-43b2-a756-bd4fb859e697
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0957ff70d5163c142282a15ac597de5504537636
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como recuperar o nome da m&#225;quina local (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra a recuperação do nome do computador local \(o nome do computador como aparece em uma rede\).  Você pode fazê\-lo obtendo a cadeia de caracteres de <xref:System.Environment.MachineName%2A> , que é definida no namespace de <xref:System.Environment> .  
+# <a name="how-to-retrieve-the-local-machine-name-ccli"></a>Como recuperar o nome da máquina local (C++/CLI)
+O exemplo de código a seguir demonstra a recuperação do nome do computador local (o nome do computador, como ele aparece em uma rede). Você pode fazer isso obtendo o <xref:System.Environment.MachineName%2A> cadeia de caracteres, que é definida no <xref:System.Environment> namespace.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // machine_name.cpp  
@@ -41,6 +40,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Operações do Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Operações do Windows (C + + CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

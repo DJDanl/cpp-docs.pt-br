@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.control.stockprops
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.control.stockprops
+dev_langs: C++
 ms.assetid: b27b0e60-08a6-43f4-ba6e-0a4e45147693
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Propriedades de estoque, o Assistente de controle ATL
+# <a name="stock-properties-atl-control-wizard"></a>Propriedades de estoque, o Assistente de controle ATL
 Esta página do assistente identifica as propriedades de estoque com suporte para o controle. Por padrão, não há propriedades são identificadas.  
   
  **Sem suporte**  
@@ -40,7 +36,6 @@ Esta página do assistente identifica as propriedades de estoque com suporte par
 |**<**|Remove o nome da propriedade selecionado no momento o **com suporte** lista.|  
 |**<<**|Remove todos os nomes de propriedade listados no momento no **com suporte** lista.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)
-
 

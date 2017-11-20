@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .*
 - ->*
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - expressions [C++], pointer
 - pointer-to-member operators [C++]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a77c69b2268ea1d97cc92122ab587b1c70be0e42
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Operadores de ponteiro para membro:. * e -&gt;*
 ## <a name="syntax"></a>Sintaxe  
@@ -145,5 +142,4 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-
 

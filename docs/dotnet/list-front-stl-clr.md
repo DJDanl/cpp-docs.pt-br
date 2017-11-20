@@ -1,42 +1,39 @@
 ---
-title: "list::front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro frontal [STL/CLR]"
+title: 'List:: front (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: ead6aaaa-b518-4a9c-af80-7189bf872cad
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 02cfcf5df078472cf9edeb9e0a30c893b17c4438
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# list::front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listfront-stlclr"></a>list::front (STL/CLR)
 Acessa o primeiro elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 reference front();  
 ```  
   
-## Comentários  
- A função de membro retorna uma referência ao primeiro elemento da sequência controlada, que deve estar vazio.  Use\-a para ler ou gravar o primeiro elemento, quando você conhece o existe.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna uma referência para o primeiro elemento da sequência controlada, que deve ser não vazio. Você pode usá-lo para ler ou gravar o primeiro elemento, quando você souber que ele existe.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_list_front.cpp   
@@ -68,16 +65,19 @@ int main()
   
 ```  
   
-  **um b c**  
-**front\(\) \= a**  
- **x b c**   
-## Requisitos  
- cliext \<\/lista de**Cabeçalho:** \>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../Topic/list::back_item%20\(STL-CLR\).md)   
- [list::front\_item \(STL\/CLR\)](../dotnet/list-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [List::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)

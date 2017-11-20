@@ -1,76 +1,75 @@
 ---
-title: "Configurando programas C++ 11 para Windows XP | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Configurando programas para Windows XP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 14
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b92eb646b152a7bbd4588fe953a762389ce111dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Configurando programas C++ 11 para Windows XP
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Como [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] oferece suporte a vários conjuntos de ferramentas de plataforma, é possível direcionar para sistemas operacionais e as bibliotecas de tempo de execução que não há suporte para o conjunto de ferramentas padrão.  Por exemplo, você pode usar os aprimoramentos de linguagem 11 C \+ \+, compiladores, bibliotecas e outros recursos implementados em [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para criar aplicativos destinados [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  Você pode usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado compatíveis com o binário e ainda aproveitar os novos recursos do [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] IDE.  
+# <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
+Como o Visual Studio oferece suporte a vários conjuntos de ferramentas de plataforma, você pode direcionar os sistemas operacionais e as bibliotecas de tempo de execução que não são suportadas pelo conjunto de ferramentas padrão. Por exemplo, alternando o conjunto de ferramentas de plataforma, você pode usar C++ 11, C++ 14 e aprimoramentos de C++ 17 idiomas suportados pelo compilador do Visual C++ no Visual Studio para criar aplicativos que visam [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Você pode também usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado binário compatível e ainda aproveitar os recursos mais recentes do IDE do Visual Studio.  
   
 > [!NOTE]
->  Você deve instalar [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4 para adicionar suporte para conjunto de ferramentas de plataforma [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] para [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)].  Para baixar e instalar uma cópia do [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4, consulte [Microsoft Visual Studio Express 2012 para Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) no Microsoft Download Center.  Instale o [atualização 4 do Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkID=335900) para obter o conjunto de ferramentas de plataforma v110\_xp.  Use o Windows Update para receber as últimas atualizações de software após a instalação.  
+>  Se você estiver usando [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], você deve instalar [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4 para adicionar suporte de conjunto de ferramentas de plataforma para [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Para baixar e instalar uma cópia do [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4, consulte [Microsoft Visual Studio Express 2012 para Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) no Microsoft Download Center. Em seguida, instalar [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/?LinkID=335900) para obter o conjunto de ferramentas de plataforma v110_xp. Use o Windows Update para receber as últimas atualizações de software após a instalação.  
   
-## Direcionamento de experiência do Windows XP  
- As ferramentas da plataforma Windows XP que está incluída no [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] é uma versão do [!INCLUDE[win7](../build/includes/win7_md.md)] SDK que foi incluído no [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], mas usa o compilador C\+\+ atual.  Ele também configura as propriedades do projeto para valores padrão apropriados — por exemplo, a especificação de um vinculador compatível para o direcionamento de nível inferior.  Somente os aplicativos da área de trabalho Windows que são criados usando as ferramentas da plataforma Windows XP executados em [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], mas esses aplicativos também podem ser executados em sistemas operacionais mais recentes — por exemplo, o Windows Vista, [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/includes/winsvr08_md.md)], [!INCLUDE[win8](../build/includes/win8_md.md)], ou [!INCLUDE[winserver8](../build/includes/winserver8_md.md)].  
+## <a name="windows-xp-targeting-experience"></a>Direcionamento de experiência do Windows XP  
+ O conjunto de ferramentas da plataforma Windows XP que está incluído no Visual Studio é uma versão do [!INCLUDE[win7](../build/includes/win7_md.md)] SDK que foi incluído no [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], mas usa o compilador do C++ atual. Ele também configura as propriedades do projeto para valores padrão apropriados — por exemplo, a especificação de um vinculador compatível para o direcionamento de nível inferior. Apenas janelas de aplicativos de área de trabalho que são criados usando o conjunto de ferramentas de plataforma do Windows XP são executados em [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], mas esses aplicativos também podem executar em sistemas de operacionais mais recentes do Windows.  
   
-#### Para direcionar o Windows XP  
+#### <a name="to-target-windows-xp"></a>Para direcionar o Windows XP  
   
-1.  Em **Solution Explorer**, abra o menu de atalho para o seu projeto e escolha **propriedades**.  
+1.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.  
   
-2.  No **Property Pages** caixa de diálogo para o projeto, em **Propriedades de configuração**, **geral**, defina o **Ferramentas da plataforma** propriedade para o conjunto de ferramentas do Windows XP desejado.  Por exemplo, escolher **Visual Studio 2012 – Windows XP \(v110\_xp\)** criar código que é binário compatível com as Microsoft Visual C\+\+ 2012 redistribuível bibliotecas.  
+2.  No **páginas de propriedade** caixa de diálogo para o projeto em **propriedades de configuração**, **geral**, defina o **conjunto de ferramentas de plataforma** propriedade para o conjunto de ferramentas do Windows XP desejado. Por exemplo, escolha **Visual Studio 2015 - Windows XP (v140_xp)** para criar o código de [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] , usando o compilador do Microsoft Visual C++ 2015.  
   
-### Suporte de tempo de execução C\+\+  
- Juntamente com as ferramentas da plataforma Windows XP, a biblioteca C Runtime \(CRT\), modelo Biblioteca STL \(Standard\), biblioteca ATL \(Active Template\), biblioteca de tempo de execução de simultaneidade \(ConCRT\), biblioteca de padrões paralelos \(PPL\), Microsoft Foundation Class Library \(MFC\) e biblioteca C\+\+ AMP \(C\+\+ Accelerated maciça de programação\) incluem suporte de tempo de execução para [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  Para esses sistemas operacionais, as versões com suporte são [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 \(SP3\) para x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 \(SP2\) para x64, e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 \(SP2\) para x86 e x64.  
+### <a name="c-runtime-support"></a>Suporte de tempo de execução C++  
+ Juntamente com o conjunto de ferramentas de plataforma do Windows XP, a biblioteca de tempo de execução do C (CRT), biblioteca padrão C++, ATL Active Template Library (), biblioteca de tempo de execução de simultaneidade (ConCRT), biblioteca de padrões paralelos (PPL), Microsoft Foundation Class Library (MFC) e C++ AMP (C++ Aceleradas programação grande) biblioteca incluem o suporte de tempo de execução para [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Para esses sistemas operacionais, as versões mínimas com suporte são [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) para x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) para x64, e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) para x86 e x64.  
   
- Essas bibliotecas são compatíveis com os conjuntos de ferramentas de plataforma instalados por[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], dependendo do destino:  
+ Essas bibliotecas são suportadas pelos conjuntos de ferramentas de plataforma instalados pelo Visual Studio, dependendo do destino:  
   
-|Biblioteca|Padrão plataforma toolset direcionamento Windows aplicativos de desktop|Padrão de direcionamento do conjunto de ferramentas de plataforma [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] aplicativos|Direcionamento de conjunto de ferramentas de plataforma do Windows XP [!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|  
-|----------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Biblioteca|Padrão do conjunto de ferramentas para Windows desktop aplicativos de plataforma|Padrão de destino do conjunto de ferramentas de plataforma [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] aplicativos|Direcionamento de conjunto de ferramentas de plataforma do Windows XP [!INCLUDE[winxp](../build/includes/winxp_md.md)],[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|  
+|-------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |CRT|X|X|X|  
-|STL|X|X|X|  
+|Biblioteca Padrão C++|X|X|X|  
 |ATL|X|X|X|  
-|ConCRT\/PPL|X|X|X|  
+|ConCRT/PPL|X|X|X|  
 |MFC|X||X|  
-|C\+\+ AMP|X|X||  
+|C++ AMP|X|X||  
   
 > [!NOTE]
->  Aplicativos escritos em C\+\+ \/CLI CLI e o destino do .NET Framework 4 executados em [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  
+>  Aplicativos que são escritos em C + + CLI e o destino do .NET Framework 4 são executados em [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  
   
-### Diferenças entre os conjuntos de ferramentas  
- Devido às diferenças de suporte de plataforma e de biblioteca, a experiência de desenvolvimento para aplicativos que usam um conjunto de ferramentas de plataforma do Windows XP não é tão completa para aplicativos que usam o padrão [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] Ferramentas da plataforma.  
+### <a name="differences-between-the-toolsets"></a>Diferenças entre os conjuntos de ferramentas  
+ Devido a diferenças no suporte de plataforma e de biblioteca, a experiência de desenvolvimento para aplicativos que usam um conjunto de ferramentas de plataforma do Windows XP não é completa para aplicativos que usam o conjunto de ferramentas da plataforma Visual Studio padrão.  
   
--   **Recursos da linguagem C\+\+**  
+-   **Recursos da linguagem C++**  
   
-     Somente C \+ \+ 11 recursos de linguagem implementado em [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] têm suporte em aplicativos que usam o conjunto de ferramentas de plataforma v110\_xp.  Somente os recursos do C\+\+ 11 implementados no [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] são suportados em aplicativos que usam o conjunto de ferramentas de plataforma v120\_xp.  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] usa o compilador correspondente quando ele cria usando os conjuntos de ferramentas de plataforma mais antigos.  Use um conjunto de ferramentas de plataforma mais recente do Windows XP para tirar proveito de recursos adicionais do C \+ \+ 11 implementado nessa versão.  
+     Somente os recursos de linguagem C++ implementado em [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] têm suporte em aplicativos que usam o conjunto de ferramentas de plataforma v110_xp. Somente os recursos de linguagem C++ implementado em [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] têm suporte em aplicativos que usam o conjunto de ferramentas de plataforma v120_xp. O Visual Studio usa o compilador correspondente quando ele cria usando os conjuntos de ferramentas de plataforma mais antigos. Use o conjunto de ferramentas plataforma mais recente do Windows XP para tirar proveito dos recursos de linguagem C++ adicionais implementado nessa versão do compilador.  
   
 -   **Depuração remota**  
   
-     Ferramentas remotas para [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] não oferece suporte a depuração remota em [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  Para depurar um aplicativo quando ele é executado em [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], você pode usar um depurador de uma versão mais antiga do [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para depurá\-los localmente ou remotamente.  Isso é semelhante a experiência de depuração de um aplicativo no Windows Vista, que é um destino de tempo de execução do conjunto de ferramentas de plataforma, mas não é um destino de depuração remoto.  
+     Ferramentas remotas para Visual Studio não oferece suporte para depuração remota em [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Para depurar um aplicativo quando ele é executado em [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], você pode usar um depurador de uma versão anterior do Visual Studio para depurá-lo localmente ou remotamente. Isso é semelhante a experiência de depuração de um aplicativo no Windows Vista, que é um destino de tempo de execução do conjunto de ferramentas de plataforma, mas não é um destino de depuração remoto.  
   
 -   **Análise estática**  
   
-     Os conjuntos de ferramentas de plataforma do Windows XP não oferecem suporte a análise estática porque as anotações de SAL para o [!INCLUDE[win7](../build/includes/win7_md.md)] SDK e as bibliotecas de tempo de execução são incompatíveis.  Quando você deseja executar uma análise estática em um aplicativo que oferece suporte a [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], você pode alternar temporariamente a solução para o conjunto de ferramentas de plataforma padrão para realizar a análise de destino e, em seguida, alternar de volta para o conjunto de ferramentas da plataforma Windows XP para criar o aplicativo.  
+     Os conjuntos de ferramentas de plataforma do Windows XP não oferecer suporte a análise estática porque as anotações de SAL para o [!INCLUDE[win7](../build/includes/win7_md.md)] SDK e as bibliotecas de tempo de execução são incompatíveis. Quando você deseja executar uma análise estática em um aplicativo que oferece suporte a [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], você pode alternar temporariamente a solução para o conjunto de ferramentas de plataforma padrão para executar a análise de destino e, em seguida, alternar de volta para o conjunto de ferramentas da plataforma Windows XP para criar o aplicativo.  
   
 -   **Depuração de gráficos do DirectX**  
   
-     Porque o depurador de gráficos não dá suporte a API do Direct3D 9, não pode ser usado para depurar aplicativos que usam o Direct3D [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  No entanto, se o aplicativo implementar um renderizador alternativo que usa o Direct3D 10 ou APIs do Direct3D 11, o depurador de gráficos pode ser usado para diagnosticar problemas com o uso dessas APIs.  
+     Como o depurador de gráficos não oferecem suporte a API do Direct3D 9, ele não pode ser usado para depurar aplicativos que usam Direct3D em [!INCLUDE[winxp](../build/includes/winxp_md.md)] ou [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. No entanto, se o aplicativo implementa um renderizador alternativo que usa as APIs do Direct3D 11 ou Direct3D 10, o depurador de gráficos pode ser usado para diagnosticar problemas com o uso dessas APIs.  
   
 -   **Criando HLSL**  
   
-     Por padrão, o conjunto de ferramentas do Windows XP não compila os arquivos de origem do código HLSL.  Para compilar arquivos HLSL, baixe e instale a junho de 2010 SDK do DirectX e defina o projeto do VC diretórios para incluí\-lo.  Para obter mais informações, consulte o "SDK do DirectX não registra os caminhos de inclusão\/biblioteca com o Visual Studio 2010" seção o [junho de 2010 página de download do SDK do DirectX](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+     Por padrão, o conjunto de ferramentas do Windows XP não compila arquivos de código fonte HLSL. Para compilar arquivos HLSL, baixe e instale o junho de 2010 SDK do DirectX e defina o projeto do VC diretórios para incluí-lo. Para obter mais informações, consulte o "SDK do DirectX não registra os caminhos de inclusão/biblioteca com o Visual Studio 2010" seção o [junho de 2010 página de download do SDK do DirectX](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

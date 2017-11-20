@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4196abd9d33595c59ae291ea4eba9e8806cce984
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e5794cd9ec0eb5afc879507bcf8942d6481ebca4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="functions-c"></a>Funções (C++)
 Uma função é um bloco de código que executa uma operação. Uma função pode, opcionalmente, definir parâmetros de entrada que permitem que os chamadores passar argumentos para a função. Uma função, opcionalmente, pode retornar um valor como saída. Funções são úteis para encapsular as operações comuns em um único bloco reutilizável, de preferência com um nome que descreva claramente que a função faz. A função a seguir aceita dois inteiros de um chamador e retorna a soma; `a` e `b` são *parâmetros* do tipo `int`.  

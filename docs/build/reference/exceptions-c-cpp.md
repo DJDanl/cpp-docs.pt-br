@@ -1,43 +1,42 @@
 ---
-title: "Exce&#231;&#245;es (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ERROR_MOD_NOT_FOUND"
-  - "vcppException"
-  - "ERROR_SEVERITY_ERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de exceção de C++, carregamento atrasado de DLLs"
-  - "carregamento atrasado de DLLs, exceções"
-  - "Exceção ERROR_MOD_NOT_FOUND"
-  - "Exceção ERROR_SEVERITY_ERROR"
-  - "vcppException"
+title: "Exceções (C/C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ERROR_MOD_NOT_FOUND
+- vcppException
+- ERROR_SEVERITY_ERROR
+dev_langs: C++
+helpviewer_keywords:
+- vcppException
+- C++ exception handling, delayed loading of DLLs
+- delayed loading of DLLs, exceptions
+- ERROR_SEVERITY_ERROR exception
+- ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 40d78e9246d0bb682d63ae094f96123dd4b883e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Exce&#231;&#245;es (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dois códigos de exceção podem ser gerados quando as falhas são atendidas:  
+# <a name="exceptions-cc"></a>Exceções (C/C++)
+Dois códigos de exceção podem ser aumentados quando falhas são encontradas:  
   
--   Para uma falha de **LoadLibrary**  
+-   Para uma **LoadLibrary** falha  
   
--   Para uma falha de **GetProcAddress**  
+-   Para uma **GetProcAddress** falha  
   
- Aqui está a informações de exceção:  
+ Eis aqui as informações de exceção:  
   
 ```  
 //  
@@ -47,11 +46,11 @@ Dois códigos de exceção podem ser gerados quando as falhas são atendidas:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Os códigos de exceção são gerados os valores padrão de VcppException \(ERROR\_SEVERITY\_ERROR, ERROR\_MOD\_NOT\_FOUND\) e de VcppException \(ERROR\_SEVERITY\_ERROR, ERROR\_PROC\_NOT\_FOUND\).  A exceção transmite um ponteiro para uma estrutura de **DelayLoadInfo** o valor que pode ser recuperado por **GetExceptionInformation** na estrutura de [EXCEPTION\_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) , 0\] campos de LPDWORD de ExceptionInformation \[.  
+ Os códigos de exceção lançados são o padrão VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e os valores de VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). A exceção passa um ponteiro para um **DelayLoadInfo** estrutura no valor LPDWORD que pode ser recuperada por **GetExceptionInformation** no [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) estrutura de campo ExceptionInformation [0].  
   
- Além disso, se os bits são definidos em grAttrs incorretos, coloque a exceção gerada ERROR\_INVALID\_PARAMETER.  Esta exceção é, para todos os efeitos, fatal.  
+ Além disso, se o bits incorretos são definidos no campo grAttrs, a exceção ERROR_INVALID_PARAMETER é gerada. Essa exceção é, para todos os efeitos, fatal.  
   
- Consulte [Definições da estrutura e da constante](../../build/reference/structure-and-constant-definitions.md) para obter mais informações.  
+ Consulte [estrutura e definições de constantes](../../build/reference/structure-and-constant-definitions.md) para obter mais informações.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tratamento de erro e notificação](../../build/reference/error-handling-and-notification.md)

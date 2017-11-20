@@ -4,31 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CRTThreadTraits
 - ATLBASE/ATL::CRTThreadTraits
 - ATLBASE/ATL::CRTThreadTraits::CreateThread
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CRTThreadTraits class
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 7c591efee96af92aea263dca9c9a95f96932087e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: f6265f6c53133abbe8cd96b67bbbeb7657c98b26
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtthreadtraits-class"></a>Classe CRTThreadTraits
 Essa classe fornece a função de criação de um thread do CRT. Use essa classe se o thread de usar funções de CRT.  
@@ -106,4 +103,3 @@ static HANDLE CreateThread(
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

@@ -1,27 +1,26 @@
 ---
-title: "Defini&#231;&#245;es de dados desenrolados no C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Dados definições desenrolados no C | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 93cb6430-e4cf-43f5-ab60-3b57d1273b2c
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e69571209cdfd1a12d99d79dd14840481ac872ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Defini&#231;&#245;es de dados desenrolados no C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O seguinte é descrição de energia AC de dados de desenrolamento:  
+# <a name="unwind-data-definitions-in-c"></a>Definições de dados desenrolados no C
+A seguir está uma descrição de C de dados de desenrolamento:  
   
 ```  
 typedef enum _UNWIND_OP_CODES {  
@@ -87,5 +86,5 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)  
 ```  
   
-## Consulte também  
- [Tratamento de exceções \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Consulte também  
+ [Tratamento de exceção (x64)](../build/exception-handling-x64.md)

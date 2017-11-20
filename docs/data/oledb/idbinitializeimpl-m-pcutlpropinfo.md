@@ -1,39 +1,37 @@
 ---
-title: "IDBInitializeImpl::m_pCUtlPropInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IDBInitializeImpl<T>::m_pCUtlPropInfo"
-  - "m_pCUtlPropInfo"
-  - "IDBInitializeImpl::m_pCUtlPropInfo"
-  - "ATL.IDBInitializeImpl.m_pCUtlPropInfo"
-  - "IDBInitializeImpl<T>::m_pCUtlPropInfo"
-  - "IDBInitializeImpl.m_pCUtlPropInfo"
-  - "ATL::IDBInitializeImpl::m_pCUtlPropInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_pCUtlPropInfo"
+title: 'Idbinitializeimpl:: M_pcutlpropinfo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IDBInitializeImpl<T>::m_pCUtlPropInfo
+- m_pCUtlPropInfo
+- IDBInitializeImpl::m_pCUtlPropInfo
+- ATL.IDBInitializeImpl.m_pCUtlPropInfo
+- IDBInitializeImpl<T>::m_pCUtlPropInfo
+- IDBInitializeImpl.m_pCUtlPropInfo
+- ATL::IDBInitializeImpl::m_pCUtlPropInfo
+dev_langs: C++
+helpviewer_keywords: m_pCUtlPropInfo
 ms.assetid: 8996513f-a033-4370-94d0-56f1d7e5492b
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c0c03e84bad48ddfc6cd996bd48a24e5c57571c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IDBInitializeImpl::m_pCUtlPropInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Um ponteiro para o objeto de implementação das informações das propriedades de BD.  
+# <a name="idbinitializeimplmpcutlpropinfo"></a>IDBInitializeImpl::m_pCUtlPropInfo
+Um ponteiro para objeto de implementação para obter informações de propriedades de banco de dados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -43,8 +41,8 @@ T
   
 ```  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Classe IDBInitializeImpl](../Topic/IDBInitializeImpl%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)

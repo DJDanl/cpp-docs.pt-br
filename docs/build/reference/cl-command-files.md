@@ -1,60 +1,58 @@
 ---
-title: "Arquivos de comando CL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compilador cl.exe, arquivos de comando"
-  - "arquivos de comando"
-  - "arquivos de comando, compilador CL"
+title: Arquivos de comando CL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords:
+- cl.exe compiler, command files
+- command files
+- command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8e42c349436bd0df4f1e26b35d238b6e1ee75c32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Arquivos de comando CL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Um arquivo de comando é um arquivo de texto que contém opções e nomes de arquivo que você digitaria de outra forma em [linha de comando](../../build/reference/compiler-command-line-syntax.md) ou especificaria usando [Variável de ambiente de CL](../../build/reference/cl-environment-variables.md).  O CL aceita um arquivo de comando do compilador como um argumento de variável de ambiente de CL ou na linha de comando.  Em vez de linha de comando ou da variável de ambiente de CL, um arquivo de comando permite que você use várias linhas de opções e nomes de arquivo.  
+# <a name="cl-command-files"></a>Arquivos de comando CL
+Um arquivo de comando é um arquivo de texto que contém opções e os nomes de arquivos caso contrário, você digitaria no [linha de comando](../../build/reference/compiler-command-line-syntax.md) ou especificar usando o [variável de ambiente CL](../../build/reference/cl-environment-variables.md). CL aceita um arquivo de comando do compilador como um argumento na variável de ambiente CL ou na linha de comando. Em vez da linha de comando ou da variável de ambiente CL, um arquivo de comando permite que você use várias linhas de opções e nomes de arquivo.  
   
- As opções e os nomes de arquivo em um arquivo de comando são processados de acordo com o local de um nome de arquivo de comandos dentro da variável de ambiente de CL ou na linha de comando.  No entanto, se a opção \/link aparece no arquivo de comando, todas as opções no restante da linha são passadas ao vinculador.  Opções de linhas subsequentes no arquivo de comando e opções na linha de comando depois que a invocação do arquivo de comando é aceita ainda como opções do compilador.  Para obter mais informações sobre como a ordem de opções afeta a interpretação, consulte [Ordem de opções de CL](../../build/reference/order-of-cl-options.md).  
+ Opções e nomes de arquivos em um arquivo de comando são processados de acordo com o local de um nome de arquivo de comando na variável de ambiente CL ou na linha de comando. No entanto, se a opção /link aparece no arquivo de comando, todas as opções no restante da linha são passadas para o vinculador. Opções nas linhas subsequentes no arquivo de comandos e opções na linha de comando após a chamada do arquivo de comando ainda são aceitos como opções do compilador. Para obter mais informações sobre como a ordem das opções afeta a interpretação, consulte [ordem de opções CL](../../build/reference/order-of-cl-options.md).  
   
- Um arquivo de comando não deve conter o comando de CL.  Cada opção deverá iniciar e terminar na mesma linha; você não pode usar a barra invertida \(\\\) para combinar uma opção por meio de duas linhas.  
+ Um arquivo de comando não deve conter o comando CL. Cada opção deve começar e terminar na mesma linha; não é possível usar a barra invertida (\\) para combinar uma opção entre duas linhas.  
   
- Um arquivo de comando é especificado por um sinal de arroba \(@\) seguido por um nome de arquivo; o nome de arquivo pode especificar um absoluta ou um caminho relativo.  
+ Um arquivo de comando é especificado por um sinal de arroba (@) seguido por um nome de arquivo; o nome de arquivo pode especificar um caminho absoluto ou relativo.  
   
- Por exemplo, se o comando estiver em um arquivo denominado RESP:  
+ Por exemplo, se o comando a seguir está em um arquivo chamado RESP:  
   
 ```  
 /Og /link LIBC.LIB  
 ```  
   
- e especifique o seguinte comando de CL:  
+ e especifique o seguinte comando CL:  
   
 ```  
 CL /Ob2 @RESP MYAPP.C  
 ```  
   
- o comando para CL é a seguinte:  
+ o comando CL é da seguinte maneira:  
   
 ```  
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB  
 ```  
   
- Observe que a linha de comando e que comandos de comando\- Arquivo são combinados com eficiência.  
+ Observe que a linha de comando e os comandos do arquivo de comando são combinados com eficiência.  
   
-## Consulte também  
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)
+## <a name="see-also"></a>Consulte também  
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
+ [Opções do Compilador](../../build/reference/compiler-options.md)

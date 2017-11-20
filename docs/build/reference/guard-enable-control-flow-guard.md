@@ -1,60 +1,59 @@
 ---
-title: "-prote&#231;&#227;o (Habilitar prote&#231;&#227;o de fluxo de controle) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/guard"
-  - "VC.Project.VCCLCompilerTool.ControlFlowGuard"
-dev_langs: 
-  - "C++"
+title: "-guard (Habilitar proteção de fluxo de controle) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /guard
+- VC.Project.VCCLCompilerTool.ControlFlowGuard
+dev_langs: C++
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: dde6014d87f156758d46cad85e8bfad54d4d2db4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /guard (habilitar prote&#231;&#227;o do fluxo de controle)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="guard-enable-control-flow-guard"></a>/guard (habilitar proteção do fluxo de controle)
 Habilite a geração de compilador protetor de fluxo de controle de verificações de segurança.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /guard:cf[-]  
 ```  
   
-## Comentários  
- O **\/guard:cf** opção faz com que o compilador analisar o fluxo de controle para destinos de chamada indireta em tempo de compilação e, em seguida, insira o código para verificar se os destinos no tempo de execução. Por padrão, **\/guard:cf** está desativado e deve ser explicitamente habilitado. Para desabilitar explicitamente essa opção, use **\/guard:cf\-**.  
+## <a name="remarks"></a>Comentários  
+ O **/Guard: CF** opção faz com que o compilador analisar o fluxo de controle para destinos de chamada indireta em tempo de compilação e, em seguida, inserir o código para verificar se os destinos em tempo de execução. Por padrão, **/Guard: CF** está desativado e deve ser explicitamente habilitado. Para desabilitar explicitamente essa opção, use **/guard:cf-**.  
   
- Quando o **\/guard:cf** opção proteger o fluxo de controle \(CFG\) for especificada, o compilador e vinculador inserem verificações de segurança adicionais em tempo de execução para detectar tentativas de comprometer seu código. Durante a compilação e vinculação, todas as chamadas indiretas em seu código são analisadas para localizar todos os locais em que o código pode acessar quando ele é executado corretamente. Essas informações são armazenadas em estruturas adicionais nos cabeçalhos de seus binários. O compilador também injeta uma seleção antes de cada chamada indireta em seu código que garante que o destino é um dos locais verificados. Se a verificação falhar em tempo de execução em um sistema operacional CFG ciente, o sistema operacional fecha o programa.  
+ Quando o **/Guard: CF** opção de proteção de fluxo de controle (CFG) for especificada, o compilador e vinculador inserem verificações de segurança de tempo de execução extra para detectar tentativas de comprometer seu código. Durante a compilação e o vínculo, todas as chamadas indiretas em seu código são analisadas para localizar todos os locais em que o código pode acessar quando ele é executado corretamente. Essas informações são armazenadas em estruturas extras nos cabeçalhos de seus binários. O compilador também insere uma verificação antes de cada chamada indireta em seu código que garante que o destino é um dos locais verificados. Se a verificação falhar em tempo de execução em um sistema operacional com suporte a configuração, o sistema operacional fecha o programa.  
   
- Um ataque comum em software tira proveito dos bugs na manipulação de entradas extremas ou inesperadas. Entrada criada cuidadosamente para o aplicativo pode substituir um local que contém um ponteiro para o código executável. Isso pode ser usado para redirecionar o fluxo de controle para código controlado pelo invasor. As verificações de tempo de execução CFG não corrigir os bugs de corrupção de dados em seu executável. Eles em vez disso, tornam mais difícil para um invasor usá\-los para executar código arbitrário. CFG é uma ferramenta de atenuação que evita que as chamadas para locais diferentes pontos de entrada de função em seu código. É semelhante a como prevenção de execução de dados \(DEP\),  [\/GS](../Topic/-GS%20\(Buffer%20Security%20Check\).md) verificações de pilha e [\/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) e [\/HIGHENTROPYVA](../Topic/-HIGHENTROPYVA%20\(Support%2064-Bit%20ASLR\).md) randomização de layout de espaço de endereço \(ASLR\) reduzir as chances de que seu código se torna um vetor de exploração.  
+ Um ataque comuns em software tira proveito dos bugs no tratamento entradas extremas ou inesperadas. Entrada concebida cuidadosamente para o aplicativo pode substituir um local que contém um ponteiro para o código executável. Isso pode ser usado para redirecionar o fluxo de controle para código controlado pelo invasor. As verificações de tempo de execução CFG não corrigir os erros de corrupção de dados em seu executável. Eles em vez disso, fazer mais difícil para um invasor usá-los para executar código arbitrário. CFG é uma ferramenta de atenuação que evita que as chamadas para locais diferentes pontos de entrada de função em seu código. É semelhante a como prevenção de execução de dados (DEP), [/GS](../../build/reference/gs-buffer-security-check.md) verificações de pilha e [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) e [/HIGHENTROPYVA](../../build/reference/highentropyva-support-64-bit-aslr.md) endereço aleatorização do espaço (ASLR) inferior a chances que seu código se torna um vetor de exploração.  
   
- O **\/guard:cf** opção deve ser passada para ambas as o compilador e vinculador para compilar o código que usa o CFG explorar técnica de atenuação. Se o binário é criado usando um único `cl` de comando, o compilador passa a opção para o vinculador. Se você compilar e vincular separadamente, a opção deve ser definida no compilador e vinculador comandos. A opção de vinculador \/DYNAMICBASE também é necessária. Para verificar se seu binário tem dados de configuração, use o `dumpbin /headers /loadconfig` comando. Tem ativado CFG binários `Guard` na lista de características do EXE ou DLL e sinalizadores de proteção incluem `CF instrumentado` e `tabela FID presentes`.  
+ O **/Guard: CF** opção deve ser passada para ambos o compilador e vinculador para criar o código que usa o CFG explorar técnica de mitigação. Se o binário é construído usando um único `cl` de comando, o compilador passa a opção para o vinculador. Se você compilar e vincular separadamente, a opção deve ser definida em comandos de compilador e vinculador. A opção de vinculador /DYNAMICBASE também é necessária. Para verificar que o binário tem dados de configuração, use o `dumpbin /headers /loadconfig` comando. Tem ativado CFG binários `Guard` na lista de características EXE ou DLL e os sinalizadores de proteção incluem `CF Instrumented` e `FID table present`.  
   
- O **\/guard:cf** opção é incompatível com [\/ZI](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) \(Editar e continuar informações de depuração\) ou [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) \(Common Language Runtime Compilation\).  
+ O **/Guard: CF** opção é incompatível com [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) (Editar e continuar informações de depuração) ou [/clr](../../build/reference/clr-common-language-runtime-compilation.md) (Common Language Runtime Compilation).  
   
- Código compilado usando **\/guard:cf** podem ser vinculados a bibliotecas e arquivos que não são compilados usando a opção do objeto. Apenas este código, quando vinculado também usando o **\/guard:cf** opção e executado em um sistema operacional com reconhecimento de CFG, com proteção CFG. Como o código compilado sem a opção não irá parar um ataque, é recomendável que você usa a opção em todo o código que você compila. Há um runtime pequeno custo para verificações de configuração, mas a análise de compilador tenta otimizar as verificações em saltos indiretas que podem ser comprovados por segurança.  
+ Código compilado usando **/Guard: CF** pode ser vinculado a bibliotecas e arquivos que não são compilados com a opção do objeto. Apenas este código, quando vinculados também usando o **/Guard: CF** opção e executar em um sistema operacional com suporte a configuração, tem proteção CFG. Como o código compilado sem a opção não irá parar um ataque, é recomendável que você use a opção em todo o código que você compilar. Há um tempo de execução pequeno custo de verificações de configuração, mas a análise de compilador tenta otimizar as verificações de saltos indiretos que podem ser comprovadamente seguros.  
   
-### Para definir essa opção de compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Selecione **Propriedades de configuração**, **C\/C\+\+**, **geração de código**.  
+2.  Selecione **propriedades de configuração**, **C/C++**, **a geração de código**.  
   
 3.  Selecione o **protetor de fluxo de controle** propriedade.  
   
-4.  No controle de lista suspensa, escolha **Sim** para habilitar o protetor de fluxo de controle, ou **não** para desabilitá\-lo.  
+4.  No controle de lista suspensa, escolha **Sim** para habilitar a proteção de fluxo de controle, ou **não** para desabilitá-lo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

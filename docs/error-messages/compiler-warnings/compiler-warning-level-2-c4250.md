@@ -1,53 +1,34 @@
 ---
-title: "Compilador aviso (nível 2) C4250 | Documentos do Microsoft"
+title: "Compilador (nível 2) do aviso C4250 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4250
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4250
+f1_keywords: C4250
+dev_langs: C++
+helpviewer_keywords: C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2338ee955fb9118b608f7d7429dd5ca28a5ee126
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 123bac1ee6bc50249c272120351281258419bf6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Compilador C4250 de aviso (nível 2)
-'class1': herda class2::member por meio do domínio  
+'class1': herda class2::member via predominância  
   
- Dois ou mais membros têm o mesmo nome. O `class2` é herdada porque é uma classe base para outras classes que continha esse membro.  
+ Dois ou mais membros têm o mesmo nome. O `class2` é herdado porque é uma classe base para as outras classes que contidos neste membro.  
   
  Para suprimir C4250, use o [aviso](../../preprocessor/warning.md) pragma.  
   
- Como uma classe base virtual é compartilhada entre várias classes derivadas, um nome em uma classe derivada domina um nome em uma classe base. Por exemplo, dada a hierarquia de classe a seguir, há duas definições de função herdada no losango: a instância de vbc::func() por meio da classe fraca e o dominante:: func() por meio da classe dominante. Uma chamada não qualificada de func() por meio de um objeto de classe de losango, sempre chama a instância de dominate:: func().  Se a classe fraca introduzir uma instância de func(), nem definição deve dominar e a chamada será sinalizada como ambígua.  
+ Como uma classe base virtual é compartilhada entre várias classes derivadas, um nome em uma classe derivada domina um nome em uma classe base. Por exemplo, dada a hierarquia de classe a seguir, há duas definições de função herdada na forma de losango: a instância de vbc::func() por meio da classe fraca e o dominante:: func() por meio da classe dominante. Uma chamada não qualificada de func() por meio de um objeto de classe de losango, sempre chama a instância de dominate:: func().  Se a classe fraca apresentar uma instância de func(), não seria dominam definição e a chamada será sinalizada como ambígua.  
   
 ```  
 // C4250.cpp  

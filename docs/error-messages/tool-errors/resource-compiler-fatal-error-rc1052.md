@@ -1,44 +1,25 @@
 ---
-title: Recurso compilador Erro Fatal RC1052 | Documentos do Microsoft
+title: Recurso compilador Erro Fatal RC1052 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RC1052
-dev_langs:
-- C++
-helpviewer_keywords:
-- RC1052
+f1_keywords: RC1052
+dev_langs: C++
+helpviewer_keywords: RC1052
 ms.assetid: 59803673-492b-44fa-80fa-df93b8aaf9fb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 246cdb1f2858e18a3663fe9cc52c9de80e1f8237
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 20ffe772cc7a7fbdc96b10c16d542a6874b54577
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="resource-compiler-fatal-error-rc1052"></a>Erro fatal RC1052 (compilador de recurso)
 limite do compilador: blocos #if ou #ifdef muito aninhados  

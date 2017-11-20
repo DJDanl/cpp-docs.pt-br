@@ -1,33 +1,30 @@
 ---
-title: "partial_sum (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::partial_sum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função partial_sum [STL/CLR]"
+title: partial_sum (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::partial_sum
+dev_langs: C++
+helpviewer_keywords: partial_sum function [STL/CLR]
 ms.assetid: 845badae-8519-4ac8-9ea7-2b921bac7c51
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d8a92858303af5050706849f7e688d08ad36f321
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# partial_sum (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Computa uma série de somas em um intervalo de entrada do primeiro elemento no elemento do º de `i`e armazena o resultado de cada uma dessas soma no elemento do º de `i`de um intervalo de destino ou calcula o resultado de um procedimento generalizado em que a operação de soma seja substituída por outra operação binária especificada.  
+# <a name="partialsum-stlclr"></a>partial_sum (STL/CLR)
+Calcula uma série de somas em um intervalo de entrada do primeiro elemento por meio de `i`elemento th e armazena o resultado de cada essa soma em `i`elemento th de um intervalo de destino ou calcula o resultado de um procedimento generalizado onde a operação de soma é substituída por outra operação binário especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _InIt, class _OutIt> inline  
@@ -37,13 +34,13 @@ template<class _InIt, class _OutIt, class _Fn2> inline
         _OutIt _Dest, _Fn2 _Func);  
 ```  
   
-## Comentários  
- Essa função se comporta semelhante à função numérica `partial_sum`STL.  Para obter mais informações, consulte [partial\_sum](../Topic/partial_sum.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função numérica da biblioteca padrão C++ `partial_sum`. Para obter mais informações, consulte [partial_sum](../standard-library/numeric-functions.md#partial_sum).  
   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/numérico\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/numeric >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [numérico](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>Consulte também  
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

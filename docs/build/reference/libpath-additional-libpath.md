@@ -1,63 +1,62 @@
 ---
-title: "/LIBPATH (Libpath adicional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/libpath"
-  - "VC.Project.VCLinkerTool.AdditionalLibraryDirectories"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /LIBPATH"
-  - "opção de vinculador Libpath Adicional"
-  - "substituição de caminho de biblioteca de ambiente"
-  - "opção de vinculador LIBPATH"
-  - "opção de vinculador -LIBPATH"
-  - "opção de vinculador de caminho de biblioteca"
+title: -LIBPATH (Libpath adicional) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /libpath
+- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
+dev_langs: C++
+helpviewer_keywords:
+- LIBPATH linker option
+- /LIBPATH linker option
+- Additional Libpath linker option
+- environment library path override
+- -LIBPATH linker option
+- library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a2bef6a2294bab34cf9dfc59e352e1b79376b146
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /LIBPATH (Libpath adicional)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="libpath-additional-libpath"></a>/LIBPATH (Libpath adicional)
 ```  
 /LIBPATH:dir  
 ```  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  `dir`  
- Especifica um caminho que o vinculador pesquisar antes que pesquise o caminho especificado na opção de ambiente de LIB.  
+ Especifica um caminho que o vinculador pesquisará antes de pesquisar o caminho especificado na opção de ambiente LIB.  
   
-## Comentários  
- Use a opção \/LIBPATH substituir o caminho da biblioteca de ambiente.  O vinculador pesquisará primeiro no caminho especificado por essa opção, e pesquise no caminho especificado na variável de ambiente de LIB.  Você só pode especificar um diretório para cada opção do \/LIBPATH que você digita.  Se desejar especificar mais de um diretório, você deve especificar várias opções do \/LIBPATH.  O vinculador pesquisará nos diretórios especificados na ordem.  
+## <a name="remarks"></a>Comentários  
+ Use a opção /LIBPATH para substituir o caminho da biblioteca de ambiente. O vinculador pesquisar primeiro no caminho especificado por essa opção e, em seguida, pesquise no caminho especificado na variável de ambiente LIB. Você pode especificar apenas um diretório para cada opção /LIBPATH que você inseriu. Se você quiser especificar mais de um diretório, você deve especificar várias opções de /LIBPATH. O vinculador, em seguida, irá procurar as pastas especificadas em ordem.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Geral** .  
+3.  Clique o **geral** página de propriedades.  
   
-4.  Modifique a propriedade de **Diretórios de Biblioteca Adicionais** .  
+4.  Modificar o **diretórios de biblioteca adicionais** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

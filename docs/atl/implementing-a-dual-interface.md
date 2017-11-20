@@ -1,57 +1,57 @@
 ---
-title: "Implementando uma interface dupla | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces duais, implementando"
-  - "Classe de IDispatchImpl, implementando interfaces duais"
+title: Implementando uma Interface dupla (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IDispatchImpl class, implementing dual interfaces
+- dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b4895e7b1cd0e38b33c1efe66e9070073403ee01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Implementando uma interface dupla
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementing-a-dual-interface"></a>Implementando uma Interface dupla
+Você pode implementar uma interface dupla usando o [IDispatchImpl](../atl/reference/idispatchimpl-class.md) classe, que fornece uma implementação padrão de `IDispatch` métodos em uma interface dupla. Para obter mais informações, consulte [Implementando a IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+  
+ Para usar essa classe:  
+  
+-   Defina sua interface dupla em uma biblioteca de tipos.  
+  
+-   Derive a classe de uma especialização de `IDispatchImpl` (passar informações sobre a biblioteca de interface e o tipo como argumentos de modelo).  
+  
+-   Adicionar uma entrada (ou entradas) para o mapa de COM para expor a interface dupla por meio de `QueryInterface`.  
+  
+-   Implemente a parte vtable da interface em sua classe.  
+  
+-   Certifique-se de que a biblioteca de tipos que contém a definição da interface está disponível para os objetos em tempo de execução.  
+  
+## <a name="atl-simple-object-wizard"></a>Assistente de objeto simples de ATL  
+ Se você quiser criar uma nova interface e uma nova classe para implementá-lo, você pode usar o [caixa de diálogo Adicionar classe de ATL](../ide/add-class-dialog-box.md)e, em seguida, o [ATL Simple Object Wizard](../atl/reference/atl-simple-object-wizard.md).  
+  
+## <a name="implement-interface-wizard"></a>Assistente de Implementação de Interface  
+ Se você tiver uma interface existente, você pode usar o [Assistente de implementação de Interface](../atl/reference/adding-a-new-interface-in-an-atl-project.md) para adicionar a classe base necessária, entradas do mapa COM e implementações de método esqueleto a uma classe existente.  
+  
+> [!NOTE]
+>  Talvez seja necessário ajustar a classe base gerada para que os números de versão primária e secundária da biblioteca de tipos são transmitidos como argumentos de modelo para sua `IDispatchImpl` classe base. O Assistente de implementação de Interface não verifica o número de versão da biblioteca de tipo para você.  
+  
+## <a name="implementing-idispatch"></a>Implementar IDispatch  
+ Você pode usar um `IDispatchImpl` classe para fornecer uma implementação de um dispinterface apenas especificando a entrada apropriada no mapa COM base (usando o [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) ou [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) macro) desde que você tiver uma biblioteca de tipos que descreve uma interface dupla correspondente. É muito comum para implementar o `IDispatch` interface dessa forma, por exemplo. O Assistente de objeto ATL simples e o Assistente de Interface de implementar ambos pressupõem que você pretende implementar `IDispatch` dessa forma, portanto eles adicionará a entrada apropriada para o mapa.  
+  
+> [!NOTE]
+>  ATL oferece o [IDispEventImpl](../atl/reference/idispeventimpl-class.md) e [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) classes para ajudá-lo a implementar dispinterfaces sem a necessidade de uma biblioteca de tipos que contém a definição de uma interface dupla compatível.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Interfaces duplas e a ATL](../atl/dual-interfaces-and-atl.md)
 
-Você pode implementar uma interface dupla usando a classe de [IDispatchImpl](../atl/reference/idispatchimpl-class.md) , que fornece uma implementação padrão dos métodos de `IDispatch` em uma interface dupla.  Para mais informações, consulte [Implementing the IDispatch Interface](http://msdn.microsoft.com/pt-br/0e171f7f-0022-4e9b-ac8e-98192828e945).  
-  
- Para usar esta classe:  
-  
--   Defina sua interface dupla em uma biblioteca de tipo.  
-  
--   A classe deriva de uma especialização de `IDispatchImpl` \(informações de passagem sobre a biblioteca de interface e como argumentos de tipo de modelo\).  
-  
--   Adicione uma entrada \(ou entradas\) ao mapa COM para expor a interface dupla com `QueryInterface`.  
-  
--   Implementar a parte vtable de interface em sua classe.  
-  
--   Certifique\-se de que a biblioteca de tipos que contém a definição de interface está disponível para os objetos em tempo de execução.  
-  
-## Assistente simples de objeto de ATL  
- Se você desejar criar uma nova interface e uma nova classe para implementar, você pode usar [ATL adiciona a caixa de diálogo de classe](../ide/add-class-dialog-box.md), e então [Assistente simples de objeto de ATL](../atl/reference/atl-simple-object-wizard.md).  
-  
-## Assistente de interface de implementam  
- Se você tiver uma interface existente, você pode usar [Assistente de interface de implementam](../Topic/Adding%20a%20New%20Interface%20in%20an%20ATL%20Project.md) para adicionar as entradas necessárias da classe base, o mapa COM, e implementações de esqueleto de métodos a uma classe existente.  
-  
-> [!NOTE]
->  Você talvez precise ajustar a classe base gerado para que os números de versão principal e secundário da biblioteca de tipos a serem passados como argumentos de modelo a sua classe base de `IDispatchImpl` .  O assistente de interface de implementar não verifica o número de versão da biblioteca de tipo para você.  
-  
-## Implementando IDispatch  
- Você pode usar uma classe base de `IDispatchImpl` para fornecer uma implementação de um dispinterface apenas especificando a entrada apropriado no mapa COM \(usando a macro de [COM\_INTERFACE\_ENTRY2](../Topic/COM_INTERFACE_ENTRY2.md) ou de [COM\_INTERFACE\_ENTRY\_IID](../Topic/COM_INTERFACE_ENTRY_IID.md) \) como você tiver uma biblioteca de tipo que descreve uma interface dupla correspondente.  É muito comum implementar a interface de `IDispatch` essa maneira, por exemplo.  O assistente e implementam simples de objeto de ATL interface o assistente que ambos presumem que você pretende implementar essa maneira `IDispatch` , o que irão aumentar a entrada apropriado ao mapa.  
-  
-> [!NOTE]
->  ATL oferece as classes de [IDispEventImpl](../atl/reference/idispeventimpl-class.md) e de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) ajudá\-lo a implementação dispinterfaces sem exigir uma biblioteca de tipo que contém a definição de uma interface dupla correspondente.  
-  
-## Consulte também  
- [Interfaces duais e ATL](../atl/dual-interfaces-and-atl.md)

@@ -1,55 +1,36 @@
 ---
-title: Aviso LNK4092 das ferramentas de vinculador | Documentos do Microsoft
+title: Aviso LNK4092 das ferramentas de vinculador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4092
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4092
+f1_keywords: LNK4092
+dev_langs: C++
+helpviewer_keywords: LNK4092
 ms.assetid: d569ec47-a338-40e1-940b-8a8061459acb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 64d4e7a96009f8b3f2de1ee83f143427542ded65
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 3771cfc08a091a796e67e8c11a16c842e6a4346a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-warning-lnk4092"></a>Aviso LNK4092 (Ferramentas de Vinculador)
-seção gravável compartilhada 'seção' contém realocações; imagem pode não funcionar corretamente  
+seção compartilhada 'seção' contém realocações; imagem pode não ser executada corretamente  
   
- O vinculador emite esse aviso sempre que houver uma sessão compartilhada para avisá-lo de um problema potencialmente grave.  
+ O vinculador emite esse aviso sempre que houver uma seção compartilhada para avisá-lo de um problema potencialmente grave.  
   
- É uma maneira de compartilhar dados entre vários processos marcar uma seção como "compartilhada". No entanto, a marcação de uma seção como compartilhada pode causar problemas. Por exemplo, você tem uma DLL que contém declarações assim em uma seção de dados compartilhado:  
+ É uma maneira de compartilhar dados entre vários processos marcar uma seção como "compartilhado". No entanto, a marcação de uma seção como compartilhada pode causar problemas. Por exemplo, você tem uma DLL que contém declarações assim em uma seção de dados compartilhado:  
   
 ```  
 int var = 1;  
 int *pvar = &var;  
 ```  
   
- O vinculador não pode resolver `pvar` porque seu valor depende de onde a DLL é carregada na memória, então ele coloca um registro de realocação na DLL. Quando a DLL é carregada na memória, o endereço do `var` podem ser resolvidos e `pvar` atribuído. Se outro processo carrega a DLL mesmo, mas não pode carregá-lo no mesmo endereço, a realocação para o endereço de `var` será atualizado para o segundo processo e o espaço de endereço do processo primeiro apontará para o endereço incorreto.
+ Não é possível resolver o vinculador `pvar` como seu valor depende de onde a DLL é carregada na memória, portanto ele coloca um registro de realocação na DLL. Quando a DLL é carregada na memória, o endereço do `var` podem ser resolvidos e `pvar` atribuído. Se outro processo carrega a DLL do mesmo, mas não pode carregá-lo no mesmo endereço, a realocação para o endereço do `var` serão atualizados para o processo de segundo e o espaço de endereço do processo primeiro apontará para o endereço errado.

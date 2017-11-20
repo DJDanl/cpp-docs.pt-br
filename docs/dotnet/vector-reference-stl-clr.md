@@ -1,42 +1,39 @@
 ---
-title: "vector::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro de referência [STL/CLR]"
+title: 'Vector:: Reference (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 6ea0d3b0-d2e6-42c3-856c-a10f5ef7620c
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a810b63676a7f4b15d01496f4137699d9dc1791
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorreference-stlclr"></a>vector::reference (STL/CLR)
 O tipo de uma referência para um elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O tipo descreve uma referência a um elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_vector_reference.cpp   
@@ -73,14 +70,17 @@ int main()
   
 ```  
   
-  **um b c**  
- **UM C\- 2.0 B**   
-## Requisitos  
- cliext \<\/vetor de**Cabeçalho:** \>  
+```Output  
+a b c  
+A B C  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/vetor >  
   
-## Consulte também  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::const\_reference](../dotnet/vector-const-reference-stl-clr.md)   
- [vector::value\_type](../Topic/vector::value_type%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [vetor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector:: const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)   
+ [vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)

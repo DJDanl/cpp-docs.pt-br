@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- this_cpp
-dev_langs:
-- C++
+f1_keywords: this_cpp
+dev_langs: C++
 helpviewer_keywords:
 - nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4e77139cdf93d385b92eb87483c1b03541b18650
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="this-pointer"></a>Ponteiro this
 O **isso** ponteiro é um ponteiro acessível somente dentro das funções de membro não estático de uma **classe**, `struct`, ou **união** tipo. Ele aponta para o objeto para o qual a função de membro é chamada. Funções membro static não possuem um **isso** ponteiro.  
@@ -182,7 +178,7 @@ int main()
   
  O tipo de **isso** em um membro da função é descrita pela sintaxe a seguir, onde *VC de qualificador de lista* é determinado a partir de Declarador de funções de membro e pode ser **const**ou **volátil** (ou ambos), e *tipo de classe* é o nome da classe:  
   
- *tipo de classe [lista de qualificador cv]* ** \* const isso  **  
+ *tipo de classe [lista de qualificador cv]*  **\* const isso**   
   
  Em outras palavras, **isso** sempre é um ponteiro const; ele não pode ser reatribuído.  O **const** ou `volatile` aplicam qualificadores usados na declaração de função de membro para a instância da classe apontada pelo **isso** no escopo da função.  
   

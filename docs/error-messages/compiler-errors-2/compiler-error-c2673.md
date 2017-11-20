@@ -1,47 +1,28 @@
 ---
-title: C2673 de erro do compilador | Documentos do Microsoft
+title: C2673 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2673
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2673
+f1_keywords: C2673
+dev_langs: C++
+helpviewer_keywords: C2673
 ms.assetid: 780230c0-619b-4a78-b01d-ff5886306741
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 58b8a9c1f39e17edd7359100d341a6da4b83ce82
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 551801e5d13f18335d30fb1ea37ad29ca27aa777
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2673"></a>C2673 de erro do compilador
-'function': funções globais não tem 'nesse' ponteiros  
+'function': funções globais não possuem ponteiros 'this'  
   
  Uma função global tentou acessar `this`.  
   

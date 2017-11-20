@@ -1,34 +1,33 @@
 ---
-title: "Problemas de vers&#227;o para tipos de valor aninhados em tipos nativos (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declarações de tipo __nogc"
-  - "Palavra-chave __value, problemas ao aninhar"
+title: "Problemas de versão para tipos de valor aninhados em tipos nativos (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __nogc type declarations
+- __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Problemas de vers&#227;o para tipos de valor aninhados em tipos nativos (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Considere um componente assinado do assembly de nome forte \(\) usado para criar um assembly do cliente.  O componente contém um tipo de valor que é usado no cliente como o tipo para um membro de uma união nativo, de uma classe, ou matriz.  Se uma futura versão do componente alterar o tamanho ou o layout do tipo de valor, o cliente deve ser recompilado.  
+# <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problemas de versão para tipos de valor aninhados em tipos nativos (C++/CLI)
+Considere a possibilidade de um componente de assembly assinado (nome forte) usado para criar um assembly de cliente. O componente contiver um tipo de valor que é usado no cliente como o tipo de um membro de uma união nativo, uma classe ou uma matriz. Se uma versão futura do componente altera o tamanho ou o layout do tipo de valor, o cliente deverá ser recompilado.  
   
- Crie um keyfile com [sn.exe](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) \(`sn -k mykey.snk`\).  
+ Criar um arquivo de chave com [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir é o componente.  
   
 ```  
@@ -46,7 +45,7 @@ public value struct S {
 };  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Este exemplo é o cliente:  
   
 ```  
@@ -72,7 +71,7 @@ int main() {
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 S.i = 5  
@@ -81,8 +80,8 @@ S.i = 10
 S.i = 11  
 ```  
   
-### Comentários  
- No entanto, se você adicionar outro membro a `struct S` em nested\_value\_types.cpp, \(por exemplo, `double d;`\) e recompile o componente sem recompilar o cliente, o resultado será uma exceção sem\-tratamento \(do tipo <xref:System.IO.FileLoadException?displayProperty=fullName>\).  
+### <a name="comments"></a>Comentários  
+ No entanto, se você adicionar outro membro para `struct S` em nested_value_types.cpp, (por exemplo, `double d;`) e recompile o componente sem recompilar o cliente, o resultado é uma exceção sem tratamento (do tipo <xref:System.IO.FileLoadException?displayProperty=fullName>).  
   
-## Consulte também  
- [Tipos gerenciados](../Topic/Managed%20Types%20\(C++-CLI\).md)
+## <a name="see-also"></a>Consulte também  
+ [Tipos gerenciados (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

@@ -1,33 +1,30 @@
 ---
-title: "hash_map::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "apagar membro [STL/CLR]"
+title: 'hash_map:: Erase (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 1d2a79aa-62f7-461c-8f7c-7b660eb189be
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8102d87f0770d4bbe702c235986805f03d0d782d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Remove os elementos nas posições especificadas.  
+# <a name="hashmaperase-stlclr"></a>hash_map::erase (STL/CLR)
+Remove os elementos em posições especificadas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 iterator erase(iterator where);  
@@ -35,29 +32,29 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  primeiro  
- Início do intervalo para apagar.  
+ Início do intervalo a ser apagado.  
   
  key  
  Valor de chave para apagar.  
   
  last  
- O fim do intervalo para apagar.  
+ Fim do intervalo a ser apagado.  
   
  onde  
- Elemento para apagar.  
+ Elemento apagar.  
   
-## Comentários  
- A primeira função de membro remove o elemento de sequência controlada apontada por `where`, e retorna um iterador que designa o primeiro elemento que permanece além de elemento removido, ou [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`()` se tal elemento existe.  Use\-a para remover um único elemento.  
+## <a name="remarks"></a>Comentários  
+ A primeira função de membro remove o elemento de sequência controlada apontada pelo `where`e retorna um iterador que designa o primeiro elemento restantes além do elemento removido, ou [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()` se esse elemento não existe. Você pode usá-lo para remover um único elemento.  
   
- A segunda função de membro remove os elementos de sequência controlada no intervalo `[``first``,` `last``)`, e retorna um iterador que designa o primeiro elemento que permanece além de todos os elementos removidos, ou `end()` se tal elemento existirão.  Use\-a para remover os elementos zero ou mais contíguas.  
+ A segunda função de membro remove os elementos da sequência controlada no intervalo [`first`, `last`) e retorna um iterador que designa o primeiro elemento restantes além de quaisquer elementos removidos, ou `end()` se esse elemento não existe. Você pode usá-lo para remover a zero ou mais elementos contíguos.  
   
- A terceira função de membro remove qualquer elemento da sequência controlada cuja chave tem o equivalente de ordenação da `key`, e retorna uma contagem do número de elementos removidos.  Use\-a para remover e contar todos os elementos que correspondem a uma chave especificada.  
+ A terceira função do membro remove um elemento de sequência controlada cuja chave tem ordenação equivalente para `key`e retorna uma contagem do número de elementos removidos. Você pode usá-lo para remover e contagem de todos os elementos que correspondem a uma chave especificada.  
   
- Cada exclusão do elemento usa o tempo proporcionais ao logaritmo o número de elementos na sequência controlada.  
+ A eliminação de cada elemento demora proporcional de logaritmo do número de elementos na sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_map_erase.cpp   
@@ -105,18 +102,21 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**\= \[erase\(begin\(\)\)b 2\]**  
- **b \[2\] \[3\] \[c de \[4\]e 5\]**  
-**erase\(begin\(\), end\(\)\-1\) \= \[e 5\]**  
-**size\(\) \= 1**  
-**erase \(L'x\) \= 0**  
-**erase \(L'e\) \= 1**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+erase(begin()) = [b 2]  
+ [b 2] [c 3] [d 4] [e 5]  
+erase(begin(), end()-1) = [e 5]  
+size() = 1  
+erase(L'x') = 0  
+erase(L'e') = 1  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::clear](../Topic/hash_map::clear%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::clear (STL/CLR)](../dotnet/hash-map-clear-stl-clr.md)

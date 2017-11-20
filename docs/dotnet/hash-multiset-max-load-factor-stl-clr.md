@@ -1,49 +1,46 @@
 ---
-title: "hash_multiset::max_load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::max_load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro max_load_factor [STL/CLR]"
+title: hash_multiset::max_load_factor (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::max_load_factor
+dev_langs: C++
+helpviewer_keywords: max_load_factor member [STL/CLR]
 ms.assetid: ca0a6e8e-b889-47e4-9edd-c5a321fdeb8f
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 44d9384ef11776193ad5e520f140a9f46d66b61b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::max_load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtém ou define os elementos máximo pelo segmento.  
+# <a name="hashmultisetmaxloadfactor-stlclr"></a>hash_multiset::max_load_factor (STL/CLR)
+Obtém ou define o máximo de elementos por bucket.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
-#### Parâmetros  
- new\_factor  
- Novo fator de carga máximo a ser armazenado.  
+#### <a name="parameters"></a>Parâmetros  
+ new_factor  
+ Novo valor máximo carregar fator para armazenar.  
   
-## Comentários  
- A primeira função de membro retorna o fator de carga máximo armazenado atual.  Use\-a para determinar o tamanho médio máximo do segmento.  
+## <a name="remarks"></a>Comentários  
+ A primeira função de membro retorna o fator de carga máxima armazenado atual. Você pode usá-lo para determinar o tamanho máximo de bucket médio.  
   
- A segunda função de membro substitui o fator de carga máximo de armazenamento com `new_factor`.  Nenhum repita de automático ocorre até uma inserção subsequente.  
+ A segunda função de membro substitui o fator de carga máxima de armazenamento com `new_factor`. Nenhum refazendo o hash automática ocorre até subsequentes de inserção.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multiset_max_load_factor.cpp   
@@ -89,23 +86,28 @@ int main()
   
 ```  
   
-  **um b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- cliext de**Namespace:**  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Consulte também  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::bucket\_count](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
- [hash\_multiset::load\_factor](../Topic/hash_multiset::load_factor%20\(STL-CLR\).md)   
- [hash\_multiset::rehash](../Topic/hash_multiset::rehash%20\(STL-CLR\).md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
+ [hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)   
+ [hash_multiset::rehash (STL/CLR)](../dotnet/hash-multiset-rehash-stl-clr.md)

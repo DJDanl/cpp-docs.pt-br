@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
-- ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::InternalAddRef
 - ATLCOM/ATL::InternalRelease
@@ -25,35 +23,18 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
-helpviewer_keywords:
-- reference counting
+dev_langs: C++
+helpviewer_keywords: reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ff699c5d4620de01bd1f2ed1e3b87a4d77aa8396
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 987d8fcb8464ab691b915c576194f530cb50842e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 Essa classe fornece métodos para lidar com o gerenciamento de contagem de referência de objeto para objetos agregados e agregados.  
@@ -111,9 +92,9 @@ class CComObjectRootEx : public CComObjectRootBase
   
  Uma classe que implementa um servidor COM deve herdar de `CComObjectRootEx` ou [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
- Se sua definição de classe especifica o [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) macro ATL cria uma instância de **CComPolyObject\<CYourClass >** quando **IClassFactory** é chamado. Durante a criação, o valor do desconhecido externo é verificado. Se for **nulo**, **IUnknown** é implementada por um objeto agregado. Se o desconhecido externo não é **nulo**, **IUnknown** é implementada por um objeto agregado.  
+ Se sua definição de classe especifica o [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) macro ATL cria uma instância de **CComPolyObject\<CYourClass >** quando **IClassFactory:: CreateInstance** é chamado. Durante a criação, o valor do desconhecido externo é verificado. Se for **nulo**, **IUnknown** é implementada por um objeto agregado. Se o desconhecido externo não é **nulo**, **IUnknown** é implementada por um objeto agregado.  
   
- Se sua classe não especificar o `DECLARE_POLY_AGGREGATABLE` ATL de macro, cria uma instância de **CAggComObject\<CYourClass >** para objetos agregados ou uma instância de **CComObject\<CYourClass >** para objetos agregados.  
+ Se sua classe não especificar o `DECLARE_POLY_AGGREGATABLE` macro ATL cria uma instância de **CAggComObject\<CYourClass >** para objetos agregados ou uma instância de **CComObject\<CYourClass >** para objetos agregados.  
   
  A vantagem de usar `CComPolyObject` é evitar ter dois `CComAggObject` e `CComObject` em seu módulo para lidar com casos agregados e agregados. Um único `CComPolyObject` objeto lida com ambos os casos. Portanto, apenas uma cópia do vtable e uma cópia das funções existem em seu módulo. Se seu vtable for grande, isso pode diminuir significativamente o tamanho do módulo. No entanto, se seu vtable for pequeno, usando `CComPolyObject` pode resultar em um tamanho ligeiramente maior do módulo porque ele não é otimizado para um objeto agregado ou agregado, assim como `CComAggObject` e `CComObject`.  
   
@@ -157,7 +138,7 @@ HRESULT FinalConstruct();
 ### <a name="example"></a>Exemplo  
  Normalmente, substitua este método na classe derivada de `CComObjectRootEx` criar qualquer agregados objetos. Por exemplo:  
   
- [!code-cpp[NVC_ATL_COM 40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
  Se a construção falhar, você pode retornar um erro. Você também pode usar a macro [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) para proteger seu objeto externo sejam excluídos se, durante a criação do objeto interno agregado incrementa a contagem de referência, em seguida, diminui a contagem para 0.  
   
@@ -310,10 +291,10 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Comentários  
  O valor de `bStarting` parâmetro indica se o módulo está sendo inicializado ou encerrado. A implementação padrão de `ObjectMain` não faz nada, mas você pode substituir essa função em sua classe para inicializar ou limpar os recursos que você deseja alocar para a classe. Observe que `ObjectMain` é chamado antes de todas as instâncias da classe são solicitadas.  
   
- `ObjectMain`é chamado de ponto de entrada da DLL, então o tipo de operação que pode executar a função de ponto de entrada é restrito. Para obter mais informações sobre essas restrições, consulte [comportamento da biblioteca em tempo de execução](../../build/run-time-library-behavior.md) e [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain`é chamado de ponto de entrada da DLL, então o tipo de operação que pode executar a função de ponto de entrada é restrito. Para obter mais informações sobre essas restrições, consulte [DLLs e Visual C++ comportamento da biblioteca em tempo de execução](../../build/run-time-library-behavior.md) e [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_COM 41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  Incrementa a contagem de referência do desconhecido de uma agregação externa.  
@@ -369,4 +350,3 @@ void Unlock();
  [Classe CComObject](../../atl/reference/ccomobject-class.md)   
  [Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

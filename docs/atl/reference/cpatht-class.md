@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,18 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: c9abb6a20beca39e8224ab3d3724da9664f68702
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 Essa classe representa um caminho.  

@@ -33,36 +33,21 @@ f1_keywords:
 - complex/conj
 - complex/conjf
 - complex/conjl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - conj function
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b4ac40e0d9d1694031a7d1a628de794e28933479
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 82110e42b8cf28e3e285e0027ea31d61c8cc9370
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 Recupera o conjugado complexo de um número complexo.  

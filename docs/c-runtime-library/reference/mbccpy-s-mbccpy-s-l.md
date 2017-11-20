@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -41,30 +39,15 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 17a7cbf98fcdad7f3fffe490f99aece44146840e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 04c9091214928ecf7122868992974a0b0af9d3c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 Copia um caractere multibyte de uma cadeia de caracteres para outra. Essas versões de [_mbccpy, _mbccpy_l](../../c-runtime-library/reference/mbccpy-mbccpy-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -133,7 +116,7 @@ errno_t _mbccpy_s_l(
 |-----------|----------------------|---------------|------------------|  
 |byte não inicial|byte não inicial|1|0|  
 |0|0|1|0|  
-|byte inicial seguido por um valor diferente de&0;|byte inicial seguido por um valor diferente de&0;|2|0|  
+|byte inicial seguido por um valor diferente de 0|byte inicial seguido por um valor diferente de 0|2|0|  
 |byte inicial seguido por 0|0|1|`EILSEQ`|  
   
  Observe que a segunda linha é apenas um caso especial do primeiro. Observe também que a tabela considera `buffSizeInBytes` >= `pCopied`.  

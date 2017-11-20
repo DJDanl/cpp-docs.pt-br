@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdialogimpl-class"></a>Classe CDialogImpl
 Essa classe fornece métodos para criar uma caixa de diálogo modal ou sem janela restrita.  
@@ -110,7 +93,7 @@ template <class T,
 > [!NOTE]
 >  A classe deve definir um **IDD** membro que especifica a ID de recurso de modelo de caixa de diálogo. Por exemplo, o Assistente de projeto de ATL adiciona automaticamente a linha a seguir à sua classe:  
   
- [!code-cpp[NVC_ATL_Windowing 41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  onde `MyDlg` é o **nome curto** inseridas no Assistente de **nomes** página.  
   
@@ -118,8 +101,8 @@ template <class T,
 |--------------------------------|---------|  
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Usando caixas de diálogo do ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|  
-|Assistente de Projeto da ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Caixas de diálogo|[Caixas de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e tópicos subsequentes de[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Assistente de projeto ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
+|Caixas de diálogo|[Caixas de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e tópicos subsequentes no SDK do Windows|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  

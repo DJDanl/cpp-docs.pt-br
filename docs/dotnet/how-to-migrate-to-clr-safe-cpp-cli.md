@@ -1,57 +1,56 @@
 ---
-title: "Como migrar para /clr:safe (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /clr [C++], Migrando para /clr:safe"
-  - "migração [C++], assemblies verificáveis"
-  - "atualizando aplicativos Visual C++, assemblies verificáveis"
-  - "assemblies verificáveis [C++], Migrando para "
+title: 'Como: migrar para o clr-: safe (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- migration [C++], verifiable assemblies
+- upgrading Visual C++ applications, verifiable assemblies
+- verifiable assemblies [C++], migrating to
+- /clr compiler option [C++], migrating to /clr:safe
 ms.assetid: 75f9aae9-1dcc-448a-aa11-2d96f972f9d2
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e653c477864f4e8676da8125ce9e75df37188e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como migrar para /clr:safe (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ pode gerar componentes verificáveis usando **\/clr:safe**, que faz com que o compilador gerencia erros para cada construção não gerencie o código.  
+# <a name="how-to-migrate-to-clrsafe-ccli"></a>Como migrar para /clr:safe (C++/CLI)
+Visual C++ pode gerar verificáveis componentes usando **/CLR: safe**, que faz com que o compilador gere erros para cada construção de código não verificável.  
   
-## Comentários  
- Os seguintes problemas gerenciem erros de verificabilidade:  
+## <a name="remarks"></a>Comentários  
+ Os problemas a seguir geram erros de capacidade de verificação:  
   
--   Tipos nativos.  Mesmo se não for usada, a declaração de classes nativas, de estruturas, de ponteiros, ou de matrizes impedirá a compilação.  
+-   Tipos nativos. Mesmo se não for usado, a declaração de classes nativas, estruturas, ponteiros ou matrizes impedirá a compilação.  
   
 -   Variáveis globais  
   
--   Chamadas de função em qualquer biblioteca não gerenciado, incluindo chamadas de função de Common Language Runtime  
+-   Chamadas de função em qualquer biblioteca não gerenciada, incluindo chamadas de função de tempo de execução de linguagem comum  
   
--   Uma função verificável não pode conter [Operador static\_cast](../cpp/static-cast-operator.md) para a conversão para baixo.  [Operador static\_cast](../cpp/static-cast-operator.md) pode ser usado para converter entre tipos primitivos, mas para a conversão para baixo, o [safe\_cast](../windows/safe-cast-cpp-component-extensions.md) ou a c a conversão de estilo \(que é implementada como [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)\) deve ser usada.  
+-   Uma função verificável não pode conter um [operador static_cast](../cpp/static-cast-operator.md) para conversão inferior. O [operador static_cast](../cpp/static-cast-operator.md) pode ser usado para conversão entre tipos primitivos, mas para conversão de baixo [safe_cast](../windows/safe-cast-cpp-component-extensions.md) ou uma conversão C-Style (que é implementado como um [safe_cast](../windows/safe-cast-cpp-component-extensions.md)) deve ser usado.  
   
--   Uma função verificável não pode conter [Operador reinterpret\_cast](../cpp/reinterpret-cast-operator.md) \(ou qualquer equivalente convertido de estilo 2.0 \- c\).  
+-   Uma função verificável não pode conter um [operador reinterpret_cast](../cpp/reinterpret-cast-operator.md) (ou equivalente qualquer conversão C-style).  
   
--   Uma função verificável não pode executar a aritmética em [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md).  Só pode atribuir e desreferenciar\-la.  
+-   Uma função verificável não pode executar cálculos aritméticos em uma [interior_ptr (C + + CLI)](../windows/interior-ptr-cpp-cli.md). Ele só pode atribuir a ela e referência.  
   
--   Uma função verificável só pode gerar ou captura ponteiros para referenciar tipos, assim os tipos de valores devem ser boxed antes de gerar.  
+-   Uma função verificável somente pode lançar ou capturar ponteiros para tipos de referência, para que tipos de valor devem ser boxed antes de lançar.  
   
--   Uma função verificável só pode chamar funções verificáveis \(tais que as chamadas para Common Language Runtime não sejam permitidos, incluem `AtEntry`\/`AtExit`, e assim que os construtores globais são desaprovados.\)  
+-   Uma função verificável somente é possível chamar funções verificáveis (que não são permitidas chamadas para o common language runtime, incluir `AtEntry` / `AtExit`, e, portanto, global construtores não são permitidos).  
   
--   Uma classe verificável não pode usar <xref:System.Runtime.InteropServices.LayoutKind>.  
+-   Não é possível usar uma classe verificável <xref:System.Runtime.InteropServices.LayoutKind>.  
   
--   Se estiver compilando EXE, uma função principal não pode declarar nenhum parâmetro, de modo que <xref:System.Environment.GetCommandLineArgs%2A> deve ser usado para recuperar argumentos de linha de comando.  
+-   Se criar um EXE, uma função principal não pode declarar qualquer parâmetro, portanto <xref:System.Environment.GetCommandLineArgs%2A> deve ser usada para recuperar os argumentos de linha de comando.  
   
--   Fazendo uma chamada não virtual para uma função virtual.  Por exemplo:  
+-   Fazendo uma chamada de máquina virtual para uma função virtual. Por exemplo:  
   
     ```  
     // not_verifiable.cpp  
@@ -68,17 +67,17 @@ Visual C\+\+ pode gerar componentes verificáveis usando **\/clr:safe**, que faz
     }  
     ```  
   
- Além disso, as seguintes palavras\-chave não podem ser usados no código verificável:  
+ Além disso, as seguintes palavras-chave não podem ser usadas no código verificável:  
   
--   [não gerenciado](../preprocessor/managed-unmanaged.md) e pragmas de [bloco](../preprocessor/pack.md)  
+-   [não gerenciado](../preprocessor/managed-unmanaged.md) e [pacote](../preprocessor/pack.md) pragmas  
   
--   [despido](../Topic/naked%20\(C++\).md) e modificadores de [alinhar](../cpp/align-cpp.md)[\_\_declspec](../cpp/declspec.md)  
+-   [naked](../cpp/naked-cpp.md) e [alinhar](../cpp/align-cpp.md) [declspec](../cpp/declspec.md) modificadores  
   
--   [\_\_asm](../assembler/inline/asm.md)  
+-   [__asm](../assembler/inline/asm.md)  
   
--   [\_\_based](../cpp/based-grammar.md)  
+-   [__based](../cpp/based-grammar.md)  
   
--   [\_\_try](../cpp/try-except-statement.md) e `__except`  
+-   [Try](../cpp/try-except-statement.md) e`__except`  
   
-## Consulte também  
- [Código puro e verificável](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+## <a name="see-also"></a>Consulte também  
+ [Código puro e verificável (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

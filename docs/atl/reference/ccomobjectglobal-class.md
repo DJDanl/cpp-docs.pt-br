@@ -1,11 +1,10 @@
 ---
-title: Classe CComObjectGlobal | Documentos do Microsoft
+title: Classe CComObjectGlobal | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectGlobal::QueryInterface
 - ATLCOM/ATL::CComObjectGlobal::Release
 - ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectGlobal class
+dev_langs: C++
+helpviewer_keywords: CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 8c371eee9de660a2bb08e67f35a5a6c81d32eee0
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 7684f01b9d9fa3a8be434152f190e91d0dccae3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
 Essa classe gerencia uma contagem de referência no módulo que contém o `Base` objeto.  
@@ -58,7 +40,7 @@ class CComObjectGlobal : public Base
   
 #### <a name="parameters"></a>Parâmetros  
  `Base`  
- Sua classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface para o qual você deseja oferecer suporte no objeto.  
+ A classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface desejar dar suporte ao objeto.  
   
 ## <a name="members"></a>Membros  
   
@@ -73,9 +55,9 @@ class CComObjectGlobal : public Base
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComObjectGlobal::AddRef](#addref)|Implementa uma global `AddRef`.|  
-|[CComObjectGlobal::QueryInterface](#queryinterface)|Implementa uma global `QueryInterface`.|  
-|[CComObjectGlobal::Release](#release)|Implementa uma global **versão**.|  
+|[CComObjectGlobal::AddRef](#addref)|Implementa um global `AddRef`.|  
+|[CComObjectGlobal::QueryInterface](#queryinterface)|Implementa um global `QueryInterface`.|  
+|[CComObjectGlobal::Release](#release)|Implementa um global **versão**.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -84,7 +66,7 @@ class CComObjectGlobal : public Base
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Contém o **HRESULT** retornado durante a construção do `CComObjectGlobal` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComObjectGlobal`gerencia uma contagem de referência no módulo que contém o `Base` objeto. `CComObjectGlobal`garante que o objeto não será excluído desde que o módulo não é liberado. O objeto será removido somente quando a contagem de referência em todo o módulo chega a zero.  
+ `CComObjectGlobal`gerencia uma contagem de referência no módulo que contém o `Base` objeto. `CComObjectGlobal`garante que o objeto não será excluído desde que o módulo não está liberado. O objeto será removido apenas quando a contagem de referência em todo o módulo chega a zero.  
   
  Por exemplo, usando `CComObjectGlobal`, uma fábrica de classes pode conter um objeto global comum que é compartilhado por todos os seus clientes.  
   
@@ -104,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor que pode ser útil para o diagnóstico e teste.  
+ Um valor que pode ser útil para diagnóstico e de teste.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, `AddRef` chamadas **_Module::Lock**, onde **_Module** é a instância global do [CComModule](../../atl/reference/ccommodule-class.md) ou uma classe derivada.  
@@ -130,7 +112,7 @@ CComObjectGlobal();
  Libera todos os recursos alocados e chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
 ##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
- Contém o `HRESULT` de chamar `FinalConstruct` durante a construção do `CComObjectGlobal` objeto.  
+ Contém o `HRESULT` chamar `FinalConstruct` durante a construção do `CComObjectGlobal` objeto.  
   
 ```
 HRESULT m_hResFinalConstruct;
@@ -148,7 +130,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  [in] O GUID da interface que está sendo solicitado.  
   
  `ppvObject`  
- [out] Um ponteiro para o ponteiro de interface identificado pelo iid, ou **nulo** se a interface não for encontrada.  
+ [out] Um ponteiro para o ponteiro de interface identificado pelo iid, ou **nulo** se a interface não foi encontrada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
@@ -164,7 +146,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Em compilações de depuração, **versão** retorna um valor que pode ser útil para o diagnóstico e teste. Em compilações de depuração não **versão** sempre retorna 0.  
+ Em compilações de depuração, **versão** retorna um valor que pode ser útil para diagnóstico e de teste. Em compilações de depuração não **versão** sempre retorna 0.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, **versão** chamadas **_Module::Unlock**, onde **_Module** é a instância global do [CComModule](../../atl/reference/ccommodule-class.md) ou uma classe derivada.  
@@ -174,4 +156,3 @@ STDMETHOD_(ULONG, Release)();
  [Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
  [Classe CComObject](../../atl/reference/ccomobject-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

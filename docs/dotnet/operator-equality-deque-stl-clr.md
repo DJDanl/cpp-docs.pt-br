@@ -1,33 +1,30 @@
 ---
-title: "operador== (deque) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator== [STL/CLR]"
+title: operador = = (deque) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: b97de473-8a30-4278-b25f-79429f55a764
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 091b21464038da9c5fa5c9d6d2748e6553777357
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operador== (deque) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comparação de igual de Deque.  
+# <a name="operator-deque-stlclr"></a>operador== (deque) (STL/CLR)
+Comparação do deque igual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Value>  
@@ -35,17 +32,17 @@ template<typename Value>
         deque<Value>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  esquerda  
- Contêiner esquerdo da ser comparada.  
+ Contêiner esquerdo a comparar.  
   
  direita  
- Contêiner direito da ser comparada.  
+ Contêiner direito a comparar.  
   
-## Comentários  
- A função do operador só retornará true se as sequências controladas por `left` e por `right` têm o mesmo tamanho e, para cada posição `i`, `left``[i] ==` `right``[i]`.  Use\-a para testar se `left` é ordenado da mesma forma que `right` quando os dois deques elemento são comparados pelo elemento.  
+## <a name="remarks"></a>Comentários  
+ A função de operador retorna true somente se as sequências controlados por `left` e `right` ter o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você pode usá-lo para testar se `left` é ordenado igual `right` quando os dois deques estão em comparação com o elemento pelo elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_operator_eq.cpp   
@@ -84,19 +81,22 @@ int main()
   
 ```  
   
-  **um b c**  
- **um de b**  
-**\[um b c\] \=\= \[um b c\] é true**  
-**\[um b c\] \=\= b de um \[\] é false**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::operator\!\=](../dotnet/deque-operator-inequality-stl-clr.md)   
- [operador\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)   
- [operador\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
- [operador\> \(deque\)](../dotnet/operator-greater-than-deque-stl-clr.md)   
- [operador\<\= \(deque\)](../dotnet/operator-less-or-equal-deque-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: Operator! = (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)   
+ [operador\< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)   
+ [operador > = (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
+ [operador > (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)   
+ [operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)

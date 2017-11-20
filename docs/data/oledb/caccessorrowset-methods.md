@@ -1,26 +1,24 @@
 ---
-title: "M&#233;todos (CAccessorRowset) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CAccessorRowset, métodos"
+title: "Métodos CAccessorRowset | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CAccessorRowset class, methods
 ms.assetid: ab29d438-a382-4bd0-85fa-55182122ca00
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c1f14a5532fe604bdaaf28c70e77735f5b4c5fd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todos (CAccessorRowset)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para obter informações sobre os métodos em `CAccessorRowset`, consulte [Membros de CAccessorRowset](../../data/oledb/caccessorrowset-members.md).
+# <a name="caccessorrowset-methods"></a>Métodos (CAccessorRowset)
+Para obter informações sobre os métodos em `CAccessorRowset`, consulte [membros CAccessorRowset](../../data/oledb/caccessorrowset-members.md).

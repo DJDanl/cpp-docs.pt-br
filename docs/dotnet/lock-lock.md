@@ -1,36 +1,34 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "construtor de bloqueio"
+title: Lock::Lock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0bc0c0e61b4500bae9589cbf6b536f1a23ae45c8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria um objeto de `lock` opcionalmente, esperando para adquirir o bloqueio para sempre, para uma quantidade especificada de tempo, ou não.  
+# <a name="locklock"></a>lock::lock
+Constrói uma `lock` objeto, opcionalmente, esperando para adquirir o bloqueio para sempre, por um certo período de tempo ou não.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class T> lock(  
@@ -50,27 +48,27 @@ template<class T> lock(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `_object`  
  O objeto a ser bloqueada.  
   
  `_timeout`  
- Valor de tempo limite em milissegundos ou como <xref:System.TimeSpan>.  
+ Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.  
   
-## Exceções  
- Gerencie <xref:System.ApplicationException> se a aquisição do bloqueio não ocorre antes do tempo limite.  
+## <a name="exceptions"></a>Exceções  
+ Gera <xref:System.ApplicationException> se aquisição de bloqueio não ocorrerá antes do tempo limite.  
   
-## Comentários  
- Os primeiros três formulários do construtor tentam adquirir um bloqueio em `_object` dentro do tempo limite especificado \(ou de <xref:System.Threading.Timeout.Infinite> se nenhum for especificado\).  
+## <a name="remarks"></a>Comentários  
+ Os três primeiros formulários do construtor tentam adquirir um bloqueio em `_object` dentro do período de tempo limite especificado (ou <xref:System.Threading.Timeout.Infinite> se nenhum for especificado).  
   
- O quarto formulário de construtor não adquire um bloqueio em `_object`.  `lock_later` é um membro de [lock\_when Enum](../dotnet/lock-when-enum.md).  Use [lock::acquire](../dotnet/lock-acquire.md) ou [lock::try\_acquire](../Topic/lock::try_acquire.md) para adquirir caso em que o bloqueio.  
+ O quarto formulário do construtor não adquirir um bloqueio em `_object`. `lock_later`é um membro do [lock_when Enum](../dotnet/lock-when-enum.md). Use [lock::acquire](../dotnet/lock-acquire.md) ou [lock::try_acquire](../dotnet/lock-try-acquire.md) para adquirir o bloqueio nesse caso.  
   
  O bloqueio será liberado automaticamente quando o destruidor é chamado.  
   
- `_object` não pode ser <xref:System.Threading.ReaderWriterLock>.  Se for, um erro do compilador ocorrerá.  
+ `_object` não pode ser <xref:System.Threading.ReaderWriterLock>.  Se for, isso resultará em um erro do compilador.  
   
-## Exemplo  
- Este exemplo usa uma única instância de uma classe em vários threads.  A classe usar um bloqueio em para assegurar que acessa a seus dados internos são consistentes para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe para verificar periodicamente se algum thread de trabalho ainda existe, e para sair de espera até que todos os threads de trabalho foi concluído suas tarefas.  
+## <a name="example"></a>Exemplo  
+ Este exemplo usa uma única instância de uma classe em vários threads.  A classe usa um bloqueio em si mesmo para garantir que acessa a seus dados internos é consistente para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe Verifique periodicamente para ver se qualquer threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -144,24 +142,27 @@ int main() {
 }  
 ```  
   
-  **O thread 3, o contador \= 0**  
-**O thread 3, o contador \= 10**  
-**O thread 5, o contador \= 0**  
-**O thread 5, o contador \= 10**  
-**O thread 7, o contador \= 0**  
-**O thread 7, o contador \= 10**  
-**O thread 4, o contador \= 0**  
-**O thread 4, o contador \= 10**  
-**O thread 6, o contador \= 0**  
-**O thread 6, o contador \= 10**  
-**Todos os threads concluídos.**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\lock.h >  
   
-## Consulte também  
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
  [Membros de bloqueio](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
- [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../Topic/lock::try_acquire.md)
+ [bloqueio:: ~ lock](../dotnet/lock-tilde-lock.md)   
+ [Lock::acquire](../dotnet/lock-acquire.md)   
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

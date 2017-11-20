@@ -1,32 +1,31 @@
 ---
-title: "Tipos gerenciados e a fun&#231;&#227;o principal (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função main, em aplicativos gerenciados"
-  - "código gerenciado, função main()"
+title: "Tipos gerenciados e a função principal (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- main function, in managed applications
+- managed code, main() function
 ms.assetid: 9d0e9620-58c4-4dac-a0e1-ffeb95f80fa5
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b1a6d8b330108c5fba953567493551894036a7a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Tipos gerenciados e a fun&#231;&#227;o principal (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ao escrever um aplicativo usando **\/clr**, os argumentos da função de **main\(\)** não podem ser de um tipo gerenciado.  
+# <a name="managed-types-and-the-main-function-ccli"></a>Tipos gerenciados e a função principal (C++/CLI)
+Ao escrever um aplicativo usando **/clr**, os argumentos do **Main** função não pode ser de um tipo gerenciado.  
   
- Um exemplo de uma assinatura é apropriada:  
+ Um exemplo de uma assinatura apropriada é:  
   
 ```  
 // managed_types_and_main.cpp  
@@ -34,5 +33,5 @@ Ao escrever um aplicativo usando **\/clr**, os argumentos da função de **main\
 int main(int, char*[], char*[]) {}  
 ```  
   
-## Consulte também  
- [Tipos gerenciados](../Topic/Managed%20Types%20\(C++-CLI\).md)
+## <a name="see-also"></a>Consulte também  
+ [Tipos gerenciados (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

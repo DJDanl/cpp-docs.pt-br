@@ -1,37 +1,35 @@
 ---
-title: "IRowsetChangeImpl::InsertRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetChangeImpl.InsertRow"
-  - "InsertRow"
-  - "IRowsetChangeImpl.InsertRow"
-  - "ATL::IRowsetChangeImpl::InsertRow"
-  - "IRowsetChangeImpl::InsertRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método InsertRow"
+title: 'Irowsetchangeimpl:: Insertrow | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetChangeImpl.InsertRow
+- InsertRow
+- IRowsetChangeImpl.InsertRow
+- ATL::IRowsetChangeImpl::InsertRow
+- IRowsetChangeImpl::InsertRow
+dev_langs: C++
+helpviewer_keywords: InsertRow method
 ms.assetid: 93027be3-921e-438e-a19a-6e5aadb813eb
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 77f30e6254dce7c92100c216c78eb80fe1c23952
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetChangeImpl::InsertRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetchangeimplinsertrow"></a>IRowsetChangeImpl::InsertRow
 Cria e inicializa uma nova linha no conjunto de linhas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -43,11 +41,11 @@ Cria e inicializa uma nova linha no conjunto de linhas.
 );  
 ```  
   
-#### Parâmetros  
- Consulte [IRowsetChange::InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx)*na referência do programador de OLE DB*.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [IRowsetChange:: Insertrow](https://msdn.microsoft.com/en-us/library/ms716921.aspx) no *referência do programador de OLE DB*.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)

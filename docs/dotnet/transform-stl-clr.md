@@ -1,33 +1,30 @@
 ---
-title: "transforma&#231;&#227;o (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::transform"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "função de transformação [STL/CLR]"
+title: "transformação (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::transform
+dev_langs: C++
+helpviewer_keywords: transform function [STL/CLR]
 ms.assetid: 08940969-6d10-40e4-a35b-68dd801b3949
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 71a1c584aa03a360107d51f852b1768fa71dc48e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# transforma&#231;&#227;o (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Aplica um objeto especificado da função a cada elemento em um intervalo de origem ou a um par de elementos de dois intervalos de origem e copiar os valores de retorno do objeto da função em um intervalo de destino.  
+# <a name="transform-stlclr"></a>transformação (STL/CLR)
+Aplica um objeto de função especificado a cada elemento em um intervalo de origem ou a um par de elementos de dois intervalos de origem e copia os valores de retorno do objeto de função em um intervalo de destino.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _InIt, class _OutIt, class _Fn1> inline  
@@ -38,13 +35,13 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
         _OutIt _Dest, _Fn2 _Func);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `transform`STL.  Para obter mais informações, consulte [transformação](../Topic/transform.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `transform`. Para obter mais informações, consulte [transformação](../standard-library/algorithm-functions.md#transform).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

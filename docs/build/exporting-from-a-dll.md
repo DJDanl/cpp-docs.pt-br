@@ -1,71 +1,71 @@
 ---
-title: "Exportando a partir de uma DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Exportações de DLL [C++]"
-  - "DLLs [C++], exportando a partir de"
-  - "exportando DLLs [C++]"
-  - "exportando DLLs [C++], sobre exportação de DLLs"
-  - "exportando funções [C++], DLLs (exportando de)"
-  - "tabela de exportações [C++]"
-  - "funções [C++], exportando"
+title: Exportando a partir de uma DLL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting DLLs [C++], about exporting from DLLs
+- exporting functions [C++], DLLs (exporting from)
+- exporting DLLs [C++]
+- DLLs [C++], exporting from
+- DLL exports [C++]
+- functions [C++], exporting
+- exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a591628d74320dee7868b0c689bd4d61bb19073d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Exportando a partir de uma DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um arquivo de DLL tem um layout muito semelhante a um arquivo .exe, com uma diferença importante — um arquivo de DLL contém uma tabela de exportações.  A tabela de exportações contém o nome de cada função que o DLL exporta a outros executáveis.  Essas funções são os pontos de entrada na DLL; apenas funções na tabela de exportações podem ser acessadas por outros executáveis.  Todas as outras funções na DLL são privadas para a DLL.  A tabela de exportações de uma DLL podem ser exibidas usando a ferramenta de [DUMPBIN](../build/reference/dumpbin-reference.md) com a opção do \/EXPORTS.  
+# <a name="exporting-from-a-dll"></a>Exportando a partir de uma DLL  
   
- Você pode exportar funções de uma DLL usando dois métodos:  
+Um arquivo DLL tem um layout muito semelhante a um arquivo de .exe, com uma diferença importante — um arquivo DLL contém uma tabela de exportações. A tabela de exportações contém o nome de cada função que a DLL exporta para outros executáveis. Essas funções são os pontos de entrada para a DLL; somente as funções na tabela de exportações podem ser acessadas por outros executáveis. Outras funções na DLL são particulares a DLL. A tabela de exportações de uma DLL pode ser exibida usando o [DUMPBIN](../build/reference/dumpbin-reference.md) ferramenta com a opção /EXPORTS.  
   
--   Crie um arquivo de definição de módulo \(.def\) e o arquivo .def durante a criação da DLL.  Use esta abordagem se desejar que a [exportar funções do DLL por ordinal em vez de por nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
+ Você pode exportar as funções de uma DLL usando dois métodos:  
   
--   Use a palavra\-chave **\_\_declspec\(dllexport\)** na definição de função.  
+-   Criar um arquivo de definição (. def) do módulo e usar o arquivo. def ao criar a DLL. Use essa abordagem se quiser [exportar funções da sua DLL por ordinal em vez de nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
   
- Ao exportar funções com um ou outro método, use [\_\_stdcall](../cpp/stdcall.md) que chama a convenção.  
+-   Use a palavra-chave **dllexport** na definição da função.  
   
-## O que você deseja fazer?  
+ Ao exportar funções com um desses métodos, certifique-se de usar o [stdcall](../cpp/stdcall.md) convenção de chamada.  
   
--   [Exportação de uma DLL usando arquivos .def](../build/exporting-from-a-dll-using-def-files.md)  
+## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?  
   
--   [Exportar de uma DLL usando \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Exportar de uma DLL usando arquivos. def](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Exportar e importar usando AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Exportar de uma DLL usando dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Exportar funções de C\+\+ para uso em executáveis de linguagem C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Exportar e importar usando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Exportar funções de C para uso em executáveis de linguagem C ou C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Exportar funções C++ para uso em executáveis da linguagem C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Exportar funções de uma DLL por ordinal em vez de por nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
+-   [Exportar funções C para uso em executáveis C ou linguagem C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Determine o método de exportação a ser usado](../build/determining-which-exporting-method-to-use.md)  
+-   [Funções de exportação de uma DLL por ordinal em vez de nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
   
--   [Determine o método de vinculação a ser usado](../build/determining-which-linking-method-to-use.md)  
+-   [Determinar qual método de exportação a ser usado](../build/determining-which-exporting-method-to-use.md)  
   
--   [Inicialize um DLL](../build/initializing-a-dll.md)  
+-   [Determinar qual método de associação usar](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Que você deseja saber mais?  
+-   [Inicializar uma DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
--   [Importar em um aplicativo](../build/importing-into-an-application.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [Importando e exportando funções embutidas](../Topic/Importing%20and%20Exporting%20Inline%20Functions.md)  
+-   [Importando para um aplicativo](../build/importing-into-an-application.md)  
   
--   [Importações Mútuas](../Topic/Mutual%20Imports.md)  
+-   [Importando e exportando funções embutidas](../build/importing-and-exporting-inline-functions.md)  
   
-## Consulte também  
+-   [Importações mútuas](../build/mutual-imports.md)  
+  
+## <a name="see-also"></a>Consulte também  
  [Importando e exportando](../build/importing-and-exporting.md)

@@ -1,33 +1,30 @@
 ---
-title: "operador&lt; (stack) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator< [STL/CLR]"
+title: operador&lt; (stack) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: 77f8dd42-89d1-4ce1-a7ec-04c3a45dd3ee
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5b0d2c7ef3da417c85cd7c4ec69714b8b635e46c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operador&lt; (stack) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Pilha menor que a comparação.  
+# <a name="operatorlt-stack-stlclr"></a>operador&lt; (stack) (STL/CLR)
+Pilha de menos de comparação.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Value,  
@@ -36,17 +33,17 @@ template<typename Value,
         stack<Value, Container>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  esquerda  
- Contêiner esquerdo da ser comparada.  
+ Contêiner esquerdo a comparar.  
   
  direita  
- Contêiner direito da ser comparada.  
+ Contêiner direito a comparar.  
   
-## Comentários  
- A função do operador retornará true se, da mais baixa posição `i` para que `!(``right``[i] <` `left``[i])` ele também será true `left`que`[i] <` `right``[i]`.  Caso contrário, retorna `left``->`[stack::size](../dotnet/stack-size-stl-clr.md)`() <` `right``->size()` que você usa para testar se `left` é ordenado antes de `right` quando as duas pilhas elemento são comparados pelo elemento.  
+## <a name="remarks"></a>Comentários  
+ O operador função retornará true se, para a posição mais baixa `i` para o qual `!(right[i] < left[i])` é verdade que também `left[i] < right[i]`. Caso contrário, retornará `left->` [Stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` usá-lo para testar se `left` são ordenados antes `right` quando duas pilhas são comparado elemento pelo elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_stack_operator_lt.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **um b c**  
- **um de b**  
-**\[um b c\] \< \[um b c\] é false**  
-**\[um b c\] \< \[\] de um b é true**   
-## Requisitos  
- cliext \<\/pilha de**Cabeçalho:** \>  
+```Output  
+ a b c  
+ a b d  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/pilha >  
   
-## Consulte também  
- [stack](../dotnet/stack-stl-clr.md)   
- [operador\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)   
- [operador\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)   
- [operador\>\= \(stack\)](../Topic/operator%3E=%20\(stack\)%20\(STL-CLR\).md)   
- [operador\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)   
- [operador\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [pilha (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [operador = = (stack) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)   
+ [operador! = (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)   
+ [operador > = (stack) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
+ [operador > (stack) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)   
+ [operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)

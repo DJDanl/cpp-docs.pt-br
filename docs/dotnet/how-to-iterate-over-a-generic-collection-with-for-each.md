@@ -1,32 +1,30 @@
 ---
-title: "Como iterar em uma cole&#231;&#227;o gen&#233;rica com for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "coleção genérica, iterando sobre"
+title: "Como: iterar em uma coleção genérica com for each | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: generic collection, iterating over
 ms.assetid: 00288d53-3d41-44d0-be5b-b3033456ceaa
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d4d01ef87b51195f7ff7a05acbdad4a34ca566c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como iterar em uma cole&#231;&#227;o gen&#233;rica com for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O recurso de [Generics](../windows/generics-cpp-component-extensions.md) do Visual C\+\+ permite que você crie coleções genéricas.  
+# <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Como iterar em uma coleção genérica com for each
+O [genéricos](../windows/generics-cpp-component-extensions.md) recurso do Visual C++ permite que você crie coleções genéricas.  
   
-## Exemplo  
- Este exemplo mostra como usar `for each` com uma coleção genérica simples de tipo de valor.  
+## <a name="example"></a>Exemplo  
+ Este exemplo mostra como usar `for each` com uma coleção de tipo genérico de valor simples.  
   
 ```  
 // for_each_generics.cpp  
@@ -93,8 +91,11 @@ int main() {
 }  
 ```  
   
-  **10**  
-**20**  
-**30**   
-## Consulte também  
+```Output  
+10  
+20  
+30  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [for each, in](../dotnet/for-each-in.md)

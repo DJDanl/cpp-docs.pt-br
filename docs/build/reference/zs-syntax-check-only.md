@@ -1,60 +1,58 @@
 ---
-title: "/Zs (apenas verifica&#231;&#227;o da sintaxe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /Zs (C++)"
-  - "Opção de compilador Apenas Verificação de Sintaxe"
-  - "Opção de compilador Zs"
-  - "Opção de compilador -Zs [C++]"
+title: "-Zs (apenas verificação da sintaxe) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /zs
+dev_langs: C++
+helpviewer_keywords:
+- -Zs compiler option [C++]
+- Syntax Check Only compiler option
+- Zs compiler option
+- /Zs compiler option [C++]
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: eb23032f7c0cd4b59a510c632b3311a09b520301
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /Zs (apenas verifica&#231;&#227;o da sintaxe)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Informa o compilador para verificar somente a sintaxe de arquivos de origem na linha de comando.  
+# <a name="zs-syntax-check-only"></a>/Zs (apenas verificação da sintaxe)
+Informa ao compilador para verificar somente a sintaxe dos arquivos de origem na linha de comando.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Zs  
 ```  
   
-## Comentários  
- Ao usar essa opção, nenhum arquivo de saída é criado, e as mensagens de erro são gravadas para a saída padrão.  
+## <a name="remarks"></a>Comentários  
+ Ao usar essa opção, nenhum arquivo de saída é criado e mensagens de erro são gravadas na saída padrão.  
   
- A opção de **\/Zs** fornece um modo rápido de localizar e erros de sintaxe corretos antes de compilar e vincula um arquivo de origem.  
+ O **/Zs** opção fornece uma maneira rápida de localizar e corrigir erros de sintaxe antes de compilar e vincular a um arquivo de origem.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador na caixa **Opções Adicionais**.  
+4.  Digite a opção de compilador no **opções adicionais** caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

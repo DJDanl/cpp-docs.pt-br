@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- template_cpp
-dev_langs:
-- C++
+f1_keywords: template_cpp
+dev_langs: C++
 helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6ce40029e40906441ebd7c64ff9011a61f26045b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32c65fc68bc9e7be2770e951de466e48f482af90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="templates-c"></a>Modelos (C++)
 Modelos são a base para programação genérica em C++. Como uma linguagem fortemente tipada, C++ requer que todas as variáveis com um tipo específico, explicitamente declarado pelo programador ou deduzido pelo compilador. No entanto, muitos algoritmos e estruturas de dados terá a mesma aparência, independentemente do tipo que estejam operando em. Habilitar modelos definem as operações de uma classe ou função e permitir que o usuário especifique quais concreto tipos essas operações deve funcionar no.  

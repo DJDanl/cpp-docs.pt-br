@@ -1,42 +1,41 @@
 ---
-title: "Como realizar marshaling de ponteiros inseridos usando PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "realização de marshaling em dados [C++], ponteiros inseridos"
-  - "ponteiros inseridos [C++]"
-  - "interoperabilidade [C++], ponteiros inseridos"
-  - "realização de marshaling [C++], ponteiros inseridos"
-  - "invocação de plataforma [C++], ponteiros inseridos"
+title: 'Como: marshaling de ponteiros inseridos usando PInvoke | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- embedded pointers [C++]
+- interop [C++], embedded pointers
+- platform invoke [C++], embedded pointers
+- marshaling [C++], embedded pointers
+- data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8f6716a11919c300dc3153ca678767503a35088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como realizar marshaling de ponteiros inseridos usando PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-As funções que são implementadas na DLL não gerenciado podem ser chamadas de código gerenciado usando a funcionalidade de invocação de plataforma \(P\/Invoke\).  Se o código\-fonte do DLL não estiver disponível, P\/Invoke é a única opção para interoperar.  No entanto, diferentemente de outras linguagens .NET, Visual C\+\+ fornece uma alternativa a P\/Invoke.  Para obter mais informações, consulte [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [Como realizar marshaling de ponteiros inseridos usando interop C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Como realizar marshaling de ponteiros inseridos usando PInvoke
+Funções que são implementadas em DLLs não gerenciados podem ser chamadas de código gerenciado usando a funcionalidade de invocação de plataforma (P/Invoke). Se o código-fonte para a DLL não estiver disponível, o P/Invoke é a única opção para interoperar. No entanto, ao contrário de outras linguagens .NET, o Visual C++ fornece uma alternativa para P/Invoke. Para obter mais informações, consulte [usando Interop C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [como: marshaling incorporado ponteiros usando Interop C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
-## Exemplo  
- Passe estruturas em código nativo que requer uma estrutura gerenciado que é equivalente em termos de layout de dados à estrutura nativo é criada.  No entanto, as estruturas que contêm ponteiros exigem tratamento especial.  Para cada ponteiro inserido na estrutura nativo, a versão gerenciado da estrutura deve conter uma instância do tipo de <xref:System.IntPtr> .  Além disso, a memória para essas instâncias deve ser atribuída explicitamente, inicializado, e liberada usando <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, e os métodos de <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> .  
+## <a name="example"></a>Exemplo  
+ Passando estruturas para código nativo requer que uma estrutura gerenciada equivalente em termos de layout de dados para a estrutura nativa é criada. No entanto, as estruturas que contêm ponteiros requerem tratamento especial. Para cada ponteiro incorporado na estrutura de nativo, a versão gerenciada da estrutura deve conter uma instância das <xref:System.IntPtr> tipo. Além disso, memória para essas instâncias devem ser explicitamente alocadas, inicializado e liberadas usando o <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, e <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> métodos.  
   
- O código a seguir consiste em um módulo não gerenciado e gerenciado.  O módulo não gerenciado é uma DLL que define uma função que aceita uma estrutura chamada ListString que contém um ponteiro, e uma função chamada TakesListStruct.  O módulo gerenciado é um aplicativo de linha de comando que importa a função de TakesListStruct e define uma estrutura chamada MListStruct que é equivalente a ListStruct nativo com exceção de que o double\* é representado por uma instância de <xref:System.IntPtr> .  Antes de chamar TakesListStruct, a função principal e atribui inicializa a memória que faz referência a esse campo.  
+ O código a seguir consiste em uma não gerenciado e um módulo gerenciado. O módulo não gerenciado é uma DLL que define uma função que aceita uma estrutura chamada ListString que contém um ponteiro e uma função chamada TakesListStruct. O módulo gerenciado é um aplicativo de linha de comando que importa a função TakesListStruct e define uma estrutura chamada MListStruct que é equivalente a ListStruct nativo, exceto que duplo * é representada com um <xref:System.IntPtr> instância. Antes de chamar TakesListStruct, a função principal aloca e inicializa a memória que faz referência a esse campo.  
   
- O módulo gerenciado é compilado com \/clr, mas trabalho de \/clr:pure também.  
+ O módulo gerenciado é compilado com /clr, mas com /clr: pure funciona bem. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll6.cpp  
 // compile with: /EHsc /LD  
 #include <stdio.h>  
@@ -66,7 +65,7 @@ void TakesListStruct(ListStruct list) {
 }  
 ```  
   
-```  
+```cpp  
 // EmbeddedPointerMarshalling.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -108,7 +107,7 @@ int main() {
 }  
 ```  
   
- Observe que nenhuma parte da DLL está exposta ao código gerenciado usando a diretiva tradicional de \#include.  De fato, a DLL é acessado em tempo de execução, apenas assim que os problemas com as funções com <xref:System.Runtime.InteropServices.DllImportAttribute> importadas não serão detectados em tempo de compilação.  
+ Observe que nenhuma parte da DLL é exposto para o código gerenciado usando o tradicional # diretiva include. Na verdade, a DLL é acessada no tempo de execução, para problemas com funções importados com <xref:System.Runtime.InteropServices.DllImportAttribute> não serão detectadas em tempo de compilação.  
   
-## Consulte também  
- [Usando PInvoke explícito em C\+\+ \(atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando PInvoke explícito no C++ (atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

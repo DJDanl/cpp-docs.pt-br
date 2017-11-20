@@ -1,49 +1,48 @@
 ---
-title: "Como criar projetos vazios CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "projetos vazios CLR"
-  - "projetos vazios CLR, criando"
+title: 'Como: criar projetos vazios CLR | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CLR empty projects
+- CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4fbfb48043f694788405ce8e99317a614d36b53b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como criar projetos vazios CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Para criar um projeto vazio de CLR, use o modelo de **Projeto CLR Vazio** , que está disponível na caixa de diálogo de **Novo Projeto** .  
+# <a name="how-to-create-clr-empty-projects"></a>Como criar projetos vazios CLR
+Para criar um projeto vazio do CLR, use o **projeto vazio do CLR** modelo, que está disponível a partir de **novo projeto** caixa de diálogo.  
   
 > [!NOTE]
->  A aparência dos recursos no IDE pode depender de sua configurações ou edição ativa, e podem ser diferentes de aquelas descritas na ajuda.  Para alterar as configurações, escolha **Importar e exportar configurações** no menu **Ferramentas**.  Para obter mais informações, consulte [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/pt-br/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  A aparência dos recursos no IDE pode depender de suas configurações ativas ou edição e pode diferir daqueles descritos na Ajuda. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Para criar um projeto vazio de CLR  
+### <a name="to-create-a-clr-empty-project"></a>Para criar um projeto vazio do CLR  
   
-1.  No menu **Arquivo**, clique em **Novo** e em **Projeto**.  
+1.  No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.  
   
      A caixa de diálogo **Novo Projeto** é exibida.  
   
-2.  Em **Modelos Instalados**, clique no nó de **Visual C\+\+** ; clique no nó de **CLR** .  Escolha o ícone de **Projeto CLR Vazio** .  
+2.  Em **modelos instalados**, clique no **Visual C++** nó; em seguida, clique no **CLR** nó. Escolha o **projeto vazio do CLR** ícone.  
   
-3.  Na caixa de **Nome** , digite um nome exclusivo para o seu aplicativo.  
+3.  No **nome** , digite um nome exclusivo para seu aplicativo.  
   
     > [!NOTE]
-    >  Você também pode especificar outras configurações de projeto e solução de diálogo de **Novo Projeto** , mas essas configurações não são necessárias.  
+    >  Você também pode especificar outras configurações de projeto e solução do **novo projeto** caixa de diálogo, mas essas configurações não são necessárias.  
   
 4.  Clique em **OK**.  
   
-## Consulte também  
- [Tipos de projeto do Visual C\+\+](../ide/visual-cpp-project-types.md)   
- [Tipos de projeto do Visual C\+\+](../Topic/Debugging%20Preparation:%20Visual%20C++%20Project%20Types.md)
+## <a name="see-also"></a>Consulte também  
+ [Tipos de projeto do Visual C++](../ide/visual-cpp-project-types.md)   
+ [Tipos de projeto do Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

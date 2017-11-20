@@ -1,42 +1,41 @@
 ---
-title: "Criando um arquivo .Sbr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .sbr"
-  - "BSCMAKE, arquivos de entrada"
-  - "símbolos locais nas informações de procura"
-  - "arquivos SBR"
-  - "arquivos de navegador de origem"
-  - "símbolos"
+title: Criar um. Arquivos SBR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SBR files
+- BSCMAKE, input files
+- .sbr files
+- source browser files
+- local symbols in browse information
+- symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fb3638f70d19d88228b8ff65eb78c479868f1b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Criando um arquivo .Sbr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Os arquivos de entrada para BSCMAKE são arquivos de .sbr.  O compilador cria um arquivo de .sbr para cada arquivo de objeto \(.obj\) que cria o.  Quando você cria ou atualiza o procurará o arquivo de informações do, todos os arquivos de .sbr para seu projeto devem estar disponíveis em disco.  
+# <a name="creating-an-sbr-file"></a>Criando um arquivo .Sbr
+Os arquivos de entrada para BSCMAKE são arquivos. SBR. O compilador cria um arquivo. SBR para cada arquivo de objeto (. obj) ele compila. Quando você criar ou atualizar o arquivo de informações de procura, todos os arquivos. SBR para seu projeto devem estar disponíveis no disco.  
   
- Para criar um arquivo de .sbr com todas as informações possível, especifique [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md).  
+ Para criar um arquivo. SBR com todas as informações possíveis, especifique [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md).  
   
- Para criar um .sbr arquivo que não contém símbolos locais, especifique [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md).  Se os arquivos de .sbr contêm símbolos locais, você ainda pode omiti\-los do arquivo de .bsc usando [opção \/El](../Topic/BSCMAKE%20Options.md)`.`de BSCMAKE  
+ Para criar um arquivo. SBR que não contenha símbolos locais, especifique [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md). Se os arquivos. SBR contém símbolos locais, você pode ainda omiti-los do arquivo. bsc por meio do BSCMAKE [opção /El](../../build/reference/bscmake-options.md)`.`  
   
- Você pode criar um arquivo de .sbr sem executar um backup completo compila.  Por exemplo, você pode especificar a opção \/Zs ao compilador executar uma verificação de sintaxe e ainda gerar um arquivo de .sbr se você especificar \/FR ou \/Fr.  
+ Você pode criar um arquivo. SBR sem executar uma compilação completa. Por exemplo, você pode especificar a opção /Zs ao compilador para executar uma verificação de sintaxe e ainda se você especificar /FR ou /Fr., gerar um arquivo. SBR  
   
- O processo de compilação pode ser mais eficiente se os arquivos de .sbr empacotados são principalmente para remover as definições não referenciada.  O compilador pacotes automaticamente arquivos de .sbr.  
+ O processo de compilação pode ser mais eficiente se os arquivos. SBR primeiro são compactados para remover as definições não referenciadas. O compilador automaticamente pacotes de arquivos. SBR.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Compilando um arquivo .Bsc](../../build/reference/building-a-dot-bsc-file.md)

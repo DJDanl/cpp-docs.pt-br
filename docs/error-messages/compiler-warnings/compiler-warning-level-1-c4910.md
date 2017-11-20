@@ -1,50 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4910 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4910 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4910
+dev_langs: C++
+helpviewer_keywords: C4910
 ms.assetid: 67963560-fbca-4ca7-93db-06beaf7055f0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c5d0a1873fef53b64c74c5971068214252ef80a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: f0402e03d77968de3b4c1addf58c481ec85a61b8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4910"></a>Compilador C4910 de aviso (nível 1)
 '\<identificador >': 'dllexport' e 'extern' são incompatíveis em uma instanciação explícita  
   
- A instanciação explícita de modelo chamada * \<identificador >* é modificado por ambos os `__declspec(dllexport)` e `extern` palavras-chave. No entanto, essas palavras-chave é mutuamente exclusivos. O `__declspec(dllexport)` palavra-chave significa criar uma instância da classe de modelo, enquanto o `extern` meios de palavra-chave não instanciar a classe de modelo automaticamente.  
+ A instanciação de template explícitos denominada  *\<identificador >* seja modificada por ambos os `__declspec(dllexport)` e `extern` palavras-chave. No entanto, essas palavras-chave é mutuamente exclusivos. O `__declspec(dllexport)` palavra-chave significa instanciar a classe de modelo, enquanto o `extern` palavra-chave significa automaticamente não instanciar a classe de modelo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Instanciação explícita](../../cpp/explicit-instantiation.md)   
  [dllexport, dllimport](../../cpp/dllexport-dllimport.md)   
- [Regras gerais e limitações](../../cpp/general-rules-and-limitations.md)
+ [Regras e limitações gerais](../../cpp/general-rules-and-limitations.md)

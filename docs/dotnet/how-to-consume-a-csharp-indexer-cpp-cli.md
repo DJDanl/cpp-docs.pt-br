@@ -1,39 +1,36 @@
 ---
-title: "Como consumir um indexador C# (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, indexadores"
-  - "indexadores, consumindo C#"
+title: 'Como: consumir um indexador c# (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
 ms.assetid: 5a11850c-a1a2-4a0a-b95e-f6dc5a87f439
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e7938022bfe2ba1a8f97420a217590de659d9e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como consumir um indexador C# (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ não contém indicadores; indexada de propriedades.  Para consumir um indicador C\#, acessar o medidor como se fosse uma propriedade indexada.  
+# <a name="how-to-consume-a-c-indexer-ccli"></a>Como consumir um indexador C# (C++/CLI)
+Visual C++ não contém indexadores; ele tem propriedades indexadas. Para consumir um indexador c#, acesse o indexador, como se fosse uma propriedade indexada.  
   
- Para obter mais informações sobre os indicadores, consulte:  
+ Para obter mais informações sobre indexadores, consulte:  
   
--   [Indexadores](../Topic/Indexers%20\(C%23%20Programming%20Guide\).md)  
+-   [Indexadores](https://msdn.microsoft.com/library/6x16t2tx.aspx)  
   
--   [Como usar propriedades indexadas](../misc/how-to-use-indexed-properties.md)  
-  
-## Exemplo  
- O programa C\# a seguir define um medidor.  
+## <a name="example"></a>Exemplo  
+ O programa c# a seguir define um indexador.  
   
 ```  
 // consume_cs_indexers.cs  
@@ -71,8 +68,8 @@ public class MainClass {
 */  
 ```  
   
-## Exemplo  
- Esse programa Visual C\+\+ consome o medidor.  
+## <a name="example"></a>Exemplo  
+ Este programa Visual C++ consome o indexador.  
   
 ```  
 // consume_cs_indexers_2.cpp  
@@ -88,16 +85,19 @@ int main() {
 }  
 ```  
   
-  **Elemento \#0 \= 21**  
-**Elemento \#1 \= 0**  
-**Elemento \#2 \= 0**  
-**Elemento \#3 \= 0**  
-**Elemento \#4 \= 0**  
-**Elemento \#5 \= 0**  
-**Elemento \#6 \= 0**  
-**0 \= Elemento update \#7**  
-**0 \= Elemento \#8**  
-**Elemento \#9 \= 0**  
-**Elemento \#10 \= 0**   
-## Consulte também  
- [Interoperabilidade com outras linguagens .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Interoperabilidade com outras linguagens .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

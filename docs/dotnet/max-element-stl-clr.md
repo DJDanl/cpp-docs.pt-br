@@ -1,33 +1,30 @@
 ---
-title: "max_element (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::max_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função max_element [STL/CLR]"
+title: max_element (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::max_element
+dev_langs: C++
+helpviewer_keywords: max_element function [STL/CLR]
 ms.assetid: c6274bae-1216-4285-b395-254280253dae
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b80aab744d2212a6710d98c5eb93a6665fa85a2e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# max_element (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Localiza a primeira ocorrência do elemento o maior em um intervalo especificado em que o critério ordenação pode ser especificado por um predicado binário.  
+# <a name="maxelement-stlclr"></a>max_element (STL/CLR)
+Localiza a primeira ocorrência do maior elemento em um intervalo especificado, em que o critério de ordenação pode ser especificado por um predicado binário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _FwdIt> inline  
@@ -36,13 +33,13 @@ template<class _FwdIt, class _Pr> inline
     _FwdIt max_element(_FwdIt _First, _FwdIt _Last, _Pr _Pred);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `max_element`STL.  Para obter mais informações, consulte [max\_element](../Topic/max_element.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `max_element`. Para obter mais informações, consulte [max_element](../standard-library/algorithm-functions.md#max_element).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

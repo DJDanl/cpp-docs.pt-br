@@ -1,35 +1,34 @@
 ---
-title: "Como converter System::String em wchar_t* ou char* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipo de dados char, convertendo System::String em"
-  - "Método PtrToStringChars"
-  - "System::String"
-  - "System::String, convertendo em char ou wchar_t"
-  - "tipo wchart, convertendo System::String"
+title: 'Como: converter System:: String em wchar_t * ou char * | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- System::String, converting to char or wchar_t
+- PtrToStringChars method
+- System::String
+- wchart type, converting System::String
+- char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d0616e76985a06f9525a300c318fe1518cd6a70c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como converter System::String em wchar_t* ou char*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-É possível usar `PtrToStringChars` em Vcclr.h para converter <xref:System.String> para nativo `wchar_t *` ou `char *`.  Isso sempre retorna um ponteiro da cadeia de caracteres Unicode largo porque as cadeias de caracteres CLR são Unicode internamente.  Em seguida, é possível fazer a conversão de largo, como mostrado no exemplo a seguir.  
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Como converter System::String em wchar_t* ou char*
+Você pode usar `PtrToStringChars` na Vcclr.h converter <xref:System.String> para o nativo `wchar_t *` ou `char *`.  Sempre retorna um ponteiro de cadeia de caracteres largo Unicode como cadeias de caracteres CLR internamente são Unicode. Em seguida, você pode converter de todo o conforme mostrado no exemplo a seguir.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // convert_string_to_wchar.cpp  
@@ -68,7 +67,10 @@ int main() {
 }  
 ```  
   
-  **Olá**  
-**Olá**   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+Hello  
+Hello  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

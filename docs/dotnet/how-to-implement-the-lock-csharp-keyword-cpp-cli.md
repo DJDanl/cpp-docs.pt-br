@@ -1,34 +1,33 @@
 ---
-title: "Como implementar a palavra-chave do C# de bloqueio (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave lock C# [C++]"
-  - "instrução lock"
+title: 'Como: implementar a palavra-chave c# de bloqueio (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8f126968805e38d1435f4f24862183f84d089b36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como implementar a palavra-chave do C# de bloqueio (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico mostra como implementar a palavra\-chave C\# `lock` no Visual C\+\+.  Para obter mais informações, consulte [Instrução lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md).  
+# <a name="how-to-implement-the-lock-c-keyword-ccli"></a>Como implementar a palavra-chave do C# de bloqueio (C++/CLI)
+Este tópico mostra como implementar o c# `lock` palavra-chave no Visual C++. 
   
- Você também pode usar a classe de `lock` na biblioteca de suporte C\+\+.  Consulte [Sincronização \(classe lock\)](../dotnet/synchronization-lock-class.md) para maiores informações.  
+ Você também pode usar o `lock` classe na biblioteca de suporte do C++. Consulte [sincronização (classe lock)](../dotnet/synchronization-lock-class.md) para obter mais informações.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // CS_lock_in_CPP.cpp  
@@ -65,5 +64,5 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Interoperabilidade com outras linguagens .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+## <a name="see-also"></a>Consulte também  
+ [Interoperabilidade com outras linguagens .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

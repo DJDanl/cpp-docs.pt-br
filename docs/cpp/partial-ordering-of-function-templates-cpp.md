@@ -4,32 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- partial ordering of function templates
+dev_langs: C++
+helpviewer_keywords: partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 252f80416f581ecc2c126bc44ab22c1b63c50130
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d211a3ab33377b817c23734f01947cde92f8aad7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="partial-ordering-of-function-templates-c"></a>Ordenação parcial de modelos de função (C++)
 
 Vários modelos de função que correspondem à lista de argumentos de uma chamada de função podem estar disponíveis. O C++ define a ordenação parcial dos modelos de função para especificar que função deve ser chamada. A ordenação é parcial, pois pode haver alguns modelos que são considerados igualmente especializados.
 
-O compilador escolhe a função de modelo mais especializada disponível nas correspondências possíveis. Por exemplo, se um modelo de função usa um tipo __T__e outro modelo de função levando __T\* __ estiver disponível, o __T\* __ versão diz para ser mais especializada e genérica é preferível __T__ versão sempre que o argumento for um tipo de ponteiro, embora ambos seria permitidas correspondências.
+O compilador escolhe a função de modelo mais especializada disponível nas correspondências possíveis. Por exemplo, se um modelo de função usa um tipo __T__e outro modelo de função levando __T\*__  estiver disponível, o __T\*__  versão diz para ser mais especializada e genérica é preferível __T__ versão sempre que o argumento for um tipo de ponteiro, embora ambos seria permitidas correspondências.
 
 Use o seguinte processo para determinar se um candidato a modelo de função é mais especializado:
 
@@ -47,11 +42,11 @@ Use o seguinte processo para determinar se um candidato a modelo de função é 
 
      1. Uma especialização de modelo para um tipo específico é mais especializada do que a que usa um argumento de tipo genérico.
 
-     2. Um modelo de colocar somente __T\* __ é mais especializadas que fazer uma __T__, porque o tipo de um hipotético __X\* __ é um argumento válido para um __T__ argumento de modelo, mas __X__ não é um argumento válido para uma __T\* __ argumento de modelo.
+     2. Um modelo de colocar somente __T\*__  é mais especializadas que fazer uma __T__, porque o tipo de um hipotético __X\*__  é um argumento válido para um __T__ argumento de modelo, mas __X__ não é um argumento válido para uma __T\*__  argumento de modelo.
 
      3. __Const T__ é mais especializadas que __T__, pois __X const__ é um argumento válido para uma __T__ argumento de modelo, mas __X__ não é um argumento válido para uma __const T__ argumento de modelo.
 
-     4. __Const T\* __ é mais especializadas que __T\*__, pois __X const\* __ é um argumento válido para uma __T\* __ argumento de modelo, mas __X\* __ não é um argumento válido para uma __const T\* __ argumento de modelo.
+     4. __Const T\*__  é mais especializadas que __T\*__, pois __X const\*__  é um argumento válido para uma __T\*__  argumento de modelo, mas __X\*__  não é um argumento válido para uma __const T\*__  argumento de modelo.
 
 ## <a name="example"></a>Exemplo
 
@@ -99,4 +94,3 @@ Even more specialized function for const T*
 ## <a name="see-also"></a>Consulte também
 
 [Modelos de função](../cpp/function-templates.md)
-

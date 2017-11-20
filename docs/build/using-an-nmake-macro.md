@@ -1,42 +1,41 @@
 ---
-title: "Usando uma macro NMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Macros , NMAKE"
-  - "macros NMAKE, usando"
+title: Usando uma Macro NMAKE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, NMAKE
+- NMAKE macros, using
 ms.assetid: 95c87fbc-76e6-48c0-8536-9bfe179f328e
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9893e7ec1ba29b4b5ed2ccb569a135f44b2ed47f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Usando uma macro NMAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Para usar uma macro, coloque o nome entre parênteses precedido por um sinal de cifrão \($\) como a seguir.  
+# <a name="using-an-nmake-macro"></a>Usando uma macro NMAKE
+Para usar uma macro, coloque o seu nome entre parênteses, precedidos por um sinal de cifrão ($), da seguinte maneira.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 $(macroname)  
 ```  
   
-## Comentários  
- Nenhum espaço é permitido.  Os parênteses são opcionais se o *macroname* é um caractere único.  A cadeia de caracteres de definição substitui $ \(*macroname*\); uma macro indefinido é substituído por uma cadeia de caracteres nula.  
+## <a name="remarks"></a>Comentários  
+ Não são permitidos espaços. Os parênteses são opcionais se *nomedamacro* é um caractere único. A cadeia de caracteres de definição substitui $(*nomedamacro*); uma macro é substituída por uma cadeia de caracteres nula.  
   
-## Que você deseja saber mais?  
- [Substituição macro](../build/macro-substitution.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
+ [Substituição de macro](../build/macro-substitution.md)  
   
-## Consulte também  
- [Macros e NMAKE](../Topic/Macros%20and%20NMAKE.md)
+## <a name="see-also"></a>Consulte também  
+ [Macros e NMAKE](../build/macros-and-nmake.md)

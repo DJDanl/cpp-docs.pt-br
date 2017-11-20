@@ -7,7 +7,7 @@
 ## <a name="coledatetimespan-classcoledatetimespan-classmd"></a>[Classe COleDateTimeSpan](coledatetimespan-class.md)
 ## <a name="cpoint-classcpoint-classmd"></a>[Classe CPoint](cpoint-class.md)
 ## <a name="crect-classcrect-classmd"></a>[Classe CRect](crect-class.md)
-## <a name="csimplestringt-classcsimplestringt-classmd"></a>[Classe CSimpleStringT](csimplestringt-class.md)
+## <a name="csimplestringt-classcsimplestringt-classmd"></a>[Classe de CSimpleStringT](csimplestringt-class.md)
 ## <a name="csize-classcsize-classmd"></a>[Classe CSize](csize-class.md)
 ## <a name="cstrbuft-classcstrbuft-classmd"></a>[Classe CStrBufT](cstrbuft-class.md)
 ## <a name="cstringdata-classcstringdata-classmd"></a>[Classe CStringData](cstringdata-class.md)

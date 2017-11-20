@@ -1,40 +1,39 @@
 ---
-title: "Classes de gerenciamento de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes [C++], gerenciamento de recursos"
-  - "classes gerenciadas, gerenciamento de recursos"
-  - "gerenciamento de recursos"
-  - "gerenciamento de recursos, Classes C++"
-  - "recursos [C++], gerenciamento"
+title: Classes de gerenciamento de recursos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- resource management
+- managed classes, resource management
+- classes [C++], resource management
+- resource management, C++ classes
+- resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3dd8340986255774365fb3aba067253fdbb94bb4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classes de gerenciamento de recursos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="resource-management-classes"></a>Classes de gerenciamento de recursos
 Essas classes fornecem gerenciamento automático de classes gerenciadas.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 |||  
 |-|-|  
-|[auto\_gcroot](../dotnet/auto-gcroot.md)|Insere um identificador virtual em um tipo nativo.|  
-|[auto\_handle](../dotnet/auto-handle.md)|Insere um identificador virtual em um tipo gerenciado.|  
+|[auto_gcroot](../dotnet/auto-gcroot.md)|Insere um identificador virtual em um tipo nativo.|  
+|[auto_handle](../dotnet/auto-handle.md)|Insere um identificador virtual em um tipo gerenciado.|  
   
-## Consulte também  
- [Biblioteca de suporte do C\+\+](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Biblioteca de suporte do C++](../dotnet/cpp-support-library.md)

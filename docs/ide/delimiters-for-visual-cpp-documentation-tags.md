@@ -1,49 +1,47 @@
 ---
-title: "Delimitadores de marcas de documenta&#231;&#227;o para o Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentação XML, delimitadores"
+title: "Delimitadores para marcações de documentação do Visual C++ | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 967ab7a95ba2f3f0b617db7f88eabf00b48efcd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Delimitadores de marcas de documenta&#231;&#227;o para o Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O uso de marcas de documentação requer os delimitadores, que indicam o compilador onde um comentário da documentação começam e terminam.  
+# <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitadores de marcações de documentação para o Visual C++
+O uso de marcações de documentação requer delimitadores, que indicam para o compilador onde um comentário de documentação começa e termina.  
   
  Você pode usar os seguintes tipos de delimitadores com as marcas de documentação XML:  
   
  `///`  
- Este é o formulário que é mostrado em exemplos de documentação e usado pelos modelos de projeto Visual C\+\+.  
+ Este é o formulário que é mostrado nos exemplos de documentação e usado pelos modelos de projeto do Visual C++.  
   
  `/** */`  
- Esses são delimitadores de várias linhas.  
+ Esses são os delimitadores de várias linhas.  
   
- Há algumas regras de formatação ao usar os delimitadores de `/** */` \*\/:  
+ Há alguma formatação regras ao usar o `/** */` delimitadores:  
   
--   Para a linha que contém o delimitador de `/**`, se o restante da linha é o espaço em branco, a linha não é processada para comentários.  Se o primeiro caractere é o espaço em branco, o caractere de espaço em branco será ignorado e o resto da linha é processado.  Caso contrário, o texto inteiro de linha após o delimitador de `/**` é processado como parte do comentário.  
+-   Para a linha que contém o `/**` delimitador, se o restante da linha é o espaço em branco, a linha não será processado para comentários. Se o primeiro caractere é um espaço em branco, esse caractere de espaço em branco será ignorado e o restante da linha é processado. Caso contrário, todo o texto da linha após o delimitador `/**` é processado como parte do comentário.  
   
--   Para a linha que contém o delimitador de `*/`, se houver somente espaço em branco até o delimitador de `*/` , a linha será ignorada.  Caso contrário, o texto em training ao delimitador de `*/` é processado como parte de comentário, sujeitos a regras de coincidência de padrão descritas no seguinte marcador.  
+-   Para a linha que contém o `*/` delimitador, se houver apenas espaços em branco até o `*/` delimitador, essa linha será ignorada. Caso contrário, o texto da linha até o delimitador `*/` é processado como parte do comentário, sujeito às regras de correspondência de padrão descritas no marcador seguinte.  
   
--   Para linha após o que começa com o delimitador de `/**` , o compilador procura por um padrão comum no início de cada linha que consiste no espaço em branco opcional e um asterisco \(`*`\), seguido por um espaço em branco mais opcional.  Se o compilador encontra um conjunto comum de caracteres definida no início de cada linha, irá ignorar esse padrão para todas as linhas após o delimitador de `/**` , até e possivelmente incluindo a linha que contém o delimitador de `*/` .  
+-   Para as linhas depois que começa com o `/**` delimitador, o compilador procura um padrão comum no início de cada linha que consiste de espaço em branco opcional e um asterisco (`*`), seguido de mais espaço em branco opcional. Se o compilador encontra um conjunto comum de caracteres no início de cada linha, ele ignorará esse padrão para todas as linhas após o `/**` delimitador, até e, possivelmente, incluindo a linha que contém o `*/` delimitador.  
   
  Alguns exemplos:  
   
--   A única parte da seguir comentário que será processado é a linha que inicia com `<summary>`.  Os dois seguintes formatos de marca irão gerar os mesmos comentários:  
+-   A única parte do comentário a seguir que será processada é a linha que começa com `<summary>`. Os seguintes formatos de duas marca produzirá os mesmos comentários:  
   
     ```  
     /**  
@@ -52,7 +50,7 @@ O uso de marcas de documentação requer os delimitadores, que indicam o compila
     /** <summary>text</summary> */  
     ```  
   
--   O compilador aplica um padrão de “\*” para ignorar no início da segunda e terceira linhas.  
+-   O compilador aplica um padrão de "*" para ignorar no início da segunda e terceira linhas.  
   
     ```  
     /**  
@@ -60,7 +58,7 @@ O uso de marcas de documentação requer os delimitadores, que indicam o compila
      *  text </summary>*/  
     ```  
   
--   O compilador não encontrar nenhum padrão no comentário porque não há nenhum asterisco na segunda linha.  Portanto, qualquer texto na segunda e terceira linhas, acima até de `*/`, será processado como parte do comentário.  
+-   O compilador não encontra nenhum padrão deste comentário porque não há nenhum asterisco na segunda linha. Portanto, todo o texto na segunda e terceira linhas, para cima até o `*/`, será processado como parte do comentário.  
   
     ```  
     /**  
@@ -68,7 +66,7 @@ O uso de marcas de documentação requer os delimitadores, que indicam o compila
        text </summary>*/  
     ```  
   
--   O compilador não encontrar nenhum padrão no comentário por dois motivos.  Primeiro, não há nenhuma linha que inicia com um número consistente de espaços antes de asterisco.  Segundo, a quinta linha começa com um guia, que não corresponde aos espaços.  Portanto, qualquer texto da segunda linha até `*/` será processado como parte do comentário.  
+-   O compilador não encontra nenhum padrão deste comentário por dois motivos. Primeiro, não há nenhuma linha que começa com um número consistente de espaços antes do asterisco. Segundo, a quinta linha começa com uma guia, que não coincide com espaços. Portanto, todo o texto da segunda linha até que o `*/` será processado como parte do comentário.  
   
     ```  
     /**  
@@ -79,5 +77,5 @@ O uso de marcas de documentação requer os delimitadores, que indicam o compila
     */  
     ```  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

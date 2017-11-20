@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file translation [C++], about file translation
 - translation [C++]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 188574c43ca3650599fae58c0da1306ab49b5007
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 37b10254ca101bcf19aff3c84abac4a122f242eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overview-of-file-translation"></a>Visão geral da translação de arquivo
 Os programas C++, como os programas C, consistem em um ou mais arquivos. Cada um desses arquivos é convertido na seguinte ordem conceitual (a ordem real segue a regra “como está”: a conversão deve ocorrer como se estas etapas tivessem sido cumpridas):  
@@ -57,7 +54,7 @@ Os programas C++, como os programas C, consistem em um ou mais arquivos. Cada um
   
 -   Uma macro predefinida, **cplusplus**, é definida somente para C++. Consulte [Macros predefinidas](../preprocessor/predefined-macros.md) no *referência de pré-processador* para obter mais informações.  
   
--   O pré-processador C não reconhece os operadores C++: **.\* **, ** -> \* **, e `::`. Consulte [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [expressões](../cpp/expressions-cpp.md), para obter mais informações sobre operadores.  
+-   O pré-processador C não reconhece os operadores C++: **.\*** ,  **-> \*** , e `::`. Consulte [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [expressões](../cpp/expressions-cpp.md), para obter mais informações sobre operadores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Convenções lexicais](../cpp/lexical-conventions.md)

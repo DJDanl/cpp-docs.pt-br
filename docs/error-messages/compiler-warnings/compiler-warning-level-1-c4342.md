@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4342
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4342
+f1_keywords: C4342
+dev_langs: C++
+helpviewer_keywords: C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: c4a2afbc3ced186b0db63b22b3cc5c2b27204c71
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: faea23fcfa1e323ec28d81aa5abeb27f3c87cef1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4342"></a>Compilador C4342 de aviso (nível 1)
 alteração de comportamento: '*função*' chamado, mas um operador membro foi chamado em versões anteriores  

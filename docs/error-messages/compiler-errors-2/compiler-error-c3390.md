@@ -1,53 +1,33 @@
 ---
-title: C3390 de erro do compilador | Documentos do Microsoft
+title: C3390 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3390
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3390
+f1_keywords: C3390
+dev_langs: C++
+helpviewer_keywords: C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 257b0678ded15815f6673091d1adb26dea1dec12
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: b4d2f74f23c58b234f6962f9a6a17ceec0f1bbc9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3390"></a>C3390 de erro do compilador
-'type_arg': argumento de tipo inválido para parâmetro genérico param de genérico 'generic_type' deve ser um tipo de referência  
+'type_arg': argumento de tipo inválido para parâmetro de generic 'generic_type' do parâmetro genérico deve ser um tipo de referência  
   
-Um tipo genérico foi instanciado incorretamente.  Verifique a definição de tipo.  Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
+Um tipo genérico foi instanciado incorretamente.  Verifique a definição de tipo.  Para obter mais informações, consulte [Genéricos](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
-O primeiro exemplo usa c# para criar um componente que contém um tipo genérico que tem determinadas restrições que não oferecem suporte à criação de tipos genéricos no C + + / CLR. Para obter mais informações, consulte [restrições em parâmetros de tipo](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters).  
+O primeiro exemplo usa c# para criar um componente que contém um tipo genérico que tem determinadas restrições que não são suportadas na criação de tipos genéricos em C + + CLR. Para obter mais informações, consulte [Restrições a parâmetros de tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  
   
 ```cs  
 // C3390.cs  

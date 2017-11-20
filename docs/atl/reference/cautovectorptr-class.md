@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - ATLBASE/ATL::CAutoVectorPtr::Detach
 - ATLBASE/ATL::CAutoVectorPtr::Free
 - ATLBASE/ATL::CAutoVectorPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautovectorptr-class"></a>Classe CAutoVectorPtr
 Essa classe representa um objeto de ponteiro inteligente usando o vetor de novo e excluir operadores.  
@@ -96,7 +78,7 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|A variável de membro de dados de ponteiro.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe fornece métodos para criar e gerenciar um ponteiro inteligente, o que ajudará a proteger contra vazamentos de memória, a liberação de recursos automaticamente quando ele ficar fora do escopo. `CAutoVectorPtr`é semelhante a `CAutoPtr`, a única diferença é que `CAutoVectorPtr` usa [vetor novo &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) e [vector Excluir &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr) para alocar e liberar memória, em vez do C++ **novo** e **excluir** operadores. Consulte [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) se classes de coleção de `CAutoVectorPtr` são necessários.  
+ Essa classe fornece métodos para criar e gerenciar um ponteiro inteligente, o que ajudará a proteger contra vazamentos de memória, a liberação de recursos automaticamente quando ele ficar fora do escopo. `CAutoVectorPtr`é semelhante a `CAutoPtr`, a única diferença é que `CAutoVectorPtr` usa [vetor novo &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) e [Excluir &#91; &#93; de vetor](../../standard-library/new-operators.md#op_delete_arr) para alocar e liberar memória, em vez de o C++ **novo** e **excluir** operadores. Consulte [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) se classes de coleção de `CAutoVectorPtr` são necessários.  
 
   
  Consulte [CAutoPtr](../../atl/reference/cautoptr-class.md) para obter um exemplo do uso de uma classe de ponteiro inteligente.  
@@ -226,4 +208,3 @@ operator T*() const throw();
 ## <a name="see-also"></a>Consulte também  
  [Classe CAutoPtr](../../atl/reference/cautoptr-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

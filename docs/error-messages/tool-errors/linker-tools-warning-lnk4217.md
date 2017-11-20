@@ -1,53 +1,34 @@
 ---
-title: Aviso LNK4217 das ferramentas de vinculador | Documentos do Microsoft
+title: Aviso LNK4217 das ferramentas de vinculador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4217
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4217
+f1_keywords: LNK4217
+dev_langs: C++
+helpviewer_keywords: LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5f52555af529561f7665aea86307b78ff7e6fdba
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 35b82a1f5f21cdaad6dfd7d5d970a65e10e0b0a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Aviso LNK4217 (Ferramentas de Vinculador)
-definida localmente o símbolo 'symbol' importado na função 'function'  
+definidos localmente o símbolo 'symbol' importado na função 'function'  
   
- [__declspec(DllImport)](../../cpp/dllexport-dllimport.md) foi especificado para um símbolo, embora o símbolo é definido localmente. Remover o `__declspec` modificador para resolver esse aviso.  
+ [__declspec(DllImport)](../../cpp/dllexport-dllimport.md) foi especificado para um símbolo, mesmo que o símbolo é definido localmente. Remover o `__declspec` modificador para resolver este aviso.  
   
  `symbol`é o nome do símbolo que é definido dentro da imagem. `function`é a função que está importando o símbolo.  
   
- Esse aviso não aparecerá quando você compila com a opção [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Esse aviso não aparecerá quando você compila usando a opção [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
   
  LNK4217 também pode ocorrer se você tentar vincular dois módulos, quando em vez disso, você deve compilar o segundo módulo com a biblioteca de importação do módulo primeiro.  
   
@@ -67,4 +48,4 @@ __declspec(dllexport) void func(unsigned short*) {}
 __declspec(dllexport) void func(unsigned short*) {}  
 ```  
   
- A tentativa de vincular esses dois módulos resultará em LNK4217, compile o segundo exemplo com a biblioteca de importação do primeiro exemplo para resolver.
+ Tentando vincular esses dois módulos resultará em LNK4217, compile o segundo exemplo com a biblioteca de importação do primeiro exemplo para resolver.

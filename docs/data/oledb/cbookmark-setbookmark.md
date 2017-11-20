@@ -1,41 +1,39 @@
 ---
-title: "CBookmark::SetBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBookmark<0>::SetBookmark"
-  - "ATL.CBookmark<0>.SetBookmark"
-  - "CBookmark<0>.SetBookmark"
-  - "SetBookmark"
-  - "ATL::CBookmark::SetBookmark"
-  - "ATL::CBookmark<0>::SetBookmark"
-  - "CBookmark.SetBookmark"
-  - "ATL.CBookmark.SetBookmark"
-  - "CBookmark::SetBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método SetBookmark"
+title: 'Cbookmark:: Setbookmark | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBookmark<0>::SetBookmark
+- ATL.CBookmark<0>.SetBookmark
+- CBookmark<0>.SetBookmark
+- SetBookmark
+- ATL::CBookmark::SetBookmark
+- ATL::CBookmark<0>::SetBookmark
+- CBookmark.SetBookmark
+- ATL.CBookmark.SetBookmark
+- CBookmark::SetBookmark
+dev_langs: C++
+helpviewer_keywords: SetBookmark method
 ms.assetid: bcd26831-6045-4e69-96d6-abf8037fc18d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c265eaf2103f895198d029c231bf29755ea2c17
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CBookmark::SetBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Copia o valor do medidor referenciado por `pBuffer` ao buffer de `CBookmark` e define o tamanho do buffer a `nSize`.  
+# <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
+Copia o valor do indicador referenciado por `pBuffer` para o `CBookmark` buffer e define o tamanho do buffer para `nSize`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -45,21 +43,21 @@ Copia o valor do medidor referenciado por `pBuffer` ao buffer de `CBookmark` e d
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *nSize*  
- \[in\] o tamanho do buffer do medidor.  
+ [in] O tamanho do buffer indicador.  
   
  `pBuffer`  
- \[in\] ponteiro para a matriz de bytes que contém o valor do medidor.  
+ [in] Um ponteiro para a matriz de bytes que contém o valor do indicador.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Essa função só está disponível em **CBookmark\<0\>**.  
+## <a name="remarks"></a>Comentários  
+ Essa função só está disponível em **CBookmark\<0 >**.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CBookmark](../../data/oledb/cbookmark-class.md)

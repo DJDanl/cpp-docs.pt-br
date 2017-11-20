@@ -1,37 +1,35 @@
 ---
-title: "CEnumeratorAccessor::m_bIsParent | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CEnumeratorAccessor.m_bIsParent"
-  - "ATL::CEnumeratorAccessor::m_bIsParent"
-  - "m_bIsParent"
-  - "ATL.CEnumeratorAccessor.m_bIsParent"
-  - "CEnumeratorAccessor::m_bIsParent"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bIsParent"
+title: 'Cenumeratoraccessor:: M_bisparent | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CEnumeratorAccessor.m_bIsParent
+- ATL::CEnumeratorAccessor::m_bIsParent
+- m_bIsParent
+- ATL.CEnumeratorAccessor.m_bIsParent
+- CEnumeratorAccessor::m_bIsParent
+dev_langs: C++
+helpviewer_keywords: m_bIsParent
 ms.assetid: ab267905-d7d9-41cb-96ff-7be4d8875657
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 787a235e77059f719afa8a14f4119cc968728ecc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CEnumeratorAccessor::m_bIsParent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cenumeratoraccessormbisparent"></a>CEnumeratorAccessor::m_bIsParent
 Uma variável que indica se o enumerador é um enumerador pai, se a linha é um enumerador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,11 +37,11 @@ VARIANT_BOOL m_bIsParent;
   
 ```  
   
-## Comentários  
- Consulte [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx)*na referência do programador de OLE DB* para obter mais informações.  
+## <a name="remarks"></a>Comentários  
+ Consulte [ISourcesRowset:: Getsourcesrowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx) no *referência do programador de DB OLE* para obter mais informações.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CEnumeratorAccessor](../../data/oledb/cenumeratoraccessor-class.md)

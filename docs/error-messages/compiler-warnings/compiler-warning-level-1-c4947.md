@@ -1,50 +1,30 @@
 ---
-title: "Compilador aviso (nível 1) C4947 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4947 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4947
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4947
+f1_keywords: C4947
+dev_langs: C++
+helpviewer_keywords: C4947
 ms.assetid: 5a1d484e-b4c7-4de2-a145-d8dcfc2fc1d2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 08eb5385924ee4a01a942274b8c4ec10060b12c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 9e0f02401fc9af9d9337b939b8acc33f290252d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4947"></a>Compilador C4947 de aviso (nível 1)
-'type_or_member': marcados como obsoletos  
+'type_or_member': marcado como obsoleto  
   
-Um tipo ou membro foi marcado como obsoleto com a <xref:System.ObsoleteAttribute>classe.</xref:System.ObsoleteAttribute>  
+Um membro ou tipo foi marcado como obsoleto com o <xref:System.ObsoleteAttribute> classe.  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir gera C4947:  

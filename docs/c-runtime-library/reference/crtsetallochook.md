@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetAllocHook
+apiname: _CrtSetAllocHook
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fa03fb135907d9f516544f5f4b202c9f4e779fc3
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: a614e37c8fe106289d1530a9dac01daee8b8a88a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 Instala uma função de alocação definida pelo cliente vinculando-a ao processo de alocação de memória de depuração em tempo de execução C (somente versão de depuração).  
@@ -99,7 +80,7 @@ lineNumber);
  Para obter mais informações sobre como `_CrtSetAllocHook` pode ser usado com outras funções de gerenciamento de memória ou como escrever suas próprias funções de gancho definidas pelo cliente, consulte [Gravação da função de gancho de depuração](/visualstudio/debugger/debug-hook-function-writing).  
   
 > [!NOTE]
-> Não há suporte para  `_CrtSetAllocHook` em `/clr:pure`. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
+>  Não há suporte para `_CrtSetAllocHook` em `/clr:pure`. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
 ## <a name="requirements"></a>Requisitos  
   

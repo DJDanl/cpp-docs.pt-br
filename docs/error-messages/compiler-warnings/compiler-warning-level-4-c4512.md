@@ -1,46 +1,27 @@
 ---
-title: "Compilador (nível 4) de aviso C4512 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4512 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4512
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4512
+f1_keywords: C4512
+dev_langs: C++
+helpviewer_keywords: C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5a00f02fd9c8cd28c84927a7ce0f81803e50bfef
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 3cf776d5908b747d63d17134e80a7da750852043
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="compiler-warning-level-4-c4512"></a>Compilador (nível 4) de aviso C4512
+# <a name="compiler-warning-level-4-c4512"></a>Compilador C4512 de aviso (nível 4)
 "classe": não foi possível gerar um operador de atribuição  
   
  O compilador não pode gerar um operador de atribuição para uma determinada classe. Nenhum operador de atribuição foi criado.  

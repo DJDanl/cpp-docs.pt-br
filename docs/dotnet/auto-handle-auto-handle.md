@@ -1,36 +1,34 @@
 ---
-title: "auto_handle::auto_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::auto_handle"
-  - "msclr.auto_handle.auto_handle"
-  - "auto_handle.auto_handle"
-  - "msclr::auto_handle::auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método auto_handle"
+title: auto_handle::auto_handle | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::auto_handle
+- msclr.auto_handle.auto_handle
+- auto_handle.auto_handle
+- msclr::auto_handle::auto_handle
+dev_langs: C++
+helpviewer_keywords: auto_handle method
 ms.assetid: 0b68ab31-023c-4224-9601-9231412c4e13
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f74f327bacc3ec96ad4fd3f41b4714ab3669456c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::auto_handle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O construtor de `auto_handle` .  
+# <a name="autohandleautohandle"></a>auto_handle::auto_handle
+O `auto_handle` construtor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 auto_handle();  
@@ -46,14 +44,14 @@ auto_handle(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `_ptr`  
- O objeto possuir.  
+ O objeto a própria.  
   
  `_right`  
- `auto_handle`existente.  
+ Um `auto_handle` existente.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // msl_auto_handle_auto_handle.cpp  
@@ -106,21 +104,24 @@ int main()
 }  
 ```  
   
-  **no construtor de RefClassA: primeiro**  
-**Hello world primeiro de\!**  
-**no destruidor de RefClassA: primeiro**  
-**no construtor de RefClassA: segundo**  
-**Hello world de segundo B\!**  
-**Hello world dependendo de A\!**  
-**Hello world dependendo de A\!**  
-**no destruidor de RefClassA: segundo**  
-**feita**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ auto\_handle.h\>  
+```Output  
+in RefClassA constructor: first  
+Hello from first A!  
+in RefClassA destructor: first  
+in RefClassA constructor: second  
+Hello from second B!  
+Hello from second A!  
+Hello from second A!  
+in RefClassA destructor: second  
+done  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\auto_handle.h >  
   
-## Consulte também  
- [Membros auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator\=](../dotnet/auto-handle-operator-assign.md)   
- [auto\_handle::~auto\_handle](../dotnet/auto-handle-tilde-auto-handle.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
+ [Membros auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle:: =](../dotnet/auto-handle-operator-assign.md)   
+ [auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)

@@ -1,62 +1,60 @@
 ---
-title: "Classe CDBPropIDSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet"
-  - "ATL.CDBPropIDSet"
-  - "ATL::CDBPropIDSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CDBPropIDSet"
+title: Classe CDBPropIDSet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet
+- ATL.CDBPropIDSet
+- ATL::CDBPropIDSet
+dev_langs: C++
+helpviewer_keywords: CDBPropIDSet class
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 996e1a04e9870a9cd3cf02ca6a8c7c05a1dc3e56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classe CDBPropIDSet
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Herda da estrutura de **DBPROPIDSET** e adiciona um construtor que inicializa campo\-chave como também o método de acesso de [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .  
+# <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
+Herda o **DBPROPIDSET** estrutura e adiciona um construtor que inicializa os campos de chave, bem como a [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) método de acesso.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CDBPropIDSet : public tagDBPROPIDSET  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Adiciona uma propriedade ao conjunto de ID da propriedade.|  
+|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Adiciona uma propriedade para a propriedade ID definida.|  
 |[CDBPropIDSet](../../data/oledb/cdbpropidset-cdbpropidset.md)|Construtor.|  
-|[SetGUID](../Topic/CDBPropIDSet::SetGUID.md)|Define o GUID do conjunto de ID da propriedade.|  
+|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Define o GUID da ID de propriedade do conjunto.|  
   
-### Operadores  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador \=](../../data/oledb/cdbpropidset-operator-equal.md)|Atribui o conteúdo de uma ID de propriedade definido para outro.|  
+|[operador =](../../data/oledb/cdbpropidset-operator-equal.md)|Atribui o conteúdo da ID de propriedade de um conjunto para outro.|  
   
-## Comentários  
- Os consumidores de OLE DB usam estruturas de **DBPROPIDSET** para passar uma matriz de IDs de propriedade para que o consumidor deseja obter informações de propriedade.  As propriedades identificadas em uma única estrutura de [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) pertencem a um conjunto de propriedades.  
+## <a name="remarks"></a>Comentários  
+ Uso de consumidores do OLE DB **DBPROPIDSET** estruturas para passar uma matriz de IDs de propriedade para a qual o consumidor deseja obter informações de propriedade. As propriedades identificadas em uma única [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) estrutura pertencem ao conjunto de uma propriedade.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

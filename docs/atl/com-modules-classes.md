@@ -1,53 +1,51 @@
 ---
-title: "Classes de m&#243;dulos COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classes de módulos COM"
+title: "Classes de módulos COM (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.COM
+dev_langs: C++
+helpviewer_keywords: COM modules classes
 ms.assetid: 0a8a82dd-a153-47cd-9bbe-1a1ad5d1a6ff
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cee2ebb756ecee09a78207319250832d4dfc14a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classes de m&#243;dulos COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="com-modules-classes"></a>Classes de módulos de COM
+As classes a seguir fornecem suporte para um módulo COM:  
+  
+-   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) essa classe é instanciada em cada projeto ATL.  
+  
+-   [CAtlComModule](../atl/reference/catlcommodule-class.md) esta classe implementa um módulo COM de servidor.  
+  
+-   [CAtlModule](../atl/reference/catlmodule-class.md) essa classe fornece métodos usados por várias classes de módulo ATL.  
+  
+-   [CAtlModuleT](../atl/reference/catlmodulet-class.md) esta classe implementa um módulo ATL.  
+  
+-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) essa classe representa o módulo para um aplicativo.  
+  
+-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) esta classe implementa um serviço.  
+  
+-   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) essa classe fornece suporte para componentes de janelas ATL.  
+  
+-   [CComModule](../atl/reference/ccommodule-class.md) esta classe implementa um módulo DLL ou EXE. Obsoleto no ATL 7.0.  
+  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) esta classe implementa um módulo de EXE, com suporte para vários apartments pool de thread. Obsoleto no ATL 7.0.  
+  
+## <a name="related-articles"></a>Artigos relacionados  
+ [Classes de módulo da ATL](../atl/atl-module-classes.md)  
+  
+## <a name="see-also"></a>Consulte também  
+ [Visão geral da classe](../atl/atl-class-overview.md)   
+ [Classes de módulo](../atl/atl-module-classes.md)
 
-As seguintes classes oferecem suporte a um módulo COM:  
-  
--   [CAtlBaseModule](../Topic/CAtlBaseModule%20Class.md) essa classe é instanciada em cada projeto de ATL.  
-  
--   [CAtlComModule](../atl/reference/catlcommodule-class.md) essa classe implementa um módulo de servidor COM.  
-  
--   [CAtlModule](../atl/reference/catlmodule-class.md) essa classe fornece os métodos usados por várias classes do módulo de ATL.  
-  
--   [CAtlModuleT](../atl/reference/catlmodulet-class.md) essa classe implementa um módulo de ATL.  
-  
--   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) esta classe representa o módulo para um aplicativo.  
-  
--   [CAtlServiceModuleT](../Topic/CAtlServiceModuleT%20Class.md) essa classe implementa um serviço.  
-  
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) essa classe fornece suporte para componentes da janela de ATL.  
-  
--   [CComModule](../atl/reference/ccommodule-class.md) essa classe implementa um módulo de DLL ou do EXE.  Obsoleto em ATL 7,0.  
-  
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) essa classe implementa um módulo de EXE, com suporte a construção agrupados com múltiplos.  Obsoleto em ATL 7,0.  
-  
-## Artigos relacionados  
- [Classes de módulo de ATL](../Topic/ATL%20Module%20Classes.md)  
-  
-## Consulte também  
- [Visão geral de classe](../atl/atl-class-overview.md)   
- [Classes de módulo](../Topic/ATL%20Module%20Classes.md)

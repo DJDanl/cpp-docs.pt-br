@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC ODBC consumers
+dev_langs: C++
+helpviewer_keywords: MFC ODBC consumers
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: bb3cfd8a2f8f4c28892962f451501245f14aa41c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Adicionando um Consumidor ODBC do MFC
 Um consumidor ODBC MFC consiste em um ODBC recordset classe dados associações e necessárias para acessar uma fonte de dados.  
@@ -41,5 +37,4 @@ Um consumidor ODBC MFC consiste em um ODBC recordset classe dados associações 
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)
-
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -104,38 +103,23 @@ helpviewer_keywords:
 - C3486
 - C3494
 - C3497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 79b672c07429526ccbf7f5d5f9553956bf1f01e0
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 40bf082b95fd39af44605927189d0977c065a3b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>C3400 de erros do compilador por meio de C3499
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -144,7 +128,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3400](compiler-error-c3400.md)|dependência de restrição circular envolvendo '*constraint1*'e'*restrição2*'|  
 |C3401 de erro do compilador|'*especificador*': especificador de acesso de assembly inválido - somente 'private' é permitido em modelos de classe|  
 |C3402 de erro do compilador|'*função*': não é possível resolver sobrecarga exceto no escopo atual|  
-|C3403 de erro do compilador|thread_local não pode ser usado com /clr:pure ou /clr:safe|  
+|C3403 de erro do compilador|thread_local não pode ser usado com /clr: pure ou /CLR: safe|  
 |C3404 de erro do compilador|'*construir*': erro de sintaxe inesperado|  
 |C3405 de erro do compilador|'*função*': não é possível resolver sobrecarga sem descritor completo|  
 |C3406 de erro do compilador|'*palavra-chave*': não pode ser usado em um especificador de tipo elaborado|  
@@ -187,7 +171,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C3443 de erro do compilador|O inicializador de membro padrão de '*classe*' é recursivo|  
 |C3444 de erro do compilador|Esvazie a classe de agregação*classe*' deve ser inicializado com '{}'|  
 |C3445 de erro do compilador|Copy-list-initialization de '*tipo*' não é possível usar um construtor explícito|  
-|C3446 de erro do compilador|'*classe*': um inicializador de membro padrão não é permitido para um membro de uma classe de valor|  
+|[Erro do compilador C3446](compiler-error-c3446.md)|'*classe*': um inicializador de membro padrão não é permitido para um membro de uma classe de valor|  
 |C3447 de erro do compilador|Obsoleto.|  
 |C3448 de erro do compilador|Obsoleto.|  
 |C3449 de erro do compilador|Obsoleto.|  
@@ -218,15 +202,15 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C3474 de erro do compilador|não foi possível abrir o arquivo de saída '*filename*'|  
 |C3475 de erro do compilador|Erro de sintaxe no arquivo de entrada '*filename*'|  
 |C3476 de erro do compilador|não foi possível abrir o arquivo '*filename*' para entrada|  
-|C3477 de erro do compilador|um lambda não pode aparecer em um contexto não avaliado|  
+|C3477 de erro do compilador|uma expressão lambda não pode aparecer em um contexto não avaliado|  
 |C3478 de erro do compilador|'*identificador*': uma matriz não pode ser capturada por cópia|  
-|C3479 de erro do compilador|Anotações SAL em lambdas não são suportadas|  
+|C3479 de erro do compilador|Não há suporte para anotações SAL em lambdas|  
 |[Erro do compilador C3480](compiler-error-c3480.md)|'*variável*': uma variável de captura de lambda deve ser de um escopo de função delimitadora|  
 |[Erro do compilador C3481](compiler-error-c3481.md)|'*identificador*': variável de captura de lambda não encontrada|  
-|[Erro do compilador C3482](compiler-error-c3482.md)|'this' só pode ser usado como uma captura de lambda dentro de uma função membro não static|  
+|[Erro do compilador C3482](compiler-error-c3482.md)|'this' só pode ser usado como uma captura de lambda dentro de uma função de membro não estático|  
 |[Erro do compilador C3483](compiler-error-c3483.md)|'*identificador*' já é parte da lista de captura de lambda|  
-|[Erro do compilador C3484](compiler-error-c3484.md)|erro de sintaxe: esperado '->' antes do tipo de retorno|  
-|[Erro do compilador C3485](compiler-error-c3485.md)|uma definição de lambda não pode possuir cv-qualifiers|  
+|[Erro do compilador C3484](compiler-error-c3484.md)|Erro de sintaxe: esperado '->' antes do tipo de retorno|  
+|[Erro do compilador C3485](compiler-error-c3485.md)|uma definição de lambda não pode ter cv-qualifiers|  
 |C3486 de erro do compilador|Obsoleto.|  
 |[Erro do compilador C3487](compiler-error-c3487.md)|'*tipo*': todos retornam expressões devem ser deduzidas para o mesmo tipo: anteriormente era '*tipo*'|  
 |[Erro do compilador C3488](compiler-error-c3488.md)|' &*identificador*' não é permitida quando o modo de captura padrão é por referência|  
@@ -235,11 +219,10 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3491](compiler-error-c3491.md)|'*identificador*': uma captura por cópia não pode ser modificada em um lambda não mutável|  
 |[Erro do compilador C3492](compiler-error-c3492.md)|'*identificador*': não é possível capturar um membro de uma união anônima|  
 |[Erro do compilador C3493](compiler-error-c3493.md)|'*identificador*' não pode ser capturado implicitamente porque nenhum modo de captura padrão foi especificado|  
-|C3494 de erro do compilador|'este' não pode ser capturado explicitamente porque um modo de captura delimitador não permite|  
+|C3494 de erro do compilador|'this' não pode ser capturado explicitamente porque um modo de captura delimitador não permite|  
 |[Erro do compilador C3495](compiler-error-c3495.md)|'*identificador*': identificador de captura deve ser uma variável com duração de armazenamento automático declarada no escopo de alcance do lambda|  
 |[Erro do compilador C3496](compiler-error-c3496.md)|'this' sempre é capturado por valor: '&' ignorado|  
-|C3497 de erro do compilador|não é possível construir uma instância de um lambda|  
+|C3497 de erro do compilador|não é possível construir uma instância de uma expressão lambda|  
 |[Erro do compilador C3498](compiler-error-c3498.md)|'*identificador*': não é possível capturar uma variável que possui um tipo gerenciado/WinRT|  
-|[Erro do compilador C3499](compiler-error-c3499.md)|um lambda cujo tipo de retorno foi especificado como void não pode retornar um valor|  
-
+|[Erro do compilador C3499](compiler-error-c3499.md)|uma expressão lambda que foi especificada para ter um tipo de retorno void não pode retornar um valor|  
 

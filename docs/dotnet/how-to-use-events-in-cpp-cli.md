@@ -1,32 +1,30 @@
 ---
-title: "Como usar eventos em C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "eventos [C++], acessando em interfaces"
+title: 'Como: usar eventos em C + + CLI | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5a2d6a1ae0443b7c1ec66f5ca0d0fa057cf9041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como usar eventos em C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este artigo mostra como usar uma interface que declara um evento e uma função para invocar esse evento, e a classe e o manipulador de eventos que implementam a interface.  
+# <a name="how-to-use-events-in-ccli"></a>Como usar eventos em C++/CLI
+Este artigo mostra como usar uma interface que declara um evento e uma função para chamar esse evento e o manipulador de evento e a classe que implementa a interface.  
   
-## Eventos de interface  
- O exemplo de código a seguir adiciona um manipulador de eventos, invocar evento que faz com que o manipulador de eventos gravar seu nome para o console\- e removerá o manipulador de eventos.  
+## <a name="interface-events"></a>Eventos de interface  
+ O exemplo de código a seguir adiciona um manipulador de eventos, invoca o evento, que faz com que o manipulador de eventos gravar seu nome no console — e, em seguida, remove o manipulador de eventos.  
   
 ```  
 // mcppv2_events2.cpp  
@@ -76,9 +74,12 @@ int main () {
   
  **Saída**  
   
-  **EventReceiver::Handler**   
-## Métodos de acessador personalizados  
- O exemplo a seguir mostra como definir o comportamento de um evento quando os manipuladores são adicionados ou removidos e, quando um evento é gerado.  
+```Output  
+EventReceiver::Handler  
+```  
+  
+## <a name="custom-accessor-methods"></a>Métodos acessadores personalizados  
+ O exemplo a seguir mostra como definir o comportamento de um evento quando os manipuladores são adicionados ou removidos, e quando um evento é gerado.  
   
 ```  
 // mcppv2_events6.cpp  
@@ -163,10 +164,13 @@ int main() {
   
  **Saída**  
   
-  **No manipulador de eventos H1**  
-**No manipulador de eventos H2 com args 1 e 2,2**   
-## O acesso à opção de substituição sobre adicionar, descartar, e aumenta acessadores  
- Este exemplo mostra como substituir o acesso padrão adicionar, remover, e gerar os métodos de eventos:  
+```Output  
+In event handler H1  
+In event handler H2 with args 1 and 2.2  
+```  
+  
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Acesso de padrão de substituição em Adicionar, remover e gerar acessadores  
+ Este exemplo mostra como substituir o acesso padrão a adicionar, remover e acionar eventos métodos:  
   
 ```  
 // mcppv2_events3.cpp  
@@ -218,9 +222,12 @@ int main() {
   
  **Saída**  
   
-  **17**   
-## Vários manipuladores de eventos  
- Um destinatário do evento, ou qualquer outro código de cliente, podem adicionar um ou vários manipuladores a um evento.  
+```Output  
+17  
+```  
+  
+## <a name="multiple-event-handlers"></a>Vários manipuladores de eventos  
+ Um receptor de evento, ou qualquer outro código de cliente, pode adicionar um ou mais manipuladores para um evento.  
   
 ```  
 // mcppv2_events4.cpp  
@@ -291,10 +298,13 @@ int main() {
   
  **Saída**  
   
-  **Clique em \(x\=7, y\=3.14159\)**  
-**DblClick s\=System.Char \(\[\]\)**  
-**DblClickAgain s\=System.Char \(\[\]\)**   
-## Eventos estáticos  
+```Output  
+Click(x=7,y=3.14159)  
+DblClick(s=System.Char[])  
+DblClickAgain(s=System.Char[])  
+```  
+  
+## <a name="static-events"></a>Eventos estáticos  
  O exemplo a seguir mostra como definir e usar eventos estáticos.  
   
 ```  
@@ -376,12 +386,15 @@ int main() {
   
  **Saída**  
   
-  **No manipulador de eventos H1**  
-**No manipulador de eventos H2 com args 11 e 11,11**  
-**No manipulador de eventos H1**  
-**No manipulador de eventos H2 com args 22 e 22,22**   
-## Eventos virtuais  
- Este exemplo implementa eventos virtuais, gerenciados em uma interface e a classe:  
+```Output  
+In event handler H1  
+In event handler H2 with args 11 and 11.11  
+In event handler H1  
+In event handler H2 with args 22 and 22.22  
+```  
+  
+## <a name="virtual-events"></a>Eventos virtuais  
+ Este exemplo implementa eventos virtuais gerenciados em uma interface e a classe:  
   
 ```  
 // mcppv2_events5.cpp  
@@ -460,8 +473,12 @@ int main() {
   
  **Saída**  
   
-  **No manipulador H1**  
-**No manipulador H2 com args 1 e 2,2** Um evento simples não pode ser especificado para substituir ou ocultar um evento da classe base.  Você deve definir funções do acessador de qualquer evento, e depois especificar a palavra\-chave de `new` ou de `override` em cada função do acessador.  
+```Output  
+In handler H1  
+In handler H2 with args 1 and 2.2  
+```  
+  
+ Um evento simples não pode ser especificado para substituir ou ocultar um evento de classe base.  Você deve definir todas as funções do acessador do evento e, em seguida, especifique o `new` ou `override` palavra-chave em cada função de acessador.  
   
 ```  
 // mcppv2_events5_a.cpp  
@@ -493,8 +510,8 @@ ref struct C : B {
 };  
 ```  
   
-## Eventos abstratos  
- O exemplo a seguir mostra como implementar um evento de base.  
+## <a name="abstract-events"></a>Eventos abstratos  
+ O exemplo a seguir mostra como implementar um evento abstract.  
   
 ```  
 // mcppv2_events10.cpp  
@@ -572,10 +589,13 @@ int main () {
   
  **Saída**  
   
-  **hello world**  
-**hello world de Event2**   
-## Aumentando os eventos que são definidos em um assembly diferente  
- Um evento e um manipulador de eventos podem ser definidos em um assembly, e ser consumidos por outro assembly.  
+```Output  
+hi  
+hello from Event2  
+```  
+  
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Gerando eventos que são definidos em um assembly diferente  
+ Um evento e o manipulador de eventos podem ser definidos em um assembly e consumidos por outro assembly.  
   
 ```  
 // mcppv2_events8.cpp  
@@ -593,7 +613,7 @@ public:
 };  
 ```  
   
- Este código de cliente consome o evento:  
+ Esse código de cliente consome o evento:  
   
 ```  
 // mcppv2_events9.cpp  
@@ -622,7 +642,10 @@ int main() {
   
  **Saída**  
   
-  **hello**  
-**hello**   
-## Consulte também  
+```Output  
+hello  
+hello  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [event](../windows/event-cpp-component-extensions.md)

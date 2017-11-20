@@ -1,35 +1,33 @@
 ---
-title: "CRowsetImpl::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "CRowsetImpl.GetColumnInfo"
-  - "CRowsetImpl::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetColumnInfo"
+title: 'Crowsetimpl:: Getcolumninfo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- CRowsetImpl.GetColumnInfo
+- CRowsetImpl::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 9ef76525-f996-4c6f-81b9-68eb260350ef
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1229a9f45d7bd0f4a2f80b8443179640cd9f8926
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CRowsetImpl::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera informações de coluna para uma solicitação de cliente específica.  
+# <a name="crowsetimplgetcolumninfo"></a>CRowsetImpl::GetColumnInfo
+Recupera informações de coluna para uma solicitação de cliente específico.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,27 +37,27 @@ Recupera informações de coluna para uma solicitação de cliente específica.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `pv`  
- \[in\] ponteiro da classe derivada de `CRowsetImpl` do usuário.  
+ [in] Um ponteiro para o usuário `CRowsetImpl` classe derivada.  
   
  `pcCols`  
- \[in\] o ponteiro de saída \(\) ao número de colunas retornado.  
+ [in] Um ponteiro (saída) para o número de colunas retornadas.  
   
-## Valor de retorno  
- Um ponteiro para uma estrutura de **ATLCOLUMNINFO** estático.  
+## <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para um static **ATLCOLUMNINFO** estrutura.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Esse método é uma substituição avançada.  
   
- Este método é chamado por várias classes base de implementação para recuperar informações de coluna para uma solicitação de cliente específica.  Geralmente, esse método será chamado por `IColumnsInfoImpl`.  Se você substituir esse método, você deve colocar uma versão do método em seu `CRowsetImpl`\- classe derivada.  Como o método pode ser colocado em uma classe non\-templatized, você deve alterar `pv` a `CRowsetImpl`apropriado \- classe derivada.  
+ Este método é chamado por várias classes de implementação de base para recuperar informações de coluna para uma solicitação de cliente específico. Normalmente, esse método será chamado `IColumnsInfoImpl`. Se você substituir esse método, você deve colocar uma versão do método na sua `CRowsetImpl`-classe derivada. Como o método pode ser colocado em uma classe não-transformado em modelo, você deve alterar `pv` ao apropriado `CRowsetImpl`-classe derivada.  
   
- O exemplo a seguir demonstra o uso de **GetColumnInfo's** .  Neste exemplo, **CMyRowset** é `CRowsetImpl`\- classe derivada.  Para substituir `GetColumnInfo` para todas as instâncias dessa classe, coloque o método a seguir na definição da classe de **CMyRowset** :  
+ O exemplo a seguir demonstra **do GetColumnInfo** uso. Neste exemplo, **CMyRowset** é um `CRowsetImpl`-classe derivada. Para substituir `GetColumnInfo` para todas as instâncias dessa classe, coloque o seguinte método no **CMyRowset** definição da classe:  
   
- [!CODE [NVC_OLEDB_Provider#1](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#1)]  
+ [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CRowsetImpl](../../data/oledb/crowsetimpl-class.md)

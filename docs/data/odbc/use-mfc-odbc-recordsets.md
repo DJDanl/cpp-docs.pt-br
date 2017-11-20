@@ -1,60 +1,59 @@
 ---
-title: "Usar conjuntos de registros ODBC MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conjuntos de registros ODBC MFC"
-  - "conjunto de registros ODBC"
+title: Usar conjuntos de registros ODBC MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, MFC ODBC
+- ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 114725aad521edc30b9e33f0be699dc6019d15d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Usar conjuntos de registros ODBC MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="use-mfc-odbc-recordsets"></a>Usar conjuntos de registros ODBC MFC
 Estes tópicos explicam como trabalhar com conjuntos de registros ODBC por meio do MFC.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
-### Tarefas do conjunto de registros gerais  
+### <a name="general-recordset-tasks"></a>Tarefas do conjunto de registros gerais  
   
 -   [Escolha um tipo de conjunto de registros ODBC](../../data/odbc/recordset-odbc.md)  
   
 -   [Repetir um conjunto de registros](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
--   [Declare uma classe de conjunto de registros para uma tabela](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
+-   [Declarar uma classe de conjunto de registros para uma tabela](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
   
--   [Declare uma classe de conjunto de registros para uma consulta predefinida](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
+-   [Declarar uma classe de conjunto de registros para uma consulta predefinida](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
   
-### Conjunto de registros de Design e implementação  
+### <a name="recordset-design-and-implementation"></a>Conjunto de registros de Design e implementação  
   
--   [Saiba mais sobre a troca de campos de registro \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [Saiba mais sobre a troca de campos de registro (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [Trocar dados entre um banco de dados e um objeto recordset](../../data/odbc/record-field-exchange-using-rfx.md)  
+-   [Trocar dados entre um banco de dados e um objeto de conjunto de registros](../../data/odbc/record-field-exchange-using-rfx.md)  
   
--   [Personalizar o código do conjunto de registros produzido pelos assistentes](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
+-   [Personalizar produzido pelos assistentes de código de conjunto de registros](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
   
--   [Use as funções do exchange \(RFX\) campos de registro](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
+-   [Use as funções do exchange (RFX) campos de registro](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
   
-### Conveniência e o desempenho do conjunto de registros  
+### <a name="recordset-performance-and-convenience"></a>Conveniência e o desempenho do conjunto de registros  
   
 -   [Adicionar registros em massa com um conjunto de registros](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
 -   [Filtrar registros em um conjunto de registros](../../data/odbc/recordset-filtering-records-odbc.md)  
   
-### Operações de conjunto de registros  
+### <a name="recordset-operations"></a>Operações de conjunto de registros  
   
 -   [Adicionar registros em massa com um conjunto de registros](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
@@ -64,27 +63,27 @@ Estes tópicos explicam como trabalhar com conjuntos de registros ODBC por meio 
   
 -   [Classificar registros em um conjunto de registros](../../data/odbc/recordset-sorting-records-odbc.md)  
   
--   [Parametrizar um conjunto de registros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
+-   [Parâmetros de um conjunto de registros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
 -   [Passar valores de parâmetro para um conjunto de registros em tempo de execução](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
--   [Executar uma junção com um conjunto de registros](../Topic/Recordset:%20Performing%20a%20Join%20\(ODBC\).md)  
+-   [Executar uma junção com um conjunto de registros](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
--   [Bloqueio de registros em um conjunto de registros](../../data/odbc/recordset-locking-records-odbc.md)  
+-   [Registros de bloqueio em um conjunto de registros](../../data/odbc/recordset-locking-records-odbc.md)  
   
 -   [Trabalhar com itens de dados grande em um conjunto de registros](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
   
 -   [Obter somas e outros resultados agregados em um conjunto de registros](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### Seleção de conjunto de registros e SQL  
+### <a name="recordset-selection-and-sql"></a>SQL e seleção de conjunto de registros  
   
--   [Selecione os registros de uma fonte de dados ODBC](../Topic/Recordset:%20How%20Recordsets%20Select%20Records%20\(ODBC\).md)  
+-   [Selecionar os registros de uma fonte de dados ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
--   [Personalizar a cadeia de caracteres SQL para um conjunto de registros](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)  
+-   [Personalizar a cadeia de caracteres SQL para um conjunto de registros](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
-### Vinculação dinâmica de conjuntos de registros  
+### <a name="dynamic-binding-of-recordsets"></a>Associação dinâmica de conjuntos de registros  
   
 -   [Associar colunas de dados em um conjunto de registros dinamicamente em tempo de execução](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
-## Consulte também  
- [Conectividade de banco de dados aberto \(ODBC\)](../Topic/Open%20Database%20Connectivity%20\(ODBC\).md)
+## <a name="see-also"></a>Consulte também  
+ [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

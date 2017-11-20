@@ -1,39 +1,38 @@
 ---
-title: "Arquivos criados para projetos CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aplicativos .NET, C++"
-  - "Projetos Visual C++, Programação de CLR"
+title: Arquivos criados para projetos CLR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++ projects, CLR programming
+- .NET applications, C++
 ms.assetid: 59ae9020-5f26-4ad0-bbdd-97c2e2023a20
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 355b22ecf40251e3bb0b9910660e56bf9fe763a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Arquivos criados para projetos CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando você usa modelos Visual C\+\+ para criar seus projetos, vários arquivos são criados, dependendo do modelo você usar.  A tabela a seguir lista todos os arquivos que são criados por modelos de projeto para projetos do .NET Framework.  
+# <a name="files-created-for-clr-projects"></a>Arquivos criados para projetos CLR
+Quando você usar os modelos do Visual C++ para criar seus projetos, vários arquivos são criados, dependendo do modelo que você usa. A tabela a seguir lista todos os arquivos que são criados pelos modelos de projeto para projetos do .NET Framework.  
   
-|File name|Descrição do arquivo|  
-|---------------|--------------------------|  
-|AssemblyInfo.cpp|O arquivo que contém informações \(isto é, atributos, arquivos, recursos, tipos, informações de controle de versão, assinando informações, e assim por diante\) para alterar os metadados do assembly de projeto.  Para obter mais informações consulte [Conceitos de assembly](../Topic/Assembly%20Contents.md).|  
-|*projname.asmx*|Um arquivo de texto que faz referência às classes gerenciadas que encapsulam funcionalidades de serviço Web XML.|  
-|*projname.cpp*|O principal ponto do arquivo de origem e de entrada no aplicativo que o Visual Studio criou para você.  Identifica o arquivo .dll de projeto e o namespace do projeto.  Fornecer seu próprio código no arquivo.|  
-|*projname.vsdisco*|Um arquivo de implantação XML que contém links para outros recursos que descrevem o serviço Web XML.|  
-|*projname.h*|O main inclui o arquivo para o projeto, que contém todas as declarações, símbolos globais, e políticas de `#include` para outros arquivos de cabeçalho.|  
-|*projname.sln*|O arquivo de solução usado dentro do ambiente de desenvolvimento para organizar todos os elementos do projeto em uma única solução.|  
-|*projname.suo*|O arquivo das opções de solução usado dentro do ambiente de desenvolvimento.|  
-|*projname.vcxproj*|O arquivo de projeto usado dentro do ambiente de desenvolvimento o que armazena informações específicas ao projeto.|  
-|ReadMe.txt|Um arquivo que descreve cada arquivo no seu projeto usando os verdadeiros nomes de arquivo criados pelo modelo.|
+|Nome do arquivo|Descrição do arquivo|  
+|---------------|----------------------|  
+|AssemblyInfo|O arquivo que contém informações (ou seja, atributos, arquivos, recursos, tipos, informações de controle de versão, as informações de assinatura e assim por diante) para modificar metadados de assembly do projeto. Para obter mais informações, consulte [conceitos de Assembly](/dotnet/framework/app-domains/assembly-contents).|  
+|*NomeDoProjeto*. asmx|Um arquivo de texto que referências gerenciadas classes que encapsulam a funcionalidade do serviço Web XML.|  
+|*NomeDoProjeto*. cpp|O arquivo de origem principal e ponto de entrada para o aplicativo que o Visual Studio criado para você. Identifica o arquivo. dll de projeto e o namespace do projeto. Fornece seu próprio código nesse arquivo.|  
+|*NomeDoProjeto*.vsdisco|Um arquivo de implantação de XML que contém links para outros recursos que descrevem o serviço Web XML.|  
+|*NomeDoProjeto*. h|O arquivo de inclusão principal para o projeto que contém todas as declarações, símbolos globais, e `#include` diretivas para outros arquivos de cabeçalho.|  
+|*NomeDoProjeto*. sln|O arquivo de solução usado no ambiente de desenvolvimento para organizar todos os elementos de seu projeto em uma única solução.|  
+|*NomeDoProjeto*. suo|O arquivo de opções de solução usado dentro do ambiente de desenvolvimento.|  
+|*NomeDoProjeto*. vcxproj|O arquivo de projeto usado dentro do ambiente de desenvolvimento que armazena as informações específicas para este projeto.|  
+|Leiame. txt|Um arquivo que descreve cada arquivo em seu projeto usando os nomes de arquivo real criados pelo modelo.|

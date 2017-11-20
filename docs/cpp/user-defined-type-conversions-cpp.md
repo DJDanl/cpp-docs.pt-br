@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- explicit_cpp
-dev_langs:
-- C++
+f1_keywords: explicit_cpp
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++], and constants
 - conversion functions [C++]
@@ -31,16 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 778c5a659755b5c79f79e9b846441c3e0665995e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 155afe7c785b111a49a19545e47d175a9b22f7d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversões de tipo definido pelo usuário (C++)
 Um *conversão* produz um novo valor de tipo de um valor de um tipo diferente. *Conversões padrão* são incorporados a linguagem C++ e o suporte seus tipos internos e você pode criar *conversões definidas pelo usuário* para realizar conversões para, de ou entre tipos definidos pelo usuário.  
@@ -234,4 +230,3 @@ void display_balance(const Money balance)
   
  Aqui a função de conversão `operator double` foi feita explícita e uma conversão explícita para o tipo `double` foi introduzida na função `display_balance` para executar a conversão. Se essa conversão for omitida, o compilador será incapaz de localizar um operador de inserção de fluxo adequado `<<` de tipo `Money` e poderá ocorrer um erro.  
   
-

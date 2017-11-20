@@ -1,40 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::SetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicParameterAccessor::SetParam"
-  - "ATL::CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor.SetParam"
-  - "ATL.CDynamicParameterAccessor.SetParam"
-  - "SetParam"
-  - "CDynamicParameterAccessor:SetParam"
-  - "CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor::SetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método SetParam"
+title: 'Cdynamicparameteraccessor:: SetParam | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicParameterAccessor::SetParam
+- ATL::CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor.SetParam
+- ATL.CDynamicParameterAccessor.SetParam
+- SetParam
+- CDynamicParameterAccessor:SetParam
+- CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor::SetParam
+dev_langs: C++
+helpviewer_keywords: SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c2d7403dc318a0d5c7a906ec4c7f1e388143b3f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::SetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Define o buffer de parâmetro usando os dados especificados \(diferente de cadeia de caracteres\).  
+# <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
+Define o buffer de parâmetro usando os dados (não-cadeia de caracteres) especificados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -53,31 +51,31 @@ bool SetParam(
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `ctype`  
- Um parâmetro templated que é o tipo de dados.  
+ Um parâmetro de modelo que é o tipo de dados.  
   
  `nParam`  
- \[in\] o número do parâmetro \(deslocamento de 1\).  O parâmetro 0 é reservado para valores de retorno.  O número do parâmetro for o índice do parâmetro com base na ordem de SQL ou na chamada do procedimento armazenado.  Por exemplo:  
+ [in] O número do parâmetro (deslocamento de 1). Parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem na chamada de procedimento armazenado ou SQL. Por exemplo:  
   
- [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/CPP/cdynamicparameteraccessor-setparam_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
   
  `pParamName`  
- \[in\] o nome do parâmetro.  
+ [in] O nome do parâmetro.  
   
  `pData`  
- \[in\] o ponteiro de memória que contém os dados a serem gravados no buffer.  
+ [in] O ponteiro para a memória que contém os dados a ser gravado no buffer.  
   
  *status*  
- \[in\] o status da coluna de `DBSTATUS` .  Para obter informações sobre valores de `DBSTATUS` , consulte [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx)*na referência do programador do*OLE DB, ou na pesquisa de `DBSTATUS` em oledb.h.  
+ [in] O `DBSTATUS` status da coluna. Para obter informações sobre `DBSTATUS` valores, consulte [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) no *referência do programador de DB OLE*, ou procurar `DBSTATUS` no OLEDB.  
   
-## Valor de retorno  
- Retorna **true** no êxito ou **false** a falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna **true** em caso de sucesso ou **false** em caso de falha.  
   
- Use `SetParam` para definir dados não de parâmetros no buffer.  Use [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) para definir dados do parâmetro de cadeia de caracteres no buffer.  
+ Use `SetParam` para definir os dados que não sejam parâmetro no buffer. Use [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) para definir dados de parâmetro de cadeia de caracteres no buffer.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

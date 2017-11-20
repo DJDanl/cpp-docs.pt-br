@@ -1,50 +1,30 @@
 ---
-title: "Compilador aviso (nível 4) C4634 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4634 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4634
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4634
+f1_keywords: C4634
+dev_langs: C++
+helpviewer_keywords: C4634
 ms.assetid: 3e3496ce-2ac7-43d0-a48a-f514c950e81d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: af8555307346dce78f59b55ec3429305206ff2da
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: e30bac39692844e5f6cd23cc69bfc850d88a3776
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4634"></a>Compilador C4634 de aviso (nível 4)
-Comentário de documento XML: não pode ser aplicada: motivo  
+Comentário de documento XML: não pode ser aplicado: motivo  
   
- Marcas de documentação XML não podem ser aplicadas ao C++ todas as construções.  Por exemplo, você não pode adicionar um comentário de documentação para um namespace ou um modelo.  
+ Marcações de documentação XML não podem ser aplicadas a todos os C++ constrói.  Por exemplo, você não pode adicionar um comentário de documentação para um namespace ou o modelo.  
   
  Para obter mais informações, consulte [documentação XML](../../ide/xml-documentation-visual-cpp.md).  
   

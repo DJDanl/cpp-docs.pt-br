@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 1) C4581 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4581 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4581
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4581
+f1_keywords: C4581
+dev_langs: C++
+helpviewer_keywords: C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ca3e8fb8fdb3db7356dea9ce0be25136c8f23385
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 0f5c8e5c103c7da2cca580fb4f2c12f7ae25dd89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Compilador C4581 de aviso (nível 1)
-preterido comportamento: '"string1" ' substituído por string2 ao atributo de processo  
+comportamento preterido: '"string1" ' substituído por string2 para processar atributo  
   
- Esse erro pode ser gerado como resultado de trabalho de conformidade do compilador que foi feito no Visual C++ 2005: parâmetro procurando atributos do Visual C++.  
+ Esse erro pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: parâmetro procurando atributos do Visual C++.  
   
  Nas versões anteriores, os valores de atributo foram aceitos se eles foram colocados entre aspas ou não. Se o valor é uma enumeração, não deve estar entre aspas.  
   

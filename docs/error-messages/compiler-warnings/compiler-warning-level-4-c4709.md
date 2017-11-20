@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 4) C4709 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4709 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4709
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4709
+f1_keywords: C4709
+dev_langs: C++
+helpviewer_keywords: C4709
 ms.assetid: 8abfdd45-8c70-4c27-b0fb-ca0c3f0fccf9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 60f9de5b4eb90cbbb7f7d720ca9273b5369e0a7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: d7e3fb78715063813215eaa505850d8bbbe4cf7f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4709"></a>Compilador C4709 de aviso (nível 4)
 operador vírgula dentro de expressão de índice de matriz  
   
- Quando ocorre uma vírgula em uma expressão de índice de matriz, o compilador usa o valor depois da última vírgula.  
+ Quando ocorre uma vírgula em uma expressão de índice de matriz, o compilador usa o valor após a última vírgula.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4709:  

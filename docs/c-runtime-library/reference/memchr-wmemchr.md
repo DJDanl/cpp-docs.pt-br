@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,36 +25,20 @@ apitype: DLLExport
 f1_keywords:
 - memchr
 - wmemchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aad3d578cececad6af6a6f4aaf1107460a23d784
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: dd7a16cb35257104b79d0347fe415c5b17cd4bb4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 Localize caracteres em um buffer.  
@@ -111,7 +94,7 @@ const wchar_t *wmemchr(
 ## <a name="remarks"></a>Comentários  
  `memchr` e `wmemchr` procuram a primeira ocorrência de `c` nos primeiros `count` bytes de `buf`. Ele para quando encontra `c` ou quando tiver verificado os primeiros `count` bytes.  
   
- Em C, essas funções usam um ponteiro `const` para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para `const` retorna um ponteiro para `const`; a versão que usa um ponteiro para não `const` retorna um ponteiro para não `const`. A macro _CONST_CORRECT_OVERLOADS é definida se as versões de `const` e não `const` dessas funções estão disponíveis. Se você precisar do comportamento não `const` para as sobrecargas de C++ no C++, defina o símbolo _CONST_RETURN.  
+ Em C, essas funções usam um ponteiro `const` para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para `const` retorna um ponteiro para `const`; a versão que usa um ponteiro para não `const` retorna um ponteiro para não `const`. A macro _CRT_CONST_CORRECT_OVERLOADS é definido se o `const` e não-`const` versões dessas funções estão disponíveis. Se você precisar do comportamento não `const` para as sobrecargas de C++ no C++, defina o símbolo _CONST_RETURN.  
   
 ## <a name="requirements"></a>Requisitos  
   

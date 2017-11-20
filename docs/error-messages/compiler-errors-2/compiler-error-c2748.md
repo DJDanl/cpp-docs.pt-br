@@ -1,47 +1,28 @@
 ---
-title: C2748 de erro do compilador | Documentos do Microsoft
+title: C2748 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2748
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2748
+f1_keywords: C2748
+dev_langs: C++
+helpviewer_keywords: C2748
 ms.assetid: b63ac78b-a200-499c-afea-15af1a1e819e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 09d9ecf71ab4795f25561a0082f2dccb9f022b46
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: f0eaee593630a40a6bffb126e9eab8ed17668e02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2748"></a>C2748 de erro do compilador
-gerenciado ou WinRT criação de matriz deve ter tamanho de matriz ou inicializador de matriz  
+criação de matriz WinRT deve ter tamanho de matriz ou inicializador de matriz ou gerenciado  
   
  Um gerenciado ou matriz WinRT ill foi formada. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).  
   

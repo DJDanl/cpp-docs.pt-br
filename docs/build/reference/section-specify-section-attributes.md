@@ -1,108 +1,106 @@
 ---
-title: "/SECTION (especificar atributos de se&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/section"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /SECTION"
-  - "atributos de seção"
-  - "opção de vinculador SECTION"
-  - "opção de vinculador -SECTION"
+title: "-SEÇÃO (especificar atributos de seção) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /section
+dev_langs: C++
+helpviewer_keywords:
+- SECTION linker option
+- -SECTION linker option
+- section attributes
+- /SECTION linker option
 ms.assetid: 92b69d81-e421-462e-b46f-7d0dff9b9d16
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e3fd7e844d77b9a92408c0708542a4f8f5edf304
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /SECTION (especificar atributos de se&#231;&#227;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="section-specify-section-attributes"></a>/SECTION (especificar atributos de seção)
 ```  
 /SECTION:name,[[!]{DEKPRSW}][,ALIGN=#]  
 ```  
   
-## Comentários  
- A opção \/SECTION altera os atributos de uma seção, substituindo os atributos definidos quando o arquivo de .obj da seção foi compilado.  
+## <a name="remarks"></a>Comentários  
+ A opção /SECTION altera os atributos de uma seção, sobrescrevendo os atributos definidos quando o arquivo. obj para a seção foi compilado.  
   
- Uma seção em um arquivo executável portátil de \(PE\) é aproximadamente equivalente a um segmento ou recursos no novo arquivo executável \(NE\).  As seções a seguir contêm código ou os dados.  Diferentemente dos segmentos, as seções são blocos de memória contígua sem restrições de tamanho.  Algumas seções a seguir contêm código ou os dados que seu programa declarados e usa diretamente, enquanto outras seções dos dados sejam criadas para você pelo gerenciador de biblioteca do vinculador e lib.exe \(\) e contêm informações vitais o sistema operacional.  Para obter mais informações sobre os arquivos de NE, consulte o artigo da Base de Dados de Conhecimento “formato de cabeçalho arquivo executável” \(Q65122\).  Você pode localizar artigos da Base de Dados de Conhecimento na Biblioteca MSDN, ou em [http:\/\/support.microsoft.com](http://support.microsoft.com).  
+ Uma seção em um arquivo executável portátil (PE) é aproximadamente equivalente a um segmento ou os recursos em um novo arquivo executável do (m). Seções contêm códigos ou dados. Ao contrário de segmentos, seções são blocos de memória contígua sem restrições de tamanho. Algumas seções contêm códigos ou dados que seu programa declarados e usa diretamente, enquanto as outras seções de dados serão criadas para você, o vinculador e o Gerenciador de biblioteca (lib.exe) e contêm informações essenciais para o sistema operacional. Para obter mais informações sobre arquivos NE, consulte a Base de dados de Conhecimento o artigo "Formato de cabeçalho de arquivo executável" (Q65122). Você pode encontrar artigos da Base de dados de Conhecimento na MSDN Library ou no [http://support.microsoft.com](http://support.microsoft.com).  
   
- Especificar dois\-pontos \(:\) e *um nome*de seção.  *O nome* é com diferenciação de maiúsculas e minúsculas.  
+ Especifique um dois-pontos (:) e uma seção *nome*. O *nome* diferencia maiusculas de minúsculas.  
   
- Não use os seguintes nomes, porque estarão em conflito com nomes padrão.  Por exemplo, .sdata é usado em plataformas de RISC:  
+ Não use os nomes a seguir, pois eles entrarão em conflito com os nomes padrão. Por exemplo, .sdata é usado nas plataformas RISC:  
   
 -   .arch  
   
--   .bss  
+-   .BSS  
   
--   .data  
+-   . Data  
   
 -   .edata  
   
--   .idata  
+-   .iData  
   
--   .pdata  
+-   . pData  
   
--   .rdata  
+-   RDATA  
   
 -   .reloc  
   
--   .rsrc  
+-   . rsrc  
   
--   .sbss  
+-   . sbss  
   
 -   .sdata  
   
 -   .srdata  
   
--   .text  
+-   . Text  
   
--   .xdata  
+-   .XData  
   
- Especifique um ou mais atributos para a seção.  Os caracteres de atributo, listados abaixo, não diferenciam maiúsculas de minúsculas.  Você deve especificar todos os atributos desejados a seção para ter; causas omitidas de um caractere de atributo que atribuem o operador bit a ser desativado.  Se você não especificar R, W, ou E, a existência leitura, gravação, ou o status executável permanecem inalterados.  
+ Especifique um ou mais atributos para a seção. Os caracteres de atributo, listados abaixo, não diferenciam maiusculas de minúsculas. Você deve especificar todos os atributos que você deseja ter; a seção um caractere de atributo omitido faz com que esse bit de atributo ser desligado. Se você não especificar a gravação de R, W ou E, a leitura existente, ou executável status permanece inalterado.  
   
- Para negar um atributo, antecedeu o caractere com um ponto de exclamação \(\!\).  Os significados dos caracteres de atributo são mostrados abaixo.  
+ Para negar um atributo, preceda seu caractere com um ponto de exclamação (!). Os significados dos caracteres de atributo são mostrados abaixo.  
   
 |Caractere|Atributo|Significado|  
-|---------------|--------------|-----------------|  
+|---------------|---------------|-------------|  
 |E|Executar|A seção é executável|  
 |R|Ler|Permite operações de leitura em dados|  
 |W|Write|Permite operações de gravação de dados|  
 |S|Compartilhado|Compartilha a seção entre todos os processos que carregam a imagem|  
-|D|Discardable|Marca a seção como discardable|  
-|K|Cacheable|Marca a seção como não cacheable|  
+|D|Descartáveis|Marca a seção como descartáveis|  
+|M|Armazenável em cache|Marca a seção como não armazenável em cache|  
 |P|Paginável|Marca a seção como não paginável|  
   
- K e P peculiares que os sinalizadores da seção que eles correspondem estão no sentido negativo.  Se você especificar um deless na seção de .text \(\/SECTION: .text, K\), não será diferenças nos sinalizadores da seção quando você executa [DUMPBIN](../../build/reference/dumpbin-options.md) com a opção de [\/HEADERS](../../build/reference/headers.md) ; já foi armazenado em cachê implicitamente.  Para remover a opção, especifique \/SECTION: .text\! K e o DUMPBIN revelarão características da seção, incluir “não armazenado em cachê”.  
+ K e P é peculiares em que os sinalizadores de seção que correspondem a elas são no sentido negativo. Se você especificar uma na seção. Text (/ seção:. Text, K), não haverá nenhuma diferença nos sinalizadores de seção quando você executar [DUMPBIN](../../build/reference/dumpbin-options.md) com o [/HEADERS](../../build/reference/headers.md) opção; ele implicitamente já foi armazenado em cache. Para remover o padrão, especifique /SECTION:.text! K e DUMPBIN revelará características de seção, incluindo "Não armazenado em cache."  
   
- Uma seção no arquivo de PE que não tem E, em R, ou em W definido provavelmente é inválido.  
+ Uma seção no arquivo PE que não tenha E, R ou W definido é provavelmente inválida.  
   
- *O \=\#* ALINHAR permite especificar um valor de alinhamento para uma seção específica.  Consulte [\/ALIGN](../../build/reference/align-section-alignment.md) para obter mais informações.  
+ A ALINHAR *=#*  permite que você especifique um valor de alinhamento para uma determinada seção. Consulte [/ALINHAR](../../build/reference/align-section-alignment.md) para obter mais informações.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção na caixa de **Opções Adicionais** .  
+4.  Digite a opção para o **opções adicionais** caixa.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

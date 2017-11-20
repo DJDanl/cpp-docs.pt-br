@@ -1,34 +1,32 @@
 ---
-title: "CCommand::Create | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Create"
-  - "CCommand::Create"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Create [C++]"
+title: 'Ccommand:: Create | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Create
+- CCommand::Create
+dev_langs: C++
+helpviewer_keywords: Create method [C++]
 ms.assetid: e4bede7a-68bd-491a-97f4-89b03d45cd24
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 425e86008b97defe50e2c47e099b3b21c900bc1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Create
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chama [CCommand::CreateCommand](../Topic/CCommand::CreateCommand.md) para criar um comando para a sessão especificada, em seguida chama [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) para especificar o texto do comando.  
+# <a name="ccommandcreate"></a>CCommand::Create
+Chamadas [ccommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) para criar um comando para a sessão especificada, em seguida, chama [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) para especificar o texto do comando.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -44,27 +42,27 @@ HRESULT CCommandBase::Create(
 ) throw ( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `session`  
- \[in\] da sessão no qual criar o comando.  
+ [in] Uma sessão na qual criar o comando.  
   
  `wszCommand`  
- \[in\] ao ponteiro de texto Unicode de cadeia de caracteres de comando.  
+ [in] Um ponteiro para o texto Unicode da cadeia de caracteres de comando.  
   
  `szCommand`  
- \[in\] ao ponteiro de texto ANSI de cadeia de caracteres de comando.  
+ [in] Um ponteiro para o texto ANSI da cadeia de caracteres de comando.  
   
  `guidCommand`  
- \[in\] GUID que especifica a sintaxe e as regras gerais para que o provedor usa em analisar o texto do comando.  Para obter uma descrição dos dialetos, consulte [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)*na referência do programador de OLE DB*.  
+ [in] Um GUID que especifica a sintaxe e regras gerais para o provedor a ser usado na análise do texto de comando. Para obter uma descrição de dialetos, consulte [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) no *referência do programador de DB OLE*.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- O primeiro formulário de **Criar** usa uma cadeia de caracteres de comando Unicode.  O segundo formulário de **Criar** usa uma cadeia de caracteres de comando ANSI \(fornecida para compatibilidade com versões anteriores com os aplicativos existentes de ANSI\).  
+## <a name="remarks"></a>Comentários  
+ O primeiro formulário da **criar** usa uma cadeia de caracteres de comando Unicode. A segunda forma de **criar** usa uma cadeia de caracteres de comando ANSI (fornecida para compatibilidade com aplicativos existentes de ANSI).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CCommand](../../data/oledb/ccommand-class.md)

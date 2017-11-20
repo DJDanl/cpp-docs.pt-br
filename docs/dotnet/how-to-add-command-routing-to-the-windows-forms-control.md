@@ -1,42 +1,41 @@
 ---
-title: "Como adicionar roteamento de comando ao controle dos Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "roteamento de comando [C++], adicionando controles de Windows Forms"
-  - "Roteamento de comando de controles do Windows Forms [C++]"
+title: "Como: adicionar comandos de controle de formulários do roteamento para o Windows | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- command routing [C++], adding to Windows Forms controls
+- Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21f3fda51f9df72d9af78a03783771e74fbf3370
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como adicionar roteamento de comando ao controle dos Windows Forms
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[CWinFormsView](../mfc/reference/cwinformsview-class.md) roteia comandos e as mensagens UI de comando de atualização para o controle de usuário para permitir que ele manipule comandos MFC (por exemplo, itens de menu do quadro e botões de barra de ferramentas).  
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Como adicionar roteamento de comando ao controle dos Windows Forms
+[CWinFormsView](../mfc/reference/cwinformsview-class.md) encaminha os comandos e as mensagens UI do comando de atualização para o controle de usuário para permitir que ele trate comandos MFC (por exemplo, itens de menu do quadro e botões de barra de ferramentas).  
   
- O controle de usuário usa [ICommandTarget::Initialize](../Topic/ICommandTarget::Initialize.md) para armazenar uma referência ao objeto de origem de comando na `m_CmdSrc`, conforme mostrado no exemplo a seguir. Usar `ICommandTarget` você deve adicionar uma referência a mfcmifc80.  
+ O controle de usuário usa [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) para armazenar uma referência ao objeto de origem de comando no `m_CmdSrc`, conforme mostrado no exemplo a seguir. Para usar `ICommandTarget` você deve adicionar uma referência a mfcmifc80.  
   
- `CWinFormsView` lida com várias das notificações de exibição comuns do MFC, encaminhando-los para o controle de usuário gerenciado. Essas notificações incluem o [OnInitialUpdate](../Topic/IView::OnInitialUpdate.md), [OnUpdate](../Topic/IView::OnUpdate.md) e [OnActivateView](../Topic/IView::OnActivateView.md) métodos o [IView Interface](../Topic/IView%20Interface.md).  
+ `CWinFormsView`trata de várias das notificações de exibição comuns do MFC, encaminhando-os para o controle de usuário gerenciado. Essas notificações incluem o [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) e [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) métodos.  
   
- Este tópico pressupõe que você concluiu previamente [como: criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [como: criar o controle de usuário e uma exibição MDI Host](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+ Este tópico pressupõe que você concluiu anteriormente [como: criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [como: criar o controle de usuário e uma exibição MDI Host](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
 ### <a name="to-create-the-mfc-host-application"></a>Para criar o aplicativo de host do MFC  
   
-1.  Abra a biblioteca de controle do Windows Forms criado no [como: criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
+1.  Abra a biblioteca de controle de formulários do Windows criados no [como: criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
   
-2.  Adicione uma referência ao mfcmifc80, que pode ser feito clicando no nó do projeto no **Solution Explorer**, selecionando **Add**, **referência**, e, em seguida, navegando até o Microsoft Visual Studio 10.0\VC\atlmfc\lib.  
+2.  Adicione uma referência ao mfcmifc80, que pode ser feito clicando no nó do projeto no **Solution Explorer**, selecionando **adicionar**, **referência**e, em seguida, navegando até Microsoft Visual Studio 10.0\VC\atlmfc\lib.  
   
 3.  Abra UserControl1.Designer.cs e adicione a seguinte instrução using:  
   
@@ -44,7 +43,7 @@ manager: "ghogen"
     using Microsoft.VisualC.MFC;  
     ```  
   
-4.  Além disso, no UserControl1.Designer.cs, altere esta linha:  
+4.  Além disso, em UserControl1.Designer.cs, altere esta linha:  
   
     ```  
     partial class UserControl1  
@@ -56,7 +55,7 @@ manager: "ghogen"
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget  
     ```  
   
-5.  Adicionar isto como a primeira linha da definição de classe para `UserControl1`:  
+5.  Adicionar como a primeira linha da definição de classe para `UserControl1`:  
   
     ```  
     private ICommandSource m_CmdSrc;  
@@ -79,21 +78,21 @@ manager: "ghogen"
     }  
     ```  
   
-7.  Abra o aplicativo MFC criado na [como: criar o controle de usuário e uma exibição MDI Host](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+7.  Abra o aplicativo do MFC criado na [como: criar o controle de usuário e uma exibição MDI Host](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
-8.  Adicionar uma opção de menu que irá chamar `singleMenuHandler`.  
+8.  Adicionar uma opção de menu que invocará `singleMenuHandler`.  
   
-     Vá para **exibição recurso** (Ctrl + Shift + E), expanda o **Menu** pasta e clique duas vezes em **IDR_MFC02TYPE**. Isso exibe o editor de menu.  
+     Vá para **exibição recursos** (Ctrl + Shift + E), expanda o **Menu** pasta e, em seguida, clique duas vezes em **IDR_MFC02TYPE**. Exibe o editor de menu.  
   
-     Adicionar uma opção de menu na parte inferior da **exibição** menu. Observe a ID da opção no menu de **propriedades** janela. Salve o arquivo.  
+     Adicionar uma opção de menu na parte inferior do **exibição** menu. Observe a ID da opção de menu no **propriedades** janela. Salve o arquivo.  
   
      Em **Solution Explorer**, abra o arquivo Resource.h, copie o valor de ID para a opção de menu que você acabou de adicionar e cole esse valor como o primeiro parâmetro para o `m_CmdSrc.AddCommandHandler` chamar do projeto c# `Initialize` método (substituindo `32771` se necessário).  
   
 9. Compile e execute o projeto.  
   
-     Sobre o **criar** menu, clique em **Build Solution**.  
+     No menu **Compilar**, clique em **Compilar Solução**.  
   
-     Sobre o **Depurar** menu, clique em **Iniciar sem depuração**.  
+     Sobre o **depurar** menu, clique em **iniciar sem depuração**.  
   
      Selecione a opção de menu que você adicionou. Observe que o método no arquivo. dll é chamado.  
   
@@ -101,4 +100,4 @@ manager: "ghogen"
  [Hospedando um controle de usuário do Windows Forms como uma exibição MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
  [Interface ICommandSource](../mfc/reference/icommandsource-interface.md)   
  [Interface ICommandTarget](../mfc/reference/icommandtarget-interface.md)   
- [CommandHandler](../Topic/CommandHandler%20Delegate.md)
+ [CommandHandler](http://msdn.microsoft.com/Library/22096734-e074-4aca-8523-4b15590109f9)

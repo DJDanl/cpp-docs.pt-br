@@ -1,39 +1,38 @@
 ---
-title: "Requisitos de driver ODBC para dynasets | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "drivers, para dynasets"
-  - "drivers, ODBC"
-  - "dynasets"
-  - "Drivers ODBC, dynasets"
-  - "conjunto de registros ODBC, dynasets"
-  - "conjuntos de registros, dynasets"
+title: Requisitos de Driver ODBC para Dynasets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, dynasets
+- drivers, for dynasets
+- drivers, ODBC
+- recordsets, dynasets
+- dynasets
+- ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 387520b478be07cd1829f9665663173cfa15efcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Requisitos de driver ODBC para dynasets
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nas classes da base de dados de MFC ODBC, os dynasets são conjuntos de registros com propriedades dinâmicos; permanecem sincronizados com a fonte de dados em algumas formas.  Os dynasets MFC \(mas os conjuntos de registros não somente avanço\) exigem um driver ODBC com conformidade de API de nível 2.  Se o driver para seu [fonte de dados](../../data/odbc/data-source-odbc.md) está em conformidade com o nível 1 API definido, você ainda pode usar instantâneos atualizável e somente leitura e conjuntos de registros de somente avanço, mas não dynasets.  No entanto, um driver de nível 1 pode dar suporte a dynasets se ele da suporte à busca estendida e os cursores controlados por conjunto de chaves.  
+# <a name="odbc-driver-requirements-for-dynasets"></a>Requisitos de driver ODBC para dynasets
+As classes de banco de dados ODBC MFC, dynasets são conjuntos de registros com as propriedades dinâmicas; eles permanecem sincronizados com a fonte de dados de determinadas maneiras. MFC dynasets (mas conjuntos de registros somente de encaminhamento não) requerem um driver ODBC com conformidade de API do nível 2. Se o driver para o seu [fonte de dados](../../data/odbc/data-source-odbc.md) está em conformidade com a API de nível 1 definido, você ainda pode usar instantâneos atualizáveis tanto somente leitura e conjuntos de registros somente de encaminhamento, mas não dynasets. No entanto, um driver de nível 1 pode suporta dynasets se ele dá suporte a busca estendida e os cursores controlados por conjunto de chaves.  
   
- Na terminologia de ODBC, os dynasets e os instantâneos são chamados de cursores.  Um cursor é um mecanismo usado mantendo o controle de sua posição em um conjunto de registros.  Para obter mais informações sobre os requisitos de driver para dynasets, consulte [Dynaset](../../data/odbc/dynaset.md).  Para obter mais informações sobre os cursores, consulte [ODBC \(ODBC\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) na documentação do SDK do MSDN.  
+ Na terminologia ODBC, dynasets e instantâneos são denominados cursores. Um cursor é um mecanismo usado para controlar sua posição em um conjunto de registros. Para obter mais informações sobre requisitos de driver para dynasets, consulte [Dynaset](../../data/odbc/dynaset.md). Para obter mais informações sobre cursores, consulte o [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK na documentação do MSDN.  
   
 > [!NOTE]
->  Para conjuntos de registros atualizável, o driver ODBC deve oferecer suporte a instruções posicionadas de atualização ou função de API ODBC de **::SQLSetPos** .  Se ambos têm suporte, o **::SQLSetPos** MFC usa para maior eficiência.  Alternativamente, para instantâneos, você pode usar a biblioteca de cursores, que fornece suporte necessário para instantâneos atualizável \(cursores estáticos e instruções posicionadas de atualização\).  
+>  Para conjuntos de registros pode ser atualizados, o driver ODBC deve oferecer suporte das instruções update posicionadas ou **:: SQLSetPos** função da API do ODBC. Se ambos são suportadas, MFC usa **:: SQLSetPos** para maior eficiência. Como alternativa, para instantâneos, você pode usar a biblioteca de cursores, que fornece o suporte necessário para instantâneos atualizáveis (Cursores estáticos e instruções update posicionadas).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)

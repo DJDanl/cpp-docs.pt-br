@@ -1,79 +1,78 @@
 ---
-title: "No&#231;&#245;es b&#225;sicas de ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Componentes ODBC"
-  - "Componentes ODBC, componentes necessários"
-  - "biblioteca de cursores ODBC [ODBC], Componentes ODBC"
-  - "ODBC, sobre ODBC"
-  - "ODBC, componentes"
+title: "Noções básicas de ODBC | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC cursor library [ODBC], ODBC components
+- ODBC components
+- ODBC components, required components
+- ODBC, about ODBC
+- ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e32ebf60ac77dba6860f3e773c4d6fb122857b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# No&#231;&#245;es b&#225;sicas de ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico apresenta os fundamentos de ODBC:  
+# <a name="odbc-basics"></a>Noções básicas de ODBC
+Este tópico fornece as Noções básicas de conectividade aberta de banco de dados (ODBC):  
   
--   [Como o ODBC funciona com base de dados de classificação](../../data/odbc/odbc-and-the-database-classes.md)  
+-   [Como o funciona com as Classes de banco de dados ODBC](../../data/odbc/odbc-and-the-database-classes.md)  
   
--   [Como os drivers ODBC funcionam com Dynasets](../../data/odbc/odbc-driver-requirements-for-dynasets.md)  
+-   [Como os Drivers ODBC funcionam com Dynasets](../../data/odbc/odbc-driver-requirements-for-dynasets.md)  
   
--   [Os componentes ODBC precisará redistribuir com seus aplicativos](../../data/odbc/redistributing-odbc-components-to-your-customers.md)  
+-   [Quais componentes ODBC é necessário redistribuir com seus aplicativos](../../data/odbc/redistributing-odbc-components-to-your-customers.md)  
   
- Você também pode querer ler o tópico relacionado [ODBC: A biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+ Você também deseja ler o tópico relacionado [ODBC: A biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!NOTE]
->  As fontes de dados ODBC são acessíveis por meio das classes MFC ODBC, como descrito neste tópico, ou as classes de \(DAO\) do objeto de acesso a dados de MFC.  
+>  Fontes de dados ODBC são acessíveis por meio de classes MFC ODBC, conforme descrito neste tópico, ou as classes de objeto de acesso a dados MFC (DAO).  
   
 > [!NOTE]
->  As classes de MFC ODBC oferecem suporte ao Unicode e multithreading.  Para obter mais informações sobre o suporte de multithreading, consulte [Classes e threads ODBC](../Topic/ODBC%20Classes%20and%20Threads.md)  
+>  As classes MFC ODBC oferecem suporte a Unicode e multithreading. Para obter mais informações sobre o suporte a multithreading, consulte [Classes e Threads ODBC](../../data/odbc/odbc-classes-and-threads.md)  
   
- O ODBC é uma interface de nível de chamada que permite aplicativos para acessar dados em qualquer base de dados para que haja um driver ODBC.  Usando o ODBC, você poderá criar aplicativos de base de dados com acesso a qualquer base de dados para que o usuário final tenha um driver ODBC.  O fornece uma API ODBC permite que o aplicativo ser independentes do sistema de gerenciamento da base de dados de origem \(DBMS\).  
+ ODBC é uma interface de nível de chamada que permite que aplicativos acessem dados em qualquer banco de dados para o qual há um driver ODBC. Usando o ODBC, você pode criar aplicativos de banco de dados com acesso a qualquer banco de dados para o qual o usuário final tem um driver ODBC. ODBC fornece uma API que permite que seu aplicativo para ser independente do sistema de gerenciamento de banco de dados de origem (DBMS).  
   
- O ODBC é a parte da base de dados da arquitetura aberta \(WOSA\) dos serviços do Microsoft Windows, que é uma interface que permite aplicativos de desktop baseados no Windows se conectar a vários ambientes de computação sem reescrever o aplicativo para cada plataforma.  
+ ODBC é a parte do banco de dados do Microsoft Windows Open Services Architecture (WOSA), que é uma interface que permite que aplicativos da área de trabalho do Windows para se conectar a vários ambientes de computação sem reescrever o aplicativo para cada plataforma.  
   
- Os seguintes são componentes ODBC:  
+ A seguir é componentes de ODBC:  
   
--   API ODBC  
+-   API DE ODBC  
   
-     Uma biblioteca das chamadas de função, de um conjunto de códigos de erro, e uma sintaxe padrão de [SQL](../../data/odbc/sql.md) para acessar dados em DBMSs.  
+     Chamadas de uma biblioteca da função, um conjunto de códigos de erro e um padrão [SQL](../../data/odbc/sql.md) sintaxe para acessar dados em DBMSs.  
   
--   Gerenciador de driver ODBC  
+-   Gerenciador de Driver ODBC  
   
-     Uma biblioteca de vínculo dinâmico \(Odbc32.dll\) que drivers da base de dados de ODBC das cargas em nome de um aplicativo.  Este DLL é transparente ao aplicativo.  
+     Uma biblioteca de vínculo dinâmico (Odbc32. dll) que carrega os drivers de banco de dados ODBC em nome de um aplicativo. Esta DLL é transparente ao seu aplicativo.  
   
--   Drivers da base de dados de ODBC  
+-   Drivers de banco de dados ODBC  
   
-     Um ou mais DLL que processam chamadas de função ODBC para DBMSs específico.  Para obter uma lista de drivers fornecidos, consulte [Lista de driver ODBC](../../data/odbc/odbc-driver-list.md).  
+     Uma ou mais DLLs que processam chamadas de função ODBC para DBMSs específicos. Para obter uma lista de drivers fornecidos, consulte [lista de drivers ODBC](../../data/odbc/odbc-driver-list.md).  
   
 -   [Biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
-     Uma biblioteca de vínculo dinâmico \(Odbccr32.dll\) que reside entre o gerenciador de driver ODBC e drivers e trata a rolagem com os dados.  
+     Uma biblioteca de vínculo dinâmico (Odbccr32.dll) que reside entre o Gerenciador de Driver ODBC e os drivers e manipula a percorrer os dados.  
   
--   [Administrador ODBC](../../data/odbc/odbc-administrator.md)  
+-   [Administrador do ODBC](../../data/odbc/odbc-administrator.md)  
   
-     Uma ferramenta usada para configurar o DBMS para torná\-lo disponível como uma fonte de dados para um aplicativo.  
+     Uma ferramenta usada para configurar um DBMS para disponibilizá-lo como uma fonte de dados para um aplicativo.  
   
- Um aplicativo obtém a independência de DBMSs trabalhando em um driver ODBC gravado especificamente para o DBMS em vez de trabalhando diretamente com o DBMS.  O driver traduz as chamadas em comandos que o DBMS pode usar, simplificando o trabalho de desenvolvedor e tornando\-o disponível para uma ampla variedade de fontes de dados.  
+ Um aplicativo obtém a independência de DBMSs trabalho por meio de um driver ODBC criado especificamente para um DBMS em vez de trabalhar diretamente com o DBMS. O driver não converte as chamadas em comandos que seu DBMS pode usar, simplificando o trabalho do desenvolvedor e torná-lo disponível para uma ampla variedade de fontes de dados.  
   
- As classes de base de dados do oferecem suporte a qualquer fonte de dados para que você tenha um driver ODBC.  Isso pode, por exemplo, para incluir um base de dados relacional, um base de dados sequencial indexado \(ISAM\) de método de acesso, uma planilha do Microsoft Excel, ou um arquivo de texto.  Os drivers ODBC gerencia as conexões com a fonte de dados, e do SQL é usado para selecionar registros do base de dados.  
+ As classes de banco de dados oferecem suporte a qualquer fonte de dados em que você tenha um driver ODBC. Por exemplo, isso pode incluir um banco de dados relacional, um banco de dados indexados sequencial acesso ISAM (método), uma planilha do Microsoft Excel ou um arquivo de texto. Os drivers ODBC gerenciam as conexões para a fonte de dados e SQL é usado para selecionar registros do banco de dados.  
   
- Para obter uma lista de drivers ODBC incluídos nesta versão do Visual C\+\+ e para obter informações sobre como obter drivers adicionais, consulte [Lista de driver ODBC](../../data/odbc/odbc-driver-list.md).  
+ Para obter uma lista de drivers ODBC incluídos nesta versão do Visual C++ e para obter informações sobre como obter drivers adicionais, consulte [lista de drivers ODBC](../../data/odbc/odbc-driver-list.md).  
   
-## Consulte também  
- [Conectividade de banco de dados aberto \(ODBC\)](../Topic/Open%20Database%20Connectivity%20\(ODBC\).md)
+## <a name="see-also"></a>Consulte também  
+ [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

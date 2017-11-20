@@ -1,27 +1,26 @@
 ---
-title: "Uso do Registro | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Registrar uso | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7394088f4bd3cec21dde9ea82c0573c56d87366a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Uso do Registro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A arquitetura do [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] sustenta 16 registros de uso geral \(a partir de agora chamados de registros de inteiros\), bem como para 16 registros XMM\/YMM disponíveis para uso de ponto flutuante.  Os registros voláteis são registros a partir do zero presumidos pelo chamador para serem destruídos em uma chamada.  Os registros não voláteis são obrigados a manter seus valores em uma chamada de função e devem ser salvos pelo receptor da chamada se usados.  
+# <a name="register-usage"></a>Uso do Registro
+A arquitetura do [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sustenta 16 registros de uso geral (a partir de agora chamados de registros de inteiros), bem como para 16 registros XMM/YMM disponíveis para uso de ponto flutuante. Os registros voláteis são registros a partir do zero presumidos pelo chamador para serem destruídos em uma chamada. Os registros não voláteis são obrigados a manter seus valores em uma chamada de função e devem ser salvos pelo receptor da chamada se usados.  
   
  A tabela a seguir descreve como cada registro é usado nas chamadas de função:  
   
@@ -33,7 +32,7 @@ A arquitetura do [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] sustenta 16 registr
 |RDX|Volátil|Segundo argumento inteiro|  
 |R8|Volátil|Terceiro argumento inteiro|  
 |R9|Volátil|Quarto argumento inteiro|  
-|R10, R11|Volátil|Deve ser preservado, conforme a necessidade do chamador; usado em instruções syscall\/sysret|  
+|R10, R11|Volátil|Deve ser preservado, conforme a necessidade do chamador; usado em instruções syscall/sysret|  
 |R12, R15|Não volátil|Deve ser preservado pelo receptor da chamada|  
 |RDI|Não volátil|Deve ser preservado pelo receptor da chamada|  
 |RSI|Não volátil|Deve ser preservado pelo receptor da chamada|  
@@ -46,8 +45,8 @@ A arquitetura do [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] sustenta 16 registr
 |XMM3, YMM3|Volátil|Quarto argumento FP; quarto argumento de tipo vetorial quando `__vectorcall` for usado|  
 |XMM4, YMM4|Volátil|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo vetorial quando `__vectorcall` for usado|  
 |XMM5, YMM5|Volátil|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo vetorial quando `__vectorcall` for usado|  
-|XMM6:XMM15, YMM6:YMM15|Não volátil \(XMM\), Volátil \(metade superior de YMM\)|Deve ser preservado conforme necessário pelo receptor da chamada.  Os registros YMM devem ser preservados conforme necessário pelo chamador.|  
+|XMM6:XMM15, YMM6:YMM15|Não volátil (XMM), Volátil (metade superior de YMM)|Deve ser preservado pelo receptor. Os registros YMM devem ser preservados conforme necessário pelo chamador.|  
   
-## Consulte também  
- [Convenções de software x64](../build/x64-software-conventions.md)   
- [\_\_vectorcall](../Topic/__vectorcall.md)
+## <a name="see-also"></a>Consulte também  
+ [x64 convenções de software](../build/x64-software-conventions.md)   
+ [__vectorcall](../cpp/vectorcall.md)

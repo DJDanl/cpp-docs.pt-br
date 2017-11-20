@@ -1,74 +1,73 @@
 ---
-title: "/NODEFAULTLIB (ignorar bibliotecas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.IgnoreAllDefaultLibraries"
-  - "VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames"
-  - "/nodefaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /NODEFAULTLIB"
-  - "bibliotecas padrão, removendo"
-  - "opção de vinculador ignorar bibliotecas"
-  - "bibliotecas, ignorar"
-  - "opção de vinculador NODEFAULTLIB"
-  - "opção de vinculador -NODEFAULTLIB"
+title: -/NODEFAULTLIB (ignorar bibliotecas) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
+- VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
+- /nodefaultlib
+dev_langs: C++
+helpviewer_keywords:
+- default libraries, removing
+- -NODEFAULTLIB linker option
+- libraries, ignore
+- NODEFAULTLIB linker option
+- /NODEFAULTLIB linker option
+- ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1172bc3dbed6353e31e34a0f406d2ea688ce78c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /NODEFAULTLIB (ignorar bibliotecas)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (ignorar bibliotecas)
 ```  
 /NODEFAULTLIB[:library]   
 ```  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  *biblioteca*  
- Uma biblioteca desejada o vinculador para ignorar quando ele resolver referências externas.  
+ Uma biblioteca que você deseja que o vinculador para ignorar ao resolver referências externas.  
   
-## Comentários  
- A opção \/NODEFAULTLIB diz o vinculador para remover uma ou várias bibliotecas padrão da lista de bibliotecas que pesquisa ao resolver referências externas.  
+## <a name="remarks"></a>Comentários  
+ A opção /NODEFAULTLIB informa o vinculador para remover uma ou mais bibliotecas padrão da lista de bibliotecas que busca ao resolver referências externas.  
   
- Para criar um .obj arquivo que não contém referências às bibliotecas padrão, use [\/Zl \(omitir nome da biblioteca padrão\)](../../build/reference/zl-omit-default-library-name.md).  
+ Para criar um arquivo. obj que não contém referências a bibliotecas padrão, use [/Zl (omitir nome da biblioteca padrão)](../../build/reference/zl-omit-default-library-name.md).  
   
- Por padrão, \/NODEFAULTLIB remove todas as bibliotecas padrão da lista de bibliotecas que pesquisa ao resolver referências externas.  O parâmetro opcional da *biblioteca* permite remover uma biblioteca ou em bibliotecas especificadas na lista de bibliotecas que pesquisa ao resolver referências externas.  Especificar uma opção do \/NODEFAULTLIB para cada biblioteca que você deseja excluir.  
+ Por padrão, /NODEFAULTLIB remove todas as bibliotecas padrão da lista de bibliotecas que busca ao resolver referências externas. Opcional *biblioteca* parâmetro permite que você remover uma biblioteca especificada ou bibliotecas da lista de bibliotecas que busca ao resolver referências externas. Especifica uma opção /NODEFAULTLIB para cada biblioteca que você deseja excluir.  
   
- O vinculador resolver referências às definições externos procurando primeiro em bibliotecas que você especifique explicitamente, então em bibliotecas padrão especificada com a opção \/DEFAULTLIB, em bibliotecas padrão e nomeadas em arquivos de .obj.  
+ O vinculador resolve referências a definições externas pesquisando primeiro nas bibliotecas que você especifique explicitamente, então padrão bibliotecas especificado com a opção /DEFAULTLIB e, em seguida, em bibliotecas padrão chamadas nos arquivos. obj.  
   
- \/NODEFAULTLIB:*a biblioteca* substitui*a biblioteca* de [\/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)quando o mesmo nome *da biblioteca* é especificado em ambos.  
+ /NODEFAULTLIB:*biblioteca* substitui [/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*biblioteca* quando o mesmo *biblioteca* nome é especificado em ambos.  
   
- Se você usar \/NODEFAULTLIB, por exemplo, para criar seu programa sem a biblioteca de tempo de execução C, você pode ter que usar [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) para especificar o ponto de entrada \(função\) em seu programa.  Para obter mais informações, consulte [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
+ Se você usar /NODEFAULTLIB, por exemplo, para criar seu programa sem a biblioteca de tempo de execução do C, você pode ter também use [/ENTRY](../../build/reference/entry-entry-point-symbol.md) para especificar o ponto de entrada (função) em seu programa. Para obter mais informações, consulte [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na páginade propriedades de **Entrada**.  
+3.  Clique o **entrada**página de propriedades.  
   
-4.  Selecione a propriedade de **Ignorar Todas as Bibliotecas Padrão** ou especificar uma lista das bibliotecas que você quer ignorar na propriedade de **Ignorar Biblioteca Específica** .  A página de propriedades de **Linha de Comando** mostrará o efeito das alterações feitas nessas propriedades.  
+4.  Selecione o **ignorar todas as bibliotecas padrão** propriedade ou especificar uma lista das bibliotecas de que deseja ignorar no **ignorar biblioteca específica** propriedade. O **linha de comando** página de propriedades mostra o efeito das alterações feitas a essas propriedades.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

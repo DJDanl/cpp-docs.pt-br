@@ -1,37 +1,35 @@
 ---
-title: "IRowsetImpl::IRowsetImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl.IRowsetImpl"
-  - "ATL::IRowsetImpl::IRowsetImpl"
-  - "ATL.IRowsetImpl.IRowsetImpl"
-  - "IRowsetImpl::IRowsetImpl"
-  - "IRowsetImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Construtor IRowsetImpl"
+title: 'Irowsetimpl:: Irowsetimpl | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl.IRowsetImpl
+- ATL::IRowsetImpl::IRowsetImpl
+- ATL.IRowsetImpl.IRowsetImpl
+- IRowsetImpl::IRowsetImpl
+- IRowsetImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetImpl constructor
 ms.assetid: 44ef30c8-9fa5-492b-b90b-40723745dc20
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 39ec10e36d7c6b811e47a03f3d501d2bc494ff8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::IRowsetImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetimplirowsetimpl"></a>IRowsetImpl::IRowsetImpl
 O construtor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,11 +37,11 @@ IRowsetImpl( );
   
 ```  
   
-## Comentários  
- Geralmente você não precisa chamar diretamente esse método.  
+## <a name="remarks"></a>Comentários  
+ Normalmente, você não precisa chamar este método diretamente.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Classe IRowsetImpl](../Topic/IRowsetImpl%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe IRowsetImpl](../../data/oledb/irowsetimpl-class.md)

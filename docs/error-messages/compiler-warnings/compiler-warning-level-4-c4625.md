@@ -1,47 +1,28 @@
 ---
-title: "Compilador aviso (nível 4) C4625 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4625 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4625
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4625
+f1_keywords: C4625
+dev_langs: C++
+helpviewer_keywords: C4625
 ms.assetid: 4cc99e50-846c-4784-97da-48b977067851
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5c8771d5d3866e1e8e80c58577e8df46ba3fb159
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: c4b1cc20ea5f2ef03b2f2ebefa7a4b2c373d796f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4625"></a>Compilador C4625 de aviso (nível 4)
-'derived class': construtor de cópia foi definido implicitamente como excluído porque um construtor de cópia da classe base está inacessível ou excluídos  
+'classe derivada': construtor de cópia foi implicitamente definido como excluído, pois um construtor de cópia da classe base é inacessível ou excluídos  
   
  Um construtor de cópia foi excluído ou não está acessível na classe base e, portanto, não foi gerado para uma classe derivada. Qualquer tentativa de copiar um objeto desse tipo causará um erro do compilador.  
   

@@ -1,65 +1,64 @@
 ---
-title: "/TLBID (especificar ID do recurso para TypeLib) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tlbid"
-  - "VC.Project.VCLinkerTool.TypeLibraryResourceID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .tlb, especificando a ID de recurso"
-  - "Opção de vinculador /TLBID"
-  - "arquivos tlb, especificando a ID de recurso"
-  - "opção de vinculador TLBID"
-  - "opção de vinculador -TLBID"
-  - "bibliotecas de tipo, especificando a ID de recurso"
+title: -TLBID (especificar ID de recurso para TypeLib) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /tlbid
+- VC.Project.VCLinkerTool.TypeLibraryResourceID
+dev_langs: C++
+helpviewer_keywords:
+- tlb files, specifying resource ID
+- -TLBID linker option
+- .tlb files, specifying resource ID
+- /TLBID linker option
+- TLBID linker option
+- type libraries, specifying resource ID
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9a260882b7e4623149e9e82a3a635f7230b6985a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /TLBID (especificar ID do recurso para TypeLib)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (especificar ID do recurso para TypeLib)
 ```  
 /TLBID:id  
 ```  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  `id`  
- Um valor especificado pelo usuário para uma biblioteca vinculador\- criada do tipo.  Substitui a ID do recurso padrão de 1.  
+ Um valor especificado pelo usuário para uma biblioteca de tipos criada pelo vinculador. Ela substitui a ID de recurso padrão de 1.  
   
-## Comentários  
- Ao criar um programa que usa atributos, o vinculador criará uma biblioteca de tipos.  O vinculador atribuirá uma ID de recurso de 1 para a biblioteca de tipos.  
+## <a name="remarks"></a>Comentários  
+ Ao compilar um programa que usa atributos, o vinculador criará uma biblioteca de tipos. O vinculador atribuirá uma ID de recurso de 1 para a biblioteca de tipos.  
   
- Se esse ID de recurso entra em conflito com um de seus recursos existentes, você pode especificar outro ID com \/TLBID.  O intervalo de valores que você pode passar a `id` é de 1 a 65535.  
+ Se esta ID de recurso está em conflito com um dos recursos existentes, você pode especificar outra ID com /TLBID. O intervalo de valores que você pode passar para `id` é de 1 a 65535.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **IDL Inserida** .  
+3.  Clique o **IDL inserido** página de propriedades.  
   
-4.  Modifique a propriedade de **ID de Recurso TypeLib** .  
+4.  Modificar o **ID de recurso TypeLib** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

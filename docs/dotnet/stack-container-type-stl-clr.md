@@ -1,42 +1,39 @@
 ---
-title: "stack::container_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::container_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro container_type [STL/CLR]"
+title: 'Stack:: container_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::container_type
+dev_langs: C++
+helpviewer_keywords: container_type member [STL/CLR]
 ms.assetid: ca0e862d-e57d-4638-b0ba-b4c206de38ed
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e318d21321783a03182bb6cd9844eaa2641989db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# stack::container_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de contêiner subjacente.  
+# <a name="stackcontainertype-stlclr"></a>stack::container_type (STL/CLR)
+O tipo do contêiner subjacente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef Container value_type;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o parâmetro `Container`do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo do parâmetro de modelo `Container`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_stack_container_type.cpp   
@@ -61,12 +58,15 @@ int main()
   
 ```  
   
-  **um b c**   
-## Requisitos  
- cliext \<\/pilha de**Cabeçalho:** \>  
+```Output  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/pilha >  
   
-## Consulte também  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::get\_container](../Topic/stack::get_container%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [pilha (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::get_container (STL/CLR)](../dotnet/stack-get-container-stl-clr.md)

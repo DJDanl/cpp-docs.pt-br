@@ -1,41 +1,40 @@
 ---
-title: "Par&#226;metros de sa&#237;da | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, procedimentos armazenados"
-  - "procedimentos armazenados, chamando"
-  - "procedimentos armazenados, parâmetros"
-  - "chamadas de procedimento"
-  - "chamadas de procedimento, procedimentos armazenados"
+title: "Parâmetros de saída | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, calling
+- stored procedures, parameters
+- procedure calls
+- procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d1f1a4c84c4567b325bb19e3696170f7960b46b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Par&#226;metros de sa&#237;da
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chamar um procedimento armazenado é semelhante a chamar um comando SQL. A principal diferença é que procedimentos armazenados usam parâmetros de saída \(ou "outparameters"\) e valores de retorno.  
+# <a name="output-parameters"></a>Parâmetros de saída
+Chamar um procedimento armazenado é semelhante a chamar um comando SQL. A principal diferença é que os procedimentos armazenados usam parâmetros de saída (ou "outparameters") e valores de retorno.  
   
- O seguinte procedimento armazenado, o primeiro '? 'é o valor de retorno \(telefone\) e o segundo'?' é um parâmetro de entrada \(nome\):  
+ O seguinte procedimento armazenado, o primeiro '? 'é o valor de retorno (phone) e o segundo'?' é um parâmetro de entrada (nome):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- Especifique os parâmetros in e out no mapa de parâmetro:  
+ Especifique os parâmetros in e out no mapa do parâmetro:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -46,10 +45,10 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- Seu aplicativo deve tratar a saída retornada de procedimentos armazenados. Provedores OLE DB diferentes retornam parâmetros de saída e valores de retorno em momentos diferentes durante o processamento de resultados. Por exemplo, o Microsoft OLE DB provider for SQL Server \(SQLOLEDB\) não fornecer parâmetros de saída e retornar códigos até depois que o consumidor tiver recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. A saída é retornada no último pacote TDS do servidor.  
+ Seu aplicativo deve tratar a saída retornada de procedimentos armazenados. Provedores OLE DB diferentes retornam parâmetros de saída e retornam valores em momentos diferentes durante o processamento de resultados. Por exemplo, o provedor Microsoft OLE DB para SQL Server (SQLOLEDB) não forneça parâmetros de saída e retornar códigos até depois que o consumidor tiver recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. O resultado é retornado no último pacote TDS do servidor.  
   
-## Contagem de linhas  
- Se você usar os modelos do consumidor de banco de dados OLE para executar um procedimento armazenado que tem outparameters, a contagem de linhas não é definida até que você feche o conjunto de linhas.  
+## <a name="row-count"></a>Contagem de linhas  
+ Se você usar os modelos de consumidor de banco de dados OLE para executar um procedimento armazenado que tem outparameters, a contagem de linhas não é definida até que você feche o conjunto de linhas.  
   
  Por exemplo, considere um procedimento armazenado com um conjunto de linhas e um outparameter:  
   
@@ -62,7 +61,7 @@ as
 return 0  
 ```  
   
- O outparameter @\_rowcount informa quantas linhas foram realmente retornadas da tabela de teste. No entanto, esse procedimento armazenado limita o número de linhas a um máximo de 50. Por exemplo, se houver 100 linhas no teste, o número de linhas seria 50 \(porque esse código recupera apenas as primeiras 50 linhas\). Se houver apenas 30 linhas na tabela, o número de linhas seria 30. Você deve chamar **Fechar** ou **CloseAll** para preencher o outparameter antes de buscar o seu valor.  
+ O @_rowcount outparameter informa quantas linhas foram realmente retornadas da tabela de teste. No entanto, esse procedimento armazenado limita o número de linhas a um máximo de 50. Por exemplo, se houvesse 100 linhas no teste, o número de linhas deve ser 50 (porque esse código recupera apenas as primeiras 50 linhas). Se houver apenas 30 linhas na tabela, o número de linhas seria 30. Você deve chamar **fechar** ou **CloseAll** para preencher o outparameter antes de buscar seu valor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usando procedimentos armazenados](../../data/oledb/using-stored-procedures.md)

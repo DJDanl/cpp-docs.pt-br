@@ -1,37 +1,36 @@
 ---
-title: "Como realizar marshaling de ponteiros inseridos usando interop C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Interoperabilidade C++, ponteiros inseridos"
-  - "realização de marshaling em dados [C++], ponteiros inseridos"
-  - "interoperabilidade [C++], ponteiros inseridos"
-  - "realização de marshaling [C++], ponteiros inseridos"
-  - "ponteiros [C++], marshaling"
-  - "estruturas [C++], realizando marshaling em ponteiros inseridos"
+title: 'Como: marshaling de ponteiros inseridos usando Interop C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- structures [C++], marshaling embedded pointers
+- interop [C++], embedded pointers
+- C++ Interop, embedded pointers
+- marshaling [C++], embedded pointers
+- pointers [C++], marshaling
+- data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3916d80089d78925b6b5746146490f901c093c09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como realizar marshaling de ponteiros inseridos usando interop C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os exemplos de código a seguir usam as políticas de \#pragma de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) para implementar gerenciado e funções não gerenciada no mesmo arquivo, mas essas funções interoperam da mesma forma que se definido em arquivos separados.  Os arquivos que contêm somente funções não gerenciado não precisam ser compilados com [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Como realizar marshaling de ponteiros inseridos usando interop C++
+O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisam ser compilada com [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemplo  
- O exemplo a seguir demonstra como uma função não gerenciado que usa uma estrutura que contém ponteiros pode ser chamada de uma função gerenciada.  A função gerenciada cria uma instância de estrutura e inicializa o ponteiro inserido com a nova palavra\-chave \(em vez da palavra\-chave de [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) \).  Isso porque aloca memória heap nativo, não há necessidade de manter a matriz para suprimir a coleta de lixo.  No entanto, a memória deve ser explicitamente excluída para evitar o escapamento de memória.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como uma função não gerenciada que usa uma estrutura que contém ponteiros pode ser chamada de uma função gerenciada. A função gerenciada cria uma instância da estrutura e inicializa o ponteiro inserido com a palavra-chave new (em vez do [gcnew novo ref](../windows/ref-new-gcnew-cpp-component-extensions.md) palavra-chave). Como isso aloca a memória no heap nativo, não é necessário para fixar a matriz para suprimir a coleta de lixo. No entanto, a memória deve ser explicitamente excluída para evitar o vazamento de memória.  
   
 ```  
 // marshal_embedded_pointer.cpp  
@@ -74,27 +73,30 @@ int main() {
 }  
 ```  
   
-  **contagem gerenciado \[\] \= 10**  
-**matriz \[0\] \= 72,624326996796**  
-**matriz \[1\] \= 81,7325359590969**  
-**matriz \[2\] \= 76,8022689394663**  
-**matriz \[3\] \= 55,8161191436537**  
-**matriz \[4\] \= 20,6033154021033**  
-**matriz \[5\] \= 55,8884794618415**  
-**matriz \[6\] \= 90,6027066011926**  
-**matriz \[7\] \= 44,2177873310716**  
-**matriz \[8\] \= 97,754975314138**  
-**matriz \[9\] \= 27,370445768987**  
-**contagem não gerenciado \[\] \= 10**  
-**matriz \[0\] \= 72,624327**  
-**matriz \[1\] \= 81,732536**  
-**matriz \[2\] \= 76,802269**  
-**matriz \[3\] \= 55,816119**  
-**matriz \[4\] \= 20,603315**  
-**matriz \[5\] \= 55,888479**  
-**matriz \[6\] \= 90,602707**  
-**matriz \[7\] \= 44,217787**  
-**matriz \[8\] \= 97,754975**  
-**matriz \[9\] \= 27,370446**   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+[managed] count = 10  
+array[0] = 72.624326996796  
+array[1] = 81.7325359590969  
+array[2] = 76.8022689394663  
+array[3] = 55.8161191436537  
+array[4] = 20.6033154021033  
+array[5] = 55.8884794618415  
+array[6] = 90.6027066011926  
+array[7] = 44.2177873310716  
+array[8] = 97.754975314138  
+array[9] = 27.370445768987  
+[unmanaged] count = 10  
+array[0] = 72.624327  
+array[1] = 81.732536  
+array[2] = 76.802269  
+array[3] = 55.816119  
+array[4] = 20.603315  
+array[5] = 55.888479  
+array[6] = 90.602707  
+array[7] = 44.217787  
+array[8] = 97.754975  
+array[9] = 27.370446  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

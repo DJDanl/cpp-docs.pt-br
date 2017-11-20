@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3502a16c0cbbccdfd5d73aafe776d907c9845c1f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scope-visual-c"></a>Escopo (Visual C++)
 Os nomes de C++ podem ser usados apenas em determinadas regiões de um programa. Essa área é chamada de "escopo" do nome. O escopo determina o "tempo de vida" de um nome que não denota um objeto de extensão estática. O escopo também determina a visibilidade de um nome quando os construtores e os destruidores de classe são chamados e quando as variáveis locais para o escopo são inicializadas. (Para obter mais informações, consulte [construtores](../cpp/constructors-cpp.md) e [destruidores](../cpp/destructors-cpp.md).) Há cinco tipos de escopo:  
@@ -49,7 +46,7 @@ Os nomes de C++ podem ser usados apenas em determinadas regiões de um programa.
   
      Em C++, o escopo do arquivo também é conhecido como escopo do namespace.  
   
--   **Escopo de classe** nomes de membros de classe têm o escopo de classe. Funções de membro de classe podem ser acessadas usando os operadores de seleção de membro (**.** ou ** -> **) ou operadores de ponteiro para membro (**.\* ** ou ** -> \* **) em um objeto ou um ponteiro para um objeto de classe; dados de membro de classe não estático são considerados locais para o objeto de classe. Considere a seguinte declaração de classe:  
+-   **Escopo de classe** nomes de membros de classe têm o escopo de classe. Funções de membro de classe podem ser acessadas usando os operadores de seleção de membro (**.** ou  **->** ) ou operadores de ponteiro para membro (**.\***  ou  **-> \*** ) em um objeto ou um ponteiro para um objeto de classe; dados de membro de classe não estático são considerados locais para o objeto de classe. Considere a seguinte declaração de classe:  
   
     ```  
     class Point  

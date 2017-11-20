@@ -1,55 +1,36 @@
 ---
-title: C2664 de erro do compilador | Documentos do Microsoft
+title: C2664 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2664
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2664
+f1_keywords: C2664
+dev_langs: C++
+helpviewer_keywords: C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e011a23723809dd580ef309d8d7d0f653f1c81f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 933ef66a4f4fabea46c3f1ebaede1ea51429141c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2664"></a>C2664 de erro do compilador
-'function': não é possível converter o argumento n de 'type1' em 'type2'  
+'function': não é possível converter a n de argumento de 'type1' em 'type2'  
   
- Esse problema de conversão de parâmetro poderá acontecer se uma instância de classe for criada e houver uma tentativa de conversão implícita em um construtor marcado com a palavra-chave `explicit`. Para obter mais informações sobre conversões explícitas, consulte [conversões de tipo definidas pelo usuário](../../cpp/user-defined-type-conversions-cpp.md).  
+ Esse problema de conversão de parâmetro poderá acontecer se uma instância de classe for criada e houver uma tentativa de conversão implícita em um construtor marcado com a palavra-chave `explicit`. Para obter mais informações sobre conversões explícitas, consulte [conversões de tipo definido pelo usuário](../../cpp/user-defined-type-conversions-cpp.md).  
   
  Se um objeto temporário é passado para uma função que usa uma referência a um objeto como parâmetro, essa referência deve ser uma referência `const`.  
   
  Se a função é passada para um parâmetro que não é do tipo que a função espera, um objeto temporário é criado usando o construtor apropriado. Em seguida, esse objeto temporário é passado para a função. Nesse caso, o objeto temporário é usado para inicializar a referência. Em versões anteriores da linguagem, todas as referências podiam ser inicializadas por objetos temporários.  
   
- Para corrigir o C2664,  
+ Para corrigir C2664,  
   
 -   Verifique novamente o protótipo para a função fornecida e corrija o argumento indicado na mensagem de erro.  
   
@@ -101,7 +82,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra o C2664 usando um literal de cadeia de caracteres para chamar `Test`e mostra como corrigi-lo. Como o parâmetro é uma referência `szString`, um objeto deve ser criado pelo construtor apropriado. O resultado é um objeto temporário que não pode ser usado para inicializar a referência.  
+ O próximo exemplo demonstra C2664, usando uma cadeia de caracteres literal para chamar `Test`e mostra como corrigi-lo. Como o parâmetro é uma referência `szString`, um objeto deve ser criado pelo construtor apropriado. O resultado é um objeto temporário que não pode ser usado para inicializar a referência.  
   
 ```  
 // C2664c.cpp  
@@ -165,7 +146,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- Aqui está uma situação mais complexa, em que C2664 é gerado, incluindo instruções sobre como corrigir o problema:  
+ Aqui está uma situação mais complexa onde C2664 é gerado, incluindo instruções sobre como corrigir o problema:  
   
 ```  
 // C2664e.cpp  

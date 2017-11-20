@@ -1,35 +1,33 @@
 ---
-title: "IOpenRowsetImpl::CreateRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOpenRowsetImpl.CreateRowset"
-  - "IOpenRowsetImpl::CreateRowset"
-  - "CreateRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método CreateRowset"
+title: 'Iopenrowsetimpl:: Createrowset | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IOpenRowsetImpl.CreateRowset
+- IOpenRowsetImpl::CreateRowset
+- CreateRowset
+dev_langs: C++
+helpviewer_keywords: CreateRowset method
 ms.assetid: 69041cf6-7a2f-4409-a26e-6e984c24986e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dc67ec84af8125f92334077dcd3ab3580d31877a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IOpenRowsetImpl::CreateRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cria um objeto de conjunto de linhas.  Não chamado diretamente pelo usuário.  Consulte [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)*na referência do programador de OLE DB.*  
+# <a name="iopenrowsetimplcreaterowset"></a>IOpenRowsetImpl::CreateRowset
+Cria um objeto de conjunto de linhas. Não é chamado diretamente pelo usuário. Consulte [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/en-us/library/ms716724.aspx) no *referência do programador de OLE DB.*  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -48,17 +46,17 @@ HRESULT CreateRowset(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `RowsetClass`  
- Um membro da classe do modelo que representa a classe do conjunto de linhas do usuário.  Geralmente gerado pelo assistente.  
+ Um membro de classe de modelo que representa a classe do usuário. Geralmente, gerado pelo assistente.  
   
  `pRowsetObj`  
- \[out\] ponteiro de um em um objeto do conjunto de linhas.  Esse parâmetro não é usado normalmente, mas poderá ser usado se você deve executar mais trabalho no conjunto de linhas antes de passá\-lo para um objeto COM.  O tempo de vida de `pRowsetObj` é associado por `ppRowset`.  
+ [out] Um ponteiro para um objeto de conjunto de linhas. Normalmente, esse parâmetro não for usado, mas ele pode ser usado se você deve executar o trabalho mais no conjunto de linhas antes de passá-lo para um objeto COM. O tempo de vida de `pRowsetObj` estiver associado ao `ppRowset`.  
   
- Para outros parâmetros, consulte [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)*na referência do programador de OLE DB.*  
+ Para outros parâmetros, consulte [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/en-us/library/ms716724.aspx) no *referência do programador DB OLE.*  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)

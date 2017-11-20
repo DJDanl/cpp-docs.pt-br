@@ -1,75 +1,74 @@
 ---
-title: "/STUB (nome de arquivo stub do MS-DOS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/stub"
-  - "VC.Project.VCLinkerTool.DosStub"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /STUB"
-  - "opção de vinculador de nome de arquivo stub MS-DOS"
-  - "opção de vinculador STUB"
-  - "opção de vinculador -STUB"
-  - "Win32 [C++], anexando programa stub MS-DOS"
-  - "API do Windows [C++], anexando programa stub MS-DOS"
+title: -STUB (nome de arquivo Stub MS-DOS) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /stub
+- VC.Project.VCLinkerTool.DosStub
+dev_langs: C++
+helpviewer_keywords:
+- Win32 [C++], attaching MS-DOS stub program
+- STUB linker option
+- MS-DOS stub file name linker option
+- /STUB linker option
+- Windows API [C++], attaching MS-DOS stub program
+- -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 75d5d3d1eb362c893f3594e5d770111ddded01b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /STUB (nome de arquivo stub do MS-DOS)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stub-ms-dos-stub-file-name"></a>/STUB (nome de arquivo stub do MS-DOS)
 ```  
 /STUB:filename  
 ```  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  *filename*  
- Um aplicativo MS\-DOS.  
+ Um aplicativo do MS-DOS.  
   
-## Comentários  
- A opção \/STUB anexa um programa de stub MS\-DOS para um programa do Win32.  
+## <a name="remarks"></a>Comentários  
+ A opção /STUB anexa um programa stub MS-DOS a um programa Win32.  
   
- Um programa de stub é invocado se o arquivo é executado no MS\-DOS.  Exibe uma mensagem geralmente apropriado; no entanto, qualquer aplicativo válida do MS\-DOS pode ser um programa de stub.  
+ Um programa de stub é invocado se o arquivo for executado no MS-DOS. Ele geralmente exibe uma mensagem apropriada; No entanto, qualquer aplicativo MS-DOS válido pode ser um programa de stub.  
   
- Especifique *um nome de arquivo* para o programa de stub depois de dois\-pontos \(:\) na linha de comando.  O vinculador verifica o *nome de arquivo* e emite uma mensagem de erro se o arquivo não é um executável.  O programa deve ser um arquivo; .exe um arquivo .com é válida para um programa de stub.  
+ Especifique um *filename* para o programa de stub após dois-pontos (:) na linha de comando. As verificações de vinculador *filename* e emite uma mensagem de erro se o arquivo não é um executável. O programa deve ser um arquivo .exe; um arquivo. com é inválido para um programa de stub.  
   
- Se essa opção não for usada, o vinculador anexa um programa padrão de stub que emita a seguinte mensagem:  
+ Se essa opção não for usada, o vinculador anexa um programa de stub padrão que emite a seguinte mensagem:  
   
 ```  
 This program cannot be run in MS-DOS mode.  
 ```  
   
- Ao criar um driver de dispositivo virtual, *o nome de arquivo* permite que o usuário especifica um nome de arquivo que contém uma estrutura de IMAGE\_DOS\_HEADER \(definida em WINNT.H\) a ser usado em VXD, em vez do cabeçalho padrão.  
+ Ao compilar um driver de dispositivo virtual, *filename* permite que o usuário especifique um nome de arquivo que contém uma estrutura IMAGE_DOS_HEADER (definida em WINNT. H) a ser usado no VXD, em vez do cabeçalho padrão.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção na caixa de **Opções Adicionais** .  
+4.  Digite a opção para o **opções adicionais** caixa.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

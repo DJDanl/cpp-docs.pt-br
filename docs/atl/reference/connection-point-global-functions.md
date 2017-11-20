@@ -1,63 +1,49 @@
 ---
-title: "Funções globais de ponto de Conexão | Documentos do Microsoft"
+title: "Funções globais do ponto de Conexão | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- connection points [C++], global functions
+f1_keywords:
+- atlbase/ATL::AtlAdvise
+- atlbase/ATL::AtlUnadvise
+- atlbase/ATL::AtlAdviseSinkMap
+dev_langs: C++
+helpviewer_keywords: connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 8271f512141e4d2cc274d180b31e1ad33bfc354e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: d4457712cf99a7e5b34632247e027d6765699ac4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="connection-point-global-functions"></a>Funções globais de ponto de Conexão
-Essas funções fornecem suporte para pontos de conexão e mapas de coletor.  
+# <a name="connection-point-global-functions"></a>Funções globais do ponto de Conexão
+Essas funções fornecem suporte para pontos de conexão e do coletor de mapas.  
   
 > [!IMPORTANT]
->  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados o tempo de execução do Windows.  
   
 |||  
 |-|-|  
 |[AtlAdvise](#atladvise)|Cria uma conexão entre o ponto de conexão de um objeto e o coletor de um cliente.|  
 |[AtlUnadvise](#atlunadvise)|Encerra a conexão estabelecida por meio de `AtlAdvise`.|  
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Avisa ou unadvises entradas em um mapa coletor de evento.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Aconselha ou unadvises entradas em um mapa de coletor de eventos.|  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
    
 ##  <a name="atladvise"></a>AtlAdvise  
  Cria uma conexão entre o ponto de conexão de um objeto e o coletor de um cliente.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 HRESULT    AtlAdvise(
@@ -87,13 +73,13 @@ HRESULT    AtlAdvise(
  O coletor implementa a interface de saída com suporte pelo ponto de conexão. O cliente usa o `pdw` cookie para remover a conexão, passando-o para [AtlUnadvise](#atlunadvise).  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Windowing&#91;](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
 ##  <a name="atlunadvise"></a>AtlUnadvise  
  Encerra a conexão estabelecida por meio de [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 HRESULT    AtlUnadvise(
@@ -116,13 +102,13 @@ HRESULT    AtlUnadvise(
  Um valor padrão de HRESULT.  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Windowing&#96;](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
 ##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
  Chame essa função para recomendar ou não recomendar todas as entradas no mapa de eventos do coletor do objeto.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -130,18 +116,17 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
   
 ### <a name="parameters"></a>Parâmetros  
  *pT*  
- [in] Um ponteiro para o objeto que contém o mapa do coletor.  
+ [in] Um ponteiro para o objeto que contém o mapa de coletor.  
   
  `bAdvise`  
- [in] **true** se todas as entradas de coletor devem ser notificado; **false** se todas as entradas de coletor devem ser unadvised.  
+ [in] **true** se todas as entradas de coletor devem ser avisado; **false** se todas as entradas de coletor devem ser unadvised.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um valor padrão de HRESULT.  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Windowing&#92;](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções](../../atl/reference/atl-functions.md)   
- [Macros de ponto de Conexão](../../atl/reference/connection-point-macros.md)
-
+ [Macros de ponto de conexão](../../atl/reference/connection-point-macros.md)

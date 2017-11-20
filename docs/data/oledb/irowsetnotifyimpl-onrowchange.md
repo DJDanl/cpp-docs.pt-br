@@ -1,39 +1,37 @@
 ---
-title: "IRowsetNotifyImpl::OnRowChange | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetNotifyImpl::OnRowChange"
-  - "IRowsetNotifyImpl.OnRowChange"
-  - "OnRowChange"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método OnRowChange"
+title: 'Irowsetnotifyimpl:: Onrowchange | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetNotifyImpl::OnRowChange
+- IRowsetNotifyImpl.OnRowChange
+- OnRowChange
+dev_langs: C++
+helpviewer_keywords: OnRowChange method
 ms.assetid: 148bee03-3707-4bbf-8c51-657efc63645f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c765561ce1320944888e599fd4d9f7bf1da04976
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetNotifyImpl::OnRowChange
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Notifica o consumidor da primeira alteração em uma linha ou de qualquer alteração que afete a linha inteira.  
+# <a name="irowsetnotifyimplonrowchange"></a>IRowsetNotifyImpl::OnRowChange
+Notifica o consumidor da primeira alteração para uma linha ou de qualquer alteração que afeta toda a linha.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-STDMETHOD(OnRowChange)(   
+STDMETHOD(OnRowChange)(   
 /* [in] */ IRowset* /* pRowset */,  
 /* [in] */ DBCOUNTITEM /* cRows */,  
 /* [size_is][in] */ const HROW /* rghRows*/ [] ,  
@@ -42,18 +40,18 @@ STDMETHOD(OnRowChange)( 
 /* [in] */ BOOL /* fCantDeny */)  
 ```  
   
-#### Parâmetros  
- Consulte [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) para obter descrições de parâmetro.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) para descrições de parâmetro.  
   
-## Valor de retorno  
- Consulte [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) para obter descrições de valor de retorno.  
+## <a name="return-value"></a>Valor de retorno  
+ Consulte [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) para descrições de valor de retorno.  
   
-## Comentários  
- Esse método envolve o método de [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) .  Consulte a descrição desse método na referência do programador de OLE DB para obter detalhes.  
+## <a name="remarks"></a>Comentários  
+ Este método envolve a [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) método. Consulte a descrição desse método na referência do OLE DB do programador para obter detalhes.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe IRowsetNotifyImpl](../Topic/IRowsetNotifyImpl%20Class.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classe IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)   
  [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)

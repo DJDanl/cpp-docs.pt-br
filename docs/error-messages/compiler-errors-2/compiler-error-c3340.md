@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3340
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3340
+f1_keywords: C3340
+dev_langs: C++
+helpviewer_keywords: C3340
 ms.assetid: 23b12298-b92a-4717-8380-f165c998cb8a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: fafe0e3131512aff530f88daf023d76a47b7d3ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3340"></a>C3340 de erro do compilador
 'interface': interface não pode ser 'restricted' e 'default' em coclass 'class'  

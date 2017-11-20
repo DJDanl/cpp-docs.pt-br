@@ -1,46 +1,43 @@
 ---
-title: "queue::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atribuir membro [STL/CLR]"
+title: Queue::Assign (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 5bec8a84-9561-43f7-ad7f-f845d0edef41
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bb8391ddeee73e5a5f4b2ce63b7034079b64897
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# queue::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queueassign-stlclr"></a>queue::assign (STL/CLR)
 Substitui todos os elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void assign(queue<Value, Container>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  direita  
- Adaptador do contêiner a ser inserido.  
+ Adaptador de contêiner para inserir.  
   
-## Comentários  
- A função de membro atribui `right``.get_container()` ao contêiner subjacente.  Use\-a para alterar o conteúdo da fila.  
+## <a name="remarks"></a>Comentários  
+ Atribui a função de membro `right.get_container()` para o contêiner subjacente. Você pode usá-lo para alterar o conteúdo inteiro da fila.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_queue_assign.cpp   
@@ -71,13 +68,16 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+a b c  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
   
-## Consulte também  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [fila (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)

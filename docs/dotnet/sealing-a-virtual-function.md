@@ -1,34 +1,33 @@
 ---
-title: "Selando uma fun&#231;&#227;o virtual | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "palavra-chave sealed [C++]"
-  - "classes derivadas, funções virtuais"
-  - "funções virtuais, fechamento"
-  - "Palavra-chave __sealed"
+title: "Selando uma função Virtual | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sealed keyword [C++]
+- derived classes, virtual functions
+- virtual functions, sealing
+- __sealed keyword
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 500e5b5e6014b7141c000a4e453341ceb5e822d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Selando uma fun&#231;&#227;o virtual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A sintaxe para lacrar uma função virtual foi alterado de extensões gerenciadas para C\+\+ para [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)].  
+# <a name="sealing-a-virtual-function"></a>Selando uma função virtual
+A sintaxe para lacrar uma função virtual foi alterado de extensões gerenciadas para C++ para Visual C++.  
   
- O `__sealed` palavra\-chave é usada nas extensões gerenciadas para modificar qualquer um tipo de referência, proibindo derivação subsequente dele \(consulte [Declaração de um tipo de classe gerenciado](../dotnet/declaration-of-a-managed-class-type.md)\), ou para modificar uma função virtual, a desabilitação de substituição subsequentes do método em uma classe derivada. Por exemplo:  
+ O `__sealed` palavra-chave é usada das extensões gerenciadas para modificar ou um tipo de referência, a desabilitação de derivação subsequente dele (consulte [declaração de um tipo de classe gerenciada](../dotnet/declaration-of-a-managed-class-type.md)), ou para modificar uma função virtual, não permitindo substituindo subsequentes do método em uma classe derivada. Por exemplo:  
   
 ```  
 __gc class base { public: virtual void f(); };  
@@ -38,9 +37,9 @@ public:
 };  
 ```  
   
- Neste exemplo, `derived::f()` substitui o `base::f()` instância com base na correspondência exata do protótipo da função. O `__sealed` palavra\-chave indica que uma classe subsequente herdada da classe derivada não pode fornecer uma substituição de `derived::f()`.  
+ Neste exemplo, `derived::f()` substitui o `base::f()` instância com base na correspondência exata do protótipo de função. O `__sealed` palavra-chave indica que uma classe subsequente herdada da classe derivada não pode fornecer uma substituição de `derived::f()`.  
   
- Na nova sintaxe, `sealed` é posicionada após a assinatura em vez de terem permissão para aparecer antes do protótipo de função real, que anteriormente era permitido. Além disso, o uso de `sealed` requer um uso explícito do `virtual` palavra\-chave também. Ou seja, a tradução correta de `derived`, acima, é o seguinte:  
+ Na sintaxe de novo, `sealed` é posicionada após a assinatura em vez de terem permissão para aparecer em qualquer lugar antes do protótipo de função real, que anteriormente era permitida. Além disso, o uso de `sealed` exige um uso explícito do `virtual` palavra-chave também. Ou seja, a tradução correta de `derived`acima, é o seguinte:  
   
 ```  
 ref class derived: public base {  
@@ -49,18 +48,18 @@ public:
 };  
 ```  
   
- A ausência do `virtual` palavra\-chave nesta instância resulta em um erro. Na nova sintaxe, a palavra\-chave contextual `abstract` pode ser usado em vez do `=0` para indicar uma função virtual pura. Isso não era suportado dentro das extensões gerenciadas. Por exemplo:  
+ A ausência de `virtual` palavra-chave nesta instância resulta em um erro. Na sintaxe de novo, a palavra-chave contextual `abstract` pode ser usado em vez do `=0` para indicar uma função virtual pura. Isso não era suportado dentro das extensões gerenciadas. Por exemplo:  
   
 ```  
 __gc class base { public: virtual void f()=0; };  
 ```  
   
- pode ser reescrito como  
+ pode ser reescrita como  
   
 ```  
 ref class base { public: virtual void f() abstract; };  
 ```  
   
-## Consulte também  
- [Declarações de membro em uma classe ou uma interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+## <a name="see-also"></a>Consulte também  
+ [Declarações de membro em uma classe ou Interface (C + + CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [sealed](../windows/sealed-cpp-component-extensions.md)

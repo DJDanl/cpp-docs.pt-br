@@ -1,35 +1,33 @@
 ---
-title: "lock_when Enum | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::lock_when"
-  - "msclr.lock_when"
-  - "lock_when"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enum lock_when"
+title: lock_when Enum | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::lock_when
+- msclr.lock_when
+- lock_when
+dev_langs: C++
+helpviewer_keywords: lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c13325f92f3b17f5881be1deffd9710108ecf4be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# lock_when Enum
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica adiou o bloqueio.  
+# <a name="lockwhen-enum"></a>lock_when Enum
+Especifica o bloqueio adiada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 enum lock_when {  
@@ -37,11 +35,11 @@ enum lock_when {
 };  
 ```  
   
-## Comentários  
- Quando é passada a [lock::lock](../dotnet/lock-lock.md), `lock_later` especifica que o bloqueio não ser tomada agora.  
+## <a name="remarks"></a>Comentários  
+ Quando passados para [lock::lock](../dotnet/lock-lock.md), `lock_later` Especifica que o bloqueio não deve ser executada agora.  
   
-## Exemplo  
- Este exemplo usa uma única instância de uma classe em vários threads.  A classe usar um bloqueio em para assegurar que acessa a seus dados internos são consistentes para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe para verificar periodicamente se algum thread de trabalho ainda existe, e para sair de espera até que todos os threads de trabalho foi concluído suas tarefas.  
+## <a name="example"></a>Exemplo  
+ Este exemplo usa uma única instância de uma classe em vários threads.  A classe usa um bloqueio em si mesmo para garantir que acessa a seus dados internos é consistente para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe Verifique periodicamente para ver se qualquer threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
   
 ```  
 // msl_lock_lock_when.cpp  
@@ -115,21 +113,24 @@ int main() {
 }  
 ```  
   
-  **O thread 3, o contador \= 0**  
-**O thread 3, o contador \= 10**  
-**O thread 5, o contador \= 0**  
-**O thread 5, o contador \= 10**  
-**O thread 7, o contador \= 0**  
-**O thread 7, o contador \= 10**  
-**O thread 4, o contador \= 0**  
-**O thread 4, o contador \= 10**  
-**O thread 6, o contador \= 0**  
-**O thread 6, o contador \= 10**  
-**Todos os threads concluídos.**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\lock.h >  
   
-## Consulte também  
- [bloqueio](../dotnet/lock.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
+ [lock](../dotnet/lock.md)

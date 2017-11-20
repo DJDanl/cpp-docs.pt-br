@@ -1,35 +1,34 @@
 ---
-title: "Destaques de altera&#231;&#245;es (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Destaques de alterações (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a17ad8aca031d6345f3ded4839dbb543c1edf133
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Destaques de altera&#231;&#245;es (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esse contorno mostra exemplos de algumas das alterações no idioma das extensões gerenciadas para C\+\+ a [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)].  Siga o link que rastreia cada item para obter mais informações.  
+# <a name="outline-of-changes-ccli"></a>Destaques de alterações (C++/CLI)
+Essa estrutura de tópicos mostra exemplos de algumas das alterações na linguagem de extensões gerenciadas para C++ para Visual C++. Siga o link que acompanha cada item para obter mais informações.  
   
-## Nenhum palavra\-chave dupla de sublinhado  
- O sublinhado vezes na frente de todas as palavras\-chave foi removido, com uma exceção.  Assim, `__value``value`se torna, se torna e `__interface``interface`, e assim por diante.  Para evitar conflitos de nome entre palavras\-chave e identificadores no código de usuário, as palavras\-chave são tratados primariamente como sensíveis ao contexto.  
+## <a name="no-double-underscore-keywords"></a>Nenhuma palavra-chave sublinhado duplo  
+ O sublinhado duplo na frente de todas as palavras-chave tiver sido removido, com uma exceção. Portanto, `__value` se torna `value`, e `__interface` torna-se `interface`, e assim por diante. Para evitar conflitos de nomes entre as palavras-chave e os identificadores no código do usuário, as palavras-chave principalmente são tratadas como contextual.  
   
- Consulte [Palavras\-chave da linguagem \(C\+\+\/CLI\)](../Topic/Language%20Keywords%20\(C++-CLI\).md) para maiores informações.  
+ Consulte [palavras-chave (C + + CLI)](../dotnet/language-keywords-cpp-cli.md) para obter mais informações.  
   
-## Declarações da classe  
- Sintaxe gerenciado de extensões:  
+## <a name="class-declarations"></a>Declarações de classe  
+ Sintaxe de extensões gerenciada:  
   
 ```  
 __gc class Block {};                           // reference class  
@@ -49,10 +48,10 @@ ref class Shape abstract {};       // abstract class
 ref class Shape2D sealed: Shape{}; // derived class  
 ```  
   
- Consulte [Tipos gerenciados \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md) para maiores informações.  
+ Consulte [tipos gerenciados (C + + CL)](../dotnet/managed-types-cpp-cl.md) para obter mais informações.  
   
-## Declaração de objeto  
- Sintaxe gerenciado de extensões:  
+## <a name="object-declaration"></a>Declaração de objeto  
+ Sintaxe de extensões gerenciada:  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -75,10 +74,10 @@ public ref class Form1 : System::Windows::Forms::Form {
 };  
 ```  
   
- Consulte [Declaração de um objeto de classe de referência CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para maiores informações.  
+ Consulte [declaração de um objeto de classe de referência CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para obter mais informações.  
   
-### Alocação gerenciado do heap  
- Sintaxe gerenciado de extensões:  
+### <a name="managed-heap-allocation"></a>Alocação de Heap gerenciado  
+ Sintaxe de extensões gerenciada:  
   
 ```  
 Button* button1 = new Button; // managed heap  
@@ -94,10 +93,10 @@ int * pi1 = new int;                   // native heap
 Int32^ pi2 = gcnew Int32;              // managed heap  
 ```  
   
- Consulte [Declaração de um objeto de classe de referência CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para maiores informações.  
+ Consulte [declaração de um objeto de classe de referência CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para obter mais informações.  
   
-### Uma referência a um objeto de controle  
- Sintaxe gerenciado de extensões:  
+### <a name="a-tracking-reference-to-no-object"></a>Uma referência de rastreamento para nenhum objeto  
+ Sintaxe de extensões gerenciada:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -123,15 +122,15 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- Consulte [Declaração de um objeto de classe de referência CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para maiores informações.  
+ Consulte [declaração de um objeto de classe de referência CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para obter mais informações.  
   
-## Declaração de matriz  
- A matriz de CLR foi alto.  É semelhante à coleção do modelo de `vector` de stl, mas mapeia para `System::Array` subjacente classificação \- isto é, não é uma implementação do modelo.  
+## <a name="array-declaration"></a>Declaração de matriz  
+ A matriz do CLR foi reprojetada. É semelhante a stl `vector` coleção do modelo, mas mapeia para subjacente `System::Array` classe - ou seja, não é uma implementação de modelo.  
   
- Consulte [Declaração de uma matriz CLR](../dotnet/declaration-of-a-clr-array.md) para maiores informações.  
+ Consulte [declaração de uma matriz de CLR](../dotnet/declaration-of-a-clr-array.md) para obter mais informações.  
   
-### Matriz como o parâmetro  
- Sintaxe gerenciado da matriz de extensões:  
+### <a name="array-as-parameter"></a>Matriz como parâmetro  
+ Sintaxe de matriz de extensões gerenciada:  
   
 ```  
 void PrintValues( Object* myArr __gc[]);   
@@ -145,8 +144,8 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
-### Matriz como o tipo de retorno  
- Sintaxe gerenciado da matriz de extensões:  
+### <a name="array-as-return-type"></a>Matriz como tipo de retorno  
+ Sintaxe de matriz de extensões gerenciada:  
   
 ```  
 Int32 f() [];   
@@ -160,8 +159,8 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
-### Inicialização de taquigrafia da matriz de CLR types local  
- Sintaxe gerenciado da matriz de extensões:  
+### <a name="shorthand-initialization-of-local-clr-array"></a>Inicialização de forma abreviada de matriz CLR Local  
+ Sintaxe de matriz de extensões gerenciada:  
   
 ```  
 int GetArray() __gc[] {  
@@ -184,8 +183,8 @@ array<int>^ GetArray() {
 }  
 ```  
   
-### Declaração explícita de matriz de CLR  
- Sintaxe gerenciado da matriz de extensões:  
+### <a name="explicit-clr-array-declaration"></a>Declaração de matriz CLR explícita  
+ Sintaxe de matriz de extensões gerenciada:  
   
 ```  
 Object* myArray[] = new Object*[2];  
@@ -199,7 +198,7 @@ array<Object^>^ myArray = gcnew array<Object^>(2);
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- Novo à linguagem: inicialização explícita da matriz que segue o gcnew  
+ Novo idioma: inicialização de matriz explícita que segue gcnew  
   
 ```  
 // explicit initialization list follow gcnew   
@@ -208,8 +207,8 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## Propriedades escalares  
- Sintaxe de propriedade gerenciada de extensões:  
+## <a name="scalar-properties"></a>Propriedades escalares  
+ Sintaxe de propriedade extensões gerenciada:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -221,7 +220,7 @@ public:
 };  
 ```  
   
- Nova sintaxe da propriedade:  
+ Nova sintaxe de propriedade:  
   
 ```  
 public ref class Vector sealed {   
@@ -232,11 +231,11 @@ public:
    {  
       double get()             { return _x; }  
       void   set( double newx ){ _x = newx; }  
-   } // Note: no semi-colon …  
+   } // Note: no semi-colon  
 };  
 ```  
   
- Novo à linguagem: propriedades triviais  
+ Novo idioma: propriedades triviais  
   
 ```  
 public ref class Vector sealed {   
@@ -247,10 +246,10 @@ public:
 };  
 ```  
   
- Consulte [Declaração da propriedade](../dotnet/property-declaration.md) para maiores informações.  
+ Consulte [declaração de propriedade](../dotnet/property-declaration.md) para obter mais informações.  
   
-## Propriedades indexadas  
- As extensões gerenciadas indexados a sintaxe da propriedade:  
+## <a name="indexed-properties"></a>Propriedades indexadas  
+ Extensões gerenciadas indexados a sintaxe da propriedade:  
   
 ```  
 public __gc class Matrix {  
@@ -262,7 +261,7 @@ public:
 };  
 ```  
   
- Nova sintaxe indexada da propriedade:  
+ Nova sintaxe de propriedade indexada:  
   
 ```  
 public ref class Matrix {  
@@ -276,7 +275,7 @@ public:
 };  
 ```  
   
- Novo à linguagem: propriedade indexada nível classe  
+ Novo idioma: propriedade indexada de nível de classe  
   
 ```  
 public ref class Matrix {  
@@ -296,10 +295,10 @@ public:
 };  
 ```  
   
- Consulte [Declaração do índice de propriedade](../dotnet/property-index-declaration.md) para maiores informações.  
+ Consulte [declaração de propriedade de índice](../dotnet/property-index-declaration.md) para obter mais informações.  
   
-## Operadores sobrecarregados  
- Sintaxe gerenciado de sobrecarga do operador DMX:  
+## <a name="overloaded-operators"></a>Operadores sobrecarregados  
+ Sintaxe de sobrecarga de operador de extensões gerenciada:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -321,7 +320,7 @@ int main() {
 }  
 ```  
   
- Nova sintaxe da sobrecarga do operador:  
+ Nova sintaxe de sobrecarga de operador:  
   
 ```  
 public ref class Vector sealed {  
@@ -342,10 +341,10 @@ int main() {
 }  
 ```  
   
- Consulte [Operadores sobrecarregados](../dotnet/overloaded-operators.md) para maiores informações.  
+ Consulte [operadores sobrecarregados](../dotnet/overloaded-operators.md) para obter mais informações.  
   
-## Operadores de conversão  
- Sintaxe gerenciado do operador de conversão de extensões:  
+## <a name="conversion-operators"></a>Operadores de conversão  
+ Sintaxe de operador de conversão de extensões gerenciada:  
   
 ```  
 __gc struct MyDouble {  
@@ -355,7 +354,7 @@ __gc struct MyDouble {
 };  
 ```  
   
- Nova sintaxe de operador de conversão:  
+ Nova sintaxe do operador de conversão:  
   
 ```  
 ref struct MyDouble {  
@@ -366,10 +365,10 @@ public:
 };  
 ```  
   
- Consulte [Alterações feitas em operadores da conversão](../dotnet/changes-to-conversion-operators.md) para maiores informações.  
+ Consulte [altera para os operadores de conversão](../dotnet/changes-to-conversion-operators.md) para obter mais informações.  
   
-## Substituição explícita de um membro da interface  
- Sintaxe explícita de substituição de extensões gerenciadas:  
+## <a name="explicit-override-of-an-interface-member"></a>Substituição explícita de um membro de interface  
+ Extensões gerenciadas explícita substituem sintaxe:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -381,7 +380,7 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- Nova sintaxe explícita de substituição:  
+ Nova sintaxe de substituição explícita:  
   
 ```  
 public ref class R : public ICloneable {  
@@ -393,10 +392,10 @@ public ref class R : public ICloneable {
 };  
 ```  
   
- Consulte [Substituição explícita de um membro de interface](../dotnet/explicit-override-of-an-interface-member.md) para maiores informações.  
+ Consulte [substituição explícita de um membro de Interface](../dotnet/explicit-override-of-an-interface-member.md) para obter mais informações.  
   
-## Funções \(virtual private networks\)  
- Sintaxe virtual privada da função de extensões gerenciadas:  
+## <a name="private-virtual-functions"></a>Funções virtuais particulares  
+ Sintaxe de função virtual particular extensões gerenciada:  
   
 ```  
 __gc class Base {  
@@ -412,7 +411,7 @@ public:
 };  
 ```  
   
- Nova sintaxe virtual privada da função  
+ Nova sintaxe de função virtual privada  
   
 ```  
 ref class Base {  
@@ -428,10 +427,10 @@ public:
 };  
 ```  
   
- Consulte [Funções virtuais particulares](../Topic/Private%20Virtual%20Functions.md) para maiores informações.  
+ Consulte [privada Virtual funções](../dotnet/private-virtual-functions.md) para obter mais informações.  
   
-## Tipo de enum de CLR  
- Sintaxe gerenciado de enum de extensões:  
+## <a name="clr-enum-type"></a>Tipo enum CLR  
+ Sintaxe de enum extensões gerenciada:  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -451,33 +450,33 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- Além dessa alteração sintática pequena, o comportamento do tipo de enum de CLR foi alterado em várias maneiras:  
+ Além dessa alteração sintática pequena, o comportamento do tipo enum CLR foi alterado de várias maneiras:  
   
--   Uma declaração frente de um enum de CLR não tem mais suporte.  
+-   Não há suporte para a declaração de encaminhamento de um enum CLR.  
   
--   A resolução de sobrecarga entre aritmética interno tipo e a hierarquia da classe de objeto inverteu entre extensões gerenciadas e [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)].  Como efeito colateral, os enum de CLR não são convertidos implicitamente em tipos aritméticos.  
+-   A resolução de sobrecarga entre os tipos aritméticos internos e a hierarquia de classe de objeto inverteu entre extensões gerenciadas e Visual C++. Como um efeito colateral, o CLR enums implicitamente não são convertidos em tipos aritméticos.  
   
--   Na nova sintaxe, uma enum de CLR mantém seu próprio escopo, que não é o caso em extensões gerenciadas.  Anteriormente, os enumeradores eram visíveis dentro do escopo de conteúdo de enum; agora, os enumeradores são encapsulados no escopo de enum.  
+-   A nova sintaxe, um enum CLR mantém seu próprio escopo, que não é o caso em extensões gerenciadas. Anteriormente, enumeradores eram visíveis no escopo contentor do enum; Agora, os enumeradores são encapsuladas dentro do escopo do enum.  
   
- Consulte [Tipo enum CLR](../dotnet/clr-enum-type.md) para maiores informações.  
+ Consulte [tipo Enum CLR](../dotnet/clr-enum-type.md) para obter mais informações.  
   
-## Remoção da palavra\-chave de \_\_box  
- Extensões gerenciadas e que a sintaxe:  
+## <a name="removal-of-box-keyword"></a>Remoção de palavra-chave de box  
+ Extensões gerenciadas conversão boxing de sintaxe:  
   
 ```  
 Object *o = __box( 1024 ); // explicit boxing  
 ```  
   
- Nova sintaxe do com:  
+ Nova sintaxe de conversão boxing:  
   
 ```  
 Object ^o = 1024; // implicit boxing  
 ```  
   
- Consulte [Uma manipulação de acompanhamento de um valor demarcado](../dotnet/a-tracking-handle-to-a-boxed-value.md) para maiores informações.  
+ Consulte [um controle identificador para um valor demarcado](../dotnet/a-tracking-handle-to-a-boxed-value.md) para obter mais informações.  
   
-## Fixando o ponteiro  
- Extensões gerenciadas que fixam a sintaxe do ponteiro:  
+## <a name="pinning-pointer"></a>Ponteiro de fixação  
+ Sintaxe de ponteiro de fixação de extensões gerenciadas:  
   
 ```  
 __gc struct H { int j; };  
@@ -488,7 +487,7 @@ int main() {
 };  
 ```  
   
- Nova sintaxe fixando\-se do ponteiro:  
+ Nova sintaxe de ponteiro de fixação:  
   
 ```  
 ref struct H { int j; };  
@@ -499,26 +498,27 @@ int main() {
 }  
 ```  
   
- Consulte [Semântica do tipo de valor](../Topic/Value%20Type%20Semantics.md) para maiores informações.  
+ Consulte [semântica do tipo de valor](../dotnet/value-type-semantics.md) para obter mais informações.  
   
-## A palavra\-chave de \_\_typeof se torna typeid  
- Sintaxe gerenciado de typeof de extensões:  
+## <a name="typeof-keyword-becomes-typeid"></a>TypeOf palavra-chave se torna typeid  
+ Sintaxe de typeof extensões gerenciada:  
   
 ```  
 Array* myIntArray =   
    Array::CreateInstance( __typeof(Int32), 5 );  
 ```  
   
- Nova sintaxe de typeid:  
+ Nova sintaxe typeid:  
   
 ```  
 Array^ myIntArray =   
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
- Consulte [typeof vai até T::typeid](../dotnet/typeof-goes-to-t-typeid.md) para maiores informações.  
+ Consulte [typeof vai até t:: TypeId](../dotnet/typeof-goes-to-t-typeid.md) para obter mais informações.  
   
-## Consulte também  
- [Primer de migração C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)   
- [\(NOTINBUILD\)Managed Extensions for C\+\+ Syntax Upgrade Checklist](http://msdn.microsoft.com/pt-br/edbded88-7ef3-4757-bd9d-b8f48ac2aada)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Consulte também  
+ [C + + CLI Primer de migração](../dotnet/cpp-cli-migration-primer.md)   
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+
+

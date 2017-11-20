@@ -1,32 +1,31 @@
 ---
-title: "Como recuperar a vers&#227;o do Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows [C++], recuperando versão com Visual C++"
-  - "Windows [C++], version"
+title: "Como: recuperar a versão do Windows (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], version
+- Windows [C++], retrieving version using Visual C++
 ms.assetid: 7e6f567b-d378-49bb-aa59-2240f69a022d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 65e2c342b1c7be86035955cf2d22fde838c0c3ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como recuperar a vers&#227;o do Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra como recuperar informações sobre plataforma e versão do sistema operacional atual.  Essa informação é armazenada na propriedade de <xref:System.Environment.OSVersion%2A?displayProperty=fullName> e consiste em uma enumeração que descreve a versão do windows no geral e em um objeto de <xref:System.Environment.Version%2A> que contém a compilação exata do sistema operacional.  
+# <a name="how-to-retrieve-the-windows-version-ccli"></a>Como recuperar a versão do Windows (C++/CLI)
+O exemplo de código a seguir demonstra como recuperar as informações de plataforma e versão do sistema operacional atual. Essas informações são armazenadas no <xref:System.Environment.OSVersion%2A?displayProperty=fullName> propriedade e consiste em uma enumeração que descreve a versão do Windows em termos gerais e um <xref:System.Environment.Version%2A> objeto que contém a compilação exata do sistema operacional.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // os_ver.cpp  
@@ -64,6 +63,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Operações do Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Operações do Windows (C + + CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

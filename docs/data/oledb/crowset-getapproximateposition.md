@@ -1,70 +1,68 @@
 ---
-title: "CRowset::GetApproximatePosition | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::GetApproximatePosition"
-  - "ATL::CRowset<TAccessor>::GetApproximatePosition"
-  - "CRowset.GetApproximatePosition"
-  - "CRowset::GetApproximatePosition"
-  - "GetApproximatePosition"
-  - "ATL.CRowset.GetApproximatePosition"
-  - "CRowset<TAccessor>::GetApproximatePosition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetApproximatePosition"
+title: 'Crowset:: Getapproximateposition | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::GetApproximatePosition
+- ATL::CRowset<TAccessor>::GetApproximatePosition
+- CRowset.GetApproximatePosition
+- CRowset::GetApproximatePosition
+- GetApproximatePosition
+- ATL.CRowset.GetApproximatePosition
+- CRowset<TAccessor>::GetApproximatePosition
+dev_langs: C++
+helpviewer_keywords: GetApproximatePosition method
 ms.assetid: 8f9ccd41-0590-468e-b202-6731d0f99d21
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 165537f3b61120237e7bfb8330ecf353bc01a107
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::GetApproximatePosition
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna a posição aproximada de uma linha que corresponde a um medidor.  
+# <a name="crowsetgetapproximateposition"></a>CRowset::GetApproximatePosition
+Retorna a posição aproximada de uma linha correspondente a um indicador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      HRESULT GetApproximatePosition(   
-   const CBookmarkBase* pBookmark,   
-   DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows    
+      HRESULT GetApproximatePosition(   
+   const CBookmarkBase* pBookmark,   
+   DBCOUNTITEM* pPosition,   
+   DBCOUNTITEM* pcRows    
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `pBookmark`  
- \[in\] ponteiro de medidor a um que identifica a linha cuja posição deve ser encontrada.  **nulo** se apenas a contagem de linhas é necessária.  
+ [in] Um ponteiro para um indicador que identifica a linha cuja posição é encontrado. **NULO** se apenas a contagem de linhas é necessária.  
   
  *pPosition*  
- \[out\] ponteiro do local onde `GetApproximatePosition` retorna a posição da linha.  **nulo** se a posição não é necessária.  
+ [out] Um ponteiro para o local onde `GetApproximatePosition` retorna a posição da linha. **NULO** se a posição não for necessária.  
   
  `pcRows`  
- \[out\] ponteiro do local onde `GetApproximatePosition` retorna o número total de linhas.  **nulo** se a contagem de linhas não é necessária.  
+ [out] Um ponteiro para o local onde `GetApproximatePosition` retorna o número total de linhas. **NULO** se a contagem de linhas não for necessária.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Esse método exige a interface opcional `IRowsetScroll`, que pode não haver suporte em todos os provedores; nesse caso, o método retornará **E\_NOINTERFACE**.  Você também deve definir **DBPROP\_IRowsetScroll** a `VARIANT_TRUE` antes de chamar **Abrir** na tabela ou o comando que contém o conjunto de linhas.  
+## <a name="remarks"></a>Comentários  
+ Esse método requer que a interface opcional `IRowsetScroll`, que talvez não tenha suporte em todos os provedores; se esse for o caso, o método retornará **E_NOINTERFACE**. Você também deve definir **DBPROP_IRowsetScroll** para `VARIANT_TRUE` antes de chamar **abrir** na tabela ou que contém o conjunto de linhas de comando.  
   
- Para obter informações sobre como usar o marca um endereço da Internet\) dos consumidores, consulte [Usando indicadores](../../data/oledb/using-bookmarks.md).  
+ Para obter informações sobre como usar indicadores em clientes, consulte [usando indicadores](../../data/oledb/using-bookmarks.md).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe CRowset](../Topic/CRowset%20Class.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classe CRowset](../../data/oledb/crowset-class.md)   
  [IRowsetScroll::GetApproximatePosition](https://msdn.microsoft.com/en-us/library/ms712901.aspx)

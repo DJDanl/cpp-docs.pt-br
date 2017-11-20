@@ -1,33 +1,30 @@
 ---
-title: "max (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::max"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "função max [STL/CLR]"
+title: Max (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::max
+dev_langs: C++
+helpviewer_keywords: max function [STL/CLR]
 ms.assetid: bf51aedc-b7a0-4b6c-a76e-fdbc4af042fa
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 609e27f35aa1e80a90a9ae5e66ffc230dcc18d0a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# max (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Compara dois objetos e retorna o maior dos dois, onde o critério de ordenação pode ser especificado por um predicado binário.  
+# <a name="max-stlclr"></a>max (STL/CLR)
+Compara dois objetos e retorna o maior dos dois, em que o critério de ordenação pode ser especificado por um predicado binário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _Ty> inline  
@@ -36,13 +33,13 @@ template<class _Ty, class _Pr> inline
     const _Ty max(const _Ty% _Left, const _Ty% _Right, _Pr _Pred);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `max`STL.  Para obter mais informações, consulte [max](../Topic/max.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `max`. Para obter mais informações, consulte [max](../standard-library/algorithm-functions.md#max).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,34 +1,32 @@
 ---
-title: "CRowsetImpl::ValidateCommandID | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl.ValidateCommandID"
-  - "CRowsetImpl::ValidateCommandID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método ValidateCommandID"
+title: 'Crowsetimpl:: Validatecommandid | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl.ValidateCommandID
+- CRowsetImpl::ValidateCommandID
+dev_langs: C++
+helpviewer_keywords: ValidateCommandID method
 ms.assetid: cdde6088-41bc-4b8f-a32b-f36f7d9b5ec0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fa772283a3dc5f5b3a69639aa0828226f3c90760
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CRowsetImpl::ValidateCommandID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verifica se um ou ambos **DBID**s contém valores de cadeia de caracteres e, em caso afirmativo, copiá\-los para os membros de dados [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) e [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  
+# <a name="crowsetimplvalidatecommandid"></a>CRowsetImpl::ValidateCommandID
+Verifica para ver se um ou ambos **DBID**s contêm valores de cadeia de caracteres e, nesse caso, copiá-los em seus membros de dados [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) e [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,22 +36,22 @@ Verifica se um ou ambos **DBID**s contém valores de cadeia de caracteres e, em 
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `pTableID`  
- \[in\] ponteiro da **DBID** que representa a ID da tabela  
+ [in] Um ponteiro para o **DBID** que representa a ID da tabela.  
   
  `pIndexID`  
- \[in\] ponteiro da **DBID** que representa o ID de índice  
+ [in] Um ponteiro para o **DBID** que representa a ID de índice.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Este método é chamado por um upcast estática por `CRowsetImpl` para popular seus membros de dados [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) e [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  Por padrão, esse método verifica se um ou ambos **DBID**s contém valores de cadeia de caracteres e, em caso afirmativo, copiá\-los para os membros de dados.  Colocando um método com essa assinatura no `CRowsetImpl`\- a classe derivada, o método será chamada em vez de implementação de base.  
+## <a name="remarks"></a>Comentários  
+ Este método é chamado por meio de uma elevação estática por `CRowsetImpl` para preencher seus membros de dados [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) e [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). Por padrão, esse método verifica para ver se um ou ambos **DBID**s contêm valores de cadeia de caracteres e, nesse caso, copiá-los em seus membros de dados. Colocando um método com essa assinatura em seu `CRowsetImpl`-derivado da classe, o método será chamado em vez da implementação base.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CRowsetImpl](../../data/oledb/crowsetimpl-class.md)   
  [CRowsetImpl::SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)

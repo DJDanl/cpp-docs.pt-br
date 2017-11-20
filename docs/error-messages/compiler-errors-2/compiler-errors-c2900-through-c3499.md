@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -78,19 +77,17 @@ helpviewer_keywords:
 - C2987
 - C2997
 - C2999
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>C2900 de erros do compilador por meio de C2999
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
@@ -202,4 +199,3 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C2997 de erro do compilador|'*função*': limite de matriz não pode ser deduzida de um inicializador de membro padrão|  
 |[Erro do compilador C2998](compiler-error-c2998.md)|'*declarador*': não pode ser uma definição de modelo|  
 |C2999 de erro do compilador|Erro desconhecido, escolha o comando de suporte técnico no menu Ajuda do Visual C++, ou abrir o arquivo de Ajuda do suporte técnico para obter mais informações|  
-

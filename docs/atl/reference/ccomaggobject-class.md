@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLCOM/ATL::CComAggObject::QueryInterface
 - ATLCOM/ATL::CComAggObject::Release
 - ATLCOM/ATL::CComAggObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 2f580a33b5b92f44e40a3da2e1f7111cbb8ede88
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 0af699e61f487ba8af836a4f544ed4c338d70b4b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 Essa classe implementa o [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface para um objeto agregado. Por definição, um objeto agregado está contido dentro de um objeto externo. O `CComAggObject` classe é semelhante do [CComObject classe](../../atl/reference/ccomobject-class.md), exceto que ela expõe uma interface que é diretamente acessível aos clientes externos.  
@@ -80,7 +63,7 @@ class CComAggObject : public IUnknown,
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Incrementa a contagem de referência no objeto agregado.|  
-|[CComAggObject::CreateInstance](#createinstance)|Função estática permite que você crie um novo **CComAggObject** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Função estática permite que você crie um novo **CComAggObject <** `contained`  **>**  objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Executa a inicialização final de `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Executa a destruição de final de `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Recupera um ponteiro para a interface solicitada.|  
@@ -146,7 +129,7 @@ CComAggObject(void* pv);
  Libera todos os recursos alocados, chamadas [FinalRelease](#finalrelease), e diminui a módulo contagem de bloqueio.  
   
 ##  <a name="createinstance"></a>CComAggObject::CreateInstance  
- Função estática permite que você crie um novo **CComAggObject** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Função estática permite que você crie um novo **CComAggObject <** `contained`  **>**  objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(
@@ -156,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parâmetros  
  `pp`  
- [out] Um ponteiro para um **CComAggObject\<***contidos* **>** ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
+ [out] Um ponteiro para um **CComAggObject\<***contidos*  **>**  ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
@@ -239,4 +222,3 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

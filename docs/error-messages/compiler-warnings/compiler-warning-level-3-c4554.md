@@ -1,47 +1,28 @@
 ---
-title: "Compilador aviso (nível 3) C4554 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4554 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4554
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4554
+f1_keywords: C4554
+dev_langs: C++
+helpviewer_keywords: C4554
 ms.assetid: 55bb68f0-2e80-4330-8921-51083c4f8d53
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c45b4456d247049fd0123760a301b877ac944da0
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 063c317e25be808c14b65c08fe005bbbac7109e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-3-c4554"></a>Compilador C4554 de aviso (nível 3)
-'operator': verificar a precedência do operador para o erro possíveis; Use parênteses para esclarecer a precedência  
+'operator': Verifique precedência de operador para possível erro; Use parênteses para esclarecer precedência  
   
  O exemplo a seguir gera C4554:  
   

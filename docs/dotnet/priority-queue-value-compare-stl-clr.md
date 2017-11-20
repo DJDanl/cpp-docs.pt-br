@@ -1,42 +1,39 @@
 ---
-title: "priority_queue::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro value_compare [STL/CLR]"
+title: priority_queue::value_compare (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 40832c80-426f-42af-b4a3-bab27d2abd7e
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bfa61ac20d5d09a3f5e9ed30aa2b328aab5efe10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O delegado de ordenação para dois valores.  
+# <a name="priorityqueuevaluecompare-stlclr"></a>priority_queue::value_compare (STL/CLR)
+O representante de ordenação para dois valores.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 binary_delegate<value_type, value_type, int> value_compare;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o delegado que determina se o primeiro argumento é ordenado antes de segundo.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo para o representante que determina se o primeiro argumento é ordenado antes do segundo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_priority_queue_value_compare.cpp   
@@ -72,18 +69,22 @@ int main()
   
 ```  
   
-  **compare \(L'a, L'a\) \= false**  
-**compare \(L'a, L'b\) \= retificam**  
-**compare \(L'b, L'a\) \= false**  
-**compare \(L'a, L'a\) \= false**  
-**compare \(L'a, L'b\) \= false**  
-**compare \(L'b, L'a\) \= retificam**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- cliext de**Namespace:**  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Consulte também  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::value\_comp](../dotnet/priority-queue-value-comp-stl-clr.md)   
- [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)   
+ [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)

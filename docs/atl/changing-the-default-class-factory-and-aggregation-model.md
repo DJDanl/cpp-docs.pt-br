@@ -1,50 +1,50 @@
 ---
-title: "Modificando o modelo padr&#227;o de f&#225;brica e de distribui&#231;&#227;o de classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "agregação [C++], modelos de agregação"
-  - "agregação [C++], usando ATL"
-  - "Classe de CComClassFactory, fazendo a opção"
-  - "Classe de CComCoClass, fábrica padrão da classe e modelo de agregação"
-  - "fábricas de classe, alterando a opção"
-  - "fábrica de classe padrão"
-  - "fábrica de classe padrão, ATL"
-  - "opções [C++], modelo de agregação em ATL"
-  - "opções [C++], fábrica de classe"
+title: "Alterando a fábrica de classe padrão e o modelo de agregação | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CComClassFactory class, making the default
+- aggregation [C++], using ATL
+- aggregation [C++], aggregation models
+- defaults [C++], aggregation model in ATL
+- default class factory
+- class factories, changing default
+- CComCoClass class, default class factory and aggregation model
+- default class factory, ATL
+- defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a963c1fba2d3eda9c86fa1e6db74de739bf45182
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Modificando o modelo padr&#227;o de f&#225;brica e de distribui&#231;&#227;o de classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Alterando a fábrica de classe padrão e o modelo de agregação
+ATL usa [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir o modelo padrão de fábrica e agregação de classe para seu objeto. `CComCoClass`Especifica as dois macros seguintes:  
+  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) declara a fábrica de classe para ser [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
+  
+-   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) declara que o objeto pode ser agregado.  
+  
+ Você pode substituir qualquer um desses padrões especificando outra macro em sua definição de classe. Por exemplo, para usar [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) em vez de `CComClassFactory`, especifique o [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) macro:  
+  
+ [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
+  
+ Duas outras macros que definem uma fábrica de classes são [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) e [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
+  
+ ATL também usa o `typedef` mecanismo para implementar o comportamento padrão. Por exemplo, o `DECLARE_AGGREGATABLE` macro usa `typedef` para definir um tipo chamado **_CreatorClass**, que, em seguida, é referenciado em ATL. Observe que em uma classe derivada, uma `typedef` usando o mesmo nome que a classe base `typedef` resulta em ATL usando sua definição e substituindo o comportamento padrão.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Conceitos básicos de objetos COM de ATL](../atl/fundamentals-of-atl-com-objects.md)   
+ [Macros de fábrica de classes e agregação](../atl/reference/aggregation-and-class-factory-macros.md)
 
-Usos [CComCoClass](../Topic/CComCoClass%20Class.md) de ATL definir o factory e a agregação padrão da classe padrão para o objeto.  `CComCoClass` especifica os dois seguintes macros:  
-  
--   [DECLARE\_CLASSFACTORY](../Topic/DECLARE_CLASSFACTORY.md) declara o factory da classe para ser [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
-  
--   [DECLARE\_AGGREGATABLE](../Topic/DECLARE_AGGREGATABLE.md) declara que o objeto pode ser agregado.  
-  
- Você pode substituir qualquer uma de essas opções especificando outro macro em sua definição de classe.  Por exemplo, para usar [CComClassFactory2](../Topic/CComClassFactory2%20Class.md) em vez de `CComClassFactory`, especifique a macro de [DECLARE\_CLASSFACTORY2](../Topic/DECLARE_CLASSFACTORY2.md) :  
-  
- [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/CPP/changing-the-default-class-factory-and-aggregation-model_1.h)]  
-  
- Outros dois macros que definem uma fábrica de classe são [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) e [DECLARE\_CLASSFACTORY\_SINGLETON](../Topic/DECLARE_CLASSFACTORY_SINGLETON.md).  
-  
- ATL também usa o mecanismo de `typedef` para implementar o comportamento padrão.  Por exemplo, a macro de `DECLARE_AGGREGATABLE` usa `typedef` para definir um tipo chamado **\_CreatorClass**, que é referenciado em todo ATL.  Observe que em uma classe derivada, `typedef` usando o mesmo nome que os resultados de `typedef` de classe de base em ATL usando sua definição e substituindo o comportamento padrão.  
-  
-## Consulte também  
- [Fundamentos de objetos COM de ATL](../atl/fundamentals-of-atl-com-objects.md)   
- [Macros de fábrica de distribuição e uma classe](../atl/reference/aggregation-and-class-factory-macros.md)

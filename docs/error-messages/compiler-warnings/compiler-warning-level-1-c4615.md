@@ -1,44 +1,25 @@
 ---
-title: "Compilador aviso (nível 1) C4615 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4615 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4615
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4615
+f1_keywords: C4615
+dev_langs: C++
+helpviewer_keywords: C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 41ddf5e421e5840fa5d17dfb6a619a0d4ee1099d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 0541ea09fedf3c716bf970531735eafaecc048f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4615"></a>Compilador C4615 de aviso (nível 1)
 \#Aviso de Pragma: tipo de aviso de usuário desconhecido  

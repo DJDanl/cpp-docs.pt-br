@@ -1,34 +1,33 @@
 ---
-title: "Como usar express&#245;es regulares para reorganizar dados (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dados [C++], reorganizando"
-  - "expressões regulares [C++], reorganizando dados"
+title: "Como: usar expressões regulares para reorganizar dados (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular expressions [C++], rearranging data
+- data [C++], rearranging
 ms.assetid: 5f91e777-9471-424e-ba75-dca3d1b49e42
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como usar express&#245;es regulares para reorganizar dados (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra como o suporte à expressão regular do .NET Framework pode ser usado para reorganizar, ou reformata dados.  O exemplo de código usa <xref:System.Text.RegularExpressions.Regex> e as classes de <xref:System.Text.RegularExpressions.Match> para extrair nomes e sobrenomes de uma cadeia de caracteres e exibir nesses nomes os elementos em ordem inversa.  
+# <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Como usar expressões regulares para reorganizar dados (C++/CLI)
+O exemplo de código a seguir demonstra como o suporte a expressões regulares do .NET Framework pode ser usado para reorganizar ou reformatar dados. O seguinte exemplo de código usa o <xref:System.Text.RegularExpressions.Regex> e <xref:System.Text.RegularExpressions.Match> classes para extrair os nomes e sobrenomes de uma cadeia de caracteres e, em seguida, exibir esses elementos de nome em ordem inversa.  
   
- A classe de <xref:System.Text.RegularExpressions.Regex> é usada para construir uma expressão regular que descreve o formato de dados atual.  Os dois nomes são assumidos para serem separados por uma vírgula e podem usar qualquer quantidade de espaço em branco em torno de vírgula.  O método de <xref:System.Text.RegularExpressions.Match> é usado para analisar cada cadeia de caracteres.  Se tiver êxito, os nomes e sobrenomes são recuperados do objeto de <xref:System.Text.RegularExpressions.Match> e exibidos.  
+ O <xref:System.Text.RegularExpressions.Regex> classe é usada para construir uma expressão regular que descreve o formato atual dos dados. Os dois nomes devem ser separados por uma vírgula e podem usar qualquer quantidade de espaço em branco em torno da vírgula. O <xref:System.Text.RegularExpressions.Match> método é usado para analisar cada cadeia de caracteres. Se for bem-sucedido, o nome e sobrenome é recuperados do <xref:System.Text.RegularExpressions.Match> do objeto e exibido.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // regex_reorder.cpp  
@@ -66,6 +65,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Expressões regulares do .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Expressões regulares do .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

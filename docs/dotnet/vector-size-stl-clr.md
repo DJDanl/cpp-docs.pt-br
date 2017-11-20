@@ -1,42 +1,39 @@
 ---
-title: "vector::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro de tamanho [STL/CLR]"
+title: 'Vector:: Size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 3d2a156e-5871-4441-9307-21a20cd1430f
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 091d0d220ae11a09cc7e9da35626ac2d750666b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorsize-stlclr"></a>vector::size (STL/CLR)
 Conta o número de elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 size_type size();  
 ```  
   
-## Comentários  
- A função de membro retorna o comprimento da sequência controlada.  Use\-a para determinar atualmente o número de elementos na sequência controlada.  Se tudo o que você precisa se preocupar é aproximadamente se a sequência tiver o tamanho diferente de zero, consulte [vector::empty](../Topic/vector::empty%20\(STL-CLR\).md)`()`.  
+## <a name="remarks"></a>Comentários  
+ A função membro retorna o comprimento da sequência controlada. Você pode usá-lo para determinar o número de elementos no momento na sequência controlada. Se você se preocupa se a sequência tem tamanho diferente de zero, consulte [Vector:: Empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)`()`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_vector_size.cpp   
@@ -69,15 +66,18 @@ int main()
   
 ```  
   
-  **um b c**  
-**size\(\) \= 3 começando com 3**  
-**size\(\) \= 0 depois de limpar**  
-**size\(\) \= 2 depois da adição de 2**   
-## Requisitos  
- cliext \<\/vetor de**Cabeçalho:** \>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/vetor >  
   
-## Consulte também  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::empty](../Topic/vector::empty%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [vetor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)

@@ -1,86 +1,85 @@
 ---
-title: "CReferentialConstraints, CReferentialConstraintInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szUniqueName"
-  - "m_szCatalog"
-  - "DELETE_RULE"
-  - "m_szUniqueCatalog"
-  - "CONSTRAINT_NAME"
-  - "CReferentialConstraintInfo"
-  - "MATCH_OPTION"
-  - "m_szSchema"
-  - "m_szDeleteRule"
-  - "m_szUpdateRule"
-  - "m_szUniqueSchema"
-  - "CReferentialConstraints"
-  - "m_szName"
-  - "CONSTRAINT_CATALOG"
-  - "m_szMatchOption"
-  - "CONSTRAINT_SCHEMA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "Classe de parâmetro CReferentialConstraintInfo"
-  - "Classe CReferentialConstraints (typedef)"
-  - "DELETE_RULE"
-  - "Membro de dados de classe DESCRIPTION"
-  - "m_szCatalog"
-  - "m_szDeleteRule"
-  - "m_szDescription"
-  - "m_szMatchOption"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szUniqueCatalog"
-  - "m_szUniqueName"
-  - "m_szUniqueSchema"
-  - "m_szUpdateRule"
-  - "MATCH_OPTION"
+title: CReferentialConstraints, CReferentialConstraintInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szUniqueName
+- m_szCatalog
+- DELETE_RULE
+- m_szUniqueCatalog
+- CONSTRAINT_NAME
+- CReferentialConstraintInfo
+- MATCH_OPTION
+- m_szSchema
+- m_szDeleteRule
+- m_szUpdateRule
+- m_szUniqueSchema
+- CReferentialConstraints
+- m_szName
+- CONSTRAINT_CATALOG
+- m_szMatchOption
+- CONSTRAINT_SCHEMA
+dev_langs: C++
+helpviewer_keywords:
+- m_szUniqueSchema
+- DESCRIPTION class data member
+- m_szSchema
+- CONSTRAINT_CATALOG
+- CReferentialConstraints typedef class
+- m_szUniqueName
+- m_szCatalog
+- CONSTRAINT_NAME
+- m_szDeleteRule
+- DELETE_RULE
+- MATCH_OPTION
+- CONSTRAINT_SCHEMA
+- m_szName
+- m_szDescription
+- m_szMatchOption
+- m_szUniqueCatalog
+- m_szUpdateRule
+- CReferentialConstraintInfo parameter class
 ms.assetid: 5d485358-be29-41c2-b0ce-19e023598e73
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: efc7df7f5d8dfd2cd0106297ac8748a4d1b0531e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CReferentialConstraints, CReferentialConstraintInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chame a classe **CReferentialConstraints** do typedef para implementar a sua classe **CReferentialConstraintInfo**do parâmetro.  
+# <a name="creferentialconstraints-creferentialconstraintinfo"></a>CReferentialConstraints, CReferentialConstraintInfo
+Chamar a classe typedef **CReferentialConstraints** para implementar sua classe de parâmetro **CReferentialConstraintInfo**.  
   
-## Comentários  
- Consulte [Classes do conjunto de linhas de esquema e classes de Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) para obter mais informações sobre como usar classes do typedef.  
+## <a name="remarks"></a>Comentários  
+ Consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obter mais informações sobre como usar classes do typedef.  
   
- Essa classe identifica as restrições referenciais, definidas no catálogo, que são propriedade de um determinado usuário.  
+ Essa classe identifica as restrições referenciais, definidas no catálogo, que são de propriedade de um determinado usuário.  
   
- A tabela a seguir lista os membros de dados da classe e suas colunas correspondentes OLE DB.  Consulte [Conjunto de linhas REFERENTIAL\_CONSTRAINTS](https://msdn.microsoft.com/en-us/library/ms719737.aspx)*na referência do programador de OLE DB* para obter mais informações sobre o esquema e de colunas.  
+ A tabela a seguir lista os membros de dados de classe e o OLE DB colunas correspondentes. Consulte [REFERENTIAL_CONSTRAINTS linhas](https://msdn.microsoft.com/en-us/library/ms719737.aspx) no *referência do programador de DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
-|Membros de dados|Colunas de OLE DB|  
-|----------------------|-----------------------|  
-|m\_szCatalog|CONSTRAINT\_CATALOG|  
-|m\_szSchema|CONSTRAINT\_SCHEMA|  
-|m\_szName|CONSTRAINT\_NAME|  
-|m\_szUniqueCatalog|UNIQUE\_CONSTRAINT\_CATALOG|  
-|m\_szUniqueSchema|UNIQUE\_CONSTRAINT\_SCHEMA|  
-|m\_szUniqueName|UNIQUE\_CONSTRAINT\_NAME|  
-|m\_szMatchOption|MATCH\_OPTION|  
-|m\_szUpdateRule|UPDATE\_RULE|  
-|m\_szDeleteRule|DELETE\_RULE|  
-|m\_szDescription|DESCRIÇÃO|  
+|Membros de dados|Colunas de banco de dados OLE|  
+|------------------|--------------------|  
+|m_szCatalog|CONSTRAINT_CATALOG|  
+|m_szSchema|CONSTRAINT_SCHEMA|  
+|m_szName|CONSTRAINT_NAME|  
+|m_szUniqueCatalog|UNIQUE_CONSTRAINT_CATALOG|  
+|m_szUniqueSchema|UNIQUE_CONSTRAINT_SCHEMA|  
+|m_szUniqueName|UNIQUE_CONSTRAINT_NAME|  
+|m_szMatchOption|MATCH_OPTION|  
+|m_szUpdateRule|UPDATE_RULE|  
+|m_szDeleteRule|DELETE_RULE|  
+|m_szDescription|DESCRIÇÃO|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbsch.h  
   
-## Consulte também  
- [Classe CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

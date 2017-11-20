@@ -1,42 +1,39 @@
 ---
-title: "map::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro size_type [STL/CLR]"
+title: 'Map:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 6204685d-caf8-4d9e-9359-0768c74e2e6d
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 44b42eab84ed29a7e4cfd1ae2ae54fd21aa5fc59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# map::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de uma distância entre dois assinado o elemento.  
+# <a name="mapsizetype-stlclr"></a>map::size_type (STL/CLR)
+O tipo de uma distância assinado entre dois elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Comentários  
- O tipo descreve uma contagem não negativa do elemento.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve uma contagem de elementos não-negativo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_map_size_type.cpp   
@@ -66,13 +63,16 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**end\(\)\- inicie \(\) \= 3**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [map](../dotnet/map-stl-clr.md)   
- [map::empty](../dotnet/map-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [Map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)

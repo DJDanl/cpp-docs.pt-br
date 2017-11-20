@@ -1,46 +1,27 @@
 ---
-title: Aviso LNK4199 das ferramentas de vinculador | Documentos do Microsoft
+title: Aviso LNK4199 das ferramentas de vinculador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4199
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4199
+f1_keywords: LNK4199
+dev_langs: C++
+helpviewer_keywords: LNK4199
 ms.assetid: 724f1ca8-ee9a-4ca3-b5c6-c0284a5195e7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 02465b9ba1b898d22fd2e7aa372e06d1c680fc7f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: fa119f8c3af174545230b3d629e1319d1f097d14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-warning-lnk4199"></a>Aviso LNK4199 (Ferramentas de Vinculador)
-/DELAYLOAD:dllname ignorados; não encontradas em dllname de importações  
+/DELAYLOAD:dllname ignorado; nenhuma importação encontrada a nomedadll  
   
  Ignora o vinculador `dllname` porque ele não precisa de qualquer uma das funções que `dllname` exporta.

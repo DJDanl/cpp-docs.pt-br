@@ -1,53 +1,51 @@
 ---
-title: "Criando projetos para desktop com Assistentes de Aplicativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfcexe.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos [C++], usando assistentes"
-  - "plataformas [C++], criação de projeto"
-  - "programas [C++], começando com assistentes"
-  - "Projetos Visual C++, assistentes de aplicativo"
-  - "Projetos Visual C++, criando"
+title: "Criando projetos de área de trabalho usando os assistentes de aplicativo | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.mfcexe.project
+dev_langs: C++
+helpviewer_keywords:
+- platforms [C++], project creation
+- Visual C++ projects, application wizards
+- Visual C++ projects, creating
+- programs [C++], beginning with wizards
+- applications [C++], using wizards
 ms.assetid: 090c6423-deb8-4a00-817d-337eb5644544
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c79a01e5c6724ab37a29e8f3b80ca9a3346f1440
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Criando projetos para desktop com Assistentes de Aplicativo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cada tipo de projeto do Visual C\+\+ tem um assistente de aplicativo que ajuda a gerar novos projetos de forma rápida e fácil, modelados a partir do modelo de projeto.  Para abrir um assistente de aplicativo, use a caixa de diálogo **Novo Projeto** para especificar as propriedades do projeto, como o nome do projeto ou o diretório e a solução em que seu projeto residirá.  
+# <a name="creating-desktop-projects-by-using-application-wizards"></a>Criando projetos para desktop com Assistentes de Aplicativo
+Cada tipo de projeto do Visual C++ tem um assistente de aplicativo que ajuda a gerar novos projetos de forma rápida e fácil, modelados a partir do modelo de projeto.  Para abrir um Assistente de aplicativo, use o **novo projeto** caixa de diálogo para especificar as propriedades do projeto, como o nome do projeto, ou o diretório e a solução em que seu projeto residirá.  
   
-#### Para abrir um assistente de aplicativo do Visual C\+\+  
+#### <a name="to-open-a-visual-c-application-wizard"></a>Para abrir um assistente de aplicativo do Visual C++  
   
-1.  No menu **Arquivo**, clique em **Novo** e em **Projeto**.  
+1.  No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.  
   
      A caixa de diálogo **Novo Projeto** é exibida.  
   
-2.  No painel Tipos de Projeto, selecione a pasta **Projetos Visual C\+\+**.  Um ícone para cada tipo de projeto C\+\+ aparece no painel Modelos.  
+2.  No painel de tipos de projeto, selecione o **projetos Visual C++** pasta. Um ícone para cada tipo de projeto C++ aparece no painel Modelos.  
   
-3.  No painel Modelos, selecione um ícone para escolher um tipo de projeto.  Será exibida uma mensagem em ambos os painéis indicando o tipo de projeto que você criará.  
+3.  No painel Modelos, selecione um ícone para escolher um tipo de projeto. Será exibida uma mensagem em ambos os painéis indicando o tipo de projeto que você criará.  
   
-4.  Especificar as propriedades do projeto ou ignore esta etapa para usar propriedades de projeto padrão do Visual Studio.  Consulte [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md) para obter os detalhes.  
+4.  Especificar as propriedades do projeto ou ignore esta etapa para usar propriedades de projeto padrão do Visual Studio. Consulte [trabalhando com propriedades de projeto](../ide/working-with-project-properties.md) para obter detalhes.  
   
-5.  Clique em **OK**, e o assistente para seu tipo de projeto será aberto.  Se você quiser ler o tópico de ajuda do assistente, pressione **F1**.  
+5.  Clique em **Okey**e o Assistente para seu projeto de tipo é aberto. Se você deseja ler o tópico da Ajuda para o assistente, pressione **F1**.  
   
- Ao criar um projeto, você pode criar uma nova solução ou pode adicionar o projeto a uma solução existente.  Para obter mais informações, consulte [Como criar um projeto do C\+\+ a partir do código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+ Ao criar um projeto, você pode criar uma nova solução ou pode adicionar o projeto a uma solução existente. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
-## Consulte também  
- [Criando e gerenciando projetos do Visual C\+\+](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Assistentes e caixas de diálogo do MFC](../mfc/reference/mfc-wizards-and-dialog-boxes.md)   
- [Assistentes e caixas de diálogo de ATL](../atl/reference/atl-wizards-and-dialog-boxes.md)
+## <a name="see-also"></a>Consulte também  
+ [Criando e gerenciando projetos do Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Caixas de diálogo e assistentes do MFC](../mfc/reference/mfc-wizards-and-dialog-boxes.md)   
+ [Assistentes e caixas de diálogo do ATL](../atl/reference/atl-wizards-and-dialog-boxes.md)

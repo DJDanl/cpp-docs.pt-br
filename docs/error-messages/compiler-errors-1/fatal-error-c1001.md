@@ -1,52 +1,34 @@
 ---
-title: Erro fatal C1001 | Documentos do Microsoft
+title: Erro fatal C1001 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1001
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1001
+f1_keywords: C1001
+dev_langs: C++
+helpviewer_keywords: C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f95edeec288ab04b7c3a0aa66d4bfa96784b23ad
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 6726b348c27e60c9e76718cd3106ef1213719d18
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1001"></a>Erro fatal C1001
-INTERNO ERROR(compiler file file, line number) COMPILADOR  
+
+> INTERNO COMPILADOR ERROR(compiler file *file*, line *number*)  
   
- O compilador não pode gerar o código correto para uma construção, provavelmente devido à combinação de uma expressão e uma opção de otimização. Tente remover uma ou mais opções de otimização e recompilar a função que contém a linha indicado na mensagem de erro.  
-  
- Provavelmente, você pode corrigir o problema removendo uma ou mais opções de otimização. Para determinar qual opção está com defeito, remova uma opção em uma hora e recompile até que a mensagem de erro desaparece. As opções mais comumente responsáveis são **/Og**, **/Oi**, e `/Oa`. Depois de determinar qual opção é responsável, você pode desabilitá-lo usando o [otimizar](../../preprocessor/optimize.md) pragma em torno da função onde o erro ocorre e continuar a usar a opção para o restante do módulo.  
-  
- A Base de dados de Conhecimento da Microsoft possui mais informações sobre C1001; consulte [http://support.microsoft.com/default.aspx?scid=kb;en-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
-  
- Tente reescrever a linha onde o erro é relatado, ou várias linhas de código ao redor dessa linha.
+O compilador não pode gerar o código correto para uma construção, geralmente devido à combinação de uma determinada expressão e uma opção de otimização ou um problema na análise. Se o arquivo de compilador listado tem um utc ou segmento de caminho de C2, provavelmente é um erro de otimização. Se o arquivo tem um segmento de caminho cxxfe ou c1xx ou é msc1.cpp, provavelmente é um erro do analisador. Se o arquivo denominado cl.exe, nenhuma outra informação está disponível.  
+
+Geralmente, você pode corrigir um problema de otimização, removendo uma ou mais opções de otimização. Para determinar qual opção está com defeito, remova uma opção em uma hora e recompile até que a mensagem de erro desaparecerá. As opções mais comumente responsáveis são [/Og (otimizações globais)](../../build/reference/og-global-optimizations.md) e [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md). Depois de determinar qual opção de otimização é responsável, você pode desabilitá-lo em torno de função em que o erro ocorre usando o [otimizar](../../preprocessor/optimize.md) pragma e continuar a usar a opção para o restante do módulo. Para obter mais informações sobre as opções de otimização, consulte [práticas recomendadas de otimização](../../build/reference/optimization-best-practices.md).
+
+Se otimizações não estão responsáveis pelo erro, tente reescrever a linha onde o erro é relatado ou várias linhas de código ao redor dessa linha. Para ver o código a maneira que o compilador vê-lo depois de pré-processamento, você pode usar o [/P (pré-processar em um arquivo)](../../build/reference/p-preprocess-to-a-file.md) opção.
+
+Para obter mais informações sobre como identificar a origem do erro e como relatar um erro interno do compilador para a Microsoft, consulte [como relatar um problema com o conjunto de ferramentas do Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).

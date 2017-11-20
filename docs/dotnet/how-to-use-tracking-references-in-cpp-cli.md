@@ -1,34 +1,32 @@
 ---
-title: "Como usar refer&#234;ncias de monitoramento em C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos CLR, passagem por referência"
+title: "Como: usar o controle de referências em C + + CLI | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como usar refer&#234;ncias de monitoramento em C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este artigo mostra como usar uma referência de rastreamento \(%\) em [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] para passar tipos de Common Language Runtime \(CLR\) por referência.  
+# <a name="how-to-use-tracking-references-in-ccli"></a>Como usar referências de monitoramento em C++/CLI
+Este artigo mostra como usar uma referência de rastreamento (%) em C + + CLI passar common language runtime (CLR) tipos por referência.  
   
-## Para passar tipos CLR por referência  
- O exemplo a seguir mostra como usar uma referência de controle para tipos CLR de passagem por referência.  
+## <a name="to-pass-clr-types-by-reference"></a>Passar tipos CLR por referência  
+ O exemplo a seguir mostra como usar uma referência de rastreamento para passar tipos CLR por referência.  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -75,11 +73,13 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
-  **\=\= 20100 zip** O exemplo a seguir mostra o que leva ao endereço de retornos de uma referência de controle [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md), e mostra como alterar e acessar dados com uma referência de rastreamento.  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ O próximo exemplo mostra que pegar o endereço de uma referência de rastreamento retorna um [interior_ptr (C + + CLI)](../windows/interior-ptr-cpp-cli.md)e mostra como modificar e acessar dados por meio de uma referência de rastreamento.  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -124,14 +124,15 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
-  **ctor: R \(int\)**  
-**ctor: N \(int i\)**   
-## Controlando referências e ponteiros interiores  
- O exemplo de código a seguir mostra que você pode converter entre referências de controle e ponteiros interiores.  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>Referências de acompanhamento e ponteiros internos  
+ O exemplo de código a seguir mostra que você pode converter entre referências de acompanhamento e ponteiros internos.  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -177,20 +178,30 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
-  **ctor: R \(int\)**  
-**ctor: N \(int i\)**   
-## Controlando referências e tipos de valor  
- Este exemplo mostra o com simples com uma referência de rastreamento a um tipo de valor:  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- O exemplo a seguir mostra que você pode ter referências de controle e referências nativos para tipos de valor.  
+## <a name="tracking-references-and-value-types"></a>Referências de acompanhamento e tipos de valor  
+ Este exemplo mostra boxing simple por meio de uma referência de rastreamento para um tipo de valor:  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ O próximo exemplo mostra que você pode ter referências de acompanhamento e referências de nativo para tipos de valor.  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -207,13 +218,15 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
-  **13**  
-**13**  
-**13** O exemplo a seguir mostra que você pode usar referências de rastreamento junto com tipos de valores e tipos nativos.  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ O exemplo a seguir mostra que você pode usar referências de acompanhamento junto com os tipos de valor e tipos nativos.  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -239,14 +252,16 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
-  **4**  
-**4**  
-**5**  
-**5** Este exemplo mostra que você pode associar uma referência de rastreamento a um tipo de valor no heap com coletado:  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ Este exemplo mostra que você pode vincular uma referência de rastreamento para um tipo de valor no heap do coletor de lixo:  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -275,16 +290,17 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
-  **V original: 2, o rastreamento a referência V encaixotado: 1**  
-**Controlando a referência V encaixotado: 3**  
-**Nova cópia encaixotada V: 1**  
-**V original: 4, à alça de V originalmente encaixotado: 1**   
-## O modelo funções que usa o modo nativo, o valor, ou os parâmetros de referência  
- Usando uma referência de rastreamento na assinatura de uma função do modelo, você garante que a função pode ser chamada por um parâmetro cujo tipo é nativo, pelo valor de CLR, ou pela referência de CLR.  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Funções de modelo que usam nativo, o valor ou parâmetros de referência  
+ Usando uma referência de rastreamento na assinatura de um modelo de função, você assegura que a função pode ser chamada por um parâmetro cujo tipo é nativo, um valor CLR ou uma referência CLR.  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -305,7 +321,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -323,10 +339,11 @@ int main() {
 }  
 ```  
   
- **Saída**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **T %**  
-**T %**  
-**T &**   
-## Consulte também  
- [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>Consulte também  
+ [Operador de referência de rastreamento](../windows/tracking-reference-operator-cpp-component-extensions.md)

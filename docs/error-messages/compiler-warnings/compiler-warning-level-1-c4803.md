@@ -1,51 +1,32 @@
 ---
-title: "Compilador aviso (nível 1) C4803 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4803 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4803
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4803
+f1_keywords: C4803
+dev_langs: C++
+helpviewer_keywords: C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 43353a5a86bbd7c8e185fed925506ac1ae0fbfe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Compilador C4803 de aviso (nível 1)
-'method': o método para disparar tem uma classe de armazenamento diferente do evento, 'event'  
+'method': o método raise possui uma classe de armazenamento diferente do evento, 'event'  
   
-Métodos de evento devem ter a mesma classe de armazenamento que a declaração de evento. O compilador ajusta os métodos do evento para que as classes de armazenamento são os mesmos.  
+Métodos de evento devem ter a mesma classe de armazenamento como a declaração de evento. O compilador ajusta os métodos do evento para que as classes de armazenamento são os mesmos.  
   
-Esse aviso pode ocorrer se você tiver uma classe que implementa um evento de uma interface. O compilador não gera implicitamente um método para disparar um evento em uma interface. Quando você implementa essa interface em uma classe, o compilador gerar implicitamente um método para disparar e esse método não será virtual, portanto, o aviso. Para obter mais informações sobre eventos, consulte [evento](../../windows/event-cpp-component-extensions.md).  
+Esse aviso pode ocorrer se você tiver uma classe que implementa um evento de uma interface. O compilador não gera implicitamente um método de acionar um evento em uma interface. Quando você implementa essa interface em uma classe, o compilador gere implicitamente um método raise e esse método não será virtual, portanto, o aviso. Para obter mais informações sobre eventos, consulte [evento](../../windows/event-cpp-component-extensions.md).  
   
 Consulte [aviso](../../preprocessor/warning.md) pragma para obter informações sobre como desativar um aviso.  
   
@@ -89,4 +70,3 @@ int main() {
    ep->E1();  
 }  
 ```  
-

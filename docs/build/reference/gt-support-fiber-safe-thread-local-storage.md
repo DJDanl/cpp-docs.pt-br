@@ -1,63 +1,62 @@
 ---
-title: "/GT (armazenamento local de thread seguro de fibra de suporte) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations"
-  - "/gt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /GT (C++)"
-  - "Opção de compilador de armazenamento local de threads estático de fibra segura [C++]"
-  - "Opção de compilador GT [C++]"
-  - "Opção de compilador -GT [C++]"
-  - "armazenamento local de threads estático e segurança de fibra"
-  - "armazenamento local de threads"
+title: -GT (armazenamento de Local de Thread seguro de fibra suporte) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations
+- /gt
+dev_langs: C++
+helpviewer_keywords:
+- /GT compiler option [C++]
+- GT compiler option [C++]
+- thread-local storage
+- static thread-local storage and fiber safety
+- -GT compiler option [C++]
+- fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5912f241716bbaf9aba989dabbeb25d38ab465c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /GT (armazenamento local de thread seguro de fibra de suporte)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Da suporte à segurança de fibra para os dados atribuídos estático usando o armazenamento de thread local, isto é, com `__declspec(thread)`dados atribuídos.  
+# <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (armazenamento local de thread seguro de fibra de suporte)
+Dá suporte a segurança de fibra para dados alocados usando o armazenamento local de thread estático, ou seja, os dados alocados com `__declspec(thread)`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /GT  
 ```  
   
-## Comentários  
- Os dados declarados com `__declspec(thread)` são referenciados com uma matriz \(TLS\) de armazenamento de thread local.  A matriz do TLS é uma matriz de endereços que o sistema mantém para cada thread.  Cada endereço nesta matriz de dados do local de armazenamento de thread local.  
+## <a name="remarks"></a>Comentários  
+ Dados declarados com `__declspec(thread)` é referenciado por meio de uma matriz de armazenamento local de thread (TLS). A matriz TLS é uma matriz de endereços que o sistema mantém para cada thread. Cada endereço nessa matriz fornece o local dos dados de armazenamento local de thread.  
   
- Uma fibra é um objeto de peso leve que consiste em uma pilha e em um contexto do registro e pode ser agendada em vários threads.  Uma fibra pode ser executada em qualquer thread.  Como uma fibra pode obter alternado de saída e reiniciado mais tarde em um thread diferente, o endereço da matriz do TLS não deve ser armazenado em cachê ou otimizado como uma subexpressão comuns por uma chamada de função \(consulte a opção de [\/Og \(otimizações globais\)](../../build/reference/og-global-optimizations.md) para obter detalhes\).  **\/GT** evitar tais otimizações.  
+ Uma fibra é um objeto leve que consiste em uma pilha e um contexto de registro e pode ser agendado em vários threads. Uma fibra pode executar em qualquer thread. Como uma fibra pode obter trocada e reiniciada posteriormente em um thread diferente, o endereço da matriz de TLS não deve ser armazenado em cache ou otimizado como uma subexpressão comum em uma chamada de função (consulte o [/Og (otimizações globais)](../../build/reference/og-global-optimizations.md) opção detalhes). **/GT** impede que tais otimizações.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Otimização** .  
+3.  Clique o **otimização** página de propriedades.  
   
-4.  Modifique a propriedade de **Habilita Otimizações Seguras para Fibras** .  
+4.  Modificar o **habilitar otimizações de fibra segura** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFiberSafeOptimizations%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -1,40 +1,39 @@
 ---
-title: "operator WIDTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Width"
-  - "operator WIDTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WIDTH operator"
-  - "operator WIDTH"
+title: operador WIDTH | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Width
+- operator WIDTH
+dev_langs: C++
+helpviewer_keywords:
+- WIDTH operator
+- operator WIDTH
 ms.assetid: 7b00e296-a101-4cd5-a578-17eec7a4eb44
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5f628e9ecb6f09fb6c01b8c5c7b7fb53c77910a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operator WIDTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna a largura em bits da atual  *recordfieldname* ou  *registro*.  
+# <a name="operator-width"></a>operador WIDTH
+Retorna a largura em bits da atual *recordfieldname* ou *registro*.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 WIDTH {recordfieldname | record}  
 ```  
   
-## Consulte também  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de operadores](../../assembler/masm/operators-reference.md)

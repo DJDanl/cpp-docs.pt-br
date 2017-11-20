@@ -1,79 +1,78 @@
 ---
-title: "Compilando uma biblioteca de importa&#231;&#227;o e um arquivo de exporta&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLibrarianTool.ModuleDefinitionFile"
-  - "VC.Project.VCLibrarianTool.ExportNamedFunctions"
-  - "VC.Project.VCLibrarianTool.GenerateDebug"
-  - "VC.Project.VCLibrarianTool.ForceSymbolReferences"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .lib"
-  - "Opção /DEF (gerenciador de biblioteca)"
-  - "Opção /EXPORT (gerenciador de biblioteca)"
-  - "Opção /INCLUDE (gerenciador de biblioteca)"
-  - "Opção /OUT (gerenciador de biblioteca)"
-  - "opção de gerenciador de biblioteca DEF"
-  - "opção de gerenciador de biblioteca -DEF"
-  - "arquivos EXP"
-  - "opção de gerenciador de biblioteca EXPORT"
-  - "opção de gerenciador de biblioteca -EXPORT"
-  - "exportando dados"
-  - "exportando dados, exportar arquivos (.exp)"
-  - "importar bibliotecas, compilando"
-  - "opção de gerenciador de biblioteca INCLUDE"
-  - "opção de gerenciador de biblioteca -INCLUDE"
-  - "opção de gerenciador de biblioteca OUT"
-  - "opção de gerenciador de biblioteca -OUT"
+title: "Compilando uma biblioteca de importação e exportação de arquivo | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLibrarianTool.ModuleDefinitionFile
+- VC.Project.VCLibrarianTool.ExportNamedFunctions
+- VC.Project.VCLibrarianTool.GenerateDebug
+- VC.Project.VCLibrarianTool.ForceSymbolReferences
+dev_langs: C++
+helpviewer_keywords:
+- OUT library manager option
+- INCLUDE library manager option
+- /DEF library manager option
+- exporting data
+- import libraries, building
+- -INCLUDE library manager option
+- /OUT library manager option
+- DEF library manager option
+- -DEF library manager option
+- -OUT library manager option
+- /INCLUDE library manager option
+- -EXPORT library manager option
+- exporting data, export (.exp) files
+- /EXPORT library manager option
+- EXPORT library manager option
+- .lib files
+- EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05368937505ff77674bb6b176ceb0e14f55384e3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Compilando uma biblioteca de importa&#231;&#227;o e um arquivo de exporta&#231;&#227;o
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para criar uma biblioteca uma importação e exportação do arquivo, use a seguinte sintaxe:  
+# <a name="building-an-import-library-and-export-file"></a>Compilando uma biblioteca de importação e um arquivo de exportação
+Para criar uma biblioteca de importação e exportação de arquivo, use a seguinte sintaxe:  
   
 ```  
 LIB /DEF[:deffile] [options] [objfiles] [libraries]  
 ```  
   
- Quando \/DEF é especificado, o LIB cria os arquivos de saída das especificações de exportação que são transmitidas no comando de LIB.  Há três métodos para especificar a exportações, listados na ordem recomendado para uso:  
+ Quando /DEF for especificado, o LIB cria os arquivos de saída das especificações de exportação que são passadas no comando LIB. Há três métodos para especificar exportações, listadas em ordem de recomendação de uso:  
   
-1.  Uma definição de **\_\_declspec\(dllexport\)** em uma *de objfiles* ou *bibliotecas*  
+1.  Um **dllexport** definição em um do *objfiles* ou *bibliotecas*  
   
-2.  Uma especificação de \/EXPORT:*nome* na linha de comando de LIB  
+2.  Uma especificação de /EXPORT:*nome* na linha de comando LIB  
   
-3.  Uma definição em uma instrução de **EXPORTS** em `deffile`  
+3.  Uma definição em um **exportações** instrução em um`deffile`  
   
- Estes são os mesmos métodos que você usa para especificar exporta ao vincular um programa exportando.  Um programa pode usar mais de um método.  Você pode especificar partes do comando de LIB \(como várias *objfiles* ou especificações de \/EXPORT\) em um arquivo de comando do LIB, exatamente como você pode em um comando de LINK.  
+ Esses são os mesmos métodos que você usar para especificar exportações ao vincular um programa de exportação. Um programa pode usar mais de um método. Você pode especificar partes do comando LIB (como vários *objfiles* ou /EXPORT especificações) em um arquivo de comando no comando LIB, assim como você pode em um comando LINK.  
   
- As opções a seguir se aplicam a criar uma biblioteca de importação e exportam\-se o arquivo:  
+ As opções a seguir se aplicam à criação de uma biblioteca de importação e exportação de arquivo:  
   
- \/OUT: *importação*  
- Substitui o nome do arquivo de saída padrão para a biblioteca *de importação* que está sendo criada.  Quando \/OUT não for especificado, o nome padrão é o nome de base do primeiro arquivo ou biblioteca do objeto no comando de LIB e na extensão .lib.  O arquivo de exportação é com o mesmo nome de base que a biblioteca de importação e a extensão .exp.  
+ / Entrada saída: *importar*  
+ Substitui o nome de arquivo de saída padrão para o *importar* biblioteca que está sendo criada. Quando /OUT não for especificado, o nome padrão é o nome base do primeiro arquivo de objeto ou da biblioteca no comando LIB e a extensão. lib. O arquivo de exportação recebe o mesmo nome de base a biblioteca de importação e a extensão. exp.  
   
- \/EXPORT: *entryname**internalname*\[\=\] \[, @ `ordinal`**NONAME**\] \[,\] \[,\] **DADOS**  
- Exporta uma função do programa para permitir que outros programas chame a função.  Você também pode exportar os dados \(usando a palavra\-chave de **DADOS** \).  Exporta as são normalmente definidas em uma DLL.  
+ /Export: *Nome_da_entrada*[= *internalname*] [, @ `ordinal`[, **NONAME**]] [, **dados**]  
+ Exporta uma função em seu programa para permitir que outros programas chamar a função. Você também pode exportar dados (usando o **dados** palavra-chave). Exportações geralmente são definidas em uma DLL.  
   
- *O entryname* é o nome do item da função ou de dados como deve ser usada pelo programa de chamada.  Opcionalmente, você pode especificar *o internalname* como a função conhecida no programa de definição; por padrão, o *internalname* é o mesmo que o *entryname*.  `ordinal` especifica um índice na tabela de exportação no intervalo de 1 a 65.535; se você não especificar `ordinal`, o LIB atribui um.  A palavra\-chave de **NONAME** exporta a função apenas como um ordinal, sem *um entryname*.  A palavra\-chave de **DADOS** é usado para exportar objetos somente de dados.  
+ O *Nome_da_entrada* é o nome do item de dados ou função como ele será usado pelo programa de chamada. Opcionalmente, você pode especificar o *internalname* como a função conhecida no programa de definição; por padrão, *internalname* é o mesmo que *Nome_da_entrada*. O `ordinal` Especifica um índice para a tabela de exportação no intervalo de 1 a 65.535; se você não especificar `ordinal`, LIB atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem um *Nome_da_entrada*. O **dados** palavra-chave é usado para exportar objetos de dados.  
   
- \/INCLUDE: `symbol`  
- Adiciona o símbolo especificado na tabela de símbolo.  Essa opção é útil para forçar o uso de um objeto da biblioteca que de outra forma não serão incluídos.  
+ / INCLUEM:`symbol`  
+ Adiciona o símbolo especificado para a tabela de símbolos. Essa opção é útil para forçar o uso de um objeto de biblioteca que, caso contrário, não são incluído.  
   
- Observe que se você criar sua biblioteca de importação em uma etapa preliminar, antes de criar seu .dll, você deve transmitir o mesmo conjunto de arquivos de objeto ao criar o .dll, como é passada para criar a biblioteca de importação.  
+ Observe que se você criar sua biblioteca de importação em uma etapa preliminar, antes de criar o. dll, você deve passar o mesmo conjunto de arquivos de objeto ao criar o arquivo. dll, conforme passado ao criar a biblioteca de importação.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Trabalhando com bibliotecas de importação e arquivos de exportação](../../build/reference/working-with-import-libraries-and-export-files.md)

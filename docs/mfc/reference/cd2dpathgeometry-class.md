@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DPathGeometry::Open
 - AFXRENDERTARGET/CD2DPathGeometry::Stream
 - AFXRENDERTARGET/CD2DPathGeometry::m_pPathGeometry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DPathGeometry [MFC], CD2DPathGeometry
 - CD2DPathGeometry [MFC], Attach
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: ae273456a40b5d065177fa6aba91e69a2fbea424
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 5b9c6ac03757a0180f0947775d4c35b3faef953d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dpathgeometry-class"></a>Classe CD2DPathGeometry
 Um wrapper para ID2D1PathGeometry.  
@@ -205,4 +202,3 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)
-

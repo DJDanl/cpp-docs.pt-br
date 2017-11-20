@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b716d383d001b8e0812eaba76322aa3c7b66b8f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: c896b9ae68aad6e537655f03585f2261203099e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="single-inheritance"></a>Herança única
 Na “herança única”, uma forma comum de herança, as classes têm apenas uma classe base. Considere a relação lustrada na figura a seguir.  
@@ -63,10 +60,10 @@ class PaperbackBook : public Book {};
  ![Gráfico acíclico direcionado](../cpp/media/vc38xj2.gif "vc38XJ2")  
 Exemplo de gráfico acíclico direcionado  
   
- No diagrama mostrado acima, chamado “gráfico acíclico direcionado” (ou “DAG”), algumas das classes são classes base para mais de uma classe derivada. No entanto, o contrário não é verdadeiro: há apenas uma classe base direta para qualquer classe derivada especificada. O gráfico na figura denota uma estrutura de "herança única".  
+ No diagrama mostrado acima, chamado “grafo direcionado acíclico” (ou “DAG”), algumas das classes são classes base para mais de uma classe derivada. No entanto, o contrário não é verdadeiro: há apenas uma classe base direta para qualquer classe derivada especificada. O gráfico na figura denota uma estrutura de "herança única".  
   
 > [!NOTE]
->  Os gráficos acíclicos direcionados não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla. Este tópico é abordado em [várias heranças](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Os grafos direcionados acíclicos não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla. Este tópico é abordado em [várias heranças](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
  Na herança, a classe derivada contém os membros da classe base mais os novos membros que você adicionar. Como resultado, uma classe derivada pode se referir a membros da classe base (a menos que esses membros sejam redefinidos na classe derivada). O operador de resolução de escopo (`::`) pode ser usado para fazer referência a membros de classes base diretas e indiretas quando esses membros são redefinidos na classe derivada. Considere este exemplo:  
   
@@ -166,4 +163,3 @@ int main() {
 > [!NOTE]
 >  Forçar a classe base a implementar uma função como `PrintNameOf` normalmente não é o melhor design. [Funções virtuais](../cpp/virtual-functions.md) oferece outras alternativas de design.  
   
-

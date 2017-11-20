@@ -1,37 +1,35 @@
 ---
-title: "Como BSCMAKE compila um arquivo .Bsc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos de informações de pesquisa (.bsc), compilando"
+title: Como BSCMAKE compila um. Arquivos BSC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: adc340a30fcf0292c3dc7fa0e595d488b4046431
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como BSCMAKE compila um arquivo .Bsc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BSCMAKE cria ou recria um arquivo de .bsc da maneira mais eficiente que possa.  Para evitar problemas potenciais, é importante compreender o processo de compilação.  
+# <a name="how-bscmake-builds-a-bsc-file"></a>Como BSCMAKE compila um arquivo .Bsc
+BSCMAKE cria ou recria um arquivo. bsc da maneira mais eficiente possível. Para evitar possíveis problemas, é importante compreender o processo de compilação.  
   
- Quando BSCMAKE cria um arquivo de informações de navegação, trunca os arquivos de .sbr ao comprimento zero.  Durante a criação subsequente do mesmo arquivo, \(vazio\) ou um arquivo de comprimento zero de .sbr informa a BSCMAKE que o arquivo de .sbr não tem nenhuma nova contribuição para executar.  Permite que BSCMAKE saber que uma atualização dessa parte do arquivo não é necessária e uma construção incremental será suficiente.  Durante cada construção \(a menos que a opção \/n é especificado\), BSCMAKE tenta primeiro atualização incremental do arquivo usando somente aqueles arquivos de .sbr que foram alterados.  
+ Quando BSCMAKE compila um arquivo de informações de procura, ele trunca os arquivos. SBR para comprimento de zero. Durante uma compilação subsequente do mesmo arquivo, um arquivo. SBR de comprimento zero (ou vazio) informa BSCMAKE, o arquivo. SBR não tem nenhum novo contribuição para fazer. Ele permite que o BSCMAKE que não é necessária uma atualização essa parte do arquivo e uma compilação incremental será suficiente. Durante cada compilação (a menos que a opção /n for especificada), BSCMAKE primeiro tenta atualizar o arquivo de forma incremental usando somente os arquivos. SBR foram alterados.  
   
- BSCMAKE procura um arquivo de .bsc que tem o nome especificado com a opção do \/o.  \/o Se não for especificado, BSCMAKE procura um arquivo que tem o nome de base do primeiro arquivo de .sbr e uma extensão de .bsc.  Se o arquivo já existir, BSCMAKE executa uma construção incremental do arquivo de informações de busca usando apenas os arquivos de contribuição de .sbr.  Se o arquivo não existir, BSCMAKE executa uma compilação completa usando todos os arquivos de .sbr.  As regras para construções são os seguintes:  
+ BSCMAKE procura um arquivo. bsc que tem o nome especificado com a opção /o. Se /o não for especificado, o BSCMAKE procurará um arquivo que tem o nome base do arquivo. SBR primeiro e uma extensão. bsc. Se o arquivo existir, BSCMAKE executa uma compilação incremental do arquivo de informações de procura usando somente os arquivos. SBR contribuição. Se o arquivo não existir, BSCMAKE executa uma compilação completa usando todos os arquivos. SBR. As regras para compilações são da seguinte maneira:  
   
--   Para que uma compilação completa seja bem\-sucedida, todos os arquivos especificados de .sbr devem existir e não devem ser truncados.  Se um arquivo de .sbr é truncado, você deverá recriá\-lo \(recompilando ou montando\) antes de executar BSCMAKE.  
+-   Para obter uma compilação completa seja bem-sucedida, todos especificados arquivos. SBR devem existir e não devem ser truncados. Se um arquivo. SBR estiver truncado, você deve recriá-lo (por recompilar ou montar) antes de executar BSCMAKE.  
   
--   Para que uma construção incremental seja bem\-sucedida, o arquivo de .bsc deve existir.  Todos os arquivos de contribuição de .sbr, mesmo os arquivos vazios, devem existir e devem ser especificados na linha de comando de BSCMAKE.  Se você omitir um arquivo de .sbr de linha de comando, BSCMAKE cancela sua contribuição do arquivo.  
+-   Para uma compilação incremental seja bem-sucedida, o arquivo. bsc deve existir. Todos os arquivos. SBR contribuição, até mesmo arquivos vazios, deve existir e deve ser especificado na linha de comando BSCMAKE. Se você omitir um arquivo. SBR da linha de comando, BSCMAKE remove sua contribuição do arquivo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Compilando um arquivo .Bsc](../../build/reference/building-a-dot-bsc-file.md)

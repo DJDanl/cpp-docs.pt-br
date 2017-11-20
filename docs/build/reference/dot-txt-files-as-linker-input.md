@@ -1,32 +1,31 @@
 ---
-title: "Arquivos .Txt como entrada de vinculador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .txt, entrada de vinculador"
-  - "arquivos de texto, entrada de vinculador"
-  - "arquivos txt, entrada de vinculador"
+title: . Arquivos txt como entrada de vinculador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .txt files, linker input
+- text files, linker input
+- txt files, linker input
 ms.assetid: 220b5a59-8b78-43f6-a8c3-f3134ccddf9e
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9ce3d795816de7eced1927523aa57965f43603aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Arquivos .Txt como entrada de vinculador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O LINK espera mais arquivos de texto como entrada adicional.  O especificador de [comando\-Arquivo](../../build/reference/link-command-files.md) \(@\) e [Endereço de base](../../build/reference/base-base-address.md) \(\/BASE\), [\/DEF](../../build/reference/def-specify-module-definition-file.md), e as opções de todos [\/ORDER](../../build/reference/order-put-functions-in-order.md) especificam arquivos de texto.  Esses arquivos podem ter qualquer extensão, não apenas .txt.  
+# <a name="txt-files-as-linker-input"></a>Arquivos .Txt como entrada de vinculador
+LINK espera vários arquivos de texto como entrada adicional. O [arquivo de comando](../../build/reference/link-command-files.md) especificador (@) e o [endereço Base](../../build/reference/base-base-address.md) (/base), [/DEF](../../build/reference/def-specify-module-definition-file.md), e [/ORDER](../../build/reference/order-put-functions-in-order.md) especificam de opções de todos os arquivos de texto. Esses arquivos podem ter qualquer extensão, não apenas ao. txt.  
   
-## Consulte também  
- [Arquivos de entrada LINK](../../build/reference/link-input-files.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Consulte também  
+ [Arquivos de entrada de LINK](../../build/reference/link-input-files.md)   
+ [Opções do vinculador](../../build/reference/linker-options.md)

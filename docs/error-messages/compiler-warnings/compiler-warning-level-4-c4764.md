@@ -1,50 +1,30 @@
 ---
-title: "Compilador aviso (nível 4) C4764 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4764 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4764
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4764
+f1_keywords: C4764
+dev_langs: C++
+helpviewer_keywords: C4764
 ms.assetid: 7bd4296f-966b-484c-bf73-8dbc8e85b4a9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ab34c8a0dbb2da157fc80066404c065d4a3f96df
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 25f04d579d5f34d78197beacc262df482029b5c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4764"></a>Compilador C4764 de aviso (nível 4)
-Não é possível alinhar objetos catch maiores do que 16 bytes  
+Não é possível alinhar objetos catch maiores que 16 bytes  
   
- Foi especificado um alinhamento maior que 16, mas em algumas plataformas, se a função lançará uma exceção, a pilha forçará um alinhamento de não mais de 16.  
+ Foi especificado um alinhamento maior do que 16, mas em algumas plataformas, se a função gera uma exceção, a pilha forçará um alinhamento de não mais de 16.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4764:  

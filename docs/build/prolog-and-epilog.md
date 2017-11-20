@@ -1,33 +1,32 @@
 ---
-title: "Pr&#243;logo e ep&#237;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Prólogo e epílogo | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Pr&#243;logo e ep&#237;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cada função que atribui o espaço de pilha, chama outras funções, salva registros permanentes, ou tratamento de exceção de dispositivo deve ter um prólogo cujos os limites de endereços são descritos nos dados de desenrolamento associados com a entrada de tabela respectiva de função \(consulte [Tratamento de exceções \(x64\)](../build/exception-handling-x64.md)\).  O prólogo salva registros de argumento em seus endereços domiciliários se necessário, registros permanentes de envia na pilha, atribui a parte fixa de pilha para locais e temporaries, e opcionalmente estabelece um ponteiro de quadro.  O desenrola associado a dados deve descrever a ação de prólogo e deve fornecer as informações necessárias para desfazer o efeito de código de prólogo.  
+# <a name="prolog-and-epilog"></a>Prólogo e epílogo
+Cada função que aloca espaço de pilha, chamadas de outras funções, salva os registros não volátil ou usa o tratamento de exceção devem ter um prólogo cujos endereço limites descritos nos dados de desenrolamento associados à entrada de tabela do respectivos função (consulte [(X64) de tratamento de exceção](../build/exception-handling-x64.md)). O prólogo salva argumento registros em seus endereços de base se necessário, envia registros não volátil na pilha, aloca a parte fixa da pilha de locais e de longa e opcionalmente estabelece um ponteiro de quadro. Dados desenrolados associado deve descrever a ação de prólogo e forneça as informações necessárias para desfazer o efeito do código de prólogo.  
   
- Se a alocação fixa na pilha é mais de uma página \(isto é, maior que 4096 bytes\), então é possível que a alocação de pilha pode abranger mais de uma página de memória virtual e, portanto, a alocação devem ser marcadas antes que seja atribuída realmente.  Uma rotina especial que sejam acessível de prólogo e que não destrua alguns dos registros de argumento é fornecida essa finalidade.  
+ Se a alocação fixa na pilha é a mais de uma página (ou seja, maior do que 4096 bytes), em seguida, é possível que a alocação da pilha pode abranger mais de uma página de memória virtual e, portanto, a alocação deve ser verificada antes que ela é realmente alocada. Uma rotina especial que é chamado de prólogo e que não destrói qualquer um dos registros de argumento é fornecida para essa finalidade.  
   
- O método preferido para salvar registros permanentes é movê\-los na pilha antes de alocação de pilha fixa.  Se a alocação de pilha fixa foi executada antes que os registros foram salvos permanentes, então um deslocamento de 32 bits foi necessário o mais provável endereçar a área exceto pelo fato do registro \(dependendo das informações recebidas, envia os registros são apenas tão rápido quanto move e devem permanecer bem para o futuro próximo independentemente de dependência implícita entre envia\).  Os registros permanentes podem ser salvos em qualquer ordem.  No entanto, o primeiro uso de um registro permanente no prólogo deve ser salve\-o.  
+ É o método preferencial para salvar registros não volátil para movê-las para a pilha antes da alocação da pilha fixa. Se a alocação da pilha fixa foram realizada antes dos registros não volátil foram salvos, em seguida, muito provavelmente um deslocamento de 32 bits é necessário para o endereço salvo registrar área (supostamente, verificações de registros são apenas tão rápidas quanto move e devem permanecer de um futuro apesar da dependência implícita entre envios por push). Registros não volátil podem ser salvo em qualquer ordem. No entanto, o primeiro uso de um registro não volátil no prólogo deve ser para salvá-lo.  
   
- O código para um prólogo típico pode ser:  
+ O código de prólogo típico pode ser:  
   
 ```  
 mov       [RSP + 8], RCX  
@@ -39,9 +38,9 @@ lea      R13, 128[RSP]
 ...  
 ```  
   
- Este prólogo armazena o registro RCX de argumento no local de início, salva os registros R13\-R15 permanentes, atribui a parte fixa quadro de pilha, e estabelece um ponteiro de quadro esse pontos 128 bytes na área fixa de alocação.  Usar um deslocamento permite que mais da área fixa de alocação sejam endereçadas com deslocamentos de um byte.  
+ Este prólogo armazena o registro de argumento RCX na posição inicial, não salva volátil registra R13 R15 aloca a parte fixa do quadro de pilhas e estabelece um ponteiro de quadro que aponta 128 bytes para a área de alocação fixa. Um deslocamento permite que mais da área de alocação fixa sejam resolvidos com deslocamentos de um byte.  
   
- Se o tamanho fixo de alocação é maior ou igual a uma página de memória, uma função auxiliar deve ser chamada antes de alterar RSP.  Este auxiliar, \_\_chkstk, eleição é responsável pelo intervalo à\-estar\- atribuído a pilha, para garantir que a pilha é estendida corretamente.  Nesse caso, o exemplo anterior de prólogo seria em vez disso:  
+ Se o tamanho de alocação fixa é maior que ou igual a uma página de memória, uma função auxiliar deve ser chamada antes de modificar RSP. Este auxiliar, __chkstk, é responsável pela sondagem do intervalo de pilha ser alocado, para garantir que a pilha é estendida corretamente. Nesse caso, o exemplo de prólogo anterior em vez disso, seria:  
   
 ```  
 mov       [RSP + 8], RCX  
@@ -55,13 +54,13 @@ lea      R13, 128[RSP]
 ...  
 ```  
   
- O auxiliar de \_\_chkstk não alterará os registros diferentes de R10, de R11, e os códigos de condição.  Em particular, retornará RAX inalterado e permitir que todos os registros e permanentes argumento\- passar registra inalterados.  
+ O auxiliar __chkstk não modificará quaisquer registros diferentes R10, R11 e os códigos de condição. Em particular, ele retornará RAX inalterado e deixe registra todos os não volátil e registros de passagem de argumento sem modificações.  
   
- O código de epílogo existe em cada saída para uma função.  Enquanto geralmente há apenas um prólogo, pode haver muitos epílogos.  As guarnições de código de epílogo a pilha ao seu tamanho fixo de alocação \(se necessário\), desalocam a alocação de pilha fixa, restauram registros permanentes aparecendo seus valores salvos de pilha, e retornam.  
+ Código de epílogo existe em cada saída para uma função. Enquanto houver normalmente apenas um prólogo, pode haver muitos epilogs. Código de epílogo corta a pilha para o tamanho de alocação fixa (se necessário), desaloca a alocação da pilha fixa, restaura registros não volátil, tirando seus valores salvos da pilha e retorna.  
   
- O código de epílogo deve seguir um conjunto de regras restrito para que o código do desenrolamento desenrole confiavelmente com exceções e as interrupções.  Isso reduz a quantidade de desenrola os dados necessários, porque nenhum dado extra é necessário para descrever cada epílogo.  Em vez disso, o código de desenrolamento pode determinar que um epílogo está sendo executado digitalizando frente através de um fluxo de código para identificar um epílogo.  
+ O código de epílogo deve seguir um conjunto restrito de regras para o código de desenrolamento confiável desenrolamento por meio de exceções e interrupções. Isso reduz a quantidade de desenrolamento dados necessários, porque nenhum dado extra é necessária para descrever cada epílogo. Em vez disso, o código de desenrolamento pode determinar que um epílogo está sendo executado por meio do exame forward por meio de um fluxo de código para identificar um epílogo.  
   
- Se nenhum ponteiro de quadro é usado na função, o epílogo deve primeiro desalocar a parte fixa de pilha, registros são aparecidos permanentes, e o controle é retornado para a função de chamada.  Por exemplo,  
+ Se nenhum ponteiro de quadro é usado na função, em seguida, o epílogo primeiro deverá desalocar a parte fixa da pilha, os registros não volátil são disparados e controle é retornado para a função de chamada. Por exemplo,  
   
 ```  
 add      RSP, fixed-allocation-size  
@@ -71,7 +70,7 @@ pop      R15
 ret  
 ```  
   
- Se um ponteiro de quadro é usado na função, então a pilha deve ser aparada à alocação fixa antes da execução de epílogo.  Isso não é tecnicamente parte de epílogo.  Por exemplo, o seguinte epílogo pode ser usado para desfazer o prólogo usado anteriormente:  
+ Se um ponteiro de quadro é usado na função, a pilha deve ser cortada para sua alocação fixa antes da execução de epílogo. Isso é tecnicamente não faz parte do epílogo. Por exemplo, epílogo a seguir pode ser usado para desfazer o prólogo usado anteriormente:  
   
 ```  
 lea      RSP, -128[R13]  
@@ -83,21 +82,21 @@ pop      R15
 ret  
 ```  
   
- Na prática, quando um ponteiro de quadro é usado, não há bom motivo ajustar RSP em duas etapas, o seguinte epílogo deve ser usado em vez disso:  
+ Na prática, quando é usado um ponteiro de quadro, não há nenhuma boa razão para ajustar RSP em duas etapas, portanto o seguir epílogo seria usado em vez disso:  
   
 ```  
-lea      RSP, fixed-allocation-size – 128[R13]  
+lea      RSP, fixed-allocation-size - 128[R13]  
 pop      R13  
 pop      R14  
 pop      R15  
 ret  
 ```  
   
- Esses são os únicos formulários legais para um epílogo.  Deve consistir de `add RSP,constant` ou `lea RSP,constant[FPReg]`, seguido por uma série de zero ou mais 8 PNF de registro do byte e um retorno ou um jmp.  \(Somente um subconjunto das instruções de jmp é permitido em epílogo.  Esses são exclusivamente da classe de jmps com referências de memória de ModRM onde o valor do campo 00 mod de ModRM.  O uso de jmps no epílogo com valor do campo 01 ou 10 mod de ModRM é proibido.  Consulte a tabela A\-15 em massa manual 3 do programador da arquitetura de AMD x86\-64: Instruções de uso geral e do sistema, para obter mais informações sobre referências de ModRM permitidos.\).  Nenhum outro código pode aparecer.  Em particular, nada pode ser agendada em um epílogo, incluindo a carga de um valor de retorno.  
+ Esses são os formulários válidos somente para um epílogo. Ele deve consistir em uma `add RSP,constant` ou `lea RSP,constant[FPReg]`, seguido por uma série de zero ou mais pops de registro de 8 bytes e um retorno ou um jmp. (Apenas um subconjunto de instruções jmp são permitidas de epílogo. Esses são exclusivamente da classe do jmps com referências de memória ModRM onde o campo mod ModRM valor 00. É proibido o uso de jmps em epílogo com valor de campo mod ModRM 01 ou 10. Consulte tabela A-15 do programador AMD x86-64 arquitetura Manual Volume 3: geral e instruções de sistema, para obter mais informações sobre as referências de ModRM permitidas.). Nenhum outro código pode aparecer. Em particular, nada pode ser agendado em um epílogo, incluindo o carregamento de um valor de retorno.  
   
- Observe que, quando um ponteiro de quadro não for usado, o epílogo deve usar `add RSP,constant` desalocar a parte fixa de pilha.  Não pode usar `lea RSP,constant[RSP]` em vez disso.  Essa limitação existe para que o código de desenrolamento tem menos padrão para reconhecer ao procurar por epílogos.  
+ Observe que, quando um ponteiro de quadro não for usado, o epílogo deve usar `add RSP,constant` desalocar a parte fixa da pilha. Ele não pode usar `lea RSP,constant[RSP]` em vez disso. Essa restrição existe para que o código de desenrolamento tenha menos padrões para reconhecer quando procurando epilogs.  
   
- Seguindo essas regras permite que o código de desenrolamento determinar que um epílogo está sendo executado atualmente e simular a execução do restante de epílogo para permitir recriar o contexto de função de chamada.  
+ Essas regras a seguir permite que o código de desenrolamento para determinar se um epílogo está sendo executado atualmente e para simular a execução do restante epílogo para permitir a recriar o contexto da função de chamada.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Convenções de software x64](../build/x64-software-conventions.md)

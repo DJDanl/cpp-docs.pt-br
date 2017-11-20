@@ -1,31 +1,29 @@
 ---
-title: "Como testar a igualdade (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "igualdade, testando para"
+title: 'Como: testar a igualdade (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: equality, testing for
 ms.assetid: 9115e298-9f75-452d-bdfb-6eeb0fa0b3c6
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2cbaddee30c9b02b99c10852b7e9c0d425d80ebb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como testar a igualdade (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-No exemplo a seguir, um testar a igualdade que usa extensões gerenciadas para C\+\+ é baseado em que os identificadores pertencem.  
+# <a name="how-to-test-for-equality-ccli"></a>Como testar a igualdade (C++/CLI)
+No exemplo a seguir, um teste de igualdade que usa extensões gerenciadas para C++ baseia-se no que se referem os identificadores.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // mcppv2_equality_test.cpp  
@@ -39,12 +37,12 @@ bool Test1() {
 }  
 ```  
   
- O IL para esse programa mostra que o valor de retorno é implementado usando uma chamada para o op\_Equality.  
+ O IL para este programa mostra que o valor de retorno é implementado usando uma chamada para op_Equality.  
   
 ```  
 IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,  
                                                                string)  
 ```  
   
-## Consulte também  
- [Tipos gerenciados](../Topic/Managed%20Types%20\(C++-CLI\).md)
+## <a name="see-also"></a>Consulte também  
+ [Tipos gerenciados (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

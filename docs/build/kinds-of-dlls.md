@@ -1,79 +1,78 @@
 ---
-title: "Tipos de DLLs | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], MFC"
-  - "DLLs [C++], tipos"
-  - "DLLs MFC [C++], tipos"
+title: Tipos de DLLs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC DLLs [C++], types
+- DLLs [C++], types
+- DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f1f2bbc257bbed427766f81175b250909ccb7d04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Tipos de DLLs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico oferece informações para ajudá\-lo a determinar o tipo de DLL a ser compilada.  
+# <a name="kinds-of-dlls"></a>Tipos de DLLs
+Este tópico fornece informações para ajudá-lo a determinar o tipo da DLL para compilar.  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Diferentes tipos de DLLs disponíveis  
- Usando o Visual C\+\+, você pode criar as dlls Win32 em C ou C\+\+ que não usam a biblioteca de classes \(MFC\) do Microsoft Foundation.  É possível criar um projeto de DLL não MFC com o assistente de aplicação Win32.  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Diferentes tipos de DLLs disponíveis  
+ Usando o Visual C++, você pode criar DLLs Win32 em C ou C++ que não usam a biblioteca Microsoft Foundation Class (MFC). Você pode criar um projeto de DLL não - MFC com o Assistente de aplicativo Win32.  
   
- A própria biblioteca do MFC está disponível, em bibliotecas de vínculo estático ou um número de DLLs, com o assistente de DLL do MFC.  Se a sua DLL estiver usando o MFC, o Visual C\+\+ oferece suporte a três diferentes cenários de desenvolvimento do DLL:  
+ A biblioteca do MFC está disponível, em qualquer bibliotecas de link estático ou em um número de DLLs, com o Assistente de DLL do MFC. Se a DLL está usando MFC, Visual C++ dá suporte a três cenários de desenvolvimento de DLL diferentes:  
   
--   Compilando uma DLL regular que vincula estaticamente o MFC  
+-   Criar uma DLL MFC regular que estaticamente vincula MFC  
   
--   Compilando uma DLL regular que vincula dinamicamente o MFC  
+-   Criar uma DLL MFC regular que dinamicamente vincula MFC  
   
--   Compilando uma DLL de extensão do MFC, que sempre vinculam dinamicamente o MFC  
+-   Criar uma DLL de extensão do MFC, que vincular dinamicamente sempre MFC  
   
-### Que você deseja saber mais?  
+### <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [DLLs não MFC: Visão Geral](../Topic/Non-MFC%20DLLs:%20Overview.md)  
+-   [DLLs não MFC: visão geral](../build/non-mfc-dlls-overview.md)  
   
--   [DLL normais vinculadas estaticamente ao MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [DLLs normais do MFC vinculado estaticamente ao MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [DLL normais vinculadas dinamicamente ao MFC](../Topic/Regular%20DLLs%20Dynamically%20Linked%20to%20MFC.md)  
+-   [DLLs MFC regulares vinculadas dinamicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [DLLs de extensão: visão geral](../build/extension-dlls-overview.md)  
+-   [DLLs de extensão do MFC: visão geral](../build/extension-dlls-overview.md)  
   
--   [que tipo de DLL usar](#_core_which_kind_of_dll_to_use)  
+-   [Que tipo de DLL para usar](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a> Decidindo que tipo de DLL usar  
- Se a sua DLL não usa o MFC, use o Visual C\+\+ para criar uma DLL Win32 não MFC.  Vincular seu DLL ao MFC \(estaticamente ou dinamicamente\) ocupa espaço significativo em disco e na memória.  Você não deve vincular ao MFC a menos que a DLL realmente use o MFC.  
+##  <a name="_core_which_kind_of_dll_to_use"></a>O tipo de DLL para uso  
+ Se a DLL não usar MFC, use o Visual C++ para criar uma não - MFC Win32 DLL. Vinculando a DLL para MFC (estática ou dinâmica) ocupa muito espaço em disco e de memória. Você não deve vincular a MFC, a menos que a DLL realmente usa MFC.  
   
- Se a sua DLL for usar o MFC e for ser usada por aplicativos do MFC ou não MFC, você deverá compilar um DLL normal que se vincula dinamicamente ao MFC ou um DLL normal que se vincula estaticamente ao MFC.  Na maioria dos casos, você provavelmente desejará usar uma DLL normal que vincule dinamicamente ao MFC, porque o tamanho de arquivo da DLL será muito menor e a economia de memória em relação ao uso da versão compartilhada de MFC poderá ser significativa.  Se você vincular de forma estática ao MFC, o tamanho de arquivo da DLL será maior e usará memória extra porque ela carrega a própria cópia particular do código de biblioteca do MFC.  
+ Se sua DLL usará MFC e será usado por aplicativos MFC ou não MFC, você deve criar uma DLL MFC regular vinculada dinamicamente a MFC ou uma DLL MFC regular que se vincula estaticamente ao MFC. Na maioria dos casos, você provavelmente desejará usar uma DLL MFC regular vinculada dinamicamente a MFC, porque o tamanho do arquivo da DLL será muito menor e a economia na memória usa a versão compartilhada do MFC pode ser significativa. Se você vincular estaticamente ao MFC, o tamanho do arquivo de sua DLL será maior e potencialmente ocupam memória extra porque ele carrega sua própria cópia do código de biblioteca do MFC.  
   
- Compilar uma DLL que vincula dinamicamente ao MFC é mais rápido que compilar uma DLL que vincula estaticamente ao MFC, porque não é necessário vincular o próprio MFC.  Isso é especialmente verdadeiro em compilações de depuração onde o vinculador deverá compactar informações de depuração.  Ao vincular com uma DLL que já contém informações de depuração, há menos informações de depuração para compactar dentro da DLL.  
+ Criar uma DLL que vincula dinamicamente a MFC é mais rápido do que criar uma DLL que se vincula estaticamente ao MFC porque ele não é necessário vincular MFC em si. Isso é especialmente verdadeiro em compilações de depuração em que o vinculador deve compactar as informações de depuração. Por meio da vinculação com uma DLL que já contém as informações de depuração, há menos informações de depuração para compactar dentro da sua DLL.  
   
- Uma desvantagem de vincular dinamicamente ao MFC é que você deve distribuir as DLLs compartilhadas Mfcx0.dll e Msvcrxx.dll \(ou arquivos semelhantes\) com sua DLL.  As DLLs do MFC são livremente redistribuíveis, mas você ainda deve instalar as DLLs no seu programa de instalação.  Além disso, você deve enviar o Msvcrxx.dll, que contém a biblioteca em tempo de execução do C usada pelo programa e as próprias DLLs MFC.  
+ Uma desvantagem vincular dinamicamente a MFC é que você deve distribuir o Mfcx0.dll de DLLs compartilhadas e Msvcrxx.dll (ou arquivos similares) com sua DLL. As DLLs MFC são redistribuíveis gratuitamente, mas você ainda deve instalar as DLLs em seu programa de instalação. Além disso, você deve enviar Msvcrxx.dll, que contém a biblioteca de tempo de execução C que é usada pelo seu programa e as DLLs MFC próprios.  
   
- Se a sua DLL for ser usada somente por executáveis MFC, você poderá escolher entre criar uma DLL normal ou uma DLL de extensão.  Se a sua DLL implementa as classes reutilizáveis derivadas de classes existentes do MFC, você precisa passar objetos derivados do MFC entre o aplicativo e o DLL, você deve criar uma extensão.  
+ Se sua DLL somente será usado por arquivos executáveis do MFC, você terá a opção de criar uma DLL MFC regular ou uma DLL de extensão do MFC. Se sua DLL implementa reutilizáveis classes derivadas de classes MFC existentes ou você precisa passar objetos derivados de MFC entre o aplicativo e a DLL, você deve criar uma DLL de extensão do MFC.  
   
- Se a sua DLL se vincula dinamicamente ao MFC, as DLLs do MFC podem ser redistribuídas com o DLL.  Essa arquitetura é particularmente útil para compartilhamento da biblioteca de classes entre vários arquivos executáveis para economizar espaço em disco e minimizar uso de memória.  
+ Se sua DLL vincula dinamicamente a MFC, as DLLs MFC pode ser redistribuídas com sua DLL. Essa arquitetura é particularmente útil para o compartilhamento de biblioteca de classes entre vários arquivos executáveis para economizar espaço em disco e minimizar o uso de memória.  
   
- Antes de versão 4.0, o Visual C\+\+ oferecia suporte apenas para dois tipos de DLL que usavam o MFC: USRDLLs e AFXDLLs.  As DLLs normais vinculadas estaticamente ao MFC têm as mesmas características da antiga USRDLL.  DLLs de extensão MFC têm as mesmas características que o AFXDLLs antigo.  
+ Antes da versão 4.0, tipos de Visual C++ apenas dois com suporte de DLLs que usado MFC: USRDLLs e AFXDLLs. DLLs normais do MFC vinculado estaticamente ao MFC têm as mesmas características como o USRDLL anterior. DLLs de extensão do MFC com as mesmas características como os AFXDLLs anteriores.  
   
-### Que você deseja saber mais?  
+### <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [DLLs não MFC: Visão Geral](../Topic/Non-MFC%20DLLs:%20Overview.md)  
+-   [DLLs não MFC: visão geral](../build/non-mfc-dlls-overview.md)  
   
--   [DLL normais vinculadas estaticamente ao MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [DLLs normais do MFC vinculado estaticamente ao MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [DLL normais vinculadas dinamicamente ao MFC](../Topic/Regular%20DLLs%20Dynamically%20Linked%20to%20MFC.md)  
+-   [DLLs MFC regulares vinculadas dinamicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [DLLs de extensão: visão geral](../build/extension-dlls-overview.md)  
+-   [DLLs de extensão do MFC: visão geral](../build/extension-dlls-overview.md)  
   
-## Consulte também  
- [DLLs no Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)

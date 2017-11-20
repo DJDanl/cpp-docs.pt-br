@@ -1,31 +1,28 @@
 ---
-title: "Ordem de op&#231;&#245;es CL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compilador cl.exe, definindo opções"
+title: "Ordem de opções CL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords: cl.exe compiler, setting options
 ms.assetid: 300908ce-ae00-4b45-964b-e4e69ff6777b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fdcc4b315f2e223e59e88e2f5876965d106a49c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Ordem de op&#231;&#245;es CL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-As opções podem aparecer em qualquer lugar na linha de comando de CL, exceto a opção \/link, que deve acontecer por último.  O compilador começa com as opções especificadas em [Variável de ambiente de CL](../../build/reference/cl-environment-variables.md) e depois ler os arquivos de comando de processamento da linha de comando da esquerda para a direita — na ordem em que os encontra.  Cada opção se aplica a todos os arquivos na linha de comando.  Se o CL encontrar conflitantes opções, use a opção mais à direita.  
+# <a name="order-of-cl-options"></a>Ordem de opções CL
+Opções podem aparecer em qualquer lugar na linha de comando CL, exceto para a opção /link que deve ocorrer por último. O compilador começa com opções especificadas no [variável de ambiente CL](../../build/reference/cl-environment-variables.md) e lê a linha de comando da esquerda para a direita, processamento de arquivos de comando na ordem encontrá-las. Cada opção se aplica a todos os arquivos na linha de comando. Se CL encontrar opções de conflito, ele usa a opção mais à direita.  
   
-## Consulte também  
- [Sintaxe da linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md)
+## <a name="see-also"></a>Consulte também  
+ [Sintaxe de linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md)

@@ -1,35 +1,34 @@
 ---
-title: "Como converter formatos de arquivo de imagem com o .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GDI+ [C++], convertendo formatos de arquivo de imagem"
-  - "gráficos [C++], convertendo formatos de arquivo de imagem"
+title: 'Como: Converter formatos de arquivo de imagem com o .NET Framework | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+ [C++], converting image file formats
+- graphics [C++], converting image file formats
 ms.assetid: 5d5384b0-b9b7-4262-b9ad-c4cb95f75ee4
-caps.latest.revision: 13
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eff94d00f92fe0a52162c986662209168974e072
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como converter formatos de arquivo de imagem com o .NET Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra a classe de <xref:System.Drawing.Image?displayProperty=fullName> e a enumeração de <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> usadas para converter e salvar arquivos de imagem.  O código a seguir carrega uma imagem de um arquivo .jpg e a salva em ambos os formatos de .gif e arquivos .bmp.  
+# <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>Como converter formatos de arquivo de imagem com o .NET Framework
+O exemplo de código a seguir demonstra o <xref:System.Drawing.Image?displayProperty=fullName> classe e o <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> enumeração usada para converter e salvar arquivos de imagem. O código a seguir carrega uma imagem de um arquivo. jpg e, em seguida, salva-o em formatos de arquivos. gif e. bmp.  
   
 > [!NOTE]
->  GDI\+ está incluído no Windows XP, 2003, Windows Server e Windows Vista e está disponível como um redistribuível para Windows 2000.  Para baixar o redistribuível o último, consulte [http:\/\/go.microsoft.com\/fwlink\/?linkid\=11232](http://go.microsoft.com/fwlink/?linkid=11232).  Para obter mais informações, consulte [GDI\+](_gdiplus_GDI_start_cpp).  
+>  GDI+ está incluído no Windows XP, Windows Server 2003 e Windows Vista e está disponível como um redistribuível para o Windows 2000. Para baixar o redistribuível mais recente, consulte [http://go.microsoft.com/fwlink/?linkid=11232](http://go.microsoft.com/fwlink/?linkid=11232).   
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 #using <system.drawing.dll>  
@@ -48,6 +47,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:System.Drawing>   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

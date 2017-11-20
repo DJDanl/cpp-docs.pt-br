@@ -1,34 +1,33 @@
 ---
-title: "Como gravar dados no Registro do Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "registro, gravando em"
-  - "Visual C++, gravando no Registro do Windows"
+title: 'Como: gravar dados no registro do Windows (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- registry, writing to
+- Visual C++, writing to Windows Registry
 ms.assetid: 3d40b978-4baa-4779-bfe3-47e2917b757f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8bb95ab9a70fd0144256f85d3fae6ccc3c034c1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como gravar dados no Registro do Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código usa a chave de <xref:Microsoft.Win32.Registry.CurrentUser> para criar uma instância gravável da classe de <xref:Microsoft.Win32.RegistryKey> que corresponde à chave de **Software** .  O método de <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> é usado para criar uma nova chave e adicioná\-la aos pares de chave\/valor.  
+# <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Como gravar dados no Registro do Windows (C++/CLI)
+O seguinte exemplo de código usa o <xref:Microsoft.Win32.Registry.CurrentUser> chave para criar uma instância gravável do <xref:Microsoft.Win32.RegistryKey> classe correspondente para o **Software** chave. O <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> método é usado para criar uma nova chave e adicionar pares de chave/valor.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // registry_write.cpp  
@@ -74,9 +73,9 @@ int main()
 }  
 ```  
   
-## Comentários  
- Você pode usar o.NET Framework para acessar o Registro com as classes de <xref:Microsoft.Win32.Registry> e de [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) , que ambas são definidas no namespace de <xref:Microsoft.Win32> .  A classe de **Registro** é um contêiner para instâncias estáticos da classe de <xref:Microsoft.Win32.RegistryKey> .  Cada instância de representar um nó de Registro raiz.  As instâncias são <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.  
+## <a name="remarks"></a>Comentários  
+ Você pode usar o .NET Framework para acessar o registro com o <xref:Microsoft.Win32.Registry> e [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) classes, que são definidos no <xref:Microsoft.Win32> namespace. O **registro** classe é um contêiner para instâncias estáticos de <xref:Microsoft.Win32.RegistryKey> classe. Cada instância representa um nó de raiz do registro. As instâncias são <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.  
   
-## Consulte também  
- [Como ler dados a partir do Registro do Windows](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Como: ler dados do registro do Windows (C + + CLI)](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

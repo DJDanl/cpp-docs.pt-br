@@ -1,39 +1,38 @@
 ---
-title: "Como implementar uma arquitetura de componente de plug-in usando a reflex&#227;o (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plug-ins [C++]"
-  - "reflexão [C++], plug-ins"
+title: Implementar uma arquitetura de plug-in (C + + CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- plug-ins [C++]
+- reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d959702a7de8df9d90ca6dd855725901543dc92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como implementar uma arquitetura de componente de plug-in usando a reflex&#227;o (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os exemplos de código a seguir demonstra o uso de reflexão implementar uma arquitetura de plug\-in “” simples.  A primeira listagem é o aplicativo, e a segunda é o plug\-in.  O aplicativo é mais um formato de documento que se popula que usa qualquer classe baseada em formulários localizadas na DLL de plug\-in fornecido como um argumento de linha de comando.  
+# <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Como implementar uma arquitetura de componente de plug-in usando a reflexão (C++/CLI)
+Os exemplos de código a seguir demonstram o uso da reflexão para implementar uma arquitetura simples de "plug-in". A primeira listagem é o aplicativo e o segundo é o plug-in. O aplicativo é um formulário de documento vários que preenche usando as classes com base em formulário encontradas na DLL do plug-in fornecido como um argumento de linha de comando.  
   
- O aplicativo tentar carregar o assembly fornece que usa o método de <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> .  Se tiver êxito, os tipos do assembly são enumerados usando o método de <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> .  Cada tipo é verificado em para verificar se há compatibilidade usando o método de <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> .  Neste exemplo, as classes localizadas no assembly fornece devem ser derivadas da classe de <xref:System.Windows.Forms.Form> para qualificar como um plug\-in.  
+ O aplicativo tenta carregar o assembly fornecido usando o <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> método. Se for bem-sucedida, os tipos no assembly são enumerados usando o <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> método. Em seguida, é verificado a cada tipo de compatibilidade usando o <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> método. Neste exemplo, classes encontrados no assembly fornecido devem ser derivados do <xref:System.Windows.Forms.Form> classe para qualificar um plug-in.  
   
- As classes correspondentes são criadas uma instância com o método de <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> , que aceita <xref:System.Type> como um argumento e retorna um ponteiro para uma nova instância do.  Cada nova instância em é anexada ao formulário e exibida.  
+ Em seguida, são criadas instâncias de classes compatíveis com o <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> método, que aceita um <xref:System.Type> como um argumento e retorna um ponteiro para uma nova instância. Cada nova instância é anexada ao formulário e exibida.  
   
- Observe que o método de <xref:System.Reflection.Assembly.Load%2A> não aceita os nomes do assembly que incluem a extensão de arquivo.  A função principal no aplicativo corta alguns fornecidas extensões, assim os seguintes trabalhos do exemplo de código em ambos os casos.  
+ Observe que o <xref:System.Reflection.Assembly.Load%2A> método não aceita nomes de assembly que incluem a extensão de arquivo. A função principal do aplicativo corta extensões fornecidos, portanto o exemplo de código a seguir funciona em ambos os casos.  
   
-## Exemplo  
- O código a seguir define o aplicativo que aceita plug\-ins.  Um nome do assembly deve ser fornecida como o primeiro argumento.  Esse assembly deve conter pelo menos um tipo derivado <xref:System.Windows.Forms.Form> do utilitário.  
+## <a name="example"></a>Exemplo  
+ O código a seguir define o aplicativo que aceita os plug-ins. Um nome de assembly deve ser fornecido como o primeiro argumento. Este assembly deve conter pelo menos um público <xref:System.Windows.Forms.Form> tipo derivado.  
   
 ```  
 // plugin_application.cpp  
@@ -77,8 +76,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O código a seguir define três classes derivadas de <xref:System.Windows.Forms.Form>.  Quando o nome do nome do assembly resultante é transmitido ao executável na lista anterior, cada uma dessas três classes descoberta e será criada uma instância, independentemente do fato de que eram tudo desconhecidos ao aplicativo host em tempo de compilação.  
+## <a name="example"></a>Exemplo  
+ O código a seguir define três classes derivadas de <xref:System.Windows.Forms.Form>. Quando o nome do assembly resultante é passado para o executável na lista anterior, cada uma dessas três classes será descoberta e instanciada, apesar do fato de que eles foram todos desconhecidos para o aplicativo de hospedagem em tempo de compilação.  
   
 ```  
 // plugin_assembly.cpp  
@@ -128,5 +127,5 @@ protected:
 };  
 ```  
   
-## Consulte também  
- [Reflexão](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>Consulte também  
+ [Reflexão (C++/CLI)](../dotnet/reflection-cpp-cli.md)

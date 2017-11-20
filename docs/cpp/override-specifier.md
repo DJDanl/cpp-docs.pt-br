@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- override Identifier
+dev_langs: C++
+helpviewer_keywords: override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 54c3b0de90ef3455af31c49592c6b405c345b0e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: c182404618e36fe3b7fa0ed72d3a2e39569f7ac0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="override-specifier"></a>substituir especificador
 Você pode usar a palavra-chave `override` para designar as funções membro que substituem uma função virtual em uma classe base.  

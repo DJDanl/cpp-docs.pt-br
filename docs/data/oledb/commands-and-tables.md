@@ -1,49 +1,48 @@
 ---
-title: "Comandos e tabelas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CAccessorRowset, classes de comando e tabela"
-  - "Classe CCommand, Modelos de consumidor OLE DB"
-  - "comandos [C++], Modelos de consumidor de banco de dados OLE"
-  - "Classe CTable"
-  - "Modelos de consumidor OLE DB, suporte a comandos"
-  - "Modelos de consumidor OLE DB, suporte a tabelas"
-  - "conjuntos de linhas, acessando"
-  - "tabelas [C++], Modelos de consumidor de banco de dados OLE"
+title: Comandos e tabelas | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates, table support
+- CCommand class, OLE DB consumer templates
+- commands [C++], OLE DB Consumer Templates
+- CTable class
+- CAccessorRowset class, command and table classes
+- rowsets, accessing
+- tables [C++], OLE DB Consumer Templates
+- OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5f849dc66746fe5740f47182a4fbacbc4d6c60d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Comandos e tabelas
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Os comandos e as tabelas permitem que você acesse conjuntos de linhas; ou seja, abrir os conjuntos de linhas, execute comandos, e colunas de associação.  As classes de [CCommand](../../data/oledb/ccommand-class.md) e de [CTable](../../data/oledb/ctable-class.md) cria uma instância dos objetos de comando e da tabela, respectivamente.  Essas classes derivam\-se de [CAccessorRowset](../Topic/CAccessorRowset%20Class.md) conforme mostrado na figura a seguir.  
+# <a name="commands-and-tables"></a>Comandos e tabelas
+Comandos e tabelas permitem que você acesse conjuntos de linhas; ou seja, abrir conjuntos de linhas, executar comandos e associar colunas. O [CCommand](../../data/oledb/ccommand-class.md) e [CTable](../../data/oledb/ctable-class.md) classes instanciar os objetos de comando e tabela, respectivamente. Essas classes derivam [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) conforme mostrado na figura a seguir.  
   
- ![De VC&#95;CommandsTables](../../data/oledb/media/vccommandstables.png "vcCommandsTables")  
-Classes de comando e da tabela  
+ ![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
+Classes de tabela e de comando  
   
- Na tabela anterior, `TAccessor` pode ser qualquer tipo de acessador listado em [Tipos de acessador](../../data/oledb/accessors-and-rowsets.md).  *TRowset* pode ser qualquer tipo de conjunto de linhas listado em [Tipos de conjunto de linhas](../../data/oledb/accessors-and-rowsets.md).  *TMultiple* especifica o tipo de resultado \(um único ou vários conjuntos de resultados\).  
+ Na tabela anterior, `TAccessor` pode ser qualquer tipo de acessador listado na [tipos de acessador](../../data/oledb/accessors-and-rowsets.md). *TRowset* pode ser qualquer tipo de conjunto de linhas listado na [tipos de conjunto de linhas](../../data/oledb/accessors-and-rowsets.md). *TMultiple* Especifica o tipo de resultado (um único ou vários do conjunto de resultados).  
   
- [Assistente do consumidor de ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md) permite especificar se você deseja que um objeto de comando ou de tabela.  
+ O [ATL OLE DB Assistente de consumidor](../../atl/reference/atl-ole-db-consumer-wizard.md) permite que você especifique se deseja que um objeto de comando ou uma tabela.  
   
--   Para fontes de dados sem comandos, você pode usar a classe de `CTable` .  Use\-a em geral dos conjuntos de linhas simples que não especifica nenhum parâmetro e não requer nenhum resultado de multiple.  Essa classe simples abre uma tabela em uma fonte de dados usando um nome da tabela que você especifica.  
+-   Para fontes de dados sem comandos, você pode usar o `CTable` classe. Você geralmente usá-lo para conjuntos de linhas simples que não especificar nenhum parâmetro e não exigem nenhum vários resultados. Essa classe simple abre uma tabela em uma fonte de dados usando um nome de tabela que você especificar.  
   
--   Para fontes de dados que oferecem suporte a comandos, você pode usar a classe de `CCommand` em vez disso.  Para executar um comando, chame [Abrir](../../data/oledb/ccommand-open.md) nessa classe.  Como alternativa, você pode chamar `Prepare` para preparar um comando que você deseja executar mais de uma vez.  
+-   Para fontes de dados que oferece suporte a comandos, você pode usar o `CCommand` classe em vez disso. Para executar um comando, chame [abrir](../../data/oledb/ccommand-open.md) nessa classe. Como alternativa, você pode chamar `Prepare` para preparar um comando que você deseja executar mais de uma vez.  
   
-     **CCommand** tem três argumentos do modelo: um tipo de acessador, um tipo de conjunto de linhas, e um tipo de resultado \(`CNoMultipleResults`, por padrão, ou `CMultipleResults`\).  Se você especificar `CMultipleResults`, a classe de `CCommand` oferece suporte à interface de **IMultipleResults** e gerencia vários conjuntos de linhas.  O exemplo de [DBVIEWER](http://msdn.microsoft.com/pt-br/07620f99-c347-4d09-9ebc-2459e8049832) mostra como tratar vários resultados.  
+     **CCommand** tem três argumentos de modelo: um tipo de resultado de um tipo de acessador e um tipo de conjunto de linhas (`CNoMultipleResults`, por padrão, ou `CMultipleResults`). Se você especificar `CMultipleResults`, o `CCommand` classe oferece suporte a **IMultipleResults** de interface e gerencia vários conjuntos de linhas. O [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) exemplo mostra como tratar vários resultados.  
   
-## Consulte também  
- [Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

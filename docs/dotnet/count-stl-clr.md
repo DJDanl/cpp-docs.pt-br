@@ -1,33 +1,30 @@
 ---
-title: "count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "função de contagem [STL/CLR]"
+title: contagem (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::count
+dev_langs: C++
+helpviewer_keywords: count function [STL/CLR]
 ms.assetid: 6d10abb4-3c48-469c-804c-281015b12865
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 960e220032cf817465ce421677914968fe8c07b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="count-stlclr"></a>count (STL/CLR)
 Retorna o número de elementos em um intervalo cujos valores correspondem a um valor especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _InIt, class _Ty> inline  
@@ -35,13 +32,13 @@ template<class _InIt, class _Ty> inline
         count(_InIt _First, _InIt _Last, const _Ty% _Val);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `count`STL.  Para obter mais informações, consulte [count](../Topic/count.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `count`. Para obter mais informações, consulte [contagem](../standard-library/algorithm-functions.md#count).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

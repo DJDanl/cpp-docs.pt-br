@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 1) C4929 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4929 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4929
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4929
+f1_keywords: C4929
+dev_langs: C++
+helpviewer_keywords: C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c9a662904f764c1eba48f24d7fc7b97254fe0e51
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: e51b5ba70e486126575c6f25492d4e2cc37b0b7a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4929"></a>Compilador C4929 de aviso (nível 1)
-'arquivo': typelibrary contém uma união; Ignorando o qualificador 'embedded_idl'  
+'arquivo': biblioteca de tipos contém uma união; Ignorando o qualificador 'embedded_idl'  
   
- O atributo embedded_idl do [#import](../../preprocessor/hash-import-directive-cpp.md) não pôde ser aplicada à biblioteca de tipos como uma união está presente na biblioteca de tipos. Para resolver esse aviso, não use embedded_idl.  
+ O atributo embedded_idl do [#import](../../preprocessor/hash-import-directive-cpp.md) não puderam ser aplicadas à biblioteca de tipos porque uma união está presente na biblioteca de tipos. Para resolver este aviso, não use embedded_idl.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir define um componente.  

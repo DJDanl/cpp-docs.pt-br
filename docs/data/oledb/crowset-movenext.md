@@ -1,77 +1,75 @@
 ---
-title: "CRowset::MoveNext | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>.MoveNext"
-  - "ATL.CRowset.MoveNext"
-  - "ATL::CRowset<TAccessor>::MoveNext"
-  - "CRowset<TAccessor>.MoveNext"
-  - "CRowset.MoveNext"
-  - "CRowset<TAccessor>::MoveNext"
-  - "CRowset::MoveNext"
-  - "ATL::CRowset::MoveNext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método MoveNext"
+title: 'Crowset:: MoveNext | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>.MoveNext
+- ATL.CRowset.MoveNext
+- ATL::CRowset<TAccessor>::MoveNext
+- CRowset<TAccessor>.MoveNext
+- CRowset.MoveNext
+- CRowset<TAccessor>::MoveNext
+- CRowset::MoveNext
+- ATL::CRowset::MoveNext
+dev_langs: C++
+helpviewer_keywords: MoveNext method
 ms.assetid: 0df3288c-2bce-494f-99c0-6344b54a4adf
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e2b0a3a3a10ae2cc18ab83800cc50f25903a3607
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::MoveNext
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="crowsetmovenext"></a>CRowset::MoveNext
 Move o cursor para o próximo registro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      HRESULT MoveNext( ) throw( );   
-HRESULT MoveNext(   
-   LONG lSkip,   
-   bool bForward = true    
+      HRESULT MoveNext( ) throw( );   
+HRESULT MoveNext(   
+   LONG lSkip,   
+   bool bForward = true    
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `lSkip`  
- \[in\] o número de linhas a serem ignorados antes de buscar.  
+ [in] O número de linhas a serem ignoradas antes de buscar.  
   
  `bForward`  
- \[in\] passar **true** para avançar para o próximo registro, **false** a ser movido para trás.  
+ [in] Passar **true** avance para o próximo registro, **false** para retroceder.  
   
-## Valor de retorno  
- `HRESULT`padrão.  Quando o final do conjunto de linhas foi atingido, retornará **DB\_S\_ENDOFROWSET**.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`. Quando for atingido o fim do conjunto de linhas, retorna **DB_S_ENDOFROWSET**.  
   
-## Comentários  
- Pesquisa sequencial a linha seguinte do objeto de `CRowset` , recordando a posição anterior.  Opcionalmente, você pode optar por ignorar linhas de `lSkip` ou para navegar para trás.  
+## <a name="remarks"></a>Comentários  
+ Busca a próxima linha sequencial do `CRowset` objeto, lembre-se a posição anterior. Opcionalmente, você pode optar por ignorar `lSkip` linhas ou mover para trás.  
   
- Esse método exige que você defina as seguintes propriedades antes de chamar **Abrir** na tabela ou o comando que contém o conjunto de linhas:  
+ Esse método requer que você defina as propriedades a seguir antes de chamar **abrir** na tabela ou que contém o conjunto de linhas de comando:  
   
--   **DBPROP\_CANSCROLLBACKWARDS** deve ser `VARIANT_TRUE` se `lSkip` \< 0  
+-   **DBPROP_CANSCROLLBACKWARDS** devem ser `VARIANT_TRUE` se `lSkip` < 0  
   
--   **DBPROP\_CANFETCHBACKWARDS** deve ser `VARIANT_TRUE` se `bForward` \= false  
+-   **DBPROP_CANFETCHBACKWARDS** devem ser `VARIANT_TRUE` se `bForward` = false  
   
- Se não \(se `lSkip` \>\= 0 e `bForward` \= true\), você não precisa definir nenhuma propriedade adicional.  
+ Caso contrário (se `lSkip` > = 0 e `bForward` = true), você não precisa definir as propriedades adicionais.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe CRowset](../Topic/CRowset%20Class.md)   
- [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   
- [CRowset::MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)   
- [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classe CRowset](../../data/oledb/crowset-class.md)   
+ [Crowset:: MoveFirst](../../data/oledb/crowset-movefirst.md)   
+ [Crowset:: Movetobookmark](../../data/oledb/crowset-movetobookmark.md)   
+ [Crowset:: Moveprev](../../data/oledb/crowset-moveprev.md)   
  [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)
