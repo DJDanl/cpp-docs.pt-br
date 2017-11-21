@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - vcprintf_p
 - _vcwprintf_p
 - _vcwprintf_p_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _vtcprintf_p_l function
 - vcprintf_p_l function
@@ -50,37 +48,21 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5f5f288686f17f966ae311720d31987e7df7b508
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: a04c78f70f1d1338e1c5578b4cb9a641aea30c73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 Grava a saída formatada no console usando um ponteiro para uma lista de argumentos e dá suporte a parâmetros posicionais na cadeia de caracteres de formato.  
   
 > [!IMPORTANT]
->  Essa API não pode ser usada em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintaxe  
   

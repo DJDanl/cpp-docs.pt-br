@@ -1,69 +1,68 @@
 ---
-title: "SQL: tipos de dados SQL e C++ (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de dados [C++], SQL vs. C++"
-  - "SQL [C++], vs. tipos de dados C++"
-  - "tipos de dados SQL [C++]"
+title: 'SQL: Tipos de dados C++ (ODBC) e SQL | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data types [C++], SQL vs. C++
+- SQL data types [C++]
+- SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 76a4f2bb14b7878c8843dc89bece4fdd5b2e3c02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# SQL: tipos de dados SQL e C++ (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: tipos de dados SQL e C++ (ODBC)
 > [!NOTE]
->  Essas informações são aplicadas às classes de MFC ODBC.  Se você estiver trabalhando com as classes de MFC DAO, consulte o tópico “comparação do Microsoft Jet Mecanismo de Base de dados SQL e ANSI SQL” na ajuda de DAO.  
+>  Essas informações se aplicam às classes MFC ODBC. Se você estiver trabalhando com as classes DAO MFC, consulte o tópico "Comparação do banco de dados do mecanismo de SQL e ANSI SQL do Microsoft Jet" na Ajuda do DAO.  
   
- A tabela a seguir mapeia os tipos de dados SQL ANSI para tipos de dados C\+\+.  Isso aumenta as informações da linguagem C fornecida no Apêndice D do *ODBC SDK* *Referência do Programador* no CD da Biblioteca MSDN.  Os assistentes gerenciam a maioria de mapeamento de tipo de dados.  Se você não usar um assistente, você pode usar as informações de mapeamento para ajudar a escrever manualmente o código de troca do campo.  
+ A tabela a seguir mapeia tipos de dados ANSI SQL para tipos de dados C++. Isso aumenta as informações de linguagem C fornecidas no Apêndice D do *ODBC SDK* *referência do programador de* no CD de biblioteca do MSDN. Os assistentes de gerenciam a maioria das mapeamento de tipo de dados para você. Se você não usar um assistente, você pode usar as informações de mapeamento para ajudá-lo a escrever o código de troca de campos manualmente.  
   
-### Tipos de dados SQL ANSI mapeados para tipos de dados do C\+\+  
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Tipos de dados SQL ANSI mapeados para tipos de dados C++  
   
-|Tipo de dados SQL ANSI|Tipo de dado em C\+\+|  
-|----------------------------|---------------------------|  
+|Tipo de dados do SQL ANSI|Tipo de dados em C++|  
+|------------------------|---------------------|  
 |**CHAR**|`CString`|  
 |**DECIMAL**|`CString` 1|  
 |**SMALLINT**|`int`|  
 |`REAL`|**float**|  
-|**INTEGER**|**long**|  
+|**NÚMERO INTEIRO**|**long**|  
 |**FLOAT**|**double**|  
 |**DOUBLE**|**double**|  
-|**NUMERIC**|`CString` 1|  
+|**NUMÉRICO**|`CString` 1|  
 |**VARCHAR**|`CString`|  
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|  
-|**BIT**|**BOOL**|  
+|**BITS**|**BOOL**|  
 |**TINYINT**|**BYTE**|  
 |**BIGINT**|`CString` 1|  
-|**BINARY**|`CByteArray`|  
+|**BINÁRIO**|`CByteArray`|  
 |**VARBINARY**|`CByteArray`|  
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|  
 |**DATE**|`CTime`, `CString`|  
-|**TIME**|**CTime, CString**|  
-|**TIMESTAMP**|**CTime, CString**|  
+|**TEMPO**|**CTime, CString**|  
+|**CARIMBO DE HORA**|**CTime, CString**|  
   
- 1.  Mapa de ANSI **DECIMAL** e de **NUMERIC** a `CString` porque **SQL\_C\_CHAR** é o tipo de transferência do ODBC da opção.  
+ 1. ANSI **DECIMAL** e **NUMÉRICO** mapear para `CString` porque **SQL_C_CHAR** é o tipo de transferência ODBC padrão.  
   
- 2.  Os dados de caracteres que excede 255 caracteres serão truncados por padrão quando mapeados para `CString`.  Você pode estender o comprimento de truncamento definindo explicitamente o argumento de `nMaxLength` de `RFX_Text`.  
+ 2. Os dados de caractere além de 255 caracteres serão truncados por padrão quando mapeado para `CString`. Você pode estender o tamanho do truncamento definindo explicitamente o `nMaxLength` argumento de `RFX_Text`.  
   
- 3.  Os dados binários além de 255 caracteres serão truncados por padrão quando mapeados para `CByteArray`.  Você pode estender o comprimento de truncamento definindo explicitamente o argumento de `nMaxLength` de `RFX_Binary`.  
+ 3. Dados binários, além de 255 caracteres estão truncados por padrão quando mapeado para `CByteArray`. Você pode estender o tamanho do truncamento definindo explicitamente o `nMaxLength` argumento de `RFX_Binary`.  
   
- Se você não estiver usando a biblioteca de cursores ODBC, poderá encontrar um problema ao tentar atualizar campos de comprimento variável duas ou mais longos usando o driver ODBC do Microsoft SQL Server e classes de base de dados de MFC ODBC.  Os tipos de ODBC, **SQL\_LONGVARCHAR** e **SQL\_LONGVARBINARY**, o mapa em texto e imagem tipos do SQL Server.  `CDBException` será lançada se você atualiza campos de comprimento variável duas ou mais longos na mesma chamada a `CRecordset::Update`.  Consequentemente, não atualizar várias colunas longas simultaneamente com `CRecordset::Update`.  Você pode atualizar várias colunas longas simultaneamente com a API ODBC **SQLPutData**.  Você também pode usar a biblioteca de cursores ODBC, mas isso não é recomendado para os drivers, como o driver do SQL Server, que oferecem suporte a cursores e não precisam da biblioteca de cursores.  
+ Se você não estiver usando a biblioteca de cursores ODBC, você pode encontrar um problema ao tentar atualizar dois ou mais campos de comprimento variável de tempo usando o driver ODBC do Microsoft SQL Server e as classes de banco de dados ODBC MFC. Os tipos ODBC, **SQL_LONGVARCHAR** e **SQL_LONGVARBINARY**, mapear para texto e imagem tipos do SQL Server. Um `CDBException` é gerada se você atualizar dois ou mais campos de comprimento variável de tempo na mesma chamada `CRecordset::Update`. Portanto, não atualizar várias colunas longas simultaneamente com `CRecordset::Update`. Você pode atualizar várias colunas longas simultaneamente com a API ODBC **SQLPutData**. Você também pode usar a biblioteca de cursores ODBC, mas isso não é recomendado para drivers, como o driver do SQL Server, que oferecem suporte a cursores e não é necessário para a biblioteca de cursores.  
   
- Se você estiver usando a biblioteca de cursores ODBC com as classes da base de dados de MFC ODBC e o driver ODBC do Microsoft SQL Server, **DECLARAR** pode acontecer juntos com `CDBException` se uma chamada a `CRecordset::Update` segue uma chamada a `CRecordset::Requery`.  Em vez disso, chame `CRecordset::Close` e `CRecordset::Open` em vez de `CRecordset::Requery`.  Outra solução não é usar a biblioteca de cursores ODBC, como o SQL Server e o driver ODBC do SQL Server fornece suporte nativo para cursores de maneira nativa e a biblioteca de cursores ODBC não é necessária.  
+ Se você estiver usando a biblioteca de cursores ODBC com as classes de banco de dados ODBC MFC e o driver ODBC do Microsoft SQL Server, um **ASSERT** podem ocorrer juntamente com um `CDBException` se uma chamada para `CRecordset::Update` segue uma chamada para `CRecordset::Requery`. Em vez disso, chame `CRecordset::Close` e `CRecordset::Open` em vez de `CRecordset::Requery`. Outra solução é não usar a biblioteca de cursores ODBC, porque o SQL Server e o driver ODBC do SQL Server fornecem suporte nativo para cursores de modo nativo e a biblioteca de cursores ODBC não é necessária.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL](../../data/odbc/sql.md)   
- [SQL: fazendo chamadas SQL diretas \(ODBC\)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+ [SQL: fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

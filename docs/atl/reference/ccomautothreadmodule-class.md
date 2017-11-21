@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLBASE/ATL::m_Allocator
 - ATLBASE/ATL::m_nThreads
 - ATLBASE/ATL::m_pApartments
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 8e3ad5333d684daff5d8baf462ae805ef8b4b51d
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d07a29ff12edcd590379f9bb30cdc122806a83c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>Classe CComAutoThreadModule
 A partir de ATL 7.0, `CComAutoThreadModule` é obsoleta: consulte [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.  
@@ -102,7 +85,7 @@ class CComAutoThreadModule : public CComModule
   
  Por padrão, o AppWizard de COM da ATL (o Assistente de projeto ATL no Visual Studio .NET) obterão o módulo de `CComModule`. Para usar `CComAutoThreadModule`, modifique a definição de classe. Por exemplo:  
   
- [!code-cpp[NVC_ATL_AxHost n º 2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -259,4 +242,3 @@ LONG Unlock();
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)   
  [Classes de módulo](../../atl/atl-module-classes.md)
-

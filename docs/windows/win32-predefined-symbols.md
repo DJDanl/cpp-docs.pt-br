@@ -1,52 +1,51 @@
 ---
-title: "S&#237;mbolos predefinidos Win32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "símbolos, Win32 predefinido"
-  - "Win32 [C++], símbolos predefinidos"
-  - "API do Windows [C++], símbolos predefinidos"
+title: "Símbolos predefinidos Win32 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Win32 [C++], predefined symbols
+- symbols, Win32 predefined
+- Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 01aa83fc5d0be468252b8593ee343ff28648d218
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# S&#237;mbolos predefinidos Win32
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esses símbolos são definidos nos arquivos de cabeçalho do Win32 e dão suporte a ações e funções de aplicativo padrão do Windows.  Esses símbolos são usados principalmente com elementos de interface do usuário comuns.  Quando você estiver trabalhando com controles de editores de recursos, esses símbolos aparecem na  [Janela Propriedades do](../Topic/Properties%20Window.md) associados a controles comuns.  Por exemplo, se sua barra de ferramentas deve exibir o ícone do aplicativo, o ícone será associado com o símbolo IDI\_SMALL na janela de propriedade.  
+# <a name="win32-predefined-symbols"></a>Símbolos predefinidos Win32
+Esses símbolos são definidos nos arquivos de cabeçalho do Win32 e eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados principalmente com elementos de interface de usuário comuns. Quando você estiver trabalhando com controles nos editores de recursos, esses símbolos aparecerão no [janela propriedades](/visualstudio/ide/reference/properties-window) associados a controles comuns. Por exemplo, se sua barra de ferramentas deve exibir o ícone do aplicativo, o ícone será associado com o símbolo IDI_SMALL na janela Propriedades.  
   
 |||  
 |-|-|  
 |IDABORT|Controle: Botão de anulação de caixa de diálogo|  
-|IDC\_STATIC|Controle: O texto estático em uma caixa de diálogo|  
+|IDC_STATIC|Controle: O texto estático em uma caixa de diálogo|  
 |IDCANCEL|Controle: Botão de cancelamento de caixa de diálogo|  
-|IDD\_ABOUTBOX Ÿ100,23523|Caixa de diálogo: Produto sobre caixa de diálogo|  
-|IDI\_PROJECTNAME|Ícone: Ícone de projeto atual|  
-|IDI\_SMALL|: Atual project ícone pequeno|  
+|IDD_ABOUTBOX|Caixa de diálogo: Produto sobre a caixa de diálogo|  
+|IDI_PROJECTNAME|Ícone: Ícone de projeto atual|  
+|IDI_SMALL|: Atual projeto ícone pequeno|  
 |IDIGNORE|Controle: Usado com o botão Ignorar em caixas de diálogo|  
-|IDM\_ABOUT|Item de menu: Usada com a Ajuda...Sobre...|  
-|IDM\_EXIT|Item de menu: Usado com o arquivo...Sair...|  
+|IDM_ABOUT|Item de menu: Usado com a Ajuda... Sobre...|  
+|IDM_EXIT|Item de menu: Usado com o arquivo... Sair...|  
 |IDNO|Controle: não caixa de diálogo nenhum botão|  
-|IDOK|Controle: Botão de OK da caixa de diálogo|  
+|IDOK|Controle: Botão de Okey da caixa de diálogo|  
 |IDRETRY|Controle: Botão de repetição de caixa de diálogo|  
-|IDS\_APP\_TITLE|Seqüência: Nome do aplicativo atual|  
-|IDYES|Controle: Caixa de diálogo botão Sim|  
+|IDS_APP_TITLE|Cadeia de caracteres: Nome de aplicativo atual|  
+|IDYES|Controle: Caixa de diálogo Sim botão|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [IDs de símbolo predefinido](../windows/predefined-symbol-ids.md)   
- [Símbolos: Identificadores de recursos](../mfc/symbols-resource-identifiers.md)
+ [Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)

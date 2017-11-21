@@ -1,129 +1,128 @@
 ---
-title: "Altera&#231;&#227;o do c&#243;digo de desenho (Tutorial ATL, parte 4) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macro _ATL_MIN_CRT"
+title: "Alterar o código de desenho (Tutorial ATL, parte 4) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords: _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-caps.latest.revision: 18
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bc0c5ab0a76d77898b2249f63c699f76b10a628b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Altera&#231;&#227;o do c&#243;digo de desenho (Tutorial ATL, parte 4)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Por padrão, o código de desenho do controle exibe um quadrado e o texto **PolyCtl**.  Em esta etapa, você irá alterar o código para exibir algo interessante.  As seguintes tarefas são involvidas:  
+# <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Alteração do código de desenho (Tutorial ATL, parte 4)
+Por padrão, o código de desenho do controle exibe um quadrado e o texto **PolyCtl**. Nesta etapa, você irá alterar o código para exibir algo mais interessante. As seguintes tarefas envolvidas:  
   
--   Alterando o cabeçalho Arquivo  
+-   Modificando o arquivo de cabeçalho  
   
--   Alterando a função de `OnDraw`  
+-   Modificando o `OnDraw` função  
   
--   Adicionando um método para calcular os pontos polygon  
+-   Adicionando um método para calcular os pontos do polígono  
   
 -   Inicializando a cor de preenchimento  
   
-## Alterando o cabeçalho Arquivo  
- Início adicionando\-se suporte para funções matemáticas `sin` e `cos`, que serão usados calculam os pontos de polígonos, e criar uma matriz para armazenar posições.  
+## <a name="modifying-the-header-file"></a>Modificando o arquivo de cabeçalho  
+ Comece adicionando suporte para as funções matemáticas `sin` e `cos`, que será usado calcula os pontos do polígono e criando uma matriz para armazenar posiciona.  
   
-#### Para modificar o arquivo de cabeçalho  
+#### <a name="to-modify-the-header-file"></a>Para modificar o arquivo de cabeçalho  
   
-1.  Adicione a linha `#include <math.h>` à parte superior de PolyCtl.h.  A parte superior do arquivo deve ser assim:  
+1.  Adicione a linha `#include <math.h>` na parte superior da PolyCtl.h. A parte superior do arquivo deve ter esta aparência:  
   
-     [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]  
   
-2.  Uma vez que os pontos polygon são calculados, serão armazenados em uma matriz do tipo `POINT`, para adicionar a matriz após a definição de `m_nSides` em PolyCtl.h:  
+2.  Depois que os pontos do polígono são calculados, eles serão armazenados em uma matriz do tipo `POINT`, para adicionar a matriz após a definição de `m_nSides` em PolyCtl.h:  
   
-     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_2.h)]  
+     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_2.h)]  
   
-## Alterando o método de OnDraw  
- Agora você deve modificar o método de `OnDraw` em PolyCtl.h.  O código que você adicionará cria uma nova caneta e pincel para desenhar com que seu polígonos, e então chama funções de `Ellipse` e de `Polygon` API do Win32 para executar desenho real.  
+## <a name="modifying-the-ondraw-method"></a>Modificar o método OnDraw  
+ Agora você deve modificar o `OnDraw` método PolyCtl.h. O código que você irá adicionar cria um novo caneta e pincel com qual desenhar o polígono e, em seguida, chama o `Ellipse` e `Polygon` funções de API do Win32 para executar o desenho real.  
   
-#### Para alterar a função de OnDraw  
+#### <a name="to-modify-the-ondraw-function"></a>Para modificar a função OnDraw  
   
-1.  Substitua o método existente de `OnDraw` em PolyCtl.h com o seguinte código:  
+1.  Substituir o `OnDraw` método PolyCtl.h com o código a seguir:  
   
-     [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]  
   
-## Adicionando um método para calcular os pontos polygon  
- Adicione um método, `CalcPoints`chamado, calculará que as coordenadas de pontos que compõem o perímetro polígono.  Esses serão baseados em cálculos variável RECT que é passado para a função.  
+## <a name="adding-a-method-to-calculate-the-polygon-points"></a>Adicionando um método para calcular os pontos do polígono  
+ Adicionar um método chamado `CalcPoints`, que calcula as coordenadas dos pontos que compõem o perímetro do polígono. Esses cálculos se baseará a variável de retângulo que é passada para a função.  
   
-#### Para adicionar o método de CalcPoints  
+#### <a name="to-add-the-calcpoints-method"></a>Para adicionar o método CalcPoints  
   
-1.  Adicione a declaração de `CalcPoints` a seção pública de `IPolyCtl` da classe de `CPolyCtl` em PolyCtl.h:  
+1.  Adicione a declaração de `CalcPoints` para o `IPolyCtl` seção pública a `CPolyCtl` classe PolyCtl.h:  
   
-     [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_4.h)]  
+     [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_4.h)]  
   
-     A última parte da seção da classe pública de `CPolyCtl` deve se parecer como este:  
+     A última parte da seção pública a `CPolyCtl` classe terá esta aparência:  
   
-     [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_5.h)]  
+     [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_5.h)]  
   
-2.  Adicionar essa implementação de função de `CalcPoints` ao final de PolyCtl.cpp:  
+2.  Adicione essa implementação do `CalcPoints` função ao final da PolyCtl.cpp:  
   
-     [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]  
   
-## Inicializando a cor de preenchimento  
+## <a name="initializing-the-fill-color"></a>Inicializando a cor de preenchimento  
  Inicializar `m_clrFillColor` com uma cor padrão.  
   
-#### Para inicializar a cor de preenchimento  
+#### <a name="to-initialize-the-fill-color"></a>Para inicializar a cor de preenchimento  
   
-1.  Use o verde como a cor padrão adicionar essa linha para o construtor de `CPolyCtl` em PolyCtl.h:  
+1.  Usar verde como a cor padrão adicionando esta linha para o `CPolyCtl` construtor em PolyCtl.h:  
   
-     [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_7.h)]  
+     [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_7.h)]  
   
- O construtor agora tem a seguinte aparência:  
+ O construtor agora é semelhante a:  
   
- [!code-cpp[NVC_ATL_Windowing#54](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_8.h)]  
+ [!code-cpp[NVC_ATL_Windowing#54](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_8.h)]  
   
-## Compilação e teste o controle  
- Crie o controle.  Certifique\-se de que o arquivo PolyCtl.htm é fechado ainda está aberto, e clique em **Compile o polígonos** no menu de **Compilar** .  Você pode exibir o controle mais uma vez da página PolyCtl.htm, mas esse uso de tempo o contêiner de teste de controle ActiveX.  
+## <a name="building-and-testing-the-control"></a>Compilar e testar o controle  
+ Recrie o controle. Verifique se o arquivo PolyCtl.htm está fechado, se ele ainda está aberto e, em seguida, clique em **criar polígono** no **criar** menu. Você pode exibir o controle novamente na página PolyCtl.htm, mas desta vez, use o contêiner de teste do controle ActiveX.  
   
-#### Para usar o recipiente de teste do controle ActiveX  
+#### <a name="to-use-the-activex-control-test-container"></a>Para usar o contêiner de teste do controle ActiveX  
   
-1.  Criar e ligue o contêiner de teste de controle ActiveX.  Para obter mais informações, consulte [exemplo de TSTCON: Recipiente de teste do controle ActiveX](../top/visual-cpp-samples.md).  
+1.  Criar e iniciar o contêiner de teste do controle ActiveX. Para obter mais informações, consulte [TSTCON exemplo: contêiner de teste do controle ActiveX](../visual-cpp-samples.md).  
   
-2.  Em o contêiner de teste, no menu de **Editar** , clique em **Novo controle de inserção**.  
+2.  No contêiner de teste, no **editar** menu, clique em **Inserir novo controle**.  
   
-3.  Localize o controle, que será chamado `PolyCtl Class`, e clique **OK**.  Você verá um triângulo em um círculo verde.  
+3.  Localize o controle, que será chamado `PolyCtl Class`e clique em **Okey**. Você verá um triângulo verde dentro de um círculo.  
   
- Tente alterar o número de lados seguindo o procedimento a seguir.  Para alterar as propriedades de uma interface dupla de dentro do contêiner de teste, use **Invoke Methods**.  
+ Tente alterar o número de lados seguindo o procedimento a seguir. Para modificar as propriedades em uma interface dupla de dentro do contêiner de teste, use **invocar métodos**.  
   
-#### Para alterar a propriedade de um controle dentro do contêiner de teste  
+#### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>Para modificar a propriedade do controle de dentro do contêiner de teste  
   
-1.  Em o contêiner de teste, clique **Chamar métodos** no menu de **Controle** .  
+1.  No contêiner de teste, clique em **invocar métodos** no **controle** menu.  
   
-     a caixa de diálogo de **Método invoke** é exibida.  
+     O **invocar o método** caixa de diálogo é exibida.  
   
-2.  Selecione a versão de **PropPut** da propriedade de **Sides** da lista suspensa de **Nome do Método** .  
+2.  Selecione o **PropPut** versão do **lados** propriedade o **nome do método** caixa de listagem suspensa.  
   
-3.  Digite `5` na caixa de **Valor do Parâmetro** , clique **Definir valor**, e clique **Invoke**.  
+3.  Tipo `5` no **o valor do parâmetro** , clique em **definir valor**e clique em **Invoke**.  
   
- Observe que o controle não muda.  Embora você altera o número de lados internamente definir a variável de `m_nSides` , isso não fez com que o controle repintasse.  Se você muda para outro aplicativo e alterne de volta para o contêiner de teste, você verá que o controle repintou e tem o número correto de lados.  
+ Observe que o controle não se altera. Embora você tenha alterado o número de lados internamente, definindo o `m_nSides` variável, isso não causou o controle seja redesenhado. Se você alterna para outro aplicativo e alterne de volta para o contêiner de teste, você descobrirá que o controle tem redesenhado e tem o número correto de lados.  
   
- Para corrigir esse problema, adicione uma chamada para a função de `FireViewChange` , definida em `IViewObjectExImpl`, após você definir o número de lados.  Se o controle está sendo executado em sua própria janela, `FireViewChange` chamar o método de `InvalidateRect` diretamente.  Se o controle é executado sem janelas, o método será chamado de `InvalidateRect` a interface do site do recipiente.  Isso força o controle para repintar\-se.  
+ Para corrigir esse problema, adicione uma chamada para o `FireViewChange` função, definida em `IViewObjectExImpl`, depois de definir o número de lados. Se o controle está sendo executado em sua própria janela `FireViewChange` chamará o `InvalidateRect` método diretamente. Se o controle está em execução sem janelas, o `InvalidateRect` método ser chamado na interface do local do contêiner. Isso força o controle a se redesenhar.  
   
-#### Para adicionar uma chamada para FireViewChange  
+#### <a name="to-add-a-call-to-fireviewchange"></a>Para adicionar uma chamada para FireViewChange  
   
-1.  Atualizar PolyCtl.cpp adicionando a chamada a `FireViewChange` para o método de `put_Sides` .  Quando você terminar, o método de `put_Sides` deve ser assim:  
+1.  Atualizar PolyCtl.cpp adicionando a chamada para `FireViewChange` para o `put_Sides` método. Quando você terminar, o `put_Sides` método deve ter esta aparência:  
   
-     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]  
   
- Após adicionar `FireViewChange`, a recompilação e tentar novamente o controle no recipiente de teste de controle ActiveX.  De esta vez quando você altera o número de lados e clique `Invoke`, você deve ver a alteração do controle imediatamente.  
+ Depois de adicionar `FireViewChange`, recriar e tente o controle novamente no contêiner de teste do controle ActiveX. Neste momento, quando você alterar o número de lados e clique em `Invoke`, você deverá ver o controle de alteração imediatamente.  
   
- Em o próximo passo, você adicionará um evento.  
+ A próxima etapa, você adicionará um evento.  
   
- [De volta para a etapa 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [a etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
+ [Para a etapa 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [Na etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
-## Consulte também  
- [Tutorial](../Topic/Active%20Template%20Library%20\(ATL\)%20Tutorial.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tutorial](../atl/active-template-library-atl-tutorial.md)   
  [Testando propriedades e eventos com contêiner de teste](../mfc/testing-properties-and-events-with-test-container.md)
+

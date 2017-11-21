@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - thread safety
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 74db2b02426f3322975c695179afed0164b9fe6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: a30ad3887ace197276556aab929a7d16ae7922e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>Segurança de threads na Biblioteca Padrão C++
 As regras de acesso thread-safe a seguir se aplicam a todas as classes da Biblioteca Padrão C++. Isso inclui `shared_ptr`, conforme descrito abaixo.  Às vezes, são dadas garantias maiores – por exemplo, os objetos iostream padrão, conforme descrito abaixo e os tipos projetados especificamente para multithreading, como aqueles em [\<atomic>](../standard-library/atomic.md).  
@@ -60,7 +43,6 @@ As regras de acesso thread-safe a seguir se aplicam a todas as classes da Biblio
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)
-
 
 
 

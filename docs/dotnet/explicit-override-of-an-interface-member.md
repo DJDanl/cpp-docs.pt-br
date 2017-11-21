@@ -1,35 +1,34 @@
 ---
-title: "Substitui&#231;&#227;o expl&#237;cita de um membro de interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "substituição explícita de função virtual"
-  - "funções [C++], substituição"
-  - "membros de interface, substituições explícitas"
-  - "substituindo funções"
-  - "funções virtuais, substituições explícitas"
+title: "Substituição explícita de um membro de Interface | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding functions
+- interface members, explicit overrides
+- functions [C++], overriding
+- explicit override of virtual function
 ms.assetid: 46f1f536-bf43-4311-9a17-ff2282e528a9
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8dad678572d0f49d3859ad37d307942b3561f71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Substitui&#231;&#227;o expl&#237;cita de um membro de interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A sintaxe para declarar uma substituição explícita de um membro da interface em uma classe foi alterada de extensões gerenciadas para C\+\+ a [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)].  
+# <a name="explicit-override-of-an-interface-member"></a>Substituição explícita de um membro de interface
+A sintaxe para declarar uma substituição explícita de um membro de interface dentro de uma classe foi alterado de extensões gerenciadas para C++ para Visual C++.  
   
- Com frequência você deseja fornecer duas instâncias de um membro da interface em uma classe que implementa a interface – uma que é usada quando os objetos da classe são manipulados por meio de um identificador da interface, e uma que é usada quando os objetos da classe são usados na interface da classe.  Por exemplo:  
+ Você geralmente deseja fornecer duas instâncias de um membro de interface dentro de uma classe que implementa a interface - que é usado quando os objetos de classe são manipulados por meio de um identificador de interface e que é usada quando os objetos de classe são usados por meio da interface de classe. Por exemplo:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -41,9 +40,9 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- Extensões gerenciadas em nós faça isso fornecendo uma declaração explícita do método da interface do nome do método qualificado com o nome da interface.  A classe é instância específica não qualificado.  Isso eliminar a necessidade de entrada aérea do valor de retorno de `Clone`, neste exemplo, quando chamado explícito em uma instância de `R`.  
+ Em extensões gerenciadas fazemos isso fornecendo uma declaração explícita do método de interface com o nome do método qualificado com o nome da interface. A instância de classe específica não é qualificada. Isso elimina a necessidade de baixá-los o valor de retorno `Clone`, neste exemplo, quando uma chamada explícita por meio de uma instância de `R`.  
   
- Na nova sintaxe, substituindo um mecanismo geral foi introduzido que substitui a sintaxe gerenciado das extensões.  Nosso exemplo seria reescrito como segue:  
+ Na nova sintaxe, um mecanismo de substituição geral foi introduzido que substitui a sintaxe das extensões gerenciadas. Nosso exemplo poderia ser reescrito da seguinte maneira:  
   
 ```  
 public ref class R : public ICloneable {  
@@ -56,8 +55,8 @@ public:
 };  
 ```  
   
- Essa análise requer que o membro da interface que está sendo substituído explicitamente foi fornecido um nome exclusivo dentro da classe.  Aqui, eu forneci o nome de `InterfaceClone`inadequado.  O comportamento ainda é o mesmo – uma invocação por meio da interface de `ICloneable` invoca `InterfaceClone,` renomeados quando uma chamada por meio de um objeto do tipo `R` invocar a segunda instância de `Clone` .  
+ Esta revisão requer que o membro de interface que está sendo substituído explicitamente ser fornecido um nome exclusivo dentro da classe. Aqui, você forneceu o nome inadequado de `InterfaceClone`. O comportamento ainda é o mesmo - uma chamada por meio de `ICloneable` interface invoca renomeadas `InterfaceClone`, enquanto uma chamada por meio de um objeto do tipo `R` invoca o segundo `Clone` instância.  
   
-## Consulte também  
- [Declarações de membro em uma classe ou uma interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Explicit Overrides](../windows/explicit-overrides-cpp-component-extensions.md)
+## <a name="see-also"></a>Consulte também  
+ [Declarações de membro em uma classe ou Interface (C + + CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Substituições explícitas](../windows/explicit-overrides-cpp-component-extensions.md)

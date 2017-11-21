@@ -1,47 +1,28 @@
 ---
-title: omp_set_num_threads | Documentos do Microsoft
+title: omp_set_num_threads | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_set_num_threads
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_set_num_threads OpenMP function
+f1_keywords: omp_set_num_threads
+dev_langs: C++
+helpviewer_keywords: omp_set_num_threads OpenMP function
 ms.assetid: dae0bf3f-cd7a-4413-89de-6149ac1f4fa7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f5199e229f1dfd5ebc6ef342239aab9bdeca58cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 66fc3984342b75b2fed35ed9a5c58d0848d41b2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompsetnumthreads"></a>omp_set_num_threads
-Define o número de threads em regiões subsequente em paralelo, a menos que substituída por uma [num_threads](../../../parallel/openmp/reference/num-threads.md) cláusula.  
+Define o número de threads em regiões paralelas subsequentes, a menos que substituído por um [num_threads](../../../parallel/openmp/reference/num-threads.md) cláusula.  
   
 ## <a name="syntax"></a>Sintaxe  
   

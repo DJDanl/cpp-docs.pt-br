@@ -1,55 +1,32 @@
 ---
-title: "Compilador aviso (nível 2) C4356 | Documentos do Microsoft"
+title: "Compilador (nível 2) do aviso C4356 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4356
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4356
+f1_keywords: C4356
+dev_langs: C++
+helpviewer_keywords: C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 335754557454c8ed8a6cb30052ae39848385494b
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: cd32ad76e83a51ad361b7d0226fa73fd88b58214
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-warning-level-2-c4356"></a>Compilador C4356 de aviso (nível 2)
-'member': membro de dados estático não pode ser inicializado por meio da classe derivada  
+'member': membro de dados estático não pode ser inicializado via classe derivada  
   
- A inicialização de um membro de dados estáticos ill foi formada. O compilador aceita a inicialização.  
+ A inicialização de um membro de dados estáticos ill foi formada. O compilador aceita a inicialização. Para evitar o aviso, inicialize o membro por meio da classe base.  
   
- Isso é uma alteração significativa no compilador do Visual C++ .NET 2003.  
-  
- Para o código que funciona da mesma forma em todas as versões do Visual C++, inicialize o membro por meio da classe base.  
-  
- Use o [aviso](../../preprocessor/warning.md) pragma para suprimir esse aviso.  
+ Use o [aviso](../../preprocessor/warning.md) pragma para suprimir este aviso.  
   
  O exemplo a seguir gera C4356:  
   

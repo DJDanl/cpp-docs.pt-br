@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], abstract
 - base classes [C++], abstract classes [C++]
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d8ee7473b77f943c4f9958dabb0baa4998c284f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1846d2177cea18d8bbfbeb3ba6a7994fa3a9d191
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="abstract-classes-c"></a>Classes abstratas (C++)
 As classes abstratas agem como expressões de conceitos gerais das quais classes mais específicas podem ser derivadas. Não é possível criar um objeto de um tipo de classe abstrata; no entanto, é possível usar ponteiros e referências para tipos de classes abstratas.  

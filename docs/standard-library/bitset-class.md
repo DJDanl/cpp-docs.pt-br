@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -43,16 +41,15 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 542be13898b18fb6f73a724eebe72f135f7ebde2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 2f53256a15485619268a4b1dce42395857d29a1e
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bitset-class"></a>Classe bitset
 Descreve um tipo de objeto que armazena uma sequência que consiste em um número fixo de bits que fornecem uma maneira compacta de manter sinalizadores para um conjunto de itens ou condições. A classe bitset dá suporte a operações em objetos do tipo bitset que contêm uma coleção de bits e fornecem acesso constante a cada bit.  
@@ -1442,5 +1439,4 @@ bool test(size_t _Pos) const;
   
 ### <a name="remarks"></a>Comentários  
  A função membro gera um [out_of_range](../standard-library/out-of-range-class.md)
-
 

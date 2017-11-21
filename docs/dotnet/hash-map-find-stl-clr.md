@@ -1,46 +1,43 @@
 ---
-title: "hash_map::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "localizar membro [STL/CLR]"
+title: 'hash_map:: Find (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 53ff8d57-2ea4-485e-9419-aed5e3f5affb
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 398b94e12f84a2d940853f9909a8f0eeb65173dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapfind-stlclr"></a>hash_map::find (STL/CLR)
 Localiza um elemento que corresponde a uma chave especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  key  
- Valor de chave para pesquisar por.  
+ O valor chave a ser pesquisado.  
   
-## Comentários  
- Se pelo menos um elemento na sequência controlada tem o equivalente que regras com `key`, a função de membro retorna um iterador que designa um desses elementos; se não retorna [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`()`.  Use\-a para posicionar atualmente um elemento na sequência controlada que corresponde a uma chave especificada.  
+## <a name="remarks"></a>Comentários  
+ Se pelo menos um elemento na sequência controlada tem ordenação equivalente com `key`, a função de membro retorna um iterador designar um desses elementos; caso contrário, ele retorna [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()`. Você pode usá-lo para localizar um elemento no momento na sequência controlada que corresponde a uma chave especificada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_map_find.cpp   
@@ -74,20 +71,23 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**find A \= False**  
-**localizar b \= \[b 2\]**  
-**find C \= False**   
-## Descrição  
- Observe que `find` não garante que os vários ele localiza o elemento.  
+```Output  
+ [a 1] [b 2] [c 3]  
+find A = False  
+find b = [b 2]  
+find C = False  
+```  
   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+## <a name="description"></a>Descrição  
+ Observe que `find` não garante que vários elemento encontrar.  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::equal\_range](../dotnet/hash-map-equal-range-stl-clr.md)   
- [hash\_map::lower\_bound](../dotnet/hash-map-lower-bound-stl-clr.md)   
- [hash\_map::upper\_bound](../dotnet/hash-map-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)   
+ [hash_map:: lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)   
+ [hash_map::upper_bound (STL/CLR)](../dotnet/hash-map-upper-bound-stl-clr.md)

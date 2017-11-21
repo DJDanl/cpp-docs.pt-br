@@ -1,36 +1,34 @@
 ---
-title: "__svm_vmrun | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_vmrun"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__svm_vmrun intrínseco"
-  - "Instrução VMRUN"
+title: __svm_vmrun | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_vmrun
+dev_langs: C++
+helpviewer_keywords:
+- __svm_vmrun intrinsic
+- VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 04467cc1d6d13a5c7c983aae48d2208622a75683
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# __svm_vmrun
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="svmvmrun"></a>__svm_vmrun
+**Seção específica da Microsoft**  
   
- Inicia a execução do código do convidado de máquina virtual que corresponde ao bloco de controle de máquina virtual especificada \(VMCB\).  
+ Inicia a execução do código de convidado de máquina virtual que corresponde ao bloco de controle de máquina virtual especificada (VMCB).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void __svm_vmrun(  
@@ -38,28 +36,28 @@ void __svm_vmrun(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|\[in\]`VmcbPhysicalAddress`|O endereço físico do VMCB.|  
+|---------------|-----------------|  
+|[in] `VmcbPhysicalAddress`|O endereço físico do VMCB.|  
   
-## Comentários  
- O `__svm_vmrun` função usa uma quantidade mínima de informações no VMCB para começar a executar o código de convidado da máquina virtual.  Use o [\_\_svm\_vmsave](../intrinsics/svm-vmsave.md) ou [\_\_svm\_vmload](../intrinsics/svm-vmload.md) funcionar se você precisar de mais informações para lidar com uma interrupção complexa ou alternar para outro convidado.  
+## <a name="remarks"></a>Comentários  
+ O `__svm_vmrun` função usa uma quantidade mínima de informações no VMCB para começar a executar o código de convidado da máquina virtual. Use o [__svm_vmsave](../intrinsics/svm-vmsave.md) ou [__svm_vmload](../intrinsics/svm-vmload.md) funcionar se você precisar de mais informações para lidar com uma interrupção complexas ou para alternar para outro.  
   
- O `__svm_vmrun` função é equivalente a `VMRUN` instrução da máquina.  Esta função oferece suporte a interação do monitor de máquina virtual de um host com um sistema operacional e seus aplicativos de convidado.  Para obter mais informações, procure o documento, "Manual de volumes do programador de arquitetura AMD64 2: programação de sistema," número do documento 24593, revisão 3.11 ou mais recente, no [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) site.  
+ O `__svm_vmrun` função é equivalente a `VMRUN` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Manual Volume do programador de arquitetura AMD64 2: programação do sistema," número de documento 24593, revisão 3.11 ou posterior, no [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) site.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
-|----------------|-----------------|  
-|`__svm_vmrun`|x86,[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__svm_vmrun`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Específicos do Microsoft final  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_vmsave](../intrinsics/svm-vmsave.md)   
- [\_\_svm\_vmload](../intrinsics/svm-vmload.md)
+ [__svm_vmsave](../intrinsics/svm-vmsave.md)   
+ [__svm_vmload](../intrinsics/svm-vmload.md)

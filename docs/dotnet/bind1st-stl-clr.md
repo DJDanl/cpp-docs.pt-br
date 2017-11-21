@@ -1,33 +1,30 @@
 ---
-title: "bind1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função bind1st [STL/CLR]"
+title: bind1st (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind1st
+dev_langs: C++
+helpviewer_keywords: bind1st function [STL/CLR]
 ms.assetid: 03a04cef-60fb-4667-b22a-22a387adb028
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 732238e3c0754731dcf7caf10ad1d6a140490cd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# bind1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gerenciar `binder1st` para um argumento e um funtor.  
+# <a name="bind1st-stlclr"></a>bind1st (STL/CLR)
+Gera um `binder1st` para um argumento e functor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Fun,  
@@ -36,24 +33,24 @@ template<typename Fun,
         Arg left);  
 ```  
   
-## Parâmetros de modelo  
+## <a name="template-parameters"></a>Parâmetros de modelo  
  Arg  
- O tipo de argumento.  
+ O tipo do argumento.  
   
- Divertimento  
- O tipo de funtor.  
+ Fun  
+ O tipo de functor.  
   
-## Parâmetros de função  
- funtor  
- O funtor a quebra de texto.  
+## <a name="function-parameters"></a>Parâmetros de função  
+ functor  
+ Functor para encapsular.  
   
  esquerda  
- O primeiro argumento a quebra de texto.  
+ O primeiro argumento para encapsular.  
   
-## Comentários  
- A função do modelo retorna [binder1st](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`.  Use\-a como uma maneira conveniente de envolver um funtor de dois argumentos e seu primeiro argumento em um funtor de um argumento que o chama com um segundo argumento.  
+## <a name="remarks"></a>Comentários  
+ Retorna a função de modelo [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Você pode usá-lo como uma maneira conveniente para encapsular um functor dois argumentos e seu primeiro argumento em um functor um argumento que faz a chamada com um segundo argumento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_bind1st.cpp   
@@ -96,13 +93,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/funcional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/funcional >  
   
-## Consulte também  
- [binder1st](../dotnet/binder1st-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)

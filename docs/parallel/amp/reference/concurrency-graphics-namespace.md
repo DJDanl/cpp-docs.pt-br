@@ -1,45 +1,27 @@
 ---
-title: 'Namespace Concurrency:: Graphics | Documentos do Microsoft'
+title: 'Namespace Concurrency:: Graphics | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- AMP_GRAPHICS/Concurrency
-dev_langs:
-- C++
+f1_keywords: AMP_GRAPHICS/Concurrency
+dev_langs: C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Namespace Concurrency::graphics
-O namespace de gráficos fornece tipos e funções que são projetadas para programação de gráficos.  
+O namespace de elementos gráficos fornece tipos e funções que são projetadas para programação de elementos gráficos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +35,7 @@ namespace graphics;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Namespace Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)|Fornece funções para interoperabilidade do Direct3D.|  
+|[Namespace Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)|Fornece funções para interoperabilidade Direct3D.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -72,7 +54,7 @@ namespace graphics;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Classe texture](texture-class.md)|Uma textura é uma agregação em um accelerator_view no domínio do ponto de dados. É uma coleção de variáveis para cada elemento em um domínio de extensão. Cada variável contém um valor correspondente ao tipo primitivo do C++ (unsigned int, int, float, double), ou a norma de tipo escalar ou unorm (definido em Concurrency:: Graphics) ou tipos de vetor curto qualificados definidas no Concurrency:: Graphics.|  
+|[Classe texture](texture-class.md)|Uma textura é uma agregação em um accelerator_view no domínio de extensão de dados. É uma coleção de variáveis para cada elemento em um domínio de extensão. Cada variável contém um valor que corresponde ao tipo primitivo do C++ (int não assinado, int, float, double), ou a norma de tipo escalar ou unorm (definido em Concurrency:: Graphics) ou tipos de vetor curto qualificados definidas no Concurrency:: Graphics.|  
 |[Classe writeonly_texture_view](writeonly-texture-view-class.md)|Um writeonly_texture_view fornece acesso writeonly com uma textura.|  
 |[Classe double_2](double-2-class.md)|Representa um vetor curto de 2 `double` valores.|  
 |[Classe double_3](double-3-class.md)|Representa um vetor curto de 3 `double` valores.|  
@@ -94,8 +76,8 @@ namespace graphics;
 |[Classe unorm_4](unorm-4-class.md)|Representa um vetor curto de 4 `unorm` valores.|  
 |[Classe sampler](sampler-class.md)|Representa a configuração de amostra usada para amostragem de textura.|  
 |[Estrutura short_vector](short-vector-structure.md)|Fornece uma implementação básica de um vetor curta de valores.|  
-|[Estrutura short_vector_traits](short-vector-traits-structure.md)|Fornece para recuperação de comprimento e tipo de um vetor curto.|  
-|[Classe texture_view](texture-view-class.md)|Fornece acesso de leitura e gravação para uma textura.|  
+|[Estrutura short_vector_traits](short-vector-traits-structure.md)|Fornece recuperação de comprimento e tipo de um vetor de curto.|  
+|[Classe texture_view](texture-view-class.md)|Fornece acesso de leitura e gravação com uma textura.|  
   
 ### <a name="functions"></a>Funções  
   
@@ -111,4 +93,3 @@ namespace graphics;
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

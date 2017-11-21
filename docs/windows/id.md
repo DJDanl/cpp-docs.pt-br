@@ -1,33 +1,30 @@
 ---
-title: "id | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "id attribute"
+title: ID | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.id
+dev_langs: C++
+helpviewer_keywords: id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c9110bfe44ea1ffe373ab5e3ed5d4aa3e06c2574
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# id
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica um `dispid` parâmetro de uma função de membro \(uma propriedade ou um método, em uma interface ou um dispinterface\).  
+# <a name="id"></a>id
+Especifica um `dispid` parâmetro para uma função de membro (uma propriedade ou um método, em uma interface ou dispinterface).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -36,34 +33,33 @@ Especifica um `dispid` parâmetro de uma função de membro \(uma propriedade ou
 ) ]  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `dispid`  
- A identificação de expedição para o método de interface.  
+ A ID de expedição para o método de interface.  
   
-## Comentários  
- O  **id** o atributo do C\+\+ tem a mesma funcionalidade que o  [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **id** atributo C++ tem a mesma funcionalidade que o [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) atributo MIDL.  
   
-## Exemplo  
- Consulte o exemplo para  [vinculáveis](../windows/bindable.md) para obter um exemplo de como usar  **id**.  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo para [associável](../windows/bindable.md) para obter um exemplo de como usar **id**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Método de interface|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|Método de interface|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [defaultvalue](../Topic/defaultvalue.md)   
- [in](../Topic/in%20\(C++\).md)   
- [out](../Topic/out%20\(C++\).md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   
+ [Atributos de membro de dados](../windows/data-member-attributes.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
+ [in](../windows/in-cpp.md)   
+ [out](../windows/out-cpp.md)   

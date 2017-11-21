@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -58,19 +57,17 @@ helpviewer_keywords:
 - C2591
 - C2595
 - C2596
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e66a789de4a1b5cfd64ff73f6dbecd4e85bfdffd
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>C2500 de erros do compilador por meio de C2599
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
@@ -90,7 +87,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2505](compiler-error-C2505.md)|'*símbolo*': ' declspec (*especificador*)' só pode ser aplicado a declarações ou definições de objetos globais ou membros de dados estáticos|  
 |[Erro do compilador C2506](compiler-error-C2506.md)|'*membro*': ' declspec (*especificador*)' não pode ser aplicado a este símbolo|  
 |[Erro do compilador C2507](compiler-error-C2507.md)|'*identificador*': muitos modificadores virtual na classe base|  
-|C2508 de erro do compilador|'*identificador*': '\_\_declspec (*specifier1*)' não pode ser combinado com '\_\_declspec (*specifier2*)'|  
+|C2508 de erro do compilador|'*identificador*': ' declspec (*specifier1*)' não pode ser combinado com ' declspec (*specifier2*)'|  
 |[Erro do compilador C2509](compiler-error-C2509.md)|'*identificador*': função membro não declarada em '*classe*'|  
 |[Erro do compilador C2510](compiler-error-C2510.md)|'*identificador*': esquerda de ':: ' deve ser uma classe/struct/união|  
 |[Erro do compilador C2511](compiler-error-C2511.md)|'*identificador*': membro função sobrecarregada não encontrada em '*classe*'|  

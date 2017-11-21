@@ -1,47 +1,28 @@
 ---
-title: omp_get_wtime | Documentos do Microsoft
+title: omp_get_wtime | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_get_wtime
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_get_wtime OpenMP function
+f1_keywords: omp_get_wtime
+dev_langs: C++
+helpviewer_keywords: omp_get_wtime OpenMP function
 ms.assetid: c8dee105-ec1b-42e5-a6e3-edeedcf9854c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: eaf83132da9ce5d348e5ed9a5bbd1e1afcd67ebd
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: b071564cc6c5059d8978d45f80ce3e008622ec2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompgetwtime"></a>omp_get_wtime
-Retorna que um valor em segundos do tempo decorrido desde algum ponto.  
+Retorna que um valor em segundos do tempo decorrido de algum momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +31,10 @@ double omp_get_wtime( );
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna que um valor em segundos do tempo decorrido desde o momento de alguns arbitrário, mas consistente.  
+ Retorna que um valor em segundos do tempo decorrido desde o momento arbitrário algumas, mas consistente.  
   
 ## <a name="remarks"></a>Comentários  
- Esse ponto permanecerá consistente durante a execução do programa, possibilitando comparações subsequentes.  
+ Esse ponto permanecerá consistente durante a execução do programa, possibilitando a comparações subsequentes.  
   
  Para obter mais informações, consulte [3.3.1 função omp_get_wtime](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md).  
   

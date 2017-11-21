@@ -1,112 +1,111 @@
 ---
-title: "Conjunto de registros: mais sobre atualiza&#231;&#245;es (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ambientes multiusuário, atualizações para conjuntos de registros"
-  - "conjunto de registros ODBC, atualizando"
-  - "registros, atualizando"
-  - "conjuntos de registros, atualizando"
-  - "rolagem, atualizações para conjuntos de registros"
-  - "transações, atualizando conjuntos de registros"
-  - "atualizando conjuntos de registros"
+title: "Conjunto de registros: Mais sobre atualizações (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, updating
+- transactions, updating recordsets
+- ODBC recordsets, updating
+- multiuser environments, updates to recordsets
+- scrolling, updates to recordsets
+- updating recordsets
+- recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f996a206ebac40a469f2fc540c5e23ce0f5c2733
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Conjunto de registros: mais sobre atualiza&#231;&#245;es (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico se aplica às classes ODBC do MFC.  
+# <a name="recordset-more-about-updates-odbc"></a>Conjunto de registros: mais sobre atualizações (ODBC)
+Este tópico se aplica às classes MFC ODBC.  
   
  Este tópico explica:  
   
--   [Como outras operações, como transações, atualizações do](#_core_how_transactions_affect_updates).  
+-   [Como outras operações, como transações afetam atualizações](#_core_how_transactions_affect_updates).  
   
 -   [As atualizações e as de outros usuários](#_core_your_updates_and_the_updates_of_other_users).  
   
--   [Mais sobre as funções de membro de atualização e exclusão](#_core_more_about_update_and_delete).  
+-   [Mais sobre as funções de membro de Update e Delete](#_core_more_about_update_and_delete).  
   
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` no qual a busca de linhas do volume não foi implementado.  Se você implementar a linha em massa que pesquisa, algumas das informações não se aplica.  Por exemplo, você não pode chamar `AddNew`, **Editar**, **Excluir**, e as funções de membro de **Atualizar** ; porém, você pode executar transações.  Para obter mais informações sobre a linha em massa que pesquisa, consulte [Conjunto de registros: recuperando registros em massa \(ODBC\)](../Topic/Recordset:%20Fetching%20Records%20in%20Bulk%20\(ODBC\).md).  
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se você tiver implementado a busca de linhas em massa, algumas informações não se aplicam. Por exemplo, você não pode chamar o `AddNew`, **editar**, **excluir**, e **atualização** funções de membro; no entanto, você pode executar transações. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_how_other_operations_affect_updates"></a> Como outras atualizações de influência de operações  
- As atualizações são afetadas por transações em vigor no momento da atualização, fechando o conjunto de registros antes de concluir uma transação, e rolando antes de concluir uma transação.  
+##  <a name="_core_how_other_operations_affect_updates"></a>Como outras operações afetam atualizações  
+ As atualizações são afetadas por transações em vigor no momento da atualização, fechando o conjunto de registros antes da conclusão de uma transação e rolando antes da conclusão de uma transação.  
   
-###  <a name="_core_how_transactions_affect_updates"></a> Como atualizações de influência de transações  
- Além de entender como `AddNew`, **Editar**, e o trabalho de **Excluir** , é importante entender como **BeginTrans**, **CommitTrans**, e as funções de membro de **Reverter** de [CDatabase](../../mfc/reference/cdatabase-class.md) funcionam com as funções de atualização de [CRecordset](../Topic/CRecordset%20Class.md).  
+###  <a name="_core_how_transactions_affect_updates"></a>Como as transações afetam atualizações  
+ Além de Noções básicas sobre como `AddNew`, **editar**, e **excluir** trabalho, é importante entender como o **BeginTrans**, **CommitTrans**, e **reversão** funções membro de [CDatabase](../../mfc/reference/cdatabase-class.md) funcionam com as funções de atualização de [CRecordset](../../mfc/reference/crecordset-class.md).  
   
- Por padrão, as chamadas para `AddNew` e **Editar** afetam a fonte de dados imediatamente quando você chama **Atualizar**.  as chamadas de**Excluir** entram em vigor imediatamente.  Mas você pode estabelecer uma transação e executar um lote dessas chamadas.  As atualizações não são permanentes até que você confirme as.  Se você alterar ideia, você poderá reverter a transação em vez de confirme\-a.  
+ Por padrão, as chamadas para `AddNew` e **editar** afetam a fonte de dados imediatamente quando você chama **atualização**. **Excluir** chamadas entram em vigor imediatamente. Mas você pode estabelecer uma transação e executar um lote dessas chamadas. As atualizações não são permanentes até que você confirme-los. Se você mudar de ideia, você pode reverter a transação em vez de confirmá-la.  
   
- Para obter mais informações sobre transações, consulte [Transação \(ODBC\)](../../data/odbc/transaction-odbc.md).  
+ Para obter mais informações sobre transações, consulte [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Como fechar o conjunto de registros afeta atualizações  
- Se você fechar um conjunto de registros, ou seu objeto associado de `CDatabase` , com uma transação em andamento \(não chamou [CDatabase::CommitTrans](../Topic/CDatabase::CommitTrans.md) ou [CDatabase::Rollback](../Topic/CDatabase::Rollback.md)\), a transação será revertida automaticamente \(a menos que a back\-end da base de dados é o mecanismo de base de dados do Microsoft Jet\).  
+###  <a name="_core_how_closing_the_recordset_affects_updates"></a>Como o conjunto de registros de fechamento afeta as atualizações  
+ Se você fechar um conjunto de registros ou seus associados `CDatabase` objeto, com uma transação em andamento (você não tiver chamado [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) ou [CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback)), a transação é revertida Faça automaticamente (a menos que seu banco de dados back-end é o mecanismo de banco de dados Microsoft Jet).  
   
 > [!CAUTION]
->  Se você estiver usando o mecanismo de base de dados do Microsoft Jet, fechar um conjunto de registros dentro de uma transação explícita não resulta em liberar qualquer das linhas que foram modificadas ou de bloqueios que foram enfileirados e esperarão até que a transação seja confirmada ou revertida.  É recomendável que você sempre abrir e fechar os conjuntos de registros internos ou fora de uma transação explícita do Jet.  
+>  Se você estiver usando o mecanismo de banco de dados Microsoft Jet, fechar um conjunto de registros dentro de uma transação explícita não resulta em liberar qualquer uma das linhas que foram modificadas ou bloqueios que foram colocados até que a transação explícita é confirmada ou revertida. É recomendável que você sempre abertas e fechar conjuntos de registros dentro ou fora de uma transação explícita do Jet.  
   
-###  <a name="_core_how_scrolling_affects_updates"></a> Como rolar afeta atualizações  
- Quando você [Conjunto de registros: rolando \(ODBC\)](../Topic/Recordset:%20Scrolling%20\(ODBC\).md) em um conjunto de registros, o buffer de edição é preenchido com cada novo registro atual \(o registro anterior não está armazenado primeiro\).  Rolar ignora sobre os registros excluídos anteriormente.  Se você rolar após uma chamada de `AddNew` ou de **Editar** sem chamar **Atualizar**, **CommitTrans**, ou **Reverter** primeiro, todas as alterações serão perdidas \(sem um aviso ao\) como um registro novo é colocado no buffer de edição.  O buffer de edição é preenchido com o registro rolado, o registro armazenado é liberado, e nenhuma alteração ocorre na fonte de dados.  Isso se aplica a `AddNew` e a **Editar**.  
+###  <a name="_core_how_scrolling_affects_updates"></a>Como a rolagem afeta as atualizações  
+ Quando você [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) em um conjunto de registros, o buffer de edição é preenchido com cada novo registro atual (o registro anterior não é armazenado primeiro). Rolagem ignora sobre registros excluídos anteriormente. Se você rolar após um `AddNew` ou **editar** chamada sem chamar **atualização**, **CommitTrans**, ou **reversão** primeiro, as alterações são perdidas (sem nenhum aviso para você) como um novo registro é colocado no buffer de edição. O buffer de edição é preenchido com o registro rolado para o registro armazenado é liberado e não ocorre nenhuma alteração na fonte de dados. Isso se aplica a ambos `AddNew` e **editar**.  
   
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> As atualizações e as atualizações de outros usuários  
- Quando você usa um conjunto de registros para atualizar dados, suas atualizações afetam outros usuários.  De maneira semelhante, as atualizações de outros usuários durante o tempo de vida do conjunto de registros afetam\-no.  
+##  <a name="_core_your_updates_and_the_updates_of_other_users"></a>As atualizações e as atualizações de outros usuários  
+ Quando você usar um conjunto de registros para atualizar dados, as atualizações afetam outros usuários. Da mesma forma, as atualizações de outros usuários durante o tempo de vida do seu conjunto de registros afetá-lo.  
   
- Em um ambiente multiusuário, outros usuários podem abrir os conjuntos de registros que contêm alguns dos mesmos registros que você selecionou no conjunto de registros.  As alterações de um registro antes que você recupere o são refletidas no conjunto de registros.  Como os dynasets que recuperam um registro cada vez que você rolagem, os dynasets refletem alterações cada vez que você rolar um registro.  Os instantâneos recuperam um registro na primeira vez que você rolar, de forma que os instantâneos refletem somente as alterações que ocorrem antes que você rolar o registro inicialmente.  
+ Em um ambiente multiusuário, outros usuários podem abrir os conjuntos de registros que contêm alguns dos registros de mesmo que você selecionou no seu conjunto de registros. As alterações em um registro antes de recuperá-lo são refletidas em seu conjunto de registros. Como dynasets recuperam um registro de cada vez que você rola para ele, dynasets refletem as alterações sempre que você rolar para um registro. Instantâneos de recuperar um registro na primeira vez que você rola a ele, para que instantâneos refletem somente as alterações que ocorrem antes de você rolar para o registro inicialmente.  
   
- Os registros adicionados por outros usuários depois que você abre o conjunto de registros não aparecem no conjunto de registros a menos que você você consulte novamente.  Se o conjunto de registros é um dynaset, as edições a registros existentes por outros usuários aparecem no dynaset quando você percorrer o registro afetado.  Se o conjunto de registros é um instantâneo, as edições não aparecem até que você você consulte novamente o instantâneo.  Se você quiser ver os registros adicionados ou excluídos por outros usuários no instantâneo, ou os registros adicionados por outros usuários no dynaset, chame [CRecordset::Requery](../Topic/CRecordset::Requery.md) para recriar o conjunto de registros. \(Observe que as exclusões de outros usuários aparecem no dynaset.\) Você também pode chamar **Requery** para ver os registros que você adiciona, mas não ver suas exclusões.  
+ Registros adicionados por outros usuários depois que você abrir o conjunto de registros não aparecem em seu conjunto de registros, a menos que você repetir a consulta. Se o conjunto de registros é dynaset, modificações feitas por outros usuários, os registros existentes aparecerão na sua dynaset quando você rola para o registro afetado. Se o conjunto de registros é um instantâneo, edições não mostram até que você exige que o instantâneo. Se você quiser ver registros adicionados ou excluídos por outros usuários em seu instantâneo ou registros adicionados por outros usuários em sua dynaset, chame [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) para recriar o conjunto de registros. (Observe que as exclusões de outros usuários aparecerão em seu dynaset.) Você também pode chamar **Requery** para ver os registros de adicionar, mas não para ver suas exclusões.  
   
 > [!TIP]
->  Para forçar imediatamente o cachê de um instantâneo inteiro, chame `MoveLast` imediatamente depois que você abre o instantâneo.  Chame **MoveFirst** para começar a trabalhar com os registros.  `MoveLast` é equivalente a navegação sobre todos os registros, mas fazer de uma vez.  Observe, entretanto, que isso pode reduzir o desempenho e não pode ser necessário para alguns drivers.  
+>  Para forçar o cache de todo um instantâneo de uma vez, chamar `MoveLast` imediatamente depois de abrir o instantâneo. Em seguida, chame **MoveFirst** para começar a trabalhar com os registros. `MoveLast`é equivalente a rolagem em todos os registros, mas ele recupera uma só vez. No entanto, observe que isso pode reduzir o desempenho e não pode ser necessário para alguns drivers.  
   
- Os efeitos das atualizações em outros usuários são semelhantes a seus efeitos no.  
+ Os efeitos de suas atualizações em outros usuários são semelhantes aos seus efeitos em você.  
   
-##  <a name="_core_more_about_update_and_delete"></a> Mais sobre a atualização e exclusão  
- Esta seção fornece informações adicionais para ajudá\-lo a trabalhar com **Atualizar** e **Excluir**.  
+##  <a name="_core_more_about_update_and_delete"></a>Mais informações sobre atualização e exclusão  
+ Esta seção fornece informações adicionais para ajudá-lo a trabalhar com **atualização** e **excluir**.  
   
-### Êxito e falha da atualização  
- Se **Atualizar** tiver êxito, o modo de `AddNew` ou de **Editar** termina.  Para reiniciar um modo de `AddNew` ou de **Editar** , chame `AddNew` ou **Editar**.  
+### <a name="update-success-and-failure"></a>Atualização de êxito e falha  
+ Se **atualização** for bem-sucedida, o `AddNew` ou **editar** modo termina. Para iniciar um `AddNew` ou **editar** modo novamente, chamada `AddNew` ou **editar**.  
   
- Se **Atualizar** falha \(retorna **Falso** ou lançar uma exceção\), você permanecerá em `AddNew` ou no modo de **Editar** , dependendo da função você chamou o último.  Você pode fazer o seguinte:  
+ Se **atualização** falhar (retorna **FALSE** ou lança uma exceção), permanecem em `AddNew` ou **editar** modo, dependendo de qual função é chamado pela última. Você pode fazer o seguinte:  
   
--   Modificar um membro de dados do campo **Atualizar** e tente novamente.  
+-   Modificar um membro de dados do campo e tente a **atualização** novamente.  
   
--   `AddNew` chame para redefinir os membros de dados do campo em branco, define os valores dos membros de dados do campo e, em seguida **Atualizar** novamente.  
+-   Chamar `AddNew` para redefinir os membros de dados de campo para Null, defina os valores dos membros de dados de campo e, em seguida, chamar **atualização** novamente.  
   
--   Chame **Editar** para recarregar os valores avaliados no conjunto de registros antes da primeira chamada para `AddNew` ou a **Editar**, define os valores dos membros de dados do campo, e chamar **Atualizar** novamente.  Após uma chamada bem\-sucedida de **Atualizar** \(exceto depois que uma chamada de `AddNew` \), os membros de dados do campo retém os novos valores.  
+-   Chamar **editar** para recarregar os valores que estavam no conjunto de registros antes da primeira chamada para `AddNew` ou **editar**, defina os valores dos membros de dados de campo e, em seguida, chamar **atualizar**novamente. Após um bem-sucedido **atualização** chamar (exceto após uma `AddNew` chamar), os membros de dados do campo retêm seus novos valores.  
   
--   Chame **Mover** \(que inclui **Mover** com um parâmetro de **AFX\_MOVE\_REFRESH**, ou 0\), que libera todas as alterações e termina qualquer modo de `AddNew` ou de **Editar** aplicado.  
+-   Chamar **mover** (incluindo **mover** com um parâmetro de **AFX_MOVE_REFRESH**, ou 0), que libera quaisquer alterações e encerra qualquer `AddNew` ou **editar** modo em vigor.  
   
-### Atualização e exclusão  
- Esta seção é aplicada a **Atualizar** e a **Excluir**.  
+### <a name="update-and-delete"></a>Update e Delete  
+ Esta seção se aplica a ambos **atualização** e **excluir**.  
   
- Em uma operação de **Atualizar** ou de **Excluir** , um e apenas um registros devem ser atualizados.  O registro é o registro atual, que corresponde aos valores de dados nos campos do conjunto de registros.  Se por alguma razão nenhum registro é afetado ou mais de um registro é afetado, será lançada uma exceção que contém um dos seguintes valores de **RETCODE** :  
+ Em um **atualização** ou **excluir** operação, apenas um registro deve ser atualizado. Esse registro é o registro atual, que corresponde aos valores de dados nos campos do conjunto de registros. Se por alguma razão registros não são afetados ou mais de um registro é afetado, uma exceção será lançada que contém um dos seguintes **RETCODE** valores:  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED**  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**  
   
- Quando essas exceções são geradas, você permanecerá no estado de `AddNew` ou de **Editar** você estava quando você chamou **Atualizar** ou **Excluir**.  Aqui estão os cenários mais comuns em que você veria estas exceções.  Você provavelmente de consulte:  
+ Quando essas exceções são lançadas, você permanecerá no `AddNew` ou **editar** estado que estava quando você chamou **atualização** ou **excluir**. Aqui estão os cenários mais comuns em que você vê essas exceções. Provavelmente você ver:  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED** quando você estiver usando o modo otimista de bloqueio e outro usuário alterou o registro de uma maneira que impedisse que a estrutura identifica o registro correto para atualizar ou excluir.  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED** quando você estiver usando o modo de bloqueio otimista e outro usuário modificou o registro de uma maneira que impede a estrutura que identifica o registro correto para atualizar ou excluir.  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED** quando a tabela que você está atualizando não tem nenhum chave primária ou índice exclusivo e não têm colunas suficientes no conjunto de registros para identificar exclusivamente uma linha da tabela.  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** quando a tabela que você está atualizando não tem nenhuma chave primária ou índice exclusivo e você não tem colunas suficientes no conjunto de registros para identificar exclusivamente uma linha da tabela.  
   
-## Consulte também  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: como conjuntos de registros selecionam registros \(ODBC\)](../Topic/Recordset:%20How%20Recordsets%20Select%20Records%20\(ODBC\).md)   
- [Registrar troca de campos \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)   
+## <a name="see-also"></a>Consulte também  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
+ [Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [SQL](../../data/odbc/sql.md)   
  [Exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md)

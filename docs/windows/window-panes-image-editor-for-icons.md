@@ -1,48 +1,47 @@
 ---
-title: "Pain&#233;is Janela (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "editor gráfico [C++]"
-  - "Editor de imagem [C++], painéis"
+title: "Painéis de janela (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- graphics editor [C++]
+- Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ce9716e810f48c237eabb0ea11b222e3590d795b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Pain&#233;is Janela (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A janela do Editor de imagem normalmente exibe uma imagem em dois painéis separados por uma barra divisória.  Um modo de exibição é o tamanho real e o outro é ampliado \(o fator de ampliação padrão é 6\).  Os modos de exibição esses dois painéis são atualizados automaticamente: as alterações feitas em um painel são mostradas imediatamente na outra.  Os dois painéis facilitam para você trabalhar em uma exibição ampliada de sua imagem, na qual você pode distinguir pixels individuais e, ao mesmo tempo, observar o efeito do seu trabalho no modo de exibição de tamanho real da imagem.  
+# <a name="window-panes-image-editor-for-icons"></a>Painéis Janela (editor de imagens para ícones)
+A janela do Editor de imagem exibe uma imagem em dois painéis separados por uma barra de divisão. Um modo de exibição é o tamanho real e a outra é ampliada (o fator de ampliação padrão é 6). Os modos de exibição nesses dois painéis são atualizados automaticamente: as alterações feitas em um painel são mostradas imediatamente no outro. Os dois painéis tornam mais fácil para você trabalhar em uma exibição ampliada da imagem, na qual você pode distinguir pixels individuais e, ao mesmo tempo, observar o efeito de seu trabalho no modo de exibição de tamanho real da imagem.  
   
- O painel esquerdo usa como a quantidade de espaço é necessário \(até a metade da janela de imagens\) para exibir o modo de ampliação de 1: 1 \(padrão\) da imagem.  O painel direito exibe a imagem aumentada \(6: 1 ampliação por padrão\).  Você pode  [alterar a ampliação](../mfc/changing-the-magnification-factor-image-editor-for-icons.md) em cada painel usando a  **ampliação** ferramenta na  [barra de ferramentas do Editor de imagens](../mfc/toolbar-image-editor-for-icons.md) ou usando as teclas de aceleração.  
+ O painel esquerdo usa como a quantidade de espaço é necessário (até a metade da janela de imagem) para mostrar a exibição de ampliação 1:1 (o padrão) da imagem. O painel direito exibe a imagem com zoom (6:1 ampliação por padrão). Você pode [alterar a ampliação](../windows/changing-the-magnification-factor-image-editor-for-icons.md) em cada painel usando o **ampliar** ferramenta no [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md) ou usando as teclas de aceleração.  
   
- Você pode ampliar o painel menor da janela do Editor de imagens e usar os dois painéis para mostrar diferentes regiões de uma imagem grande.  Clique no painel para selecioná\-lo.  
+ Você pode ampliar o painel menor da janela do Editor de imagem e usar os dois painéis para mostrar regiões diferentes de uma imagem grande. Clique no painel para selecioná-la.  
   
- Você pode alterar os tamanhos relativos dos painéis posicionando o ponteiro na barra de divisão e mover a barra de divisão para a direita ou esquerda.  A barra de divisão pode mover todo o caminho para os dois lados se você desejar trabalhar em apenas um painel.  
+ Você pode alterar os tamanhos relativos dos painéis posicionando o ponteiro sobre a barra de divisão e movendo a barra de divisão para a direita ou esquerda. A barra de divisão pode mover para ambos os lados se você deseja trabalhar em apenas um painel.  
   
- Se o painel do editor de imagem é ampliado por um fator de 4 ou superior, você pode  [Exibir uma grade de pixels](../mfc/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) que delimita os pixels individuais da imagem.  
+ Se o painel do editor de imagem é ampliado por um fator de 4 ou superior, você pode [exibir uma grade de pixels](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) que delimita os pixels individuais na imagem.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
-## Consulte também  
- [Teclas de aceleração](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
+

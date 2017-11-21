@@ -1,33 +1,30 @@
 ---
-title: "synchronize | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.synchronize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "synchronize attribute"
+title: sincronizar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.synchronize
+dev_langs: C++
+helpviewer_keywords: synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38898eefcbc2d5bb882186786894e7fb752e28ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# synchronize
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="synchronize"></a>synchronize
 Sincroniza o acesso para o método de destino.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,15 +32,15 @@ Sincroniza o acesso para o método de destino.
   
 ```  
   
-## Comentários  
- O  **sincronizar** atributo C\+\+ implementa o suporte para o método de destino de um objeto de sincronização.  Sincronização permite que vários objetos usar um recurso comum \(como um método de uma classe\), controlando o acesso do método de destino.  
+## <a name="remarks"></a>Comentários  
+ O **sincronizar** atributo C++ implementa o suporte para o método de destino de um objeto de sincronização. Sincronização permite que vários objetos usar um recurso comum (como um método de uma classe), controlando o acesso do método de destino.  
   
- O código inserido por esse atributo chama adequada `Lock` método \(determinado pelo modelo de threading\) no início do método de destino.  Quando o método é finalizado, `Unlock` é chamado automaticamente.  Para obter mais informações sobre essas funções, consulte  [CComAutoThreadModule::Lock](../Topic/CComAutoThreadModule::Lock.md)  
+ O código inserido por este atributo chama a operação `Lock` método (determinado pelo modelo de threading) no início do método de destino. Quando o método for fechado, `Unlock` é chamado automaticamente. Para obter mais informações sobre essas funções, consulte [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- Este atributo requer que o  [coclass](../windows/coclass.md),  [progid](../Topic/progid.md), ou  [vi\_progid](../windows/vi-progid.md) atributo \(ou outro atributo implica um deles\) também ser aplicadas ao mesmo elemento.  Se qualquer atributo único for usado, as outras duas são aplicadas automaticamente.  Por exemplo, se  **progid** for aplicada,  **vi\_progid** e  **coclass** também são aplicadas.  
+ Este atributo requer que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicados ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se **progid** é aplicado, **vi_progid** e **coclass** também são aplicadas.  
   
-## Exemplo  
- O código a seguir fornece sincronização para o `UpdateBalance` método da `CMyClass` objeto.  
+## <a name="example"></a>Exemplo  
+ O código a seguir fornece sincronização para o `UpdateBalance` método o `CMyClass` objeto.  
   
 ```  
 // cpp_attr_ref_synchronize.cpp  
@@ -70,19 +67,18 @@ class CMyClass {
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Método de classe, método|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Um ou mais das seguintes opções:  **coclass**,  **progid**, ou  **vi\_progid**.|  
+|**Aplica-se a**|Método de classe, método|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi_progid**.|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos de COM](../windows/com-attributes.md)   

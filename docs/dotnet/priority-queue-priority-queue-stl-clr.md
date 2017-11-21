@@ -1,33 +1,30 @@
 ---
-title: "priority_queue::priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro priority_queue [STL/CLR]"
+title: 'priority_queue:: priority_queue (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::priority_queue
+dev_langs: C++
+helpviewer_keywords: priority_queue member [STL/CLR]
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 77486fdadaafe9b98e93998b73a4f5eb42f7865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria um objeto do adaptador do contêiner.  
+# <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue (STL/CLR)
+Constrói um objeto de adaptador do contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 priority_queue();  
@@ -45,84 +42,74 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);  
 ```  
   
-#### Parâmetros  
- cont  
- Contêiner a ser copiada.  
+#### <a name="parameters"></a>Parâmetros  
+ continuação  
+ O contêiner a ser copiado.  
   
  primeiro  
  Início do intervalo a ser inserido.  
   
  last  
- O fim do intervalo a ser inserido.  
+ Fim do intervalo a ser inserido.  
   
- pred  
- Ordenando o predicado da sequência controlada.  
+ Pred  
+ Ordenação de predicado para sequência controlada.  
   
  direita  
- Objeto ou intervalo a ser inserido.  
+ Objeto ou intervalo a inserir.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O construtor:  
   
  `priority_queue();`  
   
- cria um contêiner de conjunto vazio, com o padrão de ordenação predicado.  Você usa para especificar inicial uma sequência vazia, controlada com o predicado padrão de ordenação.  
+ cria um contêiner encapsulado vazio, com o padrão de ordenação de predicado. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o padrão de ordenação de predicado.  
   
  O construtor:  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- cria um contêiner ajustado que é uma cópia de `right.get_container()`, com o predicado de ordenação `right.value_comp()`.  Você usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto da fila `right`, com o mesmo predicado de solicitação.  
+ cria um contêiner encapsulado que é uma cópia do `right.get_container()`, com o predicado ordenação `right.value_comp()`. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de fila `right`, com o mesmo predicado ordenação.  
   
  O construtor:  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- cria um contêiner ajustado que é uma cópia de `right->get_container()`, com o predicado de ordenação `right->value_comp()`.  Você usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto da fila `*right`, com o mesmo predicado de solicitação.  
+ cria um contêiner encapsulado que é uma cópia do `right->get_container()`, com o predicado ordenação `right->value_comp()`. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de fila `*right`, com o mesmo predicado ordenação.  
   
  O construtor:  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- cria um contêiner de conjunto vazio, com o predicado de ordenação `pred`.  Você usa para especificar inicial uma sequência vazia, controlada pelo predicado especificado. ordenando  
+ cria um contêiner de encapsulado vazio, com o predicado ordenação `pred`. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o predicado de ordenação especificado.  
   
  O construtor:  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- cria um contêiner de conjunto vazio, com o predicado de ordenação `pred`, então empurra todos os elementos de `cont` que você usa para especificar uma sequência controlada inicial de um contêiner existente, com o predicado ordenando especificado.  
+ cria um contêiner de encapsulado vazio, com o predicado de ordenação `pred`, em seguida, envia todos os elementos de `cont` usá-lo para especificar uma sequência controlada inicial de um contêiner existente, com o predicado de ordenação especificado.  
   
  O construtor:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- `priority_queue(InIt first, InIt last);`  
-  
- cria um contêiner de conjunto vazio, com o padrão de ordenação predicado, então empurra a sequência `[``first``,` `last``)`.  Use\-a para especificar uma sequência controlada inicial de um eqeuence especificado, com o predicado ordenando especificado.  
+ cria um contêiner encapsulado vazio, com o predicado de classificação padrão e, depois, a sequência [`first`, `last`). Você pode usá-lo para especificar uma sequência controlada inicial de um eqeuence especificado, com o predicado de ordenação especificado.  
   
  O construtor:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- `priority_queue(InIt first, InIt last,`  
-  
- `value_compare^ pred);`  
-  
- cria um contêiner de conjunto vazio, com o predicado de ordenação `pred`, então empurra a sequência `[``first``,` `last``)`.  Use\-a para especificar uma sequência controlada inicial de um seqeuence especificado, com o predicado ordenando especificado.  
+ cria um contêiner de encapsulado vazio, com o predicado ordenação `pred`, em seguida, envia a sequência [`first`, `last`). Você pode usá-lo para especificar uma sequência controlada inicial de um seqeuence especificado, com o predicado de ordenação especificado.  
   
  O construtor:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- `priority_queue(InIt first, InIt last,`  
+ cria um contêiner de encapsulado vazio, com o predicado de ordenação `pred`, em seguida, envia todos os elementos de `cont` mais a sequência de [`first`, `last`). Você pode usá-lo para especificar uma sequência controlada inicial de um contêiner existente e um seqeuence especificado, com o predicado de ordenação especificado.  
   
- `value_compare^ pred, container_type% cont);`  
+## <a name="example"></a>Exemplo  
   
- cria um contêiner de conjunto vazio, com o predicado de ordenação `pred`, então empurra todos os elementos de `cont` mais a sequência `[``first``,` `last``)`.  Use\-a para especificar uma sequência controlada inicial de um contêiner existente e um seqeuence especificado, com o predicado ordenando especificado.  
-  
-## Exemplo  
-  
-```  
+```cpp  
 // cliext_priority_queue_construct.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -205,24 +192,27 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **c um b**  
-**size\(\) \= 0**  
- **c b**  
- **c b**  
- **c um b**  
- **c b**  
- **um b c c b**  
- **c um b**  
- **c um b**  
- **c b**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+size() = 0  
+ c a b  
+size() = 0  
+ a c b  
+ a c b  
+ c a b  
+ a c b  
+ a a b c c b  
+ c a b  
+ c a b  
+ a c b  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
   
-## Consulte também  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::Assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

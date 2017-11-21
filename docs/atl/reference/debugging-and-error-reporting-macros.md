@@ -4,39 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de relatórios de erros e de depuração
 Essas macros fornecem recursos úteis de depuração e rastreamento.  
@@ -136,7 +125,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  A diferença entre **ATLENSURE** e `ATLASSERT` é que **ATLENSURE** lança uma exceção na versão cria, bem como em compilações de depuração.  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Utilities #108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** AFX  
@@ -156,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
  Nas compilações de lançamento, simplesmente retorna **E_NOTIMPL**.  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Utilities #127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atltrace.h 
@@ -254,13 +243,13 @@ ATLTRACE2(
   
  Para declarar uma categoria de rastreamento personalizada, declarar uma instância global do `CTraceCategory` classe da seguinte maneira:  
   
- [!code-cpp[NVC_ATL_Utilities #109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  O nome da categoria, `MY_CATEGORY` neste exemplo, é o nome que você especificar para o `category` parâmetro. O primeiro parâmetro é o nome da categoria que aparecerá na ferramenta de rastreamento do ATL/MFC. O segundo parâmetro é o nível de rastreamento padrão. Esse parâmetro é opcional e o nível de rastreamento padrão é 0.  
   
  Para usar uma categoria definida pelo usuário:  
   
- [!code-cpp[NVC_ATL_Utilities #110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  Para especificar que você deseja filtrar as mensagens de rastreamento, inserir definições para essas macros Stdafx. h antes do `#include <atlbase.h>` instrução.  
   
@@ -275,9 +264,8 @@ ATLTRACE2(
  **ATLTRACE** e `ATLTRACE2` têm o mesmo comportamento, **ATLTRACE** é incluído para compatibilidade com versões anteriores.  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Utilities #111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Macros](../../atl/reference/atl-macros.md)   
  [Funções globais de relatório de erros e depuração](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

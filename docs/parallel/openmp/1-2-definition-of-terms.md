@@ -1,72 +1,71 @@
 ---
-title: "1.2 Definition of Terms | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1.2 definições de termos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21c4bcafe89fda7e09333b014da20e1d483125e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# 1.2 Definition of Terms
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="12-definition-of-terms"></a>1.2 Definições de termos
 Os seguintes termos são usados neste documento:  
   
- barreira  
- Um ponto de sincronização que deve ser alcançado por todos os threads de uma equipe.  Cada segmento espera até que todos os threads na equipe chegarem neste ponto.  Há barreiras explícitas identificadas por diretivas e barreiras implícitas criadas pela implementação.  
+ barrier  
+ Um ponto de sincronização que deve ser acessado por todos os threads em uma equipe.  Cada thread aguarda até que todos os threads da equipe de chegarem nesse ponto. Há barreiras explícitas identificadas por diretivas e implícitas barreiras criadas pela implementação.  
   
  Construir  
- Uma construção é uma declaração.  Ele consiste em uma diretiva e o bloco estruturado subseqüente.  Observe que algumas diretivas não são parte de uma construção.  \(Consulte  *diretiva do openmp*  na  [Apêndice C](../Topic/C.%20OpenMP%20C%20and%20C++%20Grammar.md)\).  
+ Uma construção é uma instrução. Ele consiste em uma diretiva e o bloco estruturado subsequente. Observe que algumas diretivas não fazem parte de uma construção. (Consulte *diretiva de openmp* na [Apêndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)).  
   
- diretiva  
- Uma c ou C\+\+  **\# pragma** seguido de  **omp** identificador, outro texto e uma nova linha.  A diretiva especifica o comportamento do programa.  
+ Diretiva  
+ C ou C++ **#pragma** seguido de **omp** identificador, outro texto e uma nova linha. A diretiva especifica o comportamento do programa.  
   
  extensão dinâmica  
- Todas as instruções na  *lexical extensão*, além de qualquer instrução dentro de uma função que é executada como resultado da execução de instruções dentro do rigor lexical.  Uma extensão dinâmica também é conhecida como um  *região*.  
+ Todas as instruções no *extensão lexical*, além de qualquer instrução em uma função que é executada como resultado da execução de instruções dentro da extensão de léxica. Uma extensão dinâmica também é conhecida como um *região*.  
   
- extensão lexical  
- Instruções lexicalmente contidas em um  *estruturado bloco*.  
+ extensão de léxico  
+ Instruções lexicalmente contidas em um *bloco estruturado*.  
   
  thread mestre  
- O segmento que cria uma equipe quando um  *região paralela*  for inserido.  
+ O thread que cria uma equipe quando um *região parallel* é inserido.  
   
- região paralela  
- Instruções que vincular a uma construção de paralela OpenMP e podem ser executadas por vários segmentos.  
+ região Parallel  
+ Instruções que associar a uma construção paralela OpenMP e podem ser executadas por vários threads.  
   
- Particular  
- Uma variável privada nomeia um bloco de armazenamento que é exclusivo para o segmento de fazer a referência.  Observe que há várias maneiras para especificar que uma variável privada: a definição de dentro de uma região paralela, uma  **threadprivate** diretiva, um  **particular**,  **firstprivate**,  **lastprivate**, ou  **redução**  cláusula ou uso da variável como um  **para**variável de controle de loop em um  **para**  loop imediatamente após um  **para**  ou  **paralela para**  diretiva.  
+ particulares  
+ Uma variável privada nomeia um bloco de armazenamento que é exclusivo para o thread que faz a referência. Observe que há várias maneiras de especificar que uma variável particular: uma definição de dentro de uma região parallel, um **threadprivate** diretiva, um **privada**, **firstprivate**, **lastprivate**, ou **redução** cláusula ou uso da variável como um **para**variável de controle de loop em uma **para** loop imediatamente após um **para** ou **paralelo para** diretiva.  
   
  região  
  Uma extensão dinâmica.  
   
  região serial  
- Instruções executadas somente pelo  *segmento mestre*  fora da extensão dinâmica de qualquer  *região paralela*.  
+ Instruções executadas somente pelo *mestre thread* fora a extensão dinâmica de qualquer *região parallel*.  
   
- serializar  
- Para executar uma construção paralela com uma equipe de threads consiste em apenas um único thread \(que é o segmento principal para essa construção paralela\), com serial ordem de execução para as instruções dentro do bloco estruturado \(o mesmo pedido como se o bloco não fossem parte de uma construção paralela\) e sem afetar o valor retornado por  **omp\_in\_parallel\(\)** \(além dos efeitos de qualquer aninhada construções paralelas\).  
+ Serializar  
+ Para executar uma construção paralela com uma equipe de threads que consiste em apenas um único thread (que é o thread principal para essa construção paralela), com serial ordem de execução para as instruções dentro do bloco estruturado (a mesma ordem como se o bloco não eram parte de uma construção paralela) e sem afetar o valor retornado por **omp_in_parallel()** (além dos efeitos de qualquer aninhado construções paralelas).  
   
- compartilhado  
- Uma variável compartilhada nomeia um único bloco de armazenamento.  Todos os threads de uma equipe que acessam essa variável acessará esse único bloco de armazenamento.  
+ shared  
+ Uma variável compartilhada nomeia um único bloco de armazenamento. Todos os threads em uma equipe que acessar essa variável acessarão este bloco único de armazenamento.  
   
  bloco estruturado  
- Um bloco estruturado é uma declaração \(simples ou composta\) que tem uma única entrada e uma saída única.  Nenhuma instrução é um bloco de estruturado, se houver um salto dentro ou fora dessa instrução \(incluindo uma chamada para  **longjmp**\(3C\) ou o uso de  **lança**, mas uma chamada para  **Sair** é permitido\).  Uma declaração composta é um bloco de estruturado se sua execução sempre começa na abertura  **{** e sempre termina no fechamento  **}**.  Uma instrução de expressão, a instrução de seleção, a instrução de iteração, ou  **tente** bloco é um bloco de estruturado, se a instrução composta correspondente obtido colocando\-o em  **{** e  **}**seria um bloco estruturado.  Uma instrução de salto, rotulada de instrução ou instrução de declaração não é um bloco estruturado.  
+ Um bloco estruturado é uma instrução (simples ou composta) que tem uma única entrada e uma única saída. Nenhuma instrução é um bloco estruturado se há um salto para dentro ou fora dessa instrução (incluindo uma chamada para **longjmp**(3C) ou o uso de **gerar**, mas uma chamada para **sair** é permitido). Uma instrução composta é um bloco estruturado se sua execução sempre começa na abertura **{** e sempre termina no fechamento **}**. Uma instrução de expressão, a instrução de seleção, a instrução de iteração, ou **tente** bloco é um bloco estruturado, se a instrução composta correspondente obtido por delimitador na **{** e **}** seria um bloco estruturado. Uma instrução de salto, a instrução rotulada ou a instrução de declaração não é um bloco estruturado.  
   
- equipe  
- Um ou mais threads cooperando na execução de uma construção.  
+ Equipe  
+ Um ou mais threads trabalhar de forma na execução de uma construção.  
   
  thread  
- Uma entidade de execução tendo um fluxo serial de controle, um conjunto de variáveis particulares e o acesso a variáveis compartilhadas.  
+ Uma entidade de execução com um série fluxo de controle, um conjunto de variáveis privadas e acesso a variáveis compartilhadas.  
   
- variable  
- Um identificador, opcionalmente qualificado pelos nomes de namespace, que nomeia um objeto.
+ variável  
+ Um identificador, opcionalmente qualificado por nomes de namespace, que nomeia um objeto.

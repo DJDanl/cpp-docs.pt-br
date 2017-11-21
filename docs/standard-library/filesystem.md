@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-Inclua o cabeçalho \<filesystem> para acessar classes e funções que manipulam e recuperam informações sobre caminhos, arquivos e diretórios.  
+Inclua o cabeçalho &lt;filesystem> para acessar classes e funções que manipulam e recuperam informações sobre caminhos, arquivos e diretórios.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +38,7 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  Desde o lançamento do Visual Studio de 2017, o cabeçalho \<experimental/filesystem> ainda não era um padrão de C++. O Visual C++ 2017 implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
+>  A partir da versão do Visual Studio de 2017, o \<sistema de arquivos > cabeçalho ainda não era um padrão de C++. O Visual C++ 2017 implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
   
  Esse cabeçalho dá suporte a sistemas de arquivos para uma de duas classes amplas de sistemas operacionais host: Microsoft Windows e Posix.  
   
@@ -73,15 +56,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   Um objeto do caminho de classe armazena o nome do caminho no formato nativo, mas dá suporte à conversão fácil entre esse formato armazenado e vários formatos externos:  
   
-    -   Uma sequência de terminação nula de caracteres, codificada como preferencial para o sistema operacional.  
+-   Uma sequência de terminação nula de caracteres, codificada como preferencial para o sistema operacional.  
   
-    -   Uma sequência de terminação nula de caracteres, codificada como UTF-8.  
+-   Uma sequência de terminação nula de caracteres, codificada como UTF-8.  
   
-    -   Uma sequência de terminação nula de wchar_t, codificada como preferencial para o sistema operacional.  
+-   Uma sequência de terminação nula de wchar_t, codificada como preferencial para o sistema operacional.  
   
-    -   Uma sequência de terminação nula de char16_t, codificada como UTF-16.  
+-   Uma sequência de terminação nula de char16_t, codificada como UTF-16.  
   
-    -   Uma sequência de terminação nula de char32_t, codificada como UTF-32.  
+-   Uma sequência de terminação nula de char32_t, codificada como UTF-32.  
   
  Interconversões entre essas representações são mediadas, conforme necessário, pelo uso de uma ou mais facetas de `codecvt`. Se um objeto de localidade específico não for designado, essas facetas serão obtidas da localidade global.  
   
@@ -142,14 +125,13 @@ using namespace std::experimental::filesystem::v1;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Uma enumeração que é usada com [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) e determina o comportamento se um arquivo de destino já existir.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Uma enumeração que é usada com [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) e determina o comportamento se um arquivo de destino já existir.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Uma enumeração que especifica opções para iteradores de diretório.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Uma enumeração de tipos de arquivo.|  
 |[permissões](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

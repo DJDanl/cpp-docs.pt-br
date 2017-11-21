@@ -1,33 +1,30 @@
 ---
-title: "vector::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro generic_container [STL/CLR]"
+title: Vector::generic_container (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: f291493f-dbdd-4240-935e-ce7432b59872
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0079adf049d1db78d3e01b338e886d778a150e02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de interface genérica para o contêiner.  
+# <a name="vectorgenericcontainer-stlclr"></a>vector::generic_container (STL/CLR)
+O tipo da interface genérica para o contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -35,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Comentários  
- O tipo descreve a interface genérica para esta classe do contêiner do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve a interface genérica para esta classe de contêiner do modelo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_vector_generic_container.cpp   
@@ -82,18 +79,21 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**  
- **um tipo c de b**  
- **um b c e d**   
-## Requisitos  
- cliext \<\/vetor de**Cabeçalho:** \>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/vetor >  
   
-## Consulte também  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualC.StlClr.IVector%601>   
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::generic\_iterator](../dotnet/vector-generic-iterator-stl-clr.md)   
- [vector::generic\_reverse\_iterator](../Topic/vector::generic_reverse_iterator%20\(STL-CLR\).md)   
- [vector::generic\_value](../dotnet/vector-generic-value-stl-clr.md)
+ [vetor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)   
+ [Vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)   
+ [vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)

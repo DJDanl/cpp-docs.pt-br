@@ -1,60 +1,57 @@
 ---
-title: "Estrutura SRWLockSharedTraits | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura SRWLockSharedTraits"
+title: Estrutura SRWLockSharedTraits | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits
+dev_langs: C++
+helpviewer_keywords: SRWLockSharedTraits structure
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3a044baaa463c91c134137214e9708db8c4dfefb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Estrutura SRWLockSharedTraits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Descreve características comuns da classe de SRWLock no modo de bloqueio compartilhado.  
+# <a name="srwlocksharedtraits-structure"></a>Estrutura SRWLockSharedTraits
+Descreve características comuns da classe SRWLock no modo de bloqueio compartilhado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 struct SRWLockSharedTraits;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs Públicas  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|`Type`|Sinônimo para um ponteiro para a classe de [SRWLOCK](../windows/srwlock-class.md) .|  
-  
-### Métodos Públicos  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método SRWLockSharedTraits::GetInvalidValue](../Topic/SRWLockSharedTraits::GetInvalidValue%20Method.md)|Recupera um objeto de SRWLockSharedTraits que sempre é inválido.|  
-|[Método SRWLockSharedTraits::Unlock](../Topic/SRWLockSharedTraits::Unlock%20Method.md)|Controle exclusivo das versões do objeto especificado de SRWLock.|  
+|----------|-----------------|  
+|`Type`|Sinônimo de um ponteiro para o [SRWLOCK](../windows/srwlock-class.md) classe.|  
   
-## Hierarquia de Herança  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método SRWLockSharedTraits::GetInvalidValue](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Recupera um objeto de SRWLockSharedTraits que sempre é inválido.|  
+|[Método SRWLockSharedTraits::Unlock](../windows/srwlocksharedtraits-unlock-method.md)|Libera o controle exclusivo do objeto SRWLock especificado.|  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `SRWLockSharedTraits`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

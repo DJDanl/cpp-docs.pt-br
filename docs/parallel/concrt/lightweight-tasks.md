@@ -1,42 +1,41 @@
 ---
-title: "Tarefas leves | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tarefas leves"
+title: Tarefas leves | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-caps.latest.revision: 7
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9b9caa028d7f870ecdd6c67503c6bc9448cff1d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Tarefas leves
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este documento descreve a função de tarefas de peso leve em tempo de execução de simultaneidade.  *Uma tarefa de peso leve* é uma tarefa que você agende diretamente de um objeto de `concurrency::Scheduler` ou de `concurrency::ScheduleGroup` .  Uma tarefa de peso leve é semelhante à função que você fornece a API do windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) a função.  Em virtude disso, as tarefas de peso leve são úteis quando se adapta o código existente para usar a funcionalidade de programação de tempo de execução de simultaneidade.  O tempo de execução próprio de simultaneidade usa tarefas de peso leve programar agentes assíncronas e enviar mensagens entre blocos assíncronas da mensagem.  
+# <a name="lightweight-tasks"></a>Tarefas Leves
+Este documento descreve a função de tarefas leves no tempo de execução de simultaneidade. Um *tarefa leve* é uma tarefa que você agendar diretamente de um `concurrency::Scheduler` ou `concurrency::ScheduleGroup` objeto. A função que você fornece a API do Windows é semelhante a uma tarefa leve [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) função. Portanto, as tarefas leves são úteis quando você adaptar o código existente para usar a funcionalidade de agendamento de tempo de execução de simultaneidade. O tempo de execução de simultaneidade em si usa tarefas leves para agendar agentes assíncronos e enviar mensagens entre blocos de mensagens assíncronas.  
   
 > [!TIP]
->  O tempo de execução de simultaneidade fornece um agendador padrão, e em virtude disso não é necessário criar um relatório em seu aplicativo.  Como o agendador de tarefas o ajuda a ajustar o desempenho dos aplicativos, recomendamos que você comece com [Biblioteca de padrões paralelos \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md) ou [Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md) se você é novato em tempo de execução de simultaneidade.  
+>  O tempo de execução de simultaneidade fornece um agendador padrão e, portanto, não é necessário criá-lo em seu aplicativo. Como o Agendador de tarefas Ajuda a ajustar o desempenho de seus aplicativos, é recomendável que você inicie com o [biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) ou [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) se você estiver novo no tempo de execução de simultaneidade.  
   
- As tarefas de peso leve levam menos sobrecarga de agentes assíncronas e grupos de trabalho.  Por exemplo, o tempo de execução não o informa quando uma tarefa superficial é concluída.  Além disso, o tempo de execução não captura nem controla as exceções emitidas de uma tarefa de peso leve.  Para obter mais informações sobre a manipulação de exceções e tarefas de peso leve, consulte [Tratamento de Exceção](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md).  
+ Tarefas leves carregam menos sobrecarga de agentes assíncronos e grupos de tarefas. Por exemplo, o tempo de execução não informam quando uma tarefa simples termina. Além disso, o tempo de execução não catch ou manipular exceções que são geradas a partir de uma tarefa simples. Para obter mais informações sobre o tratamento de exceção e tarefas leves, consulte [tratamento de exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
- Para a maioria das tarefas, recomendamos que você use uma funcionalidade mais robusta como grupos de trabalho e algoritmos paralelos porque permitem mais facilmente interromper tarefas mais complexas em básicas.  Para obter mais informações sobre grupos de trabalho, consulte [Paralelismo da tarefa](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  Para obter mais informações sobre algoritmos paralelos, consulte [Algoritmos paralelos](../Topic/Parallel%20Algorithms.md).  
+ Para a maioria das tarefas, recomendamos que você usa a funcionalidade mais robusta, como grupos de tarefas e os algoritmos paralelos porque eles permitem que você mais facilmente invadir tarefas complexas os mais básicos. Para obter mais informações sobre grupos de tarefas, consulte [paralelismo de tarefa](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Para obter mais informações sobre os algoritmos paralelos, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).  
   
- Para criar uma tarefa de peso leve, chame [concurrency::ScheduleGroup::ScheduleTask](../Topic/ScheduleGroup::ScheduleTask%20Method.md), [concurrency::CurrentScheduler::ScheduleTask](../Topic/CurrentScheduler::ScheduleTask%20Method.md), ou o método de [concurrency::Scheduler::ScheduleTask](../Topic/Scheduler::ScheduleTask%20Method.md) .  Para esperar uma tarefa de peso leve concluir, aguarda o agendador pai para fechar ou usar um mecanismo de sincronização como um objeto de [concurrency::event](../Topic/event%20Class.md) .  
+ Para criar uma tarefa simples, chame o [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask), [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask), ou [concurrency::Scheduler::ScheduleTask ](reference/scheduler-class.md#scheduletask) método. Para aguardar uma a conclusão da tarefa leve, aguarde até que o Agendador pai desligar ou usar um mecanismo de sincronização, como um [concurrency::event](../../parallel/concrt/reference/event-class.md) objeto.  
   
-## Exemplo  
- Para obter um exemplo que demonstra como adaptar o código existente para usar uma tarefa superficial, considere [Instruções passo a passo: adaptando um código existente para usar tarefas leves](../Topic/Walkthrough:%20Adapting%20Existing%20Code%20to%20Use%20Lightweight%20Tasks.md).  
+## <a name="example"></a>Exemplo  
+ Para obter um exemplo que demonstra como adaptar o código existente para usar uma tarefa simples, consulte [passo a passo: adaptando um código existente para usar tarefas leves](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).  
   
-## Consulte também  
- [Agendador de Tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Instruções passo a passo: adaptando um código existente para usar tarefas leves](../Topic/Walkthrough:%20Adapting%20Existing%20Code%20to%20Use%20Lightweight%20Tasks.md)
+## <a name="see-also"></a>Consulte também  
+ [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
+ [Instruções passo a passo: adaptando um código existente para usar tarefas leves](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
+

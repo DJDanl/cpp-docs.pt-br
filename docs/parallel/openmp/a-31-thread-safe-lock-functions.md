@@ -1,31 +1,30 @@
 ---
-title: "A.31   Thread-Safe Lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Funções de bloqueio de Thread-Safe A.31 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 3ad89eb8-076c-405a-be5e-88d3d707a832
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a7572fd7e112c739119e58cd5403058bb99a4026
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# A.31   Thread-Safe Lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de C\+\+ a seguir demonstra como inicializar uma matriz de bloqueios em uma região paralela usando `omp_init_lock` \([seção 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na página 42\).  
+# <a name="a31---thread-safe-lock-functions"></a>A.31   Funções de bloqueio thread-safe
+O exemplo C++ a seguir demonstra como inicializar uma matriz de bloqueios em uma região parallel usando `omp_init_lock` ([seção 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na página 42).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // A_13_omp_init_lock.cpp  

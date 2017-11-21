@@ -1,72 +1,69 @@
 ---
-title: "Classe WeakReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe WeakReference"
+title: WeakReference Class1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference
+dev_langs: C++
+helpviewer_keywords: WeakReference class
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb8e05ca3ef52515af58db455ed83da593d6bdfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classe WeakReference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="weakreference-class1"></a>WeakReference Class1
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class WeakReference;  
 ```  
   
-## Comentários  
- Representa *uma referência de URL* que pode ser usada com tempos de Execução do Windows ou COM clássico.  Uma referência de objeto representa um que pode ou não ser acessível.  
+## <a name="remarks"></a>Comentários  
+ Representa um *referência fraca* que pode ser usado com o tempo de execução do Windows ou o clássico com. Uma referência fraca representa um objeto que pode ou não pode ser acessado.  
   
- Um objeto de `WeakReference` mantém *uma referência forte*, que é um ponteiro para um objeto, e *uma contagem forte de referência*, que é o número de cópias de referência forte que foram distribuídas pelo método de resolução \(\).  Quando a contagem forte de referência seja diferente de zero, a referência forte é válido e o objeto está acessível.  Quando a contagem de referência forte se tornará zero, a referência forte não é válida e o objeto está inacessível.  
+ Um `WeakReference` objeto mantém um *referência forte*, que é um ponteiro para um objeto e um *contagem de referência forte*, que é o número de cópias da referência de alta segurança que foram distribuídas por o método resolve. Enquanto a contagem de referência forte é diferente de zero, a referência forte é válida e o objeto está acessível. Quando a contagem de referência forte se torna zero, a referência forte é válida e o objeto está inacessível.  
   
- Um objeto de WeakReference normalmente é usado para representar um objeto cuja existente é controlada por um thread ou por um aplicativo externo.  Por exemplo, construir um objeto de WeakReference de uma referência a um objeto de arquivo.  Quando o arquivo estiver aberto, a referência forte é válido.  Mas se o arquivo é fechado, a referência forte torna\-se inválido.  
+ Um objeto WeakReference normalmente é usado para representar um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, criar um objeto WeakReference de uma referência a um objeto de arquivo. Enquanto o arquivo estiver aberto, a referência forte é válida. Mas, se o arquivo for fechado, a referência forte torna-se inválido.  
   
- Os métodos de WeakReference são thread\-safe.  
+ Os métodos de WeakReference são thread-safe.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Construtor WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Inicializa uma nova instância da classe de WeakReference.|  
-|[Destruidor WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes \(destruir\) a instância atual da classe de WeakReference.|  
-  
-### Métodos Públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método WeakReference::DecrementStrongReference](../Topic/WeakReference::DecrementStrongReference%20Method.md)|Forte do diminuirá a contagem de referência do objeto atual de WeakReference.|  
-|[Método WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Forte incrementa a contagem de referência do objeto atual de WeakReference.|  
-|[Método WeakReference::Resolve](../windows/weakreference-resolve-method.md)|Define o ponteiro especificado ao valor de referência forte atual se a contagem forte de referência for diferente de zero.|  
-|[Método WeakReference::SetUnknown](../windows/weakreference-setunknown-method.md)|Define a referência forte do objeto atual de WeakReference especificado para o ponteiro da interface.|  
+|----------|-----------------|  
+|[Construtor WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Inicializa uma nova instância da classe WeakReference.|  
+|[Destruidor WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes (destrói) a instância atual da classe WeakReference.|  
   
-## Hierarquia de Herança  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método WeakReference::DecrementStrongReference](../windows/weakreference-decrementstrongreference-method.md)|Diminui a forte contagem de referência do objeto WeakReference atual.|  
+|[Método WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Incrementa a contagem de referência forte do objeto WeakReference atual.|  
+|[Método WeakReference::Resolve](../windows/weakreference-resolve-method.md)|Define o ponteiro especificado para o valor de referência forte atual se a contagem de referência forte é diferente de zero.|  
+|[Método WeakReference::SetUnknown](../windows/weakreference-setunknown-method.md)|Define a referência forte do objeto WeakReference atual para o ponteiro de interface especificado.|  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `WeakReference`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

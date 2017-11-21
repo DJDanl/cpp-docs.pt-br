@@ -1,43 +1,40 @@
 ---
-title: "hash_multimap::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro value_compare [STL/CLR]"
+title: hash_multimap::value_compare (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 64daa1b6-3019-4850-9ec5-ae63c01fe819
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6738717f2718a1552237d3c77aa563c123e66b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O delegado de ordenação para dois valores do elemento.  
+# <a name="hashmultimapvaluecompare-stlclr"></a>hash_multimap::value_compare (STL/CLR)
+O representante de ordenação para dois valores de elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o delegado que determina a ordem dos argumentos de valor.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo para o representante que determina a ordem de seus argumentos de valor.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multimap_value_compare.cpp   
@@ -65,16 +62,19 @@ int main()
   
 ```  
   
-  **compare \(\[L'a, 1\], \[,\]\) L'a 1 \= retificam**  
-**compare \(\[L'a, 1\], \[,\]\) L'b 2 \= retificam**  
-**compare \(\[L'b, 2\], \[,\]\) L'a 1 \= false**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = True  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::key\_compare](../dotnet/hash-multimap-key-compare-stl-clr.md)   
- [hash\_multimap::value\_comp](../dotnet/hash-multimap-value-comp-stl-clr.md)   
- [hash\_multimap::value\_type](../dotnet/hash-multimap-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)   
+ [hash_multimap:: value_comp (STL/CLR)](../dotnet/hash-multimap-value-comp-stl-clr.md)   
+ [hash_multimap::value_type (STL/CLR)](../dotnet/hash-multimap-value-type-stl-clr.md)

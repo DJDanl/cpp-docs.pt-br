@@ -1,45 +1,27 @@
 ---
-title: "Arquétipo trabalho | Documentos do Microsoft"
+title: "Trabalho arquétipo | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- Worker archetype
+dev_langs: C++
+helpviewer_keywords: Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: a408af2ac7de2f71c98467e08c49187c346304e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="worker-archetype"></a>Arquétipo de trabalho
-Classes que estão em conformidade com a *trabalho* arquétipo fornecer o código para processar os itens de trabalho em fila em um pool de threads.  
+# <a name="worker-archetype"></a>Trabalho arquétipo
+Classes de acordo com o *trabalho* arquétipo fornecer o código para processar os itens de trabalho em fila em um pool de threads.  
   
  **Implementação**  
   
@@ -49,7 +31,7 @@ Classes que estão em conformidade com a *trabalho* arquétipo fornecer o códig
 |------------|-----------------|  
 |[Inicializar](#initialize)|Chamado para inicializar o objeto de trabalho antes de todas as solicitações são passadas para [Execute](#execute).|  
 |[Executar](#execute)|Chamado para processar um item de trabalho.|  
-|[Encerrar](#terminate)|Chamado para inicializar o objeto de trabalho depois que todas as solicitações foram passadas ao [Execute](#execute).|  
+|[Encerrar](#terminate)|Chamado para inicializar o objeto de trabalho depois que todas as solicitações foram passadas para [Execute](#execute).|  
   
 |DefTipo|Descrição|  
 |-------------|-----------------|  
@@ -57,7 +39,7 @@ Classes que estão em conformidade com a *trabalho* arquétipo fornecer o códig
   
  Um típico *trabalho* classe tem esta aparência:  
   
- [!code-cpp[NVC_ATL_Utilities&#137;](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
   
  **Implementações existentes**  
   
@@ -65,7 +47,7 @@ Classes que estão em conformidade com a *trabalho* arquétipo fornecer o códig
   
 |Classe|Descrição|  
 |-----------|-----------------|  
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Recebe solicitações do pool de threads e as passa para um objeto de trabalho que é criado e destruído para cada solicitação.|  
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Recebe solicitações do pool de threads e as transmite para um objeto de trabalho que é criado e destruído para cada solicitação.|  
   
  **Use**  
   
@@ -73,8 +55,8 @@ Classes que estão em conformidade com a *trabalho* arquétipo fornecer o códig
   
 |Nome do parâmetro|Usado por|  
 |--------------------|-------------|  
-|*Trabalho*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
-|*Trabalho*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
+|*Operador*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
+|*Operador*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlutil.h  
@@ -93,13 +75,13 @@ void Execute(
   
 #### <a name="parameters"></a>Parâmetros  
  `request`  
- O item de trabalho a serem processados. O item de trabalho é do mesmo tipo como `RequestType`.  
+ O item de trabalho a ser processado. O item de trabalho é o mesmo tipo da `RequestType`.  
   
  `pvWorkerParam`  
- Um parâmetro personalizado compreendido pela classe de trabalho. Também passado para `WorkerArchetype::Initialize` e `Terminate`.  
+ Um parâmetro personalizado compreendido pela classe de trabalho. Também é passado para `WorkerArchetype::Initialize` e `Terminate`.  
   
  `pOverlapped`  
- Um ponteiro para o [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estrutura usada para criar a fila na qual trabalho enfileirados itens.  
+ Um ponteiro para o [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estrutura usada para criar a fila em que o trabalho enfileirados itens.  
   
 ## <a name="initialize"></a>WorkerArchetype::Initialize
 Chamado para inicializar o objeto de trabalho antes de todas as solicitações são passadas para `WorkerArchetype::Execute`.  
@@ -109,10 +91,10 @@ BOOL Initialize(void* pvParam) throw();
   
 #### <a name="parameters"></a>Parâmetros  
  `pvParam`  
- Um parâmetro personalizado compreendido pela classe de trabalho. Também passado para `WorkerArchetype::Terminate` e `WorkerArchetype::Execute`.  
+ Um parâmetro personalizado compreendido pela classe de trabalho. Também é passado para `WorkerArchetype::Terminate` e `WorkerArchetype::Execute`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retornar **TRUE** com êxito, **FALSE** em caso de falha.  
+ Retornar **TRUE** em caso de sucesso, **FALSE** em caso de falha.  
   
 ## <a name="requesttype"></a>WorkerArchetype::RequestType
 Um typedef para o tipo de item de trabalho que pode ser processada pela classe de trabalho.  
@@ -125,7 +107,7 @@ typedef MyRequestType RequestType;
  Esse tipo deve ser usado como o primeiro parâmetro de `WorkerArchetype::Execute` e deve ser capaz de que está sendo convertido em um ULONG_PTR.  
   
 ## <a name="terminate"></a>WorkerArchetype::Terminate
-Chamado para inicializar o objeto de trabalho depois que todas as solicitações foram passadas ao `WorkerArchetype::Execute`).  
+Chamado para inicializar o objeto de trabalho depois que todas as solicitações foram passadas para `WorkerArchetype::Execute`).  
     
 ``` 
 void Terminate(void* pvParam) throw();
@@ -133,13 +115,12 @@ void Terminate(void* pvParam) throw();
   
 #### <a name="parameters"></a>Parâmetros  
  `pvParam`  
- Um parâmetro personalizado compreendido pela classe de trabalho. Também passado para `WorkerArchetype::Initialize` e `WorkerArchetype::Execute`.  
+ Um parâmetro personalizado compreendido pela classe de trabalho. Também é passado para `WorkerArchetype::Initialize` e `WorkerArchetype::Execute`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquétipos](../../atl/reference/atl-archetypes.md)   
  [Conceitos](../../atl/active-template-library-atl-concepts.md)   
- [Componentes da área de trabalho COM de ATL](../../atl/atl-com-desktop-components.md)
-
+ [Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)
 
 
 

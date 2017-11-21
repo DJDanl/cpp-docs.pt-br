@@ -1,42 +1,39 @@
 ---
-title: "hash_multimap::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro const_iterator [STL/CLR]"
+title: 'hash_multimap:: const_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 3d54185c-7d30-41e6-8837-92e62448bc8e
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 613b0a77a2455bb5af246635302c040cf6b3c813
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapconstiterator-stlclr"></a>hash_multimap::const_iterator (STL/CLR)
 O tipo de um iterador de constante para a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## Comentários  
- O tipo descreve um objeto do tipo não for especificado `T2` que pode servir como um iterador bidirecional constante para a sequência controlada.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um objeto do tipo especificado `T2` que pode servir como um iterador de constante bidirecional para a sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multimap_const_iterator.cpp   
@@ -61,12 +58,15 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::iterator](../dotnet/hash-multimap-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::iterator (STL/CLR)](../dotnet/hash-multimap-iterator-stl-clr.md)

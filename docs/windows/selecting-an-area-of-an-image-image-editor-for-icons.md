@@ -1,62 +1,60 @@
 ---
-title: "Selecionando uma &#225;rea de uma imagem (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.editing"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "cursores [C++], selecionando áreas de"
-  - "Editor de imagem [C++], seleção de imagem"
-  - "Editor de imagem [C++], selecionando imagens"
-  - "imagens [C++], selecionando"
+title: "Selecionando uma área de uma imagem (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.editing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], image selection
+- Image editor [C++], selecting images
+- images [C++], selecting
+- cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 02caf907ae59251a3a8988eeb5bd8e3269cd855b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Selecionando uma &#225;rea de uma imagem (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode usar ferramentas de seleção para definir uma área de uma imagem que você deseja recortar, copiar, limpar, redimensionar, inverter ou mover.  Com o  **Retângulo de seleção** ferramenta você pode definir e selecionar uma região retangular da imagem.  Com o  **Seleção Irregular** ferramenta você pode desenhar um contorno à mão livre da área que deseja selecionar o recorte, cópia ou outra operação.  
+# <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Selecionando uma área de uma imagem (editor de imagens para ícones)
+Você pode usar as ferramentas de seleção para definir uma área de uma imagem que você deseja recortar, copiar, limpar, redimensionar, inverter ou mover. Com o **seleção de retângulo** ferramenta, você pode definir e selecionar uma região retangular da imagem. Com o **seleção Irregular** ferramenta Desenhar um contorno traçado da área que você deseja selecionar a recortar, copiar ou outra operação.  
   
 > [!NOTE]
->  Consulte o  **Retângulo de seleção** e  **Seleção Irregular** ferramentas mostrado na  [barra de ferramentas do Editor de imagens](../mfc/toolbar-image-editor-for-icons.md) ou exiba as dicas de ferramenta associadas a cada botão no  **Editor de imagens** barra de ferramentas.  
+>  Consulte o **seleção de retângulo** e **seleção Irregular** ferramentas mostrado na [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md) ou exibir as dicas de ferramenta associadas a cada botão de **Editor de imagem** barra de ferramentas.  
   
- Você também pode criar um pincel personalizado a partir de uma seleção.  Para obter mais informações, consulte  [criar um pincel personalizado](../Topic/Creating%20a%20Custom%20Brush%20\(Image%20Editor%20for%20Icons\).md).  
+ Você também pode criar um pincel personalizado de uma seleção. Para obter mais informações, consulte [criando um pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
-### Para selecionar uma área de uma imagem  
+### <a name="to-select-an-area-of-an-image"></a>Para selecionar uma área de uma imagem  
   
-1.  No  **Editor de imagens** barra de ferramentas \(ou a partir do  **imagem** menu,  **Ferramentas** comando\), clique na ferramenta de seleção que você deseja.  
+1.  No **Editor de imagem** barra de ferramentas (ou o **imagem** menu **ferramentas** comando), clique na ferramenta de seleção que você deseja.  
   
-2.  Mova o ponto de inserção para um canto da área de imagem que você deseja selecionar.  Mira aparecer quando o ponto de inserção estiver sobre a imagem.  
+2.  Mova o ponto de inserção para um dos cantos da área da imagem que você deseja selecionar. Cursores em cruz aparecem quando o ponto de inserção estiver sobre a imagem.  
   
-3.  Arraste o ponto de inserção até o canto oposto da área que deseja selecionar.  Um retângulo mostra quais pixels serão selecionados.  Todos os pixels dentro do retângulo, incluindo aqueles sob o retângulo, estão incluídos na seleção.  
+3.  Arraste o ponto de inserção para o canto oposto da área que você deseja selecionar. Um retângulo mostra quais pixels serão selecionados. Todos os pixels dentro do retângulo, inclusive as encontradas sob o retângulo, estão incluídos na seleção.  
   
-4.  Solte o botão do mouse.  A borda de seleção delimita a área selecionada.  
+4.  Solte o botão do mouse. A borda de seleção coloca na área selecionada.  
   
-### Para selecionar uma imagem inteira  
+### <a name="to-select-an-entire-image"></a>Para selecionar uma imagem inteira  
   
-1.  Clique na imagem fora da seleção atual.  A borda de seleção altera o foco e abrange a imagem inteira novamente.  
+1.  Clique na imagem fora da seleção atual. A borda de seleção muda o foco e abrange a imagem inteira novamente.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
  Nenhum  
   
-## Consulte também  
- [Teclas de aceleração](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editando recursos gráficos](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
+

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - wsopen
 - _sopen
 - _tsopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sopen function
 - sharing files
@@ -41,30 +39,15 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aac10cebd0f967944403837283e9008b0b1047fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 2a28e6a05676b7340c4dfbf3e963e6046c7beafa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 Abre um arquivo para compartilhamento. Versões mais seguras dessas funções estão disponíveis – consulte [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -108,7 +91,7 @@ int _wsopen(
  O caminho determinado é um diretório ou o arquivo é somente leitura, mas foi realizada uma tentativa de operação de abertura para gravação.  
   
  `EEXIST`  
-Sinalizadores  `_O_CREAT` e `_O_EXCL` foram especificados, mas `filename` já existe.  
+ Sinalizadores `_O_CREAT` e `_O_EXCL` foram especificados, mas `filename` já existe.  
   
  `EINVAL`  
  Argumento `oflag` ou `shflag` inválido.  

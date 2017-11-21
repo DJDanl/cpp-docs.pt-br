@@ -1,47 +1,27 @@
 ---
-title: "Compilador aviso (nível 1) C4631 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4631 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4631
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4631
+f1_keywords: C4631
+dev_langs: C++
+helpviewer_keywords: C4631
 ms.assetid: d8636ff6-29a7-4fec-b9a6-e201d121c3ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d9866eff061ac95889611fab19a4abe2dd4d50f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 130ad012d268b9547552a1583f86c5a500a4c691
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4631"></a>Compilador C4631 de aviso (nível 1)
-MSXML ou XPath não estiver disponível, documento XML comentários não serão processados. motivo  
+MSXML ou XPath indisponível, documento XML de comentários não serão processados. Motivo  
   
- A instalação de tempo de execução de linguagem comum não possui os arquivos necessários para dar suporte ao processamento de comentário em documento. Reinstale o common language runtime.
+ A instalação de tempo de execução de linguagem comum não tinha os arquivos necessários para dar suporte ao processamento de comentário de documento. Reinstale o Common Language Runtime.

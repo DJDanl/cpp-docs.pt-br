@@ -1,62 +1,61 @@
 ---
-title: "Compilando projetos do C++ no Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilações [C++], sobre compilação no Visual Studio"
-  - "projetos [C++], compilando"
-  - "Projetos Visual C++, compilando"
+title: Compilando projetos do C++ no Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++ projects, building
+- projects [C++], building
+- builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0aea958eb441f3b2b4d1adb993f1b92ae8359530
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/31/2017
 ---
-# Compilando projetos do C++ no Visual Studio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-No IDE \(ambiente de desenvolvimento integrado\) do Visual Studio há diversas formas de compilar uma solução completa ou apenas um projeto em uma solução.  Você também pode modificar as definições de compilação e especificar etapas de compilação especificadas para aumentar a eficiência do seu processo de desenvolvimento.  
+# <a name="building-c-projects-in-visual-studio"></a>Compilando projetos do C++ no Visual Studio
+No IDE (ambiente de desenvolvimento integrado) do Visual Studio há diversas formas de compilar uma solução completa ou apenas um projeto em uma solução. Você também pode modificar as definições de compilação e especificar etapas de compilação especificadas para aumentar a eficiência do seu processo de desenvolvimento.  
   
- Para compilar uma solução que está aberta no [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] e selecionada no **Gerenciador de Soluções**, execute uma destas ações:  
+ Para criar uma solução que é aberto no Visual Studio e selecionado na **Solution Explorer**, você pode:  
   
 -   Na barra de menus, escolha **Compilar**, **Compilar Solução**.  
   
--   Abra o menu de atalho da solução no **Gerenciador de Soluções** e clique em **Compilar Solução**.  
+-   Ou, no **Solution Explorer**, abra o menu de atalho para a solução e, em seguida, escolha **compilar solução**.  
   
--   Ou pressione F7.  \(esse é o atalho padrão do teclado para as definições de desenvolvimento em C\/C\+\+\).  
+-   Ou pressione F7. (esse é o atalho padrão do teclado para as definições de desenvolvimento em C/C++).  
   
--   Na [Janela Comando](../Topic/Command%20Window.md) \(na barra de menus, clique em **Exibição**, **Outras Janelas**, **Janela Comando**\), digite `Build.BuildSolution`.  
+-   Ou, no [janela comando](/visualstudio/ide/reference/command-window) (na barra de menus, escolha **exibição**, **outras janelas**, **janela comando**), digite `Build.BuildSolution`.  
   
--   Na caixa [Início Rápido](../Topic/Quick%20Launch,%20Environment,%20Options%20Dialog%20Box.md), digite `build build solution`.  
+-   Ou, no [início rápido](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) , digite `build build solution`.  
   
- Para compilar um projeto selecionado no **Gerenciador de Soluções**, execute uma destas ações:  
+ Para criar um projeto que está selecionado no **Solution Explorer**, você pode:  
   
--   Na barra de menus, clique em **Compilar**, **Compilar \<Nome do projeto\>**.  
+-   Na barra de menus, escolha **criar**, **criar \<nome do projeto >**.  
   
--   No **Gerenciador de Soluções**, abra um menu de atalho para o projeto e clique em **Compilar**.  
+-   Ou, no **Solution Explorer**, abra o menu de atalho para o projeto e, em seguida, escolha **criar**.  
   
--   Na Janela de Comando \(na barra de menus, clique em **Exibição**, **Outras Janelas**, **Janela Comando**\), digite `Build.BuildOnlyProject`.  
+-   Ou, na janela de comando (na barra de menus, escolha **exibição**, **outras janelas**, **janela comando**), digite `Build.BuildOnlyProject`.  
   
--   Na caixa Início rápido, digite `build project only build only <nome do projeto>`.  
+-   Ou, na caixa de início rápido, digite `build project only build only <project name>`.  
   
- Ao compilar um aplicativo em Visual C\+\+ no Visual Studio, você pode modificar diversas definições da compilação na caixa de diálogo Páginas de Propriedades do projeto.  Para saber mais sobre como definir propriedades de projetos, consulte [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
+ Ao compilar um aplicativo em Visual C++ no Visual Studio, você pode modificar diversas definições da compilação na caixa de diálogo Páginas de Propriedades do projeto. Para obter informações sobre como definir propriedades do projeto, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
   
- Para ver um exemplo de como usar o IDE para criar, compilar e depurar um projeto em C\+\+, consulte [Passo a passo: explore o IDE do Visual Studio com o C\+\+](../Topic/Getting%20Started%20with%20C++%20in%20Visual%20Studio.md).  Para ver um exemplo de como usar o IDE para compilar um projeto em C\+\+\/CLR, consulte [Instruções passo a passo: compilando um programa C\+\+ que se destina ao CLR no Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  Para ver um exemplo de como usar o IDE para criar um aplicativo de tempo de execução do Windows, consulte [Criar seu primeiro aplicativo do tempo de execução do Windows em C\+\+](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Para obter um exemplo sobre como usar o IDE para criar, compilar e depurar um projeto do C++, consulte [passo a passo: explorar o IDE do Visual Studio com C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Para obter um exemplo sobre como usar o IDE para criar um C + + projeto CLR, consulte [passo a passo: compilando um programa C++ que tem como alvo o CLR no Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Para obter um exemplo sobre como usar o IDE para criar um aplicativo de tempo de execução do Windows, consulte [criar seu primeiro aplicativo de tempo de execução do Windows usando C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
  Para saber mais sobre como compilar, modificar definições de compilação e especificar etapas de compilação personalizadas, consulte os artigos mencionados a seguir.  
   
-## Nesta seção  
- [Noções básicas de etapas e eventos de compilação personalizados](../ide/understanding-custom-build-steps-and-build-events.md)  
+## <a name="in-this-section"></a>Nesta seção  
+ [Noções básicas sobre etapas e eventos compilação personalizada](../ide/understanding-custom-build-steps-and-build-events.md)  
  Descreve como personalizar o processo de compilação no ambiente de desenvolvimento integrado.  
   
  [Macros comuns para compilar comandos e propriedades](../ide/common-macros-for-build-commands-and-properties.md)  
@@ -68,24 +67,24 @@ No IDE \(ambiente de desenvolvimento integrado\) do Visual Studio há diversas f
  [Arquivos de projeto](../ide/project-files.md)  
  Apresenta a estrutura XML de um arquivo .vcxproj.  
   
-## Seções relacionadas  
- [VC\+\+ Directories, Projects, Options Dialog Box](http://msdn.microsoft.com/pt-br/e027448b-c811-4c3d-8531-4325ad3f6e02)  
- Fala sobre como modificar um caminho de pesquisa de arquivos executáveis, arquivos de inclusão, arquivos de biblioteca e arquivos de código\-fonte durante uma compilação.  
+## <a name="related-sections"></a>Seções relacionadas  
+ [VC + + caixa de diálogo Opções de diretórios, projetos,](vcpp-directories-property-page.md)  
+ (Somente para projetos de MSBuild) Descreve como modificar o caminho de pesquisa de arquivos executáveis, incluem arquivos, arquivos de biblioteca e arquivos de código fonte durante uma compilação.  
   
- [Compilando aplicativos no Visual Studio](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)  
+ [Compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Fornece informações sobre como compilar no Visual Studio.  
   
- [Compilando programas do C\/C\+\+](../build/building-c-cpp-programs.md)  
+ [Compilando programas do C/C++](../build/building-c-cpp-programs.md)  
  Fornece links para tópicos que descrevem como compilar seu programa pela linha de comando ou pelo ambiente de desenvolvimento integrado do Visual Studio.  
   
- [Referência de compilação do C\/C\+\+](../Topic/C-C++%20Building%20Reference.md)  
- Fornece links para uma visão geral sobre os programas de compilação em C\+\+, opções de compilador e vinculador, e outras ferramentas de compilação.  
+ [Referência de build C/C++](../build/reference/c-cpp-building-reference.md)  
+ Fornece links para uma visão geral sobre os programas de compilação em C++, opções de compilador e vinculador, e outras ferramentas de compilação.  
   
- [Atualizando projetos a partir de versões anteriores do Visual C\+\+](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- Fornece links para tópicos sobre problemas com a atualização para o Visual C\+\+ 6.0 e projetos posteriores ao Visual C\+\+ .NET.  
+ [Atualizando projetos de versões anteriores do Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+ Fornece links para tópicos que abrangem os problemas na atualização de seu projeto de C++ para versões mais recentes do conjunto de ferramentas de compilador.  
   
- [Porting and Upgrading Programs](http://msdn.microsoft.com/pt-br/c36c44b3-5a9b-4bb4-9b7a-469aa770ed00)  
- Fornece detalhes sobre como fazer a portabilidade de aplicativos e fala sobre makefiles.  
+[Guia de atualização e portabilidade do Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)  
+  Informações detalhadas sobre como atualizar aplicativos C++ que foram criados em versões anteriores do Visual Studio e também como migrar aplicativos que foram criados usando ferramentas que não sejam o Visual Studio.  
   
-## Consulte também  
- [Roadmap for Windows Store apps using C\+\+](http://msdn.microsoft.com/pt-br/0b71e4a4-5d8a-4a20-b2ec-e40062675ec1)
+## <a name="see-also"></a>Consulte também  
+ [Roteiro para aplicativos da Windows Store usando C++](http://msdn.microsoft.com/en-us/0b71e4a4-5d8a-4a20-b2ec-e40062675ec1)

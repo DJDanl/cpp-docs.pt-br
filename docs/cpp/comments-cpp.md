@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code comments, C++
 - comments, documenting code
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c6c97e27ff4019eec3ee3f63f2b4ed06db6af317
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 828d02ddd02c7484e142333bdb87453f8fb922e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comments-c"></a>Comentários (C++)
 Um comentário é um texto que o compilador ignora, mas que é útil para os programadores. Normalmente, os comentários são usados para fazer anotações no código para fins de referência futura. O compilador os trata como espaço em branco. Você pode usar comentários no teste para tornar certas linhas de código inativo; No entanto, `#if` / `#endif` diretivas de pré-processador funcionam melhor para isso porque você pode colocar o código que contém comentários, mas não é possível aninhar comentários.  

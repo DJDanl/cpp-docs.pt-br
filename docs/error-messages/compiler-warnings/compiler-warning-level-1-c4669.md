@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 1) C4669 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4669 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4669
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4669
+f1_keywords: C4669
+dev_langs: C++
+helpviewer_keywords: C4669
 ms.assetid: 97730679-e3dc-44d4-b2a8-aa65badc17f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 92bcfff116815eb51d017fbf2f06cd8796fe2d0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 203650a0d1e53fe9e13ca6dae58dfa3d0a42e4ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4669"></a>Compilador C4669 de aviso (nível 1)
-'cast': conversão não segura: 'class' é um serviço ou objeto de tipo do WinRT  
+'cast': conversão não segura: 'class' é um serviço ou objeto de tipo de WinRT  
   
- Uma conversão contém um tempo de execução do Windows ou um tipo gerenciado. O compilador conclui a conversão, executando uma cópia bit a bit de um ponteiro para o outro, mas não fornece nenhuma outra verificação. Para resolver esse aviso, não converta classes que contêm membros gerenciados ou tipos de tempo de execução do Windows.  
+ Uma conversão contém um tempo de execução do Windows ou um tipo gerenciado. O compilador conclui a conversão, efetuar uma cópia de bit a bit de um ponteiro para o outro, mas não fornece nenhuma outra verificação. Para resolver este aviso, não converta classes que contêm membros gerenciados ou tipos de tempo de execução do Windows.  
   
  O exemplo a seguir gera C4669 e mostra como corrigi-lo:  
   

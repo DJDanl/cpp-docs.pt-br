@@ -1,66 +1,65 @@
 ---
-title: "Recursos localizados em aplicativos MFC: DLLs sat&#233;lites | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], localizando MFC"
-  - "localização [C++], Recursos MFC"
-  - "recursos localizados [C++]"
-  - "DLLs MFC [C++], localizando"
-  - "suporte a vários idiomas [C++]"
-  - "DLLs somente de recursos [C++]"
-  - "DLLs somente de recursos [C++], Aplicativos MFC"
-  - "recursos [MFC], localizando"
-  - "DLLs satélites [C++]"
+title: "Recursos localizados em aplicativos MFC: DLLs satélites | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multiple language support [C++]
+- localization [C++], MFC resources
+- localized resources [C++]
+- MFC DLLs [C++], localizing
+- DLLs [C++], localizing MFC
+- resources [MFC], localizing
+- resource-only DLLs [C++]
+- resource-only DLLs [C++], MFC applications
+- satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8f601c32a1fe2accec2663246a56830fda5ed930
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Recursos localizados em aplicativos MFC: DLLs sat&#233;lites
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC a versão 7,0 e posterior oferece suporte aprimorado para a DLL satélite, um recurso que ajuda a criar aplicativos localizados em vários idiomas.  Uma DLL satélite é [a DLL de recurso somente](../build/creating-a-resource-only-dll.md) que contém os recursos de um aplicativo localizados para um idioma específico.  Quando o aplicativo inicia a execução, o MFC carregará automaticamente o recurso localizada o mais apropriado para o ambiente.  Por exemplo, você pode ter um aplicativo com recursos de idioma inglês com dois DLL satélite, um que contém uma tradução francesa de seus recursos e outro que contém uma tradução alemão.  Quando o aplicativo for executado em um sistema de idioma inglês, use os recursos em inglês.  Se for executado em um sistema francês, usa os recursos franceses; se for executado em um sistema alemão, usar os recursos de alemão.  
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Recursos localizados em aplicativos MFC: DLLs satélites
+Versão MFC 7.0 e posterior oferece suporte avançado para satélite DLLs, um recurso que ajuda na criação de aplicativos localizados em vários idiomas. Uma DLL de satélite um [somente de recurso DLL](../build/creating-a-resource-only-dll.md) que contém os recursos do aplicativo localizados para um idioma específico. Quando o aplicativo começa a executar, MFC carrega automaticamente o recurso localizado mais apropriado para o ambiente. Por exemplo, você pode ter um aplicativo com recursos de idioma inglês com duas satélite DLLs, uma que contém uma tradução francesa de seus recursos e outra que contém uma tradução para o alemão. Quando o aplicativo é executado em um sistema de idioma inglês, ele usa os recursos em inglês. Se executado em um sistema em francês, ele usa os recursos em francês; Se executado em um sistema em alemão, ele usa os recursos em alemão.  
   
- Para dar suporte a recursos localizada em um aplicativo, MFC tentativas de MFC de carregar uma DLL satélite que contém os recursos encontrados em um idioma específico.  Os DLL satélite são nomeados *ApplicationNameXXX.dll*, onde ApplicationNameis o nome do arquivo .dll ou de MFC usando o, e o XXXIS o código de três letras para o idioma dos recursos \(por exemplo, “POR” ou “DEU "\).  
+ Para dar suporte a recursos localizados em um aplicativo MFC, MFC tenta carregar uma DLL satélite que contém recursos localizados para um idioma específico. DLLs satélite são nomeados *ApplicationNameXXX*. dll, onde *ApplicationName* é o nome do .exe ou. dll usando MFC, e *XXX* é o código de três letras para o idioma os recursos (por exemplo, 'PTB' ou 'DEU').  
   
- MFC O tentar carregar a DLL de recurso para cada um dos seguintes idiomas em ordem, parando quando encontrar um:  
+ MFC tenta carregar a DLL de recurso para cada um dos seguintes idiomas na ordem, parando quando encontrar um:  
   
-1.  \(Windows 2000 ou posterior\) somente o idioma padrão da interface do usuário do usuário atual, como retornado de GetUserDefaultUILanguage\(\) a API do Win32.  
+1.  (Windows 2000 ou posterior somente) Da interface do usuário idioma padrão do usuário atual, conforme retornado da API do Win32 GetUserDefaultUILanguage().  
   
-2.  \(Windows 2000 ou posterior\) somente o idioma padrão da interface do usuário do usuário atual, sem qualquer subidioma específico \(isto é, o ENC \[\] inglês canadense se torna \[POR E.U.  Inglês\]\).  
+2.  (Windows 2000 ou posterior somente) Idioma de interface do usuário padrão do usuário atual, sem qualquer subidioma específico (ou seja, ENC [inglês canadense] se torna PTB [dos EUA Em inglês]).  
   
-3.  O idioma da interface do usuário padrão do sistema.  No Windows 2000 ou posterior, isto é retornado de GetSystemDefaultUILanguage\(\) API.  Em outras plataformas, esse é o idioma do sistema operacional próprio.  
+3.  O idioma do sistema padrão da interface do usuário. No Windows 2000 ou posterior, é retornado da API GetSystemDefaultUILanguage(). Em outras plataformas, esse é o idioma do sistema operacional em si.  
   
-4.  O idioma da interface do usuário padrão do sistema, sem qualquer subidioma específico.  
+4.  O idioma padrão do sistema da interface do usuário, sem qualquer subidioma específico.  
   
-5.  Falso um idioma com o código LOC de 3 letras.  
+5.  Uma linguagem falsa com o código de 3 letras loc.  
   
- Se o MFC não encontrar DLL satélite, o usa recursos que estão contidos no próprio aplicativo.  
+ Se o MFC não encontrar qualquer DLLs satélite, ele usa todos os recursos que estão contidos no próprio aplicativo.  
   
- Como exemplo, suponha que um aplicativo LangExample.exe usa o MFC e o estiver executando o sistema da interface do usuário do Windows 2000 em vários; o idioma do sistema interface do usuário é ENU \[E.U.  O inglês\] e o idioma atual da interface de usuário do usuário são definidos como FRC \[\] francês canadense.  O MFC procura os seguintes dlls na seguinte ordem:  
+ Por exemplo, suponha que um aplicativo LangExample.exe usa MFC e está em execução no Windows 2000, vários sistemas de interface do usuário; o idioma da interface do usuário do sistema é ENU [dos EUA Em inglês] e o idioma da interface do usuário atual é definido como FRC [francês canadense]. MFC procura as DLLs a seguir na seguinte ordem:  
   
-1.  LangExampleFRC.dll \(linguagem de interface de usuário do usuário\).  
+1.  LangExampleFRC.dll (idioma da interface do usuário do usuário).  
   
-2.  LangExampleFRA.dll \(linguagem de interface de usuário do usuário sem subidioma, neste exemplo de francês \(França\).  
+2.  LangExampleFRA.dll (linguagem de interface do usuário do usuário sem subidioma, neste exemplo, francês (França).  
   
-3.  LangExampleENU.dll \(linguagem de interface do usuário do sistema\).  
+3.  LangExampleENU.dll (idioma da interface do usuário do sistema).  
   
 4.  LangExampleLOC.dll.  
   
- Se nenhum desses DLL for encontrado, o MFC usa os recursos em LangExample.exe.  
+ Se nenhuma dessas DLLs forem encontradas, o MFC usa os recursos no LangExample.exe.  
   
-## Consulte também  
- [DLLs no Visual C\+\+](../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>Consulte também  
+ [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)   
  [TN057: localização de componentes MFC](../mfc/tn057-localization-of-mfc-components.md)

@@ -1,47 +1,28 @@
 ---
-title: ordenado (diretivas OpenMP) | Documentos do Microsoft
+title: ordenado (diretivas OpenMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- ordered
-dev_langs:
-- C++
-helpviewer_keywords:
-- ordered OpenMP directive
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2674c1356bb4c985d1dd7cd40c65e1ea845f836c
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 85e4b969c7cf47e2243418db52bbdf2299bdafd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ordered-openmp-directives"></a>ordered (diretivas OpenMP)
-Especifica o código em um em paralelo para loop deve ser executado como um loop sequencial.  
+Especifica que o código em um em paralelo para loop deve ser executado como um loop sequencial.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,9 +32,9 @@ Especifica o código em um em paralelo para loop deve ser executado como um loop
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **ordenados** diretiva deve estar dentro da extensão dinâmica de um [para](../../../parallel/openmp/reference/for-openmp.md) ou **paralela para** construir com um **ordenados** cláusula.  
+ O **ordenados** diretiva deve estar dentro a extensão dinâmica de um [para](../../../parallel/openmp/reference/for-openmp.md) ou **paralelo para** construir com um **ordenados** cláusula.  
   
- O **ordenados** diretiva oferece suporte a nenhum cláusulas OpenMP.  
+ O **ordenados** diretiva dá suporte a nenhuma cláusulas OpenMP.  
   
  Para obter mais informações, consulte [2.6.6 constructo ordered](../../../parallel/openmp/2-6-6-ordered-construct.md).  
   

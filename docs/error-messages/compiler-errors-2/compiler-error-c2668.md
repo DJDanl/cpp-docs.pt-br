@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2668
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2668
+f1_keywords: C2668
+dev_langs: C++
+helpviewer_keywords: C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 6bb1dc7c1dbf26a4ff8ec25a46fe7128e0fb6aa8
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 48af783aab38f7d314d0b8cf45d876e6a8682030
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2668"></a>C2668 de erro do compilador
 'function': chamada ambígua para função sobrecarregada  
@@ -71,7 +52,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- Outra maneira de resolver esse erro é com um [utilizando declaração](../../cpp/using-declaration.md):  
+ Outra maneira de resolver esse erro é com um [usando declaração](../../cpp/using-declaration.md):  
   
 ```  
 // C2668b.cpp  
@@ -113,7 +94,7 @@ class MyTestCase : public AppTestCase {
 ```  
   
 ## <a name="example"></a>Exemplo  
- Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: ambíguo conversão na conversão de constante 0.  
+ Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: conversão ambíguo em conversão de constante 0.  
   
  Conversão de uma conversão usando a constante 0 é ambíguo como int requer uma conversão de ambos os longa e void *. Para resolver esse erro, converta 0 para o tipo exato do parâmetro de função que está sendo usado de forma que nenhuma conversão precisa ocorrer (esse código será válido das versões do Visual Studio .NET 2003 e o Visual Studio .NET do Visual C++).  
   
@@ -162,7 +143,7 @@ int main() {
 ```
 
 ## <a name="example"></a>Exemplo  
-Esse código é bem-sucedida no Visual Studio 2015, mas não em 2017 do Visual Studio e posterior com C2668. No Visual Studio 2015, o compilador tratou a inicialização de lista de cópia de maneira incorreta da mesma maneira que a inicialização de cópia regular; ele considerou somente a conversão de construtores para a resolução de sobrecarga. 
+Esse código é bem-sucedida no Visual Studio 2015, mas não no Visual Studio de 2017 e posterior com C2668. No Visual Studio 2015, o compilador tratou a inicialização de lista de cópia de maneira incorreta da mesma maneira que a inicialização de cópia regular; ele considerou somente a conversão de construtores para a resolução de sobrecarga. 
 
 ```
 C++

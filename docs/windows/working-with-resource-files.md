@@ -1,61 +1,61 @@
 ---
-title: "Trabalhando com arquivos de recurso | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos de recurso, sobre arquivos de recurso"
-  - "recursos [C++], sobre arquivos de recurso"
-  - "recursos [Visual Studio], sobre recursos"
+title: Trabalhando com arquivos de recurso | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], about resources
+- resources [C++], about resource files
+- resource files, about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-caps.latest.revision: 22
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74e46aeae58e95b7d455923f6f082f5e10952826
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Trabalhando com arquivos de recurso
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="working-with-resource-files"></a>Trabalhando com arquivos de recurso
 > [!WARNING]
->  Esta seção aplica\-se a aplicativos de área de trabalho do Windows escritos em C\+\+. Para obter informações sobre os recursos na [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] aplicativos escritos em C\+\+, consulte [definindo recursos do aplicativo](http://msdn.microsoft.com/pt-br/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  Esta seção se aplica a aplicativos de área de trabalho do Windows escritos em C++. Para obter informações sobre os recursos em aplicativos de plataforma Universal do Windows gravados em C++, consulte [definindo recursos do aplicativo](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
->  Para obter informações sobre como adicionar recursos C \+ \+ \/ projetos CLI, consulte [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.*  
+>  Para obter informações sobre como adicionar recursos C + + projetos CLI, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
   
- Recursos podem ser compostos de uma grande variedade de elementos, incluindo elementos de interface que fornecem informações para o usuário \(por exemplo um bitmap, ícone ou cursor\); recursos personalizados que contêm dados de que um aplicativo precisa; recursos de versão que são usados por APIs de configuração e recursos de caixa de menu e caixa de diálogo.  
+ Os recursos podem ser compostos de uma ampla variedade de elementos, como elementos de interface que fornecem informações para o usuário (por exemplo, um bitmap, ícone ou cursor); recursos personalizados que contêm dados que um aplicativo necessita; recursos de versão que são usados por APIs de configuração e recursos de menu e caixa de diálogo.  
   
- Você pode adicionar novos recursos ao seu projeto e modificar esses recursos usando o editor de recursos apropriado. A maioria dos assistentes do Visual C\+\+ gerará automaticamente um arquivo. RC para seu projeto.  
+ Você pode adicionar novos recursos ao seu projeto e modificar esses recursos usando o editor de recursos adequado. A maioria dos assistentes do Visual C++ gerará automaticamente um arquivo .rc para o seu projeto.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Nesta seção  
- [Arquivos de recursos](../mfc/resource-files-visual-studio.md)  
- Descreve os arquivos de recurso e como eles são usados em aplicativos de área de trabalho do Windows. Também fornece links para tópicos que descrevem como usar arquivos de recurso.  
+## <a name="in-this-section"></a>Nesta seção  
+ [Arquivos de recurso](../windows/resource-files-visual-studio.md)  
+ Descreve os arquivos de recurso e como eles são usados em aplicativos de área de trabalho do Windows. Também fornece links para tópicos que descrevem como usar arquivos de recursos.  
   
- [Símbolos: Identificadores de recursos](../mfc/symbols-resource-identifiers.md)  
- Descreve símbolos e fornece informações sobre como usar o **símbolos de recurso** caixa de diálogo Gerenciar símbolos em seus projetos.  
+ [Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)  
+ Descreve os símbolos e fornece informações sobre como usar o **símbolos de recurso** caixa de diálogo para gerenciar os símbolos em seus projetos.  
   
- [Editores de recursos](../mfc/resource-editors.md)  
- Descreve os editores de recursos fornecidos no Visual Studio, os tipos de recursos você pode modificar com cada editor e fornece links para informações detalhadas sobre como usar cada editor.  
+ [Editores de recursos](../windows/resource-editors.md)  
+ Descreve os editores de recursos fornecidos no Visual Studio, os tipos de recursos que você pode modificar com cada editor e fornece links para informações detalhadas sobre como usar cada editor.  
   
-## Seções relacionadas  
- [Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)  
- Fornece links para a documentação do Visual C\+\+.  
+## <a name="related-sections"></a>Seções relacionadas  
+ [Visual C++](../visual-cpp-in-visual-studio.md)  
+ Fornece links para a documentação do Visual C++.  
   
- [Introdução ao Visual Studio](http://msdn.microsoft.com/pt-br/99997089-56ff-4d60-81a9-447062dc98ac)  
- Descreve o conjunto completo de ferramentas de desenvolvimento que todos usam o mesmo ambiente de desenvolvimento integrado \(IDE\), permitindo que compartilhem ferramentas e facilita a criação de soluções em linguagens mistas.  
+ [Introdução ao Visual Studio](http://msdn.microsoft.com/en-us/99997089-56ff-4d60-81a9-447062dc98ac)  
+ Descreve o conjunto completo de ferramentas de desenvolvimento que todas usam o mesmo ambiente de desenvolvimento integrado (IDE), o que permite compartilhar ferramentas e facilita na criação de soluções de linguagens mistas.  
   
- [Fale conosco](../Topic/Talk%20to%20Us.md)  
- Fornece links para informações sobre usando o conjunto de documentação, entrando em contato com o suporte ao produto e empregar recursos de acessibilidade.  
+ [Fale conosco](/visualstudio/ide/talk-to-us)  
+ Fornece links para informações sobre o uso do conjunto de documentação, o contado com suporte ao produto, e a aplicação de recursos de acessibilidade.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicativos de área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)   
  [Menus e outros recursos](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+

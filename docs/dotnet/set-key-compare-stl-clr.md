@@ -1,43 +1,40 @@
 ---
-title: "set::key_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::key_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro key_compare [STL/CLR]"
+title: 'set:: key_compare (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::key_compare
+dev_langs: C++
+helpviewer_keywords: key_compare member [STL/CLR]
 ms.assetid: 4ce14c96-24d7-48eb-ae78-4ab192f7422a
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ad7d09ef3bd3265ded0d6738dab3ebabb43fb4c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# set::key_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O delegado de ordenação para duas chaves.  
+# <a name="setkeycompare-stlclr"></a>set::key_compare (STL/CLR)
+O representante de ordenação para duas chaves.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o delegado que determina a ordem dos argumentos chaves.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo para o representante que determina a ordem de seus argumentos de chave.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_set_key_compare.cpp   
@@ -73,19 +70,23 @@ int main()
   
 ```  
   
-  **compare \(L'a, L'a\) \= false**  
-**compare \(L'a, L'b\) \= retificam**  
-**compare \(L'b, L'a\) \= false**  
-**compare \(L'a, L'a\) \= false**  
-**compare \(L'a, L'b\) \= false**  
-**compare \(L'b, L'a\) \= retificam**   
-## Requisitos  
- cliext \<\/conjunto de**Cabeçalho:** \>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- cliext de**Namespace:**  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Consulte também  
- [set](../dotnet/set-stl-clr.md)   
- [set::key\_comp](../dotnet/set-key-comp-stl-clr.md)   
- [set::key\_type](../dotnet/set-key-type-stl-clr.md)   
- [set::value\_compare](../Topic/set::value_compare%20\(STL-CLR\).md)
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/set >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [conjunto (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)   
+ [set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)   
+ [set::value_compare (STL/CLR)](../dotnet/set-value-compare-stl-clr.md)

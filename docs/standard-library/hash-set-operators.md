@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
+ms.openlocfilehash: e5205240d4f0bbfbf41423ee73a737e7d2bd0667
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62ad48b857b4136f2f8abbdef6ec3b5acddc00d8
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="lthashsetgt-operators"></a>Operadores &lt;hash_set&gt;
 ||||  
@@ -116,7 +114,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 ### <a name="remarks"></a>Comentários  
  A comparação entre objetos hash_set é baseada em uma comparação de paridade de seus elementos. Dois hash_sets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
   
- No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [Namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
+   
   
 ### <a name="example"></a>Exemplo  
   
@@ -181,7 +179,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 ### <a name="remarks"></a>Comentários  
  A comparação entre os objetos hash_multiset é baseada em uma comparação de paridade de seus elementos. Dois hash_multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
   
- No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [Namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
+   
   
 ### <a name="example"></a>Exemplo  
   
@@ -246,8 +244,6 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 ### <a name="remarks"></a>Comentários  
  A comparação entre os objetos hash_multiset é baseada em uma comparação de paridade de seus elementos. Dois hash_multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
   
- No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
-  
 ### <a name="example"></a>Exemplo  
   
 ```cpp  
@@ -289,5 +285,4 @@ The hash_multisets s1 and s2 are equal.
   
 ## <a name="see-also"></a>Consulte também  
  [<hash_set>](../standard-library/hash-set.md)
-
 

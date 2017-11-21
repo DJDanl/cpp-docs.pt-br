@@ -1,44 +1,25 @@
 ---
-title: particular (OpenMP) | Documentos do Microsoft
+title: privada (OpenMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- private
-dev_langs:
-- C++
-helpviewer_keywords:
-- private OpenMP clause
+f1_keywords: private
+dev_langs: C++
+helpviewer_keywords: private OpenMP clause
 ms.assetid: 772904a2-1345-4562-90e6-eb4dc85aea1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7dc111f5ad953aa3a466a1ae8d5c098860359c0e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 21193361d10acdbf506e0b9f8e09ba5d7da598d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 Especifica que cada thread deve ter sua própria instância de uma variável.  
@@ -53,18 +34,18 @@ private(var)
  onde,  
   
  `var`  
- A variável ter instâncias em cada segmento.  
+ A variável para ter instâncias em cada thread.  
   
 ## <a name="remarks"></a>Comentários  
- **privada** se aplica aos seguintes diretivas:  
+ **privada** se aplica às seguintes diretivas:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [paralelo](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [seções](../../../parallel/openmp/reference/sections-openmp.md)  
   
--   [único](../../../parallel/openmp/reference/single.md)  
+-   [single](../../../parallel/openmp/reference/single.md)  
   
  Para obter mais informações, consulte [2.7.2.1 particular](../../../parallel/openmp/2-7-2-1-private.md).  
   

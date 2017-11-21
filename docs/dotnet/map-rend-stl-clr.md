@@ -1,42 +1,39 @@
 ---
-title: "map::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro rend [STL/CLR]"
+title: 'Map:: rend (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 132d9a82-f76a-4f3e-8d21-26de17e1245f
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 642e5aa236018094eedaf46c3a8d0a6e7578fe95
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# map::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Designa o término da sequência controlada invertida.  
+# <a name="maprend-stlclr"></a>map::rend (STL/CLR)
+Designa o fim da sequência controlada invertida.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Comentários  
- A função de membro retorna um iterador invertido que aponta apenas além de início da sequência controlada.  Consequentemente, designa `end` de sequência inversa.  Use\-a para obter um iterador que designa o final de `current` de sequência controlada consultada em ordem inversa, mas seu status pode ser alterado se o comprimento da sequência controlada é alterado.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada visto na ordem inversa, mas seu status pode alterar se altera o comprimento da sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_map_rend.cpp   
@@ -70,16 +67,19 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**\*\-\- \= \[ \-\-rend\(\) b 2\]**  
-**\= \[\*\-\-rend\(\) um 1\]**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --rend() = [b 2]  
+*--rend() = [a 1]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [map](../dotnet/map-stl-clr.md)   
- [map::begin](../dotnet/map-begin-stl-clr.md)   
- [map::end](../dotnet/map-end-stl-clr.md)   
- [map::rbegin](../dotnet/map-rbegin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [Map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: Begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)   
+ [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)   
+ [map::rbegin (STL/CLR)](../dotnet/map-rbegin-stl-clr.md)

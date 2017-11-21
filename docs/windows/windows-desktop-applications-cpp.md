@@ -1,45 +1,48 @@
 ---
-title: "Aplicativos de &#225;rea de trabalho do Windows (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vcplatformsdk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aplicativos do Windows [C++]"
-  - "aplicativos [C++], Windows"
-  - "Visual C++, aplicativos do Windows"
-  - "Aplicativos do Windows [C++], sobre a criação de aplicativos do Windows"
+title: "Aplicativos de área de trabalho do Windows (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vcplatformsdk
+dev_langs: C++
+helpviewer_keywords:
+- Windows applications [C++]
+- applications [C++], Windows
+- Visual C++, Windows applications
+- Windows applications [C++], about creating Windows applications
 ms.assetid: be15855a-fa3f-41e9-89cd-41b9484ebfdb
-caps.latest.revision: 15
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c826d3999ac1f044bcc0ffc25e58f86ec7b7e881
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Aplicativos de &#225;rea de trabalho do Windows (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="windows-desktop-applications-c"></a>Aplicativos de área de trabalho do Windows (C++)
+Esta seção discute como criar aplicativos de área de trabalho do C++ que são executados em uma janela.  
+> [!TIP]  
+> Para Windows 10, você pode usar o conversor de aplicativo de área de trabalho para empacotar o aplicativo de área de trabalho existente para implantação por meio da Windows Store. Para obter mais informações, consulte [Usando o tempo de execução do Visual C++ em projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e [Traga seu aplicativo da área de trabalho para a UWP (Plataforma Universal do Windows) com a Ponte de Desktop](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+  
+## <a name="prerequisites"></a>Pré-requisitos  
+ Esses tópicos supõem que você entender os conceitos básicos da linguagem C++.  
+  
+## <a name="in-this-section"></a>Nesta seção  
+  
+-   [Assistente de aplicativo do Win32](../windows/win32-application-wizard.md)  
+  
+-   [Passo a passo: criando aplicativos da área de trabalho do Windows (C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
+  
+-   [Criando um aplicativo da área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)  
+  
+-   [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)  
+  
+## <a name="see-also"></a>Consulte também  
+ [Visual C++ no Visual Studio](../visual-cpp-in-visual-studio.md)
 
-Agora que nós aprendemos sobre o Visual Studio IDE e aplicativos de linha de comando, é saberemos como criar aplicativos do Windows.  Com o Visual C\+\+, você pode criar aplicativos do Windows usando diversas tecnologias diferentes, como [A API do windows](https://msdn.microsoft.com/en-us/library/cc433218.aspx) \(também conhecido como API do Win32\) e o.NET Framework.  
-  
- Nesta seção, criaremos dois aplicativos do Windows simples usando a API do Win32 e o.NET Framework.  Também nós criaremos um controle do Windows Forms usando o.NET Framework, e finalmente criaremos um kit simples usando DirectX.  
-  
-## Pré-requisitos  
- Esses tópicos supõem que você entender os conceitos básicos de linguagem C\+\+.  
-  
-## Nesta seção  
-  
--   [Passo a passo: Criando aplicativos de área de trabalho do Windows \(C\+\+\)](../Topic/Walkthrough:%20Creating%20Windows%20Desktop%20Applications%20\(C++\).md)  
-  
--   [Recursos para criar um jogo usando DirectX \(C\+\+\)](../windows/resources-for-creating-a-game-using-directx.md)  
-  
-## Consulte também  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/pt-br/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)

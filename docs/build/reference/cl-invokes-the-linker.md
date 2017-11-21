@@ -1,70 +1,68 @@
 ---
-title: "CL invoca o vinculador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilador cl.exe [C++], compilando sem vinculação"
-  - "compilador cl.exe [C++], controlando vinculador"
-  - "compilando o código-fonte [C++], sem vinculação"
-  - "invocando vinculador do compilador"
-  - "ferramenta LINK [C++], invocando do compilador CL"
+title: CL invoca o vinculador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords:
+- compiling source code [C++], without linking
+- invoking linker from the compiler
+- LINK tool [C++], invoking from CL compiler
+- cl.exe compiler [C++], compiling without linking
+- cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 15d37f6adb5d6a5588d9b727ff8ba5adb56dda67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CL invoca o vinculador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O CL invocada automaticamente o vinculador depois de criar a menos que a opção \/c é usada.  Passagens de CL ao vinculador os nomes dos arquivos de .obj criados durante a compilação e os nomes de outros arquivos especificados na linha de comando.  O vinculador usa as opções listadas na variável de ambiente de LINK.  Você pode usar a opção \/link para especificar opções do vinculador na linha de comando de CL.  Opções que seguem a substituição da opção \/link aqueles na variável de ambiente de LINK.  As opções na tabela a seguir suprimem vincular.  
+# <a name="cl-invokes-the-linker"></a>O CL invoca o vinculador
+Automaticamente o CL invoca o vinculador após a compilação, a menos que a opção /c é usada. CL passa para o vinculador os nomes dos arquivos. obj criados durante a compilação e os nomes de todos os outros arquivos especificados na linha de comando. O vinculador usa as opções listadas na variável de ambiente LINK. Você pode usar a opção /link para especificar opções de vinculador na linha de comando CL. Opções que se seguem a opção /link substituem aquelas na variável de ambiente LINK. As opções na tabela a seguir suprimir a vinculação.  
   
 |Opção|Descrição|  
-|-----------|---------------|  
-|\/c|Construir sem vincular|  
-|\/E, \/EP, \/P|Preprocess sem compilar ou vincular|  
-|\/Zg|Gerencia protótipos de função|  
-|\/Zs|Verifique a sintaxe|  
+|------------|-----------------|  
+|/c|Compilar sem vinculação|  
+|/ / E, /EP, P|Pré-processar sem compilar ou vincular|  
+|/Zg|Gerar protótipos de função|  
+|/Zs|Verificar sintaxe|  
   
- Para obter detalhes adicionais sobre vincular, consulte [Opções do vinculador](../../build/reference/linker-options.md).  
+ Para obter mais detalhes sobre como vincular, consulte [opções do vinculador](../../build/reference/linker-options.md).  
   
-## Exemplo  
- Suponha que você está criando três arquivos de origem de C: 2.0 MAIN.c, MOD1.c, e. MOD2.c.  Cada arquivo inclui uma chamada a uma função definida em um arquivo diferente:  
+## <a name="example"></a>Exemplo  
+ Suponha que você estiver compilando C três arquivos de origem: MAIN.c, MOD1.c e MOD2.c. Cada arquivo inclui uma chamada para uma função definida em um arquivo diferente:  
   
--   MAIN.c chama a função `func1` em MOD1.c e a função `func2` em. MOD2.c.  
+-   MAIN.c chama a função `func1` MOD1.c e a função `func2` em MOD2.c.  
   
--   MOD1.c chama as funções da biblioteca `printf_s` e `scanf_s`do padrão.  
+-   MOD1.c chama as funções de biblioteca padrão `printf_s` e `scanf_s`.  
   
--   MOD2.c chama as funções dos gráficos `myline` nomeadas e `mycircle`, que são definidas em uma biblioteca MYGRAPH.lib nomeada.  
+-   MOD2.c chama funções gráficas denominadas `myline` e `mycircle`, que é definido em uma biblioteca denominada MYGRAPH.lib.  
   
- Para criar esse programa, compile com a seguinte linha de comando:  
+ Para criar este programa, compile com a seguinte linha de comando:  
   
 ```  
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib  
 ```  
   
- CL O primeiro os arquivos de origem cria C e cria arquivos de objeto MAIN.obj, MOD1.obj, e MOD2.obj.  O compilador coloca o nome da biblioteca padrão em cada arquivo de .obj.  Para obter mais detalhes, consulte [Use a biblioteca de tempo de execução](../../build/reference/md-mt-ld-use-run-time-library.md).  
+ CL primeiro compila os arquivos de origem C e cria os arquivos de objeto MAIN.obj, MOD1.obj e MOD2.obj. O compilador coloca o nome da biblioteca padrão em cada arquivo. obj. Para obter mais detalhes, consulte [usar a biblioteca de tempo de execução](../../build/reference/md-mt-ld-use-run-time-library.md).  
   
- O CL transmite os nomes dos arquivos de .obj, junto com o nome MYGRAPH.lib, ao vinculador.  O vinculador resolve as referências externas como segue:  
+ CL passa os nomes dos arquivos. obj, juntamente com o nome MYGRAPH.lib, para o vinculador. O vinculador resolve as referências externas, como se segue:  
   
-1.  Em MAIN.obj, a referência a `func1` é resolvida usando a definição em MOD1.obj; a referência a `func2` é resolvida usando a definição em MOD2.obj.  
+1.  Em MAIN.obj, a referência ao `func1` é resolvido usando a definição da MOD1.obj; a referência ao `func2` é resolvido usando a definição da MOD2.obj.  
   
-2.  Em MOD1.obj, as referências a `printf_s` e `scanf_s` são resolvidos usando as definições que encontra na biblioteca do vinculador denominado dentro de MOD1.obj.  
+2.  Em MOD1.obj, as referências a `printf_s` e `scanf_s` são resolvidos usando as definições na biblioteca que localiza o vinculador chamada dentro de MOD1.obj.  
   
 3.  Em MOD2.obj, as referências a `myline` e `mycircle` são resolvidos usando as definições em MYGRAPH.lib.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

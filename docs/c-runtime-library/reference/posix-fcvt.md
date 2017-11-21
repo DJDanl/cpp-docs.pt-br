@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fcvt
+apiname: fcvt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- fcvt
-dev_langs:
-- C++
-helpviewer_keywords:
-- fcvt function
+f1_keywords: fcvt
+dev_langs: C++
+helpviewer_keywords: fcvt function
 ms.assetid: 1f748ad0-e186-400e-af8e-80d4431523d7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 401fe3685066017a6c21d54992d213fd804f70a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fcvt"></a>fcvt
 Essa função POSIX foi preterida. Em vez disso, use [_fcvt](../../c-runtime-library/reference/fcvt.md) compatível com ISO C++ ou [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md) de segurança avançada.

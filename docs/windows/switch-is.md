@@ -1,33 +1,30 @@
 ---
-title: "switch_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_is attribute"
+title: switch_is | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_is
+dev_langs: C++
+helpviewer_keywords: switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5f2f694c03e0aed3e5c5f5072a6fa73365de1fa7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# switch_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica a expressão ou um identificador que atua como o discriminant de união que seleciona o membro da união.  
+# <a name="switchis"></a>switch_is
+Especifica a expressão ou identificador atuando como o discriminador de união que seleciona o membro de união.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,27 +32,26 @@ Especifica a expressão ou um identificador que atua como o discriminant de uni�
   
 ```  
   
-## Comentários  
- O  **switch\_is** o atributo do C\+\+ tem a mesma funcionalidade que o  [switch\_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **switch_is** atributo C++ tem a mesma funcionalidade que o [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) atributo MIDL.  
   
-## Exemplo  
- Consulte o  [case](../windows/case-cpp.md) exemplo para um uso de amostra de  **switch\_is**.  
+## <a name="example"></a>Exemplo  
+ Consulte o [caso](../windows/case-cpp.md) exemplo para uso do exemplo **switch_is**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|`typedef`|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|`typedef`|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [switch\_type](../windows/switch-type.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [switch_type](../windows/switch-type.md)   

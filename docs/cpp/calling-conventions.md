@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- calling conventions
+dev_langs: C++
+helpviewer_keywords: calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bbdee0427dcefc019214e7f9af16831f162cef83
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 13003d247e1fb90ff078746af0cbbe2d7255ea18
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="calling-conventions"></a>Convenções de chamada
 O compilador Visual C/C++ fornece várias convenções diferentes para chamar funções internas e externos. Entender essas abordagens diferentes pode ajudar a depurar seu programa e a vincular seu código a rotinas de linguagem de assembly.  

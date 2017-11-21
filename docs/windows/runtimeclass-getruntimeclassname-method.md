@@ -1,54 +1,57 @@
 ---
-title: "M&#233;todo RuntimeClass::GetRuntimeClassName | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetRuntimeClassName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetRuntimeClassName"
+title: "Método Runtimeclass: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetRuntimeClassName
+dev_langs: C++
+helpviewer_keywords: GetRuntimeClassName method
 ms.assetid: f6388163-fe65-4948-a4bc-ae6826f480e7
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c82a3ae65ae65dfe43cb0ed645f802161f7a17f6
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/31/2017
 ---
-# M&#233;todo RuntimeClass::GetRuntimeClassName
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="runtimeclassgetruntimeclassname-method"></a>Método RuntimeClass::GetRuntimeClassName
 
-Obtém o nome da classe de tempo de execução do objeto atual de RuntimeClass.  
-  
-## Sintaxe  
-  
-```  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-## Parâmetros  
- `runtimeName`  
- Quando esta operação concluir, o nome da classe de tempo de execução.  
-  
-## Valor de retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que declara o erro.  
-  
-## Comentários  
- Um erro de afirmar é emitido se o \_\_WRL\_FORCE\_INSPECTABLE\_CLASS\_MACRO de \_\_WRL\_STRICT\_\_or não é definido.  
-  
-## Requisitos  
- **Cabeçalho:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## Consulte também  
- [Classe RuntimeClass](../windows/runtimeclass-class.md)
+Obtém o nome de classe de tempo de execução do objeto RuntimeClass atual.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*runtimeName*  
+Quando a operação for concluída, o nome de classe de tempo de execução.
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.
+
+## <a name="remarks"></a>Comentários
+
+Um erro de asserção é emitido se &#95; &#95; WRL_STRICT #95; &#95; ou &#95; &#95; WRL_FORCE_INSPECTABLE_CLASS_MACRO #95; &#95; não está definido.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** implements.h
+
+**Namespace:** Microsoft:: wrl
+
+## <a name="see-also"></a>Consulte também
+
+[Classe RuntimeClass](../windows/runtimeclass-class.md)

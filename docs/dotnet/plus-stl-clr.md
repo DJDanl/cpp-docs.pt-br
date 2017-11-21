@@ -1,33 +1,30 @@
 ---
-title: "plus (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::plus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "função plus [STL/CLR]"
+title: "Além de (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::plus
+dev_langs: C++
+helpviewer_keywords: plus function [STL/CLR]
 ms.assetid: 7ec8228a-72c7-4e47-9e63-23525d4a5416
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e9bb76e3d4d96cea13c59222de42c3bcc20d517
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# plus (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe do modelo descreve um funtor que, quando chamado, retorna o primeiro argumento mais o segundo.  Use\-a especifica um objeto de função em termos de seu tipo de argumento.  
+# <a name="plus-stlclr"></a>plus (STL/CLR)
+A classe de modelo descreve um functor que, quando chamado, retorna o primeiro argumento e o segundo. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Arg>  
@@ -50,34 +47,34 @@ public:
     };  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Arg  
- O tipo dos argumentos e o valor de retorno.  
+ O tipo do valor de retorno e argumentos.  
   
-## Funções de membro  
+## <a name="member-functions"></a>Funções membro  
   
-|Definição de tipo|Descrição|  
-|-----------------------|---------------|  
-|delegate\_type|O tipo delegado genérico.|  
-|first\_argument\_type|O tipo do primeiro argumento de funtor.|  
-|result\_type|O tipo de resultado de funtor.|  
-|second\_argument\_type|O tipo de argumento de funtor segundo.|  
+|Definição do tipo|Descrição|  
+|---------------------|-----------------|  
+|delegate_type|O tipo de delegado genérico.|  
+|first_argument_type|O tipo do primeiro argumento functor.|  
+|tipo_resultado|O tipo do resultado functor.|  
+|second_argument_type|O tipo do segundo argumento functor.|  
   
 |Membro|Descrição|  
-|------------|---------------|  
-|positivo|Constrói o funtor.|  
+|------------|-----------------|  
+|plus|Constrói o functor.|  
   
 |Operador|Descrição|  
-|--------------|---------------|  
-|operator\(\)|Computa a função desejada.|  
-|delegate\_type^ do operador|Converte o funtor a um representante.|  
+|--------------|-----------------|  
+|operator()|Calcula a função desejada.|  
+|operador delegate_type ^|Converte o functor a um delegado.|  
   
-## Comentários  
- A classe do modelo descreve um funtor de dois argumentos.  Define o operador `operator()` membro de forma que, quando o objeto é chamado como uma função, retorna o primeiro argumento mais o segundo.  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo descreve uma functor de dois argumentos. Define o operador de membro `operator()` para que, quando o objeto é chamado como uma função, ele retorna o primeiro argumento e o segundo.  
   
- Você também pode passar o objeto como um argumento da função cujo tipo é `delegate_type^` e ele será convertido adequadamente.  
+ Você também pode passar o objeto como um argumento de função cujo tipo é `delegate_type^` e ele será convertido corretamente.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_plus.cpp   
@@ -117,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **6 4**   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/funcional\>  
+```Output  
+4 3  
+2 1  
+6 4  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/funcional >  
   
-## Consulte também  
- [minus](../dotnet/minus-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [minus (STL/CLR)](../dotnet/minus-stl-clr.md)

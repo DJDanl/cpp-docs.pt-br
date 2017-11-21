@@ -1,46 +1,43 @@
 ---
-title: "map::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator= [STL/CLR]"
+title: 'Map:: Operator = (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: d27d42c3-9910-407c-8b35-e09641345940
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89cf789143d9b9852d6976cf56c6838797664cf1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# map::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapoperator-stlclr"></a>map::operator= (STL/CLR)
 Substitui a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 map<Key, Mapped>% operator=(map<Key, Mapped>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  direita  
- Contêiner a ser copiada.  
+ O contêiner a ser copiado.  
   
-## Comentários  
- O membro que o operador copia `right` ao objeto, retornará `*this`.  Você usará para substituir a sequência controlada por uma cópia de sequência controlada em `right`.  
+## <a name="remarks"></a>Comentários  
+ As cópias de operador de membro `right` para o objeto, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada em `right`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_map_operator_as.cpp   
@@ -72,12 +69,15 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
- **um \[1\] \[2\] \[b3 c\]**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [map](../dotnet/map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)

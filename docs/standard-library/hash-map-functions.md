@@ -10,14 +10,13 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 manager: ghogen
+ms.openlocfilehash: 4b98135f1b72c66938d00f16649d011a27369473
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 43c9501c49f59ec4b6949c75b294d3cd6012dde0
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="lthashmapgt-functions"></a>Funções &lt;hash_map&gt;
 |||  
@@ -47,8 +46,6 @@ void swap(
 ### <a name="remarks"></a>Comentários  
  A função de modelo é um algoritmo especializado na classe de contêiner hash_map para executar a função membro `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template \<class T> void swap(T&, T&)**, no arquivo de cabeçalho do algoritmo funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.  
   
- No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [Namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
-  
 ##  <a name="swap"></a>  swap  
   
 > [!NOTE]
@@ -72,11 +69,8 @@ void swap(
 ### <a name="remarks"></a>Comentários  
  A função de modelo é um algoritmo especializado na classe de contêiner hash_multimap para executar a função de membro `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template \<class T> void swap(T&, T&)**, no arquivo de cabeçalho do algoritmo funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.  
   
- No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [Namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
-  
 ## <a name="see-also"></a>Consulte também  
  [<hash_map>](../standard-library/hash-map.md)
-
 
 
 

@@ -1,11 +1,10 @@
 ---
-title: scheduler_ptr estrutura | Documentos do Microsoft
+title: scheduler_ptr estrutura | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,36 +13,20 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4bef1995724d078c9702669806ff61d5563ac465
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 8586ddb10561364d9fb56be5e45874edcd91cdbe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr estrutura
-Representa um ponteiro para um agendador. Esta classe existe para permitir a especificação de um tempo de vida compartilhada usando shared_ptr ou apenas uma referência simples usando o ponteiro bruto.  
+Representa um ponteiro para um agendador. Esta classe existe para permitir a especificação de um tempo de vida compartilhada usando shared_ptr ou apenas uma referência simples ponteiro bruto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,19 +40,19 @@ struct scheduler_ptr;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[scheduler_ptr:: scheduler_ptr](#ctor)|Sobrecarregado. Cria um ponteiro de Agendador de shared_ptr para Agendador|  
+|[scheduler_ptr:: scheduler_ptr](#ctor)|Sobrecarregado. Cria um ponteiro de Agendador do shared_ptr para Agendador|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[scheduler_ptr:: Get](#get)|Retorna o ponteiro bruto ao Agendador|  
+|[scheduler_ptr:: Get](#get)|Retorna o ponteiro bruto para o Agendador|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[scheduler_ptr:: Operator bool](#operator_bool)|Testar se o ponteiro do Agendador é não-nulo|  
+|[scheduler_ptr:: Operator bool](#operator_bool)|Testar se o ponteiro do Agendador é não nulo|  
 |[scheduler_ptr:: Operator-&gt;](#operator_ptr)|Se comportam como um ponteiro|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -81,7 +64,7 @@ struct scheduler_ptr;
  **Namespace:** simultaneidade  
   
 ##  <a name="get"></a>scheduler_ptr:: método Get  
- Retorna o ponteiro bruto ao Agendador  
+ Retorna o ponteiro bruto para o Agendador  
   
 ```
 scheduler_interface* get() const;
@@ -90,7 +73,7 @@ scheduler_interface* get() const;
 ### <a name="return-value"></a>Valor de retorno  
   
 ##  <a name="operator_bool"></a>scheduler_ptr:: Operator bool   
- Testar se o ponteiro do Agendador é não-nulo  
+ Testar se o ponteiro do Agendador é não nulo  
   
 ' ' operador bool() const;
 ```  
@@ -99,7 +82,7 @@ scheduler_interface* get() const;
  Behave like a pointer  
   
 ```
-scheduler_interface * operator->() const;
+scheduler_interface * operador -> () const;
 ```  
   
 ### Return Value  
@@ -108,7 +91,7 @@ scheduler_interface * operator->() const;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-explícita scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);</scheduler_interface>
+scheduler_ptr explícita (Agendador std:: shared_ptr < scheduler_interface >);
 
 scheduler_ptr explícita (_In_opt_ scheduler_interface * pScheduler);
 ```  
@@ -119,4 +102,3 @@ scheduler_ptr explícita (_In_opt_ scheduler_interface * pScheduler);
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)
-

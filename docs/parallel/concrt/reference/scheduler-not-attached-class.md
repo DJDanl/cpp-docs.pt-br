@@ -1,49 +1,31 @@
 ---
-title: Classe scheduler_not_attached | Documentos do Microsoft
+title: Classe scheduler_not_attached | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached::scheduler_not_attached
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_not_attached class
+dev_langs: C++
+helpviewer_keywords: scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5e0ec52a5b204d33f391d367d36d6ab3e9af6d74
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 6e18171f3984a7021884586ec519512a49dc6fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulernotattached-class"></a>Classe scheduler_not_attached
-Esta classe descreve uma exceção gerada quando é executada uma operação que requer um agendador a ser anexado ao contexto atual e não.  
+Esta classe descreve uma exceção gerada quando é executada uma operação que requer um agendador a ser anexado ao contexto atual e outro não faz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,4 +68,3 @@ scheduler_not_attached() throw();
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe Scheduler](scheduler-class.md)
-

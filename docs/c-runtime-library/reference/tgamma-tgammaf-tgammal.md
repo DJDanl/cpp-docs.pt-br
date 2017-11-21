@@ -33,36 +33,21 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1418ef72ccc2bb374997e8e266fc2db1e778bca6
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 24c4cc90ed77a57ad053f5608ad5eaf2d1ed62f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 Determina a função gama do valor especificado.  

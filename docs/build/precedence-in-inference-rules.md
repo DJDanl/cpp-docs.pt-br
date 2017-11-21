@@ -1,37 +1,36 @@
 ---
-title: "Preced&#234;ncia em regras de infer&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "regras de inferência em NMAKE"
-  - "precedência, regra de inferência"
-  - "regras, inferência"
+title: "Precedência em regras de inferência | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- rules, inference
+- precedence, inference rule
 ms.assetid: 69e3dc02-0815-4c3a-b02b-1cb85fceaf24
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d22db9de1fc1941798c73c3c1c05a8ccd8571525
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Preced&#234;ncia em regras de infer&#234;ncia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se uma regra de inferência é definido, multiplicar NMAKE usa a definição de alta prioridade.  A lista a seguir mostra a ordem de precedência do mais alto ao mais baixo:  
+# <a name="precedence-in-inference-rules"></a>Precedência em regras de inferência
+Se uma regra de inferência é definida várias vezes, NMAKE usa a definição de precedência mais alta. A lista a seguir mostra a ordem de prioridade do mais alto ao mais baixo:  
   
-1.  Uma regra de inferência definida em um makefile; as definições posteriores têm precedência.  
+1.  Uma regra de inferência de tipos definida em um makefile; as definições mais recente tem precedência.  
   
-2.  Uma regra de inferência definida em Tools.ini; as definições posteriores têm precedência.  
+2.  Uma regra de inferência de tipos definida em Tools.ini; as definições mais recente tem precedência.  
   
-3.  Uma regra de inferência predefinida.  
+3.  Uma regra de inferência de tipos predefinidos.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Regras de inferência](../build/inference-rules.md)

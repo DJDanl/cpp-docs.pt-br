@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -62,39 +61,23 @@ helpviewer_keywords:
 - C2367
 - C2398
 - C2399
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8d8925a68ffbb7ba607e37be8db5eca33300ef23
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: f8e1dcf350c974f5be96b971d3d70e69b95ebc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>Erros do Compilador C2300 a C2399
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -130,7 +113,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2327](compiler-error-c2327.md)|'*identificador*': não é um nome de tipo, static ou enumerador|  
 |C2328 de erro do compilador|'*palavra-chave*': palavra-chave ainda não é suportada|  
 |C2329 de erro do compilador|'*identificador*': ptr64 não disponível para ponteiros para funções|  
-|C2330 de erro do compilador|'implementation_key( )' só é válido em uma região limitada por #pragma start_map_region/stop_map_region|  
+|C2330 de erro do compilador|'implementation_key ()' só é válido em uma região limitada por #pragma start_map_region/stop_map_region|  
 |C2331 de erro do compilador|acesso a '*identificador*'agora definido como'*accessibility1*', anteriormente foi definido para ser'*accessibility2*'|  
 |[Erro do compilador C2332](compiler-error-c2332.md)|'*typedef*': faltando nome de marca|  
 |[Erro do compilador C2333](compiler-error-c2333.md)|'*função*': erro na declaração de função; ignorando corpo de função|  
@@ -142,7 +125,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C2339 de erro do compilador|'*identificador*': tipo inválido em IDL inserida|  
 |C2340 de erro do compilador|'*identificador*': 'static' só pode ser usado em uma definição de classe|  
 |[Erro do compilador C2341](compiler-error-c2341.md)|'*seção*': segmento deve ser definido usando #pragma data_seg, code_seg ou section antes de usar|  
-|C2342 de erro do compilador|erro de sintaxe: qualificadores de tipos conflitantes|  
+|C2342 de erro do compilador|Erro de sintaxe: qualificadores de tipo conflitante|  
 |C2343 de erro do compilador|'*seção*': atributos de seção conflitantes|  
 |[Erro do compilador C2344](compiler-error-c2344.md)|Alinhar (*número*): alinhamento deve ser uma potência de dois|  
 |[Erro do compilador C2345](compiler-error-c2345.md)|Alinhar (*número*): valor de alinhamento inválido|  
@@ -153,9 +136,9 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2350](compiler-error-c2350.md)|'*identificador*' não é um membro estático|  
 |[Erro do compilador C2351](compiler-error-c2351.md)|sintaxe de inicialização de construtor de C++ obsoleta|  
 |[Erro do compilador C2352](compiler-error-c2352.md)|'*identificador*': chamada inválida a função de membro não estático|  
-|[Erro do compilador C2353](compiler-error-c2353.md)|especificação de exceção não é permitida|  
+|[Erro do compilador C2353](compiler-error-c2353.md)|não é permitida a especificação de exceção|  
 |C2354 de erro do compilador|Obsoleto.|  
-|[Erro do compilador C2355](compiler-error-c2355.md)|'this': é possível referenciar apenas dentro de funções de membro não estáticas ou inicializadores de membros de dados não estáticos|  
+|[Erro do compilador C2355](compiler-error-c2355.md)|'this': só pode ser referenciada dentro de funções de membro não estático ou inicializadores de membros de dados não estático|  
 |[Erro do compilador C2356](compiler-error-c2356.md)|segmento de inicialização não deve mudar durante unidade de tradução|  
 |[Erro do compilador C2357](compiler-error-c2357.md)|'*identificador*': deve ser uma função do tipo '*tipo*'|  
 |C2358 de erro do compilador|'*identificador*': uma propriedade estática não pode ser definida fora de uma definição de classe|  
@@ -200,4 +183,3 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2397](compiler-error-c2397.md)|conversão de '*type1*'para'*type2*' requer uma conversão de restrição|  
 |C2398 de erro do compilador|Elemento '*número*': conversão de '*type1*'para'*type2*' requer uma conversão de restrição|  
 |C2399 de erro do compilador|Obsoleto.|  
-

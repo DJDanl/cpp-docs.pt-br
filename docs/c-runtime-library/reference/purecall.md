@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _purecall
+apiname: _purecall
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,36 +24,20 @@ apitype: DLLExport
 f1_keywords:
 - purecall
 - _purecall
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d18aa1a4b5c5616e02b67b50d2e6e6c9e55b7a8d
-ms.openlocfilehash: 21bccf888776bea1d4a01020a8ca07d9cc91e421
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: c475c66c92dec7990aa8056a1791c8eeb87d6afa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="purecall"></a>_purecall
 O manipulador de erro de chamada de função pura virtual padrão. O compilador gera código para chamar esta função quando uma função membro pura virtual é chamada.  

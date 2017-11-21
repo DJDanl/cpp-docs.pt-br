@@ -1,27 +1,26 @@
 ---
-title: "2.6.4 Constructo atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.4 constructo atomic | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea1cc2474a8420227dcf2b6b6e87f255ce144cf4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.4 Constructo atomic
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A `atomic` diretiva garante que um local específico da memória é atualizada atomicamente, em vez de expô-lo para a possibilidade de vários threads de gravação simultâneas. A sintaxe de `atomic` diretiva é o seguinte:  
+# <a name="264-atomic-construct"></a>2.6.4 Constructo atomic
+O `atomic` diretiva garante que um local de memória específica é atualizado atomicamente, em vez de expô-lo para a possibilidade de várias simultâneas de gravação de threads. A sintaxe da `atomic` diretiva é da seguinte maneira:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
@@ -41,19 +40,19 @@ A `atomic` diretiva garante que um local específico da memória é atualizada a
   
  As expressões anteriores:  
   
--   *x* é uma expressão de l-value com tipo escalar.  
+-   *x* é uma expressão de lvalue com tipo escalar.  
   
--   *Expr* é uma expressão com um tipo escalar e não faz referência a objeto designado pelo *x*.  
+-   *Expr* é uma expressão com um tipo escalar, e ele não faz referência o objeto designado pelo *x*.  
   
--   `binop` não é um operador sobrecarregado e é um dos +, *, -, /, &, ^, &#124; <\<, ou >>.  
+-   `binop`não é um operador sobrecarregado e é um dos +, *, -, /, &, ^, &#124; <\<, ou >>.  
   
- Embora seja definido pela implementação se uma implementação substitui todos `atomic` diretivas com **crítico** diretivas que têm o mesmo exclusivo *nome*, o `atomic` diretiva permite melhor otimização. Instruções de hardware geralmente estão disponíveis que pode executar a atualização atômica com menos sobrecarga.  
+ Embora seja definido pela implementação se uma implementação substitui todos os `atomic` diretivas com **crítico** diretivas que têm o mesmo exclusivo *nome*, o `atomic` diretiva permite melhor otimização. Instruções de hardware geralmente estão disponíveis que pode executar a atualização atômica com a menor sobrecarga.  
   
- Apenas a carga e o armazenamento de objeto designado pelo *x* são atômicas; a avaliação de *expr* não é atômica. Para evitar condições de corrida, todas as atualizações do local em paralelo devem ser protegidas com o `atomic` diretiva, exceto aqueles que são conhecidos como livre de condições de corrida.  
+ Somente o carregamento e o armazenamento do objeto designado pelo *x* são atômicas; a avaliação de *expr* não é atômica. Para evitar condições de corrida, todas as atualizações do local em paralelo devem ser protegidas com o `atomic` diretiva, exceto aqueles que são conhecidos como livre de condições de corrida.  
   
- Restrições para o `atomic` diretiva são os seguintes:  
+ Restrições para o `atomic` diretiva são da seguinte maneira:  
   
--   Todas as referências atômicas para o local de armazenamento x em todo o programa devem ter um tipo compatível.  
+-   Todas as referências atômicas para o local de armazenamento x em todo o programa deve ter um tipo compatível.  
   
 ## <a name="examples"></a>Exemplos:  
   

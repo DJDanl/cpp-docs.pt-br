@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::decay
-dev_langs:
-- C++
-helpviewer_keywords:
-- decay class
+f1_keywords: type_traits/std::decay
+dev_langs: C++
+helpviewer_keywords: decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 74f89b08422563c9b215ece0e879de7d83e5597d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c24872ee58c740776285c715f1d03b16e811d9c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="decay-class"></a>Classe decay
 Produz o tipo passado por valor. Torna o tipo não referência, não const, não volátil ou cria um ponteiro para o tipo com base em uma função ou em um tipo de matriz.  
@@ -61,7 +56,6 @@ using decay_t = typename decay<T>::type;
   
 ## <a name="see-also"></a>Consulte também  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

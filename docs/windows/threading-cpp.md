@@ -1,33 +1,30 @@
 ---
-title: "threading (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.threading"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threading attribute"
+title: Threading (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.threading
+dev_langs: C++
+helpviewer_keywords: threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c85287a590dfa9cf3c931ce358dca8b303f4737a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# threading (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica o modelo de segmentação para um objeto COM.  
+# <a name="threading-c"></a>threading (C++)
+Especifica o modelo de threading para um objeto COM.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -36,49 +33,48 @@ Especifica o modelo de segmentação para um objeto COM.
 ) ]  
 ```  
   
-#### Parâmetros  
- ***modelo*** \(opcional\)  
- Um dos seguintes modelos de segmentação:  
+#### <a name="parameters"></a>Parâmetros  
+ ***modelo*** (opcional)  
+ Um dos seguintes modelos de threads:  
   
--   **apartamento** \(modelo apartment threading\)  
+-   **apartment** (apartment threading)  
   
--   **neutro** \(.NET Framework components sem interface do usuário\)  
+-   **neutro** (componentes do .NET Framework com nenhuma interface do usuário)  
   
--   **único** \(threading simples\)  
+-   **único** (threading simples)  
   
--   **livre** \(free threading\)  
+-   **livre** (libere threading)  
   
--   **ambos** \(apartamento e segmentação livre\)  
+-   **ambos** (apartment Threading e free threading)  
   
- O valor padrão é  **apartamento**.  
+ O valor padrão é **apartment**.  
   
-## Comentários  
- O  **threading** atributo C\+\+ não aparecer no arquivo. idl gerado, mas será usado na implementação do seu objeto COM.  
+## <a name="remarks"></a>Comentários  
+ O **threading** atributo C++ não aparecem no arquivo. idl gerado, mas será usado na implementação do objeto COM.  
   
- Em projetos ATL, se o  [coclass](../windows/coclass.md) atributo também estiver presente, o modelo de threading especificado por  *modelo* é passado como o parâmetro de modelo para o  [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe, inserida pelo  **coclass** atributo.  
+ Em projetos ATL, se o [coclass](../windows/coclass.md) atributo também estiver presente, o modelo de threading especificado por *modelo* é passado como o parâmetro de modelo para o [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe , inseridas pelo **coclass** atributo.  
   
- O  **threading** atributo também protege o acesso a uma  [event\_source](../windows/event-source.md).  
+ O **threading** atributo também protege o acesso a um [event_source](../windows/event-source.md).  
   
-## Exemplo  
- Consulte o  [licenciado](../windows/licensed.md) exemplo para um uso de amostra de  **threading**.  
+## <a name="example"></a>Exemplo  
+ Consulte o [licenciado](../windows/licensed.md) exemplo para uso do exemplo **threading**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|**classe**,`struct`|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|**coclass**|  
+|**Aplica-se a**|**classe**,`struct`|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|**coclass**|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Suporte multithread para código anterior \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutral Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos COM](../windows/com-attributes.md)   
+ [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributos de classe](../windows/class-attributes.md)   
+ [Suporte multithread para código anterior (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [Neutros Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

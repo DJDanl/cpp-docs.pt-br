@@ -1,81 +1,79 @@
 ---
-title: "Usando uma ferramenta de desenho (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.drawing"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "ferramentas de desenho"
-  - "Editor de imagem [C++], selecionando ferramentas de desenho"
-  - "Editor de imagem [C++], barra de ferramentas"
+title: "Usando uma ferramenta de desenho (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.drawing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], selecting drawing tools
+- Image editor [C++], toolbar
+- drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bcbc089783e86be9c9fcb49fb3c4f0b10c29064f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Usando uma ferramenta de desenho (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O editor de imagens do freehand desenho e apagando ferramentas todos funcionam da mesma forma: selecionar a ferramenta e, se necessário,  [selecionar cores de primeiro plano e plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e opções de tamanho e forma.  Você, em seguida, mova o ponteiro na imagem e clique ou arraste para desenhar e apagar.  
+# <a name="using-a-drawing-tool-image-editor-for-icons"></a>Usando uma ferramenta de desenho (editor de imagens para ícones)
+O editor de imagens do traçada desenho e ferramentas todos eles funcionam da mesma maneira de apagar: selecione a ferramenta e, se necessário, [selecione as cores de primeiro plano e plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e opções de tamanho e forma. Você, em seguida, mova o ponteiro para a imagem e clique ou arraste para desenhar e apagar.  
   
- Quando você seleciona o  **Borracha** ferramenta,  **Pincel** ferramenta, ou  **spray** ferramenta, o seletor de opção exibe opções da ferramenta.  
+ Quando você seleciona o **borracha** ferramenta, **pincel** ferramenta, ou **aerógrafo** ferramenta, o seletor de opção exibe opções da ferramenta.  
   
 > [!TIP]
->  Em vez de usar o  **Borracha** ferramenta, você talvez ache mais prático desenhar a cor de plano de fundo com uma das ferramentas de desenho.  
+>  Em vez de usar o **borracha** ferramenta, você pode achar mais conveniente para desenhar na cor de plano de fundo com uma das ferramentas de desenho.  
   
- Você pode selecionar ferramentas de desenho a partir de  **Editor de imagens** barra de ferramentas ou o  **imagem**  menu.  
+ Você pode selecionar ferramentas de desenho do **Editor de imagem** barra de ferramentas ou **imagem** menu.  
   
-### Para selecionar e usar uma ferramenta de desenho na barra de ferramentas do Editor de imagens  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para selecionar e usar uma ferramenta de desenho da barra de ferramentas do Editor de imagem  
   
-1.  Clique em um botão no  **Editor de imagens** barra de ferramentas.  
+1.  Clique em um botão no **Editor de imagem** barra de ferramentas.  
   
-    -   O  **Borracha** ferramenta paints sobre a imagem com a cor de plano de fundo atual quando você pressiona o botão esquerdo do mouse.  
+    -   O **borracha** ferramenta pinturas sobre a imagem com a cor de plano de fundo atual quando você pressionar o botão esquerdo do mouse.  
   
-    -   O  **Lápis** ferramenta desenha à mão livre em uma largura constante de um pixel.  
+    -   O **Lápis** ferramenta à mão livre desenha em uma constante de largura de um pixel.  
   
-    -   O  **o seletor de opção determina a forma e o tamanho da ferramenta Pincel**.  
+    -   O **seletor de opção determina a forma e o tamanho da ferramenta Pincel**.  
   
-    -   O  **spray** ferramenta distribui aleatoriamente pixels de cores em torno do centro do pincel.  
+    -   O **aerógrafo** ferramenta distribui aleatoriamente pixels de cor em torno do centro do pincel.  
   
         > [!TIP]
-        >  Dicas de ferramenta são exibidos quando você passa o cursor sobre os botões no  [barra de ferramentas do Editor de imagens](../mfc/toolbar-image-editor-for-icons.md).  Estas dicas ajudarão você a identificar os botões específicos mencionados aqui.  
+        >  Dicas de ferramenta exibida quando você passa o cursor sobre os botões no [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md). Estas dicas ajudará você a identificar os botões específicos mencionados aqui.  
   
 2.  Se necessário, selecione um pincel e cores:  
   
-    -   No  [a paleta de cores](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
+    -   No [paleta de cores](../windows/colors-window-image-editor-for-icons.md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
   
-    -   No  [O seletor de opções](../mfc/toolbar-image-editor-for-icons.md), clique em uma forma que representa o pincel que deseja usar.  
+    -   No [opções seletor](../windows/toolbar-image-editor-for-icons.md), clique em uma forma que representa o pincel que você deseja usar.  
   
-3.  Apontar para o local na imagem onde você deseja iniciar o desenho ou pintura.  O ponteiro muda a forma de acordo com a ferramenta que você selecionou.  
+3.  Aponte para o local no qual você deseja iniciar o desenho de imagem ou pintura. O ponteiro mudar de forma de acordo com a ferramenta que você selecionou.  
   
-4.  Pressione o botão esquerdo do mouse \(para a cor de primeiro plano\) ou o botão direito do mouse \(para a cor de plano de fundo\) e mantenha\-a pressionada enquanto você draw.  
+4.  Pressione o botão esquerdo do mouse (para a cor de primeiro plano) ou o botão direito do mouse (para a cor de plano de fundo) e mantenha-a pressionada enquanto você desenhar.  
   
-### Para selecionar e usar uma ferramenta de desenho a partir do menu imagem  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Para selecionar e usar uma ferramenta de desenho no menu imagem  
   
-1.  Clique no  **imagem**  menu e selecione o  **Ferramentas** comando.  
+1.  Clique o **imagem** menu e selecione o **ferramentas** comando.  
   
 2.  No submenu em cascata, escolha a ferramenta que você deseja usar.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
  Nenhum  
   
-## Consulte também  
- [Teclas de aceleração](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editando recursos gráficos](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../mfc/image-editor-for-icons.md)   
- [Trabalhando com cor](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor de imagens para ícones](../windows/image-editor-for-icons.md)   
+ [Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)
+

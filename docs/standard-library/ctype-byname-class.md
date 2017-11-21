@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocale/std::ctype_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- ctype_byname class
+f1_keywords: xlocale/std::ctype_byname
+dev_langs: C++
+helpviewer_keywords: ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: f1fb3ef836361a4d98ac8c7ab764da5e3fd43c7a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5f57ef8eadf5ea963ef4a8b8c1eaa7b6ec48ee6d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ctypebyname-class"></a>Classe ctype_byname
 A classe de modelo derivada descreve um objeto que pode servir como uma faceta ctype de determinada localidade, permitindo a classificação e conversão de caracteres entre maiúsculas e minúsculas, assim como entre conjuntos de caracteres especificados de localidade e nativos.  
@@ -60,7 +55,6 @@ protected:
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

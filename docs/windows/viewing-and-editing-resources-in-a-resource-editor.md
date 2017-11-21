@@ -1,90 +1,89 @@
 ---
-title: "Exibindo e edificando recursos em um Editor de Recurso | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.resourceview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .rc, exibindo recursos"
-  - "código, exibindo recursos"
-  - "layouts, visualizando recurso"
-  - "arquivos rc, exibindo recursos"
-  - "editores de recursos, exibindo recursos"
-  - "Painel Modo de Exibição de Recursos"
-  - "recursos [Visual Studio], edição"
-  - "recursos [Visual Studio], exibindo"
+title: Exibindo e editando recursos em um Editor de recurso | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.resourceview
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], viewing
+- rc files, viewing resources
+- Resource View pane
+- layouts, previewing resource
+- code, viewing resources
+- resource editors, viewing resources
+- .rc files, viewing resources
+- resources [Visual Studio], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 287a1dbe297abd57911ab1ddaee7b56b7ce0b40b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Exibindo e edificando recursos em um Editor de Recurso
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cada tipo de recurso tem um editor de recursos específico para esse tipo de recurso.  Você pode reorganizar, redimensionar, adicionar controles e recursos ou modificar aspectos de um recurso usando o editor associado.  Você também pode editar um recurso em  [formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md) e  [formato binário](../mfc/opening-a-resource-for-binary-editing.md).  
+# <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Exibindo e edificando recursos em um Editor de Recurso
+Cada tipo de recurso tem um editor de recurso específico para o tipo de recurso. Você pode reorganizar, redimensionar, adicionar controles e recursos ou modificar aspectos de um recurso usando o editor associado. Você também pode editar um recurso no [formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binário](../windows/opening-a-resource-for-binary-editing.md).  
   
- Alguns tipos de recursos estão arquivos individuais que podem ser importados e usados de várias maneiras; Eles incluem bitmaps, ícones, cursores, barras de ferramentas e arquivos html.  Esses recursos têm nomes de arquivo, bem como  [identificadores de recurso](../mfc/symbols-resource-identifiers.md).  Outros, como, por exemplo, caixas de diálogo, menus e tabelas de cadeia de caracteres em projetos do Win32, existem apenas como parte de um arquivo de script \(. rc\) do recurso ou um arquivo de modelo \(. rct\) do recurso.  
+ Alguns tipos de recurso são arquivos individuais que podem ser importados e usados de várias maneiras; Isso inclui bitmaps, ícones, cursores, barras de ferramentas e arquivos html. Esses recursos têm nomes de arquivo, bem como [identificadores de recurso](../windows/symbols-resource-identifiers.md). Outras, como caixas de diálogo, menus e tabelas de cadeia de caracteres em projetos do Win32, existem apenas como parte de um arquivo de script (. rc) do recurso ou o arquivo de modelo (. rct) do recurso.  
   
 > [!NOTE]
->  Propriedades de um recurso  [pode ser modificado usando a janela Propriedades do](../windows/changing-the-properties-of-a-resource.md).  
+>  Propriedades de um recurso [podem ser modificadas usando a janela propriedades](../windows/changing-the-properties-of-a-resource.md).  
   
-## Recursos do Win32  
- Você pode acessar os recursos do Win32 no  [Exibição de recurso](../windows/resource-view-window.md) painel.  
+## <a name="win32-resources"></a>Recursos do Win32  
+ Você pode acessar os recursos do Win32 no [exibição recursos](../windows/resource-view-window.md) painel.  
   
-#### Para exibir um recurso do Win32 em um editor de recurso  
+#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Para exibir um recurso do Win32 em um editor de recurso  
   
-1.  Selecione  **Exibição de recurso** da  **Exibir** menu.  
+1.  Selecione **exibição recursos** do **exibição** menu.  
   
-2.  Se a janela de exibição de recurso não é o mais alto, clique no  **Exibição de recurso** guia para trazê\-la para a parte superior.  
+2.  Se a janela de exibição de recurso não é a janela principal, clique no **exibição recursos** guia para colocá-lo na parte superior.  
   
-3.  No modo de exibição de recursos, expanda a pasta para o projeto que contém recursos que você deseja exibir.  Por exemplo, se você quiser visualizar um recurso de caixa de diálogo, expanda a pasta de caixa de diálogo.  
+3.  De modo de exibição de recursos, expanda a pasta do projeto que contém recursos que você deseja exibir. Por exemplo, se você quiser exibir um recurso de caixa de diálogo, expanda a pasta de caixa de diálogo.  
   
     > [!NOTE]
-    >  Se o seu projeto já não contém um arquivo. rc, consulte  [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-4.  Clique duas vezes o recurso, por exemplo, IDD\_ABOUTBOX ÿ100,23523.  
+4.  Clique duas vezes o recurso, por exemplo, IDD_ABOUTBOX.  
   
-     O recurso abre no editor apropriado.  Por exemplo, para os recursos de caixa de diálogo, o recurso abre dentro do editor de diálogo.  
+     O recurso é aberto no editor apropriado. Por exemplo, para os recursos da caixa de diálogo, o recurso é aberto no editor de caixa de diálogo.  
   
-     Você também pode  [Exibir recursos em um arquivo de. rc \(script de recurso\) sem a necessidade de um projeto aberto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     Você também pode [exibir recursos em um arquivo. RC (script de recurso) sem ter que abrir um projeto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-#### Para excluir um recurso de 32 bits do Windows existente  
+#### <a name="to-delete-an-existing-win-32-resource"></a>Para excluir um recurso existente do Win 32  
   
 1.  No modo de exibição de recursos, expanda o nó para um tipo de recurso.  
   
-2.  Clique com o botão direito no recurso que deseja excluir e escolha  **Excluir** no menu de atalho.  
+2.  Clique no recurso que você deseja excluir e escolha **excluir** no menu de atalho.  
   
     > [!NOTE]
-    >  Você pode excluir um recurso usando o mesmo comando de menu de atalho quando o arquivo. rc aberta em uma janela de documento fora de um projeto.  
+    >  Você pode excluir um recurso usando o comando de menu de atalho mesmo quando o arquivo. rc aberta em uma janela de documento fora de um projeto.  
   
-## Recursos em projetos gerenciados  
- Porque os projetos gerenciados não usam os arquivos de script de recurso, você deve abrir seus recursos de  **Solution Explorer**.  Você pode usar o  [editor de imagens](../mfc/image-editor-for-icons.md) e o  [editor binário](../mfc/binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados.  Quaisquer recursos gerenciados que você deseja editar devem ser recursos vinculados.  Os editores de recursos de Visual Studio não têm suporte para a edição de recursos incorporados.  
+## <a name="resources-in-managed-projects"></a>Recursos em projetos gerenciados  
+ Como projetos gerenciados não usa arquivos de script de recurso, você deve abrir os recursos de **Gerenciador de soluções**. Você pode usar o [editor de imagem](../windows/image-editor-for-icons.md) e [editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-#### Para exibir um recurso gerenciado em um editor de recurso  
+#### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Para exibir um recurso gerenciado em um editor de recurso  
   
 1.  No Solution Explorer, clique duas vezes o recurso, por exemplo, Bitmap1.bmp.  
   
-     O recurso abre no editor apropriado.  
+     O recurso é aberto no editor apropriado.  
   
-#### Para excluir um recurso gerenciado existente  
+#### <a name="to-delete-an-existing-managed-resource"></a>Para excluir um recurso gerenciado existente  
   
-1.  No Solution Explorer, clique com o botão direito no recurso que deseja excluir e escolha  **Excluir** no menu de atalho.  
+1.  No Gerenciador de soluções, clique o recurso que você deseja excluir e escolha **excluir** no menu de atalho.  
   
-### Requisitos  
+### <a name="requirements"></a>Requisitos  
  Nenhum  
   
-## Consulte também  
- [Editores de recursos](../mfc/resource-editors.md)
+## <a name="see-also"></a>Consulte também  
+ [Editores de recursos](../windows/resource-editors.md)
+

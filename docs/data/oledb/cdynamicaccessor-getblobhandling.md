@@ -1,37 +1,35 @@
 ---
-title: "CDynamicAccessor::GetBlobHandling | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetBlobHandling"
-  - "CDynamicAccessor::GetBlobHandling"
-  - "ATL::CDynamicAccessor::GetBlobHandling"
-  - "GetBlobHandling"
-  - "CDynamicAccessor.GetBlobHandling"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetBlobHandling"
+title: 'Cdynamicaccessor:: Getblobhandling | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetBlobHandling
+- CDynamicAccessor::GetBlobHandling
+- ATL::CDynamicAccessor::GetBlobHandling
+- GetBlobHandling
+- CDynamicAccessor.GetBlobHandling
+dev_langs: C++
+helpviewer_keywords: GetBlobHandling method
 ms.assetid: bbc6dda6-e132-42a3-980d-24e455cbe456
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b9bac84019f408c7a68cf6afbffe94572be44c46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetBlobHandling
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera o valor de manipulação de BLOB para a linha atual.  
+# <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
+Recupera o BLOB de tratamento de valor para a linha atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,11 +37,11 @@ const DBBLOBHANDLINGENUM GetBlobHandling( ) const;
   
 ```  
   
-## Comentários  
- Retorna o valor `eBlobHandling` de manipulação de BLOB conforme definido por [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).  
+## <a name="remarks"></a>Comentários  
+ Retorna o valor de tratamento de BLOB `eBlobHandling` conforme definido por [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

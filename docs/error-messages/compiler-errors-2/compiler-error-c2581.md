@@ -1,49 +1,30 @@
 ---
-title: C2581 de erro do compilador | Documentos do Microsoft
+title: C2581 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2581
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2581
+f1_keywords: C2581
+dev_langs: C++
+helpviewer_keywords: C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 31954b5e65362e14179a7c1d01d1f76d5ef4d7de
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 205d972237a71a05839dbc4236d248a11e6ee53d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2581"></a>C2581 de erro do compilador
-'type': estático ' operador =' função é ilegal  
+'type': estático ' operador =' função é inválida  
   
- A atribuição (`=`) operador incorretamente é declarado como `static`. Operadores de atribuição não podem ser `static`. Para obter mais informações, consulte [operadores definidos pelo usuário (C + + / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
+ A atribuição (`=`) operador incorretamente é declarado como `static`. Operadores de atribuição não podem ser `static`. Para obter mais informações, consulte [operadores definidos pelo usuário (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2581.  

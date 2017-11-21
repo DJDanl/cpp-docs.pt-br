@@ -1,43 +1,40 @@
 ---
-title: "hash_multimap::hasher (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::hasher"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membros hasher [STL/CLR]"
+title: hash_multimap::hasher (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::hasher
+dev_langs: C++
+helpviewer_keywords: hasher member [STL/CLR]
 ms.assetid: f92bf084-d9d0-4eca-b23c-c88e6568d267
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7bbcedc2ef0b58c806086061d47e78c5369ab9ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::hasher (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A delegação de hash de uma chave.  
+# <a name="hashmultimaphasher-stlclr"></a>hash_multimap::hasher (STL/CLR)
+O representante de hash para uma chave.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
     hasher;  
 ```  
   
-## Comentários  
- O tipo descreve um representante que converte um valor de chave para um inteiro.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um delegado que converte um valor de chave em um inteiro.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multimap_hasher.cpp   
@@ -57,13 +54,16 @@ int main()
   
 ```  
   
-  **hash \(L'a\) \= 1616896120**  
-**hash \(L'b\) \= 570892832**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::hash\_delegate](../dotnet/hash-multimap-hash-delegate-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::hash_delegate (STL/CLR)](../dotnet/hash-multimap-hash-delegate-stl-clr.md)

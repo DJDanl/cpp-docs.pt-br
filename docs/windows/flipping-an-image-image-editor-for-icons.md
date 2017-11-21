@@ -1,60 +1,59 @@
 ---
-title: "Invertendo uma imagem (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Editor de imagem [C++], invertendo e girando imagens"
-  - "imagens [C++], invertendo"
-  - "imagens [C++], girando"
+title: "Invertendo uma imagem (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], flipping and rotating images
+- images [C++], flipping
+- images [C++], rotating
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e8f31e29d955d54231b25d09f79ecfcf73595a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Invertendo uma imagem (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="flipping-an-image-image-editor-for-icons"></a>Invertendo uma imagem (editor de imagens para ícones)
 Você pode inverter ou girar uma imagem para:  
   
 -   Crie uma imagem espelhada do original.  
   
--   Virar a imagem de cabeça para baixo.  
+-   Ative a imagem de cabeça para baixo.  
   
--   Gire a imagem à direita 90 graus, ao mesmo tempo.  
+-   Gire 90 graus de imagem à direita por vez.  
   
-### Para inverter a imagem horizontalmente \(imagem espelhada\)  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>Para inverter a imagem horizontalmente (espelho)  
   
-1.  Do  **imagem** menu, escolha  **Inverter horizontalmente**.  
+1.  Do **imagem** menu, escolha **Inverter horizontalmente**.  
   
-### Para inverter a imagem verticalmente \(Virar de cabeça para baixo\)  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>Para inverter a imagem verticalmente (Ativar cabeça para baixo)  
   
-1.  Do  **imagem** menu, escolha  **Inverter verticalmente**.  
+1.  Do **imagem** menu, escolha **Inverter verticalmente**.  
   
-### Para girar a imagem 90 graus  
+### <a name="to-rotate-the-image-90-degrees"></a>Para girar a imagem 90 graus  
   
-1.  Do  **imagem** menu, escolha  **Girar 90 graus**.  
+1.  Do **imagem** menu, escolha **Girar 90 graus**.  
   
     > [!NOTE]
-    >  Você também pode usar o  [teclas de aceleração \(atalho\)](../mfc/accelerator-keys-image-editor-for-icons.md) para que esses comandos ou acessar os comandos do menu de atalho \(clique fora da imagem enquanto estiver no editor de imagens\).  
+    >  Você também pode usar o [teclas de aceleração (atalho)](../windows/accelerator-keys-image-editor-for-icons.md) para esses comandos ou acessar os comandos no menu de atalho (clique fora da imagem no editor de imagem).  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
  Nenhum  
   
-## Consulte também  
- [Editando recursos gráficos](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
+

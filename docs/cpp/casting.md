@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 590022e41c13031e6ef5c78d4672521713002af1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 85f26c61e1e4fa996f73b4f61f4f961ba59dec98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="casting"></a>Conversão
 A linguagem C++ estabelece que se uma classe é derivada de uma classe base que contém funções virtuais, um ponteiro para esse tipo de classe base pode ser usado para chamar as implementações das funções virtuais que residem no objeto de classe derivada. Uma classe que contém funções virtuais é às vezes chamada de "classe polimórfica".  

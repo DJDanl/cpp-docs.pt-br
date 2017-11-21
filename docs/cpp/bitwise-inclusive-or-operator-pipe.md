@@ -4,31 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bitor
 - '|'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
 - bitwise operators [C++], OR operator
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bb2fcc7c85e112b80929b2a8392f0e6c19ab97f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 792a5ef5576f68925459d8e7a34168afa11871c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Operador OR inclusivo bit a bit: |
 ## <a name="syntax"></a>Sintaxe  
@@ -69,5 +66,4 @@ int main() {
 ## <a name="see-also"></a>Consulte também  
  [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores bit a bit C](../c-language/c-bitwise-operators.md)
-
 

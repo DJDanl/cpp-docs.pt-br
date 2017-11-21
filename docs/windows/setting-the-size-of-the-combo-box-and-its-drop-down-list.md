@@ -1,64 +1,62 @@
 ---
-title: "Definindo o tamanho da caixa de combina&#231;&#227;o e a lista suspensa | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.combo"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "caixas de combinação, dimensionamento"
-  - "controles [C++], dimensionamento"
+title: "Definindo o tamanho da caixa de combinação e sua lista suspensa | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.combo
+dev_langs: C++
+helpviewer_keywords:
+- combo boxes, sizing
+- controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9edef494f88bc5a5b4e8efdab94b70d233fcd59f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Definindo o tamanho da caixa de combina&#231;&#227;o e a lista suspensa
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando você adicioná\-lo à caixa de diálogo, você pode dimensionar uma caixa de combinação.  Você também pode especificar o tamanho da caixa de listagem drop\-down.  
+# <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Definindo o tamanho da caixa de combinação e a lista suspensa
+Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa de combinação. Você também pode especificar o tamanho da caixa de listagem suspensa.  
   
-### Para dimensionar uma caixa de combinação  
+### <a name="to-size-a-combo-box"></a>Para dimensionar uma caixa de combinação  
   
-1.  Selecione o controle de caixa de combinação na sua caixa de diálogo.  
+1.  Selecione o controle de caixa de combinação na caixa de diálogo.  
   
-     Inicialmente, apenas as alças de dimensionamento de direita e esquerda estão ativas.  
+     Inicialmente, apenas as alças de dimensionamento esquerda e direita estão ativas.  
   
 2.  Use as alças de dimensionamento para definir a largura da caixa de combinação.  
   
  Você também pode definir o tamanho vertical da parte suspensa da caixa de combinação.  
   
-#### Para definir o tamanho do que a combinação da lista da caixa suspensa  
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Para definir o tamanho da caixa de combinação de lista suspensa da caixa  
   
 1.  Clique no botão de seta suspensa à direita da caixa de combinação.  
   
-     ![Projeto MFC VisualC &#43; &#43; seta para a caixa de combinação](../Image/vcComboBoxArrow.gif "vcComboBoxArrow")  
+     ![Seta em uma caixa de combinação em um projeto MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")  
   
-     O contorno do controle muda para mostrar o tamanho da caixa de combinação com a área da lista drop\-down estendida.  
+     A estrutura de tópicos do controle será alterado para mostrar o tamanho da caixa de combinação com a área de lista suspensa estendida.  
   
-2.  Use a alça de dimensionamento mais baixa para alterar o tamanho inicial da área da lista drop\-down.  
+2.  Use a alça de dimensionamento inferior para alterar o tamanho inicial da área de lista suspensa.  
   
-     ![Projeto MFC VisualC &#43; &#43; dimensionamento de caixa de combinação](../mfc/media/vccomboboxsizing.png "vcComboBoxSizing")  
+     ![Caixa de combinação &#45; dimensionamento caixa em um projeto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
-3.  Clique na seta suspensa novamente para fechar a parte da lista drop\-down da caixa de combinação.  
+3.  Clique na seta suspensa novamente para fechar a parte da lista suspensa da caixa de combinação.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-### Requisitos  
+### <a name="requirements"></a>Requisitos  
  Win32  
   
-## Consulte também  
- [Adicionando valores a um controle de caixa de combinação](../mfc/adding-values-to-a-combo-box-control.md)   
- [Controles em caixas de diálogo](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Adicionando valores a um controle de caixa de combinação](../windows/adding-values-to-a-combo-box-control.md)   
+ [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

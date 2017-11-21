@@ -1,11 +1,10 @@
 ---
-title: Estrutura IThreadProxy | Documentos do Microsoft
+title: Estrutura IThreadProxy | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,38 +14,21 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs:
-- C++
-helpviewer_keywords:
-- IThreadProxy structure
+dev_langs: C++
+helpviewer_keywords: IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 0a002dc4440b4784dee7f808a9e3be8dd4f89124
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: f56e7858fc313ac35d5a3937e2d64472f28e355d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ithreadproxy-structure"></a>Estrutura IThreadProxy
-Uma abstração de um thread de execução. Dependendo do `SchedulerType` chave da diretiva do Agendador é criar o Gerenciador de recursos concederá a você um proxy de thread é apoiado por um thread do Win32 regular ou um thread (UMS) agendáveis do modo de usuário. Threads UMS são suportados em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.  
+Uma abstração para um thread de execução. Dependendo do `SchedulerType` chave da diretiva do Agendador que você criar o Gerenciador de recursos será conceder a você um proxy de thread que é apoiado por um thread de Win32 regular ou um thread (UMS) agendáveis do modo de usuário. Threads UMS são com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,21 +44,21 @@ struct IThreadProxy;
 |----------|-----------------|  
 |[Ithreadproxy](#getid)|Retorna um identificador exclusivo para o proxy de thread.|  
 |[Ithreadproxy](#switchout)|Desassocia o contexto da raiz do processador virtual subjacente.|  
-|[Ithreadproxy](#switchto)|Executa uma alternância de contexto cooperativo do contexto de execução atual para outro.|  
-|[Ithreadproxy](#yieldtosystem)|Faz com que o thread de chamada conceda a execução para outro thread que está pronto para ser executado no processador atual. O sistema operacional seleciona o próximo segmento a ser executado.|  
+|[: Switchto](#switchto)|Executa uma alternância de contexto cooperativo do contexto de execução atual para outro.|  
+|[: Yieldtosystem](#yieldtosystem)|Faz com que o thread de chamada conceda a execução para outro thread que está pronto para ser executado no processador atual. O sistema operacional seleciona o próximo segmento a ser executado.|  
   
 ## <a name="remarks"></a>Comentários  
- Proxies de thread estão ligados aos contextos de execução representados pela interface `IExecutionContext` como um meio de expedição de trabalho.  
+ Proxies de thread estão ligados a contextos de execução representados pela interface `IExecutionContext` como um meio de despacho de trabalho.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IThreadProxy`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrtrm. h  
+ **Cabeçalho:** concrtrm.h  
   
  **Namespace:** simultaneidade  
   
-##  <a name="getid"></a>Método Ithreadproxy::  
+##  <a name="getid"></a>Método Ithreadproxy:  
  Retorna um identificador exclusivo para o proxy de thread.  
   
 ```
@@ -86,7 +68,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador inteiro exclusivo.  
   
-##  <a name="switchout"></a>Método Ithreadproxy::  
+##  <a name="switchout"></a>Método Ithreadproxy:  
  Desassocia o contexto da raiz do processador virtual subjacente.  
   
 ```
@@ -95,22 +77,22 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
 ### <a name="parameters"></a>Parâmetros  
  `switchState`  
- Indica o estado do proxy do thread que está executando o comutador. O parâmetro é do tipo `SwitchingProxyState`.  
+ Indica o estado do proxy do thread que está executando a opção. O parâmetro é do tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Comentários  
- Use `SwitchOut` se você precisar desassociar um contexto da raiz do processador virtual está em execução, por qualquer motivo. Dependendo do valor você passa para o parâmetro `switchState`, e se ou não está em execução em uma raiz virtual do processador, a chamada irá retornar imediatamente ou bloquear o proxy thread associado ao contexto. Erro ao chamar `SwitchOut` com o parâmetro definido `Idle`. Isso resultará em uma [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção.  
+ Use `SwitchOut` se você precisa desassociar um contexto da raiz do processador virtual está em execução, por qualquer motivo. Dependendo do valor você passar para o parâmetro `switchState`, e se ele está em execução em uma raiz de processador virtual, ou não a chamada será retornado imediatamente ou bloquear o proxy de thread associado ao contexto. Erro ao chamar `SwitchOut` com o parâmetro definido `Idle`. Isso resultará em um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção.  
   
- `SwitchOut`é útil quando você deseja reduzir o número de raízes do processador virtual que tem o Agendador, porque o Gerenciador de recursos foi instruído a fazer isso, ou porque foi solicitada uma raiz temporário processador virtual assinadas e terminar com ele. Nesse caso, você deve chamar o método [IVirtualProcessorRoot::Remove](http://msdn.microsoft.com/en-us/ad699b4a-1972-4390-97ee-9c083ba7d9e4) na raiz do processador virtual, antes de fazer uma chamada para `SwitchOut` com o parâmetro `switchState` definida como `Blocking`. Isso bloqueará o proxy de thread e retomará a execução quando uma raiz de processador virtual diferente do Agendador está disponível para executá-lo. O proxy de segmento de bloqueio pode ser retomado chamando a função `SwitchTo` para alternar para o contexto de execução do proxy esse thread. Você também pode retomar o proxy de thread, usando seu contexto associado para ativar uma raiz de processador virtual. Para obter mais informações sobre como fazer isso, consulte [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#activate).  
+ `SwitchOut`é útil quando você deseja reduzir o número de raízes de processador virtual que tem o Agendador, porque o Gerenciador de recursos tem instruído a fazer isso, ou porque você solicitou uma raiz de temporário processador virtual assinadas e terminar com ele. Nesse caso, você deve chamar o método [IVirtualProcessorRoot::Remove](http://msdn.microsoft.com/en-us/ad699b4a-1972-4390-97ee-9c083ba7d9e4) na raiz do processador virtual, antes de fazer uma chamada para `SwitchOut` com o parâmetro `switchState` definido como `Blocking`. Isso bloqueará o proxy de thread e ele continuará a execução quando uma raiz de processador virtual diferente no Agendador está disponível para executá-lo. O proxy de segmento de bloqueio pode ser retomado chamando a função `SwitchTo` para alternar para o contexto de execução do proxy esse thread. Você também pode retomar o proxy de thread, usando seu contexto associado para ativar uma raiz de processador virtual. Para obter mais informações sobre como fazer isso, consulte [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#activate).  
   
- `SwitchOut`também pode ser usado quando você deseja reinicializar o processador virtual para que ele pode ser ativado no futuro enquanto tanto bloqueando o proxy thread ou desconectá-lo temporariamente na raiz do processador virtual está em execução no Agendador ele está distribuindo o trabalho para. Use `SwitchOut` com o parâmetro `switchState` definida como `Blocking` se você deseja bloquear o proxy de thread. Ele pode posteriormente ser retomado usando `SwitchTo` ou `IVirtualProcessorRoot::Activate` conforme mencionado acima. Use `SwitchOut` com o parâmetro definido `Nesting` quando você deseja desanexar temporariamente esse proxy thread na raiz do processador virtual está em execução no e o Agendador do processador virtual está associado. Chamando `SwitchOut` com o parâmetro `switchState` definida como `Nesting` enquanto ele está em execução em uma raiz de processador virtual fará com que a raiz seja reiniciada e o proxy do thread atual para continuar a execução sem a necessidade de um. O proxy de thread é considerado abandonou o Agendador até que ele chama o [Ithreadproxy](#switchout) método `Blocking` em um momento posterior. A segunda chamada para `SwitchOut` com o parâmetro definido `Blocking` destina-se para retornar o contexto para um estado bloqueado para que ele possa ser retomado pelo `SwitchTo` ou `IVirtualProcessorRoot::Activate` do Agendador que ele desanexado do. Como não estava sendo executado em uma raiz virtual do processador, nenhuma reinicialização ocorre.  
+ `SwitchOut`também pode ser usado quando você deseja reinicializar o processador virtual para que ele pode ser ativado no futuro enquanto o bloqueio do proxy de thread ou temporariamente desconectá-lo da raiz do processador virtual está em execução no e o Agendador que ele está distribuindo trabalho para. Use `SwitchOut` com o parâmetro `switchState` definida como `Blocking` se você deseja bloquear o proxy de thread. Ela mais tarde poderá ser retomada usando `SwitchTo` ou `IVirtualProcessorRoot::Activate` conforme observado acima. Use `SwitchOut` com o parâmetro definido `Nesting` quando você quer desanexar temporariamente esse proxy de thread da raiz virtual processador estiver executando no e o Agendador de processador virtual é associado. Chamando `SwitchOut` com o parâmetro `switchState` definida como `Nesting` enquanto ele está em execução em uma raiz de processador virtual fará com que a raiz sejam reinicializadas e o proxy do thread atual para continuar a executar sem a necessidade de um. O proxy de thread é considerado deixou o Agendador até que ele chama o [Ithreadproxy](#switchout) método com `Blocking` em um momento posterior. A segunda chamada para `SwitchOut` com o parâmetro definido `Blocking` destina-se para retornar o contexto para um estado bloqueado para que ele possa ser retomado pelo `SwitchTo` ou `IVirtualProcessorRoot::Activate` no Agendador do qual ele desanexado do. Porque ele não estava em execução em uma raiz de processador virtual, nenhuma reinicialização ocorre.  
   
- Uma raiz de processador virtual reinicializada não é diferente de uma nova raiz de processador virtual que o Agendador recebeu pelo Gerenciador de recursos. Você pode usá-lo para execução ativando-o com um contexto de execução usando `IVirtualProcessorRoot::Activate`.  
+ Uma raiz de processador virtual reinicializada não é diferente de uma nova raiz de processador virtual que o Agendador recebeu pelo Gerenciador de recursos. Você pode usá-lo para execução pelo ativá-lo com um contexto de execução usando `IVirtualProcessorRoot::Activate`.  
   
- `SwitchOut`deve ser chamado no `IThreadProxy` interface que representa o thread atualmente em execução ou os resultados são indefinidos.  
+ `SwitchOut`deve ser chamado no `IThreadProxy` interface que representa o thread atualmente em execução ou os resultados serão indefinidos.  
   
- Em bibliotecas e cabeçalhos que acompanha o Visual Studio 2010, esse método não continha um parâmetro e não reinicializar a raiz do processador virtual. Para preservar o comportamento antigo, o valor de parâmetro padrão de `Blocking` é fornecido.  
+ Em bibliotecas e cabeçalhos que acompanham o Visual Studio 2010, esse método não continha um parâmetro e não reinicializar a raiz do processador virtual. Para preservar o comportamento antigo, o valor de parâmetro padrão de `Blocking` é fornecido.  
   
-##  <a name="switchto"></a>Método Ithreadproxy::  
+##  <a name="switchto"></a>Método: Switchto  
  Executa uma alternância de contexto cooperativo do contexto de execução atual para outro.  
   
 ```
@@ -121,23 +103,23 @@ virtual void SwitchTo(
   
 ### <a name="parameters"></a>Parâmetros  
  `pContext`  
- O contexto de execução de forma cooperativa alternar para.  
+ O contexto de execução para alternar de forma cooperativa para.  
   
  `switchState`  
- Indica o estado do proxy do thread que está executando o comutador. O parâmetro é do tipo `SwitchingProxyState`.  
+ Indica o estado do proxy do thread que está executando a opção. O parâmetro é do tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Comentários  
- Use este método para alternar do contexto de execução para outro, do [Iexecutioncontext](iexecutioncontext-structure.md#dispatch) método do contexto de execução do primeiro. O método associa o contexto de execução `pContext` com um proxy de thread se ele não ainda estiver associado a um. A propriedade do proxy do thread atual é determinada pelo valor especificado para o `switchState` argumento.  
+ Use esse método para alternar do contexto de execução de um para outro, do [Iexecutioncontext](iexecutioncontext-structure.md#dispatch) método do contexto de execução primeiro. O método associa o contexto de execução `pContext` com um proxy de thread se ele não ainda estiver associado a um. A propriedade do proxy do thread atual é determinada pelo valor especificado para o `switchState` argumento.  
   
- Use o valor `Idle` quando quiser retornar o proxy thread atualmente em execução para o Gerenciador de recursos. Chamando `SwitchTo` com o parâmetro `switchState` definida como `Idle` fará com que o contexto de execução `pContext` para iniciar a execução do recurso de execução subjacente. A propriedade de proxy esse thread é transferida para o Gerenciador de recursos, e você deverá retornar a partir do contexto de execução `Dispatch` método logo após `SwitchTo` retorna, para concluir a transferência. O contexto de execução que o proxy de thread foi expedição é dissociado do proxy thread e o Agendador está livre para reutilizá-lo ou destruí-lo conforme desejar.  
+ Use o valor `Idle` quando você quiser retornar o proxy de thread em execução no momento para o Gerenciador de recursos. Chamando `SwitchTo` com o parâmetro `switchState` definida como `Idle` fará com que o contexto de execução `pContext` para iniciar a execução do recurso de execução subjacente. Propriedade desse proxy de thread é transferida para o Gerenciador de recursos, e você deve retornar a partir do contexto de execução `Dispatch` método logo após `SwitchTo` retorna, para concluir a transferência. O contexto de execução que o proxy de thread foi expedição é desassociado do proxy de thread, e o Agendador está livre para reutilizá-la ou destruída conforme desejar.  
   
- Use o valor `Blocking` quando deseja que esse proxy de thread para entrar em um estado bloqueado. Chamando `SwitchTo` com o parâmetro `switchState` definida como `Blocking` fará com que o contexto de execução `pContext` para iniciar a execução e bloquear o proxy do thread atual até que ele seja reiniciado. O Agendador reterá a propriedade do proxy thread quando o proxy thread está no `Blocking` estado. O proxy de segmento de bloqueio pode ser retomado chamando a função `SwitchTo` para alternar para o contexto de execução do proxy esse thread. Você também pode retomar o proxy de thread, usando seu contexto associado para ativar uma raiz de processador virtual. Para obter mais informações sobre como fazer isso, consulte [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#activate).  
+ Use o valor `Blocking` quando você quiser que este proxy de thread para entrar em um estado bloqueado. Chamando `SwitchTo` com o parâmetro `switchState` definida como `Blocking` fará com que o contexto de execução `pContext` para iniciar a execução e bloquear o proxy do thread atual até que ela seja retomada. O Agendador reterá a propriedade do proxy thread quando o proxy de thread está no `Blocking` estado. O proxy de segmento de bloqueio pode ser retomado chamando a função `SwitchTo` para alternar para o contexto de execução do proxy esse thread. Você também pode retomar o proxy de thread, usando seu contexto associado para ativar uma raiz de processador virtual. Para obter mais informações sobre como fazer isso, consulte [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#activate).  
   
- Use o valor `Nesting` quando você deseja desanexar temporariamente esse proxy thread na raiz do processador virtual está em execução no e o Agendador ele está distribuindo o trabalho. Chamando `SwitchTo` com o parâmetro `switchState` definida como `Nesting` fará com que o contexto de execução `pContext` para iniciar a execução e atual proxy thread também continua executando sem a necessidade de uma raiz do processador virtual. O proxy de thread é considerado abandonou o Agendador até que ele chama o [Ithreadproxy](#switchout) método em um momento posterior. O `IThreadProxy::SwitchOut` método poderia bloquear o proxy thread até uma raiz de processador virtual está disponível para reprogramar a ele.  
+ Use o valor `Nesting` quando você quer desanexar temporariamente esse proxy de thread da raiz do processador virtual estiver em execução e o Agendador que ele está distribuindo trabalho para. Chamando `SwitchTo` com o parâmetro `switchState` definida como `Nesting` fará com que o contexto de execução `pContext` para iniciar a execução e o atual proxy thread também continua executando sem a necessidade de uma raiz de processador virtual. O proxy de thread é considerado deixou o Agendador até que ele chama o [Ithreadproxy](#switchout) método em um momento posterior. O `IThreadProxy::SwitchOut` método pode bloquear o proxy de thread até uma raiz de processador virtual está disponível para reprogramar a ele.  
   
- `SwitchTo`deve ser chamado no `IThreadProxy` interface que representa o thread atualmente em execução ou os resultados são indefinidos. A função gera `invalid_argument` se o parâmetro `pContext` é definido como `NULL`.  
+ `SwitchTo`deve ser chamado no `IThreadProxy` interface que representa o thread atualmente em execução ou os resultados serão indefinidos. A função gera `invalid_argument` se o parâmetro `pContext` é definido como `NULL`.  
   
-##  <a name="yieldtosystem"></a>Método Ithreadproxy::  
+##  <a name="yieldtosystem"></a>Método: Yieldtosystem  
  Faz com que o thread de chamada conceda a execução para outro thread que está pronto para ser executado no processador atual. O sistema operacional seleciona o próximo segmento a ser executado.  
   
 ```
@@ -145,13 +127,12 @@ virtual void YieldToSystem() = 0;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Quando chamado por um proxy thread apoiado por um thread do Windows regular, `YieldToSystem` se comporta exatamente como a função do Windows `SwitchToThread`. No entanto, quando chamado de modo de usuário agendáveis (UMS) threads, o `SwitchToThread` função delega a tarefa de escolher o próximo segmento a ser executado para o Agendador de modo de usuário, não o sistema operacional. Para obter o efeito desejado de alternar para outro thread pronto no sistema, use `YieldToSystem`.  
+ Quando chamado por um proxy de thread sustentado por um thread do Windows regular, `YieldToSystem` se comporta exatamente como a função do Windows `SwitchToThread`. No entanto, quando chamado de modo de usuário agendáveis threads (UMS), o `SwitchToThread` função delega a tarefa de separação o próximo segmento para executar o Agendador de modo de usuário, não o sistema operacional. Para obter o efeito desejado de alternar para outro thread pronto no sistema, use `YieldToSystem`.  
   
- `YieldToSystem`deve ser chamado no `IThreadProxy` interface que representa o thread atualmente em execução ou os resultados são indefinidos.  
+ `YieldToSystem`deve ser chamado no `IThreadProxy` interface que representa o thread atualmente em execução ou os resultados serão indefinidos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Estrutura IExecutionContext](iexecutioncontext-structure.md)   
  [Estrutura IScheduler](ischeduler-structure.md)   
  [Estrutura IVirtualProcessorRoot](ivirtualprocessorroot-structure.md)
-

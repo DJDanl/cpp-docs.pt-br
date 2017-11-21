@@ -1,11 +1,10 @@
 ---
-title: Classe CComMultiThreadModel | Documentos do Microsoft
+title: Classe CComMultiThreadModel | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,40 +15,24 @@ f1_keywords:
 - ATLBASE/ATL::CComMultiThreadModel::ThreadModelNoCS
 - ATLBASE/ATL::CComMultiThreadModel::Decrement
 - ATLBASE/ATL::CComMultiThreadModel::Increment
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ATL, multithreading
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6dbfb33a717b23e8252c9bcb2fc11b4a6e420280
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 7aad1856f28a1d76b53b983e63f36cf5fd4a7cfe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
-`CComMultiThreadModel`fornece métodos de thread-safe para incrementar e diminuir o valor de uma variável.  
+`CComMultiThreadModel`fornece métodos de thread-safe para incrementar e decrementar o valor de uma variável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,34 +46,34 @@ class CComMultiThreadModel
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Faz referência a classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|  
-|[CComMultiThreadModel::CriticalSection](#criticalsection)|Faz referência a classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|  
-|[CComMultiThreadModel::ThreadModelNoCS](#threadmodelnocs)|Faz referência a classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).|  
+|[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Referencia a classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|  
+|[CComMultiThreadModel::CriticalSection](#criticalsection)|Referencia a classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|  
+|[CComMultiThreadModel::ThreadModelNoCS](#threadmodelnocs)|Referencia a classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComMultiThreadModel::Decrement](#decrement)|(Estático) Diminui o valor da variável especificada de forma segura para thread.|  
-|[CComMultiThreadModel::Increment](#increment)|(Estático) Incrementa o valor da variável especificada de forma segura para thread.|  
+|[CComMultiThreadModel::Decrement](#decrement)|(Estático) Diminui o valor da variável especificada de uma forma thread-safe.|  
+|[CComMultiThreadModel::Increment](#increment)|(Estático) Incrementa o valor da variável especificada de uma forma thread-safe.|  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, você usa `CComMultiThreadModel` através de um dos dois `typedef` nomes [CComObjectThreadModel] (atl-typedefs.md #ccomobjectthreadmodel ou [CComGlobalsThreadModel] (atl-typedefs.md #ccomglobalsthreadmodel. A classe referenciada por cada `typedef` depende do modelo de threading usado, conforme mostrado na tabela a seguir:  
+ Normalmente, você usa `CComMultiThreadModel` por meio de um de dois `typedef` nomes [CComObjectThreadModel] (atl-typedefs.md #ccomobjectthreadmodel ou [CComGlobalsThreadModel] (atl-typedefs.md #ccomglobalsthreadmodel. A classe referenciada por cada `typedef` depende do modelo de threading usado, conforme mostrado na tabela a seguir:  
   
-|typedef|Threading único|Apartment threading|Livre de threading|  
+|typedef|Thread único|apartment threading|Livre de threading|  
 |-------------|----------------------|-------------------------|--------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S= `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
   
- `CComMultiThreadModel`em si define três `typedef` nomes. `AutoCriticalSection`e `CriticalSection` referência a classes que fornecem métodos para a obtenção e liberar a propriedade de uma seção crítica. `ThreadModelNoCS`referências de classe [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
+ `CComMultiThreadModel`em si define três `typedef` nomes. `AutoCriticalSection`e `CriticalSection` referência de classes que fornecem métodos para a obtenção e liberar a propriedade de uma seção crítica. `ThreadModelNoCS`referências de classe [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
- Ao usar `CComMultiThreadModel`, o `typedef` nome `AutoCriticalSection` faz referência a classe [CComAutoCriticalSection](ccomautocriticalsection-class.md), que fornece métodos para a obtenção e liberar a propriedade de um objeto da seção crítica.  
+ Ao usar `CComMultiThreadModel`, o `typedef` nome `AutoCriticalSection` referencia a classe [CComAutoCriticalSection](ccomautocriticalsection-class.md), que fornece métodos para a obtenção e liberar a propriedade de um objeto de seção crítica.  
   
 ```
 typedef CComAutoCriticalSection AutoCriticalSection;
@@ -141,20 +124,20 @@ private:
   
 ### <a name="threadmodel--ccomobjectthreadmodel"></a>ThreadModel = CComObjectThreadModel  
   
-|Método|Único ou um apartamento de Threading|Livre de Threading|  
+|Método|Único ou Apartment Threading|Livre de Threading|  
 |------------|-----------------------------------|--------------------|  
 |`InternalAddRef`|O incremento não é thread-safe.|O incremento é thread-safe.|  
-|`Lock`|Não faz nada; Há uma seção crítica para bloquear.|A seção crítica está bloqueada.|  
+|`Lock`|Não faz nada; Há uma seção crítica para bloquear.|Seção crítica está bloqueada.|  
   
 ### <a name="threadmodel--ccomobjectthreadmodelthreadmodelnocs"></a>ThreadModel = CComObjectThreadModel::ThreadModelNoCS  
   
-|Método|Único ou um apartamento de Threading|Livre de Threading|  
+|Método|Único ou Apartment Threading|Livre de Threading|  
 |------------|-----------------------------------|--------------------|  
 |`InternalAddRef`|O incremento não é thread-safe.|O incremento é thread-safe.|  
 |`Lock`|Não faz nada; Há uma seção crítica para bloquear.|Não faz nada; Há uma seção crítica para bloquear.|  
   
 ##  <a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
- Ao usar `CComMultiThreadModel`, o `typedef` nome `CriticalSection` faz referência a classe [CComCriticalSection](ccomcriticalsection-class.md), que fornece métodos para a obtenção e liberar a propriedade de um objeto da seção crítica.  
+ Ao usar `CComMultiThreadModel`, o `typedef` nome `CriticalSection` referencia a classe [CComCriticalSection](ccomcriticalsection-class.md), que fornece métodos para a obtenção e liberar a propriedade de um objeto de seção crítica.  
   
 ```
 typedef CComCriticalSection CriticalSection;
@@ -175,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  Consulte [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
 ##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
- A função estática chama a função Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), que diminui o valor da variável apontado por `p`.  
+ Função estática chama a função Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), que diminui o valor da variável apontado pelo `p`.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -183,16 +166,16 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
   
 ### <a name="parameters"></a>Parâmetros  
  `p`  
- [in] Ponteiro para a variável a ser diminuída.  
+ [in] Ponteiro para a variável para ser diminuída.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se o resultado do decremento for 0, então `Decrement` retornará 0. Se o resultado de decremento é diferente de zero, o valor de retorno também é diferente de zero, mas pode não ser igual o resultado do decrement.  
+ Se o resultado de decremento for 0, em seguida, `Decrement` retornará 0. Se o resultado de decremento é diferente de zero, o valor de retorno também é diferente de zero, mas pode não ser igual a diminuir o resultado.  
   
 ### <a name="remarks"></a>Comentários  
  **InterlockedDecrement** impede que mais de um segmento simultaneamente usando essa variável.  
   
 ##  <a name="increment"></a>CComMultiThreadModel::Increment  
- A função estática chama a função Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), que incrementa o valor da variável apontada por `p`.  
+ Função estática chama a função Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), que incrementa o valor da variável apontada pelo `p`.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();
@@ -203,13 +186,13 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
  [in] Ponteiro para a variável a ser incrementado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se o resultado do incremento for 0, então **incremento** retornará 0. Se o resultado do incremento for diferente de zero, o valor de retorno também é diferente de zero, mas pode não ser igual o resultado do incremento.  
+ Se o resultado do incremento for 0, em seguida, **incremento** retornará 0. Se o resultado do incremento for diferente de zero, o valor de retorno também é diferente de zero, mas pode não ser igual o resultado do incremento.  
   
 ### <a name="remarks"></a>Comentários  
  **InterlockedIncrement** impede que mais de um segmento simultaneamente usando essa variável.  
   
 ##  <a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
- Ao usar `CComMultiThreadModel`, o `typedef` nome `ThreadModelNoCS` faz referência a classe [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).  
+ Ao usar `CComMultiThreadModel`, o `typedef` nome `ThreadModelNoCS` referencia a classe [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).  
   
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
@@ -234,4 +217,3 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
  [Classe CComAutoCriticalSection](ccomautocriticalsection-class.md)   
  [Classe CComCriticalSection](ccomcriticalsection-class.md)   
  [Visão geral da classe](../atl-class-overview.md)
-

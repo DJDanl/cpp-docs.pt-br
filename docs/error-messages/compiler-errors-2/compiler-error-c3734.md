@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3734
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3734
+f1_keywords: C3734
+dev_langs: C++
+helpviewer_keywords: C3734
 ms.assetid: 4e2afdcc-7da9-45a1-9c96-85f25e2986e8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 83f523bb615ef06716f226d4a6c837acaa26c5b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3734"></a>C3734 de erro do compilador
 'class': um gerenciado ou de classe WinRT não pode ser uma coclass  
@@ -42,4 +37,3 @@ ms.lasthandoff: 10/10/2017
 ref class CMyClass {   // C3734 remove the ref keyword to resolve  
 };  
 ```  
-

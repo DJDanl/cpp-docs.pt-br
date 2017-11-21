@@ -1,82 +1,82 @@
 ---
-title: "Colocando o controle em uma p&#225;gina da Web (Tutorial ATL, parte 7) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Colocando o controle em uma página da Web (ATL Tutorial, parte 7) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-caps.latest.revision: 15
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6990539ca6f0bc2956822547e3d41c00c841caf8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Colocando o controle em uma p&#225;gina da Web (Tutorial ATL, parte 7)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O controle é concluído agora.  Para ver o controle funcionar em uma situação do mundo real, coloque\-o em uma página da Web.  Um arquivo HTML que contém o controle foi criado quando você definiu o seu controle.  Abra o arquivo PolyCtl.htm do **Gerenciador de Soluções** e será possível ver seu controle em uma página da Web.  
+# <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Colocando o controle em uma página da Web (Tutorial ATL, parte 7)
+O controle está concluído. Para ver o controle de trabalho em uma situação real, coloque-o em uma página da Web. Um arquivo HTML que contém o controle foi criado quando você definiu seu controle. Abra o arquivo PolyCtl.htm **Solution Explorer**, e você pode ver o controle em uma página da Web.  
   
- Nesta etapa, você criará um script da página da Web para responder a eventos.  Você também irá alterar o controle para permitir que o Internet Explorer saiba que o controle é seguro para o script.  
+ Nesta etapa, você será o script a página da Web para responder a eventos. Você também modificará o controle para permitir que o Internet Explorer saibam que o controle é seguro para script.  
   
-## Para gerar um script da página da Web  
- O controle não faz nada ainda. Então, altere a página da Web para responder aos eventos que você envia.  
+## <a name="scripting-the-web-page"></a>A página da Web de script  
+ O controle não fazer nada ainda, portanto, altere a página da Web para responder aos eventos que você enviar.  
   
-#### Para gerar um script da página da Web  
+#### <a name="to-script-the-web-page"></a>Para gerar script de página da Web  
   
-1.  Abra o PolyCtl.htm e selecione o modo HTML.  Adicione as seguintes linhas ao código HTML.  Elas devem ser adicionadas após `</OBJECT>`, mas antes de `</BODY>`.  
+1.  Abra PolyCtl.htm e selecione o modo de exibição HTML. Adicione as seguintes linhas ao código HTML. Eles devem ser adicionados depois `</OBJECT>` mas antes `</BODY>`.  
   
-    ```  
-  
-    <SCRIPT LANGUAGE="VBScript">  
-    <!--  
+ ```  
+ 
+ <SCRIPT LANGUAGE="VBScript">  
+ <!--  
     Sub PolyCtl_ClickIn(x, y)  
-       PolyCtl.Sides = PolyCtl.Sides + 1  
+    PolyCtl.Sides = PolyCtl.Sides + 1  
     End Sub  
     Sub PolyCtl_ClickOut(x, y)  
-       PolyCtl.Sides = PolyCtl.Sides - 1  
+    PolyCtl.Sides = PolyCtl.Sides - 1  
     End Sub  
-    -->  
-    </SCRIPT>  
-    ```  
+ -->  
+ </SCRIPT>  
+ ```  
   
 2.  Salve o arquivo HTM.  
   
- Você adicionou código VBScript que obtém a propriedade dos lados do controle e aumenta o número de lados por um se você clicar no controle.  Se você clicar fora do controle, reduzirá o número de lados por um.  
+ Você adicionou um código VBScript que obtém a propriedade lados do controle e aumenta o número de lados por um se clique dentro do controle. Se você clicar fora do controle, você reduzir o número de lados por um.  
   
-## Indicando que o controle é seguro para o script  
- Você pode exibir a página da Web com o controle no Internet Explorer ou, mais conveniente, usar modo de navegador da Web compilada no Visual C\+\+.  Para ver seu controle no modo de navegador da Web, clique com o botão direito do mouse em PolyCtl.htm e clique em **Exibir no navegador**.  
+## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Indicando que o controle é seguro para script  
+ Você pode exibir a página da Web com o controle no Internet Explorer ou, mais conveniente, usam a exibição do navegador da Web embutida no Visual C++. Para ver seu controle no modo de exibição de navegador da Web, clique com botão direito PolyCtl.htm e clique em **exibir no navegador**.  
   
- Com base em suas configurações de segurança atuais do Internet Explorer, você pode receber uma caixa de diálogo de alerta de segurança que indica que o controle não pode ser seguro para o script e pode potencialmente causar danos.  Por exemplo, se você tinha um controle que exibia um arquivo mas que também tinha um método `Delete` que excluía um arquivo, seria seguro se você simplesmente o exibisse em uma página.  No entanto, não seria seguro criar um script porque alguém poderia chamar o método `Delete`.  
+ Com base em suas configurações de segurança do Internet Explorer, você poderá receber um alerta de segurança caixa de diálogo informando que o controle pode não ser seguro para script e pode potencialmente danificar. Por exemplo, se você tivesse um controle que é exibido um arquivo, mas também tinha uma `Delete` método excluiu um arquivo, seria seguro se apenas exibidos em uma página. Não seria seguro para script, no entanto, porque alguém poderia chamar o `Delete` método.  
   
 > [!IMPORTANT]
->  Para este tutorial, você pode alterar suas configurações de segurança no Internet Explorer para executar controles ActiveX que não estejam marcados como seguros.  No Painel de Controle, clique em **Propriedades da Internet** e clique em **Segurança** para alterar as configurações apropriadas.  Quando tiver concluído o tutorial, altere suas configurações de segurança de volta para o estado original.  
+>  Para este tutorial, você pode alterar as configurações de segurança no Internet Explorer para executar controles ActiveX não marcados como seguros. No painel de controle, clique em **propriedades da Internet** e clique em **segurança** para alterar as configurações apropriadas. Quando você concluiu o tutorial, altere as configurações de segurança para seu estado original.  
   
- Você pode programaticamente alertar o Internet Explorer que ele não precisa exibir a caixa de diálogo de alerta de segurança para este controle específico.  Você pode fazer isso com a interface de `IObjectSafety` , e o ATL fornece uma implementação dessa interface na classe [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md).  Para adicionar a interface ao controle, adicione `IObjectSafetyImpl` a sua lista de classes herdadas e adicione uma entrada para ele no seu mapa COM.  
+ Você pode programaticamente de alerta do Internet Explorer que isso não é necessário exibir a caixa de diálogo de alerta de segurança para este controle específico. Você pode fazer isso com o `IObjectSafety` interface e ATL fornece uma implementação desta interface na classe [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md). Para adicionar a interface para o controle, adicione `IObjectSafetyImpl` à lista de classes herdadas e adicione uma entrada para ele em seu mapa de COM.  
   
-#### Para adicionar IObjectSafetyImpl ao controle  
+#### <a name="to-add-iobjectsafetyimpl-to-the-control"></a>Para adicionar IObjectSafetyImpl ao controle  
   
-1.  Adicione a seguinte linha no final da lista de classes herdadas em PolyCtl.h e adicione uma vírgula na linha anterior:  
+1.  Adicione a seguinte linha ao final da lista de classes herdadas em PolyCtl.h e adicione uma vírgula para a linha anterior:  
   
-     [!code-cpp[NVC_ATL_Windowing#62](../atl/codesnippet/CPP/putting-the-control-on-a-web-page-atl-tutorial-part-7_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#62](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_1.h)]  
   
-2.  Adicione as linhas a seguir ao mapa COM em PolyCtl.h:  
+2.  Adicione a seguinte linha ao mapa em PolyCtl.h COM:  
   
-     [!code-cpp[NVC_ATL_Windowing#63](../atl/codesnippet/CPP/putting-the-control-on-a-web-page-atl-tutorial-part-7_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#63](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_2.h)]  
   
-## Compilando e testando o controle  
- Compilar o controle.  Assim que a compilação é concluída, abra o PolyCtl.htm no modo de navegador novamente.  Desta vez, a página da Web deve ser exibida diretamente sem a caixa de diálogo Alerta de Segurança.  Clique dentro do polígono; o número de lados aumenta em um.  Clique fora do polígono para reduzir o número de lados.  Se você tentar reduzir o número de lados para abaixo de três, verá a mensagem de erro definida.  
+## <a name="building-and-testing-the-control"></a>Compilar e testar o controle  
+ Crie o controle. Depois que a compilação for concluída, abra novamente PolyCtl.htm na exibição do navegador. Neste momento, a página da Web deve ser exibida diretamente sem a caixa de diálogo alerta de segurança. Clique dentro do polígono; o número de lados aumenta em um. Clique fora do polígono para reduzir o número de lados. Se você tentar reduzir o número de lados abaixo três, você verá a mensagem de erro que você definir.  
   
- [Volte para a etapa 6](../Topic/Adding%20a%20Property%20Page%20\(ATL%20Tutorial,%20Part%206\).md)  
+ [Para a etapa 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
-## Próximas etapas  
- Isso conclui o tutorial do ATL.  Para obter links para mais informações sobre o ATL, consulte a [página inicial do ATL](../atl/active-template-library-atl-concepts.md).  
+## <a name="next-steps"></a>Próximas etapas  
+ Isso conclui o tutorial da ATL. Para obter links para obter mais informações sobre ATL, consulte o [página inicial do ATL](../atl/active-template-library-atl-concepts.md).  
   
-## Consulte também  
- [Tutorial](../Topic/Active%20Template%20Library%20\(ATL\)%20Tutorial.md)
+## <a name="see-also"></a>Consulte também  
+ [Tutorial](../atl/active-template-library-atl-tutorial.md)
+

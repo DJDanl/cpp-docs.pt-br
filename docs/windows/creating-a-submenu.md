@@ -1,43 +1,42 @@
 ---
-title: "Criando um submenu | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "submenus"
-  - "submenus, criando"
-  - "menus, criando"
+title: Criando um Submenu | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- submenus
+- submenus, creating
+- menus, creating
 ms.assetid: fb95fdfd-0a80-459d-8c5c-a4e8bac9f56a
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fad2e10a8e6a06069bfb4bda269962aa4268e39a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Criando um submenu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para criar um submenu  
+# <a name="creating-a-submenu"></a>Criando um submenu
+### <a name="to-create-a-submenu"></a>Para criar um submenu  
   
 1.  Clique no comando de menu para o qual você deseja criar um submenu.  
   
-2.  No **Novo Item** caixa que aparece à direita, digite o nome do novo comando de menu. Este novo comando aparecerá primeiro no menu do submenu.  
+2.  No **Novo Item** caixa que aparece à direita, digite o nome do novo comando de menu. Este novo comando aparecerão primeiro no menu de submenu.  
   
-3.  Adicione comandos de menu adicionais no menu do submenu.  
+3.  Adicione comandos de menu adicionais ao menu submenu.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
   
  **Requisitos**  
   
  Win32  
   
-## Consulte também  
- [Editor de menu](../Topic/Menu%20Editor.md)
+## <a name="see-also"></a>Consulte também  
+ [Editor de Menu](../windows/menu-editor.md)

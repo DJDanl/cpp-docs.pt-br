@@ -1,46 +1,43 @@
 ---
-title: "deque::at (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "no membro [STL/CLR]"
+title: 'deque:: AT (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af83d8a-c519-4b2a-a25f-d3dc8bbb87fb
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf07c109bfd80fb34af007b0a66dd6f7a2dbd3af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::at (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeat-stlclr"></a>deque::at (STL/CLR)
 Acessa um elemento em uma posição especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### Parâmetros  
- posição  
- Posição do elemento acessar.  
+#### <a name="parameters"></a>Parâmetros  
+ POS  
+ Posição do elemento a acessar.  
   
-## Comentários  
- A função de membro retorna uma referência ao elemento de sequência controlada na posição `pos`.  Use\-a para ler ou gravar um elemento cuja posição você conhece.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna uma referência para o elemento da sequência controlada na posição `pos`. Você pode usá-lo para ler ou gravar um elemento cuja posição você sabe.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_at.cpp   
@@ -69,13 +66,16 @@ int main()
   
 ```  
   
-  **um b c**  
- **um x c**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+a b c  
+a x c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::operator](../Topic/deque::operator\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)

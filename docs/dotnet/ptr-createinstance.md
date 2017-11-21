@@ -1,36 +1,34 @@
 ---
-title: "ptr::CreateInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.CreateInstance"
-  - "msclr::com::ptr::CreateInstance"
-  - "msclr.com.ptr.CreateInstance"
-  - "ptr::CreateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::CreateInstance"
+title: PTR::CreateInstance | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.CreateInstance
+- msclr::com::ptr::CreateInstance
+- msclr.com.ptr.CreateInstance
+- ptr::CreateInstance
+dev_langs: C++
+helpviewer_keywords: ptr::CreateInstance
 ms.assetid: 9e8e4c4c-1651-4839-8829-5857d74470fe
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 00a107d0f502d29d37ae085548e66012d4d585d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::CreateInstance
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria uma instância de um objeto COM dentro de `com::ptr`.  
+# <a name="ptrcreateinstance"></a>ptr::CreateInstance
+Cria uma instância de um objeto COM em um `com::ptr`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void CreateInstance(  
@@ -71,29 +69,29 @@ void CreateInstance(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `progid`  
- Uma cadeia de caracteres de `ProgID` .  
+ Uma cadeia de caracteres `ProgID`.  
   
  `pouter`  
- Ponteiro para a interface IUnknown do objeto de agregação \(o IUnknown de controle\).  Se `pouter` não for especificado, `NULL` será usado.  
+ Ponteiro para a interface de IUnknown do objeto de agregação (IUnknown controlador). Se `pouter` não for especificado, `NULL` é usado.  
   
  `cls_context`  
- Contexto no qual o código que gerencia o objeto recém\-criado será executado.  Os valores são tirados de enumeração de `CLSCTX` .  Se `cls_context` não for especificado, o valor CLSCTX\_ALL será usado.  
+ Contexto no qual o código que gerencia o objeto recém-criado será executado. Os valores são tirados de `CLSCTX` enumeração. Se `cls_context` não for especificado, o valor CLSCTX_ALL é usado.  
   
  `rclsid`  
- `CLSID` associado aos dados e o código que serão usados para criar o objeto.  
+ `CLSID`associado a dados e o código que será usado para criar o objeto.  
   
-## Exceções  
- Se `com::ptr` já tiver uma referência a um objeto COM, `CreateInstance` gerencie <xref:System.InvalidOperationException>.  
+## <a name="exceptions"></a>Exceções  
+ Se o `com::ptr` já possui uma referência a um objeto COM, `CreateInstance` lança <xref:System.InvalidOperationException>.  
   
- Este chamadas de função `CoCreateInstance` e usa <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> converter qualquer erro `HRESULT` a uma exceção apropriada.  
+ Esta função chama `CoCreateInstance` e usa <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> para converter qualquer erro `HRESULT` para uma exceção apropriada.  
   
-## Comentários  
- usa `CoCreateInstance` de`CreateInstance` criar uma nova instância do objeto especificado, identificada de ProgID ou de CLSID.  `com::ptr` referencia o objeto recém\-criado e libera automaticamente todas as referências possuídos em cima de destruição.  
+## <a name="remarks"></a>Comentários  
+ `CreateInstance`usa `CoCreateInstance` para criar uma nova instância do objeto especificado, identificado um ProgID ou CLSID. O `com::ptr` faz referência ao objeto recém-criado e liberará automaticamente todos os proprietários referências após a destruição.  
   
-## Exemplo  
- Este exemplo de CLR implementa uma classe que usa `com::ptr` para encapsular o objeto de `IXMLDOMDocument` de membro particular.  Os formatos diferentes de uso dos dois construtores da classe de `CreateInstance` para criar o objeto de documento de ProgID ou CLSID mais de um CLSCTX.  
+## <a name="example"></a>Exemplo  
+ Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto. Os construtores de classe usam duas formas diferentes de `CreateInstance` para criar o objeto de documento a partir de ProgID ou CLSID mais um CLSCTX.  
   
 ```  
 // comptr_createinstance.cpp  
@@ -142,10 +140,10 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ COM \\ ptr.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\com\ptr.h >  
   
- msclr::com de**Namespace**  
+ **Namespace** msclr::com  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Membros ptr](../dotnet/ptr-members.md)

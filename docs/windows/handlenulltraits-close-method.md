@@ -1,33 +1,30 @@
 ---
-title: "M&#233;todo HANDLENullTraits::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Close"
+title: "Método Handlenulltraits: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: 6fb2fa0d-df20-45dc-856f-f78497f8bdf9
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45d92fd9d14fa65594db17ce881eb0821810b1dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo HANDLENullTraits::Close
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="handlenulltraitsclose-method"></a>Método HANDLENullTraits::Close
 Fecha o identificador especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 inline static bool Close(  
@@ -35,17 +32,17 @@ inline static bool Close(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `h`  
  O identificador para fechar.  
   
-## Valor de retorno  
- **true** se o identificador `h` se é encerrado com êxito; caso contrário, **false**.  
+## <a name="return-value"></a>Valor de retorno  
+ **True** se tratar `h` fechada com êxito; caso contrário, **false**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estrutura HANDLENullTraits](../windows/handlenulltraits-structure.md)

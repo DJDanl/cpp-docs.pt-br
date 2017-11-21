@@ -1,47 +1,28 @@
 ---
-title: omp_unset_nest_lock | Documentos do Microsoft
+title: omp_unset_nest_lock | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_unset_nest_lock
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_unset_nest_lock OpenMP function
+f1_keywords: omp_unset_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_unset_nest_lock OpenMP function
 ms.assetid: 1721d061-3f9c-45d7-b479-a665cd0a121d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 18fd01b475c45e2d4e717aff291528de5caa924f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: badb7518b7fa90b39e1fb4af0ee07b27087f5e8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
-Libera um bloqueio aninháveis.  
+Libera um bloqueio empilhável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +36,7 @@ void omp_unset_nest_lock(
  onde,  
   
  `lock`  
- Uma variável do tipo [omp_nest_lock_t ()](../../../parallel/openmp/reference/omp-nest-lock-t.md) que foi inicializado com [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md), possuídos pelo thread e em execução na função.  
+ Uma variável do tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que foi inicializado com [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md), o segmento pertence e em execução na função.  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [3.2.4 funções omp_unset_lock e omp_unset_nest_lock](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).  

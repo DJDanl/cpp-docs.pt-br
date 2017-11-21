@@ -1,33 +1,30 @@
 ---
-title: "M&#233;todo WeakRef::AsIID | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::AsIID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método AsIID"
+title: "Método: Asiid | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::AsIID
+dev_langs: C++
+helpviewer_keywords: AsIID method
 ms.assetid: 94e87309-32da-4dbb-8233-e77313a1f448
-caps.latest.revision: 7
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 37bbf6711c983383b311449bb036fca7cad74f5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo WeakRef::AsIID
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Define o parâmetro de ponteiro ComPtr especificado para representar a ID da interface especificada.  
+# <a name="weakrefasiid-method"></a>Método WeakRef::AsIID
+Define o parâmetro de ponteiro ComPtr especificado para representar a ID de interface especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 HRESULT AsIID(  
@@ -36,32 +33,32 @@ HRESULT AsIID(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `riid`  
  Uma ID de interface.  
   
  `ptr`  
  Quando essa operação for concluída, um objeto que representa o parâmetro `riid`.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
   
--   S\_OK se essa operação for bem\-sucedida; Caso contrário, um HRESULT que indica o motivo pelo qual a operação falhou, e `ptr` é definido como `nullptr`.  
+-   S_OK se essa operação for bem-sucedida; Caso contrário, o HRESULT que indica o motivo da falha na operação, e `ptr` é definido como `nullptr`.  
   
--   S\_OK se essa operação for bem\-sucedida, mas o objeto WeakRef atual já foi liberado. Parâmetro `ptr` é definido como `nullptr`.  
+-   S_OK se essa operação for bem-sucedida, mas o objeto WeakRef atual já foi liberado. Parâmetro `ptr` é definido como `nullptr`.  
   
--   S\_OK se essa operação for bem\-sucedida, mas o objeto WeakRef atual não é derivado do parâmetro `riid`. Parâmetro `ptr` é definido como `nullptr`. \(Para obter mais informações, consulte comentários.\)  
+-   S_OK se essa operação for bem-sucedida, mas o objeto WeakRef atual não é derivado do parâmetro `riid`. Parâmetro `ptr` é definido como `nullptr`. (Para obter mais informações, consulte comentários.)  
   
-## Comentários  
- Um erro será emitido se parâmetro `riid` não é derivado de IInspectable. Esse erro substitui o valor de retorno.  
+## <a name="remarks"></a>Comentários  
+ Um erro é emitido se parâmetro `riid` não é derivado de IInspectable. Esse erro substitui o valor de retorno.  
   
- O primeiro modelo é a forma que você deve usar em seu código. O segundo modelo \(não mostrada aqui mas declarado no arquivo de cabeçalho\) é uma especialização de auxiliar interno, que oferece suporte a recursos da linguagem C\+\+, como o [automático](../cpp/auto-cpp.md) palavra\-chave de dedução de tipo.  
+ O primeiro modelo é o formulário que você deve usar em seu código. O segundo modelo (não mostrada aqui, mas declarados no arquivo de cabeçalho) é uma especialização de auxiliar interno, que dá suporte a recursos de linguagem do C++, como o [automática](../cpp/auto-cpp.md) palavra-chave de dedução de tipo.  
   
- A partir do SDK do Windows 10, esse método não define a instância de WeakRef `nullptr` se não foi possível obter a referência fraca, portanto você deve evitar código de verificação de erro que verifica o WeakRef para `nullptr`. Em vez disso, verifique o HRESULT retornado para determinar se o método foi bem\-sucedido, ou marque `ptr` para `nullptr`.  
+ A partir do SDK do Windows 10, esse método não define a instância de WeakRef `nullptr` se não foi possível obter a referência fraca, portanto você deve evitar código de verificação que verifica a WeakRef para `nullptr`. Em vez disso, verifique `ptr` para `nullptr`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
  **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe WeakRef](../windows/weakref-class.md)

@@ -1,33 +1,30 @@
 ---
-title: "SafeSubtract | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeSubtract"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função SafeSubtract"
+title: SafeSubtract | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeSubtract
+dev_langs: C++
+helpviewer_keywords: SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 98114ebc7baee41970177e9c390f65fa5521544a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# SafeSubtract
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Subtrai dois números de uma maneira que protege contra o estouro.  
+# <a name="safesubtract"></a>SafeSubtract
+Subtrai dois números de forma que protege contra estouro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename T, typename U>  
@@ -38,34 +35,34 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### Parâmetros  
- \[entrada\] `t`  
- O primeiro número na subtração.  Isso deve ser do tipo T.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `t`  
+ O primeiro número de subtração. Isso deve ser do tipo T.  
   
- \[entrada\] `u`  
- O número a ser subtraído de `t`.  Isso deve ser do tipo U.  
+ [in] `u`  
+ O número para subtrair de `t`. Isso deve ser do tipo u  
   
- \[saída\] `result`  
- O parâmetro `SafeSubtract` onde armazena o resultado.  
+ [out] `result`  
+ O parâmetro onde `SafeSubtract` armazena o resultado.  
   
-## Valor de retorno  
- `true` se nenhum erro ocorre; `false` se ocorrer um erro.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se nenhum erro ocorrer; `false` se ocorrer um erro.  
   
-## Comentários  
- Esse método é parte de [Biblioteca de SafeInt](../windows/safeint-library.md) e é criado para uma única operação de subtração sem criar uma instância de [Classe SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Comentários  
+ Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de subtração único sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Esse método deve ser usado apenas quando uma única operação matemática deve ser protegida.  Se houver várias operações, você deve usar a classe de `SafeInt` em vez de chamar funções autônomas individuais.  
+>  Este método só deve ser usado quando uma operação matemática único deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
   
- Para obter mais informações sobre os tipos T e U de modelo, consulte [Funções \(SafeInt\)](../windows/safeint-functions.md).  
+ Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Consulte também  
- [Funções \(SafeInt\)](../windows/safeint-functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções (SafeInt)](../windows/safeint-functions.md)   
  [Biblioteca de SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)   
  [SafeAdd](../windows/safeadd.md)

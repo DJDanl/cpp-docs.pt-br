@@ -1,33 +1,30 @@
 ---
-title: "map::map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro de mapa [STL/CLR]"
+title: 'Map:: Map (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::map
+dev_langs: C++
+helpviewer_keywords: map member [STL/CLR]
 ms.assetid: c91f699a-4742-4859-b2b3-c2a01a750bea
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d8fe3e0dd20ae07f3378bd528d7e19986c2aed6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# map::map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria um objeto contêiner.  
+# <a name="mapmap-stlclr"></a>map::map (STL/CLR)
+Constrói um objeto contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 map();  
@@ -44,79 +41,71 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  primeiro  
  Início do intervalo a ser inserido.  
   
  last  
- O fim do intervalo a ser inserido.  
+ Fim do intervalo a ser inserido.  
   
- pred  
- Ordenando o predicado da sequência controlada.  
+ Pred  
+ Ordenação de predicado para sequência controlada.  
   
  direita  
- Objeto ou intervalo a ser inserido.  
+ Objeto ou intervalo a inserir.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O construtor:  
   
  `map();`  
   
- inicializa a sequência controlada sem os elementos, com o padrão de ordenação `key_compare()`predicado.  Você usa para especificar inicial uma sequência vazia, controlada com o predicado padrão de ordenação.  
+ inicializa a sequência controlada com nenhum elemento com o padrão de ordenação predicado `key_compare()`. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o padrão de ordenação de predicado.  
   
  O construtor:  
   
  `explicit map(key_compare^ pred);`  
   
- inicializa a sequência controlada sem os elementos, com o predicado de ordenação `pred`.  Você usa para especificar inicial uma sequência vazia, controlada pelo predicado especificado. ordenando  
+ inicializa a sequência controlada com nenhum elemento, com o predicado ordenação `pred`. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o predicado de ordenação especificado.  
   
  O construtor:  
   
  `map(map<Key, Mapped>% right);`  
   
- inicializa a sequência controlada pela sequência `[``right``.`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``.`[map::end](../dotnet/map-end-stl-clr.md)`())`, com o padrão de ordenação predicado.  Você usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto `right`do mapa, com o padrão de ordenação predicado.  
+ inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`), com o padrão de ordenação de predicado. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de mapa `right`, com o padrão de ordenação de predicado.  
   
  O construtor:  
   
  `map(map<Key, Mapped>^ right);`  
   
- inicializa a sequência controlada pela sequência `[``right``->`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``->`[map::end](../dotnet/map-end-stl-clr.md)`())`, com o padrão de ordenação predicado.  Você usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto `right`do mapa, com o padrão de ordenação predicado.  
+ inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`), com o padrão de ordenação de predicado. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de mapa `right`, com o padrão de ordenação de predicado.  
   
  O construtor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last);`  
   
- `map(InIter first, InIter last);`  
-  
- inicializa a sequência controlada pela sequência `[``first``,` `last``)`, com o padrão de ordenação predicado.  Você usará para tornar a sequência controlada uma cópia de outra sequência, com o padrão de ordenação predicado.  
+ inicializa a sequência controlada com a sequência [`first`, `last`), com o padrão de ordenação de predicado. Você pode usá-lo para fazer uma cópia de outra sequência, de sequência controlada com o padrão de ordenação de predicado.  
   
  O construtor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- `map(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- inicializa a sequência controlada pela sequência `[``first``,` `last``)`, com o predicado de ordenação `pred`.  Você usará para tornar a sequência controlada uma cópia de outra sequência, com o predicado ordenando especificado.  
+ inicializa a sequência controlada com a sequência [`first`, `last`), com o predicado ordenação `pred`. Você pode usá-lo para fazer uma cópia de outra sequência, com o predicado especificado de ordenação de sequência controlada.  
   
  O construtor:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o padrão de ordenação predicado.  Você usará para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador, com o padrão de ordenação predicado.  
+ inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o padrão de ordenação de predicado. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com o padrão de ordenação de predicado de sequência controlada.  
   
  O construtor:  
   
- `map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o predicado ordenação `pred`. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com o predicado especificado de ordenação de sequência controlada.  
   
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o predicado de ordenação `pred`.  Você usará para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador, com o predicado ordenando especificado.  
+## <a name="example"></a>Exemplo  
   
-## Exemplo  
-  
-```  
+```cpp  
 // cliext_map_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -190,22 +179,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **um \[1\] \[2\] \[b3 c\]**  
-**size\(\) \= 0**  
- **c \[3\] \[2\] \[bum 1\]**  
- **um \[1\] \[2\] \[b3 c\]**  
- **c \[3\] \[2\] \[bum 1\]**  
- **um \[1\] \[2\] \[b3 c\]**  
- **c \[3\] \[2\] \[bum 1\]**  
- **c \[3\] \[2\] \[bum 1\]**  
- **um \[1\] \[2\] \[b3 c\]**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../Topic/map::generic_container%20\(STL-CLR\).md)   
- [map::operator\=](../dotnet/map-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [Map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)

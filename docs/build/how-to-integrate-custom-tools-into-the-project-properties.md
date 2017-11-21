@@ -1,51 +1,48 @@
 ---
-title: "Como integrar ferramentas personalizar a propriedades de projeto | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "msbuild.cpp.howto.integratecustomtools"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "msbuild (c++), como integrar ferramentas personalizadas"
+title: 'Como: integrar ferramentas personalizar as propriedades do projeto | Microsoft Docs'
+ms.custom: 
+ms.date: 04/27/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: msbuild.cpp.howto.integratecustomtools
+dev_langs: C++
+helpviewer_keywords: 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 128b19c1175fb5f39599a9ccaeae66d1fc53fdab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como integrar ferramentas personalizar a propriedades de projeto
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode adicionar opções personalizadas de ferramenta para a janela do Visual Studio **Páginas de Propriedades** criando um arquivo XML subjacente do esquema.  
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Como integrar ferramentas personalizar a propriedades de projeto
+Você pode adicionar opções de ferramenta personalizada para o Visual Studio **páginas de propriedade** janela criando um arquivo de esquema XML subjacente.  
   
- A seção de **Propriedades de Configuração** da janela de **Páginas de Propriedades** exibe os grupos de configurações que são conhecidos como *regras*.  Cada regra contém as configurações para uma ferramenta ou um grupo de recursos.  Por exemplo, a regra de **Vinculador** contém as definições da ferramenta do vinculador.  As configurações em uma regra podem ser subdivididas em *categorias*.  
+ O **propriedades de configuração** seção o **páginas de propriedade** janela exibe os grupos de configuração que são conhecidos como *regras*. Cada regra contém as configurações para uma ferramenta ou um grupo de recursos. Por exemplo, o **vinculador** regra contém as configurações para a ferramenta do vinculador. As configurações em uma regra podem ser subdivididas em *categorias*.  
   
- Este documento explica como criar um arquivo em um diretório de conjunto que contém as propriedades da ferramenta personalizado de forma que elas sejam carregadas quando o Visual Studio é iniciado.  Para obter informações sobre como alterar o arquivo, consulte [Parte da plataforma de 2 Extensibilty](http://go.microsoft.com/fwlink/?LinkID=191489) o blog da equipe do projeto do Visual Studio.  
+ Este documento explica como criar um arquivo em um diretório de conjunto que contém propriedades de sua ferramenta personalizada para que as propriedades são carregadas quando o Visual Studio inicia. Para obter informações sobre como modificar o arquivo, consulte [plataforma Extensibilty parte 2](http://go.microsoft.com/fwlink/?LinkID=191489) no blog da equipe de projeto do Visual Studio.  
   
-### Para adicionar ou alterar as propriedades do projeto  
+### <a name="to-add-or-change-project-properties"></a>Para adicionar ou alterar propriedades do projeto  
   
 1.  No editor de XML, crie um arquivo XML.  
   
-2.  Salve o arquivo na pasta de %ProgramFiles%\\MSBuild\\Microsoft.Cpp\\v4.0\\ .  Cada regra na janela de **Páginas de Propriedades** é representada por um arquivo XML nessa pasta.  Certifique\-se de que o arquivo é denominado exclusivamente na pasta.  
+2.  Salve o arquivo em que o Visual Studio de 2017 `VCTargets\1033` pasta. Você terá um caminho diferente para cada edição do Visual Studio de 2017 que está instalado e em cada idioma. Por exemplo, o caminho da pasta para a edição do Visual Studio Enterprise em inglês é `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Ajuste o caminho para seu idioma e a edição do Visual Studio. Cada regra no **páginas de propriedade** janela é representada por um arquivo XML nesta pasta. Certifique-se de que o arquivo seja exclusivamente nomeado na pasta.  
   
-3.  Copie o conteúdo de %ProgramFiles%\\MSBuild\\Microsoft.Cpp\\v4.0\\cl.xml, próximo ele sem salvar as alterações, e colar o conteúdo no novo arquivo XML.  Você pode usar qualquer arquivo de esquema XML – este é apenas um que pode ser usado assim que você começa com um modelo.  
+3.  Copiar o conteúdo de `%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>\cl.xml`, fechá-lo sem salvar as alterações e, em seguida, cole o conteúdo no seu novo arquivo XML. Você pode usar qualquer arquivo de esquema XML - essa é apenas uma pode ser usado para iniciar com um modelo.  
   
-4.  No novo arquivo XML, modifique o conteúdo de acordo com seus requisitos.  Não se esqueça de alterar **Nome da regra** e **Rule.DisplayName** no topo do arquivo.  
+4.  No novo arquivo XML, modifique o conteúdo de acordo com suas necessidades. Certifique-se de alterar o **o nome da regra** e **Rule.DisplayName** na parte superior do arquivo.  
   
-5.  Salvar as alterações e feche o arquivo.  
+5.  Salve as alterações e feche o arquivo.  
   
-6.  Os arquivos XML em %ProgramFiles%\\MSBuild\\Microsoft.Cpp\\v4.0\\ são carregados quando o é iniciado do Visual Studio.  Em virtude disso, para testar o novo arquivo, reinicie o Visual Studio.  
+6.  Arquivos XML em `%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>` são carregados quando o Visual Studio inicia. Portanto, para testar o novo arquivo, reinicie o Visual Studio.  
   
-7.  Em **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.  Na janela de **Páginas de Propriedades** , no painel esquerdo, verifique se existe um novo nó com o nome da regra.  
+7.  Em **Solution Explorer**, clique em um projeto e, em seguida, clique em **propriedades**. No **páginas de propriedade** janela, no painel esquerdo, verifique se há um novo nó com o nome da sua regra.  
   
-## Consulte também  
- [MSBuild \(Visual C\+\+\)](../Topic/MSBuild%20\(Visual%20C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

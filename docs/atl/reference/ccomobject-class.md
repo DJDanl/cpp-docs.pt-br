@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLCOM/ATL::CComObject::CreateInstance
 - ATLCOM/ATL::CComObject::QueryInterface
 - ATLCOM/ATL::CComObject::Release
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObject class
+dev_langs: C++
+helpviewer_keywords: CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 7735c80e293bc6534700cf31715fdfdd8ab8e461
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 Essa classe implementa **IUnknown** para um objeto agregado.  
@@ -129,7 +111,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- Função estática permite que você crie um novo **CComObject** `Base` **>** objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Função estática permite que você crie um novo **CComObject <** `Base`  **>**  objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -137,7 +119,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Parâmetros  
  `pp`  
- [out] Um ponteiro para um **CComObject** `Base` **>** ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
+ [out] Um ponteiro para um **CComObject <** `Base`  **>**  ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
@@ -148,9 +130,9 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
  Se você não precisa de acesso direto ao objeto, mas ainda deseja criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_COM 38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[NVC_ATL_COM #39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Recupera um ponteiro para a interface solicitada.  
@@ -190,4 +172,3 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

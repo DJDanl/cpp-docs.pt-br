@@ -1,33 +1,30 @@
 ---
-title: "helpcontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpcontext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpcontext attribute"
+title: HelpContext | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpcontext
+dev_langs: C++
+helpviewer_keywords: helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 46611a2cd25f6154d183f44da0c8333471ea2ae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# helpcontext
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica uma identificação de contexto que permite que as informações de modo de exibição do usuário sobre este elemento no arquivo de Ajuda.  
+# <a name="helpcontext"></a>helpcontext
+Especifica uma ID de contexto que permite que usuários exibir informações sobre este elemento no arquivo de Ajuda.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -36,35 +33,34 @@ Especifica uma identificação de contexto que permite que as informações de m
 ) ]  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `id`  
- A identificação de contexto do tópico da Ajuda.  Consulte [Ajuda em HTML: ajuda contextual para os programas](../mfc/html-help-context-sensitive-help-for-your-programs.md) para obter mais informações sobre identificações de contexto.  
+ A ID do contexto do tópico da Ajuda. Consulte [ajuda HTML: Ajuda sensível ao contexto de seus programas](../mfc/html-help-context-sensitive-help-for-your-programs.md) para obter mais informações sobre o contexto de IDs.  
   
-## Comentários  
- O  **helpcontext** o atributo do C\+\+ tem a mesma funcionalidade que o  [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **helpcontext** atributo C++ tem a mesma funcionalidade que o [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) atributo MIDL.  
   
-## Exemplo  
- Consulte o exemplo para  [ValorPadrão](../Topic/defaultvalue.md) para obter um exemplo de como usar  **helpcontext**.  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo para [defaultvalue](../windows/defaultvalue.md) para obter um exemplo de como usar **helpcontext**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`, `typedef`,  **classe**, método, propriedade|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|`interface`, `typedef`, **classe**, método, propriedade|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../Topic/helpfile.md)   
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interface](../windows/interface-attributes.md)   
+ [Atributos de classe](../windows/class-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   
+ [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [arquivo de ajuda](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

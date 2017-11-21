@@ -1,42 +1,39 @@
 ---
-title: "deque::push_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::push_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro push_back [STL/CLR]"
+title: deque (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::push_back
+dev_langs: C++
+helpviewer_keywords: push_back member [STL/CLR]
 ms.assetid: dafd5a4d-1fc7-434c-b129-a523099f8701
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f8da63a1b1ee8734a6e767acbe4a6a2f2d304f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::push_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adiciona um novo elemento a última vez.  
+# <a name="dequepushback-stlclr"></a>deque::push_back (STL/CLR)
+Adiciona um novo elemento de última.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void push_back(value_type val);  
 ```  
   
-## Comentários  
- A função de membro insere um elemento com valor `val` ao término da sequência controlada.  Você usará para anexar outro elemento ao deque.  
+## <a name="remarks"></a>Comentários  
+ A função de membro insere um elemento com o valor `val` no final da sequência controlada. Você pode usá-lo para anexar outro elemento para o deque.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_push_back.cpp   
@@ -59,14 +56,17 @@ int main()
   
 ```  
   
-  **um b c**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)   
- [deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)   
- [deque::push\_front](../dotnet/deque-push-front-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)   
+ [deque:: pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)   
+ [deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)

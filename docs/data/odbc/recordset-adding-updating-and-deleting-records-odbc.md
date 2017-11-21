@@ -1,51 +1,50 @@
 ---
-title: "Conjunto de registros: adicionando, atualizando e excluindo registros (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método AddNew"
-  - "dados em conjuntos de registros [C++]"
-  - "conjuntos de registros ODBC [C++], adicionando registros"
-  - "conjuntos de registros ODBC [C++], excluindo registros"
-  - "conjuntos de registros ODBC [C++], editando registros"
-  - "edição de registros [C++]"
-  - "edição de registros [C++], em conjunto de registros"
-  - "registros [C++], adicionando"
-  - "registros [C++], excluindo"
-  - "registros [C++], edição"
-  - "registros [C++], atualizando"
-  - "conjunto de registros [C++], adicionando registros"
-  - "conjunto de registros [C++], excluindo registros"
-  - "conjunto de registros [C++], editando registros"
-  - "conjunto de registros [C++], atualizando"
+title: 'Conjunto de registros: Adicionando, atualizando e excluindo registros (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records [C++], updating
+- record editing [C++], in recordsets
+- recordsets [C++], adding records
+- records [C++], adding
+- ODBC recordsets [C++], adding records
+- recordsets [C++], editing records
+- recordsets [C++], updating
+- records [C++], deleting
+- AddNew method
+- ODBC recordsets [C++], deleting records
+- data in recordsets [C++]
+- record editing [C++]
+- recordsets [C++], deleting records
+- ODBC recordsets [C++], editing records
+- records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8f326a729485ddbc203e6efc04e45061bbbc08d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico se aplica às classes ODBC do MFC.  
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)
+Este tópico se aplica às classes MFC ODBC.  
   
 > [!NOTE]
->  Agora você pode adicionar registros em massa mais eficiente.  Para obter mais informações, consulte [Conjunto de registros: Adicionando registros em massa \(ODBC\)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).  
+>  Agora você pode adicionar registros em massa com mais eficiência. Para obter mais informações, consulte [conjunto de registros: adicionando registros em massa (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` no qual a busca de linhas do volume não foi implementado.  Se você estiver usando a linha em massa que pesquisa, consulte [Conjunto de registros: Buscando registros em massa \(ODBC\)](../Topic/Recordset:%20Fetching%20Records%20in%20Bulk%20\(ODBC\).md).  
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Os instantâneos e os dynasets atualizáveis permitem adicionar, editar \(atualização\), e exclui registros.  Este tópico explica:  
+ Dynasets atualizáveis instantâneos permitem adicionar, editar (atualização) e excluir registros. Este tópico explica:  
   
 -   [Como determinar se o conjunto de registros é atualizável](#_core_determining_whether_your_recordset_is_updatable).  
   
@@ -55,30 +54,30 @@ Este tópico se aplica às classes ODBC do MFC.
   
 -   [Como excluir um registro](#_core_deleting_a_record_from_a_recordset).  
   
- Para obter mais informações sobre como as atualizações são mantidas e como as atualizações são exibidas a outros usuários, consulte [Conjunto de registros: Como registros de atualização dos conjuntos de registros \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  Normalmente, quando você adicionar, editar, excluir ou um registro, as alterações do conjunto de registros a fonte de dados imediatamente.  Você pode então processar em lotes grupos de atualizações relacionadas de transações.  Se uma transação estiver em andamento, a atualização não se torna final até que você confirme a transação.  Isso permite que você faça novamente ou reverta as alterações.  Para obter informações sobre transações, consulte [Transações \(ODBC\)](../../data/odbc/transaction-odbc.md).  
+ Para obter mais informações sobre como as atualizações são realizadas fora e como as atualizações aparecem para outros usuários, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalmente, quando você adicionar, edita ou excluir um registro, o conjunto de registros altera a fonte de dados imediatamente. Em vez disso, você pode em lotes grupos de atualizações relacionadas em transações. Se uma transação está em andamento, a atualização não fica final até que você confirme a transação. Isso permite que você volta ou reverter as alterações. Para obter informações sobre transações, consulte [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
   
  A tabela a seguir resume as opções disponíveis para conjuntos de registros com características diferentes de atualização.  
   
-### Conjunto de registros ler\/opções de atualização  
+### <a name="recordset-readupdate-options"></a>Opções de leitura/atualização do conjunto de registros  
   
-|Tipo|Ler|Registro de edição|Excluir registro|Adicionar novo \(adicionar\)|  
-|----------|---------|------------------------|----------------------|----------------------------------|  
-|Somente leitura|Y|N|N|N|  
-|Somente de acréscimo|Y|N|N|Y|  
-|Completamente atualizável|Y|Y|Y|Y|  
+|Tipo|Ler|Editar o registro|Excluir registro|Adicionar novo (acrescentar)|  
+|----------|----------|-----------------|-------------------|------------------------|  
+|Somente leitura|S|N|N|N|  
+|Somente de acréscimo|S|N|N|S|  
+|Totalmente atualizável|S|S|S|S|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Determinando se o conjunto de registros é Atualizável  
- Um objeto do conjunto de registros é atualizável se a fonte de dados pode ser atualizado e você abriu o conjunto de registros como atualizáveis.  Seu updateability depende também da instrução SQL usada, os recursos do driver ODBC e, se a biblioteca de cursores ODBC estiver na memória.  Você não pode atualizar um conjunto de registros ou uma fonte de dados somente leitura.  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>Determinar se o conjunto de registros é Updateable  
+ Um objeto de conjunto de registros é atualizável, se a fonte de dados é atualizável e abrir o conjunto de registros pode ser atualizado. Sua capacidade de atualização também depende da instrução SQL que você usa, os recursos de seu driver de ODBC, e se a biblioteca de cursores ODBC está na memória. Você não pode atualizar uma fonte de dados ou conjunto de registros somente leitura.  
   
-#### Para determinar se o conjunto de registros é atualizável  
+#### <a name="to-determine-whether-your-recordset-is-updatable"></a>Para determinar se o conjunto de registros é atualizável  
   
-1.  Chame a função de membro de [CanUpdate](../Topic/CRecordset::CanUpdate.md) do objeto do conjunto de registros.  
+1.  Chamar o objeto de conjunto de registros [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) função de membro.  
   
-     `CanUpdate` retorna um valor diferente de zero se o conjunto de registros é atualizável.  
+     `CanUpdate`Retorna um valor diferente de zero se o conjunto de registros é atualizável.  
   
- Por padrão, os conjuntos de registros são completamente atualizável \(você pode executar `AddNew`, **Editar**, e operações de **Excluir** \).  Mas você também pode usar a opção de [appendOnly](../Topic/CRecordset::Open.md) abrir os conjuntos de registros atualizável.  Um conjunto de registros abriu essa maneira permite apenas a adição de novos registros com `AddNew`.  Você não pode editar ou excluir registros existentes.  Você pode testar se um conjunto de registros é aberto somente para acrescentar chamando a função de membro de [CanAppend](../Topic/CRecordset::CanAppend.md) .  `CanAppend` retorna um valor diferente de zero se o conjunto de registros é completamente atualizado ou aberto somente para acrescentar.  
+ Por padrão, conjuntos de registros são totalmente atualizáveis (você pode executar `AddNew`, **editar**, e **excluir** operações). Mas você também pode usar o [appendOnly](../../mfc/reference/crecordset-class.md#open) opção para abrir o conjunto de registros pode ser atualizado. Um conjunto de registros aberto dessa maneira permite apenas a adição de novos registros com `AddNew`. Você não pode editar ou excluir os registros existentes. Você pode testar se um conjunto de registros é aberto somente para acrescentar chamando o [CanAppend](../../mfc/reference/crecordset-class.md#canappend) função de membro. `CanAppend`Retorna um valor diferente de zero se o conjunto de registros é totalmente atualizável ou aberto somente para anexar.  
   
- O código a seguir mostra como você pode usar `CanUpdate` para um objeto do conjunto de registros chamado `rsStudentSet`:  
+ O código a seguir mostra como você pode usar `CanUpdate` para um objeto recordset chamado `rsStudentSet`:  
   
 ```  
 if( !rsStudentSet.Open( ) )  
@@ -91,28 +90,28 @@ if( !rsStudentSet.CanUpdate( ) )
 ```  
   
 > [!CAUTION]
->  Quando você se prepara para atualizar um conjunto de registros chamando **Atualizar**, lembre\-se que o conjunto de registros inclui todas as colunas que constituem a chave primária da tabela \(ou todas as colunas de qualquer índice exclusivo na tabela\).  Em alguns casos, a estrutura pode usar apenas as colunas selecionadas no conjunto de registros para identificar quais registros na tabela a ser atualizada.  Sem todas as colunas necessárias, vários registros podem ser atualizados na tabela, corrompendo possivelmente a integridade referencial da tabela.  Nesse caso, a estrutura lança exceções quando você chama **Atualizar**.  
+>  Quando você se prepara para atualizar um conjunto de registros chamando **atualizar**, lembre-se que o conjunto de registros inclui todas as colunas que compõem a chave primária da tabela (ou todas as colunas de qualquer índice exclusivo na tabela). Em alguns casos, a estrutura pode usar somente as colunas selecionadas em seu conjunto de registros para identificar qual registro na tabela para atualizar. Sem todas as colunas necessárias, vários registros poderão ser atualizados na tabela, possivelmente danificar a integridade referencial da tabela. Nesse caso, o framework lança exceções ao chamar **atualização**.  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a> Adicionando um registro em um conjunto de registros  
- Você pode adicionar novos registros em um conjunto de registros se sua função de membro de [CanAppend](../Topic/CRecordset::CanAppend.md) retorna um valor diferente de zero.  
+##  <a name="_core_adding_a_record_to_a_recordset"></a>Adicionar um registro para um conjunto de registros  
+ Você pode adicionar novos registros de um conjunto de registros se seu [CanAppend](../../mfc/reference/crecordset-class.md#canappend) função membro retorna um valor diferente de zero.  
   
-#### Para adicionar um novo registro para um conjunto de registros  
+#### <a name="to-add-a-new-record-to-a-recordset"></a>Para adicionar um novo registro para um conjunto de registros  
   
-1.  Verifique se o conjunto de registros é appendable.  
+1.  Verifique se que o conjunto de registros é appendable.  
   
-2.  Chame a função de membro de [AddNew](../Topic/CRecordset::AddNew.md) do objeto do conjunto de registros.  
+2.  Chamar o objeto de conjunto de registros [AddNew](../../mfc/reference/crecordset-class.md#addnew) função de membro.  
   
-     `AddNew` prepara o conjunto de registros para atuar como um buffer de edição.  Todos os membros de dados do campo são definidos como zero do valor especial e marcados como sujos de forma que apenas valores \(\) alterados inalteradas são gravados na fonte de dados quando você chama [Atualização](../Topic/CRecordset::Update.md).  
+     `AddNew`prepara o conjunto de registros para atuar como um buffer de edição. Todos os membros de dados de campo são definidos como o valor especial Null e marcados como inalterada para apenas alterada (suja) valores são gravados para a fonte de dados quando você chamar [atualização](../../mfc/reference/crecordset-class.md#update).  
   
-3.  Definir os valores dos membros de dados do campo de registro novo.  
+3.  Defina os valores campo do registro novo membros de dados.  
   
-     Atribuir valores aos membros de dados do campo.  As que você não atribuir não são gravados na fonte de dados.  
+     Atribua valores para os membros de dados do campo. Aquelas que não atribua não são gravadas para a fonte de dados.  
   
-4.  Chame a função de membro de **Atualizar** do objeto do conjunto de registros.  
+4.  Chamar o objeto de conjunto de registros **atualização** função de membro.  
   
-     **Atualizar** conclui a adição do gravando novo registro à fonte de dados.  Para obter informações sobre como acontece se você não chama **Atualizar**, consulte [Conjunto de registros: Como registros de atualização dos conjuntos de registros \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+     **Atualização** conclui a adição, gravando o novo registro para a fonte de dados. Para obter informações sobre acontece se você não chamar **atualização**, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
- Para obter informações sobre como adicionar registra trabalhos e sobre quando os registros adicionados são visíveis no conjunto de registros, consulte [Conjunto de registros: Como AddNew, edição e, trabalho de exclusão \(ODBC\)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).  
+ Para obter informações sobre como adicionar registros funciona e quando os registros adicionados estão visíveis em seu conjunto de registros, consulte [conjunto de registros: como AddNew, editar e excluir trabalho (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).  
   
  O exemplo a seguir mostra como adicionar um novo registro:  
   
@@ -133,32 +132,32 @@ if( !rsStudent.Update( ) )
 ```  
   
 > [!TIP]
->  Para cancelar uma chamada de `AddNew` ou de **Editar** , execute apenas outra chamada para `AddNew` ou a **Editar** ou chame **Mover** com o parâmetro de **AFX\_MOVE\_REFRESH** .  Os membros de dados são redefinidos para os valores anteriores e você ainda estão em **Editar** ou do modo de **Adicionar** .  
+>  Para cancelar um `AddNew` ou **editar** chamar, basta fazer outra chamada para `AddNew` ou **editar** ou chame **mover** com o **AFX_MOVE_REFRESH**  parâmetro. Membros de dados são redefinidos para os valores anteriores e você ainda no **editar** ou **adicionar** modo.  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a> Editando um registro em um conjunto de registros  
- Você pode editar registros existentes se a função de membro de [CanUpdate](../Topic/CRecordset::CanUpdate.md) do conjunto de registros retorna um valor diferente de zero.  
+##  <a name="_core_editing_a_record_in_a_recordset"></a>Editar um registro em um conjunto de registros  
+ Você pode editar os registros existentes se o conjunto de registros [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) função membro retorna um valor diferente de zero.  
   
-#### Para editar um registro existente em um conjunto de registros  
+#### <a name="to-edit-an-existing-record-in-a-recordset"></a>Para editar um registro existente em um conjunto de registros  
   
-1.  Verifique se o conjunto de registros é atualizável.  
+1.  Verifique se que o conjunto de registros é atualizável.  
   
-2.  Role ao registro que você deseja atualizar.  
+2.  Role para o registro que você deseja atualizar.  
   
-3.  Chame a função de membro de [Edição](../Topic/CRecordset::Edit.md) do objeto do conjunto de registros.  
+3.  Chamar o objeto de conjunto de registros [editar](../../mfc/reference/crecordset-class.md#edit) função de membro.  
   
-     **Editar** prepara o conjunto de registros para atuar como um buffer de edição.  Todos os membros de dados do campo são marcados de modo que o conjunto de registros pode informar posteriormente se foram alterados.  Os novos valores para membros de dados alterados do campo são gravados na fonte de dados quando você chama [Atualização](../Topic/CRecordset::Update.md).  
+     **Editar** prepara o conjunto de registros para atuar como um buffer de edição. Todos os membros de dados de campo são marcados para que o conjunto de registros pode dizer mais tarde, se elas foram alteradas. Os novos valores para membros de dados de campo alterado são gravados para a fonte de dados quando você chamar [atualização](../../mfc/reference/crecordset-class.md#update).  
   
-4.  Definir os valores dos membros de dados do campo de registro novo.  
+4.  Defina os valores campo do registro novo membros de dados.  
   
-     Atribuir valores aos membros de dados do campo.  As que você não atribuir valores permanecem inalterados.  
+     Atribua valores para os membros de dados do campo. Aquelas que não atribua valores permanecem inalteradas.  
   
-5.  Chame a função de membro de **Atualizar** do objeto do conjunto de registros.  
+5.  Chamar o objeto de conjunto de registros **atualização** função de membro.  
   
-     **Atualizar** concluir a edição do gravando registro alterado à fonte de dados.  Para obter informações sobre como acontece se você não chama **Atualizar**, consulte [Conjunto de registros: Como registros de atualização dos conjuntos de registros \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+     **Atualização** concluir a edição, gravando o registro alterado para a fonte de dados. Para obter informações sobre acontece se você não chamar **atualização**, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
- Depois que você edita um registro, o registro permanece editado o registro atual.  
+ Depois que você edita um registro, o registro editado permanece o registro atual.  
   
- O exemplo a seguir mostra uma operação de **Editar** .  Assumir o usuário movê\-lo para um registro ou deseja editar.  
+ A exemplo a seguir mostra um **editar** operação. Ele pressupõe que o usuário foi movido para um registro que deseja editar.  
   
 ```  
 rsStudent.Edit( );  
@@ -174,37 +173,37 @@ if( !rsStudent.Update( ) )
 ```  
   
 > [!TIP]
->  Para cancelar uma chamada de `AddNew` ou de **Editar** , execute apenas outra chamada para `AddNew` ou a **Editar** ou chame **Mover** com o parâmetro de **AFX\_MOVE\_REFRESH** .  Os membros de dados são redefinidos para os valores anteriores e você ainda estão em **Editar** ou do modo de **Adicionar** .  
+>  Para cancelar um `AddNew` ou **editar** chamar, basta fazer outra chamada para `AddNew` ou **editar** ou chame **mover** com o **AFX_MOVE_REFRESH**  parâmetro. Membros de dados são redefinidos para os valores anteriores e você ainda no **editar** ou **adicionar** modo.  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a> Excluindo um registro de um conjunto de registros  
- Você pode excluir registros se a função de membro de [CanUpdate](../Topic/CRecordset::CanUpdate.md) do conjunto de registros retorna um valor diferente de zero.  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a>Excluir um registro de um conjunto de registros  
+ Você pode excluir registros se o conjunto de registros [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) função membro retorna um valor diferente de zero.  
   
-#### Para excluir um registro  
+#### <a name="to-delete-a-record"></a>Para excluir um registro  
   
-1.  Verifique se o conjunto de registros é atualizável.  
+1.  Verifique se que o conjunto de registros é atualizável.  
   
-2.  Role ao registro que você deseja atualizar.  
+2.  Role para o registro que você deseja atualizar.  
   
-3.  Chame a função de membro de [Excluir](../Topic/CRecordset::Delete.md) do objeto do conjunto de registros.  
+3.  Chamar o objeto de conjunto de registros [excluir](../../mfc/reference/crecordset-class.md#delete) função de membro.  
   
-     **Excluir** marca imediatamente o registro como excluído, no conjunto de registros e na fonte de dados.  
+     **Excluir** marca imediatamente o registro como excluído, tanto no conjunto de registros na fonte de dados.  
   
-     Ao contrário de `AddNew` e de **Editar**, **Excluir** não tem nenhum chamada correspondente de **Atualizar** .  
+     Ao contrário de `AddNew` e **editar**, **excluir** não tem correspondente **atualização** chamar.  
   
-4.  Role para outro registro.  
+4.  Role até outro registro.  
   
     > [!NOTE]
-    >  Ao mover com o conjunto de registros, os registros excluídos não podem ser ignorados.  Para obter mais informações, veja a função de membro de [IsDeleted](../Topic/CRecordset::IsDeleted.md) .  
+    >  Ao passar pelo conjunto de registros, registros excluídos não podem ser ignorados. Para obter mais informações, consulte o [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) função de membro.  
   
- O exemplo a seguir mostra uma operação de **Excluir** .  Assume que o usuário se transportou a um registro que o usuário deseja excluir.  Depois que **Excluir** é chamado, é importante para a movimentação para um novo registro.  
+ A exemplo a seguir mostra um **excluir** operação. Ele pressupõe que o usuário foi movido para um registro que o usuário deseja excluir. Depois de **excluir** é chamado, é importante mover para um novo registro.  
   
 ```  
 rsStudent.Delete( );  
 rsStudent.MoveNext( );  
 ```  
   
- Para obter mais informações sobre os efeitos de `AddNew`, **Editar**, e as funções de membro de **Excluir** , consulte [Conjunto de registros: Como registros de atualização dos conjuntos de registros \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+ Para obter mais informações sobre os efeitos da `AddNew`, **editar**, e **excluir** funções de membro, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
-## Consulte também  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: bloqueando registros \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>Consulte também  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: bloqueando registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

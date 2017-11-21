@@ -1,45 +1,43 @@
 ---
-title: "auto_handle::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_handle.operator!"
-  - "msclr::auto_handle::operator!"
-  - "auto_handle.operator!"
-  - "auto_handle::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador!"
+title: auto_handle::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_handle.operator!
+- msclr::auto_handle::operator!
+- auto_handle.operator!
+- auto_handle::operator!
+dev_langs: C++
+helpviewer_keywords: operator!
 ms.assetid: 3f6c7729-3260-4842-87f9-c491c140b299
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f0cd9ef88895b8fa85bd89775c030aedaa5c042
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operador para usar `auto_handle` em uma expressão condicional.  
+# <a name="autohandleoperator"></a>auto_handle::operator!
+Operador para o uso de `auto_handle` em uma expressão condicional.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 bool operator!();  
 ```  
   
-## Valor de retorno  
- `true` se o objeto for inválido; ajustado `false` de outra forma.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se o objeto encapsulado é inválido; `false` caso contrário.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // msl_auto_handle_operator_not.cpp  
@@ -62,14 +60,17 @@ int main() {
 }  
 ```  
   
-  **o s1 não é válido**  
-**s2 é válido**  
-**s2 agora é inválido**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ auto\_handle.h\>  
+```Output  
+s1 is invalid  
+s2 is valid  
+s2 is now invalid  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\auto_handle.h >  
   
-## Consulte também  
- [Membros auto\_handle](../dotnet/auto-handle-members.md)   
- [Bool auto\_handle::operator](../dotnet/auto-handle-operator-bool.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
+ [Membros auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator bool](../dotnet/auto-handle-operator-bool.md)

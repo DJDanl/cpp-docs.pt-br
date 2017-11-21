@@ -1,47 +1,28 @@
 ---
-title: C2540 de erro do compilador | Documentos do Microsoft
+title: C2540 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2540
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2540
+f1_keywords: C2540
+dev_langs: C++
+helpviewer_keywords: C2540
 ms.assetid: 92c805a3-2dd9-46ca-a63d-3845c18ecc95
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a50dc04079f3bb37ff1be1ff51b9dd6748fc1657
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 5267000782f03a0e512288139c77dc120df751ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2540"></a>C2540 de erro do compilador
-expressão não constante como limite da matriz  
+expressão não constante como limite de matriz  
   
  Uma matriz deve ter uma constante associada.  
   

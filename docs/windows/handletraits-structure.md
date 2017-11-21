@@ -1,60 +1,57 @@
 ---
-title: "Estrutura HANDLETraits | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura HANDLETraits"
+title: Estrutura HANDLETraits | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
+dev_langs: C++
+helpviewer_keywords: HANDLETraits structure
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d020adfbcb9ee1a47750dd16b5466cf76391906
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Estrutura HANDLETraits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Define características comuns de um identificador.  
+# <a name="handletraits-structure"></a>Estrutura HANDLETraits
+Define as características de um identificador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 struct HANDLETraits;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs Públicas  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|`Type`|Um sinônimo para a ALÇA.|  
-  
-### Métodos Públicos  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
+|----------|-----------------|  
+|`Type`|Um sinônimo de identificador.|  
+  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
 |[Método HANDLETraits::Close](../windows/handletraits-close-method.md)|Fecha o identificador especificado.|  
-|[Método HANDLETraits::GetInvalidValue](../Topic/HANDLETraits::GetInvalidValue%20Method.md)|Representa um identificador inválido.|  
+|[Método HANDLETraits::GetInvalidValue](../windows/handletraits-getinvalidvalue-method.md)|Representa um identificador inválido.|  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `HANDLETraits`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

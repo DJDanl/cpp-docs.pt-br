@@ -1,39 +1,38 @@
 ---
-title: "Variable Argument Lists (...) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variable argument lists"
-  - "parameter arrays"
+title: "Listas de argumentos variáveis (...) (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- variable argument lists
+- parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: af3742ae4c8f22dd2b5cef8189d02e8f19f7c9fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Variable Argument Lists (...) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este exemplo mostra como você pode usar a sintaxe `...` no Visual C\+\+ para implementar as funções que têm um número variável de argumentos.  
+# <a name="variable-argument-lists--ccli"></a>Listas de Argumentos Variáveis (...) (C++/CLI)
+Este exemplo mostra como você pode usar o `...` sintaxe no Visual C++ para implementar as funções que têm um número variável de argumentos.  
   
 > [!NOTE]
->  Este tópico refere\-se a C\+\+\/CLI.  Para obter informações sobre o uso de `...` no C\+\+ Padrão ISO, consulte [Reticências e modelos variadic](../cpp/ellipses-and-variadic-templates.md) e [Reticências e argumentos padrão](../misc/ellipses-and-default-arguments.md).  
+>  Este tópico pertence ao C + + CLI. Para obter informações sobre como usar o `...` em C++ padrão de ISO, consulte [reticências e modelos Variadic](../cpp/ellipses-and-variadic-templates.md) e reticências e argumentos padrão em [expressões pós-fixadas](../cpp/postfix-expressions.md).  
   
- O parâmetro que usa `...` deve ser o último parâmetro da lista.  
+ O parâmetro que usa `...` deve ser o último parâmetro na lista de parâmetros.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // mcppv2_paramarray.cpp  
@@ -54,14 +53,14 @@ int main() {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 3  
 ```  
   
-## Exemplo de código  
- O exemplo a seguir mostra como chamar de C\# uma função do Visual C\+\+ que recebe um número variável de argumentos.  
+## <a name="code-example"></a>Exemplo de código  
+ O exemplo a seguir mostra como chamar a partir de c# uma função do Visual C++ que usa um número variável de argumentos.  
   
 ```  
 // mcppv2_paramarray2.cpp  
@@ -74,9 +73,9 @@ public:
 };  
 ```  
   
- A função `f` pode ser chamada do C\# ou Visual Basic, por exemplo, como se fosse uma função que pode ser um número variável de argumentos.  
+ A função `f` pode ser chamado de c# ou Visual Basic, por exemplo, como se fosse uma função que pode levar a um número variável de argumentos.  
   
- No C\#, um argumento que é passado para um parâmetro `ParamArray` pode ser chamado por um número variável de argumentos.  O exemplo de código a seguir está em C\#.  
+ No c#, um argumento que é passado para um `ParamArray` parâmetro pode ser chamado por um número variável de argumentos. O exemplo de código a seguir está em c#.  
   
 ```  
 // mcppv2_paramarray3.cs  
@@ -93,7 +92,7 @@ public class X {
 }  
 ```  
   
- Uma chamada para `f` no Visual C\+\+ pode passar uma matriz inicializada ou uma matriz de comprimento variável.  
+ Uma chamada para `f` no Visual C++ pode passar uma matriz inicializada ou uma matriz de comprimento variável.  
   
 ```  
 // mcpp_paramarray4.cpp  
@@ -111,5 +110,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>Consulte também  
+ [Matrizes](../windows/arrays-cpp-component-extensions.md)

@@ -1,47 +1,28 @@
 ---
-title: omp_set_dynamic | Documentos do Microsoft
+title: omp_set_dynamic | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_set_dynamic
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_set_dynamic OpenMP function
+f1_keywords: omp_set_dynamic
+dev_langs: C++
+helpviewer_keywords: omp_set_dynamic OpenMP function
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b4313bee47101b91186da999f6f04430da5bca23
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: bc9306a7babcd86c96995f4fd464ebd24b138c43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
-Indica que o número de threads disponíveis na região paralela subsequente pode ser ajustado pelo tempo de execução.  
+Indica que o número de threads disponíveis na região parallel subsequente pode ser ajustado por tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +36,7 @@ void omp_set_dynamic(
  onde,  
   
  `val`  
- Um valor que indica se o número de threads disponíveis na região paralela subsequente pode ser ajustado pelo tempo de execução.  Se for diferente de zero, que o tempo de execução pode ajustar o número de threads, se for zero, o tempo de execução será não ajustar dinamicamente o número de threads.  
+ Um valor que indica se o número de threads disponíveis na região parallel subsequente pode ser ajustado pelo tempo de execução.  Se for diferente de zero, que o tempo de execução pode ajustar o número de threads, se for zero, o tempo de execução não dinamicamente ajustará o número de threads.  
   
 ## <a name="remarks"></a>Comentários  
  O número de threads nunca excederá o valor definido por [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) ou [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  

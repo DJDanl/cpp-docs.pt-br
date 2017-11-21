@@ -1,31 +1,28 @@
 ---
-title: "M&#233;todo WeakReference::SetUnknown | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::SetUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método SetUnknown"
+title: "Método: Setunknown | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::SetUnknown
+dev_langs: C++
+helpviewer_keywords: SetUnknown method
 ms.assetid: 5dddb9e3-a7c1-4195-8166-97c5ab6e972f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82a556ddc855c2ab9793f74fa091c464e094cb80
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo WeakReference::SetUnknown
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura do WRL e não se destina a ser usada diretamente no seu código.  
+# <a name="weakreferencesetunknown-method"></a>Método WeakReference::SetUnknown
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   

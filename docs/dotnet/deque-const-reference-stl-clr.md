@@ -1,42 +1,39 @@
 ---
-title: "deque::const_reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::const_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro const_reference [STL/CLR]"
+title: 'deque:: const_reference (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::const_reference
+dev_langs: C++
+helpviewer_keywords: const_reference member [STL/CLR]
 ms.assetid: daa4a3dc-cae9-46da-b62c-c2870edb120f
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4bc32fee9ac91f73536053afdc47e2cfc5d161bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::const_reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de uma referência constante para um elemento.  
+# <a name="dequeconstreference-stlclr"></a>deque::const_reference (STL/CLR)
+O tipo de uma referência de constante para um elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef value_type% const_reference;  
 ```  
   
-## Comentários  
- O tipo descreve uma constante referência a um elemento.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve uma referência constante a um elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_const_reference.cpp   
@@ -63,13 +60,16 @@ int main()
   
 ```  
   
-  **um b c**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::reference](../dotnet/deque-reference-stl-clr.md)   
- [deque::value\_type](../Topic/deque::value_type%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: Reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)   
+ [deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)

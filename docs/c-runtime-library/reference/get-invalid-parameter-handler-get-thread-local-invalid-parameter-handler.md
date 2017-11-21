@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,36 +28,20 @@ f1_keywords:
 - stdlib/_get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
 - stdlib/_get_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 37e742d7b4e96abddcfff11cf5ea7d987da96469
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: aef6cfa2c015abf64cdfd217e2128dd77bd925a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 Obtém a função que é chamada quando o CRT detecta um argumento inválido.  

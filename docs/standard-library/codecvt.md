@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - codecvt
 - <codecvt>
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt header
+dev_langs: C++
+helpviewer_keywords: codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 81a40835fc5122d6384578e1b6e48e81a70db18b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: d35597d8d0c39a15aead1e7c35c512bc8dc7fafe
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 Define várias classes de modelo que descrevem os objetos com base na classe de modelo [codecvt](../standard-library/codecvt-class.md). Esses objetos podem funcionar como [facetas de localidade](../standard-library/locale-class.md#facet_class) que controlam conversões entre uma sequência de valores de tipo `Elem` e uma sequência de valores de tipo `char`.  
@@ -88,7 +84,6 @@ Define várias classes de modelo que descrevem os objetos com base na classe de 
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

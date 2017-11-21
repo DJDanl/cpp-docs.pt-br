@@ -1,33 +1,30 @@
 ---
-title: "odl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.odl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "odl attribute"
+title: odl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.odl
+dev_langs: C++
+helpviewer_keywords: odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 179d645bde978a9eafb21961d1400aa7282f558e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# odl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Identifica uma interface como uma interface de linguagem de descrição de objeto \(ODL\).  O compilador MIDL não requer o  **odl** de atributo; ele é reconhecido somente para compatibilidade com ficheiros. odl mais antigos.  
+# <a name="odl"></a>odl
+Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL). Não exige que o compilador MIDL o **odl** atributo; ele é reconhecido somente para compatibilidade com arquivos. odl mais antigos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,10 +32,10 @@ Identifica uma interface como uma interface de linguagem de descrição de objet
   
 ```  
   
-## Comentários  
- O  **odl** o atributo do C\+\+ tem a mesma funcionalidade que o  [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **odl** atributo C++ tem a mesma funcionalidade que o [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) atributo MIDL.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cpp_attr_ref_odl.cpp  
@@ -60,20 +57,19 @@ public:
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|`interface`|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interface](../windows/interface-attributes.md)   

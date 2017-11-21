@@ -1,46 +1,43 @@
 ---
-title: "operador= (deque) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator= [STL/CLR]"
+title: operador = (deque) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 0851c6e2-29a2-45da-8c5a-e0b2f5357fb6
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3cef0fea863d68de78e81449fb1adcb1b9a93b7f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operador= (deque) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="operator-deque-stlclr"></a>operador= (deque) (STL/CLR)
 Substitui a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 deque<Value>% operator=(deque<Value>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  direita  
- Contêiner a ser copiada.  
+ O contêiner a ser copiado.  
   
-## Comentários  
- O membro que o operador copia `right` ao objeto, retornará `*this`.  Você usará para substituir a sequência controlada por uma cópia de sequência controlada em `right`.  
+## <a name="remarks"></a>Comentários  
+ As cópias de operador de membro `right` para o objeto, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada em `right`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_operator_as.cpp   
@@ -70,13 +67,16 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+a b c  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)

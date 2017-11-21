@@ -1,62 +1,59 @@
 ---
-title: "NotifyHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NotifyHandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função de NotifyHandler"
+title: NotifyHandler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NotifyHandler
+dev_langs: C++
+helpviewer_keywords: NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea725b470d08688ed824991d308677970e2c8277
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# NotifyHandler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O nome da função identificada pelo terceiro parâmetro de macro de `NOTIFY_HANDLER` no mapa de mensagem.  
+# <a name="notifyhandler"></a>NotifyHandler
+O nome da função identificada pelo parâmetro do terceiro o `NOTIFY_HANDLER` macro em seu mapa de mensagem.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      LRESULT   
-      NotifyHandler  
-      (  
-   int idCtrl,  
-   LPNMHDR pnmh,  
-   BOOL& bHandled   
-);  
+ 
+    LRESULT 
+    NotifyHandler 
+ (
+    int idCtrl,  
+    LPNMHDR pnmh,  
+    BOOL& bHandled);
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `idCtrl`  
- O identificador do controle que envia a mensagem.  
+ O identificador do controle enviar a mensagem.  
   
  *pnmh*  
- Endereço de uma estrutura de [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) que contém o código e informações adicionais de notificação.  Para algumas notificações, pontos de este parâmetro a estrutura maior que possui a estrutura de **NMHDR** como o primeiro membro.  
+ Endereço de um [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) estrutura que contém o código de notificação e informações adicionais. Para algumas mensagens de notificação, esse parâmetro aponta para uma estrutura maior que tem o **NMHDR** estrutura como seu primeiro membro.  
   
  `bHandled`  
- O mapa de mensagem `bHandled` define a **Verdadeiro** antes que *NotifyHandler* seja chamado.  Se *NotifyHandler* não trata totalmente a mensagem, deve definir `bHandled` a **Falso** para indicar a adicional das necessidades de mensagem.  
+ Os conjuntos de mapa de mensagem `bHandled` para **TRUE** antes de *NotifyHandler* é chamado. Se *NotifyHandler* não totalmente processa a mensagem, ele deve ser definido `bHandled` para **FALSE** para indicar que a mensagem precisa de processamento adicional.  
   
-## Valor de retorno  
- O resultado de processamento de mensagem.  0 se com êxito.  
+## <a name="return-value"></a>Valor de retorno  
+ O resultado do processamento de mensagens. 0 se for bem-sucedido.  
   
-## Comentários  
- Para um exemplo de como usar este manipulador de mensagem em um mapa de mensagem, consulte [NOTIFY\_HANDLER](../Topic/NOTIFY_HANDLER.md).  
+## <a name="remarks"></a>Comentários  
+ Para obter um exemplo de como usar este manipulador de mensagens em um mapa de mensagem, consulte [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Implementando uma janela](../atl/implementing-a-window.md)   
  [Mapas de mensagem](../atl/message-maps-atl.md)   
- [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+

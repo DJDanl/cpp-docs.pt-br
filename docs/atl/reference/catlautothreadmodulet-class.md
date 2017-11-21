@@ -1,52 +1,34 @@
 ---
-title: Classe CAtlAutoThreadModuleT | Documentos do Microsoft
+title: Classe CAtlAutoThreadModuleT | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModuleT
 - ATLBASE/ATL::CAtlAutoThreadModuleT
 - ATLBASE/ATL::CAtlAutoThreadModuleT::GetDefaultThreads
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlAutoThreadModuleT class
+dev_langs: C++
+helpviewer_keywords: CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 86b35f0a6a3ab43c170ee710838ec9ba0e2fc5b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 594e6bd026d214e2dd5d12e702d26a5942cfc872
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlautothreadmodulet-class"></a>Classe CAtlAutoThreadModuleT
 Essa classe fornece métodos para a implementação de um servidor de pool de thread, o modelo de apartment COM.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +44,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
  A classe que implementará o servidor COM.  
   
  `ThreadAllocator`  
- A classe de gerenciamento de seleção de thread. O valor padrão é [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ A classe de gerenciar a seleção de thread. O valor padrão é [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
  `dwWait`  
  Especifica o intervalo de tempo limite em milissegundos. O padrão é infinito, o que significa que o intervalo de tempo limite do método nunca tiver decorrido.  
@@ -73,7 +55,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|A função estática dinamicamente calcula e retorna o número máximo de threads para o módulo EXE, com base no número de processadores.|  
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Função estática dinamicamente calcula e retorna o número máximo de threads para o módulo EXE, com base no número de processadores.|  
   
 ## <a name="remarks"></a>Comentários  
  A classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva `CAtlAutoThreadModuleT` para implementar um servidor de pool de thread, o modelo de apartment COM. Ele substitui a classe obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
@@ -87,10 +69,10 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
  `CAtlAutoThreadModuleT`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
- A função estática dinamicamente calcula e retorna o número máximo de threads para o módulo EXE, com base no número de processadores.  
+ Função estática dinamicamente calcula e retorna o número máximo de threads para o módulo EXE, com base no número de processadores.  
   
 ```
 static int GetDefaultThreads();
@@ -107,4 +89,3 @@ static int GetDefaultThreads();
  [Visão geral da classe](../../atl/atl-class-overview.md)   
  [Classe IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
  [Classes de módulo](../../atl/atl-module-classes.md)
-

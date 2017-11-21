@@ -1,92 +1,91 @@
 ---
-title: "Suporte IDispEventImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Suporte de IDispEventImpl em objetos COM"
-  - "Macro de BEGIN_SINK_MAP"
-  - "mapas do coletor de eventos, declarando"
-  - "Classe de IDispEventImpl, unadvising e conselhos"
-  - "Classe de IDispEventImpl, declarando"
-  - "Macro de SINK_ENTRY"
-  - "bibliotecas de tipo, importando"
+title: Suporte IDispEventImpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventImpl
+dev_langs: C++
+helpviewer_keywords:
+- event sink maps, declaring
+- IDispEventImpl class, advising and unadvising
+- SINK_ENTRY macro
+- type libraries, importing
+- ATL, IDispEventImpl support in COM objects
+- BEGIN_SINK_MAP macro
+- IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 81976652c14693c54980f6e0901f5db5576fbbe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Suporte IDispEventImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe [IDispEventImpl](../atl/reference/idispeventimpl-class.md) de modelo pode ser usada para fornecer suporte para dissipadores de ponto de conexão em sua classe de ATL.  Coleta de um ponto de conexão permite que a classe trata os eventos acionados de COM objetos externos.  Esses dissipadores de ponto de conexão são mapeados com um mapa do coletor de eventos, já que por sua classe.  
+# <a name="supporting-idispeventimpl"></a>Suporte IDispEventImpl
+A classe de modelo [IDispEventImpl](../atl/reference/idispeventimpl-class.md) pode ser usado para fornecer suporte para Coletores de ponto de conexão em sua classe ATL. Um coletor de ponto de conexão permite que a sua classe manipular eventos disparados por objetos externos. Esses coletores de ponto de conexão são mapeadas com um mapa de coletor de eventos, fornecido por sua classe.  
   
- Para implementar corretamente coletor de um ponto de conexão para sua classe, as seguintes etapas devem ser concluídas:  
+ Para implementar corretamente um coletor de ponto de conexão para a sua classe, as etapas a seguir devem ser concluídas:  
   
 -   Importar as bibliotecas de tipo para cada objeto externo  
   
--   Declare as interfaces de `IDispEventImpl`  
+-   Declare o `IDispEventImpl` interfaces  
   
--   Declare um mapa do coletor de eventos  
+-   Declarar um mapa de coletor de eventos  
   
--   Seja recomendável e unadvise os pontos de conexão  
+-   Avisar e unadvise os pontos de conexão  
   
- As etapas envolvidas em qualquer implementar um ponto de conexão do coletor são executadas somente alterando o arquivo de cabeçalho \(.h\) de sua classe.  
+ As etapas envolvidas na implementação de um coletor de ponto de conexão são realizadas pela modificação dos apenas o arquivo de cabeçalho (. h) de sua classe.  
   
-## Importando as bibliotecas de tipo  
- Para cada objeto externo cujos eventos que você deseja tratar, você deve importar a biblioteca de tipos.  Esta etapa define os eventos que podem ser tratados e fornece informações que é usada para declarar o mapa do coletor de eventos.  A política de [\#import](../Topic/%23import%20Directive%20\(C++\).md) pode ser usada para fazer isso.  Adicione as linhas necessárias políticas de `#import` para cada interface de distribuição que você oferece suporte ao arquivo de cabeçalho \(.h\) de sua classe.  
+## <a name="importing-the-type-libraries"></a>Importando as bibliotecas de tipo  
+ Para cada objeto cujos eventos você deseja manipular externo, você deve importar a biblioteca de tipos. Esta etapa define os eventos que podem ser manipulados e fornece informações que são usadas ao declarar o mapa de coletor de evento. O [#import](../preprocessor/hash-import-directive-cpp.md) diretiva pode ser usada para fazer isso. Adicionar necessários `#import` diretivas linhas para cada interface de Despache você dará suporte para o arquivo de cabeçalho (. h) de sua classe.  
   
- O exemplo a seguir importa a biblioteca de tipos de um servidor externo COM \(`MSCAL.Calendar.7`\):  
+ O exemplo a seguir importa a biblioteca de tipos de um servidor COM externo (`MSCAL.Calendar.7`):  
   
- [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/CPP/supporting-idispeventimpl_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]  
   
 > [!NOTE]
->  Você deve ter uma declaração separada de `#import` para cada biblioteca externa do tipo que você ele.  
+>  Você deve ter um separado `#import` instrução para cada biblioteca de tipo externo oferecerá suporte.  
   
-## Declarando interfaces de IDispEventImpl  
- Agora que você importou as bibliotecas de tipo de cada distribuição interface, você precisará declarar interfaces de `IDispEventImpl` separadas para cada interface externo de distribuição.  Altere a declaração de classe adicionando uma declaração de interface de `IDispEventImpl` para cada objeto externo.  Para obter mais informações sobre parâmetros, consulte [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
+## <a name="declaring-the-idispeventimpl-interfaces"></a>Declarando as Interfaces IDispEventImpl  
+ Agora que você importou as bibliotecas de tipo de cada interface de distribuição, você precisa declarar separada `IDispEventImpl` interfaces para cada interface de Despache externo. Modificar a declaração da classe adicionando um `IDispEventImpl` interface de declaração para cada objeto externo. Para obter mais informações sobre os parâmetros, consulte [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
- O código a seguir declara dois dissipadores de ponto de conexão, para a interface de `DCalendarEvents` , porque o objeto COM implementado pela classe `CMyCompositCtrl2`:  
+ O código a seguir declara duas Coletores de ponto de conexão, para o `DCalendarEvents` interface para o objeto COM implementado pela classe `CMyCompositCtrl2`:  
   
- [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/CPP/supporting-idispeventimpl_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]  
   
-## Declarando um mapa do coletor de eventos  
- Para que as notificações de eventos são tratadas pela função apropriada, sua classe devem redirecionar\-se cada evento ao seu identificador correto.  Isso é conseguido declarando um mapa do coletor de eventos.  
+## <a name="declaring-an-event-sink-map"></a>Declarando um mapa de coletor de eventos  
+ Em ordem para as notificações de eventos a ser manipulada pela função apropriada, sua classe deve rotear cada evento para seu manipulador correto. Isso é conseguido declarando um mapa de coletor de eventos.  
   
- ATL fornece vários macros, [BEGIN\_SINK\_MAP](../Topic/BEGIN_SINK_MAP.md), [END\_SINK\_MAP](../Topic/END_SINK_MAP.md), e [SINK\_ENTRY\_EX](../Topic/SINK_ENTRY.md), que facilitam esse mapeamento.  O formato padrão é:  
+ ATL fornece várias macros, [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), e [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), que facilitam esse mapeamento. O formato padrão é o seguinte:  
   
  `BEGIN_SINK_MAP(comClass)`  
   
  `SINK_ENTRY_EX(id, iid, dispid, func)`  
   
- `.  .  .  //additional external event entries`  
+ `. . . //additional external event entries`  
   
  `END_SINK_MAP()`  
   
- O seguinte exemplo declara um mapa do coletor de eventos com dois manipuladores de eventos:  
+ O exemplo a seguir declara um mapa de coletor de eventos com dois manipuladores de eventos:  
   
- [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/CPP/supporting-idispeventimpl_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]  
   
- A implementação é quase concluído.  A última etapa refere\-se ao do unadvising e conselhos interfaces externos.  
+ A implementação está quase concluída. A última etapa relacionado à assessoria e unadvising das interfaces externas.  
   
-## Conselhos Unadvising e interfaces de IDispEventImpl  
- A etapa final é implementar um método que seja recomendável \(ou\) unadvise todos os pontos de conexão no momento apropriado.  Isso recomendável que deve ser feito antes de comunicação entre os clientes externos e seu objeto pode ocorrer.  Antes de seu objeto se torne visível, cada interface externo de distribuição suportada pelo objeto é consultada para interfaces de saída.  Uma conexão é estabelecida e uma referência para a interface de saída é usada para manipular eventos do objeto.  Este procedimento é conhecido como “recomendando”.  
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Orientando e Unadvising as Interfaces IDispEventImpl  
+ A etapa final é implementar um método que será de aviso (ou unadvise) todos os pontos de conexão de tempo adequado. Este informando deve ser feita antes que a comunicação entre os clientes externos e seu objeto podem ocorrer. Antes do objeto se torna visível, cada interface de Despache externo com suporte do seu objeto será consultado para interfaces de saída. Uma conexão é estabelecida e uma referência para a interface de saída é usada para manipular eventos do objeto. Esse procedimento é chamado de "informando".  
   
- Após o objeto terminar com as interfaces externos, as interfaces de saída devem ser notificados que não são usadas por sua classe.  Esse processo é conhecido como “unadvising”.  
+ Após o objeto com as interfaces externas, as interfaces de saída devem ser notificadas de que eles não são mais usados pela sua classe. Esse processo é conhecido como "unadvising".  
   
- Devido a natureza exclusivo de objetos COM, este procedimento varia, em detalhes e execução, entre implementações.  Esses detalhes são além do escopo de este tópico e não são endereçados.  
+ Devido à natureza exclusiva de objetos COM, esse procedimento varia, em execução entre implementações e de detalhes. Esses detalhes estão além do escopo deste tópico e não são resolvidos.  
   
-## Consulte também  
- [Fundamentos de objetos COM de ATL](../atl/fundamentals-of-atl-com-objects.md)
+## <a name="see-also"></a>Consulte também  
+ [Princípios básicos de objetos COM da ATL](../atl/fundamentals-of-atl-com-objects.md)
+

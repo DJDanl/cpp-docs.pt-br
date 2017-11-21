@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 - OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 41e31e82c97252a2ab5e34a78db5af1fd4e24f98
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Adicionando um consumidor ATL OLE DB
 Use este assistente para adicionar um consumidor ATL OLE DB a um projeto. Um consumidor ATL OLE DB consiste em um banco de dados OLE acessador classe dados associações e necessárias para acessar uma fonte de dados. O projeto deve ter sido criado como um aplicativo COM ATL ou como um aplicativo MFC ou Win32 que contém suporte ATL (que o ATL OLE DB consumidor assistente adiciona automaticamente).  
@@ -45,5 +42,4 @@ Use este assistente para adicionar um consumidor ATL OLE DB a um projeto. Um con
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)
-
 

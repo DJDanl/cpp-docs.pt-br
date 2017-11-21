@@ -1,42 +1,40 @@
 ---
-title: "Transa&#231;&#227;o: realizando uma transa&#231;&#227;o em um conjunto de registros (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "transações, atualizando conjuntos de registros"
+title: "Transação: Realizando uma transação em um conjunto de registros (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1451775374b94bbefb6396e7afeda2396df84ba4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Transa&#231;&#227;o: realizando uma transa&#231;&#227;o em um conjunto de registros (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transação: realizando uma transação em um conjunto de registros (ODBC)
 Este tópico explica como executar uma transação em um conjunto de registros.  
   
 > [!NOTE]
->  Só um nível de transações tiver suporte; não é possível aninhar transações.  
+>  Há suporte para apenas um nível de transações; não é possível aninhar transações.  
   
-#### Para executar uma transação em um conjunto de registros  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Para executar uma transação em um conjunto de registros  
   
-1.  Chame a função de membro de **BeginTrans** do objeto de `CDatabase` .  
+1.  Chamar o `CDatabase` do objeto **BeginTrans** função de membro.  
   
-2.  Se você não tiver implementado a linha em massa que pesquisa, chame **AddNew\/Update**, **Edit\/Update**, e as funções de membro de **Excluir** de um ou mais objetos do conjunto de registros do mesmo base de dados tantas vezes quando necessário.  Para obter mais informações, consulte [Conjunto de registros: Adicionando, atualizando e excluindo registros \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  Se você implementar a linha em massa que pesquisa, você deve escrever suas próprias funções para atualizar a fonte de dados.  
+2.  Se você não implementou a busca de linhas em massa, chame o **AddNew/atualização**, **Editar/atualizar**, e **excluir** funções membro de um ou mais objetos de conjunto de registros da mesma banco de dados como quantas vezes forem necessárias. Para obter mais informações, consulte [conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Se você tiver implementado linhas em massa busca, você deve escrever suas próprias funções para atualizar a fonte de dados.  
   
-3.  Finalmente, chame a função de membro de **CommitTrans** do objeto de `CDatabase` .  Se ocorrer um erro em uma das atualizações ou você decidir cancelar as alterações, chame a função de membro de **Reverter** .  
+3.  Finalmente, chame o `CDatabase` do objeto **CommitTrans** função de membro. Se ocorrer um erro em uma das atualizações ou decidir cancelar as alterações, chame seu **reversão** função de membro.  
   
- O exemplo a seguir usa dois conjuntos de registros para excluir o registro de um aluno de um base de dados de registro de escola, removendo o aluno de todas as classes em que o aluno é registrado.  Como as chamadas de **Excluir** em ambos os conjuntos de registros sejam bem\-sucedidas, uma transação é necessária.  O exemplo supõe a existência de `m_dbStudentReg`, uma variável de membro do tipo `CDatabase` já conectado à fonte de dados, e às classes `CEnrollmentSet` e `CStudentSet`conjunto de registros.  A variável de `strStudentID` contém um valor obtido do usuário.  
+ O exemplo a seguir usa dois conjuntos de registros para excluir o registro de um aluno de um banco de dados de registro de escola, removendo o aluno de todas as classes em que o aluno está registrado. Porque o **excluir** chamadas em ambos os conjuntos de registros devem ter êxito, uma transação é necessária. O exemplo supõe a existência de `m_dbStudentReg`, uma variável de membro de tipo `CDatabase` já está conectado à fonte de dados e as classes de conjunto de registros `CEnrollmentSet` e `CStudentSet`. O `strStudentID` variável contém um valor obtido do usuário.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -89,10 +87,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  A chamada **BeginTrans** novamente sem chamar **CommitTrans** ou **Reverter** é um erro.  
+>  Chamando **BeginTrans** novamente sem chamar **CommitTrans** ou **reversão** é um erro.  
   
-## Consulte também  
- [Transação \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [Transação: como as transações afetam atualizações \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [Classe de CDatabase](../../mfc/reference/cdatabase-class.md)   
- [Classe de CRecordset](../Topic/CRecordset%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Transação (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [Transação: Como transações afetam atualizações (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [Classe CDatabase](../../mfc/reference/cdatabase-class.md)   
+ [Classe CRecordset](../../mfc/reference/crecordset-class.md)

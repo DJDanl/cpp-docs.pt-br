@@ -1,34 +1,32 @@
 ---
-title: "BEGIN_ACCESSOR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_ACCESSOR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Macro BEGIN_ACCESSOR"
-  - "Macro BEGIN_ACCESSOR, sintaxe"
+title: BEGIN_ACCESSOR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_ACCESSOR
+dev_langs: C++
+helpviewer_keywords:
+- BEGIN_ACCESSOR macro, syntax
+- BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74d8d2197553f9fd2b1f5452236b343424d29148
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_ACCESSOR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marca o início de uma entrada do acessador.  
+# <a name="beginaccessor"></a>BEGIN_ACCESSOR
+Marca o início de uma entrada de acessador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -40,24 +38,24 @@ bAuto
   
 ```  
   
-#### Parâmetros  
- *numérico*  
- \[in\] o número de zero deslocamento do acessador neste mapa do acessador.  
+#### <a name="parameters"></a>Parâmetros  
+ *num*  
+ [in] O número de deslocamento de zero para o acessador neste mapa de acessador.  
   
- *bAuto*  
- \[in\] especifica se esse acessador é um acessador automático ou um acessador manual.  Se **true**, o acessador é automático; se **false**, o acessador é manual.  Um dados automática do acessador são buscados para você em operações de movimentação.  
+ *Houver*  
+ [in] Especifica se esse acessador é um acessador de automático ou um acessador manual. Se **true**, o acessador é automática; se **false**, o acessador é manual. Um acessador automática significa que dados são buscados para você em operações de movimentação.  
   
-## Comentários  
- No caso de vários acessadores em um conjunto de linhas, você precisa especificar `BEGIN_ACCESSOR_MAP` e usar a macro de `BEGIN_ACCESSOR` para cada acessador individual.  A macro de `BEGIN_ACCESSOR` é concluído com a macro de `END_ACCESSOR` .  A macro de `BEGIN_ACCESSOR_MAP` é concluído com a macro de `END_ACCESSOR_MAP` .  
+## <a name="remarks"></a>Comentários  
+ No caso de vários acessadores em um conjunto de linhas, você precisa especificar `BEGIN_ACCESSOR_MAP` e usar o `BEGIN_ACCESSOR` macro cada acessador individuais. O `BEGIN_ACCESSOR` macro é concluída com o `END_ACCESSOR` macro. O `BEGIN_ACCESSOR_MAP` macro é concluída com o `END_ACCESSOR_MAP` macro.  
   
-## Exemplo  
- Consulte [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md).  
+## <a name="example"></a>Exemplo  
+ Consulte [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Macros e funções globais para modelos de consumidor de banco de dados OLE](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [END\_ACCESSOR](../Topic/END_ACCESSOR.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)
+## <a name="see-also"></a>Consulte também  
+ [Macros e funções globais para modelos de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)

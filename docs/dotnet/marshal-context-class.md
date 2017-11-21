@@ -1,48 +1,45 @@
 ---
-title: "Classe marshal_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classe marshal_context [C++]"
+title: Classe marshal_context | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 55039f216f2c2b7f3ba04bebaf086dd66c13c779
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classe marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Essa classe converte dados entre o modo nativo e ambientes gerenciados.  
+# <a name="marshalcontext-class"></a>Classe marshal_context
+Essa classe converte dados entre ambientes gerenciados e nativos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class marshal_context  
 ```  
   
-## Comentários  
- Use a classe de `marshal_context` para as conversões de dados que exigem um contexto.  Consulte [Visão geral de marshaling no C\+\+](../dotnet/overview-of-marshaling-in-cpp.md) para obter mais informações sobre quais as conversões exigem um contexto e de que o arquivo marshaling tem que ser incluído.  O resultado do marshaling quando você usa um contexto é válido somente até que o objeto de `marshal_context` ser destruído.  Para preservar seu resultado, você deve copiar os dados.  
+## <a name="remarks"></a>Comentários  
+ Use o `marshal_context` classe para conversões de dados que exigem um contexto. Consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md) para obter mais informações sobre quais conversões exigem um contexto e qual arquivo marshaling deve ser incluído. O resultado de empacotamento quando você usar um contexto é válido somente até o `marshal_context` objeto é destruído. Para preservar seu resultado, você deve copiar os dados.  
   
- Mesmo `marshal_context` pode ser usado para várias conversões de dados.  Reutilizar o contexto dessa maneira não afetará os resultados das chamadas marshaling anteriores.  
+ O mesmo `marshal_context` podem ser usados para várias conversões de dados. Reutilizar o contexto dessa maneira não afetará os resultados de marshaling de chamadas anteriores.  
   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho:** \\ marshal.h, msclr\>\<\\ marshal\_windows.h, msclr\>\\ \<marshal\_cppstd.h, ou msclr\>\\ marshal\_atl.h \<\>  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >  
   
- msclr::interop de**Namespace:**  
+ **Namespace:** msclr::interop  
   
-## Consulte também  
- [Visão geral de marshaling no C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)
+## <a name="see-also"></a>Consulte também  
+ [Visão geral de Marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)

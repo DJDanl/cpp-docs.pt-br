@@ -1,72 +1,70 @@
 ---
-title: "DLLs de extens&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "afxdll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Biblioteca AFXDLL"
-  - "DLLs [C++], extensão"
-  - "DLLs de extensão [C++]"
-  - "DLLs de extensão [C++], sobre DLLs de extensão"
-  - "memória [C++], DLLs"
-  - "DLLs MFC [C++], DLLs de extensão"
-  - "extensão de MFC [C++]"
-  - "compartilhamento de recursos [C++]"
-  - "versões de DLLs compartilhadas [C++]"
-  - "recursos compartilhados [C++]"
+title: "DLLs de extensão | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: afxdll
+dev_langs: C++
+helpviewer_keywords:
+- memory [C++], DLLs
+- MFC extension DLLs [C++]
+- AFXDLL library
+- shared resources [C++]
+- MFC DLLs [C++], MFC extension DLLs
+- DLLs [C++], extension
+- shared DLL versions [C++]
+- resource sharing [C++]
+- extension DLLs [C++]
+- extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f42c738983cb0d2017614279a35ab79ae677fb1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# DLLs de extens&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Uma DLL da extensão MFC é uma DLL que implementa normalmente reutilizáveis as classes derivadas das classes existentes da biblioteca de classes do Microsoft.  
+# <a name="mfc-extension-dlls"></a>DLLs de extensão do MFC
+Uma extensão do MFC DLL é uma DLL que implementa normalmente reutilizáveis classes derivadas de classes existentes de biblioteca Microsoft Foundation Class.  
   
- Uma DLL da extensão MFC tem os seguintes recursos e requisitos:  
+ Uma DLL de extensão do MFC tem os seguintes recursos e requisitos:  
   
--   O cliente que o executável deve ser um aplicativo MFC compilado com **\_AFXDLL** definiu.  
+-   O executável do cliente deve ser um aplicativo MFC compilado com `_AFXDLL` definido.  
   
--   Uma DLL da extensão também pode ser usado por uma DLL normal vinculada dinamicamente ao MFC.  
+-   Uma DLL de extensão do MFC também pode ser usado por uma DLL MFC regular vinculada dinamicamente a MFC.  
   
--   Dlls de extensão deve ser compilado com `_AFXEXT` definidas.  Isso força **\_AFXDLL** a ser definido e também assegura que as instruções apropriadas sejam recebidas nos arquivos de cabeçalho MFC.  Também garante que **AFX\_EXT\_CLASS** está definido como **\_\_declspec\(dllexport\)** ao criar a DLL, que será necessário se você estiver usando esta macro para declarar as classes em seu DLL da extensão.  
+-   DLLs de extensão do MFC devem ser compilada com `_AFXEXT` definido. Isso força `_AFXDLL` também seja definido e garante que as declarações adequadas é retirada dos arquivos de cabeçalho do MFC. Ela também garante que `AFX_EXT_CLASS` é definido como `__declspec(dllexport)` ao criar a DLL, que é necessário se você estiver usando essa macro para declarar as classes em sua DLL de extensão do MFC.  
   
--   Dlls de extensão não devem criar uma instância de uma classe derivada de `CWinApp`, mas devem confiar no aplicativo cliente \(ou na DLL\) fornecer esse objeto.  
+-   DLLs de extensão do MFC não devem instanciar uma classe derivada de `CWinApp`, mas deve confiar no aplicativo cliente (ou DLL) para fornecer esse objeto.  
   
--   Dlls de extensão deve, no entanto, forneça uma função de `DllMain` e fazer qualquer inicialização necessárias para ela.  
+-   DLLs de extensão do MFC devem, no entanto, fornecer um `DllMain` de função e fazer qualquer inicialização necessária existe.  
   
- Dlls de extensão são criados usando a versão da biblioteca de vínculo dinâmico\) nativa MFC \(também conhecido como a versão compartilhada MFC\).  Somente os executáveis \(MFC aplicativos ou DLL normais\) que é criado com uma versão compartilhada MFC podem usar uma DLL da extensão.  O aplicativo cliente e a DLL de extensão devem usar a mesma versão de MFCx0.dll.  Com uma DLL da extensão, você pode derivar novas classes personalizadas MFC e depois oferecer essa versão estendida de MFC para aplicativos que chamam o DLL.  
+ DLLs de extensão são criados usando a versão da biblioteca de vínculo dinâmico do MFC (também conhecido como a versão compartilhada do MFC). Somente MFC executáveis (aplicativos ou a DLLs normais do MFC) que são criados com a versão compartilhada do MFC podem usar uma DLL de extensão do MFC. O aplicativo cliente e a DLL de extensão do MFC devem usar a mesma versão do MFCx0.dll. Com uma extensão MFC DLL, você pode derivar novas classes personalizadas de MFC e, em seguida, oferecer essa versão estendida do MFC para aplicativos que chamam a DLL.  
   
- Dlls de extensão também podem ser usados passando objetos MFC\- derivadas entre o aplicativo e a DLL.  As funções de membro associadas ao objeto passado existem no módulo em que o objeto foi criado.  Como essas funções são exportadas corretamente ao usar a versão compartilhada MFC da DLL, você pode transmitir livremente MFC o ou ponteiros MFC\- derivados do objeto entre um aplicativo e as dlls de extensão que carregou.  
+ DLLs de extensão também podem ser usados para transmitir objetos derivados de MFC entre o aplicativo e a DLL. As funções de membro associadas ao objeto passado existem no módulo onde o objeto foi criado. Como essas funções são exportadas corretamente ao usar a versão DLL compartilhada do MFC, você pode passar livremente MFC ou ponteiros para objetos derivados MFC entre um aplicativo e a extensão MFC DLLs, ele carrega.  
   
- Uma DLL da extensão MFC usa uma versão compartilhada MFC da mesma forma que um aplicativo usa a versão compartilhada da DLL MFC, com algumas considerações adicionais:  
+ Uma DLL de extensão do MFC usa uma versão compartilhada do MFC da mesma forma que um aplicativo usa a versão DLL compartilhada do MFC, com algumas considerações adicionais:  
   
--   Não tem `CWinApp`\- objeto derivada.  Deve trabalhar com `CWinApp`\- objeto derivado do aplicativo cliente.  Isso significa que o aplicativo cliente possui a bomba principal da mensagem, o loop ociosa, e assim por diante.  
+-   Ele não tem um `CWinApp`-objeto derivado. Ele deve funcionar com o `CWinApp`-derivados do objeto do aplicativo cliente. Isso significa que o aplicativo cliente possui a bomba de mensagem principal, o loop ocioso e assim por diante.  
   
--   Chama `AfxInitExtensionModule` na função de `DllMain` .  O valor de retorno dessa função deve ser verificado.  Se um valor nulo será retornado de `AfxInitExtensionModule`, retorna 0 da função de `DllMain` .  
+-   Ele chama `AfxInitExtensionModule` no seu `DllMain` função. O valor de retorno dessa função deve ser verificado. Se um valor zero é retornado de `AfxInitExtensionModule`, retornam 0 do seu `DllMain` função.  
   
--   Cria um objeto de **CDynLinkLibrary** durante a inicialização se a DLL de extensão deseja exportar objetos ou recursos de `CRuntimeClass` ao aplicativo.  
+-   Ele cria um **CDynLinkLibrary** durante a inicialização do objeto se a extensão MFC DLL deseja exportar `CRuntimeClass` objetos ou recursos para o aplicativo.  
   
- Antes da versão 4,0 MFC, esse tipo de DLL foi chamado em um AFXDLL.  AFXDLL se refere ao símbolo de pré\-processador de **\_AFXDLL** que é definido durante a criação da DLL.  
+ Antes da versão 4.0 do MFC, esse tipo de DLL foi chamado um AFXDLL. AFXDLL refere-se para o `_AFXDLL` símbolo do pré-processador que é definido durante a criação da DLL.  
   
- As bibliotecas de importação para a versão compartilhada MFC são nomeadas de acordo com a convenção descrita em [Convenções de nomenclatura para dlls MFC](../build/naming-conventions-for-mfc-dlls.md).  Visual C\+\+ fornece versões de prebuilt de DLL MFC, mais um número de DLL não MFC que você pode usar e distribuir com seus aplicativos.  Esses são documentados em Redist.txt, que é instalado na pasta arquivos de programas \\ Microsoft Visual Studio.  
+ As bibliotecas de importação para a versão compartilhada do MFC são nomeadas de acordo com a convenção descrita no [convenções de nomenclatura para DLLs MFC](../build/naming-conventions-for-mfc-dlls.md). Visual C++ fornece versões pré-compilada as MFC DLLs, além de um número de DLLs não MFC que você pode usar e distribuir aos seus aplicativos. Essas situações são documentadas Redist, que é instalado na pasta Program Files\Microsoft Visual Studio.  
   
- Se você estiver exportando usando um arquivo .def, coloque o código a seguir no início e o término do arquivo de cabeçalho:  
+ Se você estiver exportando usando um arquivo. def, coloque o seguinte código no início e no final do arquivo de cabeçalho:  
   
-```  
+```cpp  
 #undef AFX_DATA  
 #define AFX_DATA AFX_EXT_DATA  
 // <body of your header file>  
@@ -74,29 +72,29 @@ Uma DLL da extensão MFC é uma DLL que implementa normalmente reutilizáveis as
 #define AFX_DATA  
 ```  
   
- Essas quatro linhas garantem que o código seja criado corretamente para uma DLL da extensão.  Omitir essas quatro linhas pode causar o DLL para criar ou links incorretamente.  
+ Estas quatro linhas Certifique-se de que seu código é compilado corretamente para uma DLL de extensão do MFC. Omitindo estas quatro linhas pode causar a DLL compilar ou vincular incorretamente.  
   
- Se você precisa passar um MFC ou um ponteiro MFC\- derivado do objeto para ou de uma DLL MFC, a DLL deve ser uma DLL da extensão.  As funções de membro associadas ao objeto passado existem no módulo em que o objeto foi criado.  Como essas funções são exportadas corretamente ao usar a versão compartilhada MFC da DLL, você pode transmitir livremente MFC o ou ponteiros MFC\- derivados do objeto entre um aplicativo e as dlls de extensão que carregou.  
+ Se você precisar passar um MFC ou ponteiro de objeto derivado de MFC ou para uma DLL MFC, a DLL deve ser uma DLL de extensão do MFC. As funções de membro associadas ao objeto passado existem no módulo onde o objeto foi criado. Como essas funções são exportadas corretamente ao usar a versão DLL compartilhada do MFC, você pode passar livremente MFC ou ponteiros para objetos derivados MFC entre um aplicativo e a extensão MFC DLLs, ele carrega.  
   
- Devido a problemas de massacre e exportação do nome do C\+\+, a lista de exportação de uma DLL de extensão pode ser diferente entre a depuração e as versões de varejo do mesmo DLL e DLL para plataformas diferentes.  O varejo MFCx0.dll tem cerca de 2.000 pontos de entrada exportados; a depuração MFCx0D.dll tem cerca de 3.000 pontos de entrada exportados.  
+ Devido a nome desconfiguração e exportação problemas C++, a lista de exportação de uma extensão MFC DLL pode ser diferente entre as versões de depuração e de varejo da mesma DLL e DLLs para diferentes plataformas. Varejo MFCx0.dll sobre 2.000 exportou pontos de entrada; a depuração MFCx0D.dll tem aproximadamente 3.000 pontos de entrada exportado.  
   
-## Gerenciamento de memória  
- MFCx0.dll e todas as dlls de extensão carregados no espaço de endereço de um aplicativo cliente usam o mesmo alocador de memória, a carga de recursos, e outros estados globais MFC como se estivesse no mesmo aplicativo.  Isso é significativo como as bibliotecas da DLL NÃO\- MFC e as dlls normais fazem o oposto exato e têm a cada DLL que atribui fora de seu próprio pool de memória.  
+## <a name="memory-management"></a>Gerenciamento de memória  
+ MFCx0.dll e todas as DLLs carregadas no espaço de endereço de um aplicativo cliente de extensão do MFC usam o mesmo alocador de memória, carregamento de recursos e outros estados MFC globais como se estivessem no mesmo aplicativo. Isso é significativo porque as bibliotecas de DLL não - MFC DLLs normais do MFC fazer o oposto exato e ter cada DLL alocando fora de seu próprio pool de memória.  
   
- Se uma DLL da extensão aloca memória, essa memória pode misturar\-se livremente com qualquer outro objeto atribuído pelo aplicativo.  Além disso, se um aplicativo que vincula dinamicamente MFC ao falhar, a proteção do sistema operacional mantém a integridade de qualquer outro aplicativo MFC que compartilha a DLL.  
+ Se uma DLL de extensão do MFC aloca memória, que a memória pode combinar livremente com qualquer outro objeto alocado pelo aplicativo. Além disso, se um aplicativo que vincula dinamicamente a MFC falhar, a proteção do sistema operacional mantém a integridade de qualquer outro aplicativo do MFC a DLL de compartilhamento.  
   
- De maneira semelhante outros estados globais MFC, como o arquivo executável atual para carregar recursos do, também são compartilhados entre o aplicativo cliente e todas as dlls de extensão MFC bem como MFCx0.dll próprio.  
+ Da mesma forma outros estados MFC globais, como o arquivo executável atual ao carregar recursos, também são compartilhados entre o aplicativo cliente e todas as DLLs de extensão do MFC, bem como MFCx0.dll em si.  
   
-## Compartilhando recursos e classes  
- Exportar recursos é feito por meio de uma lista de recursos.  Cada aplicativo lista contém uma única vinculada de objetos de **CDynLinkLibrary** .  Ao procurar um recurso, a maioria das implementações de MFC padrão que carregam recursos e verifique primeiro no módulo atual de recursos \(\) e`AfxGetResourceHandle`se o recurso não for encontrada exames a lista de objetos **CDynLinkLibrary** a tentativa de carregar o recurso solicitado.  
+## <a name="sharing-resources-and-classes"></a>Compartilhamento de recursos e Classes  
+ Exportação de recursos é feita por meio de uma lista de recursos. Cada aplicativo contém uma lista individualmente vinculada de **CDynLinkLibrary** objetos. Ao procurar por um recurso, a maioria das implementações do MFC padrão que carregar recursos procuram primeira no módulo de recurso atual (`AfxGetResourceHandle`) e se o recurso não foi encontrado orientam a lista de **CDynLinkLibrary** objetos tentativa de carregar o recurso solicitado.  
   
- Percorrer a lista tem as desvantagens que é ligeiramente mais lento e requer gerenciar intervalos de ID de recurso.  Tem a vantagem de um aplicativo cliente que vincula a vários DLL de extensão pode usar qualquer DLL\- forneceu o recurso sem ter que especifique o identificador de instância da DLL.  é usado`AfxFindResourceHandle` API examinando a lista de recursos para procurar uma correspondência determinada.  Tem o nome e o tipo de um recurso e retorna o identificador de recurso em que foi encontrada pela primeira vez \(ou NULL\).  
+ Percorra a lista tem as desvantagens que é um pouco mais lenta e requer o gerenciamento de intervalos de ID de recurso. Ele tem a vantagem de que um aplicativo cliente que contém links para várias DLLs de extensão do MFC pode usar qualquer recurso fornecido DLL sem ter que especificar o identificador de instância DLL. `AfxFindResourceHandle`uma API é usada para percorrer a lista de recursos para procurar uma correspondência determinada. Ele usa o nome e um tipo de recurso e retorna o identificador de recurso em que ele foi encontrado primeiro (ou nulo).  
   
- Se você não quiser percorrer a lista e somente os recursos de carregamento de um local específico, use as funções `AfxGetResourceHandle` e `AfxSetResourceHandle` para salvar o identificador antigo e para definir a novo identificador.  Restaure todo o identificador antigo de recursos antes que você retorna ao aplicativo cliente.  Para obter um exemplo de como usar esta abordagem para carregar explicitamente um menu, consulte Testdll2 .cpp no exemplo [DLLHUSK](http://msdn.microsoft.com/pt-br/dfcaa6ff-b8e2-4efd-8100-ee3650071f90)MFC.  
+ Se você não quiser percorrer a lista e carregar somente os recursos de um local específico, use as funções `AfxGetResourceHandle` e `AfxSetResourceHandle` para salvar o identificador antigo e definir o novo identificador. Certifique-se de restaurar o identificador de recurso antigo antes de retornar ao aplicativo cliente. Para obter um exemplo de como usar essa abordagem para carregar explicitamente um menu, consulte cpp Testdll2 no exemplo do MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk).  
   
- A criação de objetos dinâmico MFC dados um nome de MFC é semelhante.  O mecanismo de desserialização do objeto de MFC precisa ter todos os objetos de `CRuntimeClass` registrados de modo que possa recriar dinamicamente criando objetos do C\+\+ de tipo necessário com base no que foi anteriormente armazenado.  
+ Criação dinâmica de objetos MFC recebe um nome MFC é semelhante. O mecanismo de desserialização de objetos MFC precisa ter todos os `CRuntimeClass` objetos registrados para que ele pode reconstruir criando dinamicamente objetos C++ do tipo necessário com base no que foi armazenado anteriormente.  
   
- No caso de exemplo [DLLHUSK](http://msdn.microsoft.com/pt-br/dfcaa6ff-b8e2-4efd-8100-ee3650071f90)MFC, a lista examina algo como:  
+ No caso do exemplo MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk), a lista tem a seguinte aparência:  
   
 ```  
 head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE  
@@ -112,31 +110,31 @@ head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE
             MFCxxD.DLL            MFCxx.DLL  
 ```  
   
- onde *xx* é o número de versão; por exemplo, 42 representam a versão 4,2.  
+ onde *xx* é o número de versão; por exemplo, 42 representa versão 4.2.  
   
- O MFCxx.dll é geralmente o mais recente na lista de recursos e da classe.  MFCxx.dll inclui todos os recursos de MFC padrão, incluindo cadeias de caracteres alertas para todas as IDs padrão do comando.  Colocá\-lo no final da lista permite que a DLL e o aplicativo cliente em si não ter sua própria cópia dos recursos de MFC padrão, mas em vez de confiar em recursos compartilhados no MFCxx.dll.  
+ O MFCxx.dll é geralmente último na lista de classes e recursos. MFCxx.dll inclui todos os recursos padrão do MFC, inclusive cadeias de caracteres de prompt para todas as IDs de comando padrão. Permite que colocá-lo no final da lista de DLLs e o aplicativo de cliente em si não têm sua própria cópia dos recursos MFC padrão, mas a confiar nos recursos compartilhados no MFCxx.dll em vez disso.  
   
- Mesclar os recursos e os nomes da classe de todas as dlls no espaço de nome de aplicativo cliente tem a desvantagem de exigir que você ter cuidado com que as IDs ou nomes de sua escolha.  
+ Mesclando os recursos e os nomes de classe de todas as DLLs espaço para nome do aplicativo cliente tem a desvantagem de exigir que você tenha cuidado com a qual IDs ou nomes que você escolher.  
   
- O exemplo de [DLLHUSK](http://msdn.microsoft.com/pt-br/dfcaa6ff-b8e2-4efd-8100-ee3650071f90) gerencia o espaço de nome compartilhado de recursos usando vários arquivos de cabeçalho.  
+ O [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk) exemplo gerencia o espaço de nome de recurso compartilhado usando vários arquivos de cabeçalho.  
   
- Se seu DLL de extensão MFC deve manter dados adicionais para cada aplicativo, você pode derivar uma nova classe de **CDynLinkLibrary** e criá\-la em `DllMain`.  Ao executar, a DLL pode verificar a lista atual do aplicativo de objetos de **CDynLinkLibrary** para localizar o para que o DLL específico de extensão.  
+ Se a DLL de extensão do MFC precisa manter dados extras para cada aplicativo, você pode derivar uma nova classe de **CDynLinkLibrary** e criá-lo em `DllMain`. Quando em execução, a DLL pode verificar a lista do aplicativo atual de **CDynLinkLibrary** objetos para localizar o item para essa extensão MFC DLL específico.  
   
-### O que você deseja fazer?  
+### <a name="what-do-you-want-to-do"></a>O que você deseja fazer?  
   
--   [Inicializar uma DLL da extensão](../build/initializing-extension-dlls.md)  
+-   [Inicializar uma DLL de extensão do MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)  
   
-### Que você deseja saber mais?  
+### <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [Dicas sobre como usar arquivos de recursos compartilhados](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
+-   [Dicas sobre como usar arquivos de recurso compartilhado](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
   
 -   [Versão de DLL do MFC](../mfc/tn033-dll-version-of-mfc.md)  
   
--   [DLL normais vinculadas estaticamente ao MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [DLLs normais do MFC vinculado estaticamente ao MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [DLL normais vinculadas dinamicamente ao MFC](../Topic/Regular%20DLLs%20Dynamically%20Linked%20to%20MFC.md)  
+-   [DLLs MFC regulares vinculadas dinamicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [Usando o base de dados, o OLE, e as dlls de extensão de soquetes na DLL normais](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [Usando banco de dados, OLE e DLLs de extensão de MFC de soquetes em DLLs MFC regulares](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
-## Consulte também  
- [DLLs no Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)

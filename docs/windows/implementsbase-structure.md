@@ -1,50 +1,47 @@
 ---
-title: "Estrutura ImplementsBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura ImplementsBase"
+title: Estrutura ImplementsBase | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsBase
+dev_langs: C++
+helpviewer_keywords: ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21ede4ac7e9540e2694c10ab00144d285283f7bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Estrutura ImplementsBase
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="implementsbase-structure"></a>Estrutura ImplementsBase
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 struct ImplementsBase;  
 ```  
   
-## Comentários  
- Usado para validar tipos de parâmetros de modelo em [Implementa estrutura](../Topic/Implements%20Structure.md).  
+## <a name="remarks"></a>Comentários  
+ Usado para validar os tipos de parâmetro de modelo no [implementa estrutura](../windows/implements-structure.md).  
   
- A estrutura de ImplementsBase está vazio por design.  
+ A estrutura ImplementsBase é vazia por design.  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ImplementsBase`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,11 +1,10 @@
 ---
-title: Classe Location | Documentos do Microsoft
+title: Classe Location | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,38 +13,21 @@ f1_keywords:
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
-helpviewer_keywords:
-- location class
+dev_langs: C++
+helpviewer_keywords: location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="location-class"></a>Classe location
-Uma abstração de um local físico no hardware.  
+Uma abstração de um local físico em hardware.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,8 +56,8 @@ class location;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Determina se dois `location` objetos representam um local diferente.|  
-|[operator=](#operator_eq)|Atribui o conteúdo de um outro `location` objeto a este.|  
-|[operator==](#operator_eq_eq)|Determina se dois `location` objetos representam o mesmo local.|  
+|[operator=](#operator_eq)|Atribui o conteúdo de outro `location` deste objeto.|  
+|[operator==](#operator_eq_eq)|Determina se dois `location` representar o mesmo local.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `location`  
@@ -114,7 +96,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
   
 ### <a name="parameters"></a>Parâmetros  
  `_NumaNodeNumber`  
- O número de nó para construir um local.  
+ O número de nó para construir um local para.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um local que representa o nó NUMA especificado pelo `_NumaNodeNumber` parâmetro.  
@@ -162,7 +144,7 @@ bool operator!= (const location& _Rhs) const;
   
 ##  <a name="operator_eq"></a>operador = 
 
- Atribui o conteúdo de um outro `location` objeto a este.  
+ Atribui o conteúdo de outro `location` deste objeto.  
   
 ```
 location& operator= (const location& _Rhs);
@@ -176,7 +158,7 @@ location& operator= (const location& _Rhs);
   
 ##  <a name="operator_eq_eq"></a>operador = = 
 
- Determina se dois `location` objetos representam o mesmo local.  
+ Determina se dois `location` representar o mesmo local.  
   
 ```
 bool operator== (const location& _Rhs) const;
@@ -190,4 +172,3 @@ bool operator== (const location& _Rhs) const;
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)
-

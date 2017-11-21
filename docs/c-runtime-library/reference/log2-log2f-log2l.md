@@ -26,35 +26,20 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0af329652d6dbaafa519f924275c7644232f4a0f
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: f825304439e3e1c27f5dc1e41a1ae4c311450625
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
-Determina o logaritmo binário (base&2;) do valor especificado.  
+Determina o logaritmo binário (base 2) do valor especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,7 +68,7 @@ long double log2l(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `x`  
- O valor para determinar o logaritmo de base&2;.  
+ O valor para determinar o logaritmo de base 2.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Caso seja bem-sucedido, retornará o log2 de retorno `x`.  
