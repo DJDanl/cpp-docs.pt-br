@@ -1,6 +1,6 @@
 ---
-redirect_url: /cpp/visual-cpp-samples
-ms.openlocfilehash: c1fd376d9dae1b5f2616b02b7893aa08cbce9298
+redirect_url: /cpp/how-to-report-a-problem-with-the-visual-cpp-toolset
+ms.openlocfilehash: 0417f70ce718ed4c43a8153e958d3d858fe8018f
 ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR

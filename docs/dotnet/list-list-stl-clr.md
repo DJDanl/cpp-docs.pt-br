@@ -1,33 +1,30 @@
 ---
-title: "list::list (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro de lista [STL/CLR]"
+title: 'List:: List (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::list
+dev_langs: C++
+helpviewer_keywords: list member [STL/CLR]
 ms.assetid: 51b58f63-c65a-4d54-b746-0c10635b123b
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f5ed413ec892ebdf89fc903ac9a9f06e4f2d917a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# list::list (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria um objeto contêiner.  
+# <a name="listlist-stlclr"></a>list::list (STL/CLR)
+Constrói um objeto contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 list();  
@@ -40,52 +37,53 @@ template<typename InIt>
 list(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parâmetros  
- count  
- Número de elementos a ser inserido.  
+#### <a name="parameters"></a>Parâmetros  
+ `count`  
+ Número de elementos a inserir.  
   
- primeiro  
+ `first`  
  Início do intervalo a ser inserido.  
   
- last  
- O fim do intervalo a ser inserido.  
+ `last`  
+ Fim do intervalo a ser inserido.  
   
- direita  
- Objeto ou intervalo a ser inserido.  
+ `right`  
+ Objeto ou intervalo a inserir.  
   
- val  
+ `val`  
  Valor do elemento a ser inserido.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
+  
  O construtor:  
   
  `list();`  
   
- inicializa a sequência controlada sem os elementos.  Use\-a para especificar uma sequência vazia inicial controlada.  
+ inicializa a sequência controlada com nenhum elemento. Você pode usá-lo para especificar uma sequência vazia de controlado inicial.  
   
  O construtor:  
   
  `list(list<Value>% right);`  
   
- inicializa a sequência controlada pela sequência `[``right``.`[list::begin](../Topic/list::begin%20\(STL-CLR\).md)`(),` `right``.`[list::end](../Topic/list::end%20\(STL-CLR\).md)`())`.  Use\-a para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto `right`na lista.  
+ inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`). Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto lista `right`.  
   
  O construtor:  
   
  `list(list<Value>^ right);`  
   
- inicializa a sequência controlada pela sequência `[``right``->`[list::begin](../Topic/list::begin%20\(STL-CLR\).md)`(),` `right``->`[list::end](../Topic/list::end%20\(STL-CLR\).md)`())`.  Use\-a para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto da lista cujo identificador é `right`.  
+ inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`). Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto lista cujo identificador é `right`.  
   
  O construtor:  
   
  `explicit list(size_type count);`  
   
- inicializa a sequência controlada com elementos de `count` cada um com valor `value_type()`.  Você usará para preencher qualquer contêiner com elementos que tem o valor padrão.  
+ inicializa a sequência controlada com `count` elementos com o valor `value_type()`. Você usá-lo para preencher o contêiner com elementos todos com o valor padrão.  
   
  O construtor:  
   
  `list(size_type count, value_type val);`  
   
- inicializa a sequência controlada com elementos de `count` cada um com valor `val`.  Use\-a para preencher qualquer contêiner com elementos que tem o mesmo valor.  
+ inicializa a sequência controlada com `count` elementos com o valor `val`. Você usá-lo para preencher o contêiner com elementos todos com o mesmo valor.  
   
  O construtor:  
   
@@ -93,17 +91,17 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list(InIt first, InIt last);`  
   
- inicializa a sequência controlada pela sequência `[``first``,` `last``)`.  Use\-a para tornar a sequência controlada uma cópia de outra sequência.  
+ inicializa a sequência controlada com a sequência [`first`, `last`). Você pode usá-lo para fazer uma cópia de outra sequência de sequência controlada.  
   
  O construtor:  
   
  `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`.  Use\-a para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador.  
+ inicializa a sequência controlada com a sequência designada pelo enumerador `right`. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador de sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cliext_list_construct.cpp   
 // compile with: /clr   
 #include <cliext/list>   
@@ -157,20 +155,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Requisitos  
- cliext \<\/lista de**Cabeçalho:** \>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::operator\= \(STL\/CLR\)](../dotnet/list-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [List::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

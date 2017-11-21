@@ -1,6 +1,6 @@
 ---
-redirect_url: /cpp/visual-cpp-samples
-ms.openlocfilehash: c1fd376d9dae1b5f2616b02b7893aa08cbce9298
+redirect_url: /cpp/cpp-conformance-improvements-2017
+ms.openlocfilehash: 6659c757af2d454b630c8316cfdaa2c66428aa86
 ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
