@@ -1,48 +1,47 @@
 ---
-title: "Alterando o fator de amplia&#231;&#227;o (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Editor de imagem [C++], ampliação"
-  - "imagens [C++], ampliação no Editor de imagem"
-  - "ampliação, Editor de imagem"
+title: "Alterando o fator de ampliação (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], magnification in Image editor
+- magnification, Image editor
+- Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7718545c20a22b98498e8dda68c1dac45d48b2ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Alterando o fator de amplia&#231;&#227;o (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Por padrão, o editor de imagens exibe o modo de exibição no painel esquerdo em tamanho real e o modo de exibição no painel à direita em tamanho real de 6 vezes.  O fator de ampliação \(visto na barra de status na parte inferior da área de trabalho\) é a proporção entre o tamanho real da imagem e o tamanho de exibição.  O fator padrão é 6 e o intervalo é de 1 a 10.  
+# <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Alterando o fator de ampliação (editor de imagens para ícones)
+Por padrão, o editor de imagem exibe o modo de exibição no painel esquerdo no tamanho real e o modo de exibição no painel à direita no tamanho real de 6 horas. O fator de ampliação (visto na barra de status na parte inferior do espaço de trabalho) é a razão entre o tamanho real da imagem e o tamanho exibido. O fator de padrão é 6 e o intervalo é de 1 a 10.  
   
-### Para alterar o fator de ampliação  
+### <a name="to-change-the-magnification-factor"></a>Para alterar o fator de ampliação  
   
-1.  Selecione o  **Editor de imagens** painel cujo fator de ampliação que deseja alterar.  
+1.  Selecione o **Editor de imagem** painel cujo fator de ampliação que você deseja alterar.  
   
-2.  Sobre o  [barra de ferramentas do Editor de imagens](../mfc/toolbar-image-editor-for-icons.md), clique na seta à direita da  [ferramenta de ampliação](../mfc/toolbar-image-editor-for-icons.md) e selecione o fator de ampliação no submenu:  **1 X**,  **2 X**,  **6 X**, ou  **8 X**.  
+2.  No [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md), clique na seta à direita do [ferramenta ampliar](../windows/toolbar-image-editor-for-icons.md) e selecione o fator de ampliação do submenu: **1 X**, **2 X**, **6 X**, ou **8 X**.  
   
     > [!NOTE]
-    >  Para selecionar um fator de ampliação diferentes daqueles listados na  **ampliação** ferramenta, use as teclas de aceleração.  
+    >  Para selecionar um fator de ampliação diferente das listadas a **ampliar** ferramenta, use as teclas de aceleração.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
  Nenhum  
   
-## Consulte também  
- [Teclas de aceleração](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Painéis Janela](../mfc/window-panes-image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Painéis janela](../windows/window-panes-image-editor-for-icons.md)
+

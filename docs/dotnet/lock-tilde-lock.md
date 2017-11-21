@@ -1,47 +1,45 @@
 ---
-title: "lock::~lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "~lock"
-  - "msclr.lock.~lock"
-  - "lock.~lock"
-  - "msclr::lock::~lock"
-  - "lock::~lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Destruidor ~lock"
+title: 'bloqueio:: ~ bloqueio | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ~lock
+- msclr.lock.~lock
+- lock.~lock
+- msclr::lock::~lock
+- lock::~lock
+dev_langs: C++
+helpviewer_keywords: ~lock destructor
 ms.assetid: 55fa9f6c-d7a6-48ef-9236-ee03342c1d20
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2fe737a0e40c1b45e7c5622ee377663e997e87ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# lock::~lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destructs um objeto de `lock` .  
+# <a name="locklock"></a>lock::~lock
+Destructs um `lock` objeto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 ~lock();  
 ```  
   
-## Comentários  
- O destruidor chama [lock::release](../Topic/lock::release.md).  
+## <a name="remarks"></a>Comentários  
+ As chamadas de destruidor [lock::release](../dotnet/lock-release.md).  
   
-## Exemplo  
- Este exemplo usa uma única instância de uma classe em vários threads.  A classe usar um bloqueio em para assegurar que acessa a seus dados internos são consistentes para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe para verificar periodicamente se algum thread de trabalho ainda existe, e para sair de espera até que todos os threads de trabalho foi concluído suas tarefas.  
+## <a name="example"></a>Exemplo  
+ Este exemplo usa uma única instância de uma classe em vários threads.  A classe usa um bloqueio em si mesmo para garantir que acessa a seus dados internos é consistente para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe Verifique periodicamente para ver se qualquer threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
   
 ```  
 // msl_lock_dtor.cpp  
@@ -115,22 +113,25 @@ int main() {
 }  
 ```  
   
-  **O thread 3, o contador \= 0**  
-**O thread 3, o contador \= 10**  
-**O thread 5, o contador \= 0**  
-**O thread 5, o contador \= 10**  
-**O thread 7, o contador \= 0**  
-**O thread 7, o contador \= 10**  
-**O thread 4, o contador \= 0**  
-**O thread 4, o contador \= 10**  
-**O thread 6, o contador \= 0**  
-**O thread 6, o contador \= 10**  
-**Todos os threads concluídos.**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\lock.h >  
   
-## Consulte também  
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
  [Membros de bloqueio](../dotnet/lock-members.md)   
  [lock::lock](../dotnet/lock-lock.md)

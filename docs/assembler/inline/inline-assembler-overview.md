@@ -1,40 +1,39 @@
 ---
-title: "Vis&#227;o geral do assembler embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __asm [C++], invocando o assembler embutido"
-  - "assembler embutido"
-  - "assembly embutido, assembler embutido"
-  - "invocando o assembler embutido"
+title: "Visão geral do Assembler embutido | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembler
+- __asm keyword [C++], invoking inline assembler
+- invoking inline assembler
+- inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7733398f5a444fa5e7461ea52295624d6d16f9a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Vis&#227;o geral do assembler embutido
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="inline-assembler-overview"></a>Visão geral do assembler embutido
+**Seção específica da Microsoft**  
   
- O montador embutido permite a você incorporar instruções de linguagem assembly em seus programas de código\-fonte c e C\+\+ sem etapas adicionais de assembly e o link.  O montador in\-line baseia\-se no compilador — não é necessário um montador separado, como o Microsoft Macro Assembler \(MASM\).  
+ O assembler embutido permite inserir instruções de linguagem de assembly em seus programas de origem C e C++ sem etapas adicionais de assembly e link. O assembler integrado é incorporado ao compilador e, portanto, não é necessário um assembler separado, como o MASM (Microsoft Macro Assembler).  
   
- Como o montador in\-line não requer assembly separado e etapas de link, é mais conveniente que um montador separado.  Código de assembly embutido pode usar qualquer c ou C\+\+ função ou variável de nome que está no escopo, portanto, é fácil de integrá\-lo ao código do seu programa de c e C\+\+.  E porque o código de assembly pode ser misturado com instruções de c e C\+\+, ele pode realizar tarefas que são incômodos ou impossíveis em c ou C\+\+ sozinho.  
+ Como o assembler integrado não requer etapas de link e do assembly separado, é mais conveniente que um assembler separado. Código de assembly embutido pode usar qualquer C ou C++ variável ou função nome que está no escopo, portanto, é fácil integrá-lo com o código do programa de C e C++. E porque o código de assembly pode ser combinado com instruções C e C++, ele pode realizar tarefas que são difícil ou impossível em C ou C++ sozinho.  
   
- O  [\_\_asm](../../assembler/inline/asm.md) palavra\-chave invoca o montador in\-line e pode aparecer sempre que uma declaração de c ou C\+\+ é legal.  Ele não pode aparecer sozinha.  Ele deve ser seguido por uma instrução de assembly, um grupo de instruções entre chaves, ou, na pior das hipóteses, um par de chaves de vazio.  O termo "`__asm` bloco" aqui se refere a qualquer instrução ou o grupo de instruções, ou não entre chaves.  
+ O [ASM](../../assembler/inline/asm.md) palavra-chave invoca o assembler embutido e pode aparecer sempre que uma instrução de C ou C++ é válida. Ela não pode aparecer sozinha. Ela deve ser seguida por uma instrução de assembly, um grupo de instruções entre chaves ou, pelo menos, um par vazio de chaves. O termo "bloco `__asm`" refere-se aqui a qualquer instrução ou grupo de instruções, estando ou não entre chaves.  
   
- O código a seguir é uma simples `__asm` bloco entre chaves.  \(O código é uma seqüência de prólogo da função personalizada.\)  
+ O código a seguir é um simples `__asm` bloco entre chaves. (O código é uma sequência personalizada de prólogos da função.)  
   
 ```  
 // asm_overview.cpp  
@@ -56,13 +55,7 @@ void __declspec(naked) main()
 }  
 ```  
   
- Como alternativa, você pode colocar `__asm` na frente de cada instrução de montagem:  
-  
-```  
-__asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE  
-```  
-  
- Desde que o `__asm` palavra\-chave é um separador de instrução, você também pode colocar instruções assembly na mesma linha:  
+ Como alternativa, você pode colocar `__asm` na frente de cada instrução de assemblies:  
   
 ```  
 __asm push ebp  
@@ -70,7 +63,13 @@ __asm mov  ebp, esp
 __asm sub  esp, __LOCAL_SIZE  
 ```  
   
- **Específicos do Microsoft final**  
+ Como a palavra-chave `__asm` é um separador de instruções, você também pode colocar instruções de assembly na mesma linha:  
   
-## Consulte também  
+```  
+__asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE  
+```  
+  
+ **Fim da seção específica da Microsoft**  
+  
+## <a name="see-also"></a>Consulte também  
  [Assembler embutido](../../assembler/inline/inline-assembler.md)

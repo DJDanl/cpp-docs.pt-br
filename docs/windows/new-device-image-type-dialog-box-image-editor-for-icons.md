@@ -1,55 +1,51 @@
 ---
-title: "Caixa de di&#225;logo Novo Tipo de Imagem do &lt;Device&gt; (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.newimagetype"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Caixa de diálogo Nova Imagem de <Device>"
+title: "Novo &lt;dispositivo&gt; imagem da caixa de diálogo de tipo (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.newimagetype
+dev_langs: C++
+helpviewer_keywords: New <Device> Image Type dialog box
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-caps.latest.revision: 8
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c667616325cf29d959340db38a8336dd6c63e8c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Caixa de di&#225;logo Novo Tipo de Imagem do &lt;Device&gt; (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Permite que você criar uma nova imagem de dispositivo de um tipo especificado.  Para abrir o  **o novo \<Device\> Imagem** caixa de diálogo, clique em  **Novo tipo de imagem** sobre o  **imagem** menu.  Para obter mais informações sobre o ícone tamanhos que utiliza Windows, consulte  [ícones](_win32_Icons_cpp) na documentação do SDK do Windows.  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Novo &lt;dispositivo&gt; imagem da caixa de diálogo de tipo (Editor de imagens para ícones)
+Permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir o **novo \<dispositivo > imagem** caixa de diálogo, clique em **novo tipo de imagem** no **imagem** menu.  
   
  **Tipo de imagem de destino**  
- Lista os tipos de imagem disponível.  Selecione o tipo de imagem que você deseja abrir:  
+ Lista os tipos de imagens disponíveis. Selecione o tipo de imagem que você deseja abrir:  
   
 ||||  
 |-|-|-|  
-|-   16 x 16, 16 cores|-   48x48, 16 cores|-   96 x 96, 16 cores|  
-|-   16 x 16, 256 cores|-   48x48, 256 cores|-   96 x 96, 256 cores|  
-|-   16x16, monocromático|-   48x48, monocromática|-   96 x 96 monocromático|  
-|-   32x32, 16 cores|-   64 x 64, 16 cores||  
-|-   32x32, 256 cores|-   64 x 64, 256 cores||  
-|-   32x32, monocromático|-   64 x 64 monocromático||  
+|-16 x 16, 16 cores|-48 x 48, 16 cores|-96 x 96, 16 cores|  
+|-16 x 16, 256 cores|-48 x 48, 256 cores|-96 x 96, 256 cores|  
+|-16 x 16, monocromática|-48 x 48, monocromática|-96 x 96, monocromática|  
+|-32 x 32, 16 cores|-64 x64, 16 cores||  
+|-32 x 32, 256 cores|-64 x64, 256 cores||  
+|-32 x 32, monocromática|-64 x64, monocromática||  
   
 > [!NOTE]
->  Todas as imagens existentes não serão exibidas nessa lista.  
+>  As imagens existentes não serão exibidas nessa lista.  
   
- **Custom**  
- Abre o  [caixa de diálogo imagem personalizada](../mfc/custom-image-dialog-box-image-editor-for-icons.md) no qual você pode criar uma nova imagem com um tamanho personalizado e o número de cores.  
+ **Personalizado**  
+ Abre o [caixa de diálogo imagem personalizada](custom-image-dialog-box-image-editor-for-icons.md) no qual você pode criar uma nova imagem com um tamanho personalizado e o número de cores.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
-## Consulte também  
- [Ícones e cursores: recursos de imagem para exibir dispositivos](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Menu Imagem](../mfc/image-menu-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Menu imagem](../windows/image-menu-image-editor-for-icons.md)   
+ [Editor de imagens para ícones](../windows/image-editor-for-icons.md)

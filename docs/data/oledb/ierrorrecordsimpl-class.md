@@ -1,35 +1,33 @@
 ---
-title: "Classe IErrorRecordsImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IErrorRecordsImpl"
-  - "ATL.IErrorRecordsImpl"
-  - "IErrorRecordsImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe IErrorRecordsImpl"
+title: Classe IErrorRecordsImpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IErrorRecordsImpl
+- ATL.IErrorRecordsImpl
+- IErrorRecordsImpl
+dev_langs: C++
+helpviewer_keywords: IErrorRecordsImpl class
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6bd2b342f2e7b29103b08c67fa973ed4a8c64869
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IErrorRecordsImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implementa a interface OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) , adicionando registros e a recuperação de registros de membro de dados \([m\_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)\) do tipo **CAtlArray\<**`RecordClass`**\>**.  
+# <a name="ierrorrecordsimpl-class"></a>Classe IErrorRecordsImpl
+Implementa o OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interface, adicionando registros e recuperar os registros de um membro de dados ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) do tipo **CAtlArray <** `RecordClass`**>**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <  
@@ -39,45 +37,45 @@ template <
 class IErrorRecordsImpl : public IErrorRecords  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
  Uma classe derivada de `IErrorRecordsImpl`.  
   
  `RecordClass`  
  Uma classe que representa um objeto de erro OLE DB.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
 |[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|Obtém a cadeia de caracteres de descrição de erro de um registro de erro.|  
-|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|Obtém o erro GUID de um registro de erro.|  
-|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|Obtém a ID de contexto da ajuda de um registro de erro.|  
-|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|Obtém o nome de caminho completo do arquivo de ajuda de um registro de erro.|  
+|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|Obtém o GUID de erro de um registro de erro.|  
+|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|Obtém a ID do contexto de ajuda de um registro de erro.|  
+|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|Obtém o nome do caminho completo do arquivo de ajuda de um registro de erro.|  
 |[GetErrorSource](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|Obtém o código de erro de um registro de erro.|  
   
-### Métodos da interface  
+### <a name="interface-methods"></a>Métodos de interface  
   
 |||  
 |-|-|  
-|[AddErrorRecord](../Topic/IErrorRecordsImpl::AddErrorRecord.md)|Adiciona um registro ao objeto de erro OLE DB.|  
+|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|Adiciona um registro para o objeto de erro OLE DB.|  
 |[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|Retorna informações básicas sobre o erro, como o código de retorno e o número do erro específico do provedor.|  
 |[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|Retorna um ponteiro para uma interface em um objeto de erro personalizada.|  
-|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Retorna um ponteiro de interface de [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) no registro especificado.|  
+|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Retorna um [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) ponteiro de interface do registro especificado.|  
 |[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|Retorna os parâmetros de erro.|  
-|[GetRecordCount](../Topic/CDaoRecordset::GetRecordCount.md)|Retorna o número de registros no objeto do registro OLE DB.|  
+|[GetRecordCount](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|Retorna o número de registros no objeto de registro de OLE DB.|  
   
-### Membros de dados  
+### <a name="data-members"></a>Membros de Dados  
   
 |||  
 |-|-|  
-|[m\_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|Uma matriz de registros de erro.|  
+|[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|Uma matriz de registros de erro.|  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

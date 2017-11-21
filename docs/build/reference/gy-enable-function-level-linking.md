@@ -1,71 +1,70 @@
 ---
-title: "/Gy (habilitar vincula&#231;&#227;o do n&#237;vel de fun&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking"
-  - "/gy"
-  - "VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /Gy (C++)"
-  - "Função COMDAT"
-  - "habilitar Opção de compilador de vinculação no nível da função [C++]"
-  - "Opção de compilador Gy [C++]"
-  - "Opção de compilador -Gy [C++]"
-  - "funções empacotadas"
+title: "-Gy (habilitar vinculação do nível de função) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking
+- /gy
+- VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking
+dev_langs: C++
+helpviewer_keywords:
+- enable function-level linking compiler option [C++]
+- COMDAT function
+- Gy compiler option [C++]
+- -Gy compiler option [C++]
+- /Gy compiler option [C++]
+- packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e7d83e4409d9c46c926859f39029ea68f2411def
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /Gy (habilitar vincula&#231;&#227;o do n&#237;vel de fun&#231;&#227;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Permite que o compilador empacote funções individuais na forma de funções empacotadas \(COMDATs\).  
+# <a name="gy-enable-function-level-linking"></a>/Gy (habilitar vinculação do nível de função)
+Permite que o compilador empacote funções individuais na forma de funções empacotadas (COMDATs).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Gy[-]  
 ```  
   
-## Comentários  
- O vinculador requer que as funções são empacotadas separadamente como COMDATs para excluir ou ordenar funções individuais em uma DLL ou no arquivo .exe.  
+## <a name="remarks"></a>Comentários  
+ O vinculador requer que funções ser empacotado separadamente como COMDATs para excluir ou ordenar funções individuais em um arquivo DLL ou .exe.  
   
- Você pode usar a opção [\/OPT \(Otimizações\)](../../build/reference/opt-optimizations.md) do vinculador excluir funções empacotadas não referenciada do arquivo .exe.  
+ Você pode usar a opção de vinculador [/OPÇ (otimizações)](../../build/reference/opt-optimizations.md) para excluir funções empacotadas sem referência do arquivo .exe.  
   
- Você pode usar a opção [\/ORDER \(colocar funções na ordem\)](../../build/reference/order-put-functions-in-order.md) do vinculador incluir funções empacotados na ordem especificada no arquivo .exe.  
+ Você pode usar a opção de vinculador [/ORDER (colocar funções na ordem)](../../build/reference/order-put-functions-in-order.md) para incluir funções empacotadas em uma ordem especificada no arquivo .exe.  
   
- As funções embutidas são empacotadas sempre se são criadas uma instância do como chamadas \(que ocorre, por exemplo, se inlining está ou você faça um endereço de função\).  Além disso, as funções de membro C\+\+ definidas na declaração de classe são empacotadas automaticamente; outras funções não são, e selecione esta opção é necessário empacotadas como funções. construa  
+ Funções embutidas são sempre compactadas se eles são instanciados como chamadas (que ocorre, por exemplo, se inlining é desativado ou tomar o endereço de uma função). Além disso, as funções de membro de C++ definidas na declaração da classe automaticamente são empacotadas; outras funções não são, e a seleção dessa opção é necessário para compilá-los como funções empacotadas.  
   
 > [!NOTE]
->  A opção de [\/ZI](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) , usada para a edição e continuar, define automaticamente a opção de **\/Gy** .  
+>  O [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) opcional usada para editar e continuar, define automaticamente o **/Gy** opção.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Geração de Código** .  
+3.  Clique o **geração de código** página de propriedades.  
   
-4.  Modifique a propriedade de **Habilita Vinculação a Nível de Função** .  
+4.  Modificar o **habilitar vínculo em nível de função** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -1,63 +1,61 @@
 ---
-title: "Sa&#237;da LINK | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .ilk"
-  - "DLLs [C++], como saída de vinculador"
-  - "arquivos executáveis [C++], como saída de vinculador"
-  - "Arquivos  [C++], LINK"
-  - "arquivos ILK"
-  - "importar bibliotecas [C++], criando"
-  - "ferramenta LINK [C++], arquivo de mapa"
-  - "ferramenta LINK [C++], saída"
-  - "vinculador [C++], arquivos de saída"
-  - "arquivos de mapa [C++]"
-  - "arquivos de mapa [C++], saída LINK"
-  - "arquivos de saída [C++], vinculador"
+title: "Saída LINK | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- mapfiles [C++]
+- ILK files
+- output files [C++], linker
+- files [C++], LINK
+- .ilk files
+- LINK tool [C++], output
+- import libraries [C++], creating
+- executable files [C++], as linker output
+- mapfiles [C++], LINK output
+- linker [C++], output files
+- DLLs [C++], as linker output
+- LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d01f19f31f83324beab1e44efe181086d6432175
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Sa&#237;da LINK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A saída do link incluem arquivos, DLL, mapfiles, e mensagens de .exe.  
+# <a name="link-output"></a>Saída LINK
+Saída link inclui arquivos .exe, DLLs, arquivos de mapa e mensagens.  
   
-##  <a name="_core_output_files"></a> Arquivos de saída  
- O arquivo de saída padrão de LINK é um arquivo .exe.  Se a opção de [\/DLL](../../build/reference/dll-build-a-dll.md) for especificada, o LINK criar um arquivo .dll.  Você pode controlar o nome do arquivo de saída com a opção de [Nome do arquivo de saída \(\/OUT\)](../../build/reference/out-output-file-name.md) .  
+##  <a name="_core_output_files"></a>Arquivos de saída  
+ O arquivo de saída padrão do LINK é um arquivo de .exe. Se o [/DLL](../../build/reference/dll-build-a-dll.md) opção for especificada, o LINK cria um arquivo. dll. Você pode controlar o nome do arquivo de saída com o [nome de arquivo de saída (/out)](../../build/reference/out-output-file-name.md) opção.  
   
- No modo incremental, o LINK cria um arquivo de .ilk a informações de status de suspensão para as construções incrementais posteriores do programa.  Para obter detalhes sobre arquivos de .ilk, consulte [arquivos de .ilk](../../build/reference/dot-ilk-files-as-linker-input.md).  Para obter mais informações sobre como vincular incremental, consulte a opção de [Vincular incremental \(\/INCREMENTAL\)](../../build/reference/incremental-link-incrementally.md) .  
+ No modo incremental, LINK cria um arquivo. ilk para armazenar informações de status para posteriores compilações incrementais do programa. Para obter detalhes sobre os arquivos. ilk, consulte [arquivos. ilk](../../build/reference/dot-ilk-files-as-linker-input.md). Para obter mais informações sobre a vinculação incremental, consulte o [Link incremental (/incremental)](../../build/reference/incremental-link-incrementally.md) opção.  
   
- Quando o LINK criar um programa que contém a exportações \(normalmente uma DLL\), o também cria um arquivo de .lib, a menos que um arquivo de .exp é usado na compilação.  Você pode controlar o nome do arquivo de biblioteca de importação com a opção de [\/IMPLIB](../Topic/-IMPLIB%20\(Name%20Import%20Library\).md) .  
+ Quando o LINK cria um programa que contenha exporta (geralmente uma DLL), ele também cria um arquivo. lib, a menos que um arquivo. EXP foi usado na compilação. Você pode controlar o nome de arquivo de biblioteca de importação com o [/IMPLIB](../../build/reference/implib-name-import-library.md) opção.  
   
- Se a opção de [Gerencia Mapfile \(\/MAP\)](../../build/reference/map-generate-mapfile.md) for especificada, o LINK cria um mapfile.  
+ Se o [Gerar Mapfile (/Map)](../../build/reference/map-generate-mapfile.md) opção for especificada, o LINK cria um arquivo de mapa.  
   
- Se a opção de [Gerencia as informações de depuração \(\/DEBUG\)](../../build/reference/debug-generate-debug-info.md) for especificada, o cria um LINK PDB para conter informações de depuração para o programa.  
+ Se o [gerar informações de depuração (/debug)](../../build/reference/debug-generate-debug-info.md) opção for especificada, o LINK cria um PDB para conter as informações de depuração para o programa.  
   
-##  <a name="_core_other_output"></a> Outras saída  
- Quando você digita `link` sem nenhuma outra entrada da linha de comando, o LINK exibe uma instrução de uso que resume as opções.  
+##  <a name="_core_other_output"></a>Outra saída  
+ Quando você digita `link` sem qualquer outra entrada de linha de comando, o LINK exibirá uma instrução de uso que resume as opções.  
   
- O LINK exibe uma mensagem de direitos autorais e da versão e a entrada de comando\- Arquivo de duplica, a menos que a opção de [Suprima a faixa de inicialização \(\/NOLOGO\)](../../build/reference/nologo-suppress-startup-banner-linker.md) é usada.  
+ LINK exibirá uma mensagem de direitos autorais e a versão e exibe o arquivo de comando de entrada, a menos que o [Suprimir faixa de inicialização (/ /NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) opção é usada.  
   
- Você pode usar a opção de [Mensagens de progresso de impressão \(\/VERBOSE\)](../../build/reference/verbose-print-progress-messages.md) exibir detalhes adicionais sobre a construção.  
+ Você pode usar o [imprimir mensagens de andamento (/verbose)](../../build/reference/verbose-print-progress-messages.md) opção para exibir detalhes adicionais sobre a compilação.  
   
- LINK emite o erro e mensagens de aviso no formato LNK*nnnn*.  Esses prefixo de erro e intervalo de números também são usadas pelo LIB, por DUMPBIN, e por EDITBIN.  
+ LINK emite mensagens de erro e aviso no formulário LNK*nnnn*. Esse prefixo de erro e o intervalo de números também são usados por LIB, DUMPBIN e EDITBIN.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

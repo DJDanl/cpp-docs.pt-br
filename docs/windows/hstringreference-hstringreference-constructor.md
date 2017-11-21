@@ -1,70 +1,65 @@
 ---
-title: "Construtor HStringReference::HStringReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference"
-dev_langs: 
-  - "C++"
+title: 'Construtor hstringreference:: Hstringreference | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
+dev_langs: C++
 ms.assetid: 29f5fe11-3928-4f60-9861-f0894247bfcb
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b73e25977b91940031316f6d85c0bcfded4ab3ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Construtor HStringReference::HStringReference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringreferencehstringreference-constructor"></a>Construtor HStringReference::HStringReference
 Inicializa uma nova instância da classe HStringReference.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
+template<unsigned int sizeDest>  
+HStringReference(wchar_t const (&str)[ sizeDest]) throw();  
   
-    template<unsigned int sizeDest>  
-    HStringReference(wchar_t const (&str)[ sizeDest]) throw();  
+template<unsigned int sizeDest>  
+HStringReference(wchar_t const (&str)[ sizeDest],   
+                 unsigned int len) throw();  
   
-    template<unsigned int sizeDest>  
-    HStringReference(wchar_t const (&str)[ sizeDest],   
-unsigned int len)  
-       throw();  
-  
-    HStringReference(HStringReference&& other) throw();  
-  
+HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `sizeDest`  
- Um parâmetro do modelo que especifica o tamanho do buffer de HStringReference de destino.  
+ Um parâmetro de modelo que especifica o tamanho do buffer de HStringReference de destino.  
   
  `str`  
- Uma referência a uma cadeia de caracteres de ampla caractere.  
+ Uma referência a uma cadeia de caracteres largos.  
   
  `len`  
- O comprimento máximo do buffer do parâmetro de `str` a ser usado na operação.  Se o parâmetro de `len` não for especificado, o parâmetro inteiro de `str` será usado.  Se `len` é maior que `sizeDest`, `len` está definido como `sizeDest`\-1.  
+ O comprimento máximo do `str` buffer de parâmetro a ser usado nesta operação. Se o `len` parâmetro não for especificado, todo o `str` parâmetro é usado. Se `len` é maior do que `sizeDest`, `len` é definido como `sizeDest`-1.  
   
  `other`  
- Outro objeto de HStringReference.  
+ Outro objeto HStringReference.  
   
-## Comentários  
- O primeiro construtor inicializa um novo objeto a partir desse HStringReference o mesmo tamanho que o parâmetro `str`.  
+## <a name="remarks"></a>Comentários  
+ O primeiro construtor inicializa um novo objeto de HStringReference o mesmo tamanho do parâmetro `str`.  
   
- O segundo construtor inicializa um novo objeto de HStringReference que o specifeid de tamanho pelo parâmetro `len`.  
+ A segundo inicializa construtor HStringReference um novo objeto que o specifeid tamanho pelo parâmetro `len`.  
   
- O terceiro construtor inicializa um novo objeto de HStringReference ao valor do parâmetro de `other`, e destruição no parâmetro de `other` .  
+ O terceiro construtor inicializa um novo objeto de HStringReference para o valor da `other` parâmetro e, em seguida, destrói o `other` parâmetro.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe HStringReference](../windows/hstringreference-class.md)

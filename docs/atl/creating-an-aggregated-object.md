@@ -1,43 +1,43 @@
 ---
-title: "Criando um objeto agregado | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos agregados [C++], criando"
-  - "agregação [C++], criando objetos agregados"
+title: "Criação de um objeto agregado | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- aggregation [C++], creating aggregated objects
+- aggregate objects [C++], creating
 ms.assetid: fc29d7aa-fd53-4276-9c2f-37379f71b179
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5446e4eb279e961ba59b5fd0b3713a7f976cef5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Criando um objeto agregado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A agregação delega chamadas de **IUnknown** , fornecendo um ponteiro para **IUnknown** do objeto externo ao objeto interno.  
+# <a name="creating-an-aggregated-object"></a>Criação de um objeto agregado
+Delegados de agregação **IUnknown** chamadas, fornecendo um ponteiro para o objeto externo **IUnknown** para o objeto interno.  
   
-### Para criar um objeto agregado  
+### <a name="to-create-an-aggregated-object"></a>Para criar um objeto agregado  
   
-1.  Adicione um ponteiro de **IUnknown** ao objeto da classe e inicializá\-la a **NULO** no construtor.  
+1.  Adicionar uma **IUnknown** ponteiro para a classe de objeto e inicializá-lo para **nulo** no construtor.  
   
-2.  Substituição [FinalConstruct](../Topic/CComObjectRootEx::FinalConstruct.md) para criar uma agregação.  
+2.  Substituir [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) para criar a agregação.  
   
-3.  Use o ponteiro de **IUnknown** , definido na etapa 1, como o segundo parâmetro para macros de [COM\_INTERFACE\_ENTRY\_AGGREGATE](../Topic/COM_INTERFACE_ENTRY_AGGREGATE.md) .  
+3.  Use o **IUnknown** ponteiro, definido na etapa 1, como o segundo parâmetro para o [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) macros.  
   
-4.  Substituição [FinalRelease](../Topic/CComObjectRootEx::FinalRelease.md) para liberar o ponteiro de **IUnknown** .  
+4.  Substituir [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) para liberar o **IUnknown** ponteiro.  
   
 > [!NOTE]
->  Se você usar e libera uma interface de objeto agregado durante `FinalConstruct`, você deve adicionar a macro de [DECLARE\_PROTECT\_FINAL\_CONSTRUCT](../Topic/DECLARE_PROTECT_FINAL_CONSTRUCT.md) a definição do seu objeto da classe.  
+>  Se você usar e liberar uma interface do objeto agregado durante `FinalConstruct`, você deve adicionar o [DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) macro à definição de seu objeto de classe.  
   
-## Consulte também  
- [Fundamentos de objetos COM de ATL](../atl/fundamentals-of-atl-com-objects.md)
+## <a name="see-also"></a>Consulte também  
+ [Princípios básicos de objetos COM da ATL](../atl/fundamentals-of-atl-com-objects.md)
+

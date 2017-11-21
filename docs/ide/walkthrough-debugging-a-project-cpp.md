@@ -1,69 +1,68 @@
 ---
-title: "Instru&#231;&#245;es passo a passo: depurando um projeto (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "depurando projetos"
-  - "depuração de projetos [C++]"
-  - "projetos [C++], depuração"
+title: 'Passo a passo: Depurando um projeto (C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- projects [C++], debugging
+- project debugging [C++]
+- debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ec7a363d3aa4601e33e44d15fbb3d667c3a87db4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Instru&#231;&#245;es passo a passo: depurando um projeto (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nessa explicação passo a passo, você altera o programa para corrigir o problema que você descobrisse quando você testou o projeto.  
+# <a name="walkthrough-debugging-a-project-c"></a>Instruções passo a passo: depurando um projeto (C++)
+Neste passo a passo, você deve modificar o programa para corrigir o problema que você descobertos quando você testar o projeto.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
   
--   Esta explicação passo a passo pressupõe que você compreenda os fundamentos da linguagem C\+\+.  
+-   Este passo a passo pressupõe que você entender os conceitos básicos da linguagem C++.  
   
--   Também pressupõe que você tenha concluído os passo a passo relacionados anteriormente, que estão listados em [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C\+\+](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Ele também pressupõe que você tenha concluído as orientações relacionadas anteriormente listados na [usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-### Para corrigir um programa que tenha um bug  
+### <a name="to-fix-a-program-that-has-a-bug"></a>Para corrigir um programa que tenha um bug  
   
-1.  Para ver o que ocorre quando um objeto de `Cardgame` é destruído, exibir o destrutor para a classe de `Cardgame` .  
+1.  Para ver o que ocorre quando um `Cardgame` objeto é destruído, exiba o destruidor para o `Cardgame` classe.  
   
-     Na barra de menus, escolha **Modo de Visualização**, **Modo de Exibição de Classe**.  
+     Na barra de menus, escolha **exibição**, **exibição de classe**.  
   
-     Na janela de **Modo de Exibição de Classe** , expanda a árvore de projeto de **Jogo** e selecione a classe de **Cardgame** para exibir os membros e métodos da classe.  
+     No **exibição de classe** janela, expanda o **jogo** árvore do projeto e selecione o **Cardgame** classe para exibir os métodos e membros de classe.  
   
-     Abra o menu de atalho para o destrutor de **~Cardgame \(vácuo\)** e então escolha **Ir Para Definição**.  
+     Abra o menu de atalho para o **~Cardgame(void)** destruidor e, em seguida, escolha **ir para definição**.  
   
-2.  Para reduzir `totalParticipants` quando um Cardgame finaliza, adicione o seguinte código entre a chaves de abertura e fechamento do destrutor de `Cardgame::~Cardgame` .  
+2.  Para diminuir o `totalParticipants` quando um Cardgame termina, adicione o seguinte código entre as chaves de abertura e fechamento do `Cardgame::~Cardgame` destruidor.  
   
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]  
   
-3.  O arquivo de Cardgame.cpp deve se parecer com a este depois que você altera o:  
+3.  O arquivo Cardgame.cpp deve se parecer com isso depois que você alterá-lo:  
   
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]  
   
 4.  Na barra de menus, escolha **Compilar**, **Compilar Solução**.  
   
-5.  Quando a compilação terminar, execute\-a no modo de depuração escolhendo **Depurar**, **Iniciar Depuração** na barra de menus, ou escolhendo tecla F5.  O programa pára no ponto de interrupção.  
+5.  Quando a compilação for concluída, executá-lo no modo de depuração, escolhendo **depurar**, **iniciar depuração** na barra de menus ou escolhendo a tecla F5. O programa faz uma pausa no primeiro ponto de interrupção.  
   
-6.  Para percorrer o programa, na barra de menus, escolha **Depurar**, **Depuração Parcial**, ou escolha tecla F10.  
+6.  Para depurar o programa, na barra de menus, escolha **depurar**, **passar por**, ou escolha a tecla F10.  
   
-     Observe que depois que cada construtor de Cardgame é executado, o valor de `totalParticipants` aumenta.  Quando a função de `PlayGames` retornar, porque cada instância de Cardgame sai do escopo e é excluída \(e o destrutor é chamado\), `totalParticipants` diminui.  Imediatamente antes da declaração de `return` é executada, os igual 0 de `totalParticipants` .  
+     Observe que depois de cada construtor Cardgame é executado, o valor de `totalParticipants` aumenta. Quando o `PlayGames` funcionando retorna, cada instância Cardgame sai do escopo e será excluída (e o destruidor é chamado), `totalParticipants` diminui. Antes de `return` instrução é executada, `totalParticipants` é igual a 0.  
   
-7.  Continue a depuração com o programa até que sair, ou deixou\-a executar escolhendo **Depurar**, **Executar** na barra de menus, ou escolhendo tecla F5.  
+7.  Continuar a depuração por meio do programa, até que ela sai ou deixá-lo a executar escolhendo **depurar**, **executar** na barra de menus ou escolhendo a tecla F5.  
   
-## Próximas etapas  
- **Anterior:** [Instruções passo a passo: testando um projeto \(C\+\+\)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Próxima:** [Instruções passo a passo: implantando o programa \(C\+\+\)](../ide/walkthrough-deploying-your-program-cpp.md)  
+## <a name="next-steps"></a>Próximas etapas  
+ **Anterior:** [passo a passo: Testando um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Próximo:**[passo a passo: Implantando o programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## Consulte também  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/pt-br/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](http://msdn.microsoft.com/pt-br/9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>Consulte também  
+ [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
+ [Compilando programas do C/C++](../build/building-c-cpp-programs.md)

@@ -1,127 +1,126 @@
 ---
-title: "IDL Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], reference topics"
-  - "IDL attributes"
-  - ".idl files, attributes"
-  - "IDL files, attributes"
-  - ".idl files"
+title: Atributos IDL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], reference topics
+- IDL attributes
+- .idl files, attributes
+- IDL files, attributes
+- .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8f64c4f30945ddd13a137ec52f160c1880053f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IDL Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tradicionalmente, a manutenção de um arquivo. idl significava que era necessário:  
+# <a name="idl-attributes"></a>Atributos IDL
+Tradicionalmente, manter um arquivo. idl significa que você precisa:  
   
--   Estar familiarizado com a estrutura e sintaxe de um arquivo. idl para poder modificá\-lo.  
+-   Familiarize-se com a estrutura e a sintaxe de um arquivo. idl possam modificá-lo.  
   
--   Contar com um assistente que permitiria modificar certos aspectos do arquivo. idl.  
+-   Contar com um assistente que permite modificar alguns aspectos do arquivo. idl.  
   
- Agora, você pode modificar o arquivo. idl a partir de um arquivo de código\-fonte usando atributos IDL do Visual C\+\+.  Em muitos casos, os atributos IDL do Visual C\+\+ têm o mesmo nome como atributos MIDL.  Quando o nome de um atributo de IDL do Visual C\+\+ e um atributo MIDL forem iguais, isso significa que a colocar o atributo do Visual C\+\+ em seu arquivo de código\-fonte resultará em um arquivo. idl que contém seu atributo MIDL por homônimo.  No entanto, um atributo de IDL do Visual C\+\+ pode não fornecer toda a funcionalidade de um atributo MIDL.  
+ Agora, você pode modificar o arquivo. idl de dentro de um arquivo de código fonte usando atributos IDL do Visual C++. Em muitos casos, os atributos de IDL do Visual C++ têm o mesmo nome como atributos MIDL. Quando o nome de um atributo IDL do Visual C++ e um atributo MIDL forem iguais, isso significa que a colocar o atributo do Visual C++ no arquivo de código fonte resultará em um arquivo. IDL que contém o atributo MIDL por homônimo. No entanto, um atributo IDL do Visual C++ não pode fornecer toda a funcionalidade de um atributo MIDL.  
   
- Quando não é usado com  [atributos COM](../Topic/COM%20Attributes.md), atributos IDL permitem definir interfaces.  Quando o código\-fonte é compilado, os atributos são usados para definir o arquivo. idl gerado.  Quando usado com atributos de COM em um projeto do ATL, alguns IDL atributos, como  **coclass**, fazer com que o código seja injetado no projeto.  
+ Quando não é usado com [atributos COM](../windows/com-attributes.md), atributos IDL permitem que você defina interfaces. Quando o código-fonte é compilado, os atributos são usados para definir o arquivo. idl gerado. Quando usado com atributos COM em um projeto ATL, alguns IDL atributos, como **coclass**, gerar o código ser inserida no projeto.  
   
- Observe que  [idl\_quote](../windows/idl-quote.md) permite o uso de construções MIDL que não são suportadas na versão atual do Visual C\+\+.  Esse e outros atributos, como  [importlib](../windows/importlib.md) e  [includelib](../windows/includelib-cpp.md) ajudam você a usar os arquivos. idl existentes em seu projeto atual do Visual C\+\+.  
+ Observe que [idl_quote](../windows/idl-quote.md) permite o uso de construções MIDL que não há suporte para a versão atual do Visual C++. Este e outros atributos, como [importlib](../windows/importlib.md) e [includelib](../windows/includelib-cpp.md) ajudá-lo a usar arquivos. idl existentes em seu projeto atual do Visual C++.  
   
 |Atributo|Descrição|  
-|--------------|---------------|  
-|[agregável](../Topic/aggregatable.md)|Indica que um controle pode ser agregado por outro controle.|  
-|[appobject](../Topic/appobject.md)|Identifica o coclass como um objeto de aplicativo, que está associado um aplicativo completo do EXE e indica que as funções e propriedades do coclass estão disponíveis globalmente nesta biblioteca de tipo.|  
-|[async\_uuid](../Topic/async_uuid.md)|Especifica o UUID que instrui o compilador MIDL para definir versões síncronas e assíncronas de uma interface COM.|  
-|[ligáveis](../windows/bindable.md)|Indica que a propriedade oferece suporte a vinculação de dados.|  
-|[call\_as](../windows/call-as.md)|Permite que uma função não remota seja mapeada para uma função remota.|  
-|[Caso](../windows/case-cpp.md)|Usado com o  [switch\_type](../windows/switch-type.md) atributo em uma união.|  
-|[coclass](../windows/coclass.md)|Locais de definição em um arquivo. idl como coclass de classe.|  
-|[controle](../windows/control.md)|Especifica que o tipo definido pelo usuário é um controle.|  
-|[cpp\_quote](../Topic/cpp_quote.md)|Emite a seqüência de caracteres especificada sem os caracteres de cotação, no arquivo de cabeçalho gerado.|  
-|[defaultbind](../windows/defaultbind.md)|Indica a propriedade única e vinculável que melhor representa o objeto.|  
-|[defaultcollelem](../windows/defaultcollelem.md)|Usado para otimização de código Visual Basic.|  
-|[Valor padrão](../Topic/defaultvalue.md)|Permite a especificação de um valor padrão para um parâmetro opcional digitado.|  
-|[Padrão](../windows/default-cpp.md)|Indica que o personalizado ou um dispinterface definido dentro de um coclass representa a interface de programação padrão.|  
-|[defaultvtable](../windows/defaultvtable.md)|Define uma interface como interface padrão vtable para um controle.|  
-|[dispinterface](../windows/dispinterface.md)|Coloca uma interface no arquivo. idl como uma interface de despacho.|  
-|[displaybind](../windows/displaybind.md)|Indica uma propriedade que deve ser exibida ao usuário como bindable.|  
-|[dual](../Topic/dual.md)|Coloca uma interface no arquivo. idl como uma interface dupla.|  
-|[entrada](../windows/entry.md)|Especifica uma função exportada ou constante em um módulo, identificando o ponto de entrada na DLL.|  
-|[first\_is](../windows/first-is.md)|Especifica o índice do primeiro elemento da matriz para serem transmitidos.|  
-|[HelpContext](../windows/helpcontext.md)|Especifica uma identificação de contexto que permite que as informações de modo de exibição do usuário sobre este elemento no arquivo de Ajuda.|  
-|[arquivo de ajuda](../Topic/helpfile.md)|Define o nome do arquivo de ajuda para uma biblioteca de tipos.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Especifica a ID de um tópico da ajuda em um arquivo .hlp ou .chm.|  
-|[helpstringdll](../windows/helpstringdll.md)|Especifica o nome da DLL a ser usada para executar a pesquisa de  string no documento \(localização\).|  
-|[HelpString](../windows/helpstring.md)|Especifica a string que é usada para descrever o elemento a que se aplica.|  
-|[oculto](../Topic/hidden.md)|Indica que o item existe mas não deve ser exibido em um navegador orientado a usuário.|  
-|[idl\_module](../windows/idl-module.md)|Especifica um ponto de entrada em uma DLL.|  
-|[idl\_quote](../windows/idl-quote.md)|Permite que você use os atributos ou IDL construções que não são suportados na versão atual do Visual C\+\+.|  
-|[id](../windows/id.md)|Especifica um DISPID para uma função membro \(uma propriedade ou um método, em uma interface ou dispinterface\).|  
-|[iid\_is](../windows/iid-is.md)|Especifica o IID da interface COM apontada por um ponteiro de interface.|  
-|[immediatebind](../windows/immediatebind.md)|Indica que o banco de dados será notificado imediatamente de todas as alterações a uma propriedade de um objeto de dados vinculado.|  
-|[importlib](../windows/importlib.md)|Faz com que tipos de já tem sido compilados em outra biblioteca de tipos disponível para a biblioteca de tipos que está sendo criada.|  
-|[Importar](../windows/import.md)|Especifica outro arquivo. idl, odl ou cabeçalho que contém definições que você deseja referenciar no seu arquivo. idl principal.|  
-|[incluir](../windows/include-cpp.md)|Especifica um ou mais arquivos de cabeçalho a serem incluídos no arquivo. idl gerado.|  
-|[includelib](../windows/includelib-cpp.md)|Faz com que um arquivo. idl ou. h para ser incluído no arquivo. idl gerado.|  
-|[Em](../Topic/in%20\(C++\).md)|Indica que é um parâmetro a ser passado do procedimento de chamada para o procedimento chamado.|  
-|[last\_is](../windows/last-is.md)|Especifica o índice do último elemento de matriz para serem transmitidos.|  
-|[LCID](../windows/lcid.md)|Permite que você passa um identificador de localidade para uma função.|  
-|[length\_is](../windows/length-is.md)|Especifica o número de elementos da matriz para serem transmitidos.|  
-|[Licenciado](../windows/licensed.md)|Indica que o coclass ao qual ele se aplica é licenciado e deve ser instanciada usando  **IClassFactory2**.|  
-|[local](../windows/local-cpp.md)|Permite que você use o compilador MIDL como um gerador de cabeçalho quando usado no cabeçalho da interface.  Quando usado em uma função individual, designa um procedimento de local para o qual nenhum fragmento de código é gerados.|  
-|[max\_is](../windows/max-is.md)|Designa o valor máximo para um índice de matriz válido.|  
+|---------------|-----------------|  
+|[aggregatable](../windows/aggregatable.md)|Indica se um controle pode ser agregado por outro controle.|  
+|[appobject](../windows/appobject.md)|Identifica o coclass como um objeto de aplicativo, que está associado um aplicativo EXE completo e indica que as funções e propriedades da coclass estão globalmente disponíveis na biblioteca de tipo.|  
+|[async_uuid](../windows/async-uuid.md)|Especifica o UUID que instrui o compilador MIDL para definir versões síncronas e assíncronas de uma interface COM.|  
+|[bindable](../windows/bindable.md)|Indica que a propriedade dá suporte à associação de dados.|  
+|[call_as](../windows/call-as.md)|Permite que uma função nonremotable a ser mapeada para uma função remota.|  
+|[case](../windows/case-cpp.md)|Usado com o [switch_type](../windows/switch-type.md) atributo em uma união.|  
+|[coclass](../windows/coclass.md)|Locais de definição em um arquivo. idl como coclass da classe.|  
+|[control](../windows/control.md)|Especifica que o tipo definido pelo usuário é um controle.|  
+|[cpp_quote](../windows/cpp-quote.md)|Emite a cadeia de caracteres especificada, sem o caractere de aspas, para o arquivo de cabeçalho gerado.|  
+|[defaultbind](../windows/defaultbind.md)|Indica a única propriedade associável que melhor representa o objeto.|  
+|[defaultcollelem](../windows/defaultcollelem.md)|Usada para otimização de código do Visual Basic.|  
+|[defaultvalue](../windows/defaultvalue.md)|Permite a especificação de um valor padrão para um parâmetro opcional com tipo.|  
+|[default](../windows/default-cpp.md)|Indica que o personalizado ou dispinterface definidos em uma coclass representa a interface de programação padrão.|  
+|[defaultvtable](../windows/defaultvtable.md)|Define uma interface de interface vtable padrão para um controle.|  
+|[dispinterface](../windows/dispinterface.md)|Coloca uma interface no arquivo. idl como uma interface de expedição.|  
+|[displaybind](../windows/displaybind.md)|Indica uma propriedade que deve ser exibida para o usuário como associável.|  
+|[dual](../windows/dual.md)|Coloca uma interface no arquivo. idl como uma interface dupla.|  
+|[entry](../windows/entry.md)|Especifica uma função exportada ou uma constante em um módulo, identificando o ponto de entrada na DLL.|  
+|[first_is](../windows/first-is.md)|Especifica o índice do primeiro elemento de matriz a ser transmitido.|  
+|[helpcontext](../windows/helpcontext.md)|Especifica uma ID de contexto que permite que usuários exibir informações sobre este elemento no arquivo de Ajuda.|  
+|[helpfile](../windows/helpfile.md)|Define o nome do arquivo de ajuda para uma biblioteca de tipos.|  
+|[helpstringcontext](../windows/helpstringcontext.md)|Especifica a ID de um tópico da Ajuda em um arquivo. hlp ou. chm.|  
+|[helpstringdll](../windows/helpstringdll.md)|Especifica o nome da DLL a ser usado para executar a pesquisa de cadeia de caracteres do documento (localização).|  
+|[helpstring](../windows/helpstring.md)|Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual se aplica.|  
+|[hidden](../windows/hidden.md)|Indica que o item existe, mas não deve ser exibido em um navegador orientado ao usuário.|  
+|[idl_module](../windows/idl-module.md)|Especifica um ponto de entrada em uma DLL.|  
+|[idl_quote](../windows/idl-quote.md)|Permite que você use atributos ou IDL construções que não são suportados na versão atual do Visual C++.|  
+|[id](../windows/id.md)|Especifica um DISPID para uma função de membro (uma propriedade ou um método, em uma interface ou dispinterface).|  
+|[iid_is](../windows/iid-is.md)|Especifica o IID da interface COM aponta para um ponteiro de interface.|  
+|[immediatebind](../windows/immediatebind.md)|Indica que o banco de dados será notificado imediatamente de todas as alterações a uma propriedade de um objeto de associação de dados.|  
+|[importlib](../windows/importlib.md)|Torna os tipos que já foi compilados em outra biblioteca de tipo disponível para a biblioteca de tipos que está sendo criada.|  
+|[import](../windows/import.md)|Especifica outro arquivo. idl, odl ou cabeçalho que contém as definições que você deseja fazer referência do arquivo. idl principal.|  
+|[include](../windows/include-cpp.md)|Especifica um ou mais arquivos de cabeçalho a ser incluído no arquivo. idl gerado.|  
+|[includelib](../windows/includelib-cpp.md)|Faz com que um arquivo. IDL ou. h ser incluída no arquivo. idl gerado.|  
+|[in](../windows/in-cpp.md)|Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.|  
+|[last_is](../windows/last-is.md)|Especifica o índice do último elemento de matriz a ser transmitido.|  
+|[lcid](../windows/lcid.md)|Permite que você passar um identificador de localidade para uma função.|  
+|[length_is](../windows/length-is.md)|Especifica o número de elementos de matriz a ser transmitido.|  
+|[licensed](../windows/licensed.md)|Indica que o coclass ao qual se aplica é licenciado e deve ser instanciado usando **IClassFactory2**.|  
+|[local](../windows/local-cpp.md)|Permite que você use o compilador MIDL como um gerador de cabeçalho quando usado no cabeçalho da interface. Quando usada em uma função individual, designa um procedimento de local para o qual nenhuma stubs são gerados.|  
+|[max_is](../windows/max-is.md)|Designa o valor máximo para um índice de matriz válida.|  
 |[módulo](../windows/module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|  
-|[ms\_union](../windows/ms-union.md)|Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.|  
-|[no\_injected\_text](../windows/no-injected-text.md)|Impede que o compilador de injeção de código como resultado do uso do atributo.|  
-|[nonbrowsable](../Topic/nonbrowsable.md)|Indica que um membro da interface não deve ser exibido em um navegador de propriedade.|  
+|[ms_union](../windows/ms-union.md)|Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.|  
+|[no_injected_text](../windows/no-injected-text.md)|Impede que o compilador injeção de código como resultado do uso do atributo.|  
+|[nonbrowsable](../windows/nonbrowsable.md)|Indica que um membro de interface não deve ser exibido em um navegador de propriedade.|  
 |[noncreatable](../windows/noncreatable.md)|Define um objeto que não pode ser instanciado por si só.|  
-|[não](../Topic/nonextensible.md)|Especifica que o `IDispatch` a implementação inclui somente as propriedades e métodos listados na descrição da interface e não podem ser estendidos com membros adicionais em tempo de execução.|  
-|[object](../Topic/object%20\(C++\).md)|Identifica uma interface personalizada; sinônimo de atributo personalizado.|  
-|[odl](../windows/odl.md)|Identifica uma interface como uma interface de linguagem de descrição de objeto \(ODL\).|  
-|[oleautomation](../windows/oleautomation.md)|Indica que uma interface é compatível com a automação.|  
+|[nonextensible](../windows/nonextensible.md)|Especifica que o `IDispatch` implementação inclui apenas as propriedades e métodos listados na descrição de interface e não podem ser estendidos com membros adicionais em tempo de execução.|  
+|[object](../windows/object-cpp.md)|Identifica uma interface personalizada; sinônimo de atributo personalizado.|  
+|[odl](../windows/odl.md)|Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL).|  
+|[oleautomation](../windows/oleautomation.md)|Indica que uma interface compatível com automação.|  
 |[opcional](../windows/optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|  
-|[Limite](../Topic/out%20\(C++\).md)|Identifica os parâmetros de ponteiro que são retornados pelo procedimento chamado ao procedimento de chamada \(a partir do servidor para o cliente\).|  
-|[pointer\_default](../windows/pointer-default.md)|Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto os ponteiros de nível superior que aparecem em listas de parâmetros.|  
-|[pragma](../windows/pragma.md)|Emite a seqüência de caracteres especificada sem os caracteres de cotação, no arquivo. idl gerado.|  
-|[ProgID](../Topic/progid.md)|Especifica o ProgID de um objeto COM.|  
-|[propget](../windows/propget.md)|Especifica uma função de assessor \(get\) de propriedade.|  
+|[out](../windows/out-cpp.md)|Identifica os parâmetros de ponteiro retornados do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|  
+|[pointer_default](../windows/pointer-default.md)|Especifica o atributo de ponteiro padrão para todos os ponteiros exceto ponteiros de nível superior que aparecem em listas de parâmetros.|  
+|[pragma](../windows/pragma.md)|Emite a cadeia de caracteres especificada, sem o caractere de aspas, no arquivo. idl gerado.|  
+|[progid](../windows/progid.md)|Especifica o ProgID de um objeto COM.|  
+|[propget](../windows/propget.md)|Especifica uma função de propriedade do acessador (get).|  
 |[propputref](../windows/propputref.md)|Especifica uma função de configuração de propriedade que usa uma referência em vez de um valor.|  
-|[propput](../windows/propput.md)|Especifica uma função de configuração da propriedade.|  
-|[PTR](../windows/ptr.md)|Designa um ponteiro como um ponteiro completo.|  
-|[Público](../windows/public-cpp-attributes.md)|Garante que um typedef irá para a biblioteca de tipo, mesmo que não é referenciado no dentro do arquivo. idl.|  
-|[intervalo](../Topic/range%20\(C++\).md)|Especifica um intervalo de valores permitidos para os argumentos ou campos cujos valores são definidos em tempo de execução.|  
-|[readonly](../windows/readonly-cpp.md)|Proíbe a atribuição a uma variável.|  
-|[Ref](../windows/ref-cpp.md)|Identifica um ponteiro de referência.|  
-|[requestedit](../windows/requestedit.md)|Indica que a propriedade oferece suporte a  **OnRequestEdit** notificação.|  
-|[restrito](../windows/restricted.md)|Especifica que uma biblioteca ou um membro de um módulo, interface ou dispinterface não pode ser chamado arbitrariamente.|  
+|[propput](../windows/propput.md)|Especifica uma função de configuração de propriedade.|  
+|[ptr](../windows/ptr.md)|Designa um ponteiro como um ponteiro completo.|  
+|[public](../windows/public-cpp-attributes.md)|Garante que um typedef para ir para a biblioteca de tipo mesmo que não é referenciado de dentro do arquivo. idl.|  
+|[intervalo](../windows/range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|  
+|[readonly](../windows/readonly-cpp.md)|Impede a atribuição a uma variável.|  
+|[ref](../windows/ref-cpp.md)|Identifica um ponteiro de referência.|  
+|[requestedit](../windows/requestedit.md)|Indica que a propriedade oferece suporte a **OnRequestEdit** notificação.|  
+|[restricted](../windows/restricted.md)|Especifica que uma biblioteca ou membro de um módulo, interface ou dispinterface não pode ser chamado arbitrariamente.|  
 |[retval](../windows/retval.md)|Designa o parâmetro que recebe o valor de retorno do membro.|  
-|[size\_is](../Topic/size_is.md)|Especifica o tamanho da memória alocada para ponteiros de tamanho, em tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.|  
-|[fonte](../Topic/source%20\(C++\).md)|Indica que o membro de uma classe, propriedade ou método é uma fonte de eventos.|  
-|[string](../windows/string-cpp.md)|Indica que o unidimensional `char`, `wchar_t`,  **bytes**, ou array equivalente ou o ponteiro para essa matriz deve ser tratado como uma seqüência de caracteres.|  
-|[switch\_is](../windows/switch-is.md)|Especifica a expressão ou um identificador que atua como o discriminant de união que seleciona o membro da união.|  
-|[switch\_type](../windows/switch-type.md)|Identifica o tipo da variável usado como o discriminant de união.|  
-|[transmit\_as](../windows/transmit-as.md)|Instrui o compilador para associar um tipo apresentado, manipulam a quais aplicativos cliente e servidor, um tipo transmitido.|  
-|[uidefault](../Topic/uidefault.md)|Indica que o membro de informações de tipo é o membro padrão para exibição na interface do usuário.|  
-|[exclusivo](../windows/unique-cpp.md)|Especifica um indicador único.|  
+|[size_is](../windows/size-is.md)|Especifica o tamanho da memória alocada para ponteiros de tamanhos, tamanho ponteiros para ponteiros de tamanhos e único ou matrizes multidimensionais.|  
+|[código-fonte](../windows/source-cpp.md)|Indica que um membro de classe, propriedade ou método é uma origem de eventos.|  
+|[string](../windows/string-cpp.md)|Indica que o unidimensional `char`, `wchar_t`, **bytes**, ou equivalente matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.|  
+|[switch_is](../windows/switch-is.md)|Especifica a expressão ou identificador atuando como o discriminador de união que seleciona o membro de união.|  
+|[switch_type](../windows/switch-type.md)|Identifica o tipo da variável usado como o discriminador de união.|  
+|[transmit_as](../windows/transmit-as.md)|Instrui o compilador para associar um tipo apresentado, manipulam os aplicativos cliente e servidor, com um tipo transmitido.|  
+|[uidefault](../windows/uidefault.md)|Indica que o membro de informações de tipo é o membro padrão para exibição na interface do usuário.|  
+|[unique](../windows/unique-cpp.md)|Especifica um ponteiro exclusivo.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Informa ao chamador que se houver um erro ao chamar essa função, o chamador pode, em seguida, chamar `GetLastError` para recuperar o código de erro.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Especifica a identificação exclusiva de uma classe ou interface.|  
-|[v1\_enum](../windows/v1-enum.md)|Dirige\-se de que o tipo enumerado especificado ser transmitidas como uma entidade de 32 bits, em vez do padrão de 16 bits.|  
-|[vararg](../windows/vararg.md)|Especifica que a função levar um número variável de argumentos.|  
-|[vi\_progid](../windows/vi-progid.md)|Especifica um formulário independente de versão de ProgID.|  
-|[wire\_marshal](../windows/wire-marshal.md)|Especifica um tipo de dados que será usado para transmissão em vez de um tipo de dados específicos do aplicativo.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Especifica a ID exclusiva de uma classe ou interface.|  
+|[v1_enum](../windows/v1-enum.md)|Direciona-se de que o tipo enumerado especificado ser transmitidas como uma entidade de 32 bits, em vez do padrão de 16 bits.|  
+|[vararg](../windows/vararg.md)|Especifica que a função tem um número variável de argumentos.|  
+|[vi_progid](../windows/vi-progid.md)|Especifica uma forma independente de versão de ProgID.|  
+|[wire_marshal](../windows/wire-marshal.md)|Especifica um tipo de dados que será usado para a transmissão em vez de um tipo de dados específicos do aplicativo.|  
   
-## Consulte também  
- [Attributes by Group](../windows/attributes-by-group.md)   
- [Attribute Limitations](http://msdn.microsoft.com/pt-br/6e6c4329-f667-4869-b991-cbe9cb7a8f61)
+## <a name="see-also"></a>Consulte também  
+ [Atributos por grupo](../windows/attributes-by-group.md)   
+ [Limitações de atributo](http://msdn.microsoft.com/en-us/6e6c4329-f667-4869-b991-cbe9cb7a8f61)

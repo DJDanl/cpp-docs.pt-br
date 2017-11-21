@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __hook_cpp
-dev_langs:
-- C++
+f1_keywords: __hook_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21bb75853d8664ad46bc48fc907946ae5a147f9a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 98a18a7e145a2b23b13e38bd07d5b29c5a397d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="hook"></a>__hook
 Associa um método de manipulador a um evento.  
@@ -86,7 +82,7 @@ long __hook(
 ## <a name="remarks"></a>Comentários  
  Use a função intrínseca `__hook` em um receptor de eventos para associar ou enganchar um método de manipulador com um método de evento. O manipulador especificado é chamado quando a origem gera o evento especificado. Você pode enganchar vários manipuladores a um único evento, ou enganchar vários eventos a um único manipulador.  
   
- Há duas formas de `__hook`. Você pode usar o primeiro formulário (quatro argumento) na maioria dos casos, especificamente, para receptores de evento COM no qual o *layout_dependent* parâmetro o [event_receiver](../windows/event-receiver.md) atributo é **false **.  
+ Há duas formas de `__hook`. Você pode usar o primeiro formulário (quatro argumento) na maioria dos casos, especificamente, para receptores de evento COM no qual o *layout_dependent* parâmetro o [event_receiver](../windows/event-receiver.md) atributo é **false** .  
   
  Nesses casos você não precisa enganchar todos os métodos em uma interface antes de acionar um evento em um dos métodos; somente a manipulação de método do evento precisa ser enganchado. Você pode usar a segunda forma de (dois argumentos) de `__hook` somente para um receptor de evento COM no qual *layout_dependent***= true**.  
   

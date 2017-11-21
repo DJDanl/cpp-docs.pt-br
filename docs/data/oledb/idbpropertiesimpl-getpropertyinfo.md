@@ -1,64 +1,62 @@
 ---
-title: "IDBPropertiesImpl::GetPropertyInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl::GetPropertyInfo"
-  - "IDBPropertiesImpl.GetPropertyInfo"
-  - "GetPropertyInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetPropertyInfo"
+title: 'Idbpropertiesimpl:: Getpropertyinfo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl::GetPropertyInfo
+- IDBPropertiesImpl.GetPropertyInfo
+- GetPropertyInfo
+dev_langs: C++
+helpviewer_keywords: GetPropertyInfo method
 ms.assetid: 170e9640-5010-4e0d-8a54-f50b23af08ad
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4891ba281000f58dd06a2c6e8bf38731da593005
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IDBPropertiesImpl::GetPropertyInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna informações de propriedade suporte da fonte de dados.  
+# <a name="idbpropertiesimplgetpropertyinfo"></a>IDBPropertiesImpl::GetPropertyInfo
+Retorna informações de propriedade com suporte pela fonte de dados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      STDMETHOD(GetPropertyInfo)(   
-   ULONG cPropertySets,   
-   const DBPROPIDSET rgPropertySets[],   
-   ULONG * pcPropertyInfoSets,   
-   DBPROPINFOSET ** prgPropertyInfoSets,   
-   OLECHAR ** ppDescBuffer    
+      STDMETHOD(GetPropertyInfo)(   
+   ULONG cPropertySets,   
+   const DBPROPIDSET rgPropertySets[],   
+   ULONG * pcPropertyInfoSets,   
+   DBPROPINFOSET ** prgPropertyInfoSets,   
+   OLECHAR ** ppDescBuffer    
 );  
 ```  
   
-#### Parâmetros  
- Consulte [IDBProperties::GetPropertyInfo](https://msdn.microsoft.com/en-us/library/ms718175.aspx)*na referência do programador de OLE DB*.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [idbproperties:: Getpropertyinfo](https://msdn.microsoft.com/en-us/library/ms718175.aspx) no *referência do programador de OLE DB*.  
   
- Alguns parâmetros correspondem aos *parâmetros de referência do programador de OLE DB* os nomes diferentes, que são descritos em **IDBProperties::GetPropertyInfo**:  
+ Alguns parâmetros correspondem a *referência do programador de DB OLE* parâmetros de nomes diferentes, que são descritos em **idbproperties:: Getpropertyinfo**:  
   
-|Parâmetros do modelo de OLE DB|*Os parâmetros de referência do programador de OLE DB*|  
-|------------------------------------|------------------------------------------------------------|  
+|Parâmetros de modelo de banco de dados OLE|*Referência do programador DB OLE* parâmetros|  
+|--------------------------------|------------------------------------------------|  
 |`cPropertySets`|`cPropertyIDSets`|  
 |`rgPropertySets`|`rgPropertyIDSets`|  
   
-## Comentários  
- Usa [IDBInitializeImpl::m\_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) para implementar essa funcionalidade.  
+## <a name="remarks"></a>Comentários  
+ Usa [idbinitializeimpl:: M_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) para implementar essa funcionalidade.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)   
- [IDBPropertiesImpl::GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
+ [Idbpropertiesimpl:: GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
  [IDBPropertiesImpl::SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)

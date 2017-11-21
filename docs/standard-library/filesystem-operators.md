@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,33 +17,17 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator/
 - FILESYSTEM/std::experimental::filesystem::operator<<
 - FILESYSTEM/std::experimental::filesystem::operator>>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0875324fada10022291e8d33c2c2d6cf7276105c
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 3b3587822536a6eff54b42c36b155836a9e49ab5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt-operators"></a>Operadores &lt;filesystem&gt;
 Os operadores executam uma comparação léxica de dois caminhos como cadeias de caracteres. Use a função **equivalent** para determinar se dois caminhos (por exemplo, um caminho relativo e um caminho absoluto) fazem referência ao mesmo arquivo ou diretório no disco.  
@@ -148,5 +131,4 @@ return (is);
  [Classe path (Biblioteca padrão C++ )](../standard-library/path-class.md)   
  [Navegação no sistema de arquivos (C++)](../standard-library/file-system-navigation.md)   
  [\<filesystem>](../standard-library/filesystem.md)
-
 

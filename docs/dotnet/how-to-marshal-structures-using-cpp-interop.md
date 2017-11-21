@@ -1,38 +1,37 @@
 ---
-title: "Como realizar marshaling de estruturas usando interop C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Interoperabilidade C++, estruturas"
-  - "realização de marshaling em dados [C++], estruturas"
-  - "interoperabilidade [C++], estruturas"
-  - "realização de marshaling [C++], estruturas"
-  - "estruturas [C++], marshaling"
+title: 'Como: marshaling de estruturas usando Interop C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 640b3cdbfe9bd88faa337737b0423e3f759b41dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como realizar marshaling de estruturas usando interop C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico demonstra uma faceta de interoperabilidade do Visual C\+\+.  Para obter mais informações, consulte [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-structures-using-c-interop"></a>Como realizar marshaling de estruturas usando interop C++
+Este tópico demonstra uma faceta de interoperabilidade do Visual C++. Para obter mais informações, consulte [usando Interop C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Os exemplos de código a seguir usam as políticas de \#pragma de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) para implementar gerenciado e funções não gerenciada no mesmo arquivo, mas essas funções interoperam da mesma forma que se definido em arquivos separados.  Os arquivos que contêm somente funções não gerenciado não precisam ser compilados com [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisam ser compilada com [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemplo  
- O exemplo a seguir demonstra transmitir uma estrutura de um gerenciado para uma função não gerenciado, o valor e por referência.  Como a estrutura neste exemplo contém apenas simples, os tipos de dados do intrínsecos \(consulte\) [Tipos blittable e não blittable](../Topic/Blittable%20and%20Non-Blittable%20Types.md)marshaling especial, não são necessários.  A estruturas non\-blittable de marshaling, como os que contêm ponteiros, consulte [Como realizar marshaling de ponteiros inseridos usando interop C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra a transmissão de uma estrutura de um gerenciado para uma função não gerenciada, por valor e por referência. Como a estrutura neste exemplo contém tipos de dados intrínseca só simples (consulte [Blittable e tipos Blittable não](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), sem o marshaling especial é necessária. Para realizar marshaling de estruturas não blittable, como aqueles que contêm ponteiros, consulte [como: marshaling incorporado ponteiros usando Interop C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -88,8 +87,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir demonstra transmitir uma estrutura de um não gerenciada em uma função gerenciada pelo valor, e por referência.  Como a estrutura neste exemplo contém apenas simples, os tipos de dados do intrínsecos \(consulte\) [Tipos blittable e não blittable](../Topic/Blittable%20and%20Non-Blittable%20Types.md)marshalling especial, não são necessários.  A estruturas non\-blittable de marshaling, como os que contêm ponteiros, consulte [Como realizar marshaling de ponteiros inseridos usando interop C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra a transmissão de uma estrutura de um não para uma função gerenciada, por valor e por referência. Como a estrutura neste exemplo contém tipos de dados intrínseca só simples (consulte [Blittable e tipos Blittable não](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), nenhuma empacotamento especial é necessário. Para realizar marshaling de estruturas não blittable, como aqueles que contêm ponteiros, consulte [como: marshaling incorporado ponteiros usando Interop C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  
@@ -154,5 +153,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

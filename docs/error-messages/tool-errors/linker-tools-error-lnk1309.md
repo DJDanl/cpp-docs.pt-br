@@ -1,52 +1,33 @@
 ---
-title: Ferramentas de vinculador LNK1309 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1309 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1309
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1309
+f1_keywords: LNK1309
+dev_langs: C++
+helpviewer_keywords: LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6d4a8648bf13aa60c234e09cc6d937cfa8435419
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: febaeeeabdf045ee7d223b7514d63202ded1e99c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk1309"></a>Erro das Ferramentas de Vinculador LNK1309
 módulo type1 detectado; inválida com a opção /CLRIMAGETYPE:type2  
   
- Um tipo de imagem CLR foi solicitado com **/CLRIMAGETYPE** , mas o vinculador não pôde produzir uma imagem desse tipo porque um ou mais módulos eram incompatíveis com esse tipo.  
+ Um tipo de imagem CLR foi solicitado com **/CLRIMAGETYPE** , mas o vinculador não pôde produzir uma imagem desse tipo porque um ou mais módulos são incompatíveis com o tipo.  
   
- Por exemplo, você verá LNK1309 se você especificar **/CLRIMAGETYPE:safe** e passar um módulo compilado com **/clr: puro**.  
+ Por exemplo, você verá LNK1309 se você especificar **Safe** e passar um módulo compilado com **/clr: pure**.  
   
- Você também verá LNK1309 se você tentar criar um aplicativo parcialmente confiável de pura CLR usando. lib ptrustu [d]. Para obter informações sobre como criar um aplicativo parcialmente confiável, consulte [como: criar um aplicativo parcialmente confiável pela remoção de dependência na DLL de biblioteca CRT](../../dotnet/create-a-partially-trusted-application.md).  
+ Você também verá LNK1309 se você tentar compilar um aplicativo parcialmente confiável de puro CLR usando. lib de ptrustu [d]. Para obter informações sobre como criar um aplicativo parcialmente confiável, consulte [como: criar um aplicativo parcialmente confiável pela remoção de dependência na DLL da biblioteca CRT](../../dotnet/create-a-partially-trusted-application.md).  
   
  Para obter mais informações, consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) e [/CLRIMAGETYPE (especificar tipo de imagem CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).

@@ -1,34 +1,33 @@
 ---
-title: "Usando exibi&#231;&#245;es de registro de banco de dados OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe COleDBRecordView, visão geral"
-  - "MFC, exibições de registro"
-  - "Exibições de registro de OLE DB"
-  - "OLE DB, exibições de registro"
-  - "exibições de registro, objetos de exibição de registro"
-  - "conjuntos de linhas, exibições de registro"
+title: "Usando exibições de registro do OLE DB | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB record views
+- COleDBRecordView class, overview
+- rowsets, record views
+- record views, record view objects
+- OLE DB, record views
+- MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c4e57f320c8b207e7b1c8721ab25744cd1f128bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Usando exibi&#231;&#245;es de registro de banco de dados OLE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se desejar exibir dados de conjunto de linhas OLE DB em um aplicativo de MFC, você deve usar a classe [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)MFC.  Um objeto de exibição de registro criado de `COleDBRecordView` permite que você exiba registros de base de dados em controles de MFC.  A exibição de registro é uma exibição de formulário da caixa de diálogo conectada diretamente a um objeto de conjunto de linhas OLE DB criado da classe do modelo de `CRowset` .  Obter um identificador para o objeto de conjunto de linhas é simples:  
+# <a name="using-ole-db-record-views"></a>Usando exibições de registro de banco de dados OLE
+Se você deseja exibir dados de conjunto de linhas do OLE DB em um aplicativo MFC, você deve usar a classe do MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Criar um objeto de exibição de registro de `COleDBRecordView` permite que você exiba os registros do banco de dados em controles MFC. O modo de exibição de registro é uma exibição de formulário de caixa de diálogo conectada diretamente a um objeto de linhas do OLE DB criado a partir de `CRowset` classe de modelo. Obtendo um identificador para o objeto de conjunto de linhas é simple:  
   
 ```  
 COleDBRecordView myRecordView;  
@@ -37,10 +36,10 @@ COleDBRecordView myRecordView;
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();  
 ```  
   
- A exibição exibe os campos de objeto de `CRowset` nos controles da caixa de diálogo.  O objeto de `COleDBRecordView` usa a caixa de diálogo de troca de dados \(DDX\) e a funcionalidade de navegação criada em `CRowset` \(**MoveFirst**, `MoveNext`, `MovePrev`, e `MoveLast`\) para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de linhas.  `COleDBRecordView` mantém acompanha a posição do usuário no conjunto de linhas de forma que a exibição do registro pode atualizar a interface do usuário e fornece um método de [OnMove](../Topic/COleDBRecordView::OnMove.md) para atualizar o registro atual antes de passar a outro.  
+ O modo de exibição exibe os campos do `CRowset` objeto nos controles da caixa de diálogo. O `COleDBRecordView` objeto usa a troca de dados de caixa de diálogo (DDX) e a funcionalidade de navegação incorporados `CRowset` (**MoveFirst**, `MoveNext`, `MovePrev`, e `MoveLast`) para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de linhas. `COleDBRecordView`mantém o controle de posição do usuário no conjunto de linhas para que a exibição de registro possa atualizar a interface do usuário e fornece um [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) método para atualizar o registro atual antes de passar para outro.  
   
- Você pode usar funções de DDX com **COleDbRecordView** para obter dados diretamente de conjuntos de registros base de dados e exibi\-los em um controle da caixa de diálogo.  Você deve usar os métodos de **DDX\_\*** \(como `DDX_Text`\), não as funções de **DDX\_Field\*** \(como `DDX_FieldText`\) com **COleDbRecordView**.  
+ Você pode usar funções DDX com **COleDbRecordView** obter dados diretamente do conjunto de registros do banco de dados e exibi-lo em um controle de caixa de diálogo. Você deve usar o **DDX_\***  métodos (como `DDX_Text`), não o **DDX_Field\***  funções (como `DDX_FieldText`) com **COleDbRecordView** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usando acessadores](../../data/oledb/using-accessors.md)   
- [Classe de COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)
+ [Classe COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)

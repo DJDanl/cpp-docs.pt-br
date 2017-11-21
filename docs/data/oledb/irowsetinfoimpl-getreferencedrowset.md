@@ -1,37 +1,35 @@
 ---
-title: "IRowsetInfoImpl::GetReferencedRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetInfoImpl::GetReferencedRowset"
-  - "GetReferencedRowset"
-  - "ATL.IRowsetInfoImpl.GetReferencedRowset"
-  - "IRowsetInfoImpl.GetReferencedRowset"
-  - "IRowsetInfoImpl::GetReferencedRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetReferencedRowset"
+title: 'Irowsetinfoimpl:: Getreferencedrowset | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetInfoImpl::GetReferencedRowset
+- GetReferencedRowset
+- ATL.IRowsetInfoImpl.GetReferencedRowset
+- IRowsetInfoImpl.GetReferencedRowset
+- IRowsetInfoImpl::GetReferencedRowset
+dev_langs: C++
+helpviewer_keywords: GetReferencedRowset method
 ms.assetid: 94d2155c-9da0-4c19-a37c-bc35716359fd
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5901c87b5f3287da6c663402b7e7776158db85e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetInfoImpl::GetReferencedRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna um ponteiro da interface para o conjunto de linhas em que um indicador se aplica.  
+# <a name="irowsetinfoimplgetreferencedrowset"></a>IRowsetInfoImpl::GetReferencedRowset
+Retorna um ponteiro de interface para o conjunto de linhas ao qual se aplica a um indicador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -42,13 +40,13 @@ Retorna um ponteiro da interface para o conjunto de linhas em que um indicador s
 );  
 ```  
   
-#### Parâmetros  
- Consulte [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/en-us/library/ms721145.aspx)*na referência do programador de OLE DB*.  O parâmetro *de iOrdinal* deve ser uma coluna de indicador.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/en-us/library/ms721145.aspx) no *referência do programador de OLE DB*. O *iOrdinal* parâmetro deve ser uma coluna de indicador.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Classe IRowsetInfoImpl](../Topic/IRowsetInfoImpl%20Class.md)   
- [IRowsetInfoImpl::GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classe IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)   
+ [Irowsetinfoimpl:: Getspecification](../../data/oledb/irowsetinfoimpl-getspecification.md)   
  [IRowsetInfoImpl::GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)

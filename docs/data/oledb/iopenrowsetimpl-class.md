@@ -1,58 +1,55 @@
 ---
-title: "Classe IOpenRowsetImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOpenRowsetImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe IOpenRowsetImpl"
+title: Classe IOpenRowsetImpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IOpenRowsetImpl
+dev_langs: C++
+helpviewer_keywords: IOpenRowsetImpl class
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89a37274fd4040b24c36983fea968674acf4fcab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IOpenRowsetImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornece a implementação da interface de `IOpenRowset` .  
+# <a name="iopenrowsetimpl-class"></a>Classe IOpenRowsetImpl
+Fornece a implementação para o `IOpenRowset` interface.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <class SessionClass>  
 class IOpenRowsetImpl : public IOpenRowset  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `SessionClass`  
- A sua classe derivada, de `IOpenRowsetImpl`.  
+ A classe derivada de `IOpenRowsetImpl`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[CreateRowset](../../data/oledb/iopenrowsetimpl-createrowset.md)|Cria um objeto de conjunto de linhas.  Não chamado diretamente pelo usuário.|  
-|[OpenRowset](../Topic/IOpenRowsetImpl::OpenRowset.md)|Abre e retorna um conjunto de linhas que inclui todas as linhas de uma única tabela ou índice base. \(Não em ATLDB.H\)|  
+|[CreateRowset](../../data/oledb/iopenrowsetimpl-createrowset.md)|Cria um objeto de conjunto de linhas. Não é chamado diretamente pelo usuário.|  
+|[OpenRowset](../../data/oledb/iopenrowsetimpl-openrowset.md)|Abre e retorna um conjunto de linhas que inclui todas as linhas de uma única tabela base ou índice. (Não em ATLDB. H)|  
   
-## Comentários  
- A interface de [IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx) é obrigatória para um objeto de sessão.  Abre e retorna um conjunto de linhas que inclui todas as linhas de uma única tabela ou índice base.  
+## <a name="remarks"></a>Comentários  
+ O [IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx) interface é obrigatória para um objeto de sessão. Ele abre e retorna um conjunto de linhas que inclui todas as linhas de uma única tabela base ou índice.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

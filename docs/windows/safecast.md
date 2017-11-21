@@ -1,33 +1,30 @@
 ---
-title: "SafeCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função SafeCast"
+title: SafeCast | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeCast
+dev_langs: C++
+helpviewer_keywords: SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 24b1d0c99ebc4ea543ef9d3fd1bc269d4874f706
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# SafeCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Conversões um tipo de número para outro tipo.  
+# <a name="safecast"></a>SafeCast
+Converte um tipo de número em outro tipo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename T, typename U>  
@@ -37,30 +34,30 @@ inline bool SafeCast (
 );  
 ```  
   
-#### Parâmetros  
- \[entrada\] `From`  
- O número de origem a ser convertida.  Isso deve ser do tipo T.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `From`  
+ O número de origem para converter. Isso deve ser do tipo T.  
   
- \[saída\] `To`  
- Uma referência para o novo tipo de dados.  Isso deve ser do tipo U.  
+ [out] `To`  
+ Uma referência para o novo tipo de número. Isso deve ser do tipo u  
   
-## Valor de retorno  
- `true` se nenhum erro ocorre; `false` se ocorrer um erro.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se nenhum erro ocorrer; `false` se ocorrer um erro.  
   
-## Comentários  
- Esse método é parte de [Biblioteca de SafeInt](../windows/safeint-library.md) e é criado para uma única operação de conversão sem criar uma instância de [Classe SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Comentários  
+ Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de conversão único sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Esse método deve ser usado apenas quando uma única operação deve ser protegida.  Se houver várias operações, você deve usar a classe de `SafeInt` em vez de chamar funções autônomas individuais.  
+>  Este método só deve ser usado quando uma única operação deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
   
- Para obter mais informações sobre os tipos T e U de modelo, consulte [Funções \(SafeInt\)](../windows/safeint-functions.md).  
+ Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Consulte também  
- [Funções \(SafeInt\)](../windows/safeint-functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções (SafeInt)](../windows/safeint-functions.md)   
  [Biblioteca de SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)

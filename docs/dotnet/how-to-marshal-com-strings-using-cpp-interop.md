@@ -1,42 +1,41 @@
 ---
-title: "Como realizar marshaling de cadeias de caracteres COM usando interop C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Interoperabilidade C++, cadeias de caracteres"
-  - "COM [C++], realizando marshaling em cadeias de caracteres"
-  - "realização de marshaling em dados [C++], cadeias de caracteres"
-  - "interoperabilidade [C++], cadeias de caracteres"
-  - "realização de marshaling [C++], cadeias de caracteres"
+title: 'Como: cadeias de caracteres COM marshaling usando Interop C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8c2400407c6a8ec5191df46f049113ad1d435ad1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como realizar marshaling de cadeias de caracteres COM usando interop C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico mostra como um BSTR \(o formato básico de cadeia de caracteres favorecido em COM que programa\) pode ser passado de um gerenciado para uma função não gerenciado, e vice\-versa.  Para interoperar com outros tipos de cadeias de caracteres, consulte os seguintes tópicos:  
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Como realizar marshaling de cadeias de caracteres COM usando interop C++
+Este tópico demonstra como um BSTR (o formato de cadeia de caracteres básicas vantajosa em programação COM) pode ser passados do gerenciada em uma função não gerenciada e vice-versa. Para interagir com outros tipos de cadeias de caracteres, consulte os tópicos a seguir:  
   
--   [Como realizar marshaling de cadeias de caracteres Unicode usando interop C\+\+](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Como realizar marshaling de cadeias de caracteres Unicode usando interop do C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Como realizar marshaling de cadeias de caracteres ANSI usando interop C\+\+](../Topic/How%20to:%20Marshal%20ANSI%20Strings%20Using%20C++%20Interop.md)  
+-   [Como realizar marshaling de cadeias de caracteres ANSI usando interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
- Os exemplos de código a seguir usam as políticas de \#pragma de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) para implementar gerenciado e funções não gerenciada no mesmo arquivo, mas essas funções interoperam da mesma forma que se definido em arquivos separados.  Os arquivos que contêm somente funções não gerenciado não precisam ser compilados com [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisam ser compilada com [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemplo  
- O exemplo a seguir demonstra como um BSTR \(um formato de cadeia de caracteres COM usado na programação\) pode ser passado de um gerenciado para uma função não gerenciado.  A função gerenciada chamada usa <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obter o endereço de uma representação de BSTR do conteúdo de um .NET System.String.  Esse ponteiro é fixado usando [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) para garantir que o endereço físico não foi alterada durante um ciclo de coleta de lixo quando a função não gerenciado executar.  O coletor de lixo é proibido de mover a memória até que [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) saia do escopo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como um BSTR (um formato de cadeia de caracteres usado na programação COM) pode ser transmitido de gerenciado para uma função não gerenciada. Chamada gerenciado usa função <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obter o endereço de uma representação de BSTR do conteúdo do System .NET. Esse ponteiro é fixado usando [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) para garantir que seu endereço físico não é alterado durante um ciclo de coleta de lixo quando é executado, a função não gerenciada. O coletor de lixo é proibido de mover a memória até que o [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) sai do escopo.  
   
 ```  
 // MarshalBSTR1.cpp  
@@ -71,8 +70,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir demonstra como um BSTR pode ser passado de um não gerenciada em uma função não gerenciado.  A função gerenciada pull pode usar a cadeia de caracteres em como um BSTR ou usar <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> para convertê\-los em <xref:System.String> para uso com outras funções gerenciadas.  Como a memória que representa o BSTR é atribuída no heap não gerenciado, nenhum fixar\-se é necessário, pois não há nenhuma coleta de lixo no heap não gerenciado.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como um BSTR pode ser transmitido de um não gerenciado para uma função não gerenciada. O recebimento de função gerenciada pode usar a cadeia de caracteres como um BSTR ou usar <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> para convertê-lo para um <xref:System.String> para uso com outras funções gerenciadas. Porque a memória que representa o BSTR é alocada no heap gerenciado, nenhum anexação é necessária, porque não há nenhuma coleta de lixo do heap não gerenciado.  
   
 ```  
 // MarshalBSTR2.cpp  
@@ -109,5 +108,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

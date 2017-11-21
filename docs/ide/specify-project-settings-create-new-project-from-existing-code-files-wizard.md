@@ -1,79 +1,76 @@
 ---
-title: "Especificar configura&#231;&#245;es do projeto, Assistente para Criar Novo Projeto de Arquivos de C&#243;digo Existentes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.importwiz.appsettings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente para Criar Novo Projeto de Arquivos de Código Existentes, configurações de projeto"
+title: "Especificar configurações do projeto, criar o novo projeto de Assistente de arquivos de código existentes | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.importwiz.appsettings
+dev_langs: C++
+helpviewer_keywords: Create New Project From Existing Code Files Wizard, project settings
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac4e4a0e9454567be98e4534614c725df70368ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Especificar configura&#231;&#245;es do projeto, Assistente para Criar Novo Projeto de Arquivos de C&#243;digo Existentes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Especificar configurações do projeto, Assistente para Criar Novo Projeto de Arquivos de Código Existentes
 Use esta página do Assistente para criar novo projeto de arquivos de código existentes para especificar:  
   
--   O ambiente de criação para o novo projeto  
+-   O ambiente de compilação para o novo projeto  
   
--   Criar configurações para coincidir com um tipo específico de um novo projeto para gerar  
+-   Criar configurações para que correspondam a um tipo específico de novo projeto para gerar  
   
-## Lista de Tarefas  
- [Como criar um projeto do C\+\+ a partir do código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+## <a name="task-list"></a>Lista de Tarefas  
+ [Como criar um projeto do C++ a partir do código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## Lista UIElement  
- **Usar Visual Studio**  
- Especifica o uso de ferramentas de construção que estão incluídas em Visual Studio para a criação de novo projeto.  Esta opção está selecionada por padrão.  
+## <a name="uielement-list"></a>Lista UIElement  
+ **Use o Visual Studio**  
+ Especifica para usar as ferramentas de compilação são incluídas no Visual Studio para criar o novo projeto. Essa opção é habilitada por padrão.  
   
  **Tipo de projeto**  
  Especifica o tipo de projeto que o assistente irá gerar.  
   
  **Projeto de aplicativo do Windows**  
- Indica que o assistente irá gerar um projeto para um aplicativo executável do Windows.  Essa opção está disponível a partir do  **Tipo de projeto** caixa de listagem drop\-down.  
+ Indica que o assistente irá gerar um projeto para um aplicativo executável do Windows. Essa opção está disponível na **tipo de projeto** caixa de listagem suspensa.  
   
  **Projeto de aplicativo de console**  
- Indica que o assistente irá gerar um projeto para um aplicativo de console.  Essa opção está disponível a partir do  **Tipo de projeto** caixa de listagem drop\-down.  
+ Indica que o assistente irá gerar um projeto para um aplicativo de console. Essa opção está disponível na **tipo de projeto** caixa de listagem suspensa.  
   
- **Projeto de biblioteca de vínculos dinâmicos \(DLL\)**  
- Indica que o assistente irá gerar um projeto para um aplicativo de biblioteca de vínculo dinâmico vazio.  Essa opção está disponível a partir do  **Tipo de projeto** caixa de listagem drop\-down.  
+ **Projeto de biblioteca de vínculos dinâmicos (DLL)**  
+ Indica que o assistente irá gerar um projeto para um aplicativo de biblioteca de vínculo dinâmico vazio. Essa opção está disponível na **tipo de projeto** caixa de listagem suspensa.  
   
- **Projeto de biblioteca estática \(LIB\)**  
- Indica que o assistente irá gerar um projeto para um aplicativo de biblioteca estática.  Essa opção está disponível a partir do  **Tipo de projeto** caixa de listagem drop\-down.  
+ **Projeto de biblioteca estática (LIB)**  
+ Indica que o assistente irá gerar um projeto para um aplicativo de biblioteca estática. Essa opção está disponível na **tipo de projeto** caixa de listagem suspensa.  
   
- **Adicionar suporte para ATL**  
+ **Adicionar suporte ATL**  
  Adiciona o suporte ATL ao novo projeto.  
   
  **Adicionar suporte para MFC**  
  Adiciona o suporte do MFC para o novo projeto.  
   
  **Adicionar suporte a Common Language Runtime**  
- Adiciona suporte para o novo projeto de programação do CLR.  
+ Adiciona suporte para o novo projeto de programação de CLR.  
   
  **Common Language Runtime**  
  Especifica o novo projeto para ser compatível com recursos de CLR.  
   
- **Common Language Runtime \(sintaxe antiga\)**  
- Especifica o novo projeto para ser compatível com Managed Extensions for C\+\+ de sintaxe, o que é a sintaxe de programação CLR antes para o Visual C\+\+ 2005.  
+ **Common Language Runtime (sintaxe antiga)**  
+ Especifica o novo projeto para ser compatível com extensões gerenciadas para obter a sintaxe de C++, o que é a sintaxe de programação CLR antes do Visual C++ 2005.  
   
  **Use o sistema de compilação externo**  
- Especifica o uso de ferramentas de construção que não estão incluídas no Visual Studio para a criação de novo projeto.  Quando essa opção é selecionada, você pode especificar as linhas de comando de compilação na  **Especificar definições de configuração de depuração** e  **Especificar configurações de versão** páginas.  
+ Especifica o uso de ferramentas de compilação que não estão incluídas no Visual Studio para criar o novo projeto. Quando essa opção é selecionada, você pode especificar as linhas de comando de compilação no **especificar configurações de depuração** e **especificar configurações de versão** páginas.  
   
 > [!NOTE]
->  Quando o  **Usar sistema de compilação externo** opção estiver marcada, o IDE não cria o novo projeto, assim, a\/D, I, \/FI, \/AI ou \/FU opções não são necessárias para compilação.  No entanto, essas opções devem estar definidas corretamente para que IntelliSense funcionar corretamente.  
+>  Quando o **sistema de compilação externo Use** opção estiver marcada, o IDE não cria o novo projeto, portanto, o /D, I, /FI, /AI ou /FU opções não são necessárias para a compilação. No entanto, essas opções devem ser definidas corretamente para que o IntelliSense funcione corretamente.  
   
-## Consulte também  
- [Especificar definições de configuração da depuração, Assistente para Criar Novo Projeto de Arquivos de Código Existentes](../ide/specify-debug-configuration-settings.md)   
+## <a name="see-also"></a>Consulte também  
+ [Especificar configurações de depuração, criar novo projeto de Assistente de arquivos de código existentes](../ide/specify-debug-configuration-settings.md)   
  [Especificar definições de configuração da versão, Assistente para Criar Novo Projeto de Arquivos de Código Existentes](../ide/specify-release-configuration.md)

@@ -1,37 +1,36 @@
 ---
-title: "_InterlockedAddLargeStatistic | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedAddLargeStatistic"
-  - "_InterlockedAddLargeStatistic_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedAddLargeStatistic intrínseco"
-  - "InterlockedAddLargeStatistic intrínseco"
+title: _InterlockedAddLargeStatistic | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedAddLargeStatistic
+- _InterlockedAddLargeStatistic_cpp
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedAddLargeStatistic intrinsic
+- InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7930f1411c419fbf5f47164029fe42dd82455ff8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# _InterlockedAddLargeStatistic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
+**Seção específica da Microsoft**  
   
- Executa uma adição interligada em que o primeiro operando é um valor de 64 bits.  
+ Executa uma adição interlocked em que o primeiro operando é um valor de 64 bits.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 long _InterlockedAddLargeStatistic(  
@@ -40,31 +39,31 @@ long _InterlockedAddLargeStatistic(
 );  
 ```  
   
-#### Parâmetros  
- \[in, out\]`Addend`  
- Um ponteiro para o primeiro operando para a operação de adição.  O valor apontado é substituído pelo resultado da adição.  
+#### <a name="parameters"></a>Parâmetros  
+ [in, out] `Addend`  
+ Um ponteiro para o primeiro operando com a operação de adição. O valor apontado é substituído pelo resultado da adição.  
   
- \[in\]`Value`  
- O segundo operando; valor para adicionar o primeiro operando.  
+ [in] `Value`  
+ O segundo operando; valor a ser adicionado para o primeiro operando.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  O valor do segundo operando.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
 |`_InterlockedAddLargeStatistic`|x86|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Nesse intrínseca não é atômica porque ela é implementada como dois separados instruções bloqueadas.  Uma leitura de 64\-bit atômica que ocorre em outro thread durante a execução desta intrínseca pode resultar em um valor inconsistente que está sendo lido.  
+## <a name="remarks"></a>Comentários  
+ Nesse intrínseco não é atômico porque ele é implementado como dois separam instruções bloqueadas. Uma leitura de 64 bits atômica que ocorre em outro thread durante a execução deste intrínseco pode resultar em um valor inconsistente sendo lido.  
   
- Esta função se comporta como uma barreira de leitura\-gravação.  Para obter mais informações, consulte  [\_ReadWriteBarrier](../intrinsics/readwritebarrier.md).  
+ Essa função se comporta como uma barreira de leitura / gravação. Para obter mais informações, consulte [readwritebarrier](../intrinsics/readwritebarrier.md).  
   
-## END Microsoft específicos  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [Conflitos com o compilador x86](../Topic/Conflicts%20with%20the%20x86%20Compiler.md)
+ [conflitos com o compilador x86](../build/conflicts-with-the-x86-compiler.md)

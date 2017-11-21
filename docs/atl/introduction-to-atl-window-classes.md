@@ -1,51 +1,50 @@
 ---
-title: "Introdu&#231;&#227;o &#224;s classes da janela de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de janela"
+title: "Introdução às Classes de janela ATL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 253c7145f9b312890f20eddb6bb8eab425fd60c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Introdu&#231;&#227;o &#224;s classes da janela de ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-As seguintes classes de ATL são criadas para implementar e manipular janelas:  
+# <a name="introduction-to-atl-window-classes"></a>Introdução às Classes de janela ATL
+As seguintes classes ATL são projetadas para implementar e manipular windows:  
   
--   [CWindow](../atl/reference/cwindow-class.md) permite que você anexe um identificador de janela para o objeto de `CWindow` .  Você então chama métodos de `CWindow` para manipular a janela.  
+-   [CWindow](../atl/reference/cwindow-class.md) permite que você anexe um identificador de janela para o `CWindow` objeto. Em seguida, chamar `CWindow` métodos para manipular a janela.  
   
--   [CWindowImpl](../Topic/CWindowImpl%20Class.md) permite que você implemente mensagens de uma nova janela e do processo com um mapa de mensagem.  Você pode criar uma janela com base no windows classe, superclass uma classe existente, ou subclasse uma janela existente.  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md) permite implementar uma nova janela e processar mensagens com um mapa de mensagem. Você pode criar uma janela com base em um novo Windows classe, superclasse uma classe existente ou subclasse de uma janela existente.  
   
--   [CDialogImpl](../Topic/CDialogImpl%20Class.md) permite que você implemente uma caixa de diálogo modal ou sem janela restrita e processar mensagens com um mapa de mensagem.  
+-   [CDialogImpl](../atl/reference/cdialogimpl-class.md) permite que você implemente um modal ou uma caixa de diálogo sem janela restrita e processar mensagens um mapa de mensagem.  
   
--   [CContainedWindowT](../Topic/CContainedWindowT%20Class.md) é uma classe que implementa prebuilt de uma janela cujo mapa de mensagem está contido em outra classe.  Usar `CContainedWindowT` permite que você centralizar o processamento de mensagem em uma classe.  
+-   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) é uma classe predefinida que implementa uma janela cujo mapa da mensagem está contido em outra classe. Usando `CContainedWindowT` permite que você centralize o processamento de mensagem em uma classe.  
   
--   [CAxDialogImpl](../Topic/CAxDialogImpl%20Class.md) permite que você implemente uma caixa de diálogo ou sem janela restrita \(modal\) que controles ActiveX de host.  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) permite que você implemente uma caixa de diálogo (modal ou sem janela restrita) que hospeda os controles ActiveX.  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) permite que você implemente uma caixa de diálogo modal com funcionalidade básica.  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md) permite que você implemente uma caixa de diálogo modal com a funcionalidade básica.  
   
 -   [CAxWindow](../atl/reference/caxwindow-class.md) permite que você implemente uma janela que hospeda um controle ActiveX.  
   
--   [CAxWindow2T](../Topic/CAxWindow2T%20Class.md) permite que você implemente uma janela que hospeda um controle ActiveX licenciado.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) permite que você implemente uma janela que hospeda um controle ActiveX licenciado.  
   
- Além de classes específicas da janela, ATL fornece várias classes criadas para facilitar a implementação de um objeto da janela de ATL.  São:  
+ Além das classes de janela específico, ATL fornece várias classes projetados para facilitar a implementação de um objeto de janela ATL. Elas são as seguintes:  
   
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gerencia informações de uma classe de nova janela.  
+-   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gerencia as informações de uma nova classe de janela.  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) e [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) fornecem um método simples de padronizar os traços de um objeto da janela de ATL.  
+-   [CWinTraits](../atl/reference/cwintraits-class.md) e [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) fornecem um método simple de padronização as características de um objeto de janela ATL.  
   
-## Consulte também  
- [Classes de janela](../Topic/ATL%20Window%20Classes.md)
+## <a name="see-also"></a>Consulte também  
+ [Classes de janela](../atl/atl-window-classes.md)
+

@@ -1,32 +1,31 @@
 ---
-title: "Determinando dinamicamente colunas retornadas ao consumidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indicadores [C++], determinando colunas dinamicamente"
-  - "determinando colunas dinamicamente [C++]"
+title: Determinando dinamicamente colunas retornadas ao consumidor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bookmarks [C++], dynamically determining columns
+- dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec9ba16d4d600a06cdc5e4fa3de5bf40a67de8d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Determinando dinamicamente colunas retornadas ao consumidor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Macros de PROVIDER\_COLUMN\_ENTRY tratam normalmente a chamada de **IColumnsInfo::GetColumnsInfo** .  Porém, como um consumidor pode optar por usar indicadores, o provedor deve poder alterar as colunas retornadas dependendo se o consumidor solicita um medidor.  
+# <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinando dinamicamente colunas retornadas ao consumidor
+As macros PROVIDER_COLUMN_ENTRY manipular normalmente o **icolumnsinfo:: Getcolumnsinfo** chamar. No entanto, como um consumidor pode optar por usar indicadores, o provedor deve ser capaz de alterar as colunas retornadas dependendo se o consumidor solicita um indicador.  
   
- Para controlar a chamada de **IColumnsInfo::GetColumnsInfo** , para excluir o PROVIDER\_COLUMN\_MAP, que define uma função `GetColumnInfo`, do registro de usuário de `CAgentMan` em MyProviderRS.h e substitua\-o pela definição para sua própria função de `GetColumnInfo` :  
+ Para lidar com o **icolumnsinfo:: Getcolumnsinfo** chamar, exclua o PROVIDER_COLUMN_MAP, que define uma função `GetColumnInfo`, do `CAgentMan` usuário gravada em myproviderrs. H e substituí-lo com a definição para seu próprio `GetColumnInfo` função:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +48,11 @@ public:
 };  
 ```  
   
- Em seguida, implementa a função de `GetColumnInfo` em MyProviderRS.cpp, conforme mostrado no seguinte código.  
+ Em seguida, implementar a `GetColumnInfo` funcionar em MyProviderRS.cpp, conforme mostrado no código a seguir.  
   
- `GetColumnInfo` verificará primeiramente se a propriedade **DBPROP\_BOOKMARKS** OLE DB é definida.  Para obter a propriedade, `GetColumnInfo` usa um ponteiro \(\)`pRowset`o objeto do conjunto de linhas.  O ponteiro de `pThis` representa a classe que criou o conjunto de linhas, que é a classe no mapa de propriedade é armazenado.  `GetColumnInfo` typecasts o ponteiro de `pThis` a um ponteiro de `RMyProviderRowset` .  
+ `GetColumnInfo`verifica primeiro se a propriedade do OLE DB **DBPROP_BOOKMARKS** está definido. Para obter a propriedade `GetColumnInfo` usa um ponteiro (`pRowset`) para o objeto de conjunto de linhas. O `pThis` ponteiro representa a classe que criou o conjunto de linhas, que é a classe em que o mapa de propriedade é armazenado. `GetColumnInfo`typecasts o `pThis` ponteiro para um `RMyProviderRowset` ponteiro.  
   
- Para verificar a propriedade de **DBPROP\_BOOKMARKS** , `GetColumnInfo` usa a interface de `IRowsetInfo` , que você pode obter chamando `QueryInterface` na interface de `pRowset` .  Como alternativa, você pode usar um método de ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) em vez disso.  
+ Para verificar a **DBPROP_BOOKMARKS** propriedade `GetColumnInfo` usa o `IRowsetInfo` interface, que pode ser obtido chamando `QueryInterface` no `pRowset` interface. Como alternativa, você pode usar uma ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) método em vez disso.  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -114,7 +113,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- Este exemplo usa uma matriz estático para conter informações da coluna.  Se o consumidor não quiser que a coluna do indicador, uma entrada na matriz não é usado.  Para manipular informações, você cria dois macros de matriz: ADD\_COLUMN\_ENTRY e ADD\_COLUMN\_ENTRY\_EX.  ADD\_COLUMN\_ENTRY\_EX assume um parâmetro adicional, `flags`, que é necessário se você designar uma coluna de indicador.  
+ Este exemplo usa uma matriz estática para conter as informações de coluna. Se o consumidor não deseja que a coluna de indicador, uma entrada na matriz é usada. Para lidar com as informações, você cria duas macros de matriz: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX aceita um parâmetro extra, `flags`, que é necessário se você designar uma coluna de indicador.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -147,7 +146,7 @@ precision, scale, guid, dataClass, member, flags) \
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Na função de `GetColumnInfo` , a macro do medidor é usado como este:  
+ No `GetColumnInfo` função, a macro de indicador é usada da seguinte forma:  
   
 ```  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -155,7 +154,7 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- Agora você pode criar e executar o provedor aprimorado.  Para testar o provedor, modifique o consumidor de teste como descrito em [Implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md).  Execute o consumidor de teste com o provedor.  Verifique se o consumidor de teste recupera as cadeias de caracteres adequadas do provedor quando você clica no botão de **Executar** na caixa de diálogo de **Test Consumer** .  
+ Você agora pode compilar e executar o provedor aprimorado. Para testar o provedor, modifique o consumidor de teste, conforme descrito na [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md). Execute o consumidor de teste com o provedor. Verifique se que o consumidor de teste recupera as cadeias de caracteres corretas do provedor quando você clica o **executar** no botão o **testar consumidor** caixa de diálogo.  
   
-## Consulte também  
- [Melhorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Consulte também  
+ [Aprimorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)

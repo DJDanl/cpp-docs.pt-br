@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -95,39 +94,23 @@ f1_keywords:
 - C4195
 - C4196
 - C4199
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 9e7f0c939f5260991d18b69fc8965e1073bff406
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: c498483b5c0a45156ce42c6cebed715f53b51cb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 de avisos do compilador por meio de C4199
 Os artigos desta parte da documentação contém informações sobre um subconjunto de avisos do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de aviso e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro ou aviso é documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro ou aviso é documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -136,7 +119,7 @@ Os artigos desta parte da documentação contém informações sobre um subconju
 |Aviso|Mensagem|  
 |-------------|-------------|  
 |C4000 de aviso do compilador|AVISO DESCONHECIDO<br /><br /> Escolha o comando de suporte técnico do Visual c++<br /><br /> Menu de Ajuda, ou abra o arquivo de Ajuda do suporte técnico para obter mais informações|  
-|[Aviso do compilador (nível 4) C4001](../../error-messages/compiler-warnings/compiler-warning-level-4-c4001.md)|extensão não padrão 'comentário de linha única' foi usada|  
+|[Aviso do compilador (nível 4) C4001](../../error-messages/compiler-warnings/compiler-warning-level-4-c4001.md)|extensão não padrão 'comentário de linha única' foi usado|  
 |Aviso do compilador (nível 1) C4002|Muitos parâmetros reais para 'Identificador de macro'|  
 |[Aviso do compilador (nível 1) C4003](../../error-messages/compiler-warnings/compiler-warning-level-1-c4003.md)|Não há parâmetros reais para 'Identificador de macro'|  
 |[Aviso do compilador (nível 1) C4005](../../error-messages/compiler-warnings/compiler-warning-level-1-c4005.md)|'Identificador': redefinição de macro|  
@@ -170,42 +153,42 @@ Os artigos desta parte da documentação contém informações sobre um subconju
 |Aviso do compilador (nível 1) C4045|'array': estouro nos limites da matriz|  
 |[Aviso do compilador (nível 1) C4047](../../error-messages/compiler-warnings/compiler-warning-level-1-c4047.md)|'operator': 'identifier1' difere em níveis de indireção de 'identifier2'|  
 |[Aviso do compilador (nível 1) C4048](../../error-messages/compiler-warnings/compiler-warning-level-1-c4048.md)|subscritos de matriz diferentes: 'identifier1' e 'identifier2'|  
-|[Aviso do compilador (nível 1) C4049](../../error-messages/compiler-warnings/compiler-warning-level-1-c4049.md)|limite do compilador: emissão de número de linha de terminação|  
+|[Aviso do compilador (nível 1) C4049](../../error-messages/compiler-warnings/compiler-warning-level-1-c4049.md)|limite do compilador: encerrando emissão de número de linha|  
 |Aviso do compilador (nível 1) C4051|conversão de tipo; possível perda de dados|  
 |Aviso do compilador (nível 4) C4052|declarações de função diferentes; uma contém argumentos variáveis|  
 |Aviso do compilador (nível 4) C4053|um operando void para '?:'|  
-|[Aviso do compilador (nível 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|estouro em aritmética de constante de ponto flutuante|  
+|[Aviso do compilador (nível 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|Estouro em aritmética de constante de ponto flutuante|  
 |Aviso do compilador (nível 4) C4057|'operator': 'identifier1' difere em indireção para tipos base ligeiramente diferentes de 'identifier2'|  
 |C4060 de aviso do compilador|instrução switch não contém nenhum rótulo 'case' ou 'default'|  
 |[Aviso do compilador (nível 4) C4061](../../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md)|enumerador 'Identificador' em switch de enum 'enumeração' não é manipulado explicitamente por um rótulo case|  
 |[Aviso do compilador (nível 4) C4062](../../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md)|enumerador 'Identificador' em switch de enum 'enumeração' não é manipulado|  
 |C4063 de aviso do compilador|Caso 'Identificador' não é um valor válido para switch de enum 'enumeração'|  
 |C4064 de aviso do compilador|switch de enum incompleta 'enumeração'|  
-|C4065 de aviso do compilador|instrução switch contém rótulo 'default', mas nenhum 'case'|  
-|Aviso do compilador (nível 3) C4066|caracteres depois do primeiro em constante de caractere largo ignorados|  
+|C4065 de aviso do compilador|instrução switch contém 'default', mas nenhum rótulo 'case'|  
+|Aviso do compilador (nível 3) C4066|caracteres depois do primeiro em constante de caractere largo ignorado|  
 |[Aviso do compilador (nível 1) C4067](../../error-messages/compiler-warnings/compiler-warning-level-1-c4067.md)|tokens inesperados após diretiva de pré-processador - esperado um newline|  
 |Aviso do compilador (nível 1) C4068|pragma desconhecido|  
-|C4069 de aviso do compilador|long double possui a mesma precisão que double|  
-|[Aviso do compilador (nível 3) C4073](../../error-messages/compiler-warnings/compiler-warning-level-3-c4073.md)|inicializadores colocados em área de inicialização de bibliotecas|  
+|C4069 de aviso do compilador|duplo longo é a mesma precisão que double|  
+|[Aviso do compilador (nível 3) C4073](../../error-messages/compiler-warnings/compiler-warning-level-3-c4073.md)|inicializadores colocados em área de inicialização de biblioteca|  
 |[Aviso do compilador (nível 1) C4074](../../error-messages/compiler-warnings/compiler-warning-level-1-c4074.md)|inicializadores colocados em área de inicialização reservada do compilador|  
 |Aviso do compilador (nível 1) C4075|inicializadores colocados em área de inicialização não reconhecida|  
 |Aviso do compilador (nível 1) C4076|'type_modifier': não pode ser usado com o tipo 'typename'|  
-|Aviso do compilador (nível 1) C4077|opção de check_stack desconhecida|  
+|Aviso do compilador (nível 1) C4077|opção de check_stack desconhecido|  
 |[Aviso do compilador (nível 1) C4079](../../error-messages/compiler-warnings/compiler-warning-level-1-c4079.md)|token inesperado 'token'|  
 |Aviso do compilador (nível 1) C4080|Identificador esperado para o nome de segmento; encontrado 'symbol'|  
 |Aviso do compilador (nível 1) C4081|esperado 'token1'; encontrado 'token2'|  
 |[Aviso do compilador (nível 1) C4083](../../error-messages/compiler-warnings/compiler-warning-level-1-c4083.md)|esperado 'token'; encontrado o identificador 'Identificador'|  
-|Aviso do compilador (nível 1) C4085|esperado parâmetro de pragma como 'on' ou 'off'|  
-|Aviso do compilador (nível 1) C4086|esperado parâmetro de pragma como '1', '2', '4', '8', ou '16'|  
+|Aviso do compilador (nível 1) C4085|parâmetro pragma esperado para ser 'on' ou 'off'|  
+|Aviso do compilador (nível 1) C4086|parâmetro pragma esperado como '1', '2', '4', ' 8' ou ' 16'|  
 |Aviso do compilador (nível 1) C4087|'function': declarado com lista de parâmetros 'void'|  
 |[Aviso do compilador (nível 1) C4088](../../error-messages/compiler-warnings/compiler-warning-level-1-c4088.md)|'function': incompatibilidade de ponteiro em parâmetro real 'parameter_number', 'parameter_number' do parâmetro formal|  
 |[Aviso do compilador (nível 1) C4089](../../error-messages/compiler-warnings/compiler-warning-level-1-c4089.md)|'function': tipos diferentes em parâmetro real 'parameter_number', 'parameter_number' do parâmetro formal|  
 |[Aviso do compilador (nível 1) C4090](../../error-messages/compiler-warnings/compiler-warning-level-1-c4090.md)|'operação de ': qualificadores 'modificador' diferente|  
 |[Aviso do compilador (nível 1) C4091](../../error-messages/compiler-warnings/compiler-warning-level-1-c4091.md)|palavra-chave ': ignorado à esquerda de 'type' quando nenhuma variável é declarada|  
-|[Aviso do compilador (nível 4) C4092](../../error-messages/compiler-warnings/compiler-warning-level-4-c4092.md)|sizeof retorna 'unsigned long'|  
+|[Aviso do compilador (nível 4) C4092](../../error-messages/compiler-warnings/compiler-warning-level-4-c4092.md)|sizeof retorna 'sem sinal longa'|  
 |[Aviso do compilador (nível 2) C4094](../../error-messages/compiler-warnings/compiler-warning-level-2-c4094.md)|sem marcas 'token' não declarado nenhum símbolo|  
 |[Aviso do compilador (nível 1) C4096](../../error-messages/compiler-warnings/compiler-warning-level-1-c4096.md)|'Identificador': não é uma interface COM; não será emitida para IDL|  
-|Aviso do compilador (nível 1) C4097|esperado parâmetro de pragma como 'restore' ou 'off'|  
+|Aviso do compilador (nível 1) C4097|esperado parâmetro de pragma como ' Restore ' ou 'off'|  
 |[Aviso do compilador (nível 1) C4098](../../error-messages/compiler-warnings/compiler-warning-level-1-c4098.md)|'function': retornando um valor de função 'void'|  
 |[Aviso do compilador (nível 2) C4099](../../error-messages/compiler-warnings/compiler-warning-level-2-c4099.md)|'Identificador': nome de tipo visto primeiro usando 'object_type1' agora visto usando 'object_type2'|  
 |[Aviso do compilador (nível 4) C4100](../../error-messages/compiler-warnings/compiler-warning-level-4-c4100.md)|'Identificador': parâmetro formal não referenciado|  
@@ -213,18 +196,18 @@ Os artigos desta parte da documentação contém informações sobre um subconju
 |Aviso do compilador (nível 3) C4102|'Rótulo': rótulo não referenciado|  
 |[Aviso do compilador (nível 1) C4103](../../error-messages/compiler-warnings/compiler-warning-level-1-c4103.md)|'filename': alinhamento mudou após inclusão de cabeçalho, pode ser devido à ausência de Pack (POP) #pragma|  
 |Aviso do compilador (nível 1) C4109|identificador inesperado 'Identificador'|  
-|Aviso do compilador (nível 1) C4112|#linha requer um inteiro entre 1 e 'line_count'|  
+|Aviso do compilador (nível 1) C4112|#line requer um inteiro entre 1 e 'line_count'|  
 |[Aviso do compilador (nível 1) C4113](../../error-messages/compiler-warnings/compiler-warning-level-1-c4113.md)|'identifier1' difere em listas de parâmetro de 'identifier2'|  
 |[Aviso do compilador (nível 1) C4114](../../error-messages/compiler-warnings/compiler-warning-level-1-c4114.md)|mesmo qualificador de tipo usado mais de uma vez|  
 |Aviso do compilador (nível 1 e nível 4) C4115|'type': definição de tipo entre parênteses nomeado|  
 |[Aviso do compilador (nível 1) C4116](../../error-messages/compiler-warnings/compiler-warning-level-1-c4116.md)|definição de tipo sem-nome entre parênteses|  
 |Aviso do compilador (nível 1) C4117|o nome de macro 'name' é reservado, 'command' ignorado|  
 |Aviso do compilador (nível 1) C4119|bases de dados diferentes 'base1' e 'base2' especificado|  
-|Aviso do compilador (nível 1) C4120|incompatibilidade de based/unbased|  
+|Aviso do compilador (nível 1) C4120|incompatibilidade com base/unbased|  
 |[Aviso do compilador (nível 4) C4121](../../error-messages/compiler-warnings/compiler-warning-level-4-c4121.md)|'symbol': alinhamento de um membro foi sensível a empacotamento|  
 |Aviso do compilador (nível 1) C4122|'function': alloc_text aplicável apenas a funções com vínculo a C|  
 |Aviso do compilador (nível 1) C4123|expressões base diferentes especificadas|  
-|[Aviso do compilador (nível 1) C4124](../../error-messages/compiler-warnings/compiler-warning-level-1-c4124.md)|__fastcall com verificação de pilha é ineficiente|  
+|[Aviso do compilador (nível 1) C4124](../../error-messages/compiler-warnings/compiler-warning-level-1-c4124.md)|fastcall com verificação de pilha é ineficiente|  
 |Aviso do compilador (nível 4) C4125|dígito decimal encerra sequência de escape octal|  
 |[Aviso do compilador (nível 4) C4127](../../error-messages/compiler-warnings/compiler-warning-level-4-c4127.md)|expressão condicional é constante|  
 |[Aviso do compilador (nível 1) C4129](../../error-messages/compiler-warnings/compiler-warning-level-1-c4129.md)|'character': não reconhecido de sequência de escape de caractere|  
@@ -233,20 +216,20 @@ Os artigos desta parte da documentação contém informações sobre um subconju
 |Aviso do compilador (nível 4) C4132|'object': objeto const deve ser inicializado|  
 |[Aviso do compilador (nível 3) C4133](../../error-messages/compiler-warnings/compiler-warning-level-3-c4133.md)|'expression': tipos incompatíveis - de 'type1' em 'type2'|  
 |C4137 de aviso do compilador|'function': nenhum valor de retorno da função de ponto flutuante|  
-|Aviso do compilador (nível 1) C4138|'*/' encontrado fora de comentário|  
+|Aviso do compilador (nível 1) C4138|' * /' encontrado fora de comentário|  
 |Aviso do compilador (nível 1) C4141|'modificador': usado mais de uma vez|  
 |[Aviso do compilador (nível 1) C4142](../../error-messages/compiler-warnings/compiler-warning-level-1-c4142.md)|redefinição benigna de tipo|  
-|Aviso do compilador (nível 1) C4143|pragma 'same_seg' não suportado; use alocação __based|  
+|Aviso do compilador (nível 1) C4143|pragma 'same_seg' não tem suportada; Use a alocação de based|  
 |[Aviso do compilador (nível 1) C4144](../../error-messages/compiler-warnings/compiler-warning-level-1-c4144.md)|'expression': expressão relacional como expressão de switch|  
 |Aviso do compilador (nível 1) C4145|'expression1': expressão relacional como expressão de switch; possível confusão com 'expression2'|  
 |[Aviso do compilador (nível 2) C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|operador menos unário aplicado a tipo unsigned, resultado permanece unsigned|  
 |[Aviso do compilador (nível 2) C4150](../../error-messages/compiler-warnings/compiler-warning-level-2-c4150.md)|exclusão de ponteiro para tipo incompleto 'type'; Nenhum destruidor chamado|  
-|Aviso do compilador (nível 4) C4152|extensão não padrão, conversão de ponteiro de função/dados em expressão|  
+|Aviso do compilador (nível 4) C4152|extensão não padrão, a conversão de ponteiro de função/dados em expressão|  
 |Aviso do compilador (nível 1) C4153|conversão de ponteiro de função/dados em expressão|  
-|[Aviso do compilador (nível 1) C4154](../../error-messages/compiler-warnings/compiler-warning-level-1-c4154.md)|exclusão de uma expressão de matriz; conversão para ponteiro fornecida|  
+|[Aviso do compilador (nível 1) C4154](../../error-messages/compiler-warnings/compiler-warning-level-1-c4154.md)|exclusão de uma expressão de matriz. conversão para ponteiro fornecida|  
 |Aviso do compilador (nível 1) C4155|exclusão de uma expressão de matriz sem o uso da forma matricial de 'delete'|  
 |[Aviso do compilador (nível 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|exclusão de uma expressão de matriz sem o uso da forma matricial de 'delete'; forma matricial substituída|  
-|[Aviso do compilador (nível 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|pragma foi ignorado pelo compilador de C|  
+|[Aviso do compilador (nível 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|pragma foi ignorado pelo compilador C|  
 |Aviso do compilador (nível 1) C4158|Supondo que #pragma pointers_to_members (full_generality, 'inheritance_type')|  
 |[Aviso do compilador (nível 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma ' pragma'(pop,...): identificador anteriormente enviado 'Identificador' ser exibido|  
 |Aviso do compilador (nível 1) C4160|#pragma ' pragma'(pop,...): não foi possível encontrar o identificador anteriormente enviado 'Identificador'|  
@@ -254,32 +237,32 @@ Os artigos desta parte da documentação contém informações sobre um subconju
 |[Aviso do compilador (nível 1) C4162](../../error-messages/compiler-warnings/compiler-warning-level-1-c4162.md)|'Identificador': nenhuma função com vínculo a C encontrada|  
 |Aviso do compilador (nível 1) C4163|'Identificador': não disponível como uma função intrínseca|  
 |Aviso do compilador (nível 1) C4164|'function': função intrínseca não declarada|  
-|Aviso do compilador (nível 1) C4165|'HRESULT' está sendo convertido para 'bool'; você tem certeza de que quer isso?|  
+|Aviso do compilador (nível 1) C4165|'HRESULT' está sendo convertido em 'bool'; Tem certeza de que é isso que você deseja?|  
 |Aviso do compilador (nível 1) C4166|convenção de chamada inválida para construtor/destruidor|  
 |Aviso do compilador (nível 1) C4167|'function': disponível apenas como uma função intrínseca|  
 |Aviso do compilador (nível 1) C4168|limite do compilador: sem tipos de depurador, excluir o banco de dados do programa 'database' e recompile|  
-|[Aviso do compilador (nível 1) C4172](../../error-messages/compiler-warnings/compiler-warning-level-1-c4172.md)|retornando endereço de variável local ou temporária|  
+|[Aviso do compilador (nível 1) C4172](../../error-messages/compiler-warnings/compiler-warning-level-1-c4172.md)|retornando o endereço da variável local ou temporário|  
 |Aviso do compilador (nível 1) C4174|'name': não disponível como um componente #pragma|  
 |Aviso do compilador (nível 1) C4175|#pragma component(browser, on): informações de navegador devem ser inicialmente especificadas na linha de comando|  
 |Aviso do compilador (nível 1) C4176|'subcomponente': subcomponente desconhecido para o navegador de componentes #pragma|  
 |Aviso do compilador (nível 1) C4177|#pragma 'pragma' deve ser usado somente no escopo global ou escopo de namespace|  
 |Aviso do compilador (nível 1) C4178|constante de Case 'constante' muito grande para o tipo da expressão switch|  
 |Aviso do compilador (nível 4) C4179|' / / *': analisado como '/' e ' /\*': confusão com padrão ' / /' comentários|  
-|Aviso do compilador (nível 1) C4180|qualificador aplicado a tipo de função não possui significado; ignorado|  
-|C4181 de aviso do compilador|qualificador aplicado a tipo de referência; ignorado|  
-|Aviso do compilador (nível 1) C4182|#incluir o nível de aninhamento é 'nest_count' profunda; possível recursão infinita|  
+|Aviso do compilador (nível 1) C4180|qualificador aplicado a tipo de função não tem nenhum significado; ignorado|  
+|C4181 de aviso do compilador|qualificador aplicado para fazer referência a tipo; ignorado|  
+|Aviso do compilador (nível 1) C4182|#include é de nível de aninhamento 'nest_count' profunda; possível recursão infinita|  
 |[Aviso do compilador (nível 1) C4183](../../error-messages/compiler-warnings/compiler-warning-level-1-c4183.md)|'Identificador': faltando tipo de retorno; presume-se que uma função membro retornando 'int'|  
 |Aviso do compilador (nível 1) C4185|Ignorando atributo #import desconhecido 'attribute'|  
-|Aviso do compilador (nível 1) C4186|#atributo de importação 'attribute' requer argumentos 'argument_count'; ignorado|  
-|Aviso do compilador (nível 1) C4187|#atributos de importação 'attribute1' e 'attribute2' são incompatíveis; ambos ignorados|  
-|Aviso do compilador (nível 1) C4188|expressão constante não é integral|  
+|Aviso do compilador (nível 1) C4186|atributo #import 'attribute' requer argumentos 'argument_count'; ignorado|  
+|Aviso do compilador (nível 1) C4187|atributos #import 'attribute1' e 'attribute2' são incompatíveis; ambos ignorados|  
+|Aviso do compilador (nível 1) C4188|expressão de constante não é integral|  
 |Aviso do compilador (nível 4) C4189|'Identificador': variável local é inicializada, mas não referenciada|  
 |[Aviso do compilador (nível 1) C4190](../../error-messages/compiler-warnings/compiler-warning-level-1-c4190.md)|'identifier1' possui vínculo a C especificado, mas retorna UDT 'identifier2', que é incompatível com C|  
 |Aviso do compilador (nível 3) C4191|' operador/operação': conversão não segura de 'type_of_expression' para 'type_required' \nCalling esta função através do ponteiro resultante pode causar falha no programa|  
 |[Aviso do compilador (nível 3) C4192](../../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)|excluindo automaticamente 'Identificador' durante a importação de biblioteca de tipos 'library'|  
-|Aviso do compilador (nível 3) C4193|#Warning (POP) Pragma: nenhuma correspondência '#pragma Warning (push)'|  
+|Aviso do compilador (nível 3) C4193|Warning (POP) #pragma: nenhuma correspondência '#pragma Warning (push)'|  
 |Aviso do compilador (nível 1) C4194|#pragma start_map_region não podem ser aninhados; ignorado|  
 |Aviso do compilador (nível 1) C4195|#pragma stop_map_region usado sem correspondência start_map_region de #pragma; ignorado|  
-|Aviso do compilador (nível 1) C4196|esperado '%$L' ou '%$L'; encontrado '%$L'|  
+|Aviso do compilador (nível 1) C4196|esperado '%$L L'ou '%$L l'; encontrado '%$L'|  
 |[Aviso do compilador (nível 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'type': volatile de alto nível em conversão é ignorado|  
 |Aviso do compilador (nível 1, nível 2, nível 3 e nível 4) C4199|%s|

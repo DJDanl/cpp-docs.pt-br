@@ -1,49 +1,30 @@
 ---
-title: NMAKE Erro Fatal U1033 | Documentos do Microsoft
+title: NMAKE Erro Fatal U1033 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- U1033
-dev_langs:
-- C++
-helpviewer_keywords:
-- U1033
+f1_keywords: U1033
+dev_langs: C++
+helpviewer_keywords: U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e8cd0591a1b2fac4ac8837f53ac576eb1eae7ed7
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 26041fdf95fe57e8dd79b89d990f3ecfd90110dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="nmake-fatal-error-u1033"></a>Erro fatal U1033 (NMAKE)
 Erro de sintaxe: 'string' inesperado  
   
- A cadeia de caracteres não faz parte da sintaxe válida para um makefile.  
+ A cadeia de caracteres não é parte da sintaxe válida para um makefile.  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   
@@ -53,7 +34,7 @@ Erro de sintaxe: 'string' inesperado
     syntax error : 'EOF' unexpected  
     ```  
   
-2.  Se uma definição de macro no makefile continha um sinal de igual (**=**) sem um nome ou se o nome que está sendo definida é uma macro que se expande para nada, ocorrerá o seguinte erro:  
+2.  Se uma definição de macro no makefile continha um sinal de igual (**=**) sem um anterior nome ou se o nome que está sendo definido é uma macro que se expande para nada, ocorre o seguinte erro:  
   
     ```  
     syntax error : '=' unexpected  

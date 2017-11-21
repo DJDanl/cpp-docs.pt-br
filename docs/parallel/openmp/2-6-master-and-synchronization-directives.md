@@ -1,36 +1,35 @@
 ---
-title: "2.6 Master and Synchronization Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.6 mestre e diretivas de sincronização | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cf07327-1b8d-4dce-954c-b1c59d0ea51d
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 59431f2cadd0629bc9091c2b772fa10b019a3b47
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6 Master and Synchronization Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="26-master-and-synchronization-directives"></a>2.6 Diretivas mestre e de sincronização
 As seções a seguir descrevem:  
   
--   o  **mestre** construir.  
+-   o **mestre** construir.  
   
--   o  **crítica** construir.  
+-   o **crítico** construir.  
   
--   o  **barreira** diretiva.  
+-   o **barreira** diretiva.  
   
--   o  **atômica** construir.  
+-   o **atômico** construir.  
   
--   o  **liberar** diretiva.  
+-   o **liberar** diretiva.  
   
--   o  **ordenada** construir.
+-   o **ordenados** construir.

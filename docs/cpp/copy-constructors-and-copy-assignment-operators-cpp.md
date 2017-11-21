@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - = operator [C++], copying objects
 - assignment statements [C++], copying objects
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b84bb6f0558b58bd83819fbef7e8e9e9c392bd94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Operadores de construtores de cópia e de atribuição de cópia (C++)
 > [!NOTE]
@@ -82,14 +79,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Verifique o tipo de argumento do construtor de cópia *nome de classe const* ** & ** sempre que possível. Isso evita que o construtor de cópia altere acidentalmente o objeto que está copiando. Ele também permite que a cópia de **const** objetos.  
+>  Verifique o tipo de argumento do construtor de cópia *nome de classe const*  **&**  sempre que possível. Isso evita que o construtor de cópia altere acidentalmente o objeto que está copiando. Ele também permite que a cópia de **const** objetos.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Construtores de cópia gerado pelo compilador  
  Construtores de cópia gerada pelo compilador, como construtores de cópia definido pelo usuário, ter um único argumento do tipo "referência a *nome da classe*." Uma exceção é quando todas as classes base e membro tem construtores de cópia declarados como colocar um único argumento de tipo **const** *nome de classe***&**. Nesse caso, o argumento do construtor de cópia gerada pelo compilador também é **const**.  
   
  Quando o tipo de argumento para o construtor de cópia não é **const**, inicialização copiando um **const** objeto gera um erro. O oposto não é possível: se o argumento for **const**, você pode inicializar copiando um objeto que não seja **const**.  
   
- Operadores de atribuição gerado pelo compilador seguem o mesmo padrão em relação ao **const.** Eles entram em um único argumento de tipo *nome de classe* ** & ** , a menos que os operadores de atribuição em todas as classes base e membro usam argumentos de tipo **const** *nome de classe &.* Nesse caso, a classe gerada do leva de operador de atribuição um **const** argumento.  
+ Operadores de atribuição gerado pelo compilador seguem o mesmo padrão em relação ao **const.** Eles entram em um único argumento de tipo *nome de classe*  **&**  , a menos que os operadores de atribuição em todas as classes base e membro usam argumentos de tipo **const** *nome de classe &.* Nesse caso, a classe gerada do leva de operador de atribuição um **const** argumento.  
   
 > [!NOTE]
 >  Quando classes básicas virtuais são inicializadas por construtores de cópia, geradas pelo compilador ou definidas pelo usuário, elas são inicializadas somente uma vez: no ponto em que são construídas.  
@@ -98,4 +95,3 @@ int main()
   
  Para obter mais informações sobre operadores de atribuição sobrecarregado, consulte [atribuição](../cpp/assignment.md).  
   
-

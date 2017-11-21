@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.database
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, database support
+f1_keywords: vc.appwiz.mfc.exe.database
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: 875df8f8205d132cf6bcafe536c221876a5e3e51
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="database-support-mfc-application-wizard"></a>Suporte ao banco de dados, Assistente de Aplicativo MFC
 Esta página fornece opções que permitem que você especifique o nível de banco de dados de suporte (mais de uma fonte de dados, se necessário) para seu projeto.  
@@ -81,4 +76,3 @@ Esta página fornece opções que permitem que você especifique o nível de ban
   
 ## <a name="see-also"></a>Consulte também  
  [Assistente de aplicativo do MFC](../../mfc/reference/mfc-application-wizard.md)
-

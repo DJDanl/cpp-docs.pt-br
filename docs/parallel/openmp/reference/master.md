@@ -1,44 +1,25 @@
 ---
-title: mestre | Documentos do Microsoft
+title: mestre | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- master
-dev_langs:
-- C++
-helpviewer_keywords:
-- master OpenMP directive
+f1_keywords: master
+dev_langs: C++
+helpviewer_keywords: master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8b991a6bd15474347d68bf316d71cb5a1ac90bee
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 405c5f6cfba3ab60abac30fdb8a0ac730f1ab8b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="master"></a>master
 Especifica que somente o mestre threadshould executar uma seção do programa.  
@@ -53,9 +34,9 @@ Especifica que somente o mestre threadshould executar uma seção do programa.
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **mestre** diretiva oferece suporte a nenhum cláusulas OpenMP.  
+ O **mestre** diretiva dá suporte a nenhuma cláusulas OpenMP.  
   
- O [único](../../../parallel/openmp/reference/single.md) diretiva permite especificar que uma seção de código deve ser executada em um único thread, não necessariamente o thread principal.  
+ O [único](../../../parallel/openmp/reference/single.md) diretiva permite que você especifique que uma seção de código deve ser executada em um único thread, não necessariamente o thread principal.  
   
  Para obter mais informações, consulte [2.6.1 mestre construção](../../../parallel/openmp/2-6-1-master-construct.md).  
   

@@ -1,48 +1,28 @@
 ---
-title: "Compilador aviso (nível 4) C4703 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4703 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4703
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4703
+f1_keywords: C4703
+dev_langs: C++
+helpviewer_keywords: C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 75aa17d24abfad3eec3bc74f82218af6ceedadec
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 995491fd4fdd05465b4ebdc961ad7ca09c4e7697
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4703"></a>Compilador C4703 de aviso (nível 4)
-Variável de ponteiro local 'name' usada potencialmente foi cancelada  
+Potencialmente não inicializada variável de ponteiro local 'name' usado  
   
  A variável de ponteiro local *nome* pode ter sido usado sem receber um valor. Isso pode levar a resultados imprevisíveis.  
   
@@ -99,4 +79,4 @@ void main()
   
 ## <a name="see-also"></a>Consulte também  
  [Compilador C4701 de aviso (nível 4)](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)   
- [Avisos, /sdl e melhorando a detecção de variável não inicializada](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)
+ [Avisos, /sdl e melhorar a detecção de variável não inicializada](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

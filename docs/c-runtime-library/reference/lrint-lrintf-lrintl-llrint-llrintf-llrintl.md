@@ -42,8 +42,7 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -52,16 +51,15 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 731c3670e315889fdf35e84a234d658b6a904050
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: c3e857150812578a71ff1fba6d0c1a7db830f4bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 Arredonda o valor de ponto flutuante especificado para o valor inteiro mais próximo, usando o modo de arredondamento atual e a direção.  

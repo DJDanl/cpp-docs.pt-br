@@ -1,51 +1,51 @@
 ---
-title: "Criando controles com a mesma largura, a altura ou o tamanho | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles [C++], dimensionamento"
-  - "Comando Igualar Tamanho"
+title: Criando controles a mesma largura, altura ou tamanho | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Make Same Size command
+- controls [C++], sizing
 ms.assetid: 94b50613-67e2-497b-a2b6-6d98dccfd345
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f789a8f85516de7160bda3667affce6876002eef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Criando controles com a mesma largura, a altura ou o tamanho
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode redimensionar um grupo de controles com base no tamanho do controle dominante.  Você também pode  [redimensionar um controle com base nas dimensões do texto da legenda](../mfc/sizing-individual-controls.md).  
+# <a name="making-controls-the-same-width-height-or-size"></a>Criando controles com a mesma largura, a altura ou o tamanho
+Você pode redimensionar um grupo de controles com base no tamanho do controle dominante. Você também pode [redimensiona um controle com base nas dimensões de seu texto de legenda](../windows/sizing-individual-controls.md).  
   
-### Para tornar controla a mesma largura, altura ou tamanho  
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Para tornar controla a mesma largura, altura ou tamanho  
   
-1.  [Selecione os controles](../mfc/selecting-multiple-controls.md) você deseja redimensionar.  
+1.  [Selecione os controles](../windows/selecting-multiple-controls.md) você deseja redimensionar.  
   
-     O controle selecionado em primeiro lugar na série é o controle dominante.  O tamanho final dos controles no grupo depende do tamanho do controle dominante.  Para obter mais informações sobre como selecionar o controle dominante, consulte  [especificando um controle dominante](../mfc/specifying-the-dominant-control.md).  
+     O controle selecionado primeiro na série é o controle dominante. O tamanho final dos controles no grupo depende do tamanho do controle dominante. Para obter mais informações sobre como selecionar o controle dominante, consulte [especificando um controle dominante](../windows/specifying-the-dominant-control.md).  
   
-2.  Do  **formato** menu, escolha  **Igualar tamanho**, em seguida, escolha um dos seguintes comandos:  
+2.  Do **formato** menu, escolha **Igualar tamanho**, em seguida, escolha um dos seguintes comandos:  
   
     -   **Ambos**  
   
-    -   **Height**  
+    -   **Altura**  
   
-    -   **Width**  
+    -   **Largura**  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
  Win32  
   
-## Consulte também  
- [Controles em caixas de diálogo](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

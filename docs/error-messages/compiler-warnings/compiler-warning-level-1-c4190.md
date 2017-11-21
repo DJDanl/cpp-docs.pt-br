@@ -1,53 +1,34 @@
 ---
-title: "Compilador aviso (nível 1) C4190 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4190 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4190
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4190
+f1_keywords: C4190
+dev_langs: C++
+helpviewer_keywords: C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: bf45c0737f52da93f93c1f95d313771f0e92a10e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 1f01997ecd685942123b9e5c07db1a2dd59b6618
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4190"></a>Compilador C4190 de aviso (nível 1)
-'identifier1' foi especificada para vinculação de C, mas retorna UDT 'identifier2', que é incompatível com C  
+'identifier1' possui vínculo a C especificado, mas retorna UDT 'identifier2', que é incompatível com C  
   
- Uma função ou um ponteiro para função tem um UDT (-tipo definido pelo usuário, que é uma classe, estrutura, enum ou união) como tipo de retorno e `extern` vinculação "C". Isso é legal se:  
+ Uma função ou um ponteiro para função tem um UDT (tipo definido por usuário, que é uma classe, estrutura, enum ou união) como tipo de retorno e `extern` ligação "C". Isso é válido se:  
   
--   Todas as chamadas para essa função ocorrerem do C++.  
+-   Todas as chamadas para essa função ocorrerem de C++.  
   
--   A definição da função é em C++.  
+-   É a definição da função em C++.  
   
 ## <a name="example"></a>Exemplo  
   

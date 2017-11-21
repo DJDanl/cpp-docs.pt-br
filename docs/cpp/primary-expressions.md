@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 980be1e393fab633f3417dcc250c1820def3ff90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="primary-expressions"></a>Expressões primárias
 As expressões primárias são os blocos de construção de expressões mais complexas. Elas são literais, nomes e nomes qualificados pelo operador de resolução de escopo (`::`).  Uma expressão primária pode ter qualquer uma das seguintes formas:  
@@ -42,7 +39,7 @@ As expressões primárias são os blocos de construção de expressões mais com
   
  O **isso** palavra-chave é um ponteiro para um objeto de classe. Ela está disponível nas funções membro não estáticas e aponta para a instância da classe para a qual a função foi invocada. O **isso** palavra-chave não pode ser usado fora do corpo de uma função de membro de classe.  
   
- O tipo do **isso** ponteiro é `type` ** \*const** (onde `type` é o nome de classe) em funções não especificamente modificando o **este** ponteiro. O exemplo a seguir mostra o membro declarações de função e os tipos de **isso**:  
+ O tipo do **isso** ponteiro é `type`  **\*const** (onde `type` é o nome de classe) em funções não especificamente modificando o **este** ponteiro. O exemplo a seguir mostra o membro declarações de função e os tipos de **isso**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

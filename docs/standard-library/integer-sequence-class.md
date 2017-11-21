@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,8 +13,7 @@ f1_keywords:
 - type_traits/std::integer_sequence
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::index_sequence
 - std::make_index_sequence
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 129847900bc64ea0696f2736f173b9e57f7595ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e2502b627a40b40ee6942a24fdc1b8c0d16ecc31
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="integersequence-class"></a>Classe integer_sequence
 Representa uma sequência de inteiros. Pode ser usada para deduzir e expandir pacotes de parâmetros em tipos variadic, como std::tuple\<T...>, que são passados como argumentos para uma função.  
@@ -135,5 +132,4 @@ int main()
   
 ## <a name="see-also"></a>Consulte também  
  [Reticências e modelos variadic](../cpp/ellipses-and-variadic-templates.md)
-
 

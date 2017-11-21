@@ -1,33 +1,32 @@
 ---
-title: "Substituindo um acessador din&#226;mico | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acessadores [C++], dynamic"
-  - "acessadores dinâmicos"
-  - "substituição, acessadores dinâmicos"
+title: "Substituindo um acessador dinâmico | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dcec1f501d2f05018410fcd293a4ed649e607b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Substituindo um acessador din&#226;mico
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Quando você usa um acessador dinâmico como `CDynamicAccessor`, o método de **Abrir** de comando cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto.  Você pode substituir o acessador dinâmico para controlar exatamente como as colunas são associadas.  
+# <a name="overriding-a-dynamic-accessor"></a>Substituindo um acessador dinâmico
+Quando você usa um acessador dinâmico como `CDynamicAccessor`, o comando **abrir** método cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto. Você pode substituir o acessador dinâmico para controlar exatamente como as colunas associadas.  
   
- Para substituir o acessador dinâmico, passe **false** como o último parâmetro ao método de `CCommand::Open` .  Isso impede que **Abrir** crie um acessador automaticamente.  Você pode chamar `GetColumnInfo` e chamar `AddBindEntry` para cada coluna que você deseja associar.  O código a seguir mostra como fazer isso:  
+ Para substituir o acessador dinâmico, passar **false** como o último parâmetro para o `CCommand::Open` método. Isso impede que **abrir** de criar um acessador automaticamente. Em seguida, você pode chamar `GetColumnInfo` e chame `AddBindEntry` para cada coluna que você deseja vincular. O código a seguir mostra como fazer isso:  
   
 ```  
 USES_CONVERSION;  
@@ -77,5 +76,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usando acessadores](../../data/oledb/using-accessors.md)

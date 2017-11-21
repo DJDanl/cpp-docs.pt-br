@@ -1,38 +1,35 @@
 ---
-title: "@InStr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@InStr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@InStr symbol"
+title: '@InStr| Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@InStr'
+dev_langs: C++
+helpviewer_keywords: '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05a2ffa5f886318524267aeb348557a413960f7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# @InStr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Função de macro que se encontra a primeira ocorrência de  *string2* na  *seqüência1*, começando em  *posição* dentro de  *seqüência1*.  Se  *posição* não for exibido, pesquisa começa no início de  *seqüência1*.  Retorna um inteiro de posição ou 0 se  *seqüência2* não foi encontrado.  
+# <a name="instr"></a>@InStr
+Função de macro que localiza a primeira ocorrência do *string2* na *string1*, começando em *posição* em *string1*. Se *posição* não aparecer, a pesquisa começa no início do *string1*. Retorna um inteiro de posição ou 0 se *string2* não foi encontrado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 @InStr( [[position]], string1, string2 )  
 ```  
   
-## Consulte também  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de símbolos](../../assembler/masm/symbols-reference.md)

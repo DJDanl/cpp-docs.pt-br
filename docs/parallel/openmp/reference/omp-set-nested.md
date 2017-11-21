@@ -1,44 +1,25 @@
 ---
-title: omp_set_nested | Documentos do Microsoft
+title: omp_set_nested | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_set_nested
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_set_nested OpenMP function
+f1_keywords: omp_set_nested
+dev_langs: C++
+helpviewer_keywords: omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d120c4eca49a917cb34fc3b8a873c08f5e2815eb
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 3b0d04a0eb9813a3829b0f435972c7922bf77d07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompsetnested"></a>omp_set_nested
 Permitir o paralelismo aninhado.  
@@ -62,7 +43,7 @@ void omp_set_nested(
   
  A configuração de `omp_set_nested` substituirá a configuração do `OMP_NESTED` variável de ambiente.  
   
- Quando habilitada, a variável de ambiente pode interromper um programa caso contrário operacional porque o número de threads aumenta exponencialmente ao aninhar regiões em paralelo.  Por exemplo, uma função recurses 6 vezes com o número de threads OMP definido como 4 requer 4.096 (4 à potência de 6) threads em geral, poderá degradar o desempenho do seu aplicativo se o número de threads exceder o número de processadores. Uma exceção a isso seria que aplicativos vinculados a e/s.  
+ Quando habilitada, a variável de ambiente pode interromper um programa operacional caso contrário, porque o número de threads aumenta exponencialmente ao aninhar regiões paralelas.  Por exemplo, uma função recurses 6 vezes com o número de threads OMP definido como 4 requer 4.096 (4 à potência de 6) de threads em geral, o desempenho do seu aplicativo prejudicará se o número de threads excede o número de processadores. Uma exceção a isso seria a que e/s associados a aplicativos.  
   
  Use [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) para exibir a configuração atual de `omp_set_nested`.  
   

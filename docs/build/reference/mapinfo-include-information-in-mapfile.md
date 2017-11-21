@@ -1,56 +1,55 @@
 ---
-title: "/MAPINFO (incluir informa&#231;&#245;es em mapfile) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.MapLines"
-  - "VC.Project.VCLinkerTool.MapInfoFixups"
-  - "VC.Project.VCLinkerTool.MapExports"
-  - "/mapinfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /MAPINFO"
-  - "opção de vinculador MAPINFO"
-  - "opção de vinculador -MAPINFO"
+title: "-MAPINFO (incluir informações em Mapfile) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.MapLines
+- VC.Project.VCLinkerTool.MapInfoFixups
+- VC.Project.VCLinkerTool.MapExports
+- /mapinfo
+dev_langs: C++
+helpviewer_keywords:
+- /MAPINFO linker option
+- MAPINFO linker option
+- -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 81f85149af6f8774106530d4878679247d66f42e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /MAPINFO (incluir informa&#231;&#245;es em mapfile)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (incluir informações em mapfile)
 ```  
 /MAPINFO:EXPORTS  
 ```  
   
-## Comentários  
- A opção \/MAPINFO diz o vinculador para incluir as informações especificadas em um mapfile, que foi criado se você especificar a opção de [\/MAP](../../build/reference/map-generate-mapfile.md) .  As EXPORTAÇÕES indicam o vinculador para incluir funções exportadas.  
+## <a name="remarks"></a>Comentários  
+ A opção /MAPINFO informa o vinculador para incluir as informações especificadas em um arquivo de mapa, que é criado se você especificar o [/MAPEAR](../../build/reference/map-generate-mapfile.md) opção.  Exportações informa o vinculador para incluir funções exportadas.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Depurar** .  
+3.  Clique o **depurar** página de propriedades.  
   
-4.  Modifique as propriedades de **Exportações de Mapa** :  
+4.  Modificar do **exportações de mapa** propriedades:  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

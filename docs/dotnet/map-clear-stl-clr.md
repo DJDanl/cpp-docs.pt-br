@@ -1,42 +1,39 @@
 ---
-title: "map::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "limpar membro [STL/CLR]"
+title: Map (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 2a6a01fe-2998-447d-9ae8-6cb6343d0dfa
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cfdaf126ee093819df14bae679100d37d5f3ea59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# map::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapclear-stlclr"></a>map::clear (STL/CLR)
 Remove todos os elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void clear();  
 ```  
   
-## Comentários  
- A função de membro chama efetivamente [map::erase](../dotnet/map-erase-stl-clr.md)`(` [map::begin](../dotnet/map-begin-stl-clr.md)`(),` [map::end](../dotnet/map-end-stl-clr.md)`())`.  Use\-a para garantir que a sequência controlada está vazia.  
+## <a name="remarks"></a>Comentários  
+ A função de membro efetivamente chama [Map:: Erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [Map:: Begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. Você pode usá-lo para garantir que a sequência controlada está vazia.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_map_clear.cpp   
@@ -74,15 +71,18 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**size\(\) \= 0**  
- **um \[1\] \[b 2\]**  
-**size\(\) \= 0**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [map](../dotnet/map-stl-clr.md)   
- [map::erase](../dotnet/map-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [Map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)

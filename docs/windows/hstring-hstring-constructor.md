@@ -1,54 +1,51 @@
 ---
-title: "Construtor HString::HString | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::HString"
-dev_langs: 
-  - "C++"
+title: 'Construtor hstring:: Hstring | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::HString
+dev_langs: C++
 ms.assetid: 6da12785-ed01-4720-a004-667db60298f1
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a598b6a4b0e1b6077e2232131814192ef0a81863
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Construtor HString::HString
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringhstring-constructor"></a>Construtor HString::HString
 Inicializa uma nova instância da classe HString.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-  
 HString(HSTRING hstr = nullptr) throw();  
 HString(HString&& other) throw();  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `hstr`  
- Um identificador de HSTRING.  
+ Um identificador HSTRING.  
   
  `other`  
- Um objeto existente de HString.  
+ Um objeto HString existente.  
   
-## Comentários  
- O primeiro construtor inicializa um novo objeto de HString que está vazia.  
+## <a name="remarks"></a>Comentários  
+ O primeiro construtor inicializa um novo objeto de HString está vazio.  
   
- O segundo construtor inicializa um novo objeto de HString ao valor do parâmetro existente de `other` , e destruição no parâmetro de `other` .  
+ O segundo construtor inicializa um novo objeto de HString para o valor existente `other` parâmetro e, em seguida, destrói o `other` parâmetro.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe HString](../windows/hstring-class.md)

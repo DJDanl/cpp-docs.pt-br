@@ -1,49 +1,29 @@
 ---
-title: "Compilador aviso (nível 1) C4122 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4122 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4122
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4122
+f1_keywords: C4122
+dev_langs: C++
+helpviewer_keywords: C4122
 ms.assetid: 9a83eb0d-8708-42f7-988a-b0b6f2f646a0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 36ab65ba06e0344f62077108c5065371c620a2db
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 418f8e24e51d0b6af355960c896f7833fea45c65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4122"></a>Compilador C4122 de aviso (nível 1)
-'function': alloc_text aplicável somente a funções com vinculação C  
+'function': alloc_text aplicável apenas a funções com vínculo a C  
   
- O **alloc_text** pragma se aplica somente a funções declaradas com **extern c**. Ela não pode ser usada com funções externas do C++.  
+ O **alloc_text** pragma só se aplica a funções declaradas com **extern do c**. Ele não pode ser usado com funções externas de C++.  
   
  O pragma é ignorado.

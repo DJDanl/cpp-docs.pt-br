@@ -1,49 +1,46 @@
 ---
-title: ".SETFRAME | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".SETFRAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".SETFRAME directive"
+title: . SETFRAME | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SETFRAME
+dev_langs: C++
+helpviewer_keywords: .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8666e0ecfd1b2f81236766a1a32baea7a939cd19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# .SETFRAME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Preenchimentos no quadro de campo e deslocamento registram as informações de desenrolamento usando o registro especificado \(`reg`\) e deslocamento \(`offset`\).  O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240.  Essa diretiva também gera uma `UWOP_SET_FPREG` desenrolar a entrada de código para registrar o especificado usando o atual deslocamento de prólogo.  
+# <a name="setframe"></a>.SETFRAME
+Preenche o quadro de registrar o campo e o deslocamento nas informações de liberação usando o registro especificado (`reg`) e deslocamento (`offset`). O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera um `UWOP_SET_FPREG` desenrolar a entrada de código para registrar especificado usando o deslocamento de prólogo atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 .SETFRAME reg, offset  
 ```  
   
-## Comentários  
- .SETFRAME permite que os usuários ml64.exe especificar como uma função de quadro esvazia e só é permitida no prólogo, que se estende da [PROC](../../assembler/masm/proc.md) declaração de quadro para o [.ENDPROLOG](../Topic/.ENDPROLOG.md) diretiva.  Essas diretivas não geram código; eles apenas geram `.xdata` e `.pdata`.  .SETFRAME deve ser precedido por instruções que realmente implementam as ações para ser organizado.  Ele é uma boa prática para encapsular as diretivas de desenrolamento e do código que eles se destinam à desenrolamento em uma macro para garantir que o contrato.  
+## <a name="remarks"></a>Comentários  
+ . SETFRAME permite que os usuários de ml64.exe especificar como uma função de quadro esvazia e só é permitida no prólogo, que se estende do [PROC](../../assembler/masm/proc.md) declaração de quadro para o [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) diretiva. Essas diretivas não geram código; Gerar apenas `.xdata` e `.pdata`. . SETFRAME deve ser precedido por instruções que as ações a ser organizado de fato implementam. É uma boa prática para encapsular as diretivas de liberação e o código que eles se destinam à liberação em uma macro para garantir o contrato.  
   
- Para obter mais informações, consulte [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ Para obter mais informações, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   
-## Exemplo  
+## <a name="sample"></a>Amostra  
   
-### Descrição  
+### <a name="description"></a>Descrição  
  O exemplo a seguir mostra como usar um ponteiro de quadro:  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 ; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE  
@@ -72,5 +69,5 @@ _text ENDS
 END  
 ```  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

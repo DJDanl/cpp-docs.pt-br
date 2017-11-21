@@ -1,46 +1,43 @@
 ---
-title: "/ALLOWBIND | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/allowbind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opção editbin ALLOWBIND"
-  - "Opção /ALLOWBIND (editbin)"
-  - "opção editbin -ALLOWBIND"
+title: -ALLOWBIND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /allowbind
+dev_langs: C++
+helpviewer_keywords:
+- ALLOWBIND editbin option
+- /ALLOWBIND editbin option
+- -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e1a039a6f62a3cf2dd296677f81f672ab462f7b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /ALLOWBIND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica se uma DLL pode ser associado.  
+# <a name="allowbind"></a>/ALLOWBIND
+Especifica se uma DLL pode ser associada.  
   
 ```  
   
 /ALLOWBIND[:NO]  
-  
 ```  
   
-## Comentários  
- As opções definidas de **\/ALLOWBIND** um bit no cabeçalho de uma DLL que indica a Bind.exe que a imagem é permitida ser associada.  A associação pode permitir que uma imagem carrega mais rápido quando o carregador não tem que rebase e executar o fixup de endereço para cada DLL referenciado.  Você não queira uma DLL a ser associado se foi digitalmente assinar\- associação invalida a assinatura.  Associar não tem nenhum efeito se o randomization \(ASLR\) do layout do espaço de endereço é habilitado para a imagem usando **\/DYNAMICBASE** em versões do windows que dão suporte a ASLR.  
+## <a name="remarks"></a>Comentários  
+ O **/ALLOWBIND** opção define um bit no cabeçalho de uma DLL que indica para Bind.exe que a imagem pode ser associado. Associação pode permitir que uma imagem a ser carregado mais rapidamente quando o carregador não tem rebase e executar a correção de endereço para cada DLL referenciado. Talvez não seja um DLL ser associada caso ele tenha sido assinado digitalmente — associação invalida a assinatura. Associação não tem nenhum efeito se aleatória de layout de espaço de endereço (ASLR) está habilitada para a imagem usando **/DYNAMICBASE** em versões do Windows que oferecem suporte a ASLR.  
   
- Use **\/ALLOWBIND:NO** para impedir que Bind.exe associa a DLL.  
+ Use **/allowbind: no** para impedir que a DLL de associação Bind.exe.  
   
- Para obter mais informações, consulte a opção do vinculador de [\/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) .  
+ Para obter mais informações, consulte o [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) opção de vinculador.  
   
-## Consulte também  
- [Opções EDITBIN](../../build/reference/editbin-options.md)
+## <a name="see-also"></a>Consulte também  
+ [Opções de EDITBIN](../../build/reference/editbin-options.md)

@@ -1,63 +1,61 @@
 ---
-title: "/DYNAMICBASE (usar aleatoriza&#231;&#227;o do layout de espa&#231;o do endere&#231;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.RandomizedBaseAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /DYNAMICBASE"
-  - "opção de vinculador DYNAMICBASE"
-  - "opção de vinculador -DYNAMICBASE"
+title: "-/DYNAMICBASE (aleatória de layout do espaço de endereço de uso) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.RandomizedBaseAddress
+dev_langs: C++
+helpviewer_keywords:
+- -DYNAMICBASE linker option
+- /DYNAMICBASE linker option
+- DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2bce480d906210ebd8eb597902c7f1aac855c6ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /DYNAMICBASE (usar aleatoriza&#231;&#227;o do layout de espa&#231;o do endere&#231;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica se deve produzir uma imagem executável que pode ser rebased aleatoriamente no tempo de carregamento usando o recurso \(ASLR\) de randomization de layout do espaço de endereço de [!INCLUDE[windowsver](../Token/windowsver_md.md)].  
+# <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (usar aleatorização do layout de espaço do endereço)
+Especifica se é para gerar uma imagem executável que pode ser baseada aleatoriamente de novo no tempo de carregamento usando o recurso do aleatória (ASLR) de layout do espaço de endereço de [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /DYNAMICBASE[:NO]  
 ```  
   
-## Comentários  
- Por padrão, \/DYNAMICBASE está ativado.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, /DYNAMICBASE está ativado.  
   
- Esta opção altera o cabeçalho de um executável para indicar se o aplicativo deve ser rebased aleatoriamente no tempo de carregamento.  
+ Esta opção modifica o cabeçalho de um executável para indicar se o aplicativo deve ser baseada aleatoriamente de novo no tempo de carregamento.  
   
- O randomization de layout do espaço de endereço tem suporte em [!INCLUDE[windowsver](../Token/windowsver_md.md)].  
+ Aleatorização do espaço de endereço é suportada em [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
   
-### Para definir essa opção de vinculador no Visual Studio  
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Para definir essa opção do vinculador no Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter mais informações, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o nó **Propriedades de Configuração**.  
+2.  Expanda o **propriedades de configuração** nó.  
   
-3.  Expanda o nó **Vinculador**.  
+3.  Expanda o **vinculador** nó.  
   
-4.  Selecione a página de propriedades **Avançadas**.  
+4.  Selecione o **avançado** página de propriedades.  
   
-5.  Modifique a propriedade de **Endereço Base Aleatório** .  
+5.  Modificar o **endereço de Base aleatório** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

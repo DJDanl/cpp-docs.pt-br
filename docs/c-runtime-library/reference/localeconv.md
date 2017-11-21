@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- localeconv
+apiname: localeconv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,38 +20,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- localeconv
-dev_langs:
-- C++
+f1_keywords: localeconv
+dev_langs: C++
 helpviewer_keywords:
 - lconv type
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4e4e6ea80db7930b227f3d2bea5ccf1c35f9e750
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: aa001a4c8dde1337eb576ae3a2c78108e4cb3199
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="localeconv"></a>localeconv
 Obtém informações detalhadas sobre configurações de localidade.  
@@ -61,15 +43,14 @@ Obtém informações detalhadas sobre configurações de localidade.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 struct lconv *localeconv( void );  
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- `localeconv` retorna um ponteiro para um objeto preenchido do tipo [struct lconv](../../c-runtime-library/standard-types.md). Os valores contidos no objeto podem ser substituídos por chamadas subsequentes a `localeconv` e não modificam diretamente o objeto. Chamadas para [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) com valores `category` de `LC_ALL`, `LC_MONETARY` ou `LC_NUMERIC` substituem os conteúdos da estrutura.  
+ `localeconv` retorna um ponteiro para um objeto preenchido do tipo [struct lconv](../../c-runtime-library/standard-types.md). Os valores contidos no objeto são copiados de configurações de localidade no armazenamento local de thread e pode ser substituídos por chamadas subsequentes para `localeconv`. As alterações feitas aos valores neste objeto não modifique as configurações de localidade. Chamadas para [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) com valores `category` de `LC_ALL`, `LC_MONETARY` ou `LC_NUMERIC` substituem os conteúdos da estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- A função `localeconv` obtém informações detalhadas sobre a formatação numérica da localidade atual. Essas informações são armazenadas em uma estrutura do tipo **lconv**. A estrutura **lconv**, definida em LOCALE.H, contém os seguintes membros:  
+ A função `localeconv` obtém informações detalhadas sobre a formatação numérica da localidade atual. Essas informações são armazenadas em uma estrutura de tipo `lconv`. O `lconv` estrutura, definido na localidade. H, contém os seguintes membros:  
   
  `char *decimal_point, wchar_t *_W_decimal_point`  
  Caractere de vírgula decimal para quantidades não monetárias.  
@@ -78,7 +59,7 @@ struct lconv *localeconv( void );
  Caractere que separa grupos de dígitos à esquerda da vírgula decimal para quantidades não monetárias.  
   
  `char *grouping`  
- Tamanho de cada grupo de dígitos em quantidades não monetárias.  
+ Ponteiro para um `char`-tamanho inteiro que contém o tamanho de cada grupo de dígitos em quantidades monetárias.  
   
  `char *int_curr_symbol, wchar_t *_W_int_curr_symbol`  
  Símbolo de moeda internacional para a localidade atual. Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*. O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.  
@@ -93,7 +74,7 @@ struct lconv *localeconv( void );
  Separador para grupos de dígitos à esquerda da casa decimal em quantidades monetárias.  
   
  `char *mon_grouping`  
- Tamanho de cada grupo de dígitos em quantidades monetárias.  
+ Ponteiro para um `char`-tamanho inteiro que contém o tamanho de cada grupo de dígitos em quantidades monetárias.  
   
  `char *positive_sign, wchar_t *_W_positive_sign`  
  Cadeia de caracteres indicando o sinal para quantidades monetárias não negativas.  
@@ -125,59 +106,47 @@ struct lconv *localeconv( void );
  `char n_sign_posn`  
  Posição do sinal positivo em quantidades monetárias formatadas negativas.  
   
- Membros da estrutura que têm versões `char` `*` e `wchar_t *` são ponteiros para cadeias de caracteres. Qualquer um desses que seja igual a `""` (ou `L""` para `wchar_t *`) terá comprimento igual a zero ou não terá suporte na localidade atual. Observe que `decimal_point` e `_W_decimal_point` sempre terão suporte e comprimento diferente de zero.  
+Exceto como membros especificados, o `lconv` estrutura que têm `char *` e `wchar_t *` versões são ponteiros para cadeias de caracteres. Qualquer um desses que seja igual a `""` (ou `L""` para `wchar_t *`) terá comprimento igual a zero ou não terá suporte na localidade atual. Observe que `decimal_point` e `_W_decimal_point` sempre terão suporte e comprimento diferente de zero.  
   
- Os membros `char` da estrutura são números pequenos não negativos e não caracteres. Qualquer um desses que seja igual a **CHAR_MAX** não terá suporte na localidade atual.  
+Os membros `char` da estrutura são números pequenos não negativos e não caracteres. Qualquer um desses é igual a `CHAR_MAX` não há suporte para a localidade atual.  
   
- Os elementos de **agrupamento** e **mon_grouping** são interpretados de acordo com as regras a seguir.  
+Os valores de `grouping` e `mon_grouping` são interpretados de acordo com as regras a seguir:  
   
- **CHAR_MAX**  
- Não execute qualquer agrupamento adicional.  
+- `CHAR_MAX`-Não execute qualquer agrupamento adicional.  
   
- 0  
- Use o elemento anterior para cada um dos dígitos restantes.  
+- 0 - use o elemento anterior para cada um dos dígitos restantes.  
   
- *n*  
- Número de dígitos que compõem o agrupamento atual. O próximo elemento é examinado para determinar o tamanho do próximo grupo de dígitos antes do grupo atual.  
+- *n*-Número de dígitos que compõem o grupo atual. O próximo elemento é examinado para determinar o tamanho do próximo grupo de dígitos antes do grupo atual.  
   
- Os valores para **int_curr_symbol** são interpretados de acordo com as regras a seguir:  
+Os valores para `int_curr_symbol` são interpretados de acordo com as regras a seguir:  
   
 -   Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*.  
   
 -   O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.  
   
- Os valores para **p_cs_precedes** e **n_cs_precedes** são interpretados de acordo com as regras a seguir (a regra para **n_cs_precedes** está entre parênteses):  
+Os valores para `p_cs_precedes` e `n_cs_precedes` são interpretados de acordo com as regras a seguir (o `n_cs_precedes` regra está entre parênteses):  
   
- 0  
- O símbolo de moeda sucede o valor para a quantidade monetária formatada não negativa (negativa).  
+- 0 - símbolo de moeda segue o valor não negativo (negativo) formatado valor monetário.  
   
- 1  
- O símbolo de moeda precede o valor para a quantidade monetária formatada não negativa (negativa).  
+- 1 - símbolo de moeda precede o valor não negativo (negativo) formatado valor monetário.  
   
- Os valores para **p_sep_by_space** e **n_sep_by_space** são interpretados de acordo com as regras a seguir (a regra para **n_sep_by_space** está entre parênteses):  
+Os valores para `p_sep_by_space` e `n_sep_by_space` são interpretados de acordo com as regras a seguir (o `n_sep_by_space` regra está entre parênteses):  
   
- 0  
- O símbolo de moeda é separado por espaço do valor para o valor monetário formatado não negativo (negativo).  
+- 0 - símbolo de moeda é separado do valor de espaço para não-negativo (negativo) formatado valor monetário.  
   
- 1  
- Não há separação por espaço entre o símbolo de moeda e o valor para o valor monetário formatado não negativo (negativo).  
+- 1 - não há separação nenhum espaço entre o símbolo de moeda e o valor não negativo (negativo) formatado valor monetário.  
   
- Os valores para **p_sign_posn** e **n_sign_posn** são interpretados de acordo com as regras a seguir:  
+Os valores para `p_sign_posn` e `n_sign_posn` são interpretados de acordo com as regras a seguir:  
   
- 0  
- Parênteses circundam os símbolos de quantidade e moeda.  
+- 0 - parênteses envolvem o símbolo de moeda e quantidade.  
   
- 1  
- Cadeia de caracteres de sinal precedem os símbolos de quantidade e moeda.  
+- 1 - cadeia de caracteres de sign precede o símbolo de moeda e quantidade.  
   
- 2  
- Cadeia de caracteres de sinal sucedem os símbolos de quantidade e moeda.  
+- 2 - cadeia de caracteres de entrada segue o símbolo de moeda e quantidade.  
   
- 3  
- Cadeia de caracteres de sinal precede o símbolo de moeda.  
+- 3 - cadeia de caracteres de entrada precede o símbolo de moeda.  
   
- 4  
- Cadeia de caracteres de sinal sucede o símbolo de moeda.  
+- 4 - sinal de cadeia de caracteres imediatamente símbolo de moeda da seguinte maneira.  
   
 ## <a name="requirements"></a>Requisitos  
   

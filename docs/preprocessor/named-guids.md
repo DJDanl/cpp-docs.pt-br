@@ -1,44 +1,40 @@
 ---
-title: "named_guids | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "named_guids"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Atributo named_guids"
+title: named_guids | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: named_guids
+dev_langs: C++
+helpviewer_keywords: named_guids attribute
 ms.assetid: b905e5e5-07fe-4874-8993-e05b9d639045
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 04cd9155a55d9ec8041285a4326a8f4949871957
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# named_guids
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico do C\+\+**  
+# <a name="namedguids"></a>named_guids
+**Específicas do C++**  
   
- Diz para o compilador definir e inicializar variáveis GUID no estilo antigo, na forma **LIBID\_MyLib**, **CLSID\_MyCoClass**, **IID\_MyInterface** e **DIID\_MyDispInterface**.  
+ Informa ao compilador para definir e inicializar variáveis de GUID em estilo antigo, do formulário **LIBID_MyLib**, **CLSID_MyCoClass**, **IID_MyInterface**, e **DIID _MyDispInterface**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 named_guids  
 ```  
   
-## Comentários  
- **FIM de Específico do C\+\+**  
+## <a name="remarks"></a>Comentários  
+ **TÉRMINO específicas do C++**  
   
-## Consulte também  
- [Atributos \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Diretiva \#import](../Topic/%23import%20Directive%20\(C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

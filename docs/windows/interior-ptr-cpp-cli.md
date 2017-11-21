@@ -1,97 +1,95 @@
 ---
-title: "interior_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "stdcli::language::interior_ptr"
-  - "interior_ptr_cpp"
-  - "interior_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interior_ptr keyword [C++]"
+title: interior_ptr (C + + CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- stdcli::language::interior_ptr
+- interior_ptr_cpp
+- interior_ptr
+dev_langs: C++
+helpviewer_keywords: interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: edb506b17cce617c438bc518bfbd5410b9dabbe2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# interior_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*Um ponteiro interior* declara um ponteiro dentro de um tipo de referência, mas não no próprio objeto.  Um ponteiro interior pode apontar para um identificador de referência, tipo de valor, encaixotada identificador do tipo, membro de um tipo gerenciado, ou um elemento de uma matriz gerenciado.  
+# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+Um *ponteiro interior* declara um ponteiro para dentro de um tipo de referência, mas não o próprio objeto. Um ponteiro interior pode apontar para um identificador de referência, o tipo de valor, o identificador de tipo demarcado, o membro de um tipo gerenciado, ou a um elemento de uma matriz gerenciada.  
   
-## Todos os Tempos de Execução  
- \(Não há nenhum comentário sobre este recurso de linguagem que se aplica a todos os tempos de execução\).  
+## <a name="all-runtimes"></a>Todos os Tempos de Execução  
+ (Não há nenhum comentários para esse recurso de idioma que se aplicam a todos os tempos de execução).  
   
-## Tempo de execução do windows  
- \(Não há nenhum comentário sobre este recurso de linguagem que se aplica somente Tempo de Execução do Windows\).  
+## <a name="windows-runtime"></a>Tempo de Execução do Windows  
+ (Não há nenhum comentários para esse recurso de idioma que se aplicam somente no tempo de execução do Windows).  
   
-### Requisitos  
- Opção do compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opção do compilador: **/ZW**  
   
-## Common Language Runtime  
- A sintaxe a seguir demonstra um ponteiro interior.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ O exemplo de sintaxe a seguir demonstra um ponteiro interior.  
   
-### Sintaxe  
+### <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 cli::interior_ptr<cv_qualifier type> var = &initializer;  
 ```  
   
-### Parâmetros  
- *cv\_qualifier*  
- **const** ou qualificadores de `volatile` .  
+### <a name="parameters"></a>Parâmetros  
+ *cv_qualifier*  
+ **Const** ou `volatile` qualificadores.  
   
  *type*  
- O tipo de *initializer*.  
+ O tipo de *inicializador*.  
   
  *var*  
- O nome da variável de `interior_ptr` .  
+ O nome do `interior_ptr` variável.  
   
  *initializer*  
- Um membro de um tipo de referência, do elemento de uma matriz gerenciado, ou qualquer outro objeto que você pode atribuir a um ponteiro nativo.  
+ Um membro de um tipo de referência, o elemento de uma matriz gerenciada, ou qualquer outro objeto que você pode atribuir a um ponteiro nativo.  
   
-### Comentários  
- Um ponteiro nativo não pode rastrear um item como seu local for alterado no heap gerenciado, que é o resultado das instâncias movendo do coletor de lixo de um objeto.  Para que um ponteiro consulte corretamente a instância, o tempo de execução precisa atualizar o ponteiro para o objeto recentemente posicionado.  
+### <a name="remarks"></a>Comentários  
+ Um ponteiro nativo não é capaz de rastrear um item como as alterações de sua localização no heap gerenciado, o que resulta da movimentação de instâncias de um objeto de coletor de lixo. Para um ponteiro referir-se à instância corretamente, o tempo de execução precisa atualizar o ponteiro para o objeto recentemente posicionado.  
   
- `interior_ptr` representa um superconjunto da funcionalidade de um ponteiro nativo.  Em virtude disso, qualquer coisa que pode ser atribuído a um ponteiro nativo também pode ser atribuído a `interior_ptr`.  Um ponteiro interior tem permissão para executar o mesmo conjunto de operações que ponteiros nativos, incluindo a comparação e aritmética do ponteiro.  
+ Um `interior_ptr` representa um subconjunto da funcionalidade de um ponteiro nativo.  Portanto, qualquer coisa que pode ser atribuído a um ponteiro nativo também pode ser atribuída a um `interior_ptr`.  Um ponteiro interior tem permissão para executar o mesmo conjunto de operações, como ponteiros nativos, incluindo a comparação e a aritmética de ponteiro.  
   
  Um ponteiro interior só pode ser declarado na pilha.  Um ponteiro interior não pode ser declarado como um membro de uma classe.  
   
- Como os ponteiros interiores só existem na pilha, fazer o endereço de um ponteiro interior gerencie um ponteiro não gerenciado.  
+ Uma vez que ponteiros internos existem apenas na pilha, pegar o endereço de um ponteiro interior gera um ponteiro não gerenciado.  
   
- `interior_ptr` tem uma conversão implícita em `bool`, que permite seu uso em instruções condicionais.  
+ `interior_ptr`tem uma conversão implícita para `bool`, que permite o uso em instruções condicionais.  
   
- Para obter informações sobre como declarar um ponteiro interior que aponta para um objeto que não pode ser movido para o heap com coletado, consulte [pin\_ptr](../Topic/pin_ptr%20\(C++-CLI\).md).  
+ Para obter informações sobre como declarar um ponteiro interior que aponta para um objeto que não pode ser movido no heap coletado como lixo, consulte [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr` está no namespace cli.  Consulte [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para maiores informações.  
+ `interior_ptr`está no namespace cli.  Consulte [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para obter mais informações.  
   
- Para obter mais informações sobre os ponteiros interiores, consulte  
+ Para obter mais informações sobre ponteiros internos, consulte  
   
--   [How to: Declare and Use Interior Pointers and Managed Arrays \(C\+\+\/CLI\)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
+-   [Como declarar e usar ponteiros internos e matrizes gerenciadas (C++/CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
   
--   [How to: Declare Value Types with the interior\_ptr Keyword \(C\+\+\/CLI\)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
+-   [Como declarar tipos de valor com a palavra-chave interior_ptr (C++/CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
   
--   [How to: Overload Functions with Interior Pointers and Native Pointers \(C\+\+\/CLI\)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
+-   [Como sobrecarregar funções com ponteiros internos e nativos (C++/CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
   
--   [How to: Declare Interior Pointers with the const Keyword \(C\+\+\/CLI\)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
+-   [Como declarar ponteiros internos com a palavra-chave const (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
-### Requisitos  
- Opção do compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opção de compilador: **/clr**  
   
-### Exemplos  
+### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- O exemplo a seguir mostra como declarar e usar um ponteiro dentro de um tipo de referência.  
+ O exemplo a seguir mostra como declarar e usar um ponteiro interior em um tipo de referência.  
   
 ```cpp  
 // interior_ptr.cpp  
@@ -121,8 +119,11 @@ int main() {
   
  **Saída**  
   
- **1**   
-**2**   
-**3**   
-## Consulte também  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+1  
+2  
+3  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

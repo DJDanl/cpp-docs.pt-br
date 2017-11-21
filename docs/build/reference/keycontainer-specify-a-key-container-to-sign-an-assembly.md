@@ -1,76 +1,75 @@
 ---
-title: "/KEYCONTAINER (especificar um cont&#234;iner de chave para assinar um assembly) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.KeyContainer"
-  - "/keycontainer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /KEYCONTAINER"
-  - "opção de vinculador KEYCONTAINER"
-  - "opção de vinculador -KEYCONTAINER"
+title: "-KEYCONTAINER (especificar um contêiner de chave para assinar um Assembly) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.KeyContainer
+- /keycontainer
+dev_langs: C++
+helpviewer_keywords:
+- KEYCONTAINER linker option
+- /KEYCONTAINER linker option
+- -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c8aa93168b2ad5bf76eab5417a03bc4903777db8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /KEYCONTAINER (especificar um cont&#234;iner de chave para assinar um assembly)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (especificar um contêiner de chave para assinar um assembly)
 ```  
 /KEYCONTAINER:name  
 ```  
   
-## Comentários  
- where,  
+## <a name="remarks"></a>Comentários  
+ onde,  
   
- *nome*  
- Contêiner que contém a chave.  Coloque a cadeia de caracteres entre aspas duplas \(” "\) se contiver um espaço.  
+ *name*  
+ Contêiner que contém a chave. Coloque a cadeia de caracteres entre aspas duplas ("") se ele contiver um espaço.  
   
-## Comentários  
- O vinculador cria um assembly assinado inserindo uma chave pública no manifesto do assembly e assinar o assembly final com a chave privada.  Para gerar um arquivo de chave, digite [sn \- k](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) `file` na linha de comando.  **sn \-i** instala o par de chaves em um contêiner.  
+## <a name="remarks"></a>Comentários  
+ O vinculador cria um assembly assinado, inserindo uma chave pública no manifesto do assembly e assinar o assembly final com a chave privada. Para gerar um arquivo de chave, digite [sn -k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename* na linha de comando. **sn -i** instala o par de chaves no contêiner.  
   
- Se você compila com [\/LN](../../build/reference/ln-create-msil-module.md), o nome do arquivo da chave será realizado no módulo e inserida no assembly que é criado quando você cria um assembly que inclua uma referência explícita ao módulo, por meio de [\#using](../../preprocessor/hash-using-directive-cpp.md), ou ao vincular a [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
+ Se você compilar com [/LN](../../build/reference/ln-create-msil-module.md), o nome do arquivo da chave é mantido no módulo e incorporado no assembly, que é criado quando você compila um assembly que inclui uma referência explícita para o módulo, por meio de [#using](../../preprocessor/hash-using-directive-cpp.md), ou ao vincular com [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
   
- Você também pode transmitir suas informações de criptografia ao compilador com [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md).  Use [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) se você desejar um assembly parcialmente assinado.  Consulte [Assemblies de nome forte \(assinatura de assembly\)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obter mais informações sobre como assinar um assembly.  
+ Você também pode passar as informações de criptografia para o compilador com [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Use [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) se você quiser um assembly parcialmente assinado. Consulte [Assemblies com nome forte (assinatura de Assembly) (C + + CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obter mais informações sobre como assinar um assembly.  
   
- Outras opções do vinculador que afetam a geração do assembly são:  
+ Outras opções de vinculador que afetam a geração de assembly são:  
   
--   [\/ASSEMBLYDEBUG](../Topic/-ASSEMBLYDEBUG%20\(Add%20DebuggableAttribute\).md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção na caixa de **Opções Adicionais** .  
+4.  Digite a opção para o **opções adicionais** caixa.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

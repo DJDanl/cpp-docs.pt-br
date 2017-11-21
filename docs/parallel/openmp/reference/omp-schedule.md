@@ -1,44 +1,25 @@
 ---
-title: OMP_SCHEDULE | Documentos do Microsoft
+title: OMP_SCHEDULE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- OMP_SCHEDULE
-dev_langs:
-- C++
-helpviewer_keywords:
-- OMP_SCHEDULE OpenMP environment variable
+f1_keywords: OMP_SCHEDULE
+dev_langs: C++
+helpviewer_keywords: OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2295a801-e584-4d2f-826f-7ca4c88846a6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 020ba85844942e78d10180e433061e7b84d45da2
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: c29ec07f9a912fb66adc391465885da8030cc466
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 Modifica o comportamento do [agenda](../../../parallel/openmp/reference/schedule.md) cláusula quando `schedule(runtime)` é especificado em uma `for` ou `parallel for` diretiva.  
@@ -67,9 +48,9 @@ set OMP_SCHEDULE[=type[,size]]
 -   `static`  
   
 ## <a name="remarks"></a>Comentários  
- O valor padrão na implementação do Visual C++ do OpenMP padrão é `OMP_SCHEDULE=static,0`.  
+ O valor padrão na implementação do padrão OpenMP Visual C++ é `OMP_SCHEDULE=static,0`.  
   
- Para obter mais informações, consulte [OMP_SCHEDULE&4;.1](../../../parallel/openmp/4-1-omp-schedule.md).  
+ Para obter mais informações, consulte [OMP_SCHEDULE 4.1](../../../parallel/openmp/4-1-omp-schedule.md).  
   
 ## <a name="example"></a>Exemplo  
  O comando a seguir define o **OMP_SCHEDULE** variável de ambiente:  

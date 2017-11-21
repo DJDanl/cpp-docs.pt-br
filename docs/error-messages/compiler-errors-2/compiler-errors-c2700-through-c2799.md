@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -46,38 +45,23 @@ helpviewer_keywords:
 - C2789
 - C2796
 - C2799
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 02bfc54853aea219b4ff0a08231e73fb53550a37
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: d8246cec8db138b053f3c239448043147131166c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>C2700 de erros do compilador por meio de C2799
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -85,19 +69,19 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |-----------|-------------|  
 |[Erro do compilador C2700](compiler-error-c2700.md)|'*tipo*': não pode ser lançado (use /W4 para obter mais informações)|  
 |[Erro do compilador C2701](compiler-error-c2701.md)|'*função*': um modelo de função/genérico não pode ser um friend de uma classe local|  
-|[Erro do compilador C2702](compiler-error-c2702.md)| __except não deve aparecer em bloco de terminação|  
-|[Erro do compilador C2703](compiler-error-c2703.md)|instrução __leave inválida|  
+|[Erro do compilador C2702](compiler-error-c2702.md)| EXCEPT não pode aparecer em bloco de terminação|  
+|[Erro do compilador C2703](compiler-error-c2703.md)|instrução Leave ilegal|  
 |[Erro do compilador C2704](compiler-error-c2704.md)|'*função*': intrínseco va_start permitido apenas em varargs|  
 |[Erro do compilador C2705](compiler-error-c2705.md)|'*rótulo*': salto ilegal em '*exception_block*' escopo|  
-|[Erro do compilador C2706](compiler-error-c2706.md)|__except inválido sem __try correspondente (faltando '}' no bloco __try?)|  
+|[Erro do compilador C2706](compiler-error-c2706.md)|EXCEPT inválido sem Try correspondente (faltando '}' no bloco Try?)|  
 |[Erro do compilador C2707](compiler-error-c2707.md)|'*identificador*': contexto incorreto para função intrínseca|  
 |[Erro do compilador C2708](compiler-error-c2708.md)|'*identificador*': comprimento em bytes de parâmetros reais difere da chamada anterior ou referência|  
 |[Erro do compilador C2709](compiler-error-c2709.md)|'*identificador*': comprimento em bytes de parâmetros formais difere da declaração anterior|  
 |[Erro do compilador C2710](compiler-error-c2710.md)|'*identificador*': ' declspec (*modificador*)' só pode ser aplicado a uma função que retorne um ponteiro|  
 |[Erro do compilador C2711](compiler-error-c2711.md)|'*função*': esta função não pode ser compilado como gerenciado, considere usar #pragma não gerenciado|  
-|[Erro do compilador C2712](compiler-error-c2712.md)|Não é possível usar __try em funções que requerem liberação de objeto|  
-|[Erro do compilador C2713](compiler-error-c2713.md)|Apenas uma forma de manipulação de exceção permitida por função|  
-|[Erro do compilador C2714](compiler-error-c2714.md)|alignof(void) não permitido|  
+|[Erro do compilador C2712](compiler-error-c2712.md)|não é possível usar try em funções que exigem a liberação de objeto|  
+|[Erro do compilador C2713](compiler-error-c2713.md)|apenas uma forma de tratamento de exceção permitida por função|  
+|[Erro do compilador C2714](compiler-error-c2714.md)|alignof(void) não é permitido|  
 |[Erro do compilador C2715](compiler-error-c2715.md)|'*tipo*': não é possível usar throw ou catch com este tipo|  
 |C2716 de erro do compilador|Obsoleto.|  
 |C2717 de erro do compilador|Obsoleto.|  
@@ -154,13 +138,13 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2768](compiler-error-c2768.md)|'*função*': uso inválido de argumentos de template explícitos|  
 |C2769 de erro do compilador|Você não é possível chave inicializar uma matriz gerenciada/WinRT em uma lista de inicializadores de base/membro|  
 |[Erro do compilador C2770](compiler-error-c2770.md)|argumentos de modelo/generic explícita inválida para '*modelo*'|  
-|[Erro do compilador C2771](compiler-error-c2771.md)|#importação permitido somente em global ou escopo de namespace|  
+|[Erro do compilador C2771](compiler-error-c2771.md)|#import permitido somente em global ou escopo de namespace|  
 |C2772 de erro do compilador|Obsoleto.|  
-|[Erro do compilador C2773](compiler-error-c2773.md)|#Importar e #using disponíveis apenas em compilador C++|  
+|[Erro do compilador C2773](compiler-error-c2773.md)|#import e #using disponíveis apenas em compilador C++|  
 |[Erro do compilador C2774](compiler-error-c2774.md)|'*identificador*': nenhum método 'put' está associado esta propriedade|  
 |[Erro do compilador C2775](compiler-error-c2775.md)|'*identificador*': nenhum método 'get' está associado esta propriedade|  
-|[Erro do compilador C2776](compiler-error-c2776.md)|apenas um método 'get' pode ser especificado por propriedade|  
-|[Erro do compilador C2777](compiler-error-c2777.md)|apenas um método 'put' pode ser especificado por propriedade|  
+|[Erro do compilador C2776](compiler-error-c2776.md)|somente um método 'get' pode ser especificado por propriedade|  
+|[Erro do compilador C2777](compiler-error-c2777.md)|somente um método 'put' pode ser especificado por propriedade|  
 |[Erro do compilador C2778](compiler-error-c2778.md)|GUID formado de modo inadequado em __declspec(uuid())|  
 |[Erro do compilador C2779](compiler-error-c2779.md)|'*declaração*': métodos de propriedade só podem ser associados a membros de dados não estático|  
 |[Erro do compilador C2780](compiler-error-c2780.md)|'*declaração*': espera *número* argumentos - *número* fornecido|  
@@ -173,14 +157,13 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2787](compiler-error-c2787.md)|'*identificador*': nenhum GUID foi associado este objeto|  
 |[Erro do compilador C2788](compiler-error-c2788.md)|'*identificador*': mais de um GUID associado a este objeto|  
 |C2789 de erro do compilador|'*identificador*': um objeto do tipo qualificado como const deve ser inicializado|  
-|[Erro do compilador C2790](compiler-error-c2790.md)|'super': esta palavra-chave só pode ser usada dentro do corpo de função membro de classe|  
+|[Erro do compilador C2790](compiler-error-c2790.md)|'super': esta palavra-chave só pode ser usado no corpo da função de membro de classe|  
 |[Erro do compilador C2791](compiler-error-c2791.md)|Uso inválido de 'super': '*classe*' não tem nenhuma classe base|  
-|[Erro do compilador C2792](compiler-error-c2792.md)|'super': esta palavra-chave deve ser seguida por '::'|  
+|[Erro do compilador C2792](compiler-error-c2792.md)|'super': esta palavra-chave deve ser seguido por ':: '|  
 |[Erro do compilador C2793](compiler-error-c2793.md)|'*token*': token inesperado após ':: ', identificador ou palavra-chave 'operator' esperados|  
 |[Erro do compilador C2794](compiler-error-c2794.md)|'*identificador*': não é um membro de qualquer classe base direta ou indireta de '*classe*'|  
 |[Erro do compilador C2795](compiler-error-c2795.md)|' super::*identificador*' não é uma função de membro|  
-|C2796 de erro do compilador|'ref new' só pode ser usado para criar uma instância de um tipo de WinRT|  
+|C2796 de erro do compilador|'ref new' só pode ser usado para criar uma instância de um tipo WinRT|  
 |[Erro do compilador C2797](compiler-error-c2797.md)|(Obsoleto) '*identificador*': lista de inicializações dentro da lista de inicializador de membro ou inicializador de membro de dados não estático não está implementada.|  
 |[Erro do compilador C2798](compiler-error-c2798.md)|' super::*identificador*' é ambíguo|  
 |C2799 de erro do compilador|'*identificador*': um objeto do tipo de classe qualificado como const sem um construtor padrão fornecido pelo usuário deve ser inicializado|  
-

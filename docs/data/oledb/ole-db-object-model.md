@@ -1,80 +1,79 @@
 ---
-title: "Modelo de objeto do banco de dados OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, modelo de objeto"
-  - "conjuntos de linhas, modelo de objeto do OLE DB"
+title: Modelo de objeto do OLE DB | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rowsets, OLE DB object model
+- OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b91198d4280a271c775b7be79ecab3da7271fb57
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Modelo de objeto do banco de dados OLE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O modelo de objeto do OLE DB inclui os seguintes objetos ou componentes.  Os primeiros quatro objetos ou componentes listados \(fontes de dados, sessões, comandos, e conjuntos de linhas\) permitem que você se conectar a uma fonte de dados e exibi\-la.  O restante, a partir de acessadores, está relacionado ao trabalhar com os dados quando é exibido.  
+# <a name="ole-db-object-model"></a>Modelo de objeto do banco de dados OLE
+O modelo de objeto OLE DB inclui os seguintes objetos ou componentes. A primeira quatro objetos ou componentes listados (fontes de dados, sessões, comandos e conjuntos de linhas) permitem que você se conectar a uma fonte de dados e exibi-lo. O restante, começando com acessadores, referem-se para trabalhar com os dados quando ele for exibido.  
   
-## Fontes de dados  
- Os objetos de fonte de dados permitem que você se conectar a uma fonte de dados como um arquivo ou DBMS.  Um objeto de fonte de dados cria e gerencia a conexão e contém permissões e informações de autenticação \(como o nome e a senha de logon\).  Um objeto de fonte de dados pode criar uma ou mais sessões.  
+## <a name="data-sources"></a>Data Sources  
+ Objetos de fonte de dados permitem que você se conectar a uma fonte de dados como um arquivo ou DBMS. Um objeto de fonte de dados cria e gerencia a conexão e contém informações de permissões e as autenticações (por exemplo, nome de logon e senha). Um objeto de fonte de dados pode criar uma ou mais sessões.  
   
-## Sessões  
- Uma sessão específica gerencia uma interação com a fonte de dados para consultar e recuperar dados.  Cada sessão é uma única transação.  Uma transação é uma unidade de trabalho indivisível definida pelo teste ACID.  Para uma definição de ACID, consulte [Transações](#vcconoledbcomponents_transactions).  
+## <a name="sessions"></a>Sessões  
+ Uma sessão gerencia uma determinado interação com a fonte de dados para consultar e recuperar dados. Cada sessão é uma única transação. Uma transação é uma unidade indivisível trabalho definida pelo teste ACID. Para obter uma definição de ACID, consulte [transações](#vcconoledbcomponents_transactions).  
   
- As sessões executam tarefas importantes como conjuntos de linhas e retornar de abertura o objeto de fonte de dados que o criou.  As sessões também podem retornar metadados, ou informações sobre a fonte de dados em si \(como informações da tabela\).  
+ Sessões de realizar tarefas importantes como abrindo conjuntos de linhas e retornar o objeto de fonte de dados que o criou. Sessões também retornam metadados ou informações sobre a fonte de dados em si (como informações de tabela).  
   
  Uma sessão pode criar um ou mais comandos.  
   
-## Comandos  
- Os comandos executa um comando de texto como uma instrução SQL.  Se o comando de texto especifica um conjunto de linhas, como uma instrução SQL **SELECIONAR** , o comando cria o conjunto de linhas.  
+## <a name="commands"></a>Comandos  
+ Comandos de executar um comando de texto como uma instrução SQL. Se o comando de texto Especifica um conjunto de linhas, como um SQL **selecione** instrução, o comando cria o conjunto de linhas.  
   
- Um comando é apenas um contêiner para um comando de texto, que é uma cadeia de caracteres \(como uma instrução SQL\) transmitidas de um consumidor a um objeto de fonte de dados para execução pelo repositório de dados subjacente do provedor.  Normalmente, o comando de texto é uma instrução SQL **SELECIONAR** \(nesse caso, como o SQL **SELECIONAR** especifica um conjunto de linhas, o comando cria automaticamente um conjunto de linhas\).  
+ Um comando é simplesmente um contêiner para um comando de texto, que é uma cadeia de caracteres (como uma instrução SQL) transmitida de um consumidor de um objeto de fonte de dados para execução pelo armazenamento de dados subjacente do provedor. Normalmente, o comando de texto é um SQL **selecione** instrução (nesse caso, como SQL **selecione** Especifica um conjunto de linhas, o comando cria automaticamente um conjunto de linhas).  
   
-## Conjuntos de linhas  
- Expõem dados dos conjuntos de linhas no formato de tabela.  Um índice é um caso especial de um conjunto de linhas.  Você pode criar conjuntos de linhas da sessão ou do comando.  
+## <a name="rowsets"></a>Conjuntos de linhas  
+ Conjuntos de linhas exibem dados em formato tabular. Um índice é um caso especial de um conjunto de linhas. Você pode criar conjuntos de linhas de comando ou a sessão.  
   
-### Conjuntos de linhas de esquema  
- Os esquemas contêm metadados \(\) informações estruturais sobre um base de dados.  Conjuntos de linhas de esquema são conjuntos de linhas que contêm informações de esquema.  Alguns provedores OLE DB para o DBMS oferecem suporte a objetos de conjunto de linhas de esquema.  Para obter mais informações sobre conjuntos de linhas de esquema, consulte [Obtendo metadados com conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) e [Classes Rowset do esquema e Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md).  
+### <a name="schema-rowsets"></a>Conjuntos de linhas do esquema  
+ Os esquemas contêm metadados (informações estruturais) sobre um banco de dados. Conjuntos de linhas de esquema são conjuntos de linhas que contêm informações de esquema. Alguns provedores OLE DB para DBMS oferecem suporte a objetos de conjunto de linhas de esquema. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [obtendo metadados com conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) e [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
-### Objetos de exibição  
- Um objeto de exibição define um subconjunto de linhas e colunas de um conjunto de linhas.  Não contém nenhum dado de sua escolha.  Os objetos de exibição não podem combinar dados de vários conjuntos de linhas.  
+### <a name="view-objects"></a>Exibir objetos  
+ Um objeto de exibição define um subconjunto de linhas e colunas de um conjunto de linhas. Ele não contém dados de seu próprio. Objetos de exibição não é possível combinar dados de vários conjuntos de linhas.  
   
-## Acessadores  
- Somente OLE DB usa o conceito de acessadores.  Um acessador descreve como os dados são armazenados em um consumidor.  Contém um conjunto de associações \(chamadas um mapa de coluna\) entre os campos do conjunto de linhas \(colunas\) e os membros de dados que você declara no consumidor.  
+## <a name="accessors"></a>Acessadores  
+ Somente OLE DB usa o conceito de acessadores. Um acessador descreve como os dados são armazenados em um consumidor. Ele contém um conjunto de associações (chamado de um mapa de coluna) entre os membros de dados que você declare no consumidor e campos de conjunto de linhas (colunas).  
   
-##  <a name="vcconoledbcomponents_transactions"></a> Transações  
- Os objetos de transação são usados ao confirmar ou anular a transações aninhadas diferente no nível mais baixo.  Uma transação é uma unidade de trabalho indivisível definida pelo teste ACID.  O ACID representa:  
+##  <a name="vcconoledbcomponents_transactions"></a>Transações  
+ Objetos de transação são usados quando a confirmação ou anulação de transações aninhadas em que não seja o nível mais baixo. Uma transação é uma unidade indivisível trabalho definida pelo teste ACID. ACID significa:  
   
 -   Atomicidade: não pode ser dividido em unidades de trabalho menores.  
   
--   Simultaneidade: mais de uma transação pode ocorrer em cada vez.  
+-   Simultaneidade: mais de uma transação pode ocorrer por vez.  
   
--   Isolamento: uma transação limitou o conhecimento sobre as alterações feitas por outra.  
+-   Isolamento: uma transação limitou o conhecimento sobre as alterações feitas por outro.  
   
 -   Durabilidade: a transação faz alterações persistentes.  
   
-## Enumeradores  
- Os enumeradores a procura de fontes de dados disponíveis e por outros enumeradores.  Consumidores que não são personalizados para que os enumeradores específicos do uso da fonte de dados pesquisados por uma fonte de dados para usar.  
+## <a name="enumerators"></a>Enumeradores  
+ Enumeradores de pesquisa para fontes de dados disponíveis e outros enumeradores. Os consumidores que não são personalizados para uma determinada fonte de dados usam enumeradores para pesquisar uma fonte de dados para usar.  
   
- Um enumerador raiz, enviado no acesso a dados SDK do Microsoft, atravessa o Registro que procura fontes de dados e outros enumeradores.  Outros enumeradores atravessam o Registro ou a pesquisa de uma maneira específica do provedor.  
+ Um enumerador de raiz, fornecido com o SDK do Microsoft Data Access, atravessa o registro procurando fontes de dados e outros enumeradores. Outros enumeradores atravessam o registro ou a pesquisa de uma maneira específica do provedor.  
   
-## Erros  
- Qualquer interface em qualquer objeto OLE DB pode gerar erros.  Os erros contêm informações adicionais sobre um erro, incluindo um objeto personalizado opcional do erro.  Essa informação está contida em um HRESULT.  
+## <a name="errors"></a>Erros  
+ Qualquer interface em qualquer objeto de banco de dados OLE pode gerar erros. Erros de contenham informações adicionais sobre o erro, incluindo um objeto de erro personalizada opcional. Essas informações estão contidas em um HRESULT.  
   
-## Notificações  
- As notificações são usadas por grupos de consumidores de cooperação que compartilham um conjunto de linhas \(compartilhar onde significa que os consumidores será presumido trabalhar na mesma transação\).  As notificações permitem que os consumidores de cooperação que compartilham um conjunto de linhas a ser informado sobre ações no conjunto de linhas executado por seus pontos.  
+## <a name="notifications"></a>Notificações  
+ As notificações são usadas por grupos de consumidores cooperação compartilhamento de um conjunto de linhas (onde compartilhar significa que os consumidores devem estar trabalhando dentro da mesma transação). As notificações permitem cooperação consumidores de compartilhamento de um conjunto de linhas ser informado sobre as ações no conjunto de linhas executadas por seus colegas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)   
- [Visão geral da programação de banco de dados OLE](../../data/oledb/ole-db-programming-overview.md)
+ [Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)

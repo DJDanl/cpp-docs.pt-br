@@ -1,33 +1,30 @@
 ---
-title: "list::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inserir membro [STL/CLR]"
+title: 'List:: Insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 399ed30f-6b76-41a8-b180-6070e3ca1c68
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2a0fd1aad6b32de4f9232cbb7f7874255d1ecba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# list::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listinsert-stlclr"></a>list::insert (STL/CLR)
 Adiciona os elementos em uma posição especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 iterator insert(iterator where, value_type val);  
@@ -38,39 +35,39 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  count  
- Número de elementos a ser inserido.  
+ Número de elementos a inserir.  
   
  primeiro  
  Início do intervalo a ser inserido.  
   
  last  
- O fim do intervalo a ser inserido.  
+ Fim do intervalo a ser inserido.  
   
  direita  
- Enumeração o a ser inserido.  
+ Enumeração para inserir.  
   
- val  
+ Val  
  Valor do elemento a ser inserido.  
   
  onde  
- Onde no contêiner inserir antes.  
+ Onde no contêiner para inserir antes.  
   
-## Comentários  
- Cada uma das funções de membro, insere antes do elemento apontado por `where` na sequência controlada, uma sequência especificada pelos operandos restantes.  
+## <a name="remarks"></a>Comentários  
+ Cada membro funções inserções, antes do elemento apontada pelo `where` na sequência controlada, uma sequência especificado pelo operandos restantes.  
   
- A primeira função de membro insere um elemento com valor `val` e retorna um iterador que designa o elemento inserido recentemente.  Use\-a para inserir um único elemento antes de um local designado por um iterador.  
+ A primeira função de membro insere um elemento com o valor `val` e retorna um iterador que designa o elemento recentemente inserido. Você pode usá-lo para inserir um único elemento antes de um local designado por um iterador.  
   
- A segunda função de membro insere uma reprodução dos elementos de `count` de valor `val`.  Use\-a para inserir elementos zero ou mais contíguas que são todas as cópias do mesmo valor.  
+ A segunda função membro insere uma repetição de elementos `count` de valor `val`. Você pode usá-lo para inserir zero ou mais elementos contíguos que são todas as cópias do mesmo valor.  
   
- Se `InIt` é do tipo inteiro, a terceira função de membro se comportará da mesma maneira que `insert(``where``, (size_type)``first``, (value_type)``last``)`.  Se não, insere a sequência `[``first``,` `last``)`.  Use\-a para inserir elementos zero ou mais contíguos copiado de outra sequência.  
+ Se `InIt` for um tipo inteiro, a terceira função membro se comportará da mesma forma que `insert(where, (size_type)first, (value_type)last)`. Caso contrário, ele insere a sequência [`first`, `last`). Você pode usá-lo para inserir zero ou mais elementos contíguos copiados de outra sequência.  
   
- A quarta função de membro insere a sequência designada por `right`.  Use\-a para inserir uma sequência descrita por um enumerador.  
+ A função de membro quarta insere a sequência designada pelo `right`. Você pode usá-lo para inserir uma sequência descrita por um enumerador.  
   
- Ao inserir um único elemento, o número de cópias do elemento é linear no número de elementos entre o ponto de inserção e término mais próximo da sequência. \(Ao inserir um ou mais elementos em um ou outro fim de sequência, nenhuma cópia do elemento ocorre.\) Se `InIt` é um iterador de entrada, a terceira função de membro é efetivamente uma única inserção para cada elemento na sequência.  Caso contrário, ao inserir elementos de `N` , o número de cópias do elemento é linear em `N` mais o número de elementos entre o ponto de inserção e término mais próximo da sequência.  
+ Ao inserir um único elemento, o número de cópias do elemento é linear no número de elementos entre o ponto de inserção e a extremidade mais próximo da sequência. (Ao inserir um ou mais elementos em ambas as extremidades da sequência, nenhuma cópia do elemento ocorre). Se `InIt` é um iterador de entrada, a terceira função do membro efetivamente executa uma inserção única para cada elemento na sequência. Caso contrário, quando inserir `N` elementos, o número de cópias do elemento é linear em `N` mais o número de elementos entre o ponto de inserção e a extremidade mais próximo da sequência.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_list_insert.cpp   
@@ -131,17 +128,20 @@ int main()
   
 ```  
   
-  **um b c**  
-**insert\(begin\(\)\+1, L'x\) \= x**  
- **um x b c**  
- **y y**  
- **y um x y b**  
- **um x y b c um x y b**   
-## Requisitos  
- cliext \<\/lista de**Cabeçalho:** \>  
+```Output  
+ a b c  
+insert(begin()+1, L'x') = x  
+ a x b c  
+ y y  
+ y y a x b  
+ a x b c y y a x b  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)

@@ -1,52 +1,50 @@
 ---
-title: "Alterando a propriedade da legenda de v&#225;rias cadeias de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "edição de cadeia de caracteres, tabelas de cadeias de caracteres"
-  - "Editor de Cadeias de Caracteres, alterando propriedades de várias cadeias de caracteres"
-  - "tabelas de cadeias de caracteres, alterando legenda de várias cadeias de caracteres"
-  - "cadeias de caracteres [C++], alterando a propriedade de legenda de várias"
+title: "Alterando a propriedade de legenda de várias cadeias de caracteres | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- String editor, changing properties of multiple strings
+- strings [C++], changing caption property of multiple
+- string editing, string tables
+- string tables, changing caption of multiple strings
 ms.assetid: 82ac4389-fd9c-4794-a18f-c6bf5b253bd7
-caps.latest.revision: 12
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 75e32739cdf096ee1f27a53aa6258bf36c1de4e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Alterando a propriedade da legenda de v&#225;rias cadeias de caracteres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O procedimento a seguir mostra como alterar a propriedade caption de várias seqüências de caracteres.  
+# <a name="changing-the-caption-property-of-multiple-strings"></a>Alterando a propriedade da legenda de várias cadeias de caracteres
+O procedimento a seguir mostra como alterar a propriedade de legenda de várias cadeias de caracteres.  
   
-### Para alterar a propriedade caption de várias seqüências de caracteres  
+### <a name="to-change-the-caption-property-of-multiple-strings"></a>Para alterar a propriedade de legenda de várias cadeias de caracteres  
   
-1.  Abra a tabela de cadeia de caracteres clicando duas vezes no ícone correspondente na  [Exibição de recurso](../windows/resource-view-window.md).  
+1.  Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição recursos](../windows/resource-view-window.md).  
   
-     **Nota** se o seu projeto já não contém um arquivo. rc, consulte  [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+     **Observação** se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selecione as seqüências de caracteres que você deseja alterar, mantendo pressionada a  **CTRL** chave enquanto clica em cada uma delas.  
+2.  Selecione as cadeias de caracteres que você deseja alterar, mantendo o **CTRL** da chave que você clica em cada um deles.  
   
-3.  No  [Janela Propriedades do](../Topic/Properties%20Window.md), digite um novo valor para a propriedade que você deseja alterar.  
+3.  No [janela propriedades](/visualstudio/ide/reference/properties-window), digite um novo valor para a propriedade que você deseja alterar.  
   
 4.  Pressione **ENTER**.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados \(aquelas que visam common language runtime\), consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados (aquelas que se destinam a common language runtime), consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisitos**  
   
  Win32  
   
-## Consulte também  
- [Editor de Cadeia de Caracteres](../mfc/string-editor.md)   
- [Seqüências de caracteres](_win32_Strings)   
- [sobre seqüências de caracteres](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Consulte também  
+ [Editor de cadeias de caracteres](../windows/string-editor.md)   
+

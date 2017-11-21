@@ -1,49 +1,31 @@
 ---
-title: Classe improper_scheduler_detach | Documentos do Microsoft
+title: Classe improper_scheduler_detach | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - improper_scheduler_detach
 - CONCRT/concurrency::improper_scheduler_detach
 - CONCRT/concurrency::improper_scheduler_detach::improper_scheduler_detach
-dev_langs:
-- C++
-helpviewer_keywords:
-- improper_scheduler_detach class
+dev_langs: C++
+helpviewer_keywords: improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 0975354279c2a7e35524890498d9d7ebab1c18d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 81d4f0169c598c9321166ae952e1f594202781d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="improperschedulerdetach-class"></a>Classe improper_scheduler_detach
-Esta classe descreve uma exceção gerada quando o `CurrentScheduler::Detach` método for chamado em um contexto que não foi anexado a qualquer Agendador usando o `Attach` método de um `Scheduler` objeto.  
+Esta classe descreve uma exceção gerada quando o `CurrentScheduler::Detach` método for chamado em um contexto que não tenha sido anexado ao Agendador de usando o `Attach` método de um `Scheduler` objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,4 +68,3 @@ improper_scheduler_detach() throw();
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe Scheduler](scheduler-class.md)
-

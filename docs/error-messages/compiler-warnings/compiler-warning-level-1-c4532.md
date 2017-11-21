@@ -1,47 +1,28 @@
 ---
-title: "Compilador aviso (nível 1) C4532 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4532 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4532
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4532
+f1_keywords: C4532
+dev_langs: C++
+helpviewer_keywords: C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7a188878267ce6889106183fd1bf9db3533134f0
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 5cec2f70dfa6781c237cc1c08079904c7b48e171
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4532"></a>Compilador C4532 de aviso (nível 1)
-'continue': Finally/bloco finally de saída tem um comportamento indefinido durante a manipulação de término  
+'continue': salto para fora de Finally/bloco finally possui comportamento indefinido durante manipulação de encerramento  
   
  O compilador encontrou uma das seguintes palavras-chave:  
   
@@ -51,11 +32,11 @@ ms.lasthandoff: 02/25/2017
   
 -   [goto](../../cpp/goto-statement-cpp.md)  
   
- causando um salto de um [Finally](../../cpp/try-finally-statement.md) ou [finalmente](../../dotnet/finally.md) bloco durante o encerramento anormal.  
+ fazendo com que um salto de um [Finally](../../cpp/try-finally-statement.md) ou [finalmente](../../dotnet/finally.md) bloco durante o encerramento anormal.  
   
- Se ocorrer uma exceção, e enquanto a pilha está sendo desenrolada durante a execução de manipuladores de terminação (o `__finally` ou blocos finally), e seu código ignora uma `__finally` bloquear antes do `__finally` bloco termina, o comportamento é indefinido. Controle pode não retornar para o código de desenrolamento, para que a exceção não pode ser tratada adequadamente.  
+ Se ocorrer uma exceção, e enquanto está sendo retornou a pilha durante a execução dos manipuladores de encerramento (o `__finally` ou blocos finally), e seu código vai fora de um `__finally` bloquear antes do `__finally` bloco termina, o comportamento será indefinido. Controle não pode retornar para o código de desenrolamento para a exceção não pode ser tratada corretamente.  
   
- Se você deve ignorar um **Finally** bloco, verifique primeiro para encerramento anormal.  
+ Se você deve ir de um **Finally** bloquear, procure o encerramento anormal primeiro.  
   
  O exemplo a seguir gera C4532; Comente simplesmente as instruções de salto para resolver os avisos.  
   

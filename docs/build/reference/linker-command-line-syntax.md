@@ -1,47 +1,46 @@
 ---
-title: "Sintaxe da linha de comando do vinculador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ferramenta LINK [C++], sintaxe de linha de comando"
-  - "vinculador [C++], sintaxe"
-  - "linha de comando de vinculador [C++]"
+title: Sintaxe de linha de comando do vinculador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], syntax
+- linker command line [C++]
+- LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 905ef180c2212e2efd708bb795162627b60ced79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Sintaxe da linha de comando do vinculador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para executar LINK.EXE, use a seguinte sintaxe de comando:  
+# <a name="linker-command-line-syntax"></a>Sintaxe da linha de comando do vinculador
+Para executar o LINK. EXE, use a seguinte sintaxe de comando:  
   
 ```  
 LINK arguments  
 ```  
   
- `arguments` inclui opções e nomes de arquivo e pode ser especificado em qualquer ordem.  As opções são processadas primeiro, depois arquivos.  Use um ou mais espaços ou guias para separar argumentos.  
+ O `arguments` incluem opções e nomes de arquivo e podem ser especificados em qualquer ordem. Opções são processados e, depois, arquivos. Use um ou mais espaços ou guias para separar os argumentos.  
   
 > [!NOTE]
->  É possível iniciar esta ferramenta somente usando o prompt de comando [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  Não é possível iniciá\-lo a partir de um prompt de comando do sistema ou do gerenciador de arquivos.  
+>  Você pode iniciar essa ferramenta apenas o [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] prompt de comando. Você não pode iniciá-lo em um prompt de comando do sistema ou no Explorador de arquivos.  
   
- Na linha de comando, uma opção consiste em um especificador da opção, um traço \(–\) ou uma barra \(\/\), seguida pelo nome da opção.  Os nomes de opção não podem ser abreviados.  Algumas opções possuem um argumento especificado, depois de dois\-pontos \(:\).  Nenhum espaço ou a guia são permitidos em uma especificação da opção, exceto em uma cadeia de caracteres entre aspas na opção do \/COMMENT.  Especificar argumentos numéricos em notação decimal do ou do C \- idioma.  Os nomes da opção e seus argumentos da palavra\-chave ou o nome do arquivo não está com diferenciação de maiúsculas e minúsculas, mas identificadores como os argumentos diferenciam maiúsculas de minúsculas.  
+ Na linha de comando, uma opção consiste em um especificador de opção, um traço (-) ou uma barra invertida (/), seguido do nome da opção. Nomes de opção não podem ser abreviados. Algumas opções têm um argumento, especificado após dois-pontos (:). Nenhum tabulações ou espaços são permitidas dentro de uma especificação de opção, exceto dentro de uma cadeia de caracteres entre aspas na opção /COMMENT. Especifica argumentos numéricos em decimal ou notação de linguagem C. Os nomes de opções e seus argumentos de palavra-chave ou nome de arquivo não diferenciam maiusculas de minúsculas, mas identificadores como argumentos diferenciam maiusculas de minúsculas.  
   
- Para transmitir um arquivo ao vinculador, especifique o nome de arquivo na linha de comando depois que o comando de LINK.  Você pode especificar um caminho relativo ou absoluto um com o nome do arquivo, e você pode usar curingas o nome do arquivo.  Se você omitir a extensão do ponto \(.\) e nome de arquivo, o LINK assume .obj com a finalidade de localizar o arquivo.  O LINK não usa extensões de nome de arquivo ou a falta delass para fazer suposições sobre o conteúdo dos arquivos; determina o tipo de arquivo por meio do exame do, e o processa de acordo.  
+ Para transmitir um arquivo para o vinculador, especifique o nome do arquivo na linha de comando após o comando LINK. Você pode especificar um caminho absoluto ou relativo com o nome do arquivo, e você pode usar curingas no nome de arquivo. Se você omitir a extensão de nome de arquivo e o ponto (.), o LINK pressupõe. obj com a finalidade de localizar o arquivo. LINK não usa extensões de nome de arquivo ou à falta de-los de fazer suposições sobre o conteúdo de arquivos; ele determina o tipo de arquivo por examiná-lo e processa de acordo.  
   
- link.exe retorna zero para o êxito \(nenhum erro\).  Caso contrário, o vinculador retorna o número do erro que interrompeu o link.  Por exemplo, se o vinculador gerenciar LNK1104, o vinculador retorna 1104.  Consequentemente, o número mais baixo de erro retornado em um erro pelo vinculador é 1000.  Um valor de retorno 128 representa um problema de configuração com o sistema operacional ou um arquivo de .config; o carregador não foi carregado link.exe ou c2.dll.  
+ link.exe retorna zero para o sucesso (sem erros).  Caso contrário, o vinculador retorna o número do erro que interrompeu o link.  Por exemplo, se o vinculador gere LNK1104, o vinculador retorna 1104.  Da mesma forma, o menor número do erro retornado em um erro pelo vinculador é 1000.  Um valor de retorno de 128 representa um problema de configuração com o sistema operacional ou um arquivo. config. o carregador não carrega link.exe ou c2.dll.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

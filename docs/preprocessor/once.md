@@ -1,36 +1,34 @@
 ---
-title: "once | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.once"
-  - "once_CPP"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "pragma once"
-  - "pragmas, once"
+title: Depois de | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.once
+- once_CPP
+dev_langs: C++
+helpviewer_keywords:
+- once pragma
+- pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b4a509ee99acef2510424995569da297c5d6f971
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# once
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica que o arquivo será incluído \(aberto\) apenas uma vez pelo compilador ao compilar um arquivo de código\-fonte.  
+# <a name="once"></a>uma vez
+Especifica que o arquivo será incluído (aberto) apenas uma vez pelo compilador ao compilar um arquivo de código-fonte.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,8 +36,8 @@ Especifica que o arquivo será incluído \(aberto\) apenas uma vez pelo compilad
   
 ```  
   
-## Comentários  
- O uso de `#pragma once` pode reduzir os tempos de compilação, o compilador não abrirá e lerá o arquivo após o primeiro \#include do arquivo na unidade de tradução.  Isso é conhecido como *otimização de incluir várias*.  Ele tem um efeito semelhante para o *\#include guard* linguagem, que usa as definições de macro de pré\-processador para impedir que vários inclusão de conteúdo do arquivo.  Isso também ajuda a impedir violações de *regra de definição de um*— o requisito de que todos os modelos, tipos, funções e objetos têm mais de uma definição em seu código.  
+## <a name="remarks"></a>Comentários  
+ O uso de `#pragma once` pode reduzir os tempos de compilação, o compilador não abrir e ler o arquivo após a primeira #include do arquivo na unidade de tradução. Isso é conhecido como *otimização de incluir vários*. Ele tem um efeito semelhante para o *#include guard* idioma, que usa as definições de macro de pré-processador para impedir que vários inclusão do conteúdo do arquivo. Isso também ajuda a impedir violações de *regra de definição de um*— o requisito de que todos os modelos, tipos, funções e objetos tem não mais de uma definição em seu código.  
   
  Por exemplo:  
   
@@ -50,9 +48,9 @@ Especifica que o arquivo será incluído \(aberto\) apenas uma vez pelo compilad
   
 ```  
   
- Recomendamos a `#pragma once` diretiva para o novo código porque ele não poluir o namespace global com um símbolo do pré\-processador.  Ele requer menos digitação, é menos distração e não pode provocar colisões de símbolo — erros causados quando os arquivos de cabeçalho diferente usam o símbolo do pré\-processador mesmo como o valor de proteção.  Não é parte do padrão C\+\+, mas é implementado portably por diversos compiladores comuns.  
+ É recomendável a `#pragma once` diretiva para o novo código porque ele não poluir o namespace global com um símbolo do pré-processador. Ele requer menos digitação, menos causa uma distração e não pode causar colisões de símbolo — erros causados quando os arquivos de cabeçalho diferente de usam o símbolo do pré-processador mesmo como o valor de proteção. Não é parte do C++ padrão, mas é implementado portably por alguns compiladores comuns.  
   
- Não há nenhuma vantagem em usar tanto o \#include protetor de linguagem e `#pragma once` no mesmo arquivo.  O compilador reconhece o \#include protetor de linguagem e implementa o múltiplo incluem a otimização da mesma forma que o `#pragma once` diretiva se nenhum código sem comentário ou diretiva de pré\-processador vem antes ou depois da forma padrão da linguagem:  
+ Não há nenhuma vantagem em usar tanto o #include protetor de idioma e `#pragma once` no mesmo arquivo. O compilador reconhece o #include protetor de idioma e implementa o múltiplo incluem otimização da mesma forma que o `#pragma once` diretiva se nenhum código de comentário não ou diretiva de pré-processador vem antes ou depois do formulário padrão do idioma:  
   
 ```  
 // header.h  
@@ -65,9 +63,9 @@ Especifica que o arquivo será incluído \(aberto\) apenas uma vez pelo compilad
   
 ```  
   
- Recomendamos o \#include protetor de linguagem ao código deve ser portáteis para compiladores que não implementam a `#pragma once` diretiva para manter a consistência com o código existente, ou quando a incluir vários otimização é impossível.  Isso pode ocorrer em projetos complexos ao alias de sistema de arquivos ou um alias incluir caminhos prevenir que o compilador identifica idêntico incluir arquivos pelo caminho canônico.  
+ É recomendável a #include protetor idioma ao código deve ser portáteis para compiladores que não implementam a `#pragma once` diretiva, para manter a consistência com o código existente, ou quando a incluir vários otimização é impossível. Isso pode ocorrer em projetos complexos ao alias de sistema de arquivo ou um alias incluir caminhos impedem o compilador de identificar idêntico incluir arquivos pelo caminho canônico.  
   
- Tenha cuidado para não usar `#pragma once` ou \#include protetor de idioma em arquivos de cabeçalho que são projetados para ser incluída várias vezes, usando símbolos de pré\-processador para controlar seus efeitos.  Para obter um exemplo desse design, consulte o arquivo de cabeçalho \< Assert. h \>.  Também ser cuidadoso ao gerenciar incluir caminhos para evitar a criação de vários caminhos para arquivos incluídos, que podem anular a incluir vários de otimização para ambos \#include protege e `#pragma once`.  
+ Tenha cuidado para não usar `#pragma once` ou #include protetor de idioma em arquivos de cabeçalho que são projetados para ser incluída várias vezes, usando símbolos de pré-processamento para controlar seus efeitos. Para obter um exemplo desse design, consulte o \<assert.h > arquivo de cabeçalho. Além disso, tenha cuidado para gerenciar incluir caminhos para evitar a criação de vários caminhos para arquivos incluídos, que podem anular a incluir vários de otimização para ambos #include protege e `#pragma once`.  
   
-## Consulte também  
- [Diretivas Pragma e a palavra\-chave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

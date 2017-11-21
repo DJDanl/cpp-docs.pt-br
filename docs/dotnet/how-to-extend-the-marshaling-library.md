@@ -1,51 +1,49 @@
 ---
-title: "Como estender a biblioteca de marshaling | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Realizando Marshaling em Biblioteca, estendendo"
+title: 'Como: estender a biblioteca de Marshaling | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords: Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3133a8329dac0e20eeb5c3b3c8141e15a65aefe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como estender a biblioteca de marshaling
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico explica como estender a biblioteca marshaling para fornecer mais conversões entre tipos de dados.  Os usuários podem estender a biblioteca marshaling para todas as conversões de dados com suporte não atualmente pela biblioteca.  
+# <a name="how-to-extend-the-marshaling-library"></a>Como estender a biblioteca de marshaling
+Este tópico explica como estender a biblioteca de marshaling para fornecer mais conversões entre tipos de dados. Os usuários podem estender a biblioteca de marshaling para qualquer conversões de dados sem suporte no momento da biblioteca.  
   
- Você pode estender a biblioteca marshaling de uma de duas maneiras \- com ou sem [Classe marshal\_context](../dotnet/marshal-context-class.md).  Examine o tópico de [Visão geral de marshaling no C\+\+](../dotnet/overview-of-marshaling-in-cpp.md) para determinar se uma nova conversão requer um contexto.  
+ Você pode estender a biblioteca de marshaling de uma das duas maneiras - com ou sem um [classe marshal_context](../dotnet/marshal-context-class.md). Examine o [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md) tópico para determinar se uma nova conversão requer um contexto.  
   
- Em ambos os casos, você cria primeiro um arquivo para novos conversões marshaling.  Você faz isso para preservar a integridade dos arquivos de biblioteca marshaling padrão.  Se você quiser mover um projeto para outro computador ou a outro programador, você deve copiar o novo arquivo marshaling junto com o restante do projeto.  Assim, o usuário que recebe o projeto será garantida para receber novas conversões e não precisará modificar os arquivos de biblioteca.  
+ Em ambos os casos, você primeiro crie um arquivo para conversões de marshaling de novo. Faça isso para preservar a integridade dos arquivos de biblioteca de marshaling padrão. Se você quiser um projeto para outro computador ou para outro programador de porta, você deve copiar o arquivo de marshaling novo junto com o restante do projeto. Dessa maneira, o usuário que recebe o projeto será garantido para receber as conversões de novo e não será necessário modificar os arquivos de biblioteca.  
   
-### Para estender a biblioteca Marshaling com uma conversão que não requer um contexto  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Para estender a biblioteca de Marshaling de uma conversão que não requer um contexto  
   
-1.  Crie um arquivo para armazenar as novas funções marshaling, por exemplo, MyMarshal.h.  
+1.  Crie um arquivo para armazenar as novas funções de empacotamento, por exemplo, MyMarshal.h.  
   
-2.  Contém um ou mais dos arquivos de biblioteca de marshaling:  
+2.  Inclua um ou mais dos arquivos de biblioteca de marshaling:  
   
-    -   marshal.h para tipos de base.  
+    -   Marshal.h para tipos de base.  
   
-    -   marshal\_windows.h para tipos de dados do windows.  
+    -   marshal_windows.h para tipos de dados do windows.  
   
-    -   marshal\_cppstd.h para tipos de dados STL.  
+    -   marshal_cppstd.h para tipos de dados de biblioteca padrão C++.  
   
-    -   marshal\_atl.h para tipos de dados de ATL.  
+    -   marshal_atl.h ATL para tipos de dados.  
   
-3.  Use o código na extremidade dessas etapas para gravar a função de conversão.  Neste código, EXCEPT é o tipo para converter em, FROM é o tipo à conversão de, e `from` é o parâmetro a ser convertido.  
+3.  Use o código no final dessas etapas para gravar a função de conversão. Nesse código, para o tipo para converter, FROM é o tipo para converter de, e `from` é o parâmetro a ser convertido.  
   
-4.  Substitua o comentário sobre a lógica de conversão com o código para converter o parâmetro de `from` em um objeto de digitar o e para retornar o objeto convertido.  
+4.  Substitua o comentário sobre a lógica de conversão com o código para converter o `from` parâmetro em um objeto de TO tipo e retornam o objeto convertido.  
   
 ```  
 namespace msclr {  
@@ -58,29 +56,29 @@ namespace msclr {
 }  
 ```  
   
-### Para estender a biblioteca Marshaling com uma conversão que requer um contexto  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Para estender a biblioteca de Marshaling com uma conversão que requer um contexto  
   
-1.  Crie um arquivo para armazenar as novas funções marshaling, por exemplo, MyMarshal.h  
+1.  Criar um arquivo para armazenar as novas funções de empacotamento, por exemplo, MyMarshal.h  
   
-2.  Contém um ou mais dos arquivos de biblioteca de marshaling:  
+2.  Inclua um ou mais dos arquivos de biblioteca de marshaling:  
   
-    -   marshal.h para tipos de base.  
+    -   Marshal.h para tipos de base.  
   
-    -   marshal\_windows.h para tipos de dados do windows.  
+    -   marshal_windows.h para tipos de dados do windows.  
   
-    -   marshal\_cppstd.h para tipos de dados STL.  
+    -   marshal_cppstd.h para tipos de dados de biblioteca padrão C++.  
   
-    -   marshal\_atl.h para tipos de dados de ATL.  
+    -   marshal_atl.h ATL para tipos de dados.  
   
-3.  Use o código na extremidade dessas etapas para gravar a função de conversão.  Neste código, EXCEPT é o tipo para converter em, FROM é o tipo à conversão de, `toObject` é um ponteiro na qual armazenar o resultado e, em `fromObject` é o parâmetro a ser convertido.  
+3.  Use o código no final dessas etapas para gravar a função de conversão. Nesse código, para o tipo para converter, FROM é o tipo para converter de, `toObject` é um ponteiro para armazenar o resultado e `fromObject` é o parâmetro a ser convertido.  
   
-4.  Substitua o comentário sobre inicializar com o código para inicializar `toPtr` para o apropriado vazia o valor.  Por exemplo, se é um ponteiro, defina\-o como `NULL`.  
+4.  Substitua o comentário sobre a inicialização com o código para inicializar o `toPtr` para o valor vazio apropriado. Por exemplo, se for um ponteiro, defina-o `NULL`.  
   
-5.  Substitua o comentário sobre a lógica de conversão com o código para converter o parâmetro de `from` em um objeto de tipo de *TO* .  Esse objeto convertido será armazenado em `toPtr`.  
+5.  Substitua o comentário sobre a lógica de conversão com o código para converter o `from` parâmetro em um objeto de *TO* tipo. Este objeto convertido será armazenado no `toPtr`.  
   
-6.  Substitua o comentário sobre como definir `toObject` com o código para definir `toObject` ao objeto convertido.  
+6.  Substitua o comentário sobre a configuração de `toObject` com o código para definir `toObject` para seu objeto convertido.  
   
-7.  Substitua o comentário sobre limpar recursos nativos com o código para liberar toda a memória alocada por `toPtr`.  Se `toPtr` alocou a memória usando `new`, use `delete` para liberar a memória.  
+7.  Substitua o comentário sobre limpeza de recursos nativos com o código para liberar a memória alocada por qualquer `toPtr`. Se `toPtr` memória alocada usando `new`, use `delete` para liberar a memória.  
   
 ```  
 namespace msclr {  
@@ -111,8 +109,8 @@ namespace msclr {
 }   
 ```  
   
-## Exemplo  
- O exemplo a seguir estende a biblioteca marshaling com uma conversão que não requer um contexto.  Neste exemplo, o código a seguir converte a informações de funcionários de um tipo de dados nativo para um tipo de dados gerenciados.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir estende a biblioteca de marshaling com uma conversão que não requer um contexto. Neste exemplo, o código converte as informações de funcionário de um tipo de dados nativo para um tipo de dados gerenciado.  
   
 ```  
 // MyMarshalNoContext.cpp  
@@ -164,13 +162,16 @@ int main() {
 }  
 ```  
   
- No exemplo anterior, a função de `marshal_as` retorna um identificador para os dados convertidos.  Isso é feito para evitar a criação de uma cópia adicional dos dados.  Retornar a variável diretamente teria um custo de desempenho desnecessário associado a ela.  
+ No exemplo anterior, o `marshal_as` função retorna um identificador para os dados convertidos. Isso foi feito para evitar a criação de uma cópia adicional dos dados. Retornando a variável diretamente seria um custo de desempenho desnecessários associou com ele.  
   
-  **Nome gerenciada: Jeff Smith**  
-**Endereço gerenciada: 123 Main street**  
-**Código postal gerenciada: 98111**   
-## Exemplo  
- O exemplo a seguir converte informações de funcionários de um tipo de dados gerenciado em um tipo de dados nativo.  Essa conversão requer um contexto marshaling.  
+```Output  
+Managed name: Jeff Smith  
+Managed address: 123 Main Street  
+Managed zip code: 98111  
+```  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir converte as informações de funcionário de um tipo de dados gerenciados em um tipo de dados nativos. Essa conversão requer um contexto de marshaling.  
   
 ```  
 // MyMarshalContext.cpp  
@@ -264,8 +265,11 @@ int main() {
 }  
 ```  
   
-  **Nome nativo: Jeff Smith**  
-**Endereço nativo: 123 Main street**  
-**Código postal nativo: 98111**   
-## Consulte também  
- [Visão geral de marshaling no C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)
+```Output  
+Native name: Jeff Smith  
+Native address: 123 Main Street  
+Native zip code: 98111  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Visão geral de marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md)

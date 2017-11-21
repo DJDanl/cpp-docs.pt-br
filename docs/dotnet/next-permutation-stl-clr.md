@@ -1,33 +1,30 @@
 ---
-title: "next_permutation (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::next_permutation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função next_permutation [STL/CLR]"
+title: next_permutation (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::next_permutation
+dev_langs: C++
+helpviewer_keywords: next_permutation function [STL/CLR]
 ms.assetid: e36e821f-4b8d-461b-8074-69cd0175ccec
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 073aef1aa8e18ecbefe0c0816785c4f67af84244
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# next_permutation (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Reorganiza os elementos em um intervalo de forma que a ordenação de original seja substituído pela permutação maior lexicographically seguir se existir, onde o sentido de em seguida pode ser especificado com um predicado binário.  
+# <a name="nextpermutation-stlclr"></a>next_permutation (STL/CLR)
+Reordena os elementos em um intervalo para que a ordenação original seja substituída pela próxima permutação lexicograficamente maior, se ela existir, em que o sentido de próxima pode ser especificado com um predicado binário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _BidIt> inline  
@@ -36,13 +33,13 @@ template<class _BidIt, class _Pr> inline
     bool next_permutation(_BidIt _First, _BidIt _Last, _Pr _Pred);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `next_permutation`STL.  Para obter mais informações, consulte [next\_permutation](../Topic/next_permutation.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `next_permutation`. Para obter mais informações, consulte [next_permutation](../standard-library/algorithm-functions.md#next_permutation).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

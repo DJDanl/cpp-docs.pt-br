@@ -1,37 +1,35 @@
 ---
-title: "IRowsetLocateImpl::GetRowsAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetRowsAt"
-  - "IRowsetLocateImpl.GetRowsAt"
-  - "ATL::IRowsetLocateImpl::GetRowsAt"
-  - "IRowsetLocateImpl::GetRowsAt"
-  - "ATL.IRowsetLocateImpl.GetRowsAt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetRowsAt"
+title: 'Irowsetlocateimpl:: Getrowsat | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetRowsAt
+- IRowsetLocateImpl.GetRowsAt
+- ATL::IRowsetLocateImpl::GetRowsAt
+- IRowsetLocateImpl::GetRowsAt
+- ATL.IRowsetLocateImpl.GetRowsAt
+dev_langs: C++
+helpviewer_keywords: GetRowsAt method
 ms.assetid: 6aeb09dc-3aa8-4729-97a8-144dd27063f7
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: facb6498d38c05d513b08016b85865438174ed5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::GetRowsAt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Buscar linhas iniciar com a linha especificada por um deslocamento de um indicador.  
+# <a name="irowsetlocateimplgetrowsat"></a>IRowsetLocateImpl::GetRowsAt
+Busca de linhas que começam com a linha especificada por um deslocamento de um indicador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -47,17 +45,17 @@ Buscar linhas iniciar com a linha especificada por um deslocamento de um indicad
 );  
 ```  
   
-#### Parâmetros  
- Consulte [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)*na referência do programador de OLE DB*.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [irowsetlocate:: Getrowsat](https://msdn.microsoft.com/en-us/library/ms723031.aspx) no *referência do programador de OLE DB*.  
   
-## Comentários  
- Para buscar em vez da posição do cursor, use [IRowset::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx).  
+## <a name="remarks"></a>Comentários  
+ Para buscar da posição do cursor em vez disso, use [IRowset::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx).  
   
- `IRowsetLocateImpl::GetRowsAt` não altera a posição do cursor.  
+ `IRowsetLocateImpl::GetRowsAt`Não altere a posição do cursor.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)   
  [IRowsetLocateImpl::GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)

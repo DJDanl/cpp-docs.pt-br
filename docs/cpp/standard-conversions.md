@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 A linguagem C++ define conversões entre seus tipos básicos. Ela também define conversões para o ponteiro, referência e tipos derivados de ponteiro ao membro. Essas conversões são chamadas de “conversões padrão”. (Para obter mais informações sobre tipos, os tipos padrão e tipos derivados, consulte [tipos](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -80,11 +77,11 @@ long_num2 = int_num * long_num2;
   
  As promoções de preservação de valores e as promoções que preservam o signedness normalmente geram os mesmos resultados. Porém, elas poderão gerar resultados diferentes se o objeto promovido for um dos seguintes:  
   
--   Um operando de ** / **, `%`, `/=`, `%=`, ** < **, ** \< = **, ** > **, ou**>=**  
+-   Um operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , ou**>=**  
   
      Esses operadores dependem do sinal para determinar o resultado. Portanto, as promoções de preservação de valores e de sinais geram resultados diferentes quando aplicadas a esses operandos.  
   
--   O operando esquerdo da ** >> ** ou**>>=**  
+-   O operando esquerdo da  **>>**  ou**>>=**  
   
      Esses operadores tratam quantidades assinadas e não assinadas de maneiras diferentes ao executar uma operação de alternância. Para quantidades assinadas, alternar uma quantidade para a direita faz com que o bit de sinal seja propagado para posições de bits vagas. Para quantidades não assinadas, as posições de bit vagas são preenchidas com zeros.  
   
@@ -253,12 +250,12 @@ int main()
  O ponteiro `pA` é do tipo `A *`, o que pode ser interpretado como “ponteiro para um objeto do tipo `A`”. Membros de `bObject` `(`como `BComponent` e `BMemberFunc`) são exclusivos para o tipo `B` e, portanto, não estão acessíveis por meio de `pA`. O ponteiro `pA` permite acesso somente às características (funções membro e dados) do objeto que são definidas na classe `A`.  
   
 ### <a name="pointer-to-function"></a>Ponteiro para função  
- Um ponteiro para uma função pode ser convertido no tipo **void \* **, se tipo **void \* ** é grande o suficiente para manter esse ponteiro.  
+ Um ponteiro para uma função pode ser convertido no tipo **void \*** , se tipo **void \***  é grande o suficiente para manter esse ponteiro.  
   
 ### <a name="pointer-to-void"></a>Ponteiro para void  
  Os ponteiros para o tipo `void` podem ser convertidos em ponteiros para qualquer outro tipo, mas apenas com uma conversão de tipos explícita (diferente do que ocorrem em C). (Consulte [expressões com conversões de tipo explícitas](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obter mais informações sobre conversões de tipo.) Um ponteiro para qualquer tipo pode ser convertido implicitamente em um ponteiro para o tipo `void`. Um ponteiro para um objeto incompleto de um tipo possa ser convertido em um ponteiro para `void` (implicitamente) e faça (explicitamente). O resultado dessa conversão é igual ao valor do ponteiro original. Um objeto é considerado incompleto se for declarado, mas informações disponíveis o suficiente para determinar seu tamanho ou a classe base.  
   
- Um ponteiro para qualquer objeto que não seja **const** ou `volatile` pode ser convertido implicitamente em um ponteiro de tipo **void \* **.  
+ Um ponteiro para qualquer objeto que não seja **const** ou `volatile` pode ser convertido implicitamente em um ponteiro de tipo **void \*** .  
   
 ### <a name="const-and-volatile-pointers"></a>ponteiros const e volatile  
  C++ não fornece uma conversão padrão de um **const** ou `volatile` tipo em um tipo que não seja **const** ou `volatile`. No entanto, qualquer tipo de conversão pode ser especificado usando as conversões de tipos explícitas (inclusive as conversões que não são seguras).  

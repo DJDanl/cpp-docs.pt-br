@@ -1,64 +1,62 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtss2si intrínseco"
-  - "_mm_cvtss_si64x intrínseco"
+title: _mm_cvtss_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 19d39aa8219321e372a2cd8b669c83b606646122
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+**Seção específica da Microsoft**  
   
- Gera o [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] versão estendida do converter Scalar única precisão flutuante ponto número para um inteiro de 64 bits \(`cvtss2si`\) instrução.  
+ Gera o [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] versão estendida da converter escalar única precisão número de ponto flutuante para inteiros de 64 bits (`cvtss2si`) instrução.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`value`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `value`  
  Um `__m128` estrutura que contém valores de ponto flutuante.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Um inteiro de 64 bits, o resultado da conversão do primeiro valor de ponto flutuante para um inteiro.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
+|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- O primeiro elemento de valor estrutura é convertido para um inteiro e retornado.  Os bits de controle de arredondamento em MXCSR são usados para determinar o comportamento de arredondamento.  O padrão arredondamento modo é arredondado para mais próximo, se a parte decimal é 0,5 o arredondamento para o número par.  Porque o `__m128` estrutura representa um registro XMM neste intrínseco leva um valor do registro XMM e grava\-memória do sistema.  
+## <a name="remarks"></a>Comentários  
+ O primeiro elemento do valor de estrutura é convertido em um número inteiro e retornado. Os bits de controle de arredondamento em MXCSR são usados para determinar o comportamento de arredondamento. O modo de arredondamento o padrão é round para mais próximo, arredondar para o número par se a parte decimal é 0,5. Porque o `__m128` estrutura representa um registro XMM, usa esse intrínseco um valor do registro XMM e grava-memória do sistema.  
   
- Esta rotina só está disponível como um intrínseco.  
+ Essa rotina só está disponível como função intrínseca.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -88,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## END Microsoft específicos  
+```Output  
+101  
+```  
   
-## Consulte também  
- [\_\_m128d](../cpp/m128d.md)   
+**Fim da seção específica da Microsoft**  
+  
+## <a name="see-also"></a>Consulte também  
+ [__m128d](../cpp/m128d.md)   
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

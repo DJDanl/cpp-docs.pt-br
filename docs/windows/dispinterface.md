@@ -1,33 +1,30 @@
 ---
-title: "dispinterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.dispinterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributo dispinterface"
+title: dispinterface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.dispinterface
+dev_langs: C++
+helpviewer_keywords: dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e52d050b9b05ccb72969c531297367e729c258b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# dispinterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dispinterface"></a>dispinterface
 Coloca uma interface no arquivo. idl como uma interface de expedição.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,10 +32,10 @@ Coloca uma interface no arquivo. idl como uma interface de expedição.
   
 ```  
   
-## Comentários  
- Quando o **dispinterface** atributo C\+\+ precede uma interface, ele faz com que a interface a ser colocado dentro do bloco de biblioteca no arquivo. idl gerado.  
+## <a name="remarks"></a>Comentários  
+ Quando o **dispinterface** atributo C++ precede uma interface, ele faz com que a interface a ser colocado dentro do bloco de biblioteca no arquivo. idl gerado.  
   
- A menos que você especifique uma classe base, uma interface de expedição serão derivados de `IDispatch`. Você deve especificar um [id](../windows/id.md) para os membros de uma interface de expedição.  
+ A menos que você especifique uma classe base, uma interface de Despache será derivado `IDispatch`. Você deve especificar um [id](../windows/id.md) para os membros de uma interface de expedição.  
   
  O exemplo de uso de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) na documentação do MIDL:  
   
@@ -49,28 +46,27 @@ dispinterface helloPro
   
  não é válido para o **dispinterface** atributo.  
   
-## Exemplo  
- Consulte o exemplo para [vinculáveis](../windows/bindable.md) para obter um exemplo de como usar **dispinterface**.  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo para [associável](../windows/bindable.md) para obter um exemplo de como usar **dispinterface**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Aplica\-se a**|`interface`|  
+|**Aplica-se a**|`interface`|  
 |**Repetível**|Não|  
-|**Atributos necessários**|Nenhum|  
-|**Atributos inválidos**|**dual**, **objeto**, **oleautomation**, `local`, **ms\_union**|  
+|**Atributos necessários.**|Nenhum|  
+|**Atributos inválidos**|**duplo**, **objeto**, **oleautomation**, `local`, **ms_union**|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [uuid](../windows/uuid-cpp-attributes.md)   
- [dual](../Topic/dual.md)   
- [custom](../windows/custom-cpp.md)   
- [object](../Topic/object%20\(C++\).md)   
- [\_\_interface](../Topic/__interface.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos por uso](../windows/attributes-by-usage.md)   
+ [UUID](../windows/uuid-cpp-attributes.md)   
+ [duplo](../windows/dual.md)   
+ [personalizado](../windows/custom-cpp.md)   
+ [object](../windows/object-cpp.md)   
+ [__interface](../cpp/interface.md)   

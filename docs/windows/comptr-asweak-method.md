@@ -1,33 +1,30 @@
 ---
-title: "M&#233;todo ComPtr::AsWeak | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::AsWeak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método AsWeak"
+title: "Método: Asweak | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::AsWeak
+dev_langs: C++
+helpviewer_keywords: AsWeak method
 ms.assetid: 23e29dcd-39cb-423f-abe6-6df4428213bf
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d4bdf9e6f2e3a484af825cea7facc78830b0cc48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo ComPtr::AsWeak
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera uma referência de URL ao objeto atual.  
+# <a name="comptrasweak-method"></a>Método ComPtr::AsWeak
+Recupera uma referência fraca ao objeto atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 HRESULT AsWeak(  
@@ -35,17 +32,17 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `pWeakRef`  
- Quando esta operação concluir, um ponteiro para um objeto de referência flexível.  
+ Quando essa operação for concluída, um ponteiro para um objeto de referência fraca.  
   
-## Valor de retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que declara o erro.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe ComPtr](../windows/comptr-class.md)

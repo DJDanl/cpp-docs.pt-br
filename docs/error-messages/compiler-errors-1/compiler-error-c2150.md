@@ -1,57 +1,41 @@
 ---
-title: C2150 de erro do compilador | Documentos do Microsoft
+title: C2150 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2150
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2150
+f1_keywords: C2150
+dev_langs: C++
+helpviewer_keywords: C2150
 ms.assetid: 21e82a10-c1d4-4c0d-9dc6-c5d92ea42a31
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d704d927938089b912d92468620b18fcb375ec40
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: bb45a137b17b685fea438548da2a3d6d3de73559
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2150"></a>C2150 de erro do compilador
-'identifier': campo de bit deve ter tipo 'int', 'int com sinal' ou 'unsigned int'  
   
- os campos de bits devem ser `int`, `signed``int`, ou `unsigned``int`.  
+> '*identificador*': campo de bits deve possuir tipo 'int', 'signed int' ou 'unsigned int'  
   
- O exemplo a seguir gera C2150:  
+ O tipo base para um campo de bits deve ser `int`, `signed int`, ou `unsigned int`.  
   
-```  
+## <a name="example"></a>Exemplo  
+  
+ Este exemplo mostra como você pode encontrar C2150 e como corrigi-lo:  
+  
+```cpp  
 // C2150.cpp  
 // compile with: /c  
 struct A {  
    float a : 8;    // C2150  
-   int i : 8;   // OK  
+   int i : 8;      // OK  
 };  
 ```

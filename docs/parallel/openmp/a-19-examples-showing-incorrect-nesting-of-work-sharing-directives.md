@@ -1,29 +1,28 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Exemplos A.19 mostrando aninhamento incorreto de diretivas de compartilhamento de trabalho | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1cc5ed3a3a5ddd4117a3332703613a8d525853a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Os exemplos nesta seção ilustram as regras de diretivas de aninhamento.  Para obter mais informações sobre o aninhamento de diretiva, consulte  [seção 2,9](../../parallel/openmp/2-9-directive-nesting.md) na página 33.  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Exemplos que mostram o aninhamento incorreto de diretivas de compartilhamento do trabalho
+Os exemplos nesta seção ilustram as regras de aninhamento de diretiva. Para obter mais informações sobre o aninhamento de diretiva, consulte [seção 2.9](../../parallel/openmp/2-9-directive-nesting.md) na página 33.  
   
- O exemplo a seguir é incompatível porque internas e externas `for` diretivas estão aninhadas e ligar para o mesmo `parallel` diretiva:  
+ O exemplo a seguir está em conformidade porque interna e externa `for` diretivas forem aninhadas e associar ao mesmo `parallel` diretiva:  
   
 ```  
 void wrong1(int n)  
@@ -41,7 +40,7 @@ void wrong1(int n)
 }  
 ```  
   
- A seguinte versão dinamicamente aninhada do exemplo anterior também é incompatível:  
+ A seguinte versão dinamicamente aninhada do exemplo anterior também será incompatível:  
   
 ```  
 void wrong2(int n)  
@@ -64,7 +63,7 @@ void work1(int i, int n)
 }  
 ```  
   
- O exemplo a seguir é incompatível porque a `for` e `single` diretivas estão aninhadas e eles ligam para a mesma região paralela:  
+ O exemplo a seguir está em conformidade porque a `for` e `single` diretivas forem aninhadas e eles ligam à mesma região paralela:  
   
 ```  
 void wrong3(int n)  
@@ -81,7 +80,7 @@ void wrong3(int n)
 }  
 ```  
   
- O exemplo a seguir é incompatível porque um `barrier` diretiva dentro de um `for` pode resultar em um deadlock:  
+ O exemplo a seguir está em conformidade porque um `barrier` diretiva dentro de um `for` pode resultar em deadlock:  
   
 ```  
 void wrong4(int n)  
@@ -99,7 +98,7 @@ void wrong4(int n)
 }  
 ```  
   
- O exemplo a seguir é incompatível porque a `barrier` resulta em deadlock devido ao fato de que apenas um thread por vez pode inserir a seção crítica:  
+ O exemplo a seguir está em conformidade porque a `barrier` resulta em deadlock devido ao fato de que apenas um thread por vez pode inserir a seção crítica:  
   
 ```  
 void wrong5()  
@@ -116,7 +115,7 @@ void wrong5()
 }  
 ```  
   
- O exemplo a seguir é incompatível porque a `barrier` resulta em deadlock devido ao fato de que apenas um segmento executa o `single` seção:  
+ O exemplo a seguir está em conformidade porque a `barrier` resulta em deadlock devido ao fato de que apenas um thread é executado o `single` seção:  
   
 ```  
 void wrong6()  

@@ -1,38 +1,37 @@
 ---
-title: "_mm_extract_si64, _mm_extracti_si64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_extracti_si64"
-  - "_mm_extract_si64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instrução extrq"
-  - "_mm_extracti_si64 intrínseco"
-  - "_mm_extract_si64 intrínseco"
+title: _mm_extract_si64, _mm_extracti_si64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mm_extracti_si64
+- _mm_extract_si64
+dev_langs: C++
+helpviewer_keywords:
+- extrq instruction
+- _mm_extracti_si64 intrinsic
+- _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 33467ac3a4397c3f446abe370dca5dc16c1a92ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_extract_si64, _mm_extracti_si64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
+**Seção específica da Microsoft**  
   
- Gera o `extrq` instruções para extrair os bits especificados do 64 bits baixos de seu primeiro argumento.  
+ Gera o `extrq` instruções para extrair especificado do bits de 64 bits baixos do seu primeiro argumento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 __m128i _mm_extract_si64(  
@@ -46,41 +45,41 @@ __m128i _mm_extracti_si64(
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`Source`  
- Um campo de 128 bits com dados de entrada de 64 bits inferiores.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `Source`  
+ Um campo de 128 bits com dados de entrada em seus 64 bits inferiores.  
   
- \[in\]`Descriptor`  
+ [in]`Descriptor`  
  Um campo de 128 bits que descreve o campo de bits para extrair.  
   
- \[in\]`Length`  
+ [in]`Length`  
  Um inteiro que especifica o comprimento do campo para extrair.  
   
- \[in\]`Index`  
+ [in]`Index`  
  Um inteiro que especifica o índice do campo para extrair  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Um campo de 128 bits com o campo extraído em seus bits menos significativos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
 |`_mm_extract_si64`|SSE4a|  
 |`_mm_extracti_si64`|SSE4a|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Nesse intrínsecas gera o `extrq` instruções para extrair os bits de `Source`.Há duas versões intrínsecas: `_mm_extracti_si64` é a versão imediata e `_mm_extract_si64` é o não\-imediatos.  Cada versão extrai de `Source` um campo de bits definido pelo seu comprimento e o índice do bit menos significativo.  Os valores de comprimento e índice são tirados mod 64, portanto, \-1 e 127 são interpretados como 63.  Se a soma do comprimento do campo \(menor\) e índice \(reduzido\) é maior que 64, os resultados são indefinidos.  Um valor de zero para o comprimento do campo é interpretado como 64.  Se o índice de bit e de comprimento de campo forem ambos zero, 63:0 de bits de `Source` são extraídos.  Se o comprimento do campo é zero, mas o índice de bit é diferente de zero, os resultados são indefinidos.  
+## <a name="remarks"></a>Comentários  
+ Nesse intrínsecas gera o `extrq` instruções para extrair os bits de `Source`. Há duas versões deste intrínsecas: `_mm_extracti_si64` é a versão de imediata, e `_mm_extract_si64` é aquele que não imediata.  Cada versão extrai de `Source` um campo de bit definido por seu tamanho e o índice do bit menos significativo. Os valores de comprimento e do índice são utilizados mod 64, portanto, -1 e 127 são interpretados como 63. Se a soma do índice (menor) e tamanho do campo (menor) for maior que 64, os resultados serão indefinidos. Um valor de zero para o tamanho do campo é interpretado como 64. Se o índice de bits e de comprimento de campo é ambos zero, 63:0 de bits de `Source` são extraídos. Se o tamanho do campo for zero, mas o índice de bit é diferente de zero, os resultados serão indefinidos.  
   
- Em uma chamada para \_mm\_extract\_si64, o `Descriptor` contém o índice em 13: 8 bits e o comprimento do campo de dados sejam extraídos em bits 5: 0..  
+ Em uma chamada para _mm_extract_si64, o `Descriptor` contém o índice em 13:8 bits e o tamanho do campo de dados a ser extraído em bits 5:0...  
   
- Se você chamar `_mm_extracti_si64` com argumentos que o compilador não pode determinar constantes de inteiro, o compilador gera código pack esses valores em um registro XMM \(`Descriptor`\) e chamar `_mm_extract_si64`.  
+ Se você chamar `_mm_extracti_si64` com argumentos que o compilador não pode determinar a ser constantes de inteiro, o compilador gera código para os valores do pacote em um registro XMM (`Descriptor`) e chamar `_mm_extract_si64`.  
   
- Para determinar o suporte de hardware para o `extrq` instrução, chamada de `__cpuid` intrínseca com `InfoType=0x80000001` e verificar o bit 6 do `CPUInfo[2] (ECX)`.  Esse bit será 1 se a instrução for aceito e 0 caso contrário.  Se você executar o código que usa este hardware intrínseca que não oferece suporte a `extrq` as instruções, os resultados são imprevisíveis.  
+ Para determinar o suporte de hardware para o `extrq` instrução, chamada de `__cpuid` intrínseco com `InfoType=0x80000001` e verifique o bit 6 de `CPUInfo[2] (ECX)`. Esse bit será 1 se a instrução tiver suporte e 0 caso contrário. Se você executar o código que usa este hardware intrínseco que não oferece suporte a `extrq` instrução, os resultados são imprevisíveis.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -109,10 +108,15 @@ main()
 }  
 ```  
   
-  **Resultado1 \= 0x30eca86 Resultado2 \= result3 0x30eca86 \= 0x30eca86**   
-## END Microsoft específicos  
- Copyright 2007 pela Advanced Micro dispositivos, Inc. todos os direitos reservados.  Reproduzido com permissão do Advanced Micro dispositivos, Inc.  
+```Output  
+result1 = 0x30eca86  
+result2 = 0x30eca86  
+result3 = 0x30eca86  
+```  
   
-## Consulte também  
- [\_mm\_insert\_si64, \_mm\_inserti\_si64](../Topic/_mm_insert_si64,%20_mm_inserti_si64.md)   
+**Fim da seção específica da Microsoft**  
+ Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Consulte também  
+ [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 04/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4471
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4471
+f1_keywords: C4471
+dev_langs: C++
+helpviewer_keywords: C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: fc0ddb07ec768804be61185211bbac0ee6fbf2b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/28/2017
-
+ms.openlocfilehash: a1476beca6b34e8afb53058c7961822f0fb48109
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Compilador C4471 de aviso (nível 4)
 '*enumeração*': declaração de encaminhamento de uma enumeração sem escopo deve ter um tipo subjacente (int assumido)  
@@ -113,4 +94,3 @@ enum class Example { item = 0 };
 // ...
 ```  
   
-

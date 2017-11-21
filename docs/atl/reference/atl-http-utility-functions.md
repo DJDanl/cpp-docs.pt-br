@@ -7,14 +7,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 9cdb12373d93c17258fb615f667d7321e06f6728
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-http-utility-functions"></a>Funções de utilitário de HTTP do ATL
 
@@ -53,7 +53,7 @@ inline BOOL AtlCanonicalizeUrl(
  Buffer alocada pelo chamador para receber a URL de conversão em formato canônico.  
   
  `pdwMaxLength`  
- Ponteiro para uma variável que contém o comprimento em caracteres de `szCanonicalized`. Se a função tiver êxito, a variável recebe o número de caracteres gravados para o buffer não incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação.  
+ Ponteiro para uma variável que contém o comprimento em caracteres de `szCanonicalized`. Se a função tiver êxito, a variável recebe o número de caracteres gravada no buffer, incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação.  
   
  `dwFlags`  
  Sinalizadores ATL_URL controlar o comportamento dessa função. 
@@ -98,7 +98,7 @@ inline BOOL AtlCombineUrl(
  Buffer alocada pelo chamador para receber a URL de conversão em formato canônico.  
   
  `pdwMaxLength`  
- Ponteiro para uma variável que contém o comprimento em caracteres de `szBuffer`. Se a função tiver êxito, a variável recebe o número de caracteres gravados para o buffer não incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação.  
+ Ponteiro para uma variável que contém o comprimento em caracteres de `szBuffer`. Se a função tiver êxito, a variável recebe o número de caracteres gravada no buffer, incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação.  
   
  `dwFlags`  
  Sinalizadores de controlar o comportamento dessa função. Consulte [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
@@ -136,7 +136,7 @@ inline BOOL AtlEscapeUrl(
  Buffer alocada pelo chamador que a URL convertida será gravada.  
   
  `pdwStrLen`  
- Ponteiro para uma variável DWORD. Se a função tiver êxito, `pdwStrLen` recebe o número de caracteres gravada no buffer, não incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação. Ao usar a versão de caractere largo desse método `pdwStrLen` recebe o número de caracteres necessários, não o número de bytes.  
+ Ponteiro para uma variável DWORD. Se a função tiver êxito, `pdwStrLen` recebe o número de caracteres gravada no buffer, incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação. Ao usar a versão de caractere largo desse método `pdwStrLen` recebe o número de caracteres necessários, não o número de bytes.  
   
  `dwMaxLength`  
  O tamanho do buffer `lpszStringOut`.  
@@ -203,7 +203,7 @@ inline BOOL AtlUnescapeUrl(
  Buffer alocada pelo chamador que a URL convertida será gravada.  
   
  `pdwStrLen`  
- Ponteiro para uma variável DWORD. Se a função tiver êxito, a variável recebe o número de caracteres gravados para o buffer não incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação.  
+ Ponteiro para uma variável DWORD. Se a função tiver êxito, a variável recebe o número de caracteres gravada no buffer, incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação.  
   
  `dwMaxLength`  
  O tamanho do buffer `lpszStringOut`.  
@@ -259,5 +259,4 @@ inline void SystemTimeToHttpDate(
 ## <a name="see-also"></a>Consulte também  
  [Conceitos](../../atl/active-template-library-atl-concepts.md)   
  [Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)   
-
 

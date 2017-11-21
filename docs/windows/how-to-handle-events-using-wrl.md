@@ -1,98 +1,97 @@
 ---
-title: "Como manipular eventos com WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: 'Como: manipular eventos com WRL | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 12e36d679e8067cc9dc0cd7e8a30735b042bc702
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como manipular eventos com WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este documento mostra como usar [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) para assinar e para tratar eventos de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] objeto.  
+# <a name="how-to-handle-events-using-wrl"></a>Como manipular eventos com WRL
+Este documento mostra como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para assinar e tratar os eventos de um objeto de tempo de execução do Windows.  
   
- Para obter um exemplo mais básico que cria uma instância desse componente e recupera um valor de propriedade, consulte [Como ativar e usar um componente de Tempo de Execução do Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
+ Para obter um exemplo mais simples que cria uma instância do componente e recupera um valor de propriedade, consulte [como: ativar e usar um componente de tempo de execução do Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
   
-## Assinar e tratar eventos  
- As etapas a seguir começam um objeto de `ABI::Windows::System::Threading::IDeviceWatcher` e manipuladores de eventos de uso para monitorar o andamento.  A interface de `IDeviceWatcher` permite enumerar de forma assíncrona dispositivos, ou no plano de fundo, e recebe\-à notificação quando os dispositivos são adicionados, removidos, ou alterados.  A função de [Retorno de chamada](../windows/callback-function-windows-runtime-cpp-template-library.md) é uma parte importante deste exemplo como a habilita para especificar os manipuladores de eventos que processam os resultados da operação em segundo plano.  O exemplo completo a seguir.  
+## <a name="subscribing-to-and-handling-events"></a>Assinar e manipulação de eventos  
+ Iniciar as etapas a seguir um `ABI::Windows::System::Threading::IDeviceWatcher` do objeto e usar manipuladores de eventos para monitorar o progresso. O `IDeviceWatcher` interface permite enumerar dispositivos, de forma assíncrona ou no plano de fundo e receber notificação quando os dispositivos são adicionados, removidos ou alterados. O [retorno de chamada](../windows/callback-function-windows-runtime-cpp-template-library.md) função é uma parte importante deste exemplo porque permite que ele Especifique manipuladores de eventos que processam os resultados da operação em segundo plano. O exemplo completo segue.  
   
 > [!WARNING]
->  Embora você normalmente usa [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] em um aplicativo de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] , esse exemplo usa um aplicativo de console para ilustração.  Funções como `wprintf_s` não estão disponíveis em um aplicativo de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] .  Para obter mais informações sobre os tipos e funções que você pode usar em um aplicativo de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] , consulte [Funções de CRT sem suporte com \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) e [O Win32 e COM para aplicativos do Windows Store](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Embora você costumar usar a biblioteca de modelos de C++ de tempo de execução do Windows em um aplicativo de plataforma Universal do Windows, este exemplo usa um aplicativo de console para fins ilustrativos. Funções como `wprintf_s` não estão disponíveis de um aplicativo de plataforma Universal do Windows. Para obter mais informações sobre os tipos e funções que você pode usar em um aplicativo de plataforma Universal do Windows, consulte [funções CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) e [aplicativos Win32 e COM para a Windows Store](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
-1.  Inclua \(\)`#include`qualquer [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]necessário, [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)], ou cabeçalhos de biblioteca padrão do C\+\+.  
+1.  Incluir (`#include`) os necessários do Windows Runtime, biblioteca de modelos C++ do Windows Runtime ou cabeçalhos de biblioteca padrão C++.  
   
-     [!CODE [wrl-consume-event#2](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#2)]  
+     [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h declara os tipos que são necessários para enumerar dispositivos.  
+     Windows.Devices.Enumeration.h declara os tipos que são necessárias para enumerar os dispositivos.  
   
-     Recomendamos que você utiliza a política de `using namespace` no arquivo .cpp para tornar código mais legível.  
+     É recomendável que você utiliza o `using namespace` diretiva no arquivo. cpp para tornar o código mais legível.  
   
-2.  Declare variáveis locais para o aplicativo.  Este exemplo contém a contagem do número de dispositivos e tokens enumerados do registro que permitem para cancelar posteriormente de eventos.  
+2.  Declare as variáveis locais para o aplicativo. Este exemplo contém a contagem do número de dispositivos enumerados e tokens de registro que habilitá-lo mais tarde, cancelar a assinatura de eventos.  
   
-     [!CODE [wrl-consume-event#7](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#7)]  
+     [!code-cpp[wrl-consume-event#7](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_2.cpp)]  
   
-3.  Inicializar [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+3.  Inicialize o tempo de execução do Windows.  
   
-     [!CODE [wrl-consume-event#3](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#3)]  
+     [!code-cpp[wrl-consume-event#3](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_3.cpp)]  
   
-4.  Crie um objeto de [Evento](../windows/event-class-windows-runtime-cpp-template-library.md) que sincroniza a conclusão do processo de enumeração para o aplicativo principal.  
+4.  Criar um [evento](../windows/event-class-windows-runtime-cpp-template-library.md) objeto que sincroniza a conclusão do processo de enumeração para o aplicativo principal.  
   
-     [!CODE [wrl-consume-event#4](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#4)]  
+     [!code-cpp[wrl-consume-event#4](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_4.cpp)]  
   
     > [!NOTE]
-    >  Esse evento é para demonstração somente como parte de um aplicativo de console.  Este exemplo usa o evento para assegurar que uma operação de async foi concluído antes que o aplicativo vai.  Na maioria dos aplicativos, você normalmente não espera operações de async para concluir.  
+    >  Esse evento é para demonstração somente como parte de um aplicativo de console. Este exemplo usa o evento para garantir que uma operação assíncrona é concluída antes do aplicativo sai. Na maioria dos aplicativos, você normalmente não esperam para operações assíncronas sejam concluídas.  
   
-5.  Crie uma fábrica de ativação para a interface de `IDeviceWatcher` .  
+5.  Criar uma fábrica de ativação para o `IDeviceWatcher` interface.  
   
-     [!CODE [wrl-consume-event#5](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#5)]  
+     [!code-cpp[wrl-consume-event#5](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_5.cpp)]  
   
-     Os nomes totalmente qualificados de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] para identificar tipos.  O parâmetro de `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` é uma cadeia de caracteres que é fornecida por [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e contém o nome da classe necessário em tempo de execução.  
+     O tempo de execução do Windows usa nomes totalmente qualificados para identificar tipos. O `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` parâmetro é uma cadeia de caracteres que é fornecida pelo Windows Runtime e contém o nome de classe de tempo de execução necessários.  
   
-6.  Crie o objeto de `IDeviceWatcher` .  
+6.  Criar o `IDeviceWatcher` objeto.  
   
-     [!CODE [wrl-consume-event#6](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#6)]  
+     [!code-cpp[wrl-consume-event#6](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_6.cpp)]  
   
-7.  Use a função de `Callback` para assinar `Added`, a `EnumerationCompleted`, e eventos de `Stopped` .  
+7.  Use o `Callback` função para assinar o `Added`, `EnumerationCompleted`, e `Stopped` eventos.  
   
-     [!CODE [wrl-consume-event#8](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#8)]  
+     [!code-cpp[wrl-consume-event#8](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_7.cpp)]  
   
-     O manipulador de eventos de `Added` incrementa a contagem de dispositivos enumerados.  Para o processo de enumeração após dez dispositivos são encontrados.  
+     O `Added` manipulador de eventos incrementa a contagem de dispositivos enumerados. Ele interrompe o processo de enumeração após dez dispositivos são encontrados.  
   
-     O manipulador de eventos de `Stopped` remove os manipuladores de eventos e define o evento de conclusão.  
+     O `Stopped` remove os manipuladores de eventos de manipulador de eventos e define o evento de conclusão.  
   
-     O manipulador de eventos de `EnumerationCompleted` para o processo de enumeração.  Nós tratamos esse evento caso que haverá menos dispositivos do que dez.  
+     O `EnumerationCompleted` manipulador de eventos interrompe o processo de enumeração. Podemos manipular esse evento, caso haja menos de dez dispositivos.  
   
     > [!TIP]
-    >  Este exemplo usa uma expressão de lambda para definir os retornos de chamada.  Você também pode usar objetos de função \(functors\), ponteiros de função, ou objetos de [std::function](../standard-library/function-class.md) .  Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../cpp/lambda-expressions-in-cpp.md).  
+    >  Este exemplo usa uma expressão lambda para definir os retornos de chamada. Você também pode usar objetos de função (functors), os ponteiros de função, ou [std:: Function](../standard-library/function-class.md) objetos. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../cpp/lambda-expressions-in-cpp.md).  
   
 8.  Inicie o processo de enumeração.  
   
-     [!CODE [wrl-consume-event#9](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#9)]  
+     [!code-cpp[wrl-consume-event#9](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_8.cpp)]  
   
-9. Aguarde até que o processo de enumeração para concluir e depois imprimir uma mensagem.  Qualquer `ComPtr` e os objetos de RAII permitem o escopo e são liberados automaticamente.  
+9. Aguarde o processo de enumeração concluir e, em seguida, imprima uma mensagem. Todos os `ComPtr` e objetos RAII deixam o escopo e são liberados automaticamente.  
   
-     [!CODE [wrl-consume-event#10](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#10)]  
+     [!code-cpp[wrl-consume-event#10](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_9.cpp)]  
   
  Aqui está o exemplo completo:  
   
- [!CODE [wrl-consume-event#1](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#1)]  
+ [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
-## Compilando o código  
- Para compilar o código, copie\-a e cole\-o em um projeto do Visual Studio, ou cole\-o em um arquivo chamado `wrl-consume-events.cpp` e execute o comando a seguir em uma janela de prompt de comando do Visual Studio.  
+## <a name="compiling-the-code"></a>Compilando o código  
+ Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `wrl-consume-events.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
   
- **cl.exe wrl\-consume\-events.cpp runtimeobject.lib**  
+ **cl.exe events.cpp consumir wrl runtimeobject.lib**  
   
-## Consulte também  
- [Biblioteca de Modelos C\+\+ do Tempo de Execução do Windows \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)
+## <a name="see-also"></a>Consulte também  
+ [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md)

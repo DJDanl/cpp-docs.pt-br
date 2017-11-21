@@ -1,54 +1,52 @@
 ---
-title: "Problemas de design arquitet&#244;nico de banco de dados OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, considerações sobre o design de aplicativo"
+title: "Problemas de Design arquitetônico de banco de dados OLE | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 085c658fff3d387019c6e8574ebafcd347400823
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Problemas de design arquitet&#244;nico de banco de dados OLE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Considere os seguintes problemas antes de iniciar o aplicativo OLE DB:  
+# <a name="ole-db-architectural-design-issues"></a>Problemas de design arquitetônico de banco de dados OLE
+Você deve considerar os seguintes problemas antes de iniciar seu aplicativo OLE DB:  
   
- **What programming implementation will you use to write your OLE DB application?**  
- Microsoft oferece várias bibliotecas fazer isso: uma biblioteca do modelo do OLE DB, OLE DB, atributos e as interfaces brutos OLE DB no OLE DB SDK.  Além disso, há assistentes que o ajudam a gravar seu programa.  Essas implementações são descritas em [Modelos OLE DB, atributos, e outras implementações](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).  
+ **Qual implementação programação será usado para gravar seu aplicativo OLE DB?**  
+ A Microsoft oferece várias bibliotecas para fazer isso: uma biblioteca de modelos de banco de dados OLE, atributos de OLE DB e as interfaces do OLE DB brutas no SDK do OLE DB. Além disso, há assistentes que o ajudam a gravar seu programa. Essas implementações são descritas na [modelos OLE DB, atributos e outras implementações](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).  
   
- **Do you need to write your own provider?**  
- A maioria dos desenvolvedores não precisa escrever seu próprio provedor.  O Microsoft fornece diversos provedores.  Sempre que você criar uma conexão de dados \(por exemplo, quando você adicionar um consumidor ao seu projeto usando o assistente do consumidor de ATL OLE DB\), a caixa de diálogo de **Propriedades de associação de dados** lista todos os provedores disponíveis registrados em seu sistema.  Se um desses provedores é apropriado para seu próprio aplicativo do repositório de dados e de acesso a dados, à maneira mais fácil de fazer é usar um desses.  No entanto, se o repositório de dados não couber uma dessas categorias, você precisa criar seu próprio provedor.  Para obter informações sobre como criar provedores, consulte [Modelos do provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).  
+ **Você precisa escrever seu próprio provedor?**  
+ A maioria dos desenvolvedores não precisa escrever seu próprio provedor. A Microsoft fornece vários provedores. Sempre que você criar uma conexão de dados (por exemplo, quando você adiciona um consumidor ao seu projeto usando o Assistente de ATL OLE DB consumidor), o **propriedades de vínculo de dados** caixa de diálogo lista todos os provedores disponíveis registrados no seu sistema. Se um desses provedores é apropriado para seu próprio aplicativo de acesso de dados e armazenamento de dados, o mais fácil fazer é usar uma destas opções. No entanto, se o armazenamento de dados não couber uma dessas categorias, você precisa criar seu próprio provedor. Para obter informações sobre como criar provedores, consulte [modelos OLE DB Provider](../../data/oledb/ole-db-provider-templates-cpp.md).  
   
- **What level of support do you need for your consumer?**  
- Alguns consumidores podem ser muito básicos; quando outro podem ser muito complexos.  A funcionalidade de objetos OLE DB é especificada por propriedades.  Quando você usa o assistente do consumidor de ATL OLE DB para criar um consumidor ou o assistente do provedor de base de dados do para criar um provedor, defina as propriedades adequadas do objeto para o qual você atribua um conjunto padrão de funcionalidades.  No entanto, se as classes \- gerados ou do consumidor do provedor não dão suporte a todos você só precisam fazer, você precisar consultar as interfaces para essas classes em [Biblioteca de modelos OLE DB](../Topic/OLE%20DB%20Templates.md).  Essas interfaces envolvem as interfaces brutos do OLE DB, fornecendo a implementação adicional para facilitar usando as para você.  
+ **O nível de suporte para o consumidor você precisa?**  
+ Alguns consumidores podem ser muito básicas; enquanto outros podem ser muito complexos. A funcionalidade dos objetos de banco de dados OLE especificada pelas propriedades. Quando você usa o ATL OLE DB consumidor Assistente para criar um consumidor ou o Assistente de provedor de banco de dados para criar um provedor, ele define as propriedades de objeto apropriado para fornecer um conjunto padrão de funcionalidades. No entanto, se as classes de provedor ou consumidor gerado pelo assistente não oferecem suporte a tudo o que precisar fazer, você precisa se referir às interfaces para essas classes do [OLE DB modelos de biblioteca](../../data/oledb/ole-db-templates.md). Essas interfaces encapsulam as interfaces OLE DB brutas, fornecendo uma implementação extra para facilitar usá-los para você.  
   
- Por exemplo, se você quiser atualizar dados em um conjunto de linhas, mas esqueceu especificar essa opção quando você criou o consumidor com o assistente, você pode especificar a funcionalidade após o fato **DBPROP\_IRowsetChange** e definindo as propriedades de **DBPROP\_UPDATABILITY** no comando objeto.  Então, quando o conjunto de linhas é criado, tem a interface de `IRowsetChange` .  
+ Por exemplo, se você quiser atualizar dados em um conjunto de linhas, mas esqueceu de especificar isso quando você criou o consumidor com o assistente, você pode especificar a funcionalidade após o fato definindo o **DBPROP_IRowsetChange** e  **DBPROP_UPDATABILITY** propriedades no objeto de comando. Em seguida, quando o conjunto de linhas é criado, ele tem o `IRowsetChange` interface.  
   
- **Do you have older code using another data access technology \(ADO, ODBC, or DAO\)?**  
- Conforme as combinações possíveis de tecnologias \(como o uso de componentes do ADO com componentes do OLE DB e migrar o código do ODBC para OLE DB\), para cobrir todas as situações está além do escopo da documentação do Visual C\+\+.  Porém, muitos artigos que abrangem vários cenários estão disponíveis nos seguintes sites do Microsoft:  
+ **Você tem o código anterior usando outra tecnologia de acesso a dados (ADO, ODBC ou DAO)?**  
+ Considerando as combinações possíveis de tecnologias (como usar componentes de ADO com componentes de OLE DB e migrando código ODBC para o banco de dados OLE), que abrangem todas as situações está além do escopo da documentação do Visual C++. No entanto, vários artigos que abrangem vários cenários estão disponíveis nos seguintes sites:  
   
--   [A Ajuda do Microsoft e Suporte](http://go.microsoft.com/fwlink/?LinkId=148218)  
+-   [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/?linkid=148218)  
   
--   [Visão geral dos artigos técnica de acesso a dados da Microsoft](http://go.microsoft.com/fwlink/?LinkId=148217)  
+-   [Visão geral de artigos técnicos do Microsoft Data Access](http://go.microsoft.com/fwlink/?linkid=148217)  
   
--   [Solution center do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=148215)  
+-   [Centro de soluções do Visual Studio](http://go.microsoft.com/fwlink/?linkid=148215)  
   
--   [Pesquisar Microsoft.com](http://search.microsoft.com/)  
+-   [Pesquisar no Microsoft.com](http://search.microsoft.com/)  
   
- Quando você executa uma pesquisa, insira uma combinação de palavras\-chave que o mais adequado ao seu cenário; por exemplo: se você estava usando o ADO objetos com um provedor OLE DB, o tentará uma pesquisa booliano com **ADO AND "OLE DB"**.  Se você desejar migrar um código mais antigo de DAO a ODBC, selecione “todas as palavras” e especificar as cadeias de caracteres como **migrating DAO**.  
+ Quando você executa uma pesquisa, insira uma combinação de palavras-chave que melhor se adapta ao seu cenário; Por exemplo: se você estiver usando objetos ADO com um provedor OLE DB, tente fazer uma pesquisa booliana com **ADO e "OLE DB"**. Se você quiser migrar código DAO anterior para ODBC, selecione "todas as palavras" e especificar cadeias de caracteres como **DAO migrando**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)   
- [Visão geral da programação de banco de dados OLE](../../data/oledb/ole-db-programming-overview.md)
+ [Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)

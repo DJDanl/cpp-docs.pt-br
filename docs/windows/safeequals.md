@@ -1,33 +1,30 @@
 ---
-title: "SafeEquals | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeEquals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função SafeEquals"
+title: SafeEquals | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeEquals
+dev_langs: C++
+helpviewer_keywords: SafeEquals function
 ms.assetid: 6019627d-f170-413b-9abd-2b5b34396a72
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: dc8794975f177c07733b90f3d17663967cb756ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# SafeEquals
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Compara dois números para determinar se são iguais.  
+# <a name="safeequals"></a>SafeEquals
+Compara dois números para determinar se eles são iguais.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename T, typename U>  
@@ -37,33 +34,33 @@ inline bool SafeEquals (
 ) throw ();  
 ```  
   
-#### Parâmetros  
- \[entrada\] `t`  
- O primeiro número a ser comparado.  Isso deve ser do tipo T.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `t`  
+ O primeiro número a ser comparado. Isso deve ser do tipo T.  
   
- \[entrada\] `u`  
- O segundo número a ser comparado.  Isso deve ser do tipo U.  
+ [in] `u`  
+ O segundo número a ser comparado. Isso deve ser do tipo u  
   
-## Valor de retorno  
- `true` `t` se e forem iguais; `u` se não `false`.  
+## <a name="return-value"></a>Valor de retorno  
+ `true` se `t` e `u` forem iguais; caso contrário `false`.  
   
-## Comentários  
- O método `==` melhora porque `SafeEquals` permite comparar dois tipos diferentes de números.  
+## <a name="remarks"></a>Comentários  
+ O método aprimora `==` porque `SafeEquals` permite comparar dois tipos diferentes de números.  
   
- Esse método é parte de [Biblioteca de SafeInt](../windows/safeint-library.md) e é criado para uma única operação de comparação sem criar uma instância de [Classe SafeInt](../windows/safeint-class.md).  
+ Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de comparação simples sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Esse método deve ser usado apenas quando uma única operação matemática deve ser protegida.  Se houver várias operações, você deve usar a classe de `SafeInt` em vez de chamar funções autônomas individuais.  
+>  Este método só deve ser usado quando uma operação matemática único deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
   
- Para obter mais informações sobre os tipos T e U de modelo, consulte [Funções \(SafeInt\)](../windows/safeint-functions.md).  
+ Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Consulte também  
- [Funções \(SafeInt\)](../windows/safeint-functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções (SafeInt)](../windows/safeint-functions.md)   
  [Biblioteca de SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)   
- [SafeNotEquals](../Topic/SafeNotEquals.md)
+ [SafeNotEquals](../windows/safenotequals.md)

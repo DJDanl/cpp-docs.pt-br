@@ -1,35 +1,33 @@
 ---
-title: "IErrorRecordsImpl::GetErrorHelpContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetErrorHelpContext"
-  - "IErrorRecordsImpl::GetErrorHelpContext"
-  - "IErrorRecordsImpl.GetErrorHelpContext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetErrorHelpContext"
+title: 'Ierrorrecordsimpl:: Geterrorhelpcontext | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetErrorHelpContext
+- IErrorRecordsImpl::GetErrorHelpContext
+- IErrorRecordsImpl.GetErrorHelpContext
+dev_langs: C++
+helpviewer_keywords: GetErrorHelpContext method
 ms.assetid: 53d70239-0d64-482e-9ad4-4e1f4f02d5a3
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2167384aca71a8bcd95240b007f84dbea6a498fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IErrorRecordsImpl::GetErrorHelpContext
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Obtém a ID de contexto da ajuda de um registro de erro.  
+# <a name="ierrorrecordsimplgeterrorhelpcontext"></a>IErrorRecordsImpl::GetErrorHelpContext
+Obtém a ID do contexto de ajuda de um registro de erro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,15 +36,15 @@ Obtém a ID de contexto da ajuda de um registro de erro.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `rCurError`  
- Um registro de `ERRORINFO` em uma interface de **IErrorInfo** .  
+ Um `ERRORINFO` registro em um **IErrorInfo** interface.  
   
-## Valor de retorno  
- A ID de contexto da ajuda para o erro.  
+## <a name="return-value"></a>Valor de retorno  
+ A ID do contexto de ajuda para o erro.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)

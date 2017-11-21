@@ -1,53 +1,33 @@
 ---
-title: C3391 de erro do compilador | Documentos do Microsoft
+title: C3391 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3391
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3391
+f1_keywords: C3391
+dev_langs: C++
+helpviewer_keywords: C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 7b5922ccf353162dc32c99e3818227639d0f5985
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 8501d0a645d656bd0c86f093d1591985f9a3499a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3391"></a>C3391 de erro do compilador
-'type_arg': argumento de tipo inválido para parâmetro genérico param de genérico 'generic_type' deve ser um tipo de valor não nulo  
+'type_arg': argumento de tipo inválido para parâmetro de generic 'generic_type' do parâmetro genérico deve ser um tipo de valor não nulo  
   
-Um tipo genérico foi instanciado incorretamente. Verifique a definição de tipo. Para obter mais informações, consulte <xref:System.Nullable>e [genéricos](../../windows/generics-cpp-component-extensions.md).</xref:System.Nullable>  
+Um tipo genérico foi instanciado incorretamente. Verifique a definição de tipo. Para obter mais informações, consulte <xref:System.Nullable> e [genéricos](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir usa c# para criar um componente que contém um tipo genérico que tem determinadas restrições que não oferecem suporte à criação de tipos genéricos no C + + / CLI. Para obter mais informações, consulte [restrições em parâmetros de tipo](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters).  
+O exemplo a seguir usa c# para criar um componente que contém um tipo genérico que tem determinadas restrições que não são suportadas na criação de tipos genéricos em C + + CLI. Para obter mais informações, consulte [Restrições a parâmetros de tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  
   
 ```cs  
 // C3391.cs  

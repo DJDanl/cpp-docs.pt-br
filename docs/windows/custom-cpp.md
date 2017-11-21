@@ -1,33 +1,30 @@
 ---
-title: "custom (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.custom"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "custom attributes, defining"
+title: personalizado (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.custom
+dev_langs: C++
+helpviewer_keywords: custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7f811197526d2d3da0700af27be84151da79d67f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# custom (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Define os metadados para um objeto na biblioteca de tipos.  
+# <a name="custom-c"></a>custom (C++)
+Define os metadados de um objeto na biblioteca de tipos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -37,37 +34,36 @@ Define os metadados para um objeto na biblioteca de tipos.
 ) ];  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *UUID*  
  Uma ID exclusiva.  
   
- *Valor*  
+ *value*  
  Um valor que pode ser colocado em uma variante.  
   
-## Comentários  
- O  **personalizado** atributo C\+\+ fará com que informações sejam colocadas em biblioteca de tipos.  Você precisará de uma ferramenta que lê o valor personalizado de biblioteca de tipos.  
+## <a name="remarks"></a>Comentários  
+ O **personalizado** atributo C++ fará com que informações sejam colocados em biblioteca de tipos. Você precisará de uma ferramenta que lê o valor personalizado da biblioteca de tipos.  
   
- O  **personalizado** atributo tem a mesma funcionalidade que o  [personalizado](http://msdn.microsoft.com/library/windows/desktop/aa366766) atributo MIDL.  
+ O **personalizado** atributo tem a mesma funcionalidade que o [personalizado](http://msdn.microsoft.com/library/windows/desktop/aa366766) atributo MIDL.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Non\-COM `interface`,  **classe**, `enum`s, `idl_module` métodos, os membros de interface, parâmetros de interface, `typedef`s,  **união**s, `struct`s|  
-|**Reproduzíveis**|Sim|  
-|**Atributos obrigatórios**|**coclass** \(quando usado na classe\)|  
+|**Aplica-se a**|Não-COM `interface`, **classe**, `enum`s, `idl_module` métodos, membros de interface, parâmetros de interface, `typedef`s, **união**s, `struct`s|  
+|**Repetível**|Sim|  
+|**Atributos necessários.**|**coclass** (quando usado em classe)|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos autônomos](../windows/stand-alone-attributes.md)   
+ [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributos de parâmetro](../windows/parameter-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   
+ [Atributos de classe](../windows/class-attributes.md)   
+ [Atributos de interface](../windows/interface-attributes.md)   

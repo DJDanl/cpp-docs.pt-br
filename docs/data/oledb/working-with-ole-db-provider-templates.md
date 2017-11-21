@@ -1,49 +1,48 @@
 ---
-title: "Trabalhando com modelos de provedor de banco de dados OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Provedores OLE DB, modelos"
-  - "OLE DB, modelos de provedor"
-  - "referência, modelos de provedor do OLE DB"
-  - "modelos, Provedor OLE DB"
+title: Trabalhando com modelos de provedor do OLE DB | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reference, OLE DB provider templates
+- OLE DB, provider templates
+- templates, OLE DB provider
+- OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9158351892c8a8d097f0eccd498c05b2833d862
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Trabalhando com modelos de provedor de banco de dados OLE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para saber como trabalhar com os modelos do provedor OLE DB, consulte os seguintes tópicos:  
+# <a name="working-with-ole-db-provider-templates"></a>Trabalhando com modelos de provedor de banco de dados OLE
+Para saber como trabalhar com os modelos de provedor do OLE DB, consulte os tópicos a seguir:  
   
--   [Adicionando uma interface para o provedor](../../data/oledb/adding-an-interface-to-your-provider.md)  
+-   [Adicionando uma interface ao provedor](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
--   [Referenciando uma propriedade do provedor](../../data/oledb/referencing-a-property-in-your-provider.md)  
+-   [Fazendo referência a uma propriedade no provedor](../../data/oledb/referencing-a-property-in-your-provider.md)  
   
--   [Propriedades de configuração do provedor](../../data/oledb/setting-properties-in-your-provider.md)  
+-   [Definindo propriedades no provedor](../../data/oledb/setting-properties-in-your-provider.md)  
   
--   [Colunas dinamicamente de associação do provedor](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
+-   [Colunas de associação dinâmica no provedor](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
   
--   [Threading livre de suporte do provedor](../Topic/Supporting%20Free%20Threading%20in%20Your%20Provider.md)  
+-   [Dando suporte ao thread livre no provedor](../../data/oledb/supporting-free-threading-in-your-provider.md)  
   
--   [Testando o provedor](../Topic/Testing%20Your%20Provider.md)  
+-   [Testando o provedor](../../data/oledb/testing-your-provider.md)  
   
--   [Depurando seu provedor](../../data/oledb/debugging-your-provider.md)  
+-   [Depurando o provedor](../../data/oledb/debugging-your-provider.md)  
   
--   [Convertendo os dados não suportados pelo provedor](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
+-   [Convertendo dados sem suporte do provedor](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
-## Consulte também  
- [Referência dos modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-reference.md)   
- [Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   
+ [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

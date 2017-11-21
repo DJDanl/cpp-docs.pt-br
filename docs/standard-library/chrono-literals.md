@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 493b622bf49ddd148e0877b15659e10646f46d4e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 7a470c96670753fd98b97f9b9d5daffbb8c3eba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="chrono-literals"></a>literais chrono
 (C++14) O cabeçalho \<chrono> define 12 [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) para facilitar o uso de literais que representam horas, minutos, segundos, milissegundos, microssegundos e nanossegundos. Cada literal definido pelo usuário tem um integral e uma sobrecarga de ponto flutuante. Os literais são definidos no namespace embutido literals::chrono_literals que é colocado no escopo automaticamente quando std::chrono está no escopo.  
@@ -103,5 +86,4 @@ constexpr auto my_duration_unit = 108ms;
   
 ## <a name="see-also"></a>Consulte também  
  [\<chrono>](../standard-library/chrono.md)
-
 

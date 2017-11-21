@@ -1,47 +1,28 @@
 ---
-title: C2511 de erro do compilador | Documentos do Microsoft
+title: C2511 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2511
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2511
+f1_keywords: C2511
+dev_langs: C++
+helpviewer_keywords: C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6a0ed921c6d6aefd63fdecd8e54fa6580780e474
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 1ba01f808fb4dd618291777c1da7490b3b95af3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2511"></a>C2511 de erro do compilador
-'identifier': função de membro não encontrada em 'class' sobrecarregada  
+'Identificador': membro função sobrecarregada não encontrada em 'class'  
   
  Nenhuma versão da função é declarada com os parâmetros especificados.  Possíveis causas:  
   
@@ -49,7 +30,7 @@ ms.lasthandoff: 02/25/2017
   
 2.  Parâmetros passados na ordem errada.  
   
-3.  Grafia incorreta de nomes de parâmetro.  
+3.  Ortografia incorreta de nomes de parâmetro.  
   
  O exemplo a seguir gera C2511:  
   

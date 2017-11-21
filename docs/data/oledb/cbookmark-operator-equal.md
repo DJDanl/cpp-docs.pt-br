@@ -1,55 +1,54 @@
 ---
-title: "CBookmark::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBookmark<0>::operator="
-  - "CBookmark<0>.operator="
-  - "ATL.CBookmark.operator="
-  - "CBookmark::operator="
-  - "ATL.CBookmark<0>.operator="
-  - "ATL::CBookmark<0>::operator="
-  - "CBookmark.operator="
-  - "ATL::CBookmark::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador =, com modelos OLE DB"
-  - "Operador =, indicadores"
-  - "operator=, indicadores"
+title: 'Cbookmark:: Operator = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBookmark<0>::operator=
+- CBookmark<0>.operator=
+- ATL.CBookmark.operator=
+- CBookmark::operator=
+- ATL.CBookmark<0>.operator=
+- ATL::CBookmark<0>::operator=
+- CBookmark.operator=
+- ATL::CBookmark::operator=
+dev_langs: C++
+helpviewer_keywords:
+- = operator, with OLE DB templates
+- operator =, bookmarks
+- operator=, bookmarks
 ms.assetid: 23805af4-aedd-47ad-bef4-21d902463797
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4225917ffb57c8c3e792a05c81f81dce1b6009cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CBookmark::operator =
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Atribui um objeto de `CBookmark` para outro.  
+# <a name="cbookmarkoperator-"></a>CBookmark::operator =
+Atribui um `CBookmark` objeto para outro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      CBookmark& operator =(   
-   const CBookmark& bookmark    
+      CBookmark& operator =(   
+   const CBookmark& bookmark    
 ) throw( );  
 ```  
   
-## Comentários  
- Esse operador é necessário apenas em **CBookmark\<0\>**.  
+## <a name="remarks"></a>Comentários  
+ Esse operador é necessária somente em **CBookmark\<0 >**.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CBookmark](../../data/oledb/cbookmark-class.md)

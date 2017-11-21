@@ -1,57 +1,53 @@
 ---
-title: "Fun&#231;&#227;o RaiseException | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::RaiseException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função RaiseException"
+title: "Função RaiseException | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::RaiseException
+dev_langs: C++
+helpviewer_keywords: RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f64d0e38bb92f9ebe3954b47ece29184cbf1a73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Fun&#231;&#227;o RaiseException
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="raiseexception-function"></a>Função RaiseException
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-inline void __declspec(noreturn)  
-   RaiseException(  
+inline void __declspec(noreturn)   RaiseException(  
       HRESULT hr,   
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `hr`  
- O código de exceção de exceção que está sendo gerado; isto é, o HRESULT de uma operação com falha.  
+ O código de exceção da exceção que está sendo gerado; ou seja, o HRESULT de uma operação com falha.  
   
  `dwExceptionFlags`  
- Um sinalizador que indica uma exceção continuable \(o valor do sinalizador é zero\), ou exceção noncontinuable \(o valor do sinalizador for diferente de zero\).  Por padrão, a exceção será noncontinuable.  
+ Um sinalizador que indica uma exceção noncontinuable (valor de sinalizador é diferente de zero) ou a exceção de continuidade (o valor do sinalizador será zero). Por padrão, a exceção é não continuável.  
   
-## Comentários  
- Gerencie uma exceção no thread de chamada.  
+## <a name="remarks"></a>Comentários  
+ Gera uma exceção no thread de chamada.  
   
- Para obter mais informações, veja a função de **RaiseException** do windows.  
+ Para obter mais informações, consulte o Windows **RaiseException** função.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** internal.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

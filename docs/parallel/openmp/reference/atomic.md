@@ -1,47 +1,28 @@
 ---
-title: "atômicos | Documentos do Microsoft"
+title: Atomic | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- atomic
-dev_langs:
-- C++
-helpviewer_keywords:
-- atomic OpenMP directive
+f1_keywords: atomic
+dev_langs: C++
+helpviewer_keywords: atomic OpenMP directive
 ms.assetid: 275e0338-cf2f-4525-97b5-696250000df7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bda7605e611aeac0e3c03def934acf2303a95d3b
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 92804b2bdcc243bde6e536004cda73d7f5087b1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atomic"></a>atomic
-Especifica que um local de memória que será atualizado automaticamente.  
+Especifica que um local de memória que será atualizado de forma atômica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,12 +33,12 @@ Especifica que um local de memória que será atualizado automaticamente.
   
 #### <a name="parameters"></a>Parâmetros  
  `expression`  
- A instrução que contém o l-value cujo local de memória que você deseja proteger contra várias gravações. Para obter mais informações sobre formulários de expressão legal, consulte a especificação de OpenMP.  
+ A instrução que contém o lvalue cujo local de memória que você deseja proteger contra várias gravações. Para obter mais informações sobre os formulários de expressão válido, consulte a especificação de OpenMP.  
   
 ## <a name="remarks"></a>Comentários  
- A `atomic` diretiva oferece suporte a nenhum cláusulas OpenMP.  
+ O `atomic` diretiva dá suporte a nenhuma cláusulas OpenMP.  
   
- Para obter mais informações, consulte [2.6.4 atômica construir](../../../parallel/openmp/2-6-4-atomic-construct.md).  
+ Para obter mais informações, consulte [2.6.4 atômico construir](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   

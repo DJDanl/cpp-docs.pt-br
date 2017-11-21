@@ -1,38 +1,36 @@
 ---
-title: "__noop | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__noop_cpp"
-  - "__noop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "palavra-chave __noop [C++]"
+title: NOOP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __noop_cpp
+- __noop
+dev_langs: C++
+helpviewer_keywords: __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7bdd595ac7fb70ef00865485a38e9d11cfd0181c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# __noop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="noop"></a>__noop
+**Seção específica da Microsoft**  
   
- O `__noop` intrínseca Especifica que uma função deve ser ignorada e a lista de argumento ser analisada, mas nenhum código gerado para os argumentos.  Destina\-se a uso em funções globais de depuração que levam um número variável de argumentos.  
+ O `__noop` intrínseco Especifica que uma função deve ser ignorada e a lista de argumentos ser analisados, mas nenhum código gerado para os argumentos. Ele é destinado ao uso em funções de depuração global que possuem um número variável de argumentos.  
   
- O compilador converte a `__noop` intrínseca 0 em tempo de compilação.  
+ O compilador converte o `__noop` intrínseco como 0 no tempo de compilação.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O código a seguir mostra como você poderia usar `__noop`.  
   
 ```  
@@ -51,6 +49,6 @@ int main() {
 }  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+ [Palavras-chave](../cpp/keywords-cpp.md)

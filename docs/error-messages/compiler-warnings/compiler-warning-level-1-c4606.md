@@ -1,47 +1,28 @@
 ---
-title: "Compilador aviso (nível 1) C4606 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4606 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4606
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4606
+f1_keywords: C4606
+dev_langs: C++
+helpviewer_keywords: C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0623611299416c5455be1b547a2e85f365cdfa12
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 8cabc2eb00cb1944a19ac31b5f0f30deb3857c04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4606"></a>Compilador C4606 de aviso (nível 1)
-\#Aviso de Pragma: 'warning_number' ignorado; Avisos da análise de código não estão associados a níveis de aviso  
+\#Aviso de Pragma: 'warning_number' ignorado; Avisos da análise de código não estão associados com níveis de aviso  
   
  Avisos de análise de código, apenas `error`, `once`, e `default` são compatíveis com o [aviso](../../preprocessor/warning.md) pragma.  
   

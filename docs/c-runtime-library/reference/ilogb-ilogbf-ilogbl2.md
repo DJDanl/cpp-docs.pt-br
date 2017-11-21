@@ -38,32 +38,18 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ea12eb75673037fce034917aa26f91da2c8b146c
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: f0b2e084e27b951676fddfb20b53d5f74944089e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
-Recupera um inteiro que representa o expoente de base&2; neutro do valor especificado.  
+Recupera um inteiro que representa o expoente de base 2 neutro do valor especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -95,7 +81,7 @@ int ilogbl(
  O valor especificado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna o expoente de base&2; de `x` como um `int` valor com sinal.  
+ Se for bem-sucedido, retorna o expoente de base 2 de `x` como um `int` valor com sinal.  
   
  Caso contrário, retorna um dos valores a seguir, definidos em É um dos valores a seguir, definidos em \<math.h>:  
   

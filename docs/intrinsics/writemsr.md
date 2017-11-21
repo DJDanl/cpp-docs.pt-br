@@ -1,64 +1,62 @@
 ---
-title: "__writemsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writemsr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Escrever instruções de registro específicas do modelo"
-  - "instrução WRMSR"
-  - "__writemsr intrínseco"
+title: __writemsr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writemsr
+dev_langs: C++
+helpviewer_keywords:
+- Write Model Specific Register instruction
+- wrmsr instruction
+- __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f82905dd2ef788962929203b3371f0b1fde316ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# __writemsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="writemsr"></a>__writemsr
+**Seção específica da Microsoft**  
   
- Gera a gravação para registrar o modelo específico \(`wrmsr`\) instrução.  
+ Gera a gravação para registrar específicos do modelo (`wrmsr`) instrução.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-void __writemsr(   
-   unsigned long Register,   
-   unsigned __int64 Value   
+void __writemsr(   
+   unsigned long Register,   
+   unsigned __int64 Value   
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`Register`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `Register`  
  O registro de modelo específico.  
   
- \[in\]`Value`  
- O valor para escrever.  
+ [in] `Value`  
+ O valor a ser gravado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
-|`__writemsr`|x86,[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
+|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Esta função só pode ser usada no modo kernel e essa rotina só está disponível como um intrínseco.  
+## <a name="remarks"></a>Comentários  
+ Essa função só pode ser usada no modo de kernel e Esta rotina só está disponível como um intrínseco.  
   
-## END Microsoft específicos  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

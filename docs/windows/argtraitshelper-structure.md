@@ -1,33 +1,30 @@
 ---
-title: "Estrutura ArgTraitsHelper | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraitsHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura ArgTraitsHelper"
+title: Estrutura ArgTraitsHelper | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraitsHelper
+dev_langs: C++
+helpviewer_keywords: ArgTraitsHelper structure
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8c42db196836a4a618003bfa14cd08d53105a04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Estrutura ArgTraitsHelper
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="argtraitshelper-structure"></a>Estrutura ArgTraitsHelper
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<  
@@ -36,35 +33,35 @@ template<
 struct ArgTraitsHelper;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `TDelegateInterface`  
- Uma interface de delegação.  
+ Uma interface de delegado.  
   
-## Comentários  
- Ajuda definem as características comuns de argumentos de delegação.  
+## <a name="remarks"></a>Comentários  
+ Ajuda a define as características comuns dos argumentos do delegado.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs Públicas  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
+|----------|-----------------|  
 |`methodType`|Um sinônimo de `decltype(&TDelegateInterface::Invoke)`.|  
 |`Traits`|Um sinônimo de `ArgTraits<methodType>`.|  
   
-### Constantes públicas  
+### <a name="public-constants"></a>Constantes públicas  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Constante ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md)|Ajuda [ArgTraits::args](../windows/argtraits-args-constant.md) mantém a contagem do número de parâmetros no método invocar de uma interface de delegação.|  
+|----------|-----------------|  
+|[Constante ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md)|Ajuda a [argtraits:: args](../windows/argtraits-args-constant.md) manter a contagem do número de parâmetros no método Invoke de uma interface de delegado.|  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ArgTraitsHelper`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** event.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

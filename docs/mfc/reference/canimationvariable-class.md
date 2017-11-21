@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,8 +29,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_lstTransitions
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_pParentObject
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_variable
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationVariable [MFC], CAnimationVariable
 - CAnimationVariable [MFC], AddTransition
@@ -53,16 +51,15 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: bc59fa4597bff59901ef77b0a661cf406bda6b29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 59b6c428f34f0f3eb100d568224399827fb243a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationvariable-class"></a>Classe CAnimationVariable
 Representa uma variável de animação.  
@@ -403,4 +400,3 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)
-

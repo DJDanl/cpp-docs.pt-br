@@ -1,57 +1,40 @@
 ---
-title: "Compilador aviso (nível 4) C4437 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4437 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 093522350ac996f6157a3e10e63271a0bada2ccc
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 88873faa9978da7c068d35cb88cc92317b7509d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Compilador C4437 de aviso (nível 4)
-dynamic_cast da base virtual 'class1' para 'class2' pode falhar em alguns contextos compilação com /vd2 ou definir 'class2' #pragma vtordisp(2) em vigor  
+dynamic_cast da base virtual 'class1' para 'class2' pode falhar em alguns contextos Compile com /vd2 ou defina class2 com vtordisp (2) #pragma em vigor  
   
  Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
  O compilador encontrou um `dynamic_cast` operação com as seguintes características.  
   
--   É a conversão de um ponteiro de classe base para um ponteiro de classe derivada.  
+-   A conversão é de um ponteiro de classe base para um ponteiro de classe derivada.  
   
--   Virtualmente, a classe derivada herda da classe base.  
+-   A classe derivada praticamente herda da classe base.  
   
--   A classe derivada não tem um `vtordisp` campo base virtual.  
+-   A classe derivada não tem um `vtordisp` campo para a base virtual.  
   
 -   A conversão não foi encontrada em um construtor ou destruidor da classe derivada ou uma classe que mais herda da classe derivada (caso contrário, aviso do compilador C4436 será emitido).  
   
- O aviso indica que o `dynamic_cast` pode não executar corretamente se estiver funcionando em um objeto parcialmente construído.  Essa situação ocorre quando a função é chamada de um construtor ou destruidor de uma classe que herda da classe derivada chamada no aviso.  Se a classe derivada é chamada no aviso nunca é ainda mais derivado, ou função não é chamada durante a construção de objetos ou destruição, o aviso pode ser ignorado.  
+ O aviso indica que o `dynamic_cast` pode não executar corretamente se ele estiver funcionando em um objeto parcialmente construído.  Essa situação ocorre quando a função delimitador é chamada de um construtor ou destruidor de uma classe que herda da classe derivada que é chamada no aviso.  Se a classe derivada que é chamada no aviso nunca seja mais derivado, ou a função delimitadora não é chamada durante a construção de objeto ou destruição, o aviso pode ser ignorado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4437 e demonstra o problema de geração de código que surge da ausentes `vtordisp` campo.  
@@ -105,4 +88,4 @@ int main()
 ## <a name="see-also"></a>Consulte também  
  [Operador dynamic_cast](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Compilador C4436 de aviso (nível 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+ [Aviso do compilador (nível 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

@@ -1,38 +1,37 @@
 ---
-title: "Express&#245;es no pr&#233;-processamento de makefile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expressões [C++], pré-processamento de makefile"
-  - "makefiles, pré-processamento"
-  - "pré-processando makefiles"
+title: "Expressões no pré-processamento de Makefile | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessing makefiles
+- expressions [C++], makefile preprocessing
+- makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 32de1d1eb3262e1fca0a00048a61d3129347cb19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Express&#245;es no pr&#233;-processamento de makefile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\!IF** Ou **\!ELSE IF** `constantexpression` consistem em constantes de número inteiro \(em notação decimal do ou do C \- linguagem\), constantes de cadeia de caracteres, ou comandos.  Use parênteses para agrupar expressões.  Aritmética longa de inteiro de 2.0 c \- estilo do uso de expressões; os números estão no formulário de 32 bits no intervalo de 2147483648 a 2147483647 de two's\- complemento.  
+# <a name="expressions-in-makefile-preprocessing"></a>Expressões no pré-processamento de makefile
+O **! Se** ou **! ELSE IF** `constantexpression` consiste em comandos, constantes de cadeia de caracteres ou constantes de inteiro (em notação decimal ou linguagem C). Use parênteses para agrupar expressões. As expressões usam C-style longo inteiro aritmético; números são na forma de complemento de dois de 32 bits no intervalo de-2147483648 a 2147483647.  
   
- As expressões podem usar os operadores que atuam em valores constantes, em códigos de saída de comandos, em cadeias de caracteres, em macros, e em caminhos do sistema de arquivos.  
+ Expressões podem usar os operadores que atuam em valores de constantes, códigos de saída de comandos, cadeias de caracteres, macros e caminhos de sistema de arquivos.  
   
-## Que você deseja saber mais?  
- [Operadores de pré\-processamento de Makefile](../Topic/Makefile%20Preprocessing%20Operators.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
+ [Operadores de pré-processamento de makefile](../build/makefile-preprocessing-operators.md)  
   
- [Executando um programa em pré\-processando](../build/executing-a-program-in-preprocessing.md)  
+ [Executando um programa em pré-processamento](../build/executing-a-program-in-preprocessing.md)  
   
-## Consulte também  
- [Pré\-processamento de makefile](../Topic/Makefile%20Preprocessing.md)
+## <a name="see-also"></a>Consulte também  
+ [Pré-processamento de makefile](../build/makefile-preprocessing.md)

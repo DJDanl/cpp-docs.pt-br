@@ -1,32 +1,31 @@
 ---
-title: "Modificando a heran&#231;a de RMyProviderRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "herança [C++]"
-  - "RMyProviderRowset"
+title: "Modificando a herança de RMyProviderRowset | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RMyProviderRowset
+- inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8ecfe35d61762b8beaa217eaacc4202a588debb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Modificando a heran&#231;a de RMyProviderRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para adicionar a interface de `IRowsetLocate` somente leitura ao exemplo simples do provedor, modifique a herança de **RMyProviderRowset**.  Inicialmente, **RMyProviderRowset** herda de `CRowsetImpl`.  Você precisa modificá\-la para herdar de **CRowsetBaseImpl**.  
+# <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modificando a herança de RMyProviderRowset
+Para adicionar o `IRowsetLocate` interface para o exemplo simples de provedor somente leitura, modifique a herança de **RMyProviderRowset**. Inicialmente, **RMyProviderRowset** herda de `CRowsetImpl`. Você precisa modificá-la para herdar de **CRowsetBaseImpl**.  
   
- Para fazer isso, crie uma nova classe, `CMyRowsetImpl`, em MyProviderRS.h:  
+ Para fazer isso, crie uma nova classe, `CMyRowsetImpl`, em myproviderrs. H:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -40,7 +39,7 @@ class CMyRowsetImpl:
 };  
 ```  
   
- Agora, edite o mapa da interface COM em MyProviderRS.h para ser:  
+ Agora, edite o mapa de interface COM em myproviderrs. H para ser da seguinte maneira:  
   
 ```  
 BEGIN_COM_MAP(CMyRowsetImpl)  
@@ -49,17 +48,17 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()  
 ```  
   
- Isso cria um mapa da interface COM que indica `CMyRowsetImpl` para chamar **QueryInterface** para as interfaces de `IRowset` e de `IRowsetLocate` .  Para obter qualquer implementação para as outras classes de conjunto de linhas, o mapa vincula a classe de `CMyRowsetImpl` de volta à classe de **CRowsetBaseImpl** definida pelos modelos OLE DB; o mapa usa a macro de COM\_INTERFACE\_ENTRY\_CHAIN, com modelos OLE DB para examinar o mapa COM em **CRowsetBaseImpl** em resposta a uma chamada de `QueryInterface` .  
+ Isso cria um mapa de interface COM que informa `CMyRowsetImpl` chamar **QueryInterface** para ambos os `IRowset` e `IRowsetLocate` interfaces. Para obter todos os a implementação para outro conjunto de linhas de classes, os links do mapa de `CMyRowsetImpl` classe de volta para o **CRowsetBaseImpl** classe definida pelos modelos OLE DB; o mapa usa a macro COM_INTERFACE_ENTRY_CHAIN, que informa Modelos OLE DB para verificar o COM mapeiam em **CRowsetBaseImpl** em resposta a um `QueryInterface` chamar.  
   
- Finalmente, link `RAgentRowset` a `CMyRowsetBaseImpl` alterando `RAgentRowset` para herdar de `CMyRowsetImpl`, como segue:  
+ Por fim, vincular `RAgentRowset` para `CMyRowsetBaseImpl` modificando `RAgentRowset` herde `CMyRowsetImpl`, da seguinte maneira:  
   
 ```  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset` pode usar a interface de `IRowsetLocate` para tirar proveito do restante da implementação da classe do conjunto de linhas.  
+ `RAgentRowset`agora pode usar o `IRowsetLocate` interface, aproveitando o restante da implementação da classe de conjunto de linhas.  
   
- Quando isso for feito, você pode [determinar dinamicamente as colunas retornadas ao consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Quando isso for feito, você pode [determinar dinamicamente colunas retornadas ao consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## Consulte também  
- [Melhorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Consulte também  
+ [Aprimorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)

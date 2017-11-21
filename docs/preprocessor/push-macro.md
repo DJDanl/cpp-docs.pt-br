@@ -1,36 +1,34 @@
 ---
-title: "push_macro | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.push_macro"
-  - "push_macro_CPP"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "pragmas, push_macro"
-  - "push_macro (pragma)"
+title: push_macro | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.push_macro
+- push_macro_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, push_macro
+- push_macro pragma
 ms.assetid: ac89efc9-afd1-4dfe-bfd1-497229b3e81d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ea7f842518f21e553198e8ee80894df25b8562dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# push_macro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Salva o valor da macro *macro\_name* na parte superior da pilha dessa macro.  
+# <a name="pushmacro"></a>push_macro
+Salva o valor da *macro_name* macro no topo da pilha da macro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -40,10 +38,10 @@ macro_name
   
 ```  
   
-## Comentários  
- Você pode recuperar o valor de *macro\_name* com **pop\_macro**.  
+## <a name="remarks"></a>Comentários  
+ Você pode recuperar o valor de *macro_name* com **pop_macro**.  
   
- Consulte [pop\_macro](../Topic/pop_macro.md) para obter um exemplo.  
+ Consulte [pop_macro](../preprocessor/pop-macro.md) para obter um exemplo.  
   
-## Consulte também  
- [Diretivas Pragma e a palavra\-chave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

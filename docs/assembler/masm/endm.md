@@ -1,33 +1,30 @@
 ---
-title: "ENDM | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ENDM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ENDM directive"
+title: ENDM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ENDM
+dev_langs: C++
+helpviewer_keywords: ENDM directive
 ms.assetid: 697ea303-1e47-4ee9-9e67-77b83c3fe35a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: deea4c7db1765665d4ad630ef300ea995c3ef5de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# ENDM
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="endm"></a>ENDM
 Finaliza um bloco de macro ou a repetição.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,8 +32,8 @@ ENDM
   
 ```  
   
-## Comentários  
- See [MACRO](../Topic/MACRO.md), [FOR](../../assembler/masm/for-masm.md), [FORC](../Topic/FORC.md), [REPEAT](../../assembler/masm/repeat.md), or **WHILE**.  
+## <a name="remarks"></a>Comentários  
+ Consulte [MACRO](../../assembler/masm/macro.md), [para](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [REPITA](../../assembler/masm/repeat.md), ou **ENQUANTO**.  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

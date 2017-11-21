@@ -1,71 +1,69 @@
 ---
-title: "/MANIFEST (criar manifesto de assembly lado a lado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateManifest"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /MANIFEST"
-  - "opção de vinculador MANIFEST"
-  - "opção de vinculador -MANIFEST"
+title: -MANIFESTO (criar manifesto do Assembly lado a lado) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.GenerateManifest
+dev_langs: C++
+helpviewer_keywords:
+- -MANIFEST linker option
+- /MANIFEST linker option
+- MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2067b0eb3cedb924c906e77bb549611bf8e8ed01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFEST (criar manifesto de assembly lado a lado)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (criar manifesto de assembly lado a lado)
 ```  
 /MANIFEST[:{EMBED[,ID=#]|NO}]  
 ```  
   
-## Comentários  
- \/MANIFEST especifica que o vinculador deve criar um arquivo de manifesto lado a lado.  Para obter mais informações sobre os arquivos de manifesto, consulte [Referência do arquivo de manifesto](http://msdn.microsoft.com/library/aa375632).  
+## <a name="remarks"></a>Comentários  
+ / MANIFESTO especifica que o vinculador deve criar um arquivo de manifesto lado a lado. Para obter mais informações sobre arquivos de manifesto, consulte [referência de arquivos de manifesto](http://msdn.microsoft.com/library/aa375632).  
   
- A opção é \/MANIFEST.  
+ O padrão é /MANIFEST.  
   
- A opção de \/MANIFEST:EMBED especifica que o vinculador deve digitar o arquivo de manifesto na imagem como um recurso do tipo RT\_MANIFEST.  O parâmetro opcional de `ID` é a ID do recurso a ser usado para o manifesto.  Use um valor de 1 para um arquivo executável.  Use um valor de 2 para uma DLL que permite especificar dependências privadas.  Se o parâmetro de `ID` não for especificado, o valor padrão é 2 se a opção \/DLL for definida; caso contrário, o valor padrão é 1.  
+ O /MANIFEST: Inserir opção especifica que o vinculador deve inserir o arquivo de manifesto na imagem como um recurso do tipo RT_MANIFEST. Opcional `ID` parâmetro é a ID de recurso a ser usado para o manifesto. Use um valor de 1 para um arquivo executável. Use um valor de 2 para uma DLL para habilitá-lo especificar dependências privadas. Se o `ID` parâmetro não for especificado, o valor padrão é 2, se a opção /DLL estiver definida; caso contrário, o valor padrão é 1.  
   
- A partir [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], os arquivos de manifesto para executáveis contêm uma seção que especifica as informações de Controle de Conta de Usuário \(UAC\).  Se você especificar \/MANIFEST mas não especifica nem [\/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) ou [\/DLL](../../build/reference/dll-build-a-dll.md), um fragmento do UAC opção que tem o nível do UAC definido *como asInvoker* é inserido no manifesto.  Para obter mais informações sobre os níveis do UAC, consulte [\/MANIFESTUAC \(insere informações UAC no manifesto\)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
+ Arquivos de manifesto para executáveis a partir do Visual Studio 2008, contém uma seção que especifica informações de controle de conta de usuário (UAC). Se você especificar /MANIFEST, mas não especificar nenhum [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) nem [/DLL](../../build/reference/dll-build-a-dll.md), um fragmento UAC padrão que tem o conjunto de nível de UAC para *asInvoker* é inserido no manifesto. Para obter mais informações sobre os níveis UAC, consulte [/MANIFESTUAC (insere informações UAC no manifesto)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
   
- Para alterar o comportamento padrão para o UAC, siga um destes:  
+ Para alterar o comportamento padrão para o UAC, siga um destes procedimentos:  
   
--   Especifique a opção \/MANIFESTUAC e define o nível do UAC para o valor desejado.  
+-   Especifique a opção /MANIFESTUAC e defina o nível UAC para o valor desejado.  
   
--   Ou especificar a opção de \/MANIFESTUAC:NO se não desejar gerar um fragmento do UAC no manifesto.  
+-   Ou especifique a opção /MANIFESTUAC: no se você não deseja gerar um fragmento de UAC no manifesto.  
   
- Se você não especificar \/MANIFEST mas especifica comentários de [\/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) , um arquivo de manifesto é criado.  Um arquivo de manifesto não é criado se você especificar \/MANIFEST:NO.  
+ Se você não especificar /MANIFEST, mas especificar [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) comentários, um arquivo de manifesto é criado. Um arquivo de manifesto não é criado se você especificar /MANIFEST:NO.  
   
- Se você especificar \/MANIFEST, o nome do arquivo de manifesto é o mesmo que o nome do arquivo de saída, mas com o .manifest anexado ao nome de arquivo.  Por exemplo, se o nome do arquivo de saída é MyFile.exe, o nome do arquivo de manifesto é MyFile.exe.manifest.  Se você especificar \/MANIFESTFILE:*name*, o nome do manifesto é o que você especifica em *name*.  
+ Se você especificar /MANIFEST, o nome do arquivo de manifesto é o mesmo que o nome do seu arquivo de saída, mas com. manifest junto ao nome do arquivo. Por exemplo, se o nome do arquivo de saída for MyFile.exe, o nome do arquivo de manifesto é MyFile.exe.manifest.  Se você especificar /MANIFESTFILE:*nome*, o nome do manifesto é o que você especificar na *nome*.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o nó **Propriedades de Configuração**.  
+2.  Expanda o **propriedades de configuração** nó.  
   
-3.  Expanda o nó **Vinculador**.  
+3.  Expanda o **vinculador** nó.  
   
-4.  Selecione a página de propriedades de **Arquivo de Manifesto** .  
+4.  Selecione o **o arquivo de manifesto** página de propriedades.  
   
-5.  Modifique a propriedade de **Gerar Manifesto** .  
+5.  Modificar o **gerar manifesto** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

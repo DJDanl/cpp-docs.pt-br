@@ -1,44 +1,25 @@
 ---
-title: copyprivate | Documentos do Microsoft
+title: copyprivate | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- copyprivate
-dev_langs:
-- C++
-helpviewer_keywords:
-- copyprivate OpenMP clause
+f1_keywords: copyprivate
+dev_langs: C++
+helpviewer_keywords: copyprivate OpenMP clause
 ms.assetid: 02c0209d-abe8-4797-8365-a82b53c3f15d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 02cd38a814bcefe016763a70dd0e459e465914ce
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 45b9e6ab273f80c2f19516933e6cac5bf9f1a739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="copyprivate"></a>copyprivate
 Especifica que uma ou mais variáveis devem ser compartilhados entre todos os threads.  
@@ -53,7 +34,7 @@ copyprivate(var)
  onde,  
   
  `var`  
- Uma ou mais variáveis para compartilhar. Se mais de uma variável for especificada, separe os nomes de variáveis com uma vírgula.  
+ Uma ou mais variáveis para compartilhar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
   
 ## <a name="remarks"></a>Comentários  
  `copyprivate`aplica-se para o [único](../../../parallel/openmp/reference/single.md) diretiva.  

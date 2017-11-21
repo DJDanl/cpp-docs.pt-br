@@ -1,53 +1,34 @@
 ---
-title: C3535 de erro do compilador | Documentos do Microsoft
+title: C3535 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3535
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3535
+f1_keywords: C3535
+dev_langs: C++
+helpviewer_keywords: C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d7275b848504a57e16d72e25e3b3d0da44ce2edf
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 3ab054ceefa51ab944e2d048996e25559b0c86ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3535"></a>C3535 de erro do compilador
-não é possível deduzir o tipo de 'type1' de 'type2'  
+não é possível deduzir o tipo para 'type1' de 'type2'  
   
- O tipo da variável declarada pelo `auto` palavra-chave não pode ser deduzido do tipo da expressão de inicialização. Por exemplo, este erro ocorre se a expressão de inicialização for avaliada como `void`, que não é um tipo.  
+ O tipo da variável declarada com o `auto` palavra-chave não pode ser deduzido do tipo da expressão de inicialização. Por exemplo, esse erro ocorre se a expressão de inicialização for avaliada como `void`, que não é um tipo.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se o tipo da expressão de inicialização não é `void`.  
+1.  Certifique-se de que o tipo da expressão de inicialização não é `void`.  
   
 2.  Certifique-se de que a declaração não é um ponteiro para um tipo fundamental. Para obter mais informações, consulte [tipos fundamentais](../../cpp/fundamental-types-cpp.md).  
   
@@ -68,7 +49,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir produz C3535 porque a instrução declara a variável `x` como um ponteiro para um tipo deduzido, mas o tipo do inicializador do expression é duplo. Consequentemente, o compilador não pode deduzir o tipo da variável.  
+ O exemplo a seguir produz C3535 porque a instrução Declare a variável `x` como um ponteiro para um tipo deduzido, mas o tipo do inicializador de expressão é double. Consequentemente, o compilador não é possível deduzir o tipo da variável.  
   
 ```  
 // C3535b.cpp  

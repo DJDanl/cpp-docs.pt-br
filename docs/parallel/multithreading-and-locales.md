@@ -1,49 +1,48 @@
 ---
-title: "Multithread e localidades | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "localidades [C++], multithreading"
-  - "multithreading [C++], localidades"
-  - "de acordo com a localidade do thread"
-  - "threading [C++], localidades"
+title: Multithread e localidades | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- locales [C++], multithreading
+- multithreading [C++], locales
+- threading [C++], locales
+- per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e60083aa67cc640dafb5c096b83d3097df04db1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Multithread e localidades
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A biblioteca de tempo de execução C e a biblioteca padrão C\+\+ fornecem suporte para alterar a localidade do programa.  Este tópico aborda problemas que ocorrem ao usar a funcionalidade de localidade de ambas as bibliotecas em um aplicativo multi\-threaded.  
+# <a name="multithreading-and-locales"></a>Multithread e localidades
+A biblioteca de tempo de execução do C e a biblioteca padrão C++ oferecem suporte para alterar a localidade do seu programa. Este tópico aborda problemas que surgem ao usar a funcionalidade de localidade de ambas as bibliotecas em um aplicativo multithread.  
   
-## Comentários  
- Com a biblioteca de tempo de execução C, você pode criar aplicativos multi\-threaded usando as funções de `_beginthread` e de `_beginthreadex` .  Este tópico abrange apenas os aplicativos multi\-threaded criados usando estas funções.  Para obter mais informações, consulte [\_beginthread, \_beginthreadex](../Topic/_beginthread,%20_beginthreadex.md).  
+## <a name="remarks"></a>Comentários  
+ Com a biblioteca de tempo de execução do C, você pode criar aplicativos multithread usando o `_beginthread` e `_beginthreadex` funções. Este tópico aborda apenas aplicativos multithread criados usando estas funções. Para obter mais informações, consulte [beginthread, beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Para alterar a localidade usando a biblioteca de tempo de execução C, use a função de [setlocale](../preprocessor/setlocale.md) .  Em versões anteriores de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)], essa função deve alterar sempre a localidade durante qualquer aplicativo inteiro.  Agora existe suporte para definir a localidade em uma base por thread.  Isso é feito usando a função de [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) .  Para especificar que [setlocale](../preprocessor/setlocale.md) deve alterar apenas a localidade do thread atual, chame `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` nesse thread.  Por outro lado, chame `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` fará com que o thread use a localidade global, e qualquer chamada para [setlocale](../preprocessor/setlocale.md) nesse thread alterará a localidade em todos os threads que não habilitado explicitamente a localidade do thread.  
+ Para alterar a localidade usando a biblioteca de tempo de execução C, use o [setlocale](../preprocessor/setlocale.md) função. Nas versões anteriores do Visual C++, essa função sempre deve modificar a localidade em todo o aplicativo. Agora há suporte para definir a localidade em uma base por thread. Isso é feito usando o [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) função. Para especificar que [setlocale](../preprocessor/setlocale.md) só deve alterar a localidade do thread atual, chamada `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` nesse thread. Por outro lado, chamar `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` fará com que esse thread para usar a localidade global e todas as chamadas de [setlocale](../preprocessor/setlocale.md) nesse thread irá alterar a localidade em todos os threads que não tenha habilitado explicitamente localidade por thread.  
   
- Para alterar a localidade usando a biblioteca de tempo de execução C\+\+, use [Classe locale](../standard-library/locale-class.md).  Chamando o método de [locale::global](../Topic/locale::global.md) , modifique a localidade em cada thread que não tenha habilitado explicitamente a localidade do thread.  Para alterar a localidade em um único thread ou parte de um aplicativo, crie apenas uma instância de um objeto de `locale` nessa thread ou parte do código.  
+ Para alterar a localidade usando a biblioteca de tempo de execução C++, use o [classe locale](../standard-library/locale-class.md). Chamando o [Locale:: global](../standard-library/locale-class.md#global) método, você alterar a localidade em cada thread que não tenha habilitado explicitamente localidade por thread. Para alterar a localidade em um único thread ou parte de um aplicativo, basta criar uma instância de um `locale` objeto no thread ou parte do código.  
   
 > [!NOTE]
->  A chamada [locale::global](../Topic/locale::global.md) altera a localidade da biblioteca padrão C\+\+ e a biblioteca de tempo de execução C.  No entanto, chame [setlocale](../preprocessor/setlocale.md) altera somente a localidade da biblioteca de tempo de execução C; a biblioteca padrão do C\+\+ não é afetada.  
+>  Chamando [Locale:: global](../standard-library/locale-class.md#global) altera a localidade para a biblioteca padrão C++ e a biblioteca de tempo de execução C. No entanto, chamar [setlocale](../preprocessor/setlocale.md) altera apenas a localidade para a biblioteca de tempo de execução C; a biblioteca padrão C++ não é afetado.  
   
- Os exemplos a seguir mostram como usar a função de [setlocale](../preprocessor/setlocale.md) , o [Classe locale](../standard-library/locale-class.md), e a função de [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) para alterar a localidade de um aplicativo em vários cenários diferentes.  
+ Os exemplos a seguir mostram como usar o [setlocale](../preprocessor/setlocale.md) função, o [classe locale](../standard-library/locale-class.md)e o [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) função para alterar a localidade de um aplicativo vários cenários diferentes.  
   
-## Exemplo  
- Neste exemplo, o thread principal gerencie dois threads filhos.  O primeiro thread, A threads, habilita a localidade do thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  O segundo thread, o thread B, bem como o thread principal, não habilitam a localidade do thread.  Executável continuar A seguir para alterar a localidade usando a função de [setlocale](../preprocessor/setlocale.md) da biblioteca de tempo de execução C.  
+## <a name="example"></a>Exemplo  
+ Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. Thread de um, em seguida, prossegue para alterar a localidade usando o [setlocale](../preprocessor/setlocale.md) função da biblioteca de tempo de execução do C.  
   
- Desde que o thread A tem localidade do thread habilitada, somente as funções da biblioteca de tempo de execução C threads no início da usando a localidade francesa “”.  Funções da biblioteca de tempo de execução C no thread B e o thread principal continuam a usar a localidade de C “2.0”.  Além disso, desde que [setlocale](../preprocessor/setlocale.md) não afeta a localidade da biblioteca padrão C\+\+, todos os objetos de biblioteca padrão do C\+\+ continuam a usar a localidade de C “2.0”.  
+ Desde que o Thread A tem localidade por thread habilitada, somente as funções de biblioteca de tempo de execução C no início de Thread A usando a localidade "França". As funções de biblioteca de tempo de execução C no Thread B e no thread principal continuam a usar a localidade "C". Além disso, como [setlocale](../preprocessor/setlocale.md) não afeta a localidade de biblioteca padrão C++, todos os biblioteca padrão C++ objetos continuam a usar a localidade "C".  
   
 ```  
 // multithread_locale_1.cpp  
@@ -124,19 +123,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[\] Executável à localidade do thread está habilitada.**  
-**\[\] Executável à localidade de CRT é definida como “French\_France.1252”**  
-**\[\] Executável A locale::global é definido como “2.0” C**  
-**\[\] Thread B a localidade do thread não é habilitada.**  
-**\[\] Thread B a localidade de CRT é definida como “2.0” C**  
-**\[\] Thread B locale::global é definido como “2.0” C**  
-**\[A localidade do thread de main de thread\] não é habilitada.**  
-**\[Main de thread\] a localidade de CRT é definida como “2.0” C**  
-**\[Main de thread\] locale::global é definido como “2.0” C**   
-## Exemplo  
- Neste exemplo, o thread principal gerencie dois threads filhos.  O primeiro thread, A threads, habilita a localidade do thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  O segundo thread, o thread B, bem como o thread principal, não habilitam a localidade do thread.  Executável continuar A seguir para alterar a localidade usando o método de [locale::global](../Topic/locale::global.md) de biblioteca padrão do C\+\+.  
+```Output  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "French_France.1252"  
+[Thread A] locale::global is set to "C"  
   
- Desde que o thread A tem localidade do thread habilitada, somente as funções da biblioteca de tempo de execução C threads no início da usando a localidade francesa “”.  Funções da biblioteca de tempo de execução C no thread B e o thread principal continuam a usar a localidade de C “2.0”.  Entretanto, como o método de [locale::global](../Topic/locale::global.md) altera a localidade “globais”, todos os objetos da biblioteca padrão do C\+\+ em qualquer início dos threads usando a localidade francesa “”.  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "C"  
+[Thread B] locale::global is set to "C"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "C"  
+[Thread main] locale::global is set to "C"  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. Thread de um, em seguida, prossegue para alterar a localidade usando o [Locale:: global](../standard-library/locale-class.md#global) método da biblioteca C++ padrão.  
+  
+ Desde que o Thread A tem localidade por thread habilitada, somente as funções de biblioteca de tempo de execução C no início de Thread A usando a localidade "França". As funções de biblioteca de tempo de execução C no Thread B e no thread principal continuam a usar a localidade "C". No entanto, como o [Locale:: global](../standard-library/locale-class.md#global) método altera a localidade "global", todos os objetos de biblioteca padrão C++ em todos os threads iniciar usando a localidade "França".  
   
 ```  
 // multithread_locale_2.cpp  
@@ -217,19 +221,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[\] Executável à localidade do thread está habilitada.**  
-**\[\] Executável à localidade de CRT é definida como “French\_France.1252”**  
-**\[\] Executável A locale::global é definido como “French\_France.1252”**  
-**\[\] Thread B a localidade do thread não é habilitada.**  
-**\[\] Thread B a localidade de CRT é definida como “2.0” C**  
-**\[\] Thread B locale::global é definido como “French\_France.1252”**  
-**\[A localidade do thread de main de thread\] não é habilitada.**  
-**\[Main de thread\] a localidade de CRT é definida como “2.0” C**  
-**\[Main de thread\] locale::global é definido como “French\_France.1252”**   
-## Exemplo  
- Neste exemplo, o thread principal gerencie dois threads filhos.  O primeiro thread, A threads, habilita a localidade do thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  O segundo thread, o thread B, bem como o thread principal, não habilitam a localidade do thread.  O thread B continue para alterar a localidade usando a função de [setlocale](../preprocessor/setlocale.md) da biblioteca de tempo de execução C.  
+```Output  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "French_France.1252"  
+[Thread A] locale::global is set to "French_France.1252"  
   
- Desde que o thread B não tem localidade do thread habilitada, as funções da biblioteca de tempo de execução C no thread B e o thread principal começa usando a localidade francesa “”.  Funções da biblioteca de tempo de execução C threads em uma acompanhamento usar a localidade de C “2.0” porque o thread A tem localidade do thread habilitada.  Além disso, desde que [setlocale](../preprocessor/setlocale.md) não afeta a localidade da biblioteca padrão C\+\+, todos os objetos de biblioteca padrão do C\+\+ continuam a usar a localidade de C “2.0”.  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "C"  
+[Thread B] locale::global is set to "French_France.1252"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "C"  
+[Thread main] locale::global is set to "French_France.1252"  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. O thread B, em seguida, prossegue para alterar a localidade usando o [setlocale](../preprocessor/setlocale.md) função da biblioteca de tempo de execução do C.  
+  
+ Desde que o Thread B não tiver habilitada a localidade por thread, as funções de biblioteca de tempo de execução C no Thread B e no thread principal iniciar usando a localidade "França". As funções de biblioteca de tempo de execução do C em continuar Thread A usar a localidade "C", porque o Thread A tem localidade por thread habilitada. Além disso, como [setlocale](../preprocessor/setlocale.md) não afeta a localidade de biblioteca padrão C++, todos os biblioteca padrão C++ objetos continuam a usar a localidade "C".  
   
 ```  
 // multithread_locale_3.cpp  
@@ -314,19 +323,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[\] Thread B a localidade do thread não é habilitada.**  
-**\[\] Thread B a localidade de CRT é definida como “French\_France.1252”**  
-**\[\] Thread B locale::global é definido como “2.0” C**  
-**\[\] Executável à localidade do thread está habilitada.**  
-**\[\] Executável à localidade de CRT é definida como “2.0” C**  
-**\[\] Executável A locale::global é definido como “2.0” C**  
-**\[A localidade do thread de main de thread\] não é habilitada.**  
-**\[Main de thread\] a localidade de CRT é definida como “French\_France.1252”**  
-**\[Main de thread\] locale::global é definido como “2.0” C**   
-## Exemplo  
- Neste exemplo, o thread principal gerencie dois threads filhos.  O primeiro thread, A threads, habilita a localidade do thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  O segundo thread, o thread B, bem como o thread principal, não habilitam a localidade do thread.  O thread B continue para alterar a localidade usando o método de [locale::global](../Topic/locale::global.md) de biblioteca padrão do C\+\+.  
+```Output  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "French_France.1252"  
+[Thread B] locale::global is set to "C"  
   
- Desde que o thread B não tem localidade do thread habilitada, as funções da biblioteca de tempo de execução C no thread B e o thread principal começa usando a localidade francesa “”.  Funções da biblioteca de tempo de execução C threads em uma acompanhamento usar a localidade de C “2.0” porque o thread A tem localidade do thread habilitada.  Entretanto, como o método de [locale::global](../Topic/locale::global.md) altera a localidade “globais”, todos os objetos da biblioteca padrão do C\+\+ em qualquer início dos threads usando a localidade francesa “”.  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "C"  
+[Thread A] locale::global is set to "C"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "French_France.1252"  
+[Thread main] locale::global is set to "C"  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. O thread B, em seguida, prossegue para alterar a localidade usando o [Locale:: global](../standard-library/locale-class.md#global) método da biblioteca C++ padrão.  
+  
+ Desde que o Thread B não tiver habilitada a localidade por thread, as funções de biblioteca de tempo de execução C no Thread B e no thread principal iniciar usando a localidade "França". As funções de biblioteca de tempo de execução do C em continuar Thread A usar a localidade "C", porque o Thread A tem localidade por thread habilitada. No entanto, como o [Locale:: global](../standard-library/locale-class.md#global) método altera a localidade "global", todos os objetos de biblioteca padrão C++ em todos os threads iniciar usando a localidade "França".  
   
 ```  
 // multithread_locale_4.cpp  
@@ -411,22 +425,27 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[\] Thread B a localidade do thread não é habilitada.**  
-**\[\] Thread B a localidade de CRT é definida como “French\_France.1252”**  
-**\[\] Thread B locale::global é definido como “French\_France.1252”**  
-**\[\] Executável à localidade do thread está habilitada.**  
-**\[\] Executável à localidade de CRT é definida como “2.0” C**  
-**\[\] Executável A locale::global é definido como “French\_France.1252”**  
-**\[A localidade do thread de main de thread\] não é habilitada.**  
-**\[Main de thread\] a localidade de CRT é definida como “French\_France.1252”**  
-**\[Main de thread\] locale::global é definido como “French\_France.1252”**   
-## Consulte também  
- [Suporte multithread para código anterior \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [\_beginthread, \_beginthreadex](../Topic/_beginthread,%20_beginthreadex.md)   
- [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+```Output  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "French_France.1252"  
+[Thread B] locale::global is set to "French_France.1252"  
+  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "C"  
+[Thread A] locale::global is set to "French_France.1252"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "French_France.1252"  
+[Thread main] locale::global is set to "French_France.1252"  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Suporte multithread para código anterior (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+ [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
  [setlocale](../preprocessor/setlocale.md)   
  [Internacionalização](../c-runtime-library/internationalization.md)   
  [Localidade](../c-runtime-library/locale.md)   
- [\<clocale\>](../standard-library/clocale.md)   
- [\<locale\>](../standard-library/locale.md)   
+ [\<clocale >](../standard-library/clocale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [Classe locale](../standard-library/locale-class.md)

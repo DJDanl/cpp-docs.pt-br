@@ -1,44 +1,42 @@
 ---
-title: "CBookmark::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBookmark::GetSize"
-  - "ATL.CBookmark<nSize>.GetSize"
-  - "CBookmark<nSize>.GetSize"
-  - "CBookmark.GetSize"
-  - "ATL::CBookmark::GetSize"
-  - "CBookmark<0>::GetSize"
-  - "ATL::CBookmark<nSize>::GetSize"
-  - "ATL.CBookmark<0>.GetSize"
-  - "ATL::CBookmark<0>::GetSize"
-  - "ATL.CBookmark.GetSize"
-  - "CBookmark<0>.GetSize"
-  - "CBookmark<nSize>::GetSize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetSize"
+title: 'Cbookmark:: GetSize | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBookmark::GetSize
+- ATL.CBookmark<nSize>.GetSize
+- CBookmark<nSize>.GetSize
+- CBookmark.GetSize
+- ATL::CBookmark::GetSize
+- CBookmark<0>::GetSize
+- ATL::CBookmark<nSize>::GetSize
+- ATL.CBookmark<0>.GetSize
+- ATL::CBookmark<0>::GetSize
+- ATL.CBookmark.GetSize
+- CBookmark<0>.GetSize
+- CBookmark<nSize>::GetSize
+dev_langs: C++
+helpviewer_keywords: GetSize method
 ms.assetid: 78ea6021-2033-48f5-8ce8-040ae30f30c5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: daaebc957862b893b130dce28d47d4a166da9d52
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CBookmark::GetSize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera o tamanho do buffer do medidor.  
+# <a name="cbookmarkgetsize"></a>CBookmark::GetSize
+Recupera o tamanho do buffer indicador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -46,11 +44,11 @@ virtual DBLENGTH GetSize( ) const throw( );
   
 ```  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  O tamanho do buffer em bytes.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CBookmark](../../data/oledb/cbookmark-class.md)

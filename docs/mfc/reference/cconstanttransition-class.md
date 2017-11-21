@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,23 +13,21 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CConstantTransition::CConstantTransition
 - AFXANIMATIONCONTROLLER/CConstantTransition::Create
 - AFXANIMATIONCONTROLLER/CConstantTransition::m_duration
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CConstantTransition [MFC], CConstantTransition
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 7e44b045f4d6484b554f72aaeecf00e18660143c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: ebf6536421814ba9e08e497b1c29eed7e17ede06
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cconstanttransition-class"></a>Classe CConstantTransition
 Encapsula uma transição de constante.  
@@ -110,4 +107,3 @@ UI_ANIMATION_SECONDS m_duration;
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)
-

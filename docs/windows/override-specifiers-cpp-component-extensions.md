@@ -1,61 +1,60 @@
 ---
-title: "Substituir especificadores (extens&#245;es de componentes C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Substituir especificadores, Visual C++"
-  - "especificadores de substituição"
+title: "Substituir especificadores (extensões de componentes C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- override specifiers, Visual C++
+- override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c314e224bbbc9b7d232ee9e2cb9bbc20ec8ead71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Substituir especificadores (extens&#245;es de componentes C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*Especificadores de substituição* modificam a forma como tipos e membros herdados de tipos herdados se comportam em tipos derivados.  
+# <a name="override-specifiers--c-component-extensions"></a>Especificadores de Substituição (Extensões de Componentes C++)
+*Especificadores de substituição* modificar como herdadas de tipos e membros de tipos herdados se comportam em tipos derivados.  
   
-## Todos os Tempos de Execução  
+## <a name="all-runtimes"></a>Todos os Tempos de Execução  
  **Comentários**  
   
  Para obter mais informações sobre especificadores de substituição, consulte:  
   
--   [abstrata](../windows/abstract-cpp-component-extensions.md)  
+-   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [novo \(novo slot em vtable\)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [novo (novo slot em vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
--   [autenticada](../windows/sealed-cpp-component-extensions.md)  
+-   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
 -   [Especificadores de substituição e compilações nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- `abstract` e `sealed` também são válidos em declarações de tipo, onde não atuam como especificadores de substituição.  
+ `abstract`e `sealed` também são válidos em declarações de tipo, em que elas não atuam como especificadores de substituição.  
   
- Para obter informações sobre a substituição explícita de funções de classe base, consulte [Substituições explícitas](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Para obter informações sobre como substituir explicitamente funções da classe base, consulte [substituições explícitas](../windows/explicit-overrides-cpp-component-extensions.md).  
   
-## Tempo de execução do windows  
- \(Não há nenhum comentário sobre este recurso de linguagem que se aplica somente Tempo de Execução do Windows\).  
+## <a name="windows-runtime"></a>Tempo de Execução do Windows  
+ (Não há nenhum comentários para esse recurso de idioma que se aplicam somente no tempo de execução do Windows).  
   
-### Requisitos  
- Opção do compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opção do compilador: **/ZW**  
   
-## Common Language Runtime  
- \(Não há nenhum comentário sobre este recurso de linguagem que se aplica somente ao common language runtime\).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (Não há nenhum comentários para esse recurso de idioma que se aplicam a apenas o common language runtime).  
   
-### Requisitos  
- Opção do compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opção de compilador: **/clr**  
   
-## Consulte também  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Consulte também  
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

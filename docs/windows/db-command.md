@@ -1,54 +1,44 @@
 ---
-title: "db_command | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_command"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Atributo db_command"
+title: db_command | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_command
+dev_langs: C++
+helpviewer_keywords: db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a59b7eceeafe7d158dd983936fb4cffecaf2e12f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# db_command
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dbcommand"></a>db_command
 Cria um comando OLE DB.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-[ db_command(   
-command  
-,   
-   name  
-,   
-   source_name  
-,   
-   hresult  
-,   
-   bindings  
-,   
-   bulk_fetch  
-)  
+      [ db_command(   
+   command,   
+   name,   
+   source_name,   
+   hresult,   
+   bindings,   
+   bulk_fetch)  
 ]  
-  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `command`  
  Uma cadeia de caracteres de comando que contém o texto de um comando de OLE DB. É um exemplo simples:  
   
@@ -67,38 +57,38 @@ binding parameter block 3
 ...  
 ```  
   
- Um *Bloco de parâmetro de associação* é definida da seguinte maneira:  
+ Um *bloco de parâmetro de associação* é definido da seguinte maneira:  
   
- **\(\[** `bindtype` **\]** *szVar1* \[*, szVar2* \[, *nVar3* \[, ...\]\]\] **\)**  
+ **([** `bindtype` **]** *szVar1* [*, szVar2* [, *nVar3* [,...]]] **)**  
   
- onde:  
+ em que:  
   
- **\(** marca o início do bloco de associação de dados.  
+ **(** marca o início do bloco de associação de dados.  
   
- **\[** `bindtype` **\]** é uma das seguintes cadeias de caracteres diferenciam maiusculas de minúsculas:  
+ **[** `bindtype` **]** é uma das seguintes cadeias de caracteres de maiusculas e minúsculas:  
   
--   **\[db\_column\]** associa cada uma das variáveis de membro a uma coluna em um conjunto de linhas.  
+-   **[db_column]**  associa cada uma das variáveis de membro a uma coluna em um conjunto de linhas.  
   
--   **\[bindto\]** \(mesmo que **\[db\_column\]**\).  
+-   **[bindto]**  (mesmo que **[db_column]**).  
   
--   **\[in\]** associa variáveis de membro como parâmetros de entrada.  
+-   **[in]**  associa as variáveis de membro como parâmetros de entrada.  
   
--   **\[out\]** associa variáveis de membro como parâmetros de saída.  
+-   **[out]**  associa as variáveis de membro como parâmetros de saída.  
   
--   **\[em, out\]** associa variáveis de membro como parâmetros de entrada\/saída.  
+-   **[out no]**  associa as variáveis de membro como parâmetros de entrada/saída.  
   
  *SzVarX* resolve a uma variável de membro dentro do escopo atual.  
   
- **\)** marca o fim do bloco de associação de dados.  
+ **)** marca o fim do bloco de associação de dados.  
   
- Se a cadeia de caracteres de comando contém um ou mais especificadores como \[in\], \[out\] ou \[entrada\/saída\], **db\_command** cria um mapa de parâmetro.  
+ Se a cadeia de caracteres de comando contém um ou mais especificadores como [in], [out] ou [entrada/saída], **db_command** cria um mapa de parâmetro.  
   
- Se a cadeia de caracteres de comando contém um ou mais parâmetros como \[db\_column\] ou \[bindto\], **db\_command** gera um conjunto de linhas e um mapa de acessador para atender a essas variáveis associadas. Consulte [db\_accessor](../windows/db-accessor.md) para obter mais informações.  
+ Se a cadeia de caracteres de comando contém um ou mais parâmetros como [db_column] ou [bindto] **db_command** gera um conjunto de linhas e um mapa de acessador para atender a essas variáveis associadas. Consulte [db_accessor](../windows/db-accessor.md) para obter mais informações.  
   
 > [!NOTE]
->  \[`bindtype`\] sintaxe e o `bindings` parâmetro não são válidos quando usando **db\_command** no nível de classe.  
+>  [`bindtype`] sintaxe e o `bindings` parâmetro não são válidos quando usando **db_command** no nível de classe.  
   
- Aqui estão alguns exemplos de blocos de parâmetro de associação. O exemplo a seguir associa o `m_au_fname` e `m_au_lname` membros de dados de `au_fname` e `au_lname` colunas, respectivamente, da tabela dos autores no banco de dados pubs:  
+ Aqui estão alguns exemplos de blocos de parâmetro de associação. O exemplo a seguir associa o `m_au_fname` e `m_au_lname` membros de dados para o `au_fname` e `au_lname` colunas, respectivamente, da tabela dos autores no banco de dados pubs:  
   
 ```  
 TCHAR m_au_fname[21];  
@@ -111,48 +101,48 @@ TCHAR m_state[3] = 'CA';
    "WHERE state = ?([in]m_state)")  
 ```  
   
- \]  
+ ]  
   
- *nome* \(opcional\)  
- O nome do identificador que você usa para trabalhar com o conjunto de linhas. Se você especificar *nome*, **db\_command** gera uma classe com especificado *nome*, que pode ser usado para percorrer o conjunto de linhas ou de executar várias consultas de ação. Se você não especificar *nome*, não será possível retornar mais de uma linha de resultados para o usuário.  
+ *nome* (opcional)  
+ O nome do identificador que você usa para trabalhar com o conjunto de linhas. Se você especificar *nome*, **db_command** gera uma classe com especificado *nome*, que pode ser usado para percorrer o conjunto de linhas ou para executar várias consultas de ação. Se você não especificar *nome*, não será possível retornar mais de uma linha de resultados para o usuário.  
   
- *source\_name* \(opcional\)  
- O `CSession` variável ou instância de uma classe que tem o `db_source` atributo aplicado a ele no qual o comando é executado. Consulte [db\_source](../windows/db-source.md).  
+ *source_name* (opcional)  
+ O `CSession` variável ou instância de uma classe que tem o `db_source` atributo aplicado a ele no qual o comando é executado. Consulte [db_source](../windows/db-source.md).  
   
- **db\_command** verificações para garantir que a variável usada para *source\_name* é válido, então a variável especificada deve estar no escopo global ou de função.  
+ **db_command** verificações para garantir que a variável usada para *source_name* é válido, portanto, a variável especificada deve estar no escopo global ou de função.  
   
- `hresult` \(opcional\)  
- Identifica a variável que receberá o `HRESULT` desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.  
+ `hresult` (opcional)  
+ Identifica a variável que receberá o `HRESULT` deste comando de banco de dados. Se a variável não existir, ele será automaticamente introduzido pelo atributo.  
   
- *ligações* \(opcional\)  
+ *associações* (opcional)  
  Permite que você separe os parâmetros de ligação do comando OLE DB.  
   
- Se você especificar um valor para `bindings`, **db\_command** analisará o valor associado e não analisará o \[`bindtype`\] parâmetro. Esse uso permite que você use a sintaxe do provedor OLE DB. Para desabilitar a análise, sem associação de parâmetros, especifique **ligações \= ""**.  
+ Se você especificar um valor para `bindings`, **db_command** analisará o valor associado e não analisará o [`bindtype`] parâmetro. Esse uso permite que você use a sintaxe do provedor OLE DB. Para desabilitar a análise, sem associação de parâmetros, especifique **associações = ""**.  
   
- Se você não especificar um valor para `bindings`, **db\_command** analisará o bloco de parâmetro de associação, procurando por '**\(**', seguido por **\[**`bindtype`**\]** entre colchetes, seguidos por um ou mais declarado anteriormente C\+\+ variáveis de membro, seguido por '**\)**'. Todo o texto entre os parênteses será removido do comando resultante e esses parâmetros serão usados para criar associações de parâmetro e coluna para este comando.  
+ Se você não especificar um valor para `bindings`, **db_command** analisará o bloco de parâmetro de associação, procurando por '**(**', seguido por **[** `bindtype` **]**  entre colchetes, seguidos por um ou mais declarada anteriormente C++ variáveis de membro, seguido por '**)**'. Todo o texto entre os parênteses será removido do comando resultante, e esses parâmetros serão usados para construir as associações de parâmetro e coluna para este comando.  
   
- *bulk\_fetch*\(opcional\)  
- Um valor inteiro que especifica o número de linhas a serem recuperadas.  
+ *bulk_fetch*(opcional)  
+ Um valor inteiro que especifica o número de linhas a serem buscadas.  
   
- O valor padrão é 1, que especifica a busca de única linha \(o conjunto de linhas será do tipo [CRowset](../Topic/CRowset%20Class.md)\).  
+ O valor padrão é 1, que especifica a busca de única linha (o conjunto de linhas será do tipo [CRowset](../data/oledb/crowset-class.md)).  
   
- Um valor maior que 1 Especifica a busca de linhas em massa. Busca de linhas em massa se refere à capacidade de conjuntos de linhas em massa para buscar vários identificadores de linha \(o conjunto de linhas será do tipo [CBulkRowset](../Topic/CBulkRowset%20Class.md) e chamará `SetRows` com o número especificado de linhas\).  
+ Um valor maior que 1 Especifica que a busca de linhas em massa. Busca de linhas em massa refere-se à capacidade de conjuntos de linhas em massa para buscar vários identificadores de linha (o conjunto de linhas será do tipo [CBulkRowset](../data/oledb/cbulkrowset-class.md) e chamará `SetRows` com o número especificado de linhas).  
   
- Se *bulk\_fetch* é menor que 1, `SetRows` retornará zero.  
+ Se *bulk_fetch* é menor do que um `SetRows` retornará zero.  
   
-## Comentários  
- **db\_command** cria um [CCommand](../data/oledb/ccommand-class.md) objeto, que é usado por um consumidor OLE DB para executar um comando.  
+## <a name="remarks"></a>Comentários  
+ **db_command** cria um [CCommand](../data/oledb/ccommand-class.md) objeto, que é usado por um consumidor OLE DB para executar um comando.  
   
- Você pode usar **db\_command** com escopo de classe ou função; a principal diferença é o escopo do `CCommand` objeto. Com o escopo da função, dados, como associações encerrar no final da função. Usos de escopo de classe e a função envolvem a classe de modelo OLE DB consumidor **CCommand \<\>**, mas os argumentos do modelo são diferentes para os casos de função e classe. No caso de função, associações serão feitas para um **acessador** que abrange variáveis locais, enquanto o uso da classe irá inferir um `CAccessor`\-derivado da classe como o argumento. Quando usado como um atributo de classe **db\_command** funciona em conjunto com **db\_column**.  
+ Você pode usar **db_command** com escopo de classe ou função; a principal diferença é o escopo do `CCommand` objeto. Com escopo de função, dados, como associações de terminam a fim de função. Usos de escopo de classe e a função envolvem a classe de OLE DB consumidor modelo **CCommand <>**, mas os argumentos de modelo são diferentes para os casos de função e classe. No caso de função, associações serão feitas para um **acessador** que consiste em variáveis locais, enquanto o uso da classe deduz um `CAccessor`-derivado da classe como o argumento. Quando usado como um atributo de classe, **db_command** funciona em conjunto com **db_column**.  
   
- **db\_command** pode ser usado para executar comandos que retornam um conjunto de resultados.  
+ **db_command** pode ser usado para executar comandos que não retornam um conjunto de resultados.  
   
- Quando o provedor de atributo do consumidor aplica esse atributo para uma classe, o compilador irá renomear a classe \_*YourClassName*acessador, onde *YourClassName* é o nome que você deu a classe e o compilador também criará uma classe chamada *YourClassName,* que deriva de \_*YourClassName*acessador.  No modo de exibição de classe, você verá as duas classes.  
+ Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador irá renomear a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome atribuído a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivado de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as classes.  
   
-## Exemplo  
- Este exemplo define um comando que seleciona os nomes e sobrenomes de uma tabela onde o estado da coluna corresponde a 'CA'.**db\_command** cria e lê um conjunto de linhas em que você pode chamar funções geradas pelo assistente, como [OpenAll e CloseAll](../Topic/Consumer%20Wizard-Generated%20Methods.md), bem como `CRowset` como funções de membro [MoveNext](../data/oledb/crowset-movenext.md).  
+## <a name="example"></a>Exemplo  
+ Este exemplo define um comando que seleciona os nomes e sobrenomes de uma tabela em que a coluna de estado corresponde a 'CA'. **db_command** cria e lê um conjunto de linhas em que você pode chamar funções geradas pelo assistente, como [OpenAll e CloseAll](../data/oledb/consumer-wizard-generated-methods.md), bem como `CRowset` , como funções de membro [MoveNext](../data/oledb/crowset-movenext.md).  
   
- Observe que esse código requer que você forneça sua própria cadeia de conexão que se conecta ao banco de dados pubs. Para obter informações sobre como fazer isso no ambiente de desenvolvimento, consulte [How to: Connect to a Database from Server Explorer](http://msdn.microsoft.com/pt-br/7c1c3067-0d77-471b-872b-639f9f50db74) e [How to: Add New Data Connections in Server Explorer\/Database Explorer](http://msdn.microsoft.com/pt-br/fb2f513b-ddad-4142-911e-856bba0054c8).  
+ Observe que esse código requer que você forneça sua própria cadeia de caracteres de conexão que se conecta ao banco de dados pubs. Para obter informações sobre como fazer isso no ambiente de desenvolvimento, consulte [como: conectar-se ao banco de dados do Gerenciador de servidores](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) e [como: adicionar novas conexões de dados no Server Explorer/Database Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8).  
   
 ```  
 // db_command.h  
@@ -189,7 +179,7 @@ struct CAuthors {
 };  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // db_command.cpp  
@@ -219,8 +209,8 @@ int main(int argc, _TCHAR* argv[]) {
 }  
 ```  
   
-## Exemplo  
- Este exemplo usa `db_source` em uma classe de fonte de dados `CMySource`, e `db_command` nas classes de comando `CCommand1` e `CCommand2`.  
+## <a name="example"></a>Exemplo  
+ Este exemplo usa `db_source` em uma classe de fonte de dados `CMySource`, e `db_command` em classes de comando `CCommand1` e `CCommand2`.  
   
 ```  
 // db_command_2.cpp  
@@ -262,20 +252,19 @@ int main() {
 }  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Aplica\-se a**|**classe**, `struct`, membro, o método, o local|  
+|**Aplica-se a**|**classe**, `struct`, membro, o método, o local|  
 |**Repetível**|Não|  
-|**Atributos necessários**|Nenhum|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md)   
+ [Atributos independentes](../windows/stand-alone-attributes.md)   

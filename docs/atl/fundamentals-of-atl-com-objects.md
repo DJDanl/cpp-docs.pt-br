@@ -1,85 +1,85 @@
 ---
-title: "Fundamentos de objetos COM de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Objetos COM de ATL"
-  - "ATL, COM"
-  - "objetos COM, ATL"
-  - "COM, e ATL"
+title: "Conceitos básicos de ATL COM objetos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM, and ATL
+- ATL, COM
+- ATL COM objects
+- COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "25"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30527a705d880e96620edfee5f7ad7897f9371a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Fundamentos de objetos COM de ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A ilustração a seguir descrevem a relação entre as classes e interfaces que são usadas para definir um objeto COM de ATL.  
+# <a name="fundamentals-of-atl-com-objects"></a>Conceitos básicos de objetos COM de ATL
+A ilustração a seguir descreve a relação entre as classes e interfaces que são usadas para definir um objeto COM da ATL.  
   
- ![Estrutura do ATL](../atl/media/vc307y1.png "vc307Y1")  
+ ![Estrutura ATL](../atl/media/vc307y1.gif "vc307y1")  
   
 > [!NOTE]
->  Este diagrama mostra `CComObject` que é derivado de `CYourClass` enquanto `CComAggObject` e `CComPolyObject` incluem `CYourClass` como um variável de membro.  
+>  Este diagrama mostra que `CComObject` é derivado de `CYourClass` enquanto `CComAggObject` e `CComPolyObject` incluem `CYourClass` como uma variável de membro.  
   
- Existem três maneiras para definir um objeto COM de ATL.  a opção padrão é usar a classe de `CComObject` que é derivada de `CYourClass`.  a segunda opção é criar um objeto agregado usando a classe de `CComAggObject` .  a terceira opção é usar a classe de `CComPolyObject` .  `CComPolyObject` atua como um híbrido: pode funcionar como uma classe de `CComObject` ou como uma classe de `CComAggObject` , dependendo de como é projetado principalmente.  Para obter mais informações sobre como usar a classe de `CComPolyObject` , consulte [Classe de CComPolyObject](../atl/reference/ccompolyobject-class.md).  
+ Há três maneiras de definir um objeto COM da ATL. A opção padrão é usar o `CComObject` classe que é derivada de `CYourClass`. A segunda opção é criar um objeto agregado usando a `CComAggObject` classe. A terceira opção é usar o `CComPolyObject` classe. `CComPolyObject`atua como um híbrido: ele pode funcionar como um `CComObject` classe ou como um `CComAggObject` classe, dependendo de como ela é criada pela primeira vez. Para obter mais informações sobre como usar o `CComPolyObject` de classe, consulte [CComPolyObject classe](../atl/reference/ccompolyobject-class.md).  
   
- Quando você usa o padrão ATL COM, você usa dois objetos: um objeto externo e um objeto interno.  Os clientes externos acesso à funcionalidade interna de objeto com as funções do wrapper que são definidas no objeto externo.  O objeto externo é do tipo `CComObject`.  
+ Quando você usa COM da ATL padrão, você usa dois objetos: um objeto externo e um objeto interno. Clientes externos acessam a funcionalidade do objeto interna por meio das funções de invólucro que são definidas no objeto externo. O objeto externo é do tipo `CComObject`.  
   
- Quando você usa um objeto agregado, o objeto externo não fornece os wrappers para a funcionalidade interna do objeto.  Em vez de isso, o objeto externo fornece um ponteiro que é acessado diretamente por clientes externos.  Em esse cenário, o objeto externo é do tipo `CComAggObject`.  O objeto interno é um variável de membro objeto externo, e é do tipo `CYourClass`.  
+ Quando você usa um objeto agregado, o objeto externo não fornecem wrappers para a funcionalidade do objeto interno. Em vez disso, o objeto externo fornece um ponteiro que é acessado diretamente por clientes externos. Nesse cenário, o objeto externo é do tipo `CComAggObject`. O objeto interno é uma variável de membro do objeto de dados externa e é do tipo `CYourClass`.  
   
- Porque o cliente não precisa passar pelo objeto externo interagir com o objeto interno, os objetos agregados são geralmente mais eficientes.  Além de isso, o objeto externo não precisa saber a funcionalidade do objeto agregado, dado que a interface do objeto diretamente agregado está disponível para o cliente.  Em o entanto, nem todos os objetos podem ser agregados.  Para que um objeto seja, agregado precisam ser criado com agregação em mente.  
+ Como o cliente não precise percorrer o objeto externo para interagir com o objeto interno, objetos agregados são geralmente mais eficientes. Além disso, o objeto externo não precisa saber a funcionalidade do objeto agregado, considerando que a interface do objeto agregado está diretamente disponível para o cliente. No entanto, nem todos os objetos podem ser agregados. Para um objeto a ser agregada, ele precisa ser criado com agregação em mente.  
   
- ATL implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) em dois estágios:  
+ ATL implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) em duas fases:  
   
--   Implementa de[CComObject](../atl/reference/ccomobject-class.md), de [CComAggObject](../atl/reference/ccomaggobject-class.md), ou de [CComPolyObject](../atl/reference/ccompolyobject-class.md) os métodos de **IUnknown** .  
+-   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), ou [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa o **IUnknown** métodos.  
   
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gerenciam a contagem de referência e ponteiros fora de **IUnknown**.  
+-   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gerencia a contagem de referência e ponteiros externos de **IUnknown**.  
   
- Outros aspectos do seu objeto COM de ATL são tratados por outras classes:  
+ Outros aspectos do objeto ATL COM são tratados por outras classes:  
   
--   [CComCoClass](../Topic/CComCoClass%20Class.md) define o modelo padrão de fábrica e de distribuição da classe do objeto.  
+-   [CComCoClass](../atl/reference/ccomcoclass-class.md) define o modelo de fábrica e agregação de classe de padrão do objeto.  
   
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) fornece uma implementação padrão de parte de `IDispatch Interface` de todas as interfaces duais no objeto.  
+-   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) fornece uma implementação padrão da `IDispatch Interface` parte de qualquer interface dupla no objeto.  
   
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementa a interface de **ISupportErrorInfo** que garante que as informações de erro pode ser propagadas acima da cadeia de chamada corretamente.  
+-   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementa o **ISupportErrorInfo** interface que garante que as informações de erro pode ser propagado a cadeia de chamada corretamente.  
   
-## Nesta seção  
- [implementando CComObjectRootEx](../Topic/Implementing%20CComObjectRootEx.md)  
- Entradas do mapa da do exemplo de apresentação para implementar `CComObjectRootEx`.  
+## <a name="in-this-section"></a>Nesta seção  
+ [Implementando CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+ Mostrar entradas do mapa de COM para a implementação de exemplo `CComObjectRootEx`.  
   
- [implementando CComObject, CComAggObject, e CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
- Discute como macros de **DECLARE\_\*\_AGGREGATABLE** afetam o uso de `CComObject`, de `CComAggObject`, e de `CComPolyObject`.  
+ [Implementando CComObject, CComAggObject e CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+ Discute como o **DECLARE_\*_AGGREGATABLE** macros afetam o uso de `CComObject`, `CComAggObject`, e `CComPolyObject`.  
   
- [Suporte IDispatch e IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
- Lista as classes de implementação de ATL para usar o para oferecer suporte `IDispatch` e **IErrorInfo** interfaces.  
+ [Suporte a IDispatch e IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+ Lista as classes de implementação do ATL para usar para oferecer suporte a `IDispatch` e **IErrorInfo** interfaces.  
   
- [Suporte IDispEventImpl](../atl/supporting-idispeventimpl.md)  
- Discute as etapas para implementar um ponto de conexão para a classe.  
+ [Suporte a IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+ Discute as etapas para implementar um ponto de conexão para a sua classe.  
   
- [Modificando o modelo padrão de fábrica e de distribuição de classe](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
- Apresentação que macros a usar para alterar o factory e a agregação padrão da classe modelar.  
+ [Alterando a fábrica de classes padrão e o modelo de agregação](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+ Mostre quais macros para usar para alterar o modelo de fábrica e agregação de classe padrão.  
   
- [criando um objeto agregado](../atl/creating-an-aggregated-object.md)  
+ [Criando um objeto agregado](../atl/creating-an-aggregated-object.md)  
  Lista as etapas para criar um objeto agregado.  
   
-## Seções relacionadas  
- [criando um projeto de ATL](../atl/reference/creating-an-atl-project.md)  
- Fornece informações sobre a criação de um objeto através de ATL.  
+## <a name="related-sections"></a>Seções relacionadas  
+ [Criando um projeto ATL](../atl/reference/creating-an-atl-project.md)  
+ Fornece informações sobre como criar um objeto COM da ATL.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornece links para tópicos conceituais sobre como programar usando a biblioteca ativa do modelo.  
+ Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conceitos](../atl/active-template-library-atl-concepts.md)
+

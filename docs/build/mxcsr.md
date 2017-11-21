@@ -1,29 +1,28 @@
 ---
-title: "MxCsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: MxCsr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4f3c229d-0862-4733-acc7-9ed7a0b870ce
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6bbd0adbfa7ccc51093ac087d908360b893ea518
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# MxCsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O estado do registro também inclui MxCsr.  A convenção de chamada divide esse registro em uma parte temporária e uma parte permanente.  A parte temporária consiste nos sinalizadores de status 6, MXCSR \[\] 0:5, quando o restante do registro, MXCSR \[\] 6:15, é considerado permanente.  
+# <a name="mxcsr"></a>MxCsr
+O estado do registro também inclui MxCsr. A convenção de chamada divide esse registro em uma parte voláteis e uma parte não volátil. A parte volátil consiste os sinalizadores de 6 status, MXCSR [0:5], enquanto o restante do registro, MXCSR [6:15] é considerado não volátil.  
   
- A parte permanente é definida para os seguintes valores padrão no início da execução do programa:  
+ A parte não volátil é definida para os seguintes valores padrão no início da execução do programa:  
   
 ```  
 MXCSR[6]         : Denormals are zeros - 0  
@@ -32,15 +31,15 @@ MXCSR[13:14]   : Rounding  control - 0 (round to nearest)
 MXCSR[15]      : Flush to zero for masked underflow - 0 (off)  
 ```  
   
- Um receptor que modifique alguns dos campos permanentes dentro de MXCSR deve restaurar\-lo antes de retornar ao chamador.  Além disso, um chamador que altere qualquer um dos campos deve restaurar\-los para seus valores padrão antes de chamar um receptor a menos que acordo pelo receptor esperar os valores alterados.  
+ Um receptor que modifica qualquer um dos campos não volátil dentro MXCSR necessário restaurá-los antes de retornar ao chamador. Além disso, um chamador que modificou a qualquer um desses campos deve restaurá-los para seus valores padrão antes de chamar um receptor, a menos que o contrato o receptor espera que os valores modificados.  
   
- Há duas exceções as regras em relação ao não volatilidade dos sinalizadores de controle:  
+ Há duas exceções às regras sobre o não-volatilidade dos sinalizadores de controle:  
   
--   Funções onde o objetivo documentada de função determinada é alterar os sinalizadores permanentes de MxCsr.  
+-   Em funções em que a finalidade documentada da função fornecida é modificar a MxCsr não volátil sinalizadores.  
   
--   Quando provavelmente está correto que a violação dessas regras resulta em programas que se comporta\/significa\-se o mesmo que um programa onde essas regras não sejam violadas, por exemplo, com a análise de inteiro\- programa.  
+-   Quando é provavelmente correto que a violação dessas regras resulta em um programa que se comporta/significa que o mesmo que um programa em que essas regras não forem violadas, por exemplo, por meio de análise de programa inteiro.  
   
- Nenhuma suposição pode ser feita sobre o estado da parte temporária de MXCSR através de um limite de função, a menos que especificamente descrito na documentação de uma função.  
+ Não pode ser feita nenhuma suposição sobre o estado da parte volátil de MXCSR em um limite de função, a menos que especificamente descrito na documentação de uma função.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Convenção de chamada](../build/calling-convention.md)

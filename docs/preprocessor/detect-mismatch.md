@@ -1,46 +1,45 @@
 ---
-title: "detect_mismatch | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.detect_mismatch"
-  - "detect_mismatch_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "detect_mismatch (pragma)"
-  - "pragmas, detect_mismatch"
+title: detect_mismatch | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.detect_mismatch
+- detect_mismatch_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, detect_mismatch
+- detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d99efe6bca27cdbefa73057f843adbcd01cd1fdf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# detect_mismatch
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Coloca um registro em um objeto.  O vinculador verifica possíveis incompatibilidades nesses registros.  
+# <a name="detectmismatch"></a>detect_mismatch
+Coloca um registro em um objeto. O vinculador verifica possíveis incompatibilidades nesses registros.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #pragma detect_mismatch( "name", "value"))  
 ```  
   
-## Comentários  
- Ao vincular o projeto, o vinculador lança um erro `LNK2038` se o projeto contiver dois objetos que tenham o mesmo `name` mas dois `value`diferentes.  Use este pragma para impedir que os arquivos de objeto inconsistentes sejam vinculados.  
+## <a name="remarks"></a>Comentários  
+ Ao vincular o projeto, o vinculador lança um erro `LNK2038` se o projeto contiver dois objetos que tenham o mesmo `name` mas dois `value`diferentes. Use este pragma para impedir que os arquivos de objeto inconsistentes sejam vinculados.  
   
- O nome e o valor são literais de cadeia de caracteres e obedecem às regras de literais de cadeia de caracteres em relação aos caracteres de escape e a concatenação.  Eles têm diferenciação de maiúsculas e minúsculas e não podem conter vírgulas, sinais de igual, aspas ou o caractere `null`.  
+ O nome e o valor são literais de cadeia de caracteres e obedecem às regras de literais de cadeia de caracteres em relação aos caracteres de escape e a concatenação. Eles têm diferenciação de maiúsculas e minúsculas e não podem conter vírgulas, sinais de igual, aspas ou o caractere `null`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Este exemplo cria dois arquivos que têm números de versão diferentes para o mesmo rótulo da versão.  
   
 ```  
@@ -57,5 +56,5 @@ int main ()
   
  Se você criar ambos os arquivos usando a linha de comando `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp`, receberá o erro `LNK2038`.  
   
-## Consulte também  
- [Diretivas Pragma e a palavra\-chave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

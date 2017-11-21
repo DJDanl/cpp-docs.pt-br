@@ -1,143 +1,141 @@
 ---
-title: "2.4.1 for Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.4.1 constructo for | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92f3af3fa84043d9e8755136ab66e345e455ff1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4.1 for Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O  **para** diretiva identifica uma construção de compartilhamento de trabalho iterativa que especifica que as iterações do loop associado serão executadas em paralelo.  As iterações da  **para** loop são distribuídos entre os segmentos que já existem na equipe de executar a construção paralela à qual ele se vincula.  A sintaxe do  **para** construção é da seguinte maneira:  
+# <a name="241-for-construct"></a>2.4.1 Constructo for
+O **para** diretiva identifica uma construção de compartilhamento de trabalho iterativa que especifica que as iterações do loop associado serão executadas em paralelo. As iterações do **para** loop são distribuídas entre os threads que já existem na equipe executando a construção paralela à qual ela está associada. A sintaxe do **para** construção é o seguinte:  
   
 ```  
-#pragma omp for [clause[[,] clause] ... ] new-line  
-   for-loop  
+#pragma omp for [clause[[,] clause] ... ] new-linefor-loop  
 ```  
   
- A cláusula é um destes procedimentos:  
+ A cláusula é um dos seguintes:  
   
- **particular \(** *variável\-list* **\)**  
+ **privada (** *lista variável* **)**  
   
- **firstprivate \(** *variável\-list* **\)**  
+ **firstprivate (** *lista variável* **)**  
   
- **lastprivate \(** *variável\-list* **\)**  
+ **lastprivate (** *lista variável* **)**  
   
- **reduction\(** *operator* **:** *variable\-list***\)**  
+ **redução (** *operador* **:** *lista variável***)**  
   
- **ordenado**  
+ **ordenados**  
   
- **schedule\(** *kind*, *chunk\_size***\)**  
+ **agenda (** *tipo*[, *chunk_size*]**)**  
   
  **nowait**  
   
- O  **para** diretiva impõe restrições na estrutura do correspondente  **para** loop.  Especificamente, o correspondente  **para** loop deve ter a forma canônica:  
+ O **para** diretiva impõe restrições na estrutura do **para** loop. Especificamente, o correspondente **para** loop deve ter a forma canônica:  
   
- **for \(** *init\-expr* **;** *b do var lógico\-op*;   *incr\-expr***\)**  
+ **para (** *expr init* **;** *var operações lógicas b*; *incr expr***)**  
   
- *Init\-expr*  
+ *Init-expr*  
  Um dos seguintes:  
   
- *var* \= *lb*  
+ *var* = *lb*  
   
- *tipo de inteiro var* \=  *lb*  
+ *tipo de inteiro var* = *lb*  
   
- *expr de incrementais*  
+ *expr incrementais*  
  Um dos seguintes:  
   
- \+\+*var*  
+ ++*var*  
   
- *var* \+\+  
+ *var* ++  
   
- \-\- *var*  
+ -- *var*  
   
- *var* \-\-  
+ *var* --  
   
- *var* \+\= *incr*  
+ *var* += *incr*  
   
- *var* \-\= *incr*  
+ *var* -= *incr*  
   
- *var* \= *var* \+ *incr*  
+ *var* = *var* + *incr*  
   
- *var* \= *incr* \+ *var*  
+ *var* = *incr* + *var*  
   
- *var* \= *var* \- *Aumentar medida*  
+ *var* = *var* - *incr*  
   
  *var*  
- Uma variável de inteiro assinado.  Se essa variável caso contrário, seria compartilhada, ele é implicitamente feito privada durante o  **para**.  Essa variável não deve ser modificada dentro do corpo da  **para** instrução.  A menos que a variável é especificada  **lastprivate**, seu valor após o loop é indeterminado.  
+ Uma variável de inteiro com sinal. Se essa variável deve ser compartilhada, seja implicitamente tornado privado durante o **para**.   Essa variável não deve ser modificada dentro do corpo do **para** instrução. A menos que a variável for especificada **lastprivate**, seu valor depois que o loop é indeterminado.  
   
- *lógico\-op.*  
+ *operações lógicas*  
  Um dos seguintes:  
   
- \<  
+ <  
   
- \< \=  
+ \<=  
   
- \>  
+ >  
   
- \> \=  
+ \>=  
   
- *lb*, *b*, and *incr*  
- Loop expressões invariável inteiro.  Há uma sincronização durante a avaliação dessas expressões.  Assim, efeitos colaterais avaliados produzem resultados indeterminados.  
+ *balanceamento de carga*, *b*, e *incr*  
+ Expressões de constante de inteiro de loop. Não há nenhuma sincronização durante a avaliação dessas expressões. Assim, efeitos colaterais avaliados produzir resultados indeterminados.  
   
- Observe que a forma canônica permite o número de iterações do loop ser computados na entrada para o loop.  Esse cálculo é executado com valores no tipo de  *var*, depois de promoções integrais.  Em particular, se o valor de  *b* \- *lb* \+  *incr* não pode ser representada nesse tipo, o resultado é indeterminado.  Se ainda mais,  *lógico\-op* é \< ou \< \=, em seguida,  *\- incr expr* devem causar  *var* para aumentar em cada iteração do loop.  Se  *lógico\-op* é \> ou \> \=, em seguida,  *\- incr expr* deve causar  *var* para diminuir em cada iteração do loop.  
+ Observe que a forma canônica permite que o número de iterações de loop deve ser calculada na entrada para o loop. Esse cálculo é executado com valores no tipo de *var*, depois de promoções integrais. Em particular, se o valor de *b* - *lb* + *incr* não pode ser representado em que o tipo, o resultado é indeterminado. Além disso, se *operações lógicas* é < ou \<=, em seguida, *incr expr* devem causar *var* aumentar em cada iteração do loop.   Se *operações lógicas* é > ou > =, em seguida, *incr expr* devem causar *var* diminuir em cada iteração do loop.  
   
- O  **agenda** cláusula Especifica como iterações da  **para** loop são divididos entre os threads da equipe.  A correção de um programa não deve depender de qual thread executa uma iteração específica.  O valor de  *chunk\_size*, se especificado, deve ser uma expressão de inteiro invariável de loop com um valor positivo.  Há uma sincronização durante a avaliação dessa expressão.  Assim, efeitos colaterais avaliados produzem resultados indeterminados.  O agendamento de  *tipo* pode ser uma das seguintes opções:  
+ O **agenda** cláusula Especifica como iterações do **para** loop são divididos entre threads da equipe. A correção de um programa não deve depender de segmento que executa uma iteração específica. O valor de *chunk_size*, se especificado, deve ser uma expressão de inteiro invariável de loop com um valor positivo. Não há nenhuma sincronização durante a avaliação desta expressão. Assim, efeitos colaterais avaliados produzir resultados indeterminados. A agenda *tipo* pode ser um dos seguintes:  
   
- Tabela 2\-1  **agenda** cláusula  *tipo* valores  
+ Tabela 2-1 **agenda** cláusula *tipo* valores  
   
 |||  
 |-|-|  
-|estático|Quando  **agenda \(estática,** *chunk\_size***\)** for especificado, iterações são divididas em fragmentos de um tamanho especificado por  *chunk\_size*.  Os blocos são atribuídos estaticamente aos threads na equipe em um estilo round\-robin na ordem do número de segmento.  Quando não há  *chunk\_size* for especificado, o espaço de iteração será dividido em partes que são aproximadamente iguais em tamanho, com um bloco atribuído a cada segmento.|  
-|dinâmico|Quando  **agenda \(dinâmico,** *chunk\_size***\)** for especificado, as iterações são divididas em uma série de blocos, cada um contendo  *chunk\_size* iterações.  Cada bloco é atribuído a um segmento que está aguardando uma atribuição.  O segmento executa o fragmento de iterações e aguarda sua próxima atribuição, até que não há partes permaneçam a ser atribuído.  Observe que a última parte a ser atribuído pode ter um número menor de iterações.  Quando não há  *chunk\_size* for especificado, o padrão é 1.|  
-|interativa|Quando  **agenda \(guiada,** *chunk\_size***\)** for especificado, as iterações são atribuídas aos threads em blocos com tamanhos de decrescentes.  Quando um thread termina seu fragmento atribuído de iterações, ela será atribuída dinamicamente outro bloco, até que nenhum permaneçam.  Para um  *chunk\_size* de 1, o tamanho de cada bloco é aproximadamente igual ao número de iterações não atribuídos, dividido pelo número de segmentos.  Esses tamanhos aproximadamente diminuem exponencialmente para 1.  Para um  *chunk\_size* com o valor  *k* maior que 1, os tamanhos de aproximadamente diminuir exponencialmente para  *k*, exceto que a última parte pode ter menos de  *k* iterações.  Quando não há  *chunk\_size* for especificado, o padrão é 1.|  
-|tempo de execução|Quando  **schedule\(runtime\)** for especificado, a decisão sobre agendamento é adiada até que o tempo de execução.  O agendamento de  *tipo*  e o tamanho dos blocos pode ser escolhido em tempo de execução, definindo a variável de ambiente  **OMP\_SCHEDULE**.  Se esta variável de ambiente não estiver definido, a agenda resultante é definidos na implementação.  Quando  **schedule\(runtime\)** for especificado,  *chunk\_size* não deve ser especificado.|  
+|static|Quando **agenda (estático,** *chunk_size***)** for especificado, iterações são divididas em partes de um tamanho especificado por *chunk_size*. As partes são atribuídas estaticamente a threads da equipe em um modo round robin na ordem o número de threads. Quando nenhum *chunk_size* for especificado, o espaço de iteração é dividido em partes que são aproximadamente iguais em tamanho, com uma parte atribuída a cada thread.|  
+|dinâmica|Quando **agenda (dinâmico,** *chunk_size***)** for especificado, as iterações são divididas em uma série de blocos, cada uma contendo *chunk_size* iterações. Cada bloco é atribuído a um thread que está esperando por uma atribuição. O thread executa o bloco de iterações e, em seguida, aguarda sua atribuição de Avançar, até que nenhum partes permanecem para serem atribuídos. Observe que a última parte a ser atribuído pode ter um número menor de iterações. Quando nenhum *chunk_size* for especificado, o padrão é 1.|  
+|interativa|Quando **agenda (interativa,** *chunk_size***)** for especificado, as iterações são atribuídas a threads em partes com tamanhos de redução. Quando um thread conclui sua parte atribuído de iterações, ela é atribuída dinamicamente outra parte, até nenhuma permanece. Para uma *chunk_size* de 1, o tamanho de cada bloco é aproximadamente o número de iterações não atribuídos, dividido pelo número de threads. Esses tamanhos aproximadamente diminuem exponencialmente como 1. Para uma *chunk_size* com valor *k* maior que 1, os tamanhos de aproximadamente diminui exponencialmente a *k*, exceto que o último bloco pode ter menos de  *k* iterações. Quando nenhum *chunk_size* for especificado, o padrão é 1.|  
+|tempo de execução|Quando **Schedule (Runtime)** for especificado, a decisão sobre planejamento é adiada até o tempo de execução. A agenda *tipo* e tamanho das partes pode ser escolhido em tempo de execução, definindo a variável de ambiente **OMP_SCHEDULE**. Se essa variável de ambiente não for definida, a agenda resultante é definido pela implementação. Quando **Schedule (Runtime)** for especificado, *chunk_size* não deve ser especificado.|  
   
- Na ausência de explicitamente definidas  **agenda** cláusula, o padrão  **agenda** é definido para implementação.  
+ Na ausência de um definido explicitamente **agenda** cláusula, o padrão **agenda** é definido pela implementação.  
   
- Um programa compatível com OpenMP não deve confiar em uma programação específica para a execução correta.  Um programa não deve depender de uma agenda  *tipo* conformes com precisão à descrição acima, porque é possível ter variações das implementações do mesmo agendamento no  *tipo* entre compiladores diferentes.  As descrições podem ser usadas para selecionar o agendamento que é apropriado para uma determinada situação.  
+ Um programa OpenMP compatível não deve depender de uma agenda específica de execução correta. Um programa não deve confiar em um agendamento *tipo* em conformidade com precisão para a descrição fornecida acima, porque é possível ter variações em implementações de mesma agenda *tipo* em compiladores diferentes. As descrições de podem ser usadas para selecionar o agendamento apropriado para uma situação específica.  
   
- O  **ordenados** cláusula deve estar presente quando  **ordenados** diretivas ligar para o  **para** construir.  
+ O **ordenados** cláusula deve estar presente quando **ordenados** diretivas de associar o **para** construir.  
   
- Há uma barreira implícita no final de uma  **para** construir a menos que uma  **nowait** cláusula for especificada.  
+ Há uma barreira implícita ao final de um **para** construir, a menos que um **nowait** cláusula for especificada.  
   
- Restrições para o  **para** diretiva são os seguintes:  
+ Restrições para o **para** diretiva são da seguinte maneira:  
   
--   O  **para** loop deve ser um bloco estruturado e, além disso, sua execução não deve ser terminada por um  **quebra** instrução.  
+-   O **para** loop deve ser um bloco estruturado, e, além disso, sua execução não deve ser terminada por um **quebra** instrução.  
   
--   Os valores do loop controle expressões da  **para** loop associado com um  **para** diretiva deve ser o mesmo para todos os segmentos na equipe.  
+-   Os valores do loop controlam expressões do **para** loop associado com um **para** diretiva deve ser o mesmo para todos os threads na equipe.  
   
--   O  **para** variável de iteração de loop deve ter um tipo de inteiro assinado.  
+-   O **para** variável de iteração de loop deve ter um tipo inteiro com sinal.  
   
--   Um único  **agenda** cláusula pode aparecer em um  **para** diretiva.  
+-   Um único **agenda** cláusula pode aparecer em uma **para** diretiva.  
   
--   Um único  **ordenada** cláusula pode aparecer em um  **para** diretiva.  
+-   Um único **ordenados** cláusula pode aparecer em uma **para** diretiva.  
   
--   Um único  **nowait** cláusula pode aparecer em um  **para** diretiva.  
+-   Um único **nowait** cláusula pode aparecer em uma **para** diretiva.  
   
--   Se não especificado ou a freqüência na qual os efeitos de qualquer lado dentro é o  *chunk\_size*,  *lb*,  *b*, ou  *incrementais* expressões ocorrerem.  
+-   É se não especificado ou a frequência de efeitos de qualquer lado dentro de *chunk_size*, *lb*, *b*, ou *incr* ocorrem expressões.  
   
--   O valor da  *chunk\_size* a expressão deve ser o mesmo para todos os segmentos na equipe.  
+-   O valor de *chunk_size* expressão deve ser o mesmo para todos os threads na equipe.  
   
-## Entre as referências:  
+## <a name="cross-references"></a>Entre referências:  
   
--   **Private**,  **firstprivate**,  **lastprivate**, e  **redução** cláusulas, consulte  [seção 2.7.2](../Topic/2.7.2%20Data-Sharing%20Attribute%20Clauses.md) na página 25.  
+-   **privada**, **firstprivate**, **lastprivate**, e **redução** cláusulas, consulte [seção 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na página 25.  
   
--   **OMP\_SCHEDULE** consulte variável, do ambiente  [seção 4.1](../../parallel/openmp/4-1-omp-schedule.md) na página 48.  
+-   **OMP_SCHEDULE** consulte de variável de ambiente [seção 4.1](../../parallel/openmp/4-1-omp-schedule.md) na página 48.  
   
--   **ordenada** construir, consulte  [seção 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na página 22.  
+-   **ordenados** construir, consulte [seção 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na página 22.  
   
--   [Apêndice d](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, fornece mais informações sobre como usar a cláusula de agenda.
+-   [Apêndice D](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, fornece mais informações sobre como usar a cláusula de agenda.

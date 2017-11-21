@@ -1,52 +1,51 @@
 ---
-title: "CCatalogs, CCatalogInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCatalogs"
-  - "m_szName"
-  - "CCatalogInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de parâmetro CCatalogInfo"
-  - "Classe typedef CCatalogs"
-  - "Membro de dados de classe DESCRIPTION"
-  - "m_szDescription"
-  - "m_szName"
+title: CCatalogs, CCatalogInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCatalogs
+- m_szName
+- CCatalogInfo
+dev_langs: C++
+helpviewer_keywords:
+- DESCRIPTION class data member
+- CCatalogInfo parameter class
+- CCatalogs typedef class
+- m_szName
+- m_szDescription
 ms.assetid: 8362cbbd-2f00-4272-8518-fc235c4de193
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30ab92811c214e71534831f40e0a2fb144ed9017
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CCatalogs, CCatalogInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chame a classe **CCatalogs** do typedef para implementar a sua classe **CCatalogInfo**do parâmetro.  
+# <a name="ccatalogs-ccataloginfo"></a>CCatalogs, CCatalogInfo
+Chamar a classe typedef **CCatalogs** para implementar sua classe de parâmetro **CCatalogInfo**.  
   
-## Comentários  
- Consulte [Classes do conjunto de linhas de esquema e classes de Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) para obter mais informações sobre como usar classes do typedef.  
+## <a name="remarks"></a>Comentários  
+ Consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obter mais informações sobre como usar classes do typedef.  
   
  Essa classe identifica os atributos físicos associados a catálogos acessíveis a partir do DBMS.  
   
- A tabela a seguir lista os membros de dados da classe e suas colunas correspondentes OLE DB.  Consulte [Conjunto de linhas de CATALOGS](https://msdn.microsoft.com/en-us/library/ms721241.aspx)*na referência do programador de OLE DB* para obter mais informações sobre o esquema e de colunas.  
+ A tabela a seguir lista os membros de dados de classe e o OLE DB colunas correspondentes. Consulte [CATÁLOGOS linhas](https://msdn.microsoft.com/en-us/library/ms721241.aspx) no *referência do programador de DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
-|Membros de dados|Colunas de OLE DB|  
-|----------------------|-----------------------|  
-|m\_szName|CATALOG\_NAME|  
-|m\_szDescription|DESCRIÇÃO|  
+|Membros de dados|Colunas de banco de dados OLE|  
+|------------------|--------------------|  
+|m_szName|CATALOG_NAME|  
+|m_szDescription|DESCRIÇÃO|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbsch.h  
   
-## Consulte também  
- [Classe CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

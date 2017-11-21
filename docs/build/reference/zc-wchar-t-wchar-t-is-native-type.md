@@ -1,68 +1,67 @@
 ---
-title: "/Zc:wchar_t (wchar_t &#233; do tipo nativo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.TreatWChar_tAsBuiltInType"
-  - "VC.Project.VCCLCompilerTool.TreatWChar_tAsBuiltInType"
-  - "/Zc:wchar_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opções do compilador /Zc [C++]"
-  - "Opções de compilador de conformidade"
-  - "Tipo wchar_t"
-  - "opções de compilador Zc [C++]"
-  - "opções de compilador -Zc [C++]"
+title: "-Zc: wchar_t (wchar_t é do tipo nativo) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.TreatWChar_tAsBuiltInType
+- VC.Project.VCCLCompilerTool.TreatWChar_tAsBuiltInType
+- /Zc:wchar_t
+dev_langs: C++
+helpviewer_keywords:
+- /Zc compiler options [C++]
+- -Zc compiler options [C++]
+- wchar_t type
+- Conformance compiler options
+- Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 886669e6c6be58f02b9b8fa49468ca8b3b19c4a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /Zc:wchar_t (wchar_t &#233; do tipo nativo)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Analise `wchar_t` como um tipo interno de acordo com o padrão C\+\+.  Por padrão, **\/Zc:wchar\_t** é ativado.  
+# <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t é do tipo nativo)
+Analise `wchar_t` como um tipo interno de acordo com o padrão C++. Por padrão, **/ZC:** está em.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Zc:wchar_t[-]  
 ```  
   
-## Comentários  
- Se **\/Zc:wchar\_t** estiver ativado, `wchar_t` será mapeado para tipo nativo específico da Microsoft `__wchar_t`.  Se **\/Zc:wchar\_t\-** \(com um sinal de subtração\) for especificado, `wchar_t` será mapeado para um `typedef` de `unsigned short`.  \(No Visual C\+\+ 6.0 e versões anteriores, `wchar_t` não era implementado como tipo interno, mas era declarado em wchar.h como `typedef` de `unsigned short`.\) Não recomendamos **\/Zc:wchar\_t\-** porque o padrão C\+\+ requer que `wchar_t` seja um tipo interno.  Usar a versão `typedef` pode causar problemas de portabilidade.  Se você atualizar de versões anteriores do Visual C\+\+ e encontrar o erro [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) do compilador porque o código está tentando converter implicitamente `wchar_t` em `unsigned short`, recomendamos alterar o código para corrigir o erro, em vez de definir **\/Zc:wchar\_t\-**.  
+## <a name="remarks"></a>Comentários  
+ Se **/ZC:** está ativada, `wchar_t` mapeia para o tipo nativo específicas da Microsoft `__wchar_t`. Se **/Zc:wchar_t-** (com um sinal de subtração) for especificado, `wchar_t` é mapeado para um `typedef` para `unsigned short`. (No Visual C++ 6.0 e versões anteriores, `wchar_t` não era implementado como tipo interno, mas era declarado em wchar.h como `typedef` de `unsigned short`.) Não é recomendável **/Zc:wchar_t-** porque o padrão C++ requer que `wchar_t` ser um tipo interno. Usar a versão `typedef` pode causar problemas de portabilidade. Se você atualizar de versões anteriores do Visual C++ e encontrar o erro do compilador [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) porque o código está tentando converter implicitamente um `wchar_t` para `unsigned short`, recomendamos que você altere o código para corrigir o erro, em vez disso configuração **/Zc:wchar_t-**.  
   
- A Microsoft implementa `wchar_t` como um valor sem sinal de dois bytes.  Para obter mais informações sobre `wchar_t`, consulte [Intervalos de tipos de dados](../../cpp/data-type-ranges.md) e [Tipos fundamentais](../../cpp/fundamental-types-cpp.md).  
+ A Microsoft implementa `wchar_t` como um valor sem sinal de dois bytes. Para obter mais informações sobre `wchar_t`, consulte [intervalos de tipos de dados](../../cpp/data-type-ranges.md) e [tipos fundamentais](../../cpp/fundamental-types-cpp.md).  
   
- Se você escrever um novo código que precisa interoperar com um código mais antigo que ainda que use a versão `typedef` de `wchar_t`, poderá fornecer sobrecargas para as variações `unsigned short` e `__wchar_t` de `wchar_t`, para que seu código possa ser vinculado pelo código compilado com **\/Zc:wchar\_t** ou o código compilado sem ele.  Caso contrário, você precisará fornecer duas diferentes compilações da biblioteca – uma com e outra sem **\/Zc:wchar\_t** habilitado.  Mesmo nesse caso, é recomendável compilar o código mais antigo usando o mesmo compilador que você usa para compilar o novo código.  Nunca misture binários compilados com compiladores diferentes.  
+ Se você escrever novo código que tem para interoperar com o código anterior ainda usa o `typedef` versão do `wchar_t`, você pode fornecer sobrecargas para ambos os `unsigned short` e `__wchar_t` variações de `wchar_t`, de modo que seu código pode ser vinculado a o código compilado com **/ZC:** ou código compilado sem ele. Caso contrário, você precisa fornecer duas diferentes compilações da biblioteca de — um com e sem **/ZC:** habilitado. Mesmo nesse caso, é recomendável compilar o código mais antigo usando o mesmo compilador que você usa para compilar o novo código. Nunca misture binários compilados com compiladores diferentes.  
   
- Quando **\/Zc:wchar\_t** é especificado, os símbolos **\_WCHAR\_T\_DEFINED** e **\_NATIVE\_WCHAR\_T\_DEFINED** são definidos.  Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).  
+ Quando **/ZC:** for especificado, **wchar_t_defined** e **native_wchar_t_defined** símbolos são definidos. Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).  
   
- Se seu código usa as funções globais COM do compilador, como **\/Zc:wchar\_t** agora é ativado por padrão, recomendamos que você altere referências explícitas a comsupp.lib – do [pragma de comentário](../../preprocessor/comment-c-cpp.md) ou na linha de comando – para comsuppw.lib ou comsuppwd.lib.  \(Se você tiver de compilar com **\/Zc:wchar\_t\-**, use comsupp.lib.\) Se você incluir o arquivo de cabeçalho comdef.h, a biblioteca correta será especificada para você.  Para obter informações sobre o suporte para COM do compilador, consulte [Suporte COM do compilador](../Topic/Compiler%20COM%20Support.md).  
+ Se seu código usa as funções globais COM do compilador, pois **/ZC:** está agora em por padrão, é recomendável que você altere as referências explícitas aos comsupp.lib—from o [pragma de comentário](../../preprocessor/comment-c-cpp.md) ou sobre o comando linha — comsuppw.lib ou comsuppwd.lib. (Se você deve compilar com **/Zc:wchar_t-**, use comsupp.lib.) Se você incluir o arquivo de cabeçalho comdef.h, a biblioteca correta será especificada para você. Para obter informações sobre o suporte de COM do compilador, consulte [compilador COM suporte](../../cpp/compiler-com-support.md).  
   
- O tipo `wchar_t` não tem suporte quando você compila código C.  Para obter mais informações sobre problemas de conformidade com o Visual C\+\+, consulte [Comportamento não padrão](../Topic/Nonstandard%20Behavior.md).  
+ O tipo `wchar_t` não tem suporte quando você compila código C. Para obter mais informações sobre problemas de conformidade com o Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto.  Para obter detalhes, consulte [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  No painel esquerdo, expanda **Propriedades de Configuração**, **C\/C\+\+** e selecione **Linguagem**.  
+2.  No painel esquerdo, expanda **propriedades de configuração**, **C/C++**e, em seguida, selecione **idioma**.  
   
-3.  Modifique a propriedade de **Trate WChar\_t Como um Tipo Interno**.  
+3.  Modificar o **tratar wchar_t como tipo interno** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.TreatWChar_tAsBuiltInType%2A>.  
   
-## Consulte também  
- [\/Zc \(conformidade\)](../../build/reference/zc-conformance.md)
+## <a name="see-also"></a>Consulte também  
+ [/ZC (conformidade)](../../build/reference/zc-conformance.md)

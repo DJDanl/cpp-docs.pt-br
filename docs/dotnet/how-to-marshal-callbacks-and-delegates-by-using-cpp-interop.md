@@ -1,43 +1,42 @@
 ---
-title: "Como realizar marshal de retornos de chamadas e delegados usando o C++ Interop | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Interoperabilidade C++, retornos de chamado e delegados"
-  - "retornos de chamada [C++], marshaling"
-  - "realização de marshaling em dados [C++], retornos de chamado e delegados"
-  - "delegados [C++], marshaling"
-  - "interoperabilidade [C++], retornos de chamado e delegados"
-  - "realização de marshaling [C++], retornos de chamado e delegados"
+title: 'Como: marshaling de retornos de chamadas e delegados usando Interop C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], callbacks and delegates
+- C++ Interop, callbacks and delegates
+- interop [C++], callbacks and delegates
+- delegates [C++], marshaling
+- marshaling [C++], callbacks and delegates
+- callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2a835dbdbce23f7f92f13fabd038d6e294345981
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como realizar marshal de retornos de chamadas e delegados usando o C++ Interop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico demonstra o marshalling de retornos de chamada e de representantes \(a versão gerenciado de um retorno de chamada\) entre o código gerenciado e não gerenciados usando o Visual C\+\+.  
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Como realizar marshaling de retornos de chamadas e delegados usando o C++ Interop
+Este tópico demonstra o marshalling de retornos de chamada e delega (a versão de um retorno de chamada gerenciada) entre código gerenciado e usando o Visual C++.  
   
- Os exemplos de código a seguir usam as políticas de \#pragma de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) para implementar gerenciado e funções não gerenciada no mesmo arquivo, mas as funções também podem ser definidas em arquivos separados.  Os arquivos que contêm somente funções não gerenciado não precisam ser compilados com [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas as funções também podem ser definidas em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisam ser compilada com o [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemplo  
- O exemplo a seguir demonstra como configurar a API não gerenciados para disparar um representante gerenciado.  Um representante gerenciado é criado e um dos métodos de interoperabilidade, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, é usado para recuperar o ponto de entrada subjacente para o representante.  Este endereço é então passado para a função não gerenciado, que chama o sem o conhecimento do fato de que é implementada como uma função gerenciada.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como configurar uma API não gerenciada para disparar um delegado gerenciado. Um delegado gerenciado é criado e um dos métodos a interoperabilidade, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, é usado para recuperar o ponto de entrada subjacente do representante. Este endereço é então passado para a função não gerenciada, o que irá chamá-lo sem conhecimento do fato de que ele é implementado como uma função gerenciada.  
   
- Observe que ele é possível, mas não for necessário, para fixar o delegado que usa [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) para impedir que seja encontrado novamente ou que indicado pelo coletor de lixo.  A proteção de coleta de lixo prematura é necessária, mas fixar\-se fornece proteção mais do que é necessário, pois impede a coleção mas também impede a realocação.  
+ Observe que é possível, mas não necessário, para fixar o delegado usando [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) para impedir que ele seja localizado novamente ou descartados pelo coletor de lixo. Proteção da coleta de lixo prematuro é necessária, mas fixação fornece mais proteção do que é necessária, pois ele impede que a coleção, mas também impede a realocação.  
   
- Se um representante novamente for encontrado por uma coleta de lixo, não afetará o retorno de chamada é gerenciado underlaying, portanto <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> é usado para adicionar uma referência ao representante, permitindo a realocação de delegação, mas impedindo a eliminação.  Usar GCHandle em vez de pin\_ptr reduz a possibilidade de fragmentação de heap gerenciado.  
+ Se um delegado novamente está localizado, uma coleta de lixo, isso não afetará o retorno de chamada subjacentes gerenciados, então <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> é usado para adicionar uma referência para o representante, permitindo a realocação do delegado, mas impede que o descarte. Usando o GCHandle em vez de pin_ptr reduz a possibilidade de fragmentação do heap gerenciado.  
   
 ```  
 // MarshalDelegate1.cpp  
@@ -85,8 +84,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir é semelhante ao exemplo anterior, mas o ponteiro fornecido da função é armazenado nesse caso a API não gerenciado, o que pode invocar a qualquer momento, requerendo que a coleta de lixo seja suprimida para um período de tempo arbitrário.  No, o exemplo a seguir usa uma instância de <xref:System.Runtime.InteropServices.GCHandle> global para impedir que o representante estado realocado, independentemente do escopo da função.  Como discutido no primeiro exemplo, usar o pin\_ptr é desnecessária para esses exemplos, mas nesse caso não funcionaria de qualquer forma, porque o escopo de um pin\_ptr é limitado a uma única função.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir é semelhante ao exemplo anterior, mas nesse caso o ponteiro de função fornecida é armazenado na API não gerenciada, portanto ele pode ser chamado a qualquer momento, exigindo que a coleta de lixo suprimidos durante um tempo arbitrário. Como resultado, o exemplo a seguir usa uma instância global do <xref:System.Runtime.InteropServices.GCHandle> para impedir que o representante que está sendo realocados, independentemente do escopo de função. Como discutido no primeiro exemplo, usando pin_ptr é desnecessário para esses exemplos, mas nesse caso não funcionaria assim mesmo, pois o escopo de um pin_ptr é limitado a uma única função.  
   
 ```  
 // MarshalDelegate2.cpp  
@@ -146,5 +145,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,11 +1,10 @@
 ---
-title: Classe combinable | Documentos do Microsoft
+title: Classe combinable | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,38 +15,21 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs:
-- C++
-helpviewer_keywords:
-- combinable class
+dev_langs: C++
+helpviewer_keywords: combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 89bccb4ce3803708d919f0778c49428c399a3b70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="combinable-class"></a>Classe combinable
-O `combinable<T>` objeto se destina a fornecer cópias de thread particular de dados, para executar computações subpropriedades de locais de thread sem bloqueio durante algoritmos paralelos. No final da operação em paralelo, as computações de subpropriedades thread privado, em seguida, podem ser mescladas em um resultado final. Essa classe pode ser usado em vez de uma variável compartilhada e pode resultar em uma melhoria de desempenho se há muita contenção naquela variável compartilhada.  
+O `combinable<T>` objeto destina-se a fornecer thread privada cópias de dados, para executar cálculos de subgrupos de local de thread livre de bloqueios durante os algoritmos paralelos. No final da operação em paralelo, os cálculos sub particular de thread, em seguida, podem ser mesclados em um resultado final. Esta classe pode ser usado em vez de uma variável compartilhada e pode resultar em uma melhoria de desempenho se caso contrário, haverá muita contenção nessa variável compartilhada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,17 +48,17 @@ class combinable;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Combinável](#ctor)|Sobrecarregado. Constrói um novo `combinable` objeto.|  
-|[~ Destruidor Combinável](#dtor)|Destrói um objeto `combinable`.|  
+|[podem ser combinadas](#ctor)|Sobrecarregado. Constrói um novo `combinable` objeto.|  
+|[~ Destruidor combinable](#dtor)|Destrói um objeto `combinable`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[clear](#clear)|Limpa os resultados intermediários computacionais um uso anterior.|  
-|[combine](#combine)|Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor combinar fornecido.|  
-|[combine_each](#combine_each)|Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor fornecido combinar uma vez por computação subpropriedades de thread local. O resultado final é acumulado pelo objeto de função.|  
-|[local](#local)|Sobrecarregado. Retorna uma referência ao cálculo thread private sub.|  
+|[combine](#combine)|Calcula um valor final do conjunto de cálculos de subgrupos de local de thread chamando o functor combinar fornecido.|  
+|[combine_each](#combine_each)|Calcula um valor final do conjunto de cálculos de subgrupos de local de thread chamando o functor fornecido combinar uma vez por computação sub local de thread. O resultado final é acumulado pelo objeto de função.|  
+|[local](#local)|Sobrecarregado. Retorna uma referência para a computação sub particular de thread.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -85,7 +67,7 @@ class combinable;
 |[operator=](#operator_eq)|Atribui a um `combinable` objeto de outro `combinable` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte [paralela contêineres e objetos](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Para obter mais informações, consulte [objetos e contêineres paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `combinable`  
@@ -103,7 +85,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>Combinável 
+##  <a name="ctor"></a>podem ser combinadas 
 
  Constrói um novo `combinable` objeto.  
   
@@ -118,20 +100,20 @@ combinable(const combinable& _Copy);
   
 ### <a name="parameters"></a>Parâmetros  
  `_Function`  
- O tipo de objeto de inicialização de functor.  
+ O tipo do objeto de functor de inicialização.  
   
  `_FnInitialize`  
  Uma função que será chamada para inicializar cada novo valor de thread particular do tipo `T`. Ele deve oferecer suporte a um operador de chamada de função com a assinatura `T ()`.  
   
  `_Copy`  
- Existente `combinable` objeto a ser copiado para esta.  
+ Um existente `combinable` objeto a ser copiado a este.  
   
 ### <a name="remarks"></a>Comentários  
- O primeiro construtor inicializa novos elementos com o construtor padrão para o tipo `T`.  
+ O primeiro construtor inicializa novos elementos com o construtor padrão para o tipo de `T`.  
   
  O segundo construtor inicializa novos elementos usando o functor de inicialização fornecida como o `_FnInitialize` parâmetro.  
   
- O terceiro construtor é o construtor de cópia.  
+ O construtor de terceiro é o construtor de cópia.  
   
 ##  <a name="dtor"></a>~ combinable 
 
@@ -143,7 +125,7 @@ combinable(const combinable& _Copy);
   
 ##  <a name="combine"></a>combinar 
 
- Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor combinar fornecido.  
+ Calcula um valor final do conjunto de cálculos de subgrupos de local de thread chamando o functor combinar fornecido.  
   
 ```
 template<typename _Function>
@@ -152,17 +134,17 @@ T combine(_Function _FnCombine) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `_Function`  
- O tipo de objeto de função que será chamado para combinar dois cálculos de subpropriedades de thread local.  
+ O tipo do objeto de função que será invocado para combinar dois cálculos de subgrupos de local de thread.  
   
  `_FnCombine`  
- O functor é usado para combinar os cálculos de subpropriedades. A assinatura é `T (T, T)` ou `T (const T&, const T&)`, e ele deve ser associativa e comutativa.  
+ Functor que é usada para combinar os cálculos sub. A assinatura é `T (T, T)` ou `T (const T&, const T&)`, e ele deve ser comutativas e associativas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O resultado final da combinação de todos os threads privado sub computações.  
+ O resultado final da combinação de todos os cálculos de sub particular de thread.  
   
 ##  <a name="combine_each"></a>combine_each 
 
- Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor fornecido combinar uma vez por computação subpropriedades de thread local. O resultado final é acumulado pelo objeto de função.  
+ Calcula um valor final do conjunto de cálculos de subgrupos de local de thread chamando o functor fornecido combinar uma vez por computação sub local de thread. O resultado final é acumulado pelo objeto de função.  
   
 ```
 template<typename _Function>
@@ -171,14 +153,14 @@ void combine_each(_Function _FnCombine) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `_Function`  
- O tipo de objeto de função que será chamado para combinar uma computação de subpropriedades de local de thread única.  
+ O tipo do objeto de função que será invocado para combinar uma computação de subgrupos de local de thread único.  
   
  `_FnCombine`  
- O functor é usado para combinar uma computação subpropriedades. A assinatura é `void (T)` ou `void (const T&)`e deve ser associativa e comutativa.  
+ Functor que é usada para combinar uma computação sub. A assinatura é `void (T)` ou `void (const T&)`e deve ser associativas e comutativas.  
   
 ##  <a name="local"></a>local 
 
- Retorna uma referência ao cálculo thread private sub.  
+ Retorna uma referência para a computação sub particular de thread.  
   
 ```
 T& local();
@@ -188,10 +170,10 @@ T& local(bool& _Exists);
   
 ### <a name="parameters"></a>Parâmetros  
  `_Exists`  
- Uma referência a um valor booleano. O valor booliano referenciado por esse argumento será definido como `true` se a computação subpropriedades já existia neste thread e definido como `false` se esse foi o primeiro cálculo subpropriedades neste thread.  
+ Uma referência a um valor booleano. O valor booliano referenciado por este argumento será definido como `true` se a computação sub já existia neste thread e definido como `false` se esta for a primeira computação sub neste thread.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência ao cálculo thread private sub.  
+ Uma referência para a computação sub particular de thread.  
   
 ##  <a name="operator_eq"></a>operador = 
 
@@ -203,11 +185,10 @@ combinable& operator= (const combinable& _Copy);
   
 ### <a name="parameters"></a>Parâmetros  
  `_Copy`  
- Existente `combinable` objeto a ser copiado para esta.  
+ Um existente `combinable` objeto a ser copiado a este.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência a esta `combinable` objeto.  
+ Uma referência a este `combinable` objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)
-

@@ -1,11 +1,10 @@
 ---
-title: Classe de mensagem | Documentos do Microsoft
+title: Classe de mensagem | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,38 +15,21 @@ f1_keywords:
 - AGENTS/concurrency::message::msg_id
 - AGENTS/concurrency::message::remove_ref
 - AGENTS/concurrency::message::payload
-dev_langs:
-- C++
-helpviewer_keywords:
-- message class
+dev_langs: C++
+helpviewer_keywords: message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c6cc72c1fe9385eabe86194031913b7363d602ff
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5f0c62e8b783b7d97a6158a3f4a55501ed4450b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="message-class"></a>Classe message
-O envelope de mensagem básica que contém a carga de dados sendo passada entre blocos de mensagens.  
+O envelope de mensagem básica que contém a carga de dados que está sendo transmitida entre blocos de mensagens.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,15 +55,15 @@ class message : public ::Concurrency::details::_Runtime_object;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[message](#ctor)|Sobrecarregado. Constrói um objeto `message`.|  
-|[~ Destruidor de mensagem](#dtor)|Destrói o `message` objeto.|  
+|[~ Destruidor de mensagem](#dtor)|Destrói a `message` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Adiciona a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar o tempo de vida da mensagem de contagem de referência.|  
+|[add_ref](#add_ref)|Adiciona a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar os tempos de vida da mensagem de contagem de referência.|  
 |[msg_id](#msg_id)|Retorna a ID do `message` objeto.|  
-|[remove_ref](#remove_ref)|Subtrai a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar o tempo de vida da mensagem de contagem de referência.|  
+|[remove_ref](#remove_ref)|Subtrai a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar os tempos de vida da mensagem de contagem de referência.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -102,7 +84,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ##  <a name="add_ref"></a>add_ref 
 
- Adiciona a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar o tempo de vida da mensagem de contagem de referência.  
+ Adiciona a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar os tempos de vida da mensagem de contagem de referência.  
   
 ```
 long add_ref();
@@ -145,7 +127,7 @@ message(
   
 ##  <a name="dtor"></a>~ mensagem 
 
- Destrói o `message` objeto.  
+ Destrói a `message` objeto.  
   
 ```
 virtual ~message();
@@ -172,7 +154,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a>remove_ref 
 
- Subtrai a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar o tempo de vida da mensagem de contagem de referência.  
+ Subtrai a contagem de referência para o `message` objeto. Usado para blocos de mensagens que precisa determinar os tempos de vida da mensagem de contagem de referência.  
   
 ```
 long remove_ref();
@@ -183,4 +165,3 @@ long remove_ref();
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)
-

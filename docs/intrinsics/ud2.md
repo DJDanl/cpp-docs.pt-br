@@ -1,58 +1,56 @@
 ---
-title: "__ud2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ud2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Instrução UD2"
-  - "__ud2 intrínseco"
+title: __ud2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __ud2
+dev_langs: C++
+helpviewer_keywords:
+- UD2 instruction
+- __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-caps.latest.revision: 7
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 699e575d283f830d94c123f7748f7fdaa6272ff5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# __ud2
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="ud2"></a>__ud2
+**Seção específica da Microsoft**  
   
  Gera uma instrução indefinida.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void __ud2();  
 ```  
   
-## Comentários  
- O processador gerará uma exceção de opcode inválido se você executar uma instrução indefinida.  
+## <a name="remarks"></a>Comentários  
+ O processador gerará uma exceção de opcode inválido, se você executar uma instrução indefinida.  
   
- O `__ud2` função é equivalente do `UD2` instruções de máquina e está disponível somente no modo kernel.  Para obter mais informações, procure o documento, "Manual do desenvolvedor de Software da arquitetura Intel, Volume 2: referência de conjunto de instruções," com o [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) site.  
+ O `__ud2` função é equivalente ao `UD2` instrução do computador e está disponível apenas no modo de kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) site.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
-|----------------|-----------------|  
-|`__ud2`|x86,[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Específicos do Microsoft final  
+**Fim da seção específica da Microsoft**  
   
-## Exemplo  
- O exemplo a seguir executa uma instrução indefinida, o que gera uma exceção.  O manipulador de exceção, em seguida, altera o código de retorno de zero a um.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir executa uma instrução indefinida, o que gera uma exceção. O manipulador de exceção, em seguida, altera o código de retorno de zero para um.  
   
 ```  
 // __ud2_intrinsic.cpp  
@@ -84,6 +82,11 @@ int main() {
 }  
 ```  
   
-  **Antes de \_\_ud2\(\).  Código de retorno \= 0.  No manipulador de exceção.  Depois de \_\_ud2\(\).  Código de retorno \= 1.**    
-## Consulte também  
+```Output  
+Before __ud2(). Return code = 0.  
+  In the exception handler.  
+After __ud2().  Return code = 1.  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

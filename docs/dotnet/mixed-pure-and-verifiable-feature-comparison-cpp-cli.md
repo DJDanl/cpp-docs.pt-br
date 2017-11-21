@@ -1,54 +1,55 @@
 ---
-title: "Compara&#231;&#227;o de recursos mistos, puros e verific&#225;veis (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assemblies mistos [C++]"
-  - "assemblies mistos [C++], vs. puro"
-  - "assemblies mistos [C++], vs. seguro"
-  - "assemblies puros [C++]"
-  - "MSIL puro [C++]"
-  - "MSIL puro [C++], em comparação com misto e seguro"
-  - "MSIL puro [C++], vs. misto"
-  - "MSIL puro [C++], vs. seguro"
-  - "assemblies seguros [C++]"
-  - "assemblies seguros [C++], vs. misto"
-  - "assemblies seguros [C++], vs. puro"
-  - "assemblies verificáveis [C++]"
-  - "assemblies verificáveis [C++], vs. misto"
-  - "assemblies verificáveis [C++], vs. puro"
+title: "Comparação de recursos mistos, puros e verificáveis (C++ /CLI CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- safe assemblies [C++], vs. pure
+- mixed assemblies [C++], vs. pure
+- safe assemblies [C++], vs. mixed
+- pure MSIL [C++]
+- verifiable assemblies [C++]
+- pure MSIL [C++], vs. safe
+- pure MSIL [C++], vs. mixed
+- pure MSIL [C++], compared to mixed and safe
+- verifiable assemblies [C++], vs. mixed
+- mixed assemblies [C++], vs. safe
+- verifiable assemblies [C++], vs. pure
+- pure assemblies [C++]
+- safe assemblies [C++]
+- mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92c3b6b95bc1ddb51900d8274f76993c32a71ceb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Compara&#231;&#227;o de recursos mistos, puros e verific&#225;veis (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico compara recursos entre os diferentes modos de compilação de **\/clr** .  Para obter mais informações, consulte [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Comparação de funcionalidades mistas, puras e verificáveis (C++/CLI)
+Este tópico compara recursos entre os diferentes **/clr** modos de compilação. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Comparação de recursos  
+ As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
-|Recurso|Misto \(\/clr\)|Puro \(\/clr:pure\)|Segura \(\/clr:safe\)|Informações relacionadas|  
-|-------------|---------------------|-------------------------|---------------------------|------------------------------|  
-|Biblioteca do CRT|suporte|suporte||[Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)|  
-|MFC\/ATL|suporte|||[Aplicativos para desktop do MFC](../mfc/mfc-desktop-applications.md) &#124; [Visão geral de classe](../atl/atl-class-overview.md)|  
-|Funções não gerenciado|suporte|||[Assemblies mistos \(nativos e gerenciados\)](../Topic/Mixed%20\(Native%20and%20Managed\)%20Assemblies.md)|  
-|Dados não gerenciado|suporte|suporte||[Código puro e verificável](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
-|Acessível de funções não gerenciado|suporte|||[Como migrar para \/clr:pure](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
-|O oferece suporte a funções que chamam não gerenciado|suporte|o C \- estilo funciona somente|Somente P\/Invoke|[Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|Reflexão da suporte|DLL apenas|suporte|suporte|[Reflexão](../dotnet/reflection-cpp-cli.md)|  
+## <a name="feature-comparison"></a>Comparação de recursos  
   
-## Consulte também  
- [Código puro e verificável](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+|Recurso|Misto (/ clr)|Puro (/ clr: pure)|Segurança (/: Safe)|Informações relacionadas|  
+|-------------|---------------------|-------------------------|-------------------------|-------------------------|  
+|Biblioteca CRT|Com suporte|Com suporte||[Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)|  
+|ATL/MFC|Com suporte|||[Aplicativos de Desktop do MFC](../mfc/mfc-desktop-applications.md) &#124; [Visão geral da classe](../atl/atl-class-overview.md)|  
+|Funções não gerenciadas|Com suporte|||[Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)|  
+|Dados não gerenciados|Com suporte|Com suporte||[Código puro e verificável (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
+|Chamado de funções não gerenciadas|Com suporte|||[Como: migrar para /clr: pure (C + + CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
+|Dá suporte a chamar funções não gerenciadas|Com suporte|Somente funções de estilo C|P/Invoke somente|[Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
+|Dá suporte a reflexão|DLLs somente|Com suporte|Com suporte|[Reflexão (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Código puro e verificável (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

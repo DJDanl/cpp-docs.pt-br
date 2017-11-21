@@ -1,33 +1,30 @@
 ---
-title: "multimap::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inserir membro [STL/CLR]"
+title: 'multimap:: Insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 98922ea1-c7ed-4c53-8834-8a0470b11c9e
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1355bb5e5ce9b959a9fc3015fec083846d2e12d7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adiciona os elementos.  
+# <a name="multimapinsert-stlclr"></a>multimap::insert (STL/CLR)
+Adiciona elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 iterator insert(value_type val);  
@@ -37,36 +34,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  primeiro  
  Início do intervalo a ser inserido.  
   
  last  
- O fim do intervalo a ser inserido.  
+ Fim do intervalo a ser inserido.  
   
  direita  
- Enumeração o a ser inserido.  
+ Enumeração para inserir.  
   
- val  
- Valor de chave a ser inserido.  
+ Val  
+ Valor da chave a ser inserido.  
   
  onde  
- Onde no contêiner inserir \(dica somente\).  
+ Onde no contêiner para inserir (dica).  
   
-## Comentários  
- Cada uma das funções de membro insere uma sequência especificada pelos operandos restantes.  
+## <a name="remarks"></a>Comentários  
+ Cada uma das funções membro insere uma sequência especificada por operandos restantes.  
   
- A primeira função de membro insere um elemento com valor `val`, e retorna um iterador que designa o elemento inserido recentemente.  Você usará para inserir um único elemento.  
+ A primeira função de membro insere um elemento com o valor `val`e retorna um iterador que designa o elemento recentemente inserido. Você pode usá-lo para inserir um único elemento.  
   
- A segunda função de membro insere um elemento com valor `val`, usando `where` como uma dica \(para melhorar o desempenho\), e retorna um iterador que designa o elemento inserido recentemente.  Use\-a para inserir um único elemento que pode ser em conjunto em um elemento que você saiba.  
+ A segunda função de membro insere um elemento com o valor `val`usando `where` como uma dica (para melhorar o desempenho) e retorna um iterador que designa o elemento recentemente inserido. Você pode usá-lo para inserir um único elemento que pode ser adjacente a um elemento que você sabe.  
   
- A terceira função de membro insere a sequência `[``first``,` `last``)`.  Use\-a para inserir zero ou mais elementos copiados de outra sequência.  
+ A terceira função do membro insere a sequência [`first`, `last`). Você pode usá-lo para inserir zero ou mais elementos copiados de outra sequência.  
   
- A quarta função de membro insere a sequência designada por `right`.  Use\-a para inserir uma sequência descrita por um enumerador.  
+ A função de membro quarta insere a sequência designada pelo `right`. Você pode usá-lo para inserir uma sequência descrita por um enumerador.  
   
- Cada inserção de elemento usa o tempo proporcionais ao logaritmo o número de elementos na sequência controlada.  A inserção pode ocorrer em tempo amortizados constantes, porém, uma dica dados que designa um elemento adjacente ao ponto de inserção.  
+ Cada inserção de elemento demora proporcional de logaritmo do número de elementos na sequência controlada. Inserção pode ocorrer em tempo de constante amortizado, no entanto, considerando uma dica que designa um elemento adjacente ao ponto de inserção.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_multimap_insert.cpp   
@@ -129,18 +126,21 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**insert \(\[L'x 24 \= \[\]\)x 24\]**  
-**insert \(\[L'b 2 \= \[\]\)b 2\]**  
- **um \[1\] \[2\] b b \[2\] \[3\] \[cx 24\]**  
-**insert\(begin\(\), \[L'y 25 \= \[\]\)y 25\]**  
- **um \[1\] \[2\] \[b e c\] 2 \[3\] \[\] \[24 xy 25\]**  
- **um \[1\] \[2\] b b \[2\] \[3\] \[cx 24\]**  
- **um \[1\] \[2\] \[b e c\] 2 \[3\] \[\] \[24 xy 25\]**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+insert([L'x' 24]) = [x 24]  
+insert([L'b' 2]) = [b 2]  
+ [a 1] [b 2] [b 2] [c 3] [x 24]  
+insert(begin(), [L'y' 25]) = [y 25]  
+ [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]  
+ [a 1] [b 2] [b 2] [c 3] [x 24]  
+ [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [multimapa](../dotnet/multimap-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)

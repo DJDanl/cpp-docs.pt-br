@@ -1,50 +1,48 @@
 ---
-title: "ISessionPropertiesImpl::SetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISessionPropertiesImpl.SetProperties"
-  - "SetProperties"
-  - "ISessionPropertiesImpl::SetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método SetProperties"
+title: 'Isessionpropertiesimpl:: SetProperties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ISessionPropertiesImpl.SetProperties
+- SetProperties
+- ISessionPropertiesImpl::SetProperties
+dev_langs: C++
+helpviewer_keywords: SetProperties method
 ms.assetid: 2e1219ed-0e1e-460e-84d6-031acfbfd3d2
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2833613789a67219eddaff57b7b6de54fce7f880
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# ISessionPropertiesImpl::SetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Define propriedades no grupo de propriedades **DBPROPSET\_SESSION** .  
+# <a name="isessionpropertiesimplsetproperties"></a>ISessionPropertiesImpl::SetProperties
+Define as propriedades no **DBPROPSET_SESSION** grupo de propriedades.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      STDMETHOD(SetProperties)(   
-   ULONG cPropertySets,   
-   DBPROPSET rgPropertySets[]    
+      STDMETHOD(SetProperties)(   
+   ULONG cPropertySets,   
+   DBPROPSET rgPropertySets[]    
 );  
 ```  
   
-#### Parâmetros  
- Consulte [ISessionProperties::SetProperties](https://msdn.microsoft.com/en-us/library/ms714405.aspx)*na referência do programador de OLE DB*.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [ISessionProperties::SetProperties](https://msdn.microsoft.com/en-us/library/ms714405.aspx) no *referência do programador de OLE DB*.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)   
  [ISessionPropertiesImpl::GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)

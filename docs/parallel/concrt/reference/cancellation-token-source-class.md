@@ -1,11 +1,10 @@
 ---
-title: Classe cancellation_token_source | Documentos do Microsoft
+title: Classe cancellation_token_source | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token_source class
+dev_langs: C++
+helpviewer_keywords: cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: d5335b36e9ac80399a965c3717fcc0f5c2bab1fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
 O `cancellation_token_source` classe representa a capacidade de cancelar uma operação cancelável.  
@@ -60,16 +42,16 @@ class cancellation_token_source;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[cancellation_token_source](#ctor)|Sobrecarregado. Constrói um novo `cancellation_token_source`. A origem pode ser usada para sinalizar o cancelamento de alguma operação cancelável.|  
+|[cancellation_token_source](#ctor)|Sobrecarregado. Constrói um novo `cancellation_token_source`. A fonte pode ser usada para sinalizar o cancelamento de alguma operação cancelável.|  
 |[~ cancellation_token_source destruidor](#dtor)||  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Cancelar](#cancel)|Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que utiliza o token será cancelado após esta chamada e lançar uma exceção no próximo ponto de interrupção.|  
+|[Cancelar](#cancel)|Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que utiliza o token será cancelado após essa chamada e gerará uma exceção no próximo ponto de interrupção.|  
 |[create_linked_source](#create_linked_source)|Sobrecarregado. Cria um `cancellation_token_source` que é cancelado quando o token fornecido é cancelado.|  
-|[get_token](#get_token)|Retorna um token de cancelamento associado com essa origem. O token retornado pode ser controlado de cancelamento ou fornecer um retorno de chamada quando ocorre de cancelamento.|  
+|[get_token](#get_token)|Retorna um token de cancelamento associado a essa fonte. O token retornado pode ser controlado de cancelamento ou forneça um retorno de chamada se e quando o cancelamento ocorre.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -95,7 +77,7 @@ class cancellation_token_source;
   
 ##  <a name="cancel"></a>Cancelar 
 
- Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que utiliza o token será cancelado após esta chamada e lançar uma exceção no próximo ponto de interrupção.  
+ Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que utiliza o token será cancelado após essa chamada e gerará uma exceção no próximo ponto de interrupção.  
   
 ```
 void cancel() const;
@@ -103,7 +85,7 @@ void cancel() const;
   
 ##  <a name="ctor"></a>cancellation_token_source 
 
- Constrói um novo `cancellation_token_source`. A origem pode ser usada para sinalizar o cancelamento de alguma operação cancelável.  
+ Constrói um novo `cancellation_token_source`. A fonte pode ser usada para sinalizar o cancelamento de alguma operação cancelável.  
   
 ```
 cancellation_token_source();
@@ -131,27 +113,27 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ### <a name="parameters"></a>Parâmetros  
  `_Iter`  
  `_Src`  
- Um token cujo cancelamento causará o cancelamento da fonte de token retornado. Observe que a fonte de token retornada também pode ser cancelada independentemente de origem contida nesse parâmetro.  
+ Um token cujo cancelamento fará com que o cancelamento da origem do token retornado. Observe que a origem do token retornada também pode ser cancelada independentemente de origem contida nesse parâmetro.  
   
  `_Begin`  
- O iterador de biblioteca padrão C++ correspondente ao início do intervalo de tokens para escutar o cancelamento da.  
+ O iterador da biblioteca padrão C++ correspondente ao início do intervalo de tokens para ouvir o cancelamento da.  
   
  `_End`  
- O iterador de biblioteca padrão C++ correspondente para o final do intervalo de tokens para escutar o cancelamento da.  
+ O iterador de biblioteca padrão C++ correspondente para o final do intervalo de tokens para ouvir o cancelamento da.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A `cancellation_token_source` que é cancelado quando o token fornecido pelo `_Src` parâmetro será cancelado.  
+ Um `cancellation_token_source` que é cancelado quando o token fornecido pelo `_Src` parâmetro será cancelado.  
   
 ##  <a name="get_token"></a>get_token 
 
- Retorna um token de cancelamento associado com essa origem. O token retornado pode ser controlado de cancelamento ou fornecer um retorno de chamada quando ocorre de cancelamento.  
+ Retorna um token de cancelamento associado a essa fonte. O token retornado pode ser controlado de cancelamento ou forneça um retorno de chamada se e quando o cancelamento ocorre.  
   
 ```
 cancellation_token get_token() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um token de cancelamento associado com essa origem.  
+ Um token de cancelamento associado a essa fonte.  
   
 ##  <a name="operator_neq"></a>operador! = 
 
@@ -190,4 +172,3 @@ bool operator== (const cancellation_token_source& _Src) const;
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)
-

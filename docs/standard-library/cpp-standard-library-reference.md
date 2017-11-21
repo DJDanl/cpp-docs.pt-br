@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, reference
 - C++ Standard Library
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 73761e1f2d4eed0e12ab42d0f1b3a6dec0d66b10
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: d7c2c20604b2630b5125da839b275170559c08e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-standard-library-reference"></a>Referência da Biblioteca Padrão C++
 É possível chamar um programa do C++ em um grande número de funções por meio dessa implementação em conformidade da Biblioteca Padrão C++. Essas funções realizam serviços essenciais como entrada e saída, além de oferecer implementações eficientes das operações mais usadas.  
@@ -56,5 +39,4 @@ ms.lasthandoff: 02/25/2017
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)  
  Fornece links para tópicos de referência que abordam os arquivos de cabeçalho da Biblioteca Padrão C++, com exemplos de código.  
   
-
 

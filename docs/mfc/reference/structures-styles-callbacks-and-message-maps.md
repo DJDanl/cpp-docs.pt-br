@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.structures
-dev_langs:
-- C++
+f1_keywords: vc.mfc.structures
+dev_langs: C++
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: c3531ab24116cd64778f43604fa6196b9ffd67f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Estruturas, estilos, retornos de chamada e mapas de mensagem
 Esta seção documenta as estruturas, estilos e funções de retorno de chamada usadas pela biblioteca Microsoft Foundation Class e mapas de mensagem do MFC.  
@@ -51,7 +47,6 @@ Esta seção documenta as estruturas, estilos e funções de retorno de chamada 
   
  [Exemplos MFC](../../visual-cpp-samples.md)  
  Fornece links para exemplos que demonstram o uso da biblioteca do MFC.
-
 
 
 

@@ -1,37 +1,36 @@
 ---
-title: "Saltando at&#233; r&#243;tulos no assembly embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __asm [C++], rótulos"
-  - "diferenciação de maiúsculas e minúsculas, rótulos em assembly embutido"
-  - "assembly embutido, saltando para rótulos"
-  - "saltando para rótulos em assembly embutido"
-  - "rótulos, em blocos __asm"
-  - "rótulos, em assembly embutido"
+title: "Saltando para rótulos em Assembly embutido | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembly, jumping to labels
+- labels, in inline assembly
+- __asm keyword [C++], labels
+- case sensitivity, labels in inline assembly
+- labels, in __asm blocks
+- jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3cec845e83e41f71496d1384396e7dd370dc0406
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Saltando at&#233; r&#243;tulos no assembly embutido
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específico da Microsoft  
- Como um rótulo comum de 2.0 C ou C\+\+, um rótulo em um bloco de `__asm` tem o escopo em toda a função na qual é definido \(não apenas no bloco\).  As instruções de assembly e as instruções de `goto` podem ir diretamente para rótulos dentro ou fora do bloco de `__asm` .  
+# <a name="jumping-to-labels-in-inline-assembly"></a>Passando para rótulos no assembly embutido
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ Como um comum C ou C++ rótulo, um rótulo em uma `__asm` bloco tem escopo em toda a função na qual ela está definida (não apenas no bloco). Ambas as instruções de assembly e `goto` instruções podem saltar para rótulos dentro ou fora de `__asm` bloco.  
   
- Os rótulos definidas em blocos de `__asm` não diferenciam maiúsculas e minúsculas; as instruções de `goto` e as instruções de assembly podem fazer referência a essas rótulos sem considerar o caso.  Os rótulos de 2.0 C e C\+\+ diferenciam maiúsculas e minúsculas somente quando usadas pelas instruções de `goto` .  As instruções de assembly podem passar a c ou C\+\+ para o rótulo sem considerar o caso.  
+ Rótulos definidos em `__asm` blocos não diferenciam maiusculas de minúsculas; as `goto` instruções e instruções de assembly podem fazer referência a esses rótulos sem considerar o caso. Rótulos de C e C++ diferenciam maiusculas de minúsculas apenas quando usado por `goto` instruções. Instruções de assembly podem saltar para um rótulo de C ou C++ sem considerar o caso.  
   
  O código a seguir mostra todas as permutações:  
   
@@ -63,7 +62,7 @@ int main()
 }  
 ```  
   
- Não use nomes de função de biblioteca de 2.0 c como rótulos em blocos de `__asm` .  Por exemplo, você poderia ser tentado usar `exit` como um rótulo, como segue:  
+ Não use nomes de função de biblioteca C como rótulos em `__asm` blocos. Por exemplo, você poderá ficar tentado usar `exit` como um rótulo, da seguinte maneira:  
   
 ```  
 ; BAD TECHNIQUE: using library function name as label  
@@ -75,9 +74,9 @@ exit:
    ; More __asm code follows  
 ```  
   
- Como **exit** é o nome da função de biblioteca c, esse código pode causar um salto à função de **exit** em vez do local desejado.  
+ Porque **sair** é o nome de uma função de biblioteca C, esse código pode causar um salto para o **sair** função em vez de para o local desejado.  
   
- Como em programas de MASM, o símbolo de cifrão \(`$`\) serve como o contador de local atual.  É um rótulo para a instrução que está sendo atualmente montada.  Em blocos de `__asm` , sua própria principal é fazer saltos condicionais longos:  
+ Como programas MASM, o símbolo de dólar (`$`) serve como o contador de local atual. É um rótulo para a instrução que está sendo montado no momento. Em `__asm` blocos, seu uso principal é tornar saltos longa condicionais:  
   
 ```  
 jne $+5 ; next instruction is 5 bytes long  
@@ -89,7 +88,7 @@ jmp farlabel
 farlabel:  
 ```  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assembler embutido](../../assembler/inline/inline-assembler.md)

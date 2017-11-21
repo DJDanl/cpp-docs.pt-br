@@ -1,40 +1,38 @@
 ---
-title: "Como declarar identificadores em tipos nativos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave gcroot [C++]"
-  - "identificadores, declarando"
-  - "tipos [C++], declarando identificadores em"
+title: 'Como: declarar identificadores em tipos nativos | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords: gcroot
+dev_langs: C++
+helpviewer_keywords:
+- handles, declaring
+- gcroot keyword [C++]
+- types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b7507a0c941fa651f55fdf462b9d832cfd929632
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como declarar identificadores em tipos nativos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você não pode declarar um identificador em um tipo nativo. vcclr.h fornece o modelo fortemente tipado `gcroot` de invólucro para se referir a um objeto CLR do heap C\+\+.  Esse modelo permite digitar um identificador virtual em um tipo nativo e tratá\-los como se fosse o tipo subjacente.  Na maioria dos casos, você pode usar o objeto de `gcroot` como o tipo inserido sem nenhuma conversão.  No entanto, com [for each, in](../dotnet/for-each-in.md), você tem que usar `static_cast` para recuperar a referência gerenciada subjacentes.  
+# <a name="how-to-declare-handles-in-native-types"></a>Como declarar identificadores em tipos nativos
+Você não pode declarar um tipo de identificador em um tipo nativo. vcclr.h fornece o modelo de wrapper de tipo seguro `gcroot` para se referir a um objeto CLR do heap C++. Este modelo permite que você inserir um identificador virtual em um tipo nativo e tratá-lo como se fosse o tipo subjacente. Na maioria dos casos, você pode usar o `gcroot` objeto como o tipo incorporado sem qualquer conversão. No entanto, com [para cada um, no](../dotnet/for-each-in.md), você deve usar `static_cast` para recuperar a referência gerenciada subjacente.  
   
- O modelo de `gcroot` é implementado usando as instalações da classe System::Runtime::InteropServices::GCHandle de valor, que fornece as “identificadores” no heap com coletados.  Observe que os identificadores em si não são limpos e são liberadas quando não em uso pelo destruidor na classe de `gcroot` \(esse destruidor não pode ser chamado manualmente\).  Se você criar uma instância de um objeto de `gcroot` no heap nativo, você deve chamar a exclusão desse recurso.  
+ O `gcroot` modelo é implementado usando os recursos da classe de valor System::Runtime::InteropServices::GCHandle, que fornece "identificadores" para o heap coletado como lixo. Observe que os identificadores de si mesmos não são coletados pelo Garbage Collector e são liberados quando não mais em uso por destruidor no `gcroot` classe (este destruidor não pode ser chamado manualmente). Se você criar uma instância de um `gcroot` de objetos no heap nativo, você deve chamar delete no recurso.  
   
- O tempo de execução manterá uma associação entre o identificador e o objeto CLR, que referencia.  Quando o objeto CLR se move um com o heap com coletado, o identificador retornará o novo endereço do objeto.  Uma variável não tem que ser fixado antes que seja atribuído a um modelo de `gcroot` .  
+ O tempo de execução mantém uma associação entre o identificador e o objeto CLR, que faz referência a ele. Quando o objeto CLR é movida com a pilha de coletor de lixo, o identificador retornará o novo endereço do objeto. Uma variável não precisa ser fixado antes que ela é atribuída a um `gcroot` modelo.  
   
-## Exemplo  
- Este exemplo mostra como criar um objeto de `gcroot` na pilha nativo.  
+## <a name="example"></a>Exemplo  
+ Este exemplo mostra como criar um `gcroot` objeto na pilha nativo.  
   
 ```  
 // mcpp_gcroot.cpp  
@@ -55,9 +53,12 @@ int main() {
 }  
 ```  
   
-  **hello**   
-## Exemplo  
- Este exemplo mostra como criar um objeto de `gcroot` no heap nativo.  
+```Output  
+hello  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Este exemplo mostra como criar um `gcroot` objeto no heap nativo.  
   
 ```  
 // mcpp_gcroot_2.cpp  
@@ -81,9 +82,12 @@ int main() {
 }  
 ```  
   
-  **hello**   
-## Exemplo  
- Este exemplo mostra como usar `gcroot` para manter referências aos tipos de valor \(não tipos de referência\) em um tipo nativo usando `gcroot` no tipo encaixotado.  
+```Output  
+hello  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Este exemplo mostra como usar `gcroot` para manter as referências aos tipos de valor (tipos de referência não) em um tipo nativo usando `gcroot` no tipo de processador.  
   
 ```  
 // mcpp_gcroot_3.cpp  
@@ -109,6 +113,9 @@ int main() {
 }  
 ```  
   
-  **Cadeia de caracteres em V: Hello world**   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+String in V: Hello  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

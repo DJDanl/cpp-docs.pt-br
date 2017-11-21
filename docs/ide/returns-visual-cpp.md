@@ -1,48 +1,47 @@
 ---
-title: "&lt;returns&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "returns"
-  - "<returns>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marca XML C++ <returns>"
-  - "marca XML C++ returns"
+title: '&lt;Retorna&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- returns
+- <returns>
+dev_langs: C++
+helpviewer_keywords:
+- returns C++ XML tag
+- <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: babb15cd887ddd877d2aa898b9df7d35618be990
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;returns&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A marca de \<returns\> deve ser usada no comentário de uma declaração de método para descrever o valor de retorno.  
+# <a name="ltreturnsgt-visual-c"></a>&lt;Retorna&gt; (Visual C++)
+A marca \<returns> deve ser usada no comentário para uma declaração de método descrever o valor retornado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 <returns>description</returns>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `description`  
- Uma descrição de valor de retorno.  
+ Uma descrição do valor retornado.  
   
-## Comentários  
- Compile com [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação para um arquivo.  
+## <a name="remarks"></a>Comentários  
+ Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // xml_returns_tag.cpp  
@@ -57,5 +56,5 @@ public:
 };  
 ```  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

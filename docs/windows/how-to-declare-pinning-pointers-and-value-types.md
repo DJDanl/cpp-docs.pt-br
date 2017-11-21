@@ -1,34 +1,33 @@
 ---
-title: "How to: Declare Pinning Pointers and Value Types | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value types, declaring"
-  - "pinning pointers"
+title: "Como: declarar ponteiros de fixação e tipos de valor | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- value types, declaring
+- pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 04ee5a54ec797324aa0bad6e72f8cfc0861d2a38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Declare Pinning Pointers and Value Types
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um tipo de valor pode ser implicitamente encaixotado.  Você pode declarar um ponteiro fixando\-se ao objeto do tipo de valor em si e usar **pin\_ptr** ao tipo de valor encaixotado.  
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Como declarar ponteiros de fixação e tipos de valor
+Um tipo de valor pode ser convertido implicitamente. Você pode, em seguida, declarar um ponteiro de fixação para o objeto de tipo de valor em si e use um **pin_ptr** para o tipo de valor Demarcado.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // pin_ptr_value.cpp  
@@ -48,7 +47,7 @@ int main() {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 8  
@@ -56,5 +55,5 @@ int main() {
 7  
 ```  
   
-## Consulte também  
- [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md)
+## <a name="see-also"></a>Consulte também  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

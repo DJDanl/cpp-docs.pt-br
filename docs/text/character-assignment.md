@@ -1,30 +1,29 @@
 ---
-title: "Atribui&#231;&#227;o de caractere | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caracteres [C++], atribuições"
-  - "MBCS [C++], atribuições de caractere"
+title: "Atribuição de caractere | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], assignments
+- MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: c40e7d0c6861f4815d98ad4388aade8227b43dcb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Atribui&#231;&#227;o de caractere
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Considere o exemplo a seguir, em que o loop de `while` examina uma cadeia de caracteres, copiando todos os caracteres exceto “X” em outra cadeia de caracteres:  
+# <a name="character-assignment"></a>Atribuição de caractere
+Considere o exemplo a seguir, no qual o `while` loop verifica uma cadeia de caracteres, copiando todos os caracteres, exceto 'X' em outra cadeia de caracteres:  
   
 ```  
 while( *sz2 )  
@@ -36,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- O código copia bytes no `sz2` ao local apontado por `sz1`, a seguir incrementa `sz1` para receber o byte seguir.  Mas se o próximo caractere em `sz2` é um caractere de byte duplo, a atribuição a `sz1` copia só o primeiro byte.  O código a seguir usa uma função portátil para copiar segurança com o caractere e outro para incrementar corretamente `sz1` e `sz2` :  
+ O código copia o byte no `sz2` no local apontado pela `sz1`, em seguida, incrementa `sz1` para receber o próximo byte. Mas se o próximo caractere em `sz2` é um caractere de byte duplo, a atribuição ao `sz1` copia somente o primeiro byte. O código a seguir usa uma função portátil para copiar o caractere com segurança e outro para incrementar `sz1` e `sz2` corretamente:  
   
 ```  
 while( *sz2 )  
@@ -52,6 +51,6 @@ while( *sz2 )
 }  
 ```  
   
-## Consulte também  
- [Dicas de programação MBCS](../Topic/MBCS%20Programming%20Tips.md)   
+## <a name="see-also"></a>Consulte também  
+ [Dicas de programação MBCS](../text/mbcs-programming-tips.md)   
  [Comparação de caracteres](../text/character-comparison.md)

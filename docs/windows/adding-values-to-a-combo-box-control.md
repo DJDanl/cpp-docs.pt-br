@@ -1,75 +1,74 @@
 ---
-title: "Adicionando valores a um controle de caixa de combina&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.combo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caixas de combinação [C++], adicionando valores"
-  - "caixas de combinação [C++], Propriedade de dados"
-  - "caixas de combinação [C++], visualizando valores"
-  - "caixas de combinação [C++], testando valores"
-  - "controles [C++], testando valores em caixas de combinação"
-  - "controles [Visual Studio], testando valores em caixas de combinação"
-  - "Propriedade de dados"
+title: "Adicionando valores a um controle de caixa de combinação | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.combo
+dev_langs: C++
+helpviewer_keywords:
+- combo boxes [C++], Data property
+- controls [Visual Studio], testing values in combo boxes
+- combo boxes [C++], adding values
+- combo boxes [C++], previewing values
+- controls [C++], testing values in combo boxes
+- Data property
+- combo boxes [C++], testing values
 ms.assetid: 22a78f98-fada-48b3-90d8-7fa0d8e4de51
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f63f0e9466ec8a6649e14976e40d6c509af5fb2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Adicionando valores a um controle de caixa de combina&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode adicionar valores a um controle de caixa de combinação, contanto que você tenha o editor de diálogo Abrir.  
+# <a name="adding-values-to-a-combo-box-control"></a>Adicionando valores a um controle de caixa de combinação
+Você pode adicionar valores para um controle de caixa de combinação, contanto que o editor de caixa de diálogo Abrir.  
   
 > [!TIP]
->  Ele é uma boa idéia adicionar todos os valores para a caixa de combinação  *antes de* você dimensiona a caixa no editor de diálogo, ou você pode truncar o texto que deve aparecer no controle de combinação.  
+>  É uma boa ideia para adicionar todos os valores para a caixa de combinação *antes de* tamanho caixa no editor de caixa de diálogo, ou você pode truncar o texto que deve aparecer no controle de caixa de combinação.  
   
-#### Para inserir valores em um controle de caixa de combinação  
+#### <a name="to-enter-values-into-a-combo-box-control"></a>Para inserir valores em um controle de caixa de combinação  
   
-1.  Selecione o controle de caixa de combinação, clicando nele.  
+1.  Selecione o controle de caixa de combinação clicando nele.  
   
-2.  No  [Janela Propriedades do](../Topic/Properties%20Window.md), role para baixo até o  **dados** propriedade.  
-  
-    > [!NOTE]
-    >  Se você estiver exibindo as propriedades agrupadas por tipo,  **dados** consta o  **diverso** propriedades.  
-  
-3.  Clique na área de valor para o  **dados** propriedade e digite os valores de dados, separados por ponto e vírgula.  
+2.  No [janela propriedades](/visualstudio/ide/reference/properties-window), role para baixo até o **dados** propriedade.  
   
     > [!NOTE]
-    >  Não coloque espaços entre valores porque espaços interferem colocando em ordem alfabética na lista suspensa.  
+    >  Se você estiver exibindo propriedades agrupadas por tipo, **dados** aparece no **Misc** propriedades.  
   
-4.  Clique em  **Enter** quando você terminar de adicionar valores.  
+3.  Clique na área de valor para o **dados** propriedade e digite os valores de dados, separados por ponto e vírgula.  
   
- Para informações sobre como ampliar a parte suspensa de uma caixa de combinação, consulte  [definir o tamanho da sua lista de Drop\-Down de caixa de combinação e](../mfc/setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
+    > [!NOTE]
+    >  Não coloque espaços entre os valores como espaços interferem colocando em ordem alfabética na lista suspensa.  
+  
+4.  Clique em **Enter** quando tiver terminado de adicionar valores.  
+  
+ Para obter informações sobre como aumentar a lista suspensa de uma caixa de combinação, consulte [definindo o tamanho da sua lista de lista suspensa de caixa de combinação e](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
   
 > [!NOTE]
->  Não é possível adicionar valores aos projetos do Win32 usando este procedimento \(o  **dados**  propriedade fica cinza em projetos Win32\).  Porque os projetos do Win32 não possuem bibliotecas que adicionar esse recurso, você deve adicionar valores para uma caixa de combinação com um projeto do Win32 programaticamente.  
+>  Você não pode adicionar valores para projetos de Win32 usando esse procedimento (o **dados** propriedade é esmaecida para projetos de Win32). Porque Win32 projetos não possuem bibliotecas que adicionam essa funcionalidade, você deve adicionar valores para uma caixa de combinação com um projeto do Win32 programaticamente.  
   
-#### Para testar a aparência dos valores em uma caixa de combinação  
+#### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Para testar a aparência dos valores em uma caixa de combinação  
   
-1.  Depois de inserir valores na  **dados** propriedade, clique no  **teste** na barra a  [Barra de ferramentas do Editor de diálogo](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md).  
+1.  Depois de inserir valores no **dados** propriedade, clique no **teste** botão o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
-     Tente a rolagem para baixo na lista de todo o valor.  Os valores exibidos exatamente em que são digitados a  **dados** propriedade na janela Propriedades.  Não há nenhuma ortografia ou a verificação de maiúsculas e minúsculas.  
+     Tente rolar para baixo na lista de valor inteiro. Valores são exibidos exatamente como eles são digitados no **dados** propriedade na janela Propriedades. Não há nenhuma verificação de maiusculas e minúsculas ou ortografia.  
   
      Pressione ESC para retornar ao editor de caixa de diálogo.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](https://msdn.microsoft.com/library/f45fce5x.aspx) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-### Requisitos  
+### <a name="requirements"></a>Requisitos  
  Win32  
   
-## Consulte também  
- [Controles em caixas de diálogo](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

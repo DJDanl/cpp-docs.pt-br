@@ -1,33 +1,30 @@
 ---
-title: "lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função lower_bound [STL/CLR]"
+title: lower_bound (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound function [STL/CLR]
 ms.assetid: 841b70b5-1f54-4ecf-8faa-7dda32a24c54
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 44ba30cf55df27b08d47b7dc7d540fcefced266d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Localiza a posição do primeiro elemento em um intervalo ordenado que tem um valor menor ou o equivalente a um valor especificado, onde o critério de ordenação pode ser especificado por um predicado binário.  
+# <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
+Localiza a posição do primeiro elemento em um intervalo ordenado que tem um valor menor ou equivalente a um valor especificado, onde o critério de ordenação pode ser especificado com um predicado binário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -37,13 +34,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `lower_bound`STL.  Para obter mais informações, consulte [lower\_bound](../Topic/lower_bound.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `lower_bound`. Para obter mais informações, consulte [lower_bound](../standard-library/algorithm-functions.md#lower_bound).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

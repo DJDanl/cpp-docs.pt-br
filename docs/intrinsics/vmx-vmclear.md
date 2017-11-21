@@ -1,36 +1,34 @@
 ---
-title: "__vmx_vmclear | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmclear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Instrução VMCLEAR"
-  - "__vmx_vmclear intrínseco"
+title: __vmx_vmclear | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmclear
+dev_langs: C++
+helpviewer_keywords:
+- VMCLEAR instruction
+- __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: aa331ebc9ae1d7d18ccb5dd613e55cb1303d4c94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmclear
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="vmxvmclear"></a>__vmx_vmclear
+**Seção específica da Microsoft**  
   
- Inicializa a estrutura de controle da máquina virtual especificada \(VMCS\) e define seu estado de inicialização `Clear`.  
+ Inicializa a estrutura de controle de máquina virtual especificada (VMCS) e define seu estado de inicialização `Clear`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 unsigned char __vmx_vmclear(  
@@ -38,36 +36,36 @@ unsigned char __vmx_vmclear(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|\[in\]`VmcsPhysicalAddress`|Um ponteiro para um local de memória de 64 bits que contém o endereço físico de limpar o VMCS.|  
+|---------------|-----------------|  
+|[in] `VmcsPhysicalAddress`|Um ponteiro para um local de memória de 64 bits que contém o endereço físico de VMCS para limpar.|  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
   
 |Valor|Significado|  
-|-----------|-----------------|  
-|0|A operação foi bem\-sucedida.|  
-|1|A operação falhou com status estendido disponível na `VM-instruction error field` do VMCS atual.|  
-|2|A operação falhou sem status disponível.|  
+|-----------|-------------|  
+|0|A operação foi bem-sucedida.|  
+|1|A operação falhou com status estendido disponível no `VM-instruction error field` de VMCS o atual.|  
+|2|Falha na operação sem status disponível.|  
   
-## Comentários  
- Um aplicativo pode executar uma operação de inserir a VM usando o [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) função.  O [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) função pode ser usada somente com um estado cujo lançamento é de VMCS `Clear`e o [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) função pode ser usada somente com um estado cujo lançamento é de VMCS `Launched`.  Conseqüentemente, usar o [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de início de um VMCS para `Clear`.  Use o [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) função sua primeira operação do VM\-enter e o [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) função para operações subseqüentes de VM\-enter.  
+## <a name="remarks"></a>Comentários  
+ Um aplicativo pode executar uma operação de inserir a VM usando o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função. O [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) função pode ser usada somente com um VMCS cujo estado da inicialização `Clear`e o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função pode ser usada somente com um VMCS cujo estado de inicialização é `Launched`. Consequentemente, use o [__vmx_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de inicialização de um VMCS para `Clear`. Use o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) função para a primeira operação de VM-enter e o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função para operações subsequentes de VM-enter.  
   
- O `__vmx_vmclear` função é equivalente a `VMCLEAR` instrução da máquina.  Esta função oferece suporte a interação do monitor de máquina virtual de um host com um sistema operacional e seus aplicativos de convidado.  Para obter mais informações, procure o documento, "Intel Virtualization técnico especificação para a arquitetura IA\-32 Intel," documento número C97063\-002, no [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) site.  
+ O `__vmx_vmclear` função é equivalente a `VMCLEAR` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, no [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) site.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
-|----------------|-----------------|  
-|`__vmx_vmclear`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__vmx_vmclear`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Específicos do Microsoft final  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
- [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md)
+ [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
+ [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

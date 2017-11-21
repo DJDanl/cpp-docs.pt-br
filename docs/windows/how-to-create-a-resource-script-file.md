@@ -1,57 +1,56 @@
 ---
-title: "Como criar um arquivo de script de recurso | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos RC, criando"
-  - "arquivos. RC, criando"
-  - "arquivos de script de recurso, criando"
+title: 'Como: criar um arquivo de Script de recurso | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rc files, creating
+- .rc files, creating
+- resource script files, creating
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8521849ab71f05b10dc8d3b861c93ba71b552eb4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como criar um arquivo de script de recurso
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="how-to-create-a-resource-script-file"></a>Como criar um arquivo de script de recurso
 > [!NOTE]
->  O Editor de recursos não está disponível nas edições Express.  
+>  O Editor de recurso não está disponível em edições Express.  
 >   
->  Esse material se aplica a aplicativos de área de trabalho do Windows. Projetos em linguagens .NET não usa arquivos de script de recurso. Consulte [arquivos de recurso](../mfc/resource-files-visual-studio.md), para obter mais informações.  
+>  Este material se aplica a aplicativos de área de trabalho do Windows. Projetos em linguagens .NET não usa arquivos de script de recurso. Consulte [arquivos de recurso](../windows/resource-files-visual-studio.md), para obter mais informações.  
   
-### Para criar um novo arquivo de script \(. rc\) do recurso  
+### <a name="to-create-a-new-resource-script-rc-file"></a>Para criar um novo arquivo de script (. rc) do recurso  
   
 1.  Colocar o foco na sua pasta de projeto existente no `Solution Explorer`, por exemplo, "MyProject".  
   
     > [!NOTE]
-    >  Não confunda a pasta do projeto com a pasta de solução no Solution Explorer. Se você colocar o foco na pasta da solução, suas opções no **Add New Item** caixa de diálogo \(na etapa 3\) será diferente.  
+    >  Não confunda a pasta de projeto com a pasta de solução no Gerenciador de soluções. Se você colocar o foco na pasta da solução, suas opções no **Adicionar Novo Item** caixa de diálogo (na etapa 3) serão diferente.  
   
-2.  Sobre o **projeto** menu clique **Add New Item**.  
+2.  Sobre o **projeto** menu clique **Adicionar Novo Item**.  
   
-3.  No **Add New Item** caixa de diálogo, clique o **Visual C\+\+** pasta escolha **arquivo de recurso \(. rc\)** no painel à direita.  
+3.  No **Adicionar Novo Item** caixa de diálogo, clique o **Visual C++** , em seguida, escolha uma pasta **o arquivo de recurso (. rc)** no painel direito.  
   
-4.  Forneça um nome para o arquivo de script recursos o **nome** texto caixa e, em seguida, clique em **Abrir**.  
+4.  Forneça um nome para seu arquivo de script de recurso no **nome** texto caixa e, em seguida, clique em **abrir**.  
   
  Agora você pode [criar](../windows/how-to-create-a-resource.md) e adicionar novos recursos ao seu arquivo. rc.  
   
 > [!NOTE]
->  Você só pode adicionar um script \(arquivo. rc\) do recurso a um projeto existente que é carregado no IDE do Visual Studio. Você não pode criar um arquivo. RC do autônomo \(um fora do projeto\).[Modelos de recursos](../Topic/How%20to:%20Use%20Resource%20Templates.md) \(arquivos. rct\) podem ser criados a qualquer momento.  
+>  Você só pode adicionar um script de recurso (arquivo. rc) a um projeto existente que é carregado no IDE do Visual Studio. Não é possível criar um arquivo. rc de autônomo (um fora do projeto). [Modelos de recursos](../windows/how-to-use-resource-templates.md) (arquivos. rct) podem ser criados a qualquer momento.  
   
  RRequirements  
   
  Win32  
   
-## Consulte também  
- [Arquivos de recursos](../mfc/resource-files-visual-studio.md)   
- [Editores de recursos](../mfc/resource-editors.md)
+## <a name="see-also"></a>Consulte também  
+ [Arquivos de recurso](../windows/resource-files-visual-studio.md)   
+ [Editores de recursos](../windows/resource-editors.md)

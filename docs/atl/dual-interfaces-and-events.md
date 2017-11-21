@@ -1,35 +1,35 @@
 ---
-title: "Interfaces duais e eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces duais, eventos"
-  - "eventos [C++], interfaces duais"
+title: Interfaces duplas e eventos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- events [C++], dual interfaces
+- dual interfaces, events
 ms.assetid: bb382f7c-e885-4274-bf07-83f3602615d2
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d18124646f4d4fcb02246234bf74b5870246e7e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Interfaces duais e eventos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Embora seja possível criar uma interface de evento como um double, há um número bons motivos de design não fazer isso.  A principal motivo é que a origem do evento acionará somente o evento através de vtable ou através de `Invoke`, não ambos.  Se a fonte do evento aciona o evento como uma chamada vtable direto do método, os métodos de `IDispatch` serão usados e nunca é claro que a interface deve ter sido uma interface vtable pura.  Se a fonte do evento aciona o evento como uma chamada a `Invoke`, os métodos vtable serão usados e nunca é claro que a interface deve ter sido um dispinterface.  Se você definir o evento interface como duals, você irá requerer clientes implementar a parte de uma interface que nunca é usada.  
+# <a name="dual-interfaces-and-events"></a>Eventos e Interfaces duplas
+Embora seja possível criar uma interface de evento como um duplo, há vários motivos bom design para não fazer isso. O motivo fundamental é que a origem do evento será disparado somente o evento por meio de vtable ou `Invoke`, mas não ambos. Se a origem do evento dispara o evento como uma chamada de método vtable direto, o `IDispatch` métodos nunca serão usados e é claro que a interface deve ter sido uma interface vtable puro. Se a origem do evento dispara o evento como uma chamada para `Invoke`, os métodos vtable nunca serão usados e é claro que a interface deve ter sido um dispinterface. Se você definir as interfaces de evento como duals, você vai exigir que clientes implementar a parte de uma interface que nunca será usada.  
   
 > [!NOTE]
->  Esse argumento não se aplica às interfaces duais, em geral.  De a perspectiva da implementação, duals é uma maneira rápida, conveniente, e bem suporte de implementar as interfaces que são acessíveis para uma ampla variedade de clientes.  
+>  Esse argumento não se aplica às duas interfaces, em geral. De uma perspectiva de implementação, duals são uma maneira bem com suporte, rápida e conveniente de implementação de interfaces que são acessíveis a uma ampla gama de clientes.  
   
- Há motivos mais adiante evitar interfaces duais do evento; nem nem o Visual Basic Internet Explorer suportar\-los.  
+ Houver mais razões para evitar interfaces de evento dupla; suporte Visual Basic, nem Internet Explorer.  
   
-## Consulte também  
- [Interfaces duais e ATL](../atl/dual-interfaces-and-atl.md)
+## <a name="see-also"></a>Consulte também  
+ [Interfaces duplas e a ATL](../atl/dual-interfaces-and-atl.md)
+

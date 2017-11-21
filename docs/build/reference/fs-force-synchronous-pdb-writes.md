@@ -1,58 +1,56 @@
 ---
-title: "/FS (For&#231;ar grava&#231;&#245;es PDB s&#237;ncronas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/FS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador -FS (C++)"
-  - "Opção de compilador /FS (C++)"
+title: "-FS (forçar gravações PDB síncronas) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /FS
+dev_langs: C++
+helpviewer_keywords:
+- -FS compiler option [C++]
+- /FS compiler option [C++]
 ms.assetid: b2caaffe-f6e1-4963-b068-648f06b105e0
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a29b5f58517a8348c20bb233491aec01fda7f771
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /FS (For&#231;ar grava&#231;&#245;es PDB s&#237;ncronas)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Impõe a gravação no base de dados \(PDB\) do programa arquivo criado por [\/Zi](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) ou por [\/ZI](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md)— a ser serializado com MSPDBSRV.EXE.  
+# <a name="fs-force-synchronous-pdb-writes"></a>/FS (Forçar gravações PDB síncronas)
+Força grava o arquivo de programa (PDB) de banco de dados — criado por [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) ou [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— a ser serializado por meio de MSPDBSRV. EXE.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /FS  
 ```  
   
-## Comentários  
- Por padrão, quando **\/Zi** ou **\/ZI** é especificado, os arquivos PDB de bloqueios do compilador para gravar informações de tipo e informações de depuração do token.  Isso pode reduzir significativamente o tempo que leva o compilador para gerar as informações de tipo quando o número de tipos é grande.  Se outro processo bloqueia temporariamente para o arquivo PDB o exemplo, as gravações por programa de um anti\- vírus pelo compilador podem falhar e um erro fatal poderá ocorrer.  O problema também poderá ocorrer quando várias cópias de cl.exe acessam o arquivo PDB mesmo por exemplo, se sua solução tiver independente os projetos que usam os mesmos diretórios intermediários ou diretórios de saída e construções de paralela estão habilitados.  A opção do compilador de **\/FS** impede que o compilador impede o arquivo PDB e força gravações para atravessar MSPDBSRV.EXE, que serializa o acesso.  Isto pode causar compilações significativamente mais longo, e não evita que todos os erros que podem ocorrer quando várias instâncias de cl.exe acessam o arquivo PDB ao mesmo tempo.  Recomendamos que você altere sua solução de forma que os projetos independentes gravem locais separados intermediários e de saída, ou que você faça um dos projetos dependente no outro para forçar o projeto cria serializado.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, quando **/Zi** ou **/ZI** for especificado, o compilador bloqueia arquivos PDB para gravar informações de tipo e informações simbólicas de depuração. Isso pode reduzir significativamente o tempo necessário ao compilador para gerar informações de tipo quando o número de tipos é grande. Se outro processo bloquear temporariamente o arquivo PDB — por exemplo, um programa antivírus — gravações pelo compilador poderão falhar e pode ocorrer um erro fatal. Esse problema também pode ocorrer quando várias cópias de cl.exe acessar o mesmo arquivo PDB — por exemplo, se sua solução tiver independente projetos que usam o mesmo intermediário de pastas ou diretórios de saída e compilações paralelas estão habilitadas. O **/FS** opção de compilador impede que o compilador bloqueando o arquivo PDB e forçará as gravações percorrer MSPDBSRV. EXE, que serializa o acesso. Isso pode tornar builds significativamente maiores, e ela não impede que todos os erros que podem ocorrer quando várias instâncias do cl.exe acessarem o arquivo PDB ao mesmo tempo. É recomendável que você altere sua solução para que os projetos independentes escreva separar intermediário e locais de saída, ou que você faça um dos projetos depende do outro para compilações de projeto de equipe serializado.  
   
- A opção de [\/MP](../../build/reference/mp-build-with-multiple-processes.md) habilita **\/FS** por padrão.  
+ O [/MP](../../build/reference/mp-build-with-multiple-processes.md) opção habilita **/FS** por padrão.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Selecione a pasta **C\/C\+\+**.  
+2.  Selecione o **C/C++** pasta.  
   
-3.  Selecione a página de propriedades **Linha de Comando** .  
+3.  Selecione o **linha de comando** página de propriedades.  
   
-4.  Modifique a propriedade de **Opções Adicionais** para incluir `/FS` e escolha em **OK**.  
+4.  Modificar o **opções adicionais** propriedade incluir `/FS` e, em seguida, escolha **Okey**.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

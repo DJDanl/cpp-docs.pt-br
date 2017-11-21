@@ -1,67 +1,66 @@
 ---
-title: "/Gm (habilitar recompila&#231;&#227;o manual) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.MinimalRebuild"
-  - "/Gm"
-  - "/FD"
-  - "VC.Project.VCCLWCECompilerTool.MinimalRebuild"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /Gm (C++)"
-  - "Opção de compilador habilitar recompilação mínima [C++]"
-  - "Opção de compilador Gm [C++]"
-  - "Opção de compilador -Gm [C++]"
-  - "recompilação mínima"
+title: "-Gm (habilitar recompilação mínima) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.MinimalRebuild
+- /Gm
+- /FD
+- VC.Project.VCCLWCECompilerTool.MinimalRebuild
+dev_langs: C++
+helpviewer_keywords:
+- /Gm compiler option [C++]
+- minimal rebuild
+- enable minimal rebuild compiler option [C++]
+- Gm compiler option [C++]
+- -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7d3336c51f5a1300d06efe5b0fe774072502ef38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /Gm (habilitar recompila&#231;&#227;o manual)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Habilita recompilação mínima, que determina se os arquivos de origem C\+\+ que incluem definições de classe C\+\+ alteradas \(armazenadas nos arquivos de cabeçalho \(.h\)\) precisam ser recompilados.  
+# <a name="gm-enable-minimal-rebuild"></a>/Gm (habilitar recompilação manual)
+Habilita recompilação mínima, que determina se os arquivos de origem C++ que incluem definições de classe C++ alteradas (armazenadas nos arquivos de cabeçalho (.h)) precisam ser recompilados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Gm  
 ```  
   
-## Comentários  
- O compilador armazena as informações de dependência entre arquivos de origem e definições de classe no arquivo .idb do projeto durante a primeira compilação.  \(Informações sobre dependência dizem que arquivo de origem depende da definição de classe e em qual arquivo .h a definição está localizada.\) Compilações subsequentes usam as informações armazenadas no arquivo .idb para determinar se um arquivo de origem precisa ser compilado, mesmo que inclua um arquivo .h modificado.  
+## <a name="remarks"></a>Comentários  
+ O compilador armazena as informações de dependência entre arquivos de origem e definições de classe no arquivo .idb do projeto durante a primeira compilação. (Informações de dependência informam qual arquivo de origem depende de qual definição de classe, e quais. h a definição de arquivo está localizado em.) Compilações subsequentes usam as informações armazenadas no arquivo .idb para determinar se um arquivo de origem precisa ser compilado, mesmo que ele inclui um arquivo. h modificado.  
   
 > [!NOTE]
->  A recompilação mínima conta com definições de classe que não mudem entre os arquivos incluídos.  As definições de classe devem ser globais para um projeto \(deve haver apenas uma definição de uma determinada classe\), pois as informações de dependência no arquivo .idb são criadas para todo o projeto.  Se você tiver mais de uma definição para uma classe no seu projeto, desabilite a recompilação mínima.  
+>  A recompilação mínima conta com definições de classe que não mudem entre os arquivos incluídos. As definições de classe devem ser globais para um projeto (deve haver apenas uma definição de uma determinada classe), pois as informações de dependência no arquivo .idb são criadas para todo o projeto. Se você tiver mais de uma definição para uma classe no seu projeto, desabilite a recompilação mínima.  
   
- Como o vinculador incremental não tem suporte para metadados do Windows incluídos em arquivos .obj usando a opção [\/ZW \(Compilação de Tempo de Execução do Windows\)](../../build/reference/zw-windows-runtime-compilation.md), a opção **\/Gm** é incompatível com **\/ZW**.  
+ Como o vinculador incremental não oferece suporte para os metadados do Windows incluído nos arquivos. obj, usando o [/ZW (compilação de tempo de execução do Windows)](../../build/reference/zw-windows-runtime-compilation.md) opção, o **/GM manual** opção é incompatível com  **/ZW**.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedade de **Geração de Código**.  
+3.  Clique o **geração de código** página de propriedades.  
   
-4.  Modifique a propriedade **Habilitar Recompilação Mínima**.  
+4.  Modificar o **habilitar recriar mínimo** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.MinimalRebuild%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

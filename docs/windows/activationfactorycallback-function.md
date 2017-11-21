@@ -1,33 +1,30 @@
 ---
-title: "Fun&#231;&#227;o ActivationFactoryCallback | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::ActivationFactoryCallback"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função ActivationFactoryCallback"
+title: "Função ActivationFactoryCallback | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::ActivationFactoryCallback
+dev_langs: C++
+helpviewer_keywords: ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: adf41c8a518b0ca57326da1dd71c1a8ddd6f0a27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Fun&#231;&#227;o ActivationFactoryCallback
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="activationfactorycallback-function"></a>Função ActivationFactoryCallback
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
@@ -36,25 +33,25 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `activationId`  
  Identificador para uma cadeia de caracteres que especifica um nome de classe de tempo de execução.  
   
  `ppFactory`  
- Quando esta operação concluir, uma fábrica de ativação que corresponde ao parâmetro `activationId`.  
+ Quando essa operação for concluída, um alocador de ativação que corresponde ao parâmetro `activationId`.  
   
-## Valor de retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que descreve a falha.  A falha provável HRESULTs é CLASS\_E\_CLASSNOTAVAILABLE e E\_INVALIDARG.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve a falha. Falha provável HRESULTs são CLASS_E_CLASSNOTAVAILABLE e E_INVALIDARG.  
   
-## Comentários  
- Obtém a fábrica de ativação para a ID especificada de ativação  
+## <a name="remarks"></a>Comentários  
+ Obtém o alocador de ativação para a ID de ativação especificado.  
   
- Tempo de Execução do chama esta função de retorno de chamada para solicitar um objeto especificado pelo nome da classe de tempo de execução.  
+ O tempo de execução do Windows chama essa função de retorno de chamada para solicitar um objeto especificado por seu nome de classe de tempo de execução.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

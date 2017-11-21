@@ -1,33 +1,32 @@
 ---
-title: "Importando usando arquivos DEF | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .def [C++], importando com"
-  - "arquivos def [C++], importando com"
-  - "Atributo dllimport [C++], arquivos DEF"
-  - "DLLs [C++], arquivos DEF"
-  - "importando DLLs [C++], arquivos DEF"
+title: Importando usando arquivos DEF | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- importing DLLs [C++], DEF files
+- def files [C++], importing with
+- .def files [C++], importing with
+- dllimport attribute [C++], DEF files
+- DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 81148525b70f3c5ff351feb9561699f3b9b5e932
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Importando usando arquivos DEF
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se você optar por usar **\_\_declspec\(dllimport\)** junto com um arquivo .def, modifique o arquivo .def para usar ser incluída no lugar de CONSTANTE para reduzir a probabilidade da codificação incorreta causará um problema:  
+# <a name="importing-using-def-files"></a>Importando usando arquivos DEF
+Se você optar por usar **__declspec(dllimport)** junto com um arquivo. def, você deve alterar o arquivo. def para usar dados no lugar de constante para reduzir a probabilidade de que a codificação incorreta fará com que um problema:  
   
 ```  
 // project.def  
@@ -36,30 +35,30 @@ EXPORTS
    ulDataInDll   DATA  
 ```  
   
- A tabela a seguir mostra como.  
+ A tabela a seguir mostra por que.  
   
-|Palavra\-Chave|Emite na biblioteca de importação|Exporta|  
-|--------------------|---------------------------------------|-------------|  
-|`CONSTANT`|`_imp_ulDataInDll_ulDataInDll`|`_ulDataInDll`|  
+|Palavra-chave|Emite na biblioteca de importação|Exportações|  
+|-------------|---------------------------------|-------------|  
+|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|  
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|  
   
- Usando **\_\_declspec\(dllimport\)** e a lista CONSTANTE a versão de `imp` e o nome undecorated na biblioteca de importação da DLL de .lib que é criada para permitir vincular explícito.  Usando **\_\_declspec\(dllimport\)** e listas DATA apenas a versão de `imp` do nome.  
+ Usando **__declspec(dllimport)** e constante lista ambos o `imp` versão e o nome não decorado na DLL. lib Importar biblioteca que é criada para permitir que a vinculação explícita. Usando **__declspec(dllimport)** e listas de dados apenas o `imp` versão do nome.  
   
- Se você usar a CONSTANTE, qualquer uma das construções de código pode ser usada para acessar `ulDataInDll`:  
+ Se você usar a constante, uma das construções de código a seguir pode ser usada para acessar `ulDataInDll`:  
   
 ```  
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/  
 if (ulDataInDll == 0L)   /*sample code fragment*/  
 ```  
   
- \- ou \-  
+ -ou-  
   
 ```  
 ULONG *ulDataInDll;      /*prototype*/  
 if (*ulDataInDll == 0L)  /*sample code fragment*/  
 ```  
   
- No entanto, se você usar DATA no arquivo .def, somente o código compilado com a seguinte definição pode acessar `ulDataInDll`variável:  
+ No entanto, se você usar dados em seu arquivo. def, apenas o código compilado com a seguinte definição pode acessar a variável `ulDataInDll`:  
   
 ```  
 __declspec(dllimport) ULONG ulDataInDll;  
@@ -67,9 +66,9 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/  
 ```  
   
- Usar a CONSTANTE é mais arriscada pois se você esquecer usar o nível de nomes indiretos adicional, você poderia acessar o ponteiro de tabela de endereço de importação para a variável — não a variável próprio.  Esse tipo de problema pode frequentemente manifestar como uma violação de acesso como a tabela de endereço de importação é feita somente leitura no momento pelo compilador e pelo vinculador.  
+ Usando a constante é mais arriscado, porque se você se esqueça de usar o nível extra de indireção, você pode acessar potencialmente ponteiro da tabela de endereço de importação para a variável, não a variável em si. Esse tipo de problema geralmente pode manifestar como uma violação de acesso porque a tabela de endereço de importação é feita no momento somente leitura, o compilador e vinculador.  
   
- O vinculador atual do Visual C\+\+ emite um aviso se consulte a CONSTANTE no arquivo .def para considerar estas caixas.  O único motivo real usar a CONSTANTE se você não pode recompilar um arquivo de objeto onde o arquivo de cabeçalho não listados **\_\_declspec\(dllimport\)** no protótipo.  
+ O vinculador atual do Visual C++ emite um aviso se ele vê constante no arquivo. def para a conta para este caso. O motivo real só usar constante é se não for possível recompilar algum arquivo de objeto em que o arquivo de cabeçalho não lista **__declspec(dllimport)** no protótipo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Importando para um aplicativo](../build/importing-into-an-application.md)

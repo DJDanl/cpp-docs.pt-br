@@ -1,33 +1,30 @@
 ---
-title: "Operador ComPtr::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador operator="
+title: 'Comptr:: Operator operador = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: 1a0c2752-f7d8-4819-9443-07b88b69ef02
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 238c58e8fda169d86dc4be625ed16efa81c21fef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Operador ComPtr::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Atribui um valor a ComPtr atual.  
+# <a name="comptroperator-operator"></a>Operador ComPtr::operator=
+Atribui um valor para o ComPtr atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 WRL_NOTHROW ComPtr& operator=(  
@@ -62,35 +59,35 @@ WRL_NOTHROW ComPtr& operator=(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `U`  
  Uma classe.  
   
  `other`  
- Um ponteiro, uma referência, ou uma referência de rvalue a um tipo ou a outro ComPtr.  
+ Uma referência a um tipo ou ComPtr outro ponteiro, referência ou rvalue.  
   
-## Valor de retorno  
- Uma referência ao ComPtr atual.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma referência para o ComPtr atual.  
   
-## Comentários  
- A primeira versão desse operador atribui um valor vazio a ComPtr atual.  
+## <a name="remarks"></a>Comentários  
+ A primeira versão desse operador atribui um valor vazio para o ComPtr atual.  
   
- Na segunda versão, se o ponteiro de interface de atribuição não é o mesmo que o ponteiro atual da interface de ComPtr, o segundo ponteiro de interface é atribuído ao ComPtr atual.  
+ Na segunda versão, se o ponteiro de interface de atribuição não é o mesmo que o ponteiro de interface ComPtr atual, o segundo ponteiro de interface é atribuído a ComPtr atual.  
   
- Na terceira versão, o ponteiro de interface de atribuição será atribuído ao ComPtr atual.  
+ Na terceira versão, o ponteiro de interface de atribuição é atribuído para o ComPtr atual.  
   
- Na quarta versão, se o ponteiro da interface de atribuição de valor não é o mesmo que o ponteiro atual da interface de ComPtr, o segundo ponteiro de interface é atribuído ao ComPtr atual.  
+ Na quarta versão, se o ponteiro de interface do valor de atribuição não é o mesmo que o ponteiro de interface ComPtr atual, o segundo ponteiro de interface é atribuído a ComPtr atual.  
   
- A quinta versão é um operador de cópia; uma referência a um ComPtr é atribuída ao ComPtr atual.  
+ A versão do quinto é um operador de cópia; uma referência a um ComPtr é atribuída para o ComPtr atual.  
   
- A sexta versão é um operador de cópia que usa a semântica de movimentação; uma referência de rvalue a um ComPtr se qualquer tipo estático é convertida e atribuída ao ComPtr atual.  
+ A versão do sexto é um operador de cópia que usa mover semântica; uma referência de rvalue para um ComPtr se qualquer tipo é estático convertido e, em seguida, atribuído para o ComPtr atual.  
   
- A sétima versão é um operador de cópia que usa a semântica de movimentação; uma referência de rvalue a um ComPtr de tipo estático `U` é convertida em e atribuída ao ComPtr atual.  
+ A versão do sétima é um operador de cópia que usa mover semântica; uma referência de rvalue para um ComPtr do tipo `U` é estático, em seguida, converter e atribuído ao ComPtr atual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe ComPtr](../windows/comptr-class.md)

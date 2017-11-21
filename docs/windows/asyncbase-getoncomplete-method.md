@@ -1,33 +1,30 @@
 ---
-title: "M&#233;todo AsyncBase::GetOnComplete | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::GetOnComplete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetOnComplete"
+title: "Método: Getoncomplete | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::GetOnComplete
+dev_langs: C++
+helpviewer_keywords: GetOnComplete method
 ms.assetid: f06ae02d-9a88-41d2-b749-bdc1a7ff8748
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3367832ec7dea157e5a0132b7ff10c5a4338bdd2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo AsyncBase::GetOnComplete
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia o endereço do manipulador de eventos atual de conclusão a variável especificada.  
+# <a name="asyncbasegetoncomplete-method"></a>Método AsyncBase::GetOnComplete
+Copia o endereço do manipulador de eventos de conclusão atual para a variável especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 STDMETHOD(  
@@ -35,17 +32,17 @@ STDMETHOD(
 )(TComplete** completeHandler);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `completeHandler`  
- O local onde o endereço do manipulador de eventos atual da conclusão é armazenado.  
+ O local em que o endereço do manipulador de eventos de conclusão atual será armazenado.  
   
-## Valor de retorno  
- S\_OK se bem\-sucedido; caso contrário, E\_ILLEGAL\_METHOD\_CALL.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe AsyncBase](../windows/asyncbase-class.md)

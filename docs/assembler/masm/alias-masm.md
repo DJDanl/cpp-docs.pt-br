@@ -1,33 +1,30 @@
 ---
-title: "ALIAS (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Alias"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ALIAS directive"
+title: ALIAS (MASM) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Alias
+dev_langs: C++
+helpviewer_keywords: ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39f539c18ce23fb3ef9630e4bfdfca8f265beb33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# ALIAS (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O  **ALIAS** diretiva cria um nome alternativo para uma função.  Isso permite criar vários nomes para uma função ou criar bibliotecas que permitem que o vinculador \(link. exe\) para mapear uma função antiga para uma nova função.  
+# <a name="alias-masm"></a>ALIAS (MASM)
+O **ALIAS** diretiva cria um nome alternativo para uma função.  Isso permite que você crie vários nomes para uma função ou bibliotecas que permitem que o vinculador (LINK.exe) para mapear uma função antiga para uma nova função.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,12 +36,12 @@ actual-name
   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `actual-name`  
- O nome real da função ou procedimento.  Os colchetes angulares são obrigatórios.  
+ O nome real da função ou procedimento.  Os colchetes são necessários.  
   
  `alias`  
- O nome do alias ou alternativo.  Os colchetes angulares são obrigatórios.  
+ O nome de alias ou alternativo.  Os colchetes são necessários.  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

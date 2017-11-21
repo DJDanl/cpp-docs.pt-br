@@ -1,43 +1,42 @@
 ---
-title: "Suporte do provedor para indicadores | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indicadores, OLE DB"
-  - "Classe IRowsetLocate"
-  - "Classe IRowsetLocate, suporte do provedor para indicadores"
-  - "modelos de provedor do OLE DB, indicadores"
-  - "Provedores OLE DB, suporte a indicadores"
+title: Suporte do provedor para indicadores | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IRowsetLocate class, provider support for bookmarks
+- OLE DB provider templates, bookmarks
+- bookmarks, OLE DB
+- IRowsetLocate class
+- OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 445aa5a2a609c3cf2da83e9ff876195a05a33d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Suporte do provedor para indicadores
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo neste tópico adiciona a interface de `IRowsetLocate` à classe de `CMyProviderRowset` .  Em quase todos os casos, você começa adicionando uma interface para um objeto COM existente.  Você pode então adicionar mais chama teste de modelos do consumidor.  O exemplo a seguir demonstra como:  
+# <a name="provider-support-for-bookmarks"></a>Suporte do provedor para indicadores
+O exemplo neste tópico adiciona o `IRowsetLocate` interface para o `CMyProviderRowset` classe. Em quase todos os casos, você começa adicionando uma interface para um objeto existente do COM. Você pode testá-lo com a adição de mais chamadas nos modelos de consumidor. O exemplo demonstra como:  
   
--   Adicionar uma interface para um provedor.  
+-   Adicione uma interface para um provedor.  
   
--   Determinar dinamicamente as colunas retornar ao consumidor.  
+-   Determine dinamicamente as colunas para retornar para o consumidor.  
   
--   Adicionar suporte do medidor.  
+-   Adicione suporte a indicadores.  
   
- A interface de `IRowsetLocate` herda da interface de `IRowset` .  Para adicionar a interface de `IRowsetLocate` , herde `CMyProviderRowset` de [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+ A interface `IRowsetLocate` herda da interface `IRowset`. Para adicionar o `IRowsetLocate` interface, herdam `CMyProviderRowset` de [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
- Adicionar a interface de `IRowsetLocate` é um pouco diferente da maioria das interfaces.  Para fazer a linha de VTABLEs, os modelos do provedor OLE DB tem um parâmetro de modelo para controlar a interface derivada.  O código a seguir mostra a nova lista de herança:  
+ Adicionando o `IRowsetLocate` interface é um pouco diferente da maioria das interfaces. Para tornar a linha VTABLEs para cima, o OLE DB modelos de provedor têm um parâmetro de modelo para lidar com a interface derivada. O código a seguir mostra a nova lista de herança:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -50,9 +49,9 @@ class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,
           IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
 ```  
   
- Todos do quarto, o quinto, e o sexto os parâmetros são adicionados.  Este exemplo usa as opções para o quarto e o quinto parâmetros mas especifica `IRowsetLocateImpl` como o sexto parâmetro.  `IRowsetLocateImpl` é uma classe do modelo OLE DB que usa dois parâmetros do modelo: esses engancham acima da interface de `IRowsetLocate` à classe de `CMyProviderRowset` .  Para adicionar a maioria das interfaces, ignore esta etapa e passar a seguir.  Somente as interfaces de `IRowsetLocate` e de `IRowsetScroll` precisam ser tratadas dessa maneira.  
+ A quarta, quinta e sexta parâmetros serão adicionados. Este exemplo usa os padrões para o quarto e quinto parâmetros mas especificam `IRowsetLocateImpl` como o sexto parâmetro. `IRowsetLocateImpl`é uma classe de modelo de banco de dados OLE que utiliza dois parâmetros de modelo: eles ligar o `IRowsetLocate` interface para o `CMyProviderRowset` classe. Para adicionar a maioria das interfaces, você pode ignorar esta etapa e mover para o próximo. Somente o `IRowsetLocate` e `IRowsetScroll` interfaces precisam ser manipulados dessa maneira.  
   
- É necessário depois de saber `CMyProviderRowset` para chamar `QueryInterface` para a interface de `IRowsetLocate` .  Adicionar a linha `COM_INTERFACE_ENTRY(IRowsetLocate)` ao mapa.  O mapa da interface para `CMyProviderRowset` deve aparecer como mostrado no seguinte código:  
+ Você precisa saber o `CMyProviderRowset` para chamar `QueryInterface` para o `IRowsetLocate` interface. Adicione a linha `COM_INTERFACE_ENTRY(IRowsetLocate)` ao mapa. O mapa de interface de `CMyProviderRowset` deve aparecer como mostrado no código a seguir:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -66,11 +65,11 @@ BEGIN_COM_MAP(CMyProviderRowset)
 END_COM_MAP()  
 ```  
   
- Você também precisa conectar seu mapa na classe de `CRowsetImpl` .  Adicionar em macro de COM\_INTERFACE\_ENTRY\_CHAIN ao gancho no mapa de `CRowsetImpl` .  Além disso, crie um typedef chamado `RowsetBaseClass` que consiste em informações de herança.  Este typedef é arbitrário e pode ser ignorado.  
+ Você também precisa conectar-se com seu mapa para o `CRowsetImpl` classe. Adicionar da macro COM_INTERFACE_ENTRY_CHAIN conectar-se no `CRowsetImpl` mapa. Além disso, crie um typedef chamado `RowsetBaseClass` que consiste em informações de herança. Este typedef é arbitrário e pode ser ignorado.  
   
- Finalmente, controlar a chamada de **IColumnsInfo::GetColumnsInfo** .  Normalmente você usaria macros de PROVIDER\_COLUMN\_ENTRY para fazer isso.  No entanto, um consumidor pode querer usar medidores.  Você deve poder alterar as colunas que o provedor retornará se o consumidor solicita um medidor.  
+ Por fim, tratar o **icolumnsinfo:: Getcolumnsinfo** chamar. Normalmente, você usaria as macros PROVIDER_COLUMN_ENTRY para fazer isso. No entanto, um cliente talvez queira usar indicadores. Você deve ser capaz de alterar as colunas que o provedor retorna dependendo se o consumidor solicita um indicador.  
   
- Para controlar a chamada de **IColumnsInfo::GetColumnsInfo** , exclua o mapa de **PROVIDER\_COLUMN** na classe de `CTextData` .  A macro de PROVIDER\_COLUMN\_MAP define uma função `GetColumnInfo`.  Você precisa definir sua própria função de `GetColumnInfo` .  A declaração de função deve ter esta aparência:  
+ Para lidar com o **icolumnsinfo:: Getcolumnsinfo** chamar, exclua o **PROVIDER_COLUMN** mapear no `CTextData` classe. A macro PROVIDER_COLUMN_MAP define uma função `GetColumnInfo`. Você precisa definir seus próprios `GetColumnInfo` função. A declaração da função deve ter esta aparência:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -88,7 +87,7 @@ class CTextData
 };  
 ```  
   
- Em seguida, implementar a função de `GetColumnInfo` no arquivo de MyProviderRS.cpp como segue:  
+ Em seguida, implementar a `GetColumnInfo` de função no arquivo MyProviderRS.cpp da seguinte maneira:  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -159,11 +158,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo` verificará primeiramente se uma propriedade chamada **DBPROP\_IRowsetLocate** está definida.  OLE DB tem as propriedades para cada uma das interfaces opcionais do objeto do conjunto de linhas.  Se o consumidor deseja usar uma dessas interfaces opcionais, define uma propriedade para retificar.  O provedor então poderá marcar esta propriedade e executar a ação especial com base nele.  
+ `GetColumnInfo`primeiro verifica se uma propriedade chamada **DBPROP_IRowsetLocate** está definido. OLE DB tem propriedades para cada uma das interfaces opcionais desativar o objeto de conjunto de linhas. Se o consumidor deseja usar uma dessas interfaces opcionais, ele define uma propriedade como true. O provedor pode, em seguida, verifique se a propriedade e realizar ação especial com base nele.  
   
- Em sua implementação, você obtém a propriedade que usa o ponteiro para o objeto de comando.  O ponteiro de `pThis` representa a classe do conjunto de linhas ou do comando.  Como usar modelos a partir daqui, você deve transmitir este em como um ponteiro de `void` ou falham ao compilar o código.  
+ Em sua implementação, você pode obter a propriedade usando o ponteiro para o objeto de comando. O `pThis` ponteiro representa a classe de conjunto de linhas ou de comando. Como você pode usar modelos aqui, você precisa passar isso como um `void` ponteiro ou o código não compila.  
   
- Especifique uma matriz estático para conter informações da coluna.  Se o consumidor não quiser que a coluna do indicador, uma entrada na matriz será inútil.  Você pode atribuir dinamicamente essa matriz, mas você precisará verificar destrui\-la corretamente.  Este exemplo define e usar macros ADD\_COLUMN\_ENTRY e ADD\_COLUMN\_ENTRY\_EX para inserir informações na matriz.  Você pode adicionar macros para o arquivo de MyProviderRS.H conforme mostrado no seguinte código:  
+ Especifique uma matriz estática para conter as informações de coluna. Se o consumidor não deseja que a coluna de indicador, uma entrada na matriz é desperdiçada. É possível alocar dinamicamente essa matriz, mas você precisa certificar-se de destrui-la corretamente. Este exemplo define e usa as macros ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX para inserir as informações na matriz. Você pode adicionar as macros para o arquivo myproviderrs. H, conforme mostrado no código a seguir:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -194,7 +193,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Para testar o código no consumidor, você precisa fazer nenhuma alteração ao manipulador de `OnRun` .  A primeira alteração para a função é que você adicionar o código para adicionar uma propriedade ao conjunto de propriedades.  Os conjuntos de códigos a propriedade da **DBPROP\_IRowsetLocate** retificar assim, informando ao provedor que você deseja que a coluna do indicador.  O código do manipulador de `OnRun` deve aparecer como segue:  
+ Para testar o código no consumidor, você precisa fazer algumas alterações para o `OnRun` manipulador. A primeira alteração para a função é que você adicione código para adicionar uma propriedade ao conjunto de propriedades. O código define o **DBPROP_IRowsetLocate** propriedade como true, indicando assim o provedor que você deseja que a coluna de indicador. O `OnRun` código de manipulador de deve aparecer da seguinte maneira:  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -245,9 +244,9 @@ void CTestProvDlg::OnRun()
 }  
 ```  
   
- O loop while contém o código para chamar o método de `Compare` na interface de `IRowsetLocate` .  O código que você tenha sempre deve passar por que você está comparando exatamente os mesmos indicadores.  Além disso, o armazenamento de um indicador em uma variável temporário de forma que você possa usá\-lo depois do término do loop while para chamar a função de `MoveToBookmark` em modelos do consumidor.  As chamadas de função de `MoveToBookmark` o método de `GetRowsAt` em `IRowsetLocate`.  
+ While loop contém código para chamar o `Compare` método o `IRowsetLocate` interface. O código que você tem sempre deve passar porque você está comparando os indicadores de mesmos exatos. Além disso, armazene um indicador em uma variável temporária para que você pode usá-lo após o tempo loop concluída para chamar o `MoveToBookmark` função nos modelos de consumidor. O `MoveToBookmark` chamadas de função de `GetRowsAt` método `IRowsetLocate`.  
   
- Você também precisa atualizar o registro de usuário no consumidor.  Adicione uma entrada na classe para tratar um indicador e uma entrada em **COLUMN\_MAP**:  
+ Você também precisa atualizar o registro de usuário no consumidor. Adicionar uma entrada na classe para manipular um indicador e uma entrada de **COLUMN_MAP**:  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -272,7 +271,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Quando você atualizou o código, você deve poder criar e executar o provedor com a interface de `IRowsetLocate` .  
+ Quando você atualizar o código, você deve ser capaz de compilar e executar o provedor com o `IRowsetLocate` interface.  
   
-## Consulte também  
- [Técnicas de provedor avançadas](../Topic/Advanced%20Provider%20Techniques.md)
+## <a name="see-also"></a>Consulte também  
+ [Técnicas de provedor avançadas](../../data/oledb/advanced-provider-techniques.md)

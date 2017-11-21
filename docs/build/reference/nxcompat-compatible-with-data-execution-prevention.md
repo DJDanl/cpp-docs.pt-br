@@ -1,67 +1,65 @@
 ---
-title: "/NXCOMPAT (compat&#237;vel com Preven&#231;&#227;o de Execu&#231;&#227;o de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/NXCOMPAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /NXCOMPAT"
-  - "opção de vinculador NXCOMPAT"
-  - "opção de vinculador -NXCOMPAT"
+title: "-/NXCOMPAT (compatível com prevenção de execução de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /NXCOMPAT
+dev_langs: C++
+helpviewer_keywords:
+- /NXCOMPAT linker option
+- -NXCOMPAT linker option
+- NXCOMPAT linker option
 ms.assetid: 5858e7ff-24d3-4ac3-9046-af2c9e220d9b
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d97b1b84ef6894e4ec161dbcecef47f6b676af23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /NXCOMPAT (compat&#237;vel com Preven&#231;&#227;o de Execu&#231;&#227;o de Dados)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Indica que um executável foi testado quanto a compatibilidade com o recurso do Windows Data Execution Prevention.  
+# <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatível com Prevenção de Execução de Dados)
+Indica que um executável foi testado para ser compatível com o recurso do Windows Data Execution Prevention.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /NXCOMPAT[:NO]  
 ```  
   
-## Comentários  
- Por padrão, **\/NXCOMPAT** está ativado.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, **/NXCOMPAT** está em.  
   
- **\/NXCOMPAT:NO** pode ser usado para especificar explicitamente um executável como incompatível com Data Execution Prevention.  
+ **/NXCOMPAT: no** pode ser usado para especificar explicitamente um executável como incompatíveis com prevenção de execução de dados.  
   
- Para obter mais informações sobre a prevenção de execução de dados, consulte esses artigos:  
+ Para obter mais informações sobre a prevenção de execução de dados, consulte estes artigos:  
   
--   [Uma descrição detalhada do recurso de Prevenção de Execução de Dados \(DEP\)](http://go.microsoft.com/fwlink/?LinkID=157771) no site de suporte e na ajuda da Microsoft  
+-   [Uma descrição detalhada do recurso prevenção de execução de dados (DEP)](http://go.microsoft.com/fwlink/?LinkID=157771) no site do Microsoft Help e suporte  
   
--   [Prevenção de execução de dados](http://go.microsoft.com/fwlink/?LinkID=157770) no site do MSDN  
+-   [Data Execution Prevention](http://go.microsoft.com/fwlink/?LinkID=157770) no site do MSDN  
   
--   [Prevenção de execução de dados \(Windows Embedded\)](http://go.microsoft.com/fwlink/?LinkID=157768) no site do MSDN  
+-   [Prevenção de execução de dados (Windows Embedded)](http://go.microsoft.com/fwlink/?LinkID=157768) no site do MSDN  
   
-### Para definir essa opção de vinculador no Visual Studio  
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Para definir essa opção do vinculador no Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção na caixa **Opções Adicionais**.  
+4.  Digite a opção no **opções adicionais** caixa.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

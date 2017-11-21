@@ -1,47 +1,28 @@
 ---
-title: C2599 de erro do compilador | Documentos do Microsoft
+title: C2599 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2599
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2599
+f1_keywords: C2599
+dev_langs: C++
+helpviewer_keywords: C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 68971aec52fb03532b74be3b231598abfc0e8f6f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: e71bf7f08591ed80489b6e83590696cabdb57c03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2599"></a>C2599 de erro do compilador
-'enum': declaração de encaminhamento de tipo enum não é permitida.  
+'enum': declaração de encaminhamento do tipo enum não é permitida  
   
  O compilador não oferece suporte à declaração de encaminhamento de uma enumeração gerenciada.  
   

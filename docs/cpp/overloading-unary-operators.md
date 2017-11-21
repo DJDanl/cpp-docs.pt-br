@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unary operators [C++], plus
 - increment operators [C++], overloaded
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9ec200fecdebb1c39929882c6fbe4ad09eddc812
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 54c3e7eff420c5ed562e71235d204800eff5019a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overloading-unary-operators"></a>Operadores unários de sobrecarga
 Os operadores unários que podem ser sobrecarregados são os seguintes:  
@@ -52,7 +49,7 @@ Os operadores unários que podem ser sobrecarregados são os seguintes:
   
 9. operadores de conversão  
   
- Os operadores de incremento e de operadores de decremento (`++` e ** -- **) são tratados separadamente no [incrementar e decrementar](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
+ Os operadores de incremento e de operadores de decremento (`++` e  **--** ) são tratados separadamente no [incrementar e decrementar](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
  Operadores de conversão também são discutidos em um tópico separado; consulte [conversões de tipo definido pelo usuário](../cpp/user-defined-type-conversions-cpp.md).  
   

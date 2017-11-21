@@ -1,49 +1,49 @@
 ---
-title: "Programando com c&#243;digo de tempo de execu&#231;&#227;o ATL e C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macro _ATL_MIN_CRT"
-  - "ATL, biblioteca em tempo de execução do C (CRT)"
-  - "Macro ATL_MIN_CRT"
-  - "CRT, usando com ATL"
+title: "Programando com código de tempo de execução ATL e C | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL_MIN_CRT macro
+- CRT, using with ATL
+- _ATL_MIN_CRT macro
+- ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Programando com c&#243;digo de tempo de execu&#231;&#227;o ATL e C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esta seção discute as vantagens de usar a biblioteca em tempo de execução de C \(CRT\) com vincular estático ou dinâmico.  
+# <a name="programming-with-atl-and-c-run-time-code"></a>Programando com código de tempo de execução ATL e C
+Esta seção discute as vantagens de usar a biblioteca de tempo de execução do C (CRT) com a vinculação estática ou dinâmica.  
   
-## Nesta seção  
- [Benefícios e troca do método usado para vincular ao CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
- Resume os benefícios e as troca envolvidos em vincular ao CRT estaticamente ou em vincular dinamicamente.  
+## <a name="in-this-section"></a>Nesta seção  
+ [Vantagens e desvantagens do método usado para vincular ao CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+ Resume os benefícios e os inconvenientes envolvidos em Vincular estaticamente a CRT ou vincular dinamicamente.  
   
- [vincular ao CRT em seu projeto de ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
- Discute as configurações do projeto e opções de vinculador para vincular ao CRT; também fornece detalhes sobre como vinculando a afeta de CRT a imagem do programa.  
+ [Vinculando ao CRT em seu projeto ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
+ Descreve as configurações de projeto e opções de vinculador para vincular a CRT; também fornece detalhes sobre como vincular a CRT afeta a imagem de programa.  
   
-## Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornece links para tópicos conceituais sobre como programar usando a biblioteca ativa do modelo.  
+ Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.  
   
- [Comportamento da biblioteca em tempo de execução](../build/run-time-library-behavior.md)  
- Fornece detalhes sobre como código de inicialização do CRT funciona.  
+ [Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)  
+ Fornece detalhes sobre como funciona o código de inicialização VCRuntime e CRT.  
   
- [Bibliotecas em tempo de execução de C](../c-runtime-library/crt-library-features.md)  
- Discute os diversos arquivos de .lib que compõem as bibliotecas em tempo de execução do c e lista as opções do compilador e políticas associados pré\-processamento.  
+ [Bibliotecas em tempo de execução C](../c-runtime-library/crt-library-features.md)  
+ Discute vários arquivos. lib que compõem as bibliotecas de tempo de execução do C e lista suas opções de compilador associado e diretivas de pré-processador.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conceitos](../atl/active-template-library-atl-concepts.md)
+

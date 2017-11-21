@@ -1,45 +1,27 @@
 ---
-title: Classe CElementTraits | Documentos do Microsoft
+title: Classe CElementTraits | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CElementTraits
 - atlcoll/ATL::CElementTraits
-dev_langs:
-- C++
-helpviewer_keywords:
-- CElementTraits class
+dev_langs: C++
+helpviewer_keywords: CElementTraits class
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 745cb19c3e62e89daa400aa466827ebec9969897
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: cda18f6148f9a1cbc39a6e7003cce6324e36eeeb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="celementtraits-class"></a>Classe CElementTraits
 Essa classe é usada pelas classes de coleção para fornecer funções e métodos para mover, copiar, comparação e operações de hash.  
@@ -68,4 +50,3 @@ class CElementTraits : public CDefaultElementTraits<T>
 ## <a name="see-also"></a>Consulte também  
  [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

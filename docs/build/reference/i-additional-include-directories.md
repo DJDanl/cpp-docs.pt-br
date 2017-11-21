@@ -1,84 +1,83 @@
 ---
-title: "/I (diret&#243;rios de inclus&#227;o adicionais) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories"
-  - "/I"
-  - "VC.Project.VCNMakeTool.IncludeSearchPath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /I (C++)"
-  - "Opção de compilador Diretórios de Inclusão Adicionais"
-  - "Opção de compilador I [C++]"
-  - "Opção de compilador -I [C++]"
-  - "incluir diretórios, Opção de compilador  (C++)"
-  - "definir diretórios de inclusão"
+title: "-I (adicionais diretórios de inclusão) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
+- VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
+- /I
+- VC.Project.VCNMakeTool.IncludeSearchPath
+dev_langs: C++
+helpviewer_keywords:
+- /I compiler option [C++]
+- Additional Include Directories compiler option
+- I compiler option [C++]
+- -I compiler option [C++]
+- set include directories
+- include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 91868a657e4b537c286378276701915c1e160a77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /I (diret&#243;rios de inclus&#227;o adicionais)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Adiciona um diretório à lista de diretórios pesquisados por incluem arquivos.  
+# <a name="i-additional-include-directories"></a>/I (diretórios de inclusão adicionais)
+Adiciona uma pasta à lista de diretórios pesquisada em busca de arquivos de inclusão.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /I[ ]directory  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  `directory`  
- O diretório a ser adicionado à lista de diretórios pesquisados por inclui arquivos.  
+ O diretório a ser adicionado à lista de diretórios pesquisado por arquivos de inclusão.  
   
-## Comentários  
- Para adicionar mais de um diretório, use essa opção para mais de uma vez.  Os diretórios são pesquisados apenas até que inclui o arquivo especificados forem localizados.  
+## <a name="remarks"></a>Comentários  
+ Para adicionar mais de um diretório, use esta opção mais de uma vez. Diretórios são pesquisados até que o arquivo de inclusão especificado for encontrado.  
   
- Você pode usar essa opção com o padrão ignorar inclui a opção dos caminhos[\/X \(ignorar caminhos de inclusão padrão\)](../../build/reference/x-ignore-standard-include-paths.md)\(\).  
+ Você pode usar essa opção com a ignorar caminhos de inclusão padrão ([/X (ignorar caminhos de inclusão padrão)](../../build/reference/x-ignore-standard-include-paths.md)) opção.  
   
- Pesquisas de compilador para diretórios na seguinte ordem:  
+ O compilador procura diretórios na seguinte ordem:  
   
-1.  Diretórios contendo o arquivo de origem.  
+1.  Diretórios que contêm o arquivo de origem.  
   
-2.  Diretórios especificados com a opção de **\/I** , na ordem em que o CL os encontra.  
+2.  Diretórios especificados com o **/i** opção, na ordem em que CL encontrá-las.  
   
-3.  Diretórios especificados na variável de ambiente de **INCLUDE** .  
+3.  Diretórios especificados no **incluir** variável de ambiente.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Geral** .  
+3.  Clique o **geral** página de propriedades.  
   
-4.  Modifique a propriedade de **Diretórios de Inclusão Adicionais** .  
+4.  Modificar o **diretórios de inclusão adicionais** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.  
   
-## Exemplo  
- O comando a seguir procura arquivos incluir solicitados por MAIN.c na seguinte ordem: primeiro no diretório conter MAIN.c, no diretório \\INCLUDE, então no diretório \\MY\\INCLUDE e, finalmente nos diretórios atribuídos à variável de ambiente INCLUDE.  
+## <a name="example"></a>Exemplo  
+ O comando a seguir procura os arquivos de inclusão solicitados por MAIN.c na seguinte ordem: primeiro no diretório que contém MAIN.c, em seguida, no diretório \INCLUDE, em seguida, no diretório \MY\INCLUDE e finalmente nos diretórios atribuído de inclusão variável de ambiente.  
   
 ```  
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

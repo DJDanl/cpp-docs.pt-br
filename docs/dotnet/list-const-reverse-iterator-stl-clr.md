@@ -1,42 +1,39 @@
 ---
-title: "list::const_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::const_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro const_reverse_iterator [STL/CLR]"
+title: 'List:: const_reverse_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::const_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: const_reverse_iterator member [STL/CLR]
 ms.assetid: d9a9a1ec-df5f-411f-9918-beb5838ffa63
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d200ae6d8092520f08504734459220d36fe750e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# list::const_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de um iterador inverso constante para a sequência controlada.  
+# <a name="listconstreverseiterator-stlclr"></a>list::const_reverse_iterator (STL/CLR)
+O tipo de um iterador inverso constante para sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef T4 const_reverse_iterator;  
 ```  
   
-## Comentários  
- O tipo descreve um objeto do tipo especificado `T4` que pode servir como um iterador inverso constante para a sequência controlada.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um objeto do tipo especificado `T4` que pode servir como um constante iterador inverso para sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_list_const_reverse_iterator.cpp   
@@ -62,14 +59,14 @@ int main()
 ```  
   
 ```Output  
-b c um  
+c b a  
 ```  
   
-## Requisitos  
- **Cabeçalho:** \< cliext\/lista \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
  **Namespace:** cliext  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [list::reverse\_iterator](../dotnet/list-reverse-iterator-stl-clr.md)
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::reverse_iterator (STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)

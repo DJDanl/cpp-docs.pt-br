@@ -1,88 +1,87 @@
 ---
-title: "__writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writefsword"
-  - "__writefsbyte"
-  - "__writefsqword"
-  - "__writefsdword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "writefsbyte intrínseco"
-  - "__writefsword intrínseco"
-  - "writefsqword intrínseco"
-  - "writefsdword intrínseco"
-  - "__writefsdword intrínseco"
-  - "__writefsqword intrínseco"
-  - "__writefsbyte intrínseco"
-  - "writefsword intrínseco"
+title: __writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __writefsword
+- __writefsbyte
+- __writefsqword
+- __writefsdword
+dev_langs: C++
+helpviewer_keywords:
+- writefsbyte intrinsic
+- __writefsword intrinsic
+- writefsqword intrinsic
+- writefsdword intrinsic
+- __writefsdword intrinsic
+- __writefsqword intrinsic
+- __writefsbyte intrinsic
+- writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5d6e630943225fc0d3a3b0fca33f4e38d7192317
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# __writefsbyte, __writefsdword, __writefsqword, __writefsword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
+**Seção específica da Microsoft**  
   
- Grave a memória em um local especificado por um deslocamento relativo para o início do segmento FS.  
+ Grave memória para um local especificado por um deslocamento relativo ao início do segmento FS.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-void __writefsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
+void __writefsbyte(   
+   unsigned long Offset,   
+   unsigned char Data   
 );  
-void __writefsword(   
-   unsigned long Offset,   
-   unsigned short Data   
+void __writefsword(   
+   unsigned long Offset,   
+   unsigned short Data   
 );  
-void __writefsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
+void __writefsdword(   
+   unsigned long Offset,   
+   unsigned long Data   
 );  
-void __writefsqword(   
-   unsigned long Offset,   
-   unsigned __int64 Data   
+void __writefsqword(   
+   unsigned long Offset,   
+   unsigned __int64 Data   
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`Offset`  
- O deslocamento do início do FS para gravar.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `Offset`  
+ O deslocamento do início do FS gravar.  
   
- \[in\]`Data`  
- O valor para escrever.  
+ [in] `Data`  
+ O valor a ser gravado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
 |`__writefsbyte`|x86|  
 |`__writefsword`|x86|  
 |`__writefsdword`|x86|  
 |`__writefsqword`|x86|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Essas rotinas estão disponíveis apenas como intrínsecos.  
   
-## END Microsoft específicos  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [\_\_readfsbyte, \_\_readfsdword, \_\_readfsqword, \_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+## <a name="see-also"></a>Consulte também  
+ [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-handling-differences"></a>Diferenças de tratamento de exceções
 A principal diferença entre o tratamento de exceções estruturado e o tratamento de exceções de C++ é que o modelo do tratamento de exceções de C++ lida com tipos, enquanto o modelo de tratamento de exceções estruturado do C lida exceções de um tipo — especificamente, `unsigned int`. Ou seja, as exceções de C são identificadas por um valor inteiro sem sinal, enquanto as exceções de C++ são identificadas pelo tipo de dados. Quando uma exceção é gerada em C, cada manipulador possível executa um filtro que examina o contexto da exceção de C e determine se aceitará a exceção, a transmitirá para algum outro manipulador, ou a ignorará. Quando uma exceção é gerada em C++, ela pode ser de qualquer tipo.  
@@ -71,7 +68,7 @@ Caught a C exception.
 ```  
   
 ##  <a name="_core_c_exception_wrapper_class"></a>Classe de invólucro de exceção C  
- Um exemplo simples como acima, a exceção de C pode ser capturada somente por um sinal de reticências (**... **) **catch** manipulador. Nenhuma informação sobre o tipo ou a natureza de exceção é comunicada ao manipulador. Ainda que este método funcione, em alguns casos pode ser necessário definir uma transformação entre os dois modelos de tratamento de exceções para que cada exceção de C seja associada a uma classe específica. Para fazer isso, você pode definir a classe da exceção de C como "wrapper", que pode ser usada ou derivada de para atribuir um tipo específico da classe a uma exceção de C. Ao fazer isso, cada exceção C pode ser tratada por um C++ **catch** manipulador separadamente que no exemplo anterior.  
+ Um exemplo simples como acima, a exceção de C pode ser capturada somente por um sinal de reticências (**...** ) **catch** manipulador. Nenhuma informação sobre o tipo ou a natureza de exceção é comunicada ao manipulador. Ainda que este método funcione, em alguns casos pode ser necessário definir uma transformação entre os dois modelos de tratamento de exceções para que cada exceção de C seja associada a uma classe específica. Para fazer isso, você pode definir a classe da exceção de C como "wrapper", que pode ser usada ou derivada de para atribuir um tipo específico da classe a uma exceção de C. Ao fazer isso, cada exceção C pode ser tratada por um C++ **catch** manipulador separadamente que no exemplo anterior.  
   
  Sua classe wrapper pode ter uma interface que consiste em algumas funções de membro que determinam o valor de exceção, e que acessam informações estendidas de contexto de exceção fornecidas pelo modelo da exceção de C. Você também pode desejar definir um construtor padrão e um construtor que aceite um argumento `unsigned int` (para fornecer para a representação subjacente da exceção de C) e um construtor de cópia bit a bit. O seguinte é uma possível implementação da classe wrapper de exceção do C:  
   

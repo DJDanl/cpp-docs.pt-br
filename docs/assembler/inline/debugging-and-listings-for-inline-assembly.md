@@ -1,43 +1,42 @@
 ---
-title: "Depura&#231;&#227;o e listagens para assembly embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __asm [C++], depuração"
-  - "bugs, blocos __asm"
-  - "depurando [C++], código de assembly embutido"
-  - "assembly embutido, depuração"
-  - "assembly embutido, listas"
-  - "depurador de nível de origem"
+title: "Depuração e listagens para Assembly embutido | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- source level debugger
+- __asm keyword [C++], debugging
+- inline assembly, listings
+- bugs, __asm blocks
+- debugging [C++], inline assembly code
+- inline assembly, debugging
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 532d76f5f7a51e6c84067b442e6469b83994db7d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Depura&#231;&#227;o e listagens para assembly embutido
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específico da Microsoft  
- Programas que contêm código embutida de assembly poderão ser depurado com um depurador da fonte nível se você compila com a opção de [\/Zi](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) .  
+# <a name="debugging-and-listings-for-inline-assembly"></a>Depuração e listagens para assembly embutido
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ Programas que contém o código de assembly embutido podem ser depurados com um depurador de nível de origem se você compilar com o [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opção.  
   
- No depurador, você pode definir pontos de interrupção em 2.0 C ou C\+\+ e linhas de assembly idioma.  Se você habilitar o modo misto do assembly e de origem, você pode exibir a origem e o formulário desmontado de código do assembly.  
+ No depurador, você pode definir pontos de interrupção nas linhas de C ou C++ e linguagem de assembly. Se você habilitar o assembly misto e modo de origem, você pode exibir a origem e o formulário desmontado do código de assembly.  
   
- Observe que coloca várias instruções de assembly ou instruções de idioma de origem em uma linha podem impedir de depuração.  No modo de origem, você poderá usar o depurador para definir pontos de interrupção em uma única linha mas não em instruções individuais na mesma linha.  O mesmo princípio se aplica a `__asm` um bloco definido como a macro c, que se expande a uma única linha lógica.  
+ Observe que colocar várias instruções ou instruções de linguagem do código-fonte em uma linha pode dificultar a depuração. No modo de origem, você pode usar o depurador para definir pontos de interrupção em uma única linha, mas não em instruções individuais na mesma linha. O mesmo princípio se aplica a um `__asm` bloco definida como uma macro de C, que se expande para uma única linha lógica.  
   
- Se você criar uma listagem mista de origem e do assembly com a opção do compilador de [\/FAs](../../build/reference/fa-fa-listing-file.md) , a lista contém os formatos de origem e do assembly de cada linha do assembly idioma.  Macros não são expandidos nas listagens, mas são expandidos durante a compilação.  
+ Se você criar uma fonte de misto e assembly listando com o [/FAs](../../build/reference/fa-fa-listing-file.md) opção de compilador, a listagem contém formas de origem e o assembly de cada linha de linguagem de assembly. Macros não são expandidas nas listagens, mas eles são expandidos durante a compilação.  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Usando linguagem de assembly em blocos de \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

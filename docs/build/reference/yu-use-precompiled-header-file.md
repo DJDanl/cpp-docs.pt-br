@@ -1,90 +1,88 @@
 ---
-title: "/Yu (usar arquivo de cabe&#231;alho pr&#233;-compilado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .pch, usar existente"
-  - "Opção de compilador /Yu (C++)"
-  - "arquivos PCH, usar existente"
-  - "arquivos de cabeçalho pré-compilado, usar existente"
-  - "Opção de compilador Yu [C++]"
-  - "Opção de compilador -Yu [C++]"
+title: "-Yu (usar arquivo de cabeçalho pré-compilado) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yu
+dev_langs: C++
+helpviewer_keywords:
+- Yu compiler option [C++]
+- /Yu compiler option [C++]
+- -Yu compiler option [C++]
+- PCH files, use existing
+- .pch files, use existing
+- precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c0eb123cca28fdae379b387aaf09d0a200a88287
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /Yu (usar arquivo de cabe&#231;alho pr&#233;-compilado)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Instrui o compilador para usar um arquivo de cabeçalho pré\-compilado existente \(.pch\) na compilação atual.  
+# <a name="yu-use-precompiled-header-file"></a>/Yu (usar arquivo de cabeçalho pré-compilado)
+Instrui o compilador para usar um arquivo de cabeçalho pré-compilado (. pch) existente na compilação atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Yu[filename]  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *filename*  
- O nome de um arquivo de cabeçalho, que está incluído no arquivo de origem usando uma política de pré\-processador de **\#include** .  
+ O nome de um arquivo de cabeçalho, que está incluído no arquivo de origem usando um **#include** diretiva de pré-processamento.  
   
-## Comentários  
- O nome do arquivo incluir deve ser o mesmo para a opção de **\/Yc** que cria o cabeçalho pré\-compilado e qualquer opção subsequente de **\/Yu** que indicam o uso do cabeçalho pré\-compilado.  
+## <a name="remarks"></a>Comentários  
+ O nome do arquivo de inclusão deve ser o mesmo para ambos os **/Yc** opção que cria o cabeçalho pré-compilado e qualquer subsequentes **/Yu** opção indicando o uso do cabeçalho pré-compilado.  
   
- Para **\/Yc**, `filename` especifica o ponto em que o precompilation para; o compilador precompiles todo o código embora `filename` e nomeia o cabeçalho pré\-compilado resultante usando o nome de arquivo e de incluir uma extensão de .pch.  
+ Para **/Yc**, `filename` Especifica o ponto no qual pré-compilação parar; o compilador pré-compila todo o código que `filename` e nomes de cabeçalho pré-compilado resultante usando o nome base do arquivo de inclusão e uma extensão de. pch.  
   
- O arquivo de .pch deve ter sido criado usando **\/Yc**.  
+ O arquivo. pch deve ter sido criado usando **/Yc**.  
   
- O compilador trata qualquer código que ocorre antes que o arquivo de .h como pré\-compilado.  Ignora apenas além da política de **\#include** ao associada ao arquivo de .h, use o código contido no arquivo de .pch, e depois criará todo o código após `filename`.  
+ O compilador trata todo o código que ocorrem antes do arquivo. h como pré-compilado. Ele ignora apenas posterior a **#include** diretiva associada ao arquivo. h, usa o código contido no arquivo. pch e, em seguida, compila todo o código após `filename`.  
   
- Na linha de comando, nenhum espaço é permitido entre **\/Yu** e `filename`.  
+ Na linha de comando, não são permitidos espaços entre **/Yu** e `filename`.  
   
- Quando você especifica a opção de **\/Yu** sem um nome de arquivo, o programa de origem deve conter um pragma que especifica o nome do arquivo de cabeçalho pré\-compilado, o arquivo de [hdrstop de \#pragma](../../preprocessor/hdrstop.md) de .pch.  Nesse caso, o compilador usará o cabeçalho pré\-compilado \(arquivo de .pch\) nomeada por [\/Fp \(nomear arquivo .Pch\)](../Topic/-Fp%20\(Name%20.Pch%20File\).md).  O compilador salta para o local do pragma, restaura o estado criado a partir do arquivo de cabeçalho pré\-compilado especificado pelo pragma, e depois criará somente o código que segue o pragma.  Se **\#pragma hdrstop** não especificar um nome de arquivo, o compilador procura um arquivo com um nome derivado do nome de arquivo de origem por uma extensão de .pch.  Você também pode usar a opção de **\/Fp** especificar um arquivo diferente de .pch.  
+ Quando você especifica o **/Yu** opção sem um nome de arquivo, o programa de origem deve conter um [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma que especifica o nome do arquivo de cabeçalho pré-compilado, o arquivo. pch. Nesse caso, o compilador usará o cabeçalho pré-compilado (arquivo. pch) nomeado pelo [/Fp (nome. O arquivo pch)](../../build/reference/fp-name-dot-pch-file.md). O compilador vai para o local desse pragma, restaura o estado compilado do arquivo de cabeçalho pré-compilado especificado pelo pragma e, em seguida, compila somente o código que segue o pragma. Se **#pragma hdrstop** não especificar um nome de arquivo, o compilador procura um arquivo com um nome derivado do nome de base do arquivo de origem com uma extensão. pch. Você também pode usar o **/Fp** opção para especificar um arquivo. pch diferentes.  
   
- Se você especificar a opção de **\/Yu** sem um nome de arquivo e uma falha especificar um pragma de **hdrstop** , será gerada uma mensagem de erro e a compilação é bem\-sucedida.  
+ Se você especificar o **/Yu** opção sem um nome de arquivo e não especificar um **hdrstop** pragma, uma mensagem de erro é gerada e a compilação for bem-sucedida.  
   
- Se **\/Yc**`filename` e as opções de **\/Yu**`filename` ocorrem na mesma linha de comando e ambos fazem referência ao mesmo nome de arquivo, **\/Yc**`filename` prevalece, precompiling todo o código até e incluindo o arquivo chamado.  Esse recurso simplifica a gravação de makefiles.  
+ Se o **/Yc** `filename` e **/Yu** `filename` opções ocorrem na mesma linha de comando e o mesmo nome de arquivo, tanto de referência **/Yc** `filename` usa precedência, todo o código de pré-compilação até e incluindo o arquivo nomeado. Esse recurso simplifica a gravação de makefiles.  
   
- Como os arquivos de .pch contêm informações sobre o ambiente do computador bem como informações de endereço de memória sobre o programa, você só deve usar um arquivo de pch no computador em que foi criado.  
+ Como arquivos. pch contêm informações sobre o ambiente de máquina, bem como informações de endereço de memória sobre o programa, você deve usar apenas um arquivo pch no computador em que ele foi criado.  
   
- Para obter mais informações sobre cabeçalhos pré\-compilados, consulte:  
+ Para obter mais informações sobre cabeçalhos pré-compilados, consulte:  
   
--   [\/Y \(cabeçalhos pré\-compilados\)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md)  
   
--   [Criando arquivos de cabeçalho pré\-compilados](../../build/reference/creating-precompiled-header-files.md)  
+-   [Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Especifique [\/Yc \(criar arquivo de cabeçalho pré\-compilado\)](../../build/reference/yc-create-precompiled-header-file.md) em um arquivo .cpp em seu projeto.  
+1.  Especifique [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) em um arquivo. cpp no seu projeto.  
   
-2.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+2.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-3.  Clique na pasta **C\/C\+\+**.  
+3.  Clique o **C/C++** pasta.  
   
-4.  Clique na página de propriedades de **Cabeçalhos Pré\-Compilados** .  
+4.  Clique o **cabeçalhos pré-compilados** página de propriedades.  
   
-5.  Modifique a propriedade de **Criar\/uso com PCH Arquivo** ou a propriedade de **Cabeçalho pré\-compilado criar\/uso** .  
+5.  Modificar o **criar/usar PCH através de arquivo** propriedade ou o **criar/usar cabeçalho de pré-compilado** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.  
   
-## Exemplos  
- Se o seguinte código:  
+## <a name="examples"></a>Exemplos  
+ Se o código a seguir:  
   
 ```  
 #include <afxwin.h>   // Include header for class library  
@@ -93,16 +91,16 @@ Instrui o compilador para usar um arquivo de cabeçalho pré\-compilado existent
 ...  
 ```  
   
- é compilado com a linha de comando `CL /YuMYAPP.H PROG.CPP`, o compilador não processa os três incluem o código pré\-compilada de instruções mas de MYAPP.pch, economizando assim o tempo envolvidos neles todos os três arquivos \(e para alguns arquivos que podem incluir\).  
+ é compilado com a linha de comando `CL /YuMYAPP.H PROG.CPP`, o compilador não processa os três incluem instruções, mas usa pré-compilado código de MYAPP.pch, assim, salvando o tempo envolvido no pré-processamento todos os três arquivos (e todos os arquivos podem incluir).  
   
- Você pode usar a opção de [\/Fp \(nomear arquivo .Pch\)](../Topic/-Fp%20\(Name%20.Pch%20File\).md) com a opção de **\/Yu** especifique o nome do arquivo de .pch se o nome for diferente do argumento de nome de arquivo a **\/Yc** ou o nome de arquivo de origem, como a seguir:  
+ Você pode usar o [/Fp (nome. O arquivo pch)](../../build/reference/fp-name-dot-pch-file.md) opção com o **/Yu** opção para especificar o nome do arquivo. pch se o nome é diferente do que o argumento de nome de arquivo para **/Yc** ou o nome base do arquivo de origem, como no a seguir:  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP  
 ```  
   
- Esse comando especifica um arquivo de cabeçalho pré\-compilado nomeada MYPCH.pch.  O compilador usa seu conteúdo para restaurar o estado pré\-compilado de todos os arquivos de cabeçalho até e incluindo MYAPP.h.  O compilador compilará o código que ocorre após a instrução de MYAPP.h **include** .  
+ Este comando Especifica um arquivo de cabeçalho pré-compilado chamado MYPCH.pch. O compilador usa seu conteúdo para restaurar o estado de todos os arquivos de cabeçalho até e incluindo MYAPP.h do pré-compilado. O compilador, em seguida, compila o código que ocorre após o MYAPP.h **incluem** instrução.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

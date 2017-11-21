@@ -1,71 +1,67 @@
 ---
-title: "Assemblies amig&#225;veis (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assemblies amigáveis, Visual C++"
+title: "Assemblies amigáveis (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Assemblies amig&#225;veis (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Durante o tempo de execução aplicável, o recurso de linguagem assembly *de amigo* torna os tipos que estão no escopo do namespace ou no escopo global em um componente do assembly acessíveis para um ou mais assemblies de cliente ou .netmodules.  
+# <a name="friend-assemblies-c"></a>Assemblies amigáveis (C++)
+Para tempos de execução aplicável, o *assemblies amigáveis* tipos que estão no escopo de namespace ou escopo global em um componente de assembly acessível a um ou mais assemblies de cliente ou. netmodules faz com que o recurso de idioma.  
   
-## Todos os Tempos de Execução  
+## <a name="all-runtimes"></a>Todos os Tempos de Execução  
  **Comentários**  
   
- \(Esse recurso de idioma não tem suporte em todo o tempo de execução.\)  
+ (Esse recurso de idioma não é suportado em todos os tempos de execução.)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Tempo de Execução do Windows  
  **Comentários**  
   
- \(Esse recurso de idioma não tem suporte em [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].\)  
+ (Esse recurso de idioma não é suportado no Windows Runtime.)  
   
-### Requisitos  
- Opção do compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opção do compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentários**  
   
-#### Para fazer tipos no namespace definir o escopo ou no escopo global em um componente do assembly acessível a um assembly do cliente ou a um .netmodule  
+#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>Para tornar os tipos no escopo de namespace ou escopo global em um componente de assembly acessível a um assembly cliente ou. netmodule  
   
-1.  No componente, especifique um atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>do assembly, e passe o nome do assembly cliente ou de .netmodule que acessarão tipos no escopo do namespace ou no escopo global no componente.  Você pode especificar vários assemblies do cliente ou o .netmodules especificando atributos adicionais.  
+1.  No componente, especificar um atributo de assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>e passe o nome do assembly cliente ou. netmodule que irá acessar tipos no escopo de namespace ou escopo global no componente.  Você pode especificar vários assemblies de cliente ou. netmodules especificando atributos adicionais.  
   
-2.  No assembly cliente ou no .netmodule, quando você referenciar o assembly componente usando `#using`, o atributo de `as_friend` .  Se você especifica o atributo de `as_friend` para um assembly que não especifica `InternalsVisibleToAttribute`, uma exceção em tempo de execução será gerada se você tentar acessar um tipo no escopo do namespace ou no escopo global no componente.  
+2.  No assembly cliente ou. netmodule, quando você referenciar o componente de assembly usando `#using`, passar o `as_friend` atributo.  Se você especificar o `as_friend` atributo para um assembly que não especificam `InternalsVisibleToAttribute`, será lançada uma exceção de tempo de execução se você tentar acessar um tipo no escopo de namespace ou escopo global no componente.  
   
- Um erro de compilação ocorrerá se o assembly que contém o atributo de <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> não tiver um nome forte mas o cliente que o assembly que usa o atributo de `as_friend` faz.  
+ Ocorrerá um erro de compilação se o assembly que contém o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo não tem um nome forte, mas o assembly de cliente que usa o `as_friend` atributo faz.  
   
- Embora os tipos no namespace definir o escopo e o escopo global pode ser conhecido a um assembly do cliente ou a um .netmodule, a acessibilidade do membro ainda é aplicado.  Por exemplo, você não pode acessar um membro particular.  
+ Embora tipos no escopo global e no escopo do namespace podem ser um assembly cliente ou. netmodule, acessibilidade de membro ainda está em vigor.  Por exemplo, você não pode acessar um membro privado.  
   
- O acesso a qualquer em um assembly deve ser explicitamente concedido.  Por exemplo, o assembly que C não tem acesso a todos os tipos no assembly Para se o assembly C referencia o assembly B e o assembly B tem acesso a todos os tipos no assembly Para.  
+ Acesso a todos os tipos em um assembly deve ser concedido explicitamente.  Por exemplo, C do assembly não tem acesso a todos os tipos no assembly A se C de assembly faz referência ao assembly B e conjunto B tem acesso a todos os tipos no assembly A.  
   
- Para obter informações sobre como especificar a acessibilidade de tipos fora de um assembly, consulte [Visibilidade de tipo](../Topic/Type%20Visibility.md).  
+ Para obter informações sobre como assinar — ou seja, como fornecer um nome forte para — um assembly que é criado usando o compilador do Visual C++, consulte [Assemblies com nome forte (assinatura de Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
- Para obter informações sobre como a sinal\- que é, como atribuir um nome forte do assembly que é criado usando o compilador do Visual C\+\+, consulte [Assemblies de nome forte \(assinatura de assembly\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Como alternativa para usar o recurso de friend assemblies, você pode usar <xref:System.Security.Permissions.StrongNameIdentityPermission> para restringir o acesso a tipos individuais.  
   
- Como uma alternativa para usar assemblies recurso de amigo, você pode usar <xref:System.Security.Permissions.StrongNameIdentityPermission> para restringir o acesso aos tipos individuais.  
+### <a name="requirements"></a>Requisitos  
+ Opção de compilador: **/clr**  
   
-### Requisitos  
- Opção do compilador: **\/clr**  
+### <a name="examples"></a>Exemplos  
+ O exemplo de código a seguir define um componente que especifica um assembly de cliente que tenha acesso para os tipos no componente.  
   
-### Exemplos  
- O exemplo de código define um componente que especifica um assembly cliente que tenha acesso aos tipos no componente.  
-  
-```  
+```cpp  
 // friend_assemblies.cpp  
 // compile by using: /clr /LD  
 using namespace System::Runtime::CompilerServices;  
@@ -81,9 +77,9 @@ public:
 };  
 ```  
   
- O exemplo de código a seguir acessa um privado no componente.  
+ O exemplo de código a seguir acessa um tipo particular no componente.  
   
-```  
+```cpp  
 // friend_assemblies_2.cpp  
 // compile by using: /clr  
 #using "friend_assemblies.dll" as_friend  
@@ -94,15 +90,15 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
- `Class1::Test_Public`  
-  
- O exemplo de código seguinte define um componente mas não especifica um assembly cliente que tenha acesso aos tipos no componente.  
-  
- Observe que o componente está vinculado usando **\/opt:noref**.  Isso assegura que os tipos particulares emissão nos metadados do componente, que não é necessário quando o atributo de `InternalsVisibleTo` estiver presente.  Para obter mais informações, consulte [\/OPT \(Otimizações\)](../build/reference/opt-optimizations.md).  
-  
+```Output  
+Class1::Test_Public  
 ```  
+  
+ O exemplo de código a seguir define um componente, mas não especifica um assembly de cliente que terão o acesso para os tipos no componente.  
+  
+ Observe que o componente é vinculado usando **/OPT: noref**. Isso garante que os tipos privados são emitidos nos metadados do componente, que não é necessário quando o `InternalsVisibleTo` atributo estiver presente. Para obter mais informações, consulte [/OPÇ (otimizações)](../build/reference/opt-optimizations.md).  
+  
+```cpp  
 // friend_assemblies_3.cpp  
 // compile by using: /clr /LD /link /opt:noref  
 using namespace System;  
@@ -115,9 +111,9 @@ public:
 };  
 ```  
   
- O exemplo de código define um cliente que as tentativas para acessar um privado digitação em um componente que não de acesso a seus tipos privados.  Devido ao comportamento de tempo de execução, se você quiser capturar a exceção, você deve tentar acessar um privado em uma função auxiliar.  
+ O exemplo de código a seguir define um cliente tenta acessar um tipo particular em um componente que não dá acesso aos seus tipos privados. Devido ao comportamento de tempo de execução, se você quiser capturar a exceção, você deve tentar acessar um tipo particular em uma função auxiliar.  
   
-```  
+```cpp  
 // friend_assemblies_4.cpp  
 // compile by using: /clr  
 #using "friend_assemblies_3.dll" as_friend  
@@ -138,13 +134,13 @@ int main() {
 }  
 ```  
   
- **Saída**  
+```Output  
+caught an exception  
+```
   
- `caught an exception`  
+ O exemplo de código a seguir mostra como criar um componente de nome forte que especifica um assembly de cliente que terá acesso aos tipos no componente.  
   
- O próximo exemplo de código mostra como criar um componente de nome forte que especifica um assembly cliente que tenha acesso aos tipos no componente.  
-  
-```  
+```cpp  
 // friend_assemblies_5.cpp  
 // compile by using: /clr /LD /link /keyfile:friend_assemblies.snk  
 using namespace System::Runtime::CompilerServices;  
@@ -161,21 +157,21 @@ public:
 };  
 ```  
   
- Observe que o componente deve especificar a chave pública.  Nós sugerimos que você execute os seguintes comandos em sequência em um prompt de comando para criar um par de chaves e obter a chave pública:  
+ Observe que o componente deve especificar a chave pública. Sugerimos que você execute os seguintes comandos em sequência em um prompt de comando para criar um par de chaves e obter a chave pública:  
   
- **sn \-d friend\_assemblies.snk**  
+ **friend_assemblies.snk -d sn**  
   
- **sn \-k friend\_assemblies.snk**  
+ **sn -k friend_assemblies.snk**  
   
- **sn \-i friend\_assemblies.snk friend\_assemblies.snk**  
+ **sn -i friend_assemblies.snk friend_assemblies.snk**  
   
- **sn \-pc friend\_assemblies.snk key.publickey**  
+ **sn -pc friend_assemblies.snk key.publickey**  
   
- **sn \-tp key.publickey**  
+ **sn - tp key.publickey**  
   
- O exemplo de código a seguir acessa um privado no componente de nome forte.  
+ O exemplo de código a seguir acessa um tipo particular no componente de nome forte.  
   
-```  
+```cpp  
 // friend_assemblies_6.cpp  
 // compile by using: /clr /link /keyfile:friend_assemblies.snk  
 #using "friend_assemblies_5.dll" as_friend  
@@ -186,9 +182,9 @@ int main() {
 }  
 ```  
   
- **Saída**  
+```Output  
+Class1::Test_Public  
+```  
   
- `Class1::Test_Public`  
-  
-## Consulte também  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Consulte também  
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

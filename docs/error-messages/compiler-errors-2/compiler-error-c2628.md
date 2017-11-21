@@ -1,47 +1,28 @@
 ---
-title: C2628 de erro do compilador | Documentos do Microsoft
+title: C2628 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2628
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2628
+f1_keywords: C2628
+dev_langs: C++
+helpviewer_keywords: C2628
 ms.assetid: 19a25e77-d5be-4107-88d5-0745b6281f98
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cd2e49e7c7f731cf7a9496c09bc436291b08f5d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 60fd4e45b19423e32b7a5973b8bdfad34b75bcc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2628"></a>C2628 de erro do compilador
-'type1' seguido de 'type2' é ilegal (você esquecer um ';'?)  
+'type1' seguido de 'type2' é inválido (você esqueceu um ';'?)  
   
  Um ponto e vírgula pode estar faltando.  
   
@@ -53,7 +34,7 @@ class CMyClass {}
 int main(){}   // C2628 error  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2628b.cpp  

@@ -1,53 +1,34 @@
 ---
-title: "Compilador aviso (nível 1) C4503 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4503 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4503
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4503
+f1_keywords: C4503
+dev_langs: C++
+helpviewer_keywords: C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f999fcb73860bfd2fabb3484e78f313a32240dee
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: b174ac92abb0f095895eb587afcba860f4abbe0d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Compilador C4503 de aviso (nível 1)
-'identifier': decorados excedido, comprimento do nome nome foi truncado.  
+'Identificador': decorado excedido, comprimento do nome nome foi truncado  
   
  O nome decorado era maior que o limite do compilador (4096) e foi truncado. Para evitar esse aviso e o truncamento, reduza o número de argumentos ou o comprimento do nome dos identificadores usados.  
   
- Uma situação em que o aviso será emitido é quando seu código contém modelos especializados em modelos repetidamente.  Por exemplo, um mapa de mapas (da biblioteca padrão C++).  Nessa situação, você pode fazer suas definições de tipo um tipo (por exemplo, struct) que contém o mapa.  
+ Uma situação em que esse aviso será emitido é quando o código contém modelos especializado em modelos repetidamente.  Por exemplo, um mapa de mapas (da biblioteca padrão C++).  Nessa situação, você pode tornar seu typedefs um tipo (por exemplo, struct) que contém o mapa.  
   
- Você pode, no entanto, decidir não reestruturar seu código.  É possível enviar um aplicativo que gera C4503, mas se você obtiver erros de tempo de link em um símbolo truncado, será mais difícil determinar o tipo do símbolo no erro.  Depuração também será mais difícil; o depurador também terá dificuldade mapeamento de nome do símbolo para o tipo de nome.  A correção do programa, no entanto, não é afetada pelo nome truncado.  
+ No entanto, você pode, decidir não reestruture seu código.  É possível enviar um aplicativo que gera C4503, mas se você receber erros de tempo de link em um símbolo truncado, será mais difícil determinar o tipo do símbolo no erro.  Depuração também será mais difícil; o depurador também terão dificuldade mapeamento de nome de símbolo para o nome de tipo.  A exatidão do programa, no entanto, não é afetada pelo nome truncado.  
   
  O exemplo a seguir gera C4503:  
   

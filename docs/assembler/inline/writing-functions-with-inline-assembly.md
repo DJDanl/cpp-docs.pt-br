@@ -1,33 +1,32 @@
 ---
-title: "Escrevendo fun&#231;&#245;es com assembly embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __asm [C++], em funções"
-  - "assembler [C++], gravando funções"
-  - "funções [C++], assembly embutido"
-  - "assembly embutido [C++], gravando funções"
+title: "Escrevendo funções com Assembly embutido | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], inline assembly
+- inline assembly [C++], writing functions
+- assembler [C++], writing functions
+- __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b7abbb7a09f5205ada192cf15d5b7eb3c5c6b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Escrevendo fun&#231;&#245;es com assembly embutido
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específico da Microsoft  
- Se você escrever uma função embutida com o código do assembly, é fácil a argumentos para a função e retornar um valor delas.  Os exemplos a seguir comparam uma função escrita principalmente para um assembler separado e reescrita para o assembler embutido.  A função, `power2`chamado, receberá dois parâmetros, multiplicando o primeiro parâmetro por 2 à potência do segundo parâmetro.  Escrito para um assembler separado, a função pode ter esta aparência:  
+# <a name="writing-functions-with-inline-assembly"></a>Escrevendo funções com assembly embutido
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ Se você escrever uma função com código de assembly embutido, é fácil passar argumentos para a função e retornar um valor de-lo. Os exemplos a seguir comparam uma função primeiro criado para um assembler separado e, em seguida, reescrito para o assembler embutido. A função chamada `power2`, recebe dois parâmetros, multiplicando o primeiro parâmetro 2 à potência do segundo parâmetro. Escrito para um assembler separado, a função teria esta aparência:  
   
 ```  
 ; POWER.ASM  
@@ -51,10 +50,10 @@ _TEXT   ENDS
         END  
 ```  
   
- Desde que gravou para um assembler separado, a função requer etapas de um arquivo de origem separado e o assembly e link.  Os argumentos de função c e C\+\+ 2.0 geralmente são passados na pilha, o que nesta versão dos acessos da função de `power2` seus argumentos por suas posições na pilha. \(Observe que a política de **MODEL** , disponível em MASM e em outros assembler, também permitem que você acesse argumentos da pilha e variáveis locais da pilha por nome.\)  
+ Desde que ele foi criado para um assembler separado, a função requer etapas de arquivo e o assembly e o link de uma fonte separado. Argumentos de função C e C++ são passados na pilha, portanto essa versão do `power2` função acessa seus argumentos por suas posições na pilha. (Observe que o **modelo** diretiva, disponível no MASM e alguns outros montadores também permite que você acesse pilha argumentos e variáveis de pilha local por nome.)  
   
-## Exemplo  
- Esse programa grava a função de `power2` embutido com o código do assembly:  
+## <a name="example"></a>Exemplo  
+ Este programa grava o `power2` função com o código de assembly embutido:  
   
 ```  
 // Power2_inline_asm.c  
@@ -82,11 +81,11 @@ int power2( int num, int power )
 }  
 ```  
   
- A versão embutida da função de `power2` se refere a seus argumentos e aparece por nome no mesmo arquivo de origem que o restante do programa.  Essa versão também requer menos instruções de assembly.  
+ A versão embutida o `power2` refere-se aos argumentos por nome de função e aparece no arquivo de origem como o restante do programa. Esta versão também requer menos instruções do assembly.  
   
- Como a versão embutida de `power2` não executará a instrução c `return` , gerencie um aviso inofensivo se você cria no nível de aviso 2 ou superior.  A função retorna um valor, mas o compilador não pode perceber que na ausência de uma instrução de `return` .  Você pode usar [aviso de \#pragma](../../preprocessor/warning.md) para desabilitar a geração desse aviso.  
+ Porque a versão embutida do `power2` não executa um C `return` instrução, ele faz com que um aviso inofensivo se você compilar no nível de aviso 2 ou superior. A função retornar um valor, mas o compilador não pode determinar que na ausência de um `return` instrução. Você pode usar [#pragma aviso](../../preprocessor/warning.md) para desabilitar a geração deste aviso.  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Usando C ou C\+\+ em blocos \_\_asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando C ou C++ em blocos __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

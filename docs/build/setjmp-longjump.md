@@ -1,29 +1,28 @@
 ---
-title: "setjmp/longjump | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: setjmp longjump | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b0e21902-095d-4198-8f9a-b6326525721a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a3617f70e7c62e1845d8d24e11cebdd7738c507f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# setjmp/longjump
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando você incluir setjmpex.h ou setjmp.h, todas as chamadas a [setjmp](../c-runtime-library/reference/setjmp.md) ou a [longjmp](../c-runtime-library/reference/longjmp.md) resultarão em um desenrolamento que invoca destruidores e chamam finally.  Isso difere de x, onde incluindo resultados de setjmp.h finalmente nas cláusulas e os destruidores que não estão sendo chamado.  
+# <a name="setjmplongjump"></a>setjmp/longjump
+Quando você incluir setjmpex.h ou setjmp.h, todas as chamadas para [setjmp](../c-runtime-library/reference/setjmp.md) ou [longjmp](../c-runtime-library/reference/longjmp.md) resultará em um desenrolamento que chama destruidores e, finalmente, chama.  Isso é diferente do x86, onde incluindo setjmp.h resultados em cláusulas finally e destruidores não está sendo chamados.  
   
- Uma chamada para `setjmp` preserva o ponteiro de pilha atual, registros permanentes, e os registros de MxCsr.  Chamadas para o retorno de `longjmp` para o site e a redefinições as mais recentes de chamada de `setjmp` o ponteiro de pilha, registros permanentes, e os registros de MxCsr, de volta para o estado como mantido por chamada mais recente de `setjmp` .  
+ Uma chamada para `setjmp` preserva o ponteiro de pilha atual, os registros não volátil e MxCsr registra.  Chamadas para `longjmp` retornar para o mais recente `setjmp` chamar site e redefine o ponteiro de pilha, os registros não volátil e MxCsr registra, para o estado como preservado por mais recente `setjmp` chamar.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Convenção de chamada](../build/calling-convention.md)

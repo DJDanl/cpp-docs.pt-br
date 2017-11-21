@@ -1,47 +1,46 @@
 ---
-title: "Definindo op&#231;&#245;es de vinculador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos  [C++], LINK"
-  - "arquivos de entrada [C++]"
-  - "arquivos de entrada [C++], vinculador"
-  - "vinculador [C++], opções"
-  - "vinculador [C++], formas de definir opções"
-  - "módulos de objeto/biblioteca"
+title: "Definindo opções de vinculador | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], LINK
+- input files [C++], linker
+- linker [C++], ways to set options
+- linker [C++], switches
+- input files [C++]
+- object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b64b1dfd342598735124940d01b1bb4939242e10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Definindo op&#231;&#245;es de vinculador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-As opções do vinculador podem ser internas ou definido fora do ambiente de desenvolvimento.  O tópico para cada opção do vinculador discute como pode ser definido no ambiente de desenvolvimento.  Consulte [Opções do vinculador](../../build/reference/linker-options.md) para obter uma lista completa.  
+# <a name="setting-linker-options"></a>Definindo opções de vinculador
+Opções do vinculador podem ser definidas dentro ou fora do ambiente de desenvolvimento. O tópico de cada opção de vinculador discute como ele pode ser definido no ambiente de desenvolvimento. Consulte [opções do vinculador](../../build/reference/linker-options.md) para obter uma lista completa.  
   
- Quando você executa o LINK fora do ambiente de desenvolvimento, você pode especificar a entrada em uma ou muitas maneiras:  
+ Quando você executa o vínculo fora do ambiente de desenvolvimento, você pode especificar a entrada de uma ou mais formas:  
   
--   Em [linha de comando](../../build/reference/linker-command-line-syntax.md)  
+-   Sobre o [linha de comando](../../build/reference/linker-command-line-syntax.md)  
   
 -   Usando [arquivos de comando](../../build/reference/link-command-files.md)  
   
 -   Em [variáveis de ambiente](../../build/reference/link-environment-variables.md)  
   
- VINCULAR as primeiras opções de processos especificadas na variável de ambiente de LINK, seguido pelas opções na ordem em que são especificados na linha de comando e arquivos de comando.  Se uma opção é repetida com argumentos diferentes, processado pela última vez terá precedência.  
+ Opções de processos primeiro LINK especificado na variável de ambiente LINK, seguido pelas opções na ordem em que elas são especificadas na linha de comando e nos arquivos de comando. Se uma opção é repetida com argumentos diferentes, o último deles processados terá precedência.  
   
- As opções se aplicam à construção inteira; nenhuma opção pode ser aplicada aos arquivos de entrada específicos.  
+ Opções se aplicam à compilação de inteiro; Não há opções podem ser aplicadas aos arquivos de entrada específicos.  
   
-## Consulte também  
- [Referência de compilação do C\/C\+\+](../Topic/C-C++%20Building%20Reference.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de build do C/C++](../../build/reference/c-cpp-building-reference.md)   
+ [Opções do vinculador](../../build/reference/linker-options.md)

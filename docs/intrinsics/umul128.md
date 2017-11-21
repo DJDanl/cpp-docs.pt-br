@@ -1,60 +1,61 @@
 ---
-title: "_umul128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__umul128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__umul128 intrínseca"
+title: _umul128 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __umul128
+dev_langs: C++
+helpviewer_keywords: __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 81a408540d2606cb81d92a3e93cbcff888d4a3e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# _umul128
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico da Microsoft**  
+# <a name="umul128"></a>_umul128
+**Seção específica da Microsoft**  
   
  Multiplica dois inteiros sem sinal de 64 bits passados como os primeiros dois argumentos e coloca os 64 bits altos do produto no inteiro de 64 bits sem sinal apontado pelo `HighProduct` e retorna os 64 bits baixos do produto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-unsigned __int64 _umul128(     unsigned __int64 Multiplier,     unsigned __int64 Multiplicand,     unsigned __int64 *HighProduct  );  
+unsigned __int64 _umul128(   
+   unsigned __int64 Multiplier,   
+   unsigned __int64 Multiplicand,   
+   unsigned __int64 *HighProduct   
+);  
 ```  
   
-#### Parâmetros  
- \[in\] `Multiplier`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `Multiplier`  
  O primeiro inteiro de 64 bits para multiplicar.  
   
- \[in\] `Multiplicand`  
+ [in] `Multiplicand`  
  O segundo inteiro de 64 bits para multiplicar.  
   
- \[out\] `HighProduct`  
+ [out] `HighProduct`  
  Os 64 bits altos do produto.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Os 64 bits baixos do produto.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|Cabeçalho|  
-|----------------|-----------------|---------------|  
-|`_umul128`|ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|\<intrin.h\>|  
+|---------------|------------------|------------|  
+|`_umul128`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // umul128.c  
@@ -77,8 +78,11 @@ int main()
 }  
 ```  
   
-  **0xfffffffffffffff \* 0xf0000000 \= 0xeffffffffffffff10000000**   
-## FIM de Específico da Microsoft  
+```Output  
+0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
+```  
   
-## Consulte também  
+**Fim da seção específica da Microsoft**  
+  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

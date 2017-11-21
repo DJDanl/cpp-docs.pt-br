@@ -1,44 +1,42 @@
 ---
-title: "_ReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ReturnAddress intrínseco"
-  - "ReturnAddress intrínseco"
+title: _ReturnAddress | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _ReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _ReturnAddress intrinsic
+- ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7cc2682aa4c6d4662e188911dab0d0a61baf49ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# _ReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Específicos do Microsoft  
- O `_ReturnAddress` intrínseca fornece o endereço da instrução na função de chamada que será executada após o controle retorna para o chamador.  
+# <a name="returnaddress"></a>_ReturnAddress
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ O `_ReturnAddress` intrínseco fornece o endereço da instrução na função de chamada que será executada depois que o controle retorna ao chamador.  
   
- Crie o seguinte programa e em passo no depurador.  Como depurar o programa, anote o endereço retornado de `_ReturnAddress`.  Então, imediatamente após retornar da função onde `_ReturnAddress` foi usado, abra o [Como usar a janela Desmontagem](../Topic/How%20to:%20Use%20the%20Disassembly%20Window.md) e observe que o endereço da próxima instrução a ser executada corresponde o endereço retornado de `_ReturnAddress`.  
+ Crie o seguinte programa e passar por no depurador. Conforme você avança através do programa, anote o endereço que é retornado de `_ReturnAddress`. Em seguida, imediatamente depois do retorno da função onde `_ReturnAddress` foi usado, abra o [como: usar a janela de desmontagem](/visualstudio/debugger/how-to-use-the-disassembly-window) e observe que o endereço da próxima instrução a ser executada corresponde ao endereço retornado de `_ReturnAddress`.  
   
- Otimizações como inlining pode afetar o endereço de retorno.  Por exemplo, se o programa de exemplo abaixo é compilado com  [\/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` será embutido na função de chamada, `main`.  Portanto, as chamadas para `_ReturnAddress` de `inline_func` e `main` cada produzirá o mesmo valor.  
+ Otimizações como inlining pode afetar o endereço de retorno. Por exemplo, se o programa de exemplo a seguir é compilado com [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` será embutida para a função chamada, `main`. Portanto, as chamadas para `_ReturnAddress` de `inline_func` e `main` cada produzirá o mesmo valor.  
   
- Quando `_ReturnAddress` é usado em um programa compilado com  [\/clr](../build/reference/clr-common-language-runtime-compilation.md), a função que contém o `_ReturnAddress` chamada será compilada como uma função nativa.  Quando uma função é compilado como gerenciado chamadas para a função que contém `_ReturnAddress`, `_ReturnAddress` pode não se comportar conforme o esperado.  
+ Quando `_ReturnAddress` é usado em um programa compilado com [/clr](../build/reference/clr-common-language-runtime-compilation.md), a função que contém o `_ReturnAddress` chamada será compilada como uma função nativa. Quando uma função é compilado como gerenciado chama a função que contém `_ReturnAddress`, `_ReturnAddress` podem não se comportar conforme o esperado.  
   
-## Requisitos  
- **Arquivo de cabeçalho** \<intrin.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // compiler_intrinsics__ReturnAddress.cpp  
@@ -69,9 +67,9 @@ int main(void)
 }  
 ```  
   
-## END Microsoft específicos  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [\_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
+## <a name="see-also"></a>Consulte também  
+ [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+ [Palavras-chave](../cpp/keywords-cpp.md)

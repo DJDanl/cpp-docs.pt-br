@@ -1,32 +1,31 @@
 ---
-title: "2.6.2 Construto critical | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.2 construto critical | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c46ecd00-b4a2-4a5e-ba92-288c329e773a
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 13e9b4a8611732c7dddb81be1ca6123b725f7169
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.2 Construto critical
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O **crítico** diretiva identifica uma construção que restringe a execução do bloco estruturado associado a um único thread por vez. A sintaxe do **crítico** diretiva é o seguinte:  
+# <a name="262-critical-construct"></a>2.6.2 Construto critical
+O **crítico** diretiva identifica uma construção que restringe a execução do bloco estruturado associado a um único thread por vez. A sintaxe do **crítico** diretiva é da seguinte maneira:  
   
 ```  
 #pragma omp critical [(name)]  new-linestructured-block  
 ```  
   
- Um recurso opcional *nome* pode ser usado para identificar a região crítica. Usado para identificar uma região crítica de identificadores têm vinculação externa e estão em um espaço para nome que é separado dos espaços de nome usados pelo rótulos, marcas, membros e identificadores comuns.  
+ Um recurso opcional *nome* pode ser usado para identificar a região crítica. Identificadores usados para identificar uma região crítica possuir vínculo externo e estão em um espaço para nome que é separado de espaços para nome usados por rótulos, marcas, membros e identificadores comuns.  
   
- No início de uma região crítica que um thread aguarda até que nenhum outro segmento esteja executando uma região crítica \(em qualquer lugar no programa\) com o mesmo nome. Todas as capturas sem nome **crítico** diretivas são mapeados para o mesmo nome não especificado.
+ Um thread aguarda o início de uma região crítica até que nenhum outro thread está em execução em uma região crítica (em qualquer lugar no programa) com o mesmo nome. Todos os sem nome **crítico** diretivas mapeiam para o mesmo nome não especificado.

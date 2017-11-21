@@ -1,24 +1,22 @@
 ---
-title: Operadores de namespace de simultaneidade (AMP) | Documentos do Microsoft
+title: Operadores de namespace de simultaneidade (AMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: 
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 676f3e836082dc3286a45f8d59db83c969964058
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 7cc8e24c8fd1524ebaaf6c2a8edaec05ab865733
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores de namespace de simultaneidade (AMP)
 ||||  
@@ -42,7 +40,7 @@ bool operator== (
   
 ### <a name="parameters"></a>Parâmetros  
  `_Rank`  
- A classificação dos argumentos de tupla.  
+ A ordem dos argumentos de tupla.  
   
  `_Lhs`  
  Uma das tuplas a ser comparado.  
@@ -68,7 +66,7 @@ bool operator!= (
   
 ### <a name="parameters"></a>Parâmetros  
  `_Rank`  
- A classificação dos argumentos de tupla.  
+ A ordem dos argumentos de tupla.  
   
  `_Lhs`  
  Uma das tuplas a ser comparado.  
@@ -113,7 +111,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
   
 ### <a name="parameters"></a>Parâmetros  
  `_Rank`  
- A classificação dos argumentos de tupla.  
+ A ordem dos argumentos de tupla.  
   
  `_Lhs`  
  Um dos argumentos para adicionar.  
@@ -158,7 +156,7 @@ _Tuple_type<_Rank>   operator-(
   
 ### <a name="parameters"></a>Parâmetros  
  `_Rank`  
- A classificação dos argumentos de tupla.  
+ A ordem dos argumentos de tupla.  
   
  `_Lhs`  
  O argumento deve ser subtraído.  
@@ -194,13 +192,13 @@ _Tuple_type<_Rank>   operator*(
   
 ### <a name="parameters"></a>Parâmetros  
  `_Rank`  
- A classificação dos argumentos de tupla.  
+ A ordem dos argumentos de tupla.  
   
  `_Lhs`  
- Uma das tuplas para multiplicar.  
+ Uma das tuplas multiplicar.  
   
  `_Rhs`  
- Uma das tuplas para multiplicar.  
+ Uma das tuplas multiplicar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O produto component-wise dos argumentos especificados.  
@@ -230,7 +228,7 @@ _Tuple_type<_Rank>   operator/(
   
 ### <a name="parameters"></a>Parâmetros  
  `_Rank`  
- A classificação dos argumentos de tupla.  
+ A ordem dos argumentos de tupla.  
   
  `_Lhs`  
  A tupla a ser dividida.  
@@ -266,10 +264,10 @@ _Tuple_type<_Rank>   operator%(
   
 ### <a name="parameters"></a>Parâmetros  
  `_Rank`  
- A classificação dos argumentos de tupla.  
+ A ordem dos argumentos de tupla.  
   
  `_Lhs`  
- A tupla de que o módulo é calculado.  
+ A tupla do qual o módulo é calculado.  
   
  `_Rhs`  
  A tupla ao módulo por.  
@@ -279,4 +277,3 @@ _Tuple_type<_Rank>   operator%(
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace-cpp-amp.md)
-

@@ -1,34 +1,33 @@
 ---
-title: "Como usar express&#245;es regulares para extrair campos de dados (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dados [C++], extraindo de cadeias de caracteres"
-  - "cadeias de caracteres formatadas [C++]"
-  - "expressões regulares [C++], extraindo campos de dados"
-  - "cadeias de caracteres [C++], extraindo dados de"
+title: "Como: usar expressões regulares para extrair campos de dados (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], extracting data from
+- formatted strings [C++]
+- regular expressions [C++], extracting data fields
+- data [C++], extracting from strings
 ms.assetid: b581d9b6-630e-48fa-94fe-20b0f7b89b06
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a297ee1676fb3ffbff45d46334d20280beeab078
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como usar express&#245;es regulares para extrair campos de dados (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra o uso de expressões regulares extrair dados de uma cadeia de caracteres formatada.  O exemplo de código usa a classe de <xref:System.Text.RegularExpressions.Regex> para especificar um padrão que corresponde a um endereço de email.  Este alinhador longitudinal inclui os identificadores do campo que podem ser usados para recuperar o usuário e as partes do nome de host de cada endereço de email.  A classe de <xref:System.Text.RegularExpressions.Match> é usada para executar a correspondência de padrão real.  Se o endereço de email fornecido é válido, o nome de usuário e os nomes de host são extraídos e exibidos.  
+# <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Como usar expressões regulares para extrair campos de dados (C++/CLI)
+O exemplo de código a seguir demonstra o uso de expressões regulares para extrair dados de uma cadeia de caracteres formatada. O seguinte exemplo de código usa a <xref:System.Text.RegularExpressions.Regex> classe para especificar um padrão que corresponde ao endereço de email. Esse padrão inclui identificadores de campo que podem ser usados para recuperar o usuário e partes de nome de host de cada endereço de email. O <xref:System.Text.RegularExpressions.Match> classe é usada para executar a correspondência de padrão real. Se o endereço de email fornecido é válido, o nome de usuário e nomes de host são extraídos e exibidos.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // Regex_extract.cpp  
@@ -71,6 +70,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Expressões regulares do .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Expressões regulares do .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

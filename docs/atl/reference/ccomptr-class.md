@@ -1,49 +1,31 @@
 ---
-title: Classe CComPtr | Documentos do Microsoft
+title: Classe CComPtr | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComPtr
 - ATLBASE/ATL::CComPtr
 - ATLBASE/ATL::CComPtr::CComPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtr class
+dev_langs: C++
+helpviewer_keywords: CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ae7bb5e85f23492bdbef4af86d9f68fa83c991e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 0fada073fd438bb2b3605c972f6598f2955b5f68
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomptr-class"></a>Classe CComPtr
-Uma classe de ponteiro inteligente para gerenciar os ponteiros de interface.  
+Uma classe de ponteiro inteligente para o gerenciamento de ponteiros de interface COM.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +36,7 @@ class CComPtr
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- Uma interface COM especificando o tipo de ponteiro a ser armazenado.  
+ Uma interface COM especificando o tipo de ponteiro para ser armazenado.  
   
 ## <a name="members"></a>Membros  
   
@@ -71,15 +53,15 @@ class CComPtr
 |[CComPtr::operator =](#operator_eq)|Atribui um ponteiro para o ponteiro de membro.|  
   
 ## <a name="remarks"></a>Comentários  
- ATL usa `CComPtr` e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) para gerenciar os ponteiros de interface. Ambos são derivados de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), e ambos executem a contagem de referência automática.  
+ ATL usa `CComPtr` e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) para gerenciar os ponteiros de interface COM. Ambos são derivadas de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), e ambos executam a contagem de referência automática.  
   
- O **CComPtr** e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes podem ajudar a eliminar vazamentos de memória, executando a contagem de referência automática.  As seguintes funções de executam as mesmas operações lógicas; No entanto, observe como a segunda versão pode ser menos propenso a erros usando o **CComPtr** classe:  
+ O **CComPtr** e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes podem ajudar a eliminar vazamentos de memória, executando a contagem de referência automática.  As seguintes funções de executam as mesmas operações lógicas; No entanto, observe como a segunda versão pode ser menos propensas a erros usando o **CComPtr** classe:  
   
- [!code-cpp[NVC_ATL_Utilities&#130;](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
- [!code-cpp[NVC_ATL_Utilities&#131;](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- Em compilações de depuração, vincule atlsd para rastreamento de código.  
+ Em compilações de depuração, vincule atlsd.lib para rastreamento de código.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -87,7 +69,7 @@ class CComPtr
  `CComPtr`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="ccomptr"></a>CComPtr::CComPtr  
  O construtor.  
@@ -117,10 +99,9 @@ T* operator= (const CComPtr<T>& lp) throw ();
  Retorna um ponteiro para a atualização `CComPtr` objeto  
   
 ### <a name="remarks"></a>Comentários  
- Esta operação AddRefs o novo objeto e versões o objeto existente, se existir.  
+ Esta operação AddRefs o novo objeto e versões existe o objeto existente, se houver um.  
   
 ## <a name="see-also"></a>Consulte também  
  [CComPtr::CComPtr](#ccomptr)   
  [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

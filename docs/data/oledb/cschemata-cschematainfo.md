@@ -1,70 +1,69 @@
 ---
-title: "CSchemata, CSchemataInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEFAULT_CHARACTER_SET_CATALOG"
-  - "DEFAULT_CHARACTER_SET_SCHEMA"
-  - "m_szCharName"
-  - "CSchemataInfo"
-  - "m_szCatalog"
-  - "m_szCharCatalog"
-  - "m_szOwner"
-  - "m_szCharSchema"
-  - "CSchemata"
-  - "m_szName"
-  - "DEFAULT_CHARACTER_SET_NAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe typedef CSchemata"
-  - "Classe de parâmetro CSchemataInfo"
-  - "DEFAULT_CHARACTER_SET_CATALOG"
-  - "DEFAULT_CHARACTER_SET_NAME"
-  - "DEFAULT_CHARACTER_SET_SCHEMA"
-  - "m_szCatalog"
-  - "m_szCharCatalog"
-  - "m_szCharName"
-  - "m_szCharSchema"
-  - "m_szName"
-  - "m_szOwner"
+title: CSchemata, CSchemataInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DEFAULT_CHARACTER_SET_CATALOG
+- DEFAULT_CHARACTER_SET_SCHEMA
+- m_szCharName
+- CSchemataInfo
+- m_szCatalog
+- m_szCharCatalog
+- m_szOwner
+- m_szCharSchema
+- CSchemata
+- m_szName
+- DEFAULT_CHARACTER_SET_NAME
+dev_langs: C++
+helpviewer_keywords:
+- m_szCharName
+- CSchemata typedef class
+- DEFAULT_CHARACTER_SET_NAME
+- m_szOwner
+- CSchemataInfo parameter class
+- DEFAULT_CHARACTER_SET_CATALOG
+- m_szCharSchema
+- m_szCatalog
+- m_szName
+- m_szCharCatalog
+- DEFAULT_CHARACTER_SET_SCHEMA
 ms.assetid: 9d06d65a-c27b-446d-bc42-c7e487b0d9c5
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f1171117cba0d4a6448326d6e45d455557d9442b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# CSchemata, CSchemataInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chame a classe **CSchemata** do typedef para implementar a sua classe **CSchemataInfo**do parâmetro.  
+# <a name="cschemata-cschematainfo"></a>CSchemata, CSchemataInfo
+Chamar a classe typedef **CSchemata** para implementar sua classe de parâmetro **CSchemataInfo**.  
   
-## Comentários  
- Consulte [Classes do conjunto de linhas de esquema e classes de Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) para obter mais informações sobre como usar classes do typedef.  
+## <a name="remarks"></a>Comentários  
+ Consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obter mais informações sobre como usar classes do typedef.  
   
- Essa classe identifica os esquemas que são de propriedade de um determinado usuário.  
+ Essa classe identifica os esquemas que pertencem a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados da classe e suas colunas correspondentes OLE DB.  Consulte [Conjunto de linhas SCHEMATA](https://msdn.microsoft.com/en-us/library/ms716887.aspx)*na referência do programador de OLE DB* para obter mais informações sobre o esquema e de colunas.  
+ A tabela a seguir lista os membros de dados de classe e o OLE DB colunas correspondentes. Consulte [conjunto de linhas de esquema](https://msdn.microsoft.com/en-us/library/ms716887.aspx) no *referência do programador de DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
-|Membros de dados|Colunas de OLE DB|  
-|----------------------|-----------------------|  
-|m\_szCatalog|CATALOG\_NAME|  
-|m\_szName|SCHEMA\_NAME|  
-|m\_szOwner|SCHEMA\_OWNER|  
-|m\_szCharCatalog|DEFAULT\_CHARACTER\_SET\_CATALOG|  
-|m\_szCharSchema|DEFAULT\_CHARACTER\_SET\_SCHEMA|  
-|m\_szCharName|DEFAULT\_CHARACTER\_SET\_NAME|  
+|Membros de dados|Colunas de banco de dados OLE|  
+|------------------|--------------------|  
+|m_szCatalog|CATALOG_NAME|  
+|m_szName|SCHEMA_NAME|  
+|m_szOwner|SCHEMA_OWNER|  
+|m_szCharCatalog|DEFAULT_CHARACTER_SET_CATALOG|  
+|m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|  
+|m_szCharName|DEFAULT_CHARACTER_SET_NAME|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbsch.h  
   
-## Consulte também  
- [Classe CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

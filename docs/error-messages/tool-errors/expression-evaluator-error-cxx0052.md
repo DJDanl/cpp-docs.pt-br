@@ -1,52 +1,34 @@
 ---
-title: "CXX0052 de erro do avaliador de expressão | Documentos do Microsoft"
+title: "CXX0052 de erro do avaliador de expressão | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- CXX0052
-dev_langs:
-- C++
+f1_keywords: CXX0052
+dev_langs: C++
 helpviewer_keywords:
 - CXX0052
 - CAN0052
 ms.assetid: 5060d479-d0a4-4682-b858-c8b9a4f324e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fb5da3bc59b4c7a80333c2c29ebd0cdf7f22d6cd
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 0725d117f6481d2bdc218089a7599502c0f5213d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>Erro CXX0052 (avaliador de expressão)
-função membro não presente  
+função de membro não presente  
   
- Uma função de membro foi especificada como um ponto de interrupção, mas não pôde ser encontrada. Definindo um ponto de interrupção em uma função que foi embutida pode causar esse erro.  
+ Uma função de membro foi especificada como um ponto de interrupção, mas não pôde ser encontrada. Definindo um ponto de interrupção em uma função que tenha sido embutida pode causar esse erro.  
   
- Recompilar o arquivo com inlining desconectados (/ Ob0) para definir um ponto de interrupção nessa função.  
+ Recompilar o arquivo com inlining desconectados (/ Ob0) para definir um ponto de interrupção nesta função.  
   
  Uma expressão de chamada de função que não foi definida.  
   

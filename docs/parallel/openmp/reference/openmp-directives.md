@@ -1,58 +1,41 @@
 ---
-title: Diretivas (OpenMP) | Documentos do Microsoft
+title: Diretivas OpenMP | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e84a0c28ba5db783b3de131351b65172095999d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 21cb751c4ee4c261db1d6a4d5efda49a1445ade7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="openmp-directives"></a>Diretivas (OpenMP)
-Fornece links para diretivas usadas na API do OpenMP.  
+Fornece links para as diretivas usadas na API do OpenMP.  
   
- Visual C++ suporta as seguintes diretivas OpenMP:  
+ As seguintes diretivas OpenMP pela linguagem Visual C++:  
   
 |Diretiva|Descrição|  
 |---------------|-----------------|  
-|[atomic](../../../parallel/openmp/reference/atomic.md)|Especifica que um local de memória que será atualizado automaticamente.|  
-|[barreira](../../../parallel/openmp/reference/barrier.md)|Sincroniza todos os threads em uma equipe; todos os threads pausar a barreira, até que todos os threads executem a barreira.|  
-|[crítico](../../../parallel/openmp/reference/critical.md)|Especifica que o código somente é executado em um thread por vez.|  
+|[atomic](../../../parallel/openmp/reference/atomic.md)|Especifica que um local de memória que será atualizado de forma atômica.|  
+|[barrier](../../../parallel/openmp/reference/barrier.md)|Sincroniza todos os threads em uma equipe; todos os threads pausar a barreira, até que todos os threads executem a barreira.|  
+|[critical](../../../parallel/openmp/reference/critical.md)|Especifica o código só é executado em um segmento por vez.|  
 |[flush](../../../parallel/openmp/reference/flush-openmp.md)|Especifica que todos os threads têm a mesma exibição de memória para todos os objetos compartilhados.|  
-|[for](../../../parallel/openmp/reference/for-openmp.md)|Faz com que o trabalho feito um loop for dentro de uma região paralela seja dividido entre threads.|  
-|[mestre](../../../parallel/openmp/reference/master.md)|Especifica que somente o mestre threadshould executar uma seção do programa.|  
-|[ordenado](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Especifica o código em um em paralelo para loop deve ser executado como um loop sequencial.|  
-|[paralelo](../../../parallel/openmp/reference/parallel.md)|Define uma região paralela, que é o código que será executado por vários threads em paralelo.|  
+|[for](../../../parallel/openmp/reference/for-openmp.md)|Faz com que o trabalho feito um loop dentro de uma região parallel podem ser divididas entre threads.|  
+|[master](../../../parallel/openmp/reference/master.md)|Especifica que somente o mestre threadshould executar uma seção do programa.|  
+|[ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Especifica que o código em um em paralelo para loop deve ser executado como um loop sequencial.|  
+|[parallel](../../../parallel/openmp/reference/parallel.md)|Define uma região parallel, que é o código que será executado por vários threads em paralelo.|  
 |[seções](../../../parallel/openmp/reference/sections-openmp.md)|Identifica as seções de código para ser dividida entre todos os threads.|  
-|[único](../../../parallel/openmp/reference/single.md)|Permite especificar que uma seção de código deve ser executada em um único thread, não necessariamente o thread principal.|  
+|[single](../../../parallel/openmp/reference/single.md)|Permite que você especifique que uma seção de código deve ser executada em um único thread, não necessariamente o thread principal.|  
 |[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|Especifica que uma variável privada para um thread.|  
   
 ## <a name="see-also"></a>Consulte também  

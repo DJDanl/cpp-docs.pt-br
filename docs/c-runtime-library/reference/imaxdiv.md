@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- imaxdiv
+apiname: imaxdiv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- imaxdiv
-dev_langs:
-- C++
-helpviewer_keywords:
-- imaxdiv function
+f1_keywords: imaxdiv
+dev_langs: C++
+helpviewer_keywords: imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f2d79bcdb10d150b236290d3d5439331516a923f
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 65c7b71030bff65a2806d20690554a9828871268
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="imaxdiv"></a>imaxdiv
 Calcula o quociente e o resto dos dois valores inteiros de qualquer tamanho como uma única operação.  
@@ -78,7 +58,7 @@ imaxdiv_t imaxdiv(
  `imaxdiv` chamado com argumentos do tipo [intmax_t](../../c-runtime-library/standard-types.md) retorna uma estrutura do tipo [imaxdiv_t](../../c-runtime-library/standard-types.md), que inclui o quociente e o resto.  
   
 ## <a name="remarks"></a>Comentários  
- A função `imaxdiv` divide `numer` por `denom` e, portanto, calcula o quociente e o resto. A estrutura `imaxdiv_t` contém o quociente, `intmax_t``quot`, e o resto, `intmax_t``rem`. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.  
+ A função `imaxdiv` divide `numer` por `denom` e, portanto, calcula o quociente e o resto. A estrutura `imaxdiv_t` contém o quociente, `intmax_t quot`, e o resto, `intmax_t rem`. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.  
   
 ## <a name="requirements"></a>Requisitos  
   

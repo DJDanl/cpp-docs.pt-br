@@ -1,39 +1,38 @@
 ---
-title: "Uso da pilha | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Uso de pilha | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c7a74abff7a2971fe66fa2df878078ac95f58fe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Uso da pilha
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Qualquer memória além de endereço atual de RSP é considerada volátil: O sistema operacional, ou um depurador, podem substituir essa memória durante uma sessão de depuração do usuário, ou um manipulador de interrupção.  Assim, RSP deve sempre ser definido antes de tentar ler ou gravar valores em um quadro de pilha.  
+# <a name="stack-usage"></a>Uso da pilha
+Toda a memória além do endereço atual do RSP é considerada volátil: O sistema operacional ou um depurador pode substituir essa memória durante uma sessão de depuração de usuário ou um manipulador de interrupção. Assim, RSP sempre deve ser definido antes de tentar ler ou gravar valores para um quadro de pilha.  
   
- Esta seção discute a alocação de espaço de pilha para variáveis locais e o intrínsecos de **alloca** .  
+ Esta seção discute a alocação de espaço de pilha para variáveis locais e o **alloca** intrínseco.  
   
--   [Alocação de pilha](../build/stack-allocation.md)  
+-   [Alocação da pilha](../build/stack-allocation.md)  
   
--   [Compilação da área de pilha do parâmetro dinâmico](../Topic/Dynamic%20Parameter%20Stack%20Area%20Construction.md)  
+-   [Construção da área de pilha de parâmetros dinâmicos](../build/dynamic-parameter-stack-area-construction.md)  
   
 -   [Tipos de função](../build/function-types.md)  
   
--   [alinhamento de malloc](../build/malloc-alignment.md)  
+-   [Alinhamento de malloc](../build/malloc-alignment.md)  
   
 -   [alloca](../build/alloca.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Convenções de software x64](../build/x64-software-conventions.md)

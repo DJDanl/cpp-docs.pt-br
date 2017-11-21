@@ -1,77 +1,76 @@
 ---
-title: "/GL (otimiza&#231;&#227;o de todo o programa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gl"
-  - "VC.Project.VCCLWCECompilerTool.WholeProgramOptimization"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /GL (C++)"
-  - "Opção de compilador GL [C++]"
-  - "Opção de compilador -GL [C++]"
-  - "otimizações de programa total e compilador C++"
+title: "-GL (otimização de programa parcial) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /gl
+- VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
+dev_langs: C++
+helpviewer_keywords:
+- /GL compiler option [C++]
+- whole program optimizations and C++ compiler
+- -GL compiler option [C++]
+- GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 20436df9fd2f54193183505eb56da7c7b3371164
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /GL (otimiza&#231;&#227;o de todo o programa)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Habilita a otimização do programa inteiro.  
+# <a name="gl-whole-program-optimization"></a>/GL (otimização de todo o programa)
+Habilita a otimização de todo o programa.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /GL[-]  
 ```  
   
-## Comentários  
- A otimização de programa inteira permite que o compilador executa otimizações com informações sobre todos os módulos do programa.  Sem otimização de programa inteira, as otimizações são executadas na base de módulo \(compiland\).  
+## <a name="remarks"></a>Comentários  
+ Otimização de programa parcial permite que o compilador realizar otimizações com informações em todos os módulos no programa. Sem otimização de programa parcial, otimizações são executadas em um acordo de módulo (compiland).  
   
- A otimização de programa inteira é por padrão e deve ser explicitamente habilitada.  No entanto, também é possível desabilitar explicitamente com **\/GL\-**.  
+ Otimização de todo o programa está desativado por padrão e deve ser explicitamente habilitada. No entanto, também é possível desabilitá-la com explicitamente **/GL-**.  
   
- Com informações sobre todos os módulos, o compilador pode:  
+ Informações sobre todos os módulos, o compilador pode:  
   
--   Otimizar o uso dos registros nos limites da função.  
+-   Otimize o uso de registros em limites de função.  
   
--   Faça um trabalho melhores do controle de alterações nos dados globais, permitindo a redução no número de cargas e de repositório.  
+-   Fazer um trabalho melhor de modificações de dados globais, permitindo uma redução no número de carregamentos e repositórios de controle.  
   
--   Faça um trabalho de melhores possível controlar o conjunto de itens alterados por um ponteiro eliminam, reduzindo os números de cargas e de repositório.  
+-   Fazer um trabalho melhor de cancelar o conjunto de possíveis de itens modificados por um ponteiro, reduzindo os números de carregamentos e repositórios de controle.  
   
--   Uma função embutida em um módulo mesmo quando a função é definida em outro módulo.  
+-   Uma função em um módulo, mesmo quando a função é definida em outro módulo do embutido.  
   
- os arquivos de .obj gerados com **\/GL** não estarão disponíveis em utilitários do vinculador como [EDITBIN](../Topic/EDITBIN%20Reference.md) e [DUMPBIN](../../build/reference/dumpbin-reference.md).  
+ arquivos. obj produzido com **/GL** não estarão disponíveis para esses utilitários de vinculador como [EDITBIN](../../build/reference/editbin-reference.md) e [DUMPBIN](../../build/reference/dumpbin-reference.md).  
   
- Se você criar seu programa com **\/GL** e [\/c](../../build/reference/c-compile-without-linking.md), você deve usar a opção do vinculador de \/LTCG criar o arquivo de saída.  
+ Se você compilar seu programa com **/GL** e [/c](../../build/reference/c-compile-without-linking.md), você deve usar a opção de vinculador /LTCG para criar o arquivo de saída.  
   
- [\/ZI](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) não pode ser usado com **\/GL**  
+ [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) não pode ser usado com **/GL**  
   
- O formato dos arquivos gerados com **\/GL** na versão atual não pode ser legível por versões subsequentes do Visual C\+\+.  Você não precisa enviar um arquivo de .lib entendido dos arquivos de .obj que foram gerados com **\/GL** a menos que você está disposto enviar cópias do arquivo de .lib para todas as versões do Visual C\+\+ que você espera que os usuários se usar, agora e no futuro.  
+ O formato dos arquivos produzido com **/GL** na versão atual não possa ser lido por versões subsequentes do Visual C++. Você não deve fornecer um arquivo composto por arquivos. obj produzidas com **/GL** , a menos que você está disposto a enviar cópias do arquivo. lib para todas as versões do Visual C++ você espera que os usuários usem, agora e no futuro.  
   
- os arquivos de .obj gerados com **\/GL** e os arquivos de cabeçalho pré\-compilados não devem ser usados para criar um arquivo de .lib a menos que o arquivo de .lib é vinculado no mesmo computador que gerou o arquivo de **\/GL** .obj.  Informações do arquivo de cabeçalho pré\-compilado do arquivo de .obj será necessária no tempo de link.  
+ arquivos. obj produzido com **/GL** e arquivos de cabeçalho pré-compilado não devem ser usados para criar um arquivo. lib, a menos que o arquivo. lib será vinculado na mesma máquina que produziu o **/GL** arquivo. obj. Informações do arquivo de cabeçalho pré-compilado do arquivo. obj serão necessária em tempo de link.  
   
- Para obter mais informações sobre as otimizações disponíveis com e as limitações de otimização do programa inteira, consulte [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **\/GL** também faz a otimização orientada perfil disponível; consulte \/LTCG.  Ao criar para o perfil guiou otimizações e se desejar que a função da ordenação das otimizações guiadas perfil, você deve criar [\/Gy](../../build/reference/gy-enable-function-level-linking.md) ou com um padrão do compilador que implica \/Gy.  
+ Para obter mais informações sobre as otimizações disponíveis com e as limitações de otimização de todo o programa, consulte [/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **/GL** também o torna disponível de Otimização Guiada por perfil; consulte /LTCG.  Ao compilar para guiada por perfil otimizações e se você quiser ordenação de seu otimizações guiadas por perfil de função, você deve compilar com [/Gy](../../build/reference/gy-enable-function-level-linking.md) ou uma opção de compilador que implica /Gy.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Consulte [\/LTCG \(geração de código do tempo de vinculação\)](../../build/reference/ltcg-link-time-code-generation.md) para obter informações sobre como especificar **\/GL** no ambiente de desenvolvimento.  
+1.  Consulte [/LTCG (geração de código Link-time)](../../build/reference/ltcg-link-time-code-generation.md) para obter informações sobre como especificar **/GL** no ambiente de desenvolvimento.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

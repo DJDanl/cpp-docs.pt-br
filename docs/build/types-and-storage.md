@@ -1,37 +1,36 @@
 ---
-title: "Tipos e armazenamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Tipos e armazenamento | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7fe008b2-520f-4b71-8cb5-35fd513146ce
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d112d7d27d798c410cd6873d5e3433cdf92a31eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Tipos e armazenamento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esta seção descreve a enumeração e o armazenamento dos tipos de dados para a arquitetura de [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] .  
+# <a name="types-and-storage"></a>Tipos e armazenamento
+Esta seção descreve a enumeração e o armazenamento de tipos de dados para o [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] arquitetura.  
   
 -   [Tipos escalares](../build/scalar-types.md)  
   
--   [Agregados e uniões](../build/aggregates-and-unions.md)  
+-   [Agregações e uniões](../build/aggregates-and-unions.md)  
   
--   [Exemplos de alinhamento de estrutura](../build/examples-of-structure-alignment.md)  
+-   [Exemplos de alinhamento da estrutura](../build/examples-of-structure-alignment.md)  
   
--   [Bitfields](../build/bitfields.md)  
+-   [Campos de bits](../build/bitfields.md)  
   
--   [Conflitos com o compilador x86](../Topic/Conflicts%20with%20the%20x86%20Compiler.md)  
+-   [conflitos com o compilador x86](../build/conflicts-with-the-x86-compiler.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Convenções de software x64](../build/x64-software-conventions.md)

@@ -1,37 +1,35 @@
 ---
-title: "IRowsetIdentityImpl::IsSameRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IsSameRow"
-  - "IRowsetIdentityImpl.IsSameRow"
-  - "ATL.IRowsetIdentityImpl.IsSameRow"
-  - "IRowsetIdentityImpl::IsSameRow"
-  - "ATL::IRowsetIdentityImpl::IsSameRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método IsSameRow"
+title: 'Irowsetidentityimpl:: Issamerow | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IsSameRow
+- IRowsetIdentityImpl.IsSameRow
+- ATL.IRowsetIdentityImpl.IsSameRow
+- IRowsetIdentityImpl::IsSameRow
+- ATL::IRowsetIdentityImpl::IsSameRow
+dev_langs: C++
+helpviewer_keywords: IsSameRow method
 ms.assetid: e35ad54e-73f1-4dc0-8d8c-9e98202baf0a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: baab48b21ab624d285fecac0e888f8d32e86342b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetIdentityImpl::IsSameRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Compara duas alças de linha para ver se elas se referem à mesma linha.  
+# <a name="irowsetidentityimplissamerow"></a>IRowsetIdentityImpl::IsSameRow
+Compara duas alças de linha para ver se eles se referem à mesma linha.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -41,14 +39,14 @@ Compara duas alças de linha para ver se elas se referem à mesma linha.
 );  
 ```  
   
-#### Parâmetros  
- Consulte [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx)*na referência do programador de OLE DB*.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) no *referência do programador de OLE DB*.  
   
-## Comentários  
- Para comparar as alças de linha, esse método converte as alças de **HROW** os membros de **RowClass** e chama `memcmp` nos ponteiros.  
+## <a name="remarks"></a>Comentários  
+ Para comparar os identificadores de linha, este método converte o **HROW** identificadores para **RowClass** membros e chamadas `memcmp` em ponteiros.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Classe IRowsetIdentityImpl](../Topic/IRowsetIdentityImpl%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)

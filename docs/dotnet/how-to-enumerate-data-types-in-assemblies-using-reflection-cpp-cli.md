@@ -1,40 +1,39 @@
 ---
-title: "Como enumerar tipos de dados em assemblies usando reflex&#227;o (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assemblies [C++]"
-  - "assemblies [C++], enumerando tipos de dados em"
-  - "tipos de dados [C++], enumerando"
-  - "membros públicos [C++]"
-  - "tipos públicos [C++]"
-  - "reflexão [C++], assemblies externos"
+title: "Como: enumerar os tipos de dados usando a reflexão (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assemblies [C++], enumerating data types in
+- public types [C++]
+- reflection [C++], external assemblies
+- assemblies [C++]
+- data types [C++], enumerating
+- public members [C++]
 ms.assetid: c3578e6d-bb99-4599-80e1-ab795305f878
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d89324e49cb08014892d08a046221b9a1e28d2e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como enumerar tipos de dados em assemblies usando reflex&#227;o (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O código a seguir demonstra a enumeração dos tipos e os membros públicos que usam <xref:System.Reflection>.  
+# <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>Como enumerar tipos de dados em assemblies usando reflexão (C++/CLI)
+O código a seguir demonstra a enumeração de tipos e membros usando públicos <xref:System.Reflection>.  
   
- Dado o nome de um assembly, no diretório local ou no GAC, no código abaixo do tentar abrir o assembly e de recuperar descrições.  Se bem\-sucedido, cada tipo é exibido com seus membros públicos.  
+ Considerando o nome de um assembly no diretório local ou no GAC, o código a seguir tenta abrir o assembly e recuperar as descrições. Se for bem-sucedido, cada tipo é exibido com seus membros públicos.  
   
- Observe que <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> requer que nenhuma extensão de arquivo é usada.  Consequentemente, usando “mscorlib.dll” porque um argumento de linha de comando falhará, quando usar apenas o “mscorlib” resultará na exibição dos tipos do.NET Framework.  Se nenhum nome do assembly for fornecido, o código detectará e relatará os tipos no assembly atual \(EXE resultante desse código\).  
+ Observe que <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> requer que nenhuma extensão de arquivo é usado. Portanto, usando "mscorlib" como um argumento de linha de comando falhará, enquanto usar apenas "mscorlib" resultará a exibição de tipos do .NET Framework. Se nenhum nome de assembly for fornecido, o código detectará e relatar os tipos de dentro do assembly atual (o EXE resultantes desse código).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // self_reflection.cpp  
@@ -83,5 +82,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Reflexão](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>Consulte também  
+ [Reflexão (C++/CLI)](../dotnet/reflection-cpp-cli.md)

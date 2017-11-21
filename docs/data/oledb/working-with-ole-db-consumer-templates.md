@@ -1,36 +1,35 @@
 ---
-title: "Trabalhando com modelos de consumidor de banco de dados OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Modelos de consumidor OLE DB, sobre modelos de consumidor"
-  - "aplicativos de exemplo [C++], Modelos de banco de dados OLE"
+title: Trabalhando com modelos de consumidor OLE DB | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sample applications [C++], OLE DB Templates
+- OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: be52ccf8ba42b61d7393c32587e54a5a768d2f40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Trabalhando com modelos de consumidor de banco de dados OLE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Os tópicos a seguir fornecem exemplos de como usar modelos de consumidor OLE DB em cenários comuns:  
+# <a name="working-with-ole-db-consumer-templates"></a>Trabalhando com modelos de consumidor de banco de dados OLE
+Os tópicos a seguir fornecem alguns exemplos de como usar o OLE DB modelos de consumidor em cenários comuns:  
   
--   [O que simplifica o acesso a dados com atributos da base de dados](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
+-   [Simplificando o acesso a dados com atributos de banco de dados](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Membros de dados de status do campo em acessadores script gerados](../Topic/Field%20Status%20Data%20Members%20in%20Wizard-Generated%20Accessors.md)  
+-   [Membros de dados de status de campo em acessadores gerados por assistente](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
--   [Por meio de um conjunto de linhas simples](../Topic/Traversing%20a%20Simple%20Rowset.md)  
+-   [Percorrendo um conjunto de linhas simples](../../data/oledb/traversing-a-simple-rowset.md)  
   
 -   [Emitindo uma consulta parametrizada](../../data/oledb/issuing-a-parameterized-query.md)  
   
@@ -38,7 +37,7 @@ Os tópicos a seguir fornecem exemplos de como usar modelos de consumidor OLE DB
   
 -   [Atualizando conjuntos de linhas](../../data/oledb/updating-rowsets.md)  
   
--   [Usando Procedimentos Armazenados](../../data/oledb/using-stored-procedures.md)  
+-   [Usando procedimentos armazenados](../../data/oledb/using-stored-procedures.md)  
   
 -   [Usando acessadores](../../data/oledb/using-accessors.md)  
   
@@ -46,9 +45,9 @@ Os tópicos a seguir fornecem exemplos de como usar modelos de consumidor OLE DB
   
 -   [Dando suporte a transações no OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
--   [Usando exibições do registro OLE DB](../../data/oledb/using-ole-db-record-views.md)  
+-   [Usando exibições de registro do OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
--   [Usando um conjunto de registros ado MD existente](../../data/oledb/using-an-existing-ado-recordset.md)  
+-   [Usando um conjunto de registros ADO existente](../../data/oledb/using-an-existing-ado-recordset.md)  
   
 -   [Atualizando uma coluna quando outra tabela contém uma referência à linha](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   
@@ -58,15 +57,15 @@ Os tópicos a seguir fornecem exemplos de como usar modelos de consumidor OLE DB
   
 -   [Recebendo notificações](../../data/oledb/receiving-notifications.md)  
   
- Para obter um exemplo de criação e implementação de um consumidor OLE DB, consulte [Criando um consumidor simples](../../data/oledb/creating-an-ole-db-consumer.md).  
+ Para obter um exemplo de criação e implementação de um consumidor OLE DB, consulte [criando um consumidor simples](../../data/oledb/creating-an-ole-db-consumer.md).  
   
- Também é possível obter exemplos de como usar os modelos do consumidor OLE DB nos seguintes exemplos:  
+ Você também pode encontrar exemplos de como usar o OLE DB modelos de consumidor nos exemplos a seguir:  
   
--   [CatDB](http://msdn.microsoft.com/pt-br/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/pt-br/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/pt-br/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
   
-## Consulte também  
- [Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,37 +1,35 @@
 ---
-title: "Como definir op&#231;&#245;es de LIB.EXE no ambiente de desenvolvimento do Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opções lib.exe, definindo no Ambiente de Desenvolvimento do Visual Studio"
+title: "Como: definir LIB. Opções de EXE no ambiente de desenvolvimento do Visual Studio | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: lib.exe options, setting in the Visual Studio Development Environment
 ms.assetid: b00da2bb-19e2-4078-a912-0d2e9294d7a7
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 45025d4af6f53fa082c3fe162cd940747b0ee10b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como definir op&#231;&#245;es de LIB.EXE no ambiente de desenvolvimento do Visual Studio
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-### Para definir opções de LIB.EXE no ambiente de desenvolvimento do Visual Studio  
+# <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Como definir opções de LIB.EXE no ambiente de desenvolvimento do Visual Studio
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Para definir LIB. Opções de EXE no ambiente de desenvolvimento do Visual Studio  
   
-1.  Acessar a caixa de diálogo de [Página de propriedades](../../ide/working-with-project-properties.md) do projeto.  
+1.  Acessar o projeto [página de propriedade](../../ide/working-with-project-properties.md) caixa de diálogo.  
   
-2.  Com um projeto de biblioteca ativa estático, selecione o nó de **Bibliotecário** .  
+2.  Com um projeto de biblioteca estática ativado, selecione o **bibliotecário** nó.  
   
-3.  Selecione a página de propriedades gerais do ou entrada\/saída.  
+3.  Selecione a página de propriedades geral tanto na entrada e saída.  
   
-4.  Modifique propriedades quando necessário.  
+4.  Modifique as propriedades conforme necessário.  
   
-## Consulte também  
- [Referência LIB](../../build/reference/lib-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de LIB](../../build/reference/lib-reference.md)

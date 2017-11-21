@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72489315ad23bf65086105c5d76da1edea48674d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Converte uma cadeia de caracteres multibyte na localidade atual para sua representação de cadeia de caracteres largos. Uma versão de [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,13 +103,13 @@ errno_t mbsrtowcs_s(
   
  Se `count` for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), `mbsrtowcs_s` converterá o máximo da cadeia de caracteres que caberá no buffer de destino ainda deixando espaço para um terminador nulo.  
   
- Se `mbsrtowcs_s` converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em caracteres largos da cadeia de caracteres convertidas e o terminador nulo em `*``pReturnValue`, desde que `pReturnValue` não seja um ponteiro nulo. Isso ocorrerá mesmo se o argumento `wcstr` for um ponteiro nulo e permitirá que você determine o tamanho do buffer. Observe que se `wcstr` for um ponteiro nulo, `count` será ignorado.  
+ Se `mbsrtowcs_s` converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em caracteres largos da cadeia de caracteres convertidas e o terminador nulo em `*pReturnValue`, desde que `pReturnValue` não seja um ponteiro nulo. Isso ocorrerá mesmo se o argumento `wcstr` for um ponteiro nulo e permitirá que você determine o tamanho do buffer. Observe que se `wcstr` for um ponteiro nulo, `count` será ignorado.  
   
  Se `wcstr` não for um ponteiro nulo, será atribuído um ponteiro nulo ao objeto de ponteiro apontado por `mbstr` se a conversão tiver parado porque um caractere nulo de terminação foi atingido. Caso contrário, será atribuído o endereço logo depois do último caractere multibyte convertido, se houver. Isso permite que uma chamada de função subsequente reinicie a conversão em que essa chamada é interrompida.  
   
  Se `mbstate` for um ponteiro nulo, um objeto estático de estado de conversão `mbstate_t` interno da biblioteca será usado. Como o objeto estático interno não é thread-safe, é recomendável que você sempre passe seu próprio valor `mbstate`.  
   
- Se `mbsrtowcs_s` encontrar um caractere multibyte que não é válido na localidade atual, ele colocará -1 em `*``pReturnValue`, definirá o buffer de destino `wcstr` para uma cadeia de caracteres vazia, definirá `errno` como `EILSEQ` e retornará `EILSEQ`.  
+ Se `mbsrtowcs_s` encontrar um caractere multibyte que não é válido na localidade atual, ele colocará -1 em `*pReturnValue`, definirá o buffer de destino `wcstr` para uma cadeia de caracteres vazia, definirá `errno` como `EILSEQ` e retornará `EILSEQ`.  
   
  Se as sequências apontadas por `mbstr` e por `wcstr` se sobrepuserem, o comportamento de `mbsrtowcs_s` será indefinido. `mbsrtowcs_s` é afetado pela categoria LC_TYPE da localidade atual.  
   

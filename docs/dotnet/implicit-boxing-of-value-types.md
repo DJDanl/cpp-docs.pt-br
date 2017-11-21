@@ -1,45 +1,44 @@
 ---
-title: "Convers&#227;o boxing impl&#237;cita de tipos de valor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __box"
-  - "boxing"
-  - "boxing, Palavra-chave __box"
-  - "boxing, Visual C++"
-  - "tipos de valor, demarcado"
+title: "Conversão Boxing implícita de tipos de valor | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- boxing, Visual C++
+- __box keyword
+- boxing
+- boxing, __box keyword
+- value types, boxed
 ms.assetid: 9597c92f-a3fe-44af-ad80-f9d656847a35
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f489c686a182840e142264476c3906d0cbfe97b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Convers&#227;o boxing impl&#237;cita de tipos de valor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O com os tipos de valor foi alterada de extensões gerenciadas para C\+\+ a [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)].  
+# <a name="implicit-boxing-of-value-types"></a>Conversão boxing implícita de tipos de valor
+A conversão boxing de tipos de valor foi alterado de extensões gerenciadas para C++ para Visual C++.  
   
- Design de idiomas, é imposta uma posição filosófica no lugar da experiência prática com o recurso e, na prática, era um erro.  Como uma analogia, no design original do idioma de herança múltipla, Stroustrup decidiu que um novo objeto virtual da classe base não pôde ser inicializado em um construtor de classe derivada e, consequentemente o idioma exigido que qualquer classificação do serviço como uma classe base virtual deve definir um construtor padrão.  É o construtor padrão que será invocado por uma derivação virtual subsequente.  
+ No design de idioma é imposto de uma posição filosóficas em vez de uma experiência prática com o recurso e, na prática, ele foi um erro. Como uma analogia, no original vários design de linguagem de herança, Stroustrup decidido que um objeto de subsistema de classe base virtual não pôde ser inicializado em um construtor de classe derivada e, portanto, o idioma necessário que qualquer classe que serve como uma base virtual classe deve definir um construtor padrão. É esse construtor padrão que poderia ser chamado por qualquer derivação virtual subsequente.  
   
- O problema de uma hierarquia virtual da classe base é de responsabilidade da inicialização de um objeto virtual compartilhado desloca com cada derivação subsequente.  Por exemplo, se eu defino uma classe base para que a inicialização exige a alocação de um buffer, o tamanho especificado pelo usuário desse buffer pode ser passado como um argumento para o construtor.  Se eu forneço em duas derivações virtuais subsequentes, chamar `inputb` e `outputb`, cada um fornece um valor específico para o construtor da classe base.  Agora, quando eu derivei uma classe de `in_out` de `inputb` e de `outputb`, nenhum desses valores ao subobjeto virtual compartilhado da classe base apreciàvel podem ser permitidos avaliar.  
+ O problema de uma hierarquia de classe base virtual é responsabilidade para a inicialização do objeto subdiretório virtual compartilhado é deslocado com cada derivação subsequente. Por exemplo, se definir uma classe base para que a inicialização exige a alocação de um buffer, o tamanho de buffer especificado pelo usuário pode ser passado como um argumento para o construtor. Se, em seguida, fornecer duas derivações virtuais subsequentes, chamá-los `inputb` e `outputb`, cada fornece um valor específico para o construtor de classe base. Agora, quando eu derivada um `in_out` classe tanto `inputb` e `outputb`, nenhum desses valores para o objeto de classe base virtual compartilhada sub pode facilmente possa avaliar.  
   
- Em virtude disso, o design original do idioma, Stroustrup recusou a inicialização explícita de uma classe base virtual na lista de inicialização do construtor de classe derivada.  Quando isso solucionar o problema, na prática a incapacidade direcionar a inicialização da classe base virtual provou impraticável.  Keith Gorlen de formato de integridade nacional, que haviam implementado uma versão de freeware de biblioteca da coleção de tagarelice chamou o nihcl, era uma voz da entidade de segurança em Stroustrup de convencimento que teve que vir superior com um design mais flexível do idioma.  
+ Portanto, no design original do idioma, Stroustrup não permitida a inicialização explícita de uma classe base virtual dentro da lista de inicialização de membro do construtor de classe derivada. Enquanto isso solucionou o problema, na prática, a incapacidade para direcionar a inicialização da classe base virtual tornava impracticable. Keith Gorlen da National Institute de integridade, que tinha implementado uma versão gratuitos da biblioteca de coleção SmallTalk chamada nihcl, foi uma voz princípio convencer Stroustrup que ele tinha a criar um design de idioma mais flexível.  
   
- Um princípio de design hierárquico orientado a objeto que mantém uma classe derivada se deve estar relacionada somente com a implementação não privada de suas classes base imediata.  Para oferecer suporte a um design flexível de inicialização para herança virtual, Stroustrup tinha que viole esse princípio.  A maioria de classe derivada em uma hierarquia assume a responsabilidade para qualquer inicialização virtual do subobjeto independentemente do nível de profundidade da hierarquia ocorre.  Por exemplo, `inputb` e `outputb` são ambos responsáveis por explicitamente inicializar sua classe base virtual imediata.  Quando `in_out` se deriva do `inputb` e `outputb`, `in_out` é responsável pela inicialização da classe base virtual uma vez removido, e a inicialização fez explícito dentro de `inputb` e `outputb` será suprimido.  
+ Um princípio de design hierárquico e orientada a objeto mantém que uma classe derivada deve se preocupar somente com a implementação não particular de suas classes base imediatas. Para dar suporte a um projeto de inicialização flexível de herança virtual, Stroustrup tinha que violam esse princípio. A classe mais derivada em uma hierarquia assume a responsabilidade por todas as inicializações subobjeto virtual independentemente da profundidade na hierarquia, ele ocorre. Por exemplo, `inputb` e `outputb` são responsáveis por explicitamente inicializar sua classe base virtual imediata. Quando `in_out` deriva de ambos `inputb` e `outputb`, `in_out` se torna responsável para a inicialização de uma vez removido a classe base virtual e a inicialização tornados explícita em `inputb` e `outputb` é suprimida.  
   
- Isso fornece a flexibilidade exigida por desenvolvedores de idioma, mas à custa de uma semântica complicada.  Essa carga de complicação é tirada acionado se nós restringimos uma classe base virtual para ser sem estado e para permitir apenas que especifica a interface.  Este é um idioma recomendado de design em C\+\+.  Dentro de CLR que programa, é aumentado na política com o tipo de interface.  
+ Isso fornece a flexibilidade necessária por desenvolvedores de idioma, mas às custas de uma semântica complicada. Esta sobrecarga do complicativo é retirada se podemos restringir uma classe base virtual sem estado e simplesmente permite especificar uma interface. Este é um idioma de design recomendado em C++. Na programação de CLR, ele é gerado para a política com o tipo de Interface.  
   
- Aqui está um exemplo simples de código e nesse caso, o com explícito é desnecessário:  
+ Aqui está um exemplo de código simples - e, nesse caso, a conversão explícita é necessário:  
   
 ```  
 // Managed Extensions for C++ requires explicit __box operation  
@@ -53,7 +52,7 @@ Console::WriteLine( "{0}\t{1}\t{2}", __box(0),
    __box(my1DIntArray->GetUpperBound(0)) );  
 ```  
   
- Como você pode ver, há muitos de boxing aceitos em.  Em [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)], o com o tipo de valor está implícito:  
+ Como você pode ver, há muito boxing acontecendo. Tipo de valor em Visual C++, conversão boxing é implícita:  
   
 ```  
 // new syntax makes boxing implicit  
@@ -65,6 +64,6 @@ Console::WriteLine( "{0}\t{1}\t{2}", 0,
    my1DIntArray->GetUpperBound( 0 ) );  
 ```  
   
-## Consulte também  
- [Tipos de valor e seus comportamentos \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Boxing](../windows/boxing-cpp-component-extensions.md)
+## <a name="see-also"></a>Consulte também  
+ [Tipos de valor e seus comportamentos (C + + CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [Conversão boxing](../windows/boxing-cpp-component-extensions.md)

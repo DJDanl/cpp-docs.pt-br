@@ -1,47 +1,28 @@
 ---
-title: omp_in_parallel | Documentos do Microsoft
+title: omp_in_parallel | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_in_parallel
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_in_parallel OpenMP function
+f1_keywords: omp_in_parallel
+dev_langs: C++
+helpviewer_keywords: omp_in_parallel OpenMP function
 ms.assetid: 1f01a1b4-78c5-496a-afb7-a43ecdad83d6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a40a6d7d080b536cc20d2e65d65bc2310f56d77
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 808efbaf0d59850550d5c47d64bd7aa8594e90eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompinparallel"></a>omp_in_parallel
-Retorna zero se for chamado de dentro de uma região paralela.  
+Retorna nulo se chamado de dentro de uma região parallel.  
   
 ## <a name="syntax"></a>Sintaxe  
   

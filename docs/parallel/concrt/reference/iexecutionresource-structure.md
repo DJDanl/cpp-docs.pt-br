@@ -1,11 +1,10 @@
 ---
-title: Estrutura IExecutionResource | Documentos do Microsoft
+title: Estrutura IExecutionResource | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,38 +14,21 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- IExecutionResource structure
+dev_langs: C++
+helpviewer_keywords: IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 13e9e103167009ae5c1ede792a8b550e07fd4fa0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iexecutionresource-structure"></a>Estrutura IExecutionResource
-Uma abstração de um thread de hardware.  
+Uma abstração para um thread de hardware.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,24 +42,24 @@ struct IExecutionResource;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Currentsubscriptionlevel](#currentsubscriptionlevel)|Retorna o número de processadores virtuais ativado raízes e inscritos externos threads atualmente associados ao thread de hardware subjacentes que representa esse recurso de execução.|  
-|[Getexecutionresourceid](#getexecutionresourceid)|Retorna um identificador exclusivo para o thread de hardware que representa esse recurso de execução.|  
-|[Getnodeid](#getnodeid)|Retorna um identificador exclusivo para o nó de processador que esse recurso de execução pertence.|  
-|[Iexecutionresource](#remove)|Esse recurso de execução retorna para o Gerenciador de recursos.|  
+|[: Currentsubscriptionlevel](#currentsubscriptionlevel)|Retorna o número de processadores virtuais ativado raízes e assinado threads externas associadas atualmente com o thread do hardware subjacente que representa esse recurso de execução.|  
+|[: Getexecutionresourceid](#getexecutionresourceid)|Retorna um identificador exclusivo para o thread de hardware que representa esse recurso de execução.|  
+|[: Getnodeid](#getnodeid)|Retorna um identificador exclusivo para o nó de processador que esse recurso de execução pertence.|  
+|[Iexecutionresource](#remove)|Retorna a esse recurso de execução para o Gerenciador de recursos.|  
   
 ## <a name="remarks"></a>Comentários  
- Recursos de execução podem ser autônomo ou associadas a raízes do processador virtual. Um recurso de execução autônoma é criado quando um thread em seu aplicativo cria uma assinatura de thread. Os métodos [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) e [Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) criar assinaturas de thread e retornar um `IExecutionResource` interface que representa a assinatura. Criar uma assinatura de thread é uma maneira de informar o Gerenciador de recursos que um determinado thread farão parte do trabalho na fila para um programador, juntamente com as raízes de processador virtual Gerenciador de recursos atribui ao Agendador. O Gerenciador de recursos usa as informações para evitar o aproveitamento de threads de hardware onde possível.  
+ Recursos de execução podem ser autônomo ou associada raízes de processador virtual. Um recurso de execução autônoma é criado quando um thread em seu aplicativo cria uma assinatura de thread. Os métodos [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) e [: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) criar assinaturas de thread e retornar um `IExecutionResource` interface que representa a assinatura. Criando uma assinatura de thread é uma maneira de informar o Gerenciador de recursos que um determinado thread farão parte do trabalho na fila para um agendador, juntamente com as raízes de processador virtual Gerenciador de recursos atribui ao Agendador. O Gerenciador de recursos usa as informações para evitar a threads de hardware de excesso de assinaturas onde possível.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IExecutionResource`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrtrm. h  
+ **Cabeçalho:** concrtrm.h  
   
  **Namespace:** simultaneidade  
   
-##  <a name="currentsubscriptionlevel"></a>Método Currentsubscriptionlevel  
- Retorna o número de processadores virtuais ativado raízes e inscritos externos threads atualmente associados ao thread de hardware subjacentes que representa esse recurso de execução.  
+##  <a name="currentsubscriptionlevel"></a>Método: Currentsubscriptionlevel  
+ Retorna o número de processadores virtuais ativado raízes e assinado threads externas associadas atualmente com o thread do hardware subjacente que representa esse recurso de execução.  
   
 ```
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
@@ -87,15 +69,15 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
  O nível de assinatura atual.  
   
 ### <a name="remarks"></a>Comentários  
- O nível de assinatura informa quantos threads em execução associados ao thread de hardware. Isso inclui apenas os threads, o Gerenciador de recursos está ciente de na forma de segmentos inscritos e raízes de processadores virtuais que estão em execução ativamente proxies de thread.  
+ O nível de assinatura informa quantos threads em execução associados ao thread de hardware. Isso inclui apenas o Gerenciador de recursos está ciente de na forma de threads assinados e raízes de processadores virtuais que estão em execução ativamente proxies de thread de threads.  
   
- Chamar o método [Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread), ou o método [Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) com o parâmetro `doSubscribeCurrentThread` definido como o valor `true` incrementa o nível de assinatura de um thread de hardware em um. Eles também retornam um `IExecutionResource` interface que representa a assinatura. Uma chamada correspondente para o [Iexecutionresource](#remove) diminui o nível da assinatura do thread de hardware por um.  
+ Chamar o método [: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread), ou o método [: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) com o parâmetro `doSubscribeCurrentThread` definido como o valor `true`aumenta o nível de assinatura de um thread de hardware por um. Também retornam um `IExecutionResource` interface que representa a assinatura. Uma chamada correspondente para o [Iexecutionresource](#remove) diminui o nível de assinatura do thread de hardware por um.  
   
- O ato de ativação de uma raiz de processador virtual usando o método [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#activate) incrementa o nível de assinatura de um thread de hardware em um. Os métodos [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#deactivate), ou [Iexecutionresource](#remove) diminuir o nível de assinatura por um quando invocado em uma raiz de processador virtual ativado.  
+ O ato de ativação de uma raiz de processador virtual usando o método [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#activate) aumenta o nível de assinatura de um thread de hardware por um. Os métodos [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#deactivate), ou [Iexecutionresource](#remove) diminuir o nível de assinatura por um quando invocado em uma raiz de processador virtual ativado.  
   
  O Gerenciador de recursos usa informações de nível de assinatura como uma das maneiras de determinar quando mover recursos entre os agendadores.  
   
-##  <a name="getexecutionresourceid"></a>Método Getexecutionresourceid  
+##  <a name="getexecutionresourceid"></a>Método: Getexecutionresourceid  
  Retorna um identificador exclusivo para o thread de hardware que representa esse recurso de execução.  
   
 ```
@@ -103,12 +85,12 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador exclusivo para o thread de hardware subjacentes desse recurso de execução.  
+ Um identificador exclusivo para o thread do hardware subjacente a esse recurso de execução.  
   
 ### <a name="remarks"></a>Comentários  
- Cada thread de hardware é atribuído um identificador exclusivo no tempo de execução de simultaneidade. Se vários recursos de execução são hardware associado thread, eles terão o mesmo identificador de recurso de execução.  
+ Cada thread de hardware é atribuído a um identificador exclusivo no tempo de execução de simultaneidade. Se vários recursos de execução são hardware associado thread, todos eles terão o mesmo identificador de recurso de execução.  
   
-##  <a name="getnodeid"></a>Método Getnodeid  
+##  <a name="getnodeid"></a>Método: Getnodeid  
  Retorna um identificador exclusivo para o nó de processador que esse recurso de execução pertence.  
   
 ```
@@ -119,12 +101,12 @@ virtual unsigned int GetNodeId() const = 0;
  Um identificador exclusivo para um nó de processador.  
   
 ### <a name="remarks"></a>Comentários  
- O tempo de execução de simultaneidade representa segmentos de hardware do sistema em grupos de nós de processador. Nós geralmente são derivados da topologia do hardware do sistema. Por exemplo, todos os processadores em um soquete específico ou um nó NUMA específico podem pertencer ao mesmo nó do processador. O Gerenciador de recursos atribui identificadores exclusivos para esses nós começando com `0` até e incluindo `nodeCount - 1`, onde `nodeCount` representa o número total de nós de processador no sistema.  
+ O tempo de execução de simultaneidade representa threads de hardware do sistema em grupos de nós de processador. Nós geralmente são derivados da topologia do hardware do sistema. Por exemplo, todos os processadores em um soquete específico ou um nó NUMA específico podem pertencer ao mesmo nó de processador. O Gerenciador de recursos atribui identificadores exclusivos para esses nós começando com `0` até e inclusive `nodeCount - 1`, onde `nodeCount` representa o número total de nós de processador no sistema.  
   
  A contagem de nós pode ser obtida da função [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="remove"></a>Método Iexecutionresource::  
- Esse recurso de execução retorna para o Gerenciador de recursos.  
+##  <a name="remove"></a>Método Iexecutionresource:  
+ Retorna a esse recurso de execução para o Gerenciador de recursos.  
   
 ```
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
@@ -135,17 +117,16 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
  Uma interface para o Agendador de fazer a solicitação para remover esse recurso de execução.  
   
 ### <a name="remarks"></a>Comentários  
- Use este método para retornar os recursos de execução autônoma, bem como recursos de execução associados raízes do processador virtual para o Gerenciador de recursos.  
+ Use este método para retornar os recursos de execução autônoma, bem como recursos de execução associados à raiz do processador virtual para o Gerenciador de recursos.  
   
- Se esse é um recurso de execução autônoma recebido de um dos métodos [Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread) ou [Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), chamando o método `Remove` terminará a assinatura de thread que o recurso foi criado para representar. São necessárias para encerrar todas as assinaturas de thread antes de desligar um proxy do Agendador e deve chamar `Remove` do thread que criou a assinatura.  
+ Se esse é um recurso de execução autônoma que você recebeu de um dos métodos [: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread) ou [: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), chamar o método `Remove` terminará a assinatura de threads que o recurso foi criado para representar. Você deve encerrar todas as assinaturas de thread antes de desligar um proxy do Agendador e deve chamar `Remove` do thread que criou a assinatura.  
   
- Raízes do processador virtual, também podem ser retornados para o Gerenciador de recursos invocando o `Remove` método, porque a interface `IVirtualProcessorRoot` herda o `IExecutionResource` interface. Talvez você precise retornar uma raiz virtual do processador em resposta a uma chamada para o [Removevirtualprocessors](ischeduler-structure.md#removevirtualprocessors) método, ou quando você terminar com uma raiz de processador virtual assinadas é obtido o [Createoversubscriber](ischedulerproxy-structure.md#createoversubscriber) método. Para raízes de processador virtual, não existem restrições em qual thread pode chamar o `Remove` método.  
+ Raízes de processador virtual, também podem ser retornados para o Gerenciador de recursos invocando o `Remove` método, porque a interface `IVirtualProcessorRoot` herda o `IExecutionResource` interface. Talvez seja necessário retornar uma raiz virtual do processador em resposta a uma chamada para o [: Removevirtualprocessors](ischeduler-structure.md#removevirtualprocessors) método, ou quando você terminar com uma raiz de processador virtual assinadas obtido do [ : Createoversubscriber](ischedulerproxy-structure.md#createoversubscriber) método. Para as raízes de processador virtual, não existem restrições em qual thread pode invocar o `Remove` método.  
   
- `invalid_argument`é lançada se o parâmetro `pScheduler` é definido como `NULL`.  
+ `invalid_argument`será gerada se o parâmetro `pScheduler` é definido como `NULL`.  
   
- `invalid_operation`é lançada se o parâmetro `pScheduler` é diferente do Agendador que este recurso de execução foi criado para ou, com um recurso de execução autônoma, se o thread atual é diferente do thread que criou a assinatura de thread.  
+ `invalid_operation`será gerada se o parâmetro `pScheduler` é diferente do Agendador que esse recurso de execução foi criado para ou, com um recurso de execução autônoma, se o thread atual for diferente do thread que criou a assinatura de thread.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Estrutura IVirtualProcessorRoot](ivirtualprocessorroot-structure.md)
-

@@ -1,40 +1,39 @@
 ---
-title: "2.9 Directive Nesting | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.9 aninhamento de diretiva | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6565a43c-fd2d-4366-8322-8d75e1b06600
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f1af9f515861863af5906c99d78aa66d08aa09b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.9 Directive Nesting
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aninhamento dinâmico das diretivas deve atender às seguintes regras:  
+# <a name="29-directive-nesting"></a>2.9 Aninhamento de diretiva
+Aninhamento dinâmico de diretivas deve seguir as regras a seguir:  
   
--   A  **paralela** diretiva dinamicamente dentro de outro  **paralela** logicamente estabelece uma nova equipe, que é composta de apenas o segmento atual, a menos que o paralelismo de aninhado é ativada.  
+-   Um **paralela** diretiva dinamicamente dentro de outro **paralela** logicamente estabelece uma nova equipe, que é composta de apenas o thread atual, a menos que aninhados paralelismo está habilitada.  
   
--   **para**,  **seções**, e  **único** diretivas que ligar para o mesmo  **paralela** não são permitidas aninhado em si.  
+-   **para**, **seções**, e **único** diretivas que se vincular à mesma **paralela** não podem ser aninhadas dentro de outro.  
   
--   **crítica** diretivas com o mesmo nome não pode ser aninhada dentro de si.  Observe que essa restrição não é suficiente para evitar o deadlock.  
+-   **crítico** diretivas com o mesmo nome não pode ser aninhado dentro de outro. Observe que essa restrição não é suficiente para evitar deadlock.  
   
--   **para**,  **seções**, e  **único** diretivas não são permitidas na extensão dinâmica de  **crítica**,  **ordenada**, e  **mestre** regiões se as diretivas de ligação com o mesmo  **paralela** como as regiões.  
+-   **para**, **seções**, e **único** diretivas não são permitidas na extensão dinâmica de **crítico**, **ordenados**, e **mestre** regiões se as diretivas de ligação ao mesmo **paralela** como as regiões.  
   
--   **barreira** diretivas não são permitidas na extensão dinâmica de  **para**,  **ordenada**,  **seções**,  **único**,  **mestre**, e  **crítica** regiões se as diretivas de ligação com o mesmo  **paralela** como as regiões.  
+-   **barreira** diretivas não são permitidas na extensão dinâmica de **para**, **ordenados**, **seções**, **único**, **mestre**, e **crítico** regiões se as diretivas de ligação ao mesmo **paralela** como as regiões.  
   
--   **mestre** diretivas não são permitidas na extensão dinâmica de  **para**,  **seções**, e  **único** diretivas se a  **mestre** diretivas ligar para o mesmo  **paralela** como as diretivas de compartilhamento de trabalho.  
+-   **mestre** diretivas não são permitidas na extensão dinâmica de **para**, **seções**, e **único** diretivas se o **mestre** diretivas ligar à mesma **paralela** como as diretivas de compartilhamento de trabalho.  
   
--   **ordenada** diretivas não são permitidas na extensão dinâmica de  **crítica** regiões se as diretivas de ligação com o mesmo  **paralela** como as regiões.  
+-   **ordenados** diretivas não são permitidas na extensão dinâmica de **crítico** regiões se as diretivas de ligação ao mesmo **paralela** como as regiões.  
   
--   Qualquer diretiva que é permitida quando executada dinamicamente dentro de uma região paralela também é permitida quando executado fora de uma região paralela.  Quando executada dinamicamente fora de uma região paralela especificado pelo usuário, a diretiva é executada por uma equipe composta apenas o segmento principal.
+-   Nenhuma diretiva que é permitida quando executado dinamicamente dentro de uma região parallel também é permitida quando executado fora de uma região parallel. Quando executado dinamicamente fora de uma região parallel especificado pelo usuário, a diretiva é executada por uma equipe composta somente o thread principal.

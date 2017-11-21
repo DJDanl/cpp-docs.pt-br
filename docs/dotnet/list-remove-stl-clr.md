@@ -1,46 +1,43 @@
 ---
-title: "list::remove (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::remove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro remove [STL/CLR]"
+title: 'List:: Remove (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::remove
+dev_langs: C++
+helpviewer_keywords: remove member [STL/CLR]
 ms.assetid: eaf598ee-e8fd-4cc0-be69-ca81a80e1d51
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 306c758ba2278fcac9ceb0e6b701d298804e8b6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# list::remove (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listremove-stlclr"></a>list::remove (STL/CLR)
 Remove um elemento com um valor especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void remove(value_type val);  
 ```  
   
-#### Parâmetros  
- val  
+#### <a name="parameters"></a>Parâmetros  
+ Val  
  Valor do elemento a ser removido.  
   
-## Comentários  
- A função de membro remove um elemento na sequência controlada para que `((System::Object^)``val``)->Equals((System::Object^)x)` é true \(se houver\).  Use\-a para apagar um elemento arbitrário com o valor especificado.  
+## <a name="remarks"></a>Comentários  
+ A função de membro remove um elemento na sequência controlada para o qual `((System::Object^)val)->Equals((System::Object^)x)` é verdadeiro (se houver). Você pode usá-lo para apagar um elemento arbitrário com o valor especificado.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_list_remove.cpp   
@@ -75,16 +72,19 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**  
- **c**   
-## Requisitos  
- cliext \<\/lista de**Cabeçalho:** \>  
+```Output  
+a b c  
+a b c  
+a c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)

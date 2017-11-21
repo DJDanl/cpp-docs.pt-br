@@ -1,46 +1,27 @@
 ---
-title: RC2114 de erro do compilador de recurso | Documentos do Microsoft
+title: RC2114 de erro do compilador de recurso | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RC2114
-dev_langs:
-- C++
-helpviewer_keywords:
-- RC2114
+f1_keywords: RC2114
+dev_langs: C++
+helpviewer_keywords: RC2114
 ms.assetid: abdfdc46-6601-451f-8e81-81e92bcd2208
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bd13ca08a53a96db101770dfeeec9de12afb4c20
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: a3867fce7a71d8cc9c00d8fda29bf2b61d85273c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="resource-compiler-error-rc2114"></a>Erro RC2114 (compilador de recurso)
 nome da classe de controle esperado  
   
- O `class` campo de uma instrução de controle no **caixa de diálogo** instrução deve ser um dos seguintes tipos: botão, COMBOBOX, editar, LISTBOX, barra de ROLAGEM, estático, ou definido pelo usuário. Verifique se que a classe está escrita corretamente.
+ O `class` campo de uma instrução de controle no **diálogo** instrução deve ser um dos seguintes tipos: botão, caixa de COMBINAÇÃO, editar, caixa de listagem, barra de ROLAGEM, estático, ou definido pelo usuário. Verifique se que a classe está escrita corretamente.

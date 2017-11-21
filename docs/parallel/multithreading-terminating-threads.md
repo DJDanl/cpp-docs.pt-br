@@ -1,70 +1,68 @@
 ---
-title: "Multithread: encerrando threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CREATE_SUSPENDED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método AfxEndThread"
-  - "multithreading [C++], encerrando threads"
-  - "encerramento prematuro de threads"
-  - "iniciando threads"
-  - "parando threads"
-  - "encerrando threads"
-  - "threading [C++], parando threads"
-  - "threading [MFC], encerrando threads"
+title: 'Multithread: Encerrando Threads | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CREATE_SUSPENDED
+dev_langs: C++
+helpviewer_keywords:
+- premature thread termination
+- starting threads
+- threading [MFC], terminating threads
+- multithreading [C++], terminating threads
+- threading [C++], stopping threads
+- terminating threads
+- stopping threads
+- AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 942f34f8ef34a14a2e59e5a4a7e7ca9c3356f62b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Multithread: encerrando threads
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Duas situações normais fazem com que um segmento seja finalizado: a função de controle é encerrada ou o segmento não pode ser executado para a conclusão.  Se um processador de texto usou um thread para impressão em segundo plano, a função de controle finalizaria normalmente se a impressão fosse concluída com êxito.  Se o usuário deseja cancelar a impressão, porém, o thread de impressão em segundo plano tem que ser finalizado prematuramente.  Este tópico explica como implementar cada situação e como obter o código de saída de um thread depois que ele é finalizado.  
+# <a name="multithreading-terminating-threads"></a>Multithread: encerrando threads
+Duas situações normais fazer com que um thread encerrar: a função de controle for encerrada ou o thread não tem permissão para executar até a conclusão. Se um processador de texto usado um thread para impressão em segundo plano, a função controlar seria encerrar normalmente se a impressão concluída com êxito. Se o usuário deseja cancelar a impressão, no entanto, o thread de impressão em segundo plano foi encerrada prematuramente. Este tópico explica como implementar cada situação e como obter o código de saída de um thread após ele ser terminado.  
   
--   [Encerramento Normal de Thread](#_core_normal_thread_termination)  
+-   [Encerramento normal de threads](#_core_normal_thread_termination)  
   
--   [Terminação prematura de thread](#_core_premature_thread_termination)  
+-   [Encerramento prematuro de threads](#_core_premature_thread_termination)  
   
--   [Recuperando o código de saída de um thread](#_core_retrieving_the_exit_code_of_a_thread)  
+-   [Recuperar o código de saída de Thread](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a> Encerramento Normal de Thread  
- Para um thread de trabalho, o encerramento normal do thread é simples: saia da função de controle e retorne um valor que signifique a razão para o encerramento.  Você pode usar a função [AfxEndThread](../Topic/AfxEndThread.md) ou uma instrução `return`.  Em geral, 0 significa conclusão com êxito, mas depende da sua configuração.  
+##  <a name="_core_normal_thread_termination"></a>Encerramento normal de threads  
+ Para um thread de trabalho, o encerramento normal de threads é simple: a função de controle de saída e retornar um valor que indica o motivo do término. Você pode usar o [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) função ou um `return` instrução. Normalmente, 0 significa conclusão com êxito, mas que fica a seu critério.  
   
- Para um encadeamento de interface do usuário, o processo é igualmente simples: de dentro do encadeamento de interface do usuário, chame [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) no [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  O único parâmetro que leva **PostQuitMessage** é o código de saída de thread.  Quanto a threads de trabalho, 0 significa normalmente conclusão com êxito.  
+ Um thread de interface do usuário, o processo é simple: de dentro do thread de interface do usuário, chame [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) no [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. O único parâmetro que **PostQuitMessage** usa é o código de saída do thread. Para threads de trabalho, 0 significa normalmente conclusão com êxito.  
   
-##  <a name="_core_premature_thread_termination"></a> Terminação prematura de thread  
- A terminação prematura de um thread é quase simples: chame [AfxEndThread](../Topic/AfxEndThread.md) de dentro do thread.  Passe o código de saída desejado como o único parâmetro.  Isso para a execução do thread, desaloca a pilha do thread, dispara todas as DLLs anexadas ao thread e exclui o objeto de thread da memória.  
+##  <a name="_core_premature_thread_termination"></a>Encerramento prematuro de threads  
+ Encerrar um thread prematuramente é quase tão simple: chamar [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) de dentro do thread. Passe o código de saída desejado como o único parâmetro. Isso interrompe a execução do thread, desaloca a pilha do thread, desconecta todas as DLLs anexadas ao thread e exclui o objeto de segmento de memória.  
   
- `AfxEndThread` deve ser chamado de dentro do thread para ser encerrado.  Se deseja encerrar um thread a partir de outro thread, você deve configurar um método de comunicação entre os dois threads.  
+ `AfxEndThread`deve ser chamado de dentro de thread a ser encerrada. Se você quiser encerrar um thread de outro thread, você deve configurar um método de comunicação entre os dois threads.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Recuperando o código de saída de um thread  
- Para obter o código de saída de trabalhador ou o encadeamento de interface do usuário, chame a função [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) .  Para obter informações sobre essa função, consulte o [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  Essa função usa o manipulador para o thread \(armazenado no membro de dados `m_hThread` de objetos `CWinThread`\) e o endereço de `DWORD`.  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Recuperar o código de saída de Thread  
+ Para obter o código de saída do trabalhador ou o thread de interface do usuário, chame o [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) função. Para obter informações sobre essa função, consulte o [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Essa função usa o identificador para o thread (armazenados no `m_hThread` membro de dados de `CWinThread` objetos) e o endereço de um `DWORD`.  
   
- Se o segmento ainda está ativo, **GetExitCodeThread** coloca **STILL\_ACTIVE** no endereço `DWORD` fornecido; caso contrário, o código de saída é colocado neste endereço.  
+ Se o thread ainda estiver ativo, **GetExitCodeThread** coloca **STILL_ACTIVE** fornecido `DWORD` endereço; caso contrário, o código de saída é colocado nesse endereço.  
   
- A recuperação do código de saída do objeto [CWinThread](../mfc/reference/cwinthread-class.md) usa uma etapa adicional.  Por padrão, quando um thread `CWinThread` finaliza, o objeto de thread é excluído.  Isso significa que você não pode acessar o membro de dados `m_hThread` porque o objeto `CWinThread` não existe mais.  Para evitar esta situação, execute um dos procedimentos a seguir:  
+ Recuperar o código de saída [CWinThread](../mfc/reference/cwinthread-class.md) objetos usa uma etapa extra. Por padrão, quando um `CWinThread` thread termina, o objeto de thread é excluído. Isso significa que você não pode acessar o `m_hThread` membro de dados porque o `CWinThread` objeto não existe mais. Para evitar essa situação, siga um destes procedimentos:  
   
--   Defina o membro de dados `m_bAutoDelete` como **FALSO**.  Isso permite que o objeto `CWinThread` sobreviva depois que o segmento tiver sido terminado.  Em seguida, é possível acessar o membro de dados `m_hThread` após a thread ser encerrada.  Porém, se usar essa técnica, você será responsável por destruir o objeto `CWinThread`, porque a estrutura não o excluirá automaticamente.  Esse é o método preferido.  
+-   Definir o `m_bAutoDelete` membro de dados para **FALSE**. Isso permite que o `CWinThread` objeto sobreviva depois que o thread foi encerrado. Você pode acessar o `m_hThread` membro de dados depois que o thread foi encerrado. Se você usar essa técnica, no entanto, você é responsável por destruir o `CWinThread` porque a estrutura não excluirá automaticamente-lo para você. Esse é o método preferencial.  
   
--   Armazene o manipulador do thread separadamente.  Depois que o thread é criado, copie seu membro de dados `m_hThread` \(usando **::DuplicateHandle**\) para outra variável e acesse\-o por meio dessa variável.  Dessa maneira, o objeto é automaticamente excluído quando a terminação ocorre e você ainda pode descobrir porque o thread foi terminado.  Cuidado para o thread não terminar para você poder duplicar o identificador.  A maneira mais segura de fazer isso é passar **CREATE\_SUSPENDED** para [AfxBeginThread](../Topic/AfxBeginThread.md), armazenar o manipulador e então retomar o thread chamando [ResumeThread](../Topic/CWinThread::ResumeThread.md).  
+-   Armazene o identificador do segmento separadamente. Depois que o thread é criado, copie o `m_hThread` membro de dados (usando **:: DuplicateHandle**) a outra variável e acessá-lo através dessa variável. Dessa forma, o objeto é excluída automaticamente quando ocorre um encerramento e você ainda pode descobrir por que o thread foi encerrado. Tenha cuidado para que o thread não terminar antes de você pode duplicar o identificador. A maneira mais segura para fazer isso é passar **CREATE_SUSPENDED** para [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), armazenar o identificador e, em seguida, reiniciar o thread chamando [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
   
- Qualquer um desses métodos permite que você determine por que um objeto `CWinThread` foi finalizado.  
+ O método permite que você determine por que um `CWinThread` objeto encerrado.  
   
-## Consulte também  
- [Multithread com C\+\+ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
- [\_endthread, \_endthreadex](../Topic/_endthread,%20_endthreadex.md)   
- [\_beginthread, \_beginthreadex](../Topic/_beginthread,%20_beginthreadex.md)   
+## <a name="see-also"></a>Consulte também  
+ [Multithread com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+ [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

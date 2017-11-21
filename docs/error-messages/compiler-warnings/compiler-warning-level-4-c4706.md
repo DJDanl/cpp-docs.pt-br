@@ -1,47 +1,28 @@
 ---
-title: "Compilador aviso (nível 4) C4706 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4706 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4706
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4706
+f1_keywords: C4706
+dev_langs: C++
+helpviewer_keywords: C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d4f4edcbf4a4cb147c2acb8e6cb530a4a0f9a9a9
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: b128a60ce35bc6ec7cce7e10c257fe63d926fa46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4706"></a>Compilador C4706 de aviso (nível 4)
-atribuição dentro de expressão condicional  
+atribuição em expressão condicional  
   
  O valor de teste em uma expressão condicional foi o resultado de uma atribuição.  
   
@@ -61,7 +42,7 @@ int main()
 }  
 ```  
   
- O aviso ocorrerá mesmo se você duplicar os parênteses ao redor da condição de teste:  
+ O aviso ocorrerá mesmo se você duplicar os parênteses delimitando a condição de teste:  
   
 ```  
 // C4706b.cpp  
@@ -75,7 +56,7 @@ int main()
 }  
 ```  
   
- Se sua intenção é uma relação de teste e não podem fazer uma atribuição, use o `==` operador. Por exemplo, a seguinte linha testes se um e b são iguais:  
+ Se sua intenção for uma relação de teste e não podem fazer uma atribuição, use o `==` operador. Por exemplo, a seguinte linha testes se um e b são iguais:  
   
 ```  
 // C4706c.cpp  
@@ -89,7 +70,7 @@ int main()
 }  
 ```  
   
- Se você pretende fazer o teste o resultado de uma atribuição de valor, teste para garantir que a atribuição é diferente de zero ou não nulo. Por exemplo, o código a seguir não irá gerar esse aviso:  
+ Se você pretende fazer com que o teste o resultado de uma atribuição de valor, teste para garantir que a atribuição é diferente de zero ou não nulo. Por exemplo, o código a seguir não gerará este aviso:  
   
 ```  
 // C4706d.cpp  

@@ -1,68 +1,63 @@
 ---
-title: "Fun&#231;&#227;o CreateActivationFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreateActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função CreateActivationFactory"
+title: "Função CreateActivationFactory | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreateActivationFactory
+dev_langs: C++
+helpviewer_keywords: CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e36a76de38290cfd1571f1c5743745561f14e438
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Fun&#231;&#227;o CreateActivationFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria uma fábrica que gerencia instâncias da classe especificada que pode ser alternada por Tempo de Execução do Windows.  
+# <a name="createactivationfactory-function"></a>Função CreateActivationFactory
+Cria uma fábrica que produz instâncias da classe especificada que podem ser ativadas pelo tempo de execução do Windows.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-  
 template<typename Factory>  
    inline HRESULT STDMETHODCALLTYPE CreateActivationFactory(  
-      _In_ unsigned int *flags,    
-      _In_ const CreatorMap* entry,   
+      _In_ unsigned int *flags,        _In_ const CreatorMap* entry,   
       REFIID riid,   
      _Outptr_ IUnknown **ppFactory) throw();  
   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `flags`  
- Uma combinação de uma ou mais valores de enumeração [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) .  
+ Uma combinação de um ou mais [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valores de enumeração.  
   
  `entry`  
- Ponteiro para [CreatorMap](../windows/creatormap-structure.md) que contém informações de inicialização e do registro sobre o parâmetro `riid`.  
+ Ponteiro para um [CreatorMap](../windows/creatormap-structure.md) que contém informações de inicialização e o registro sobre parâmetro `riid`.  
   
  `riid`  
- Referência a uma ID de interface  
+ Referência a uma ID de interface.  
   
  `ppFactory`  
- Se essa operação for concluída com êxito, um ponteiro para uma fábrica de ativação.  
+ Se essa operação for concluída com êxito, um ponteiro para um alocador de ativação.  
   
-## Valor de Retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que declara o erro.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
   
-## Comentários  
- Um erro de afirmar é emitido se o parâmetro `Factory` do modelo não se deriva da interface IActivationFactory.  
+## <a name="remarks"></a>Comentários  
+ Um erro de asserção é emitido se o parâmetro de modelo `Factory` não deriva da interface IActivationFactory.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

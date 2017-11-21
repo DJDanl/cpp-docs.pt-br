@@ -1,37 +1,35 @@
 ---
-title: "Arquivos gerados pelo Assistente do Provedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Provedores OLE DB, arquivos gerados por assistente"
+title: Arquivos gerados pelo assistente provedor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 24da0ab4b3ab27cdb9a70c0f9cc05e3ca86e117d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Arquivos gerados pelo Assistente do Provedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O assistente do provedor OLE DB de ATL gerencia os seguintes arquivos.  Os tópicos a seguir usam o nome curto “MyProvider”, mas os nomes exatos de arquivo dependem da opção que você fez ao criar o provedor.  
+# <a name="provider-wizard-generated-files"></a>Arquivos gerados pelo Assistente do Provedor
+O OLE DB Provider assistente ATL gera os seguintes arquivos. Os tópicos a seguir usam o nome curto "MyProvider", mas os nomes de arquivo exatos dependem da escolha feita ao criar o provedor.  
   
 |Nome do arquivo|Descrição|  
-|---------------------|---------------|  
-|MyProviderRS.cpp|Contém o método de `Execute` auxiliar de comando e o mapa da coluna do provedor.|  
-|MyProviderDS.h|Implementa o objeto de fonte de dados.  Esse arquivo de cabeçalho contém o mapa para propriedades da fonte de dados.|  
-|MyProviderRS.h|Implementa os objetos de comando e do conjunto de linhas.  Esse arquivo de cabeçalho contém o mapa para propriedades de conjunto de linhas e do comando.|  
-|MyProviderSess.h|Implementa o objeto de sessão.  Esse arquivo de cabeçalho contém o mapa de propriedade para as propriedades da sessão.|  
-|MyProvider.rgs|Contém os objetos registrados gerados pelo assistente do provedor OLE DB.|  
+|---------------|-----------------|  
+|MyProviderRS.cpp|Contém o auxiliar do comando `Execute` método e o mapa de coluna do provedor.|  
+|Myproviderds. H|Implementa o objeto de fonte de dados. Esse arquivo de cabeçalho contém o mapa de propriedade para propriedades de fonte de dados.|  
+|Myproviderrs. H|Implementa os objetos de comando e o conjunto de linhas. Esse arquivo de cabeçalho contém o mapa de propriedade para propriedades de conjunto de linhas e comando.|  
+|Myprovidersess. H|Implementa o objeto de sessão. Esse arquivo de cabeçalho contém o mapa de propriedade para propriedades de sessão.|  
+|MyProvider.rgs|Contém os objetos registrados gerados pelo Assistente do provedor de banco de dados OLE.|  
   
-## Consulte também  
- [Criando um provedor de banco de dados OLE](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Consulte também  
+ [Criando um provedor do OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

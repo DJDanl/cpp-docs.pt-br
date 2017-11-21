@@ -1,49 +1,48 @@
 ---
-title: "Macros de nome de arquivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macros de nome de arquivo em NMAKE"
-  - "Macros , NMAKE"
-  - "programa NMAKE, macros de nome de arquivo"
+title: Macros de nome de arquivo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, NMAKE
+- filename macros in NMAKE
+- NMAKE program, filename macros
 ms.assetid: 20afd6b3-5b6c-4e33-9d01-309ce98ef9db
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: faa791e75817e3845b0f445cc741c88b7461a7c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Macros de nome de arquivo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Macros de nome de arquivo são predefinidos como os nomes dos arquivos especificados na dependência \(especificações não completas de nome de arquivo no disco\).  Esses macros não precisam ser incluídos entre parênteses quando invocados; especificar apenas $ como mostrado.  
+# <a name="filename-macros"></a>Macros de nome de arquivo
+Macros de nome de arquivo são predefinidas como nomes de arquivo especificado na dependência (nome de arquivo completo não especificações no disco). Essas macros não precisam ser colocados entre parênteses quando invocado; Especifique apenas um $ conforme mostrado.  
   
 |Macro|Significado|  
-|-----------|-----------------|  
-|**$@**|O nome completo de destino \(caminho atual, base, nome de extensão\), como especificado no momento.|  
-|**$$@**|O nome completo de destino \(caminho atual, base, nome de extensão\), como especificado no momento.  Válido apenas como um dependente em uma dependência.|  
-|**$\***|Nome do caminho atual e da base de destino menos a extensão de arquivo.|  
-|**$\*\***|Todos os dependentes de destino atual.|  
-|**$?**|Todos os dependentes com um carimbo de data\/hora posterior ao destino atual.|  
-|**$\<**|Arquivo dependente com um carimbo de data\/hora posterior ao destino atual.  Válido apenas os comandos em regras de inferência.|  
+|-----------|-------------|  
+|**$@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado.|  
+|**$$@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado. Válido apenas como um dependente em uma dependência.|  
+|**$\***|Nome do destino atual de base e o caminho menos extensão de arquivo.|  
+|**$\*\***|Todos os dependentes do destino atual.|  
+|**$?**|Todos os dependentes com um carimbo de hora posterior que o destino atual.|  
+|**$<**|Arquivo dependente com um carimbo de hora posterior que o destino atual. Válido somente em comandos em regras de inferência.|  
   
- Para especificar a parte de uma macro predefinido de nome de arquivo, acrescente um modificador macro e incluir a macro alterado entre parênteses.  
+ Para especificar a parte de uma macro de nome de arquivo predefinido, acrescente um modificador de macro e colocar a macro modificada entre parênteses.  
   
-|Modificador|Resultante parte do nome do arquivo|  
-|-----------------|-----------------------------------------|  
-|**D**|A unidade mais o diretório|  
-|**B**|Baseie o nome|  
-|**F**|Baseie o nome mais a extensão|  
-|**R**|A unidade mais o diretório e o nome de base|  
+|Modificador|Parte do nome de arquivo resultante|  
+|--------------|-----------------------------|  
+|**D**|Unidade e diretório|  
+|**B**|Nome de base|  
+|**F**|Nome de base e de extensão|  
+|**R**|Unidade mais o diretório mais o nome de base|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Macros NMAKE especiais](../build/special-nmake-macros.md)

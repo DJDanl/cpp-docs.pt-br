@@ -1,55 +1,54 @@
 ---
-title: "Fun&#231;&#245;es de biblioteca em tempo de execu&#231;&#227;o C para controle de thread | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função _beginthread"
-  - "Função _beginthreadex"
-  - "Função _endthread"
-  - "Função _endthreadex"
-  - "multithreading [C++], controlando threads"
-  - "threading [C++], controlando threads"
+title: "Funções de biblioteca de tempo de execução do C para controle de Thread | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- _beginthread function
+- _endthread function
+- threading [C++], controlling threads
+- multithreading [C++], controlling threads
+- _beginthreadex function
+- _endthreadex function
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f9691a4edcbf617be415ba8d48d80938cba4979
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Fun&#231;&#245;es de biblioteca em tempo de execu&#231;&#227;o C para controle de thread
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Todos os programas do Win32 têm pelo menos um thread.  Qualquer thread pode criar threads adicionais.  Um thread pode concluir seu trabalho rapidamente e depois encerrar, ou pode permanecer ativa para a duração do programa.  
+# <a name="c-run-time-library-functions-for-thread-control"></a>Funções de biblioteca em tempo de execução C para controle de thread
+Todos os programas Win32 tem pelo menos um thread. Qualquer thread pode criar threads adicionais. Um thread pode concluir seu trabalho rapidamente e, em seguida, encerrar ou ele pode permanecer ativo durante a vida útil do programa.  
   
- As bibliotecas de tempo de execução de LIBCMT e de MSVCRT C fornece as seguintes funções para a criação e a fim do thread: [\_beginthread, \_beginthreadex](../Topic/_beginthread,%20_beginthreadex.md) e [\_endthread, \_endthreadex](../Topic/_endthread,%20_endthreadex.md).  
+ As bibliotecas de tempo de execução LIBCMT e MSVCRT C fornecem as seguintes funções de criação de threads e a terminação: [beginthread, beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) e [endthread, endthreadex](../c-runtime-library/reference/endthread-endthreadex.md).  
   
- As funções de `_beginthread` e de `_beginthreadex` criam um thread novo e retorna um identificador de thread se a operação foi bem\-sucedida.  O thread termina automaticamente se concluir a execução, ou pode finalizar\-se com uma chamada a `_endthread` ou a `_endthreadex`.  
+ O `_beginthread` e `_beginthreadex` funções de criar um novo thread e retornar um identificador de thread se a operação for bem-sucedida. O thread será encerrado automaticamente se ele conclui a execução ou ele pode ser encerrado em si com uma chamada para `_endthread` ou `_endthreadex`.  
   
 > [!NOTE]
->  Se você pretende chamar rotinas de tempo de execução C de um programa compilado com Libcmt.lib, você deve iniciar os threads com a função de `_beginthread` ou de `_beginthreadex` .  Não use as funções `ExitThread` e `CreateThread`do Win32.  Usar `SuspendThread` pode resultar em um deadlock quando mais de um thread é bloqueado esperando o thread suspenso para concluir seu acesso à estrutura de dados de tempo de execução c.  
+>  Se você pretende chamar rotinas de tempo de execução do C a partir de um programa compilado com Libcmt.lib, você deve iniciar seus threads com a `_beginthread` ou `_beginthreadex` função. Não use as funções do Win32 `ExitThread` e `CreateThread`. Usando `SuspendThread` pode levar a um deadlock quando mais de um thread está bloqueado, aguardando o thread suspenso concluir seu acesso a uma estrutura de dados de tempo de execução C.  
   
-##  <a name="_core_the__beginthread_function"></a> As funções de \_beginthread e de \_beginthreadex  
- As funções de `_beginthread` e de `_beginthreadex` criam um thread novo.  Um thread compartilha os segmentos de código e de dados de um processo com outros threads no processo mas tem seus próprios valores exclusivos do registro, espaço de endereço de pilha, e instrução atual.  O sistema da CPU tempo a cada thread, de forma que todos os threads em um processo possam ser executadas simultaneamente.  
+##  <a name="_core_the__beginthread_function"></a>As funções beginthread e beginthreadex  
+ O `_beginthread` e `_beginthreadex` funções de criar um novo thread. Um thread compartilha os segmentos de código e os dados de um processo com outros threads no processo, mas tem seu próprio valores do registro exclusivo, o espaço de pilha e o endereço da instrução atual. O sistema dá tempo de CPU para cada thread, para que todos os threads em um processo podem ser executados simultaneamente.  
   
- `_beginthread` e `_beginthreadex` são semelhantes à função de [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) na API do Win32 mas têm essas diferenças:  
+ `_beginthread`e `_beginthreadex` são semelhantes a [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) função na API do Win32, mas tem essas diferenças:  
   
--   Inicializar determinadas variáveis da biblioteca de tempo de execução C.  Isso é importante somente se você usar a biblioteca de tempo de execução C em seus threads.  
+-   Eles inicializarem determinadas variáveis de biblioteca de tempo de execução C. Isso é importante apenas se você usar a biblioteca de tempo de execução do C em seu threads.  
   
--   ajuda de`CreateThread` fornecem controle sobre os atributos de segurança.  Você pode usar essa função para iniciar um thread em um estado suspenso.  
+-   `CreateThread`fornece controle sobre os atributos de segurança. Você pode usar essa função para iniciar um thread em um estado suspenso.  
   
- `_beginthread` e `_beginthreadex` retorna um identificador para o novo thread se bem\-sucedido ou um código de erro se houve um erro.  
+ `_beginthread`e `_beginthreadex` retornar um identificador para o novo thread se for bem-sucedido ou um código de erro, se houver um erro.  
   
-##  <a name="_core_the__endthread_function"></a> As funções de \_endthread e de \_endthreadex  
- A função de [\_endthread](../Topic/_endthread,%20_endthreadex.md) finaliza um thread criado por `_beginthread` \(e mesma forma, `_endthreadex` finaliza um thread criado por `_beginthreadex`\).  Os threads serão encerradas automaticamente quando for concluído.  `_endthread` e `_endthreadex` são úteis para terminação condicional do thread.  Um thread dedicado a comunicação que processam, por exemplo, pode parar se for não é possível obter o controle da porta de comunicação.  
+##  <a name="_core_the__endthread_function"></a>As funções endthread e endthreadex  
+ O [endthread](../c-runtime-library/reference/endthread-endthreadex.md) função encerra um thread criado por `_beginthread` (e da mesma forma, `_endthreadex` encerra um thread criado pelo `_beginthreadex`). Threads encerrar automaticamente quando ele terminar. `_endthread`e `_endthreadex` são úteis para encerramento condicional de dentro de um thread. Um thread dedicado à comunicação do processamento, por exemplo, pode encerrar se não for possível obter o controle da porta de comunicação.  
   
-## Consulte também  
- [Multithread com C e Win32](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>Consulte também  
+ [Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)

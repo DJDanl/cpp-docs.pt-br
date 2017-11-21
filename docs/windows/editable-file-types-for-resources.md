@@ -1,48 +1,46 @@
 ---
-title: "Tipos de arquivo edit&#225;veis para recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.resource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de arquivo [C++], para recursos"
-  - "Arquivos  [C++], tipos editáveis"
-  - "recursos [Visual Studio], edição"
+title: "Tipos de arquivo editáveis para recursos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.resource
+dev_langs: C++
+helpviewer_keywords:
+- file types [C++], for resources
+- resources [Visual Studio], editing
+- files [C++], editable types
 ms.assetid: c40f9204-f2f2-400b-9f53-53b7bf291356
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 293a380830a5f9650e6924cc76a9c354786f3f66
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Tipos de arquivo edit&#225;veis para recursos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="editable-file-types-for-resources"></a>Tipos de arquivo editáveis para recursos
 Você pode abrir os seguintes tipos de arquivos e editar os recursos que eles contêm.  
   
 |Nome do arquivo|Descrição|  
-|---------------------|---------------|  
-|RC|Arquivos de script de recurso.|  
+|---------------|-----------------|  
+|. rc|Arquivos de script de recurso.|  
 |. rct|Arquivos de modelo de recurso.|  
 |. res|Arquivos de recurso.|  
 |.resx|Arquivos de recurso gerenciado.|  
-|.exe|Arquivos executáveis.  Só pode ser editado no Windows 2000 e sistemas operacionais posteriores.|  
-|. dll|Arquivos de biblioteca de vínculo dinâmico.  Só pode ser editado no Windows 2000 e sistemas operacionais posteriores.|  
+|.exe|Arquivos executáveis. Só pode ser editada no Windows 2000 e sistemas operacionais posteriores.|  
+|. dll|Arquivos de biblioteca de vínculo dinâmico. Só pode ser editada no Windows 2000 e sistemas operacionais posteriores.|  
 |. bmp,. ico,. dib e. cur|Arquivos de bitmap, ícone, barra de ferramentas e cursor.|  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [Recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Consulte também  
- [Arquivos de recursos](../mfc/resource-files-visual-studio.md)
+## <a name="see-also"></a>Consulte também  
+ [Arquivos de recurso](../windows/resource-files-visual-studio.md)

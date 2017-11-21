@@ -1,54 +1,52 @@
 ---
-title: "IRowsetUpdateImpl::m_mapCachedData | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl.m_mapCachedData"
-  - "IRowsetUpdateImpl::m_mapCachedData"
-  - "m_mapCachedData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_mapCachedData"
+title: 'Irowsetupdateimpl:: M_mapcacheddata | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl.m_mapCachedData
+- IRowsetUpdateImpl::m_mapCachedData
+- m_mapCachedData
+dev_langs: C++
+helpviewer_keywords: m_mapCachedData
 ms.assetid: 65131743-8580-48c8-bb22-68f17c9dfa13
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6007498d85160124484860726d09523b9340bd14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::m_mapCachedData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetupdateimplmmapcacheddata"></a>IRowsetUpdateImpl::m_mapCachedData
 Um mapa que contém os dados originais para a operação adiada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      CAtlMap<   
-   HROW hRow,    
-   Storage* pData   
->   
+      CAtlMap<   
+   HROW hRow,    
+   Storage* pData   
+>   
 m_mapCachedData;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `hRow`  
- Identificador para as linhas dos dados.  
+ Identificador para as linhas de dados.  
   
  `pData`  
- Um ponteiro para os dados a serem armazenados em cachê.  Os dados são do tipo de *armazenamento* \(a classe de registro do usuário\).  Veja o argumento do modelo *de armazenamento* em [Classe de IRowsetUpdateImpl](../Topic/IRowsetUpdateImpl%20Class.md).  
+ Um ponteiro para os dados sejam armazenados em cache. Os dados são do tipo *armazenamento* (a classe de registro de usuário). Consulte o *armazenamento* argumento de modelo em [classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Classe IRowsetUpdateImpl](../Topic/IRowsetUpdateImpl%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)

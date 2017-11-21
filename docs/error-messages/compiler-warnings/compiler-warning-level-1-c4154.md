@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 1) C4154 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4154 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4154
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4154
+f1_keywords: C4154
+dev_langs: C++
+helpviewer_keywords: C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6122e3bf663dae0c075351b32f97e9782588cb1f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 71a76d17b7ce52a46f3d8b0ce7c075b10b69fef9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4154"></a>Compilador C4154 de aviso (nível 1)
-exclusão de uma expressão de matriz; conversão para ponteiro fornecida  
+exclusão de uma expressão de matriz. conversão para ponteiro fornecida  
   
- Não é possível usar `delete` em uma matriz, então o compilador converte a matriz a um ponteiro.  
+ Não é possível usar `delete` em uma matriz, então o compilador converte a matriz para um ponteiro.  
   
 ## <a name="example"></a>Exemplo  
   

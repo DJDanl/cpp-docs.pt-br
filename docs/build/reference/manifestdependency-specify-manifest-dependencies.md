@@ -1,50 +1,48 @@
 ---
-title: "/MANIFESTDEPENDENCY (especificar depend&#234;ncias de manifesto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.AdditionalManifestDependencies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /MANIFESTDEPENDENCY"
-  - "opção de vinculador MANIFESTDEPENDENCY"
-  - "opção de vinculador -MANIFESTDEPENDENCY"
+title: "-MANIFESTDEPENDENCY (especificar dependências de manifesto) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.AdditionalManifestDependencies
+dev_langs: C++
+helpviewer_keywords:
+- MANIFESTDEPENDENCY linker option
+- /MANIFESTDEPENDENCY linker option
+- -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 070adfa51103d2ab91b371918107aa432ee5aa70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFESTDEPENDENCY (especificar depend&#234;ncias de manifesto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (especificar dependências de manifesto)
 ```  
 /MANIFESTDEPENDENCY:manifest_dependency  
 ```  
   
-## Comentários  
- \/MANIFESTDEPENDENCY permite especificar atributos que serão colocados \<na seção\> de dependência do arquivo de manifesto.  
+## <a name="remarks"></a>Comentários  
+ /MANIFESTDEPENDENCY permite que você especifique os atributos que serão colocados no \<dependência > seção do arquivo de manifesto.  
   
- Consulte [\/MANIFEST \(criar manifesto de assembly lado a lado\)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) para obter informações sobre como criar um arquivo de manifesto.  
+ Consulte [/MANIFEST (manifesto de Assembly do Create lado a lado)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) para obter informações sobre como criar um arquivo de manifesto.  
   
- Para \<obter mais informações sobre a\> seção de dependência do arquivo de manifesto, consulte [Arquivos de configuração do publicador](http://msdn.microsoft.com/library/aa375682).  
+ Para obter mais informações sobre o \<dependência > seção do arquivo de manifesto, consulte [arquivos de configuração do publicador](http://msdn.microsoft.com/library/aa375682).  
   
- informações de \/MANIFESTDEPENDENCY pode ser passada ao vinculador de uma de duas maneiras:  
+ Informações de /MANIFESTDEPENDENCY podem ser passadas para o vinculador de duas maneiras:  
   
--   Diretamente na linha de comando \(ou em um arquivo de resposta\) com \/MANIFESTDEPENDENCY.  
+-   Diretamente na linha de comando (ou em um arquivo de resposta) com /MANIFESTDEPENDENCY.  
   
--   Pelo pragma de [comentário](../../preprocessor/comment-c-cpp.md) .  
+-   Por meio de [comentário](../../preprocessor/comment-c-cpp.md) pragma.  
   
- O exemplo a seguir mostra um comentário de \/MANIFESTDEPENDENCY submetida ao pragma,  
+ O exemplo a seguir mostra um comentário /MANIFESTDEPENDENCY passado por meio de pragma,  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
@@ -60,30 +58,30 @@ manager: "ghogen"
 </dependency>  
 ```  
   
- Os mesmos comentários de \/MANIFESTDEPENDENCY podem ser transmitidos na linha de comando como segue:  
+ Os comentários /MANIFESTDEPENDENCY mesmo podem ser passados na linha de comando da seguinte maneira:  
   
 ```  
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
 ```  
   
- O vinculador coletará comentários de \/MANIFESTDEPENDENCY, elimina entradas duplicadas, e depois adiciona a cadeia de caracteres XML resultante no arquivo de manifesto.  Se o vinculador localiza conflitante entradas, o arquivo de manifesto se tornará corrompido e o aplicativo não iniciará \(uma entrada pode ser adicionada ao log de eventos, indicando que a origem da falha\).  
+ O vinculador coletar comentários /MANIFESTDEPENDENCY, eliminar entradas duplicadas e, em seguida, adicione a cadeia de caracteres XML resultante para o arquivo de manifesto.  Se o vinculador localiza entradas conflitantes, o arquivo de manifesto serão corrompidos e o aplicativo falhará ao iniciar (uma entrada pode ser adicionada ao log de eventos, que indica a origem da falha).  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o nó **Propriedades de Configuração**.  
+2.  Expanda o **propriedades de configuração** nó.  
   
-3.  Expanda o nó **Vinculador**.  
+3.  Expanda o **vinculador** nó.  
   
-4.  Selecione a página de propriedades de **Arquivo de Manifesto** .  
+4.  Selecione o **o arquivo de manifesto** página de propriedades.  
   
-5.  Modifique a propriedade de **Dependências de Manifesto Adicionais** .  
+5.  Modificar o **dependências de manifesto adicionais** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalManifestDependencies%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

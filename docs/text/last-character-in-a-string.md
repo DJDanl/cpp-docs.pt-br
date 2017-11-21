@@ -1,43 +1,42 @@
 ---
-title: "&#218;ltimo caractere em uma cadeia de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "último caractere na cadeia de caracteres"
-  - "MBCS [C++], último caractere na cadeia de caracteres"
+title: "Último caractere em uma cadeia de caracteres | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- last character in string
+- MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 30ac02e96786682a61ac44a8de9cefa24e2ead7e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# &#218;ltimo caractere em uma cadeia de caracteres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="last-character-in-a-string"></a>Último caractere em uma cadeia de caracteres
 Use as dicas a seguir:  
   
--   Os intervalos de byte final sobreposição do conjunto de caracteres ASCII em muitos casos.  Você pode seguramente usar exames de bytewise para todos os caracteres de controle \(menos de 32\).  
+-   Intervalos de bytes de trilha sobreponham conjunto em muitos casos de caracteres ASCII. Exames bytewise podem ser usadas para caracteres de controle (menor que 32).  
   
--   Considere a seguinte linha de código, que pode ser verificado para saber se o último caractere em uma cadeia de caracteres for um caractere de barra invertida:  
+-   Considere a seguinte linha de código, que pode verificar se o último caractere em uma cadeia de caracteres é um caractere de barra invertida:  
   
     ```  
     if ( sz[ strlen( sz ) - 1 ] == '\\' )    // Is last character a '\'?  
         // . . .  
     ```  
   
-     Como `strlen` não estiver ciente MBCS\-, retorna o número de bytes, não o número de caracteres, uma cadeia de caracteres de vários bytes.  Além disso, observe que em algumas páginas de código \(932\), por exemplo, “\\” \(0x5c\) é um byte final é válido \(`sz` cadeia de caracteres c\).  
+     Porque `strlen` não está ciente MBCS, ele retorna o número de bytes, não o número de caracteres, em uma cadeia de caracteres multibyte. Além disso, observe que, em algumas páginas (932, por exemplo), de código '\\' (0x5c) é um byte final válido (`sz` é uma cadeia de caracteres C).  
   
-     Uma solução possível é reescrever o código da seguinte maneira:  
+     É uma solução possível reescrever o código desta forma:  
   
     ```  
     char *pLast;  
@@ -46,8 +45,8 @@ Use as dicas a seguir:
         // . . .  
     ```  
   
-     Esse código a seguir usa as funções `_mbsrchr` e `_mbsinc`de MBCS.  Como essas funções são MBCS\- reconhecimento, podem distinguir entre “\\” e “caractere de byte final \\”.  O código executar qualquer ação se o último caractere da cadeia de caracteres é nulo \(\\ “0 "\).  
+     Esse código usa as funções MBCS `_mbsrchr` e `_mbsinc`. Como essas funções são com reconhecimento de MBCS, eles podem distinguir entre um '\\'caractere e um byte final'\\'. O código executa alguma ação se o último caractere na cadeia de caracteres for um valor nulo ('\0').  
   
-## Consulte também  
- [Dicas de programação MBCS](../Topic/MBCS%20Programming%20Tips.md)   
+## <a name="see-also"></a>Consulte também  
+ [Dicas de programação MBCS](../text/mbcs-programming-tips.md)   
  [Atribuição de caractere](../text/character-assignment.md)

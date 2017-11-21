@@ -1,118 +1,117 @@
 ---
-title: "/fp (especificar comportamento de ponto flutuante) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.floatingPointModel"
-  - "VC.Project.VCCLWCECompilerTool.FloatingPointExceptions"
-  - "/fp"
-  - "VC.Project.VCCLWCECompilerTool.floatingPointModel"
-  - "VC.Project.VCCLCompilerTool.FloatingPointExceptions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /fp (C++)"
-  - "Opção de compilador -fp [C++]"
+title: -fp (Especificar comportamento de ponto flutuante) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.floatingPointModel
+- VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
+- /fp
+- VC.Project.VCCLWCECompilerTool.floatingPointModel
+- VC.Project.VCCLCompilerTool.FloatingPointExceptions
+dev_langs: C++
+helpviewer_keywords:
+- -fp compiler option [C++]
+- /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 02ca51ef8c32e59a94f87419dd4a959022a30cde
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /fp (especificar comportamento de ponto flutuante)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica o comportamento de ponto flutuante em um arquivo de código\-fonte.  
+# <a name="fp-specify-floating-point-behavior"></a>/fp (especificar comportamento de ponto flutuante)
+Especifica o comportamento de ponto flutuante em um arquivo de código-fonte.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /fp:[precise | except[-] | fast | strict ]  
 ```  
   
-## Sinalizadores  
- **precise**  
+## <a name="flags"></a>Sinalizadores  
+ **preciso**  
  O padrão.  
   
- Melhora a consistência dos testes de ponto flutuante em termos de igualdade e desigualdade desabilitando as otimizações que poderiam alterar a precisão dos cálculos de ponto flutuante. \(É necessário manter a precisão específica para a total compatibilidade com ANSI.\) Por padrão, no código para arquiteturas x86, o compilador usa os registros de 80 bits do coprocessador para armazenar os resultados intermediários dos cálculos de ponto flutuante.  Isso aumenta a velocidade do programa e reduz o tamanho do programa.  No entanto, como o cálculo envolve tipos de dados de ponto flutuante que são representados na memória por menos de 80 bits, transportar os bits extras de bits de precisão – 80 bits menos o número de bits em um tipo de ponto flutuante menor – por um cálculo longo pode gerar resultados inconsistentes.  
+ Melhora a consistência dos testes de ponto flutuante em termos de igualdade e desigualdade desabilitando as otimizações que poderiam alterar a precisão dos cálculos de ponto flutuante. (É necessário manter a precisão específica para a total compatibilidade com ANSI.) Por padrão, no código para arquiteturas x86, o compilador usa os registros de 80 bits do coprocessador para armazenar os resultados intermediários dos cálculos de ponto flutuante. Isso aumenta a velocidade do programa e reduz o tamanho do programa. No entanto, como o cálculo envolve tipos de dados de ponto flutuante que são representados na memória por menos de 80 bits, transportar os bits extras de bits de precisão – 80 bits menos o número de bits em um tipo de ponto flutuante menor – por um cálculo longo pode gerar resultados inconsistentes.  
   
- Com **\/fp:precise** em processadores x86, o compilador executa o arredondamento em variáveis do tipo `float` na precisão correta para atribuições e conversões e quando os parâmetros são passados para uma função.  Esse arredondado garante que os dados não retenham significância maior que a capacidade de seu tipo.  Um programa compilado com **\/fp:precise** pode ser mais lento e maior que um compilado sem **\/fp:precise**.  **\/fp:precise** desabilita intrínsecos; as rotinas da biblioteca em tempo de execução padrão são usadas.  Para obter mais informações, consulte [\/Oi \(gerar funções intrínsecas\)](../Topic/-Oi%20\(Generate%20Intrinsic%20Functions\).md).  
+ Com **/fp: preciso** x86 processadores, o compilador executa de arredondamento em variáveis do tipo `float` à precisão correta de atribuições e conversões e quando os parâmetros são passados para uma função. Esse arredondado garante que os dados não retenham significância maior que a capacidade de seu tipo. Um programa compilado com **/fp: preciso** pode ser mais lento e maior que um compilado sem **/fp: preciso**. **/FP: preciso** desabilita intrínsecos; a biblioteca de tempo de execução padrão rotinas são usadas em vez disso. Para obter mais informações, consulte [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md).  
   
- O seguinte comportamento de ponto flutuante é habilitado com **\/fp:precise**:  
+ O seguinte comportamento de ponto flutuante está habilitado com **/fp: preciso**:  
   
 -   Contrações – ou seja, usar uma operação composta que tenha apenas um arredondamento no final para substituir várias operações.  
   
--   As otimizações de expressão que são inválidas para valores especiais \(NaN, \+infinity, \-infinity, \+0, \-0\) não são permitidas.  As otimizações x\-x \=\> 0, x\*0 \=\> 0, x\-0 \=\> x, x\+0 \=\> x e 0\-x \=\> \-x são inválidas por vários motivos. \(Consulte IEEE 754 e o padrão C99.\)  
+-   As otimizações de expressão que são inválidas para valores especiais (NaN, +infinity, -infinity, +0, -0) não são permitidas. A otimizações x-x = > 0, x * 0 = > 0, x-0 = > x, x + 0 = > x e 0 x = > - x são inválidos por vários motivos. (Consulte IEEE 754 e o padrão C99.)  
   
--   O compilador trata corretamente as comparações que envolvem NaN.  Por exemplo, x \!\= x avalia como **true** se `x` for NaN e as comparações ordenadas que envolvem NaN geram uma exceção.  
+-   O compilador trata corretamente as comparações que envolvem NaN. Por exemplo, x! = x é avaliada como **true** se `x` é NaN e comparações ordenadas que envolva NaN geram uma exceção.  
   
--   A avaliação da expressão segue o C99 FLT\_EVAL\_METHOD\=2, com esta exceção: quando você programa para processadores x86, como o FPU é definido como uma precisão de 53 bits, isso é considerado uma precisão de double longo.  
+-   A avaliação da expressão segue o C99 FLT_EVAL_METHOD=2, com esta exceção: quando você programa para processadores x86, como o FPU é definido como uma precisão de 53 bits, isso é considerado uma precisão de double longo.  
   
--   Multiplicação por exatamente 1,0 transformada em um uso do outro fator.  x\*y\*1.0 é transformado em x\*y.  Da mesma forma, x\*1.0\*y é transformado em x\*y.  
+-   Multiplicação por exatamente 1,0 transformada em um uso do outro fator. x * y\*1.0 é transformado em x\*y. Da mesma forma, x\*1.0\*y é transformado em x\*y.  
   
--   A divisão por exatamente 1,0 é transformada em um uso do dividendo.  x\*y\/1.0 é transformado em x\*y.  Da mesma forma, x\/1.0\*y é transformado em x\*y.  
+-   A divisão por exatamente 1,0 é transformada em um uso do dividendo. x * y/1.0 é transformado em x\*y. Da mesma forma, o x / 1.0\*y é transformado em x\*y.  
   
- Usar **\/fp:precise** quando [fenv\_access](../../preprocessor/fenv-access.md) está ativado desabilita otimizações, como avaliações de tempo de compilação de expressões de ponto flutuante.  Por exemplo, se você usar [\_control87, \_controlfp, \_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md) para alterar o modo de arredondamento, e o compilador executa um cálculo de ponto flutuante, o modo de arredondamento que você especificou não é aplicado a menos que `fenv_access` esteja ativado.  
+ Usando **/fp: preciso** quando [fenv_access](../../preprocessor/fenv-access.md) está em desabilita otimizações como avaliações de tempo de compilação de expressões de ponto flutuantes. Por exemplo, se você usar [control87, controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) alterar o modo de arredondamento e o compilador executa um cálculo de ponto flutuante, o modo de arredondamento especificado não está em vigor, a menos que `fenv_access`é ON.  
   
- **\/fp:precise** substitui a opção do compilador **\/Op**.  
+ **/FP: preciso** substitui o **/Op** opção de compilador.  
   
- **fast**  
- Cria o código mais rápido na maioria dos casos flexibilizando as regras para otimizar operações de ponto flutuante.  Isso permite que o compilador otimize o código de ponto flutuante para velocidade às custas da precisão e da exatidão.  Quando **\/fp:fast** é especificado, o compilador pode não arredondar corretamente em instruções de atribuição, typecasts ou chamadas de função, e pode não ser executado pelo arredondamento de expressões intermediárias.  O compilador pode reordenar operações ou executar transformações algébricas – por exemplo, seguindo regras associativas e distributivas – sem considerar o efeito nos resultados finitos de precisão.  O compilador pode alterar operações e operandos para precisão única em vez de seguir as regras da promoção de tipo C\+\+.  As otimizações de contração específicas de ponto flutuante são sempre habilitadas \([fp\_contract](../../preprocessor/fp-contract.md) é ativado\).  As exceções de ponto flutuante e o acesso ao ambiente FPU são desabilitados \(**\/fp:except\-** é implícito e [fenv\_access](../../preprocessor/fenv-access.md) é desativado\).  
+ **rápida**  
+ Cria o código mais rápido na maioria dos casos flexibilizando as regras para otimizar operações de ponto flutuante. Isso permite que o compilador otimize o código de ponto flutuante para velocidade às custas da precisão e da exatidão. Quando **Fast** for especificado, o compilador não arredondará corretamente em instruções de atribuição, typecasts, ou chamadas de função e não pode executar arredondamento de expressões intermediárias. O compilador pode reordenar operações ou executar transformações algébricas – por exemplo, seguindo regras associativas e distributivas – sem considerar o efeito nos resultados finitos de precisão. O compilador pode alterar operações e operandos para precisão única em vez de seguir as regras da promoção de tipo C++. Otimizações específicas de ponto flutuante contração estão sempre habilitadas ([fp_contract](../../preprocessor/fp-contract.md) está ativado). Exceções de ponto flutuante e o acesso ao ambiente FPU estão desativados (**/fp: exceto-** está implícita e [fenv_access](../../preprocessor/fenv-access.md) é OFF).  
   
- **\/fp:fast** não pode ser usado com **\/fp:strict** ou **\/fp:precise**.  A última opção especificada na linha de comando é usada.  Especificar **\/fp:fast** e **\/fp:except** gera um erro de compilador.  
+ **Fast** não pode ser usado com **/fp: strict** ou **/fp: preciso**. A última opção especificada na linha de comando é usada. Especificar ambos **Fast** e **/fp: exceto** gera um erro do compilador.  
   
- Especificar [\/Za, \/Ze \(desabilitar extensões de linguagem\)](../../build/reference/za-ze-disable-language-extensions.md) \(compatibilidade com ANSI\) e **\/fp:fast** pode causar um comportamento inesperado.  Por exemplo, operações de ponto flutuante de precisão única não podem ser arredondadas para precisão única.  
+ Especificando [/Za, /Ze (desabilitar extensões de linguagem)](../../build/reference/za-ze-disable-language-extensions.md) (compatibilidade ANSI) e **Fast** pode causar um comportamento inesperado. Por exemplo, operações de ponto flutuante de precisão única não podem ser arredondadas para precisão única.  
   
- **except\[\-\]**  
- Modelo de exceção de ponto flutuante confiável.  As exceções são geradas imediatamente depois que são disparadas.  Por padrão, essa opção é desativada.  Adicionar um sinal de menos à opção a desabilita explicitamente.  
+ **exceto [-]**  
+ Modelo de exceção de ponto flutuante confiável. As exceções são geradas imediatamente depois que são disparadas. Por padrão, essa opção é desativada. Adicionar um sinal de menos à opção a desabilita explicitamente.  
   
- **strict**  
- O modelo de ponto flutuante mais estrito.  **\/fp:strict** faz com que [fp\_contract](../../preprocessor/fp-contract.md) seja desativado e [fenv\_access](../../preprocessor/fenv-access.md) seja ativado.  **\/fp:except** é implícito e pode ser desabilitado explicitamente especificando **\/fp:except\-**.  Quando usado com **\/fp:except\-**, **\/fp:strict** impõe semânticas estritas de ponto flutuante, mas sem relação a eventos excepcionais.  
+ **estrito**  
+ O modelo de ponto flutuante mais estrito. **/FP: strict** faz com que [fp_contract](../../preprocessor/fp-contract.md) fique OFF e [fenv_access](../../preprocessor/fenv-access.md) esteja ativado. **/FP: exceto** está implícita e pode ser desabilitado especificando explicitamente **/fp: exceto-**. Quando usado com **/fp: exceto-**, **/fp: strict** impõe a semântica estrita de ponto flutuante, mas sem respeito a eventos excepcionais.  
   
-## Comentários  
- Várias opções **\/fp** podem ser especificadas na mesma compilação.  
+## <a name="remarks"></a>Comentários  
+ Vários **/fp** opções podem ser especificadas na mesma compilação.  
   
- Para controlar o comportamento do ponto flutuante pela função, consulte o pragma [float\_control](../Topic/float_control.md).  Isso substitui a configuração do compilador **\/fp**.  Recomendamos salvar e restaurar o comportamento de ponto flutuante local como boa prática de engenharia:  
+ Para controlar o comportamento de ponto flutuante por função, consulte o [float_control](../../preprocessor/float-control.md) pragma. Isso substitui o **/fp** configuração do compilador. Recomendamos salvar e restaurar o comportamento de ponto flutuante local como boa prática de engenharia:  
   
-```css  
+```cpp  
 #pragma float_control(precise, on, push)  
 // Code that uses /fp:precise mode  
 #pragma float_control(pop)  
 ```  
   
- A maioria das otimizações de ponto flutuante relacionadas a **\/fp:strict**, **\/fp:except** \(e seus pragmas correspondentes\) e ao pragma `fp_contract` depende do computador.  **\/fp:strict** e **\/fp:except** não são compatíveis com **\/clr**.  
+ A maioria das otimizações de ponto flutuantes relacionada ao **/fp: strict**, **/fp: exceto** (e seus pragmas correspondente) e o `fp_contract` pragma dependem da máquina. **/FP: strict** e **/fp: exceto** não são compatíveis com **/clr**.  
   
- **\/fp:precise** deve tratar a maioria dos requisitos de ponto flutuante de um aplicativo.  Você pode usar **\/fp:except** e **\/fp:strict**, mas pode haver certa redução de desempenho.  Se o desempenho for mais importante, considere **\/fp:fast**.  
+ **/FP: preciso** deve resolver a maioria dos requisitos de ponto flutuante do aplicativo. Você pode usar **/fp: exceto** e **/fp: strict**, mas pode haver alguma diminuição no desempenho. Se o desempenho for mais importante, considere usar **Fast**.  
   
- **\/fp:strict**, **\/fp:fast** e **\/fp:precise** são modos de precisão \(exatidão\).  Somente um pode ser usado por vez.  Se **\/fp:strict** e **\/fp:precise** forem especificados, o compilador usará o que é processado por último.  **\/fp:strict** e **\/fp:fast** não podem ser especificados.  
+ **/FP: strict**, **Fast**, e **/fp: preciso** modos de precisão (precisão). Somente um pode ser usado por vez. Se ambos os **/fp: strict** e **/fp: preciso** forem especificados, o compilador usa a última processadas. Ambos **/fp: strict** e **Fast** não pode ser especificado.  
   
- Para obter mais informações, consulte [Otimização de ponto flutuante do Microsoft Visual C\+\+](http://msdn.microsoft.com/library/aa289157.aspx).  
+ Para obter mais informações, consulte [otimização de ponto flutuante do Microsoft Visual C++](http://msdn.microsoft.com/library/aa289157.aspx).  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o nó **Propriedades de Configuração**.  
+2.  Expanda o **propriedades de configuração** nó.  
   
-3.  Expanda o nó **C\/C\+\+**.  
+3.  Expanda o **C/C++** nó.  
   
-4.  Selecione a página de propriedades **Geração de Código**.  
+4.  Selecione o **geração de código** página de propriedades.  
   
-5.  Modifique a propriedade de **Modelo de Ponto Flutuante**.  
+5.  Modificar o **modelo de ponto flutuante** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)   
- [Otimização de ponto flutuante do Microsoft Visual C\+\+](http://msdn.microsoft.com/library/aa289157.aspx)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
+ [Microsoft Visual C++ flutuante ponto otimização](http://msdn.microsoft.com/library/aa289157.aspx)

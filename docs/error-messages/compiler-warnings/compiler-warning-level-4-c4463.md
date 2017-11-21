@@ -4,47 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4463
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4463
+f1_keywords: C4463
+dev_langs: C++
+helpviewer_keywords: C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 63f9c9172daffe11f91c521f514f0e8e53331b22
-ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: 1bc76019182c376decdd8658defb64dbf90dcfaa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Compilador C4463 de aviso (nível 4)  
   
 > estouro; atribuindo *valor* para o campo de bits que pode conter apenas valores de *low_value* para *high_value*  
   
-Atribuída *valor* está fora do intervalo de valores que o campo de bits pode conter. Tipos de campo de bits assinados usam a ordem de alto bit de entrada, portanto, se  *n*  é o tamanho de campo de bits, o intervalo para campos de bits assinados -2<sup>n-1</sup> 2<sup>n-1</sup>-1, enquanto os campos de bits sem sinal tem um intervalo de 0 a 2<sup>n</sup>-1.  
+Atribuída *valor* está fora do intervalo de valores que o campo de bits pode conter. Tipos de campo de bits assinados usam a ordem de alto bit de entrada, portanto, se  *n*  é o tamanho de campo de bits, o intervalo para campos de bits assinados -2<sup>n-1</sup> 2<sup>n-1</sup>-1, enquanto campos de bits sem sinal tem um intervalo de 0 a 2<sup>n</sup>-1.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -68,4 +49,3 @@ int main() {
     // to unsigned.
 } 
 ```  
-

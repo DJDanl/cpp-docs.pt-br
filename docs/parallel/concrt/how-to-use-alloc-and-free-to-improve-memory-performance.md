@@ -1,65 +1,71 @@
 ---
-title: "Como usar Alloc e Free para melhorar o desempenho da mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ALLOC e Free, usando [tempo de execução de simultaneidade]"
-  - "Usando Alloc e Free [Tempo de Execução de Simultaneidade]"
+title: "Como: usar Alloc e Free para melhorar o desempenho da memória | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Alloc and Free, using [Concurrency Runtime]
+- Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-caps.latest.revision: 14
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b375c5b3ec9f35050d7da4ae03139f6e809172cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como usar Alloc e Free para melhorar o desempenho da mem&#243;ria
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Como usar Alloc e Free para melhorar o desempenho da memória
 
-Este documento mostra como usar as funções de [concurrency::Alloc](../Topic/Alloc%20Function.md) e de [concurrency::Free](../Topic/Free%20Function.md) para melhorar o desempenho de memória.  Compara o tempo necessário para inverter em paralelo os elementos de uma matriz para três tipos diferentes cada um que especifica os operadores de `new` e de `delete` .  
+Este documento mostra como usar o [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) e [concurrency::Free](reference/concurrency-namespace-functions.md#free) funções para melhorar o desempenho de memória. Ele compara o tempo necessário para reverter os elementos de uma matriz em paralelo para três diferentes tipos de especificam o `new` e `delete` operadores.  
+
   
- As funções de `Alloc` e de `Free` são mais úteis quando vários threads chamam frequentemente `Alloc` e `Free`.  O tempo de execução contém um cachê de memória separado para cada thread; consequentemente, o tempo de execução gerencia a memória sem o uso de bloqueios ou de barreiras de memória.  
+ O `Alloc` e `Free` funções são mais úteis quando vários threads frequentemente chamam `Alloc` e `Free`. O tempo de execução mantém um cache de memória separada para cada thread; Portanto, o tempo de execução gerencia memória sem o uso de bloqueios ou barreiras de memória.  
   
-## Exemplo  
- O exemplo a seguir mostra três tipos que cada um especifica os operadores de `new` e de `delete` .  A classe de `new_delete` usa `new` e os operadores globais de `delete` , a classe de `malloc_free` usa o tempo de execução [malloc](../../c-runtime-library/reference/malloc.md) C e funções de [livre](../../c-runtime-library/reference/free.md) , e a classe de `Alloc_Free` usa o tempo de execução `Alloc` de simultaneidade e funções de `Free` .  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra três tipos que especificam o `new` e `delete` operadores. O `new_delete` classe usa global `new` e `delete` operadores, o `malloc_free` classe usa o tempo de execução do C [malloc](../../c-runtime-library/reference/malloc.md) e [livre](../../c-runtime-library/reference/free.md) funções e o `Alloc_Free` classe usa o tempo de execução de simultaneidade `Alloc` e `Free` funções.  
   
- [!CODE [concrt-allocators#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#1)]  
+ [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]  
   
-## Exemplo  
- O exemplo a seguir mostra as funções `swap` e `reverse_array`.  A função de `swap` troca o conteúdo da matriz de índices especificados.  Aloca memória do heap para a variável temporário.  A função de `reverse_array` cria uma matriz e computa o tempo necessário para inverter em paralelo que matriz várias vezes.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra as funções `swap` e `reverse_array`. O `swap` função substitui o conteúdo da matriz nos índices especificados. Aloca memória de heap para a variável temporária. O `reverse_array` função cria uma matriz grande e calcula o tempo necessário para reverter essa matriz várias vezes em paralelo.  
   
- [!CODE [concrt-allocators#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#2)]  
+ [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]  
   
-## Exemplo  
- O exemplo a seguir mostra a função de `wmain` , que calcula o tempo necessário para que a função de `reverse_array` atue em `new_delete`, em `malloc_free`, e em tipos de `Alloc_Free` , que usa um esquema de alocação de memória diferente.  
+## <a name="example"></a>Exemplo  
+ A exemplo a seguir mostra o `wmain` função, que calcula o tempo necessário para o `reverse_array` função para agir sobre o `new_delete`, `malloc_free`, e `Alloc_Free` tipos, cada um deles usa um esquema de alocação de memória diferentes.  
   
- [!CODE [concrt-allocators#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#3)]  
+ [!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]  
   
-## Exemplo  
- O exemplo completo a seguir.  
+## <a name="example"></a>Exemplo  
+ O exemplo completo segue.  
   
- [!CODE [concrt-allocators#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#4)]  
+ [!code-cpp[concrt-allocators#4](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_4.cpp)]  
   
- Este exemplo gerencia a seguinte saída de exemplo para um computador que tem quatro processadores.  
+ Este exemplo produz a seguinte saída de exemplo para um computador que tem quatro processadores.  
   
-  **Tomou a 2031 ms com novo\/exclusão.**  
-**Tomou a 1672 ms com malloc\/livre.**  
-**Tomou a 656 ms com alocação A ID\/livre.** Neste exemplo, o tipo usando as funções de `Alloc` e de `Free` fornece desempenho melhor de memória porque as funções de `Alloc` e de `Free` são otimizadas frequentemente atribuindo e liberando bloqueios de memória de vários threads.  
+```Output  
+Took 2031 ms with new/delete.  
+Took 1672 ms with malloc/free.  
+Took 656 ms with Alloc/Free.  
+```  
   
-## Compilando o código  
- Copie o código de exemplo e cole\-o em um projeto do Visual Studio, ou cole\-o em um arquivo chamado `allocators.cpp` e execute o comando a seguir em uma janela de prompt de comando do Visual Studio.  
+ Neste exemplo, o tipo que usa o `Alloc` e `Free` funções fornece o melhor desempenho de memória porque o `Alloc` e `Free` funções são otimizadas para frequentemente alocar e liberar blocos de memória de vários threads.  
   
- **cl.exe \/EHsc allocators.cpp**  
+## <a name="compiling-the-code"></a>Compilando o código  
+ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `allocators.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
   
-## Consulte também  
- [Funções de gerenciamento da memória](../Topic/Memory%20Management%20Functions.md)   
- [Função Alloc](../Topic/Alloc%20Function.md)   
- [Função livre](../Topic/Free%20Function.md)
+ **cl.exe /EHsc allocators.cpp**  
+  
+## <a name="see-also"></a>Consulte também  
+ [Funções de gerenciamento de memória](../../parallel/concrt/memory-management-functions.md)   
+ [Função ALLOC](reference/concurrency-namespace-functions.md#alloc)   
+ [Função Free](reference/concurrency-namespace-functions.md#free)
+

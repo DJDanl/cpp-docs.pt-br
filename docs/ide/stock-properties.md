@@ -1,44 +1,43 @@
 ---
-title: "Propriedades de estoque | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "propriedades de estoque"
-  - "propriedades de estoque, sobre propriedades de estoque"
+title: Propriedades de estoque | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- stock properties, about stock properties
+- stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8712e75aad6eeaa50227989043a2aaad6973193d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Propriedades de estoque
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se você estiver adicionando uma propriedade para um dispinterface MFC usando o  [Assistente para adicionar a propriedade](../ide/idl-attributes-add-property-wizard.md), você pode escolher uma propriedade das ações a partir do  **nome da propriedade** listar no  [nomes](../ide/names-add-property-wizard.md) página do assistente.  Essas propriedades são os seguintes:  
+# <a name="stock-properties"></a>Propriedades de estoque
+Se você estiver adicionando uma propriedade para um dispinterface MFC usando o [Assistente para adição de propriedade](../ide/idl-attributes-add-property-wizard.md), você pode escolher uma propriedade de estoque do **nome da propriedade** lista o [nomes](../ide/names-add-property-wizard.md) página do Assistente. Estas são as seguintes propriedades:  
   
-|Nome da propriedade|Descrição|  
-|-------------------------|---------------|  
-|**Aparência**|Retorna ou define um valor que determina a aparência do controle.  O controle  **aparência** propriedade pode incluir ou omitir os efeitos de exibição tridimensionais.  Isso é uma propriedade de leitura\/gravação de temperatura ambiente.|  
-|`BackColor`|Retorna ou define o controle temperatura ambiente `BackColor` propriedade para uma cor de paleta \(RGB\) ou uma cor do sistema predefinidos.  Por padrão, o seu valor corresponde à cor do primeiro plano do recipiente do controle.  Isso é uma propriedade de leitura\/gravação de temperatura ambiente.|  
-|`BorderStyle`|Retorna ou define o estilo de borda para um controle.  Esta é uma propriedade de leitura\/gravação.|  
-|**Legenda**|Retorna ou define o controle  **legenda** propriedade.  A legenda é o título da janela.  **Legenda** não possui  **variável de membro** tipo de implementação.|  
-|**Enabled**|Retorna ou define o controle  **Enabled** propriedade.  Um controle habilitado pode responder a eventos gerados pelo usuário.|  
-|**Fonte**|Retorna ou define a fonte de ambiente do controle.  NULL se o controle não tiver nenhuma fonte.|  
-|`ForeColor`|Retorna ou define o controle temperatura ambiente `ForeColor` propriedade.|  
-|**hWnd**|Retorna ou define o controle  **hWnd** propriedade.  **hWnd** não possui  **variável de membro** tipo de implementação.|  
-|**ReadyState**|Retorna ou define o controle  **ReadyState** propriedade.  Um controle pode ser não inicializada, inicializado, carregando, interativo ou concluída.  Consulte  [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) na  *SDK Internet* para obter mais informações.|  
-|**Texto**|Retorna ou define o texto contido em um controle.  **Texto** não possui  **variável de membro** tipo de implementação.|  
+|Property name|Descrição|  
+|-------------------|-----------------|  
+|**Aparência**|Retorna ou define um valor que determina a aparência do controle. O controle **aparência** propriedade pode incluir ou omitir os efeitos de exibição tridimensionais. Essa é uma propriedade de leitura/gravação do ambiente.|  
+|`BackColor`|Retorna ou define o controle ambiente `BackColor` propriedade para uma cor da paleta (RGB) ou uma cor do sistema predefinidos. Por padrão, seu valor corresponde à cor do primeiro plano do contêiner do controle. Essa é uma propriedade de leitura/gravação do ambiente.|  
+|`BorderStyle`|Retorna ou define o estilo de borda para um controle. Esta é uma propriedade de leitura/gravação.|  
+|**Legenda**|Retorna ou define o controle **legenda** propriedade. A legenda é o título da janela. **Legenda** não tem nenhum **variável membro** tipo de implementação.|  
+|**Habilitado**|Retorna ou define o controle **habilitado** propriedade. Um controle habilitado pode responder a eventos gerados pelo usuário.|  
+|**Fonte**|Retorna ou define a fonte de ambiente do controle. NULL se o controle não tiver nenhuma fonte.|  
+|`ForeColor`|Retorna ou define o controle ambiente `ForeColor` propriedade.|  
+|**hWnd**|Retorna ou define o controle **hWnd** propriedade. **hWnd** não tem nenhum **variável membro** tipo de implementação.|  
+|**Estado de prontidão é**|Retorna ou define o controle **estado de prontidão é** propriedade. Um controle pode ser não inicializada, inicializado, carregar, interativo ou completa. Consulte [estado de prontidão é](https://msdn.microsoft.com/en-us/library/aa768362.aspx) no *SDK Internet* para obter mais informações.|  
+|**Texto**|Retorna ou define o texto contido em um controle. **Texto** não tem nenhum **variável membro** tipo de implementação.|  
   
-## Consulte também  
- [Adicionando uma propriedade](../Topic/Adding%20a%20Property%20\(Visual%20C++\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Adicionando uma propriedade](../ide/adding-a-property-visual-cpp.md)   
  [Atributos IDL, Assistente para Adicionar Propriedade](../ide/idl-attributes-add-property-wizard.md)

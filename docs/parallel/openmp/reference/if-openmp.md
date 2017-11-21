@@ -1,47 +1,28 @@
 ---
-title: Se (OpenMP) | Documentos do Microsoft
+title: Se (OpenMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- if
-dev_langs:
-- C++
-helpviewer_keywords:
-- if OpenMP clause
+f1_keywords: if
+dev_langs: C++
+helpviewer_keywords: if OpenMP clause
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fc179d8d96cbabbc7060a89ba0f2922a5edcff5b
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 381347686d8e63681b5d179e191546b8a5bf2f8b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-Especifica se deve ser executado um loop em paralelo ou em série.  
+Especifica se um loop deve ser executado em paralelo ou em série.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,12 +34,12 @@ if(expression)
  onde,  
   
  `expression`  
- Uma expressão integral que, se for avaliada como true (diferente de zero), faz com que o código na região paralela para executar em paralelo. Se a expressão for avaliada como false (zero), a região paralela é executado em série (por um único thread).  
+ Uma expressão de inteiro que, se ela é avaliada como true (diferente de zero), faz com que o código na região paralela para executar em paralelo. Se a expressão for avaliada como false (zero), a região paralela é executado em série (por um único thread).  
   
 ## <a name="remarks"></a>Comentários  
  `if`aplica-se para as seguintes diretivas:  
   
--   [paralelo](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   

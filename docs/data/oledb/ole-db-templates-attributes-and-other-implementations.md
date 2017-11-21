@@ -1,62 +1,61 @@
 ---
-title: "Modelos de banco de dados OLE, atributos e outras implementa&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Modelos OLE DB"
-  - "Modelos OLE DB, sobre modelos OLE DB"
-  - "OLE DB, implementações"
+title: "Modelos OLE DB, atributos e outras implementações | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, implementations
+- OLE DB templates, about OLE DB templates
+- OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0dc00e20d1177de7532e0da121874476ad9fde2a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Modelos de banco de dados OLE, atributos e outras implementa&#231;&#245;es
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Modelos de ATL OLE DB  
- Os modelos OLE DB, que são parte de ATL \(biblioteca ativa do modelo\), facilitam a tecnologia da base de dados de alto desempenho OLE DB fornecendo usar as classes que implementam muitas das interfaces de uso geral do OLE DB.  Com este modelo a biblioteca aparece suporte do assistente para criar aplicativos do acionador de partida do OLE DB.  
+# <a name="ole-db-templates-attributes-and-other-implementations"></a>Modelos de banco de dados OLE, atributos e outras implementações
+## <a name="atl-ole-db-templates"></a>Modelos do ATL OLE DB  
+ Os modelos OLE DB, que fazem parte da ATL (Active Template Library), verifique a tecnologia de banco de dados do OLE DB de alto desempenho mais fácil de usar, fornecendo as classes que implementam a muitas das interfaces de OLE DB usadas com frequência. Junto com este modelo de biblioteca é fornecido suporte do Assistente para criação de aplicativos de início de OLE DB.  
   
- Essa biblioteca do modelo contém duas partes:  
+ Essa biblioteca de modelo contém duas partes:  
   
--   **OLE DB Consumer Templates** usado para implementar um aplicativo cliente OLE DB \(consumidor\).  
+-   **Modelos OLE DB consumidor** usadas para implementar um aplicativo de cliente (consumidor) do OLE DB.  
   
--   **OLE DB Provider Templates** usado para implementar um aplicativo de servidor de provedor OLE DB \(\).  
+-   **Modelos OLE DB Provider** usadas para implementar um aplicativo de servidor (provedor) do OLE DB.  
   
- Para usar os modelos OLE DB, você deve estar familiarizado com os modelos C\+\+, no, e interfaces OLE DB.  Se você não estiver familiarizado com OLE DB, consulte [A referência do programador de OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx).  
+ Para usar os modelos OLE DB, você deve estar familiarizado com as interfaces OLE DB, COM e modelos do C++. Se você não estiver familiarizado com o OLE DB, consulte [referência do programador de DB OLE](https://msdn.microsoft.com/en-us/library/ms713643.aspx).  
   
  Para obter mais informações, você pode:  
   
--   Leia os tópicos sobre [Modelos do consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) ou [Modelos do provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).  
+-   Leia os tópicos sobre o [OLE DB modelos de consumidor](../../data/oledb/ole-db-consumer-templates-cpp.md) ou [modelos OLE DB Provider](../../data/oledb/ole-db-provider-templates-cpp.md).  
   
--   Crie [Consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) ou [Provedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md).  
+-   Criar um [consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) ou [provedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md).  
   
--   Consulte a lista de [Classes do consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) ou de [Classes de provedor OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
+-   Consulte a lista de [classes de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) ou [classes de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
   
--   Consulte a lista de [Exemplos de modelos OLE DB](http://msdn.microsoft.com/pt-br/08958863-0b5f-41ad-ae99-fca7440c553c).  
+-   Consulte a lista de [exemplos de modelos OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c).  
   
--   Consulte [A referência do programador de OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx) \(em [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)]\).  
+-   Consulte [referência do programador de OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx) (no SDK do Windows).  
   
-## Atributos de OLE DB  
- [Atributos do consumidor OLE DB](../../windows/ole-db-consumer-attributes.md) fornece um modo conveniente de criar consumidores de OLE DB.  Os atributos de OLE DB injetam o código baseado em [Modelos do consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) para testar consumidores e provedores OLE DB.  Se você precisa especificar a funcionalidade não tem suporte pelos atributos, você pode usar os modelos OLE DB em conjunto com atributos em seu código.  
+## <a name="ole-db-attributes"></a>Atributos de banco de dados OLE  
+ O [atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md) fornecem uma maneira conveniente de criar os consumidores do OLE DB. Os atributos de OLE DB injetar código com base no [modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) criar provedores e consumidores OLE DB do trabalho. Se você precisa especificar os atributos não oferece suporte para a funcionalidade, você pode usar os modelos OLE DB em conjunto com os atributos no seu código.  
   
-## Classes de MFC OLE DB  
- A biblioteca MFC tem uma classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), que exibe registros de base de dados dos controles.  A exibição é uma exibição de formulário conectada diretamente a um objeto de `CRowset` e exibe os campos de objeto de `CRowset` nos controles de modelo da caixa de diálogo.  Também fornece uma implementação padrão para se mover para o primeiro, o próximo registro, anterior, ou o último e uma interface para atualizar o registro atualmente na exibição.  Para obter mais informações, consulte `COleDBRecordView`.  
+## <a name="mfc-ole-db-classes"></a>Classes do MFC OLE DB  
+ A biblioteca do MFC tem uma classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), que exibe os registros do banco de dados em controles. A exibição é um modo de exibição de formulário conectado diretamente a um `CRowset` de objeto e exibe os campos do `CRowset` objeto nos controles do modelo de caixa de diálogo. Ele também fornece uma implementação padrão para mover para a primeira, próximo, anterior ou o último registro e uma interface para atualizar o registro no momento no modo de exibição. Para obter mais informações, consulte `COleDBRecordView`.  
   
-## Interfaces OLE DB SDK  
- Em casos em que os modelos OLE DB não dão suporte à funcionalidade do OLE DB, você precisa usar OLE DB disponibiliza interface.  Para obter mais informações, consulte [A referência do programador de OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx) em [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+## <a name="ole-db-sdk-interfaces"></a>SDK de Interfaces do OLE DB  
+ Nos casos onde os modelos OLE DB não dão suporte à funcionalidade de OLE DB, você precisa usar as próprias interfaces do OLE DB. Para obter mais informações, consulte [referência do programador de DB OLE](https://msdn.microsoft.com/en-us/library/ms713643.aspx) no SDK do Windows.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)   
- [Visão geral da programação de banco de dados OLE](../../data/oledb/ole-db-programming-overview.md)
+ [Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)

@@ -1,33 +1,30 @@
 ---
-title: "SET_PARAM_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SET_PARAM_TYPE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Macro SET_PARAM_TYPE"
+title: SET_PARAM_TYPE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SET_PARAM_TYPE
+dev_langs: C++
+helpviewer_keywords: SET_PARAM_TYPE macro
 ms.assetid: 85979070-2d55-4c67-94b1-9b9058babc59
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b8fb0ab344f5ee9e34c1157d661bced369afac41
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# SET_PARAM_TYPE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica `COLUMN_ENTRY` macros que seguem o `SET_PARAM_TYPE` macro entrada, saída ou entrada\/saída.  
+# <a name="setparamtype"></a>SET_PARAM_TYPE
+Especifica `COLUMN_ENTRY` macros que seguem o `SET_PARAM_TYPE` macro de entrada, saída ou entrada/saída.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -37,26 +34,64 @@ type
   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `type`  
- \[in\] O tipo para definir o parâmetro.  
+ [in] O tipo a ser definido para o parâmetro.  
   
-## Comentários  
- Provedores oferecem suporte apenas tipos de entrada\/saída parâmetros que são suportados pela fonte de dados subjacente. O tipo é uma combinação de um ou mais **DBPARAMIO** valores \(consulte [estruturas DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) no *referência do programador DB OLE*\):  
+## <a name="remarks"></a>Comentários  
+ Provedores oferecem suporte apenas tipos de entrada/saída parâmetros que são suportados pela fonte de dados subjacente. O tipo é uma combinação de um ou mais **DBPARAMIO** valores (consulte [estruturas DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) no *referência do programador DB OLE*):  
   
--   **DBPARAMIO\_NOTPARAM** o acessador não tem parâmetros. Normalmente, você define **eParamIO** para esse valor nos acessadores de linha para lembrar o usuário que os parâmetros são ignorados.  
+-   **DBPARAMIO_NOTPARAM** o acessador não tem parâmetros. Normalmente, você define **eParamIO** para esse valor em acessadores de linha para lembrar o usuário que parâmetros são ignorados.  
   
--   **DBPARAMIO\_INPUT** um parâmetro de entrada.  
+-   **DBPARAMIO_INPUT** um parâmetro de entrada.  
   
--   **DBPARAMIO\_OUTPUT** um parâmetro de saída.  
+-   **DBPARAMIO_OUTPUT** um parâmetro de saída.  
   
--   **DBPARAMIO\_INPUT &#124; DBPARAMIO\_OUTPUT** o parâmetro é de entrada e um parâmetro de saída.  
+-   **DBPARAMIO_INPUT &#124; DBPARAMIO_OUTPUT** o parâmetro é uma entrada e um parâmetro de saída.  
   
-## Exemplo  
- [!CODE [NVC_OLEDB_Consumer#18](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#18)]  
+## <a name="example"></a>Exemplo  
+```cpp  
+class CArtistsProperty
+{
+public:
+   short m_nReturn;
+   short m_nAge;
+   TCHAR m_szFirstName[21];
+   TCHAR m_szLastName[31];
+
+BEGIN_PARAM_MAP(CArtistsProperty)
+   SET_PARAM_TYPE(DBPARAMIO_OUTPUT)
+   COLUMN_ENTRY(1, m_nReturn)
+   SET_PARAM_TYPE(DBPARAMIO_INPUT)
+   COLUMN_ENTRY(2, m_nAge)
+END_PARAM_MAP()
+
+BEGIN_COLUMN_MAP(CArtistsProperty)
+   COLUMN_ENTRY(1, m_szFirstName)
+   COLUMN_ENTRY(2, m_szLastName)
+END_COLUMN_MAP()
+
+   HRESULT OpenDataSource()
+   {
+      CDataSource _db;
+      _db.Open();
+      return m_session.Open(_db);
+   }
+
+   void CloseDataSource()
+   {
+      m_session.Close();
+   }
+
+   CSession m_session;
+
+   DEFINE_COMMAND_EX(CArtistsProperty, L" \
+      { ? = SELECT Age FROM Artists WHERE Age < ? }")
+};
+``` 
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Macros e funções globais para modelos de consumidor de banco de dados OLE](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)
+## <a name="see-also"></a>Consulte também  
+ [Macros e funções globais para modelos de consumidor do OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

@@ -1,44 +1,25 @@
 ---
-title: omp_init_lock | Documentos do Microsoft
+title: omp_init_lock | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_init_lock
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_init_lock OpenMP function
+f1_keywords: omp_init_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_lock OpenMP function
 ms.assetid: 7a65e3e2-2e31-4645-964c-c1e82e2a4d0e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0edcd073cc9f63bed9c374e7a883ed7e5f014c61
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 30ced1bc649a8a6caed1cef4c77967abdd1e1868
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompinitlock"></a>omp_init_lock
 Inicializa um bloqueio simple.  
@@ -53,7 +34,7 @@ void omp_init_lock(
   
 #### <a name="parameters"></a>Parâmetros  
  `lock`  
- Uma variável do tipo [omp_lock_t ()](../../../parallel/openmp/reference/omp-lock-t.md).  
+ Uma variável do tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [3.2.1 funções omp_init_lock e omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  

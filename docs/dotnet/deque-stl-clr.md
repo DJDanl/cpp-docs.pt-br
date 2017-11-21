@@ -1,37 +1,35 @@
 ---
-title: "deque (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho &lt;cliext/deque&gt; [STL/CLR]"
-  - "Cabeçalho &lt;deque&gt; [STL/CLR]"
-  - "Classe deque [STL/CLR]"
+title: deque (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque
+dev_langs: C++
+helpviewer_keywords:
+- deque class [STL/CLR]
+- <deque> header [STL/CLR]
+- <cliext/deque> header [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# deque (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe do modelo descreve um objeto que controla uma sequência de variar\- comprimento dos elementos que tem de acesso aleatório.  Você usa o contêiner `deque` para gerenciar uma sequência de elementos que observa como um bloco contínuo de armazenamento, mas que pode crescer ou encolher em uma ou outra extremidade sem a necessidade de copiar todos os elementos restantes.  Isso pode implementar com eficiência `double-ended queue`. \(Como o nome.\)  
+# <a name="deque-stlclr"></a>deque (STL/CLR)
+A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso aleatório. Você usa o contêiner `deque` para gerenciar uma sequência de elementos que se parece com um bloco de contíguo de armazenamento, mas que pode aumentar ou diminuir em ambas as extremidades sem a necessidade de copiar todos os elementos restantes. Assim, ela pode implementar com eficiência um `double-ended queue`. (Portanto, o nome.)  
   
- Na descrição abaixo, `GValue` é o mesmo que `Value` a menos que o último é um tipo de referência, nesse caso é `Value^`.  
+ Na descrição abaixo, `GValue` é o mesmo que `Value` , a menos que o último é um tipo de referência, caso em que é `Value^`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Value>  
@@ -47,103 +45,103 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  GValue  
  O tipo genérico de um elemento na sequência controlada.  
   
  Valor  
  O tipo de um elemento na sequência controlada.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-|Definição de tipo|Descrição|  
-|-----------------------|---------------|  
-|[deque::const\_iterator](../Topic/deque::const_iterator%20\(STL-CLR\).md)|O tipo de um iterador de constante para a sequência controlada.|  
-|[deque::const\_reference](../dotnet/deque-const-reference-stl-clr.md)|O tipo de uma referência constante para um elemento.|  
-|[deque::const\_reverse\_iterator](../dotnet/deque-const-reverse-iterator-stl-clr.md)|O tipo de um iterador invertido constante para a sequência controlada.|  
-|[deque::difference\_type](../dotnet/deque-difference-type-stl-clr.md)|O tipo de uma distância assinada entre dois elementos.|  
-|[deque::generic\_container](../Topic/deque::generic_container%20\(STL-CLR\).md)|O tipo de interface genérica para o contêiner.|  
-|[deque::generic\_iterator](../dotnet/deque-generic-iterator-stl-clr.md)|O tipo de um iterador para a interface genérica para o contêiner.|  
-|[deque::generic\_reverse\_iterator](../Topic/deque::generic_reverse_iterator%20\(STL-CLR\).md)|O tipo de um iterador de cima para baixo para a interface genérica para o contêiner.|  
-|[deque::generic\_value](../Topic/deque::generic_value%20\(STL-CLR\).md)|O tipo de um elemento para a interface genérica para o contêiner.|  
-|[deque::iterator](../dotnet/deque-iterator-stl-clr.md)|O tipo de um iterador para a sequência controlada.|  
-|[deque::reference](../dotnet/deque-reference-stl-clr.md)|O tipo de uma referência para um elemento.|  
-|[deque::reverse\_iterator](../dotnet/deque-reverse-iterator-stl-clr.md)|O tipo de um iterador de cima para baixo para a sequência controlada.|  
-|[deque::size\_type](../dotnet/deque-size-type-stl-clr.md)|O tipo de uma distância assinada entre dois elementos.|  
-|[deque::value\_type](../Topic/deque::value_type%20\(STL-CLR\).md)|O tipo de um elemento.|  
+|Definição do tipo|Descrição|  
+|---------------------|-----------------|  
+|[deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)|O tipo de um iterador de constante para a sequência controlada.|  
+|[deque::const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)|O tipo de uma referência de constante para um elemento.|  
+|[deque::const_reverse_iterator (STL/CLR)](../dotnet/deque-const-reverse-iterator-stl-clr.md)|O tipo de um iterador reverso de constante para a sequência controlada.|  
+|[deque::difference_type (STL/CLR)](../dotnet/deque-difference-type-stl-clr.md)|O tipo de uma distância com sinal entre dois elementos.|  
+|[deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)|O tipo da interface genérica para o contêiner.|  
+|[deque::generic_iterator (STL/CLR)](../dotnet/deque-generic-iterator-stl-clr.md)|O tipo de um iterador para a interface genérica para o contêiner.|  
+|[deque::generic_reverse_iterator (STL/CLR)](../dotnet/deque-generic-reverse-iterator-stl-clr.md)|O tipo de um iterador inverso para a interface genérica para o contêiner.|  
+|[deque::generic_value (STL/CLR)](../dotnet/deque-generic-value-stl-clr.md)|O tipo de um elemento para a interface genérica para o contêiner.|  
+|[deque::iterator (STL/CLR)](../dotnet/deque-iterator-stl-clr.md)|O tipo de um iterador para a sequência controlada.|  
+|[deque::reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)|O tipo de uma referência para um elemento.|  
+|[deque::reverse_iterator (STL/CLR)](../dotnet/deque-reverse-iterator-stl-clr.md)|O tipo de um iterador inverso para a sequência controlada.|  
+|[deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)|O tipo de uma distância com sinal entre dois elementos.|  
+|[deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)|O tipo de um elemento.|  
   
-|Função de membro|Descrição|  
-|----------------------|---------------|  
-|[deque::assign](../dotnet/deque-assign-stl-clr.md)|Substitui todos os elementos.|  
-|[deque::at](../dotnet/deque-at-stl-clr.md)|Acessa um elemento em uma posição especificada.|  
-|[deque::back](../dotnet/deque-back-stl-clr.md)|Acessa o elemento pela última vez.|  
-|[deque::begin](../dotnet/deque-begin-stl-clr.md)|Designa o início da sequência controlada.|  
-|[deque::clear](../dotnet/deque-clear-stl-clr.md)|Remove todos os elementos.|  
-|[deque::deque](../dotnet/deque-deque-stl-clr.md)|Cria um objeto contêiner.|  
-|[deque::empty](../dotnet/deque-empty-stl-clr.md)|Testa se nenhum elemento estiver presente.|  
-|[deque::end](../Topic/deque::end%20\(STL-CLR\).md)|Designa o término da sequência controlada.|  
-|[deque::erase](../Topic/deque::erase%20\(STL-CLR\).md)|Remove os elementos nas posições especificadas.|  
-|[deque::front](../Topic/deque::front%20\(STL-CLR\).md)|Acessa o primeiro elemento.|  
-|[deque::insert](../dotnet/deque-insert-stl-clr.md)|Adiciona os elementos em uma posição especificada.|  
-|[deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)|Remove o elemento pela última vez.|  
-|[deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)|Remove o primeiro elemento.|  
-|[deque::push\_back](../dotnet/deque-push-back-stl-clr.md)|Adiciona um novo elemento a última vez.|  
-|[deque::push\_front](../dotnet/deque-push-front-stl-clr.md)|Adiciona um novo primeiro elemento.|  
-|[deque::rbegin](../dotnet/deque-rbegin-stl-clr.md)|Designa o início da sequência controlada invertida.|  
-|[deque::rend](../Topic/deque::rend%20\(STL-CLR\).md)|Designa o término da sequência controlada invertida.|  
-|[deque::resize](../dotnet/deque-resize-stl-clr.md)|Altera o número de elementos.|  
-|[deque::size](../Topic/deque::size%20\(STL-CLR\).md)|Conta o número de elementos.|  
-|[deque::swap](../dotnet/deque-swap-stl-clr.md)|Alterna o conteúdo de dois contêineres.|  
-|[deque::to\_array](../dotnet/deque-to-array-stl-clr.md)|Copia a sequência controlada a uma nova matriz.|  
+|Função membro|Descrição|  
+|---------------------|-----------------|  
+|[deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|Substitui todos os elementos.|  
+|[deque::at (STL/CLR)](../dotnet/deque-at-stl-clr.md)|Acessa um elemento em uma posição especificada.|  
+|[deque::back (STL/CLR)](../dotnet/deque-back-stl-clr.md)|Acessa o último elemento.|  
+|[deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)|Designa o início da sequência controlada.|  
+|[deque::clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)|Remove todos os elementos.|  
+|[deque::deque (STL/CLR)](../dotnet/deque-deque-stl-clr.md)|Constrói um objeto contêiner.|  
+|[deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)|Testa se nenhum elemento está presente.|  
+|[deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md)|Designa o fim da sequência controlada.|  
+|[deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)|Remove os elementos em posições especificadas.|  
+|[deque::front (STL/CLR)](../dotnet/deque-front-stl-clr.md)|Acessa o primeiro elemento.|  
+|[deque::insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)|Adiciona os elementos em uma posição especificada.|  
+|[deque::pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)|Remove o último elemento.|  
+|[deque::pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)|Remove o primeiro elemento.|  
+|[deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)|Adiciona um novo elemento de última.|  
+|[deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)|Adiciona um novo elemento primeiro.|  
+|[deque::rbegin (STL/CLR)](../dotnet/deque-rbegin-stl-clr.md)|Designa o início da sequência controlada invertida.|  
+|[deque::rend (STL/CLR)](../dotnet/deque-rend-stl-clr.md)|Designa o fim da sequência controlada invertida.|  
+|[deque::resize (STL/CLR)](../dotnet/deque-resize-stl-clr.md)|Altera o número de elementos.|  
+|[deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)|Conta o número de elementos.|  
+|[deque::swap (STL/CLR)](../dotnet/deque-swap-stl-clr.md)|Alterna o conteúdo de dois contêineres.|  
+|[deque::to_array (STL/CLR)](../dotnet/deque-to-array-stl-clr.md)|Copia uma nova matriz sequência controlada.|  
   
 |Propriedade|Descrição|  
-|-----------------|---------------|  
-|[deque::back\_item](../Topic/deque::back_item%20\(STL-CLR\).md)|Acessa o elemento pela última vez.|  
-|[deque::front\_item](../dotnet/deque-front-item-stl-clr.md)|Acessa o primeiro elemento.|  
+|--------------|-----------------|  
+|[deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)|Acessa o último elemento.|  
+|[deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)|Acessa o primeiro elemento.|  
   
 |Operador|Descrição|  
-|--------------|---------------|  
-|[deque::operator\!\=](../dotnet/deque-operator-inequality-stl-clr.md)|Determina se dois objetos de `deque` não são iguais.|  
-|[deque::operator](../Topic/deque::operator\(STL-CLR\).md)|Acessa um elemento em uma posição especificada.|  
-|[operador\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)|Determina se um objeto de `deque` é menor que outro objeto de `deque` .|  
-|[operador\<\= \(deque\)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Determina se um objeto de `deque` é menor ou igual a outro objeto de `deque` .|  
-|[operador\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)|Substitui a sequência controlada.|  
-|[operador\=\= \(deque\)](../dotnet/operator-equality-deque-stl-clr.md)|Determina se um objeto de `deque` é igual a outro objeto de `deque` .|  
-|[operador\> \(deque\)](../dotnet/operator-greater-than-deque-stl-clr.md)|Determina se um objeto de `deque` é maior que outro objeto de `deque` .|  
-|[operador\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Determina se um objeto de `deque` é maior ou igual a outro objeto de `deque` .|  
+|--------------|-----------------|  
+|[deque::operator!= (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|Determina se dois `deque` objetos não são iguais.|  
+|[deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)|Acessa um elemento em uma posição especificada.|  
+|[operator< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)|Determina se um `deque` objeto é menor que outro `deque` objeto.|  
+|[operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Determina se um `deque` objeto é menor ou igual a outro `deque` objeto.|  
+|[operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)|Substitui a sequência controlada.|  
+|[operator== (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)|Determina se um `deque` objeto é igual a outro `deque` objeto.|  
+|[operator> (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)|Determina se um `deque` objeto é maior que outro `deque` objeto.|  
+|[operator>= (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Determina se um `deque` objeto é maior que ou igual a outro `deque` objeto.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interface|Descrição|  
-|---------------|---------------|  
-|<xref:System.ICloneable>|Duplica um objeto.|  
-|<xref:System.Collections.IEnumerable>|Sequência por meio dos elementos.|  
-|<xref:System.Collections.ICollection>|Mantenha o grupo de elementos.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Sequência por meio dos elementos digitados.|  
-|<xref:System.Collections.Generic.ICollection%601>|Mantenha o grupo de elementos de tipo.|  
-|<xref:System.Collections.Generic.IList%601>|Manter ordenou o grupo de elementos de tipo.|  
-|IDequeValue\<\>|Mantenha o contêiner genérico.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Duplicar um objeto.|  
+|<xref:System.Collections.IEnumerable>|Sequência de elementos.|  
+|<xref:System.Collections.ICollection>|Manter o grupo de elementos.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Sequência de elementos com tipo.|  
+|<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos com tipo.|  
+|<xref:System.Collections.Generic.IList%601>|Manter grupo ordenado de elementos com tipo.|  
+|IDeque < valor\>|Manter contêiner genérico.|  
   
-## Comentários  
- O objeto aloca e libera armazenamento para a sequência que controla armazenada com uma matriz de identificadores que blocos designados de elementos de `Value` .  A matriz cresce sob demanda.  O crescimento ocorre de forma que o custo de acrescentando ou acrescentar um novo elemento de hora são constantes, e nenhum elemento restante é perturbado.  Você também pode remover um elemento em uma ou outra extremidade no momento, constantes e sem os outros elementos de perturbação.  Assim, um deque é uma boa candidata para o contêiner subjacente da classe [queue](../Topic/queue%20\(STL-CLR\).md) do modelo ou a classe [stack](../dotnet/stack-stl-clr.md)do modelo.  
+## <a name="remarks"></a>Comentários  
+ O objeto aloca e libera o armazenamento para a sequência controla por meio de uma matriz armazenada de identificadores que designa blocos de `Value` elementos. A matriz aumenta sob demanda. O crescimento ocorre de forma que o custo de acrescentando ou acrescentar um novo elemento é tempo constante e não há elementos restantes são afetados. Você também pode remover um elemento na extremidade de tempo constante e sem prejudicar elementos restantes. Assim, um deque é um bom candidato para o contêiner subjacente para a classe de modelo [queue (STL/CLR)](../dotnet/queue-stl-clr.md) ou classe de modelo [pilha (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
- Um objeto de `deque` oferece suporte aos iteradores de acesso aleatório, que significa você pode recorrer a um determinado elemento diretamente a posição numérica, contando de zero do primeiro elemento \(\) para a frente, a [deque::size](../Topic/deque::size%20\(STL-CLR\).md)`() - 1` para o elemento \(\) na última vez.  Também significa que um deque é uma boa candidata para o contêiner subjacente da classe [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)do modelo.  
+ Um `deque` objeto oferece suporte ao acesso aleatório iteradores, que significa que você pode fazer referência a um elemento diretamente considerando sua posição numérica, contando a partir de zero para o primeiro elemento (frontal), para [deque (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() - 1` para o último elemento (Voltar). Isso também significa que um deque é um bom candidato para o contêiner subjacente para a classe de modelo [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Um iterador de deque armazena um identificador para o objeto associado de deque, junto com a diferença que designa do elemento.  Você pode usar iteradores apenas com seus objetos de contêiner associados.  A diferença de um elemento de deque `not` é necessariamente o mesmo que sua posição.  O primeiro elemento inserido tem zeros diagonal, o elemento anexado seguir tem 1 diagonal, mas o elemento é pré\-anexado a seguir tem \-1 diagonal.  
+ Um iterador deque armazena um identificador para seu objeto deque associado, junto com a tendência do elemento que designa por ele. Você pode usar iteradores apenas com os objetos de contêiner associado. É a diferença de um elemento deque `not` necessariamente o mesmo que sua posição. O primeiro elemento inserido tem diferença zero, o próximo elemento acrescentado tem diferença 1, mas o próximo elemento antecedendo tem diferença -1.  
   
- Inserir ou apagar os elementos em uma ou outra extremidade fazem `not` altere o valor de um elemento armazenado em qualquer diferença válido.  Inserindo ou apagando um elemento dentro, no entanto, a alteração de `can` o valor do elemento armazenado em uma diferença determinada, assim o valor designado por um iterador também pode ser alterada. \(O contêiner pode ter que copiar para cima ou para baixo nos elementos para criar um orifício antes de uma inserção ou para preencher um orifício depois de um erase.\) Entretanto, um iterador de deque permanece válido desde que a tendência designa um elemento válido.  Além disso, um iterador permanece válido dereferencable \-\- você pode usá\-lo para acessar ou modificar o valor do elemento que designa \-\- desde que a tendência é diferente da tendência para o iterador retornado por `end()`.  
+ Inserindo ou apagar os elementos em ambas as extremidades não `not` alterar o valor de um elemento armazenado em qualquer diferença válida. Inserir ou apagar um elemento interior, no entanto, `can` alterar o valor do elemento armazenado em uma determinado diferença, portanto também pode alterar o valor designado por um iterador. (O contêiner pode ter que copiar os elementos para cima ou para baixo para criar um buraco antes de uma inserção ou para preencher um buraco após um apagamento). No entanto, um iterador deque permanece válido desde que o ajuste designa um elemento válido. Além disso, um iterador válido permanece dereferencable – você pode usá-lo para acessar ou alterar o valor do elemento ele designa – desde sua diferença não é igual a tendência para o iterador retornado por `end()`.  
   
- Apagando ou removendo um elemento chama o destruidor para seu valor armazenado.  Destruir o contêiner apaga todos os elementos.  Assim, um contêiner cujo tipo de elemento é uma classe de referência garante que nenhum elemento é maior que o contêiner.  A observe, entretanto, que manipula um contêiner faz `not` destrói seus elementos.  
+ Apagar ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento duram mais tempo o contêiner. No entanto, observe que um contêiner de identificadores não `not` destruir seus elementos.  
   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [stack](../dotnet/stack-stl-clr.md)   
- [vector](../dotnet/vector-stl-clr.md)   
- [Biblioteca STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [fila (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [pilha (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [vetor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Referência de biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)

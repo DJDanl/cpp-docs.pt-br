@@ -1,30 +1,27 @@
 ---
-title: "M&#233;todo Module::DecrementObjectCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::DecrementObjectCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método DecrementObjectCount"
+title: "Método: decrementobjectcount | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::DecrementObjectCount
+dev_langs: C++
+helpviewer_keywords: DecrementObjectCount method
 ms.assetid: 6a06d1f9-7881-4f0e-891f-46b0e5c4f604
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1196d8dc2f5758979efc3f146fb0b2c95f24dd23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo Module::DecrementObjectCount
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="moduledecrementobjectcount-method"></a>Método Module::DecrementObjectCount
 Diminui o número de objetos rastreados pelo módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,7 +31,7 @@ virtual long DecrementObjectCount();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- A contagem antes da operação de diminuição.  
+ A contagem de antes da operação de decremento.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
@@ -42,4 +39,4 @@ virtual long DecrementObjectCount();
  **Namespace:** Microsoft:: wrl
  
 ## <a name="see-also"></a>Consulte também
-[Classe de módulo](../windows/module-class.md)
+[Classe Module](../windows/module-class.md)

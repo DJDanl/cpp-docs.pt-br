@@ -1,37 +1,35 @@
 ---
-title: "Classe IDBPropertiesImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl"
-  - "ATL.IDBPropertiesImpl"
-  - "ATL.IDBPropertiesImpl<T>"
-  - "ATL::IDBPropertiesImpl<T>"
-  - "ATL::IDBPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe IDBPropertiesImpl"
+title: Classe IDBPropertiesImpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl
+- ATL.IDBPropertiesImpl
+- ATL.IDBPropertiesImpl<T>
+- ATL::IDBPropertiesImpl<T>
+- ATL::IDBPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 98dd7c0ea8000d2f86283cadb9a92fd2caa059a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IDBPropertiesImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornece uma implementação da interface de `IDBProperties` .  
+# <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
+Fornece uma implementação para o `IDBProperties` interface.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <class T>   
@@ -39,26 +37,26 @@ class ATL_NO_VTABLE IDBPropertiesImpl
    : public IDBProperties, public CUtlProps<T>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- A sua classe derivada, de `IDBPropertiesImpl`.  
+ A classe derivada de `IDBPropertiesImpl`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos da interface  
+### <a name="interface-methods"></a>Métodos de interface  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|Retorna os valores das propriedades nos grupos de propriedades de fonte de dados, de informações da fonte de dados, e inicialização definidas atualmente no objeto de fonte de dados ou os valores das propriedades no grupo de propriedades de inicialização que são definidas atualmente no enumerador.|  
-|[GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)|Retorna informações sobre todas as propriedades suportadas pelo provedor.|  
-|[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|Define propriedades grupos na propriedade da fonte de dados e a inicialização, para objetos de fonte de dados, ou o grupo de propriedades de inicialização, para enumeradores.|  
+|[GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|Retorna os valores das propriedades dos grupos de propriedade de inicialização de fonte de dados e informações de fonte de dados que estão atualmente definidas no objeto de fonte de dados ou os valores das propriedades do grupo de propriedade de inicialização que estão atualmente definidas do enumerador.|  
+|[GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)|Retorna informações sobre todas as propriedades com suporte pelo provedor.|  
+|[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|Define propriedades em grupos de propriedade fonte de dados e de inicialização, para objetos de fonte de dados, ou o grupo de propriedades de inicialização para enumeradores.|  
   
-## Comentários  
- [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores.  No entanto, se expõe um enumerador [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx), deve expor `IDBProperties`.  implementa `IDBProperties` de`IDBPropertiesImpl` usando uma função estática definida por [BEGIN\_PROPSET\_MAP](../Topic/BEGIN_PROPSET_MAP.md).  
+## <a name="remarks"></a>Comentários  
+ [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional de enumeradores. No entanto, se expõe um enumerador [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx), ele deve expor `IDBProperties`. `IDBPropertiesImpl`implementa `IDBProperties` usando uma função estática definida pelo [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

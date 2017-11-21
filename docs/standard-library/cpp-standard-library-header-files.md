@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -18,30 +16,15 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: fd94dd6a7c0727b94a2f827e25bf77feea31a072
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 0a43837da95ef14b0a33f60a3260550fbdf80d2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-standard-library-header-files"></a>Arquivos de cabeçalho da Biblioteca Padrão C++
 Arquivos de cabeçalho da Biblioteca Padrão C++ e extensões, por categoria.  
@@ -95,7 +78,6 @@ Arquivos de cabeçalho da Biblioteca Padrão C++ e extensões, por categoria.
 ## <a name="see-also"></a>Consulte também  
  [Usando cabeçalhos da Biblioteca C++](../standard-library/using-cpp-library-headers.md)   
  [Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

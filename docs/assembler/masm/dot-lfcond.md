@@ -1,31 +1,28 @@
 ---
-title: ".LFCOND | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LFCOND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LFCOND directive"
+title: . LFCOND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LFCOND
+dev_langs: C++
+helpviewer_keywords: .LFCOND directive
 ms.assetid: ed35590d-cc48-4de6-b775-b4f3434d08af
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8d97a4e8044c0994bc0262fdc28616e9c770b266
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# .LFCOND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Sintaxe  
+# <a name="lfcond"></a>.LFCOND
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -33,8 +30,8 @@ manager: "ghogen"
   
 ```  
   
-## Comentários  
- See [.LISTIF](../../assembler/masm/dot-listif.md).  
+## <a name="remarks"></a>Comentários  
+ Consulte [. LISTIF](../../assembler/masm/dot-listif.md).  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

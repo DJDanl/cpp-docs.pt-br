@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 3) C4073 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4073 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4073
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4073
+f1_keywords: C4073
+dev_langs: C++
+helpviewer_keywords: C4073
 ms.assetid: 50081a6e-6acd-45ff-8484-9b1ea926cc5c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 875328dde41fe10a496a8001cfd891e99ad48525
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: f9c53b9d5a5efb1b60c680543a2072bc4f148330
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-3-c4073"></a>Compilador C4073 de aviso (nível 3)
-inicializadores colocados em área de inicialização de bibliotecas  
+inicializadores colocados em área de inicialização de biblioteca  
   
- Somente os desenvolvedores de bibliotecas de terceiros devem usar a área de inicialização de biblioteca, que é especificada por [#pragma init_seg](../../preprocessor/init-seg.md). O exemplo a seguir gera C4073:  
+ Somente os desenvolvedores de biblioteca de terceiros devem usar a área de inicialização de biblioteca, que é especificada pelo [#pragma init_seg](../../preprocessor/init-seg.md). O exemplo a seguir gera C4073:  
   
 ```  
 // C4073.cpp  

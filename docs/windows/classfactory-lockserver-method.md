@@ -1,31 +1,28 @@
 ---
-title: "M&#233;todo ClassFactory::LockServer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::LockServer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método LockServer"
+title: "Método ClassFactory: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::LockServer
+dev_langs: C++
+helpviewer_keywords: LockServer method
 ms.assetid: 8d859815-956d-4f81-a5af-7cdee7e945de
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 477df9807c3eda089289930cafbe6dce1c0f6da6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo ClassFactory::LockServer
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Incrementa ou diminui o número de base de objetos que são controlados pelo objeto ClassFactory atual.  
+# <a name="classfactorylockserver-method"></a>Método ClassFactory::LockServer
+Aumenta ou diminui o número de base de objetos que são controlados pelo objeto ClassFactory atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +34,10 @@ STDMETHOD(
   
 #### <a name="parameters"></a>Parâmetros  
  `fLock`  
- `true` para incrementar o número de objetos rastreados. `false` para diminuir o número de objetos rastreados.  
+ `true`para incrementar o número de objetos rastreados. `false`para diminuir o número de objetos rastreados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se for bem-sucedida; Caso contrário, E_FAIL.  
+ S_OK se bem-sucedido; Caso contrário, E_FAIL.  
   
 ## <a name="remarks"></a>Comentários  
  ClassFactory mantém o controle de objetos em uma instância subjacente do [módulo](../windows/module-class.md) classe.  

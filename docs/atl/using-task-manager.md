@@ -1,31 +1,31 @@
 ---
-title: "Usando o gerenciador de tarefas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pontos de interrupção, Gerenciador de tarefas"
-  - "depuração [ATL], usando o gerenciador de tarefas"
-  - "Gerenciador de tarefas"
+title: Usando o Gerenciador de tarefas | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Task Manager
+- breakpoints, Task Manager
+- debugging [ATL], using Task Manager
 ms.assetid: 773fccd5-308d-42c2-a17f-60ae94989062
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb099a534fba9c34d46d634bbca9648af1577a85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Usando o gerenciador de tarefas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Uma das maneiras mais simples para depurar um serviço é através do uso do gerenciador de tarefas no Windows NT 4.0 ou Windows 2000.  Quando o serviço executar, inicie o gerenciador de tarefas e clique na guia de **Processos** .  Clique com o botão direito do mouse no nome de **Depurar**EXE e clique em.  Isso inicia o Visual C\+\+ anexado ao processo em execução.  Agora, clique em **Interromper** no menu de **Depurar** para permitir que você defina pontos de interrupção no código.  Clique **Executar** para executar a seus pontos de interrupção selecionados.  
+# <a name="using-task-manager"></a>Usando o Gerenciador de tarefas
+Uma das maneiras mais simples de depurar um serviço é com o uso do Gerenciador de tarefas no Windows NT 4.0 ou Windows 2000. Enquanto o serviço está em execução, inicie o Gerenciador de tarefas e clique no **processos** guia. Clique no nome do EXE e, em seguida, clique em **depurar**. Isso inicia o Visual C++ anexado ao processo em execução. Agora, clique em **quebra** no **depurar** para permitir a você definir pontos de interrupção no seu código. Clique em **executar** para executar seus pontos de interrupção selecionados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Dicas de depuração](../atl/debugging-tips.md)
+

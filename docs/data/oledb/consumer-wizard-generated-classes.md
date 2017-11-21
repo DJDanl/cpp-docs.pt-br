@@ -1,53 +1,52 @@
 ---
-title: "Classes geradas pelo Assistente do Consumidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "métodos e classes injetadas por atributos"
-  - "classes [C++], gerados pelo Assistente do Consumidor OLE DB"
-  - "classes de comando no consumidor OLE DB"
-  - "métodos e classes geradas pelo assistente do consumidor"
-  - "Consumidores OLE DB, métodos e classes geradas pelo assistente"
-  - "classes de registro de usuário no consumidor OLE DB"
-  - "métodos e classes geradas pelo assistente"
+title: Classes geradas pelo Assistente do consumidor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- attribute-injected classes and methods
+- wizard-generated classes and methods
+- OLE DB consumers, wizard-generated classes and methods
+- command classes in OLE DB consumer
+- classes [C++], OLE DB Consumer Wizard-generated
+- consumer wizard-generated classes and methods
+- user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5189794a8f9c1aa44d46a5580fbfa177f15f7b53
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classes geradas pelo Assistente do Consumidor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Quando você usa o assistente do consumidor de ATL OLE DB para gerar um consumidor, você tem a opção de usar modelos OLE DB ou atributos OLE DB.  Em ambos os casos, o assistente gerenciar uma classe de comando e uma classe de registro do usuário.  A classe do comando contém o código para abrir a fonte de dados e o conjunto de linhas que você especificou no assistente.  A classe de registro de usuário contém um mapa de coluna para a tabela de base de dados que você selecionou.  Porém, o código gerado é diferente em cada caso:  
+# <a name="consumer-wizard-generated-classes"></a>Classes geradas pelo Assistente do Consumidor
+Quando você usa o ATL OLE DB consumidor Assistente para gerar um consumidor, você tem a opção de usar atributos de modelos OLE DB ou OLE DB. Em ambos os casos, o assistente gera uma classe de comando e uma classe de registro de usuário. A classe de comando contém código para abrir a fonte de dados e o conjunto de linhas que você especificou no assistente. A classe de registro de usuário contém um mapa de coluna para a tabela de banco de dados selecionado. No entanto, o código gerado é diferente em cada caso:  
   
--   Se você selecionar um consumidor templated, o assistente gerenciar uma classe de comando e uma classe de registro do usuário.  A classe do comando terá o nome que você insere na caixa da classe no assistente \(por exemplo, `CProducts`\), e a classe de registro do usuário terá um nome no formato “*ClassNameAccessor*” \(por exemplo, `CProductsAccessor`\).  Ambas as classes são colocadas no arquivo de cabeçalho do consumidor.  
+-   Se você selecionar um consumidor de modelo, o assistente gera uma classe de comando e uma classe de registro de usuário. A classe de comando terá o nome que você inseriu na caixa de classe no Assistente (por exemplo, `CProducts`), e a classe de registro de usuário terá um nome no formato "*ClassName*acessador" (por exemplo, `CProductsAccessor`). Ambas as classes são colocadas no arquivo de cabeçalho do consumidor.  
   
--   Se você selecionar um consumidor atribuído, a classe de registro do usuário terá um nome no formato "\_*ClassName*Accessor" e será injetada.  Isto é, você poderá exibir somente a classe do comando no editor de texto; você só pode exibir a classe de registro do usuário como código SQL injetado.  Para obter informações sobre o código SQL injetado exibição, consulte [Código SQL injetado depuração](../Topic/How%20to:%20Debug%20Injected%20Code.md).  
+-   Se você selecionar um consumidor atribuído, a classe de registro de usuário terá um nome no formato "_*ClassName*acessador" e serão injetados. Ou seja, você poderá exibir apenas a classe de comando no editor de texto; Você só pode exibir a classe de registro de usuário como código injetado. Para obter informações sobre como exibir o código injetado, consulte [depurar código injetado](/visualstudio/debugger/how-to-debug-injected-code).  
   
- Os exemplos a seguir usam uma classe de comando criada na tabela de produtos da base de dados Northwind para demonstrar o código script MDX do consumidor da classe da classe de comando e registro do usuário.  
+ Os exemplos a seguir usam uma classe de comando criada na tabela de produtos de banco de dados Northwind para demonstrar o código gerado pelo Assistente de consumidor para a classe de comando e a classe de registro de usuário.  
   
-## Classes de registro do usuário de Templated  
- Se você criar um consumidor OLE DB que usa os modelos OLE DB \(em vez dos atributos de OLE DB\), o assistente gerencia o código como descrito nesta seção.  
+## <a name="templated-user-record-classes"></a>Classes de registro do modelo de usuário  
+ Se você criar um consumidor OLE DB usando os modelos OLE DB (em vez dos atributos de banco de dados OLE), o assistente gera código, conforme descrito nesta seção.  
   
-### Membros de dados da coluna  
- A primeira parte da classe de registro de usuário inclui as declarações de membro de dados e os membros de dados do status e o comprimento de cada coluna associada a dados.  Para obter mais informações sobre esses membros de dados, consulte [Membros de dados de status do campo em acessadores script gerados](../Topic/Field%20Status%20Data%20Members%20in%20Wizard-Generated%20Accessors.md).  
+### <a name="column-data-members"></a>Membros de dados de coluna  
+ A primeira parte da classe de registro de usuário inclui as declarações de membro de dados e os membros de dados de comprimento e status para cada coluna de dados associados. Para obter informações sobre esses membros de dados, consulte [membros de dados de Status de campo em acessadores de Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 > [!NOTE]
->  Se você alterar a classe de registro do usuário ou escrever seu próprio consumidor, variáveis de dados devem vir antes de variáveis de status e comprimento.  
+>  Se você modificar a classe de registro de usuário ou gravar seu próprio cliente, as variáveis de dados devem vir antes das variáveis de status e comprimento.  
   
 > [!NOTE]
->  O assistente do consumidor de ATL OLE DB usa o tipo de **DB\_NUMERIC** para associar tipos de dados numéricos.  Usou anteriormente **DBTYPE\_VARNUMERIC** \(o formato de que é descrito pelo tipo de **DB\_VARNUMERIC** ; consulte Oledb.h\).  Se você não usar o assistente para criar consumidores, é recomendável usar **DB\_NUMERIC**.  
+>  Assistente de ATL OLE DB consumidor usa a **DB_NUMERIC** tipo para associar os tipos de dados numéricos. Usado anteriormente **DBTYPE_VARNUMERIC** (o formato que é descrito pelo **DB_VARNUMERIC** tipo; consulte OLEDB). Se você não usar o Assistente para criar os consumidores, é recomendável que você use **DB_NUMERIC**.  
   
 ```  
 // Products.H : Declaration of the CProducts class  
@@ -92,8 +91,8 @@ public:
    DBLENGTH m_dwDiscontinuedLength;  
 ```  
   
-### Propriedades de conjunto de linhas  
- Em seguida, o assistente define propriedades de conjunto de linhas.  Se você selecionou **Alterar**, **Inserir**, ou **Excluir** no assistente do consumidor de ATL OLE DB, as propriedades adequadas são definidas aqui \(DBPROP\_IRowsetChange sempre é definido, em um ou mais de DBPROPVAL\_UP\_CHANGE, DBPROPVAL\_UP\_INSERT, e\/ou DBPROPVAL\_UP\_DELETE, respectivamente\).  
+### <a name="rowset-properties"></a>Propriedades do conjunto de linhas  
+ Em seguida, o assistente define propriedades de conjunto de linhas. Se você selecionou **alteração**, **inserir**, ou **excluir** na ATL OLE DB consumidor assistente, as propriedades apropriadas são definidas aqui (DBPROP_IRowsetChange é sempre definido, em seguida, um ou mais DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT e/ou DBPROPVAL_UP_DELETE, respectivamente).  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -105,8 +104,8 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }  
 ```  
   
-### Classe command ou de tabela  
- Se você especificar uma classe de comando, o assistente declara a classe do comando; para o código templated, o comando tem a seguinte aparência:  
+### <a name="command-or-table-class"></a>Classe de tabela ou de comando  
+ Se você especificar uma classe de comando, o assistente declara a classe de comando. código do modelo, o comando tem esta aparência:  
   
 ```  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
@@ -124,8 +123,8 @@ SELECT \
    FROM dbo.Products")  
 ```  
   
-### Mapa de coluna  
- O assistente gerencia as associações de coluna ou o mapa da coluna.  Para corrigir vários problemas com alguns provedores, o seguinte código pode associar colunas em uma ordem diferente de aquela informada pelo provedor.  
+### <a name="column-map"></a>Mapa de coluna  
+ O assistente gera as associações de coluna ou um mapa de coluna. Para corrigir vários problemas com alguns provedores, o código a seguir pode associar colunas em uma ordem diferente daquela que relatado pelo provedor.  
   
 ```  
    BEGIN_COLUMN_MAP(CProductsAccessor)  
@@ -143,19 +142,19 @@ SELECT \
 };  
 ```  
   
-### Declaração de classe  
- Finalmente, o assistente gerenciar uma declaração de classe do comando como o seguinte:  
+### <a name="class-declaration"></a>Declaração de classe  
+ Por fim, o assistente gera uma declaração de classe, como o seguinte comando:  
   
 ```  
 class CProducts : public CCommand<CAccessor<CProductsAccessor> >  
 ```  
   
-## Classes de registro atributo injetadas do usuário  
- Se você criar um consumidor OLE DB que usa os atributos da base de dados \([db\_command](../../windows/db-command.md) ou [db\_table](../../windows/db-table.md)\), os atributos injetam uma classe de registro de usuário com um nome no formato "\_*ClassName*Accessor." Por exemplo, se você denominada sua classe `COrders`do comando, a classe de registro do usuário será `_COrdersAccessor`.  Embora a classe de registro de usuário aparece na exibição da classe, clicando duas vezes em navegue até a classe de comando ou da tabela no arquivo de cabeçalho no lugar.  Nesses casos, você só pode exibir a declaração real da classe de registro de usuário exibindo o código SQL injetado atributo.  
+## <a name="attribute-injected-user-record-classes"></a>Classes de registro de usuário injetadas por atributos  
+ Se você criar um consumidor OLE DB usando os atributos de banco de dados ([db_command](../../windows/db-command.md) ou [db_table](../../windows/db-table.md)), os atributos injetar uma classe de registro de usuário com um nome de formato "_*ClassName*Acessador. " Por exemplo, se você nomeou sua classe de comando `COrders`, a classe de registro de usuário será `_COrdersAccessor`. Embora a classe de registro do usuário apareça no modo de exibição de classe, clicando duas vezes nela navega para a classe de comando ou uma tabela no arquivo de cabeçalho, em vez disso. Nesses casos, você só pode exibir a declaração real da classe de registro de usuário exibindo o código injetado de atributo.  
   
- Pode haver complicações potenciais se você adicionar ou substituir os métodos para os consumidores atribuídos.  Por exemplo, você pode adicionar um construtor de `_COrdersAccessor` à declaração de `COrders` , mas observe que na realidade essa adiciona um construtor para a classe injetada de `COrdersAccessor` .  Como o construtor pode inicializar as colunas\/parâmetros, mas não pode criar um construtor de cópia dessa forma, pois não é diretamente criar uma instância do objeto de `COrdersAccessor` .  Se você precisar de um construtor \(ou outro método\) diretamente na classe de `COrders` , é recomendável definir uma nova classe que deriva de `COrders` e adiciona os métodos necessários lá.  
+ Pode haver possíveis complicações se você adicionar ou substituir os métodos consumidores atribuídos. Por exemplo, você pode adicionar uma `_COrdersAccessor` construtor para o `COrders` declaração, mas observe que na verdade isso adiciona um construtor para o injetado `COrdersAccessor` classe. Um construtor pode inicializar os colunas/parâmetros, mas não é possível criar um construtor de cópia dessa forma, porque ele não pode instanciar diretamente o `COrdersAccessor` objeto. Se precisar de um construtor (ou outro método) diretamente o `COrders` classe, é recomendável que você defina uma nova classe derivando de `COrders` e adicione os métodos necessários.  
   
- No exemplo a seguir, o assistente gerenciar uma declaração da classe `COrders`, mas a classe de registro `COrdersAccessor` do usuário não aparecer, como os atributos a injetam.  
+ No exemplo a seguir, o assistente gera uma declaração para a classe `COrders`, mas a classe de registro de usuário `COrdersAccessor` não aparecer, porque os atributos injetá-lo.  
   
 ```  
 #define _ATL_ATTRIBUTES  
@@ -177,15 +176,15 @@ public:
    };  
 ```  
   
- A declaração injetada da classe do comando é semelhante a esta:  
+ A declaração de classe do comando injetado tem esta aparência:  
   
 ```  
 class CProducts : public CCommand<CAccessor<_CProductsAccessor> >  
 ```  
   
- A maior parte do código SQL injetado é o mesmo que ou semelhante à versão templated.  As principais diferenças nos métodos injetados, que são descritos em [Métodos gerados para o consumidor\)](../Topic/Consumer%20Wizard-Generated%20Methods.md).  
+ A maioria do código injetado é igual ou semelhante para a versão de modelo. As principais diferenças estão nos métodos injetados, que são descritos em [Consumer Wizard-Generated métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
   
- Para obter informações sobre o código SQL injetado exibição, consulte [Código SQL injetado depuração](../Topic/How%20to:%20Debug%20Injected%20Code.md).  
+ Para obter informações sobre como exibir o código injetado, consulte [depurar código injetado](/visualstudio/debugger/how-to-debug-injected-code).  
   
-## Consulte também  
- [Criando um consumidor de banco de dados OLE sem usar um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+## <a name="see-also"></a>Consulte também  
+ [Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -1,31 +1,28 @@
 ---
-title: "M&#233;todo Module::RegisterObjects | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::RegisterObjects"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método RegisterObjects"
+title: "Método: registerobjects | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::RegisterObjects
+dev_langs: C++
+helpviewer_keywords: RegisterObjects method
 ms.assetid: db4077b7-068d-4534-aaa5-41b5444ccb49
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fbff1d4c16c8cfb4f265760a6919637808efe28d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo Module::RegisterObjects
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Registra COM ou [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] objetos para outros aplicativos possam se conectar a eles.  
+# <a name="moduleregisterobjects-method"></a>Método Module::RegisterObjects
+Registra objetos COM ou tempo de execução do Windows para que outros aplicativos possam se conectar a eles.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +34,13 @@ HRESULT RegisterObjects(
   
 #### <a name="parameters"></a>Parâmetros  
  `module`  
- Uma matriz de COM ou [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] objetos.  
+ Uma matriz de objetos COM ou tempo de execução do Windows.  
   
  `serverName`  
  Nome do servidor que criou os objetos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se for bem-sucedida; Caso contrário, um HRESULT que indica o motivo pelo qual a operação falhou.  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o motivo da falha da operação.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
@@ -51,4 +48,4 @@ HRESULT RegisterObjects(
  **Namespace:** Microsoft:: wrl
  
 ## <a name="see-also"></a>Consulte também
-[Classe de módulo](../windows/module-class.md)
+[Classe Module](../windows/module-class.md)

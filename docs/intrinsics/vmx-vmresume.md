@@ -1,66 +1,64 @@
 ---
-title: "__vmx_vmresume | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmresume"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmresume intrínseco"
-  - "Instrução VMRESUME"
+title: __vmx_vmresume | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmresume
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmresume intrinsic
+- VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0a7b59d5b3dce39b85f5c27847b3719d76071961
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmresume
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico da Microsoft**  
+# <a name="vmxvmresume"></a>__vmx_vmresume
+**Seção específica da Microsoft**  
   
- Reinicia a operação de raiz não VMX usando a estrutura de controle da máquina virtual atual \(VMCS\).  
+ Reinicia a operação de raiz não VMX usando a estrutura de controle da máquina virtual atual (VMCS).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 unsigned char __vmx_vmresume(  
    void);  
 ```  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
   
 |Valor|Significado|  
-|-----------|-----------------|  
-|0|A operação foi bem\-sucedida.|  
+|-----------|-------------|  
+|0|A operação foi bem-sucedida.|  
 |1|A operação falhou com status estendido disponível no `VM-instruction error field` de VMCS o atual.|  
 |2|Falha na operação sem status disponível.|  
   
-## Comentários  
- Um aplicativo pode executar uma operação de inserir a VM usando o [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou `__vmx_vmresume` função. O `__vmx_vmlaunch` função pode ser usada apenas com um VMCS cujo estado de inicialização é `Clear`, e o `__vmx_vmresume` função pode ser usada apenas com um VMCS cujo estado de inicialização é `Launched`. Conseqüentemente, usar o [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de inicialização de um VMCS para `Clear`, e, em seguida, usar o `__vmx_vmlaunch` função para a primeira operação insira VM e o `__vmx_vmresume` função para operações subsequentes VM\-enter.  
+## <a name="remarks"></a>Comentários  
+ Um aplicativo pode executar uma operação de inserir a VM usando o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou `__vmx_vmresume` função. O `__vmx_vmlaunch` função pode ser usada somente com um VMCS cujo estado da inicialização `Clear`e o `__vmx_vmresume` função pode ser usada somente com um VMCS cujo estado de inicialização é `Launched`. Consequentemente, use o [__vmx_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de inicialização de um VMCS para `Clear`e, em seguida, use o `__vmx_vmlaunch` função para a primeira operação de VM-enter e o `__vmx_vmresume` função para inserir subsequentes de VM operações.  
   
- O `__vmx_vmresume` função é equivalente de `VMRESUME` instruções de máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento PDF, "Intel Virtualization técnico especificação para a arquitetura IA\-32 Intel," documento número C97063\-002, o [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) site.  
+ O `__vmx_vmresume` função é equivalente a `VMRESUME` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento PDF, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, no [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) site.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
-|----------------|-----------------|  
-|`__vmx_vmresume`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__vmx_vmresume`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \< intrin. h \>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## FIM de específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
- [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md)
+ [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
+ [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

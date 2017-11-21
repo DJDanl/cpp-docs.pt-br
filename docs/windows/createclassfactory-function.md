@@ -1,36 +1,32 @@
 ---
-title: "Fun&#231;&#227;o CreateClassFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreateClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função CreateClassFactory"
+title: "Função CreateClassFactory | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreateClassFactory
+dev_langs: C++
+helpviewer_keywords: CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5ac438e233c675b6d650af83354edd36f877602d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Fun&#231;&#227;o CreateClassFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria uma fábrica que gerencia instâncias da classe especificada.  
+# <a name="createclassfactory-function"></a>Função CreateClassFactory
+Cria uma fábrica que produz instâncias da classe especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-  
 template<typename Factory>  
 inline HRESULT STDMETHODCALLTYPE CreateClassFactory(  
    _In_ unsigned int *flags,   
@@ -41,29 +37,29 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `flags`  
- Uma combinação de uma ou mais valores de enumeração [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) .  
+ Uma combinação de um ou mais [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valores de enumeração.  
   
  `entry`  
- Ponteiro para [CreatorMap](../windows/creatormap-structure.md) que contém informações de inicialização e do registro sobre o parâmetro `riid`.  
+ Ponteiro para um [CreatorMap](../windows/creatormap-structure.md) que contém informações de inicialização e o registro sobre parâmetro `riid`.  
   
  `riid`  
- Referência a uma ID de interface  
+ Referência a uma ID de interface.  
   
  `ppFactory`  
- Se essa operação for concluída com êxito, um ponteiro para uma fábrica da classe.  
+ Se essa operação for concluída com êxito, um ponteiro para uma fábrica de classes.  
   
-## Valor de Retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que declara o erro.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
   
-## Comentários  
- Um erro de afirmar é emitido se o parâmetro `Factory` do modelo não se deriva da interface IClassFactory.  
+## <a name="remarks"></a>Comentários  
+ Um erro de asserção é emitido se o parâmetro de modelo `Factory` não deriva da interface IClassFactory.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

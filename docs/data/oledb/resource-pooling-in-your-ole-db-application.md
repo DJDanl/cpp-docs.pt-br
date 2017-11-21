@@ -1,40 +1,39 @@
 ---
-title: "Pooling de recursos no aplicativo de banco de dados OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Provedores OLE DB, sondagem de recursos"
-  - "Serviços OLE DB [OLE DB], sondagem de recursos"
-  - "OLE DB, sondagem de recursos"
-  - "sondagem de recursos [OLE DB], serviços"
+title: Pool de recursos no aplicativo OLE DB | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB services [OLE DB], resource pooling
+- resource pooling [OLE DB], services
+- OLE DB, resource pooling
+- OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a11fe27fad42e7a27e55a8b4f494980aa9f708a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Pooling de recursos no aplicativo de banco de dados OLE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para utilizar agrupar em seu aplicativo, você deve ter certeza de que os serviços de OLE DB é invocado obtendo a fonte de dados com **IDataInitialize** ou **IDBPromptInitialize**.  Se você usar diretamente `CoCreateInstance` para invocar o provedor baseado em CLSID do provedor, nenhum serviço do OLE DB é invocado.  
+# <a name="resource-pooling-in-your-ole-db-application"></a>Pooling de recursos no aplicativo de banco de dados OLE
+Para aproveitar o pool em seu aplicativo, você deve verificar se os serviços de OLE DB são chamados obtendo sua fonte de dados por meio de **IDataInitialize** ou **IDBPromptInitialize**. Se você usar diretamente `CoCreateInstance` para chamar o provedor com base no CLSID do provedor, não há serviços de OLE DB são invocados.  
   
- Os serviços de OLE DB mantêm pools de fontes de dados conectadas como uma referência a **IDataInitialize** ou a **IDBPromptInitialize** é mantido ou enquanto houver uma conexão em uso.  Os pools são mantidos também automaticamente no ambiente do ou do Internet information services \(IIS\) de um COM\+ 1,0.  Se seu aplicativo se beneficia de cluster a parte externa de serviços de um COM\+ 1,0 ou do IIS, deverá manter uma referência a **IDataInitialize** ou a **IDBPromptInitialize** ou sustentá\-la pelo menos uma conexão.  Para garantir que o pool não será destruído quando a última conexão é liberada pelo aplicativo, mantém a referência ou aferra\-se à conexão para o tempo de vida de seu aplicativo.  
+ Os serviços de OLE DB mantêm grupos de fontes de dados conectadas, contanto que uma referência a **IDataInitialize** ou **IDBPromptInitialize** é mantido ou desde que haja uma conexão em uso. Pools também são mantidos automaticamente em um ambiente de COM+ 1.0 serviços ou serviços de informações da Internet (IIS). Se seu aplicativo se beneficia de pooling fora de um ambiente de COM+ 1.0 serviços ou IIS, você deve manter uma referência a **IDataInitialize** ou **IDBPromptInitialize** ou mantenha pelo menos um conexão. Para certificar-se de que o pool não obter destruído quando a última conexão é liberada pelo aplicativo, manter a referência ou manter a conexão para o tempo de vida do aplicativo.  
   
- Os serviços de OLE DB identificam o pool de que a conexão é desenhada no momento em que `Initialize` é chamado.  Depois que a conexão é desenhada de um pool, não pode ser movida para um pool diferente.  Consequentemente, evite fazer as ações em seu aplicativo que modificam as informações de inicialização, como chamar `UnInitialize` ou chame `QueryInterface` para uma interface específica do provedor antes de chamar `Initialize`.  Além disso, as conexões estabelecidas com um valor diferente de alerta **DBPROMPT\_NOPROMPT** não são agrupadas.  No entanto, a cadeia de caracteres de inicialização recuperados de uma conexão estabelecida com o alerta pode ser usada para estabelecer conexões agrupadas adicionais para a mesma fonte de dados.  
+ Serviços OLE DB identificam o grupo do qual a conexão é desenhado no momento em que `Initialize` é chamado. Depois que a conexão é desenhada de um pool, ele não pode ser movido para um pool diferente. Portanto, evite fazer as coisas em seu aplicativo que alterar as informações de inicialização, como chamar `UnInitialize` ou chamar `QueryInterface` para uma interface específica do provedor antes de chamar `Initialize`. Além disso, as conexões estabelecidas com um valor da solicitação que **DBPROMPT_NOPROMPT** não são agrupados. No entanto, a cadeia de caracteres de inicialização recuperada de uma conexão estabelecida por meio de solicitação pode ser usada para estabelecer conexões adicionais do pool com a mesma fonte de dados.  
   
- Alguns provedores devem fazer uma conexão separada para cada sessão.  Essas conexões adicionais devem ser digitadas separada na transação distribuída, se houver.  OLE DB serve a cache e reutilizar uma única sessão pela fonte de dados, mas se o aplicativo solicita mais de uma sessão de cada vez de uma única fonte de dados, o provedor pode acabar a fatura de conexões adicionais e fazer as assinaturas de transação adicionais que não são agrupadas.  É realmente mais eficiente criar uma fonte de dados separada para cada sessão em um ambiente clusterizado do que para criar várias sessões de uma única fonte de dados.  
+ Alguns provedores devem fazer uma conexão separada para cada sessão. Essas conexões adicionais devem ser inscrita separadamente na transação distribuída, se houver. Serviços OLE DB armazena em cache e reutiliza uma única sessão por fonte de dados, mas se o aplicativo solicitar mais de uma sessão em vez de uma única fonte de dados, o provedor pode acabar fazer conexões adicionais e fazer inscrições de transações adicionais que são não agrupado. Ela é realmente mais eficiente para criar uma fonte de dados separada para cada sessão em um ambiente em pool que criar várias sessões de uma fonte de dados.  
   
- Finalmente, porque utiliza ADO automaticamente serviços do OLE DB, você pode usar o ADO para estabelecer conexões e clustering e a assinatura ocorre automaticamente.  
+ Por fim, como ADO automaticamente faz uso do OLE DB services, você pode usar o ADO para estabelecer conexões e o pool e a inscrição acontecem automaticamente.  
   
-## Consulte também  
- [Pooling de recursos e serviços de banco de dados OLE](../../data/oledb/ole-db-resource-pooling-and-services.md)
+## <a name="see-also"></a>Consulte também  
+ [Pooling de recursos e serviços do OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)

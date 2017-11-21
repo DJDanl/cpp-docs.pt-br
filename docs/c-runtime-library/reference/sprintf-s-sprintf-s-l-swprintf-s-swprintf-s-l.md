@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -49,30 +47,15 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 06afe4f945413ae1f45ff9249dcec0cb87cab987
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 12b5799c9471ffaf8328d4f8aa6a994319e4f30f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 Grave os dados formatados em uma cadeia de caracteres. Estas são versões de [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) com aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -148,7 +131,7 @@ int swprintf_s(
   
  Uma diferença principal entre `sprintf_s` e `sprintf` é que `sprintf_s` verifica a cadeia de caracteres de formato para caracteres de formatação válidos, enquanto `sprintf` apenas verifica se a cadeia de caracteres de formato ou buffer são ponteiros `NULL`. Se uma das verificações falhar, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará um valor -1 e definirá `errno` como `EINVAL`.  
   
- A outra diferença principal entre `sprintf_s` e `sprintf` é que `sprintf_s` assume um parâmetro de comprimento que especifica o tamanho do buffer de saída em caracteres. Se o buffer for muito pequeno para o texto formatado, incluindo o nulo de terminação, o buffer será definido como uma cadeia de caracteres vazia colocando-se um caractere nulo em `buffer``[0]`, então o manipulador de parâmetro inválido será invocado. Ao contrário de `_snprintf`, `sprintf_s` assegura que o buffer será terminado em caractere nulo, a menos que o tamanho do buffer seja zero.  
+ A outra diferença principal entre `sprintf_s` e `sprintf` é que `sprintf_s` assume um parâmetro de comprimento que especifica o tamanho do buffer de saída em caracteres. Se o buffer for muito pequeno para o texto formatado, incluindo o nulo de terminação, o buffer será definido como uma cadeia de caracteres vazia colocando-se um caractere nulo em `buffer[0]`, então o manipulador de parâmetro inválido será invocado. Ao contrário de `_snprintf`, `sprintf_s` assegura que o buffer será terminado em caractere nulo, a menos que o tamanho do buffer seja zero.  
   
  `swprintf_s` é uma versão de caractere largo de `sprintf_s`; os argumentos de ponteiro para `swprintf_s` são cadeias de caracteres largos. A detecção de erros de codificação em `swprintf_s` pode ser diferente da detecção em `sprintf_s`. As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de usarem o parâmetro de localidade passado, em vez da localidade do thread atual.  
   

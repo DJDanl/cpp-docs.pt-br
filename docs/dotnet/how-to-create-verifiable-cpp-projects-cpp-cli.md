@@ -1,66 +1,65 @@
 ---
-title: "Como criar projetos C++ verific&#225;veis (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversões, projetos C++"
-  - "assemblies verificáveis [C++], criando"
-  - "Projetos Visual C++"
+title: "Como: criar projetos C++ verificáveis (C++ /CLI CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- verifiable assemblies [C++], creating
+- conversions, C++ projects
+- Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aad327c26c8684804c294fe5eb6b5bf41507f603
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como criar projetos C++ verific&#225;veis (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Assistentes do aplicativo do Visual C\+\+ não criam projetos verificáveis, mas os projetos podem ser convertidos para ser verificáveis.  Este tópico descreve como definir as propriedades do projeto e modificar arquivos de origem do projeto para transformar seus projetos do Visual C\+\+ gerar aplicativos verificáveis.  
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>Como criar projetos C++ verificáveis (C++/CLI)
+Assistentes de aplicativo do Visual C++ não criam projetos verificáveis, mas os projetos podem ser convertidos para que seja verificável. Este tópico descreve como definir propriedades do projeto e modificar arquivos de origem do projeto para transformar seus projetos do Visual C++ para produzir aplicativos verificáveis.  
   
-## Configurações do compilador e do vinculador  
- Por padrão, os projetos .NET usam o sinalizador de compilador de \/clr e configurar o vinculador para focar o hardware x86.  Para o código verificável, você deve usar o sinalizador de \/clr:safe , e você deve instruir o vinculador para gerar MSIL em vez de instruções do computador nativos.  
+## <a name="compiler-and-linker-settings"></a>Compilador e vinculador configurações  
+ Por padrão, os projetos do .NET usam o sinalizador de compilador /clr e configurar o vinculador para hardware de destino x86. Código verificável, você deve usar o sinalizador /CLR: safe, e você deve instruir o vinculador para gerar MSIL em vez de instruções de máquina nativo.  
   
-#### Para alterar as configurações do compilador e do vinculador  
+#### <a name="to-change-the-compiler-and-linker-settings"></a>Para alterar as configurações de compilador e vinculador  
   
-1.  Exibir a página de propriedades do projeto.  Para obter mais informações, consulte [Como abrir páginas de propriedade do projeto](../misc/how-to-open-project-property-pages.md).  
+1.  Exiba o página de propriedades do projeto. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
   
-2.  Na página de **Geral** no nó de **Propriedades de Configuração** , defina a propriedade de **Suporte a Common Language Runtime** a **Suporte seguro de MSIL Common Language Runtime \(\/clr: seguras\)**.  
+2.  No **geral** página sob o **propriedades de configuração** do conjunto de nós, o **suporte a Common Language Runtime** propriedade para **seguro MSIL Common Language Suporte de tempo de execução (/: Safe)**.  
   
-3.  Na página de **Avançado** no nó de **Vinculador** , defina a propriedade de **Tipo de Imagem CLR** a **A intensidade IL seguro imagens \(\/CLRIMAGETYPE: SAFE\)**.  
+3.  No **avançado** página sob o **vinculador** do conjunto de nós, o **tipo de imagem CLR** propriedade para **forçar imagem IL segura (/ /CLRIMAGETYPE: Safe)**.  
   
-## Removendo tipos de dados nativos  
- Como os tipos de dados nativos não são verificáveis, mesmo que não são usados na verdade, você deve descartar todos os arquivos de cabeçalho que contêm tipos nativos.  
+## <a name="removing-native-data-types"></a>Removendo tipos de dados nativos  
+ Como tipos de dados nativos não verificável mesmo se, na verdade, não são usados, você deve remover todos os arquivos de cabeçalho que contém os tipos nativos.  
   
 > [!NOTE]
->  O procedimento a seguir aplica o Windows Forms a projetos do aplicativo .NET \(\) e do aplicativo de console \(.NET\).  
+>  O procedimento a seguir se aplicam a projetos de aplicativos de formulários do Windows (.NET) e o aplicativo de Console (.NET).  
   
-#### Para remover referências aos tipos de dados nativos  
+#### <a name="to-remove-references-to-native-data-types"></a>Para remover as referências aos tipos de dados nativos  
   
-1.  Utilização de comentários para fora tudo no arquivo de Stdafx.h.  
+1.  Comentar tudo no arquivo Stdafx. h.  
   
-## Configurando um ponto de entrada  
- Como os aplicativos verificáveis não podem usar as bibliotecas de tempo de execução C \(CRT\), não pode depender do CRT para chamar a função principal como o ponto de entrada padrão.  Isso significa que você deve fornecer o nome da função a ser chamada inicialmente ao vinculador. \(Nesse caso, Main\(\) é usado em vez de main\(\) ou de \_tmain\(\) para indicar um ponto de entrada não CRT, mas como o ponto de entrada deve ser especificado explicitamente, esse nome é arbitrário.\)  
+## <a name="configuring-an-entry-point"></a>Configurando um ponto de entrada  
+ Como aplicativos verificáveis não podem usar as bibliotecas de tempo de execução do C (CRT), eles não podem depender CRT para chamar a função principal como o ponto de entrada padrão. Isso significa que você deve fornecer explicitamente o nome da função a ser chamada inicialmente para o vinculador. (Nesse caso, Main () é usado em vez Main () ou _tmain() para indicar um ponto de entrada não CRT, mas porque o ponto de entrada deve ser especificado explicitamente, esse nome é arbitrário.)  
   
 > [!NOTE]
->  Os procedimentos a seguir se aplicam para projetos do aplicativo de console \(.NET\).  
+>  Os procedimentos a seguir se aplicam a projetos de aplicativo de Console (.NET).  
   
-#### Para configurar um ponto de entrada  
+#### <a name="to-configure-an-entry-point"></a>Para configurar um ponto de entrada  
   
-1.  Alteração \_tmain\(\) a Main\(\) no arquivo .cpp do principal do projeto.  
+1.  Altere _tmain() em Main () no arquivo. cpp principal do projeto.  
   
-2.  Exibir a página de propriedades do projeto.  Para obter mais informações, consulte [Como abrir páginas de propriedade do projeto](../misc/how-to-open-project-property-pages.md).  
+2.  Exiba o página de propriedades do projeto. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
   
-3.  Na página de **Avançado** no nó de **Vinculador** , entre em `Principal` como o valor da propriedade de **Ponto de entrada** .  
+3.  No **avançado** página sob o **vinculador** nó, insira `Main` como o **ponto de entrada** valor da propriedade.  
   
-## Consulte também  
- [Código puro e verificável](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+## <a name="see-also"></a>Consulte também  
+ [Código puro e verificável (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

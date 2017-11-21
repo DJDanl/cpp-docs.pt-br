@@ -1,49 +1,29 @@
 ---
-title: "Compilador aviso (nível 1) C4182 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4182 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4182
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4182
+f1_keywords: C4182
+dev_langs: C++
+helpviewer_keywords: C4182
 ms.assetid: 8970f3c6-e2dd-407e-b2ec-964360eb8b43
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8d64e2f0eab71bbdf0f5f7750313a6d4c50b1fc0
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: dfd94e5c98e1ca6e19e3e34c3028c93148871cf4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4182"></a>Compilador C4182 de aviso (nível 1)
-\#incluir é o nível de aninhamento 'número' profundidade; recursão infinita possíveis  
+\#incluir o nível de aninhamento é 'number' profundidade; possível recursão infinita  
   
- O compilador ficou sem espaço na pilha devido ao número de aninhada incluem arquivos. Um arquivo de inclusão é aninhado quando ele está incluído em outro arquivo de inclusão.  
+ O compilador ficou sem espaço suficiente na pilha devido ao número de aninhada incluem arquivos. Um arquivo de inclusão é aninhado quando ele está incluído em outro arquivo de inclusão.  
   
  Essa mensagem é informativa e precede erro [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md).

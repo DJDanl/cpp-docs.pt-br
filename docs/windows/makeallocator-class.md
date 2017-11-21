@@ -1,33 +1,30 @@
 ---
-title: "Classe MakeAllocator | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAllocator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe MakeAllocator"
+title: Classe MakeAllocator | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAllocator
+dev_langs: C++
+helpviewer_keywords: MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0333dec823cb3996a9546bbfa702b3febf711a61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Classe MakeAllocator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="makeallocator-class"></a>Classe MakeAllocator
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -48,43 +45,43 @@ template<
 class MakeAllocator<T, true>;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- Um nome de tipo.  
+ O nome de um tipo.  
   
  `hasWeakReferenceSupport`  
- `true` para alocar memória para um objeto que da suporte a referências fracas; `false` para alocar memória para um objeto que não oferece suporte a referências fracas.  
+ `true`para alocar memória para um objeto que oferece suporte a referências fracas; `false` ao alocar memória para um objeto que não oferece suporte a referências fracas.  
   
-## Comentários  
- Aloca memória para uma classe activatable, com ou sem suporte fraco de referência.  
+## <a name="remarks"></a>Comentários  
+ Aloca memória para uma classe ativável, com ou sem suporte de referência fraca.  
   
- Substitua a classe de MakeAllocator para implementar um modelo de alocação de memória definido pelo usuário.  
+ Substitua a classe MakeAllocator para implementar um modelo de alocação de memória definido pelo usuário.  
   
- MakeAllocator normalmente é usado para evitar possíveis vazamentos de memória se lançar de um objeto durante a compilação.  
+ MakeAllocator normalmente é usado para impedir vazamentos de memória se gera um objeto durante a construção.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Construtor MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Inicializa uma nova instância da classe de MakeAllocator.|  
-|[Destruidor MakeAllocator::~MakeAllocator](../Topic/MakeAllocator::~MakeAllocator%20Destructor.md)|Deinitializes a instância atual da classe de MakeAllocator.|  
-  
-### Métodos Públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método MakeAllocator::Allocate](../Topic/MakeAllocator::Allocate%20Method.md)|Aloca memória e a associa ao objeto atual de MakeAllocator.|  
-|[Método MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Desassocia a memória alocada pelo método de [Aloque](../Topic/MakeAllocator::Allocate%20Method.md) do objeto atual de MakeAllocator.|  
+|----------|-----------------|  
+|[Construtor MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Inicializa uma nova instância da classe MakeAllocator.|  
+|[Destruidor MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes a instância atual da classe MakeAllocator.|  
   
-## Hierarquia de Herança  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Aloca memória e o associa ao objeto MakeAllocator atual.|  
+|[Método MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Desassocia a memória alocada pelo [alocar](../windows/makeallocator-allocate-method.md) método do objeto MakeAllocator atual.|  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `MakeAllocator`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

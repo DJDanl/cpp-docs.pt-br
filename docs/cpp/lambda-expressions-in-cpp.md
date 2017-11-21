@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 07/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: eaf06a81979294b20f3b9b2f15cfcaab6be0008b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b7af430bd8c509713d5be76ea0f64601a91c35cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lambda-expressions-in-c"></a>Expressões lambda em C++
 No C++ 11 e posterior, uma expressão lambda — geralmente chamada uma *lambda*— é uma maneira conveniente de definir um objeto de função anônima (um *fechamento*) à direita no local onde ele é chamado ou passado como um argumento para uma função. Normalmente lambdas são usados para encapsular algumas linhas de código que são passadas para algoritmos ou métodos assíncronos. Este artigo define o que são as lambdas, as compara a outras técnicas de programação, descreve suas vantagens e fornece um exemplo básico.  
@@ -141,7 +138,7 @@ pNums = make_unique<vector<int>>(nums);
  Além de capturar variáveis, uma expressão lambda pode aceitar parâmetros de entrada. Uma lista de parâmetros (*declarador lambda* na sintaxe padrão) é opcional e na maioria dos aspectos é semelhante a lista de parâmetros para uma função.  
   
 ```cpp  
-int y = [] (int first, int second)  
+auto y = [] (int first, int second)  
 {  
     return first + second;  
 };  
@@ -159,7 +156,7 @@ auto y = [] (auto first, auto second)
   
  Uma expressão lambda pode usar outra expressão lambda como seu argumento. Para obter mais informações, consulte "Expressões Lambda de ordem superior" no tópico [exemplos de expressões Lambda](../cpp/examples-of-lambda-expressions.md).  
   
- Como uma lista de parâmetros é opcional, você pode omitir os parênteses vazios se você não passar argumentos para a expressão lambda e seu Declarador de lambda não contém *especificação de exceção*, * à direita-tipo de retorno*, ou `mutable`.  
+ Como uma lista de parâmetros é opcional, você pode omitir os parênteses vazios se você não passar argumentos para a expressão lambda e seu Declarador de lambda não contém *especificação de exceção*,  *à direita-tipo de retorno*, ou `mutable`.  
   
 ### <a name="mutable-specification"></a>Especificação mutável  
  Geralmente, o operador de chamada de função de uma lambda é constante por valor, mas o uso da palavra-chave `mutable` cancela esse efeito. Membros de dados mutáveis não são produzidos. A especificação mutável permite que o corpo de uma expressão lambda modifique variáveis capturadas por valor. Alguns dos exemplos, mais adiante neste artigo, mostram como usar `mutable`.  

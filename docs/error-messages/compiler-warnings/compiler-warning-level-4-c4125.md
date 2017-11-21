@@ -1,45 +1,25 @@
 ---
-title: "Compilador aviso (nível 4) C4125 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4125 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4125
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4125
+f1_keywords: C4125
+dev_langs: C++
+helpviewer_keywords: C4125
 ms.assetid: a081d1f4-0789-4915-91df-7ff0b28ca245
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f0a47734e3e3dc176c38fcd5a223f402e509e939
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 0de58fc029fe68d2734e0fa13e687f8012899081
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4125"></a>Compilador C4125 de aviso (nível 4)
 dígito decimal encerra sequência de escape octal  

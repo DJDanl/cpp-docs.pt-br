@@ -1,33 +1,30 @@
 ---
-title: "hash_set::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inserir membro [STL/CLR]"
+title: 'hash_set:: Insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 0a9bc9aa-012e-4101-9e8c-f1f4b6b76af7
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8aa213c24886951f57cf6c8d670fb430a8da530
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adiciona os elementos.  
+# <a name="hashsetinsert-stlclr"></a>hash_set::insert (STL/CLR)
+Adiciona elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 cliext::pair<iterator, bool> insert(value_type val);  
@@ -37,36 +34,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  primeiro  
  Início do intervalo a ser inserido.  
   
  last  
- O fim do intervalo a ser inserido.  
+ Fim do intervalo a ser inserido.  
   
  direita  
- Enumeração o a ser inserido.  
+ Enumeração para inserir.  
   
- val  
- Valor de chave a ser inserido.  
+ Val  
+ Valor da chave a ser inserido.  
   
  onde  
- Onde no contêiner inserir \(dica somente\).  
+ Onde no contêiner para inserir (dica).  
   
-## Comentários  
- Cada uma das funções de membro insere uma sequência especificada pelos operandos restantes.  
+## <a name="remarks"></a>Comentários  
+ Cada uma das funções membro insere uma sequência especificada por operandos restantes.  
   
- A primeira função de membro se esforça inserir um elemento com valor `val`, e retorna um par de valores `X`.  Se `X.second` for true, `X.first` designa o elemento inserido recentemente; se não `X.first` designa um elemento com equivalente de ordenação que já existir e nenhum novo elemento foi inserido.  Você usará para inserir um único elemento.  
+ A primeira função de membro endeavors inserir um elemento com valor `val`e retorna um par de valores `X`. Se `X.second` for true, `X.first` designa o elemento recém-inserida; caso contrário `X.first` designa um elemento com equivalentes pedidos que já existe e nenhum elemento novo é inserido. Você pode usá-lo para inserir um único elemento.  
   
- A segunda função de membro insere um elemento com valor `val`, usando `where` como uma dica \(para melhorar o desempenho\), e retorna um iterador que designa o elemento inserido recentemente.  Use\-a para inserir um único elemento que pode ser em conjunto em um elemento que você saiba.  
+ A segunda função de membro insere um elemento com o valor `val`usando `where` como uma dica (para melhorar o desempenho) e retorna um iterador que designa o elemento recentemente inserido. Você pode usá-lo para inserir um único elemento que pode ser adjacente a um elemento que você sabe.  
   
- A terceira função de membro insere a sequência `[``first``,` `last``)`.  Use\-a para inserir zero ou mais elementos copiados de outra sequência.  
+ A terceira função do membro insere a sequência [`first`, `last`). Você pode usá-lo para inserir zero ou mais elementos copiados de outra sequência.  
   
- A quarta função de membro insere a sequência designada por `right`.  Use\-a para inserir uma sequência descrita por um enumerador.  
+ A função de membro quarta insere a sequência designada pelo `right`. Você pode usá-lo para inserir uma sequência descrita por um enumerador.  
   
- Cada inserção de elemento usa o tempo proporcionais ao logaritmo o número de elementos na sequência controlada.  A inserção pode ocorrer em tempo amortizados constantes, porém, uma dica dados que designa um elemento adjacente ao ponto de inserção.  
+ Cada inserção de elemento demora proporcional de logaritmo do número de elementos na sequência controlada. Inserção pode ocorrer em tempo de constante amortizado, no entanto, considerando uma dica que designa um elemento adjacente ao ponto de inserção.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_set_insert.cpp   
@@ -127,18 +124,21 @@ int main()
   
 ```  
   
-  **um b c**  
-**insert \(\) \= \[L'xx true\]**  
-**insert \(\) \= \[L'bb false\]**  
- **um b c x**  
-**insert\(begin\(\), L'y\) \= y**  
- **um b c x y**  
- **um b c x**  
- **um b c x y**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+ a b c  
+insert(L'x') = [x True]  
+insert(L'b') = [b False]  
+ a b c x  
+insert(begin(), L'y') = y  
+ a b c x y  
+ a b c x  
+ a b c x y  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
   
-## Consulte também  
- [hash\_set](../dotnet/hash-set-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)

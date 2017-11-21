@@ -1,27 +1,26 @@
 ---
-title: "A.12   Using the atomic Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "12, usando a diretiva atômica | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d3ba3c87-413d-4efa-8a45-8a7f28ab0164
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 12c6467ee3233ce5d36d131ec81072bab8b841fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# A.12   Using the atomic Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo a seguir evita condições de corrida \(atualizações simultâneas de um elemento do  *x* por vários threads\) usando o `atomic` diretiva \([seção 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) na página 19\):  
+# <a name="a12---using-the-atomic-directive"></a>A.12   Usando a diretiva atomic
+O exemplo a seguir evita as condições de corrida (atualizações simultâneas de um elemento de *x* por vários threads) usando o `atomic` diretiva ([seção 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) na página 19):  
   
 ```  
 #pragma omp parallel for shared(x, y, index, n)  
@@ -33,6 +32,6 @@ O exemplo a seguir evita condições de corrida \(atualizações simultâneas de
     }  
 ```  
   
- A vantagem de usar o `atomic` diretiva neste exemplo é que ele permite que as atualizações de dois elementos diferentes de x ocorram em paralelo.  Se um `critical` diretiva \([seção 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) na página 18\) foram usados em vez disso, e em seguida, todas as atualizações para elementos de  *x* seria executado em série \(embora não de qualquer garantia de ordem\).  
+ A vantagem de usar o `atomic` diretiva neste exemplo é que ele permite que as atualizações de dois elementos diferentes de x para ocorrer em paralelo. Se um `critical` diretiva ([seção 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) na página 18) foram usadas em vez disso, em seguida, todas as atualizações para os elementos de *x* seria executado em série (mas não em qualquer garantia de ordem).  
   
- Observe que o `atomic` diretiva se aplica apenas à instrução c ou C\+\+ imediatamente a seguir.  Como resultado, os elementos de  *y* não são atualizados atomicamente neste exemplo.
+ Observe que o `atomic` diretiva se aplica somente à instrução C ou C++ imediatamente após ele.  Como resultado, os elementos de *y* não são atualizadas atomicamente neste exemplo.

@@ -1,35 +1,34 @@
 ---
-title: "Como usar express&#245;es regulares para pesquisar e substituir (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expressões regulares [C++], pesquisar e substituir"
-  - "Método replace"
-  - "pesquisar e substituir"
+title: "Como: usar expressões regulares para pesquisar e substituir (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search and replace
+- Replace method
+- regular expressions [C++], search and replace
 ms.assetid: 12fe3e18-fe10-4b25-a221-19dc5eab3821
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como usar express&#245;es regulares para pesquisar e substituir (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra como a classe <xref:System.Text.RegularExpressions.Regex> à expressão regular pode ser usada para executar a pesquisa e a ser substituído.  Isso é feito por meio do método de <xref:System.Text.RegularExpressions.Regex.Replace%2A> .  A versão usada terá duas cadeias de caracteres como entrada: a cadeia de caracteres a serem modificadas, e a cadeia de caracteres a ser inserida no lugar das seções \(se houver\) que correspondem ao padrão fornecido ao objeto de <xref:System.Text.RegularExpressions.Regex> .  
+# <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Como usar expressões regulares para pesquisar e substituir (C++/CLI)
+O exemplo de código a seguir demonstra como a classe de expressão regular <xref:System.Text.RegularExpressions.Regex> podem ser usados para executar a pesquisa e substituição. Isso é feito com o <xref:System.Text.RegularExpressions.Regex.Replace%2A> método. A versão usada usa duas cadeias de caracteres como entrada: a cadeia de caracteres a ser modificado e a cadeia de caracteres a ser inserido no lugar de seções (se houver) que correspondem ao padrão fornecido para o <xref:System.Text.RegularExpressions.Regex> objeto.  
   
- Esse código substitui todos os dígitos em uma cadeia de caracteres com os sublinhados \(\_\) e substitui naquelas com uma cadeia de caracteres vazia, removendo\-os efetivamente o.  O mesmo efeito pode ser mantido em uma única etapa, mas duas etapas são usadas aqui para fins de demonstração.  
+ Esse código substitui todos os números em uma cadeia de caracteres com sublinhados (_) e, em seguida, substitui aqueles com uma cadeia de caracteres vazia, efetivamente removê-los. O mesmo efeito que pode ser realizado em uma única etapa, mas as duas etapas são usadas aqui para fins de demonstração.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // regex_replace.cpp  
@@ -55,6 +54,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Expressões regulares do .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Expressões regulares do .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
