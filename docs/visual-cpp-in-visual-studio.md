@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - visual c++
 - visual c
 - vc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -21,7 +19,7 @@ helpviewer_keywords:
 - Visual C++
 - Visual C++, reference
 ms.assetid: e8dcc44c-a3e2-4ffe-887c-fd15b18dc458
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -35,17 +33,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/15/2017
-
+ms.openlocfilehash: bd4ac59b539b972a50a192e116e536598c03ed63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ no Visual Studio
 As ferramentas de desenvolvimento e a linguagem de programação do Visual Studio 2017 ajudam a desenvolver aplicativos nativos universais do Windows, aplicativos nativos de área de trabalho e servidor, bibliotecas de plataforma cruzada que são executadas no Android e no iOS, bem como no Windows e aplicativos gerenciados que são executados no .NET Framework.  
@@ -64,8 +56,7 @@ As ferramentas de desenvolvimento e a linguagem de programação do Visual Studi
  [Novidades do Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)  
  Descubra as novidades do Visual C++.  
 
- [Aprimoramentos de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md) 
- Conheça os aprimoramentos de conformidade do C++ no Visual Studio 2017. 
+ [Melhorias de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md) Saiba mais sobre as melhorias de conformidade do C++ no Visual Studio 2017. 
 
  [Conformidade com a linguagem Visual C++](visual-cpp-language-conformance.md)  
  Uma lista de status de conformidade por recurso no Visual C++.
@@ -155,7 +146,7 @@ As ferramentas de desenvolvimento e a linguagem de programação do Visual Studi
  Algoritmos totalmente paralelos que são executados na GPU.  
   
  [WRL (Biblioteca de Modelos do Windows Runtime)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-Aplicativos e componentes da  [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)].  
+ Aplicativos e componentes da [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)].  
   
  [Programação do .NET com C++/CLI (Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
  Programação para o CLR (Common Language Runtime).  
@@ -185,4 +176,3 @@ Aplicativos e componentes da  [!INCLUDE[win8_appname_long](build/includes/win8_a
  [Referência da linguagem C](c-language/c-language-reference.md)   
  [Referência da biblioteca em tempo de execução do C](c-runtime-library/c-run-time-library-reference.md)   
  [Intrínsecos do compilador e linguagem assembly](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
