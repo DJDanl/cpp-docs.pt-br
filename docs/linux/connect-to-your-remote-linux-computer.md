@@ -1,26 +1,23 @@
 ---
-title: Conectar-se ao seu computador Linux remoto | Microsoft Docs
+title: Conectar-se ao computador Linux remoto | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6dce0c1c190854b7927c6e023edd76c9d1cb5645
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: dd817a7d9fad4946cd0aa9f641f9e8f495f1be9a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/11/2017
 ---
-
-# <a name="connect-to-your-remote-linux-computer"></a>Conectar-se ao seu computador Linux remoto
+# <a name="connect-to-your-remote-linux-computer"></a>Conectar-se ao computador Linux remoto
 
 Durante o build, o código do Linux é copiado para o seu computador Linux remoto e compilado nesse sistema de acordo com as configurações escolhidas no Visual Studio.  Para configurar essa conexão remota:
 

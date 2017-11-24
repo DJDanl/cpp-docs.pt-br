@@ -1,46 +1,43 @@
 ---
-title: Configurar um projeto do Linux | Microsoft Docs
+title: Configurar um projeto do C++ Linux no Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e727f4588c425e3a6c94d7ceb09ebc8d494e24cf
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 9a3239120ccdbc533c5063c50a523ad84774f81c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
+Este tópico descreve como configurar um projeto do Visual Studio Linux. Para obter mais informações sobre projetos do CMake Linux, consulte [Configurar um projeto do CMake Linux ](cmake-linux-project.md).
 
-## <a name="general-settings"></a>Configurações Gerais
-Uma variedade de opções podem ser configurada para um projeto do Linux com o Visual Studio.  Para exibir essas opções, selecione o menu **Projeto > Propriedades** ou clique com o botão direito do mouse em **Gerenciador de Soluções** e selecione **Propriedades** no menu de contexto:
+## <a name="general-settings"></a>Configurações gerais
+Uma variedade de opções podem ser configurada para um projeto do Linux com o Visual Studio.  Para exibir essas opções, selecione o menu **Projeto > Propriedades** ou clique com o botão direito do mouse em **Gerenciador de Soluções** e selecione **Propriedades** no menu de contexto. As **Configurações gerais** são exibidas.
 
 ![Configuração geral](media/settings_general.png)
 
 Por padrão, um executável (.out) é criado com a ferramenta.  Para criar uma biblioteca estática ou dinâmica ou para usar um Makefile existente, use a seleção **Tipo de Configuração**.
 
-## <a name="remote-settings"></a>Configurações Remotas
-Para alterar as configurações pertencentes ao computador Linux remoto, selecione o item **Configurações remotas**:
+## <a name="remote-settings"></a>Configurações remotas
+Para alterar as configurações relacionadas ao computador Linux remoto, defina as opções remotas exibidas nas **Configurações gerais**:
 
-![Configurações remotas](media/settings_remote.png)
+* Para alterar o computador Linux de destino, use a entrada **Computador de Build Remoto**.  Isso permitirá selecionar uma das conexões criadas anteriormente.  Para criar uma nova entrada, consulte a seção [Connecting to Your Remote Linux Computer (Conectando-se ao seu computador Linux remoto)](connect-to-your-remote-linux-computer.md).
 
-* Para alterar o computador Linux de destino, use a entrada **Computador de Destino**.  Isso permitirá selecionar uma das conexões criadas anteriormente.  Para criar uma nova entrada, consulte a seção [Connecting to Your Remote Linux Computer (Conectando-se ao seu computador Linux remoto)](connect-to-your-remote-linux-computer.md).
+* O **Diretório Raiz de Build Remoto** determina o local raiz de onde o projeto é compilado no computador Linux remoto.  Isso definirá **~/projects** como padrão, a menos que tenha sido alterado.
 
-* O **Diretório Raiz Remoto** determina o local raiz de onde o projeto é criado no computador Linux remoto.  Isso definirá **~/projects** como padrão, a menos que tenha sido alterado.
+* O **Diretório de Projeto de Build Remoto** é onde esse projeto específico será criado no computador Linux remoto.  Isso definirá **$(RemoteRootDir)/$(ProjectName)** como padrão, que será expandido para um diretório nomeado depois do projeto atual, no diretório raiz definido acima.
 
-* O **Diretório de Projeto Remoto** é onde esse projeto específico será criado no computador Linux remoto.  Isso definirá **$(RemoteRootDir)/$(ProjectName)** como padrão, que será expandido para um diretório nomeado depois do projeto atual, no diretório raiz definido acima.
-
-* Por fim, para alterar os compiladores padrão C e C++ ou o Vinculador e o Arquivador usados para criar o projeto, use as entradas apropriadas na seção **Padrões de Ferramenta**.  Isso pode ser definido para usar uma determinada versão de GCC ou até mesmo o compilador Clang, por exemplo.
+> [!NOTE]
+> Para alterar os compiladores padrão C e C++ ou o Vinculador e o Arquivador usados para compilar o projeto, use as entradas apropriadas nas seções **C/C++ > Geral** e **Vinculador > Geral**.  Isso pode ser definido para usar uma determinada versão de GCC ou até mesmo o compilador Clang, por exemplo.
 
 ## <a name="vc-directories"></a>Diretórios VC++
 Por padrão, o Visual Studio não inclui os arquivos de inclusão de nível de sistema do computador Linux.  Por exemplo, os itens no diretório **/usr/incluem** não estão presentes no Visual Studio.  Para obter suporte [IntelliSense](/visualstudio/ide/using-intellisense) completo, será necessário copiar esses arquivos para algum local em seu computador de desenvolvimento e apontar o Visual Studio para esse local.  Uma opção é usar scp (Cópia Segura) para copiar os arquivos.  No Windows 10, é possível usar [Bash no Windows](https://msdn.microsoft.com/commandline/wsl/about) para executar o scp.  Para versões anteriores do Windows, seria possível usar algo como [PSCP (Cópia segura PuTTY)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
@@ -55,7 +52,7 @@ Quando os arquivos forem copiados, use o item **Diretórios VC ++** item nas Pro
 
 ![Diretórios VC++](media/settings_directories.png)
 
-## <a name="copy-sources"></a>Fontes de dados
+## <a name="copy-sources"></a>Copiar fontes
 Durante a criação, os arquivos de origem em seu computador de desenvolvimento são copiados para o computador Linux e compilados lá.  Por padrão, todas as fontes no projeto do Visual Studio são copiadas para os locais definidos nas configurações acima.  No entanto, outras fontes também podem ser adicionadas à lista ou copiar fontes pode ser totalmente desativado, que é o padrão para um projeto Makefile.
 
 * **Fontes a serem copiadas** determina quais fontes são copiadas para o computador remoto.  Por padrão, o **@(SourcesToCopyRemotely)** define todos os arquivos de código-fonte do projeto como padrão, mas não inclui arquivos de ativo/recurso, como imagens.
@@ -66,10 +63,14 @@ Durante a criação, os arquivos de origem em seu computador de desenvolvimento 
 
   `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
-## <a name="build-events"></a>Compilar Eventos
-Como toda o build está acontecendo em um computador remoto, vários outros eventos de build foram adicionados à seção Eventos de Build nas Propriedades do Projeto.  Esses são **Evento de Pré-build Remoto**, **Evento Pré-vínculo Remoto** e **Remover Evento de Pós-build** e ocorrerão no computador remoto antes ou após as etapas individuais no processo.
+## <a name="build-events"></a>Eventos de build
+Como toda o build está acontecendo em um computador remoto, vários outros eventos de build foram adicionados à seção Eventos de Build nas Propriedades do Projeto.  Eles são os **Evento de pré-build remoto**, **Evento de pré-link remoto** e **Evento de pós-build remoto**, que ocorrerão no computador remoto antes ou após as etapas individuais no processo.
 
 ![Compilar Eventos](media/settings_buildevents.png)
 
 ## <a name="see-also"></a>Consulte também
-[Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)
+[Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)  
+[Propriedades gerais de C++ (Linux C++)](../linux/prop-pages/general-linux.md)  
+[Diretórios VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
+[Copiar fontes de propriedades do projeto (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Propriedades de evento de build (Linux C++)](../linux/prop-pages/build-events-linux.md)

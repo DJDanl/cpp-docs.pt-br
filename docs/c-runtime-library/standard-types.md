@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -62,8 +61,32 @@ f1_keywords:
 - __utimbuf64
 - div_t
 - _CRT_ALLOC_HOOK
-dev_langs:
-- C++
+- int8_t
+- uint8_t
+- int16_t
+- uint16_t
+- int32_t
+- uint32_t
+- int64_t
+- int_least8_t
+- uint_least8_t
+- int_least16_t
+- uint_least16_t
+- int_least32_t
+- uint_least32_t
+- int_least64_t
+- uint_least64_t
+- int_fast8_t
+- uint_fast8_t
+- int_fast16_t
+- uint_fast16_t
+- int_fast32_t
+- uint_fast32_t
+- int_fast64_t
+- uint_fast64_t
+- intmax_t
+- uintmax_t
+dev_langs: C++
 helpviewer_keywords:
 - __timeb64 type
 - tm type
@@ -144,30 +167,15 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7017caf983be40918e9d995d0d11d48e0597eba9
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: b80a4b8c947064886d6afa18e9c24d62195a049a
+ms.sourcegitcommit: c9108f0c45b7a634d4e6e5c2d2ec192d50ffdbab
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="standard-types"></a>Tipos padrão
 A biblioteca em tempo de execução da Microsoft define os seguintes tipos e definições de tipo padrão.  
@@ -176,10 +184,10 @@ A biblioteca em tempo de execução da Microsoft define os seguintes tipos e def
   
 |Nome|Tipo interno equivalente|  
 |----------|-------------------------------|  
-|int8_t, uint8_t|signed char, unsigned char|  
-|int16_t, int16_t|short, unsigned short|  
-|int32_t, uint32_t|int, unsigned int|  
-|int64_t, int64_t|long long, unsigned long long|  
+|int8\_t, uint8\_t|signed char, unsigned char|  
+|int16\_t, uint16\_t|short, unsigned short|  
+|int32\_t, uint32\_t|int, unsigned int|  
+|int64\_t, uint64\_t|long long, unsigned long long|  
 |int_least8_t, uint_least8_t|signed char, unsigned char|  
 |int_least16_t, uint_least16_t|short, unsigned short|  
 |int_least32_t, uint_least32_t|int, unsigned int|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,37 +15,19 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 apitype: DLLExport
-f1_keywords:
-- scanf
-dev_langs:
-- C++
-helpviewer_keywords:
-- scanf function, width specification
+f1_keywords: scanf
+dev_langs: C++
+helpviewer_keywords: scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 922405b111404e5a11052fd1aba8d2729e254714
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scanf-width-specification"></a>Especificação de largura scanf Width
 Essas informações se aplicam à interpretação de cadeias de caracteres de formato na família de funções `scanf`, incluindo as versões protegidas, como `scanf_s`. Essas funções geralmente pressupõem que o fluxo de entrada é dividido em uma sequência de tokens. Os tokens são separados por espaços em branco (espaço, tabulação ou nova linha) ou, no caso de tipos numéricos, pelo final natural de um tipo de dados numéricos, conforme indicado pelo primeiro caractere que não pode ser convertido em texto numérico. No entanto, a especificação de largura pode ser usada para fazer com que a análise da entrada pare antes do final natural de um token.  
@@ -107,7 +88,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  Observe que **%[a-z]** e **%[z-a]** são interpretados como equivalentes a **%[abcde...z]**. Essa é uma extensão de função `scanf` comum, mas observe que o padrão ANSI não a exige.  
   
 ## <a name="reading-unterminated-strings"></a>Leitura de cadeias de caracteres não finalizadas  
- Para armazenar uma cadeia de caracteres sem armazenar um caractere nulo de terminação ('\0'), use a especificação `%` *n***c**, em que *n* é um inteiro decimal. Nesse caso, o caractere de tipo **c** indica que o argumento é um ponteiro para uma matriz de caracteres. Os próximos caracteres *n* são lidos do fluxo de entrada para o local especificado e nenhum caractere nulo ('\0') é anexado. Se *n* não for especificado, o valor padrão será 1.  
+ Para armazenar uma cadeia de caracteres sem armazenar um caractere nulo de terminação (“\0”), use a especificação `%`*n***c**, em que *n* é um inteiro decimal. Nesse caso, o caractere de tipo **c** indica que o argumento é um ponteiro para uma matriz de caracteres. Os próximos caracteres *n* são lidos do fluxo de entrada para o local especificado e nenhum caractere nulo (“\0”) é acrescentado. Se *n* não for especificado, o valor padrão será 1.  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>Quando scanf interrompe a leitura de um campo  
  A função `scanf` examina cada campo de entrada, caractere por caractere. Ela pode parar de ler determinado campo de entrada antes de alcançar um caractere de espaço por vários motivos:  

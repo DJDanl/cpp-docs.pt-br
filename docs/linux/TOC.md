@@ -1,9 +1,16 @@
 # [Baixar, instalar e configurar a carga de trabalho de desenvolvimento do Linux](download-install-and-setup-the-linux-development-workload.md)
 # [Criar um novo projeto do Linux](create-a-new-linux-project.md)
 # [Configurar um projeto do Linux](configure-a-linux-project.md)
+# [Configurar um Projeto do Linux CMake](cmake-linux-project.md)
 # [Conectar-se ao seu computador Linux remoto](connect-to-your-remote-linux-computer.md)
 # [Implantar, executar e depurar projeto Linux](deploy-run-and-debug-your-linux-project.md)
-
-<!--HONumber=Feb17_HO4-->
-
-
+# [Referência de página de propriedades do projeto do Linux](prop-pages-linux.md)
+## [Propriedades gerais (Linux)](prop-pages/general-linux.md)
+## [Propriedades de depuração (Linux)](prop-pages/debugging-linux.md)
+## [Propriedades dos diretórios do VC++ (Linux)](prop-pages/directories-linux.md)
+## [Copiar propriedades de origem (Linux)](prop-pages/copy-sources-project.md)
+## [Propriedades de C/C++ (Linux)](prop-pages/c-cpp-linux.md)
+## [Propriedades do vinculador (Linux)](prop-pages/linker-linux.md)
+## [Propriedades de evento de build (Linux)](prop-pages/build-events-linux.md)
+## [Propriedades da etapa de build personalizada (Linux)](prop-pages/custom-build-step-linux.md) 
+## [Propriedades do projeto do Makefile (Linux)](prop-pages/makefile-linux.md)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.conversions
-dev_langs:
-- C++
+f1_keywords: c.conversions
+dev_langs: C++
 helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a711a8087fef7978eceaadece317d4aac95d6340
+ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a0d117cd042a685b2a208f96b31e0a8f09c84e83
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="data-conversion"></a>Conversão de dados
 Essas rotinas convertem dados de um formulário para outro. Geralmente, essas rotinas são executadas mais rapidamente do que as conversões que podem ser escritas. Cada rotina que começa com um prefixo `to` é implementada como função e como macro. Consulte [Escolher entre funções e macros](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md) para obter informações sobre como escolher uma implementação.  
@@ -39,6 +35,7 @@ Essas rotinas convertem dados de um formulário para outro. Geralmente, essas ro
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Converter cadeia de caracteres em `int`|  
 |[_atoi64, _atoi64_l, _wtoi64, _wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Converter cadeia de caracteres em `__int64`|  
 |[atol, _atol_l, _wtol, _wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Converter cadeia de caracteres em `long`|  
+|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Converter caracteres UTF-16 ou UTF-32 em um equivalente multibyte|  
 |[_ecvt](../c-runtime-library/reference/ecvt.md), [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Converter `double` em cadeia de caracteres de comprimento especificado|  
 |[_fcvt](../c-runtime-library/reference/fcvt.md), [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Converter `double` em cadeia de caracteres com número especificado de dígitos após o separador decimal|  
 |[_gcvt](../c-runtime-library/reference/gcvt.md), [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Converter número `double` em cadeia de caracteres; armazenar cadeia de caracteres no buffer|  
@@ -52,6 +49,7 @@ Essas rotinas convertem dados de um formulário para outro. Geralmente, essas ro
 |[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|Converter caractere multibyte em código hiragana de 1 byte|  
 |[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|Converter caractere multibyte em código katakana de 1 byte|  
 |[_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)|Converter caractere multibyte de 2 bytes no caractere multibyte de 1 byte correspondente|  
+|[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Converter um caractere multibyte em um caractere UTF-16 ou UTF-32 equivalente|  
 |[mbstowcs, _mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md), [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|Converter sequência de caracteres multibyte na sequência de caracteres largos correspondente|  
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Converter um caractere multibyte em um caractere largo correspondente|  
 |[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Converter cadeia de caracteres em `double`|  
