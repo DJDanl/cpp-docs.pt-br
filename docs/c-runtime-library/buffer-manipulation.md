@@ -17,18 +17,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c74c3b9f98f40b87224ae1c12da06ec55207567
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 942d0f881ed6453921f6082024be5247a1bb1b65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffer-manipulation"></a>Manipulação de buffer
 Use estas rotinas para trabalhar com áreas de memória em uma base byte por byte.  
   
 ### <a name="buffer-manipulation-routines"></a>Rotinas de manipulação de buffer  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|Copiar caracteres de um buffer para outro até que determinada caractere ou determinado número de caracteres foram copiados|  
 |[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|Retorna o ponteiro para a primeira ocorrência dentro de um número especificado de caracteres, de determinado caractere no buffer|  

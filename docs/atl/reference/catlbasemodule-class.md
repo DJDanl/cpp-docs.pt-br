@@ -1,11 +1,10 @@
 ---
-title: Classe CAtlBaseModule | Documentos do Microsoft
+title: Classe CAtlBaseModule | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,19 @@ f1_keywords:
 - ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlBaseModule class
+dev_langs: C++
+helpviewer_keywords: CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4897f6cf7e12a18401720ad663c90491bb0e599d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 88671ae94a1df10f3866dd2ae2e70092d1ca0c4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlbasemodule-class"></a>Classe CAtlBaseModule
 Essa classe é instanciada em cada projeto ATL.  
@@ -60,7 +43,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -74,7 +57,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Retorna um identificador para uma instância do recurso especificado.|  
 |[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Retorna a instância de módulo de um `CAtlBaseModule` objeto.|  
 |[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Retorna a instância do recurso de uma `CAtlBaseModule` objeto.|  
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Remove uma instância do recurso da lista de identificadores armazenados.|  
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Remove uma instância do recurso na lista de identificadores armazenados.|  
 |[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Define a instância do recurso de uma `CAtlBaseModule` objeto.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
@@ -84,9 +67,9 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Uma variável que indica se a inicialização do módulo falhou.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma instância de `CAtlBaseModule` _AtlBaseModule nomeado está presente em cada projeto ATL, que contém um identificador para a instância de módulo, um identificador para o módulo que contém os recursos (que, por padrão, são o mesmo) e uma matriz de identificadores para módulos que fornecem recursos principais. `CAtlBaseModule`pode ser acessado com segurança de vários threads.  
+ Uma instância de `CAtlBaseModule` _AtlBaseModule nomeado está presente em cada projeto ATL, que contém um identificador para a instância de módulo, um identificador para o módulo que contém recursos (que, por padrão, são o mesmo) e uma matriz de identificadores para módulos que fornecem primário recursos. `CAtlBaseModule`pode ser acessada de forma segura de vários threads.  
   
- Esta classe substitui o obsoleto [CComModule](../../atl/reference/ccommodule-class.md) classe usada em versões anteriores do ATL.  
+ Esta classe substitui o obsoleto [CComModule](../../atl/reference/ccommodule-class.md) classe usada em versões anteriores do ATL  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)  
@@ -108,7 +91,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
  A instância do recurso para adicionar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se o recurso tiver sido adicionado, FALSO caso contrário.  
+ Retorna VERDADEIRO se o recurso com êxito foi adicionado, false caso contrário.  
   
 ##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  O construtor.  
@@ -162,10 +145,10 @@ static bool m_bInitFailed;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- True se o módulo inicializado, FALSO se ele não conseguiu inicializar.  
+ True se o módulo for inicializado, FALSO se ele não conseguiu inicializar.  
   
 ##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
- Remove uma instância do recurso da lista de identificadores armazenados.  
+ Remove uma instância do recurso na lista de identificadores armazenados.  
   
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -176,7 +159,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
  A instância do recurso para remover.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se o recurso foi removido com êxito, FALSO caso contrário.  
+ Retorna VERDADEIRO se o recurso foi removido com êxito, false caso contrário.  
   
 ##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
  Define a instância do recurso de uma `CAtlBaseModule` objeto.  
@@ -195,4 +178,3 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)   
  [Classes de módulo](../../atl/atl-module-classes.md)
-

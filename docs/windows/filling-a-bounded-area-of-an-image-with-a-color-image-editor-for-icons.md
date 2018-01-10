@@ -1,52 +1,54 @@
 ---
-title: "Preenchendo uma &#225;rea limitada de uma imagem com uma cor (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cores [C++], imagem"
-  - "Ferramenta Preencher"
-  - "Editor de imagem [C++], cores"
-  - "imagens [C++], cores"
+title: "Preenchendo uma área limitada de uma imagem com uma cor (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- colors [C++], image
+- images [C++], colors
+- Image editor [C++], colors
+- Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd951e22286b255ea504ba5764f76ba8b4020924
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Preenchendo uma &#225;rea limitada de uma imagem com uma cor (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O editor de imagem fornece o  **Preencher** ferramenta para preencher qualquer entre a área da imagem com a cor de desenho atual ou a cor de plano de fundo atual.  
+# <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Preenchendo uma área limitada de uma imagem com uma cor (editor de imagens para ícones)
+O editor de imagem fornece o **preencher** colocados de ferramenta para o preenchimento de qualquer área da imagem com a cor de desenho atual ou a cor de plano de fundo atual.  
   
 > [!TIP]
->  Dicas de ferramentas aparecem quando você passa o cursor sobre um botão da barra de ferramentas.  Estas dicas podem ajudá\-lo a identificar a função de cada botão.  
+>  Dicas de ferramenta exibida quando você passar o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.  
   
-### Para usar a ferramenta de preenchimento  
+### <a name="to-use-the-fill-tool"></a>Para usar a ferramenta de preenchimento  
   
-1.  Sobre o  **Editor de imagens** barra de ferramentas \(ou o  **imagem** menu,  **Ferramentas** comando\), clique o  **Preencher** ferramenta.  
+1.  No **Editor de imagem** barra de ferramentas (ou o **imagem** menu **ferramentas** comando), clique no **preencher** ferramenta.  
   
-2.  Se necessário, escolha as cores de desenho: na  [a paleta de cores](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
+2.  Se necessário, escolha as cores de desenho: no [paleta de cores](../windows/colors-window-image-editor-for-icons.md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
   
-3.  Mover o  **preenchimento** ferramenta para a área que você deseja preencher.  
+3.  Mover o **preenchimento** ferramenta para a área que você deseja preencher.  
   
-4.  Clique no botão esquerdo ou direito do mouse para preencher com a cor de primeiro plano ou a cor de plano de fundo, respectivamente.  
+4.  Clique no botão esquerdo ou direito do mouse para preencher com a cor de primeiro plano ou a cor do plano de fundo, respectivamente.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
  Nenhum  
   
-## Consulte também  
- [Teclas de aceleração](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Trabalhando com cor](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)

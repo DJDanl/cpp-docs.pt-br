@@ -49,11 +49,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b745bb345377336377e46b9e49a45b340a2609b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmap-class"></a>Classe CMap
 Uma classe de coleção de dicionário que mapeia chaves exclusivas para valores.  
@@ -213,7 +214,7 @@ void GetNextAssoc(
  `rNextPosition`  
  Especifica uma referência a um **posição** valor retornado pelo anterior `GetNextAssoc` ou `GetStartPosition` chamar.  
   
- *CHAVE*  
+ *KEY*  
  Parâmetro de modelo especificando o tipo de chave do mapa.  
   
  `rKey`  

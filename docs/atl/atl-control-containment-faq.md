@@ -1,60 +1,30 @@
 ---
-title: "Perguntas frequentes sobre conten&#231;&#227;o de controle ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Contêineres de controle ActiveX [C++], hospedagem de controles da ATL"
-  - "Controles ActiveX [C++], hospedagem"
-  - "ATL, hospedando controles ActiveX"
-  - "controles [ATL]"
-  - "hospedando controles usando a ATL"
+title: "Perguntas frequentes sobre contenção de controle ATL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- hosting controls using ATL
+- ActiveX control containers [C++], ATL control hosting
+- ATL, hosting ActiveX controls
+- ActiveX controls [C++], hosting
+- controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-caps.latest.revision: 15
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e3569efe7ddd3423f7eaaf1e1c34c422a8e4d2a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Perguntas frequentes sobre conten&#231;&#227;o de controle ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="atl-control-containment-faq"></a>Perguntas frequentes sobre contenção de controle ATL
 
-Esta seção aborda as perguntas relacionadas para hospedar controles com ATL.  
-  
-> [!NOTE]
->  Em o Visual C\+\+ .NET, a classe **"AtlAxWin"** da janela será renomeada a **"AtlAxWin80"**.  Você ainda pode usar **"AtlAxWin"** se você usar o código de hospedagem em atl.dll \(enviados com o Visual C\+\+ 6,0 e agora um sistema .dll\).  
-  
-## Classes e APIs  
-  
--   [ATL classes que facilita a retenção do controle ActiveX?](../atl/which-atl-classes-facilitate-activex-control-containment-q.md)  
-  
--   [O que é ATL API de Hospedagem?](../atl/what-is-the-atl-control-hosting-api-q.md)  
-  
--   [O que é AtlAxWin80”? “](../atl/what-is-atlaxwin100-q.md)  
-  
-## Controles de design e de carregamento  
-  
--   [Quando eu preciso de chamar AtlAxWinInit?](../atl/when-do-i-need-to-call-atlaxwininit-q.md)  
-  
-## Trabalhar com controles  
-  
--   [O que é um objeto host?](../Topic/What%20Is%20a%20Host%20Object?.md)  
-  
--   [Posso hospedar mais de um controle em uma única janela?](../atl/can-i-host-more-than-one-control-in-a-single-window-q.md)  
-  
--   [Hospedando controles ActiveX usando ATL AXHost](../atl/hosting-activex-controls-using-atl-axhost.md)  
-  
-## Controles de destruindo  
-  
--   [Quando eu preciso de chamar AtlAxWinTerm?](../atl/when-do-i-need-to-call-atlaxwinterm-q.md)  
-  
-## Consulte também  
- [Conceitos](../atl/active-template-library-atl-concepts.md)

@@ -39,11 +39,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70f88d493ad557515cfac1f8cffeaa305c849f63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bf56b243118ceb7fdd995fc6970f6c49e0a5499
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensagem (MFC)
 Para dar suporte a mapas de mensagem, MFC fornece as seguintes macros:  
@@ -312,7 +313,7 @@ ON_MESSAGE( message, memberFxn )
  Deve haver exatamente um `ON_MESSAGE` instrução de macro em seu mapa de mensagem para cada mensagem definida pelo usuário que deve ser mapeada para uma função de manipulador de mensagens.  
   
 > [!NOTE]
->  Além de mensagens definidas pelo usuário, `ON_MESSAGE` manipula mensagens menos comuns do Windows. Para obter mais informações, consulte o artigo [99848: INFO: Use ON_MESSAGE() Macro mapa menos comuns mensagens](http://go.microsoft.com/fwlink/?linkId=192022).  
+>  Além de mensagens definidas pelo usuário, `ON_MESSAGE` manipula mensagens menos comuns do Windows. Para obter mais informações, consulte o artigo [99848: INFO: Use ON_MESSAGE() Macro mapa menos comuns mensagens](http://go.microsoft.com/fwlink/p/?linkid=192022).  
   
  Para obter mais informações e exemplos, consulte [manipulação de mensagens e mapeamento de tópicos](../../mfc/message-handling-and-mapping.md) e [manipuladores definidos pelo usuário](user-defined-handlers.md)  
   

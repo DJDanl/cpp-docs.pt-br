@@ -1,39 +1,38 @@
 ---
-title: "operator &amp;&amp; (MASM Run Time) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator &&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator &&"
-  - "&& operator"
+title: "operador &amp; &amp; (tempo de execução MASM) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: operator &&
+dev_langs: C++
+helpviewer_keywords:
+- operator &&
+- '&& operator'
 ms.assetid: 0a633a40-114c-48f5-88ff-09bc8d9b281a
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a354c682ce9fd3c461b088a8b8f02267989810c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# operator &amp;&amp; (MASM Run Time)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Lógica  **AND**.  Usado somente dentro  [.IF](../Topic/.IF.md), [.WHILE](../../assembler/masm/dot-while.md), or [.Repetir](../../assembler/masm/dot-repeat.md) bloqueia e avaliado em tempo de execução, não no tempo de montagem.  
+# <a name="operator-ampamp-masm-run-time"></a>operador &amp; &amp; (tempo de execução MASM)
+Lógica **AND**. Usado somente em [. Se](../../assembler/masm/dot-if.md), [. ENQUANTO](../../assembler/masm/dot-while.md), ou [. REPITA](../../assembler/masm/dot-repeat.md) bloqueia e avaliadas em tempo de execução, não no momento do assembly.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 expression1 && expression2  
 ```  
   
-## Consulte também  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de operadores](../../assembler/masm/operators-reference.md)

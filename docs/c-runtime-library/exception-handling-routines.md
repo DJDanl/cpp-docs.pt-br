@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d12410aba4f64f54cbbfcc123d842171441192a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95ecbc69dd9cbd86bd7891c79f115442f659ff94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-routines"></a>Rotinas do tratamento de exceções
 Use as funções de tratamento de exceção do C++ para recuperar eventos inesperados durante a execução do programa.  
   
 ### <a name="exception-handling-functions"></a>Funções de tratamento de exceção  
   
-|Função|Uso|  
+|Função|Use|  
 |--------------|---------|  
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Trata exceções do Win32 (exceções de C estruturadas) como exceções C++|  
 |[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Instala sua própria rotina de terminação a ser chamada por `terminate`|  

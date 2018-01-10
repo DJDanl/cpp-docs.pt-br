@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dd7ab170717cb0e20d71ad4e62e2cbc03483fbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e14c2811debfe01f7eb5ae7fc36bebfe0580017
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="incomplete-types"></a>Tipos incompletos
 Um tipo incompleto é um tipo que descreve um identificador, mas não tem as informações necessárias para determinar o tamanho do identificador. Um “tipo incompleto” pode ser:  

@@ -1,47 +1,29 @@
 ---
-title: "crítico | Documentos do Microsoft"
+title: "crítico | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Critical
-dev_langs:
-- C++
-helpviewer_keywords:
-- critical OpenMP directive
+f1_keywords: Critical
+dev_langs: C++
+helpviewer_keywords: critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5693a16faebbc0f8c0a29cf28910110fbff66318
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1df2a70c53272415789ef381874fe4bc46327381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="critical"></a>critical
-Especifica que código é ser executado somente em um thread por vez.  
+Especifica que código é ser executado somente em um segmento por vez.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,12 +38,12 @@ Especifica que código é ser executado somente em um thread por vez.
  onde,  
   
  (`name`) (opcional)  
- Um nome para identificar o código critical. Observe que esse nome deve estar entre parênteses.  
+ Um nome para identificar o código crítico. Observe que esse nome deve ser incluído entre parênteses.  
   
 ## <a name="remarks"></a>Comentários  
- O **crítico** diretiva oferece suporte a nenhum cláusulas OpenMP.  
+ O **crítico** diretiva dá suporte a nenhuma cláusulas OpenMP.  
   
- Para obter mais informações, consulte [2.6.2 críticos construir](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Para obter mais informações, consulte [2.6.2 crítico construir](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   

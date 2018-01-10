@@ -1,68 +1,67 @@
 ---
-title: "const_seg | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.const_seg"
-  - "const_seg_CPP"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "const_seg (pragma)"
-  - "pragmas, const_seg"
+title: const_seg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.const_seg
+- const_seg_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, const_seg
+- const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-caps.latest.revision: 12
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 49d145bc80b524176b381b2b5938c9707e8c1b19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# const_seg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica o segmento em que as variáveis [const](../cpp/const-cpp.md) são armazenadas no arquivo .obj.  
+# <a name="constseg"></a>const_seg
+Especifica o segmento onde [const](../cpp/const-cpp.md) variáveis são armazenadas no arquivo. obj.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## Comentários  
- O significado dos termos *segmento* e *seção* são usados alternadamente neste tópico.  
+## <a name="remarks"></a>Comentários  
+ O significado dos termos de *segmento* e *seção* são intercambiáveis neste tópico.  
   
- Os arquivos OBJ podem ser exibidos com o aplicativo [dumpbin](../build/reference/dumpbin-command-line.md).  O segmento padrão no arquivo. obj para `const` variáveis é RDATA.  Alguns `const` como escalares, as variáveis são embutidas automaticamente no fluxo de código.  O código embutido não aparecerá em .rdata.  
+ Arquivos OBJ podem ser exibidos com o [dumpbin](../build/reference/dumpbin-command-line.md) aplicativo. O segmento padrão no arquivo. obj para `const` variáveis é RDATA. Alguns `const` como escalares, as variáveis são automaticamente embutidas no fluxo de código. O código embutido não aparecerá em .rdata.  
   
- Definindo um objeto que exigem a inicialização dinâmica em um `const_seg` resulta em um comportamento indefinido.  
+ Define um objeto que requerem inicialização dinâmica em um `const_seg` resulta em um comportamento indefinido.  
   
- `#pragma const_seg` sem parâmetros redefine o segmento como RDATA.  
+ `#pragma const_seg`sem parâmetros redefine o segmento para RDATA.  
   
- `push` \(opcional\)  
- Coloca um registro na pilha interna do compilador.  Um `push` pode ter um `identifier` e `segment-name`.  
+ `push` (opcional)  
+ Coloca um registro na pilha interna do compilador. Um `push` pode ter um `identifier` e `segment-name`.  
   
- `pop` \(opcional\)  
+ `pop` (opcional)  
  Remove um registro do topo da pilha interna do compilador.  
   
- `identifier` \(opcional\)  
- Quando usado com `push`, atribui um nome ao registro na pilha interna do compilador.  Quando usado com `pop`, elimina registros da pilha interna até que `identifier` seja removido; se `identifier` não for localizado na pilha interna, nada será exibido.  
+ `identifier` (opcional)  
+ Quando usado com `push`, atribui um nome ao registro na pilha interna do compilador. Quando usado com `pop`, elimina registros da pilha interna até que `identifier` seja removido; se `identifier` não for localizado na pilha interna, nada será exibido.  
   
- Usando `identifier` habilita vários registros a serem exibidos com um único `pop` comando.  
+ Usando `identifier` permite que vários registros deve ser exibido com um único `pop` comando.  
   
- "`segment-name`" \(opcional\)  
- O nome de um segmento.  Quando usado com `pop`, a pilha é exibida e `segment-name` se torna o nome do segmento ativo.  
+ "`segment-name`" (opcional)  
+ O nome de um segmento. Quando usado com `pop`, a pilha é exibida e `segment-name` se torna o nome de segmento ativo.  
   
- "`segment-class`" \(opcional\)  
- Incluído para compatibilidade com o C\+\+ antes da versão 2.0.  É ignorado.  
+ "`segment-class`" (opcional)  
+ Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // pragma_directive_const_seg.cpp  
@@ -91,14 +90,17 @@ int main() {
 }  
 ```  
   
-  **test1**  
-**test2**  
-**test3**  
-**test4**   
-## Comentários  
- Consulte [\/SECTION](../build/reference/section-specify-section-attributes.md) para obter uma lista de nomes que você não deve usar ou criar uma seção.  
+```Output  
+test1  
+test2  
+test3  
+test4  
+```  
   
- Você também pode especificar seções para dados inicializados \([data\_seg](../preprocessor/data-seg.md)\), dados não inicializados \([bss\_seg](../preprocessor/bss-seg.md)\) e funções \([code\_seg](../preprocessor/code-seg.md)\).  
+## <a name="comments"></a>Comentários  
+ Consulte [/seção](../build/reference/section-specify-section-attributes.md) para obter uma lista de nomes que você não deve usar ao criar uma seção.  
   
-## Consulte também  
- [Diretivas Pragma e a palavra\-chave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ Você também pode especificar seções de dados inicializado ([data_seg](../preprocessor/data-seg.md)), dados foi cancelada ([bss_seg](../preprocessor/bss-seg.md)) e funções ([code_seg](../preprocessor/code-seg.md)).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

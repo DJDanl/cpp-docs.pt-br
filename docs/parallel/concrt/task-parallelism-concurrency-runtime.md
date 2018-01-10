@@ -19,11 +19,12 @@ caps.latest.revision: "56"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26b41c4fa3f3cdc9840eecbd31790b7cf82d7659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Paralelismo de tarefa (tempo de execução de simultaneidade)
 No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho que executa um trabalho específico e normalmente é executado em paralelo com outras tarefas. Uma tarefa pode ser decomposta em tarefas mais refinadas adicionais que são organizadas em uma *grupo tarefas*.  

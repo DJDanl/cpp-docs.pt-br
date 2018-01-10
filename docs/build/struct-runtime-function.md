@@ -1,35 +1,35 @@
 ---
-title: "struct RUNTIME_FUNCTION | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: struct RUNTIME_FUNCTION | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 84386527-d3aa-41c5-871d-78e3e1913704
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c05dcd516af5c078b4e4e664bae16f65370ca117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# struct RUNTIME_FUNCTION
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Manipulação de exceção com base em tabela requer uma entrada de tabela para todas as funções que usa o espaço de pilha ou chamar outra função \(por exemplo, funções nonleaf\).  As entradas de tabela de função têm o formato:  
+# <a name="struct-runtimefunction"></a>struct RUNTIME_FUNCTION
+Tratamento de exceções com base em tabela requer uma entrada de tabela para todas as funções que alocar espaço de pilha ou chamar outra função (por exemplo, funções de não-folha). Entradas de tabela da função têm o formato:  
   
 |||  
 |-|-|  
-|ULONG|Endereço de início de função|  
-|ULONG|Endereço do final da função|  
-|ULONG|Desenrole o endereço de informações|  
+|ULONG|Endereço inicial de função|  
+|ULONG|Endereço de final de função|  
+|ULONG|Endereço de informações de liberação|  
   
- A estrutura de RUNTIME\_FUNCTION deve ser DWORD alinhado na memória.  Todos os endereços são relativos de imagem, isto é, são deslocamentos de 32 bits do endereço inicial da imagem que contém a entrada de tabela de função.  Essas entradas são classificadas, e colocados na seção de .pdata de uma imagem PE32\+.  Para funções gerados dinamicamente \[compiladores JIT\], o tempo de execução para oferecer suporte a essas funções deve usar RtlInstallFunctionTableCallback ou RtlAddFunctionTable para fornecer essas informações para o sistema operacional.  A falha fazer isso resultará na manipulação de exceção não confiável e a depuração dos processos.  
+ A estrutura RUNTIME_FUNCTION deve ser DWORD alinhado na memória. Todos os endereços são imagem relativa, ou seja, eles são os deslocamentos de 32 bits do endereço inicial da imagem que contém a entrada da tabela de função. Essas entradas são classificadas e colocadas na seção de uma imagem PE32 +. pData. Para funções geradas dinamicamente [compiladores JIT], o tempo de execução para dar suporte a essas funções deve usar RtlInstallFunctionTableCallback ou RtlAddFunctionTable para fornecer essas informações para o sistema operacional. Falha ao fazer isso resulta em confiável manipuladores de exceção e depuração de processos.  
   
-## Consulte também  
- [Dados desenrolados para tratamento de exceções, suporte do depurador](../build/unwind-data-for-exception-handling-debugger-support.md)
+## <a name="see-also"></a>Consulte também  
+ [Desenrolar dados para tratamento de exceção, suporte do depurador](../build/unwind-data-for-exception-handling-debugger-support.md)

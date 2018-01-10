@@ -10,14 +10,13 @@ f1_keywords:
 - chrono/std::duration_cast
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 2df866e0f6fec9833c67e4d4ea405a826996dedf
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltchronogt-functions"></a>Funções &lt;chrono&gt;
 ||||  
@@ -33,7 +32,7 @@ template <class To, class Rep, class Period>
 constexpr To duration_cast(const duration<Rep, Period>& Dur);
 ```  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um objeto `duration` do tipo `To` que representa o intervalo de tempo `Dur`, que será truncado se precisar caber no tipo de destino.  
   
 ### <a name="remarks"></a>Comentários  
@@ -47,7 +46,7 @@ template <class To, class Clock, class Duration>
 time_point<Clock, To> time_point_cast(const time_point<Clock, Duration>& Tp);
 ```  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um objeto `time_point` que tem uma duração do tipo `To`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -55,5 +54,4 @@ time_point<Clock, To> time_point_cast(const time_point<Clock, Duration>& Tp);
   
 ## <a name="see-also"></a>Consulte também  
  [\<chrono>](../standard-library/chrono.md)
-
 

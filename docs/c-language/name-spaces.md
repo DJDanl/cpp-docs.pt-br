@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-spaces"></a>Namespaces
 O compilador configura os “name spaces” para distinguir entre os identificadores usados para tipos diferentes de itens. Os nomes em cada name space devem ser exclusivos para evitar conflitos, mas um nome idêntico pode aparecer em mais de um name space. Isso significa que você pode usar o mesmo identificador de dois ou mais itens diferentes, contanto que os itens estejam em name spaces diferentes. O compilador pode resolver referências com base no contexto sintático do identificador no programa.  
@@ -63,4 +64,4 @@ struct student {
  Quando `student` aparece após a palavra-chave de `struct`, o compilador o reconhece como uma marca de estrutura. Quando `student` aparece após um operador de seleção de membros (**->** ou **.**), o nome faz referência ao membro da estrutura. Em outros contextos, `student` se refere à variável da estrutura. Porém, sobrecarregar a marca name space não é recomendado porque obscurece o significado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Estrutura do Programa](../c-language/program-structure.md)
+ [Estrutura do programa](../c-language/program-structure.md)

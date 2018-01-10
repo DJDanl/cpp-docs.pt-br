@@ -17,18 +17,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c216c009d84771fdf34426b6121a89eb4b3f73e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97db036822687936f3f8e4084c065c8ec64ca23e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-access"></a>Acesso a argumento
 As macros `va_arg`, `va_end` e `va_start` fornecem acesso aos argumentos de função quando o número de argumentos é variável. Elas são definidas em STDARG.H para compatibilidade com ANSI C e em VARARGS.H para compatibilidade com UNIX System V.  
   
 ### <a name="argument-access-macros"></a>Macros de acesso a argumento  
   
-|Macro|Uso|  
+|Macro|Use|  
 |-----------|-------------------------------|  
 |[va_arg](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)|Recuperar o argumento da lista|  
 |[va_end](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)|Reiniciar o ponteiro|  

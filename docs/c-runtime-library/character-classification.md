@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d238acf9bfe55052a1d6dc316f5425774737f9f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c43761189d9241e77faa67ad106f346fb8f92ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-classification"></a>Classificação de caractere
 Todas essas rotinas testam um caractere de byte único especificado, caractere largo ou caracteres multibyte para satisfação de uma condição. (Por definição, o caractere ASCII definido entre 0 e 127 são um subconjunto de todos os conjuntos de caracteres multibyte. Por exemplo, o katakana japonês inclui ASCII, bem como caracteres não ASCII.)  

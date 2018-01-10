@@ -1,33 +1,33 @@
 ---
-title: "SafeLessThan | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeLessThan"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função SafeLessThan"
+title: SafeLessThan | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeLessThan
+dev_langs: C++
+helpviewer_keywords: SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4c490f02f6c27d517095ab3f75a31bb03fe14f63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# SafeLessThan
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safelessthan"></a>SafeLessThan
 Determina se um número é menor que outro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename T, typename U>  
@@ -37,33 +37,33 @@ inline bool SafeLessThan (
 ) throw ();  
 ```  
   
-#### Parâmetros  
- \[entrada\] `t`  
- O primeiro número.  Isso deve ser do tipo T.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `t`  
+ O primeiro número. Isso deve ser do tipo T.  
   
- \[entrada\] `u`  
- O segundo numer.  Isso deve ser do tipo U.  
+ [in] `u`  
+ O segundo número. Isso deve ser do tipo u  
   
-## Valor de retorno  
- `true` se `t` é menor que `u`; se não `false`.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se `t` é menor que `u`; caso contrário, `false`.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Esse método aprimora o operador de comparação padrão porque `SafeLessThan` permite comparar dois tipos diferentes de número.  
   
- Esse método é parte de [Biblioteca de SafeInt](../windows/safeint-library.md) e é criado para uma única operação de comparação sem criar uma instância de [Classe SafeInt](../windows/safeint-class.md).  
+ Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de comparação simples sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Esse método deve ser usado apenas quando uma única operação matemática deve ser protegida.  Se houver várias operações, você deve usar a classe de `SafeInt` em vez de chamar funções autônomas individuais.  
+>  Este método só deve ser usado quando uma operação matemática único deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
   
- Para obter mais informações sobre os tipos T e U de modelo, consulte [Funções \(SafeInt\)](../windows/safeint-functions.md).  
+ Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Consulte também  
- [Funções \(SafeInt\)](../windows/safeint-functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções (SafeInt)](../windows/safeint-functions.md)   
  [Biblioteca de SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)   
  [SafeLessThanEquals](../windows/safelessthanequals.md)   

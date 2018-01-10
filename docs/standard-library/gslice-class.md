@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,23 @@ f1_keywords:
 - valarray/std::gslice::size
 - valarray/std::gslice::start
 - valarray/std::gslice::stride
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::gslice [C++]
 - std::gslice [C++], size
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52170e08d3118b5eb0ef7bb1e34edbe29b3d38f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: bc5a8795d145832a476bb26bdc9928065e09ca64
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gslice-class"></a>Classe gslice
 Uma classe de utilitário para valarray que é usada para definir subconjuntos multidimensionais de um valarray. Se um valarray for considerado uma matriz multidimensional com todos os elementos em uma matriz, a fatia extrairá um vetor da matriz multidimensional.  
@@ -348,5 +346,4 @@ The strides of vaResult are:
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

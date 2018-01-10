@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>Manipulação de arquivos
 Use estas rotinas para criar, excluir e manipular arquivos e para definir e verificar as permissões de acesso a arquivos.  
@@ -33,7 +34,7 @@ Use estas rotinas para criar, excluir e manipular arquivos e para definir e veri
   
  Essas rotinas operam em arquivos designados por um descritor de arquivo.  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[_chsize](../c-runtime-library/reference/chsize.md),[_chsize_s](../c-runtime-library/reference/chsize-s.md)|Alterar o tamanho do arquivo|  
 |[_filelength, _filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|Obter tamanho de arquivo|  
@@ -48,7 +49,7 @@ Use estas rotinas para criar, excluir e manipular arquivos e para definir e veri
   
  Essas rotinas operam em arquivos especificados por um caminho ou nome de arquivo.  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Verificar configuração de permissão de arquivo|  
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Alterar configuração de permissão de arquivo|  
@@ -66,7 +67,7 @@ Use estas rotinas para criar, excluir e manipular arquivos e para definir e veri
   
  Essas rotinas abrem arquivos.  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Abre um arquivo e retorna um ponteiro para o arquivo aberto.|  
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Abre um fluxo com o compartilhamento de arquivo e retorna um ponteiro para o arquivo aberto.|  
@@ -77,7 +78,7 @@ Use estas rotinas para criar, excluir e manipular arquivos e para definir e veri
   
  Essas rotinas fornecem uma maneira de alterar a representação do arquivo entre uma estrutura `FILE`, um descritor de arquivo e um identificador de arquivo do Win32.  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Associa um fluxo com um arquivo que foi aberto anteriormente para E/S de nível inferior e retorna um ponteiro para o fluxo aberto.|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|Obtém o descritor de arquivo associado a um fluxo.|  

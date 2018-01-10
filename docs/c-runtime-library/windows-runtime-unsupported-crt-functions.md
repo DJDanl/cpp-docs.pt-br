@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9fb74dbc28235f211f24d64ef125f2cccdafc7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3e5e2f8ffab670c6e6c5eb95d37b4daced5c6b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Funções CRT não suportadas de Windows Runtime 
 Várias APIs de tempo de execução em C (CRT) não podem ser usadas em aplicativos [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] que são executados no Windows Runtime. Esses aplicativos são criados usando o sinalizador de compilador /ZW. Para obter uma lista de funções de CRT sem suporte, consulte [funções de CRT não tem suporte pelo /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  

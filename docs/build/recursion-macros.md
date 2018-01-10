@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 41354c34fb21da7f568718489495991cbd1bae43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8d9ef7f194151fb3259712759d0c29ed157d564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursion-macros"></a>Macros de recursão
 Use macros de recursão para chamar NMAKE recursivamente. Sessões recursiva herdam macros de variável de ambiente e de linha de comando e Tools.ini informações. Eles não herdam a regras de inferência definido makefile ou **. SUFIXOS** e **. PRECIOSOS** especificações. Para passar a uma sessão NMAKE recursiva macros, definir uma variável de ambiente com definida antes da chamada recursiva, definir uma macro no comando para a chamada recursiva ou definir uma macro em Tools.ini.  

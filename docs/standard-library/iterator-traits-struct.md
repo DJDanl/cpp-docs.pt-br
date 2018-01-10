@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xutility/std::iterator_traits
-- iterator_traits
-dev_langs:
-- C++
+f1_keywords: xutility/std::iterator_traits
+dev_langs: C++
 helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 24cdef3317b1a2c982858a3832e0085ba7ba7d20
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ac3034f1384bbd38cb0ca90d0df8ff5bed411d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteratortraits-struct"></a>Struct iterator_traits
 Um struct auxiliar de modelo usado para especificar todas as definições de tipo crítico que um iterador deve ter.  
@@ -150,7 +132,6 @@ struct std::bidirectional_iterator_tag
  [\<iterator>](../standard-library/iterator.md)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

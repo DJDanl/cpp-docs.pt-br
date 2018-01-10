@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58a777a049b270702e63391ebc7bd4c1addc3b32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
 Gera uma sequência aleatória e de alta qualidade de inteiros com base no algoritmo Mersenne Twister.  
@@ -36,7 +37,7 @@ class mersenne_twister_engine;
   
 #### <a name="parameters"></a>Parâmetros  
  `UIntType`  
- O tipo de resultado inteiro sem sinal. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+ O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
  `W`  
  **Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `2u < W ≤ numeric_limits<UIntType>::digits`  
@@ -104,7 +105,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- Para saber mais sobre o algoritmo Mersenne Twister, consulte o artigo da Wikipedia [Mersenne Twister](http://go.microsoft.com/fwlink/LinkId=402356).  
+ Para saber mais sobre o algoritmo Mersenne Twister, consulte o artigo da Wikipedia [Mersenne Twister](http://go.microsoft.com/fwlink/p/?linkid=402356).  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de código, consulte [\<random>](../standard-library/random.md).  

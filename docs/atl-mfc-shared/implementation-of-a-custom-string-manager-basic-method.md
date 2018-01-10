@@ -1,47 +1,47 @@
 ---
-title: "Implementa&#231;&#227;o de um gerente personalizado de cadeia de caracteres (b&#225;sico m&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de IAtlStringMgr, Usando"
+title: "Implementação um Gerenciador de personalizado cadeia de caracteres (método básico) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Implementa&#231;&#227;o de um gerente personalizado de cadeia de caracteres (b&#225;sico m&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A maneira mais fácil para personalizar o esquema de alocação de memória para dados de cadeia de caracteres é usar ATL\- forneceu a classe de **CAtlStringMgr** mas fornece seu próprio rotinas de alocação de memória.  O construtor para **CAtlStringMgr** aceita um único parâmetro: um ponteiro para um objeto de `IAtlMemMgr` .  `IAtlMemMgr` é uma classe base abstrata que fornece uma interface genérica a um heap.  Usando a interface de `IAtlMemMgr` , **CAtlStringMgr** atributos, realoca, e libera memória usada para armazenar dados de cadeia de caracteres.  Ou você pode implementar a interface de `IAtlMemMgr` você mesmo, ou use um dos cinco ATL\- forneceu classes gerente de memória.  ATL\- forneceu recursos existentes de alocação de memória de quebra automática de gerentes de memória simplesmente:  
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementação um Gerenciador de personalizado cadeia de caracteres (método básico)
+A maneira mais fácil para personalizar o esquema de alocação de memória para dados de cadeia de caracteres usar o ATL fornecido **CAtlStringMgr** classe mas fornecer sua própria memória rotinas de alocação. O construtor para **CAtlStringMgr** usa um único parâmetro: um ponteiro para um `IAtlMemMgr` objeto. `IAtlMemMgr`é uma classe base abstrata que fornece uma interface genérica para um heap. Usando o `IAtlMemMgr` interface, o **CAtlStringMgr** aloca realoca e libera a memória usada para armazenar dados de cadeia de caracteres. Você pode ou implementar o `IAtlMemMgr` interface por conta própria, ou usar uma das classes de Gerenciador de memória fornecida ATL cinco. Os gerenciadores de memória fornecida ATL simplesmente encapsular recursos existentes de alocação de memória:  
   
--   [CCRTHeap](../atl/reference/ccrtheap-class.md) Envolve as funções do heap de CRT de padrão \([malloc](../c-runtime-library/reference/malloc.md), [livre](../c-runtime-library/reference/free.md), e [realloc](../c-runtime-library/reference/realloc.md)\)  
+-   [CCRTHeap](../atl/reference/ccrtheap-class.md) encapsula as funções de heap padrão do CRT ([malloc](../c-runtime-library/reference/malloc.md), [livre](../c-runtime-library/reference/free.md), e [realloc](../c-runtime-library/reference/realloc.md))  
   
--   [CWin32Heap](../atl/reference/cwin32heap-class.md) Envolve um identificador do heap do Win32, usando [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), e [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
+-   [CWin32Heap](../atl/reference/cwin32heap-class.md) encapsula tratar de um heap Win32, usando [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), e [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
   
--   [CLocalHeap](../atl/reference/clocalheap-class.md) Envolve APIs do Win32: [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730), e [LocalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)  
+-   [CLocalHeap](../atl/reference/clocalheap-class.md) encapsula as APIs do Win32: [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730), e [LocalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)  
   
--   [CGlobalHeap](../atl/reference/cglobalheap-class.md) Envolve APIs do Win32: [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574), [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579), e [GlobalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+-   [CGlobalHeap](../atl/reference/cglobalheap-class.md) encapsula as APIs do Win32: [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574), [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579), e [GlobalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
   
--   [CComHeap](../atl/reference/ccomheap-class.md) Envolve APIs do distribuidor de tarefa COM: [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), e [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)  
+-   [CComHeap](../atl/reference/ccomheap-class.md) encapsula as APIs do alocador de tarefas COM: [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), e [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)  
   
- Com o objetivo de gerenciamento de memória de cadeia de caracteres, a classe mais útil é `CWin32Heap` porque ela permite que você crie heaps independente de múltiplos.  Por exemplo, se você quisesse usar um heap separado apenas para cadeias de caracteres, você pode fazer o seguinte:  
+ Para fins de gerenciamento de memória de cadeia de caracteres, a classe mais úteis é `CWin32Heap` porque ele permite que você criar várias pilhas independentes. Por exemplo, se você quiser usar um heap separado apenas para cadeias de caracteres, você pode fazer o seguinte:  
   
- [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/CPP/implementation-of-a-custom-string-manager-basic-method_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]  
   
- Para usar o gerenciador particular de cadeia de caracteres para gerenciar a memória para um variável de `CString` , passe um ponteiro para o gerenciador como um parâmetro para o construtor da variável de `CString` :  
+ Para usar esse gerenciador de cadeia de caracteres privada para gerenciar a memória para um `CString` variável, passe um ponteiro para o Gerenciador de como um parâmetro para o `CString` construtor da variável:  
   
- [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/CPP/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciamento de memória com CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+

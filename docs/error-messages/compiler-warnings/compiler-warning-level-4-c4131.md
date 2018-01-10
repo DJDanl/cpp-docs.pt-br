@@ -1,50 +1,31 @@
 ---
-title: "Compilador aviso (nível 4) C4131 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4131 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4131
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4131
+f1_keywords: C4131
+dev_langs: C++
+helpviewer_keywords: C4131
 ms.assetid: 7903b3e1-454f-4be2-aa9b-230992f96a2d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4bc0d1262026998e79e365e9d47fba0186636f00
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ea37a3f210a2c379471b481fb0812b6c0630d32a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4131"></a>Compilador C4131 de aviso (nível 4)
-'function': usa o declarador de estilo antigo  
+'function': usa Declarador de estilo antigo  
   
- A declaração de função especificado não está no formato de protótipo.  
+ A declaração da função especificada não está na forma de protótipo.  
   
  Declarações de função de estilo antigo devem ser convertidas em forma de protótipo.  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 987691d2eaf8ae2f6c8f724fb8bcf4f26ad68dcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 835c396c36a23d05a1e3512fa7ad5e4c4e81c795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale"></a>Localidade
 *Localidade* refere-se às configurações de país/região e idioma que você pode usar para personalizar o seu programa. Algumas categorias dependentes da localidade incluem os formatos de exibição para datas e valores monetários. Para saber mais, veja [Localidade](../c-runtime-library/locale-categories.md).  

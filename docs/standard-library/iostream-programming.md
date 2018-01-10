@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - text output [C++]
 - text [C++], formatting
@@ -26,30 +24,16 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 58f49647766d21369145474d908bd3c0436deae8
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4492f590c1be5604fcd630c41cdf79ce21e8b76f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iostream-programming"></a>Programação iostream
 Esta seção fornece uma [descrição geral](../standard-library/what-a-stream-is.md) das classes iostream e descreve [fluxos de saída](../standard-library/output-streams.md), [fluxos de entrada](../standard-library/input-streams.md) e [fluxos de entrada/saída](../standard-library/input-output-streams.md). O final da seção fornece informações sobre programação iostream avançada.  
@@ -70,5 +54,4 @@ Esta seção fornece uma [descrição geral](../standard-library/what-a-stream-i
 ## <a name="see-also"></a>Consulte também  
  [Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)   
  [Convenções de iostreams](../standard-library/iostreams-conventions.md)
-
 

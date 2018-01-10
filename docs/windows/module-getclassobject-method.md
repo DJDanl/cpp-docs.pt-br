@@ -1,30 +1,30 @@
 ---
-title: "M&#233;todo Module::GetClassObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GetClassObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetClassObject"
+title: "Método: GetClassObject | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GetClassObject
+dev_langs: C++
+helpviewer_keywords: GetClassObject method
 ms.assetid: 95b0de1b-f728-4f96-9f44-f6ea71ce56e4
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3f234b46da1a70ee0256a9a38ebb2ef7ae0bb5bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo Module::GetClassObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulegetclassobject-method"></a>Método Module::GetClassObject
 Recupera um cache de fábricas de classe.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,10 +40,10 @@ Recupera um cache de fábricas de classe.
   
 #### <a name="parameters"></a>Parâmetros  
  `clsid`  
- ID da classe.  
+ ID de classe.  
   
  `riid`  
- ID de interface que você solicitou.  
+ ID de interface que você solicitar.  
   
  `ppv`  
  Ponteiro para o objeto retornado.  
@@ -54,7 +54,7 @@ Recupera um cache de fábricas de classe.
 ## <a name="return-value"></a>Valor de retorno  
   
 ## <a name="remarks"></a>Comentários  
- Use esse método apenas para COM, não o [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]. Esse método expõe apenas IClassFactory métodos.  
+ Use este método somente para COM, não o tempo de execução do Windows. Esse método expõe métodos de IClassFactory somente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
@@ -62,4 +62,4 @@ Recupera um cache de fábricas de classe.
  **Namespace:** Microsoft:: wrl
  
  ## <a name="see-also"></a>Consulte também
- [Classe de módulo](../windows/module-class.md)
+ [Classe Module](../windows/module-class.md)

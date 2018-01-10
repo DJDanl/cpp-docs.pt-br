@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ad63f077bcc018681f852d1495e9f1abd7d4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b094e0cc34cc1a832e531cff9a5f3fa1366abcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chartraits-struct"></a>Struct char_traits
 A struct char_traits descreve os atributos associados a um caractere.  
@@ -121,7 +122,7 @@ static char_type *assign(char_type* strTo,
  `_Num`  
  O número de elementos aos quais serão atribuídos valores.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A segunda função membro retorna um ponteiro para a cadeia de caracteres a cujos primeiros `_Num` elementos foram atribuídos valores de *_CharFrom*.  
   
 ### <a name="example"></a>Exemplo  
@@ -197,7 +198,7 @@ static int compare(const char_type* str1,
  `_Num`  
  O número de elementos nas cadeias de caracteres a serem comparados.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um valor negativo se a primeira cadeia de caracteres for menor que a segunda cadeia de caracteres; 0 se as duas cadeias de caracteres forem iguais; ou um valor positivo se a primeira cadeia de caracteres for maior que a segunda cadeia de caracteres.  
   
 ### <a name="remarks"></a>Comentários  
@@ -259,7 +260,7 @@ static char_type *copy(char_type* _To,
  `_Num`  
  O número de elementos a serem copiados.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O primeiro elemento copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -320,7 +321,7 @@ static char_type *_Copy_s(
  `count`  
  O número de elementos a serem copiados.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A matriz de caractere ou cadeia de caracteres de destino para receber a sequência de caracteres copiada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -364,7 +365,7 @@ The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-ab
 static int_type eof();
 ```  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O caractere EOF.  
   
 ### <a name="remarks"></a>Comentários  
@@ -419,7 +420,7 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
  `_Ch2`  
  O segundo de dois caracteres a serem testados quanto à igualdade.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  **true** se o primeiro caractere for igual ao segundo caractere; caso contrário **false**.  
   
 ### <a name="example"></a>Exemplo  
@@ -476,7 +477,7 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
  `_Ch2`  
  O segundo de dois caracteres a serem testados quanto à igualdade como `int_type`s.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  **true** se o primeiro caractere for igual ao segundo caractere; caso contrário **false**.  
   
 ### <a name="example"></a>Exemplo  
@@ -563,7 +564,7 @@ static const char_type* find(const char_type* str,
  `_Ch`  
  O caractere a ser pesquisado no intervalo.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a primeira ocorrência do caractere especificado no intervalo se uma correspondência for encontrada; caso contrário, um ponteiro nulo.  
   
 ### <a name="example"></a>Exemplo  
@@ -632,7 +633,7 @@ static size_t length(const char_type* str);
  `str`  
  A cadeia de caracteres C cujo tamanho deve ser medido.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O número de elementos na sequência que está sendo medida, não incluindo o terminador nulo.  
   
 ### <a name="example"></a>Exemplo  
@@ -675,7 +676,7 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
  `_Ch2`  
  O segundo de dois caracteres a serem testados quanto a serem menores que.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  **true** se o primeiro caractere for menor que o segundo caractere; caso contrário **false**.  
   
 ### <a name="example"></a>Exemplo  
@@ -738,7 +739,7 @@ static char_type *move(char_type* _To,
  `_Num`  
  O número de elementos a serem copiados da cadeia de caracteres de origem.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O primeiro elemento `_To` copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -814,7 +815,7 @@ static char_type *_Move_s(
  `count`  
  O número de elementos a serem copiados da cadeia de caracteres de origem.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O primeiro elemento `dest` copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -877,7 +878,7 @@ static int_type not_eof(const int_type& _Ch);
  `_Ch`  
  O caractere representado como um `int_type` a ser testado para determinar se ele é o caractere EOF ou não.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A representação `int_type` do caractere testado, se o **int_type** do caractere não for igual ao do caractere EOF.  
   
  Se o valor `int_type` do caractere for igual ao valor do EOF `int_type`, então **false**.  
@@ -976,7 +977,7 @@ static char_type to_char_type(const int_type& _Ch);
  `_Ch`  
  O caractere `int_type` a ser representado como um `char_type`.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O caractere `char_type` que corresponde ao caractere `int_type`.  
   
  Um valor de `_Ch` que não pode ser representado como tal produz um resultado não especificado.  
@@ -1078,7 +1079,7 @@ static int_type to_int_type(const char_type& _Ch);
  `_Ch`  
  O caractere `char_type` a ser representada como um `int_type`.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O caractere `int_type` que corresponde ao caractere `char_type`.  
   
 ### <a name="remarks"></a>Comentários  

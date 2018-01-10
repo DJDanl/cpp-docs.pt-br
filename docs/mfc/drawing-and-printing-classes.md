@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 160d85e3cba62e102e823c8eeb3b9a3190c812b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4917bf4503958ccdacb7f38082139a36d0e8374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-and-printing-classes"></a>Classes de desenho e impressão
 No Windows, toda a saída gráfica é desenhada em uma área de desenho virtual chamada um contexto de dispositivo (DC). MFC fornece classes para encapsular os vários tipos de controladores de domínio, bem como encapsulamentos para ferramentas de desenho do Windows como bitmaps, pincéis, paletas e canetas.  

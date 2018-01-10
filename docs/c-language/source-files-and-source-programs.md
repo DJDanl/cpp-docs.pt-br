@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8355dd04376e73618a215fa73160dc1ee64dae2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06d237478a790437eea433d6060c8d7dca977782
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-files-and-source-programs"></a>Arquivos e programas de origem
 Um programa de origem pode ser dividido em um ou mais "arquivos de origem “ ou “unidades de conversão”. A entrada no compilador é chamada de "unidade de conversão".  
@@ -50,4 +51,4 @@ Um programa de origem pode ser dividido em um ou mais "arquivos de origem “ ou
  Os arquivos de origem não precisam conter instruções executáveis. Por exemplo, você pode considerar útil colocar definições de variáveis em um arquivo de origem e depois declarar referências a essas variáveis em outros arquivos de origem que as usam. Essa técnica torna as definições fáceis de localizar e atualizar quando necessário. Pela mesma razão, constantes e macros são geralmente organizadas em arquivos separados chamados “arquivos de inclusão” ou “arquivos de cabeçalho” que podem ser referenciados nos arquivos de origem conforme necessário. Consulte a *Referência do pré-processador* para obter informações sobre [macros](../preprocessor/macros-c-cpp.md) e [arquivos de inclusão](../preprocessor/hash-include-directive-c-cpp.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Estrutura do Programa](../c-language/program-structure.md)
+ [Estrutura do programa](../c-language/program-structure.md)

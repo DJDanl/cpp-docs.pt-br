@@ -1,43 +1,43 @@
 ---
-title: "Por que n&#250;meros de ponto flutuante podem perder a precis&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Constante DBL_EPSILON"
-  - "números de ponto flutuante, precisão"
-  - "Constante FLT_EPSILON"
+title: "Por que números de ponto flutuante podem perder a precisão | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DBL_EPSILON constant
+- FLT_EPSILON constant
+- floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Por que n&#250;meros de ponto flutuante podem perder a precis&#227;o
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Os valores decimais de ponto flutuante geralmente não têm uma representação binária exata.  Esse é um efeito colateral de como CPU representa dados de ponto flutuante.  Por isso, você pode apresentar uma perda de precisão, e algumas operações de ponto flutuante podem gerar resultados inesperados.  
+# <a name="why-floating-point-numbers-may-lose-precision"></a>Por que números de ponto flutuante podem perder a precisão
+Valores decimais de ponto flutuantes geralmente não têm uma representação binária exata. Este é um efeito colateral de como a CPU representa dados de ponto flutuante. Por esse motivo, você pode enfrentar alguma perda de precisão e algumas operações de ponto flutuantes podem produzir resultados inesperados.  
   
- Esse comportamento é o resultado de um dos seguintes:  
+ Esse comportamento é o resultado de uma das seguintes opções:  
   
--   A representação binária do número decimal pode não ser preciso.  
+-   A representação binária do número decimal pode não ser exata.  
   
--   Há uma incompatibilidade entre os números utilizados \(por exemplo, float e double de combinação\).  
+-   Há uma incompatibilidade entre os números usados (por exemplo, combinação float e double).  
   
- Para resolver o comportamento, a maioria dos programadores o garantem que o valor seja maior ou menor do que o necessário, ou a serem obtidos e usem uma biblioteca decimal binário codificado de \(BCD\) que mantém a precisão.  
+ Para resolver o problema, a maioria dos programadores, certifique-se que o valor é maior ou menor do que o que é necessário, ou obter e usar uma biblioteca de Binary Coded Decimal (BCD) que mantém a precisão.  
   
- A representação binária de valores de ponto flutuante afeta a precisão e a precisão de cálculos de ponto flutuante.  Usa [Formato de ponto flutuante IEEE](../../build/reference/ieee-floating-point-representation.md)do Microsoft Visual C\+\+.  
+ Representação binária de valores de ponto flutuante afeta a precisão e a precisão dos cálculos de ponto flutuante. Microsoft Visual C++ usa [formato de ponto flutuante IEEE](../../build/reference/ieee-floating-point-representation.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // Floating-point_number_precision.c  
@@ -64,9 +64,12 @@ int main() {
 }  
 ```  
   
-  **Não são iguais\!  O valor c for 2,4679999352 ou 2,468000**    
-## Comentários  
- Para o ÉPSILON, você pode usar constantes FLT\_EPSILON, que é definido para flutuantes como 1.192092896e\-07F, ou DBL\_EPSILON, que é definido para o dobro como 2.2204460492503131e\-016.  Você precisa incluir float.h para essas constantes.  Essas constantes são definidas como o número positivo o menor x, de modo que x\+1.0 não é igual a 1,0.  Como esse é um número muito pequeno, você deve implantar a tolerância definido pelo usuário para cálculos que envolvem números muito grandes.  
+```Output  
+They are not equal! The value of c is  2.4679999352 or 2.468000  
+```  
   
-## Consulte também  
- [Otimizando o código](../../build/reference/optimizing-your-code.md)
+## <a name="comments"></a>Comentários  
+ Para ÉPSILON, você pode usar as constantes FLT_EPSILON, que é definido para ponto flutuante como 1.192092896e-07F, ou DBL_EPSILON, que é definido para dois como 2.2204460492503131e-016. Você precisa incluir float. h para constantes. Essas constantes são definidos como ' positivo menor número x, como x + 1.0 não é igual a 1.0. Como esse é um número muito pequeno, você deve empregar tolerância definida pelo usuário para cálculos que envolvem números muito grandes.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Otimizando seu código](../../build/reference/optimizing-your-code.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e79222f908a7b71e81033fb34517834987e6590
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ceadc55945a31e4787287beb6943897784aeaad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Um retrato da arquitetura de documento/exibição
 Documentos e exibições são combinadas em um aplicativo típico do MFC. Dados são armazenados no documento, mas o modo de exibição tem acesso aos dados privilegiado. A separação de documento na exibição de separa o armazenamento e a manutenção de dados de sua exibição.  

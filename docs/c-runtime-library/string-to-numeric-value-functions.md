@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11fca1402fbf1d740b06e2eac9632496792f7da0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68586bac573018bceb7dc982625ff6a859d18871
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-to-numeric-value-functions"></a>Funções de valor da cadeia de caracteres para numérico
 -   [strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
@@ -100,5 +101,5 @@ ms.lasthandoff: 10/24/2017
  [Conversão de Dados](../c-runtime-library/data-conversion.md)   
  [Localidade](../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Suporte a ponto flutuante](../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../c-runtime-library/floating-point-support.md)   
  [atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

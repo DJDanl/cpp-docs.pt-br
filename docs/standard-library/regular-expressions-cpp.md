@@ -4,41 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: ac4dc70360682aff3a28eabeed0e4f05e4c509a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-c"></a>Expressões regulares (C++)
 Biblioteca padrão C++ dá suporte a vários gramáticas de expressão regular. Este tópico discute as variações de gramática disponíveis ao usar expressões regulares.  
@@ -51,7 +35,7 @@ A gramática de expressão regular a ser usado é por especificado pelo uso de u
 -   `extended`: O POSIX estendidos expressões regulares ou ERE.
 -   `awk`: Esse é o `extended`, mas ele tem adicionais escapes de caracteres não imprimíveis.
 -   `grep`: Esse é o `basic`, mas ele também permite a nova linha caracteres ('\n') separar alternations.
--   `egrep`: Esse é o `extended`, mas também permite que os caracteres de nova linha separar alternatios.
+-   `egrep`: Esse é o `extended`, mas também permite que os caracteres de nova linha separar alternations.
 
 Por padrão, se nenhuma gramática for especificada, `ECMAScript` será assumido. Pode ser especificada somente uma gramática.  
   
@@ -165,13 +149,13 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
  Para todas as gramáticas, exceto `basic` e `grep`, uma contagem de repetição também pode usar uma das seguintes formas:  
   
--   "". Equivalente a "{0,1}".  
+-   "?". Equivalente a "{0,1}".  
   
 -   "+". Equivalente a "{1, unbounded}".  
   
  Exemplos:  
   
--   "a" corresponde à sequência de destino "" e à sequência de destino "a", mas não à sequência de destino "aa".  
+-   "a"? coincide com a sequência de destino "" e a sequência de destino "a", mas não a sequência de destino "aa".  
   
 -   "a+" corresponde à sequência de destino "a", à sequência de destino "aa", e assim por diante, mas não à sequência de destino "".  
   
@@ -193,7 +177,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
 ##  <a name="grammarsummary"></a> Resumo de gramática  
  A tabela a seguir resume os recursos que estão disponíveis nas várias gramáticas de expressão regular:  
   
-|Elemento|básico|estendido|ECMAScript|grep|egrep|awk|  
+|Elemento|Básico|estendido|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |alternância usando '&#124;'||+|+||+|+|  
 |alternância usando '\n'||||+|+||  
@@ -217,7 +201,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
 |repetição usando "{}"||+|+||+|+|  
 |repetição usando "\\{\\}"|+|||+|||  
 |repetição usando '*'|+|+|+|+|+|+|  
-|repetição usando '' e '+'||+|+||+|+|  
+|repetição usando '?' e '+'||+|+||+|+|  
 |sequência de escape unicode|||+||||  
 |caractere curinga|+|+|+|+|+|+|  
 |declaração de limite de palavra|||+||||  
@@ -329,18 +313,18 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
 ### <a name="identity-escape"></a>Escape de identidade  
  Um escape de identidade é uma barra invertida seguida por um único caractere. Ele corresponde a esse caractere. É obrigatório quando o caractere tem um significado especial; ao usar o escape de identidade, o significado especial é removido. Por exemplo:  
   
--   "a*" corresponde à sequência de destino "aaa", mas não corresponde à sequência de destino "a\*".  
+-   "um\*" corresponde a sequência de destino "aaa", mas não coincide com a sequência de destino "um\*".  
   
--   "a\\" não corresponde à sequência de destino "aaa", mas corresponde à sequência de destino "a\*".  
+-   "um\\\*" não coincide com a sequência de destino "aaa", mas coincide com a sequência de destino "um\*".  
   
  O conjunto de caracteres que são permitidos em um escape de identidade depende da gramática da expressão regular, conforme mostrado na tabela a seguir.  
   
 |Gramática|Caracteres de escape de identidade permitidos|  
 |-------------|----------------------------------------|  
-|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
-|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
+|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|  
+|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|  
 |`awk`|`extended` mais { '"', '/' }|  
-|`ECMAScript`|Todos os caracteres, exceto aqueles que podem fazer parte de um identificador. Geralmente, isso inclui letras, dígitos, '$', '_' e sequências de escape unicode. Para obter mais informações, consulte a especificação de linguagem ECMAScript.|  
+|`ECMAScript`|Todos os caracteres, exceto aqueles que podem fazer parte de um identificador. Normalmente, isso inclui letras, dígitos, '$', '\_' e as sequências de escape unicode. Para obter mais informações, consulte a especificação de linguagem ECMAScript.|  
   
 ### <a name="individual-character"></a>Caractere individual  
  Um caractere individual em uma expressão entre colchetes adiciona esse caractere ao conjunto de caracteres que é definido pela expressão entre colchetes. Em qualquer lugar em uma expressão entre colchetes, exceto no início, um '^' representa a si mesmo.  
@@ -378,10 +362,10 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
  Uma asserção do limite de palavra negativa corresponderá se a posição atual na cadeia de caracteres de destino não vier logo após um *limite de palavra*.  
   
 ### <a name="non-capture-group"></a>Grupo de não captura  
- Um grupo de não captura marca seu conteúdo como uma unidade única na gramática da expressão regular, mas não rotula o texto de destino. Por exemplo, "(a)(:b)*(c) corresponde ao texto de destino "abbc" e associa o grupo de captura 1 à subsequência "a" e o grupo de captura 2 à subsequência "c".  
+ Um grupo de não captura marca seu conteúdo como uma unidade única na gramática da expressão regular, mas não rotula o texto de destino. Por exemplo, "(a)(:b)\*(c)" corresponde ao texto de destino "abbc" e associa o grupo de captura de 1 a subsequência "um"e capture o grupo 2 com a subsequência "c".  
   
 ### <a name="non-greedy-repetition"></a>Repetição não greedy  
- Uma repetição não greedy consome a subsequência mais curta da sequência de destino que corresponde ao padrão. Uma repetição greedy consome a mais longa. Por exemplo, "(a+)(a*b)" corresponde à sequência de destino "aaab". Quando uma repetição não greedy é usada, ela associa o grupo de captura 1 à subsequência "a" no início da sequência de destino e o grupo de captura 2 à subsequência "aab" no fim da sequência de destino. Quando uma correspondência greedy é usada, ela associa o grupo de captura 1 à subsequência "aaa" e o grupo de captura 2 à subsequência "b".  
+ Uma repetição não greedy consome a subsequência mais curta da sequência de destino que corresponde ao padrão. Uma repetição greedy consome a mais longa. Por exemplo, "(a+) (um\*b)" corresponde a "aaab" da sequência de destino. Quando uma repetição não greedy é usada, ela associa o grupo de captura 1 à subsequência "a" no início da sequência de destino e o grupo de captura 2 à subsequência "aab" no fim da sequência de destino. Quando uma correspondência greedy é usada, ela associa o grupo de captura 1 à subsequência "aaa" e o grupo de captura 2 à subsequência "b".  
   
 ### <a name="octal-escape-sequence"></a>Sequência de escape octal  
  Uma sequência de escape octal é uma barra invertida seguida por um, dois ou três dígitos octais (0-7). Ela corresponde a um caractere na sequência de destino que tem o valor especificado por esses dígitos. Se todos os dígitos forem '0', a sequência será inválida. Por exemplo, "\101" corresponde à sequência de destino "A" quando a codificação de caractere ASCII é usada.  
@@ -391,7 +375,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
  Em `ECMAScript`, os seguintes caracteres têm significados especiais:  
   
--   ^  $  \  .  *  +    (  )  [  ]  {  }  &#124;  
+-   ^  $  \  .  *  +  ?  (  )  [  ]  {  }  &#124;  
   
  Em `basic` e `grep`, os seguintes caracteres têm significados especiais:  
   
@@ -399,7 +383,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
  Além disso, em `basic` e `grep`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto:  
   
--   '*' tem um significado especial em todos os casos, exceto quando ele for o primeiro caractere em uma expressão regular ou o primeiro caractere que segue um '^' inicial em uma expressão regular, ou quando ele for o primeiro caractere de um grupo de captura ou o primeiro caractere que segue um '^' inicial em um grupo de captura.  
+-   '\*' tem um significado especial em todos os casos, exceto quando ele for o primeiro caractere em uma expressão regular ou o primeiro caractere que segue um inicial ' ^' em uma expressão regular, ou quando ele é o primeiro caractere de uma captura de grupo ou o primeiro caractere que segue um inicial ' ^' em um grupo de captura.  
   
 -   '^' tem um significado especial quando ele for o primeiro caractere de uma expressão regular.  
   
@@ -407,7 +391,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
  Em `extended`, `egrep` e `awk`, os seguintes caracteres têm significados especiais:  
   
--   .   [   \   (   *   +      {   &#124;  
+-   .   [   \   (   *   +   ?   {   &#124;  
   
  Além disso, em `extended`, `egrep` e `awk`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto.  
   
@@ -424,9 +408,9 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
  Exemplos:  
   
--   "(=aa)(a*)" corresponde à sequência de destino "aaaa" e associa o grupo de captura 1 à subsequência "aaaa".  
+-   "(=AA) (um\*)" corresponde a sequência de destino "aaaa" e associa o grupo de captura de 1 a subsequência "aaaa".  
   
--   "(aa)(a*)" corresponde à sequência de destino "aaaa" e associa o grupo de captura 1 à subsequência "aa" no início da sequência de destino e o grupo de captura 2 à subsequência "aa" no fim da sequência de destino.  
+-   "(aa) (um\*)" corresponde a sequência de destino "aaaa" e associa o grupo de captura 1 com a subsequência "aa" no início do grupo de destino sequência e captura 2 com a subsequência "aa" no final da sequência de destino.  
   
 -   "(=aa)(a)&#124;(a)" corresponde à sequência de destino "a" e associa o grupo de captura 1 a uma sequência vazia (pois a asserção positiva falhou) e o grupo de captura 2 ao "a" subsequente. Ele também corresponde à sequência de destino "aa" e associa o grupo de captura 1 à subsequência "aa" e o grupo de captura 2 a uma sequência vazia.  
   
@@ -472,7 +456,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
 |"$&"|"&"|A sequência de caracteres que corresponde à expressão regular inteira (`[match[0].first, match[0].second)`)|  
 |"$$"||"$"|  
 ||"\\&"|"&"|  
-|"$`" (o cifrão de dólar seguido pelo acento grave)||A sequência de caracteres que precede a subsequência que corresponde à expressão regular (`[match.prefix().first, match.prefix().second)`)|  
+|"$\`" (sinal de cifrão seguido por aspas voltar)||A sequência de caracteres que precede a subsequência que corresponde à expressão regular (`[match.prefix().first, match.prefix().second)`)|  
 |"$'" (cifrão de dólar seguido por aspas simples)||A sequência de caracteres que segue a subsequência que corresponde à expressão regular (`[match.suffix().first, match.suffix().second)`)|  
 |"$n"|"\n"|A sequência de caracteres que corresponde ao grupo de captura na posição `n`, onde `n` é um número entre 0 e 9 (`[match[n].first, match[n].second)`)|  
 ||"\\\n"|"\n"|  
@@ -480,5 +464,4 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)
-
 

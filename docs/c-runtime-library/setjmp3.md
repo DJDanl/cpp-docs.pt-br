@@ -29,11 +29,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba68e059224d2d15046730a9ee0058e3114d52ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72bc1e833ddaa72979e25274b7328d8987f62763
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setjmp3"></a>_setjmp3
 Função CRT interna. Uma nova implementação da função `setjmp`.  
@@ -58,7 +59,7 @@ int _setjmp3(
  [in] `optional parameters`  
  Dados adicionais enviados pelo `setjmp` intrínseco. O primeiro `DWORD` é um ponteiro de função usado para desenrolar dados extras e retornar para um estado de registro não volátil. O segundo `DWORD` é o nível de tentativa a ser restaurado. Todos os demais dados são salvos na matriz de dados genérica no `jmp_buf`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Sempre retorna 0.  
   
 ## <a name="remarks"></a>Comentários  
@@ -67,5 +68,5 @@ int _setjmp3(
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [setjmp](../c-runtime-library/reference/setjmp.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Mapeia uma cadeia de caracteres para outra, executando a transformação dependente de localidade especificada. Essa função também pode ser usada para gerar uma chave de classificação para a cadeia de caracteres de entrada.  
@@ -67,7 +68,7 @@ int __crtLCMapStringW(
  `cchDest`  
  Tamanho, em caracteres, do buffer apontado por `lpDestStr`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Se o valor de `cchDest` for diferente de zero, o número de caracteres, ou bytes, se `LCMAP_SORTKEY` for especificado, gravados no buffer indica êxito. Essa contagem inclui espaço para um terminador NULO.  
   
  Se o valor de `cchDest` for zero, o tamanho do buffer em caracteres, ou bytes, se `LCMAP_SORTKEY` for especificado, necessário para receber a cadeia de caracteres ou chave de classificação traduzida indica êxito. Esse tamanho inclui espaço para um terminador NULO.  
@@ -75,7 +76,7 @@ int __crtLCMapStringW(
  Zero indica uma falha. Para obter outras informações sobre o erro, chame a função `GetLastError`.  
   
 ## <a name="remarks"></a>Comentários  
- Se `cchSrc` for maior que zero e `lpSrcStr` for uma cadeia de caracteres terminada em nulo, `__crtLCMapStringW` define `cchSrc` para o comprimento da cadeia de caracteres. Em seguida, `__crtLCMapStringW` chama a versão de cadeia de caracteres larga (Unicode) da função `LCMapString` com os parâmetros especificados. Para obter mais informações sobre os parâmetros e o valor de retorno dessa função, confira a função `LCMapString` na [Biblioteca MSDN](http://go.microsoft.com/fwlink/?linkID=150542).  
+ Se `cchSrc` for maior que zero e `lpSrcStr` for uma cadeia de caracteres terminada em nulo, `__crtLCMapStringW` define `cchSrc` para o comprimento da cadeia de caracteres. Em seguida, `__crtLCMapStringW` chama a versão de cadeia de caracteres larga (Unicode) da função `LCMapString` com os parâmetros especificados. Para obter mais informações sobre os parâmetros e o valor de retorno dessa função, confira a função `LCMapString` na [Biblioteca MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542).  
   
 ## <a name="requirements"></a>Requisitos  
   

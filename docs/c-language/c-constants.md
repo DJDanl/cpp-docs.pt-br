@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8d0a98776f502e4ffc5455f3b49de10e506892c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a9b15ccc789ad370addc21a3b3079d563f7bbb1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constants"></a>Constantes C
 Uma "constante" é um número, caractere ou cadeia de caracteres que pode ser usada como um valor em um programa. Use constantes para representar os valores de ponto flutuante, inteiro, enumeração ou de caractere que não podem ser alterados.  

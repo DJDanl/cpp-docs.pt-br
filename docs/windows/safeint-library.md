@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 63afc34ba737d71f9f89af15d6e7e00c0382de03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2ba809ae6672983c86841640d0b6603bfdba7184
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeint-library"></a>Biblioteca de SafeInt
 A biblioteca de SafeInt ajuda a impedir o estouro de inteiro que pode ocorrer quando o aplicativo executa operações matemáticas.  

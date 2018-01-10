@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c99ee29adb900154b3e9943f4f40d6301af5ce5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd726860e181eb352d7368f31a31d2cbd7489000
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-internet-programming-tasks"></a>Tarefas de programação da Internet MFC
 Esta seção contém as etapas detalhadas para a adição de suporte da Internet para seus aplicativos. Tópicos incluem como usar as classes MFC para Internet habilitar seus aplicativos existentes e como adicionar suporte de documento ativo para o componente COM existente. Você deseja criar um documento com cotações de ações atualizadas, pontuações de futebol da Pittsburgh, e a temperatura mais recente no Microsoft Antártida fornece uma série de tecnologias para ajudá-lo a fazer isso pela Internet.  

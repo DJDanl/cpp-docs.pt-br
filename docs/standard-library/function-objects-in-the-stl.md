@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba5024590a0682f8d65c7d21ca2cb15d2f481b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objetos de função na Biblioteca Padrão C++
 Um *objeto de função* ou *functor*, é qualquer tipo que implementa operator(). Esse operador é conhecido como *operador de chamada* ou, às vezes, *operador de aplicativo*. A Biblioteca Padrão C++ usa objetos de função principalmente como critérios de classificação para contêineres e em algoritmos.  
@@ -50,15 +33,17 @@ Um *objeto de função* ou *functor*, é qualquer tipo que implementa operator()
 ## <a name="creating-a-function-object"></a>Criando um objeto de função  
  Para criar um objeto de função, crie um tipo e implemente operator(), como:  
   
+```
 class Functor  
-   {  
-   public:  
-   int operator()(int a, int b)  
-   {  
-   return a <b;  
-   }  
-   };  
-  
+{  
+public:  
+    int operator()(int a, int b)  
+    {  
+        return a < b;  
+    }  
+};  
+```
+
  A última linha da função `main` mostra como chamar o objeto de função. Essa chamada é semelhante a uma chamada para uma função, mas na verdade está chamando o operator() do tipo Functor. É dessa semelhança entre chamar um objeto de função e uma função que surgiu o termo objeto de função.  
   
 ## <a name="function-objects-and-containers"></a>Contêineres e objetos de função  
@@ -88,5 +73,4 @@ ForwardIterator remove_if(
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
-
 

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 667a6c35d979b0fb1da3675efd03e2840285b845
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-copy-policy-classes"></a>Classes de política de cópia do ATL
 Classes de política de cópia são [classes de utilitário](../atl/utility-classes.md) usado para inicializar, copiar e excluir dados. Classes de política de cópia permitem para definir semânticas de cópia para qualquer tipo de dados e define as conversões entre tipos de dados diferentes.  
@@ -41,11 +42,11 @@ Classes de política de cópia são [classes de utilitário](../atl/utility-clas
 ## <a name="definition"></a>Definição  
  Por definição, uma classe que fornece as seguintes funções estáticas é uma classe de política de cópia:  
   
- `static void init(` `DestinationType` `* p);`  
+ `static void init(``DestinationType``* p);`  
   
  `static HRESULT copy(` `DestinationType` `* pTo, const`  `SourceType` `* pFrom);`  
   
- `static void destroy(` `DestinationType` `* p);`  
+ `static void destroy(``DestinationType``* p);`  
   
  Você pode substituir os tipos de `DestinationType` e *SourceType* com tipos de dados arbitrário para cada política de cópia.  
   

@@ -43,11 +43,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86dccd98c5420adadd0f1eb3af947769c59f594c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b5b76543067b3df52e51b28ae4fc77cfa007860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 Recupera o argumento de um número complexo, com uma ramificação cortada ao longo do eixo real negativo.  
@@ -91,7 +92,7 @@ long double cargl(
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
  [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
  [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   

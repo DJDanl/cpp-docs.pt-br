@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c20707f2fc36790fc1b90e9a9df295bcd25f7af3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commands-in-a-makefile"></a>Comandos em um makefile
 Uma regra de bloqueio ou inferência Descrição especifica um bloco de comandos para executar, se a dependência está desatualizada. NMAKE exibe cada comando antes de executá-lo, a menos que /S, **. SILENCIOSA**, **! CMDSWITCHES**, ou @ é usado. NMAKE procura por uma regra de inferência correspondência se um bloco de descrição não é seguido por um bloco de comandos.  

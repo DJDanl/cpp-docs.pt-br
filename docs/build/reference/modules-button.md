@@ -1,29 +1,28 @@
 ---
-title: "Bot&#227;o M&#243;dulos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "botão Módulos"
+title: "Botão módulos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Modules button
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fd8c95775eb8db2256d35715cc117a9bb0fab22e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Bot&#227;o M&#243;dulos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Clique no botão de **Módulos** para associar a caixa de diálogo de **Módulos Adicionais para Busca de Erros** .  Digite o nome de EXE ou da DLL desejado na caixa de edição e clique em **Adicionar** para incluir os módulos em sua pesquisa da mensagem de erro.  Remover um módulo da lista destacando a e clicando no botão de **Remover** .  
+# <a name="modules-button"></a>Botão Módulos
+Clique o **módulos** botão para exibir o **módulos adicionais para a pesquisa de erro** caixa de diálogo. Insira o nome da DLL ou EXE desejado na caixa de edição e clique em **adicionar** para incluir os módulos na sua pesquisa de mensagem de erro. Remover um módulo da lista realçando-o e clicando no **remover** botão.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Controle de edição de valor](../../build/reference/value-edit-control.md)

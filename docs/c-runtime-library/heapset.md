@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e9449637887a05c64179c6b9d31712c8becfa87b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71e763e39c3d5e2f1a192e7408ee02758f26e6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapset"></a>_heapset
 Verifica heaps quanto à consistência mínima e configura as entradas livres com um valor especificado.  
@@ -56,7 +57,7 @@ int _heapset(
  `fill`  
  Caractere de preenchimento.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  `_heapset` retorna uma das seguintes constantes de manifesto de inteiro definidas em Malloc.h.  
   
  `_HEAPBADBEGIN`  

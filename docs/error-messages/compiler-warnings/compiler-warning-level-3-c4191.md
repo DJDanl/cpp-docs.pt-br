@@ -1,64 +1,45 @@
 ---
-title: "Compilador aviso (nível 3) C4191 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4191 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4191
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4191
+f1_keywords: C4191
+dev_langs: C++
+helpviewer_keywords: C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0b0830225da8b837eace1029f8a2213717ca7b49
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4a40f5a05b4efc030cd545f2ffd27325fca86294
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-level-3-c4191"></a>C4191 do compilador aviso (nível 3)
-' operator/operation': conversão não segura de 'tipo de expressão' para 'type required'  
+# <a name="compiler-warning-level-3-c4191"></a>Compilador C4191 de aviso (nível 3)
+' operador/operação': conversão não segura de 'tipo de expressão' para 'tipo necessário'  
   
- Diversas operações que envolvem ponteiros de função são consideradas seguras:  
+ Várias operações envolvendo ponteiros de função são consideradas inseguras:  
   
--   Tipos de função com diferentes convenções de chamada.  
+-   Tipos de função com as convenções de chamada diferentes.  
   
--   Tipos de função com diferentes convenções de retornos.  
+-   Tipos de função com as convenções de retorno diferentes.  
   
 -   Tipos de argumento ou retorno com classificações, categorias de tipos ou tamanhos diferentes.  
   
--   Tamanhos de lista de argumento diferentes (em `__cdecl`, somente na conversão de lista mais longa lista mais curto, mesmo se for mais curto é varargs).  
+-   Comprimentos diferentes de lista de argumento (em `__cdecl`, somente na conversão da lista mais longa para a lista mais curto, mesmo se for mais curto é varargs).  
   
--   Ponteiro para dados (diferente de **void\***) com alias em relação a um ponteiro para função.  
+-   Ponteiro para dados (diferente de **void\***) um alias em relação a um ponteiro para função.  
   
 -   Outra diferença de tipo que gerará um erro ou aviso em um `reinterpret_cast`.  
   
- Chamar essa função através do ponteiro de resultado pode causar o programa falhe.  
+ Chamar essa função através do ponteiro resultante pode causar a falha do programa.  
   
  Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   

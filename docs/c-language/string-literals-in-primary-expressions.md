@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1ed5731f0b46769ac9f49c34752d8794a0dddc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0920280f672b1c45d317ade4c592a6b93356fb8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literals-in-primary-expressions"></a>literais String em expressões primárias
 Um “literal de cadeia de caracteres” é um caractere, um caractere largo ou uma sequência de caracteres adjacentes entre aspas duplas. Como não são variáveis, nem literais de cadeia de caracteres nem seus elementos podem ser o operando esquerdo em uma operação de atribuição. O tipo de uma literal de cadeia de caracteres é uma matriz de `char` (ou uma matriz de `wchar_t` para literais de cadeia de caracteres largos). As matrizes nas expressões são convertidas em ponteiros. Consulte [Literais de cadeia de caracteres](../c-language/c-string-literals.md) para obter mais informações sobre cadeias de caracteres.  

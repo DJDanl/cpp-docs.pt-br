@@ -1,69 +1,69 @@
 ---
-title: "/STACK (aloca&#231;&#245;es da pilha) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.StackReserveSize"
-  - "VC.Project.VCLinkerTool.StackCommitSize"
-  - "/stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opção de vinculador STACK"
-  - "opção de vinculador -STACK"
-  - "alocação de memória, a pilha"
-  - "Opção de vinculador /STACK"
-  - "pilha, definindo o tamanho"
+title: "-PILHA (alocações da pilha) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.StackReserveSize
+- VC.Project.VCLinkerTool.StackCommitSize
+- /stack
+dev_langs: C++
+helpviewer_keywords:
+- STACK linker option
+- -STACK linker option
+- memory allocation, stack
+- /STACK linker option
+- stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b487ff830abd3dfa97a748c81d541cbd9fdd0b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /STACK (aloca&#231;&#245;es da pilha)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stack-stack-allocations"></a>/STACK (alocações da pilha)
 ```  
 /STACK:reserve[,commit]  
 ```  
   
-## Comentários  
- As opções definidas \/STACK do tamanho da pilha em bytes.  Use essa opção apenas quando você cria um arquivo .exe.  
+## <a name="remarks"></a>Comentários  
+ A opção /STACK define o tamanho da pilha em bytes. Use esta opção somente quando você cria um arquivo .exe.  
   
- O valor de `reserve` especifica a alocação de pilha total na memória virtual.  Para o BRAÇO, dos computadores x86 e de [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] , o tamanho padrão da pilha é 1 MB.  
+ O `reserve` valor Especifica a alocação da pilha total na memória virtual. Para ARM, x86 e [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] máquinas, o tamanho da pilha padrão é 1 MB.  
   
- `commit` está sujeito a interpretação pelo sistema operacional.  No windows WindowsRT especifica a quantidade de memória física para alocar em cada vez.  O espaço confirmada as causas de memória virtual a ser reservada no arquivo de paginação.  Um valor mais alto de `commit` economiza tempo quando o aplicativo precisar de mais espaço da pilha, mas aumenta os requisitos de memória e possivelmente o tempo de inicialização.  Para o BRAÇO, dos computadores x86 e de [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] , o valor padrão de confirmação é 4 KB.  
+ `commit`está sujeita a interpretação pelo sistema operacional. No Windows WindowsRT Especifica a quantidade de memória física para alocar a cada vez. Memória virtual confirmada faz com que o espaço a ser reservado no arquivo de paginação. Um maior `commit` valor economiza tempo quando o aplicativo precisa de mais espaço de pilha, mas aumenta os requisitos de memória e, possivelmente, o tempo de inicialização. Para ARM, x86 e [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] máquinas, o valor de confirmação padrão é 4 KB.  
   
- Especificar os valores de `reserve` e de `commit` em notação decimal do ou do C \- idioma.  
+ Especifique o `reserve` e `commit` valores em decimal ou notação de linguagem C.  
   
- Outra maneira de definir o tamanho da pilha é com a instrução de [STACKSIZE](../../build/reference/stacksize.md) em um arquivo do definição \(.def\).  **STACKSIZE** substitui a opção de alocação de pilha \(\/STACK\) se ambos forem especificados.  Você pode alterar o tamanho da pilha depois que o arquivo foi criado usando a ferramenta de [EDITBIN](../Topic/EDITBIN%20Reference.md) .  
+ Outra maneira de definir o tamanho da pilha é com o [STACKSIZE](../../build/reference/stacksize.md) instrução em um arquivo de definição de módulo (. def). **STACKSIZE** substitui as alocações de pilha (/ pilha) opção se ambos estiverem especificados. Você pode alterar o tamanho da pilha depois que o arquivo .exe é criado usando o [EDITBIN](../../build/reference/editbin-reference.md) ferramenta.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Selecione a pasta do **Vinculador**.  
+2.  Selecione o **vinculador** pasta.  
   
-3.  Selecione a página de propriedades de **Sistema** .  
+3.  Selecione o **sistema** página de propriedades.  
   
-4.  Modifique uma das seguintes propriedades:  
+4.  Modificar uma das seguintes propriedades:  
   
-    -   **Pilha o tamanho de confirmação**  
+    -   **Tamanho de confirmação da pilha**  
   
-    -   **Pilha o tamanho de reserva**  
+    -   **Tamanho de reserva da pilha**  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte as propriedades <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackCommitSize%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackReserveSize%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

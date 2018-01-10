@@ -1,40 +1,39 @@
 ---
-title: "/FPO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fpo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção /FPO (dumpbin)"
-  - "opção dumpbin FPO"
-  - "opção dumpbin -FPO"
+title: -FPO | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /fpo
+dev_langs: C++
+helpviewer_keywords:
+- /FPO dumpbin option
+- -FPO dumpbin option
+- FPO dumpbin option
 ms.assetid: ee67f08b-bc5a-475a-bee3-c5614721755a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bb1f8e397a93dc82c3eb90b3b1028a13a966f644
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /FPO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fpo"></a>/FPO
 ```  
 /FPO  
 ```  
   
-## Comentários  
- Esta opção exibe registros de \(FPO\) de otimização do ponteiro do quadro.  
+## <a name="remarks"></a>Comentários  
+ Esta opção exibe registros de otimização (FPO) de ponteiro de quadro.  
   
- Somente a opção de DUMPBIN de [\/HEADERS](../../build/reference/headers.md) está disponível para uso em arquivos gerados com a opção do compilador de [\/GL](../../build/reference/gl-whole-program-optimization.md) .  
+ Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

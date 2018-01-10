@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37f1eed2287c8fe655a124b1f76f48a203ab1607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Ferramentas do Visual C++ e recursos em edições do Visual Studio
 As tabelas a seguir mostram os recursos do Visual C++ que estão disponíveis no Visual Studio. Um X em uma célula indica que o recurso está disponível. uma célula vazia indica que o recurso não está disponível. Notas entre parênteses indicam que um recurso está disponível, mas restrito.  

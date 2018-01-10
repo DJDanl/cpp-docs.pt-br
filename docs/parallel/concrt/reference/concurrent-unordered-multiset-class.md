@@ -1,11 +1,10 @@
 ---
-title: Classe concurrent_unordered_multiset | Documentos do Microsoft
+title: Classe concurrent_unordered_multiset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,37 +16,22 @@ f1_keywords:
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::key_eq
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::swap
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::unsafe_erase
-dev_langs:
-- C++
-helpviewer_keywords:
-- concurrent_unordered_multiset class
+dev_langs: C++
+helpviewer_keywords: concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 06c098d2ad38fbf4a7664f9046ac4f1e12b1044d
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 518e0b7bef29e9d10e7cf603fc3bf387d986fa09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Classe concurrent_unordered_multiset
-O `concurrent_unordered_multiset` classe é um contêiner de prova de simultaneidade que controla uma sequência de comprimento variado de elementos do tipo K. A sequência é representada de forma que permite a prova de simultaneidade acrescentar, acesso de elemento, acesso de iterador e operações de passagem do iterador.  
+O `concurrent_unordered_multiset` classe é um contêiner de simultaneidade-safe que controla uma sequência de comprimento variável de elementos do tipo K. A sequência é representada de forma que permite a simultaneidade safe acrescentar, acesso de elemento, acesso de iterador e operações de passagem de iterador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,13 +55,13 @@ template <typename K,
  O tipo principal.  
   
  `_Hasher`  
- O tipo de objeto da função de hash. Esse argumento é opcional e o valor padrão é `std::hash<``K``>`.  
+ O tipo de objeto da função de hash. Esse argumento é opcional e o valor padrão é `std::hash<K>`.  
   
  `key_equality`  
- O tipo de objeto da função de comparação de igualdade. Esse argumento é opcional e o valor padrão é `std::equal_to<``K``>`.  
+ O tipo de objeto da função de comparação de igualdade. Esse argumento é opcional e o valor padrão é `std::equal_to<K>`.  
   
  `_Allocator_type`  
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória para o vetor simultânea. Esse argumento é opcional e o valor padrão é `std::allocator<``K``>`.  
+ O tipo que representa o objeto de alocador armazenados que encapsula os detalhes sobre a alocação e desalocação de memória para o vetor simultânea. Esse argumento é opcional e o valor padrão é `std::allocator<K>`.  
   
 ## <a name="members"></a>Membros  
   
@@ -105,26 +89,26 @@ template <typename K,
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[concurrent_unordered_multiset](#ctor)|Sobrecarregado. Constrói um multiset não ordenado simultâneo.|  
+|[concurrent_unordered_multiset](#ctor)|Sobrecarregado. Constrói um multiconjunto não ordenado simultâneo.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[hash_function](#hash_function)|Retorna o objeto de função de hash armazenado.|  
-|[insert](#insert)|Sobrecarregado. Adiciona elementos para o `concurrent_unordered_multiset` objeto.|  
+|[insert](#insert)|Sobrecarregado. Adiciona os elementos para o `concurrent_unordered_multiset` objeto.|  
 |[key_eq](#key_eq)|O objeto de função de comparação de igualdade armazenado.|  
-|[swap](#swap)|Troca o conteúdo dos dois `concurrent_unordered_multiset` objetos. Esse método não é uma prova de simultaneidade.|  
-|[unsafe_erase](#unsafe_erase)|Sobrecarregado. Remove elementos do `concurrent_unordered_multiset` em posições especificadas. Esse método não é uma prova de simultaneidade.|  
+|[swap](#swap)|Alterna o conteúdo de dois `concurrent_unordered_multiset` objetos. Este método não é seguro de simultaneidade.|  
+|[unsafe_erase](#unsafe_erase)|Sobrecarregado. Remove os elementos do `concurrent_unordered_multiset` em posições especificadas. Este método não é seguro de simultaneidade.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_unordered_multiset` objeto a este. Esse método não é uma prova de simultaneidade.|  
+|[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_unordered_multiset` deste objeto. Este método não é seguro de simultaneidade.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações detalhadas sobre o `concurrent_unordered_multiset` classe, consulte [paralela contêineres e objetos](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Para obter informações detalhadas sobre o `concurrent_unordered_multiset` de classe, consulte [objetos e contêineres paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `_Traits`  
@@ -140,7 +124,7 @@ template <typename K,
   
 ##  <a name="begin"></a>começar 
 
- Retorna um iterador apontando para o primeiro elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
+ Retorna um iterador que aponta para o primeiro elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
   
 ```
 iterator begin();
@@ -153,7 +137,7 @@ const_iterator begin() const;
   
 ##  <a name="cbegin"></a>cbegin 
 
- Retorna um iterador const que aponta para o primeiro elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
+ Retorna um iterador const apontando para o primeiro elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
   
 ```
 const_iterator cbegin() const;
@@ -164,14 +148,14 @@ const_iterator cbegin() const;
   
 ##  <a name="cend"></a>cend 
 
- Retorna um iterador const apontando para o local após o último elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
+ Retorna um iterador const apontando para o local de êxito do último elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
   
 ```
 const_iterator cend() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador const para o local após o último elemento no contêiner simultâneo.  
+ Um iterador const para o local de êxito do último elemento no contêiner simultâneo.  
   
 ##  <a name="clear"></a>Limpar 
 
@@ -183,7 +167,7 @@ void clear();
   
 ##  <a name="ctor"></a>concurrent_unordered_multiset 
 
- Constrói um multiset não ordenado simultâneo.  
+ Constrói um multiconjunto não ordenado simultâneo.  
   
 ```
 explicit concurrent_unordered_multiset(
@@ -219,38 +203,38 @@ concurrent_unordered_multiset(
  O tipo do iterador de entrada.  
   
  `_Number_of_buckets`  
- O número inicial de buckets para esse multiset fora de ordem.  
+ O número inicial de buckets para esse multiset não ordenado.  
   
  `_Hasher`  
- A função de hash para este multiset fora de ordem.  
+ A função de hash para essa multiset não ordenado.  
   
  `key_equality`  
- A função de comparação de igualdade para este multiset fora de ordem.  
+ A função de comparação de igualdade para este multiset não ordenado.  
   
  `_Allocator`  
- O alocador para este multiset fora de ordem.  
+ O alocador para este multiset não ordenado.  
   
  `first`  
  `last`  
  `_Uset`  
- A fonte `concurrent_unordered_multiset` objeto para mover elementos do.  
+ A fonte `concurrent_unordered_multiset` objeto para mover os elementos do.  
   
 ### <a name="remarks"></a>Comentários  
- Todos os construtores armazenam um objeto alocador `_Allocator` e inicializar o multiset fora de ordem.  
+ Todos os construtores armazenam um objeto de alocador `_Allocator` e inicializar o multiconjunto não ordenado.  
   
- O primeiro construtor Especifica um multiconjunto inicial vazio e explicitamente Especifica o número de buckets, tipo de função de hash, função de igualdade e alocador a ser usado.  
+ O primeiro construtor Especifica um multiset vazio de inicial e especifica explicitamente o número de buckets, tipo de função de hash, função de igualdade e alocador a ser usado.  
   
- O segundo construtor Especifica um alocador de multiset fora de ordem.  
+ O segundo construtor Especifica um alocador para o multiconjunto não ordenado.  
   
- O terceiro construtor especifica valores fornecidos pelo intervalo iterador [ `_Begin`, `_End`).  
+ O terceiro construtor especifica valores fornecidos pelo intervalo iterator [ `_Begin`, `_End`).  
   
- Os construtores quarto e quinto especificam uma cópia simultânea multiset não ordenada `_Uset`.  
+ Os quarto e quinto construtores especificar uma cópia do simultânea multiset não ordenada `_Uset`.  
   
- O último construtor Especifica uma movimentação de multiset simultânea não ordenada `_Uset`.  
+ O construtor de último especifica mover o multiconjunto não ordenado simultâneo `_Uset`.  
   
 ##  <a name="count"></a>Contagem 
 
- Conta o número de elementos que correspondem a uma chave especificada. Essa função é seguro de simultaneidade.  
+ Conta o número de elementos de correspondência de uma chave especificada. Essa função é seguro de simultaneidade.  
   
 ```
 size_type count(const key_type& KVal) const;
@@ -258,10 +242,10 @@ size_type count(const key_type& KVal) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `KVal`  
- A chave para pesquisar.  
+ A chave a ser pesquisada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O número de vezes o número de vezes que a chave é exibida no contêiner.  
+ O número de vezes o número de vezes que a chave aparece no contêiner.  
   
 ##  <a name="empty"></a>vazio 
 
@@ -275,11 +259,11 @@ bool empty() const;
  `true`Se o contêiner simultâneo estiver vazio, `false` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
- Na presença de inserções simultâneas, ou não o contêiner simultâneo está vazio pode alterar imediatamente depois de chamar essa função, antes que o valor de retorno é ler.  
+ Na presença de inserções simultâneas, ou não o contêiner simultâneo está vazio pode alterar imediatamente após chamar essa função, antes que o valor de retorno é lido ainda.  
   
 ##  <a name="end"></a>final 
 
- Retorna um iterador apontando para o local após o último elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
+ Retorna um iterador apontando para o local de êxito do último elemento no contêiner simultâneo. Esse método é seguro de simultaneidade.  
   
 ```
 iterator end();
@@ -288,7 +272,7 @@ const_iterator end() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador para o local após o último elemento no contêiner simultâneo.  
+ Um iterador para o local de êxito do último elemento no contêiner simultâneo.  
   
 ##  <a name="equal_range"></a>equal_range 
 
@@ -306,13 +290,13 @@ std::pair<const_iterator,
   
 ### <a name="parameters"></a>Parâmetros  
  `KVal`  
- O valor da chave para pesquisar.  
+ O valor chave a ser pesquisado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [par](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) onde o primeiro elemento é um iterador para o início e o segundo elemento é um iterador para o final do intervalo.  
+ Um [par](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) em que o primeiro elemento é um iterador para o início e o segundo elemento é um iterador até o final do intervalo.  
   
 ### <a name="remarks"></a>Comentários  
- É possível para inserções simultâneas fazer com que as chaves adicionais a serem inseridos após o iterador inicial e antes do iterador de fim.  
+ É possível para inserções simultâneas fazer com que outras chaves a ser inserido após o iterador de begin e antes do iterador de término.  
   
 ##  <a name="find"></a>localizar 
 
@@ -326,21 +310,21 @@ const_iterator find(const key_type& KVal) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `KVal`  
- O valor da chave para pesquisar.  
+ O valor chave a ser pesquisado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador apontando para o local do primeiro elemento que corresponde à chave fornecida ou o iterador `end()` se esse elemento não existir.  
+ Um iterador que aponta para o local do primeiro elemento que corresponde a chave fornecida ou o iterador `end()` se esse elemento não existe.  
   
 ##  <a name="get_allocator"></a>get_allocator 
 
- Retorna o objeto de alocador armazenado para esse contêiner simultânea. Esse método é seguro de simultaneidade.  
+ Retorna o objeto de alocador armazenados para este contêiner simultânea. Esse método é seguro de simultaneidade.  
   
 ```
 allocator_type get_allocator() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O objeto de alocador armazenado para esse contêiner simultânea.  
+ O objeto de alocador armazenados para este contêiner simultânea.  
   
 ##  <a name="hash_function"></a>hash_function 
 
@@ -355,7 +339,7 @@ hasher hash_function() const;
   
 ##  <a name="insert"></a>Inserir 
 
- Adiciona elementos para o `concurrent_unordered_multiset` objeto.  
+ Adiciona os elementos para o `concurrent_unordered_multiset` objeto.  
   
 ```
 iterator insert(
@@ -392,25 +376,25 @@ typename std::enable_if<!std::is_same<const_iterator,
  O valor a ser inserido.  
   
  `_Where`  
- O local inicial para procurar por um ponto de inserção.  
+ O local inicial de pesquisa para um ponto de inserção.  
   
  `first`  
- O início do intervalo para inserir.  
+ O início do intervalo a ser inserido.  
   
  `last`  
- O final do intervalo para inserir.  
+ O fim do intervalo a ser inserido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador apontando para o local de inserção.  
+ Um iterador que aponta para o local de inserção.  
   
 ### <a name="remarks"></a>Comentários  
  A primeira função de membro insere o elemento `value` na sequência controlada, em seguida, retorna o iterador que designa o elemento inserido.  
   
- A segunda função de membro retorna insert ( `value`), usando `_Where` como um ponto de partida na sequência controlada para procurar o ponto de inserção.  
+ A segunda função de membro retorna insert ( `value`) usando `_Where` como ponto de partida na sequência controlada para procurar o ponto de inserção.  
   
- A terceira função de membro insere a sequência de valores de elemento do intervalo [ `first`, `last`).  
+ A terceira função do membro insere a sequência de valores de elemento do intervalo [ `first`, `last`).  
   
- As funções de membro de dois últimos se comportam da mesma maneira como os dois primeiros, exceto que `value` é usado para construir o valor inserido.  
+ As funções de membro de dois últimos se comportam da mesma, como os dois primeiros, exceto que `value` é usado para construir o valor inserido.  
   
 ##  <a name="key_eq"></a>key_eq 
 
@@ -448,11 +432,11 @@ void max_load_factor(float _Newmax);
  `_Newmax`  
   
 ### <a name="return-value"></a>Valor de retorno  
- A primeira função membro retorna o fator de carga máxima armazenado. A segunda função de membro não retorna um valor, mas lança um [out_of_range](../../../standard-library/out-of-range-class.md) exceção se o fator de carga fornecido é inválido.  
+ A primeira função membro retorna o fator de carga máxima armazenado. A segunda função de membro não retorna um valor, mas gera um [out_of_range](../../../standard-library/out-of-range-class.md) exceção se o fator de carga fornecido é inválido.  
   
 ##  <a name="max_size"></a>max_size 
 
- Retorna o tamanho máximo do contêiner simultâneo, determinado pelo alocador. Esse método é seguro de simultaneidade.  
+ Retorna o tamanho máximo do contêiner simultâneo, determinado pelo alocador de. Esse método é seguro de simultaneidade.  
   
 ```
 size_type max_size() const;
@@ -462,11 +446,11 @@ size_type max_size() const;
  O número máximo de elementos que podem ser inseridas neste contêiner simultâneo.  
   
 ### <a name="remarks"></a>Comentários  
- Esse valor de limite superior, na verdade, pode ser maior que o contêiner pode realmente manter.  
+ Esse valor de limite superior, na verdade, deve ser maior que o contêiner, na verdade, pode manter.  
   
 ##  <a name="operator_eq"></a>operador = 
 
- Atribui o conteúdo de outro `concurrent_unordered_multiset` objeto a este. Esse método não é uma prova de simultaneidade.  
+ Atribui o conteúdo de outro `concurrent_unordered_multiset` deste objeto. Este método não é seguro de simultaneidade.  
   
 ```
 concurrent_unordered_multiset& operator= (const concurrent_unordered_multiset& _Uset);
@@ -479,10 +463,10 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
  A fonte `concurrent_unordered_multiset` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência a esta `concurrent_unordered_multiset` objeto.  
+ Uma referência a este `concurrent_unordered_multiset` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Depois de apagar os elementos existentes em um multiconjunto simultâneo não ordenado, `operator=` copia ou move o conteúdo de `_Uset` para a simultâneas não ordenados multiset.  
+ Depois de apagar os elementos existentes em um multiconjunto não ordenado simultâneo, `operator=` copia ou move o conteúdo da `_Uset` na simultâneas não ordenados multiset.  
   
 ##  <a name="rehash"></a>rehash 
 
@@ -499,7 +483,7 @@ void rehash(size_type _Buckets);
 ### <a name="remarks"></a>Comentários  
  A função membro altera o número de buckets para que seja pelo menos `_Buckets` e recria a tabela de hash, conforme necessário. O número de buckets deve ser uma potência de 2. Se não é uma potência de 2, ele será arredondado para a próxima maior potência de 2.  
   
- Ele gera um [out_of_range](../../../standard-library/out-of-range-class.md) exceção se o número de buckets é inválido (0 ou maior que o número máximo de segmentos).  
+ Ele gera um [out_of_range](../../../standard-library/out-of-range-class.md) exceção se o número de buckets é inválido (0 ou maior que o número máximo de buckets).  
   
 ##  <a name="size"></a>tamanho 
 
@@ -513,11 +497,11 @@ size_type size() const;
  O número de itens no contêiner.  
   
 ### <a name="remarks"></a>Comentários  
- Na presença de inserções simultâneas, o número de elementos no contêiner simultâneo pode alterar imediatamente depois de chamar essa função, antes que o valor de retorno é ler.  
+ Na presença de inserções simultâneas, o número de elementos no contêiner simultâneo pode alterar imediatamente após chamar essa função, antes do valor de retorno é ler.  
   
-##  <a name="swap"></a>troca 
+##  <a name="swap"></a>swap 
 
- Troca o conteúdo dos dois `concurrent_unordered_multiset` objetos. Esse método não é uma prova de simultaneidade.  
+ Alterna o conteúdo de dois `concurrent_unordered_multiset` objetos. Este método não é seguro de simultaneidade.  
   
 ```
 void swap(concurrent_unordered_multiset& _Uset);
@@ -529,7 +513,7 @@ void swap(concurrent_unordered_multiset& _Uset);
   
 ##  <a name="unsafe_begin"></a>unsafe_begin 
 
- Retorna um iterador para o primeiro elemento neste contêiner para um bloco específico.  
+ Retorna um iterador para o primeiro elemento neste contêiner para um bucket específico.  
   
 ```
 local_iterator unsafe_begin(size_type _Bucket);
@@ -542,11 +526,11 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
  O índice de bucket.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador apontando para o início da partição.  
+ Um iterador que aponta para o início da partição.  
   
 ##  <a name="unsafe_bucket"></a>unsafe_bucket 
 
- Retorna o índice de bucket que mapeia uma chave específica neste contêiner.  
+ Retorna o índice de partição que mapeia uma chave específica neste contêiner.  
   
 ```
 size_type unsafe_bucket(const key_type& KVal) const;
@@ -554,21 +538,21 @@ size_type unsafe_bucket(const key_type& KVal) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `KVal`  
- A chave do elemento que está sendo pesquisada.  
+ A chave de elemento que está sendo pesquisada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de bucket para a chave neste contêiner.  
+ O índice de classificação para a chave neste contêiner.  
   
 ##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count 
 
- Retorna o número atual de buckets neste contêiner.  
+ Retorna o número atual de recipientes neste contêiner.  
   
 ```
 size_type unsafe_bucket_count() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O número atual de buckets neste contêiner.  
+ O número atual de recipientes neste contêiner.  
   
 ##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size 
 
@@ -583,11 +567,11 @@ size_type unsafe_bucket_size(size_type _Bucket);
  O bucket para pesquisar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O número atual de buckets neste contêiner.  
+ O número atual de recipientes neste contêiner.  
   
 ##  <a name="unsafe_cbegin"></a>unsafe_cbegin 
 
- Retorna um iterador para o primeiro elemento neste contêiner para um bloco específico.  
+ Retorna um iterador para o primeiro elemento neste contêiner para um bucket específico.  
   
 ```
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
@@ -598,11 +582,11 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
  O índice de bucket.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador apontando para o início da partição.  
+ Um iterador que aponta para o início da partição.  
   
 ##  <a name="unsafe_cend"></a>unsafe_cend 
 
- Retorna um iterador para o local após o último elemento em um bloco específico.  
+ Retorna um iterador para o local de êxito do último elemento em um bloco específico.  
   
 ```
 const_local_iterator unsafe_cend(size_type _Bucket) const;
@@ -613,11 +597,11 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
  O índice de bucket.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador apontando para o início da partição.  
+ Um iterador que aponta para o início da partição.  
   
 ##  <a name="unsafe_end"></a>unsafe_end 
 
- Retorna um iterador para o último elemento neste contêiner para um bloco específico.  
+ Retorna um iterador para o último elemento neste contêiner para um bucket específico.  
   
 ```
 local_iterator unsafe_end(size_type _Bucket);
@@ -630,11 +614,11 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
  O índice de bucket.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador apontando para o final da partição.  
+ Um iterador que aponta para o final da partição.  
   
 ##  <a name="unsafe_erase"></a>unsafe_erase 
 
- Remove elementos do `concurrent_unordered_multiset` em posições especificadas. Esse método não é uma prova de simultaneidade.  
+ Remove os elementos do `concurrent_unordered_multiset` em posições especificadas. Este método não é seguro de simultaneidade.  
   
 ```
 iterator unsafe_erase(
@@ -650,7 +634,7 @@ size_type unsafe_erase(
   
 ### <a name="parameters"></a>Parâmetros  
  `_Where`  
- A posição do iterador para apagar da.  
+ A posição do iterador para apagar do.  
   
  `first`  
  `last`  
@@ -658,12 +642,12 @@ size_type unsafe_erase(
  O valor da chave para apagar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- As funções de membro de dois primeiro retornam um iterador que designa o primeiro elemento restante além de quaisquer elementos removidos, ou [final](#end)() se esse elemento não existir. A terceira função de membro retorna o número de elementos remove.  
+ As funções de membro de dois primeiro retornam um iterador que designa o primeiro elemento restantes além de quaisquer elementos removidos, ou [final](#end)() se esse elemento não existe. A terceira função do membro retorna o número de elementos remove.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função de membro remove o elemento apontado por `_Where`. A segunda função de membro remove os elementos no intervalo [ `_Begin`, `_End`).  
+ A primeira função de membro remove o elemento apontado pelo `_Where`. A segunda função de membro remove os elementos no intervalo [ `_Begin`, `_End`).  
   
- A terceira função de membro remove os elementos no intervalo delimitado por [equal_range](#equal_range)(KVal).  
+ A terceira função do membro remove os elementos no intervalo delimitado por [equal_range](#equal_range)(KVal).  
   
 ##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
 
@@ -679,7 +663,6 @@ size_type unsafe_max_bucket_count() const;
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
-
 
 
 

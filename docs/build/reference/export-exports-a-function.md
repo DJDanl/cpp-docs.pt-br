@@ -1,73 +1,73 @@
 ---
-title: "/EXPORT (exporta uma fun&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ExportFunctions"
-  - "/export"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /EXPORT"
-  - "opção de vinculador EXPORT"
-  - "opção de vinculador -EXPORT"
+title: "-EXPORT (exporta uma função) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ExportFunctions
+- /export
+dev_langs: C++
+helpviewer_keywords:
+- /EXPORT linker option
+- EXPORT linker option
+- -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /EXPORT (exporta uma fun&#231;&#227;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="export-exports-a-function"></a>/EXPORT (exporta uma função)
 ```  
 /EXPORT:entryname[,@ordinal[,NONAME]][,DATA]  
 ```  
   
-## Comentários  
- Com essa opção, você pode exportar uma função do programa de forma que outros programas podem chamar a função.  Você também pode exportar dados.  Exporta as são normalmente definidas em uma DLL.  
+## <a name="remarks"></a>Comentários  
+ Com essa opção, você pode exportar uma função em seu programa para que outros programas podem chamar a função. Você também pode exportar dados. Exportações geralmente são definidas em uma DLL.  
   
- *O entryname* é o nome do item da função ou de dados como deve ser usada pelo programa de chamada.  `ordinal` especifica um índice na tabela de exportações no intervalo de 1 a 65.535; se você não especificar `ordinal`, o LINK atribui um.  A palavra\-chave de **NONAME** exporta a função apenas como um ordinal, sem *um entryname*.  
+ O *Nome_da_entrada* é o nome do item de dados ou função como ele será usado pelo programa de chamada. `ordinal`Especifica um índice na tabela de exportações no intervalo de 1 a 65.535; Se você não especificar `ordinal`, LINK atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem um *Nome_da_entrada*.  
   
- A palavra\-chave de **DADOS** especifica que o item é exportado um item de dados.  O item de dados no programa cliente deve ser declarado usando **extern \_\_declspec\(dllimport\)**.  
+ O **dados** palavra-chave especifica que o item exportado é um item de dados. O item de dados do programa cliente deve ser declarado usando **__declspec(dllimport) extern**.  
   
- Há três métodos para exportar uma definição, listados na ordem recomendado para uso:  
+ Há três métodos para exportar uma definição, listada em ordem de recomendação de uso:  
   
-1.  [\_\_declspec \(dllexport\)](../../cpp/dllexport-dllimport.md) no código\-fonte  
+1.  [dllexport](../../cpp/dllexport-dllimport.md) no código-fonte  
   
-2.  Uma instrução de [EXPORTAÇÕES](../Topic/EXPORTS.md) em um arquivo .def  
+2.  Um [exportações](../../build/reference/exports.md) instrução em um arquivo. def  
   
-3.  Uma especificação de \/EXPORT em um comando de LINK  
+3.  Uma especificação /EXPORT em um comando LINK  
   
- Todos os três métodos podem ser usados no mesmo programa.  Quando o LINK cria um programa que contém a exportações, o também cria uma biblioteca de importação, a menos que um arquivo de .exp é usado na compilação.  
+ Todos os três métodos podem ser usados no mesmo programa. Quando o LINK cria um programa que contém exportações, ele também cria uma biblioteca de importação, a menos que um arquivo. EXP é usado na compilação.  
   
- O LINK decoraram formas de identificadores.  O compilador decora um identificador quando cria o arquivo de .obj.  Se *o entryname* está especificado ao vinculador em sua forma como ele aparece em undecorated \(origem\), o LINK tenta corresponder ao nome.  Se o não conseguir localizar uma correspondência exclusivo, o LINK emite uma mensagem de erro.  Use a ferramenta de [DUMPBIN](../../build/reference/dumpbin-reference.md) para obter o formulário de [nomes decorados](../Topic/Decorated%20Names.md) de um identificador do quando precisar de especifique ao vinculador.  
+ LINK usa decorado formulários de identificadores. O compilador decora um identificador ao criar o arquivo. obj. Se *Nome_da_entrada* é especificado para o vinculador no seu não decorado formar (conforme ele aparece no código-fonte), LINK tenta corresponder ao nome. Se ele não é possível localizar uma correspondência exclusiva, o LINK emite uma mensagem de erro. Use o [DUMPBIN](../../build/reference/dumpbin-reference.md) ferramenta para obter o [nomes decorados](../../build/reference/decorated-names.md) formulário de um identificador quando você precisa especificá-lo para o vinculador.  
   
 > [!NOTE]
->  Não especifique o formulário decorado de identificadores de C que 2.0 são declarados `__cdecl` ou `__stdcall`.  
+>  Não especifique o formulário decorado de identificadores de C que são declarados `__cdecl` ou `__stdcall`.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção na caixa de **Opções Adicionais** .  
+4.  Digite a opção para o **opções adicionais** caixa.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

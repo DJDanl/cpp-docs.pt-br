@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>E/S de fluxo
 Essas funções processam os dados em diferentes tamanhos e formatos, desde caracteres únicos até grandes estruturas de dados. Elas também fornecem o armazenamento em buffer, o que pode melhorar o desempenho. O tamanho padrão de um buffer de fluxo é de 4 K. Essas rotinas afetam apenas os buffers criados por rotinas de biblioteca de tempo de execução e não têm efeito nos buffers criados pelo sistema operacional.  
   
 ### <a name="stream-io-routines"></a>Rotinas de E/S de fluxo  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Limpar o indicador de erro do fluxo|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Fechar o fluxo|  

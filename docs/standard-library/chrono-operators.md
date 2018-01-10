@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- chrono/std::operator modulo
+f1_keywords: chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: bcd1813ec127b7b5243d61e015bb8bec444cf9cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltchronogt-operators"></a>Operadores &lt;chrono&gt;
 ||||  
@@ -63,7 +61,7 @@ constexpr typename common_type<Duration1, Duration2>::type
  `Dur`  
  Um objeto `duration`.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A primeira função retorna um objeto `duration` cujo comprimento do intervalo é a diferença entre os intervalos de tempo dos dois argumentos.  
   
  A segunda função retorna um objeto `time_point` que representa um ponto no tempo que é deslocado, pela negação do intervalo de tempo representado por `Dur`, do ponto no tempo especificado por `Time`.  
@@ -93,7 +91,7 @@ constexpr bool operator!=(
  `Right`  
  O objeto `duration` ou `time_point` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Cada função retorna `!(Left == Right)`.  
   
 ##  <a name="op_star"></a>  operator*  
@@ -122,7 +120,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
  `Mult`  
  Um valor integral.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Cada função retorna um objeto `duration` cujo tamanho de intervalo é `Mult` multiplicado pelo tamanho de `Dur`.  
   
  A menos que `is_convertible<Rep2, common_type<Rep1, Rep2>>`*seja verdadeiro*, a primeira função não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).  
@@ -160,7 +158,7 @@ constexpr typename common_type<Rep1, Rep2>::type
  `Right`  
  O objeto `duration` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O primeiro operador retorna um objeto duration cujo tamanho de intervalo é o tamanho de `Dur` dividido pelo valor de `Div`.  
   
  O segundo operador retorna a proporção dos tamanhos de intervalo de `Left` e `Right`.  
@@ -205,7 +203,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
  `Dur`  
  Um objeto `duration`.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A primeira função retorna um objeto `duration` que tem um intervalo de tempo igual à soma dos intervalos de `Left` e `Right`.  
   
  A segunda e a terceira funções retornam um objeto `time_point` que representa um ponto no tempo deslocado, pelo intervalo `Dur`, do ponto no tempo `Time`.  
@@ -233,7 +231,7 @@ constexpr bool operator<(
  `Right`  
  O objeto `duration` ou `time_point` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A primeira função retornará `true` se o tamanho do intervalo de `Left` for menor que o tamanho do intervalo de `Right`. Caso contrário, a função retorna `false`.  
   
  A segunda função retornará `true` se `Left` preceder `Right`. Caso contrário, a função retorna `false`.  
@@ -260,7 +258,7 @@ constexpr bool operator<=(
  `Right`  
  O objeto `duration` ou `time_point` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Cada função retorna `!(Right < Left)`.  
   
 ##  <a name="op_eq_eq"></a>  operator==  
@@ -285,7 +283,7 @@ constexpr bool operator==(
  `Right`  
  O objeto `duration` ou `time_point` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A primeira função retornará `true` se `Left` e `Right` representarem intervalos de tempo de mesmo tamanho. Caso contrário, a função retorna `false`.  
   
  A segunda função retornará `true` se `Left` e `Right` representarem o mesmo ponto no tempo. Caso contrário, a função retorna `false`.  
@@ -312,7 +310,7 @@ constexpr bool operator>(
  `Right`  
  O objeto `duration` ou `time_point` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Cada função retorna `Right < Left`.  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
@@ -337,7 +335,7 @@ constexpr bool operator>=(
  `Right`  
  O objeto `duration` ou `time_point` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Cada função retorna `!(Left < Right)`.  
   
 ##  <a name="op_modulo"></a>  operator modulo  
@@ -370,12 +368,11 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
  `Right`  
  O objeto `duration` à direita.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A primeira função retorna um objeto `duration` cujo tamanho de intervalo é `Dur` módulo `Div`.  
   
  A segunda função retorna um valor que representa `Left` módulo `Right`.  
   
 ## <a name="see-also"></a>Consulte também  
  [\<chrono>](../standard-library/chrono.md)
-
 

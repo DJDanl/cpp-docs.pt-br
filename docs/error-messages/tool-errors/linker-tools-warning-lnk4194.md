@@ -1,46 +1,28 @@
 ---
-title: Aviso LNK4194 das ferramentas de vinculador | Documentos do Microsoft
+title: Ferramentas de vinculador LNK4194 aviso | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4194
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4194
+f1_keywords: LNK4194
+dev_langs: C++
+helpviewer_keywords: LNK4194
 ms.assetid: a45f437e-33b5-487e-b3cd-ff1560041e7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5bf8bf6f1399588ec194ff223219190749741709
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fc689c3230cf6a1bd0373e4e96323f865c64b14e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4194"></a>Aviso LNK4194 (Ferramentas de Vinculador)
-Nome de /DELAYLOAD:dll ignorado  
+Nome do /DELAYLOAD:dll ignorado  
   
- O vinculador não pode [carregamento atrasado](../../build/reference/delayload-delay-load-import.md) DLL solicitado.
+ Não é possível o vinculador [carga com atraso](../../build/reference/delayload-delay-load-import.md) DLL solicitado.

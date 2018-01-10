@@ -1,88 +1,89 @@
 ---
-title: "Incluindo s&#237;mbolos compartilhados (somente leitura) ou calculados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.symbol.shared.calculated"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "símbolos calculados"
-  - "símbolos somente leitura"
-  - "símbolos compartilhados"
-  - "diretivas de símbolo"
-  - "símbolos, calculado"
-  - "símbolos, somente leitura"
-  - "símbolos, shared"
+title: "Incluindo compartilhados (somente leitura) ou calculados símbolos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.symbol.shared.calculated
+dev_langs: C++
+helpviewer_keywords:
+- symbols, read-only
+- symbols, shared
+- symbols, calculated
+- read-only symbols
+- symbol directives
+- calculated symbols
+- shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bf0beeb90e2d4c4d22f45322f881bb7a247acf12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Incluindo s&#237;mbolos compartilhados (somente leitura) ou calculados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Na primeira vez que o ambiente de desenvolvimento lê um arquivo de recurso criado por outro aplicativo, ele marca todos os arquivos de cabeçalho incluído como somente leitura.  Posteriormente, você pode usar o [caixa de diálogo recurso inclui](../windows/resource-includes-dialog-box.md) para adicionar arquivos de cabeçalho de símbolo somente leitura adicional.  
+# <a name="including-shared-read-only-or-calculated-symbols"></a>Incluindo símbolos compartilhados (somente leitura) ou calculados
+Na primeira vez que o ambiente de desenvolvimento lê um arquivo de recurso criado por outro aplicativo, ele marca todos os arquivos de cabeçalho incluído como somente leitura. Em seguida, você pode usar o [caixa de diálogo recurso inclui](../windows/resource-includes-dialog-box.md) para adicionar arquivos de cabeçalho de símbolo adicionais de somente leitura.  
   
- Um motivo que você talvez queira usar definições de símbolo somente leitura é para arquivos de símbolo que você planeja compartilhar entre vários projetos.  
+ É um motivo que você talvez queira usar definições de símbolo de somente leitura para os arquivos de símbolo que você planeja compartilhar entre vários projetos.  
   
- Você também pode usar arquivos de símbolo incluído quando você tem os recursos existentes com as definições de símbolos que usa expressões em vez de inteiros simples para definir o valor do símbolo.  Por exemplo:  
+ Você também pode usar arquivos de símbolo incluído quando você tem os recursos existentes com as definições de símbolo que usam expressões em vez de inteiros simples para definir o valor do símbolo. Por exemplo:  
   
 ```  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
   
- O ambiente corretamente interpretará esses símbolos calculados contanto que:  
+ O ambiente corretamente interpretará esses símbolos calculados, contanto que:  
   
--   Os símbolos calculados são colocados em um arquivo de símbolos somente leitura.  
+-   Os símbolos calculados são colocados em um arquivo de símbolos de somente leitura.  
   
--   O arquivo de recurso contém recursos aos quais esses símbolos calculados já estão atribuídos.  
+-   O arquivo de recurso contém recursos para que esses símbolos calculados já estão atribuídos.  
   
--   Espera\-se uma expressão numérica.  
+-   Uma expressão numérica é esperada.  
   
 > [!NOTE]
->  Se uma cadeia de caracteres ou uma expressão numérica é esperada, a expressão não será avaliada.  
+>  Se uma cadeia de caracteres ou uma expressão numérica é esperada, a expressão não é avaliada.  
   
-### Para incluir símbolos compartilhados \(somente leitura\) em seu arquivo de recursos  
+### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Para incluir os símbolos compartilhados (somente leitura) em seu arquivo de recurso  
   
-1.  Em [exibição recurso](../windows/resource-view-window.md), clique em seu arquivo. RC e escolha [recurso inclui](../windows/resource-includes-dialog-box.md) no menu de atalho.  
-  
-    > [!NOTE]
-    >  Se seu projeto ainda não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  No **diretivas de símbolo somente leitura** caixa, use o **\#include** diretiva de compilador para especificar o arquivo onde você deseja que os símbolos somente leitura sejam mantidos.  
-  
-     Não chame o arquivo Resource.h, já que é o nome de arquivo normalmente usada pelo arquivo de cabeçalho de símbolo principal.  
+1.  Em [exibição recursos](../windows/resource-view-window.md), clique em seu arquivo. RC e escolha [inclui recursos](../windows/resource-includes-dialog-box.md) no menu de atalho.  
   
     > [!NOTE]
-    >  **Importante** o que você digita na caixa de diretivas de símbolo somente leitura é incluído no arquivo de recurso exatamente conforme você digita.  Certifique\-se de que você digitou não contém erros de ortografia ou sintaxe.  
+    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-     Use o **diretivas de símbolo somente leitura** caixa para incluir arquivos com apenas definições de símbolo.  Não inclua as definições de recurso. Caso contrário, as definições de recurso duplicado serão criadas quando o arquivo é salvo.  
+2.  No **diretivas de símbolo somente leitura** caixa, use o **#include** diretiva de compilador para especificar o arquivo onde você deseja que os símbolos somente leitura sejam mantidos.  
   
-3.  Coloque os símbolos no arquivo especificado por você.  
+     Não chame o arquivo Resource.h, já que esse é o nome de arquivo normalmente é usado pelo arquivo de cabeçalho de símbolo principal.  
   
-     Os símbolos nos arquivos incluídos dessa forma são avaliados sempre que você abrir o arquivo de recurso, mas elas não são substituídas no disco quando você salvar o arquivo.  
+    > [!NOTE]
+    >  **Importante** o que você digita na caixa de diretivas de símbolo somente leitura está incluído no arquivo de recurso exatamente como você a digita. Certifique-se de que você digitou não contém erros de ortografia ou de sintaxe.  
+  
+     Use o **diretivas de símbolo somente leitura** caixa para incluir arquivos com apenas definições de símbolo. Não inclua as definições de recurso. Caso contrário, as definições de recurso duplicado serão criadas quando o arquivo é salvo.  
+  
+3.  Coloque os símbolos no arquivo especificado.  
+  
+     Os símbolos nos arquivos incluídos dessa maneira são avaliados sempre que você abrir o arquivo de recurso, mas elas não são substituídas no disco quando você salvar o arquivo.  
   
 4.  Clique em **OK**.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [Recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
  Requisitos  
   
  Win32  
   
-## Consulte também  
- [Restrições de nome do símbolo](../windows/symbol-name-restrictions.md)   
- [Restrições de valor do símbolo](../Topic/Symbol%20Value%20Restrictions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Restrições de nome de símbolo](../windows/symbol-name-restrictions.md)   
+ [Restrições de valor do símbolo](../windows/symbol-value-restrictions.md)   
  [IDs de símbolo predefinido](../windows/predefined-symbol-ids.md)   
- [Símbolos: Identificadores de recursos](../mfc/symbols-resource-identifiers.md)
+ [Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)

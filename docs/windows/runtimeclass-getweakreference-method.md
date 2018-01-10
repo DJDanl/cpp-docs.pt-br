@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo RuntimeClass::GetWeakReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetWeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetWeakReference"
+title: "Método: Getweakreference | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetWeakReference
+dev_langs: C++
+helpviewer_keywords: GetWeakReference method
 ms.assetid: 26656ace-7f20-4364-87c9-4a75dd30912e
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ba87fe5097f9aff52b54770c1d438be2be425259
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo RuntimeClass::GetWeakReference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtém um ponteiro para o objeto de referência flexível para o objeto atual de RuntimeClass.  
+# <a name="runtimeclassgetweakreference-method"></a>Método RuntimeClass::GetWeakReference
+Obtém um ponteiro para o objeto de referência fraca para o objeto RuntimeClass atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 STDMETHOD(  
@@ -35,17 +35,17 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `weakReference`  
- Quando esta operação concluir, um ponteiro para um objeto de referência flexível.  
+ Quando essa operação for concluída, um ponteiro para um objeto de referência fraca.  
   
-## Valor de retorno  
- Sempre S\_OK.  
+## <a name="return-value"></a>Valor de retorno  
+ Sempre S_OK.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe RuntimeClass](../windows/runtimeclass-class.md)

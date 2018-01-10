@@ -1,70 +1,72 @@
 ---
-title: "Definindo mnem&#244;nica (teclas de acesso) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "chaves de acesso [C++]"
-  - "chaves de acesso [C++], adicionando"
-  - "chaves de acesso [C++], verificando"
-  - "Comando Verificar Mnemônico"
-  - "controles [C++], teclas de acesso"
-  - "controles de caixas de diálogo, mnemônico"
-  - "atalhos de teclado [C++], controles"
-  - "atalhos de teclado [C++], verificação de exclusividade"
-  - "mnemônico"
-  - "mnemônico, verificando a existência de duplicações"
-  - "mnemônico, controles de caixas de diálogo"
+title: "Definindo mnemônica (teclas de acesso) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- access keys [C++], adding
+- keyboard shortcuts [C++], controls
+- dialog box controls, mnemonics
+- access keys [C++], checking
+- mnemonics, checking for duplicate
+- mnemonics
+- mnemonics, dialog box controls
+- keyboard shortcuts [C++], uniqueness checking
+- Check Mnemonics command
+- controls [C++], access keys
+- access keys [C++]
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 167947e51ed773f765432148cbe879c926c57d5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Definindo mnem&#244;nica (teclas de acesso)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Normalmente, os usuários de teclado mover o foco de entrada de um controle para outro em uma caixa de diálogo com as teclas de direção e TAB.  No entanto, você pode definir uma tecla de acesso \(um nome mnemônico ou fácil de lembrar\) que permite que os usuários escolham um controle pressionando uma única chave.  
+# <a name="defining-mnemonics-access-keys"></a>Definindo mnemônica (teclas de acesso)
+Normalmente, os usuários de teclado mover o foco de entrada de um controle para outro em uma caixa de diálogo com as teclas TAB e de direção. No entanto, você pode definir uma chave de acesso (um mnemônico ou fácil de lembrar nome) que permite aos usuários escolher um controle pressionando uma única chave.  
   
-### Para definir uma tecla de acesso para um controle com uma legenda visível \(botões de ação, caixas de seleção e botões de opção\)  
+### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Para definir uma chave de acesso para um controle com uma legenda visível (botões de ação, caixas de seleção e botões de opção)  
   
 1.  Selecione o controle na caixa de diálogo.  
   
-2.  No  [Janela Propriedades do](../Topic/Properties%20Window.md), no  **legenda** propriedade, digite um novo nome para o controle, digitando um e comercial \(**&**\) na frente da letra que deseja como a chave de acesso para o controle.  Por exemplo, `&Radio1`.  
+2.  No [janela propriedades](/visualstudio/ide/reference/properties-window), no **legenda** propriedade, digite um novo nome para o controle digitando um e comercial (**&**) na frente da letra que você deseja que o chave de acesso para o controle. Por exemplo, `&Radio1`.  
   
-3.  Pressione  **Digite**.  
+3.  Pressione **ENTER**.  
   
-     Um sublinhado aparece na legenda exibida para indicar a chave de acesso, por exemplo,  **r**adio1.  
+     Um sublinhado aparece na legenda exibida para indicar a chave de acesso, por exemplo, **R**adio1.  
   
-### Para definir uma tecla de acesso para um controle sem uma legenda visível  
+### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Para definir uma chave de acesso para um controle sem uma legenda visível  
   
-1.  Fazer uma legenda para o controle, usando um  **Texto estático** controlar no  [caixa de ferramentas](../Topic/Toolbox.md).  
+1.  Faça uma legenda para o controle, usando um **texto estático** controlar o [caixa de ferramentas](/visualstudio/ide/reference/toolbox).  
   
-2.  Na legenda de texto estático, digite um e comercial \(**e**\) na frente da letra que deseja como a tecla de acesso.  
+2.  A legenda de texto estático, digite um e comercial (**&**) na frente da letra que você deseja como a chave de acesso.  
   
-3.  Verifique se que o controle de texto estático imediatamente precede o controle que ele rotula na ordem de tabulação.  
+3.  Verifique se o controle de texto estático que precede o controle rotula na ordem de tabulação.  
   
  Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas.  
   
-#### Para verificar se as teclas de acesso duplicadas  
+#### <a name="to-check-for-duplicate-access-keys"></a>Para verificar se há chaves de acesso duplicados  
   
-1.  Sobre o  **formato** menu, clique em  **Verificar mnemônicos**.  
+1.  Sobre o **formato** menu, clique em **verificar mnemônico**.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### Requisitos  
+### <a name="requirements"></a>Requisitos  
  Win32  
   
-## Consulte também  
- [Controles em caixas de diálogo](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

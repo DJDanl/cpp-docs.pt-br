@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a634d748a0960e0eda56f89bcca66463780f08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf86c854345244eafff80392cdc575d026c61ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-management"></a>Gerenciamento de tempo
 Use essas funções para obter a hora atual e converter, ajustar e armazená-lo conforme necessário. A hora atual é a hora do sistema.  
@@ -32,7 +33,7 @@ Use essas funções para obter a hora atual e converter, ajustar e armazená-lo 
   
 ### <a name="time-routines"></a>Rotinas de Tempo  
   
-|Função|Uso|  
+|Função|Use|  
 |--------------|---------|  
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Converter a hora do tipo `struct tm` em sequência de caracteres. As versões dessas funções com o sufixo `_s` são mais seguras.|  
 |[clock](../c-runtime-library/reference/clock.md)|Retorne a hora do relógio decorrida no processo.|  

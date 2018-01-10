@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c46616914f9cf6d1069702c16cdd03f272d6561c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03fb11c29b51b30b1aaffccbe3e999f1cefc3fbb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-label-editing"></a>Edição do rótulo de controle de árvore
 O usuário pode editar diretamente os rótulos de itens em um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) que tem o **TVS_EDITLABELS** estilo. O usuário começa a editar clicando o rótulo do item que tem o foco. Um aplicativo começa a edição usando o [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) função de membro. O controle de árvore envia a notificação ao editar começa e quando é cancelada ou concluída. Quando concluir a edição, você é responsável por atualizar o rótulo do item, se apropriado.  

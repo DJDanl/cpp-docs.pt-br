@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo FtmBase::GetUnmarshalClass | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetUnmarshalClass"
+title: "Método Ftmbase: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+dev_langs: C++
+helpviewer_keywords: GetUnmarshalClass method
 ms.assetid: 535fc539-5b97-4967-b158-f7568f13d341
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 978379c64f22026f19dd76afa39af08402cebc65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo FtmBase::GetUnmarshalClass
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtém CLSID que a usa para localizar a DLL que contém código para o proxy correspondente.  Carrega COM este DLL para criar uma instância de não inicializada do proxy.  
+# <a name="ftmbasegetunmarshalclass-method"></a>Método FtmBase::GetUnmarshalClass
+Obtém o CLSID COM usa para localizar a DLL que contém o código para o proxy correspondente. COM carrega dessa DLL para criar uma instância não inicializada do proxy.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 STDMETHODIMP GetUnmarshalClass(  
@@ -40,35 +40,35 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `riid`  
- Referência ao identificador da interface para realizar marshaling.  
+ Referência ao identificador da interface a ser empacotado.  
   
  `pv`  
- Ponteiro para a interface a ser usada; poderá ser NULL se o chamador não tem um ponteiro para a interface desejada.  
+ Ponteiro para a interface para ser empacotado; pode ser NULL se o chamador não tem um ponteiro para a interface desejada.  
   
  `dwDestContext`  
- Contexto de destino onde a interface especificada deve ser unmarshaled.  
+ Contexto de destino onde a interface especificada é para ser desempacotada.  
   
- Especifique um ou mais valores de enumeração de MSHCTX.  
+ Especifique um ou mais valores de enumeração MSHCTX.  
   
- O desempacotamento pode ocorrer em outro STA. do processo atual \(MSHCTX\_INPROC\) ou em outro processo no mesmo computador que o processo atual \(MSHCTX\_LOCAL\).  
+ Unmarshaling pode ocorrer em outro apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).  
   
  `pvDestContext`  
  Reservado para uso futuro; deve ser NULL.  
   
  `mshlflags`  
- Quando esta operação concluir, ponteiro para CLSID a ser usado para criar um proxy no processo do cliente.  
+ Quando essa operação for concluída, ponteiro para o CLSID para ser usado para criar um proxy no processo de cliente.  
   
  `pCid`  
   
-## Valor de retorno  
- S\_OK se bem\-sucedido; se não, S\_FALSE.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, S_FALSE.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ftm.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe FtmBase](../windows/ftmbase-class.md)

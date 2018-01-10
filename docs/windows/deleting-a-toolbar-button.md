@@ -1,40 +1,42 @@
 ---
-title: "Excluindo um bot&#227;o da barra de ferramentas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "botões de barra de ferramentas (no Editor de barra de ferramentas), excluindo"
-  - "Editor da barra de ferramentas, excluindo botões"
+title: "Excluindo um botão de barra de ferramentas | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- toolbar buttons (in Toolbar editor), deleting
+- Toolbar editor, deleting buttons
 ms.assetid: 0888cb9b-6804-4717-93d0-3437bbc6241c
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a4908ba360dd831d4289f86985acd4f30a6d25ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Excluindo um bot&#227;o da barra de ferramentas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para excluir um botão da barra de ferramentas  
+# <a name="deleting-a-toolbar-button"></a>Excluindo um botão da barra de ferramentas
+### <a name="to-delete-a-toolbar-button"></a>Para excluir um botão de barra de ferramentas  
   
-1.  Selecione o botão de barra de ferramentas e arraste\-o da barra de ferramentas.  
+1.  Selecione o botão de barra de ferramentas e arraste-o da barra de ferramentas.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
- MFC ou ATL  
+ MFC ou do ATL  
   
-## Consulte também  
- [Criando, movendo e editando botões da barra de ferramentas](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Editor de Barra de Ferramentas](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Consulte também  
+ [Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Editor de barra de ferramentas](../windows/toolbar-editor.md)
+

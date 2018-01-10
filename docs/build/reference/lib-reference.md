@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4593e3fb5cdd511bde8beb262c8a3cb9fd247fd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4db7def12f6b5d08c774bef51e2a15ea5994f5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-reference"></a>Referência LIB
 O Gerenciador de biblioteca da Microsoft (LIB.exe) cria e gerencia uma biblioteca de arquivos de objeto do formato de arquivo de objeto comum (COFF). LIB também pode ser usado para criar arquivos de exportação e bibliotecas de importação para referência exportada de definições.  

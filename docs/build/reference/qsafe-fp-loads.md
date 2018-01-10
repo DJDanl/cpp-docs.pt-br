@@ -1,58 +1,58 @@
 ---
-title: "/Qsafe_fp_loads | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: -Qsafe_fp_loads | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 2b2ce52d-ba57-4bd3-a739-47a7f8bfaba9
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a9e572c8a4d353aaee4e82e8c7bdc3f719475c03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /Qsafe_fp_loads
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Requer instruções de movimentação de inteiro para valores de ponto flutuante e desabilitar certas otimizações de ponto flutuante de carga.  
+# <a name="qsafefploads"></a>/Qsafe_fp_loads
+Requer as instruções de movimentação de inteiro para valores de ponto flutuante e desabilita determinadas otimizações de carregamento de ponto flutuante.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Qsafe_fp_loads  
 ```  
   
-## Comentários  
- **\/Qsafe\_fp\_loads** só está disponível nos compiladores que visam x86; não está disponível nos compiladores que visam x64 ou o BRAÇO.  
+## <a name="remarks"></a>Comentários  
+ **/Qsafe_fp_loads** só está disponível nos compiladores de destino x86; ele não está disponível nos compiladores que x64 ou ARM de destino.  
   
- **\/Qsafe\_fp\_loads** força o compilador para usar instruções o valor inteiro em vez de instruções de ponto flutuante de movimentação para mover dados entre a memória e MMX registros.  Essa opção também desabilita a otimização da carga do registro para os valores de ponto flutuante que podem ser carregados em vários caminhos quando o valor de pode causar uma exceção sobre NLB para o exemplo, um valor do controle de NaN.  
+ **/Qsafe_fp_loads** força o compilador para usar instruções de movimentação de inteiro em vez de instruções de ponto flutuante de movimentação para mover dados entre a memória e MMX registra. Essa opção também desabilita a otimização de carga de registro para valores de ponto flutuante que pode ser carregado em vários caminhos de controle quando o valor pode causar uma exceção ao carregar — por exemplo, um valor de NaN.  
   
- Essa opção é substituída por [\/fp: exceto](../../build/reference/fp-specify-floating-point-behavior.md).  **\/Qsafe\_fp\_loads** especifica um subconjunto do comportamento do compilador que é especificado por **\/fp:except**.  
+ Essa opção é substituída por [/fp: exceto](../../build/reference/fp-specify-floating-point-behavior.md). **/Qsafe_fp_loads** Especifica um subconjunto do comportamento do compilador que é especificado pelo **/fp: exceto**.  
   
- **\/Qsafe\_fp\_loads** é incompatível com [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) e [\/fp: rápido](../../build/reference/fp-specify-floating-point-behavior.md).  Para obter mais informações sobre as opções do compilador de ponto flutuante, consulte [\/fp \(especificar comportamento de ponto flutuante\)](../../build/reference/fp-specify-floating-point-behavior.md).  
+ **/Qsafe_fp_loads** é incompatível com [/clr](../../build/reference/clr-common-language-runtime-compilation.md) e [Fast](../../build/reference/fp-specify-floating-point-behavior.md). Para obter mais informações sobre as opções de compilador de ponto flutuante, consulte [/fp (Especificar comportamento de ponto flutuante)](../../build/reference/fp-specify-floating-point-behavior.md).  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Selecione a pasta **C\/C\+\+**.  
+2.  Selecione o **C/C++** pasta.  
   
-3.  Selecione a página de propriedades **Linha de Comando** .  
+3.  Selecione o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador na caixa **Opções Adicionais**.  
+4.  Digite a opção de compilador no **opções adicionais** caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
- [\/Q Opções \(operações de nível baixo\)](../../build/reference/q-options-low-level-operations.md)   
+## <a name="see-also"></a>Consulte também  
+ [/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)   
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

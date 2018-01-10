@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe58203bb6f9b5e8aa2c793ac5f4f21a5819df85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e43e1fb1c52413eaae05dcbe8331b1d48dd7e2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-implementing-a-container"></a>Contêineres: implementando um contêiner
 Este artigo resume o procedimento para implementar um contêiner e direciona para outros artigos que fornecem que mais detalhadas explicações sobre a implementação de contêineres. Ela também lista alguns recursos opcionais do OLE, que talvez você queira implementar e os artigos que descrevem esses recursos.  

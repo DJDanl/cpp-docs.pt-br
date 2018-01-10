@@ -1,57 +1,57 @@
 ---
-title: "Classe DontUseNewUseMake | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::DontUseNewUseMake"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe DontUseNewUseMake"
+title: Classe DontUseNewUseMake | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::DontUseNewUseMake
+dev_langs: C++
+helpviewer_keywords: DontUseNewUseMake class
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c09276fb761dcd1f2f5be78afa40606e262aa3e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe DontUseNewUseMake
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="dontusenewusemake-class"></a>Classe DontUseNewUseMake
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class DontUseNewUseMake;  
 ```  
   
-## Comentários  
- Impede usando o operador `new` em RuntimeClass.  Em virtude disso, você deve usar [Crie a função](../windows/make-function.md) em vez disso.  
+## <a name="remarks"></a>Comentários  
+ Impede o uso de operador `new` em RuntimeClass. Consequentemente, você deve usar o [função Make](../windows/make-function.md) em vez disso.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Operadores Públicos  
+### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[DontUseNewUseMake::operator Operador new](../windows/dontusenewusemake-operator-new-operator.md)|Sobrecarregar o operador `new` e impede que seja usado em RuntimeClass.|  
+|----------|-----------------|  
+|[Operador DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Sobrecargas de operador `new` e impede que ele seja usado em RuntimeClass.|  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `DontUseNewUseMake`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
  [Função Make](../windows/make-function.md)

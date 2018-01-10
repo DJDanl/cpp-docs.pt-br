@@ -1,33 +1,31 @@
 ---
-title: "ELSEIF2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ELSEIF2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ELSEIF2 directive"
+title: ELSEIF2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ELSEIF2
+dev_langs: C++
+helpviewer_keywords: ELSEIF2 directive
 ms.assetid: 6e6a1020-1dc2-45a9-a42c-e08442fb4071
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 760591dff198d78dc5e4ecdc792f6f03226a1c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ELSEIF2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[ELSEIF](../../assembler/masm/elseif-masm.md) bloco avaliado cada vez que passa assembly se  **Opção: SETIF2** é  **TRUE**.  
+# <a name="elseif2"></a>ELSEIF2
+[ELSEIF](../../assembler/masm/elseif-masm.md) bloco avaliado em cada passagem de assembly se **opção: SETIF2** é **TRUE**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,5 +33,5 @@ ELSEIF2
   
 ```  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

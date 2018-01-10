@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a95596b2c9e7312d4581d1a4c641c2466420158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>Conversões de tipos de ponto flutuante
 Um valor **float** convertido em **double** ou `long double`, ou **double** convertido em `long double` não sofre nenhuma alteração no valor. Um valor **double** convertido em um valor **float** é representado exatamente, se possível. A precisão poderá ser perdida se o valor não puder ser representado exatamente. Se o resultado for fora do intervalo, o comportamento será indefinido. Consulte [Limites em constantes de ponto flutuante](../c-language/limits-on-floating-point-constants.md) para ver o intervalo de tipos de ponto flutuante.  

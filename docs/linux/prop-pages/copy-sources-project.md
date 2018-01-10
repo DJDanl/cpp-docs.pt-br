@@ -11,17 +11,20 @@ ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords: VC.Project.VCConfiguration.BuildLogFile
-ms.openlocfilehash: d552ef6bd5106b3db0e30214d8fbc144b9aa00eb
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 586244da6cc8c0a682146caf3ea75bdf72b5824e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Copiar propriedades do projeto de origem (Linux C++)
+
 As propriedades definidas nesta página de propriedades aplicam-se a todos os arquivos no projeto, exceto aos que têm as propriedades no nível do arquivo definidas.
 
-Propriedade | Descrição
+propriedade | Descrição
 --- | ---
 Origens para copiar | Especifica as fontes a serem copiadas para o sistema remoto. Alterar essa lista pode mudar ou afetar de algum outro modo a estrutura de diretórios em que os arquivos são copiados para o sistema remoto.
 Fontes de dados | Especifica se as fontes devem ser copiadas para o sistema remoto.

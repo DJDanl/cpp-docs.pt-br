@@ -1,61 +1,61 @@
 ---
-title: "M&#233;todo CompareStringOrdinal | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal"
-dev_langs: 
-  - "C++"
+title: "Método CompareStringOrdinal | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
+dev_langs: C++
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0c7e83d78bd311d7a3bfcba0cbe1a092c6c1c46b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo CompareStringOrdinal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="comparestringordinal-method"></a>Método CompareStringOrdinal
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-  
 inline INT32 CompareStringOrdinal(  
    HSTRING lhs,   
    HSTRING rhs)  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `lhs`  
- O primeiro HSTRING a ser comparado.  
+ A primeira HSTRING para comparar.  
   
  `rhs`  
- O segundo HSTRING a ser comparado.  
+ O segundo HSTRING para comparar.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
   
 |Valor|Condição|  
-|-----------|--------------|  
-|\-1|`lhs` é menor que `rhs`.|  
+|-----------|---------------|  
+|-1|`lhs` é menor que `rhs`.|  
 |0|`lhs` é igual a `rhs`.|  
 |1|`lhs` é maior que `rhs`.|  
   
-## Comentários  
- Compara dois objetos especificados de HSTRING e retorna um inteiro que indica a posição relativa em uma ordem de classificação.  
+## <a name="remarks"></a>Comentários  
+ Compara dois objetos HSTRING especificados e retorna um inteiro que indica sua posição relativa em uma ordem de classificação.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

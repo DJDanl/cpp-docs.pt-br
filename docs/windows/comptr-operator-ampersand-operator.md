@@ -1,33 +1,33 @@
 ---
-title: "Operador ComPtr::operator&amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::operator&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador operator&"
+title: 'Comptr:: Operator&amp; operador | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::operator&
+dev_langs: C++
+helpviewer_keywords: operator& operator
 ms.assetid: 2d77fda6-f4b2-45c1-8a0e-fbc355013531
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cc5234f10a16141fd91193d634f0d306886aff71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Operador ComPtr::operator&amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libera a interface associada a este objeto de `ComPtr` e recupera o endereço do objeto de `ComPtr` .  
+# <a name="comptroperatoramp-operator"></a>Comptr:: Operator&amp; operador
+Libera a interface associada a esta `ComPtr` de objeto e, em seguida, recupera o endereço do `ComPtr` objeto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 Details::ComPtrRef<WeakRef> operator&()  
@@ -35,16 +35,16 @@ Details::ComPtrRef<WeakRef> operator&()
 const Details::ComPtrRef<const WeakRef> operator&() const  
 ```  
   
-## Valor de Retorno  
- Uma referência da `ComPtr`atual.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma referência fraca a atual `ComPtr`.  
   
-## Comentários  
- Esse método é diferente de [ComPtr::GetAddressOf](../Topic/ComPtr::GetAddressOf%20Method.md) que esse método libera uma referência ao ponteiro da interface.  Use `ComPtr::GetAddressOf` quando você precisar o endereço do ponteiro de interface mas o não desejar liberar essa interface.  
+## <a name="remarks"></a>Comentários  
+ Esse método difere [: Getaddressof](../windows/comptr-getaddressof-method.md) em que esse método libera uma referência para o ponteiro de interface. Use `ComPtr::GetAddressOf` quando você exigir o endereço do ponteiro de interface, mas não deseja liberar essa interface.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe ComPtr](../windows/comptr-class.md)

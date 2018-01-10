@@ -1,63 +1,65 @@
 ---
-title: "Dimensionando controles individuais | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "controles [C++], dimensionamento"
-  - "Comando Dimensionar para o Conteúdo"
-  - " (tamanho), controles"
-  - "texto, dimensionando controles automaticamente para ajustar-se ao texto"
+title: Dimensionando controles individuais | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
 ms.assetid: 14ccba02-7171-463a-a121-7018cf1e2e5a
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b019cd2bbf68a4321bafd6dd960ffbcdba2dddf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Dimensionando controles individuais
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Use as alças de dimensionamento para redimensionar um controle.  Quando o ponteiro é posicionado sobre uma alça de dimensionamento, ele muda de forma para indicar as direções na qual o controle pode ser redimensionado.  Alças de dimensionamento ativo são sólidas; Se uma alça de dimensionamento for vazia, o controle não pode ser redimensionado ao longo desse eixo.  
+# <a name="sizing-individual-controls"></a>Dimensionando controles individuais
+Use as alças de dimensionamento para redimensionar um controle. Quando o ponteiro está posicionado em uma alça de dimensionamento, ele muda de forma para indicar as instruções no qual o controle pode ser redimensionado. Alças de dimensionamento ativo são sólidas; Se uma alça de dimensionamento estiver vazia, o controle não pode ser redimensionado ao longo desse eixo.  
   
- Você também pode alterar o tamanho de um controle ajustando o controle nas guias ou margens ou movendo um snapshot guia longe do outro e controle.  
+ Você também pode alterar o tamanho de um controle, ajuste o controle para guias ou margens ou movendo um ajustado guia longe outro e controle.  
   
-### Para dimensionar um controle  
+### <a name="to-size-a-control"></a>Para dimensionar um controle  
   
 1.  Selecione o controle.  
   
 2.  Arraste as alças de dimensionamento para alterar o tamanho do controle:  
   
-    -   Alças de dimensionamento nos lados superior e alteram o tamanho horizontal ou vertical.  
+    -   Alças de dimensionamento na parte superior e lados alterar o tamanho horizontal ou vertical.  
   
     -   Alças de dimensionamento nos cantos alteram tamanho horizontal e vertical.  
   
     > [!TIP]
-    >  Você pode redimensionar a unidade de uma caixa de diálogo de controle \(DLU\) ao mesmo tempo mantendo pressionada a tecla SHIFT e usando as teclas direita e seta para baixo.  
+    >  Você pode redimensionar a unidade de uma caixa de diálogo de controle (DLU) por vez, mantendo pressionada a tecla SHIFT e usando as teclas de seta para baixo à direita.  
   
-### Para dimensionar automaticamente um controle para ajustar o texto dentro dele  
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Para dimensionar automaticamente um controle para ajustar o texto dentro dele  
   
-1.  Escolha  **tamanho ao conteúdo** partir do  **formato** menu.  
+1.  Escolha **tamanho ao conteúdo** do **formato** menu.  
   
- \- ou \-  
+ \- ou -  
   
--   O controle com o botão direito e escolha  **tamanho do conteúdo** no menu de atalho.  
+-   Clique com botão direito do controle e escolha **tamanho ao conteúdo** no menu de atalho.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
  Win32  
   
-## Consulte também  
- [Controles em caixas de diálogo](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

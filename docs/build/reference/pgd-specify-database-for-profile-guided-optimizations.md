@@ -1,62 +1,61 @@
 ---
-title: "/PGD (especificar banco de dados para otimiza&#231;&#245;es orientadas por perfil) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ProfileGuidedDatabase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /PGD"
-  - "opção de vinculador -PGD"
+title: "-PGD (especificar o banco de dados para otimizações guiadas por perfil) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.ProfileGuidedDatabase
+dev_langs: C++
+helpviewer_keywords:
+- -PGD linker option
+- /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cb61395d9f3b8c98e17e3683a7c3897b9315d78b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /PGD (especificar banco de dados para otimiza&#231;&#245;es orientadas por perfil)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\/PGD:`filename`  
+# <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (especificar banco de dados para otimizações orientadas por perfil)
+/ PGD:`filename`  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  `filename`  
- Especifica o nome do arquivo de .pgd que será usada para manter informações sobre o programa em execução.  
+ Especifica o nome do arquivo. PGD que será usado para armazenar informações sobre o programa em execução.  
   
-## Comentários  
- Ao usar [\/LTCG: PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md), use \/PGD para especificar um nome ou local não padrão para o arquivo de .pgd.  Se você não especificar \/PGD, o nome do arquivo de .pgd será o mesmo que o nome do arquivo de saída \(.exe ou .dll\) e será criado no mesmo diretório do qual o link foi chamado.  
+## <a name="remarks"></a>Comentários  
+ Ao usar [/LTCG:PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md), use /PGD para especificar um nome não padrão ou local para o arquivo. PGD. Se você não especificar /PGD, o nome do arquivo. PGD será o mesmo que o nome (.exe ou. dll) do arquivo de saída e será criado no mesmo diretório do qual o link foi invocado.  
   
- Ao usar \/LTCG:PGOPTIMIZE, use \/PGD para especificar o nome do arquivo de .pgd a ser usado para criar a imagem otimizada.  
+ Ao usar /LTCG:PGOPTIMIZE, use /PGD para especificar o nome do arquivo. PGD para usar para criar a imagem otimizada.  
   
- Para obter mais informações, consulte [Otimização orientada perfil](../../build/reference/profile-guided-optimizations.md).  
+ Para obter mais informações, consulte [Otimização Guiada por perfil](../../build/reference/profile-guided-optimizations.md).  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o nó **Propriedades de Configuração**.  
+2.  Expanda o **propriedades de configuração** nó.  
   
-3.  Expanda o nó **Vinculador**.  
+3.  Expanda o **vinculador** nó.  
   
-4.  Selecione a página de propriedades de **Otimização** .  
+4.  Selecione o **otimização** página de propriedades.  
   
-5.  Modifique a propriedade de **Banco de Dados Guiado por Perfil** .  
+5.  Modificar o **banco de dados do perfil interativa** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProfileGuidedDatabase%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

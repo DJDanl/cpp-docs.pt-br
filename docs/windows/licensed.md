@@ -1,33 +1,33 @@
 ---
-title: "licensed | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.licensed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "licensed attribute"
+title: licenciado | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.licensed
+dev_langs: C++
+helpviewer_keywords: licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d33e51cf938642f2ff54c48e1ecd22c3f48b71f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# licensed
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica que o objeto COM a qual ele se aplica é licenciado e deve ser instanciado usando  **IClassFactory2**.  
+# <a name="licensed"></a>licensed
+Indica que o objeto COM a qual ele se aplica é licenciado e deve ser instanciado usando **IClassFactory2**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,10 +35,10 @@ Indica que o objeto COM a qual ele se aplica é licenciado e deve ser instanciad
   
 ```  
   
-## Comentários  
- O  **licenciado** o atributo do C\+\+ tem a mesma funcionalidade que o  [licenciado](http://msdn.microsoft.com/library/windows/desktop/aa367070) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **licenciado** atributo C++ tem a mesma funcionalidade que o [licenciado](http://msdn.microsoft.com/library/windows/desktop/aa367070) atributo MIDL.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cpp_attr_ref_licensed.cpp  
@@ -59,20 +59,19 @@ public:
 [module(name="MyLibrary", version="1.0", helpstring="My Library Block")];  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|**classe**,`struct`|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|**coclass**|  
+|**Aplica-se a**|**classe**,`struct`|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|**coclass**|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de classe](../windows/class-attributes.md)   

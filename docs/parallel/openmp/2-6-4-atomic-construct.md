@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea1cc2474a8420227dcf2b6b6e87f255ce144cf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 629fff5b0bef507b775fbe1b5bfabadd50b790be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Constructo atomic
 O `atomic` diretiva garante que um local de memória específica é atualizado atomicamente, em vez de expô-lo para a possibilidade de várias simultâneas de gravação de threads. A sintaxe da `atomic` diretiva é da seguinte maneira:  
