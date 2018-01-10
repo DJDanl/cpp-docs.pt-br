@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f259c6dde6364abf18b7821662dbf654c2008741
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74a00ece1e1853346b88c0340b32911618a9ff24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshaling (C++/CX)
 Na grande maioria dos casos, as instâncias de classes de tempo de execução do Windows, como os objetos C++ padrão, podem ser acessadas de qualquer thread. Essas classes são chamadas de "agile". No entanto, um pequeno número de classes de tempo de execução do Windows que acompanham o Windows não é Agile e deve ser mais consumido como objetos COM que os objetos C++ padrão. Não é necessário ser um especialista em COM para usar classes não agile, mas é preciso levar em consideração o modelo de threading da classe e seu comportamento de marshaling. Este artigo fornece informações básicas e orientação para os cenários raros em que é necessário consumir uma instância de uma classe não agile.  

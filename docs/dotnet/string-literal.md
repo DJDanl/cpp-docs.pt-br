@@ -1,39 +1,41 @@
 ---
-title: "Literal da cadeia de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "literais String"
-  - "cadeias de caracteres [C++], literais String"
+title: Literal de cadeia de caracteres | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- string literals
+- strings [C++], string literals
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Literal da cadeia de caracteres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A manipulação de cadeias de caracteres literais foi alterada de extensões gerenciadas para C\+\+ a [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)].  
+# <a name="string-literal"></a>Literal da cadeia de caracteres
+A manipulação de cadeias de caracteres literais foi alterado de extensões gerenciadas para C++ para Visual C++.  
   
- Nas extensões gerenciadas para o design de linguagem C\+\+, uma literal de cadeia de caracteres gerenciada foi declarado prefaciando o literal da cadeia de caracteres com `S`.  Por exemplo:  
+ Nas extensões gerenciadas para design de linguagem do C++, um literal de cadeia gerenciado foi indicado precedida a cadeia de caracteres literal com um `S`. Por exemplo:  
   
 ```  
 String *ps1 = "hello";  
 String *ps2 = S"goodbye";  
 ```  
   
- A sobrecarga de desempenho entre as duas inicializações de despejos não ser trivial, pois a representação de CIL seguir demonstra como **ildasm**completamente considerados:  
+ O desempenho de sobrecarga entre duas inicializações se torna não trivial, como a seguir CIL representação demonstra como visto pelo **ildasm**:  
   
 ```  
 // String *ps1 = "hello";  
@@ -49,15 +51,15 @@ ldstr      "goodbye"
 stloc.0  
 ```  
   
- Isso é aumento notáveis apenas para saber se lembrar de \(ou\) prefixar uma cadeia de caracteres literal com `S`.  Na nova sintaxe, manipulação de cadeias de caracteres literais é feita de maneira transparente, determinados pelo contexto de uso.  `S` não precisa ser especificado.  
+ Que é um aumento notável apenas Lembre-se (ou aprendizado) para uma cadeia de caracteres literal de prefixo com um `S`. A nova sintaxe, a manipulação de literais de cadeia de caracteres é feita transparente, determinado pelo contexto de uso. O `S` não precisa ser especificado.  
   
- Que sobre os casos em que precisamos de direcionar explicitamente ao compilador uma interpretação ou outra?  Nesses casos, é aplicamos uma conversão explícita.  Por exemplo:  
+ Como os casos em que precisamos explicitamente direcionam o compilador para interpretação de um ou outro? Nesses casos, podemos aplicar uma conversão explícita. Por exemplo:  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- Além disso, a cadeia literal agora corresponde a `String` com uma conversão simples em vez de uma conversão padrão.  Quando isso não pode soar como muito alterar a resolução dos conjuntos sobrecarregados de função que incluem `String` e `const char*` como parâmetros formais concorrentes.  A resolução que tiver resolvido uma vez a `const char*` uma instância é sinalizada agora como ambígua.  Por exemplo:  
+ Além disso, a cadeia de caracteres literal agora corresponde a um `String` com uma conversão simple em vez de uma conversão padrão. Enquanto isso talvez não pareça muito altera a resolução de conjuntos de função sobrecarregada que incluem um `String` e um `const char*` como parâmetros formais concorrentes. A resolução de uma vez resolvido para um `const char*` instância agora está marcada como ambígua. Por exemplo:  
   
 ```  
 ref struct R {  
@@ -69,48 +71,48 @@ int main () {
    R r;  
    // old syntax: f( const char* );  
    // new syntax: error: ambiguous  
-   r.f("ABC");   
+   r.f("ABC");   
 }  
 ```  
   
- Por que há uma diferença?  Desde que mais de um `f` instância nomeada existe no programa, isso requer o algoritmo de resolução de sobrecarga da função ser aplicado à chamada.  A resolução formal de uma função de sobrecarga envolve três etapas.  
+ Por que há uma diferença? Desde que mais de uma instância nomeada `f` existe dentro do programa, isso requer que o algoritmo de resolução de sobrecarga de função a ser aplicado à chamada. A resolução formal de uma função de sobrecarga envolve três etapas.  
   
-1.  A coleção de funções de candidato.  As funções de candidato são os métodos no escopo que correspondem léxica o nome da função que está sendo invocada.  Por exemplo, desde que `f()` é invocado por uma instância de `R`, todas as funções `f` nomeados que não são membros de `R` \(ou sua hierarquia da classe base\) não são candidato função.  Em nosso exemplo, há duas funções de candidato.  Estas são as duas funções de membro de `R` denominado `f`.  Uma chamada falha nessa fase se o conjunto da função de candidato está vazia.  
+1.  A coleção de funções de candidato. As funções de candidato são os métodos de dentro do escopo que lexicalmente correspondem ao nome da função que está sendo invocado. Por exemplo, desde `f()` é invocado por meio de uma instância do `R`, todas as funções de chamada `f` que não são membros de `R` (ou de sua hierarquia de classe base) não são funções de candidato. Em nosso exemplo, há duas funções de candidato. Estas são as funções de membro de dois de `R` chamado `f`. Uma chamada falhar durante essa fase, se o conjunto de funções de candidato está vazio.  
   
-2.  O conjunto de funções entre viáveis de candidato funções.  Uma função é viável uma que pode ser invocada com os argumentos especificados na chamada, dado o número de argumentos e seus tipos.  Em nosso exemplo, ambas as funções de candidato também são funções viáveis.  Uma chamada falha nessa fase se o conjunto viável da função está vazia.  
+2.  O conjunto de funções viáveis dentre as funções de candidato. Uma função viável é aquele que pode ser chamado com os argumentos especificados na chamada, dado o número de argumentos e seus tipos. Em nosso exemplo, ambas as funções de candidato também são funções viáveis. Uma chamada falhará durante essa fase, se o conjunto de funções viável está vazio.  
   
-3.  Selecione a função que representa a melhor correspondência de chamada.  Isso é feito para classificar as conversões aplicadas para transformar os argumentos para o tipo dos parâmetros viáveis da função.  Isso é relativamente simples com uma única função de parâmetro; se torna um pouco mais complexo quando há vários parâmetros.  Uma chamada falha nessa fase se não houver nenhuma melhor correspondência.  Ou seja, se as conversões necessárias para transformar o tipo de argumento real para o tipo do parâmetro formal são igualmente boas.  A chamada será sinalizada como ambígua.  
+3.  Selecione a função que representa a melhor correspondência da chamada. Isso é feito pela classificação as conversões aplicadas para transformar os argumentos para o tipo dos parâmetros de função viável. Isso é relativamente simples com uma função de parâmetro único; ele se torna um pouco mais complexo quando há vários parâmetros. Uma chamada falhar durante essa fase, se não houver nenhuma correspondência melhor. Ou seja, se as conversões necessárias para transformar o tipo do argumento real para o tipo do parâmetro formal são igualmente boas. A chamada será sinalizada como ambígua.  
   
- Em extensões gerenciadas, a resolução dessa chamada invocou a instância de `const char*` como a melhor correspondência.  Na nova sintaxe, a conversão necessária para corresponder `"abc"` a `const char*` e `String^` agora são equivalentes \- ou seja, igualmente bom – e assim que a chamada será sinalizada como o ruim \- isto é, como ambígua.  
+ No Managed Extensions, a resolução dessa chamada invocado o `const char*` instância como a melhor correspondência. Na sintaxe de novo, a conversão necessária corresponder `"abc"` para `const char*` e `String^` agora são equivalentes - ou seja, igualmente bom - e, portanto, a chamada será sinalizada como inválida - ou seja, como ambígua.  
   
- Isso conduz\-nos a duas perguntas:  
+ Isso nos leva a duas perguntas:  
   
--   Qual é o tipo de argumento real, `"abc"`?  
+-   O que é o tipo de argumento real, `"abc"`?  
   
--   Que é o algoritmo para determinar quando uma conversão de tipo é melhor do que outra?  
+-   O que é o algoritmo para determinar quando uma conversão de tipo é melhor do que outro?  
   
- O tipo de literal de cadeia de caracteres `"abc"` é `const char[4]` – lembre\-se, há um caractere terminador nulo implícito ao final de cada cadeia literal.  
+ O tipo de cadeia de caracteres literal `"abc"` é `const char[4]` -Lembre-se de que há um caractere de terminação nulo implícito ao final de cada cadeia de caracteres literal.  
   
- O algoritmo para determinar quando uma conversão de tipo é melhor do que outra envolve colocar as conversões de tipos possíveis em uma hierarquia.  Eis uma compreensão dessa hierarquia – todas essas conversões, naturalmente, são implícitas.  Usando uma notação convertido explícita substitui a hierarquia semelhante ao modo como os parênteses substituem a precedência de operador habitual de uma expressão.  
+ O algoritmo para determinar quando uma conversão de tipo é melhor do que outro envolve colocar as conversões de tipo possíveis em uma hierarquia. Aqui está o entendimento da hierarquia - essas conversões, obviamente, serão implícita. Usar uma notação de conversão explícita substitui a hierarquia semelhante ao modo parênteses substitui a precedência de operador normal de uma expressão.  
   
-1.  Uma correspondência exata é melhor.  Surpreendentemente, para que um argumento é uma correspondência exata, ele não precisa corresponder exatamente ao tipo de parâmetro; precisa apenas de ser bastante próximo.  Esta é a chave para entender o que está alternando adiante neste exemplo, e como o idioma foi alterado.  
+1.  Uma correspondência exata é melhor. Surpreendentemente, para um argumento para ser uma correspondência exata, ele não precisa corresponder exatamente ao tipo de parâmetro; ele só precisa ser o suficiente. Esta é a chave de entender o que está acontecendo neste exemplo e como o idioma foi alterado.  
   
-2.  Uma promoção é melhor do que uma conversão padrão.  Por exemplo, promover `short int` a `int` é melhor que convertendo `int` em `double`.  
+2.  Uma promoção é melhor do que uma conversão padrão. Por exemplo, promovendo um `short int` para um `int` é melhor do que a conversão de um `int` em um `double`.  
   
-3.  Uma conversão padrão é melhor do que uma conversão de boxing.  Por exemplo, converter `int` em `double` é melhor que encaixotando `int` em `Object`.  
+3.  Uma conversão padrão é melhor do que uma conversão boxing. Por exemplo, converter um `int` em uma `double` é melhor boxing um `int` em um `Object`.  
   
-4.  Uma conversão de boxing é melhor do que uma conversão implícita definido pelo usuário.  Por exemplo, caso `int` em `Object` é melhor que aplicando um operador de conversão de uma classe do valor de `SmallInt` .  
+4.  Uma conversão boxing é melhor do que uma conversão implícita definido pelo usuário. Por exemplo, conversão boxing um `int` em uma `Object` é melhor do que a aplicação de um operador de conversão de um `SmallInt` classe de valor.  
   
-5.  Uma conversão implícita definido pelo usuário é melhor que nenhuma conversão de todo.  Uma conversão implícita é definido pelo usuário a saída a última antes de erro \(aviso com a qual a assinatura formal pode conter uma matriz ou um sinal de reticências de param nessa posição.\)  
+5.  Uma conversão implícita definida pelo usuário é melhor que nenhuma conversão. Uma conversão implícita definida pelo usuário é a última instrução de saída antes do erro (com a ressalva de que a assinatura formal pode conter uma matriz de parâmetro ou reticências naquela posição).  
   
- Assim, o que significa saber que uma correspondência exata não é necessariamente uma correspondência exata?  Por exemplo, `const char[4]` não corresponder exatamente `const char*` ou `String^`no entanto, a ambiguidade de nosso exemplo está entre conflitantes dois correspondências exatas\!  
+ Portanto, o que significa dizer que uma correspondência exata não é necessariamente exatamente uma correspondência? Por exemplo, `const char[4]` corresponder exatamente a `const char*` ou `String^`, e ainda a ambiguidade do nosso exemplo entre duas correspondências exatas conflitantes!  
   
- Uma correspondência exata, como acontece, inclui um número de conversões triviais.  Há quatro conversões triviais em ISO\-C\+\+ que pode ser aplicado e ainda qualificado como uma correspondência exata.  Três são referenciados como transformações de lvalue.  Um quarto tipo é chamado uma conversão de qualificação.  As três transformações de lvalue são tratadas como um exato \- melhor correspondência que uma que requer uma conversão de qualificação.  
+ Uma correspondência exata, quando isso acontece, inclui um número de conversões triviais. Há quatro conversões triviais em C++ ISO que podem ser aplicadas e ainda se qualificam como uma correspondência exata. Três são chamadas de transformações lvalue. Um quarto tipo é chamado de uma conversão de qualificação. As três transformações de lvalue são tratadas como uma melhor correspondência exata de uma necessidade de uma conversão de qualificação.  
   
- Uma forma de transformação lvalue é a conversão de nativo\-matriz\-à\- ponteiro.  Este é o que está envolvido em correspondente `const char[4]` a `const char*`.  Consequentemente, a correspondência de `f("abc")` a `f(const char*)` é uma correspondência exata.  Em encarnações anteriores do nosso idioma, esta era a melhor correspondência, de fato.  
+ Uma forma de transformação lvalue é a conversão de matriz nativa de ponteiro. Este é o que está envolvido na correspondência de uma `const char[4]` para `const char*`. Portanto, a correspondência de `f("abc")` para `f(const char*)` é uma correspondência exata. A encarnação anteriores do nosso idioma, isso era a melhor correspondência, de fato.  
   
- Para que o compilador sinalize a chamada como ambígua, consequentemente, requer que a conversão de `const char[4]` a `String^` também é uma correspondência exata com uma conversão trivial.  Esta é a alteração que foi introduzida na nova versão do idioma.  E é por isso que a chamada será sinalizada agora como ambígua.  
+ Para o compilador sinalizador à chamada ambígua, portanto, requer que a conversão de um `const char[4]` para um `String^` também ser uma correspondência exata por meio de uma conversão trivial. Isso é a alteração que foi introduzida na nova versão de idioma. E é por isso a chamada agora está marcada como ambíguo.  
   
-## Consulte também  
- [Alteração geral em linguagens](../Topic/General%20Language%20Changes%20\(C++-CLI\).md)   
- [String](../windows/string-cpp-component-extensions.md)
+## <a name="see-also"></a>Consulte também  
+ [Alterações gerais em linguagens (C + + CLI)](../dotnet/general-language-changes-cpp-cli.md)   
+ [Cadeia de caracteres](../windows/string-cpp-component-extensions.md)

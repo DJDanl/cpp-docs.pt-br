@@ -1,32 +1,33 @@
 ---
-title: "CMyProviderWindowsFile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyproviderwindowsfile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CMyProviderWindowsFile"
-  - "Provedores OLE DB, arquivos gerados por assistente"
+title: CMyProviderWindowsFile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cmyproviderwindowsfile
+dev_langs: C++
+helpviewer_keywords:
+- CMyProviderWindowsFile class
+- OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderWindowsFile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O assistente cria uma classe para conter uma linha de dados; nesse caso, é chamado `CMyProviderWindowsFile`.  O código a seguir para `CMyProviderWindowsFile` assistente é gerado e lista todos os arquivos em um diretório usando a estrutura de **WIN32\_FIND\_DATA** .  `CMyProviderWindowsFile` herda da estrutura de **WIN32\_FIND\_DATA** :  
+# <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CMyProviderWindowsFile`. O código a seguir para `CMyProviderWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o **WIN32_FIND_DATA** estrutura. `CMyProviderWindowsFile`herda o **WIN32_FIND_DATA** estrutura:  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -46,9 +47,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` é chamado [classe de registro do usuário](../../data/oledb/user-record.md) como também contém um mapa que descreve as colunas no conjunto de linhas do provedor.  O mapa da coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros de PROVIDER\_COLUMN\_ENTRY.  Macros especificam o nome da coluna, o ordinal, e o deslocamento a uma entrada de estrutura.  As entradas da coluna do provedor no código anterior contêm deslocamentos na estrutura de **WIN32\_FIND\_DATA** .  Quando o consumidor chama **IRowset::GetData**, os dados são transferidos em um buffer contíguas.  Em vez de fazer o execute aritmética do ponteiro, o mapa permite que você especifique um membro de dados.  
+ `CMyProviderWindowsFile`é chamado de [classe de registro de usuário](../../data/oledb/user-record.md) porque ele contém também um mapa que descreve as colunas no conjunto de linhas do provedor. O mapa de coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros PROVIDER_COLUMN_ENTRY. As macros especificar nome de coluna ordinal e deslocamento para uma entrada de estrutura. As entradas de coluna do provedor no código acima contêm deslocamentos para a **WIN32_FIND_DATA** estrutura. Quando o consumidor chama **IRowset:: GetData**, os dados são transferidos em um buffer de contíguo. Em vez de fazer a fazer aritmética de ponteiro, o mapa permite que você especifique um membro de dados.  
   
- A classe de `CMyProviderRowset` também contém o método de `Execute` .  `Execute` é o fato que lê os dados na origem nativo.  O código a seguir mostra o método script MDX de `Execute` .  A função usa **FindFirstFile** APIs do Win32 e `FindNextFile` para recuperar informações sobre os arquivos no diretório e para inseri\-los nas instâncias de classe de `CMyProviderWindowsFile` .  
+ O `CMyProviderRowset` classe também contém o `Execute` método. `Execute`é o que realmente lê os dados da fonte de nativo. O código a seguir mostra o Assistente gerou `Execute` método. A função usa o Win32 **FindFirstFile** e `FindNextFile` APIs para recuperar informações sobre os arquivos no diretório e colocá-los em instâncias de `CMyProviderWindowsFile` classe.  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -81,9 +82,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- O diretório a ser pesquisada é representado por `m_strCommandText`; ele contém o texto representado pela interface de `ICommandText` no objeto de comando.  Se nenhum diretório é especificado, usa o diretório atual.  
+ Para pesquisar o diretório é representado por `m_strCommandText`; isso contém o texto representado pelo `ICommandText` interface no objeto de comando. Se nenhuma pasta for especificada, ele usa o diretório atual.  
   
- O método cria uma entrada para cada arquivo \(que correspondem a uma linha\) e locais ele no membro de dados de **m\_rgRowData** .  A classe de `CRowsetImpl` define o membro de dados de **m\_rgRowData** .  Os dados nesta matriz representam a tabela inteira e são usados durante todos os modelos.  
+ O método cria uma entrada para cada arquivo (correspondente a uma linha) e o coloca no **m_rgRowData** membro de dados. O `CRowsetImpl` classe define o **m_rgRowData** membro de dados. Os dados nessa matriz representa a tabela inteira e são usados em modelos.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)

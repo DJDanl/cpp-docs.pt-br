@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ae5eddbce2e590e53e51b132ebbbd9589b385eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f2ef73d3cb82a65c8114d2e7f921b47ffd45d65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-runtime-error-r6033"></a>R6033 de erro de tempo de execução do C
 Tentativa de usar código MSIL desse assembly durante a inicialização de código nativo. Isso indica um bug em seu aplicativo. Provavelmente é o resultado da chamada de uma compilação MSIL (/ clr) de um construtor nativo ou de DllMain de função.  

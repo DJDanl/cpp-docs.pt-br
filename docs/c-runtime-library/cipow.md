@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f5e2e9d621f2913b93d12288ce62c479907c4ba0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0bed34f3107f598d2070b39ac011f786b498c519
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cipow"></a>_CIpow
 Calcula o *x* gerado para a potência de *y* com base nos valores superiores na pilha.  
@@ -53,5 +54,5 @@ void __cdecl _CIpow();
  **Plataforma:** x86  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)

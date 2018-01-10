@@ -1,65 +1,65 @@
 ---
-title: "Classe CUtlProps | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CUtlProps"
+title: Classe CUtlProps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: CUtlProps class
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75e92f48729d0aae9f85cc7b7c5c97e4778f96a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CUtlProps
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-As propriedades das ferramentas para uma variedade de propriedade OLE DB interface \(por exemplo, `IDBProperties`, `IDBProperties`, e `IRowsetInfo`\).  
+# <a name="cutlprops-class"></a>Classe CUtlProps
+Implementa propriedades para uma variedade de interfaces de propriedade do banco de dados OLE (por exemplo, `IDBProperties`, `IDBProperties`, e `IRowsetInfo`).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template < class T >  
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- A classe que contém `BEGIN_PROPSET_MAP`.  
+ A classe que contém o `BEGIN_PROPSET_MAP`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[GetPropValue](../Topic/CUtlProps::GetPropValue.md)|Obtém uma propriedade de um conjunto de propriedades.|  
+|[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)|Obtém uma propriedade de um conjunto de propriedades.|  
 |[IsValidValue](../../data/oledb/cutlprops-isvalidvalue.md)|Usado para validar um valor antes de definir uma propriedade.|  
-|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|Trata solicitações para uma interface opcional quando um consumidor chama um método em uma interface de criação do objeto.|  
-|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Chamado depois de definir uma propriedade para tratar encadeou propriedades.|  
+|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|Trata solicitações para uma interface opcional quando um consumidor chama um método em uma interface de criação de objeto.|  
+|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Chamado depois de definir uma propriedade para manipular propriedades encadeadas.|  
 |[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|Define uma propriedade em um conjunto de propriedades.|  
   
-## Comentários  
- A maioria desta classe é um detalhes de implementação.  
+## <a name="remarks"></a>Comentários  
+ A maioria dessa classe é um detalhe de implementação.  
   
- `CUtlProps` contém dois membros para definir propriedades internamente: [GetPropValue](../Topic/CUtlProps::GetPropValue.md) e [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
+ `CUtlProps`contém dois membros para definir as propriedades internamente: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) e [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
   
- Para obter mais informações sobre macros usados em um mapa do conjunto de propriedades, consulte [BEGIN\_PROPSET\_MAP](../Topic/BEGIN_PROPSET_MAP.md) e [END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md).  
+ Para obter mais informações sobre as macros usado em um mapa de conjunto de propriedade, consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

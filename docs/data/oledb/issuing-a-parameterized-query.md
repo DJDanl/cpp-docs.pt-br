@@ -1,29 +1,30 @@
 ---
-title: "Emitindo uma consulta parametrizada | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "consultas de parâmetros, executando com a classe CCommand"
+title: Emitindo uma consulta parametrizada | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Emitindo uma consulta parametrizada
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo a seguir emite uma consulta parametrizada simples que recupera registros com um campo de idade \(que é maior que 30\) de uma tabela em uma base de dados do Microsoft Access.  Para oferecer suporte ao parâmetro, o registro de usuário deve ter um mapa adicional.  O código a seguir, em um projeto de ATL, use a classe de `CCommand` em vez da classe de `CTable` usada no exemplo anterior, [Por meio de um conjunto de linhas simples](../Topic/Traversing%20a%20Simple%20Rowset.md).  
+# <a name="issuing-a-parameterized-query"></a>Emitindo uma consulta parametrizada
+O exemplo a seguir emite uma consulta parametrizada simple que recupera os registros com um campo de idade (que é maior que 30) de uma tabela em um banco de dados do Microsoft Access. Para dar suporte o parâmetro, o registro de usuário deve ter um mapa adicional. O código a seguir, em um projeto ATL, usa o `CCommand` classe o `CTable` classe usada no exemplo anterior, [percorrendo um conjunto de linhas simples](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```  
 #include <atldbcli.h>  
@@ -51,7 +52,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- O registro do usuário, `CArtists`, poderia ficar assim:  
+ O registro de usuário, `CArtists`, tem esta aparência:  
   
 ```  
 class CArtists  
@@ -77,5 +78,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## Consulte também  
- [Trabalhando com modelos de consumidor de banco de dados OLE](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Consulte também  
+ [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

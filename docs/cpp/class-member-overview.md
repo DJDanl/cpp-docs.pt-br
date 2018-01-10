@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-member-overview"></a>Visão geral de membros de classe
 Uma classe ou estrutura consiste em seus membros. O trabalho que faz uma classe é executado por suas funções de membro. O estado que o mantém é armazenado em seus membros de dados. Inicialização de membros é feita por construtores e trabalho de limpeza como liberação de memória e liberação de recursos é feita por destruidores. No C++ 11 e posterior, membros de dados pode (e geralmente deve) ser inicializados no ponto de declaração.  
@@ -113,11 +111,11 @@ int TestRun::_instances{ 0 };
   
 2.  Construtor de cópia  
   
-3.  **(C + + 11) ** Construtor de movimento  
+3.  **(C + + 11)**  Construtor de movimento  
   
 4.  Operador de atribuição de cópia  
   
-5.  **(C + + 11) ** Operador de atribuição de movimentação  
+5.  **(C + + 11)**  Operador de atribuição de movimentação  
   
 6.  Destruidor  
   
@@ -179,4 +177,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>Consulte também  
  [Classes e Structs](../cpp/classes-and-structs-cpp.md)
-

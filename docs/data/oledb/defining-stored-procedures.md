@@ -1,40 +1,42 @@
 ---
-title: "Definindo procedimentos armazenados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, procedimentos armazenados"
-  - "procedimentos armazenados, definindo"
-  - "procedimentos armazenados, OLE DB"
-  - "procedimentos armazenados, sintaxe"
+title: Definindo procedimentos armazenados | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- stored procedures, syntax
+- OLE DB, stored procedures
+- stored procedures, defining
+- stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3aea2503fe08c5cd7e81afd0c185f48082d41e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Definindo procedimentos armazenados
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Antes de chamar um procedimento armazenado, primeiro você deve defini\-lo, usando a macro de [DEFINE\_COMMAND](../../data/oledb/define-command.md) .  Quando você define o comando, denote parâmetros com um ponto de interrogação \(?\) como o marcador de parâmetro:  
+# <a name="defining-stored-procedures"></a>Definindo procedimentos armazenados
+Antes de chamar um procedimento armazenado, você deve primeiro definir, usando o [DEFINE_COMMAND](../../data/oledb/define-command.md) macro. Quando você define o comando, denota parâmetros com um ponto de interrogação (?) como o marcador de parâmetro:  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
- Observe que a sintaxe \(o uso de chaves e assim por diante\) usada nos exemplos de código neste tópico é pertinente ao SQL Server.  A sintaxe que você usa em seus procedimentos armazenados podem variar de acordo com o provedor que você usa.  
+ Observe que a sintaxe (o uso de chaves e assim por diante) usada nos exemplos de código neste tópico é específica ao SQL Server. A sintaxe que você use os procedimentos armazenados pode variar de acordo com o provedor que você usa.  
   
- Em seguida, no mapa do parâmetro, especifique os parâmetros que você usou no comando, listando os parâmetros na ordem correta do comando:  
+ Em seguida, no mapa de parâmetro, especifique os parâmetros que você usou no comando, listando os parâmetros na ordem em que eles ocorrem no comando:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,7 +47,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- O exemplo anterior define um procedimento armazenado desde que vai.  Normalmente, para reutilização eficiente de código, um base de dados contém um conjunto de procedimentos armazenados predefinidos com nomes como “vendas do ano” ou “por dt\_adduserobject”. Você pode exibir suas definições usando o gerenciador do SQL Server Enterprise.  Você chamar os seguintes \(a colocação de “?” os parâmetros dependem da interface de procedimento armazenado\):  
+ O exemplo anterior define um procedimento armazenado quando ele passa. Normalmente, para reutilização eficiente de código, um banco de dados contém um conjunto de procedimentos armazenados predefinidos com nomes como "Vendas por ano" ou "dt_adduserobject". Você pode exibir suas definições usando o SQL Server Enterprise Manager. Chamá-los da seguinte maneira (o posicionamento do '?' depende de parâmetros na interface do procedimento armazenado):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
@@ -58,7 +60,7 @@ DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor> >  
 ```  
   
- Finalmente, chame o procedimento armazenado em `OpenRowset` como segue:  
+ Finalmente, chame o procedimento armazenado `OpenRowset` da seguinte maneira:  
   
 ```  
 CSession m_session;  
@@ -68,11 +70,11 @@ HRESULT OpenRowset()
 }  
 ```  
   
- Observe também que você pode definir um procedimento armazenado usando o atributo [db\_command](../../windows/db-command.md) de base de dados da seguinte maneira:  
+ Observe também que você pode definir um procedimento armazenado usando o atributo de banco de dados [db_command](../../windows/db-command.md) da seguinte maneira:  
   
 ```  
 db_command("{ ? = CALL dbo.dt_adduserobject }")  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usando procedimentos armazenados](../../data/oledb/using-stored-procedures.md)

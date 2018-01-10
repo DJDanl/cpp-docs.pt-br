@@ -1,34 +1,36 @@
 ---
-title: "Como converter a cadeia de caracteres char * na matriz System::Byte | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrizes [C++], caractere"
-  - "matrizes de caracteres, convertendo em matrizes System::Byte"
-  - "exemplos [C++], matrizes"
-  - "exemplos [C++], cadeias de caracteres"
+title: 'Como: converter char * cadeia de caracteres na matriz | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- examples [C++], strings
+- arrays [C++], character
+- character arrays, converting to System::Byte arrays
+- examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5c8a1dd1b126b77f14815a90e7b4599fe0ce14bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como converter a cadeia de caracteres char * na matriz System::Byte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A maneira mais eficiente de converter uma cadeia de caracteres de `char *` a uma matriz de <xref:System.Byte> é usar a classe de <xref:System.Runtime.InteropServices.Marshal> .  
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Como converter a cadeia de caracteres char * na matriz System::Byte
+A maneira mais eficiente para converter um `char *` de cadeia de caracteres para um <xref:System.Byte> matriz é usar <xref:System.Runtime.InteropServices.Marshal> classe.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // convert_native_string_to_Byte_array.cpp  
@@ -60,5 +62,5 @@ int main() {
 Native String  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

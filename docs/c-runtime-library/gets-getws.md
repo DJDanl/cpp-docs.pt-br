@@ -38,11 +38,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fc8a2277995cc9ddbb36cbceda68e0ba4a862b59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6193445dace47b62cf8793d69ad45e0f73a2f10d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gets-getws"></a>gets, _getws
 Obtém uma linha do fluxo `stdin`. Estão disponíveis versões mais seguras dessas funções; consulte [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -76,7 +77,7 @@ wchar_t *_getws(
  `buffer`  
  Local de armazenamento para a cadeia de caracteres de entrada.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna o argumento se for bem-sucedido. Um ponteiro `NULL` indica uma condição de erro ou de final do arquivo. Use [ferror](../c-runtime-library/reference/ferror.md) ou [feof](../c-runtime-library/reference/feof.md) para determinar qual das condições ocorreu. Se `buffer` for `NULL`, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `NULL` e definirão errno como `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
@@ -100,7 +101,7 @@ wchar_t *_getws(
 |`gets`|\<stdio.h>|  
 |`_getws`|\<stdio.h> ou \<wchar.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   

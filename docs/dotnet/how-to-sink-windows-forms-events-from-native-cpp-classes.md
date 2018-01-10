@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d51cc4caa7a1018e85cc880cf45894abc861d250
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2dd3778dad837ffe23d17b58b4e579844dc71f40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Como coletar eventos dos Windows Forms a partir de classes C++ nativas
 Você pode habilitar as classes C++ nativo receber retornos de chamada de gerenciado eventos gerados a partir de outros formulários com o formato de mapa de macro MFC ou controles de formulários do Windows. Recebendo eventos em exibições e caixas de diálogo é similar ao fazer a mesma tarefa para controles.  

@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bd0bdcdfd8f7f367c90787cb7ffdf5f888482dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 468f63d8e98dd161baec0b0db33f5dab8e750695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versões aprimoradas de segurança de funções CRT
 Estão disponíveis versões mais seguras de rotinas de biblioteca de tempo de execução. Para saber mais sobre aprimoramentos de segurança no CRT, veja [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md).  

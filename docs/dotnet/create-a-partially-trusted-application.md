@@ -1,51 +1,52 @@
 ---
-title: "Como criar um aplicativo confi&#225;vel parcialmente removendo a depend&#234;ncia da DLL de biblioteca CRT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /clr [C++], aplicativos parcialmente confiáveis"
-  - "interoperabilidade [C++], aplicativos parcialmente confiáveis"
-  - "interoperabilidade [C++], aplicativos parcialmente confiáveis"
-  - "assemblies mistos [C++], aplicativos parcialmente confiáveis"
-  - "msvcm90[d].dll"
-  - "aplicativos parcialmente confiáveis [C++]"
+title: "Como: criar um aplicativo parcialmente confiável (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- partially trusted applications [C++]
+- mixed assemblies [C++], partially trusted applications
+- msvcm90[d].dll
+- interoperability [C++], partially trusted applications
+- interop [C++], partially trusted applications
+- /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dfef7eacfa9da8c55155f6e7ce43dfdb79e67e91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como criar um aplicativo confi&#225;vel parcialmente removendo a depend&#234;ncia da DLL de biblioteca CRT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico discute como criar um aplicativo parcialmente confiável de Common Language Runtime usando [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] removendo a dependência em msvcm90.dll.  
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Como criar um aplicativo confiável parcialmente removendo a dependência da DLL de biblioteca CRT
+Este tópico discute como criar um aplicativo de Common Language Runtime parcialmente confiável usando o Visual C++, removendo a dependência no msvcm90.dll.  
   
- Um aplicativo do Visual C\+\+ compilado com **\/clr** terá uma dependência em msvcm90.dll, que faz parte da biblioteca do C \- tempo de execução.  Quando você deseja que seu aplicativo ser usado em um ambiente de confiança parcial, CLR impõe determinadas regras de segurança de acesso a código no seu DLL.  Consequentemente, será necessário remover essa dependência como msvcm90.dll contém o código nativo e política de segurança de acesso a código não pode ser aplicada nela.  
+ Um aplicativo do Visual C++ compilado com **/clr** terá uma dependência no msvcm90.dll, que é parte da biblioteca de tempo de execução C. Quando você deseja que seu aplicativo a ser usado em um ambiente de confiança parcial, o CLR irá impor certas regras de segurança de acesso do código em sua DLL. Portanto, será necessário remover essa dependência porque msvcm90.dll contém código nativo e política de segurança de acesso do código não pode ser aplicada a ele.  
   
- Se seu aplicativo não usa nenhuma funcionalidade da biblioteca de C \- tempo de execução e você gostaria de remover a dependência nessa biblioteca em seu código, você terá que usar a opção do vinculador de **\/NODEFAULTLIB:msvcmrt.lib** e links com o ptrustm.lib ou o ptrustmd.lib.  Essas bibliotecas contêm arquivos de objeto para a inicialização e o uninitialization de um aplicativo, classes de exceção usadas pelo código de inicialização, e o código gerenciado de manipulação de exceção.  Vincular em uma dessas bibliotecas removerá qualquer dependência em msvcm90.dll.  
+ Se seu aplicativo não usar nenhuma funcionalidade da biblioteca de tempo de execução do C e você gostaria de remover a dependência nesta biblioteca no seu código, você precisará usar o **/NODEFAULTLIB:msvcmrt.lib** opção de vinculador e link ptrustm.lib ou ptrustmd.lib. Essas bibliotecas contêm arquivos de objeto para inicialização e cancelamento de inicialização de um aplicativo, classes de exceção usado pelo código de inicialização e gerenciados código de tratamento de exceção. Vinculação de uma dessas bibliotecas removerá qualquer dependência em msvcm90.dll.  
   
 > [!NOTE]
->  A ordem de uninitialization de assembly pode ser diferente para os aplicativos que usam as bibliotecas de ptrust.  Para aplicativos comuns, os assemblies são descarregados normalmente em ordem inversa que estão carregados, mas isso não é garantido.  Para aplicativos parciais de confiança, os assemblies são descarregados normalmente na mesma ordem que estão carregados.  Isso não é garantido, também.  
+>  A ordem de cancelamento de inicialização de assembly pode ser diferentes para aplicativos que usam as bibliotecas de ptrust. Para aplicativos normais, assemblies geralmente são descarregados na ordem inversa em que eles são carregados, mas isso não é garantido. Para aplicativos de confiança parcial, assemblies geralmente são descarregados na mesma ordem que eles são carregados. Isso, além disso, não é garantido.  
   
-### Para criar um aplicativo \(\/clr\) misto parcialmente confiável  
+### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>Para criar um parcialmente confiável misto (/ clr) aplicativo  
   
-1.  Para remover a dependência em msvcm90.dll, você deve especificar ao vinculador para não incluir essa biblioteca usando a opção do vinculador de **\/NODEFAULTLIB:msvcmrt.lib** .  Para obter informações sobre como fazer isso usando o ambiente de desenvolvimento do Visual Studio ou programaticamente, consulte [\/NODEFAULTLIB \(ignorar bibliotecas\)](../build/reference/nodefaultlib-ignore-libraries.md).  
+1.  Para remover a dependência msvcm90.dll, você deve especificar o vinculador para não incluir essa biblioteca usando o **/NODEFAULTLIB:msvcmrt.lib** opção de vinculador. Para obter informações sobre como fazer isso usando o ambiente de desenvolvimento do Visual Studio ou programaticamente, consulte [/NODEFAULTLIB (ignorar bibliotecas)](../build/reference/nodefaultlib-ignore-libraries.md).  
   
-2.  Adicionar uma das bibliotecas de ptrustm as dependências de entrada do vinculador.  Use ptrustm.lib se você estiver criando o seu aplicativo no modo de versão.  Para o modo de depuração, use ptrustmd.lib.  Para obter informações sobre como fazer isso usando o ambiente de desenvolvimento do Visual Studio ou programaticamente, consulte [Arquivos .Lib como entrada de vinculador](../build/reference/dot-lib-files-as-linker-input.md).  
+2.  Adicione uma das bibliotecas ptrustm para as dependências de entrada de vinculador. Use ptrustm.lib se você estiver criando seu aplicativo no modo de liberação. Para o modo de depuração, use ptrustmd.lib. Para obter informações sobre como fazer isso usando o ambiente de desenvolvimento do Visual Studio ou programaticamente, consulte [. Lib arquivos como entrada de vinculador](../build/reference/dot-lib-files-as-linker-input.md).  
   
-## Consulte também  
- [Assemblies mistos \(nativos e gerenciados\)](../Topic/Mixed%20\(Native%20and%20Managed\)%20Assemblies.md)   
- [Inicialização de assemblies mistos](../Topic/Initialization%20of%20Mixed%20Assemblies.md)   
- [Suporte de biblioteca para assemblies mistos](../dotnet/library-support-for-mixed-assemblies.md)   
- [\/link \(passar opções para o vinculador\)](../Topic/-link%20\(Pass%20Options%20to%20Linker\).md)   
- [Segurança no código nativo e do .NET Framework](http://msdn.microsoft.com/pt-br/bd61be84-c143-409a-a75a-44253724f784)
+## <a name="see-also"></a>Consulte também  
+ [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)   
+ [Inicialização de Assemblies mistos](../dotnet/initialization-of-mixed-assemblies.md)   
+ [Suporte de biblioteca para Assemblies mistos](../dotnet/library-support-for-mixed-assemblies.md)   
+ [/link (passar opções para o vinculador)](../build/reference/link-pass-options-to-linker.md)   

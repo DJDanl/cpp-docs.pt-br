@@ -1,55 +1,56 @@
 ---
-title: "ICommandPropertiesImpl::GetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandPropertiesImpl::GetProperties"
-  - "ICommandPropertiesImpl.GetProperties"
-  - "GetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetProperties"
+title: 'Icommandpropertiesimpl:: GetProperties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandPropertiesImpl::GetProperties
+- ICommandPropertiesImpl.GetProperties
+- GetProperties
+dev_langs: C++
+helpviewer_keywords: GetProperties method
 ms.assetid: 1bee5f1b-bd08-435a-956a-e4cebcdf5d5e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d870ae3fe50cf8264f213a744e6520cdf74ab71c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandPropertiesImpl::GetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna todos os conjuntos de propriedades solicitados usando o mapa da propriedade do comando.  
+# <a name="icommandpropertiesimplgetproperties"></a>ICommandPropertiesImpl::GetProperties
+Retorna todos os conjuntos de propriedade solicitada usando o mapa de propriedade do comando.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      STDMETHOD(GetProperties)(   
-   const ULONG cPropertyIDSets,   
-   const DBPROPIDSET rgPropertyIDSets[],   
-   ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets    
+      STDMETHOD(GetProperties)(   
+   const ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets    
 );  
 ```  
   
-#### Parâmetros  
- Consulte [ICommandProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms723119.aspx)*na referência do programador de OLE DB*.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [icommandproperties:: GetProperties](https://msdn.microsoft.com/en-us/library/ms723119.aspx) no *referência do programador de OLE DB*.  
   
-## Comentários  
- Consulte [BEGIN\_PROPSET\_MAP](../Topic/BEGIN_PROPSET_MAP.md).  
+## <a name="remarks"></a>Comentários  
+ Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)   
- [ICommandPropertiesImpl::SetProperties](../Topic/ICommandPropertiesImpl::SetProperties.md)
+ [ICommandPropertiesImpl::SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)

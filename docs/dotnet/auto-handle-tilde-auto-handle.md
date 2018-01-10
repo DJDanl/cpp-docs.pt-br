@@ -1,46 +1,47 @@
 ---
-title: "auto_handle::~auto_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.~auto_handle"
-  - "msclr.auto_handle.~auto_handle"
-  - "auto_handle::~auto_handle"
-  - "~auto_handle"
-  - "msclr::auto_handle::~auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::~auto_handle"
+title: 'auto_handle:: ~ auto_handle | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.~auto_handle
+- msclr.auto_handle.~auto_handle
+- auto_handle::~auto_handle
+- ~auto_handle
+- msclr::auto_handle::~auto_handle
+dev_langs: C++
+helpviewer_keywords: auto_handle::~auto_handle
 ms.assetid: e83e95a8-015b-4f27-ad63-70efb3690726
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d5d28e4b43328cc55d881be3f9b7cbb47a24a47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::~auto_handle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O destruidor de `auto_handle` .  
+# <a name="autohandleautohandle"></a>auto_handle::~auto_handle
+O `auto_handle` destruidor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 ~auto_handle();  
 ```  
   
-## Comentários  
- O destruidor também destructs o objeto proprietário.  
+## <a name="remarks"></a>Comentários  
+ O destruidor também destructs o objeto de propriedade.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // msl_auto_handle_dtor.cpp  
@@ -69,15 +70,18 @@ int main()
 }  
 ```  
   
-  **O construtor de ClassA**  
-**Destruidor de ClassA**  
-**feita**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ auto\_handle.h\>  
+```Output  
+ClassA constructor  
+ClassA destructor  
+done  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\auto_handle.h >  
   
-## Consulte também  
- [Membros auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::release](../Topic/auto_handle::release.md)   
- [auto\_handle::auto\_handle](../dotnet/auto-handle-auto-handle.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
+ [Membros auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::Release](../dotnet/auto-handle-release.md)   
+ [auto_handle::auto_handle](../dotnet/auto-handle-auto-handle.md)

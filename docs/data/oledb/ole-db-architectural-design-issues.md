@@ -14,11 +14,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 085c658fff3d387019c6e8574ebafcd347400823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b894ec1cbd227663d46e98e523ffe8c1c5d84475
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemas de design arquitetônico de banco de dados OLE
 Você deve considerar os seguintes problemas antes de iniciar seu aplicativo OLE DB:  
@@ -37,11 +40,11 @@ Você deve considerar os seguintes problemas antes de iniciar seu aplicativo OLE
  **Você tem o código anterior usando outra tecnologia de acesso a dados (ADO, ODBC ou DAO)?**  
  Considerando as combinações possíveis de tecnologias (como usar componentes de ADO com componentes de OLE DB e migrando código ODBC para o banco de dados OLE), que abrangem todas as situações está além do escopo da documentação do Visual C++. No entanto, vários artigos que abrangem vários cenários estão disponíveis nos seguintes sites:  
   
--   [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/?linkid=148218)  
+-   [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148218)  
   
--   [Visão geral de artigos técnicos do Microsoft Data Access](http://go.microsoft.com/fwlink/?linkid=148217)  
+-   [Visão geral de artigos técnicos do Microsoft Data Access](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Centro de soluções do Visual Studio](http://go.microsoft.com/fwlink/?linkid=148215)  
+-   [Centro de soluções do Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [Pesquisar no Microsoft.com](http://search.microsoft.com/)  
   

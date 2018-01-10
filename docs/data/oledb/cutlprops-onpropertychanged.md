@@ -1,35 +1,36 @@
 ---
-title: "CUtlProps::OnPropertyChanged | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OnPropertyChanged"
-  - "CUtlProps.OnPropertyChanged"
-  - "CUtlProps::OnPropertyChanged"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método OnPropertyChanged"
+title: 'Cutlprops:: OnPropertyChanged | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OnPropertyChanged
+- CUtlProps.OnPropertyChanged
+- CUtlProps::OnPropertyChanged
+dev_langs: C++
+helpviewer_keywords: OnPropertyChanged method
 ms.assetid: c5924210-b685-46c4-87f8-1b81e5bd3378
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c9f886b7e966f7746610622408dbd6933a10f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::OnPropertyChanged
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chamado depois de definir uma propriedade para tratar encadeou propriedades.  
+# <a name="cutlpropsonpropertychanged"></a>CUtlProps::OnPropertyChanged
+Chamado depois de definir uma propriedade para manipular propriedades encadeadas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,26 +40,26 @@ Chamado depois de definir uma propriedade para tratar encadeou propriedades.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `iCurSet`  
- O índice na matriz do conjunto de propriedades; zero se houver apenas um conjunto de propriedades.  
+ O índice na matriz de conjunto de propriedades; zero se houver apenas uma propriedade.  
   
  `pDBProp`  
- A ID da propriedade e o novo valor em uma estrutura de [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) .  
+ A ID de propriedade e o novo valor em uma [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) estrutura.  
   
-## Valor de retorno  
- `HRESULT`padrão.  O valor de retorno padrão é `S_OK`.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`. O padrão é valor de retorno `S_OK`.  
   
-## Comentários  
- Se você quiser tratar propriedades encadeadas, como os indicadores ou atualiza dos quais valores são dependentes em outro valor da propriedade, você deve substituir essa função.  
+## <a name="remarks"></a>Comentários  
+ Se você deseja manipular propriedades encadeadas, como indicadores ou atualizações cujos valores são dependentes de valor de propriedade do outro, você deve substituir essa função.  
   
-## Exemplo  
- Nessa função, o usuário obtém a ID de propriedade do parâmetro de `DBPROP*` .  Agora, é possível comparar a ID em uma propriedade da cadeia.  Quando a propriedade for localizada, `SetProperties` é chamado com a propriedade que será definida agora junto com outra propriedade.  Nesse caso, se obtém `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, ou a propriedade de `DBPROP_ORDEREDBOOKMARKS` , uma possível definir a propriedade de `DBPROP_BOOKMARKS` .  
+## <a name="example"></a>Exemplo  
+ Nessa função, o usuário obtém a ID de propriedade do `DBPROP*` parâmetro. Agora, é possível comparar a ID em relação a uma propriedade de cadeia. Quando a propriedade for localizada, `SetProperties` é chamado com a propriedade que agora será definida em conjunto com a outra propriedade. Nesse caso, se um obtém o `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, ou `DBPROP_ORDEREDBOOKMARKS` propriedade, um conjunto de `DBPROP_BOOKMARKS` propriedade.  
   
- [!CODE [NVC_OLEDB_Provider#2](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#2)]  
+ [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CUtlProps](../../data/oledb/cutlprops-class.md)

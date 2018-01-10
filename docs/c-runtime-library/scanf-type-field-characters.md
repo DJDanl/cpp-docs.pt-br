@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 16eed3844487671a72538d8fbbbd9d4669e01dbc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebc971ea109a0e83288f5bb000e09461f4fbefec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-type-field-characters"></a>Caracteres de campo de tipo scanf
 As informações a seguir se aplicam a qualquer função da família de funções `scanf`, incluindo as versões seguras como `scanf_s`.  

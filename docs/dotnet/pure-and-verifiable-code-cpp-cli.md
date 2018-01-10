@@ -1,112 +1,114 @@
 ---
-title: "C&#243;digo puro e verific&#225;vel (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], código puro e verificável"
-  - "Opção de compilador /clr [C++], assemblies mistos"
-  - "Opção de compilador /clr [C++], assemblies puros"
-  - "Opção de compilador /clr [C++], assemblies verificáveis"
-  - "assemblies [C++], código misto"
-  - "assemblies [C++], código puro"
-  - "assemblies [C++], código verificável"
-  - "assemblies mistos [C++]"
-  - "assemblies mistos [C++], sobre assemblies mistos"
-  - "MSIL puro [C++]"
-  - "MSIL puro [C++], sobre código puro"
-  - "assemblies verificáveis [C++]"
-  - "assemblies verificáveis [C++], sobre assemblies verificáveis"
-  - "código fortemente tipado verificável [C++]"
+title: "Código puro e verificável (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /clr compiler option [C++], verifiable assemblies
+- /clr compiler option [C++], mixed assemblies
+- pure MSIL [C++]
+- verifiable assemblies [C++]
+- verifiably type-safe code [C++]
+- /clr compiler option [C++], pure assemblies
+- .NET Framework [C++], pure and verifiable code
+- assemblies [C++], mixed code
+- verifiable assemblies [C++], about verifiable assemblies
+- mixed assemblies [C++], about mixed assemblies
+- pure MSIL [C++], about pure code
+- assemblies [C++], verifiable code
+- mixed assemblies [C++]
+- assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
-caps.latest.revision: 31
-caps.handback.revision: 31
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "31"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7bcaabb9f0a696a5eb7b01c4bd78757681e4e6a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;digo puro e verific&#225;vel (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Para programação .NET, Visual C\+\+ da suporte à criação dos três tipos distintos de componentes e de aplicativos: misto, puro, e verificável.  Todos os três estão disponíveis com a opção do compilador de [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md) .  
+# <a name="pure-and-verifiable-code-ccli"></a>Código puro e verificável (C++/CLI)
+Para programação .NET, o Visual C++ oferece suporte à criação de três tipos distintos de aplicativos e componentes: mistos, puros e verificáveis. Todos os três estão disponíveis por meio de [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre assemblies verificáveis, consulte:  
   
--   [Comparação de recursos mistos, puros e verificáveis](../dotnet/mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)  
+-   [Comparação de funcionalidades mistas, puras e verificáveis (C++/CLI)](../dotnet/mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)  
   
--   [Como migrar para \/clr:pure](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)  
+-   [Como: migrar para /clr: pure (C + + CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)  
   
--   [Como criar projetos C\+\+ verificáveis](../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md)  
+-   [Como criar projetos C++ verificáveis (C++/CLI)](../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md)  
   
--   [Como migrar para \/clr:safe](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)  
+-   [Como: migrar para /CLR: Safe (C + + CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)  
   
--   [Usando assemblies verificáveis com SQL Server \(C\+\+\/CLI\)](../Topic/Using%20Verifiable%20Assemblies%20with%20SQL%20Server%20\(C++-CLI\).md)  
+-   [Usando assemblies verificáveis com SQL Server (C++/CLI)](../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md)  
   
--   [Práticas recomendadas de segurança](../top/security-best-practices-for-cpp.md)  
+-   [Práticas Recomendadas de segurança](../security/security-best-practices-for-cpp.md)  
   
 -   [Convertendo projetos do modo misto em linguagem intermediária pura](../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md)  
   
-## Misto \(\/clr\)  
- Os assemblies compilados com **\/clr**mistos \(\), contêm as partes não gerenciado e gerenciados, tornando possível para que usem recursos do .NET, mas ainda contêm código não gerenciado.  Isso permite que os aplicativos e os componentes sejam atualizados para usar os recursos do .NET sem exigir que o projeto inteiro seja recriado.  Usando o Visual C\+\+ gerenciado para mesclar e o código não gerenciado é chamado dessa maneira C\+\+ Interoperabilidade.  Para obter mais informações, consulte [Assemblies mistos \(nativos e gerenciados\)](../Topic/Mixed%20\(Native%20and%20Managed\)%20Assemblies.md) e [Nativo e interoperabilidade .NET](../Topic/Native%20and%20.NET%20Interoperability.md).  
+## <a name="mixed-clr"></a>Misto (/ clr)  
+ Misto assemblies (compilado com **/clr**), contém ambos não gerenciado e gerenciados partes, possibilitando o uso de recursos do .NET, mas ainda contêm código não gerenciado. Isso permite que aplicativos e componentes a serem atualizados para usar recursos do .NET sem a necessidade de que o projeto inteiro ser reescrito. Usando o Visual C++ misturar código gerenciado e, dessa maneira é chamada de interoperabilidade C++. Para obter mais informações, consulte [Assemblies misto (nativo e gerenciado)](../dotnet/mixed-native-and-managed-assemblies.md) e [nativo e interoperabilidade .NET](../dotnet/native-and-dotnet-interoperability.md).  
   
-## Puro \(\/clr:pure\)  
- Os assemblies compilados com **\/clr:pure**simples \(\) podem conter tipos nativos e de dados gerenciados, mas somente funções gerenciadas.  Como os assemblies mistos, os assemblies permitem puro o interoperabilidade com os DLL nativos com P\/Invoke \(consulte [Usando PInvoke explícito em C\+\+ \(atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)\), mas os recursos de Interoperabilidade C\+\+ não estão disponíveis.  Além disso, os assemblies simples não podem exportar as funções acessíveis a partir das funções nativos como pontos de entrada em um puro uso do assembly [\_\_clrcall](../cpp/clrcall.md) que chama a convenção.  
+## <a name="pure-clrpure"></a>Puro (/ clr: pure)  
+ Assemblies puros (compilado com **/clr: pure**) pode conter ambos os tipos de dados nativos e gerenciados, mas são gerenciados somente funções. Assim como os assemblies mistos, puros assemblies permitem interoperabilidade com DLLs nativas por meio de P/Invoke (consulte [usando PInvoke explícito em C++ (atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)), mas os recursos de interoperabilidade C++ não estão disponíveis. Além disso, os assemblies puros não é possível exportar funções que podem ser chamadas de funções nativas, pois os pontos de entrada em um assembly puro, use o [clrcall](../cpp/clrcall.md) convenção de chamada.  
   
-### Vantagens de \/clr:pure  
+### <a name="advantages-of-clrpure"></a>Vantagens de /clr: pure  
   
--   Melhor desempenho: Como os assemblies simples contêm apenas MSIL, não há nenhuma função nativos e, consequentemente nenhuma transição gerenciado\/não gerenciado é necessária. \(As chamadas de função feitas com P\/Invoke é uma exceção a essa regra.\)  
+-   Melhor desempenho: Como assemblies puros contêm MSIL somente, não existem funções nativas e, portanto, nenhuma transição gerenciado/não gerenciado é necessárias. (Chamadas de função feitas por meio de P/Invoke são uma exceção a essa regra.)  
   
--   Reconhecimento de Appdomain: As funções gerenciadas e os tipos de dados CLR existem dentro de `Application Domains`, o que afeta sua visibilidade e acessibilidade.  Os assemblies são simples domínio \(atentos que \_\_declspec \([appdomain](../Topic/appdomain.md)\) é indicado para cada tipo\) assim que o acesso a seus tipos e funcionalidade de outros componentes do .NET é mais fácil e mais segura.  No, os assemblies puro interoperam com mais facilidade com outros componentes do .NET que os assemblies mistos.  
+-   Reconhecimento de AppDomain: Funções gerenciadas e tipos de dados CLR existem dentro de `Application Domains`, que afeta sua acessibilidade e visibilidade. Assemblies puros estão cientes de domínio ( declspec ([appdomain](../cpp/appdomain.md)) indicado para cada tipo) para acessar seus tipos e a funcionalidade de outros componentes do .NET é mais fácil e seguro. Como resultado, assemblies puros mais facilmente interoperam com outros componentes do .NET que assemblies mistos.  
   
--   Carga que não seja disco: Os assemblies puros de memória podem ser carregados e passado mesmo.  Isso é essencial para usar assemblies do .NET como procedimentos armazenados.  Isso difere de assemblies mistos, que devido a uma dependência no windows que carregam mecanismos, deve existir no disco para executar.  
+-   Carregamento de disco não: assemblies puros podem ser carregados na memória e até mesmo em fluxo. Isso é essencial para o uso de assemblies .NET como procedimentos armazenados. Isso é diferente de assemblies mistos, que, devido a uma dependência no Windows, carregando mecanismos, deve existir no disco para executar.  
   
--   Reflexão: Não é possível refletir sobre executáveis mistos, enquanto os assemblies puro fornecem suporte completo de reflexão.  Para obter mais informações, consulte [Reflexão](../dotnet/reflection-cpp-cli.md).  
+-   Reflexão: Não é possível refletir sobre executáveis misto, enquanto assemblies puros fornecem suporte completo de reflexão. Para obter mais informações, consulte [reflexão (C + + CLI)](../dotnet/reflection-cpp-cli.md).  
   
--   Controllability de host: Como os assemblies simples contêm apenas MSIL, se comportam de maneira previsível e mais flexìvel dos assemblies mistos quando usados em aplicativos que hospedam CLR e alteram o comportamento padrão.  
+-   Host Controllability: Como assemblies puros contêm apenas MSIL, eles se comportam mais previsível e flexível que misto módulos (assemblies) quando usados em aplicativos que hospedam o CLR e modificar seu comportamento padrão.  
   
-### Restrições de \/clr:pure  
- Essa seção abrange os recursos com suporte não atualmente por **\/clr:pure**.  
+### <a name="limitations-of-clrpure"></a>Limitações de /clr: pure  
+ Esta seção aborda os recursos atualmente não há suportados **/clr: pure**.  
   
--   Os assemblies simples não podem ser chamados por funções não gerenciado.  Como consequência os assemblies simples não podem implementar interfaces COM ou retornos de chamada da possibilidade nativo.  Os assemblies simples não podem exportar funções pelo \_\_declspec \(dllexport\) ou dos arquivos de .DEF.  Além disso, as funções declaradas com a convenção de \_\_clrcall não podem ser importadas pelo dllimport \_\_declspec \(\).  As funções em um módulo nativo podem ser chamadas de um assembly puro, mas os assemblies simples não podem expor funções acessíveis nativo, portanto expor a funcionalidade em um assembly puro deve ser feita com as funções gerenciadas em um assembly misto.  Consulte [Como migrar para \/clr:pure](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md) para maiores informações.  
+-   Assemblies puros não podem ser chamados por funções não gerenciadas. Portanto assemblies puros não podem implementar interfaces COM ou expor retornos de chamada nativos. Assemblies puros não é possível exportar funções por meio de dllexport ou. Arquivos DEF. Além disso, funções declaradas com o \__clrcall convenção não pode ser importada por meio de \__declspec(dllimport). Funções em um módulo nativo podem ser chamadas de um assembly puro, mas assemblies puros não podem expor funções que pode ser chamado nativo, para que expor a funcionalidade em um assembly puro deve ser feito por meio de funções gerenciadas em um conjunto misto. Consulte [como: migrar para /clr: pure (C + + CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md) para obter mais informações.  
   
--   As bibliotecas de ATL e de MFC não são suportadas pela compilação pura do modo no Visual C\+\+.  
+-   Não há suporte para bibliotecas ATL e MFC pela compilação de modo simples no Visual C++.  
   
--   .netmodules Simples não são aceitos como entrada para o vinculador Visual C\+\+.  No entanto, arquivos simples de .obj são aceitos pelo vinculador, e os arquivos de .obj contêm um superconjunto de informações contidas em netmodules.  Consulte [Arquivos .netmodule como entrada de vinculador](../Topic/.netmodule%20Files%20as%20Linker%20Input.md) para maiores informações.  
+-   . Netmodules puro não são aceitos como entrada para o vinculador do Visual C++. No entanto, arquivos. obj puro são aceitos pelo vinculador, e arquivos. obj contêm um subconjunto das informações contidas no netmodules. Consulte [. netmodule arquivos como entrada de vinculador](../build/reference/netmodule-files-as-linker-input.md) para obter mais informações.  
   
--   O suporte do COM o compilador \(\#import\) não é suportado, pois esse introduziria instruções não gerenciada no assembly puro.  
+-   Suporte de COM do compilador (#import) não é suportado, porque isso introduziria instruções não gerenciadas no assembly puro.  
   
--   As opções de ponto flutuante para o alinhamento exceções gerais e a manipulação não são ajustáveis para assemblies puro.  No resultado, \_\_declspec \(alinhar\) não pode ser usado.  Isso renderiza alguns arquivos de cabeçalho, como fpieee.h, incompatível com \/clr:pure.  
+-   Opções de alinhamento e tratamento de exceções não são ajustáveis para assemblies puros de ponto flutuante. Como resultado, __declspec(align) não pode ser usado. Isso apresenta alguns arquivos de cabeçalho, como fpieee.h, incompatível com /clr: pure.  
   
--   A função de GetLastError em PSDK pode resultar em comportamento indefinido durante a criação com **\/clr:pure**.  
+-   A função GetLastError no PSDK pode dar a um comportamento indefinido ao compilar com **/clr: pure**.  
   
-## Verificável \(\/clr:safe\)  
- A opção do compilador de **\/clr:safe** gerenciar os assemblies verificáveis, como aquelas gravadas no Visual Basic e no C\#, conformando\-se aos requisitos que permitem que Common Language Runtime \(CLR\) garanta que o código não violar atuais configurações de segurança.  Por exemplo, se as configurações de segurança proíbem um componente de gravação no disco, CLR puder determinar se um componente verificável encontrar esse critério antes de executar um de código.  Não há suporte para os assemblies de CRT verificáveis. \(Suporte de CRT está disponível para assemblies puro por uma versão pura de MSIL da biblioteca de tempo de execução C\).  
+## <a name="verifiable-clrsafe"></a>Verificáveis (/: Safe)  
+ O **/CLR: safe** opção de compilador gera assemblies verificáveis, como aqueles escritos em Visual Basic e c#, em conformidade com os requisitos que permitem que o common language runtime (CLR) para garantir que o código não viola atual configurações de segurança. Por exemplo, se as configurações de segurança proíbem um componente de gravação em disco, o CLR pode determinar se um componente verificável atende a esse critério antes de executar qualquer código. Não há nenhum suporte de CRT para assemblies verificáveis. (O suporte de CRT está disponível para assemblies puros através de uma versão de MSIL puro da biblioteca de tempo de execução do C).  
   
- Os assemblies verificáveis oferecem essas vantagens sobre assemblies simples e mixed:  
+ Assemblies verificáveis oferecem estas vantagens sobre assemblies puros e mistos:  
   
--   Segurança emitido.  
+-   Aumentar a segurança.  
   
--   Algumas situações exigem\-na \(componentes do SQL, por exemplo\).  
+-   Algumas situações exigem (componentes do SQL, por exemplo).  
   
--   As versões futuras do windows requerem cada vez mais componentes e aplicativos ser verificáveis.  
+-   Cada vez mais exigirá versões futuras do Windows, componentes e aplicativos a ser verificado.  
   
- Uma desvantagem é que os recursos de interoperabilidade C\+\+ não estão disponíveis.  Os assemblies verificáveis não podem conter nenhuma função não gerenciado ou tipos de dados nativos, mesmo que elas não sejam referenciadas pelo código gerenciado.  
+ Uma desvantagem é que os recursos de interoperabilidade C++ não estão disponíveis. Assemblies verificáveis não podem conter funções não gerenciadas ou tipos de dados nativos, mesmo se eles não são referenciados pelo código gerenciado.  
   
- Independentemente do uso de palavras “segura”, criar aplicativos com **\/clr:safe** não significa que não há bugs; significa que apenas CLR pode verificar as configurações de segurança em tempo de execução.  
+ Apesar do uso da palavra "safe", compilando aplicativos com **/CLR: safe** significa que não há nenhum bugs; significa apenas que o CLR pode verificar as configurações de segurança em tempo de execução.  
   
- Independentemente do tipo de assembly, as chamadas feitas de assemblies gerenciados a DLL nativos via P\/Invoke serão mais, mas podem falhar em tempo de execução dependendo das configurações de segurança.  
+ Independentemente do tipo de assembly, chamadas de assemblies gerenciados para DLLs nativas por meio de P/Invoke serão compilados, mas podem falhar em tempo de execução dependendo das configurações de segurança.  
   
 > [!NOTE]
->  Há um cenário codificando que transmitirão o compilador mas que resultará em um assembly não controlável: chamando uma função virtual por meio de um objeto que usa o operador de resolução de escopo.  Por exemplo: `MyObj -> A::VirtualFunction();`.  
+>  Há um cenário de codificação que passará o compilador, mas que resultará em um assembly não verificado: chamar uma função virtual por meio de uma instância de objeto usando o operador de resolução do escopo.  Por exemplo: `MyObj -> A::VirtualFunction();`.  
   
-## Consulte também  
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

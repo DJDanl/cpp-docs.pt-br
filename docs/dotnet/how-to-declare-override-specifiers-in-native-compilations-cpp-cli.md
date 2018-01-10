@@ -1,41 +1,42 @@
 ---
-title: "Como declarar especificadores de substitui&#231;&#227;o em compila&#231;&#245;es nativas (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Substituir especificadores em compilação nativa, substituindo"
+title: "Como: declarar especificadores de substituição (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0f50e500cf25a18e86e107e22d58e6446d03379d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como declarar especificadores de substitui&#231;&#227;o em compila&#231;&#245;es nativas (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[selado](../windows/sealed-cpp-component-extensions.md), [sumário](../windows/abstract-cpp-component-extensions.md), e [substituição](../windows/override-cpp-component-extensions.md) estão disponíveis nas compilações que não usam **\/ZW** ou [\/clr](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Como declarar especificadores de substituição em compilações nativas (C++/CLI)
+[lacrado](../windows/sealed-cpp-component-extensions.md), [abstrata](../windows/abstract-cpp-component-extensions.md), e [substituir](../windows/override-cpp-component-extensions.md) estão disponíveis em compilações que não usam **/ZW** ou [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
   
 > [!NOTE]
->  O idioma padrão ISO C\+\+11 tem o identificador de [substituição](../cpp/override-specifier.md) e o identificador de [final](../cpp/final-specifier.md) , e ambos têm suporte em uso `final` do Visual Studio em vez de `sealed` no código que parece ser compilado como o nativo somente.  
+>  O ISO C++ 11 linguagem padrão tem o [substituir](../cpp/override-specifier.md) identificador e o [final](../cpp/final-specifier.md) identificador e ambos têm suporte no uso do Visual Studio `final` em vez de `sealed` no código que visa ser compilada como nativa somente.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Descrição  
- O exemplo a seguir mostra que `sealed` é válido em compilações nativos.  
+### <a name="description"></a>Descrição  
+ O exemplo a seguir mostra que `sealed` é válido em compilações nativas.  
   
-### Código  
+### <a name="code"></a>Código  
   
-```  
+```cpp  
 // sealed_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -56,14 +57,14 @@ public:
 };  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Descrição  
- O exemplo seguinte mostra que `override` é válido em compilações nativos.  
+### <a name="description"></a>Descrição  
+ O exemplo a seguir mostra que `override` é válido em compilações nativas.  
   
-### Código  
+### <a name="code"></a>Código  
   
-```  
+```cpp  
 // override_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -77,14 +78,14 @@ public:
 };  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Descrição  
- Este exemplo mostra que `abstract` é válido em compilações nativos.  
+### <a name="description"></a>Descrição  
+ Este exemplo mostra que `abstract` é válido em compilações nativas.  
   
-### Código  
+### <a name="code"></a>Código  
   
-```  
+```cpp  
 // abstract_native_keyword.cpp  
 class X abstract {};  
   
@@ -93,5 +94,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Especificadores de Substituição](../windows/override-specifiers-cpp-component-extensions.md)
+## <a name="see-also"></a>Consulte também  
+ [Especificadores de substituição](../windows/override-specifiers-cpp-component-extensions.md)

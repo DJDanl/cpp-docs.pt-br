@@ -1,46 +1,31 @@
 ---
-title: Erro fatal C1854 | Documentos do Microsoft
+title: Erro fatal C1854 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1854
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1854
+f1_keywords: C1854
+dev_langs: C++
+helpviewer_keywords: C1854
 ms.assetid: 8c21a9cc-1737-475c-9e57-8725cd8937c1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7c1f3add044c68a749ee01843a6de3a5398f351e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0e0a26e902b1a40203bb4323bce8e28e687e9647
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1854"></a>Erro fatal C1854
-não é possível substituir informações formadas durante a criação do cabeçalho pré-compilado no arquivo de objeto: 'filename'  
   
- Você especificou o **/Yu** opção (use o cabeçalho pré-compilado) depois de especificar o **/Yc** (criar cabeçalho pré-compilado) opção para o mesmo arquivo. Determinadas declarações (como declarações incluindo `__declspec` `dllexport`) faça isso inválido.
+> não é possível substituir informação formada durante a criação de cabeçalho pré-compilado no arquivo de objeto: '*filename*'  
+  
+Você especificou o [/Yu (usar pré-compilado arquivo de cabeçalho)](../../build/reference/yu-use-precompiled-header-file.md) opção depois de especificar o [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) opção para o mesmo arquivo.  
+  
+Para corrigir esse problema, em geral, definir apenas um arquivo em seu projeto para ser compilada usando o **/Yc** opção e definir todos os outros arquivos para compilar usando o **/Yu** opção. Para obter detalhes sobre o uso do **/Yc** opção e como configurá-lo no IDE do Visual Studio, consulte [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md). Para obter mais informações sobre o uso de cabeçalhos pré-compilados, consulte [criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md).  

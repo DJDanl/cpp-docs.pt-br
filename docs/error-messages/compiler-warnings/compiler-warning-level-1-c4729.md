@@ -1,49 +1,30 @@
 ---
-title: "Compilador aviso (nível 1) C4729 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4729 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4729
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4729
+f1_keywords: C4729
+dev_langs: C++
+helpviewer_keywords: C4729
 ms.assetid: 36a0151f-f258-48d9-9444-ae6d41ff70a4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: babe4bf05b93d92584cea952d6b70da008223260
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 57d6d5dc95ce3ef9cf4890b93ef1ab3abe2d6601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4729"></a>Compilador C4729 de aviso (nível 1)
-função muito grande para avisos baseados em gráfico de fluxo  
+função muito grande para o gráfico de fluxo com base em avisos  
   
- Esse aviso é gerado quando uma função é muito grande para ser compilado com verificação confiável para situações que geram um aviso. Este aviso só é gerado quando o [/Od](../../build/reference/od-disable-debug.md) opção de compilador usada.  
+ Esse aviso é gerado quando uma função é muito grande para ser compilada com verificação confiável para situações em que pode gerar um aviso. Este aviso só é gerado quando o [/Od](../../build/reference/od-disable-debug.md) opção de compilador usada.  
   
- Para resolver esse aviso, divida a função em funções menores.
+ Para resolver este aviso, divida a função em funções menores.

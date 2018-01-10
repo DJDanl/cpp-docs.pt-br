@@ -1,48 +1,50 @@
 ---
-title: "Interfaces de objeto da fonte de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos de fonte de dados [C++]"
-  - "objetos de fonte de dados [C++], interfaces"
-  - "interfaces [C++], lista de"
-  - "interfaces [C++], OLE DB"
-  - "OLE DB [C++], interfaces"
-  - "Modelos de provedor OLE DB [C++], Interfaces de objeto"
+title: Interfaces de objeto de fonte de dados | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data source objects [C++], interfaces
+- data source objects [C++]
+- interfaces [C++], OLE DB
+- interfaces [C++], list of
+- OLE DB provider templates [C++], object interfaces
+- OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b15ff70c505496fa6375ef01091e0826ec08d98d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Interfaces de objeto da fonte de dados
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A tabela a seguir mostra o obrigatório e as interfaces opcionais definidas pelo OLE DB para uma fonte de dados publicado.  
+# <a name="data-source-object-interfaces"></a>Interfaces de objeto da fonte de dados
+A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de fonte de dados.  
   
-|Interface|Obrigatório?|Implementado por modelos OLE DB?|  
-|---------------|------------------|--------------------------------------|  
+|Interface|Necessário?|Implementado por modelos OLE DB?|  
+|---------------|---------------|--------------------------------------|  
 |`IDBCreateSession`|Obrigatório|Sim|  
 |`IDBInitialize`|Obrigatório|Sim|  
 |`IDBProperties`|Obrigatório|Sim|  
-|[\<caps:sentence id\="tgt14" sentenceid\="731a3344bc1c6b5f8f54d9de3524f18a" class\="tgtSentence"\>IPersist\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms688695)|Obrigatório|Sim|  
-|[\<caps:sentence id\="tgt17" sentenceid\="63e99e63156fc90f114fa402662387ef" class\="tgtSentence"\>IConnectionPointContainer\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Opcional|Não|  
+|[IPersist](http://msdn.microsoft.com/library/windows/desktop/ms688695)|Obrigatório|Sim|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Opcional|Não|  
 |`IDBDataSourceAdmin`|Opcional|Não|  
 |`IDBInfo`|Opcional|Não|  
-|[\<caps:sentence id\="tgt26" sentenceid\="7e6a12ecd4cb3b1bd45dccf9421ed567" class\="tgtSentence"\>IPersistFile\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms687223)|Opcional|Não|  
+|[IPersistFile](http://msdn.microsoft.com/library/windows/desktop/ms687223)|Opcional|Não|  
 |`ISupportErrorInfo`|Opcional|Não|  
   
- O objeto de fonte de dados implementa `IDBProperties`, `IDBInitialize`, e interfaces de `IDBCreateSession` com a herança.  Você pode escolher para dar suporte à funcionalidade adicional ou herdando não herdando de uma dessas classes de implementação.  Se você quiser oferecer suporte à interface de `IDBDataSourceAdmin` , você deve herdar da classe de `IDBDataSourceAdminImpl` .  
+ A fonte de dados objeto implementa a `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfaces por meio da herança. Você pode escolher dar suporte a funcionalidade adicional ao herdar ou não herdar de uma dessas classes de implementação. Se você desejar oferecer suporte a `IDBDataSourceAdmin` interface, você deve herdar do `IDBDataSourceAdminImpl` classe.  
   
-## Consulte também  
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

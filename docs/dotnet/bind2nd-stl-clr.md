@@ -1,33 +1,33 @@
 ---
-title: "bind2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função bind2nd [STL/CLR]"
+title: bind2nd (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind2nd
+dev_langs: C++
+helpviewer_keywords: bind2nd function [STL/CLR]
 ms.assetid: 457cebea-38e4-4466-a468-fe9eb138e80c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3617cb917012a48398c6c9f530c2419aa8ea195b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# bind2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gerenciar `binder2nd` para um argumento e um funtor.  
+# <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
+Gera um `binder2nd` para um argumento e functor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Fun,  
@@ -36,24 +36,24 @@ template<typename Fun,
         Arg right);  
 ```  
   
-## Parâmetros de modelo  
+## <a name="template-parameters"></a>Parâmetros de modelo  
  Arg  
- O tipo de argumento.  
+ O tipo do argumento.  
   
- Divertimento  
- O tipo de funtor.  
+ Fun  
+ O tipo de functor.  
   
-## Parâmetros de função  
- funtor  
- O funtor a quebra de texto.  
+## <a name="function-parameters"></a>Parâmetros de função  
+ functor  
+ Functor para encapsular.  
   
  direita  
- O segundo argumento para envolver.  
+ O segundo argumento para encapsular.  
   
-## Comentários  
- A função do modelo retorna [binder2nd](../Topic/binder2nd%20\(STL-CLR\).md)`<Fun>(functor, right)`.  Use\-a como uma maneira conveniente de envolver um funtor de dois argumentos e o segundo argumento em um funtor de um argumento que o chama com um primeiro argumento.  
+## <a name="remarks"></a>Comentários  
+ Retorna a função de modelo [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Você pode usá-lo como uma maneira conveniente para encapsular um functor dois argumentos e o segundo argumento em um functor um argumento que faz a chamada com um primeiro argumento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_bind2nd.cpp   
@@ -96,13 +96,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/funcional\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/funcional >  
   
-## Consulte também  
- [binder2nd](../Topic/binder2nd%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)

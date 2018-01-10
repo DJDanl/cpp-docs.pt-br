@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a26cc24c409d02ff15a436dc5870d18677a152c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efad32d00a58fb7c29aa19ece86448958cb9e133
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Namespace Platform::Runtime::InteropServices
 Esse namespace destina-se somente para uso interno, e não é destinado a ser usado para desenvolvimento.  

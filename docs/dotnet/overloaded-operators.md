@@ -1,32 +1,34 @@
 ---
-title: "Operadores sobrecarregados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sobrecarga de operador, em uma classe CLR"
-  - "operadores [C++], sobrecarga"
+title: Sobrecarga dos operadores | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Operadores sobrecarregados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O sobrecarregamento de operador mudou significativamente de extensões gerenciadas para C\+\+ a [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)].  
+# <a name="overloaded-operators"></a>Operadores sobrecarregados
+Sobrecarga de operador foi alterado significativamente de extensões gerenciadas para C++ para Visual C++.  
   
- Na declaração de um tipo de referência, por exemplo, em vez de usar a sintaxe nativo de `operator+` , você escreve explicitamente para o nome interno subjacente do operador – nesse caso, `op_Addition`.  Além disso, a invocação de um operador aritmético tiver que ser explicitamente invocada com esse nome, assim impossibilitando os dois benefícios primários de sobrecarregamento de operador: \(a\) a sintaxe intuitiva, e \(b\) a capacidade misturar novos tipos existentes com tipo.  Por exemplo:  
+ Na declaração de um tipo de referência, por exemplo, em vez de usando nativo `operator+` sintaxe, você explicitamente gravar o nome interno subjacente do operador - nesse caso, `op_Addition`. Além disso, a invocação de um operador deve ser chamado explicitamente por meio desse nome, evitando, assim, os dois principais benefícios de sobrecarga de operador: (a) a sintaxe intuitiva e (b) a capacidade de combinar tipos de novo com os tipos existentes. Por exemplo:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -53,7 +55,7 @@ int main()
 }  
 ```  
   
- Na nova sintaxe, as expectativas comuns de um programador do C\+\+ nativo são restauradas, na declaração e o uso de operadores estáticos.  Aqui está a classe de `Vector` convertida na nova sintaxe:  
+ Na nova sintaxe, as expectativas normais de um programador de C++ nativo são restauradas, tanto na declaração e uso dos operadores estáticos. Aqui está o `Vector` classe traduzida para a nova sintaxe:  
   
 ```  
 public ref class Vector sealed {  
@@ -80,5 +82,5 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Declarações de membro em uma classe ou uma interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Consulte também  
+ [Declarações de membro em uma classe ou interface (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
