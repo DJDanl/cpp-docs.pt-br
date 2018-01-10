@@ -1,66 +1,66 @@
 ---
-title: "/SWAPRUN (carregar sa&#237;da do vinculador para trocar arquivo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.SwapRunFromNet"
-  - "/swaprun"
-  - "VC.Project.VCLinkerTool.SwapRunFromCD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /SWAPRUN"
-  - "Arquivos  [C++], LINK"
-  - "ferramenta LINK [C++], saída"
-  - "vinculador [C++], copiando saída no arquivo swap"
-  - "arquivos de saída, vinculador"
-  - "arquivo swap para a saída de vinculador"
-  - "opção de vinculador SWAPRUN"
-  - "opção de vinculador -SWAPRUN"
+title: "-SWAPRUN (carregar saída do vinculador para trocar arquivo) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.SwapRunFromNet
+- /swaprun
+- VC.Project.VCLinkerTool.SwapRunFromCD
+dev_langs: C++
+helpviewer_keywords:
+- -SWAPRUN linker option
+- files [C++], LINK
+- LINK tool [C++], output
+- linker [C++], copying output to swap file
+- swap file for linker output
+- output files, linker
+- /SWAPRUN linker option
+- SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a3b6829a20e80ab8548460205169e1cd258694e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /SWAPRUN (carregar sa&#237;da do vinculador para trocar arquivo)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (carregar saída do vinculador para trocar arquivo)
 ```  
 /SWAPRUN:{NET|CD}  
 ```  
   
-## Comentários  
- A opção \/SWAPRUN diz ao sistema operacional para a primeira cópia a saída do vinculador a um arquivo de permuta, e executa a imagem de lá.  Esse é um recurso do Windows NT 4.0 \(ou posterior\).  
+## <a name="remarks"></a>Comentários  
+ A opção /SWAPRUN informa o sistema operacional para primeiro copiar o vinculador de saída para um arquivo de troca e, em seguida, executar a imagem de lá. Este é um recurso do Windows NT 4.0 (e posterior).  
   
- Se a O for especificada, o sistema operacional primeiro copiar a imagem binária da rede de um arquivo de permuta e para carregá\-los de lá.  Essa opção é útil para executar aplicativos pela rede.  Quando o CD for especificado, o sistema operacional deve copiar a imagem em um disco removível em um arquivo de paginação e carregar\-a\-&z em.  
+ Se NET é especificada, o sistema operacional será primeiro copiar a imagem binária da rede para um arquivo de permuta e carregá-lo de lá. Essa opção é útil para aplicativos em execução na rede. Quando o CD é especificado, o sistema operacional será copiar a imagem em um disco removível para um arquivo de página e, em seguida, carregá-lo.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Sistema** .  
+3.  Clique o **sistema** página de propriedades.  
   
-4.  Modifique uma das seguintes propriedades:  
+4.  Modificar uma das seguintes propriedades:  
   
-    -   **Alternar a execução do CD**  
+    -   **Execução de swap do CD**  
   
-    -   **Alternar a execução da rede**  
+    -   **Execução de swap da rede**  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte as propriedades <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromCD%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromNet%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

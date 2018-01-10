@@ -1,3 +1,1 @@
----
----
 Este tópico está incluído para integridade. Para obter mais detalhes, consulte o código-fonte localizado na pasta VC\atlmfc\src\mfc de sua instalação do Visual Studio.

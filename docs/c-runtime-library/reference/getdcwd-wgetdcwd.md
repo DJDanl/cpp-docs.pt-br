@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7541bf3135dfcc3734a43fe64277e5b8ea141e9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 Obtém o caminho completo do diretório de trabalho atual na unidade especificada.  
@@ -94,7 +95,7 @@ wchar_t *_wgetdcwd(
   
  `_wgetdcwd` é uma versão de caractere largo de `_getdcwd`; seu parâmetro `buffer` e o valor retornado são cadeias de caracteres largos. Caso contrário, `_wgetdcwd` e `_getdcwd` comportam-se de modo idêntico.  
   
- Essa função é thread-safe, embora dependa de **GetFullPathName**, que não thread-safe. No entanto, você pode violar o acesso thread-safe se seu aplicativo multi-threaded chamar essa função e **GetFullPathName**. Para obter mais informações, vá até a [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkID=150542) e pesquise por **GetFullPathName**.  
+ Essa função é thread-safe, embora dependa de **GetFullPathName**, que não thread-safe. No entanto, você pode violar o acesso thread-safe se seu aplicativo multi-threaded chamar essa função e **GetFullPathName**. Para obter mais informações, vá até a [Biblioteca MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) e pesquise por **GetFullPathName**.  
   
  A versão dessa função que tem o sufixo `_nolock` se comporta de forma idêntica a essa função, exceto pelo fato de não ser thread-safe e não estar protegida contra interferência de outros threads. Para obter mais informações, consulte [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md).  
   

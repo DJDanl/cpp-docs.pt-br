@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05a2ffa5f886318524267aeb348557a413960f7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ea488841290ff1e5eaa7279e209dff2928b82c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="instr"></a>@InStr
 Função de macro que localiza a primeira ocorrência do *string2* na *string1*, começando em *posição* em *string1*. Se *posição* não aparecer, a pesquisa começa no início do *string1*. Retorna um inteiro de posição ou 0 se *string2* não foi encontrado.  

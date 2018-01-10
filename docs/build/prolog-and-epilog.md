@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>Prólogo e epílogo
 Cada função que aloca espaço de pilha, chamadas de outras funções, salva os registros não volátil ou usa o tratamento de exceção devem ter um prólogo cujos endereço limites descritos nos dados de desenrolamento associados à entrada de tabela do respectivos função (consulte [(X64) de tratamento de exceção](../build/exception-handling-x64.md)). O prólogo salva argumento registros em seus endereços de base se necessário, envia registros não volátil na pilha, aloca a parte fixa da pilha de locais e de longa e opcionalmente estabelece um ponteiro de quadro. Dados desenrolados associado deve descrever a ação de prólogo e forneça as informações necessárias para desfazer o efeito do código de prólogo.  

@@ -1,41 +1,39 @@
 ---
-title: "IFE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IFE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IFE directive"
+title: IFE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IFE
+dev_langs: C++
+helpviewer_keywords: IFE directive
 ms.assetid: bac5659d-9d2e-406d-89b7-e05b335ab0fd
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f4e1f079c45253beec27a8af00f2ceb20042e61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# IFE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Concede assembly se  *expressão* for false \(0\).  
+# <a name="ife"></a>IFE
+Concede o conjunto se *expressão* for false (0).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 IFE expression  
 ```  
   
-## Comentários  
- Consulte  [Se](../../assembler/masm/if-masm.md) para obter a sintaxe completa.  
+## <a name="remarks"></a>Comentários  
+ Consulte [se](../../assembler/masm/if-masm.md) para obter a sintaxe completa.  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0f4177ffb0db75eb18c39aa260f0b150da9b6f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eh-exception-handling-model"></a>/EH (modelo de tratamento de exceções)
 Especifica o tipo de tratamento de exceção usado pelo compilador, ao otimizar exceção ausente verifica e se deseja destruir os objetos C++ que ultrapassarem o escopo devido a uma exceção. Se **/EH** não for especificado, o compilador captura estruturado de exceções assíncronas e exceções do C++, mas não destrói C++ os objetos fora do escopo devido a uma exceção assíncrona.  

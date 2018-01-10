@@ -1,33 +1,31 @@
 ---
-title: "PROC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROC directive"
+title: PROC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROC
+dev_langs: C++
+helpviewer_keywords: PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4b8b5259e3a7e42e7eb08cb4832496a6f3c35c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# PROC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marca de início e término de um bloco de procedimento chamado  *rótulo*.  As instruções no bloco podem ser chamadas com o  **chamar** instrução ou  [INVOKE](../../assembler/masm/invoke.md) diretiva.  
+# <a name="proc"></a>PROC
+Marca de início e término de um bloco de procedimento chamado *rótulo*. As instruções no bloco podem ser chamadas com o **chamar** instrução ou [INVOKE](../../assembler/masm/invoke.md) diretiva.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,14 +36,14 @@ statements
 label ENDP  
 ```  
   
-## Comentários  
- Quadro \[:*ehandler endereço*\] é válida somente com ml64.exe e causa MASM gerar uma entrada de tabela de função em .pdata e desenrolar informações em .xdata para uma função do estruturado manipulação de exceção desenrolar comportamento.  
+## <a name="remarks"></a>Comentários  
+ [Quadros [:*ehandler endereço*]] é válido apenas com ml64.exe e faz com que MASM gerar uma entrada de tabela de função no. pData e desenrolar informações .xdata para uma função do estruturado comportamento de desenrolamento de tratamento de exceção.  
   
- Quando o  **quadro** atributo é usado, ele deve ser seguido por um [.ENDPROLOG](../Topic/.ENDPROLOG.md) diretiva.  
+ Quando o **quadro** atributo é usado, ele deve ser seguido por um [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) diretiva.  
   
- Consulte [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obter mais informações sobre como usar o ml64.exe.  
+ Consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obter mais informações sobre como usar ml64.exe.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
@@ -67,7 +65,7 @@ _text ENDS
 END  
 ```  
   
- O código acima irá emitir a seguinte tabela de função e informações sobre o desenrolamento:  
+ O código acima será emita a seguinte tabela de função e informações sobre o desenrolamento:  
   
 ```  
 FileHeader->Machine 34404  
@@ -90,5 +88,5 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp  
 ```  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

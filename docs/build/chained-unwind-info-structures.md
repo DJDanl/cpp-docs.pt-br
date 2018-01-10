@@ -1,37 +1,37 @@
 ---
-title: "Estruturas de informa&#231;&#245;es desenroladas encadeadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Encadeados estruturas de informações Desenroladas | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 176835bf-f118-45d9-9128-9db4b7571864
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Estruturas de informa&#231;&#245;es desenroladas encadeadas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se o sinalizador de UNW\_FLAG\_CHAININFO é definido, uma estrutura de informações de desenrolamento é new, e o campo de endereço compartilhado de exceção manipulador\/informações contém o principal desenrola informações.  O código a seguir recupera o principal desenrola informações, supondo que `unwindInfo` é a estrutura que tem o sinalizador de UNW\_FLAG\_CHAININFO definido.  
+# <a name="chained-unwind-info-structures"></a>Estruturas de informações desenroladas encadeadas
+Se o sinalizador UNW_FLAG_CHAININFO for definido, uma estrutura de informações de liberação é um secundário, e o campo de endereço de exceção-manipulador/encadeados-info compartilhada contém as informações de liberação principal. A código a seguir recupera informações sobre, supondo que o desenrolamento primário `unwindInfo` é a estrutura que tem o UNW_FLAG_CHAININFO o sinalizador será definido.  
   
 ```  
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);  
 ```  
   
- Informações encadeada é útil em duas situações.  Primeiro, podem ser usadas para segmentos de código não contígua.  Usando informações encadeada, você pode reduzir o tamanho de necessário desenrola informações, porque você não tem que duplicar os códigos de desenrolamento a matriz de primária desenrola informações.  
+ Informações de cadeia são útil em duas situações. Primeiro, ele pode ser usado para segmentos de código não contíguas. Usando as informações de cadeia, você pode reduzir o tamanho das informações de desenrolamento necessária, porque não é necessário duplicar a matriz de códigos de desenrolamento de informações de liberação principal.  
   
- Você também pode usar informações encadeada para agrupar o registro temporário salva.  O compilador pode atrasar salvar alguns registros voláteis até que está fora de prólogo de entrada da função.  Você pode registrar este tendo primária desenrola informações para a parte da função antes que o código agrupados, e então configurar informações encadeada com um tamanho diferente de zero de prólogo, onde os códigos de desenrolamento nas informações encadeada refletem a salvar os registros permanentes.  Nesse caso, os códigos de desenrolamento são todas as instâncias de UWOP\_SAVE\_NONVOL.  Um agrupamento que salva permanentes registros usando um ENVIO ou modifique o registro de RSP usando uma alocação de pilha fixa adicional não é suportado.  
+ Você também pode usar informações encadeadas para agrupar registro volátil salva. O compilador pode atrasar a salvar alguns registros volátil até que ele está fora de prólogo de entrada da função. Você pode registrar isso, ter informações de liberação principal para a parte da função antes do código agrupado, e, em seguida, configurando encadeados informações com um tamanho diferente de zero de prólogo, onde os códigos de desenrolamento as informações encadeadas refletem salva dos registros não volátil. Nesse caso, os códigos de desenrolamento são todas as instâncias de UWOP_SAVE_NONVOL. Não há suporte para um agrupamento que salva não volátil registros usando um envio por PUSH ou modifica o registro RSP usando uma alocação de pilha fixa adicional.  
   
- Um item de UNWIND\_INFO que tenha definido UNW\_FLAG\_CHAININFO pode conter uma entrada de RUNTIME\_FUNCTION cujo item de UNWIND\_INFO também tem UNW\_FLAG\_CHAININFO definido \(várias que envolve\).  Se houver, encadeados desenrolam ponteiros de informações chegarão em um item de UNWIND\_INFO que tem UNW\_FLAG\_CHAININFO desmarcado; este é o item primária de UNWIND\_INFO, que aponta para o ponto de entrada real do procedimento.  
+ Um item UNWIND_INFO que tem UNW_FLAG_CHAININFO definido pode conter uma entrada RUNTIME_FUNCTION item cujo UNWIND_INFO também tem UNW_FLAG_CHAININFO definido (várias shrink-wrapping). Por fim, o encadeadas desenrolar informações ponteiros chegará a um item UNWIND_INFO com UNW_FLAG_CHAININFO desmarcada. Este é o item UNWIND_INFO primário, que aponta para o ponto de entrada de procedimento real.  
   
-## Consulte também  
- [Dados desenrolados para tratamento de exceções, suporte do depurador](../build/unwind-data-for-exception-handling-debugger-support.md)
+## <a name="see-also"></a>Consulte também  
+ [Desenrolar dados para tratamento de exceção, suporte do depurador](../build/unwind-data-for-exception-handling-debugger-support.md)

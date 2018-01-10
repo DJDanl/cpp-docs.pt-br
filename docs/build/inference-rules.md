@@ -1,44 +1,44 @@
 ---
-title: "Regras de infer&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "regras de inferência em NMAKE"
-  - "programa NMAKE, regras de inferência"
-  - "regras, inferência"
+title: "Regras de inferência | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- rules, inference
+- NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 932aad860cd2b78208857ca7b028e35cd96d481e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Regras de infer&#234;ncia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comandos da fonte das regras de inferência atualizar destinos e inferir dependentes para destinos.  As extensões em uma regra de inferência correspondem a um único destino e dependente que têm o mesmo nome de base.  As regras de inferência são definidos pelo usuário ou predefinidas; as regras predefinidas podem ser redefinido.  
+# <a name="inference-rules"></a>Regras de inferência
+Regras de inferência fornecem comandos para atualizar os destinos e inferir dependentes para destinos. Extensões em uma regra de inferência correspondem a um único destino e dependente que têm o mesmo nome de base. Regras de inferência são definidos pelo usuário ou predefinido; regras predefinidas podem ser redefinidas.  
   
- Se uma dependência expirado não tem nenhum comando, e se [.SUFFIXES](../build/dot-directives.md) contém a extensão dependentes, NMAKE usa uma regra cujas extensões correspondem ao destino e um arquivo existente no escopo atual ou no diretório especificado.  Se mais de uma regra corresponde arquivos existentes, a lista de **.SUFFIXES** determina qual usar; a prioridade da lista decrescente da esquerda para a direita.  Se um arquivo dependente não existir e não estiver listado como um destino em outro bloco de descrição, uma regra de inferência é possível criar o dependente ausente de outro arquivo com o mesmo nome de base.  Se o destino de um bloco de descrição não tem nenhum dependente ou comando, uma regra de inferência pode atualizar o destino.  As regras de inferência podem criar um destino de linha de comando mesmo se nenhum pacote de existir descrição.  NMAKE pode invocar uma regra para um dependente inferido mesmo se um dependente explícito for especificado.  
+ Se uma dependência desatualizada não tiver nenhum comando e [. SUFIXOS](../build/dot-directives.md) contém a extensão do dependente, usa NMAKE uma regra cujos extensões coincidirem com o destino e uma existente de arquivos no diretório atual ou especificado. Se os arquivos existentes, corresponde a mais de uma regra de **. SUFIXOS** lista determina qual usar; prioridade lista desce da esquerda para a direita. Se um arquivo dependente não existe e não está listado como um destino em outro bloco de descrição, uma regra de inferência pode criar ausentes dependente de outro arquivo com o mesmo nome de base. Se o destino de um bloco de descrição não tem nenhuma dependentes ou comandos, uma regra de inferência pode atualizar o destino. Regras de inferência podem criar um destino de linha de comando, mesmo que exista nenhum bloco de descrição. NMAKE pode invocar uma regra para um dependentes inferidos mesmo se um dependente explícita for especificada.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
  [Definindo uma regra](../build/defining-a-rule.md)  
   
- [Regras em grupo](../Topic/Batch-Mode%20Rules.md)  
+ [Regras de modo de lote](../build/batch-mode-rules.md)  
   
  [Regras predefinidas](../build/predefined-rules.md)  
   
- [Dependentes deduzidos e regras](../build/inferred-dependents-and-rules.md)  
+ [Dependentes inferidos e regras](../build/inferred-dependents-and-rules.md)  
   
  [Precedência em regras de inferência](../build/precedence-in-inference-rules.md)  
   
-## Consulte também  
- [Referência de NMAKE](../build/nmake-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência a NMAKE](../build/nmake-reference.md)

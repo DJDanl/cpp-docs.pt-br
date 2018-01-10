@@ -1,40 +1,40 @@
 ---
-title: "operator OR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator OR"
-  - "Or"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator OR"
-  - "OR operator, bitwise"
+title: operador ou | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator OR
+- Or
+dev_langs: C++
+helpviewer_keywords:
+- operator OR
+- OR operator, bitwise
 ms.assetid: fab36ba6-8ee0-4778-beb9-21dce6d99db7
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 48c6568dd9ea8f01722385ffa3968ad784c0e605
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# operator OR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna o resultado de um bit a bit `OR` operação para  *Expressão1* e  *Expressão2*.  
+# <a name="operator-or"></a>operador Or
+Retorna o resultado de um bit a bit `OR` operação para *expression1* e *expression2*.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 expression1 OR expression2  
 ```  
   
-## Consulte também  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de operadores](../../assembler/masm/operators-reference.md)

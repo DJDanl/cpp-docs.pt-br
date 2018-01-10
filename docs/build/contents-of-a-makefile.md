@@ -1,47 +1,47 @@
 ---
-title: "Conte&#250;do de um makefile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "makefiles"
-  - "makefiles, conteúdo"
+title: "Conteúdo de um Makefile | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- makefiles
+- makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd781d93f4417bb617471ca72f63c2888918b466
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Conte&#250;do de um makefile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="contents-of-a-makefile"></a>Conteúdo de um makefile
 Um makefile contém:  
   
 -   [Blocos de descrição](../build/description-blocks.md)  
   
 -   [Comandos](../build/commands-in-a-makefile.md)  
   
--   [Macros](../Topic/Macros%20and%20NMAKE.md)  
+-   [Macros](../build/macros-and-nmake.md)  
   
 -   [Regras de inferência](../build/inference-rules.md)  
   
--   [Políticas de ponto](../build/dot-directives.md)  
+-   [Diretivas dot](../build/dot-directives.md)  
   
--   [Políticas de pré\-processamento](../Topic/Makefile%20Preprocessing.md)  
+-   [Diretivas de pré-processamento](../build/makefile-preprocessing.md)  
   
-## Comentários  
- Outros recursos que você pode usar em um makefile são [curingas](../Topic/Wildcards%20and%20NMAKE.md), [nomes de arquivo longos](../build/long-filenames-in-a-makefile.md), [comentários](../build/comments-in-a-makefile.md), e [caracteres especiais](../build/special-characters-in-a-makefile.md).  
+## <a name="remarks"></a>Comentários  
+ Outros recursos que você pode usar em um makefile estiverem [curingas](../build/wildcards-and-nmake.md), [extensos](../build/long-filenames-in-a-makefile.md), [comentários](../build/comments-in-a-makefile.md), e [caracteres especiais](../build/special-characters-in-a-makefile.md).  
   
- Consulte [Makefile de exemplo](../Topic/Sample%20Makefile.md) para um exemplo.  
+ Para obter um exemplo, consulte [Makefile de exemplo](../build/sample-makefile.md).  
   
-## Consulte também  
- [Referência de NMAKE](../build/nmake-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência a NMAKE](../build/nmake-reference.md)

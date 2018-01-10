@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b573406f679a685af8c82242a91ac5578cac9dbc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df098ee80bcd8fa81b5503cc21b08ded86945a72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 Use esta classe para enviar relatórios de depuração para um pipe nomeado.  
@@ -40,7 +41,7 @@ class CDebugReportHook
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -109,7 +110,7 @@ static int __cdecl CDebugReportHookProc(
  O tipo de relatório (_CRT_WARN, _CRT_ERROR ou _CRT_ASSERT).  
   
  `message`  
- A cadeia de caracteres de mensagem.  
+ A cadeia de caracteres da mensagem.  
   
  *returnValue*  
  O valor deve ser retornado por [crtdbgreport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  

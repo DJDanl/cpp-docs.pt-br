@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,37 +37,22 @@ f1_keywords:
 - ATLSIMPSTR/ATL::CSimpleStringT::StringLength
 - ATLSIMPSTR/ATL::CSimpleStringT::Truncate
 - ATLSIMPSTR/ATL::CSimpleStringT::UnlockBuffer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - shared classes, CSimpleStringT
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0b60a7b5c58c33ed4d8be67e1de603ef5f711742
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: acbf4753bb29b8f28cac9fe4fb6ceff72ceda8a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplestringt-class"></a>Classe CSimpleStringT
 Essa classe representa um `CSimpleStringT` objeto.  
@@ -291,7 +275,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  Um ponteiro para o Gerenciador de memória do `CSimpleStringT` objeto. Para obter mais informações sobre `IAtlStringMgr` e gerenciamento de memória para `CSimpleStringT`, consulte [gerenciamento de memória e CStringT](../memory-management-with-cstringt.md).  
   
 ### <a name="remarks"></a>Comentários  
- Criar um novo `CSimpleStringT` objeto. Porque os construtores copiar os dados de entrada para o novo armazenamento alocado, podem resultar exceções de memória.  
+ Criar um novo `CSimpleStringT` objeto. Como os construtores copiar os dados de entrada para o novo armazenamento alocado, exceções de memória podem acontecer.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o uso de `CSimpleStringT::CSimpleStringT` usando a ATL `typedef` `CSimpleString`. `CSimpleString`é uma especialização de usada geral do modelo de classe `CSimpleStringT`.  

@@ -1,36 +1,37 @@
 ---
-title: "No&#231;&#245;es b&#225;sicas de cria&#231;&#227;o de interfaces de cole&#231;&#227;o e enumerator | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces de coleção"
-  - "interfaces enumerator"
+title: "Criação de coleção e Interfaces de enumerador (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8709274e1b95816dee01b4457993521dde5d5213
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# No&#231;&#245;es b&#225;sicas de cria&#231;&#227;o de interfaces de cole&#231;&#227;o e enumerator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Há noções básicas de design diferentes de apoio cada tipo de interface:  
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Noções básicas de criação de Interfaces de enumerador e coleção
+Há diferentes princípios por trás de cada tipo de interface:  
   
--   Fornece uma interface de coleção *de acesso aleatório* *a um único* item na coleção via o método de **Item** , permite que os clientes descobrir quantos itens estão na coleção através da propriedade de **Contagem** , e permite que os clientes geralmente adicionar e remover itens.  
+-   Fornece uma interface de coleção *aleatório* acesso a um *único* item na coleção por meio de **Item** método, ele permite que os clientes descobrir quantos itens estão no conjunto de por meio de **contagem** propriedade, e geralmente permite que os clientes adicionar e remover itens.  
   
--   Uma interface de enumerador fornece *acesso serial* *para vários* itens em uma coleção, não permite que o cliente descobrir quantos itens estão na coleção \(até que o enumerador parar de retornar itens\), e não fornece nenhuma maneira para adicionar ou remover itens.  
+-   Fornece uma interface de enumerador *serial* acesso *vários* itens em uma coleção, ele não permite que o cliente descobrir quantos itens estão na coleção (até que o enumerador parar de retornar itens), e ele não fornece nenhuma forma de adicionar ou remover itens.  
   
- Cada tipo de interface executa uma função diferente em fornecer acesso aos elementos em uma coleção.  
+ Cada tipo de interface desempenha um papel diferente no fornecimento de acesso para os elementos em uma coleção.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Coleções e enumeradores](../atl/atl-collections-and-enumerators.md)
+

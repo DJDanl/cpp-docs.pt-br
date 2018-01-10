@@ -28,11 +28,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6f9bd7613254bfd0fd4aaef239b5e848ae87b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-control-global-functions"></a>Funções globais do controle composto
 Essas funções fornecem suporte para a criação de caixas de diálogo e para a criação, hospedagem e licenciando controles ActiveX.  

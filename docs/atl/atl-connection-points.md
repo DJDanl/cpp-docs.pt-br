@@ -1,49 +1,50 @@
 ---
-title: "Pontos de conex&#227;o ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, pontos de conexão"
-  - "pontos de conexão [C++], sobre pontos de conexão"
-  - "conexões, pontos de conexão"
+title: "Pontos de Conexão de ATL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connections, connection points
+- ATL, connection points
+- connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2063bd35627fd86c0cab82e4e50e5e8a126ddfa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Pontos de conex&#227;o ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um objeto conectável é aquele que oferece suporte a interfaces de saída.  Uma interface de saída permite que o objeto se comunique com um cliente.  Para cada interface de saída, o objeto conectável expõe um ponto de conexão.  Cada interface de saída é implementada por um cliente em um objeto denominado de um coletor.  
+# <a name="atl-connection-points"></a>Pontos de conexão ATL
+Um objeto conectável é aquele que oferece suporte a interfaces de saída. Uma interface de saída permite que o objeto se comunique com um cliente. Para cada interface de saída, o objeto conectável expõe um ponto de conexão. Cada interface de saída é implementada por um cliente em um objeto denominado de um coletor.  
   
- ![Pontos de conexão](../atl/media/vc2zw31.png "vc2ZW31")  
+ ![Pontos de Conexão](../atl/media/vc2zw31.gif "vc2zw31")  
   
- Cada ponto de conexão dá suporte a interface [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318).  O objeto conectável expõe seus pontos de conexão para o cliente por meio da interface [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
+ Dá suporte a cada ponto de conexão a [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interface. O objeto conectável expõe seus pontos de conexão para o cliente por meio de [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) interface.  
   
-## Nesta seção  
- [Classes de Ponto de Conexão de ATL](../atl/atl-connection-point-classes.md)  
+## <a name="in-this-section"></a>Nesta seção  
+ [Classes de ponto de conexão da ATL](../atl/atl-connection-point-classes.md)  
  Descreve sucintamente as classes ATL que dão suporte aos pontos de conexão.  
   
- [Adicionando Pontos de Conexão a um Objeto](../atl/adding-connection-points-to-an-object.md)  
+ [Adicionando pontos de conexão a um objeto](../atl/adding-connection-points-to-an-object.md)  
  Descreve as etapas usadas para adicionar pontos de conexão para um objeto.  
   
- [Exemplo de Ponto de Conexão de ATL](../atl/atl-connection-point-example.md)  
+ [Exemplo de ponto de conexão da ATL](../atl/atl-connection-point-example.md)  
  Fornece um exemplo da declaração de um ponto de conexão.  
   
-## Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conceitos](../atl/active-template-library-atl-concepts.md)
+

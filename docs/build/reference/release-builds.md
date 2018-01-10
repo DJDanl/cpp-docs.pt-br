@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b6ba275b3a287130df111ba89ec2f4dd91170d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12e81b26cd83214a5d62a42689bfc3a866ef1c10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="release-builds"></a>Builds de lançamento
 Uma compilação de versão usa otimizações. Ao usar otimizações para criar uma compilação de versão, o compilador não produzirá informações simbólicas de depuração. Chama a ausência de informações de depuração simbólicas, juntamente com o fato de que o código não é gerado para rastreamento e ASSERT, significa que o tamanho do seu arquivo executável é reduzido e, portanto, será mais rápida.  

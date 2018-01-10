@@ -1,79 +1,78 @@
 ---
-title: "Altera&#231;&#245;es no sistema de compila&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.msbuild.changes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "alterações no sistema de compilação, $(Inherit)"
-  - "alterações no sistema de compilação, $(NoInherit)"
-  - "alterações no sistema de compilação, .vsprops"
-  - "alterações no sistema de compilação, regras de compilação personalizadas"
-  - "alterações no sistema de compilação, MSBuild"
-  - "alterações no sistema de compilação, arquivo de projeto (.vcxprog)"
-  - "MSBuild, alterações no sistema de compilação"
+title: "Alterações no sistema de compilação | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.msbuild.changes
+dev_langs: C++
+helpviewer_keywords:
+- Build system changes, project file (.vcxprog)
+- Build system changes, custom build rules
+- Build system changes, MSBuild
+- MSBuild, build system changes
+- Build system changes, .vsprops
+- Build system changes, $(Inherit)
+- Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Altera&#231;&#245;es no sistema de compila&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O sistema de MSBuild é usado para construir projetos do Visual C\+\+.  No entanto, no Visual Studio 2008 e em versões anteriores, o sistema de VCBuild foi usado.  Determinados tipos de arquivo e conceitos que dependem de VCBuild não existir ou são representados do sistema atual.  Este documento discute as diferenças no sistema atual de compilação.  
+# <a name="build-system-changes"></a>Alterações no sistema de build
+O sistema MSBuild é usado para criar projetos do Visual C++. No entanto, no Visual Studio 2008 e versões anteriores, o sistema VCBuild foi usado. Determinados tipos de arquivo e conceitos que dependiam VCBuild não existem ou estão representados de maneira diferente no sistema atual. Este documento aborda as diferenças no sistema de compilação atual.  
   
-## .vcproj agora é .vcxproj  
- Os arquivos de projeto ainda não usam a extensão de nome de arquivo de .vcproj.  Visual Studio converte automaticamente os arquivos de projeto que foram criados por uma versão anterior do Visual C\+\+ para o formato usado pelo sistema atual.  Para obter mais informações sobre como atualizar manualmente um projeto do, consulte [\/Upgrade](../Topic/-Upgrade%20\(devenv.exe\).md).  
+## <a name="vcproj-is-now-vcxproj"></a>. vcproj agora é. vcxproj  
+ Arquivos de projeto não usam a extensão de nome de arquivo. vcproj. O Visual Studio converte automaticamente os arquivos de projeto que foram criados por uma versão anterior do Visual C++ para o formato usado pelo sistema atual. Para obter mais informações sobre como atualizar manualmente um projeto, consulte [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe).  
   
- Na versão atual, a extensão de nome de arquivo para um arquivo de projeto é .vcxproj.  
+ Na versão atual, a extensão de nome de arquivo para um arquivo de projeto é. vcxproj.  
   
-## .vsprops agora é .props  
- Em versões anteriores, *uma folha de propriedade do projeto* é um arquivo baseado em XML com uma extensão de nome de arquivo de .vsprops.  Uma folha de propriedade do projeto permite especificar opções para ferramentas de criação como o compilador ou o vinculador e criar macros definidos pelo usuário.  
+## <a name="vsprops-is-now-props"></a>. vsprops agora é .props  
+ Em versões anteriores, uma *da folha de propriedades do projeto* é um arquivo baseado em XML que tem uma extensão de nome de arquivo. vsprops. Uma folha de propriedades do projeto permite especificar opções para as ferramentas de compilação, como o compilador ou vinculador e criar macros definidas pelo usuário.  
   
- Na versão atual, a extensão de nome de arquivo para uma folha de propriedade do projeto é .props.  
+ Na versão atual, a extensão de nome de arquivo para uma folha de propriedades do projeto é .props.  
   
-## Regras personalizadas da construção e arquivos de .rules  
- Em versões anteriores, *um arquivo de regra* é um arquivo baseado em XML com uma extensão de nome de arquivo de .rules.  Um arquivo de regra permite definir regras personalizadas da construção e incorporar\-las no processo de criação de um projeto do Visual C\+\+.  Uma regra personalizada de construção, que pode ser associada a uma ou mais extensões de nome de arquivo, permite passar arquivos de entrada a uma ferramenta que cria um ou mais arquivos de saída.  
+## <a name="custom-build-rules-and-rules-files"></a>Arquivos. Rules e regras de compilação personalizada  
+ Em versões anteriores, uma *arquivo de regra* é um arquivo baseado em XML que tem uma extensão de nome de arquivo. rules. Um arquivo de regra permite definir regras de compilação personalizada e incorporá-los ao processo de compilação de um projeto do Visual C++. Uma regra de compilação personalizada, que pode ser associada uma ou mais extensões de nome de arquivo, permite que você passe os arquivos de entrada para uma ferramenta que cria um ou mais arquivos de saída.  
   
- Nesta versão, as regras personalizados de compilação são representadas por três tipos de arquivo, .xml, .props, e .targets, em vez de um arquivo de .rules.  Quando um arquivo de .rules que foi criada usando uma versão anterior do Visual C\+\+ for migrado para a versão atual, os arquivos de equivalente .xml, de .props, e o .targets são criados e armazenados em seu projeto com o arquivo original .rules.  
+ Nesta versão, as regras de compilação personalizadas são representadas por três tipos de arquivo. XML, .props e. targets, em vez de um arquivo. rules. Quando um arquivo. rules que foi criado usando uma versão anterior do Visual C++ é migrado para a versão atual, arquivos. targets,. XML e .props equivalentes são criados e armazenados em seu projeto junto com o arquivo. Rules original.  
   
 > [!IMPORTANT]
->  Na versão atual, [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] não oferece suporte à criação de novas regras.  Por esse motivo, a maneira mais fácil de usar um arquivo de regra de um projeto criado com uma versão anterior do Visual C\+\+ é migrar o projeto à versão atual.  
+>  Na versão atual, o [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] não oferece suporte à criação de novas regras. Por esse motivo, a maneira mais fácil de usar um arquivo de regra de um projeto que foi criado usando uma versão anterior do Visual C++ é migrar o projeto para a versão atual.  
   
-## Macros de herança  
- Em versões anteriores, a macro de **$\(Inherit\)** especifica a ordem em que herdou propriedades aparecem na linha de comando que é composto pelo sistema de criação do projeto.  A macro de **$\(NoInherit\)** faz com que todas as ocorrências de $ \(herde\) a serem ignorados e causas de quaisquer propriedades que são herdadas de outra forma, não ser herdado.  Por exemplo, por padrão os arquivos macro das causas de $ \(herde\) especificados usando a opção de compilador de [\/I \(Adicional inclua diretórios\)](../build/reference/i-additional-include-directories.md) ser anexado à linha de comando.  
+## <a name="inheritance-macros"></a>Macros de herança  
+ Em versões anteriores, o **Inherit** macro Especifica a ordem na qual as propriedades herdadas aparecem na linha de comando que é composta pelo sistema de compilação do projeto. O **noInherit** macro faz com que qualquer ocorrência de Inherit sejam ignorados e faz com que as propriedades que seriam contrário herdadas, não seja herdada. Por exemplo, por padrão a macro $ (Inherit) faz com que arquivos especificados usando o [/I (diretórios de inclusão adicionais)](../build/reference/i-additional-include-directories.md) opção de compilador a ser anexada à linha de comando.  
   
- Na versão atual, a herança é suportada especificando o valor de uma propriedade como concatenação de um ou mais valores literais e macros da propriedade.  Macros de **$\(Inherit\)** e de **$\(NoInherit\)** não têm suporte.  
+ Na versão atual, há suporte a herança, especificando o valor de uma propriedade como a concatenação de um ou mais valores literais e macros de propriedade. O **Inherit** e **noInherit** macros não têm suporte.  
   
- No exemplo a seguir, uma lista delimitada por ponto\-e\-vírgula é atribuída a uma propriedade em uma página de propriedades.  A lista consistir na concatenação de *\<value\>* literal e o valor da propriedade de `MyProperty` , que pode ser acessada usando a notação macro, **$\(***MyProperty***\)**.  
+ No exemplo a seguir, uma lista separada por ponto-e-vírgula é atribuída a uma propriedade em uma página de propriedades. A lista é composta de concatenação do  *\<valor >* literal e o valor da `MyProperty` propriedade, o que pode é acessada usando a notação de macro, **$(**  *MyProperty***)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## arquivos de .vcxproj.user  
- Um arquivo de usuário \(\) .vcxproj.user armazena propriedades específicas do usuário, por exemplo, depurar e configurações de implantação.  O arquivo de vcxproj.user se aplica a todos os projetos para um usuário específico.  
+## <a name="vcxprojuser-files"></a>. vcxproj.user arquivos  
+ Um arquivo de usuário (. vcxproj.user) armazena as propriedades específicas do usuário, as configurações de exemplo, depuração e implantação. O arquivo vcxproj.user se aplica a todos os projetos para um usuário específico.  
   
-## .vcxproj.filters Arquivo  
- Quando **Gerenciador de Soluções** é usado para adicionar um arquivo a um projeto, o arquivo de filtros \(.vcxproj.filters\) define onde na exibição de árvore de **Gerenciador de Soluções** o arquivo é adicionado, com base na sua extensão de nome de arquivo.  
+## <a name="vcxprojfilters-file"></a>. vcxproj.filters arquivo  
+ Quando **Solution Explorer** é usado para adicionar um arquivo a um projeto, o arquivo de filtros (. vcxproj.filters) define onde no **Solution Explorer** com base em sua extensão de nome de arquivo for adicionado, exibição de árvore.  
   
-## Configurações de diretórios de VC\+\+  
- As configurações de diretórios do Visual C\+\+ são especificadas em [Página de propriedade dos diretórios do VC\+\+](../ide/vcpp-directories-property-page.md).  Em versões anteriores do Visual Studio, as configurações de diretórios aplicam pelo usuário e a lista de diretórios excluídos é especificada no arquivo de sysincl.dat.  
+## <a name="vc-directories-settings"></a>Configurações de diretórios do VC + +  
+ Configurações de diretórios do Visual C++ são especificadas no [página de propriedade de diretórios VC + +](../ide/vcpp-directories-property-page.md). Em versões anteriores do Visual Studio, as configurações de diretórios se aplicam a cada usuário e a lista de pastas excluídas é especificada no arquivo sysincl.dat.  
   
- Você não pode alterar as configurações de diretórios de VC\+\+ se você executar [devenv \/resetsettings](../Topic/-ResetSettings%20\(devenv.exe\).md) na linha de comando.  Você também não pode alterar as configurações se você abre o menu de **Ferramentas** , clique em **Importar e exportar configurações**, e selecione a opção de **Redefinir todas as configurações** .  
+ Você não pode alterar as configurações de diretórios VC + + se você executar [/resetsettings devenv](/visualstudio/ide/reference/resetsettings-devenv-exe) na linha de comando. Você também não pode alterar as configurações se você abrir o **ferramentas** menu, clique em **importar e exportar configurações**e, em seguida, selecione o **redefinir todas as configurações** opção.  
   
- Migrar configurações de diretórios de VC\+\+ de um arquivo de .vssettings criado por uma versão anterior do Visual C\+\+.  Abrir o menu de **Ferramentas** , clique **Importar e exportar configurações**, **Importar configurações de ambiente selecionadas**selecione, e siga as instruções no assistente.  Ou quando você iniciar o Visual Studio pela primeira vez, na caixa de diálogo de **Escolher Configurações de Ambiente Padrão** , **Migrar minhas configurações qualificadas de uma versão anterior e aplicá\-las em acréscimo às configurações padrão selecionadas abaixo**selecione.  
+ Migre as configurações de diretórios VC + + de um arquivo vssettings criado por uma versão anterior do Visual C++. Abra o **ferramentas** menu, clique em **importar e exportar configurações**, selecione **configurações de ambiente selecionadas de importação**e, em seguida, siga as instruções no assistente. Ou quando você inicia o Visual Studio pela primeira vez, no **escolher configurações de ambiente padrão** caixa de diálogo, selecione **migrar minhas configurações qualificadas de uma versão anterior e aplicá-las além das configurações padrão selecionado abaixo**.  
   
-## Consulte também  
- [MSBuild \(Visual C\+\+\)](../Topic/MSBuild%20\(Visual%20C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

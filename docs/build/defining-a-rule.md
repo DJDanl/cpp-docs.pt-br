@@ -1,41 +1,41 @@
 ---
-title: "Definindo uma regra | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "definindo regras de inferência"
-  - "programa NMAKE, regras de inferência"
+title: Definindo uma regra | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, inference rules
+- defining inference rules
 ms.assetid: 071cd092-3f2e-4065-b0fb-36a9d393cfa8
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c0d6ca616e3685db36d6d24b339a860eab4c6150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Definindo uma regra
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*O fromext* representa a extensão de um arquivo dependente, e *o toext* representa a extensão do arquivo de destino.  
+# <a name="defining-a-rule"></a>Definindo uma regra
+O *fromext* representa a extensão de um arquivo dependente, e *toext* representa a extensão de um arquivo de destino.  
   
 ```  
 .fromext.toext:  
    commands  
 ```  
   
-## Comentários  
- As extensões não diferenciam maiúsculas de minúsculas.  Macros podem ser chamadas para representar *o fromext* e *o toext*; macros são expandidos durante pré\-processamento.  *O fromext* acima do ponto \(.\) deve aparecer no início da linha.  Os dois\-pontos \(:\) é precedido por zero ou mais espaços ou guias.  Pode ser seguido somente por espaços ou guias, um ponto\-e\-vírgula \(;\) para especificar um comando, um sinal de número \(\#\) especifique um comentário, ou um caractere de nova linha.  Nenhum outro espaço é permitido.  Os comandos são especificados como em blocos de descrição.  
+## <a name="remarks"></a>Comentários  
+ Extensões não diferenciam maiusculas de minúsculas. Macros podem ser chamadas para representar *fromext* e *toext*; as macros são expandidas durante o pré-processamento. O ponto (.) anterior *fromext* devem aparecer no início da linha. Os dois-pontos (:) é precedido por zero ou mais espaços ou guias. Ele pode ser seguido apenas por espaços ou guias, um ponto e vírgula (;) para especificar um comando, um sinal numérico (#) para especificar um comentário ou um caractere de nova linha. Não há outros espaços são permitidos. Comandos são especificados como blocos de descrição.  
   
-## Que você deseja saber mais?  
- [Caminhos de pesquisa nas regras](../build/search-paths-in-rules.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
+ [Caminhos de pesquisa em regras](../build/search-paths-in-rules.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Regras de inferência](../build/inference-rules.md)

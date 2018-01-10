@@ -4,47 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::AtlGetDacl
+- atlsecurity/ATL::AtlSetDacl
+- atlsecurity/ATL::AtlGetGroupSid
+- atlsecurity/ATL::AtlSetGroupSid
+- atlsecurity/ATL::AtlGetOwnerSid
+- atlsecurity/ATL::AtlSetOwnerSid
+- atlsecurity/ATL::AtlGetSacl
+- atlsecurity/ATL::AtlSetSacl
+- atlsecurity/ATL::AtlGetSecurityDescriptor
+dev_langs: C++
 helpviewer_keywords:
 - SIDs [C++], modifying SID objects
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-global-functions"></a>Funções de segurança Global
 Essas funções fornecem suporte para modificar objetos ACL e SID.  
   
 > [!IMPORTANT]
->  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados o tempo de execução do Windows.  
   
 |||  
 |-|-|  
@@ -65,7 +59,7 @@ Essas funções fornecem suporte para modificar objetos ACL e SID.
  Chame essa função para recuperar as informações da DACL (lista de controle de acesso discricionário) de um objeto especificado.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlGetDacl(
@@ -94,7 +88,7 @@ inline bool AtlGetDacl(
  Chame essa função para definir as informações da DACL (lista de controle de acesso discricionário) de um objeto especificado.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlSetDacl(
@@ -129,7 +123,7 @@ inline bool AtlSetDacl(
  Chame essa função para recuperar o SID (identificador de segurança) do grupo de um objeto.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlGetGroupSid(
@@ -158,7 +152,7 @@ inline bool AtlGetGroupSid(
  Chame essa função para definir o SID (identificador de segurança) do grupo de um objeto.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlSetGroupSid(
@@ -187,7 +181,7 @@ inline bool AtlSetGroupSid(
  Chame essa função para recuperar o SID (identificador de segurança) do proprietário de um objeto.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlGetOwnerSid(
@@ -216,7 +210,7 @@ inline bool AtlGetOwnerSid(
  Chame essa função para definir o SID (identificador de segurança) do proprietário de um objeto.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlSetOwnerSid(
@@ -245,7 +239,7 @@ inline bool AtlSetOwnerSid(
  Chame essa função para recuperar as informações da SACL (lista de controle de acesso do sistema) de um objeto especificado.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlGetSacl(
@@ -281,7 +275,7 @@ inline bool AtlGetSacl(
  Chame essa função para definir as informações da SACL (lista de controle de acesso do sistema) de um objeto especificado.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlSetSacl(
@@ -323,7 +317,7 @@ inline bool AtlSetSacl(
  Chame essa função para recuperar o descritor de segurança de determinado objeto.  
   
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa função não pode ser usada em aplicativos que são executados o tempo de execução do Windows.  
   
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -363,4 +357,3 @@ inline bool AtlGetSecurityDescriptor(
    
 ## <a name="see-also"></a>Consulte também  
  [Funções](../../atl/reference/atl-functions.md)
-

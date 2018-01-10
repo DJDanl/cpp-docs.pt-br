@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d40f0044795c6fd7c5df3850261ceb4314f50dbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6c43ffd60d837bdd8f061057cf1c36340b6e6af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="current-time-general-purpose-classes"></a>Hora atual: Classes de finalidade geral
 O procedimento a seguir mostra como criar um `CTime` de objeto e inicializá-lo com a hora atual.  

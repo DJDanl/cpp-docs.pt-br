@@ -1,40 +1,40 @@
 ---
-title: "Usando CStringT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CStringT, Usando"
+title: Usando CStringT | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: CStringT class, using
 ms.assetid: 3a9fffb1-6f90-482a-ab69-4003e6084cb5
-caps.latest.revision: 7
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 48f5ca02ef578d4dc01ce701b239d1aa279d05fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Usando CStringT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os tópicos em esta seção descrevem programar usando a classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md)do modelo.  
+# <a name="using-cstringt"></a>Usando CStringT
+Os tópicos nesta seção descrevem usando a classe de modelo de programação [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Gerenciamento de memória com CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
  Discute o gerenciamento de memória com `CStringT`, uma classe de modelo usada para manipular cadeias de caracteres de comprimento variável.  
   
  [Exportando classes de cadeia de caracteres usando CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
- Explica como exportar sua própria classe de cadeia de caracteres de uma DLL usando a classe de modelo de cstringt\<\>.  
+ Explica como exportar sua própria classe de cadeia de caracteres de uma DLL usando a classe de modelo de <> CStringT.  
   
-## Referência  
- [Classe de CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
- Fornece informações de referência sobre a classe compartilhada de `CStringT` .  
+## <a name="reference"></a>Referência  
+ [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
+ Fornece informações de referência sobre compartilhado `CStringT` classe.  
   
-## Consulte também  
- [Cadeias de caracteres](../atl-mfc-shared/strings-atl-mfc.md)
+## <a name="see-also"></a>Consulte também  
+ [Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+

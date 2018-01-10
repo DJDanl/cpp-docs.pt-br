@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecfb3df6f503e91dbf96a6da4bd1dd79b4f9ee3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9796a7e6d2e91abd1fd064fb54079ea0364a828
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-output-files"></a>Arquivos de saída LIB
 Os arquivos de saída produzidos por LIB dependem do modo no qual ele está sendo usado, conforme mostrado na tabela a seguir.  

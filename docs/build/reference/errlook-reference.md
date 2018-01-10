@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05d80bca74117ca23f8e839dda6ef23d9e08e3d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b35e0fa4c11c0cf2b42990f8265281acaa70ed18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errlook-reference"></a>Referência de ERRLOOK
 O utilitário ERRLOOK, que está disponível no menu Ferramentas, como **pesquisa de erro**, recupera uma mensagem de erro do sistema ou mensagem de erro do módulo com base no valor inserido. ERRLOOK recupera o texto da mensagem de erro automaticamente se você arrasta e solta um valor hexadecimal ou decimal do depurador do Visual Studio para o **valor** controle de edição. Você também pode inserir um valor digitando-na **valor** controle de edição ou colando-os da área de transferência e clicando em **consultar**.  

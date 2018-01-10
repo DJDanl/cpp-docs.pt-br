@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a69d78f0abf67ad01ea7108bb4f104e93f41332
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ac9b52d45ab857b20ead047eb598542070b1bf5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tbyte"></a>TBYTE
 Aloca e, opcionalmente, inicializa 10 bytes de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar, um tipo é legal.  

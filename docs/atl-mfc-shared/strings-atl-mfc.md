@@ -1,60 +1,61 @@
 ---
-title: "Cadeias de caracteres (ATL/MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, classe de manipulação de cadeia de caracteres"
-  - "ponteiros char"
-  - "ponteiros char const"
-  - "copiando objetos de cadeia de caracteres"
-  - "Cadeias de caracteres ctype de estilo"
-  - "portabilidade de linguagem [C++]"
-  - "cadeias de caracteres literais [C++], classe CString"
-  - "cadeias de caracteres literais [C++], classe CStringT"
-  - "MBCS [C++], Suporte de CString"
-  - "MFC [C++], classe de manipulação de cadeia de caracteres"
-  - "portabilidade [C++], Unicode e objetos de cadeia de caracteres ANSI"
-  - "contagem de referência [C++]"
-  - "cadeias de caracteres [C++]"
-  - "cadeias de caracteres [C++], classe CString"
-  - "cadeias de caracteres [C++], classe CStringT"
-  - "cadeias de caracteres [C++], em ATL"
-  - "cadeias de caracteres [C++], no MFC"
-  - "cadeias de caracteres [C++], operações de cadeias de caracteres"
+title: Cadeias de caracteres (MFC ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- const char pointers
+- strings [C++], in ATL
+- MFC [C++], string handling class
+- MBCS [C++], CString support
+- strings [C++], class CStringT
+- char pointers
+- reference counting [C++]
+- strings [C++], string operations
+- portability [C++], Unicode and ANSI string objects
+- literal strings [C++], class CString
+- copying string objects
+- ATL, string handling class
+- strings [C++], in MFC
+- strings [C++]
+- C-style strings
+- language portability [C++]
+- strings [C++], class CString
+- literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6a82f0d02cc8dc9b7c487c8cd9506a4c7d0360fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Cadeias de caracteres (ATL/MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quase todos os programas trabalham com dados de cadeia de caracteres.  Visual C\+\+ fornece várias maneiras para gerenciar esses dados de cadeia de caracteres.  
+# <a name="strings-atlmfc"></a>Cadeias de caracteres (ATL/MFC)
+Quase todos os programas trabalham com dados de cadeia de caracteres. Visual C++ fornece várias maneiras de gerenciar esses dados de cadeia de caracteres.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Usando CStringT](../atl-mfc-shared/using-cstringt.md)  
- Descreve programar usando a classe CStringT do modelo.  
+ Descreve a programação usando a classe de modelo CStringT.  
   
  [Usando CString](../atl-mfc-shared/using-cstring.md)  
- Descreve programar usando CString, a implementação padrão de CStringT.  
+ Descreve a programação usando CString, a implementação padrão de CStringT.  
   
-## Seções relacionadas  
- [visão geral de CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
- Fornece informações de referência sobre a classe compartilhada de `CStringT` .  
+## <a name="related-sections"></a>Seções relacionadas  
+ [Visão geral de CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+ Fornece informações de referência sobre compartilhado `CStringT` classe.  
   
- [Conceitos MFC](../mfc/mfc-concepts.md)  
- Fornece tópicos conceituais e chave com base para ajudá\-lo a programar usando a biblioteca MFC.  
+ [Conceitos do MFC](../mfc/mfc-concepts.md)  
+ Fornece tópicos conceituais e baseados em tarefas para ajudá-lo a programar usando a biblioteca do MFC.  
   
-## Consulte também  
- [ATL\/MFC compartilhasse classes](../atl-mfc-shared/atl-mfc-shared-classes.md)
+## <a name="see-also"></a>Consulte também  
+ [Classes compartilhadas do ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
+

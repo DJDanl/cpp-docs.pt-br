@@ -1,11 +1,10 @@
 ---
-title: Classe CComEnumImpl | Documentos do Microsoft
+title: Classe CComEnumImpl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -22,38 +21,22 @@ f1_keywords:
 - ATLCOM/ATL::CComEnumImpl::m_end
 - ATLCOM/ATL::CComEnumImpl::m_iter
 - ATLCOM/ATL::CComEnumImpl::m_spUnk
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComEnumImpl class
+dev_langs: C++
+helpviewer_keywords: CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6dc6a8ed6a318642efe58dfb94835d45b2163b54
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenumimpl-class"></a>Classe CComEnumImpl
-Essa classe fornece a implementação de uma interface de enumerador COM onde os itens que está sendo enumerados são armazenados em uma matriz.  
+Essa classe fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em uma matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +61,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -100,20 +83,20 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComEnumImpl::m_begin](#m_begin)|Um ponteiro para o primeiro item na matriz.|  
-|[CComEnumImpl::m_dwFlags](#m_dwflags)|Copie os sinalizadores passados por meio de `Init`.|  
+|[CComEnumImpl::m_dwFlags](#m_dwflags)|Copiar sinalizadores passados por meio de `Init`.|  
 |[CComEnumImpl::m_end](#m_end)|Um ponteiro para o local logo após o último item na matriz.|  
 |[CComEnumImpl::m_iter](#m_iter)|Um ponteiro para o item atual na matriz.|  
-|[CComEnumImpl::m_spUnk](#m_spunk)|O **IUnknown** ponteiro do objeto fornecendo a coleção que está sendo enumerada.|  
+|[CComEnumImpl::m_spUnk](#m_spunk)|O **IUnknown** ponteiro do objeto fornecendo a coleção que estão sendo enumerada.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComEnumImpl`fornece a implementação de uma interface de enumerador COM onde os itens que está sendo enumerados são armazenados em uma matriz. Essa classe é semelhante a de `IEnumOnSTLImpl` classe, que fornece uma implementação de uma interface de enumerador com base em um contêiner de biblioteca padrão C++.  
+ `CComEnumImpl`fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em uma matriz. Essa classe é semelhante a de `IEnumOnSTLImpl` classe, que fornece uma implementação de uma interface de enumerador com base em um contêiner de biblioteca padrão C++.  
   
 > [!NOTE]
->  Para obter detalhes sobre ainda mais diferenças entre `CComEnumImpl` e `IEnumOnSTLImpl`, consulte [CComEnumImpl::Init](#init).  
+>  Para obter detalhes sobre ainda mais as diferenças entre `CComEnumImpl` e `IEnumOnSTLImpl`, consulte [CComEnumImpl::Init](#init).  
   
- Normalmente, você irá *não* precisa criar sua própria classe de enumerador derivando essa implementação de interface. Se você quiser usar um enumerador fornecido pelo ATL com base em uma matriz, é mais comum para criar uma instância de [CComEnum](../../atl/reference/ccomenum-class.md).  
+ Normalmente, você irá *não* necessário criar sua própria classe de enumerador por esta implementação de interface. Se você quiser usar um enumerador fornecido ATL com base em uma matriz, é mais comum para criar uma instância de [CComEnum](../../atl/reference/ccomenum-class.md).  
   
- No entanto, se você precisa fornecer um enumerador personalizado (por exemplo, um que expõe interfaces além da interface de enumerador), você pode derivar dessa classe. Nessa situação, é provável que você precisará substituir o [CComEnumImpl::Clone](#clone) método para fornecer sua própria implementação.  
+ No entanto, se você precisar fornecer um enumerador personalizado (por exemplo, um que expõe interfaces além da interface de enumerador), você pode derivar dessa classe. Nessa situação, é provável que você precisará substituir o [CComEnumImpl::Clone](#clone) método para fornecer sua própria implementação.  
   
  Para obter mais informações, consulte [ATL coleções e enumeradores](../../atl/atl-collections-and-enumerators.md).  
   
@@ -140,7 +123,7 @@ CComEnumImpl();
 ```  
   
 ##  <a name="init"></a>CComEnumImpl::Init  
- Você deve chamar esse método antes de passar um ponteiro para a interface de enumerador em todos os clientes.  
+ Você deve chamar esse método antes de passar um ponteiro para a interface de enumerador para todos os clientes.  
   
 ```
 HRESULT Init(
@@ -158,7 +141,7 @@ HRESULT Init(
  Um ponteiro para o local logo após o último elemento da matriz que contém os itens a serem enumerados.  
   
  *pUnk*  
- [in] O **IUnknown** ponteiro de um objeto que deve ser mantido durante a vida útil do enumerador. Passar **nulo** se esse objeto não existe.  
+ [in] O **IUnknown** ponteiro de um objeto que deve ser mantido ativo durante o tempo de vida do enumerador. Passar **nulo** se esse objeto não existe.  
   
  `flags`  
  Sinalizadores que especificam se o enumerador deve assumir a propriedade da matriz ou faça uma cópia dele. Os valores possíveis são descritos abaixo.  
@@ -167,9 +150,9 @@ HRESULT Init(
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar esse método apenas uma vez — inicializar o enumerador, usá-lo e eliminá-lo.  
+ Chamar esse método uma vez — inicializar o enumerador, usá-lo e, em seguida, eliminá-lo.  
   
- Se você passar ponteiros para itens em uma matriz mantidas em outro objeto (e não pergunte o enumerador para copiar os dados), você pode usar o *pUnk* parâmetro para garantir que o objeto e a matriz mantém estão disponíveis para desde que o enumerador precisa deles. O enumerador simplesmente contém uma referência COM no objeto para mantê-lo ativo. A referência COM é liberada automaticamente quando o enumerador é destruído.  
+ Se você passar ponteiros para itens em uma matriz mantido em outro objeto (e não perguntar o enumerador para copiar os dados), você pode usar o *pUnk* parâmetro para garantir que o objeto e a matriz que ele contém estão disponíveis para desde que o enumerador precisa deles. O enumerador simplesmente contém uma referência de COM no objeto mantê-lo em funcionamento. A referência COM é liberada automaticamente quando o enumerador é destruído.  
   
  O `flags` parâmetro permite que você especifique como o enumerador deve tratar os elementos da matriz passados para ele. `flags`pode ter um dos valores a partir de **CComEnumFlags** enumeração mostrada abaixo:  
   
@@ -182,17 +165,17 @@ enum CComEnumFlags
    };  
 ```  
   
- **AtlFlagNoCopy** significa que o tempo de vida da matriz não é controlado pelo enumerador. Nesse caso, a matriz será estático ou o objeto identificado por *pUnk* será responsável por liberar a matriz quando ele não for mais necessário.  
+ **AtlFlagNoCopy** significa que o tempo de vida da matriz não é controlado pelo enumerador. Nesse caso, a matriz será estático ou o objeto identificado por *pUnk* será responsável pela liberação da matriz quando ele não for mais necessário.  
   
- **AtlFlagTakeOwnership** significa que a destruição da matriz é controlado pelo enumerador. Nesse caso, a matriz deve ter sido dinamicamente alocada usando **novo**. O enumerador excluirá a matriz em seu destruidor. Normalmente, você passaria **nulo** para *pUnk*, embora você ainda pode passar um ponteiro válido se você precisar ser notificado sobre a destruição do enumerador por algum motivo.  
+ **AtlFlagTakeOwnership** significa que a destruição da matriz é controlado pelo enumerador. Nesse caso, a matriz deve ter sido dinamicamente alocada usando **novo**. O enumerador excluirá a matriz em seu destruidor. Normalmente, você passaria **nulo** para *pUnk*, embora você ainda pode passar um ponteiro válido, se você precisar ser notificado sobre a destruição do enumerador por alguma razão.  
   
- **AtlFlagCopy** significa que uma nova matriz deve ser criado, copiando a matriz passada para `Init`. Tempo de vida da nova matriz é controlado pelo enumerador. O enumerador excluirá a matriz em seu destruidor. Normalmente, você passaria **nulo** para *pUnk*, embora você ainda pode passar um ponteiro válido se você precisar ser notificado sobre a destruição do enumerador por algum motivo.  
+ **AtlFlagCopy** significa que uma nova matriz deve ser criado, copiando a matriz passada para `Init`. Tempo de vida da nova matriz é controlado pelo enumerador. O enumerador excluirá a matriz em seu destruidor. Normalmente, você passaria **nulo** para *pUnk*, embora você ainda pode passar um ponteiro válido, se você precisar ser notificado sobre a destruição do enumerador por alguma razão.  
   
 > [!NOTE]
->  O protótipo do método Especifica os elementos da matriz como sendo do tipo **T**, onde **T** foi definido como um parâmetro de modelo para a classe. Esse é o mesmo tipo que é exposto por meio do método de interface COM [CComEnumImpl::Next](#next). A implicação disso é que, ao contrário de [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), essa classe não dá suporte a diferentes de armazenamento e expostos a tipos de dados. O tipo de dados dos elementos na matriz deve ser o mesmo que o tipo de dados exposto por meio da interface COM.  
+>  O protótipo desse método Especifica os elementos da matriz como sendo do tipo **T**, onde **T** foi definido como um parâmetro de modelo para a classe. Esse é o mesmo tipo que é exposto por meio do método de interface COM [CComEnumImpl::Next](#next). A implicação é que, ao contrário de [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), essa classe não oferece suporte a armazenamento diferentes e expostos a tipos de dados. O tipo de dados dos elementos na matriz deve ser o mesmo que o tipo de dados exposto por meio de interface COM.  
   
 ##  <a name="clone"></a>CComEnumImpl::Clone  
- Este método fornece a implementação do [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) método criando um objeto do tipo `CComEnum`, inicializá-la com a mesma matriz e iterador usado pelo objeto atual e retornar a interface no objeto recém-criado.  
+ Esse método fornece a implementação do [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) método criando um objeto do tipo `CComEnum`, inicializá-la com a mesma matriz e iterador usado pelo objeto atual e retornar a interface a objeto criado recentemente.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -200,16 +183,16 @@ STDMETHOD(Clone)(Base** ppEnum);
   
 ### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] A interface de enumerador em um objeto recém-criado clonado do enumerador atual.  
+ [out] A interface de enumerador em um objeto recém-criado é clonado do enumerador atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Observe que os enumeradores clonados nunca fazer suas próprias cópias (ou apropriar-se) dos dados usados pelo enumerador original. Se necessário, enumeradores clonados manterá o enumerador original ativa (usando uma referência COM) para garantir que os dados estejam disponíveis para desde que eles precisam.  
+ Observe que os enumeradores clonados nunca fazem seus próprios cópia (ou apropriar-se) dos dados usados pelo enumerador original. Se necessário, enumeradores clonados manterá o enumerador original ativo (usando uma referência COM) para garantir que os dados estão disponíveis para desde que eles precisam.  
   
 ##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
- Ponteiro inteligente mantém uma referência no objeto passado para [CComEnumImpl::Init](#init), garantindo que ele permaneça ativo durante o tempo de vida do enumerador.  
+ Esse ponteiro inteligente mantém uma referência no objeto passado para [CComEnumImpl::Init](#init), garantindo que ele permaneça ativo durante o tempo de vida do enumerador.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
@@ -244,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>CComEnumImpl::Next  
- Este método fornece a implementação de [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) método.  
+ Esse método fornece a implementação do [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) método.  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -255,16 +238,16 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  [in] O número de elementos solicitado.  
   
  `rgelt`  
- [out] A matriz a ser preenchido com os elementos.  
+ [out] A matriz a ser preenchida com os elementos.  
   
  `pceltFetched`  
- [out] O número de elementos realmente retornados em `rgelt`. Isso pode ser menor que `celt` se menos de `celt` elementos permanecem na lista.  
+ [out] O número de elementos realmente retornados em `rgelt`. Isso pode ser menor que `celt` se menos de `celt` elementos permaneceram na lista.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ##  <a name="reset"></a>CComEnumImpl::Reset  
- Este método fornece a implementação de [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) método.  
+ Esse método fornece a implementação do [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) método.  
   
 ```
 STDMETHOD(Reset)(void);
@@ -274,7 +257,7 @@ STDMETHOD(Reset)(void);
  Um padrão `HRESULT` valor.  
   
 ##  <a name="skip"></a>CComEnumImpl::Skip  
- Este método fornece a implementação de [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) método.  
+ Esse método fornece a implementação do [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) método.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -288,10 +271,9 @@ STDMETHOD(Skip)(ULONG celt);
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Retornará E_INVALIDARG se `celt` é zero, retorna S_FALSE se for menor que `celt` elementos são retornados, caso contrário, retornará S_OK.  
+ Retornará E_INVALIDARG se `celt` for zero, retornará S_FALSE se for menor que `celt` elementos são retornados, caso contrário, retornará S_OK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
  [Classe CComEnum](../../atl/reference/ccomenum-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-
