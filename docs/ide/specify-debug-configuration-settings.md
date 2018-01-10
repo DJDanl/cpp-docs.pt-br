@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1781d5c5bba0d818111673594a5526354a490bd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Especificar definições de configuração da depuração, Assistente para Criar Novo Projeto de Arquivos de Código Existentes
 Use esta página do Assistente para criar novo projeto de arquivos de código existentes para especificar as configurações de projeto de depuração.  

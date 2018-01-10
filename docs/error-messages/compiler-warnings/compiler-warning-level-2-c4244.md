@@ -1,53 +1,35 @@
 ---
-title: "Compilador aviso (nível 2) C4244 | Documentos do Microsoft"
+title: "Compilador (nível 2) do aviso C4244 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4244
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4244
+f1_keywords: C4244
+dev_langs: C++
+helpviewer_keywords: C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4f77df52e0b3fd4fd96fb94bc982e08904abb06e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6d1920fbc2ed78cf498df61c7177796645730cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4244"></a>Compilador C4244 de aviso (nível 2)
 'argumento de ': conversão de 'type1' em 'type2', possível perda de dados  
   
- Um tipo de ponto flutuante foi convertido para um tipo inteiro.  Uma possível perda de dados pode ter ocorrido.  
+ Um tipo de ponto de flutuante foi convertido em um tipo inteiro.  Uma possível perda de dados pode ter ocorrido.  
   
- Se você receber C4244, você deve alterar seu programa usar tipos compatíveis ou adicionar alguma lógica em seu código, para garantir que o intervalo de valores possíveis sempre será compatível com os tipos que você está usando.  
+ Se você obtiver C4244, você deve alterar seu programa para usar tipos compatíveis ou adicionar alguma lógica em seu código, para garantir que o intervalo de valores possíveis sempre será compatível com os tipos que você está usando.  
   
- C4244 também pode ser acionado no nível 3 e 4; consulte [C4244 de aviso do compilador (níveis 3 e 4)](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) para obter mais informações.  
+ C4244 também podem disparar no nível 3 e 4; consulte [C4244 de aviso do compilador (níveis 3 e 4)](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4244:  

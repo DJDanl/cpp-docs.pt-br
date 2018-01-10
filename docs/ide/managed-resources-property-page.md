@@ -1,48 +1,47 @@
 ---
-title: "P&#225;gina de propriedades Recursos Gerenciados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManagedResourceCompilerTool.ResourceFileName"
-  - "VC.Project.VCManagedResourceCompilerTool.OutputFileName"
-  - "VC.Project.VCManagedResourceCompilerTool.DefaultLocalizedResources"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Página de propriedades Recursos Gerenciados"
+title: "Gerenciado a página de propriedades recursos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManagedResourceCompilerTool.ResourceFileName
+- VC.Project.VCManagedResourceCompilerTool.OutputFileName
+- VC.Project.VCManagedResourceCompilerTool.DefaultLocalizedResources
+dev_langs: C++
+helpviewer_keywords: Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b8683c9212a25a5b278405c2d2c31d7fc607d0f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# P&#225;gina de propriedades Recursos Gerenciados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Permite configurações para o compilador de recurso.  
+# <a name="managed-resources-property-page"></a>Página de propriedades Recursos Gerenciados
+Permite que as configurações para o compilador de recurso.  
   
- A página de propriedades de **Recursos Gerenciados** contém as seguintes propriedades:  
+ O **recursos gerenciados** página de propriedades contém as seguintes propriedades:  
   
- **Nome do recurso lógico**  
- Especifica *o nome do* arquivo intermediário gerado de recurso.  O nome lógica é o nome usado para carregar o recurso.  Se nenhum nome lógica é especificado, o nome de arquivo de recurso \(.resx\) é usado como o nome de lógica.  
+ **Nome lógico de recursos**  
+ Especifica o *nome lógico* do arquivo Resources intermediário gerado. O nome lógico é o nome usado para carregar o recurso. Se nenhum nome lógico for especificado, o nome do arquivo de recurso (. resx) é usado como o nome lógico.  
   
- **Nome de arquivo de saída**  
- Especifica o nome do arquivo de saída final para que o arquivo de recurso \(.resx\) contribui.  
+ **Nome do arquivo de saída**  
+ Especifica o nome do arquivo de saída final que o arquivo de recurso (. resx) contribui para.  
   
- **Recursos localizados opção**  
- Especifica se o arquivo .resx determinado contribui para recursos padrão ou um satellite .dll.  
+ **Recursos localizados do padrão**  
+ Especifica se o arquivo. resx determinado contribui para os recursos padrão ou para uma DLL satélite.  
   
- Para obter informações sobre como acessar a página de propriedades de **Recursos Gerenciados** , consulte [Como especificar propriedades do projeto com páginas de propriedades](../Topic/How%20to:%20Specify%20Project%20Properties%20with%20Property%20Pages.md).  
+ Para obter informações sobre como acessar o **recursos gerenciados** página de propriedades, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
   
-## Consulte também  
- [Using RC \(The RC Command Line\)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+## <a name="see-also"></a>Consulte também  
+ [Usando RC (a linha de comando RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [Páginas de propriedade](../ide/property-pages-visual-cpp.md)   
- [\/ASSEMBLYRESOURCE \(inserir um recurso gerenciado\)](../build/reference/assemblyresource-embed-a-managed-resource.md)
+ [/ASSEMBLYRESOURCE (inserir um recurso gerenciado)](../build/reference/assemblyresource-embed-a-managed-resource.md)

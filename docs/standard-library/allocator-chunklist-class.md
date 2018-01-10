@@ -4,44 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::allocators::allocator_chunklist
-- allocators::allocator_chunklist
 - allocators/stdext::allocator_chunklist
 - allocators/stdext::allocators::allocator_chunklist
-- allocator_chunklist
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- allocator_chunklist class
+- stdext::allocator_chunklist
+- stdext::allocators [C++], allocator_chunklist
 ms.assetid: ea72ed0a-dfdb-4c8b-8096-e4baf567b80f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a284a80893c9d2665645f814563c196319bf3243
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 70d882c98b3cfc14a536721d92a748487eabbeb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorchunklist-class"></a>Classe allocator_chunklist
 Descreve um objeto que gerencia a alocação de armazenamento e a liberação de objetos usando um cache do tipo [cache_chunklist](../standard-library/cache-chunklist-class.md).  
@@ -60,7 +43,7 @@ class allocator_chunklist;
 |`Type`|O tipo dos elementos alocados pelo alocador.|  
   
 ## <a name="remarks"></a>Comentários  
- A macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) passa essa classe como o parâmetro `name` na instrução a seguir: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist``);`  
+ A macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) passa essa classe como o parâmetro `name` na instrução a seguir: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
@@ -69,7 +52,6 @@ class allocator_chunklist;
   
 ## <a name="see-also"></a>Consulte também  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

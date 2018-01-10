@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dc17ee63caf62ddeea4a134d61f8fbd47e0061c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b765be1043ac69ed735eb91deaf9419bce7f017
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 O `concurrent_vector` classe é uma classe de contêiner de sequência que permite acesso aleatório para qualquer elemento. Habilita a simultaneidade-safe acrescentar, acesso de elemento, acesso de iterador e operações de passagem do iterador.  
@@ -644,7 +645,7 @@ void swap(concurrent_vector& _Vector);
   
 ### <a name="parameters"></a>Parâmetros  
  `_Vector`  
- O `concurrent_vector` objeto para trocar conteúdo com.  
+ O objeto `concurrent_vector` com o qual trocar conteúdo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

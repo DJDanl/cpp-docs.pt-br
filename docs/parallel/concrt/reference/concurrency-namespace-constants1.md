@@ -1,5 +1,5 @@
 ---
-title: constantes de namespace de simultaneidade | Documentos do Microsoft
+title: constantes de namespace de simultaneidade | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,18 +19,18 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae7ceb640e7b92829e4134350a6e6c97747bfd77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-constants"></a>constantes de namespace de simultaneidade
 ||||  
@@ -43,14 +43,14 @@ ms.lasthandoff: 03/17/2017
 |[ScheduleGroupEventGuid](#schedulegroupeventguid)|[SchedulerEventGuid](#schedulereventguid)|[VirtualProcessorEventGuid](#virtualprocessoreventguid)|  
   
 ##  <a name="agenteventguid"></a>AgentEventGuid  
- Uma categoria de GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07}) que descreve eventos ETW acionados pela biblioteca de agentes no tempo de execução de simultaneidade.  
+ Uma categoria de GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07}) que descreve eventos ETW disparados pela biblioteca de agentes no tempo de execução de simultaneidade.  
   
 ```
 const __declspec(selectany) GUID AgentEventGuid = {0xb9b5b78c, 0x713, 0x4898, { 0xa2, 0x1a, 0xc6, 0x79, 0x49, 0xdc, 0xed, 0x7 } };
 ```  
   
 ##  <a name="choreeventguid"></a>ChoreEventGuid  
- Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados a tarefas ou tarefas.  
+ Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionadas a tarefas ou tarefas.  
   
 ```
 const __declspec(selectany) GUID ChoreEventGuid = 
@@ -61,7 +61,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
  Esta categoria de eventos não é acionada no momento pelo tempo de execução de simultaneidade.  
   
 ##  <a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
- O GUID para o tempo de execução de simultaneidade do provedor ETW.  
+ O provedor de ETW GUID para o tempo de execução de simultaneidade.  
   
 ```
 const __declspec(selectany) GUID ConcRT_ProviderGuid = 
@@ -69,7 +69,7 @@ const __declspec(selectany) GUID ConcRT_ProviderGuid =
 ```  
   
 ##  <a name="concrt_rm_version_1"></a>CONCRT_RM_VERSION_1  
- Indica suporte da interface do Gerenciador de recursos definido no Visual Studio 2010.  
+ Indica o suporte da interface do Gerenciador de recursos definido no Visual Studio 2010.  
   
 ```
 const unsigned int CONCRT_RM_VERSION_1 = 0x00010000;
@@ -94,14 +94,14 @@ const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```  
   
 ##  <a name="cooperative_wait_timeout"></a>COOPERATIVE_WAIT_TIMEOUT  
- Valor que indica que uma espera esgotado.  
+ Valor que indica que uma espera atingiu o tempo limite.  
   
 ```
 const size_t COOPERATIVE_WAIT_TIMEOUT = SIZE_MAX;
 ```  
   
 ##  <a name="contexteventguid"></a>ContextEventGuid  
- Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados aos contextos.  
+ Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionadas ao contextos.  
   
 ```
 const __declspec(selectany) GUID ContextEventGuid = 
@@ -109,14 +109,14 @@ const __declspec(selectany) GUID ContextEventGuid =
 ```  
   
 ##  <a name="inherit_thread_priority"></a>INHERIT_THREAD_PRIORITY  
- Valor especial para a chave de política `ContextPriority` indicando que a prioridade do thread de todos os contextos do agendador deve ser o mesmo que o thread que criou o Agendador.  
+ Um valor especial para a chave de política `ContextPriority` indicando que a prioridade de thread de todos os contextos no Agendador do deve ser a mesma que o thread que criou o Agendador.  
   
 ```
 const unsigned int INHERIT_THREAD_PRIORITY = 0x0000F000;
 ```  
   
 ##  <a name="lockeventguid"></a>LockEventGuid  
- Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados a bloqueios.  
+ Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionadas a bloqueios.  
   
 ```
 const __declspec(selectany) GUID LockEventGuid = 
@@ -127,14 +127,14 @@ const __declspec(selectany) GUID LockEventGuid =
  Esta categoria de eventos não é acionada no momento pelo tempo de execução de simultaneidade.  
   
 ##  <a name="maxexecutionresources"></a>MaxExecutionResources  
- Valor especial para as chaves de política `MinConcurrency` e `MaxConcurrency`. O padrão é o número de threads de hardware no computador na ausência de outras restrições.  
+ Um valor especial para as chaves de política `MinConcurrency` e `MaxConcurrency`. O padrão é o número de threads de hardware na máquina na ausência de outras restrições.  
   
 ```
 const unsigned int MaxExecutionResources = 0xFFFFFFFF;
 ```  
   
 ##  <a name="pplparallelforeventguid"></a>PPLParallelForEventGuid  
- Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados ao uso do `parallel_for` função.  
+ Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionadas ao uso do `parallel_for` função.  
   
 ```
 const __declspec(selectany) GUID PPLParallelForEventGuid = 
@@ -142,7 +142,7 @@ const __declspec(selectany) GUID PPLParallelForEventGuid =
 ```  
   
 ##  <a name="pplparallelforeacheventguid"></a>PPLParallelForeachEventGuid  
- Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados ao uso do `parallel_for_each` função.  
+ Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionadas ao uso do `parallel_for_each` função.  
   
 ```
 const __declspec(selectany) GUID PPLParallelForeachEventGuid = 
@@ -150,7 +150,7 @@ const __declspec(selectany) GUID PPLParallelForeachEventGuid =
 ```  
   
 ##  <a name="pplparallelinvokeeventguid"></a>PPLParallelInvokeEventGuid  
- Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados ao uso do `parallel_invoke` função.  
+ Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionadas ao uso do `parallel_invoke` função.  
   
 ```
 const __declspec(selectany) GUID PPLParallelInvokeEventGuid = 
@@ -180,7 +180,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
  Esta categoria de eventos não é acionada no momento pelo tempo de execução de simultaneidade.  
   
 ##  <a name="schedulereventguid"></a>SchedulerEventGuid  
- Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados à atividade do Agendador.  
+ Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionadas à atividade do Agendador.  
   
 ```
 const __declspec(selectany) GUID SchedulerEventGuid = 
@@ -197,4 +197,3 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)
-

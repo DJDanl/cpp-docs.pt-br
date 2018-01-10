@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4333 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4333 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4333
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4333
+f1_keywords: C4333
+dev_langs: C++
+helpviewer_keywords: C4333
 ms.assetid: d3763c52-6110-4da0-84db-5264e3f3f166
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f120545580c1127102db4a673b9dfc0a01b7053f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 22704292cae37b4c4395c49fb69fb2c59c1ccd48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4333"></a>Compilador C4333 de aviso (nível 1)
-'operator': shift direita por quantidade muito grande, perda de dados  
+'operator': right shift por valor muito grande, perda de dados  
   
- Uma operação de deslocamento à direita foi uma quantidade muito grande.  Todos os bits significativos são deslocados-out e o resultado será sempre zero.  
+ Uma operação de deslocamento para a direita era uma quantidade muito grande.  Todos os bits significativos são deslocados e o resultado sempre será zero.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4333.  

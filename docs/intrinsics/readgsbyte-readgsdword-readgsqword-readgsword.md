@@ -1,80 +1,80 @@
 ---
-title: "__readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readgsbyte"
-  - "__readgsdword"
-  - "__readgsqword"
-  - "__readgsword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__readgsword intrínseco"
-  - "__readgsdword intrínseco"
-  - "__readgsqword intrínseco"
-  - "__readgsbyte intrínseco"
+title: __readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __readgsbyte
+- __readgsdword
+- __readgsqword
+- __readgsword
+dev_langs: C++
+helpviewer_keywords:
+- __readgsword intrinsic
+- __readgsdword intrinsic
+- __readgsqword intrinsic
+- __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b8eb0cd893553e16bea326e4ccb81c2602fe352b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# __readgsbyte, __readgsdword, __readgsqword, __readgsword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
+**Seção específica da Microsoft**  
   
- Ler a memória de um local especificado por um deslocamento relativo para o início do segmento GS.  
+ Ler a memória de um local especificado por um deslocamento relativo ao início do segmento GS.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-unsigned char __readgsbyte(   
-   unsigned long Offset   
+unsigned char __readgsbyte(   
+   unsigned long Offset   
 );  
-unsigned short __readgsword(   
-   unsigned long Offset   
+unsigned short __readgsword(   
+   unsigned long Offset   
 );  
-unsigned long __readgsdword(   
+unsigned long __readgsdword(   
    unsigned long Offset  
 );  
-unsigned __int64 __readgsqword(   
-   unsigned long Offset   
+unsigned __int64 __readgsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`Offset`  
- O deslocamento do início do `GS` ler.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `Offset`  
+ O deslocamento do início do `GS` leiam.  
   
-## Valor de retorno  
- O conteúdo da memória do byte, word, palavra dupla ou quadword \(conforme indicado pelo nome da função de chamada\) no local `GS:[``Offset``]`.  
+## <a name="return-value"></a>Valor de retorno  
+ O conteúdo da memória do byte, word, palavra dupla ou quadword (conforme indicado pelo nome da função chamada) no local `GS:[Offset]`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
+|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Esses intrínsecos só estão disponíveis no modo kernel e as rotinas estão somente disponíveis como intrínsecos.  
+## <a name="remarks"></a>Comentários  
+ Esses intrínsecos só estão disponíveis no modo kernel e as rotinas só estão disponíveis como intrínsecos.  
   
-## END Microsoft específicos  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
+## <a name="see-also"></a>Consulte também  
+ [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
