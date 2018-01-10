@@ -1,71 +1,71 @@
 ---
-title: "P&#225;ginas de propriedade HLSL: geral | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.ShaderModel"
-  - "VC.Project.FXCompilerTool.PreprocessorDefinitions"
-  - "VC.Project.FXCompilerTool.ShaderType"
-  - "VC.Project.FXCompilerTool.EnableDebuggingInformation"
-  - "VC.Project.FXCompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.FXCompilerTool.DisableOptimizations"
-  - "VC.Project.FXCompilerTool.EntryPointName"
-dev_langs: 
-  - "C++"
+title: "Páginas de propriedade HLSL: Geral | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.FXCompilerTool.ShaderModel
+- VC.Project.FXCompilerTool.PreprocessorDefinitions
+- VC.Project.FXCompilerTool.ShaderType
+- VC.Project.FXCompilerTool.EnableDebuggingInformation
+- VC.Project.FXCompilerTool.AdditionalIncludeDirectories
+- VC.Project.FXCompilerTool.DisableOptimizations
+- VC.Project.FXCompilerTool.EntryPointName
+dev_langs: C++
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: be548966f6e75afde2c137c8beab38903844667c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# P&#225;ginas de propriedade HLSL: geral
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Para configurar as seguintes propriedades do compilador de HLSL \(fxc.exe\), use a página de propriedades de **Geral** .  Para obter informações sobre como acessar a página de propriedades de **Geral** na pasta de HLSL, consulte [Como especificar propriedades do projeto com páginas de propriedades](../Topic/How%20to:%20Specify%20Project%20Properties%20with%20Property%20Pages.md).  
+# <a name="hlsl-property-pages-general"></a>Páginas de propriedade HLSL: geral
+Para configurar as seguintes propriedades do compilador HLSL (fxc.exe), use seu **geral** página de propriedades. Para obter informações sobre como acessar o **geral** página de propriedades na pasta HLSL, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
   
-## Lista UIElement  
- **Adicional inclui diretórios**  
- Adiciona um ou vários diretórios incluir o caminho.  Use semi\-confiáveis dois\-pontos para separar os diretórios.  
+## <a name="uielement-list"></a>Lista UIElement  
+ **Adicionais diretórios de inclusão**  
+ Adiciona um ou mais diretórios para o caminho de inclusão. Use ponto e vírgula para separar os diretórios.  
   
- Esta propriedade corresponde ao argumento de linha de comando **\/I\[path\]** .  
+ Essa propriedade corresponde do **/I [caminho]** argumento de linha de comando.  
   
- **Nome de Entrypoint**  
- Especifica o ponto de entrada para o shader.  Por padrão, o valor é **main**.  
+ **Nome do ponto de entrada**  
+ Especifica o ponto de entrada para o sombreador. Por padrão, o valor é **principal**.  
   
- Esta propriedade corresponde ao argumento de linha de comando **\/E\[name\]** .  
+ Essa propriedade corresponde do **/E [nome]** argumento de linha de comando.  
   
- **Otimizações de desativar**  
- **Sim \(\/Od\)** para desativar otimizações; caso contrário, **Não**.  Por padrão, o valor é **Sim \(\/Od\)** para configurações e **Não** de **Depurar** para configurações de **Versão** .  
+ **Desabilitar otimizações**  
+ **Sim (/ Od)** para desabilitar otimizações; caso contrário, **não**. Por padrão, o valor é **Sim (/ Od)** para **depurar** configurações e **não** para **versão** configurações.  
   
- O argumento de linha de comando **\/Od** para o compilador de HLSL aplica implicitamente o argumento de linha de comando **\/Gfp** , mas saída não podem ser idênticos a saída que são geradas passando os argumentos de linha de comando de **\/Od** e de **\/Gfp** explicitamente.  
+ O **/Od** argumento de linha de comando para o compilador HLSL implicitamente se aplica a **/Gfp** argumento de linha de comando, mas a saída não pode ser idêntica à saída produzida passando ambos o **/Od**  e **/Gfp** argumentos de linha de comando explicitamente.  
   
- **Ativar informações de depuração**  
- **Sim \(\/Zi\)** para ativar informações de depuração; caso contrário, **Não**.  Por padrão, o valor é **Sim \(\/Zi\)** para configurações e **Não** de **Depurar** para configurações de **Versão** .  
+ **Habilitar informações de depuração**  
+ **Sim (/Zi)** para habilitar as informações de depuração; caso contrário, **não**. Por padrão, o valor é **Sim (/Zi)** para **depurar** configurações e **não** para **versão** configurações.  
   
- **Tipo de Shader**  
- Especifica o tipo do shader.  Tipos diferentes de partes diferentes de implementam de shaders de pipeline gráficos.  Certos tipos de shaders estão disponíveis somente nos modelos mais recentes do shader \(que são especificados pela propriedade de **Shader Model** \) — por exemplo, shaders de cálculo foram introduzidos no modelo 5. do shader.  
+ **Tipo de sombreador**  
+ Especifica o tipo de sombreador. Tipos diferentes de sombreadores implementam diferentes partes do pipeline de gráficos. Determinados tipos de sombreadores estão disponíveis apenas em modelos de sombreador mais recentes (que são especificados pelo **Shader Model** propriedade) — por exemplo, computar sombreadores foram introduzidos no modelo de sombreador 5.  
   
- Esta propriedade corresponde a parte de **\[type\]** de argumento de linha de comando **\/T \[type\]\_\[model\]** para o compilador de HLSL.  A propriedade de **Modelos de Shader** especifica a parte de **\[model\]** do argumento.  
+ Essa propriedade corresponde do **[tipo]** parte do **/T [tipo] _ [modelo]** argumento de linha de comando para o compilador HLSL. O **modelos de sombreador** propriedade especifica o **[modelo]** parte do argumento.  
   
- **Shader Model**  
- Especifica o modelo de shader.  Os diferentes modelos de características têm recursos diferentes.  Geralmente, os modelos mais recentes do shader oferecem recursos expandidos mas exigem um hardware mais modernos hardwares gráficos executar o código do shader.  Certos tipos de shaders \(que são especificados pela propriedade de **Tipo de Shader** \) estão disponíveis somente em um shader mais recente modelo para o exemplo, shaders de cálculo foram introduzidos no modelo 5. do shader.  
+ **Modelo de sombreador**  
+ Especifica o modelo de sombreador. Modelos de sombreador diferentes têm recursos diferentes. Em geral, modelos de sombreador mais recentes oferecem recursos expandidos, mas exigem mais moderna hardware de gráficos para executar o código de sombreador. Determinados tipos de sombreadores (que são especificados pelo **tipo de sombreador** propriedade) estão disponíveis apenas nos modelos de sombreador mais recentes — por exemplo, computar sombreadores foram introduzidos no modelo de sombreador 5.  
   
- Esta propriedade corresponde a parte de **\[model\]** de argumento de linha de comando **\/T \[type\]\_\[model\]** para o compilador de HLSL.  A propriedade de **Tipo de Shader** especifica a parte de **\[type\]** do argumento.  
+ Essa propriedade corresponde do **[modelo]** parte do **/T [tipo] _ [modelo]** argumento de linha de comando para o compilador HLSL. O **tipo de sombreador** propriedade especifica o **[tipo]** parte do argumento.  
   
- **Definições do Pré\-processador**  
- Adiciona uma ou mais definições do símbolo pré\-processamento para aplicar o arquivo de código\-fonte de HLSL.  Use semi\-confiáveis dois\-pontos para separar as definições do símbolo.  
+ **Definições de pré-processador**  
+ Adiciona uma ou mais definições de símbolo do pré-processador para aplicar o arquivo de código de origem HLSL. Use ponto e vírgula para separar as definições de símbolo.  
   
- Esta propriedade corresponde ao argumento de linha de comando **\/D \[definitions\]** para o compilador de HLSL.  
+ Essa propriedade corresponde do **/D [definições]** argumento de linha de comando para o compilador HLSL.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Páginas de propriedade HLSL](../ide/hlsl-property-pages.md)   
  [Páginas de propriedade HLSL: avançado](../ide/hlsl-property-pages-advanced.md)   
  [Páginas de propriedades HLSL: arquivos de saída](../ide/hlsl-property-pages-output-files.md)

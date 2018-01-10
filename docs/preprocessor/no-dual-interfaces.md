@@ -1,46 +1,43 @@
 ---
-title: "no_dual_interfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "no_dual_interfaces"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Atributo no_dual_interfaces"
+title: no_dual_interfaces | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: no_dual_interfaces
+dev_langs: C++
+helpviewer_keywords: no_dual_interfaces attribute
 ms.assetid: 9acd5d9d-4a49-4cdc-9470-73a2c23cf512
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 42501c329b5c040f762b692e9298b184a2035d7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# no_dual_interfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico do C\+\+**  
+# <a name="nodualinterfaces"></a>no_dual_interfaces
+**Específicas do C++**  
   
  Altera o modo como o compilador gerenciar funções wrapper para métodos da interface dupla.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 no_dual_interfaces  
 ```  
   
-## Comentários  
- Normalmente, o wrapper chamará o método por meio da tabela de funções virtuais da interface.  Com `no_dual_interfaces`, o wrapper chama **IDispatch::Invoke** para invocar o método.  
+## <a name="remarks"></a>Comentários  
+ Normalmente, o wrapper chamará o método por meio da tabela de funções virtuais da interface. Com `no_dual_interfaces`, em vez disso, chama o wrapper **IDispatch:: Invoke** para invocar o método.  
   
- **FIM de Específico do C\+\+**  
+ **TÉRMINO específicas do C++**  
   
-## Consulte também  
- [Atributos \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Diretiva \#import](../Topic/%23import%20Directive%20\(C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

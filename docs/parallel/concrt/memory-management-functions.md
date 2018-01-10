@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c090041969bae959ecb386486032f3f848a1440b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 309080a807a1325bbf921657a152cff60e87cb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-management-functions"></a>Funções de gerenciamento da memória
 Este documento descreve as funções de gerenciamento de memória que fornece o tempo de execução de simultaneidade para ajudá-lo a alocar e liberar memória, de forma simultânea.  

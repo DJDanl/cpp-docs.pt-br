@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,8 +30,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DGeometry::Tessellate
 - AFXRENDERTARGET/CD2DGeometry::Widen
 - AFXRENDERTARGET/CD2DGeometry::m_pGeometry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DGeometry [MFC], CD2DGeometry
 - CD2DGeometry [MFC], Attach
@@ -55,16 +53,16 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3b9d8373bdf1cba1c57936dfb4d98c5401c80476
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 352a825476bccada1ac33e2d1082f2cfcbb6fec3
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometry-class"></a>Classe CD2DGeometry
 Um wrapper para ID2D1Geometry.  
@@ -77,7 +75,7 @@ class CD2DGeometry : public CD2DResource;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -189,7 +187,7 @@ BOOL CombineWithGeometry(
  O resultado da operação de combinação.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometrias. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal das geometrias. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -212,7 +210,7 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
  A transformação para aplicar a inputGeometry.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometrias. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal das geometrias. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -235,7 +233,7 @@ BOOL ComputeArea(
  Quando este método retorna, contém um ponteiro para a área da versão transformada, bidimensional desse geometria. Você deve alocar armazenamento para esse parâmetro.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal da geometria. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -258,7 +256,7 @@ BOOL ComputeLength(
  Quando este método retorna, contém um ponteiro para o comprimento da geometria. Para geometrias fechadas, o comprimento inclui um segmento de fechamento implícita. Você deve alocar armazenamento para esse parâmetro.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal da geometria. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -289,7 +287,7 @@ BOOL ComputePointAtLength(
  Quando este método retorna, contém um ponteiro para o vetor de tangente à distância especificada ao longo da geometria. Se a geometria estiver vazia, esse vetor contém NaN como x e y valores. Você deve alocar armazenamento para esse parâmetro.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal da geometria. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -333,7 +331,7 @@ BOOL FillContainsPoint(
  Quando este método retorna, contém um valor booleano que é TRUE se a área preenchida por geometria contém ponto; Caso contrário, FALSE. Você deve alocar armazenamento para esse parâmetro.  
   
  `flatteningTolerance`  
- A precisão numérica com a qual o caminho geométrico preciso e a interseção de caminho é calculado. Faltando o preenchimento inferior a tolerância de pontos ainda são considerados dentro. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ A precisão numérica com a qual o caminho geométrico preciso e a interseção de caminho é calculado. Faltando o preenchimento inferior a tolerância de pontos ainda são considerados dentro. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -388,7 +386,7 @@ BOOL GetWidenedBounds(
  Quando este método retorna, contém os limites da geometria largo. Você deve alocar armazenamento para esse parâmetro.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometrias. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal das geometrias. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -438,7 +436,7 @@ BOOL Outline(
  O ID2D1SimplifiedGeometrySink para o qual a estrutura de tópicos transformados geometry é adicionada.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal da geometria. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -465,7 +463,7 @@ BOOL Simplify(
  O ID2D1SimplifiedGeometrySink para o qual a geometria simplificada é adicionada.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal da geometria. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -500,7 +498,7 @@ BOOL StrokeContainsPoint(
  Quando este método retorna, contém um valor booleano definido como TRUE se o traço da geometria contém o ponto especificado; Caso contrário, FALSE. Você deve alocar armazenamento para esse parâmetro.  
   
  `flatteningTolerance`  
- A precisão numérica com a qual o caminho geométrico preciso e a interseção de caminho é calculado. Pontos ausente do traço pelo menor que a tolerância ainda são considerados dentro. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ A precisão numérica com a qual o caminho geométrico preciso e a interseção de caminho é calculado. Pontos ausente do traço pelo menor que a tolerância ainda são considerados dentro. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -523,7 +521,7 @@ BOOL Tessellate(
  O ID2D1TessellationSink para que o mosaico é adicionado.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal da geometria. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
@@ -554,11 +552,10 @@ BOOL Widen(
  O ID2D1SimplifiedGeometrySink para o qual a geometria ampliou é adicionada.  
   
  `flatteningTolerance`  
- Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta.  
+ Os limites máximos na distância entre pontos na aproximação poligonal da geometria. Valores menores produzem resultados mais precisos, mas causam a execução lenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)
-

@@ -1,11 +1,10 @@
 ---
-title: Classe writeonly_texture_view | Documentos do Microsoft
+title: Classe writeonly_texture_view | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,18 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5a051b8db98e36ced89783bfa1de2ab5f514c6bc
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 594a23113159c7d4afa9e3119952b001f8ee7ed4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writeonlytextureview-class"></a>Classe writeonly_texture_view
 Fornece acesso writeonly com uma textura.  
@@ -81,8 +65,8 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor writeonly_texture_view](#ctor)|Inicializa uma nova instância da classe `writeonly_texture_view`.|  
-|[~ writeonly_texture_view destruidor](#ctor)|Destrói o `writeonly_texture_view` objeto.|  
+|[Construtor de writeonly_texture_view](#ctor)|Inicializa uma nova instância da classe `writeonly_texture_view`.|  
+|[~ writeonly_texture_view destruidor](#ctor)|Destrói a `writeonly_texture_view` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -94,13 +78,13 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` objeto a este.|  
+|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` deste objeto.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Constante Rank](#rank)|Obtém a classificação do `writeonly_texture_view` objeto.|  
+|[Constante de classificação](#rank)|Obtém a classificação do `writeonly_texture_view` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `_Texture_base`  
@@ -114,7 +98,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="dtor"></a>~ writeonly_texture_view 
 
- Destrói o `writeonly_texture_view` objeto.  
+ Destrói a `writeonly_texture_view` objeto.  
   
 ```  
 ~writeonly_texture_view() restrict(amp,cpu);
@@ -122,7 +106,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a>operador = 
 
- Copia especificado `writeonly_texture_view` objeto a este.  
+ Copia especificado `writeonly_texture_view` deste objeto.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -131,10 +115,10 @@ writeonly_texture_view<value_type, _Rank>& operator= (
   
 ### <a name="parameters"></a>Parâmetros  
  `_Other`  
- `writeonly_texture_view`objeto a ser copiado do.  
+ `writeonly_texture_view`objeto do qual copiar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência a esta `writeonly_texture_view` objeto.  
+ Uma referência a este `writeonly_texture_view` objeto.  
   
 ##  <a name="rank"></a>classificação 
 
@@ -184,8 +168,7 @@ writeonly_texture_view(
  O tipo dos elementos na textura.  
   
  `_Src`  
- A textura é usada para criar o `writeonly_texture_view`.  
+ A textura que é usada para criar o `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
-

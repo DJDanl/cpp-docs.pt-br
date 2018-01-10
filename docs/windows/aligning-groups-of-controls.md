@@ -1,58 +1,59 @@
 ---
-title: "Alinhando grupos de controles | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "controles [C++], alinhando"
+title: Alinhando grupos de controles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: controls [C++], aligning
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ebec5697faf252a13befdf2a9b3c98888db96c19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Alinhando grupos de controles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O procedimento a seguir mostra como alinhar os grupos de controles.  
+# <a name="aligning-groups-of-controls"></a>Alinhando grupos de controles
+O procedimento a seguir mostra como alinhar grupos de controles.  
   
-### Para alinhar os grupos de controles  
+### <a name="to-align-groups-of-controls"></a>Para alinhar grupos de controles  
   
-1.  [Selecione os controles](../mfc/selecting-multiple-controls.md) você deseja alinhar.  Certifique\-se de selecionar o controle que você deseja ser primeiro o controle dominante ou defini\-lo como o controle dominante antes de executar o alinhamento ou comando de dimensionamento.  
+1.  [Selecione os controles](../windows/selecting-multiple-controls.md) você deseja alinhar. Selecione o controle que você deseja o controle dominante pela primeira vez ou defini-lo para ser o controle dominante antes de executar o alinhamento ou comando de dimensionamento.  
   
-     A posição final do grupo de controles depende a posição do controle dominante.  Para obter mais informações sobre como selecionar o controle dominante, consulte  [especificando o controle dominante](../mfc/specifying-the-dominant-control.md).  
+     A posição final do grupo de controles depende a posição do controle dominante. Para obter mais informações sobre como selecionar o controle dominante, consulte [especificando o controle dominante](../windows/specifying-the-dominant-control.md).  
   
-2.  Do  **formato** menu, escolha  **Alinhar**e, em seguida, escolha uma dos alinhamentos a seguintes:  
+2.  Do **formato** menu, escolha **alinhar**e, em seguida, escolha uma das alinhamentos a seguir:  
   
-    -   **Esquerdas**: alinha os controles selecionados ao longo de seus lados esquerdos.  
+    -   **À esquerda**: alinha os controles selecionados ao longo de lado esquerdo.  
   
-    -   **Centros de**: alinha os controles selecionados horizontalmente ao longo de pontos centrais.  
+    -   **Centros de**: alinha os controles selecionados horizontalmente em pontos centrais.  
   
-    -   **Direitos**: alinha os controles selecionados ao longo de seus lados direito.  
+    -   **Direitos**: alinha os controles selecionados ao longo de lado direito.  
   
-    -   **ToPS**: alinha os controles selecionados pelas bordas superiores.  
+    -   **Partes superiores**: alinha os controles selecionados pelas bordas superiores.  
   
-    -   **Meios**: alinha os controles selecionados verticalmente ao longo de seus pontos de meio.  
+    -   **Meio**: alinha os controles selecionados verticalmente em seus pontos de intermediários.  
   
-    -   **Partes inferiores**: alinha os controles selecionados pelas bordas inferiores.  
+    -   **Inferiores**: alinha os controles selecionados pelas bordas inferior.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
  Win32  
   
-## Consulte também  
- [Organização de controles em caixas de diálogo](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controles em caixas de diálogo](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Organização dos controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

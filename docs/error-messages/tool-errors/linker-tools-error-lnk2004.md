@@ -1,51 +1,33 @@
 ---
-title: Ferramentas de vinculador LNK2004 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK2004 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2004
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2004
+f1_keywords: LNK2004
+dev_langs: C++
+helpviewer_keywords: LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f66c3eda90f3d0f9149d70418cb40f08b3b94df7
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3fdbd32bbc59d9c18df5544f07ec7e7097b9e02e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2004"></a>Erro das Ferramentas de Vinculador LNK2004
-estouro de ajuste relativo de GP ' destino '; breve seção 'seção' é muito grande ou fora do intervalo.  
+estouro de conserto relativo GP para 'target'; breve seção 'seção' é muito grande ou fora do intervalo.  
   
  A seção era muito grande.  
   
- Para resolver esse erro, reduza o tamanho da seção curto, seja explicitamente colocar dados na seção longa via seção #pragma (".sectionname", leitura, gravação, longo) e usando `__declspec(allocate(".sectionname"))` em declarações e definições de dados.  Por exemplo,  
+ Para resolver esse erro, reduzir o tamanho da seção curta, seja explicitamente colocar dados nas seções longa por meio da seção #pragma (".sectionname", leitura, gravação, longo) e usando `__declspec(allocate(".sectionname"))` em declarações e definições de dados.  Por exemplo,  
   
 ```  
 #pragma section(".data$mylong", read, write, long)  
@@ -58,7 +40,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };  
 ```  
   
- Você também pode mover dados agrupados logicamente em sua própria estrutura que será um conjunto de dados maiores que 8 bytes, que o compilador alocará em uma seção de dados longos.  Por exemplo,  
+ Você também pode mover dados agrupados logicamente em sua própria estrutura que será um conjunto de dados maiores que 8 bytes, que o compilador alocará em uma seção de dados long.  Por exemplo,  
   
 ```  
 // from this...  

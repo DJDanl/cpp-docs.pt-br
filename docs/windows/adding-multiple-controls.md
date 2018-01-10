@@ -1,45 +1,47 @@
 ---
-title: "Adicionando v&#225;rios controles | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "controles [Visual Studio], adicionando vários"
-  - "controles de caixas de diálogo, adicionando a caixas de diálogo"
+title: "Adicionando vários controles | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [Visual Studio], adding multiple
+- dialog box controls, adding to dialog boxes
 ms.assetid: cc100201-0669-4e74-bb08-f7134ddd03aa
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6fe2040594db17e84aaf1c3d0985ed07f355f187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Adicionando v&#225;rios controles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para adicionar vários controles  
+# <a name="adding-multiple-controls"></a>Adicionando vários controles
+### <a name="to-add-multiple-controls"></a>Para adicionar vários controles  
   
-1.  Enquanto mantém pressionada a  **CTRL** tecla, selecione um controle no  [Janela Toolbox](../Topic/Toolbox.md).  
+1.  Enquanto mantém pressionada a **CTRL** chave, selecione um controle no [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox).  
   
-2.  Versão do  **CTRL** chave e clique na caixa de diálogo quantas vezes você deseja adicionar um controle específico.  
+2.  Versão do **CTRL** chave e clique na caixa de diálogo quantas vezes você deseja adicionar o controle específico.  
   
-3.  Pressione  **ESC** para interromper a colocação de controles.  
+3.  Pressione **ESC** parar colocar controles.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
  Win32  
   
-## Consulte também  
- [Controles em caixas de diálogo](../mfc/controls-in-dialog-boxes.md)   
- [Adicionando manipuladores de eventos para controles da caixa de diálogo](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Controles da caixa de diálogo e tipos de variável](../Topic/Dialog%20Box%20Controls%20and%20Variable%20Types.md)
+## <a name="see-also"></a>Consulte também  
+ [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
+ [Adicionando manipuladores de eventos para controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)
+

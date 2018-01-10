@@ -41,11 +41,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 782fcbdf857fcf7984bbe02ccc7b6ed6fb94853d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpagesetupdialog-class"></a>Classe CPageSetupDialog
 Encapsula os serviços fornecidos pela caixa de diálogo de configuração de página OLE comuns do Windows com suporte adicional para configuração e modificar as margens de impressão.  
@@ -58,7 +59,7 @@ class CPageSetupDialog : public CCommonDialog
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

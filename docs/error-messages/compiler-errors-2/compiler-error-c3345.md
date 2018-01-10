@@ -1,50 +1,31 @@
 ---
-title: C3345 de erro do compilador | Documentos do Microsoft
+title: C3345 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3345
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3345
+f1_keywords: C3345
+dev_langs: C++
+helpviewer_keywords: C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5d936081f4e8371a1f6f1a1810c30df28627914b
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ca51e90d8c0cbb1806cc0b042d9c3ae2480a9729
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3345"></a>C3345 de erro do compilador
-'identifier': identificador inválido para o nome do módulo  
+'Identificador': identificador inválido para o nome do módulo  
   
- O *identificador* para um módulo contém um ou mais caracteres inválidos. Um identificador é válido se o primeiro caractere é um caractere de sublinhado em ordem alfabética, ou alto de caracteres ANSI (0x80 FF) e qualquer caractere subsequente é um alfanuméricos, sublinhados ou caractere ANSI alto.  
+ O *identificador* para um módulo contém um ou mais caracteres inválidos. Um identificador é válido se o primeiro caractere é um caractere de sublinhado em ordem alfabética, ou alta de caracteres ANSI (0x80 FF) e qualquer caractere subsequente é um caractere alfanumérico, sublinhado ou alta de caracteres ANSI.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   

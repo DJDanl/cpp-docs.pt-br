@@ -1,34 +1,36 @@
 ---
-title: "Como manter refer&#234;ncia de objeto na mem&#243;ria n&#227;o gerenciada | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave gcroot [C++], referência de objeto na função nativa"
-  - "referências de objeto, em funções nativas"
-  - "objetos [C++], referência em funções nativas"
-  - "referências, a objetos em funções nativas"
+title: "Como: manter referências a objetos na memória não gerenciada | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- object references, in native functions
+- objects [C++], reference in native functions
+- references, to objects in native functions
+- gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: debda931ae121e109c4b1008054ace11a714f065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como manter refer&#234;ncia de objeto na mem&#243;ria n&#227;o gerenciada
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode usar gcroot.h, que envolve <xref:System.Runtime.InteropServices.GCHandle>, para manter uma referência de objeto CLR na memória não gerenciado.  Como alternativa, você pode usar `GCHandle` diretamente.  
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Como manter referência de objeto na memória não gerenciada
+Você pode usar gcroot.h, que encapsula <xref:System.Runtime.InteropServices.GCHandle>, para manter uma referência de objeto CLR na memória não gerenciada. Como alternativa, você pode usar `GCHandle` diretamente.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // hold_object_reference.cpp  
@@ -60,9 +62,12 @@ int main() {
 }  
 ```  
   
-  **\=\= ManagedString de StringWrapper::x**   
-## Exemplo  
- `GCHandle` isso significa manter uma referência de objeto na memória não gerenciado.  Você usa o método de <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> para criar um identificador opaca em um objeto gerenciado e a <xref:System.Runtime.InteropServices.GCHandle.Free%2A> para solte.  Além disso, o método de <xref:System.Runtime.InteropServices.GCHandle.Target%2A> permite que você obtenha a parte da referência de objeto de identificador em código gerenciado.  
+```Output  
+StringWrapper::x == ManagedString  
+```  
+  
+## <a name="example"></a>Exemplo  
+ `GCHandle`Fornece um meio para manter uma referência de objeto gerenciado de memória não gerenciada.  Você usa o <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> método para criar um identificador opaco para um objeto gerenciado e <xref:System.Runtime.InteropServices.GCHandle.Free%2A> para liberá-lo. Além disso, o <xref:System.Runtime.InteropServices.GCHandle.Target%2A> método permite que você obtenha a referência de objeto do identificador em código gerenciado.  
   
 ```  
 // hold_object_reference_2.cpp  
@@ -95,6 +100,9 @@ int main() {
 }  
 ```  
   
-  **\=\= ManagedString de StringWrapper::m\_handle**   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+StringWrapper::m_handle == ManagedString  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

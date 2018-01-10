@@ -1,5 +1,5 @@
 ---
-title: "Página de propriedades NMake | Microsoft Docs"
+title: "Página de propriedades NMake (Windows C++) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c487cf7218f11ba6a6a27ddcf5e7b6b575b1499
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cc9f6dc7c5fec4a184ed189cfaae230df3f1e9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-property-page"></a>Página de propriedades NMake
 O **NMake** página de propriedade permite que você especifique configurações de compilação para projetos de NMake.  
   
- Para obter mais informações sobre projetos de NMake, consulte [criando um projeto Makefile](../ide/creating-a-makefile-project.md).  
+ Para obter mais informações sobre projetos de NMake, consulte [criando um projeto Makefile](../ide/creating-a-makefile-project.md). Para non_Windows projetos MakeFile, consulte [propriedades de projeto MakeFile (C++ Linux)](../linux/prop-pages/makefile-linux.md), [propriedades do projeto geral (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) ou [NMake propriedades (C++ Android)](/visualstudio/cross-platform/nmake-android-prop-page).
   
  O **NMake** página de propriedades contém as seguintes propriedades.  
   

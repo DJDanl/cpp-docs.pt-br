@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 4) C4339 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4339 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4339
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4339
+f1_keywords: C4339
+dev_langs: C++
+helpviewer_keywords: C4339
 ms.assetid: 5b83353d-7777-4afb-8476-3c368349028c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 99c48f356116c62f55b20627e48ed9b6419bc830
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2201f3611d01b0b0e04014a85f41128e1dd7e1d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4339"></a>Compilador C4339 de aviso (nível 4)
-'type': uso de tipo indefinido detectado no WinRT ou CLR metadados - uso desse tipo pode levar a uma exceção de tempo de execução  
+'type': uso de tipo indefinido detectado em WinRT ou CLR metadados - uso deste tipo pode levar a uma exceção de tempo de execução  
   
- Um tipo não foi definido no código que foi compilado para o common language runtime ou de tempo de execução do Windows. Defina o tipo para evitar uma exceção de tempo de execução possíveis.  
+ Um tipo não foi definido no código que foi compilado para o tempo de execução do Windows ou do common language runtime. Defina o tipo para evitar uma exceção de tempo de execução possíveis.  
   
  Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   

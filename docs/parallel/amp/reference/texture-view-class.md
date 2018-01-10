@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d03b67b1207827ae753c9d2583d57eab49dc223a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="textureview-class"></a>Classe texture_view
 Fornece acesso de leitura e gravação com uma textura. `texture_view`só pode ser usado para ler texturas cujo tipo de valor é `int`, `unsigned int`, ou `float` com bpse de 32 bits do padrão. Para ler os outros formatos de textura, use `texture_view<const value_type, _Rank>`.  

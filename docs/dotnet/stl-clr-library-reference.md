@@ -17,11 +17,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5906ffd662bb8b88c1c7ec42879da7f3730020f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aecb7c509fc1b072086a8772c3430c43b67350be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stlclr-library-reference"></a>Referência de biblioteca STL/CLR
 A biblioteca STL/CLR é um pacote de um subconjunto da biblioteca C++ padrão para uso com C++ e .NET Framework common language runtime (CLR). Com STL/CLR, você pode usar os contêineres, iteradores e algoritmos da biblioteca padrão em um ambiente gerenciado.  
@@ -69,4 +72,4 @@ A biblioteca STL/CLR é um pacote de um subconjunto da biblioteca C++ padrão pa
 |[utility (STL/CLR)](../dotnet/utility-stl-clr.md)|[vector (STL/CLR)](../dotnet/vector-stl-clr.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+ [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

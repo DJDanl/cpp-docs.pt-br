@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo SRWLock::LockShared | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockShared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método LockShared"
+title: "Método: Lockshared | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockShared
+dev_langs: C++
+helpviewer_keywords: LockShared method
 ms.assetid: 9d826a5c-b6a2-4430-ac85-d5753cbca889
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 272d851015595840619685a79fcedf616617b2c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo SRWLock::LockShared
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adquire um objeto de SRWLock no modo compartilhado.  
+# <a name="srwlocklockshared-method"></a>Método SRWLock::LockShared
+Obtém um objeto SRWLock no modo compartilhado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 SyncLockShared LockShared();  
@@ -37,17 +37,17 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `lock`  
- Ponteiro para um objeto de SRWLock.  
+ Ponteiro para um objeto SRWLock.  
   
-## Valor de retorno  
- Um objeto de SRWLock no modo compartilhado.  
+## <a name="return-value"></a>Valor de retorno  
+ Um objeto SRWLock no modo compartilhado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe SRWLock](../windows/srwlock-class.md)

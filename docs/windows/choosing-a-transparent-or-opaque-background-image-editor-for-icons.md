@@ -1,64 +1,66 @@
 ---
-title: "Escolhendo um plano de fundo transparente ou opaco (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cores de plano de fundo, imagens"
-  - "imagens de plano de fundo"
-  - "cores [C++], imagem"
-  - "Editor de imagem [C++], planos de fundo transparentes ou opacos"
-  - "imagens [C++], plano de fundo opaco"
-  - "imagens [C++], transparência"
-  - "planos de fundo opacos"
-  - "transparência, plano de fundo"
-  - "planos de fundo transparentes"
-  - "planos de fundo transparentes, imagens"
+title: "Escolha um fundo transparente ou opaco (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- opaque backgrounds
+- background colors, images
+- colors [C++], image
+- Image editor [C++], transparent or opague backgrounds
+- background images
+- images [C++], transparency
+- images [C++], opaque background
+- transparent backgrounds
+- transparency, background
+- transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Escolhendo um plano de fundo transparente ou opaco (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando você mover ou copia uma seleção a partir de uma imagem, os pixels na seleção que correspondem a cor de plano de fundo atual são, por padrão, transparente; eles não oculte os pixels no local de destino.  
+# <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Escolhendo uma tela de fundo transparente ou opaco (editor de imagens para ícones)
+Quando você move ou copia uma seleção de uma imagem, os pixels da seleção que correspondem a cor de plano de fundo atual são, por padrão, transparente; eles não podem ocultar pixels no local de destino.  
   
- Você pode alternar de um plano de fundo transparente \(padrão\) para um fundo opaco e vice\-versa.  Quando você usa uma ferramenta de seleção, o  **Plano de fundo transparente** e  **Plano de fundo opaco** opções aparecerão no seletor de opção à  **Editor de imagens** barra de ferramentas \(como visto abaixo\).  
+ Você pode alternar de um plano de fundo transparente (o padrão) para um plano de fundo opaco e voltar novamente. Quando você usar uma ferramenta de seleção, o **plano de fundo transparente** e **plano de fundo opaco** opções são exibidas no seletor de opção no **Editor de imagem** barra de ferramentas (conforme mostrado abaixo).  
   
- ![Opções de opacas ou transparentes](../Image/vcImageEditorOpaqTranspBack.gif "vcImageEditorOpaqTranspBack")  
-Opções transparentes e opacas na barra de ferramentas do Editor de imagens  
+ ![Opções de plano de fundo &#45; transparente ou opaco](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+Opções de opacas e transparentes na barra de ferramentas do Editor de imagem  
   
-### Para alternar entre um plano de fundo transparente e opaco  
+### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Para alternar entre um plano de fundo transparente e opaco  
   
-1.  No  **Editor de imagens** barra de ferramentas, clique no  **opção** seletor e então clique em plano de fundo apropriado:  
+1.  No **Editor de imagem** barra de ferramentas, clique no **opção** seletor e, em seguida, clique em segundo plano apropriado:  
   
-    -   **Plano de fundo opaco \(O\)**: imagem existente está obscurecida por todas as partes da seleção.  
+    -   **Plano de fundo opaco (O)**: imagem existente é obscurecida por todas as partes da seleção.  
   
-    -   **Plano de fundo transparente \(T\)**: imagem existente mostra através de partes da seleção que correspondem a cor de plano de fundo atual.  
+    -   **Plano de fundo transparente (T)**: mostra a imagem existente por meio de partes da seleção que correspondem a cor de plano de fundo atual.  
   
- \- ou \-  
+ \- ou -  
   
--   Sobre o  **imagem** menu, marque ou desmarque  **Desenho opaco**.  
+-   Sobre o **imagem** menu, selecione ou desmarque **desenho opaco**.  
   
- Você pode alterar a cor de plano de fundo enquanto uma seleção já estiver em vigor para alterar quais partes da imagem são transparentes.  
+ Você pode alterar a cor do plano de fundo enquanto uma seleção já está em vigor para alterar quais partes da imagem são transparentes.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
  Nenhum  
   
-## Consulte também  
- [Teclas de aceleração](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Trabalhando com cor](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)

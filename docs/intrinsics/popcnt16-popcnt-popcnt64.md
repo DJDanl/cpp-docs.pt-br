@@ -1,40 +1,40 @@
 ---
-title: "__popcnt16, __popcnt, __popcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__popcnt64"
-  - "__popcnt"
-  - "__popcnt16"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instrução popcnt"
-  - "__popcnt16"
-  - "__popcnt64"
-  - "__popcnt"
+title: __popcnt16, __popcnt, __popcnt64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __popcnt64
+- __popcnt
+- __popcnt16
+dev_langs: C++
+helpviewer_keywords:
+- popcnt instruction
+- __popcnt16
+- __popcnt64
+- __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 45e60a412dc24f685fd375ebc19c109b2bee0e2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# __popcnt16, __popcnt, __popcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+**Seção específica da Microsoft**  
   
- Conta o número de um bits \(contagem de população\) em 16\-, 32 ou 64 bytes inteiro não assinado.  
+ Conta o número de um bits (contagem de população) em um 16, 32 ou inteiro não assinado de 64 bytes.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 unsigned short __popcnt16(  
@@ -48,29 +48,29 @@ unsigned __int64 __popcnt64(
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`value`  
- 16\-, 32 Ou 64 bits inteiro não assinado para o qual queremos a contagem de população.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `value`  
+ A 16, 32 ou inteiro não assinado de 64 bits para os quais queremos que a contagem de população.  
   
-## Valor de retorno  
- O número de bits de um a `value` parâmetro.  
+## <a name="return-value"></a>Valor de retorno  
+ O número de bits um o `value` parâmetro.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
-|`__popcnt16`|Avançados de manipulação de bits|  
-|`__popcnt`|Avançados de manipulação de bits|  
-|`__popcnt64`|Avançados de manipulação de bits no modo de 64 bits.|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
+|`__popcnt16`|Manipulação de bits avançadas|  
+|`__popcnt`|Manipulação de bits avançadas|  
+|`__popcnt64`|Manipulação de bits avançadas no modo de 64 bits.|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Cada um desses intrínsecos gera o `popcnt` instrução.  O tamanho do valor que o `popcnt` instrução retorna é o mesmo tamanho do argumento.  No modo de 32 bits não há nenhuma 64 bits geral registra, portanto, não de 64 bits `popcnt`.  
+## <a name="remarks"></a>Comentários  
+ Cada um desses intrínsecos gera o `popcnt` instrução.  O tamanho do valor que o `popcnt` instrução retorna é o mesmo que o tamanho do argumento.  Em modo de 32 bits são sem 64-bit para fins gerais registros, portanto, não de 64 bits `popcnt`.  
   
- Para determinar o suporte de hardware para o `popcnt` instrução, chamada de `__cpuid` intrínseca com `InfoType=0x00000001` e verificar o bit 23 de `CPUInfo[2] (ECX)`.  Este bit é 1 se houver suporte para a instrução e 0 caso contrário.  Se você executa código que usa intrínseca neste hardware não oferece suporte a `popcnt` as instruções, os resultados são imprevisíveis.  
+ Para determinar o suporte de hardware para o `popcnt` instrução, chamada de `__cpuid` intrínseco com `InfoType=0x00000001` e verifique se o bit 23 de `CPUInfo[2] (ECX)`. Esse bit for 1 se a instrução tiver suporte e 0, caso contrário. Se você executar o código que usa nesse intrínseco no hardware que não oferece suporte a `popcnt` instrução, os resultados são imprevisíveis.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 #include <iostream>   
@@ -97,9 +97,18 @@ int main()
   
 ```  
   
-  **\_\_popcnt16\(0x0\) \= 0 \_\_popcnt16\(0xff\) \= \_\_popcnt16\(0xffff\) 8 \= 16 \_\_popcnt\(0x0\) \= 0 \_\_popcnt\(0xff\) \= 8 \_\_oopcnt\(0xffff\) \= \_\_popcnt\(0xffffffff\) 16 \= 32**   
-## END Microsoft específicos  
- Copyright 2007 pela Advanced Micro dispositivos, Inc. todos os direitos reservados.  Reproduzido com permissão do Advanced Micro dispositivos, Inc.  
+```Output  
+__popcnt16(0x0) = 0  
+__popcnt16(0xff) = 8  
+__popcnt16(0xffff) = 16  
+__popcnt(0x0) = 0  
+__popcnt(0xff) = 8  
+__oopcnt(0xffff) = 16  
+__popcnt(0xffffffff) = 32  
+```  
   
-## Consulte também  
+**Fim da seção específica da Microsoft**  
+ Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

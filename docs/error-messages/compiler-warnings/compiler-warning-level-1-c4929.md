@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e51b5ba70e486126575c6f25492d4e2cc37b0b7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfd20538db1f11ab2f7f20ab4079e9ed201bc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4929"></a>Compilador C4929 de aviso (nível 1)
 'arquivo': biblioteca de tipos contém uma união; Ignorando o qualificador 'embedded_idl'  

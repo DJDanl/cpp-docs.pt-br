@@ -1,43 +1,43 @@
 ---
-title: "__lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__lzcnt64"
-  - "__lzcnt16"
-  - "__lzcnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__lzcnt intrínseco"
-  - "instrução lzcnt"
-  - "lzcnt16 intrínseco"
-  - "lzcnt intrínseco"
-  - "__lzcnt16 intrínseco"
-  - "lzcnt64 intrínseco"
-  - "__lzcnt64 intrínseco"
+title: __lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __lzcnt64
+- __lzcnt16
+- __lzcnt
+dev_langs: C++
+helpviewer_keywords:
+- __lzcnt intrinsic
+- lzcnt instruction
+- lzcnt16 intrinsic
+- lzcnt intrinsic
+- __lzcnt16 intrinsic
+- lzcnt64 intrinsic
+- __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5fcd699cd137e6adbb2cf08f5852970d009f745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# __lzcnt16, __lzcnt, __lzcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico da Microsoft**  
+# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
+**Seção específica da Microsoft**  
   
- Conta o número das principais zeros em um 16, 32 ou inteiro de 64 bytes.  
+ Conta o número das principais zeros em 16-, 32 ou inteiro de 64 bytes.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 unsigned short __lzcnt16(  
@@ -51,31 +51,31 @@ unsigned __int64 __lzcnt64(
 );  
 ```  
   
-#### Parâmetros  
- \[in\] `value`  
- Os 16, 32 ou inteiro não assinado de 64 bits para verificar se há zeros à esquerda.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `value`  
+ A 16, 32 ou inteiro não assinado de 64 bits para verificar se há zeros à esquerda.  
   
-## Valor de retorno  
- O número de líderes em valores zero a `value` parâmetro. Se `value` for zero, o valor de retorno é o tamanho do operando entrado \(16, 32 ou 64\). Se mais bit significativo de `value` é um, o valor de retorno é zero.  
+## <a name="return-value"></a>Valor de retorno  
+ O número de bits zero à esquerda a `value` parâmetro. Se `value` for zero, o valor de retorno é o tamanho do operando de entrada (16, 32 ou 64). Se a maioria dos bits significativos de `value` é um, o valor de retorno é zero.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
-|----------------|-----------------|  
-|`__lzcnt16`|AMD: Manipulação de bits avançada \(ABM\)<br /><br /> Intel: Haswell|  
-|`__lzcnt`|AMD: Manipulação de bits avançada \(ABM\)<br /><br /> Intel: Haswell|  
-|`__lzcnt64`|AMD: Avançados de manipulação de bits \(ABM\) no modo de 64 bits.<br /><br /> Intel: Haswell|  
+|---------------|------------------|  
+|`__lzcnt16`|AMD: Manipulação de avançadas Bit (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD: Manipulação de avançadas Bit (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD: Avançada de manipulação de Bit (ABM) no modo de 64 bits.<br /><br /> Intel: Haswell|  
   
- **Arquivo de cabeçalho** \< intrin. h \>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Cada um desses intrínsecos gera o `lzcnt` instrução.  O tamanho do valor que o `lzcnt` instrução retorna é igual ao tamanho do argumento.  No modo de 32 bits não há nenhum 64\-bit registros de uso geral, portanto, não de 64 bits `lzcnt`.  
+## <a name="remarks"></a>Comentários  
+ Cada um desses intrínsecos gera o `lzcnt` instrução.  O tamanho do valor que o `lzcnt` instrução retorna é o mesmo que o tamanho do argumento.  Em modo de 32 bits são sem 64-bit para fins gerais registros, portanto, não de 64 bits `lzcnt`.  
   
- Para determinar o suporte de hardware para o `lzcnt` chamada de instrução de `__cpuid` intrínseco com `InfoType=0x80000001` e verifique se o bit 5 da `CPUInfo[2] (ECX)`. Esse bit será 1 se a instrução tiver suporte e 0 caso contrário. Se você executar o código que usa esse intrínseco no hardware que não oferece suporte a `lzcnt` instrução, os resultados serão imprevisíveis.  
+ Para determinar o suporte de hardware para o `lzcnt` chamada de instrução de `__cpuid` intrínseco com `InfoType=0x80000001` e verifique se o bit 5 da `CPUInfo[2] (ECX)`. Esse bit será 1 se a instrução tiver suporte e 0 caso contrário. Se você executar o código que usa nesse intrínseco no hardware que não oferece suporte a `lzcnt` instrução, os resultados são imprevisíveis.  
   
- Em processadores Intel que não dão suporte a `lzcnt` instrução, a codificação de byte de instrução é executada como `bsr` \(bit inverso de verificação\). Se a portabilidade de código for uma preocupação, considere o uso do `_BitScanReverse` intrínseco em vez disso. Para obter mais informações, consulte [\_BitScanReverse, \_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
+ Nos processadores Intel que não dão suporte a `lzcnt` instrução, a codificação de byte de instrução é executada como `bsr` (bit inverso de verificação). Se a portabilidade de código for uma preocupação, considere o uso do `_BitScanReverse` intrínseco em vez disso. Para obter mais informações, consulte [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // Compile this test with: /EHsc  
@@ -104,11 +104,17 @@ int main()
 ```  
   
 ```Output  
-__lzcnt16(0x0) = 16 __lzcnt16(0xff) = 8 __lzcnt16(0xffff) = 0 __lzcnt(0x0) = 32 __lzcnt(0xff) = __lzcnt(0xffff) 24 = 16 __lzcnt(0xffffffff) = 0  
+__lzcnt16(0x0) = 16  
+__lzcnt16(0xff) = 8  
+__lzcnt16(0xffff) = 0  
+__lzcnt(0x0) = 32  
+__lzcnt(0xff) = 24  
+__lzcnt(0xffff) = 16  
+__lzcnt(0xffffffff) = 0  
 ```  
   
-## FIM de específico da Microsoft  
- Partes deste conteúdo foram Copyright 2007 por Advanced Micro Devices, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
+**Fim da seção específica da Microsoft**  
+ Partes deste conteúdo são Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

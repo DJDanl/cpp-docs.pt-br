@@ -35,11 +35,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccac37a7ffa7ab5967118ec2bcb4c2c4cf5501c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34bd53dec328ebf94e8bb9eb6f72aae1e8a90bc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
 O `CMFCTasksPaneTaskGroup` classe é uma classe auxiliar usada pelo [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controle. Objetos do tipo `CMFCTasksPaneTaskGroup` representar uma *grupo tarefas*. O grupo de tarefas é uma lista de itens que o framework exibe em uma caixa separada que tenha um botão Recolher. A caixa pode ter uma legenda opcional (nome do grupo). Se um grupo estiver recolhido, a lista de tarefas não é visível.  
@@ -52,7 +53,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

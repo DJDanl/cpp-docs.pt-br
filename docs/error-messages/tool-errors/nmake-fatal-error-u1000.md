@@ -1,46 +1,28 @@
 ---
-title: Erro Fatal de NMAKE U1000 | Documentos do Microsoft
+title: Erro Fatal de NMAKE U1000 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- U1000
-dev_langs:
-- C++
-helpviewer_keywords:
-- U1000
+f1_keywords: U1000
+dev_langs: C++
+helpviewer_keywords: U1000
 ms.assetid: 49b9bd9e-f1bc-4b55-a171-c748e40b195e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 82de8111f2d83742dc4827d256f9b241a665be54
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f3fd5dd56295e84e258d4c4020d5714436303a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-fatal-error-u1000"></a>Erro fatal U1000 (NMAKE)
-erro de sintaxe : ')' ausente em chamada de macro  
+Erro de sintaxe: ')' ausente em chamada de macro  
   
- Um parêntese esquerdo, **(**, exibido sem um parêntese direito correspondente, **)**, em uma chamada de macro. The correct form is **$(***name***)**; `$` *n* é permitida para nomes de um caractere.
+ Um parêntese esquerdo, **(**, parecia sem um parêntese direito correspondente, **)**, em uma invocação de macro. O formato correto é **$(***nome***)**; `$`  *n*  é permitida para nomes de um caractere.

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1305057b6b0f63e513aca88b77a507ed9bbc3493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 00451b41b047f433929ad58e4b275eb413f4e22e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Exemplo de confinamento do documento ativo: Office Binder
 O Microsoft Office Binder é um exemplo de um contêiner de documento ativo. Um Office Binder inclui dois painéis principais, como contêineres normalmente. O painel esquerdo contém ícones que correspondem aos documentos ativos associador. Cada documento é chamado um *seção* dentro do fichário. Por exemplo, um associador pode conter documentos do Word, arquivos do PowerPoint, planilhas do Excel e assim por diante.  

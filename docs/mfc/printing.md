@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48395276acfac71cd940be307c3b5f0735c356ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01ee396a7866179bd140f203192d1bdcbfb4681e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printing"></a>Imprimindo
 Microsoft Windows implementa independentes de dispositivo de exibição. Em MFC, isso significa que as chamadas de desenho mesmo, no `OnDraw` a função de membro da classe do modo de exibição, são responsáveis por desenho na tela e em outros dispositivos, como impressoras. Para visualização de impressão, o dispositivo de destino é uma saída de impressora simulada para a exibição.  

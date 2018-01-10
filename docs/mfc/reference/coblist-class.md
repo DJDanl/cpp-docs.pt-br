@@ -61,11 +61,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d4c14ebe2c2e9cb143d8c08ab2e8170a7cd0f5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfcd79377eebbf36ec4dd4688dff8b33c112e451
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coblist-class"></a>Classe cObList
 fSupports ordenados listas de não exclusivo `CObject` ponteiros acessíveis em sequência ou pelo ponteiro de valor.  
@@ -78,7 +79,7 @@ class CObList : public CObject
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -448,8 +449,8 @@ const CObject* GetNext(POSITION& rPosition) const;
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&``rPosition``);`<br /><br /> `const void* GetNext( POSITION&``rPosition``) const;`|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&``rPosition``);`<br /><br /> `const CString& GetNext( POSITION&``rPosition``) const;`|  
   
 ### <a name="example"></a>Exemplo  
   Consulte [CObList::CObList](#coblist) para obter uma lista da `CAge` classe.  
@@ -491,8 +492,8 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&``rPosition``);`<br /><br /> `const void* GetPrev( POSITION&``rPosition``) const;`|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&``rPosition``);`<br /><br /> `const CString& GetPrev( POSITION&``rPosition``) const;`|  
   
 ### <a name="example"></a>Exemplo  
   Consulte [CObList::CObList](#coblist) para obter uma lista da `CAge` classe.  

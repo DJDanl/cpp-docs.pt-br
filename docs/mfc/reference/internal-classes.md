@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +12,7 @@ f1_keywords:
 - m_bPreMultiplyCheck
 - CMFCRibbonPanelMenuBar.IsCategoryPopup
 - CMFCCustomizeMenuButton.SetSiblingsButton
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - UpdateTabs method [MFC]
 - Start method [MFC]
@@ -316,16 +314,16 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f8848bb9d8599fcff5ed24d3bccf82ef581a0eb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: c571a86aaa93a6712cb57ebff5ccd275c73bd4af
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-classes"></a>Classes internas
 As classes a seguir são usadas internamente em MFC. Para fins de exatidão, esta seção descreve essas classes internas, mas eles não se destina a ser usado diretamente no seu código.  
@@ -423,5 +421,4 @@ As classes a seguir são usadas internamente em MFC. Para fins de exatidão, est
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativos da área de trabalho MFC](../../mfc/mfc-desktop-applications.md)
-
 

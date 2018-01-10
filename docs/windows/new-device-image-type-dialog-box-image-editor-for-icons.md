@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c667616325cf29d959340db38a8336dd6c63e8c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Novo &lt;dispositivo&gt; imagem da caixa de diálogo de tipo (Editor de imagens para ícones)
 Permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir o **novo \<dispositivo > imagem** caixa de diálogo, clique em **novo tipo de imagem** no **imagem** menu.  

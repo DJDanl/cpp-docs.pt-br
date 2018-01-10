@@ -1,49 +1,49 @@
 ---
-title: "&lt;para&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<para>"
-  - "para"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marca XML C++ <para>"
-  - "marca XML C++ para"
+title: '&lt;para&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <para>
+- para
+dev_langs: C++
+helpviewer_keywords:
+- <para> C++ XML tag
+- para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 642b4d08f8414db19542e6a00a3718206eee8e4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;para&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A marca de \<para\> é para uso dentro de uma marca, como [\<summary\>](../ide/summary-visual-cpp.md), [\<remarks\>](../ide/remarks-visual-cpp.md), ou [\<returns\>](../ide/returns-visual-cpp.md), e permite que você adicione estrutura ao texto.  
+# <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
+A marca \<para> é para uso dentro de uma marca, como [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) ou [\<returns>](../ide/returns-visual-cpp.md) e permite que você adicione estrutura ao texto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 <para>content</para>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `content`  
  O texto do parágrafo.  
   
-## Comentários  
- Compile com [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação para um arquivo.  
+## <a name="remarks"></a>Comentários  
+ Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
-## Exemplo  
- Consulte [\<summary\>](../ide/summary-visual-cpp.md) para um exemplo de como usar \<para\>.  
+## <a name="example"></a>Exemplo  
+ Consulte [\<summary>](../ide/summary-visual-cpp.md) para obter um exemplo sobre o uso de \<para>.  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -17,30 +15,16 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5b5ffafb841fcb883dc66880933e8d123256e575
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="algorithms"></a>Algoritmos
 Os algoritmos são uma parte fundamental da Biblioteca Padrão do C++. Os algoritmos não funcionam com contêineres em si, mas sim com iteradores. Portanto, o mesmo algoritmo pode ser usado pela maioria ou até por todos os contêineres da Biblioteca Padrão do C++. Esta seção discute as convenções e a terminologia dos algoritmos da Biblioteca Padrão do C++.  
@@ -79,5 +63,4 @@ Os algoritmos são uma parte fundamental da Biblioteca Padrão do C++. Os algori
 ## <a name="see-also"></a>Consulte também  
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

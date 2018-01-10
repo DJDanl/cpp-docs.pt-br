@@ -1,42 +1,42 @@
 ---
-title: "queue::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro size_type [STL/CLR]"
+title: 'Queue:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 9b24c931-cc23-4d25-a29f-950ffff762ef
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: becb1932f8510b1d3c7fd8cc776cb4ee87340e6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# queue::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de uma distância entre dois assinado o elemento.  
+# <a name="queuesizetype-stlclr"></a>queue::size_type (STL/CLR)
+O tipo de uma distância assinado entre dois elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Comentários  
- O tipo descreve uma contagem não negativa do elemento.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve uma contagem de elementos não-negativo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_queue_size_type.cpp   
@@ -67,13 +67,16 @@ int main()
   
 ```  
   
-  **um b c**  
-**diferença de tamanho \= 2**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+ a b c  
+size difference = 2  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
   
-## Consulte também  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::empty](../Topic/queue::empty%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [fila (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)

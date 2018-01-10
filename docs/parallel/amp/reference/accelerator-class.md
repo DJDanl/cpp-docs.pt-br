@@ -50,11 +50,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bdb3d081e9f7f1c2333d8bc577401b95ab0f858
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff64eeedb324d3a849029b15744cd630603aef67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 Um acelerador é um recurso de hardware que é otimizado para a computação paralela de dados. Um acelerador pode ser um dispositivo conectado a um barramento PCIe (como uma GPU) ou pode ser um conjunto de instruções estendido na CPU principal.  
@@ -67,7 +68,7 @@ class accelerator;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

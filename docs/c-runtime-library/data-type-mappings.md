@@ -40,11 +40,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 217290399a03174e599117077b27116a86808f7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f52c6e5664292469ef33a88e9d5458c07ec69454
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-mappings"></a>Mapeamentos de tipo de dados
 Esses mapeamentos de tipo de dados são definidos em TCHAR.H e dependem se a constante `_UNICODE` ou `_MBCS` foi definida no programa.  

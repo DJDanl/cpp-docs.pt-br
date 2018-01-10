@@ -1,50 +1,50 @@
 ---
-title: "Palavras-chave contextuais (extens&#245;es de componentes C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "internal_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "palavras-chave contextuais"
+title: "Palavras-chave contextuais (extensões de componentes C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: internal_CPP
+dev_langs: C++
+helpviewer_keywords: context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Palavras-chave contextuais (extens&#245;es de componentes C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*Palavras\-chave contextuais* são elementos de linguagem que são reconhecidos somente em contextos específicos.  Fora do contexto específico, uma palavra\-chave contextual pode ser um símbolo definido pelo usuário.  
+# <a name="context-sensitive-keywords--c-component-extensions"></a>Palavras-chave Contextuais (Extensões de Componentes C++)
+*Palavras-chave contextuais* são elementos de linguagem que são reconhecidos apenas em contextos específicos. Fora do contexto específico, uma palavra-chave contextual pode ser um símbolo definido pelo usuário.  
   
-## Todos os Tempos de Execução  
+## <a name="all-runtimes"></a>Todos os Tempos de Execução  
  **Comentários**  
   
- Veja uma lista de palavras\-chave contextuais:  
+ A seguir está uma lista de palavras-chave contextuais:  
   
--   [abstrata](../windows/abstract-cpp-component-extensions.md)  
+-   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [delegado](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate](../windows/delegate-cpp-component-extensions.md)  
   
--   [evento](../windows/event-cpp-component-extensions.md)  
+-   [event](../windows/event-cpp-component-extensions.md)  
   
 -   [finally](../dotnet/finally.md)  
   
 -   [for each, in](../dotnet/for-each-in.md)  
   
--   [initonly](../dotnet/initonly-cpp-cli.md)  
+-   [InitOnly](../dotnet/initonly-cpp-cli.md)  
   
--   `internal` \(consulte [Visibilidade de membro](../Topic/Member%20Visibility.md)\)  
+-   `internal`   
   
 -   [literal](../windows/literal-cpp-component-extensions.md)  
   
@@ -52,32 +52,32 @@ manager: "ghogen"
   
 -   [propriedade](../windows/property-cpp-component-extensions.md)  
   
--   [autenticada](../windows/sealed-cpp-component-extensions.md)  
+-   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` \(parte de [Generics](../windows/generics-cpp-component-extensions.md)\)  
+-   `where`(parte do [genéricos](../windows/generics-cpp-component-extensions.md))  
   
- Para fins de legibilidade, convém limitar o uso de palavras\-chave contextuais como símbolos definidos pelo usuário.  
+ Para fins de legibilidade, você talvez queira limitar o uso de palavras-chave contextuais como símbolos definidos pelo usuário.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Tempo de Execução do Windows  
  **Comentários**  
   
- \(Não há nenhum comentário específico de plataforma para este recurso.\)  
+ (Não há nenhum comentários específicos de plataforma para esse recurso).  
   
-### Requisitos  
- Opção do compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opção do compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentários**  
   
- \(Não há nenhum comentário específico de plataforma para este recurso.\)  
+ (Não há nenhum comentários específicos de plataforma para esse recurso).  
   
-### Requisitos  
- Opção do compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opção de compilador: **/clr**  
   
-### Exemplos  
+### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- O exemplo de código mostra que no contexto apropriado, a palavra\-chave contextual de `property` pode ser usada para definir uma propriedade e uma variável.  
+ O exemplo de código a seguir mostra que o contexto apropriado, o `property` palavra-chave contextual que pode ser usado para definir uma propriedade e uma variável.  
   
 ```  
 // context_sensitive_keywords.cpp  
@@ -102,6 +102,9 @@ int main() {
   
  **Saída**  
   
-  **100**   
-## Consulte também  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+100  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

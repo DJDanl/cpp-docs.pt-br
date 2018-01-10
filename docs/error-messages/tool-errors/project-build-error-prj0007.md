@@ -1,49 +1,31 @@
 ---
-title: "PRJ0007 de erro de compilação de projeto | Documentos do Microsoft"
+title: Erro de Build prj0007 no projeto | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- PRJ0007
-dev_langs:
-- C++
-helpviewer_keywords:
-- PRJ0007
+f1_keywords: PRJ0007
+dev_langs: C++
+helpviewer_keywords: PRJ0007
 ms.assetid: d923948b-acc9-498f-bf3b-f14e41bed61a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e6c148c6d97e773fa74134a73df55a566631d2e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5bdeba0c732fbb22f14b349b40a89e4acbbd3d3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-error-prj0007"></a>Erro de Build PRJ0007 no Projeto
 Não foi possível criar o diretório' diretório de saída'.  
   
- Visual C++ não conseguiu criar um diretório de saída. Possíveis razões:  
+ Visual C++ Falha ao criar um diretório de saída. Os motivos possíveis incluem:  
   
 -   O diretório no qual o diretório de saída foi a ser criado é somente leitura.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e564ee0c9d8ec47db68c49db1dfcbdc86b393e02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee24d39c8769eaf2216ca4f64b9856b778a51ac7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers"></a>Contêineres de controle ActiveX
 Um contêiner de controle ActiveX é um contêiner que oferece suporte para controles ActiveX e incorporá-las em seu próprio windows ou caixas de diálogo. Um controle ActiveX é um elemento de software reutilizáveis que você pode usar em vários projetos de desenvolvimento. Controles permitem que o usuário do aplicativo acessar bancos de dados, monitorar os dados e fazer várias seleções em seus aplicativos. Para obter mais informações sobre os controles ActiveX, consulte o artigo [controles ActiveX MFC](../mfc/mfc-activex-controls.md).  

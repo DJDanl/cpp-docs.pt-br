@@ -1,50 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4920 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4920 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4920
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4920
+f1_keywords: C4920
+dev_langs: C++
+helpviewer_keywords: C4920
 ms.assetid: 1e501f2e-93c1-4d27-a4fa-54fc86271ae7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d492bf7abb90ec0b842a9f2e51ee6b91a0768d9a
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c87237f5ac2240cfd2063c58055d626b72285287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4920"></a>Compilador C4920 de aviso (nível 1)
-membro de enumeração enum membro = valor já vista na enumeração enum como membro = valor  
+membro do membro de enumeração de enum = valor já visto em enum de enum como membro = valor  
   
- Se um. tlb que você passa para #import tiver o mesmo símbolo definido em dois ou mais enumerações, esse aviso indica que símbolos idênticos subsequentes são ignorados e serão comentados no arquivo. TLH.  
+ Se um. tlb transmitido #import mesmo símbolo definido em enums de dois ou mais este aviso indica que símbolos idênticos subsequentes serão ignorados e serão comentados no arquivo. TLH.  
   
  Supondo que um. tlb que contém:  
   

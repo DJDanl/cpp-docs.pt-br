@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -14,36 +13,21 @@ f1_keywords:
 - C5021
 - C5001
 - C5012
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5c466510a00079f04ee5871b41364fff552ecf70
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensagens do vetorizador e do paralelizador
-Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir o [paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) códigos de motivo de saída e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.  
+Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir o [paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) para códigos de motivo de saída e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.  
   
 -   [Mensagens informativas](#BKMK_InformationalMessages)  
   
@@ -810,7 +794,7 @@ void code_1305( S_1305 *s, S_1305 x)
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
 |1400|**#pragma loop(no_vector)** for especificado.|  
-|1401|**/kernel** switch é especificada ao direcionar x86 ou ARM.|  
+|1401|**/kernel** opção é especificada durante o direcionamento x86 ou ARM.|  
 |1402|**/arch: SSE2** ou superior chave não for especificada ao direcionar x86.|  
 |1403|**/arch:Atom** opção é especificada e o loop inclui operações em duplicatas.|  
 |1404|**/O1** ou **/Os** opção é especificada.|  
@@ -1006,7 +990,7 @@ void code_1505(int *A, int *B)
   
 ## <a name="see-also"></a>Consulte também  
  [Paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md)   
- [Programação paralela em código nativo](http://go.microsoft.com/fwlink/?LinkId=263662)   
+ [Programação paralela em código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop()](../../preprocessor/loop.md)   
  [/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)   
  [/Qpar-Report (nível de Paralelizador automático relatórios)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   

@@ -1,47 +1,29 @@
 ---
-title: Aviso LNK4078 das ferramentas de vinculador | Documentos do Microsoft
+title: Aviso LNK4078 das ferramentas de vinculador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4078
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4078
+f1_keywords: LNK4078
+dev_langs: C++
+helpviewer_keywords: LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 81f5c9e42d05bbc5646ad0b3fd27fd39408301b1
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8109ef98237f545a2139be8f0502acd11407314b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4078"></a>Aviso LNK4078 (Ferramentas de Vinculador)
-várias seções de 'nome da seção' encontradas com diferentes atributos  
+várias seções de 'nome da seção' encontradas com atributos diferentes  
   
  LINK encontrado duas ou mais seções que têm o mesmo nome mas diferentes atributos.  
   
@@ -50,7 +32,7 @@ várias seções de 'nome da seção' encontradas com diferentes atributos
  Recrie o arquivo e vincular novamente.  
   
 ## <a name="example"></a>Exemplo  
- LNK4078 também pode ser causado por uma alteração significativa: a seção denominada por [init_seg](../../preprocessor/init-seg.md) em x86 era de leitura/gravação, agora é somente leitura.  
+ LNK4078 também pode ser causado por uma alteração significativa: a seção denominada por [init_seg](../../preprocessor/init-seg.md) em x86 foi leitura/gravação, agora é somente leitura.  
   
  O exemplo a seguir gera LNK4078.  
   

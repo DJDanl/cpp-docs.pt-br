@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a470c96670753fd98b97f9b9d5daffbb8c3eba0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f23208b916c190e2fbcdcd0db4ce0709485795ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chrono-literals"></a>literais chrono
 (C++14) O cabeçalho \<chrono> define 12 [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) para facilitar o uso de literais que representam horas, minutos, segundos, milissegundos, microssegundos e nanossegundos. Cada literal definido pelo usuário tem um integral e uma sobrecarga de ponto flutuante. Os literais são definidos no namespace embutido literals::chrono_literals que é colocado no escopo automaticamente quando std::chrono está no escopo.  
@@ -67,7 +68,7 @@ inline namespace literals {
 }// inline namespace literals  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Os literais que pegam um argumento `long long` retornam um valor ou o tipo correspondente. Os literais que pegam um argumento de ponto flutuante retornam uma [duração](../standard-library/duration-class.md).  
   
 ## <a name="example"></a>Exemplo  

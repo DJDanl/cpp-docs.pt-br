@@ -1,93 +1,95 @@
 ---
-title: "Como expor um cont&#234;iner STL/CLR a partir de um assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Contêineres STL/CLR [STL/CLR]"
-  - "STL/CLR, problemas entre assemblies"
+title: "Como: expor um contêiner STL/CLR de um Assembly | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR Containers [STL/CLR]
+- STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 84505edf0877a5ae20d28906dde7f4c709574034
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como expor um cont&#234;iner STL/CLR a partir de um assembly
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os contêineres de STL\/CLR como `list` e `map` são implementados como classes de referência do modelo.  Como os modelos C\+\+ são instanciados em tempo de compilação, duas classes de modelo que têm exatamente a mesma assinatura mas são diferentes nos assemblies são realmente tipos diferentes.  Isso significa que as classes de modelo não podem ser usadas nos limites do assembly.  
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Como expor um contêiner STL/CLR a partir de um assembly
+Contêineres STL/CLR como `list` e `map` são implementados como classes de referência de modelo. Como os modelos do C++ são instanciados no tempo de compilação, duas classes de modelo que tem exatamente a mesma assinatura, mas em diferentes assemblies são realmente diferentes tipos. Isso significa que as classes de modelo não podem ser usados em limites de assembly.  
   
- Para executar o compartilhamento do assembly cruzado possível, implementam dos contêineres de STL\/CLR a interface genérica <xref:System.Collections.Generic.ICollection%601>.  Usando essa interface genérica, todos os idiomas com suporte para os produtos genéricos, inclusive C\+\+, visual C\#, Visual Basic .NET, podem acessar contêiner de STL\/CLR.  
+ Para compartilhamento entre os assemblies que possível, contêineres STL/CLR implementam a interface genérica <xref:System.Collections.Generic.ICollection%601>. Usando esta interface genérica, todos os idiomas que oferecem suporte a genéricos, incluindo C++, c# e Visual Basic, podem acessar os contêineres STL/CLR.  
   
- Este tópico mostra como exibir os elementos de vários contêineres de STL\/CLR gravados em c criando `StlClrClassLibrary`nomeado assembly.  Mostrarmos dois assemblies para acessar `StlClrClassLibrary`.  O primeiro assembly é gravado em C\+\+, e o segundo em C\#.  
+ Este tópico mostra como exibir os elementos de vários contêineres STL/CLR gravados em um assembly C++ chamado `StlClrClassLibrary`. Vamos mostrar dois assemblies acessem `StlClrClassLibrary`. O primeiro conjunto é gravado em C++ e o segundo em c#.  
   
- Se ambos os assemblies são gravados em C\+\+, você pode acessar a interface genérica de um contêiner usando o typedef de `generic_container` .  Por exemplo, se você tiver um contêiner do tipo `cliext::vector<int>`, então a interface genérica é: `cliext::vector<int>::generic_container`.  Da mesma forma, você pode obter um iterador sobre a interface genérica usando o typedef de `generic_iterator` , como em: `cliext::vector<int>::generic_iterator`.  
+ Se os dois assemblies forem escritos em C++, você pode acessar a interface genérica de um contêiner usando seu `generic_container` typedef. Por exemplo, se você tiver um contêiner do tipo `cliext::vector<int>`, é sua interface genérica: `cliext::vector<int>::generic_container`. Da mesma forma, você pode obter um iterador na interface genérica usando o `generic_iterator` typedef, como em: `cliext::vector<int>::generic_iterator`.  
   
- Como eles typedefs são declarados em arquivos de cabeçalho C\+\+, os assemblies criados em outros idiomas não podem utilizá\-los.  Em virtude disso, para acessar a interface genérica para `cliext::vector<int>` em C\# ou em qualquer outro linguagem .NET, use `System.Collections.Generic.ICollection<int>`.  Para iterar sobre essa coleção, use um loop de `foreach` .  
+ Como essas definições de tipo são declaradas em arquivos de cabeçalho do C++, assemblies escritos em outras linguagens não podem usá-los. Portanto, para acessar a interface genérica para `cliext::vector<int>` em c# ou qualquer outra linguagem .NET, use `System.Collections.Generic.ICollection<int>`. Para iterar sobre essa coleção, use um `foreach` loop.  
   
- A tabela a seguir lista a interface genérica que cada contêiner de STL\/CLR implementam:  
+ A tabela a seguir lista a interface genérica que implementa cada contêiner STL/CLR:  
   
-|Contêiner de STL\/CLR|Interface genérica|  
-|---------------------------|------------------------|  
-|dequeT\<\>|ICollectionT\<\>|  
-|hash\_mapK\<, V\>|IDictionaryK\<, V\>|  
-|hash\_multimapK\<, V\>|IDictionaryK\<, V\>|  
-|hash\_multisetT\<\>|ICollectionT\<\>|  
-|hash\_setT\<\>|ICollectionT\<\>|  
-|listT\<\>|ICollectionT\<\>|  
-|mapK\<, V\>|IDictionaryK\<, V\>|  
-|multimapK\<, V\>|IDictionaryK\<, V\>|  
-|multisetT\<\>|ICollectionT\<\>|  
-|pavimento\<\>|ICollectionT\<\>|  
-|vectorT\<\>|ICollectionT\<\>|  
+|Contêiner STL/CLR|Interface genérica|  
+|------------------------|-----------------------|  
+|deque < T\>|ICollection < T\>|  
+|hash_map < K, V >|IDictionary < K, V >|  
+|hash_multimap < K, V >|IDictionary < K, V >|  
+|hash_multiset < T\>|ICollection < T\>|  
+|hash_set < T\>|ICollection < T\>|  
+|lista < T\>|ICollection < T\>|  
+|mapa < K, V >|IDictionary < K, V >|  
+|vários mapeamentos < K, V >|IDictionary < K, V >|  
+|multiset < T\>|ICollection < T\>|  
+|Definir < T\>|ICollection < T\>|  
+|Vector < T\>|ICollection < T\>|  
   
 > [!NOTE]
->  Como `queue`, `priority_queue`, e os contêineres de `stack` não oferecem suporte para iteradores, o não implementa as interfaces genéricas e não pode ser acessado assembly cruzado.  
+>  Porque o `queue`, `priority_queue`, e `stack` contêineres dão suporte a iteradores, eles não implementar interfaces genéricas e não podem ser acessado entre assemblies.  
   
-## Exemplo 1  
+## <a name="example-1"></a>Exemplo 1  
   
-### Descrição  
- Neste exemplo, é declaramos a classe c criando que contém dados privados de membro de STL\/CLR.  Nós declaramos em métodos públicos para conceder acesso a coleções particular da classe.  Nós fazemo\-la de duas maneiras diferentes, uma para clientes C\+\+ e uma para outros clientes .NET.  
+### <a name="description"></a>Descrição  
+ Neste exemplo, é possível declarar uma classe de C++ que contém dados de membro particular STL/CLR. Em seguida, declaramos métodos públicos para conceder acesso a coleções particulares da classe. Fazemos-la de duas maneiras diferentes, uma para os clientes C++ e outra para outros clientes do .NET.  
   
-### Código  
+### <a name="code"></a>Código  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-## Exemplo 2  
+## <a name="example-2"></a>Exemplo 2  
   
-### Descrição  
- Neste exemplo, é implementamos a classe declarada no exemplo 1.  Para que os clientes usem essa biblioteca de classe, usamos a ferramenta manifesta **mt.exe** para inserir o arquivo de manifesto na DLL.  Para obter detalhes, consulte os comentários de código.  
+### <a name="description"></a>Descrição  
+ Neste exemplo, vamos implementar a classe declarada no exemplo 1. Para que os clientes usam essa biblioteca de classe, podemos usar a ferramenta de manifesto **mt.exe** para inserir o arquivo de manifesto na DLL. Para obter detalhes, consulte os comentários de código.  
   
- Para obter mais informações sobre a ferramenta manifesta os assemblies e lado a lado, consulte [Compilando aplicativos isolados do C\/C\+\+ e assemblies lado a lado](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
+ Para obter mais informações sobre a ferramenta de manifesto e assemblies lado a lado, consulte [compilando aplicativos isolados do C/C++ e Assemblies lado a lado](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
   
-### Código  
+### <a name="code"></a>Código  
   
 <CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-## Exemplo 3  
+## <a name="example-3"></a>Exemplo 3:  
   
-### Descrição  
- Neste exemplo, criamos o cliente c criando que usa a biblioteca de classes criada nos exemplos 1 e 2.  Esse cliente usa os typedefs de `generic_container` dos contêineres de STL\/CLR para iterar sobre os contêineres e exibir seu conteúdo.  
+### <a name="description"></a>Descrição  
+ Neste exemplo, podemos criar um cliente de C++ que usa a biblioteca de classes criada nos exemplos 1 e 2. Esse cliente usa o `generic_container` typedefs dos contêineres STL/CLR para iterar sobre os contêineres e exibir seu conteúdo.  
   
-### Código  
+### <a name="code"></a>Código  
   
 <CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-### Saída  
+### <a name="output"></a>Saída  
   
 <CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-## Exemplo 4  
+## <a name="example-4"></a>Exemplo 4  
   
-### Descrição  
- Neste exemplo, criamos um cliente C\# que usa a biblioteca de classes criada nos exemplos 1 e 2.  Esse cliente usar os métodos de <xref:System.Collections.Generic.ICollection%601> dos contêineres de STL\/CLR para iterar sobre os contêineres e exibir seu conteúdo.  
+### <a name="description"></a>Descrição  
+ Neste exemplo, podemos criar um cliente c# que usa a biblioteca de classes criada nos exemplos 1 e 2. Esse cliente usa o <xref:System.Collections.Generic.ICollection%601> métodos dos contêineres STL/CLR para iterar sobre os contêineres e exibir seu conteúdo.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // CsConsoleApp.cs  
@@ -152,7 +154,7 @@ namespace CsConsoleApp
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 cliext::deque contents:  
@@ -176,5 +178,5 @@ cliext::vector contents:
 20  
 ```  
   
-## Consulte também  
- [Biblioteca STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)

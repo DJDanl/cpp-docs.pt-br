@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 573e25a0750ab52da531f86e89094edc16288cdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd4eb47da7c3866e01ee563b9f6b42fa21ada109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Usando uma caixa de diálogo com um controle rebar
 Conforme mencionado em [controles Rebar e bandas](../mfc/rebar-controls-and-bands.md), cada faixa pode conter apenas um filho janela (ou controle). Isso pode ser uma limitação se desejar ter mais de uma janela filho por faixa. É uma solução alternativa conveniente criar um recurso de barra da caixa de diálogo com vários controles e, em seguida, adicionar uma faixa de rebar (que contém a barra da caixa de diálogo) para o controle rebar.  

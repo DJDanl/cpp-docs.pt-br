@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: adc480a82668da3c3ad7fdb88a701b3fa80ae9e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9c64787d9c6cc2dd0809f75f8f9db9819174d0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="263-barrier-directive"></a>2.6.3 Diretiva barrier
 O **barreira** diretiva sincroniza todos os threads em uma equipe. Quando encontrada, cada thread na equipe aguarda até que todos os outros tem atingido esse ponto. A sintaxe do **barreira** diretiva é da seguinte maneira:  

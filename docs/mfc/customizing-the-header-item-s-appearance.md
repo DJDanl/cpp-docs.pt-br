@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 494372aa3e6dcc418a6ffdacbb7b06635a010310
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dacb5cc7aa1c6d7c74a07ee911c5887efe1d877b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personalizando o Item de cabeçalho &#39; s aparência
 Definindo o *dwStyle* parâmetro quando você cria um controle de cabeçalho ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), você pode definir a aparência e comportamento do cabeçalho de itens ou do cabeçalho de controle em si.  

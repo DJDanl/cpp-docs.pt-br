@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e86ca1959ce22370e47bca508602d5efa35cd4f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-restart-manager-support"></a>Como adicionar suporte ao gerenciador de reinicialização
 O Gerenciador de reinicialização é um recurso adicionado para [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. O Gerenciador de reinicialização adiciona suporte para o seu aplicativo se fecha ou for reiniciado inesperadamente. O comportamento do Gerenciador de reinicialização depende do tipo de seu aplicativo. Se seu aplicativo for um editor de documento, o Gerenciador de reinicialização habilitado automaticamente salvar o estado do seu aplicativo e o conteúdo de qualquer abra documentos e reinicia o aplicativo depois de um encerramento inesperado. Se seu aplicativo não é um editor de documento, o Gerenciador de reinicialização reiniciará o aplicativo, mas ele não é possível salvar o estado do aplicativo por padrão.  

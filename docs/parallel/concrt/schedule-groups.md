@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 234288be0313c8e50fde08a3cb898f498ebe4174
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule-groups"></a>Grupos de agendas
 Este documento descreve a função dos grupos de agendamento no tempo de execução de simultaneidade. Um *grupo agenda* cria afinidade, ou grupos, tarefas relacionadas juntas. Cada Agendador possui um ou mais grupos de agendamento. Use grupos de agendamento de quando você exigir um alto grau de localidade entre tarefas, por exemplo, quando um grupo de tarefas relacionadas se beneficiar de execução no mesmo nó do processador. Por outro lado, use instâncias de Agendador quando seu aplicativo tiver requisitos específicos de qualidade de, por exemplo, quando você quiser limitar a quantidade de recursos de processamento que estão alocadas para um conjunto de tarefas. Para obter mais informações sobre instâncias de Agendador, consulte [instâncias de Agendador](../../parallel/concrt/scheduler-instances.md).  

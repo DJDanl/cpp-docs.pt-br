@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4358 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4358 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4358
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4358
+f1_keywords: C4358
+dev_langs: C++
+helpviewer_keywords: C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 24ff4675d9286757599472ad5f1094be3157ea43
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9e006bed5e805118c394b9107aa5eb91660aa542
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4358"></a>Compilador C4358 de aviso (nível 1)
-'operator': tipo de retorno de delegados combinados 'void'; valor retornado é indefinido  
+'operator': tipo de retorno de delegates combinados não 'void'; valor retornado é indefinido  
   
- Dois delegados foram combinados e o valor de retorno não é void. Se dois delegados com valores de retorno de void não são combinados, o compilador não poderá fazer uma atribuição correta se o valor de retorno do delegado é usado.  
+ Dois delegados foram combinados e o valor de retorno não é void. Se dois representantes com valores de retorno de void não são combinados, o compilador não poderá fazer uma atribuição adequada, se o valor de retorno do delegado é usado.  
   
  O exemplo a seguir gera C4358:  
   

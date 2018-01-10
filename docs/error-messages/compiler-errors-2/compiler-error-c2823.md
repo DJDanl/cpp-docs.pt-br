@@ -1,53 +1,38 @@
 ---
-title: C2823 de erro do compilador | Documentos do Microsoft
+title: C2823 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2823
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2823
+f1_keywords: C2823
+dev_langs: C++
+helpviewer_keywords: C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ba953ae51024a21ac694193eefdd7a1472bd8545
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 84640d17479c27047919016525272ee5a87d178b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-error-c2823"></a>C2823 de erro do compilador
-um modelo de typedef é ilegal  
+# <a name="compiler-error-c2823"></a>C2823 de erro do compilador  
   
- Modelos não são permitidos em [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1) definições.  
+> um modelo de typedef é inválido  
   
- O exemplo a seguir gera C2823:  
+Modelos não são permitidos em `typedef` definições.  
   
-```  
+## <a name="example"></a>Exemplo  
+  
+O exemplo a seguir gera C2823 e mostra uma maneira de corrigir isso:  
+  
+```cpp  
 // C2823.cpp  
 template<class T>  
 typedef struct x {  

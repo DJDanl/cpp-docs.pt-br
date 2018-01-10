@@ -1,35 +1,37 @@
 ---
-title: "Como analisar cadeias de caracteres usando o m&#233;todo split (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exemplos [C++], cadeias de caracteres"
-  - "analisando cadeias de caracteres [C++]"
-  - "expressões regulares [C++], analisando cadeias de caracteres"
-  - "Método Split, analisando cadeias de caracteres"
-  - "cadeias de caracteres [C++], analisando"
+title: "Como: analisar cadeias de caracteres usando o método Split (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- Split method, parsing strings
+- strings [C++], parsing
 ms.assetid: d52d2539-5ebb-4716-86b3-07314dd7e4bd
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7494a615d1a253c6617601f38e5d01755c718b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como analisar cadeias de caracteres usando o m&#233;todo split (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra o uso do método de <xref:System.String.Split%2A?displayProperty=fullName> para extrair cada palavra de uma cadeia de caracteres.  Uma cadeia de caracteres que contém vários tipos de delineators do word é construída e analisada chamando <xref:System.String.Split%2A> com uma lista dos delineators.  Em seguida, cada palavra da frase são exibidas separadamente.  
+# <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Como analisar cadeias de caracteres usando o método split (C++/CLI)
+O exemplo de código a seguir demonstra como usar o <xref:System.String.Split%2A?displayProperty=fullName> método para extrair cada palavra de uma cadeia de caracteres. Uma cadeia de caracteres que contém vários tipos de delineadores word é criada e, em seguida, analisar chamando <xref:System.String.Split%2A> com uma lista dos delineadores. Em seguida, cada palavra da frase será exibida separadamente.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // regex_split.cpp  
@@ -54,6 +56,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Expressões regulares do .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Expressões regulares do .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

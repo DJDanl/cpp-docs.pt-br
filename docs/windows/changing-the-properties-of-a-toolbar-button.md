@@ -1,45 +1,47 @@
 ---
-title: "Alterando as propriedades de um bot&#227;o da barra de ferramentas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "IDs de comando, botões da barra de ferramentas"
-  - "botões de barra de ferramentas (no Editor de barra de ferramentas), configurando propriedades"
-  - "controles de barra de ferramentas [MFC], ID de comando"
-  - "Editor da barra de ferramentas, propriedades de botão da barra de ferramentas"
+title: "Alterando as propriedades de um botão de barra de ferramentas | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- toolbar controls [MFC], command ID
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- command IDs, toolbar buttons
 ms.assetid: b16a0635-e703-4156-acea-a54df279295a
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b13b7ea37bc6b2f0d512e6aa2d2656bcc564fbb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Alterando as propriedades de um bot&#227;o da barra de ferramentas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para alterar as propriedades de um botão da barra de ferramentas  
+# <a name="changing-the-properties-of-a-toolbar-button"></a>Alterando as propriedades de um botão da barra de ferramentas
+### <a name="to-change-the-properties-of-a-toolbar-button"></a>Para alterar as propriedades de um botão de barra de ferramentas  
   
 1.  Selecione o botão de barra de ferramentas.  
   
-2.  Digite a ID de nova no  **ID** propriedade no  [Janela Propriedades do](../Topic/Properties%20Window.md), ou use a lista suspensa para selecionar um novo  **ID**.  
+2.  Digite a nova ID no **ID** propriedade o [janela propriedades](/visualstudio/ide/reference/properties-window), ou use a lista suspensa para selecionar um novo **ID**.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
- MFC ou ATL  
+ MFC ou do ATL  
   
-## Consulte também  
- [Propriedades do botão da barra de ferramentas](../mfc/toolbar-button-properties.md)   
- [Criando, movendo e editando botões da barra de ferramentas](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Editor de Barra de Ferramentas](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Consulte também  
+ [Propriedades de botão da barra de ferramentas](../windows/toolbar-button-properties.md)   
+ [Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Editor de barra de ferramentas](../windows/toolbar-editor.md)
+

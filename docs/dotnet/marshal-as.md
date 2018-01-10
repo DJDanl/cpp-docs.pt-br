@@ -1,35 +1,36 @@
 ---
-title: "marshal_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "marshal_as"
-  - "msclr.interop.marshal_as"
-  - "msclr::interop::marshal_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Modelo marshal_as [C++]"
+title: marshal_as | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- marshal_as
+- msclr.interop.marshal_as
+- msclr::interop::marshal_as
+dev_langs: C++
+helpviewer_keywords: marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a209b1ee657d6ae6773ee88c64225a7dc5b4f49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# marshal_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esse método converte dados entre o modo nativo e ambientes gerenciados.  
+# <a name="marshalas"></a>marshal_as
+Este método converte dados entre ambientes gerenciados e nativos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 To_Type marshal_as<To_Type>(  
@@ -37,22 +38,22 @@ To_Type marshal_as<To_Type>(
 );  
 ```  
   
-#### Parâmetros  
- \[entrada\] `input`  
- O valor que você deseja gerar marshaling a uma variável de `To_Type` .  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `input`  
+ O valor que você deseja empacotar um `To_Type` variável.  
   
-## Valor de retorno  
- Uma variável de tipo `To_Type` que é o valor convertido de `input`.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma variável do tipo `To_Type` que é o valor convertido de `input`.  
   
-## Comentários  
- Este método é uma forma simplificada de conversão de dados entre o modo nativo e tipos gerenciados.  Para determinar quais tipos de dados têm suporte, consulte [Visão geral de marshaling no C\+\+](../dotnet/overview-of-marshaling-in-cpp.md).  Algumas conversões de dados requer um contexto.  Você pode converter esses tipos de dados usando [Classe marshal\_context](../dotnet/marshal-context-class.md).  
+## <a name="remarks"></a>Comentários  
+ Esse método é uma maneira simplificada para converter os dados entre os tipos nativos e gerenciados. Para determinar quais tipos de dados têm suporte, consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md). Algumas conversões de dados exigem um contexto. Você pode converter esses tipos de dados usando o [classe marshal_context](../dotnet/marshal-context-class.md).  
   
- Se você tentar ao marshaling um par de tipos de dados sem suporte, `marshal_as` gerará um erro [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) em tempo de compilação.  Lê a mensagem fornecida com esse erro para obter mais informações.  O erro de `C4996` pode ser gerado para mais do que simplesmente funções substituídas.  Um exemplo desse está tentando o marshaling um par de tipos de dados não suportados.  
+ Se você tentar realizar marshaling de um par de tipos de dados que não são suportados, `marshal_as` irá gerar um erro [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) em tempo de compilação. Leia a mensagem fornecida com este erro para obter mais informações. O `C4996` erro pode ser gerado para as funções mais de apenas preteridas. Um exemplo disso é tentar realizar marshaling de um par de tipos de dados que não são suportados.  
   
- A biblioteca marshaling consistir em diversos arquivos de cabeçalho.  Qualquer conversão requer apenas um arquivo, mas você pode incluir arquivos adicionais se você precisa para as demais conversões.  Para ver que conversões são associadas com que os arquivos, verifique a tabela em `Marshaling Overview`.  Independentemente de qual você deseja fazer conversão, o requisito de namespace é sempre em vigor.  
+ A biblioteca de marshaling consiste em vários arquivos de cabeçalho. Qualquer conversão requer apenas um arquivo, mas você pode incluir arquivos adicionais se você precisa para outras conversões. Para ver quais conversões estão associados com os arquivos, veja na tabela `Marshaling Overview`. O requisito de espaço para nome independentemente de qual conversão você deseja fazer, está sempre em vigor.  
   
-## Exemplo  
- Realiza marshaling deste exemplo de `const char*` a um tipo de variável de `System::String` .  
+## <a name="example"></a>Exemplo  
+ Este exemplo realiza marshaling de uma `const char*` para um `System::String` tipo de variável.  
   
 ```  
 // marshal_as_test.cpp  
@@ -72,11 +73,11 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho:** \\ marshal.h, msclr\>\<\\ marshal\_windows.h, msclr\>\\ \<marshal\_cppstd.h, ou msclr\>\\ marshal\_atl.h \<\>  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >  
   
- msclr::interop de**Namespace:**  
+ **Namespace:** msclr::interop  
   
-## Consulte também  
- [Visão geral de marshaling no C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)   
- [Classe marshal\_context](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Visão geral de Marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [Classe marshal_context](../dotnet/marshal-context-class.md)

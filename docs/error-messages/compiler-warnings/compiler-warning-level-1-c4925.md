@@ -1,52 +1,33 @@
 ---
-title: "Compilador aviso (nível 1) C4925 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4925 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4925
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4925
+f1_keywords: C4925
+dev_langs: C++
+helpviewer_keywords: C4925
 ms.assetid: a4b206c0-016a-4f28-873a-bb8bb41bad50
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: afa8b609b28b278bb064090ff0e50c97630e0b6d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e686aeb361e238470776a9f762e7fa6d3bc65648
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4925"></a>Compilador C4925 de aviso (nível 1)
-'method': método dispinterface não pode ser chamado de script  
+'method': método dispinterface não pode ser chamado do script  
   
- Linguagens de script não é possível criar um VT_BYREF 'parâmetro in', ele só pode criar VT_BYREF 'parâmetros out'.  
+ Linguagens de script não é possível criar um VT_BYREF 'in', parâmetro, ele só pode criar VT_BYREF 'parâmetros out'.  
   
- Outra maneira de resolver esse aviso é não tornar o parâmetro (na definição e implementação) um tipo de ponteiro.  
+ Outra maneira de resolver este aviso é não torne o parâmetro (na definição e implementação) um tipo de ponteiro.  
   
  O exemplo a seguir gera C4925:  
   

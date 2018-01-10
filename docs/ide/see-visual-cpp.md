@@ -1,55 +1,55 @@
 ---
-title: "&lt;consulte&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<see>"
-  - "see"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marca XML C++ <see>"
-  - "marca XML C++ see"
+title: '&lt;consulte&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <see>
+- see
+dev_langs: C++
+helpviewer_keywords:
+- <see> C++ XML tag
+- see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;consulte&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A marca de \<see\> permite que você especifique um link de dentro do texto.  Use [\<seealso\>](../Topic/%3Cseealso%3E%20\(Visual%20C++\).md) para indicar que o texto que você pode querer aparecer na seção consulte consulte também.  
+# <a name="ltseegt-visual-c"></a>&lt;consulte&gt; (Visual C++)
+Use a marca \<see> para especificar um link de dentro do texto. Use [ \<seealso >](../ide/seealso-visual-cpp.md) para indicar o texto que você pode aparecer em uma seção Consulte também.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 <see cref="member"/>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `member`  
- Uma referência a um membro ou campo que está disponível para ser chamado a partir do ambiente de compilação atual.  Envolva\-o com aspas simples ou double \- marcas.  
+ Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual.  Coloque o nome entre aspas simples ou duplas.  
   
- O compilador verifica se o elemento de código existe e resolve `member` o nome de elemento no XML.  O compilador emite um aviso se não encontrar `member`.  
+ O compilador verifica se o elemento de código fornecido existe e resolve `member` para o nome do elemento no XML de saída.  O compilador emite um aviso se ele não encontrar `member`.  
   
-## Comentários  
- Compile com [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação para um arquivo.  
+## <a name="remarks"></a>Comentários  
+ Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
- Consulte [\<summary\>](../ide/summary-visual-cpp.md) para um exemplo de como usar \<see\>.  
+ Consulte [ \<resumo >](../ide/summary-visual-cpp.md) para obter um exemplo de como usar \<consulte >.  
   
- O compilador do Visual C\+\+ tentará resolver referências de cref em uma passagem com comentários de documentação.  Portanto, se usando as regras de pesquisa de C\+\+, um símbolo não for encontrado pelo compilador a referência não será marcada como resolvida.  Consulte [\<seealso\>](../Topic/%3Cseealso%3E%20\(Visual%20C++\).md) para maiores informações.  
+ O compilador do Visual C++ tentará resolver referências cref em uma passagem pela comentários de documentação.  Portanto, se usar as regras de pesquisa do C++, um símbolo não é encontrado pelo compilador a referência será marcada como não resolvidos. Consulte [ \<seealso >](../ide/seealso-visual-cpp.md) para obter mais informações.  
   
-## Exemplo  
- O exemplo a seguir mostra como você pode fazer a referência de cref a um tipo genérico, de forma que, o compilador resolverá a referência.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como você pode fazer referência cref para um tipo genérico, de modo que o compilador resolverá a referência.  
   
 ```  
 // xml_see_cref_example.cpp  
@@ -76,5 +76,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

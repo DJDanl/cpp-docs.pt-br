@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c0c486b4ea510de8e998bf1fd4e9b0ee80117c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9ebeb453aefee8310e45779f1fd60c7bd207771
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="poissondistribution-class"></a>Classe poisson_distribution
 Gera uma distribuição Poisson.  
@@ -76,7 +77,7 @@ public:
   
 #### <a name="parameters"></a>Parâmetros  
 *IntType*  
-O tipo de resultado do inteiro assume `int` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado do inteiro assume `int` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Comentários  
 A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário com uma distribuição Poisson. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -98,7 +99,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
   
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a distribuição Poisson, consulte o artigo da Wolfram MathWorld [Poisson Distribution](http://go.microsoft.com/fwlink/LinkId=401112).  
+Para obter informações detalhadas sobre a distribuição Poisson, consulte o artigo da Wolfram MathWorld [Poisson Distribution](http://go.microsoft.com/fwlink/p/?linkid=401112).  
   
 ## <a name="example"></a>Exemplo  
   
