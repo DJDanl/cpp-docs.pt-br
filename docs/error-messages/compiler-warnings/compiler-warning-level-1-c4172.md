@@ -1,51 +1,33 @@
 ---
-title: "Compilador aviso (nível 1) C4172 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4172 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4172
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4172
+f1_keywords: C4172
+dev_langs: C++
+helpviewer_keywords: C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fdd327750abe0e1f1e67f3848aeb91213b48d457
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3cda1f5c578be76bbe98b60d014a70e970fcc2d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4172"></a>Compilador C4172 de aviso (nível 1)
-retornando endereço de variável local ou temporária  
+retornando o endereço da variável local ou temporário  
   
- Uma função retorna o endereço de um objeto temporário ou variável local. Variáveis locais e objetos temporários são destruídos quando uma função retorna, portanto o endereço retornado não é válido.  
+ Uma função retorna o endereço de um objeto temporário ou variável local. Variáveis locais e objetos temporários são destruídos quando uma função retorna, para que o endereço retornado não é válido.  
   
- Recrie a função para que ela não retorna o endereço de um objeto local.  
+ Recrie a função de forma que ele não retorna o endereço de um objeto local.  
   
  O exemplo a seguir gera C4172:  
   

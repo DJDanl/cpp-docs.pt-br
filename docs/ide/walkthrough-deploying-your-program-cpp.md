@@ -1,100 +1,101 @@
 ---
-title: "Instru&#231;&#245;es passo a passo: implantando o programa (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Implantando aplicativos [C++], instruções passo a passo"
-  - "projeto de instalação [C++]"
-  - "implantações de programa [C++]"
-  - "configuração de projetos [C++]"
-  - "projetos [C++], Implantando programas"
-  - "implantação de aplicativo [C++], instruções passo a passo"
+title: 'Passo a passo: Implantando o programa (C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- deploying applications [C++], walkthroughs
+- setup projects [C++]
+- program deployments [C++]
+- projects [C++], setup
+- projects [C++], deploying programs
+- application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ce59dc7b767c8ff8e988ac7a765d3bb5f1cdfffc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Instru&#231;&#245;es passo a passo: implantando o programa (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Agora que você criou seu aplicativo completando passo a passo relacionados anteriormente, que estão listados em [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C\+\+](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), a última etapa é criar um instalador de modo que outros usuários possam instalar o programa em seus computadores.  Para fazer isso, você adicionará um novo projeto à solução existente.  A saída desse novo projeto é um arquivo setup.exe que instalará o seu aplicativo em outro computador.  
+# <a name="walkthrough-deploying-your-program-c"></a>Instruções passo a passo: implantando o programa (C++)
+Agora que você criou seu aplicativo executando a anteriormente relacionada explicações passo a passo, que é listada na [usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), a última etapa é criar um instalador para que outros usuários possam Instale o programa em seus computadores. Para fazer isso, você adicionará um novo projeto à solução existente. A saída do novo projeto é um arquivo setup.exe que instalará o aplicativo em outro computador.  
   
- Essa explicação passo a passo mostra como usar o Windows Installer para implantar seu aplicativo.  Você também pode usar o ClickOnce para implantar um aplicativo.  Para obter mais informações, consulte [ClickOnce Implantação para aplicativos do Visual C\+\+](../ide/clickonce-deployment-for-visual-cpp-applications.md).  Para obter mais informações sobre implantação em geral, consulte [Implantando aplicativos, serviços e componentes](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md).  
+ Este passo a passo mostra como usar o Windows Installer para implantar seu aplicativo. Você também pode usar o ClickOnce para implantar um aplicativo. Para obter mais informações, consulte [implantação de ClickOnce para aplicativos Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Para obter mais informações sobre a implantação em geral, consulte [implantação de aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components).  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
   
--   Esta explicação passo a passo pressupõe que você compreenda os fundamentos da linguagem C\+\+.  
+-   Este passo a passo pressupõe que você entender os conceitos básicos da linguagem C++.  
   
--   Também pressupõe que você tenha concluído os passo a passo relacionados anteriormente, que estão listados em [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C\+\+](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Ele também pressupõe que você tenha concluído as orientações relacionadas anteriormente listados na [usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
--   Essa explicação passo a passo não pode ser concluído nas edições Express do Visual Studio.  
+-   Este passo a passo não pode ser concluída em edições Express do Visual Studio.  
   
--   Caso você ainda não tenha feito isso, baixe a Edição Limitada do InstallShield \(ISLE\), conforme descrito nas etapas posteriores neste artigo.  ISLE é gratuito para desenvolvedores do Visual Studio e substitui a funcionalidade dos modelos de projeto de instalação e implantação nas edições anteriores do Visual Studio.  
+-   Se você ainda não o fez, baixe o InstallShield Limited Edition (ilha), conforme descrito nas etapas neste artigo. Ilha está livre para desenvolvedores do Visual Studio e substitui a funcionalidade de instalação e implantação de modelos de projeto em edições anteriores do Visual Studio.  
   
-### Para instalar o modelo de projeto da configuração e implantação de ILHA  
+### <a name="to-install-the-isle-setup-and-deployment-project-template"></a>Para instalar o modelo de projeto de instalação e implantação da Ilha  
   
-1.  Quando você estiver conectado à Internet, na barra de menus, selecione **Arquivo**, **Novo**, **Projeto** para abrir a caixa de diálogo **Novo Projeto**.  
+1.  Quando você está conectado à Internet, na barra de menus, escolha **arquivo**, **novo**, **projeto** para abrir o **novo projeto** caixa de diálogo.  
   
-2.  No painel esquerdo da caixa de diálogo, expanda os nós **Instalado**, **Modelos** e **Outros Tipos de Projetos**, e selecione **Instalação e Implantação**.  No painel central, selecione **Habilitar InstallShield Limited Edition** e escolha o botão **OK**.  
+2.  No painel esquerdo da caixa de diálogo, expanda o **instalado**, **modelos**, e **outros tipos de projetos** nós e, em seguida, selecione **instalação e implantação**. No painel central, selecione **habilitar o InstallShield Limited Edition** e, em seguida, escolha o **Okey** botão.  
   
-3.  Siga as instruções para instalar o InstallShield Limited Edition para Visual Studio \(ISLE\).  
+3.  Siga as instruções para instalar o InstallShield Limited Edition para Visual Studio (ilha).  
   
-4.  Depois que você baixou, instalou e ativou o ISLE, feche o Visual Studio e reabra\-o.  
+4.  Depois de ter baixado, instalado e ativado ilha, feche o Visual Studio e abra-o novamente.  
   
-5.  Na barra de menus, escolha **Arquivo**, **Projetos e Soluções Recentes**, e então escolha a solução **Jogo** para reabri\-lo.  
+5.  Na barra de menus, escolha **arquivo**, **soluções e projetos recentes**e, em seguida, escolha o **jogo** solução para reabri-la.  
   
-### Para criar um projeto de configuração e instalar seu programa  
+### <a name="to-create-a-setup-project-and-install-your-program"></a>Para criar um projeto de instalação e instalar o programa  
   
-1.  Altere a configuração ativa de solução para Release.  Na barra de menus, escolha **Compilar**, **Gerenciador de Configurações**.  Na caixa de diálogo **Gerenciador de Configurações**, na lista suspensa **Configuração da solução ativa**, selecione **Versão**.  Escolha o botão **Fechar** para salvar a configuração.  
+1.  Altere a configuração de solução ativa para versão. Na barra de menus, escolha **Build**, **Configuration Manager**. No **do Configuration Manager** caixa de diálogo de **configuração de solução ativa** lista suspensa, selecione **versão**. Escolha o **fechar** botão para salvar a configuração.  
   
-2.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto** para abrir a caixa de diálogo **Novo Projeto**.  
+2.  Na barra de menus, escolha **arquivo**, **novo**, **projeto** para abrir o **novo projeto** caixa de diálogo.  
   
-3.  No painel esquerdo da caixa de diálogo, expanda os nós **Instalado**, **Modelos** e **Outros Tipos de Projetos**, e selecione **Instalação e Implantação**.  No painel central, selecione **Projeto InstallShield Limited Edition**.  
+3.  No painel esquerdo da caixa de diálogo, expanda o **instalado**, **modelos**, e **outros tipos de projetos** nós e, em seguida, selecione **instalação e implantação**. No painel central, selecione **projeto do InstallShield Limited Edition**.  
   
-4.  Insira um nome para o projeto de configuração na caixa **Nome**.  Para esse exemplo, digite Instalador do jogo.  Na lista suspensa **Solução**, selecione **Adicionar para solução**.  Escolha o botão **OK** para criar o projeto de configuração.  Uma guia **Assistente de Projeto \(Instalador de Jogos\)** é aberta na janela do editor.  
+4.  Insira um nome para o projeto de instalação no **nome** caixa. Para este exemplo, digite **jogo instalador**. No **solução** lista suspensa, selecione **adicionar à solução**. Escolha o **Okey** botão para criar o projeto de instalação. Um **Assistente de projeto (instalador de jogo)** guia é exibida na janela do editor.  
   
-5.  Na parte inferior da guia **Assistente de Projeto \(Instalador do Jogo\)**, escolha o link **Informações do Aplicativo**.  
+5.  Na parte inferior da **Assistente de projeto (instalador de jogo)** guia, escolha o **informações do aplicativo** link.  
   
-6.  Na página **Informações do Aplicativo**, especifique o nome da empresa como você deseja que ele apareça no instalador.  É possível usar seu próprio nome da empresa, ou para esse exemplo, use Contoso.  Especifique o nome do seu aplicativo; neste exemplo, especifique Jogo.  Especificar o endereço Web da empresa ou, para este exemplo, use http:\/\/www.contoso.com.  
+6.  Sobre o **informações do aplicativo** , especifique o nome da sua empresa como deseja que ele apareça no instalador. Você pode usar seu próprio nome da empresa ou para este exemplo, use **Contoso**. Especifique o nome do aplicativo; Neste exemplo, especificar **jogo**. Especifique o endereço da web sua empresa ou para este exemplo, use **http://www.contoso.com**.  
   
-7.  Na parte inferior da guia **Assistente de Projeto \(Instalador do Jogo\)**, escolha o link **Entrevista de Instalação**.  
+7.  Na parte inferior da **Assistente de projeto (instalador de jogo)** guia, escolha o **instalação entrevista** link.  
   
-8.  Na página **Entrevista de Instalação**, em **Você deseja exibir uma Caixa de Diálogo de Contrato de Licença**, selecione o botão de opção **Não**.  Em **Você deseja solicitar aos usuários para que insiram seu nome de empresa e nome de usuário**, clique no botão de opção **Não**.  
+8.  No **instalação entrevista** página em **você deseja exibir uma caixa de diálogo do contrato de licença**, selecione o **não** botão de opção. Em **você deseja solicitar aos usuários inserir o nome da sua empresa e o nome de usuário**, selecione o **não** botão de opção.  
   
-9. Em **Gerenciador de Soluções**, expanda o projeto **Instalador do Jogo**, expanda o nó **Organize sua Configuração** e abra a página **Informações Gerais**.  
+9. No **Solution Explorer**, expanda o **jogo instalador** de projeto, expanda o **organizar sua instalação** nó e, em seguida, abra o **asinformaçõesgerais** página.  
   
-10. Na guia **Informações Gerais \(instalador do jogo\)** na janela do editor, especifique uma **Identificação do Criador de Guia**, por exemplo, regid.2012\-12.com.Contoso.  
+10. No **informações gerais (instalador de jogo)** guia na janela do editor, especifique um **ID do criador da marca**, por exemplo, **regid.2012 12.com.Contoso**.  
   
-11. Em **Gerenciador de Soluções**, no projeto **Instalador do Jogo**, expanda o nó **Especificar Dados do Aplicativo** e abra a página **Arquivos**.  
+11. No **Solution Explorer**, no **jogo instalador** de projeto, expanda o **especificar dados de aplicativo** nó e, em seguida, abra o **arquivos** página.  
   
-12. Na guia **Arquivos \(instalador do jogo\)** na janela do editor, em **Arquivos de origem do computador**, abra o menu de atalho para **Saída Primária do Jogo** e escolha **Copiar**.  
+12. No **arquivos (instalador de jogo)** guia na janela do editor, em **arquivos do computador de origem**, abra o menu de atalho para **saída primária de jogo** e escolha **Cópia**.  
   
-13. Abra um menu de atalho no espaço sob a coluna **Nome** em **Arquivos do computador de destino** e escolha **Colar**.  Um novo item chamado **Game.Primary Output** aparece.  
+13. Abrir um menu de atalho no espaço no **nome** coluna **arquivos do computador de destino**e escolha **colar**. Um novo item denominado **Game.Primary saída** é exibida.  
   
-14. Em **Gerenciador de Soluções**, no nó de **Especificar Dados de Aplicativo**, abra a página **Redistribuíveis**.  
+14. Em **Solution Explorer**, sob o **especificar dados de aplicativo** nó, abra o **redistribuíveis** página.  
   
-15. Na guia **Redistribuíveis \(instalador do jogo\)** na janela do editor, selecione a caixa de seleção **Visual C\+\+ 11.0 CRT \(x86\)**.  
+15. Sobre o **redistribuíveis (instalador de jogo)** guia na janela do editor, selecione o **CRT 11.0 de Visual C++ (x86)** caixa de seleção.  
   
-16. Na barra de menus, escolha **Compilar**, **Compilar Solução**, para compilar o projeto e jogo e o projeto de instalação do jogo.  
+16. Na barra de menus, escolha **criar**, **compilar solução** para compilar o projeto do jogo e o projeto do instalador do jogo.  
   
-17. Na pasta de solução, localize o programa setup.exe que foi compilado a partir do projeto de instalação do jogo, e o execute para instalar o aplicativo do jogo no seu computador.  É possível copiar esse arquivo para instalar o aplicativo e seus arquivos de biblioteca necessários em outro computador.  
+17. Na pasta da solução, localize o programa setup.exe que foi criado a partir do projeto do instalador do jogo e, em seguida, execute-o para instalar o aplicativo de jogo em seu computador. Você pode copiar esse arquivo para instalar o aplicativo e seus arquivos de biblioteca em outro computador.  
   
-18. É possível definir muitas opções no projeto de configuração para atender às suas necessidades.  Para obter mais informações, em **Gerenciador de Soluções**, no projeto **Instalador do jogo**, abra a página **Introdução** e aperte a tecla F1 para abrir a biblioteca de ajuda ISLE.  
+18. Você pode definir várias opções no projeto de instalação para atender às suas necessidades. Para obter mais informações, em **Solution Explorer**, no **jogo instalador** projeto, abra o **Introdução** página e, em seguida, escolha a tecla F1 para abrir a biblioteca de ajuda ilha.  
   
-## Próximas etapas  
- **Anterior:** [Instruções passo a passo: depurando um projeto \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)  
+## <a name="next-steps"></a>Próximas etapas  
+ **Anterior:** [passo a passo: depurando um projeto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## Consulte também  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/pt-br/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [Implantando aplicativos da área de trabalho](../Topic/Deploying%20Native%20Desktop%20Applications%20\(Visual%20C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
+ [Compilando programas do C/C++](../build/building-c-cpp-programs.md)  
+ [Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)

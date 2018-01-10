@@ -1,65 +1,63 @@
 ---
-title: "__mulh | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__mulh"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__mulh intrínseco"
+title: __mulh | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __mulh
+dev_langs: C++
+helpviewer_keywords: __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8d2b8f9b6a697bedeccef46c37a27bfd3559c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# __mulh
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="mulh"></a>__mulh
+**Seção específica da Microsoft**  
   
- Retorna os 64 bits altos do produto de dois inteiros assinados de 64 bits.  
+ Retorna os alta 64 bits do produto de dois inteiros com sinal de 64 bits.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-__int64 __mulh(   
-   __int64 a,   
-   __int64 b   
+__int64 __mulh(   
+   __int64 a,   
+   __int64 b   
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`a`  
- O primeiro número para multiplicar.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `a`  
+ O primeiro número a multiplicar.  
   
- \[in\]`b`  
- O segundo número para multiplicar.  
+ [in] `b`  
+ O segundo número a multiplicar.  
   
-## Valor de retorno  
- Altos 64 bits do resultado da multiplicação 128 bits.  
+## <a name="return-value"></a>Valor de retorno  
+ Os 64 bits altos do resultado da multiplicação de 128 bits.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
-|`__mulh`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
+|`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Esta rotina só está disponível como um intrínseco.  
+## <a name="remarks"></a>Comentários  
+ Essa rotina só está disponível como função intrínseca.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // mulh.cpp  
@@ -82,8 +80,11 @@ int main()
 }  
 ```  
   
-  **0xfffffffffffffff \* 0xf0000000 \= 0xeffffffffffffff10000000**   
-## END Microsoft específicos  
+```Output  
+0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
+```  
   
-## Consulte também  
+**Fim da seção específica da Microsoft**  
+  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

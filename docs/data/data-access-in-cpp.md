@@ -19,11 +19,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bae9c7d8e50ca12767e5baed436912f04daafd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-in-visual-c"></a>Acesso a dados no Visual C++
 
@@ -46,7 +49,7 @@ Desde 2011, a Microsoft tem se alinhado com o ODBC como o padrão para aplicativ
 
 [ODBC Driver 13.1 para SQL Server - Windows lançado](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server) o driver de ODBC fornece acesso eficiente a dados para o Microsoft SQL Server 2016 Microsoft Azure SQL Database para aplicativos baseados em C/C++. Fornece suporte para recursos, incluindo sempre criptografado, Active Directory do Azure e grupos de disponibilidade AlwaysOn. Também está disponível para MacOS e Linux.     
  
-[SQL Server Native Client](https://msdn.microsoft.com/library/ms130892.aspx) SQL Server Native Client é uma dados autônoma acesso aplicativo interface de programação (API) usada para OLE DB e ODBC, que oferece suporte ao SQL Server 2005 por meio do SQL Server 2014. Aplicativos novos devem usar o Driver ODBC 13.1 para SQL Server.
+[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming) SQL Server Native Client é uma dados autônoma acesso aplicativo interface de programação (API) usada para OLE DB e ODBC, que oferece suporte ao SQL Server 2005 por meio do SQL Server 2014. Aplicativos novos devem usar o Driver ODBC 13.1 para SQL Server.
 
 [Microsoft Azure C e C++ Developer Center](https://azure.microsoft.com/develop/cpp/) Azure facilita a criação de aplicativos do C++ com maior flexibilidade, escalabilidade e confiabilidade usando as ferramentas que você adora.    
 

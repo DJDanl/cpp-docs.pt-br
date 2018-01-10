@@ -1,67 +1,68 @@
 ---
-title: "CManualAccessor::CreateParameterAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::CreateParameterAccessor"
-  - "ATL.CManualAccessor.CreateParameterAccessor"
-  - "CManualAccessor.CreateParameterAccessor"
-  - "CreateParameterAccessor"
-  - "CManualAccessor::CreateParameterAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método CreateParameterAccessor"
+title: 'Cmanualaccessor:: Createparameteraccessor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::CreateParameterAccessor
+- ATL.CManualAccessor.CreateParameterAccessor
+- CManualAccessor.CreateParameterAccessor
+- CreateParameterAccessor
+- CManualAccessor::CreateParameterAccessor
+dev_langs: C++
+helpviewer_keywords: CreateParameterAccessor method
 ms.assetid: d0a2095b-b37c-4472-accc-45ef365a18c8
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ef1fc30c9188395d90171a250b96d116c2913aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::CreateParameterAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aloca memória para o associar ao parâmetro estrutura e inicializa os membros de dados do parâmetro.  
+# <a name="cmanualaccessorcreateparameteraccessor"></a>CManualAccessor::CreateParameterAccessor
+Aloca memória para o parâmetro de estruturas de associação e inicializa os membros de dados do parâmetro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      HRESULT CreateParameterAccessor(   
-   int nBindEntries,   
-   void* pBuffer,   
-   DBLENGTH nBufferSize    
+      HRESULT CreateParameterAccessor(   
+   int nBindEntries,   
+   void* pBuffer,   
+   DBLENGTH nBufferSize    
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `nBindEntries`  
- \[in\] número de colunas.  
+ [in] Número de colunas.  
   
  `pBuffer`  
- \[in\] ponteiro do buffer em que as colunas de entrada são armazenadas.  
+ [in] Um ponteiro para o buffer em que as colunas de entrada são armazenadas.  
   
  `nBufferSize`  
- \[in\] o tamanho do buffer em bytes.  
+ [in] O tamanho do buffer em bytes.  
   
-## Valor de retorno  
- Um dos valores padrão de `HRESULT` .  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT` valores.  
   
-## Comentários  
- Você deve chamar essa função antes de chamar [AddParameterEntry](../Topic/CManualAccessor::AddParameterEntry.md).  
+## <a name="remarks"></a>Comentários  
+ Você deve chamar esta função antes de chamar [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe CManualAccessor](../Topic/CManualAccessor%20Class.md)   
- [CManualAccessor::CreateAccessor](../Topic/CManualAccessor::CreateAccessor.md)   
- [CManualAccessor::AddParameterEntry](../Topic/CManualAccessor::AddParameterEntry.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)   
+ [Cmanualaccessor:: CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)   
+ [CManualAccessor::AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)

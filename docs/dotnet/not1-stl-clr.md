@@ -1,51 +1,51 @@
 ---
-title: "not1 (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "função not1 [STL/CLR]"
+title: not1 (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not1
+dev_langs: C++
+helpviewer_keywords: not1 function [STL/CLR]
 ms.assetid: a50cd819-10de-4d81-84da-8a34c5414a43
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c159c0667cf09d466a50487a0369a724a538676d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# not1 (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gerenciar `unary_negate` para um funtor.  
+# <a name="not1-stlclr"></a>not1 (STL/CLR)
+Gera um `unary_negate` para um functor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
-## Parâmetros de modelo  
- Divertimento  
- O tipo de funtor.  
+## <a name="template-parameters"></a>Parâmetros de modelo  
+ Fun  
+ O tipo de functor.  
   
-## Parâmetros de função  
- funtor  
- O funtor a quebra de texto.  
+## <a name="function-parameters"></a>Parâmetros de função  
+ functor  
+ Functor para encapsular.  
   
-## Comentários  
- A função do modelo retorna [unary\_negate](../dotnet/unary-negate-stl-clr.md)`<``Fun``>(functor)`.  Use\-a como uma maneira conveniente de envolver um funtor de um argumento em um funtor que fornece seu lógico NOT.  
+## <a name="remarks"></a>Comentários  
+ Retorna a função de modelo [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Você pode usá-lo como uma maneira conveniente para encapsular um functor um argumento em uma functor que entrega não lógico.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_not1.cpp   
@@ -87,13 +87,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/funcional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/funcional >  
   
-## Consulte também  
- [unary\_negate](../dotnet/unary-negate-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)

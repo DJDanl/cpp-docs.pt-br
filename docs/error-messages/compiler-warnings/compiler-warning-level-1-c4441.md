@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 1) C4441 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4441 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4441
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4441
+f1_keywords: C4441
+dev_langs: C++
+helpviewer_keywords: C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1d01274c86a4ed922d319034ccafcc3bae80991f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 33337741819d908ce9445d82d905ecfc5738acda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4441"></a>Compilador C4441 de aviso (nível 1)
-convenção de chamada de 'cc1' ignorado; 'cc2' usado  
+convenção de chamada de 'cc1' ignorado; 'cc2' usado em vez disso  
   
  Funções de membro em tipos gerenciados definidos pelo usuário e genéricos de função global devem usar o [clrcall](../../cpp/clrcall.md) convenção de chamada.  O compilador usado `__clrcall`.  
   

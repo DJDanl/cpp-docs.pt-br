@@ -1,28 +1,28 @@
 ---
-title: "1. Introduction | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1. Introdução | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f850e236ebfd056da93700df06ec830e5a573284
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# 1. Introduction
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este documento especifica um conjunto de diretivas de compilador, funções de biblioteca e variáveis de ambiente que podem ser usadas para especificar o paralelismo de memória compartilhada em programas c e C\+\+.  A funcionalidade descrita neste documento é conhecida coletivamente como o  *Aplicativo programa Interface \(API\) do OpenMP C\/C\+\+*.  O objetivo desta especificação é fornecer um modelo de programação paralela, que permite que um programa para ser portátil em arquiteturas de memória compartilhada de diferentes fornecedores.  A API do C\/C\+\+ OpenMP será suportada por compiladores de vários fornecedores.  Obter mais informações sobre o OpenMP, incluindo o  *OpenMP Fortran Application Program Interface*, podem ser encontradas no seguinte site da web:  
+# <a name="1-introduction"></a>1. Introdução
+Este documento especifica uma coleção de variáveis de ambiente que podem ser usados para especificar paralelismo de memória compartilhada em programas C e C++, funções de biblioteca e diretivas de compilador. A funcionalidade descrita neste documento é coletivamente conhecida como o *OpenMP Interface de programa de aplicativo C/C++ (API)*. O objetivo dessa especificação é fornecer um modelo de programação paralela que permite que um programa ser portátil entre arquiteturas de memória compartilhada de fornecedores diferentes. A API do C/C++ OpenMP terão suporte por compiladores de vários fornecedores. Para obter mais informações sobre OpenMP, incluindo o *OpenMP Interface de programação de aplicativo de Fortran*, podem ser encontradas no seguinte site:  
   
- [http:\/\/www.OpenMP.org](http://www.openmp.org)  
+ [http://www.OpenMP.org](http://www.openmp.org)  
   
- Diretivas, funções de biblioteca e variáveis de ambiente definidas neste documento permitirá que os usuários criem e gerenciem programas paralelos, permitindo a portabilidade.  As diretivas de estendem o c e modelo de programação seqüencial do C\+\+ com o único programa várias construções de dados \(SPMD\), construções de compartilhamento de trabalho e construções de sincronização e eles fornecem suporte para o compartilhamento e a privatização dos dados.  Compiladores que suportam o OpenMP C e C\+\+ API incluirá uma opção de linha de comando do compilador que ativa e permite que a interpretação de todas as diretivas de compilador do OpenMP.
+ Diretivas, biblioteca de funções e variáveis de ambiente definidas neste documento permitirá que os usuários criem e gerenciem programas paralelos enquanto permite a portabilidade. As diretivas de estendem o C e modelo de programação sequencial do C++ com um único programa de várias construções de dados (SPMD), construções de compartilhamento de trabalho e construções de sincronização e eles fornecem suporte para o compartilhamento e a privatização de dados. Compiladores que dão suporte a OpenMP C e C++ API inclui uma opção de linha de comando para o compilador que ativa e permite a interpretação de todas as diretivas de compilador OpenMP.

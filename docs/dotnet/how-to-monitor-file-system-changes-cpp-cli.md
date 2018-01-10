@@ -1,35 +1,37 @@
 ---
-title: "Como monitorar altera&#231;&#245;es feitas no sistema de arquivos (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "eventos [C++], monitorando"
-  - "exemplos [C++], monitorando alterações feitas no sistema de arquivos"
-  - "eventos do sistema de arquivos [C++]"
-  - "Classe FileSystemWatcher, exemplos"
-  - "monitorando eventos do sistema de arquivos"
+title: "Como: monitorar alterações de sistema de arquivo (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- monitoring file system events
+- FileSystemWatcher class, examples
+- examples [C++], monitoring file system changes
+- events [C++], monitoring
+- file system events [C++]
 ms.assetid: 207a3069-e63d-417e-8b56-00ab44f29c52
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como monitorar altera&#231;&#245;es feitas no sistema de arquivos (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código usa <xref:System.IO.FileSystemWatcher> para registrar o para os eventos que correspondem aos arquivos que estão sendo criados, alterados, excluídos, ou renomeados.  Em vez de sondagem periodicamente um diretório para alterações nos arquivos, você pode usar a classe de <xref:System.IO.FileSystemWatcher> de eventos acionados quando uma mudança for detectada.  
+# <a name="how-to-monitor-file-system-changes-ccli"></a>Como monitorar alterações feitas no sistema de arquivos (C++/CLI)
+O seguinte exemplo de código usa <xref:System.IO.FileSystemWatcher> para registrar eventos que correspondem a arquivos que está sendo criados, alterado, excluído ou renomeado. Em vez de um diretório para alterações em arquivos de sondagem periodicamente, você pode usar o <xref:System.IO.FileSystemWatcher> classe para disparar eventos quando uma alteração for detectada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // monitor_fs.cpp  
@@ -91,7 +93,7 @@ int main()
 }  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace System.IO](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
- [E\/S de arquivo e de fluxo](../Topic/File%20and%20Stream%20I-O.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Arquivos e fluxo de e-S](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,33 +1,33 @@
 ---
-title: "ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr attribute"
+title: PTR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ptr
+dev_langs: C++
+helpviewer_keywords: ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 183671fd4a2a0cb783a5f4644411f5d3ac5faf5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ptr"></a>ptr
 Designa um ponteiro como um ponteiro completo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,28 +35,27 @@ Designa um ponteiro como um ponteiro completo.
   
 ```  
   
-## Comentários  
- O  **ptr**  o atributo do C\+\+ tem a mesma funcionalidade que o  [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **ptr** atributo C++ tem a mesma funcionalidade que o [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) atributo MIDL.  
   
-## Exemplo  
- Consulte o exemplo para  [ValorPadrão](../Topic/defaultvalue.md) para uso do exemplo  **ptr**.  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo para [defaultvalue](../windows/defaultvalue.md) para uso do exemplo **ptr**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Parâmetro de interface, método de interface`typedef`|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|Parâmetro de interface, método de interface`typedef`|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interface](../windows/interface-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   
+ [Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

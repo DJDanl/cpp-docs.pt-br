@@ -1,11 +1,10 @@
 ---
-title: Classe da chamada | Documentos do Microsoft
+title: Classe da chamada | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,38 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::call::propagate_message
 - AGENTS/concurrency::call::send_message
 - AGENTS/concurrency::call::supports_anonymous_source
-dev_langs:
-- C++
-helpviewer_keywords:
-- call class
+dev_langs: C++
+helpviewer_keywords: call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="call-class"></a>Classe da chamada
-A `call` bloco de mensagens é um várias fontes, ordenados `target_block` que chama uma função especificada quando receber uma mensagem.  
+Um `call` bloco de mensagens é um várias fontes, ordenados `target_block` que invoca uma função especificada ao receber uma mensagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,29 +42,29 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- O tipo de carga das mensagens são propagadas para este bloco.  
+ O tipo de carga de mensagens são propagadas para este bloco.  
   
  `_FunctorType`  
  A assinatura de funções que este bloco pode aceitar.  
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[chamada](#ctor)|Sobrecarregado. Constrói um `call` bloco de mensagens.|  
-|[~ chamar destruidor](#dtor)|Destrói o `call` bloco de mensagens.|  
+|[~ chamar destruidor](#dtor)|Destrói a `call` bloco de mensagens.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Executa a função de chamada nas mensagens de entrada.|  
-|[process_message](#process_message)|Processa uma mensagem que foi aceita por este `call` bloco de mensagens.|  
-|[propagate_message](#propagate_message)|Assincronamente transmite uma mensagem de uma `ISource` bloco a esta `call` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.|  
-|[send_message](#send_message)|Sincronicamente transmite uma mensagem de uma `ISource` bloco a esta `call` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Substitui o `supports_anonymous_source` método para indicar que este bloco pode aceitar mensagens oferecidas a ele por uma fonte que não está vinculada. (Substitui [Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[process_message](#process_message)|Processa uma mensagem que foi aceito por este `call` bloco de mensagens.|  
+|[propagate_message](#propagate_message)|Assincronamente transmite uma mensagem de um `ISource` blocos a este `call` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.|  
+|[send_message](#send_message)|Modo síncrono transmite uma mensagem de um `ISource` blocos a este `call` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Substitui o `supports_anonymous_source` método para indicar que este bloco pode aceitar mensagens oferecidas a ele por uma fonte que não está vinculada. (Substitui [: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [blocos de mensagens assíncronas](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -134,13 +117,13 @@ call(
  Uma função que será chamada para cada mensagem aceita.  
   
  `_Filter`  
- Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.  
+ Uma função de filtro que determina se as mensagens oferecidas devem ser aceita.  
   
  `_PScheduler`  
- O `Scheduler` objeto dentro do qual a propagação de tarefa para o `call` bloco de mensagens está agendado.  
+ O `Scheduler` objeto dentro do qual a propagação de tarefas para o `call` bloco de mensagens está agendado.  
   
  `_PScheduleGroup`  
- O `ScheduleGroup` objeto dentro do qual a propagação de tarefa para o `call` bloco de mensagens está agendado. O `Scheduler` objeto usado é indicado pelo grupo de agendamento.  
+ O `ScheduleGroup` objeto dentro do qual a propagação de tarefas para o `call` bloco de mensagens está agendado. O `Scheduler` objeto usado é indicado pelo grupo de agendamento.  
   
 ### <a name="remarks"></a>Comentários  
  O tempo de execução usa o agendador padrão se você não especificar o `_PScheduler` ou `_PScheduleGroup` parâmetros.  
@@ -151,7 +134,7 @@ call(
   
 ##  <a name="dtor"></a>~ call 
 
- Destrói o `call` bloco de mensagens.  
+ Destrói a `call` bloco de mensagens.  
   
 ```
 ~call();
@@ -170,7 +153,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
   
 ##  <a name="process_message"></a>process_message 
 
- Processa uma mensagem que foi aceita por este `call` bloco de mensagens.  
+ Processa uma mensagem que foi aceito por este `call` bloco de mensagens.  
   
 ```
 virtual void process_message(_Inout_ message<T>* _PMessage);
@@ -178,11 +161,11 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
   
 ### <a name="parameters"></a>Parâmetros  
  `_PMessage`  
- Um ponteiro para a mensagem que deve ser tratados.  
+ Um ponteiro para a mensagem a ser manipulada.  
   
 ##  <a name="propagate_message"></a>propagate_message 
 
- Assincronamente transmite uma mensagem de uma `ISource` bloco a esta `call` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.  
+ Assincronamente transmite uma mensagem de um `ISource` blocos a este `call` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.  
   
 ```
 virtual message_status propagate_message(
@@ -195,14 +178,14 @@ virtual message_status propagate_message(
  Um ponteiro para o `message` objeto.  
   
  `_PSource`  
- Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+ Um ponteiro para o bloco de código-fonte oferta a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ##  <a name="send_message"></a>send_message 
 
- Sincronicamente transmite uma mensagem de uma `ISource` bloco a esta `call` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.  
+ Modo síncrono transmite uma mensagem de um `ISource` blocos a este `call` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.  
   
 ```
 virtual message_status send_message(
@@ -215,10 +198,10 @@ virtual message_status send_message(
  Um ponteiro para o `message` objeto.  
   
  `_PSource`  
- Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+ Um ponteiro para o bloco de código-fonte oferta a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
@@ -229,9 +212,8 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`como o bloco não adie oferecido mensagens.  
+ `true`como o bloco não adiar oferecido mensagens.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe transformer](transformer-class.md)
-

@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d959702a7de8df9d90ca6dd855725901543dc92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05c6c2584e39ed145a30c919ed850aac45905a85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Como implementar uma arquitetura de componente de plug-in usando a reflexão (C++/CLI)
 Os exemplos de código a seguir demonstram o uso da reflexão para implementar uma arquitetura simples de "plug-in". A primeira listagem é o aplicativo e o segundo é o plug-in. O aplicativo é um formulário de documento vários que preenche usando as classes com base em formulário encontradas na DLL do plug-in fornecido como um argumento de linha de comando.  

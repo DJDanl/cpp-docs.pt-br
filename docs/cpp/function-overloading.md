@@ -4,32 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9076fdd48e466d68d5dcecec2c339a98f39a8bb1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>Sobrecarga de função
 O C++ permite a especificação de mais de uma função do mesmo nome no mesmo escopo. Elas são chamadas de funções sobrecarregadas e são descritas em detalhes em Sobrecarga. As funções sobrecarregadas permitem que os programadores forneçam semânticas diferentes para uma função, dependendo dos tipos e do número de argumentos.  
   
- Por exemplo, um **imprimir** função que usa uma cadeia de caracteres (ou **char \* **) argumento executa tarefas muito diferentes daquele que usa um argumento de tipo **duplo** . A sobrecarga permite a nomeação uniforme e impede que os programadores tenham de inventar nomes como `print_sz` ou `print_d`. A tabela a seguir mostra quais partes de uma declaração de função C++ usa para diferenciar entre grupos de funções com o mesmo nome no mesmo escopo.  
+ Por exemplo, um **imprimir** função que usa uma cadeia de caracteres (ou **char \*** ) argumento executa tarefas muito diferentes daquele que usa um argumento de tipo **duplo** . A sobrecarga permite a nomeação uniforme e impede que os programadores tenham de inventar nomes como `print_sz` ou `print_d`. A tabela a seguir mostra quais partes de uma declaração de função C++ usa para diferenciar entre grupos de funções com o mesmo nome no mesmo escopo.  
   
 ### <a name="overloading-considerations"></a>Considerações de sobrecarga  
   
@@ -183,7 +181,7 @@ F1 = Add( 3, 6 );
   
  Observe que a interseção entre esses dois conjuntos está vazia. Em virtude disso, o compilador gera uma mensagem de erro.  
   
- Para o argumento correspondente a uma função com * n * argumentos padrão é tratado como * n *funções separadas + 1, cada um com um número diferente de argumentos.  
+ Para o argumento correspondente a uma função com  *n*  argumentos padrão é tratado como  *n* funções separadas + 1, cada um com um número diferente de argumentos.  
   
  As reticências (...) atuam como um curinga; elas correspondem a qualquer argumento real. Isso pode resultar em muitos conjuntos ambíguos, se você não criar seus conjuntos de função sobrecarregada com extremo cuidado.  
   
@@ -259,7 +257,7 @@ volatile Over&
 |*nome do tipo*|*nome do tipo***&**|  
 |*nome do tipo***&**|*nome do tipo*|  
 |*nome do tipo* **]**|*nome do tipo\**|  
-|*nome do tipo* **(** *lista de argumentos* **)**|**(** * \*nome do tipo* **) (** *lista de argumentos* **)**|  
+|*nome do tipo* **(** *lista de argumentos* **)**|**(**  *\*nome do tipo* **) (** *lista de argumentos* **)**|  
 |*nome do tipo*|**Const** *nome de tipo*|  
 |*nome do tipo*|`volatile`*nome de tipo*|  
 |*nome do tipo\**|**Const** *nome de tipo\**|  
@@ -269,19 +267,19 @@ volatile Over&
   
 1.  Correspondência exata. Uma correspondência exata entre os tipos com que a função é chamada e os tipos declarados no protótipo da função sempre é a melhor correspondência. As sequências de conversões triviais são classificadas como correspondências exatas. No entanto, as sequências que não fazem qualquer uma dessas conversões são consideradas melhor do que as sequências que convertem:  
   
-    -   De ponteiro para ponteiro para **const** (`type` ** \* ** para **const** `type` ** \* ** ).  
+    -   De ponteiro para ponteiro para **const** (`type`  **\***  para **const** `type`  **\***  ).  
   
-    -   De ponteiro para ponteiro para `volatile` (`type` ** \* ** para `volatile` `type` ** \* **).  
+    -   De ponteiro para ponteiro para `volatile` (`type`  **\***  para `volatile` `type`  **\*** ).  
   
-    -   De referência, a referência a **const** (`type` ** & ** para **const** `type` ** & **).  
+    -   De referência, a referência a **const** (`type`  **&**  para **const** `type`  **&** ).  
   
-    -   De referência, a referência a `volatile` (`type` ** & ** para `volatile` `type` ** & **).  
+    -   De referência, a referência a `volatile` (`type`  **&**  para `volatile` `type`  **&** ).  
   
 2.  Correspondência usando promoções. Qualquer sequência não classificada como uma correspondência exata que contém somente promoções integrais, conversões de **float** para **duplo**, e conversões triviais é classificado como uma correspondência usando promoções. Embora não seja tão boa quanto a correspondência exata, a correspondência usando promoções é melhor do que a correspondência usando conversões padrão.  
   
 3.  Correspondência usando conversões padrão. Qualquer sequência não classificada como correspondência exata ou correspondência usando promoções que contém somente conversões padrão e conversões triviais é classificada como correspondência usando conversões padrão. Nessa categoria, as seguintes regras são aplicadas:  
   
-    -   Conversão de um ponteiro para uma classe derivada, para um ponteiro para uma classe base direta ou indireta é preferível à conversão para **void \* ** ou **void const \* **.  
+    -   Conversão de um ponteiro para uma classe derivada, para um ponteiro para uma classe base direta ou indireta é preferível à conversão para **void \***  ou **void const \*** .  
   
     -   A conversão de um ponteiro em uma classe derivada, em um ponteiro em uma classe base gera uma correspondência melhor quanto mais próxima a classe base estiver de uma classe base direta. Suponhamos que a hierarquia de classes seja a ilustrada na figura a seguir.  
   
@@ -426,7 +424,7 @@ obj.name
     void Print( PSTR szToPrint );  
     ```  
   
-     As duas funções anteriores têm listas de argumento idênticas. `PSTR`é um sinônimo de tipo **char \* **. No escopo do membro, esse código gera um erro.  
+     As duas funções anteriores têm listas de argumento idênticas. `PSTR`é um sinônimo de tipo **char \*** . No escopo do membro, esse código gera um erro.  
   
 -   Os tipos enumerados são tipos distintos e podem ser usados para distinguir as funções sobrecarregadas.  
   

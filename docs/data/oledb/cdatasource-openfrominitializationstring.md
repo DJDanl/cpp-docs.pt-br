@@ -1,63 +1,64 @@
 ---
-title: "CDataSource::OpenFromInitializationString | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource.OpenFromInitializationString"
-  - "OpenFromInitializationString"
-  - "CDataSource::OpenFromInitializationString"
-  - "ATL::CDataSource::OpenFromInitializationString"
-  - "ATL.CDataSource.OpenFromInitializationString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método OpenFromInitializationString"
+title: 'Cdatasource:: Openfrominitializationstring | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource.OpenFromInitializationString
+- OpenFromInitializationString
+- CDataSource::OpenFromInitializationString
+- ATL::CDataSource::OpenFromInitializationString
+- ATL.CDataSource.OpenFromInitializationString
+dev_langs: C++
+helpviewer_keywords: OpenFromInitializationString method
 ms.assetid: 5ef1f1fd-92a9-4e1c-ad80-d3601b094b8c
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 294c5cd893b04dd477a002adb6dc03fa33c60a29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::OpenFromInitializationString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
 Abre uma fonte de dados especificada pela cadeia de caracteres de inicialização fornecida pelo usuário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      HRESULT OpenFromInitializationString(   
-   LPCOLESTR szInitializationString,   
-   bool fPromptForInfo = false    
+      HRESULT OpenFromInitializationString(   
+   LPCOLESTR szInitializationString,   
+   bool fPromptForInfo = false    
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *szInitializationString*  
- \[in\] a cadeia de caracteres de inicialização.  
+ [in] A cadeia de caracteres de inicialização.  
   
  *fPromptForInfo*  
- \[in\] se esse argumento é definido como **true**, então `OpenFromInitializationString` definirá a propriedade de **DBPROP\_INIT\_PROMPT** a **DBPROMPT\_COMPLETEREQUIRED**, que especifica que o usuário seja solicitado apenas se mais informações é necessária.  Isso é útil em situações nas quais a cadeia de caracteres de inicialização especifica um base de dados que requer uma senha, mas a cadeia de caracteres não contém a senha.  O usuário será solicitado a fornecer uma senha \(ou qualquer outra informações ausentes\) ao tentar se conectar ao base de dados.  
+ [in] Se esse argumento for definido como **true**, em seguida, `OpenFromInitializationString` definirá o **DBPROP_INIT_PROMPT** propriedade para **DBPROMPT_COMPLETEREQUIRED**, que especifica que o usuário seja solicitado somente se forem necessárias mais informações. Isso é útil para situações em que a cadeia de caracteres de inicialização especifica um banco de dados que requer uma senha, mas a cadeia de caracteres não contém a senha. O usuário receberá uma senha (ou qualquer outra informação ausente) ao tentar se conectar ao banco de dados.  
   
- O valor padrão é **false**, que especifica que o usuário seja solicitado \(nunca conjuntos **DBPROP\_INIT\_PROMPT** a **DBPROMPT\_NOPROMPT**\).  
+ O valor padrão é **false**, que especifica que o usuário nunca solicitado (define **DBPROP_INIT_PROMPT** para **DBPROMPT_NOPROMPT**).  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Este método abre um objeto de fonte de dados usando os componentes de serviço em oledb32.dll; este DLL contém a implementação de recursos dos componentes de serviço como um recurso de cluster, inscrição automática da transação, e assim por diante.  
+## <a name="remarks"></a>Comentários  
+ Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, inscrição de transação automática e assim por diante.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe CDataSource](../Topic/CDataSource%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CDataSource](../../data/oledb/cdatasource-class.md)

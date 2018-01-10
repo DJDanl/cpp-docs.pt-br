@@ -1,42 +1,42 @@
 ---
-title: "M&#233;todo Module::GenericReleaseNotifier::Invoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GenericReleaseNotifier::Invoke"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Invoke"
+title: "Genericreleasenotifier:: método Invoke | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GenericReleaseNotifier::Invoke
+dev_langs: C++
+helpviewer_keywords: Invoke method
 ms.assetid: 83dd5678-2514-454a-b2a0-6097ce7d4140
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5c7700299251d427b1e23d05c53381082394508c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo Module::GenericReleaseNotifier::Invoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Chama o manipulador de eventos associado ao objeto atual de Module::GenericReleaseNotifier.  
+# <a name="modulegenericreleasenotifierinvoke-method"></a>Método Module::GenericReleaseNotifier::Invoke
+Chama o manipulador de eventos associado ao objeto genericreleasenotifier atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void Invoke();  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)

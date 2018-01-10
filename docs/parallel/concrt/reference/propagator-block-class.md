@@ -1,11 +1,10 @@
 ---
-title: Classe propagator_block | Documentos do Microsoft
+title: Classe propagator_block | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,38 +23,22 @@ f1_keywords:
 - AGENTS/concurrency::propagator_block::send_message
 - AGENTS/concurrency::propagator_block::unlink_source
 - AGENTS/concurrency::propagator_block::unlink_sources
-dev_langs:
-- C++
-helpviewer_keywords:
-- propagator_block class
+dev_langs: C++
+helpviewer_keywords: propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a34d127baf13434435c9ab359cf75b7b93c21f6d
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ff31849020c9daed7999ae1569e8c12249a4b834
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="propagatorblock-class"></a>Classe propagator_block
-O `propagator_block` classe é uma classe base abstrata para blocos de mensagens de origem e destino. Ele combina a funcionalidade de ambos os `source_block` e `target_block` classes.  
+O `propagator_block` classe é uma classe base abstrata para blocos de mensagens de uma origem e destino. Ele combina a funcionalidade de ambos os `source_block` e `target_block` classes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,7 +57,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
  O registro de link a ser usado para manter os links de origem.  
   
  `_MessageProcessorType`  
- O tipo de processador para o processamento da mensagem.  
+ O tipo de processador para o processamento de mensagem.  
   
 ## <a name="members"></a>Membros  
   
@@ -82,7 +65,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`source_iterator`|O tipo do iterador para o `source_link_manager` para este `propagator_block`.|  
+|`source_iterator`|O tipo de iterador para o `source_link_manager` para este `propagator_block`.|  
   
 ### <a name="public-constructors"></a>Construtores públicos  
   
@@ -95,8 +78,8 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Propagar](#propagate)|Passa uma mensagem assíncrona de um bloco de código-fonte para este bloco de destino.|  
-|[Enviar](#send)|Inicia sincronicamente uma mensagem para este bloco. Chamado por um `ISource` bloco. Quando essa função é concluída, a mensagem será já ter sido propagadas no bloco.|  
+|[Propagar](#propagate)|Assincronamente transmite uma mensagem de um bloco de origem para este bloco de destino.|  
+|[send](#send)|Inicia sincronicamente uma mensagem para este bloco. Chamado por um `ISource` bloco. Quando essa função é concluída, a mensagem serão já ter propagadas no bloco.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
@@ -105,16 +88,16 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |[decline_incoming_messages](#decline_incoming_messages)|Indica para o bloco que devem ser recusadas a novas mensagens.|  
 |[initialize_source_and_target](#initialize_source_and_target)|Inicializa o objeto base. Especificamente, o `message_processor` objeto precisa ser inicializado.|  
 |[link_source](#link_source)|Vincula um bloco de origem especificado para este `propagator_block` objeto.|  
-|[process_input_messages](#process_input_messages)|Processar mensagens de entrada. Isso é útil somente para blocos de propagador, que derivam de source_block (substituições [source_block:: process_input_messages](source-block-class.md#process_input_messages).)|  
-|[propagate_message](#propagate_message)|Quando substituído em uma classe derivada, esse método assíncrona transmite uma mensagem de uma `ISource` bloco a esta `propagator_block` objeto. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.|  
+|[process_input_messages](#process_input_messages)|Processar mensagens de entrada. Isso só é útil para blocos de propagador, que derivam de source_block (substitui [source_block:: process_input_messages](source-block-class.md#process_input_messages).)|  
+|[propagate_message](#propagate_message)|Quando substituído em uma classe derivada, esse método passa assincronamente uma mensagem de um `ISource` blocos a este `propagator_block` objeto. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.|  
 |[register_filter](#register_filter)|Registra um método de filtro que será invocado em cada mensagem recebida.|  
-|[remove_network_links](#remove_network_links)|Remove todos os de origem e destino links de rede isso `propagator_block` objeto.|  
-|[send_message](#send_message)|Quando substituído em uma classe derivada, esse método sincronicamente transmite uma mensagem de uma `ISource` bloco a esta `propagator_block` objeto. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.|  
+|[remove_network_links](#remove_network_links)|Remove todos os de origem e destino links de rede deste `propagator_block` objeto.|  
+|[send_message](#send_message)|Quando substituído em uma classe derivada, esse método sincronicamente transmite uma mensagem de um `ISource` blocos a este `propagator_block` objeto. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.|  
 |[unlink_source](#unlink_source)|Desvincula um bloco de código-fonte especificado neste `propagator_block` objeto.|  
-|[unlink_sources](#unlink_sources)|Desvincula todos os blocos de código-fonte deste `propagator_block` objeto. (Substitui [Unlink_sources](itarget-class.md#unlink_sources).)|  
+|[unlink_sources](#unlink_sources)|Desvincula todos os blocos de código-fonte deste `propagator_block` objeto. (Substitui [: Unlink_sources](itarget-class.md#unlink_sources).)|  
   
 ## <a name="remarks"></a>Comentários  
- Para evitar a herança múltipla, o `propagator_block` classe herda o `source_block` classe e `ITarget` classe abstrata. A maioria das funcionalidades na `target_block` classe é replicada aqui.  
+ Para evitar várias heranças, o `propagator_block` classe herda o `source_block` classe e `ITarget` classe abstrata. A maioria das funcionalidades no `target_block` classe é replicada aqui.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [ISource](isource-class.md)  
@@ -139,7 +122,7 @@ void decline_incoming_messages();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Este método é chamado pelo destruidor para garantir que novas mensagens são recusadas enquanto destruição está em andamento.  
+ Este método é chamado, o destruidor para garantir que as novas mensagens são recusou enquanto destruição está em andamento.  
   
 ##  <a name="initialize_source_and_target"></a>initialize_source_and_target 
 
@@ -156,7 +139,7 @@ void initialize_source_and_target(
  O Agendador a ser usado para o agendamento de tarefas.  
   
  `_PScheduleGroup`  
- O grupo de programação a ser usado para o agendamento de tarefas.  
+ O grupo de agendamento a ser usado para o agendamento de tarefas.  
   
 ##  <a name="link_source"></a>link_source 
 
@@ -168,11 +151,11 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
   
 ### <a name="parameters"></a>Parâmetros  
  `_PSource`  
- Um ponteiro para o `ISource` bloco que deve ser vinculado.  
+ Um ponteiro para o `ISource` bloco que deve ser vinculada.  
   
 ##  <a name="process_input_messages"></a>process_input_messages 
 
- Processar mensagens de entrada. Isso é útil somente para blocos de propagador, que derivam de source_block  
+ Processar mensagens de entrada. Isso só é útil para blocos de propagador, que derivam de source_block  
   
 ```
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
@@ -183,7 +166,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
   
 ##  <a name="propagate"></a>Propagar 
 
- Passa uma mensagem assíncrona de um bloco de código-fonte para este bloco de destino.  
+ Assincronamente transmite uma mensagem de um bloco de origem para este bloco de destino.  
   
 ```
 virtual message_status propagate(
@@ -196,19 +179,19 @@ virtual message_status propagate(
  Um ponteiro para o `message` objeto.  
   
  `_PSource`  
- Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+ Um ponteiro para o bloco de código-fonte oferta a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ### <a name="remarks"></a>Comentários  
- O `propagate` método é invocado em um bloco de destino por um bloco de origem vinculado. Ele enfileira uma tarefa assíncrona para manipular a mensagem, se ainda não estiver já enfileirada ou em execução.  
+ O `propagate` método é chamado em um bloco de destino por um bloco de origem vinculado. Ele enfileira uma tarefa assíncrona para manipular a mensagem, se ainda não estiver já enfileirado ou em execução.  
   
- O método lança um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.  
+ O método gera uma [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.  
   
 ##  <a name="propagate_message"></a>propagate_message 
 
- Quando substituído em uma classe derivada, esse método assíncrona transmite uma mensagem de uma `ISource` bloco a esta `propagator_block` objeto. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.  
+ Quando substituído em uma classe derivada, esse método passa assincronamente uma mensagem de um `ISource` blocos a este `propagator_block` objeto. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.  
   
 ```
 virtual message_status propagate_message(
@@ -221,10 +204,10 @@ virtual message_status propagate_message(
  Um ponteiro para o `message` objeto.  
   
  `_PSource`  
- Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+ Um ponteiro para o bloco de código-fonte oferta a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ##  <a name="ctor"></a>propagator_block 
 
@@ -256,7 +239,7 @@ void register_filter(filter_method const& _Filter);
   
 ##  <a name="remove_network_links"></a>remove_network_links 
 
- Remove todos os de origem e destino links de rede isso `propagator_block` objeto.  
+ Remove todos os de origem e destino links de rede deste `propagator_block` objeto.  
   
 ```
 void remove_network_links();
@@ -264,7 +247,7 @@ void remove_network_links();
   
 ##  <a name="send"></a>Enviar 
 
- Inicia sincronicamente uma mensagem para este bloco. Chamado por um `ISource` bloco. Quando essa função é concluída, a mensagem será já ter sido propagadas no bloco.  
+ Inicia sincronicamente uma mensagem para este bloco. Chamado por um `ISource` bloco. Quando essa função é concluída, a mensagem serão já ter propagadas no bloco.  
   
 ```
 virtual message_status send(
@@ -277,17 +260,17 @@ virtual message_status send(
  Um ponteiro para o `message` objeto.  
   
  `_PSource`  
- Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+ Um ponteiro para o bloco de código-fonte oferta a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ### <a name="remarks"></a>Comentários  
  Este método lança um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.  
   
 ##  <a name="send_message"></a>send_message 
 
- Quando substituído em uma classe derivada, esse método sincronicamente transmite uma mensagem de uma `ISource` bloco a esta `propagator_block` objeto. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.  
+ Quando substituído em uma classe derivada, esse método sincronicamente transmite uma mensagem de um `ISource` blocos a este `propagator_block` objeto. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.  
   
 ```
 virtual message_status send_message(
@@ -296,10 +279,10 @@ virtual message_status send_message(
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão, esse bloco retorna `declined` a menos que substituída por uma classe derivada.  
+ Por padrão, esse bloco retorna `declined` , a menos que substituído por uma classe derivada.  
   
 ##  <a name="unlink_source"></a>unlink_source 
 
@@ -311,7 +294,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
   
 ### <a name="parameters"></a>Parâmetros  
  `_PSource`  
- Um ponteiro para o `ISource` bloco a ser desvinculada.  
+ Um ponteiro para o `ISource` bloco que deve ser desvinculado.  
   
 ##  <a name="unlink_sources"></a>unlink_sources 
 
@@ -325,4 +308,3 @@ virtual void unlink_sources();
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe source_block](source-block-class.md)   
  [Classe ITarget](itarget-class.md)
-

@@ -1,33 +1,33 @@
 ---
-title: "SafeDivide | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeDivide"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função SafeDivide"
+title: SafeDivide | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeDivide
+dev_langs: C++
+helpviewer_keywords: SafeDivide function
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0d6d3b774cb014b8257cf412bf2dec2827abeda2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# SafeDivide
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Divide dois números de uma maneira que protege contra dividir por zero.  
+# <a name="safedivide"></a>SafeDivide
+Divide dois números de forma que protege contra a divisão por zero.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename T, typename U>  
@@ -38,35 +38,35 @@ inline bool SafeDivide (
 ) throw ();  
 ```  
   
-#### Parâmetros  
- \[entrada\] `t`  
- O divisor.  Isso deve ser do tipo T.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `t`  
+ O divisor. Isso deve ser do tipo T.  
   
- \[entrada\] `u`  
- O dividendo.  Isso deve ser do tipo U.  
+ [in] `u`  
+ O dividendo. Isso deve ser do tipo u  
   
- \[saída\] `result`  
- O parâmetro `SafeDivide` onde armazena o resultado.  
+ [out] `result`  
+ O parâmetro onde `SafeDivide` armazena o resultado.  
   
-## Valor de retorno  
- `true` se nenhum erro ocorre; `false` se ocorrer um erro.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se nenhum erro ocorrer; `false` se ocorrer um erro.  
   
-## Comentários  
- Esse método é parte de [Biblioteca de SafeInt](../windows/safeint-library.md) e é criado para uma única operação de divisão sem criar uma instância de [Classe SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Comentários  
+ Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de divisão única sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Esse método deve ser usado apenas quando uma única operação matemática deve ser protegida.  Se houver várias operações, você deve usar a classe de `SafeInt` em vez de chamar funções autônomas individuais.  
+>  Este método só deve ser usado quando uma operação matemática único deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
   
- Para obter mais informações sobre os tipos T e U de modelo, consulte [Funções \(SafeInt\)](../windows/safeint-functions.md).  
+ Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Consulte também  
- [Funções \(SafeInt\)](../windows/safeint-functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções (SafeInt)](../windows/safeint-functions.md)   
  [Biblioteca de SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)   
  [SafeModulus](../windows/safemodulus.md)   
- [SafeMultiply](../Topic/SafeMultiply.md)
+ [SafeMultiply](../windows/safemultiply.md)

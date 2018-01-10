@@ -1,51 +1,33 @@
 ---
-title: "Compilador aviso (nível 4) C4564 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4564 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4564
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4564
+f1_keywords: C4564
+dev_langs: C++
+helpviewer_keywords: C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c6f8d7640b0a59cb7eaeae180235038150704110
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 25f9f8755acafd71a9ac75a68f601660b781746a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Compilador C4564 de aviso (nível 4)
-método de método da classe 'class' define ' parâmetro padrão sem suporte '  
+método de método da classe 'class' define parâmetro padrão não suportado 'parameter'  
   
- O compilador detectou um método com um ou mais parâmetros com valores padrão. Os valores padrão para os parâmetros serão ignorados quando o método é chamado; Especifica valores para esses parâmetros explicitamente. Se você não especificar valores para esses parâmetros explicitamente, o compilador C++ gerará um erro.  
+ O compilador detectou um método com um ou mais parâmetros com valores padrão. Os valores padrão para os parâmetros serão ignorados quando o método é invocado; Especifica explicitamente valores para esses parâmetros. Se você não especificar explicitamente valores para esses parâmetros, o compilador do C++ gerará um erro.  
   
- Dado o seguinte arquivo. dll criado com o Visual Basic, que permite parâmetros padrão em argumentos de método:  
+ Fornecido o seguinte arquivo. dll criado com o Visual Basic, que permite que os parâmetros padrão em argumentos de método:  
   
 ```  
 ' C4564.vb  
@@ -57,7 +39,7 @@ Public class TestClass
 End class  
 ```  
   
- E o seguinte exemplo de C++ que usa o arquivo. dll criado com o Visual Basic  
+ O seguinte exemplo de C++ que usa o arquivo. dll criado com o Visual Basic, e  
   
 ```  
 // C4564.cpp  

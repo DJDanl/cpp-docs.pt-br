@@ -1,71 +1,74 @@
 ---
-title: "/Oy (omiss&#227;o do ponteiro de quadro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.OmitFramePointers"
-  - "/oy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /Oy (C++)"
-  - "Opção de compilador de omissão de ponteiro de quadro [C++]"
-  - "omitir ponteiro de quadro"
-  - "Opção de compilador Oy [C++]"
-  - "Opção de compilador -Oy [C++]"
-  - "Opção de compilador de ponteiro de quadro de pilha [C++]"
-  - "suprimir criação de ponteiro de quadro"
+title: "-Oy (omissão do ponteiro de quadro) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/22/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.OmitFramePointers
+- /oy
+dev_langs: C++
+helpviewer_keywords:
+- omit frame pointer
+- Oy compiler option [C++]
+- stack frame pointer compiler option [C++]
+- -Oy compiler option [C++]
+- frame pointer omission compiler option [C++]
+- suppress frame pointer creation
+- /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15a760d1a9df383356ead2eb2d1e1b08e8b9ca57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /Oy (omiss&#227;o do ponteiro de quadro)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="oy-frame-pointer-omission"></a>/Oy (omissão do ponteiro de quadro)
 
-Inibe a criação de ponteiros de quadros na pilha de chamadas.  
-  
-## Sintaxe  
-  
-```  
-/Oy[-]  
-```  
-  
-## Comentários  
- Essa opção acelera chamadas de função, porque nenhum ponteiro de quadro precisa ser configurado e removido.  Também libera mais um registro, \(EBP no Intel 386 ou posterior\) para armazenar variáveis e subexpressões usadas frequentemente.  
-  
- **\/Oy** permite a omissão de ponteiro de quadro e **\/Oy\-** desabilita a omissão.  **\/Oy** está disponível somente em compiladores x86.  
-  
- Se seu código exigir tratamento baseado em EBP, você poderá especificar a opção **\/Oy–** após a opção **\/Ox** ou usar [optimize](../../preprocessor/optimize.md) com os argumentos “**y**” e **off** para obter a máxima otimização com tratamento baseado em EBP.  O compilador detecta a maioria das situações em que o tratamento baseado em EBP é necessário \(por exemplo, com as funções `_alloca` e `setjmp` e o tratamento estruturado de exceções\).  
-  
- As opções [\/Ox \(otimização total\)](../../build/reference/ox-full-optimization.md) e [\/O1, \/O2 \(minimizar tamanho, maximizar velocidade\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) implicam **\/Oy**.  Especificar **\/Oy–** depois da opção **\/Ox**, **\/O1** ou **\/Oy** desabilita **\/O2**, seja explícita ou implícita.  
-  
- A opção de compilador **\/Oy** torna o uso do depurador mais difícil porque o compilador suprime as informações do ponteiro de quadro.  Se você especificar uma opção de compilador de depuração \([\/Z7, \/Zi, \/ZI](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md)\), é recomendável especificar a opção **\/Oy\-** depois das outras opções de compilador de otimização.  
-  
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
-  
-2.  Clique na pasta **C\/C\+\+**.  
-  
-3.  Clique na página de propriedades de **Otimização**.  
-  
-4.  Modifique a propriedade de **Omite Ponteiros de Quadros**.  Essa propriedade adiciona ou remove somente a opção **\/Oy**.  Se você quiser adicionar a opção **\/Oy\-**, clique em **Linha de Comando** e modifique **Opções adicionais**.  
-  
-### Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitFramePointers%2A>.  
-  
-## Consulte também  
- [\/O opções \(otimizar código\)](../../build/reference/o-options-optimize-code.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+Inibe a criação de ponteiros de quadros na pilha de chamadas.
+
+## <a name="syntax"></a>Sintaxe
+
+> /Oy [-]
+
+## <a name="remarks"></a>Comentários
+
+Essa opção acelera chamadas de função, porque nenhum ponteiro de quadro precisa ser configurado e removido. Também libera mais um registro, (EBP no Intel 386 ou posterior) para armazenar variáveis e subexpressões usadas frequentemente.
+
+**/Oy** permite a omissão do ponteiro de quadro e **/Oy-** desabilita omissão. **/Oy** está disponível apenas no x86 compiladores.
+
+Se o seu código requer endereçamento com base em EBP, você pode especificar o **/Oy-** opção após o **/Ox** opção ou use [otimizar](../../preprocessor/optimize.md) com a "**y**" e **off** argumentos para obter o máximo de otimização com base em EBP tratamento. O compilador detecta a maioria das situações em que o tratamento baseado em EBP é necessário (por exemplo, com as funções `_alloca` e `setjmp` e o tratamento estruturado de exceções).
+
+O [/Ox (habilitar mais velocidade otimizações)](../../build/reference/ox-full-optimization.md) e [/O1, /O2 (minimizar tamanho, maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opções implicam **/Oy**. Especificando **/Oy-** depois que o **/Ox**, **/O1**, ou **/O2** desabilita a opção **/Oy**, se ele for explícita ou implícita.
+
+O **/Oy** torna de opção de compilador usando o depurador mais difícil porque o compilador suprime informações de ponteiro de quadro. Se você especificar uma opção de compilador debug ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), é recomendável que você especifique o **/Oy-** opção após outras opções de compilador de otimização.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Clique o **C/C++** pasta.
+
+1. Clique o **otimização** página de propriedades.
+
+1. Modificar o **omitir ponteiros da moldura** propriedade. Essa propriedade adiciona ou remove apenas o **/Oy** opção. Se você deseja adicionar o **/Oy-** opção, clique em **linha de comando** e modificar **opções adicionais**.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitFramePointers%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)
+
+[Opções do Compilador](../../build/reference/compiler-options.md)
+
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

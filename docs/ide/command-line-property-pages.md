@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 320e3ac5126ec1e60d768e7c109f32610103f93b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d6c2958c1f6cd5954efb9c8166c151cf2a8cc29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-property-pages"></a>Páginas de propriedades Linha de Comando
 A maioria das pastas de página de propriedade contêm uma **linha de comando** página de propriedades. Esta página exibe as propriedades que são definidas na pasta. O **linha de comando** propriedade página também contém um **opções adicionais** caixa onde você pode especificar propriedades que são válidas para a ferramenta, mas para os quais há nenhuma propriedade na pasta.  

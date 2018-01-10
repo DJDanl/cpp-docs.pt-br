@@ -1,80 +1,82 @@
 ---
-title: "Acessadores e conjuntos de linhas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acessadores [C++]"
-  - "acessadores [C++], conjuntos de linhas"
-  - "conjuntos de linhas de matriz"
-  - "conjuntos de linhas em massa"
-  - "Classe CAccessorBase"
-  - "Classe CAccessorRowset, tipos de acessadores"
-  - "Classe CArrayRowset, acessadores"
-  - "Classe CBulkRowset, acessadores"
-  - "Classe CRowset, acessadores e conjuntos de linhas"
-  - "Modelos de consumidor OLE DB, acessadores"
-  - "Modelos de consumidor OLE DB, suporte a conjunto de linhas"
-  - "conjuntos de linhas [C++], acessando"
-  - "conjuntos de linhas [C++], tipos com suporte"
-  - "conjuntos de linhas únicos"
+title: Acessadores e conjuntos de linhas | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++]
+- OLE DB consumer templates, rowset support
+- OLE DB consumer templates, accessors
+- rowsets [C++], accessing
+- bulk rowsets
+- CAccessorRowset class, accessor types
+- single rowsets
+- CArrayRowset class, accessors
+- CBulkRowset class, accessors
+- array rowsets
+- CAccessorBase class
+- CRowset class, accessors and rowsets
+- accessors [C++], rowsets
+- rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Acessadores e conjuntos de linhas
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para definir e recuperar dados, os modelos OLE DB usam um acessador e um conjunto de linhas pela classe de [CAccessorRowset](../Topic/CAccessorRowset%20Class.md) .  Esta classe pode tratar vários acessadores de tipos diferentes.  
+# <a name="accessors-and-rowsets"></a>Acessadores e conjuntos de linhas
+Para definir e recuperar dados, modelos OLE DB é usar um acessador e um conjunto de linhas por meio de [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) classe. Essa classe pode manipular vários acessadores de tipos diferentes.  
   
-## Tipos de acessador  
- Todos os acessadores derivam de [CAccessorBase](../../data/oledb/caccessorbase-class.md).  `CAccessorBase` fornece o parâmetro e a associação de coluna.  
+## <a name="accessor-types"></a>Tipos de acessador  
+ Todos os acessadores derivam [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase`fornece o parâmetro e associação de coluna.  
   
  A figura a seguir mostra os tipos de acessador.  
   
- ![Tipos de acessador](../../data/oledb/media/vcaccessortypes.png "vcAccessorTypes")  
+ ![Tipos de acessador](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 Classes de acessador  
   
--   uso de[CAccessor](../Topic/CAccessor%20Class.md)esse acessador quando você souber a estrutura de origem da base de dados em tempo de design.  `CAccessor` associa estatisticamente um registro base de dados do, que contém o buffer, à fonte de dados.  
+-   [CAccessor](../../data/oledb/caccessor-class.md) usar esse acessador quando você conhece a estrutura da fonte de banco de dados em tempo de design. `CAccessor`estaticamente associa um registro de banco de dados, que contém o buffer, a fonte de dados.  
   
--   uso de[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)esse acessador quando você não conhecer a estrutura do base de dados em tempo de design.  `CDynamicAccessor` chama `IColumnsInfo::GetColumnInfo` para obter as informações de coluna de base de dados.  Criar e gerenciar um acessador e o buffer.  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) usar esse acessador quando você não souber a estrutura do banco de dados em tempo de design. `CDynamicAccessor`chamadas `IColumnsInfo::GetColumnInfo` para obter as informações de coluna do banco de dados. Cria e gerencia um acessador e o buffer.  
   
--   o uso de[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)esse acessador tratar comando desconhecido digita.  Quando você prepara os comandos, `CDynamicParameterAccessor` pode obter informações de parâmetro da interface de `ICommandWithParameters` , se o provedor oferecer suporte a `ICommandWithParameters`.  
+-   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) usam esse acessador para lidar com os tipos de comando desconhecido. Quando você prepara os comandos, `CDynamicParameterAccessor` pode obter informações de parâmetro de `ICommandWithParameters` interface, se o provedor oferece suporte a `ICommandWithParameters`.  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), e uso de [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)essas classes quando você não tenha nenhum conhecimento do esquema de base de dados.  `CDynamicStringAccessorA` recupera dados como cadeias de caracteres ANSI; `CDynamicStringAccessorW` recupera dados como cadeias de caracteres Unicode.  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), e [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) Use essas classes quando você não possui conhecimento do esquema do banco de dados. `CDynamicStringAccessorA`recupera dados como cadeias de caracteres ANSI; `CDynamicStringAccessorW` recupera dados como cadeias de caracteres Unicode.  
   
--   [CManualAccessor](../Topic/CManualAccessor%20Class.md) com essa classe, você pode usar qualquer os tipos de dados que você deseja se o provedor pode converter o tipo.  Trata colunas de resultados e parâmetros do comando.  
+-   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) com essa classe, você pode usar quaisquer tipos de dados você deseja se o provedor pode converter o tipo. Ele trata colunas de resultados e parâmetros de comando.  
   
- A tabela a seguir resume o suporte nos tipos de modelo do acessador OLE DB.  
+ A tabela a seguir resume o suporte aos tipos de acessador de modelo de banco de dados OLE.  
   
-|Tipo de acessador|Dynamic|Trata param|Buffer|Vários acessadores|  
-|-----------------------|-------------|-----------------|------------|------------------------|  
-|`CAccessor`|Não|Sim|Usuário|Sim|  
-|`CDynamicAccessor`|Sim|Não|Modelos OLE DB|Não|  
-|`CDynamicParameterAccessor`|Sim|Sim|Modelos OLE DB|Não|  
-|`CDynamicStringAccessor[A,W]`|Sim|Não|Modelos OLE DB|Não|  
-|`CManualAccessor`|Sim|Sim|Usuário|Sim|  
+|Tipo de acessador|Dinâmico|Identificadores de parâmetros|Buffer|Vários acessadores|  
+|-------------------|-------------|--------------------|------------|------------------------|  
+|`CAccessor`|Não|Sim|User|Sim|  
+|`CDynamicAccessor`|Sim|Não|Modelos de banco de dados OLE|Não|  
+|`CDynamicParameterAccessor`|Sim|Sim|Modelos de banco de dados OLE|Não|  
+|`CDynamicStringAccessor[A,W]`|Sim|Não|Modelos de banco de dados OLE|Não|  
+|`CManualAccessor`|Sim|Sim|User|Sim|  
   
-## Tipos de conjunto de linhas  
- Os tipos de suporte dos três modelos OLE DB dos conjuntos de linhas \(consulte a figura precedente\): escolha os conjuntos de linhas \(implementados por [CRowset](../Topic/CRowset%20Class.md)\), os conjuntos de linhas em massa \(implementados por [CBulkRowset](../Topic/CBulkRowset%20Class.md)\), e os conjuntos de linhas de matriz \(implementados por [CArrayRowset](../../data/oledb/carrayrowset-class.md)\).  Escolha a busca dos conjuntos de linhas um único identificador de linha `MoveNext` quando é chamado.  Os conjuntos de linhas em massa podem buscar a vários identificadores de linha.  Os conjuntos de linhas da matriz são os conjuntos de linhas que podem ser acessados usando a sintaxe da matriz.  
+## <a name="rowset-types"></a>Tipos de conjunto de linhas  
+ Os modelos OLE DB oferecer suporte a três tipos de conjuntos de linhas (consulte a Figura precedente): único conjuntos de linhas (implementado por [CRowset](../../data/oledb/crowset-class.md)), em massa de conjuntos de linhas (implementado por [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) e conjuntos de linhas (implementados de matriz por [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Busca de conjuntos de linhas únicos tratar de uma única linha quando `MoveNext` é chamado. Conjuntos de linhas em massa podem buscar vários identificadores de linha. Conjuntos de linhas de matriz são conjuntos de linhas que podem ser acessados usando a sintaxe de matriz.  
   
  A figura a seguir mostra os tipos de conjunto de linhas.  
   
- ![De RowsetType](../Image/vcRowsetTypes.gif "vcRowsetTypes")  
-Classes do conjunto de linhas  
+ ![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
+Classes de conjunto de linhas  
   
- [Conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) não acessa dados no repositório de dados acessa mas sim as informações sobre o armazenamento de dados, chamadas de metadados.  Conjuntos de linhas de esquema são usados normalmente em situações em que a estrutura de base de dados não é conhecida em tempo de compilação e deve ser obtida em tempo de execução.  
+ [Conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) não não acessar dados em dados armazenar mas em vez disso, acessar informações sobre o armazenamento de dados, chamada de metadados. Conjuntos de linhas de esquema normalmente são usados em situações nas quais a estrutura de banco de dados não é conhecida em tempo de compilação e deve ser obtida em tempo de execução.  
   
-## Consulte também  
- [Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

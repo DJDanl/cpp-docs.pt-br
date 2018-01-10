@@ -1,57 +1,58 @@
 ---
-title: "CDynamicAccessor::GetBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetBookmark"
-  - "GetBookmark"
-  - "CDynamicAccessor::GetBookmark"
-  - "ATL.CDynamicAccessor.GetBookmark"
-  - "ATL::CDynamicAccessor::GetBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetBookmark"
+title: 'Cdynamicaccessor:: Getbookmark | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetBookmark
+- GetBookmark
+- CDynamicAccessor::GetBookmark
+- ATL.CDynamicAccessor.GetBookmark
+- ATL::CDynamicAccessor::GetBookmark
+dev_langs: C++
+helpviewer_keywords: GetBookmark method
 ms.assetid: 6d0a2970-0c62-4a34-bac7-149d8e990f81
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e090df30db8abfcd2aee4dc87543be72183f7960
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera o indexador da linha atual.  
+# <a name="cdynamicaccessorgetbookmark"></a>CDynamicAccessor::GetBookmark
+Recupera o indicador da linha atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      HRESULT GetBookmark(   
-   CBookmark< >* pBookmark    
+      HRESULT GetBookmark(   
+   CBookmark< >* pBookmark    
 ) const throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `pBookmark`  
- \[out\] ponteiro do objeto de [CBookmark](../../data/oledb/cbookmark-class.md) .  
+ [out] Um ponteiro para o [CBookmark](../../data/oledb/cbookmark-class.md) objeto.  
   
-## Valor de retorno  
- Um dos valores padrão de `HRESULT` .  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT` valores.  
   
-## Comentários  
- Você precisa definir **DBPROP\_IRowsetLocate** a `VARIANT_TRUE` para recuperar um medidor.  
+## <a name="remarks"></a>Comentários  
+ Você precisa definir **DBPROP_IRowsetLocate** para `VARIANT_TRUE` para recuperar um indicador.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

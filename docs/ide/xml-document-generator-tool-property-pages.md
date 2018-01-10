@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d6cd4359cfe4700f7decf0ec54686a4b70a183
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc09dafc0f07bc16a11dd255419440b6464456c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Páginas de propriedade da ferramenta geradora de documento XML
 A página de propriedades ferramenta de gerador de documento XML expõe a funcionalidade de xdcmake.exe. xdcmake.exe mescla os arquivos. XDC em um arquivo. XML ao seu código-fonte contém comentários de documentação e [/doc (processar comentários de documentação) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) for especificado,. Consulte [marcas recomendadas para comentários de documentação](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) para obter informações sobre como adicionar comentários de documentação no código-fonte.  

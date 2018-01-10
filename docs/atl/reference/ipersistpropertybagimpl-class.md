@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,25 @@ f1_keywords:
 - ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
 - ATLCOM/ATL::IPersistPropertyBagImpl::Load
 - ATLCOM/ATL::IPersistPropertyBagImpl::Save
-dev_langs:
-- C++
-helpviewer_keywords:
-- IPersistPropertyBagImpl class
+dev_langs: C++
+helpviewer_keywords: IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Classe IPersistPropertyBagImpl
 Essa classe implementa **IUnknown** e permite que um objeto salvar suas propriedades em um recipiente de propriedades fornecido pelo cliente.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -96,7 +79,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [ipersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [ipersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) no SDK do Windows.  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Inicializa um objeto recém-criado.  
@@ -109,7 +92,7 @@ STDMETHOD(InitNew)();
  Retorna `S_OK`.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) no SDK do Windows.  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  Carrega as propriedades do objeto de um recipiente de propriedades fornecido pelo cliente.  
@@ -121,7 +104,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ### <a name="remarks"></a>Comentários  
  ATL usa mapa de propriedade do objeto para recuperar essas informações.  
   
- Consulte [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) no SDK do Windows.  
   
 ##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  Salva as propriedades do objeto em um recipiente de propriedades fornecido pelo cliente.  
@@ -136,9 +119,8 @@ STDMETHOD(Save)(
 ### <a name="remarks"></a>Comentários  
  ATL usa mapa de propriedade do objeto para armazenar essas informações. Por padrão, esse método salva todas as propriedades, independentemente do valor *fSaveAllProperties*.  
   
- Consulte [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- wmain
-dev_langs:
-- C++
+f1_keywords: wmain
+dev_langs: C++
 helpviewer_keywords:
 - main function, vs. wmain
 - wmain function
 ms.assetid: 7abb1257-b85c-413a-b913-d45b1582a71d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ef24360507c3c58d2c0839f780062340f8d7654f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d43ab12c42315d735220af8f91c40d8b6a5cc4f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-wmain-instead-of-main"></a>Usando wmain em vez main
 ## <a name="microsoft-specific"></a>Específico da Microsoft  

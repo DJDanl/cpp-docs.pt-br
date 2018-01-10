@@ -1,31 +1,31 @@
 ---
-title: "Alinhamento de malloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Alinhamento de malloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Alinhamento de malloc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-É garantido que [malloc](../c-runtime-library/reference/malloc.md) retorna memória que esteja alinhada corretamente para o armazenamento de qualquer objeto que tenha um alinhamento fundamental e que poderia se ajustar à quantidade de memória alocada.  Um *alinhamento fundamental* é um alinhamento que é menor ou igual ao alinhamento o maior que é suportado pela implementação sem uma especificação de alinhamento. \(No Visual C\+\+, este é o alinhamento que é necessário para `double`, ou 8 bytes.  No código que se destina a plataformas de 64 bits, é de 16 bytes\). Por exemplo, uma alocação de quatro bytes seria alinhada em um limite com suporte a qualquer objeto de quatro bytes ou menor.  
+# <a name="malloc-alignment"></a>Alinhamento de malloc
+[malloc](../c-runtime-library/reference/malloc.md) é garantido para retornar a memória que está alinhada adequadamente para armazenar qualquer objeto que tenha um alinhamento fundamental e que caibam na quantidade de memória alocada. Um *alinhamento fundamental* é um alinhamento que seja menor ou igual ao maior alinhamento que é compatível com a implementação sem uma especificação de alinhamento. (No Visual C++, este é o alinhamento que é necessário para um `double`, ou 8 bytes. No código que direciona plataformas de 64 bits, ele tem 16 bytes.) Por exemplo, uma alocação de quatro bytes deve ser alinhada em um limite que dá suporte a qualquer objeto de quatro bytes ou menor.  
   
- Visual C\+\+ permite tipos que *estenderam o alinhamento*, que são também conhecidos como tipos *sobrealinhados*.  Por exemplo, os tipos SSE [\_\_m128](../Topic/__m128.md) e `__m256`, e os tipos declarados usando `__declspec(align(``n``))` onde `n` é maior que 8, têm alinhamento estendido.  O alinhamento de memória em um limite adequado a um objeto que exija o alinhamento estendido não é garantido por `malloc`.  Para atribuir memória para tipos sobre\-alinhados, use [\_aligned\_malloc](../c-runtime-library/reference/aligned-malloc.md) e funções relacionadas.  
+ Visual C++ permite tipos que têm *estendidos alinhamento*, que também são conhecidas como *excesso alinhado* tipos. Por exemplo, os tipos de SSE [m128](../cpp/m128.md) e `__m256`e tipos que são declarados usando `__declspec(align( n ))` onde `n` é maior que 8, tiver estendido o alinhamento. Alinhamento de memória em um limite que é adequado para um objeto que requer alinhamento estendido não é garantido por `malloc`. Para alocar memória para tipos de excesso alinhados, use [aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) e funções relacionadas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Uso da pilha](../build/stack-usage.md)   
- [align](../cpp/align-cpp.md)   
- [\_\_declspec](../cpp/declspec.md)
+ [Alinhar](../cpp/align-cpp.md)   
+ [__declspec](../cpp/declspec.md)

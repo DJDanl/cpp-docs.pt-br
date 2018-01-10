@@ -1,40 +1,41 @@
 ---
-title: "CRowset::Delete | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::Delete"
-  - "CRowset.Delete"
-  - "CRowset::Delete"
-  - "ATL.CRowset.Delete"
-  - "ATL::CRowset<TAccessor>::Delete"
-  - "CRowset<TAccessor>.Delete"
-  - "CRowset<TAccessor>::Delete"
-  - "ATL.CRowset<TAccessor>.Delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Delete"
+title: 'Crowset:: Delete | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::Delete
+- CRowset.Delete
+- CRowset::Delete
+- ATL.CRowset.Delete
+- ATL::CRowset<TAccessor>::Delete
+- CRowset<TAccessor>.Delete
+- CRowset<TAccessor>::Delete
+- ATL.CRowset<TAccessor>.Delete
+dev_langs: C++
+helpviewer_keywords: Delete method
 ms.assetid: 4feb4f7e-139f-489a-b7d5-ea6ec0058e0f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 525e89bd49a7bf67ac20a2f580241e7ff982c71b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Delete
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chamadas [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) para excluir a linha atual do conjunto de linhas.  
+# <a name="crowsetdelete"></a>CRowset::Delete
+Chamadas [IRowsetChange:: DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) para excluir a linha atual do conjunto de linhas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -42,11 +43,11 @@ HRESULT Delete( ) const throw( );
   
 ```  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe CRowset](../Topic/CRowset%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRowset](../../data/oledb/crowset-class.md)

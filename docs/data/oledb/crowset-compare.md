@@ -1,70 +1,71 @@
 ---
-title: "CRowset::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset<TAccessor>.Compare"
-  - "CRowset<TAccessor>::Compare"
-  - "ATL.CRowset<TAccessor>.Compare"
-  - "ATL::CRowset<TAccessor>::Compare"
-  - "CRowset.Compare"
-  - "ATL::CRowset::Compare"
-  - "ATL.CRowset.Compare"
-  - "CRowset::Compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método compare"
+title: 'Crowset:: Compare | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset<TAccessor>.Compare
+- CRowset<TAccessor>::Compare
+- ATL.CRowset<TAccessor>.Compare
+- ATL::CRowset<TAccessor>::Compare
+- CRowset.Compare
+- ATL::CRowset::Compare
+- ATL.CRowset.Compare
+- CRowset::Compare
+dev_langs: C++
+helpviewer_keywords: Compare method
 ms.assetid: a8117b40-7abd-4867-b0ba-eb9e9808204e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9d7e69c168489fcfe71c14fbbfe2b2aca8e28f62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Compare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="crowsetcompare"></a>CRowset::Compare
 Compara dois indicadores usando [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      HRESULT Compare(   
-   const CBookmarkBase& bookmark1,   
-   const CBookmarkBase& bookmark2,   
-   DBCOMPARE* pComparison    
+      HRESULT Compare(   
+   const CBookmarkBase& bookmark1,   
+   const CBookmarkBase& bookmark2,   
+   DBCOMPARE* pComparison    
 ) const throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Bookmark1*  
- \[in\] o primeiro indicador a ser comparado.  
+ [in] O primeiro indicador a ser comparado.  
   
  *Bookmark2*  
- \[in\] o segundo indicador a ser comparado.  
+ [in] O segundo indicador a ser comparado.  
   
  `pComparison`  
- \[out\] ponteiro de como o resultado da comparação.  
+ [out] Um ponteiro para o resultado da comparação.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Esse método exige a interface opcional `IRowsetLocate`, que pode não haver suporte em todos os provedores; nesse caso, o método retornará **E\_NOINTERFACE**.  Você também deve definir **DBPROP\_IRowsetLocate** a `VARIANT_TRUE` antes de chamar **Abrir** na tabela ou o comando que contém o conjunto de linhas.  
+## <a name="remarks"></a>Comentários  
+ Esse método requer que a interface opcional `IRowsetLocate`, que talvez não tenha suporte em todos os provedores; se esse for o caso, o método retornará **E_NOINTERFACE**. Você também deve definir **DBPROP_IRowsetLocate** para `VARIANT_TRUE` antes de chamar **abrir** na tabela ou que contém o conjunto de linhas de comando.  
   
- Para obter informações sobre como usar o marca um endereço da Internet\) dos consumidores, consulte [Usando indicadores](../../data/oledb/using-bookmarks.md).  
+ Para obter informações sobre como usar indicadores em clientes, consulte [usando indicadores](../../data/oledb/using-bookmarks.md).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe CRowset](../Topic/CRowset%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRowset](../../data/oledb/crowset-class.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a835dbdbce23f7f92f13fabd038d6e294345981
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dbae96aeb7b11105a1a2aa30aa513c8d94011a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Como realizar marshaling de retornos de chamadas e delegados usando o C++ Interop
 Este tópico demonstra o marshalling de retornos de chamada e delega (a versão de um retorno de chamada gerenciada) entre código gerenciado e usando o Visual C++.  

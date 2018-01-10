@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numérico, booleano e literais de ponteiro (C++)
 Um literal é um elemento do programa que representa diretamente a um valor. Este artigo aborda os literais do tipo inteiro, ponto flutuante, boolean e ponteiro. Para obter informações sobre literais de cadeia de caracteres e caracteres, consulte [cadeia de caracteres e literais de caracteres (C++)](../cpp/string-and-character-literals-cpp.md). Você também pode definir seus próprios literais com base em qualquer uma dessas categorias; Para obter mais informações, consulte [literais definidos pelo usuário (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -108,7 +106,7 @@ long long i = 24'847'458'121
   
  O expoente pode ser especificado usando **e** ou **E**, que tem o mesmo significado, seguido por um sinal opcional (+ ou -) e uma sequência de dígitos.  Se um expoente estiver presente, o ponto decimal à direita é desnecessário em números inteiros como `18E0`.  
   
- Literais de ponto flutuantes padrão para o tipo **duplo**. Usando os sufixos **f** ou **l** (ou **F** ou **L** — o sufixo não diferencia maiusculas de minúsculas), o literal pode ser especificado como ** float** ou `long double`, respectivamente.  
+ Literais de ponto flutuantes padrão para o tipo **duplo**. Usando os sufixos **f** ou **l** (ou **F** ou **L** — o sufixo não diferencia maiusculas de minúsculas), o literal pode ser especificado como  **float** ou `long double`, respectivamente.  
   
  Embora `long double` e **duplo** tem a mesma representação, eles não são do mesmo tipo. Por exemplo, você pode ter funções sobrecarregadas como  
   

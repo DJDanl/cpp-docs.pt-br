@@ -1,11 +1,10 @@
 ---
-title: Classe de amostra | Documentos do Microsoft
+title: Classe de amostra | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,33 +17,18 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f81208e40cb2a211b714af1efe801e81cd567374
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sampler-class"></a>Classe de amostra
 A classe de amostra agrega informações de configuração de amostragem a ser usado para amostragem de textura.  
@@ -57,18 +41,18 @@ class sampler;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[amostra de construtor](#ctor)|Sobrecarregado. Cria uma instância de amostra.|  
+|[amostra de construtor](#ctor)|Sobrecarregado. Constrói uma instância de amostra.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[get_address_mode](#get_address_mode)|Retorna o `address_mode` que foi associado ao objeto de amostra.|  
-|[get_border_color](#get_border_color)|Retorna a cor da borda que está associado com o objeto de amostra.|  
+|[get_border_color](#get_border_color)|Retorna a cor da borda que foi associado ao objeto de amostra.|  
 |[get_filter_mode](#get_filter_mode)|Retorna o `filter_mode` que foi associado ao objeto de amostra.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
@@ -93,9 +77,9 @@ class sampler;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>amostra de 
+##  <a name="ctor"></a>amostra 
 
- Constrói uma instância do [classe de amostra](sampler-class.md).  
+ Constrói uma instância do [amostra classe](sampler-class.md).  
   
 ```  
 sampler() restrict(cpu);
@@ -135,20 +119,20 @@ sampler(// [6] move constructor
   
 ### <a name="parameters"></a>Parâmetros  
  `_Filter_mode`  
- O modo de filtragem a ser usado na amostragem.  
+ O modo de filtro a ser usado na amostragem.  
   
  `_Address_mode`  
- O modo de endereçamento a ser usado em amostragem para todas as dimensões.  
+ O modo de endereçamento a ser usado na amostragem para todas as dimensões.  
   
  `_Border_color`  
- A cor da borda a ser usada se o modo de endereço é address_border. O valor padrão é `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.  
+ A cor da borda a ser usado se o modo de endereço é address_border. O valor padrão é `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.  
   
  `_Other`  
  [5] construtor de cópia  
- O `sampler` objeto a ser copiado no novo `sampler` instância.  
+ O `sampler` objeto a ser copiado para a nova `sampler` instância.  
   
- [6] construtor de movimentação  
- O `sampler` objeto se mova para a nova `sampler` instância.  
+ [6] construtor de movimento  
+ O `sampler` objeto a ser movido para a nova `sampler` instância.  
   
 ##  <a name="address_mode"></a>address_mode 
 
@@ -223,14 +207,13 @@ sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(a
 ### <a name="parameters"></a>Parâmetros  
  `_Other`  
  [1] operador de atribuição de cópia  
- O `sampler` objeto a ser copiado no `sampler`.  
+ O `sampler` objeto para copiar a esta `sampler`.  
   
- [2] operador de atribuição de movimentação  
- O `sampler` objeto se mova em isso `sampler`.  
+ [2] operador de atribuição de movimentação do  
+ O `sampler` objeto para mover a esta `sampler`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a essa instância de amostra.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
-

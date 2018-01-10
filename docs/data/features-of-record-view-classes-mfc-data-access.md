@@ -1,39 +1,41 @@
 ---
-title: "Recursos de classes de exibi&#231;&#227;o de registro (Acesso a dados MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de exibição de registro"
-  - "exibições de registro, classes"
+title: Recursos de registro Exibir Classes (MFC acesso a dados) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- record views, classes
+- record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c975aac0459a13a3fb95fdec3dff1a648b0efec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Recursos de classes de exibi&#231;&#227;o de registro (Acesso a dados MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode fazer programação de acesso a dados com base em formulário com classe [CFormView](../mfc/reference/cformview-class.md), mas [CRecordView](../mfc/reference/crecordview-class.md) e [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) são geralmente classes melhores para derivação.  Além de seus recursos `CFormView`, `CRecordView` e `CDaoRecordView`:  
+# <a name="features-of-record-view-classes--mfc-data-access"></a>Recursos de classes de exibição de registro (Acesso a dados MFC)
+Você pode fazer uma programação de acesso a dados baseado em formulário com a classe [CFormView](../mfc/reference/cformview-class.md), mas [CRecordView](../mfc/reference/crecordview-class.md) geralmente é uma classe melhor derivar. Além de seu `CFormView` recursos, `CRecordView`:  
   
--   Possibilite troca de dados de diálogo \(DDX\) entre os controles de formulário e o objeto do conjunto de registros associado.  
+-   Fornece a troca de dados de caixa de diálogo (DDX) entre os controles de formulário e o objeto de conjunto de registros associado.  
   
--   Execute os comandos Mover Primeiro, Mover Próximo e Mover Anterior e Mover Último para navegar nos registros no objeto de conjunto de registros associado.  
+-   Controla os comandos mover primeiro, mover próximo, mover anterior e mover último para navegar entre os registros no objeto recordset associado.  
   
--   Atualize as alterações no registro atual quando o usuário for para outro registro.  
+-   Atualiza as alterações feitas no registro atual quando o usuário se desloca para outro registro.  
   
- Para obter mais informações sobre navegação, consulte [Exibições de registro: suportando navegação em uma exibição de registro](../Topic/Supporting%20Navigation%20in%20a%20Record%20View%20%20\(MFC%20Data%20Access\).md).  
+ Para obter mais informações sobre a navegação, consulte [exibições de registro: navegação com suporte em uma exibição de registro](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
   
-## Consulte também  
- [Exibição de registro \(Acesso a dados MFC\)](../data/record-views-mfc-data-access.md)   
+## <a name="see-also"></a>Consulte também  
+ [Exibições de registro (acesso a dados MFC)](../data/record-views-mfc-data-access.md)   
  [Lista de drivers ODBC](../data/odbc/odbc-driver-list.md)

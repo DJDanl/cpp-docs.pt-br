@@ -1,41 +1,43 @@
 ---
-title: "Como realizar marshaling de cadeias de caracteres usando PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "realização de marshaling em dados [C++], cadeias de caracteres"
-  - "interoperabilidade [C++], cadeias de caracteres"
-  - "realização de marshaling [C++], cadeias de caracteres"
-  - "invocação de plataforma [C++], cadeias de caracteres"
+title: 'Como: marshaling de cadeias de caracteres usando PInvoke | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- data marshaling [C++], strings
+- platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como realizar marshaling de cadeias de caracteres usando PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico explica como as funções nativos que aceitam cadeias de caracteres de C \- estilo podem ser chamadas usando o tipo System::String de cadeia de caracteres de CLR usando o suporte da invocação de plataforma do.NET Framework.  Os desenvolvedores do Visual C\+\+ devem usar os recursos do C\+\+ Interoperabilidade vez \(quando possível P\/Invoke\) porque fornece vez relatório de erros de tempo de compilação, não são tipo seguro, e podem ser fastidiosos de implementar.  Se a API não gerenciado é empacotado como uma DLL, e o código\-fonte não estiver disponível, então P\/Invoke é a única opção, mas consulta de outra forma [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Como realizar marshaling de cadeias de caracteres usando PInvoke
+Este tópico explica como nativas funções que aceitam cadeias de caracteres de estilo C podem ser chamadas usando a cadeia de caracteres CLR usando o suporte de invocação de plataforma do .NET Framework System:: string de tipo. Programadores de Visual C++ são incentivados a usar os recursos de interoperabilidade C++ em vez disso (quando for possível) porque P/Invoke oferece pouco tempo de compilação relatório de erro, não é de tipo seguro e poderá ser tedioso implementar. Se a API não gerenciada é empacotada como uma DLL, e o código-fonte não está disponível, o P/Invoke é a única opção, mas, caso contrário, consulte [usando Interop C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- As cadeias de caracteres gerenciados e não gerenciados são apresentadas diferentemente na memória, o que passar cadeias de caracteres de gerenciado para as funções não gerenciados requer o atributo de <xref:System.Runtime.InteropServices.MarshalAsAttribute> instruir o compilador para inserir os mecanismos necessários à conversão para o marshaling os dados de cadeia de caracteres corretamente e com segurança.  
+ Cadeias de caracteres gerenciadas e são dispostas diferente na memória, portanto passar cadeias de caracteres de gerenciado para funções não gerenciadas requer o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para instruir o compilador para inserir os mecanismos de conversão necessária para realizar marshaling de dados de cadeia de caracteres corretamente e com segurança.  
   
- Como com funções que usam apenas tipos de dados do intrínsecos, <xref:System.Runtime.InteropServices.DllImportAttribute> é usado para declarar pontos de entrada gerenciados em funções nativos, mas\-\-para passar cadeias de caracteres\-\-em vez de definir esses pontos de entrada como a realização de cadeias de caracteres de C \- estilo, um identificador para o tipo de <xref:System.String> pode ser usado.  Isso solicita ao compilador a inserir o código que executa a conversão necessária.  Para cada argumento da função em uma função não gerenciado que usa uma cadeia de caracteres, o atributo de <xref:System.Runtime.InteropServices.MarshalAsAttribute> deve ser usado para indicar se o objeto String deve realizar marshaling para a função nativo como c o estilo da cadeia de caracteres.  
+ Assim como acontece com funções que usam somente tipos de dados intrínseca, <xref:System.Runtime.InteropServices.DllImportAttribute> é usada para declarar os pontos de entrada gerenciado para as funções nativas, mas – para passar cadeias de caracteres – em vez de definir esses pontos de entrada como colocar cadeias de caracteres de estilo C, um identificador para o <xref:System.String> tipo pode ser usado em vez disso. Isso solicita que o compilador para inserir o código que executa a conversão necessária. Para cada argumento de função em uma função não gerenciada que usa uma cadeia de caracteres, o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo deve ser usado para indicar que o objeto de cadeia de caracteres deve ser empacotado para a função nativa como uma cadeia de caracteres de estilo C.  
   
-## Exemplo  
- O código a seguir consiste em um módulo não gerenciado e gerenciado.  O módulo não gerenciado é uma DLL que define uma função chamada TakesAString que aceita a c o estilo da cadeia de caracteres ANSI na forma de um char\*.  O módulo gerenciado é um aplicativo de linha de comando que importa a função de TakesAString por fim, mas como fazer um System.String gerenciado em vez de um char\*.  O atributo de <xref:System.Runtime.InteropServices.MarshalAsAttribute> é usado para indicar como a cadeia de caracteres gerenciado deve realizar marshaling quando TakesAString é.  
+## <a name="example"></a>Exemplo  
+ O código a seguir consiste em uma não gerenciado e um módulo gerenciado. O módulo não gerenciado é uma DLL que define uma função chamada TakesAString que aceita uma cadeia de caracteres ANSI C-style na forma de um char *. O módulo gerenciado é um aplicativo de linha de comando que importa a função TakesAString, mas define como colocar um System. String gerenciado em vez de um caractere\*. O <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo é usado para indicar como a cadeia de caracteres gerenciada deve ser empacotada quando TakesAString é chamado.  
   
- O módulo gerenciado é compilado com \/clr, mas trabalho de \/clr:pure também.  
+ O módulo gerenciado é compilado com /clr, mas com /clr: pure funciona bem.  
   
 ```  
 // TraditionalDll2.cpp  
@@ -83,9 +85,9 @@ int main() {
 }  
 ```  
   
- Essa técnica causado uma cópia da cadeia de caracteres a ser criada no heap não gerenciado, alterações feitas na cadeia de caracteres pela função nativo não será refletida isso na cópia gerenciado de cadeia de caracteres.  
+ Essa técnica faz com que uma cópia da cadeia de caracteres a ser construído no heap gerenciado, então as alterações feitas à cadeia de caracteres, a função nativa não serão refletidas na cópia gerenciada da cadeia de caracteres.  
   
- Observe que nenhuma parte da DLL está exposta ao código gerenciado pela política tradicional de \#include.  De fato, o DLL está em tempo de execução, apenas assim que os problemas com as funções com `DllImport` importadas não serão detectados em tempo de compilação.  
+ Observe que nenhuma parte da DLL é exposto para o código gerenciado por meio do tradicional # diretiva include. Na verdade, a DLL é acessada no tempo de execução, para problemas com funções importados com `DllImport` não serão detectadas em tempo de compilação.  
   
-## Consulte também  
- [Usando PInvoke explícito em C\+\+ \(atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando PInvoke explícito no C++ (atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
