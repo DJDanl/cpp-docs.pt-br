@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b71664847041d54d6aa86b1c013627e7ad7029d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7268d1996bbe64d364c2add478509983e7b863
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Adicionar um provedor OLE DB do ATL
 Use este assistente para adicionar um provedor ATL OLE DB a um projeto. Um provedor ATL OLE DB consiste em uma fonte de dados, sessão, comando e classes de conjunto de linhas. O projeto deve ter sido criado como um aplicativo COM da ATL.  

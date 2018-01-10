@@ -26,11 +26,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
 C++ dá suporte a vários tipos de cadeia de caracteres e caracteres e fornece modos para expressar valores literais de cada um desses tipos. No seu código-fonte, você expressar o conteúdo de seu literais de caracteres e cadeia de caracteres usando um conjunto de caracteres. Nomes de caractere universal e caracteres de escape permitem expressar qualquer cadeia de caracteres usando apenas o conjunto de caracteres de origem básico. Um literal de cadeia bruto permite que você evite usar caracteres de escape e pode ser usado para expressar todos os tipos de literais de cadeia de caracteres. Você também pode criar literais std::string sem ter que executar etapas de conversão ou construção extra.  
@@ -247,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Literais de cadeia de caracteres bruta (C++ 11)  
- Um literal de cadeia bruto é uma matriz de terminação nula — de qualquer tipo de caractere, que contém qualquer caractere gráfico, incluindo as aspas duplas ("), barra invertida (\\), ou caractere de nova linha. As literais de cadeias de caracteres brutas costumam ser usadas em expressões regulares que utilizam classes de caracteres, bem como em cadeias de caracteres HTML e XML. Para obter exemplos, consulte o seguinte artigo: [perguntas frequentes sobre de Bjarne Stroustrup em C++ 11](http://go.microsoft.com/fwlink/?LinkId=401172).  
+ Um literal de cadeia bruto é uma matriz de terminação nula — de qualquer tipo de caractere, que contém qualquer caractere gráfico, incluindo as aspas duplas ("), barra invertida (\\), ou caractere de nova linha. As literais de cadeias de caracteres brutas costumam ser usadas em expressões regulares que utilizam classes de caracteres, bem como em cadeias de caracteres HTML e XML. Para obter exemplos, consulte o seguinte artigo: [perguntas frequentes sobre de Bjarne Stroustrup em C++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

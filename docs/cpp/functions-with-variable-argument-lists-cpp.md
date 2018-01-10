@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cde959d2a2b17bf346a23aca7a7724523b69b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Lista de funções com argumentos variáveis (C++)
 Declarações de função em que o último membro é o botão de reticências (...) pode levar a um número variável de argumentos. Nesses casos, o C++ fornece verificação de tipo apenas para os argumentos explicitamente declarados. Você pode usar listas de argumentos variáveis quando precisar criar uma função tão geral que mesmo o número e os tipos de argumentos possam variar. A família de funções é um exemplo de funções que usam listas de argumentos de variável. `printf` *argumento de declaração de lista*  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsinit
+apiname: mbsinit
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,20 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- mbsinit
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsinit function
+f1_keywords: mbsinit
+dev_langs: C++
+helpviewer_keywords: mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 57fae8105013446c7c4e496255907f22d51c29d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 5b6105de398d50770aecc55cd10f209e6c4521ba
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsinit"></a>mbsinit
 Controla o estado de uma conversão de caracteres de vários bytes.  

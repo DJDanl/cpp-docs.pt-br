@@ -1,43 +1,43 @@
 ---
-title: "queue::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro generic_container [STL/CLR]"
+title: Queue::generic_container (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 58e07f5e-a854-48fa-b505-9bb82c1cac69
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 960a6d943ee5caf4ad6ba288db4f51a3c0ca2637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# queue::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de interface genérica para o adaptador do contêiner.  
+# <a name="queuegenericcontainer-stlclr"></a>queue::generic_container (STL/CLR)
+O tipo da interface genérica para o adaptador de contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
-## Comentários  
- O tipo descreve a interface genérica para esta classe de adaptador do contêiner do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve a interface genérica para esta classe de adaptador de contêiner do modelo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_queue_generic_container.cpp   
@@ -79,14 +79,17 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**  
- **um tipo c de b**  
- **um b c e d**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
   
-## Consulte também  
- [queue](../Topic/queue%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)

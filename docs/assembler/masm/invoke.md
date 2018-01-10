@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9bc7191c85baa2162cb06b6baa1c81329f8481d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4e17298c59a1c8620eb2261c44e5bd9c3aaceb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invoke"></a>INVOKE
 Chama o procedimento no endereço fornecido pelo *expressão*, passando os argumentos na pilha ou nos registros de acordo com as convenções de chamada padrão do tipo de idioma.  

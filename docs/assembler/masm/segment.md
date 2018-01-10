@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8648005f26e334ae8d184aa437aef68b0318eed6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="segment"></a>SEGMENT
 Define um segmento de programa chamado *nome* ter atributos de segmento  
@@ -59,7 +60,7 @@ name ENDS
   
  Eles têm suporte apenas para COFF e correspondem às características de seção COFF de nome semelhante (por exemplo, **compartilhado** corresponde à IMAGE_SCN_MEM_SHARED). LEITURA define o sinalizador IMAGE_SCN_MEM_READ. O sinalizador somente leitura obsoleto causou a seção limpar o sinalizador IMG_SCN_MEM_WRITE. Se houver `characteristics` estão configurados, as características de padrão não são usadas e apenas os sinalizadores especificados pelo programador estão em vigor.  
   
- `ALIAS(` `string` `)`  
+ `ALIAS(``string``)`  
  Essa cadeia de caracteres é usada como o nome da seção no objeto COFF emitido.  Cria várias seções com o mesmo nome externo, com nomes distintos de segmento (MASM).  
   
  Não há suportada com **/omf**.  

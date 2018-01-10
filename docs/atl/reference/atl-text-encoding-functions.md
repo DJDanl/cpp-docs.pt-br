@@ -5,14 +5,37 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
+f1_keywords:
+- atlbase/ATL::AtlGetHexValue
+- atlbase/ATL::AtlGetVersion
+- atlenc/ATL::AtlHexDecode
+- atlenc/ATL::AtlHexDecodeGetRequiredLength
+- atlenc/ATL::AtlHexEncode
+- atlenc/ATL::AtlHexEncodeGetRequiredLength
+- atlenc/ATL::AtlHexValue
+- atlenc/ATL::BEncode
+- atlenc/ATL::BEncodeGetRequiredLength
+- atlenc/ATL::EscapeXML
+- atlenc/ATL::GetExtendedChars
+- atlenc/ATL::IsExtendedChar
+- atlenc/ATL::QEncode
+- atlenc/ATL::QEncodeGetRequiredLength
+- atlenc/ATL::QPDecode
+- atlenc/ATL::QPDecodeGetRequiredLength
+- atlenc/ATL::QPEncode
+- atlenc/ATL::QPEncodeGetRequiredLength
+- atlenc/ATL::UUDecode
+- atlenc/ATL::UUDecodeGetRequiredLength
+- atlenc/ATL::UUEncode
+- atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: 3
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: a7d4572f34a88192723c574e1b749947f76d819a
-ms.lasthandoff: 03/31/2017
-
+caps.latest.revision: "3"
+ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-text-encoding-functions"></a>Funções de codificação de texto ATL
 Essas funções oferecem suporte a codificação e decodificação de texto.
@@ -77,7 +100,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ## <a name="example"></a>Exemplo  
  A função deve ser chamada da seguinte maneira.  
   
- [!code-cpp[NVC_ATL_Utilities #95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
   
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlbase  
@@ -279,7 +302,7 @@ inline int EscapeXML(
   
 ### <a name="parameters"></a>Parâmetros  
  `szIn`  
- A cadeia de caracteres a ser convertido.  
+ A cadeia de caracteres a ser convertida.  
   
  *nSrclen*  
  O comprimento de caracteres da cadeia de caracteres a ser convertido.  

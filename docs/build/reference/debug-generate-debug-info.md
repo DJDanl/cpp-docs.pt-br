@@ -1,75 +1,84 @@
 ---
-title: "/DEBUG (gerar informa&#231;&#245;es de depura&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateDebugInformation"
-  - "/debug"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos .pdb, gerando informações de depuração"
-  - "Opção de vinculador /DEBUG"
-  - "opção de vinculador DEBUG"
-  - "opção de vinculador -DEBUG"
-  - "depurando [C++], arquivos de informações de depuração"
-  - "depurando [C++], Opção de vinculador "
-  - "opção de vinculador gerar informações de depuração"
-  - "arquivos PDB"
-  - "arquivos pdb, gerando informações de depuração"
-  - "bancos de dados de programa [C++]"
+title: "-DEBUG (gerar informações de depuração) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.GenerateDebugInformation
+- /debug
+dev_langs: C++
+helpviewer_keywords:
+- DEBUG linker option
+- /DEBUG linker option
+- -DEBUG linker option
+- PDB files
+- debugging [C++], debug information files
+- generate debug info linker option
+- pdb files, generating debug info
+- .pdb files, generating debug info
+- debugging [C++], linker option
+- program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 11
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f9f424a2e71a3094c9e633cbe5779ef5d75fbe9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /DEBUG (gerar informa&#231;&#245;es de depura&#231;&#227;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="debug-generate-debug-info"></a>/DEBUG (gerar informações de depuração)
+```  
+/DEBUG[:{FASTLINK|FULL|NONE}]  
+```  
+  
+## <a name="remarks"></a>Comentários  
 
-```  
-/DEBUG  
-```  
+O **/Debug** opção cria informações de depuração para o executável.    
   
-## Comentários  
- A opção \/DEBUG cria informações de depuração para o arquivo ou a DLL.  
+O vinculador coloca as informações de depuração em um arquivo de programa (PDB) de banco de dados. Atualiza o PDB durante compilações subsequentes do programa.  
   
- O vinculador coloca informações de depuração em um base de dados \(PDB\) do programa.  Atualiza o PDB durante construções subsequentes do programa.  
+Um executável (arquivo .exe ou DLL) criado para depuração contém o nome e caminho de PDB correspondente. O depurador lê o nome inserido e usa o PDB ao depurar o programa. O vinculador usa o nome base do programa e a extensão. PDB para nomear o banco de dados do programa e incorpora o caminho onde ele foi criado. Para substituir esse padrão, defina [/PDB](../../build/reference/pdb-use-program-database.md) e especifique um nome de arquivo diferente.  
+
+O **/Debug: fastlink** opção deixa as informações de símbolo privada os produtos individuais de compilação usados para criar o arquivo executável. Ele gera um PDB limitado que indexa para as informações de depuração nos arquivos de objeto e usadas para criar o executável em vez de fazer uma cópia completa de bibliotecas. Essa opção pode vincular de dois a quatro vezes mais rápido a geração de PDB completa e é recomendada quando você estiver depurando localmente e tiver os compilação de produtos disponíveis. Esta limitado PDB não pode ser usado para depuração quando os produtos de compilação necessários não estão disponíveis, como quando o executável é implantado em outro computador. Em um prompt de comando do desenvolvedor, você pode usar a ferramenta mspdbcmf.exe para gerar um PDB completo desse PDB limitado. No Visual Studio, use os itens de menu do projeto ou de compilação para gerar um arquivo PDB completo para criar um PDB completo para o projeto ou solução.  
   
- Um arquivo .exe ou uma DLL criado depurando contém o nome e o caminho PDB correspondente.  O depurador ler o nome inserido e usa o PDB quando você depura o programa.  O vinculador usa o nome de base de programa e a extensão .pdb para nomear a base de dados do programa, e digite o caminho em que foi criado.  Para substituir essa opção, defina [\/PDB](../../build/reference/pdb-use-program-database.md) e especificar um nome de arquivo diferente.  
+O **/Debug: full** opção move todas as informações de símbolo privada de produtos individuais de compilação (arquivos de objeto e bibliotecas) em um único PDB e pode ser a parte mais demorada do link. No entanto, o PDB completo pode ser usado para depurar o executável quando outros produtos de compilação não estiverem disponíveis, como quando o executável é implantado.  
   
- A opção de [Somente números de linha](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) \(\/Zd\) ou de [C7 compatível](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) do compilador \(\/Z7\) faz com que o compilador deixe informações de depuração nos arquivos de .obj.  Você também pode usar a opção do compilador de [Base de dados do programa](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) \(\/Zi\) armazenar informações de depuração em um PDB para o arquivo de .obj.  O vinculador procurar o PDB do objeto no primeiro caminho absoluto gravado no arquivo de .obj e, no diretório que contém o arquivo de .obj.  Você não pode especificar o nome de arquivo PDB ou o local de um objeto para o vinculador.  
+O **/Debug: nenhum** opção gera um PDB.  
   
- [\/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) é implícita quando \/DEBUG é especificado.  
+Quando você especifica **/Debug** sem opções adicionais, o vinculador assume como padrão **/Debug: full** de linha de comando e makefile compilações, versão cria no Visual Studio IDE e de depuração e versão cria no Visual Studio 2015 e versões anteriores. A partir do Visual Studio de 2017, o sistema de compilação no IDE assume como padrão **/Debug: fastlink** quando você especifica o **/Debug** opção para compilações de depuração. Outros padrões foram alterados para manter a compatibilidade com versões anteriores.  
   
- \/DEBUG altera as opções para a opção de [\/OPT](../../build/reference/opt-optimizations.md) de referência a NOREF e de ICF a NOICF \(isso, você precisará especificar explicitamente \/OPT: Referência ou \/OPT: ICF\).  
+O compilador [compatível C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) opção faz com que o compilador deixar as informações de depuração nos arquivos. obj. Você também pode usar o [banco de dados do programa](../../build/reference/z7-zi-zi-debug-information-format.md) opção de compilador (/Zi) para armazenar as informações de depuração em um PDB para o arquivo. obj. O vinculador procura PDB do objeto primeiro no caminho absoluto gravado no arquivo. obj, e, em seguida, no diretório que contém o arquivo. obj. Não é possível especificar o nome do arquivo PDB de um objeto ou o local para o vinculador.  
   
- Consulte o artigo da Base de Dados de Conhecimento Q121366, INFO: Arquivos PDB e de DBG \- o que são e como eles funcionam, para obter mais informações sobre arquivos de .PDB e de .DBG.  Você pode localizar artigos da Base de Dados de Conhecimento na Biblioteca MSDN, ou em [http:\/\/support.microsoft.com](http://support.microsoft.com/).  
+[/ INCREMENTAL](../../build/reference/incremental-link-incrementally.md) está implícita quando /DEBUG é especificado.  
   
- Não é possível criar um ou um arquivo .dll que contém informações de depuração.  Informações de depuração sempre é colocada em um arquivo .pdb.  
+/ DEBUG altera os padrões para o [/opt](../../build/reference/opt-optimizations.md) opção de REF de NOREF e ICF para NOICF, portanto, se você quiser que os padrões originais, você deve especificar explicitamente /OPT: ref ou /OPT: ICF.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+Não é possível criar um .exe ou. dll que contém informações de depuração. Depurar informações sempre são colocadas em um arquivo. obj ou. PDB.  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-2.  Clique na pasta **Vinculador**.  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-3.  Clique na página de propriedades de **Depuração** .  
+2.  Clique o **vinculador** pasta.  
   
-4.  Modifique a propriedade de **Gerar informações de depuração** .  
+3.  Clique o **depuração** página de propriedades.  
   
-### Para definir essa opção de vinculador por meio de programação  
+4.  Modificar o **gerar informações de depuração** propriedade para habilitar a geração de PDB. Isso permite que /Debug: fastlink por padrão no Visual Studio de 2017.  
+  
+4.  Modificar o **gerar arquivo de banco de dados do programa completo** propriedade para habilitar /Debug: full para a geração de PDB completa para cada compilação incremental.  
+  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

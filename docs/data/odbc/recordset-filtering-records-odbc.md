@@ -1,45 +1,47 @@
 ---
-title: "Conjunto de registros: filtrando registros (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dados [MFC], filtragem"
-  - "filtrando conjuntos de registros"
-  - "filtros [C++], objeto de conjunto de registros"
-  - "conjuntos de registros ODBC [C++], filtrando registros"
-  - "conjunto de registros [C++], filtragem"
+title: 'Conjunto de registros: Filtrando registros (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [MFC], filtering
+- recordsets [C++], filtering
+- filtering recordsets
+- ODBC recordsets [C++], filtering records
+- filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b6d6e8b41e67c9f33d643a2f64c7bdf2d2251eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Conjunto de registros: filtrando registros (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico se aplica às classes ODBC do MFC.  
+# <a name="recordset-filtering-records-odbc"></a>Conjunto de registros: filtrando registros (ODBC)
+Este tópico se aplica às classes MFC ODBC.  
   
- Este tópico explica como filtrar um conjunto de registros de modo que seleciona apenas um subconjunto específico de registros disponíveis.  Por exemplo, talvez você queira selecionar somente as seções da classe para um curso específico, como MATH101.  Um filtro é um critério de pesquisa definido pelos conteúdos de uma cláusula do SQL **WHERE** .  Quando a estrutura o acrescenta à instrução SQL do conjunto de registros, a cláusula de **WHERE** restringe a seleção.  
+ Este tópico explica como filtrar um conjunto de registros para que ele seleciona apenas um subconjunto específico de registros disponíveis. Por exemplo, você talvez queira selecionar apenas as seções de classe para um curso específico, como MATH101. Um filtro é uma condição de pesquisa definida pelo conteúdo de um SQL **onde** cláusula. Quando a estrutura acrescenta à instrução de SQL do conjunto de registros, o **onde** cláusula restringe a seleção.  
   
- Você deve estabelecer o filtro de um objeto do conjunto de registros depois que você constrói o objeto mas antes de chamar a função de membro de **Abrir** \(ou antes de chamar a função de membro de **Requery** para um objeto existente do conjunto de registros cuja função de membro de **Abrir** ser chamada anteriormente\).  
+ Você deve estabelecer o filtro de um objeto conjunto de registros depois de construir o objeto, mas antes de chamar seus **abrir** função de membro (ou antes de chamar o **Requery** função de membro para um conjunto de registros existente objeto cujo **abrir** função membro foi chamada anteriormente).  
   
-#### Para especificar um filtro para um conjunto de registros objeto  
+#### <a name="to-specify-a-filter-for-a-recordset-object"></a>Para especificar um filtro para um objeto de conjunto de registros  
   
-1.  Cria um novo objeto do conjunto de registros \(ou preparar para chamar **Requery** para um objeto existente\).  
+1.  Criar um novo objeto de conjunto de registros (ou preparar para chamar **Requery** para um objeto existente).  
   
-2.  Defina o valor do membro de dados de [m\_strFilter](../Topic/CRecordset::m_strFilter.md) do objeto.  
+2.  Definir o valor do objeto [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membro de dados.  
   
-     O filtro é uma cadeia de caracteres com terminação nula que contém o conteúdo a cláusula FROM do SQL **WHERE** mas não da palavra\-chave **WHERE**.  Por exemplo, use:  
+     O filtro é uma cadeia de caracteres terminada em nulo que contém o conteúdo do SQL **onde** cláusula, mas não a palavra-chave **onde**. Por exemplo, use:  
   
     ```  
     m_pSet->m_strFilter = "CourseID = 'MATH101'";  
@@ -52,19 +54,19 @@ Este tópico se aplica às classes ODBC do MFC.
     ```  
   
     > [!NOTE]
-    >  A cadeia de caracteres literal “MATH101” é mostrada acima com aspas simples.  Na especificação de ODBC SQL, as aspas simples são usadas para denotar um literal de cadeia de caracteres.  Verifique a documentação do driver ODBC para os requisitos de citação do DBMS nessa situação.  Essa sintaxe é discutida também mais próximo do fim deste tópico.  
+    >  A cadeia de caracteres literal "MATH101" é mostrada com aspas acima. Na especificação do ODBC SQL, aspas simples são usadas para denotar uma literal de cadeia de caracteres. Verifique a documentação do driver ODBC para os requisitos de cotação de DBMS nessa situação. Essa sintaxe também é discutida mais perto do final deste tópico.  
   
-3.  Definir todas as outras opções que você precise, como a ordem de classificação, bloqueando o modo, ou os parâmetros.  Especificar um parâmetro é especialmente útil.  Para obter informações sobre a parametrização do filtro, consulte [Conjunto de registros: A parametrização de um conjunto de registros \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+3.  Defina qualquer outra opção que você precisa, como ordem de classificação, o modo de bloqueio ou parâmetros. Especificar um parâmetro é especialmente útil. Para obter informações sobre parametrização seu filtro, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-4.  Chame **Abrir** para o novo objeto \(ou **Requery** para um objeto aberto anteriormente\).  
-  
-> [!TIP]
->  Usar parâmetros no filtro é potencialmente o método mais eficiente para recuperar registros.  
+4.  Chamar **abrir** para o novo objeto (ou **Requery** para um objeto aberto anteriormente).  
   
 > [!TIP]
->  Os filtros do conjunto de registros são úteis para tabelas de [adicionar](../Topic/Recordset:%20Performing%20a%20Join%20\(ODBC\).md) e para usar [parâmetros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) com base nas informações obtidas calculada ou em tempo de execução.  
+>  Usando parâmetros em seu filtro potencialmente é o método mais eficiente para recuperação de registros.  
   
- O conjunto de registros selecionar somente os registros que atendem os critérios de pesquisa que você especificou.  Por exemplo, para especificar o filtro do curso descrito acima \(assumindo `strCourseID` variável definido atualmente, por exemplo, “MATH101”\), faça o seguinte:  
+> [!TIP]
+>  Os filtros de conjunto de registros são úteis para [unindo](../../data/odbc/recordset-performing-a-join-odbc.md) tabelas e para o uso de [parâmetros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) com base nas informações obtidas ou calculados em tempo de execução.  
+  
+ O conjunto de registros seleciona somente os registros que atendem à condição de pesquisa especificado. Por exemplo especificar o filtro de curso descrito acima (supondo que uma variável `strCourseID` definido no momento, por exemplo, como "MATH101"), faça o seguinte:  
   
 ```  
 // Using the recordset pointed to by m_pSet  
@@ -78,28 +80,28 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset  
 ```  
   
- O conjunto de registros contém registros para todas as seções da classe para MATH101.  
+ O conjunto de registros contém registros para todas as seções de classe para MATH101.  
   
- Observe como a cadeia de caracteres de filtro foi definida no exemplo anterior, usando uma variável de cadeia de caracteres.  Este é o uso típico.  Mas suponha que você queria para especificar o valor literal 100 para a ID do curso  O código a seguir mostra como definir corretamente a cadeia de caracteres de filtro com um valor literal:  
+ Observe como a cadeia de caracteres de filtro foi definida no exemplo acima, usando uma variável de cadeia de caracteres. Este é o uso típico. Mas suponha que você queira especificar o valor literal 100 para a ID do curso. O código a seguir mostra como definir a cadeia de caracteres de filtro corretamente com um valor literal:  
   
 ```  
 m_strFilter = "StudentID = '100'";   // correct  
 ```  
   
- Observe o uso de caracteres de aspas simples; se você definir a cadeia de caracteres de filtro diretamente, a cadeia de caracteres de filtro é **not**:  
+ Observe o uso de caracteres de aspas simples. Se você definir a cadeia de caracteres de filtro diretamente, a cadeia de caracteres de filtro é **não**:  
   
 ```  
 m_strFilter = "StudentID = 100";   // incorrect for some drivers  
 ```  
   
- A citação mostrada acima está em conformidade com a especificação de ODBC, mas algumas DBMSs pode exigir outros caracteres de aspas.  Para obter mais informações, consulte [SQL: Personalizando a instrução SQL do conjunto de registros \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md).  
+ A cotação mostrado acima está de acordo com a especificação de ODBC, mas alguns DBMSs podem exigir outros caracteres de aspas. Para obter mais informações, consulte [SQL: SQL instrução (ODBC do Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 > [!NOTE]
->  Se você escolher substituir a cadeia de caracteres padrão do SQL do conjunto de registros passando sua própria cadeia de caracteres SQL da **Abrir**, você não deve definir um filtro se a cadeia de caracteres personalizado tem uma cláusula de **WHERE** .  Para obter mais informações sobre como anular a opção SQL, consulte [SQL: Personalizando a instrução SQL do conjunto de registros \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md).  
+>  Se você optar por substituir a cadeia de caracteres do conjunto de registros padrão SQL passando sua própria cadeia de caracteres SQL para **abrir**, você não deve definir um filtro se sua cadeia de caracteres personalizada tiver um **onde** cláusula. Para obter mais informações sobre como substituir o padrão SQL, consulte [SQL: SQL instrução (ODBC do Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
-## Consulte também  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: classificando registros \(ODBC\)](../../data/odbc/recordset-sorting-records-odbc.md)   
- [Conjunto de registros: como conjuntos de registros selecionam registros \(ODBC\)](../Topic/Recordset:%20How%20Recordsets%20Select%20Records%20\(ODBC\).md)   
- [Conjunto de registros: como conjuntos de registros atualizam registros \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
- [Conjunto de registros: bloqueando registros \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>Consulte também  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: Classificando registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)   
+ [Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
+ [Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
+ [Conjunto de registros: bloqueando registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

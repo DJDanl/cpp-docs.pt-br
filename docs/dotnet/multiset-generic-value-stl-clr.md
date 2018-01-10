@@ -1,42 +1,42 @@
 ---
-title: "multiset::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro generic_value [STL/CLR]"
+title: multiset::generic_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: 4b77b5f8-1e69-48b3-b523-c92ab538a29f
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed9fc78fc78882b2c45bb5c62bbab95ef765297d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetgenericvalue-stlclr"></a>multiset::generic_value (STL/CLR)
 O tipo de um elemento para uso com a interface genérica para o contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Comentários  
- O tipo descreve um objeto do tipo `GValue` que descreve o valor armazenado do elemento para uso com a interface genérica para esta classe do contêiner do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenados para uso com a interface genérica para esta classe de contêiner do modelo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_multiset_generic_value.cpp   
@@ -71,16 +71,19 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**  
- **a**   
-## Requisitos  
- cliext \<\/conjunto de**Cabeçalho:** \>  
+```Output  
+a b c  
+a b c  
+a  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/set >  
   
-## Consulte também  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::generic\_container](../dotnet/multiset-generic-container-stl-clr.md)   
- [multiset::generic\_iterator](../Topic/multiset::generic_iterator%20\(STL-CLR\).md)   
- [multiset::generic\_reverse\_iterator](../Topic/multiset::generic_reverse_iterator%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [multiconjunto (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)   
+ [multiset::generic_iterator (STL/CLR)](../dotnet/multiset-generic-iterator-stl-clr.md)   
+ [multiset::generic_reverse_iterator (STL/CLR)](../dotnet/multiset-generic-reverse-iterator-stl-clr.md)

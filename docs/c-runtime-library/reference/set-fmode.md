@@ -35,11 +35,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 317f4ac24d44008f58deeb62e8362b2d09d8309a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d13ee80a8a3d9848841b7fa3b5463e0b5302ffeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setfmode"></a>_set_fmode
 Define o modo de conversão de arquivo padrão para operações de E/S de arquivo.  
@@ -57,7 +58,7 @@ errno_t _set_fmode(
  Define o modo de conversão de arquivo desejado: `_O_TEXT` ou `_O_BINARY`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retornará zero se tiver êxito ou um código de erro em caso de falha. Se `mode` não for `_O_TEXT` ou `_O_BINARY` ou `_O_WTEXT`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `EINVAL`.  
+ Retornará zero se tiver êxito ou um código de erro em caso de falha. Se `mode` não for `_O_TEXT` ou `_O_BINARY` ou `_O_WTEXT`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
  A função define a variável global [_fmode](../../c-runtime-library/fmode.md). Essa variável especifica o modo de conversão de arquivo padrão para as operações de E/S de arquivo `_open` e `_pipe`.  

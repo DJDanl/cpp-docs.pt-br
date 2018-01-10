@@ -1,57 +1,56 @@
 ---
-title: "/Qimprecise_fwaits (remover fwaits dentro de blocos Try) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Qimprecise_fwaits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /Qimprecise_fwaits (C++)"
-  - "Opção de compilador -Qimprecise_fwaits (C++)"
+title: -Qimprecise_fwaits (remover fwaits dentro de blocos Try) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Qimprecise_fwaits
+dev_langs: C++
+helpviewer_keywords:
+- -Qimprecise_fwaits compiler option (C++)
+- /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 06c93e60530d870b05c601be4980308feb627b46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /Qimprecise_fwaits (remover fwaits dentro de blocos Try)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Remove os comandos de `fwait` internos aos blocos de `try` quando você usa a opção do compilador de [\/fp: exceto](../../build/reference/fp-specify-floating-point-behavior.md) .  
+# <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (remover fwaits dentro de blocos Try)
+Remove o `fwait` comandos internos `try` bloqueia quando você usar o [/fp: exceto](../../build/reference/fp-specify-floating-point-behavior.md) opção de compilador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Qimprecise_fwaits  
 ```  
   
-## Comentários  
- Essa opção não terá efeito se **\/fp:except** não também for especificado.  Se você especificar a opção de **\/fp:except** , o compilador inserirá um comando de `fwait` ao redor de cada linha de código em um bloco de `try` .  Desse modo, o compilador pode identificar a linha de código específica que gerencia uma exceção.  **\/Qimprecise\_fwaits** remove as instruções internas de `fwait` , deixando apenas as esperas em torno do bloco de `try` .  Isso melhora o desempenho, mas o compilador somente poderá dizer que o bloco de `try` causa uma exceção, que não se alinham.  
+## <a name="remarks"></a>Comentários  
+ Essa opção não tem nenhum efeito se **/fp: exceto** também não for especificado. Se você especificar o **/fp: exceto** opção, o compilador para inserir um `fwait` comando em torno de cada linha de código em um `try` bloco. Dessa forma, o compilador pode identificar a linha de código que gera uma exceção específica. **/Qimprecise_fwaits** remove interno `fwait` instruções, deixando apenas as esperas em torno de `try` bloco. Isso melhora o desempenho, mas o compilador só poderá dizer qual `try` bloco gera uma exceção, não a linha.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador na caixa **Opções Adicionais**.  
+4.  Digite a opção de compilador no **opções adicionais** caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
- [\/Q Opções \(operações de nível baixo\)](../../build/reference/q-options-low-level-operations.md)   
+## <a name="see-also"></a>Consulte também  
+ [/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)   
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

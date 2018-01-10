@@ -1,67 +1,67 @@
 ---
-title: "/vmb, /vmg (m&#233;todo de representa&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/vmb"
-  - "/vmg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /vmb (C++)"
-  - "Opção de compilador /vmg (C++)"
-  - "opções de compilador de método de representação [C++]"
-  - "Opção de compilador vmb [C++]"
-  - "Opção de compilador -vmb [C++]"
-  - "Opção de compilador vmg [C++]"
-  - "Opção de compilador -vmg [C++]"
+title: "-vmb, - /vmg (método de representação) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /vmb
+- /vmg
+dev_langs: C++
+helpviewer_keywords:
+- vmb compiler option [C++]
+- -vmg compiler option [C++]
+- vmg compiler option [C++]
+- -vmb compiler option [C++]
+- /vmb compiler option [C++]
+- representation method compiler options [C++]
+- /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4a9d64f8b1035f731adef79356d24eeb3e4f7ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /vmb, /vmg (m&#233;todo de representa&#231;&#227;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Selecione o método do compilador usa para representar ponteiros para classificar membros.  
+# <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (método de representação)
+Selecione o método que o compilador usa para representar ponteiros para membros de classe.  
   
- Use **\/vmb** se você sempre defina uma classe antes que você declara um ponteiro para um membro da classe.  
+ Use **/vmb** se sempre definir uma classe antes de declarar um ponteiro para um membro da classe.  
   
- Use **\/vmg** para declarar um ponteiro para um membro de uma classe antes de definir a classe.  Essa necessidade pode ocorrer se você definirá membros em duas classes diferentes que se fizerem referência.  Para essas classes mutuamente de referência, uma classe deve ser referenciada antes de ser definida.  
+ Use **/vmg** para declarar um ponteiro para um membro de uma classe antes de definir a classe. Essa necessidade pode surgir se você definir os membros de duas classes diferentes que referenciam uns aos outros. Para essas classes de referência mutuamente, uma classe deve ser referenciada antes de ser definida.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /vmb  
 /vmg  
 ```  
   
-## Comentários  
- Você também pode usar [pointers\_to\_members](../Topic/pointers_to_members.md) ou [Palavras\-chave de herança](../../cpp/inheritance-keywords.md) em seu código para especificar uma representação do ponteiro.  
+## <a name="remarks"></a>Comentários  
+ Você também pode usar [pointers_to_members](../../preprocessor/pointers-to-members.md) ou [palavras-chave de herança](../../cpp/inheritance-keywords.md) em seu código para especificar uma representação de ponteiro.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador na caixa **Opções Adicionais**.  
+4.  Digite a opção de compilador no **opções adicionais** caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

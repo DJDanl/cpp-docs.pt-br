@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27843430e1615f42dd7c5404f4eb8ba5bbb1aa39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Como criar e usar instâncias CComPtr e CComQIPtr
 Em programação clássica do Windows, bibliotecas geralmente são implementadas como objetos COM (ou mais precisamente, como servidores COM). Muitos componentes do sistema operacional Windows são implementados como servidores COM e muitos colaboradores fornecem bibliotecas neste formulário. Para obter informações sobre os conceitos básicos de COM, consulte [modelo COM (Component Object)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  

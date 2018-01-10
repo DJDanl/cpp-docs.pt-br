@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- namespace_CPP
-dev_langs:
-- C++
+f1_keywords: namespace_CPP
+dev_langs: C++
 helpviewer_keywords:
 - namespaces [C++], C++
 - namespaces [C++]
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
 Um namespace é uma região declarativa que fornece um escopo para os identificadores (os nomes de tipos, funções, variáveis, etc) dentro dele. Namespaces são usados para organizar o código em grupos lógicos e para evitar colisões de nome que podem ocorrer especialmente quando sua base de código inclui várias bibliotecas. Todos os identificadores no escopo do namespace são visíveis para um outro sem qualificação. Identificadores fora o namespace podem acessar os membros usando o nome totalmente qualificado para cada identificador, por exemplo `std::vector<std::string> vec;`, ou se encontram em um [usando declaração](../cpp/using-declaration.md) para um único identificador (`using std::string`), ou um [usando diretiva](../cpp/namespaces-cpp.md#using_directives) para todos os identificadores no namespace (`using namespace std;`). Código em arquivos de cabeçalho sempre deve usar o nome totalmente qualificado de namespace.  
@@ -281,4 +278,3 @@ namespace
   
 ## <a name="see-also"></a>Consulte também  
  [Declarações e definições](declarations-and-definitions-cpp.md)
-

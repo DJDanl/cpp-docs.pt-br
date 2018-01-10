@@ -41,11 +41,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a0f0ebd9d413a8ab49abcc08102cd33948e24fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0d010e7b04093446792eb122a67227880b7a395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 Obtém um valor do ambiente atual. Versões mais seguras dessas funções estão disponíveis; consulte [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
@@ -74,7 +75,7 @@ wchar_t *_wgetenv(
 ## <a name="remarks"></a>Comentários  
  A função `getenv` pesquisa `varname` na lista de variáveis de ambiente. `getenv` não diferencia maiúsculas de minúsculas no sistema operacional Windows. `getenv` e `_putenv` usam a cópia do ambiente apontado pela variável global `_environ` para acessar o ambiente. `getenv` funciona somente nas estruturas de dados acessíveis para a biblioteca em tempo de execução e não no "segmento" de ambiente criado para o processo pelo sistema operacional. Portanto, programas que usam o argumento `envp` para [main](../../cpp/main-program-startup.md) ou [wmain](../../cpp/main-program-startup.md) podem recuperar informações inválidas.  
   
- Se `varname` for `NULL`, a função invocará um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `NULL`.  
+ Se `varname` for `NULL`, a função invocará um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `NULL`.  
   
  `_wgetenv` é uma versão de caractere largo de `getenv`; o argumento e o valor retornado de `_wgetenv` são cadeias de caracteres largos. A variável global `_wenviron` é uma versão de caractere largo de `_environ`.  
   
@@ -105,7 +106,7 @@ wchar_t *_wgetenv(
 |`getenv`|\<stdlib.h>|  
 |`_wgetenv`|\<stdlib.h> ou \<wchar.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   

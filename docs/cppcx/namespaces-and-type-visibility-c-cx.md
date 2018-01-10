@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 09d0000dd7ac6fbe7c57d0b903694754e2d390e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces e visibilidade do tipo (C++/CX)
 Um namespace é uma construção C++ padrão para agrupamento de tipos que têm funcionalidade relacionada e para evitar colisões de nomes em bibliotecas. O sistema de tipos do tempo de execução do Windows requer que todos os tipos públicos de tempo de execução do Windows, incluindo aqueles em seu próprio código, devem ser declarados em um namespace no escopo do namespace. Os tipos públicos que são declarados no escopo global ou aninhados dentro de outra classe causarão um erro no tempo de compilação.  

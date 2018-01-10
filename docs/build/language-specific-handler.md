@@ -1,27 +1,27 @@
 ---
-title: "Identificador espec&#237;fico da linguagem | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Identificador específico da linguagem | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dc15e730666a643dfaa028fe7bc6166144897308
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Identificador espec&#237;fico da linguagem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O endereço relativo do manipulador de linguagem específica está presente no UNWIND\_INFO sempre que os sinalizadores UNW\_FLAG\_EHANDLER ou UNW\_FLAG\_UHANDLER são definidos.  Como descrito na seção anterior, o tratador específico de linguagem é chamado como parte de pesquisa para um manipulador de exceção ou como parte de um desenrolamento.  Tem o protótipo seguir:  
+# <a name="language-specific-handler"></a>Identificador específico da linguagem
+O endereço relativo do manipulador específico de idioma está presente no UNWIND_INFO sempre que UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER estão definidos. Conforme descrito na seção anterior, o identificador específico da linguagem é chamado como parte da pesquisa para um manipulador de exceção ou como parte de uma liberação. Ele tem o seguinte protótipo:  
   
 ```  
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (  
@@ -32,13 +32,13 @@ typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
 );  
 ```  
   
- **ExceptionRecord** fornece um ponteiro para um registro de exceção, que tem a definição de Win64 padrão.  
+ **ExceptionRecord** fornece um ponteiro para um registro de exceções, que tem a definição padrão de Win64.  
   
- **EstablisherFrame** é o endereço de base de alocação de pilha fixa para essa função.  
+ **EstablisherFrame** é o endereço de base da alocação da pilha fixa para esta função.  
   
- Os pontos de**ContextRecord** ao contexto de exceção na exceção foi gerada \(nos exemplos de manipulador de exceção\) ou a atual “” desenrolam o contexto \(nos exemplos de manipulador de fim.\)  
+ **ContextRecord** aponta para o contexto de exceção na hora em que a exceção foi gerada (no caso de manipulador de exceção) ou atual "Voltar" contexto (no caso de manipulador de término).  
   
- Pontos de**DispatcherContext** para o contexto do distribuidor para essa função.  Tem a seguinte definição:  
+ **DispatcherContext** aponta para o contexto de dispatcher para essa função. Ele tem a seguinte definição:  
   
 ```  
 typedef struct _DISPATCHER_CONTEXT {  
@@ -53,21 +53,21 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;  
 ```  
   
- **ControlPc** é o valor de RASGO dentro dessa função.  Este é um endereço de exceção ou endereço em que o controle à esquerda da função de estabelecer.  Este é o RASGO que será usado para determinar se o controle está dentro de qualquer compilação guardada dentro desta função \(por exemplo, um bloco \_\_try para \_\_try\/\_\_except ou \_\_try\/\_\_finally\).  
+ **ControlPc** é o valor de RIP nessa função. Este é um endereço de exceção ou o endereço em que o controle foi a função estabelecer. Este é o RIP que será usado para determinar se o controle está dentro de alguns construção protegida nessa função (por exemplo, um bloco de Try para \__try /\__except ou \__try /\__finally).  
   
- **ImageBase** é a base de imagem \(endereço de carregamento\) de módulo que contém essa função, para ser adicionado aos deslocamentos de 32 bits usados na entrada de função e desenrola informações para registrar endereços relacionados.  
+ **ImageBase** é a imagem base (endereço de carregamento) do módulo que contém essa função, para ser adicionado aos deslocamentos de 32 bits usados na entrada de função e informações para registrar os endereços relativos de desenrolamento.  
   
- **FunctionEntry** fornece um ponteiro a entrada de função de RUNTIME\_FUNCTION que contém a função e desenrola endereços relacionados de imagens base de informações para essa função.  
+ **FunctionEntry** fornece um ponteiro para o RUNTIME_FUNCTION entrada mantém a função de função e liberar endereços relativos de imagem base de informações para esta função.  
   
- **EstablisherFrame** é o endereço de base de alocação de pilha fixa para essa função.  
+ **EstablisherFrame** é o endereço de base da alocação da pilha fixa para esta função.  
   
- **TargetIp** fornece um endereço de declaração opcional que especifica o endereço de continuação de desenrolamento.  Este endereço é ignorado se **EstablisherFrame** não é especificado.  
+ **TargetIp** fornece um endereço de instrução opcional que especifica o endereço de continuação do desenrolamento. Esse endereço será ignorado se **EstablisherFrame** não for especificado.  
   
- Os pontos de**ContextRecord** ao contexto de exceção, para o uso de distribuição de exceção sys\/desenrolam o código.  
+ **ContextRecord** aponta para o contexto de exceção para uso por código de expedição/desenrolamento de exceção do sistema.  
   
- Pontos de**LanguageHandler** a rotina de linguagem específica do manipulador de linguagem que é chamada.  
+ **LanguageHandler** aponta para a rotina de manipulador de idioma específico do idioma que está sendo chamada.  
   
- Os pontos de**HandlerData** a dados específicos do idioma de manipulador para este funcionam.  
+ **HandlerData** aponta para os dados específicos de linguagem manipulador para essa função.  
   
-## Consulte também  
- [Tratamento de exceções \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Consulte também  
+ [Tratamento de exceção (x64)](../build/exception-handling-x64.md)

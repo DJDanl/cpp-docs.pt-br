@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaab86ab72ef41bfe97a67c6d8845e8ce3d3c899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-property-page-wizard"></a>Assistente de página de propriedades ATL
 Este assistente [adiciona uma página de propriedades de um projeto de ATL](../../atl/reference/adding-an-atl-property-page.md) ou a um projeto com suporte ATL. Uma página de propriedades ATL fornece uma interface do usuário para definir as propriedades (ou chamar os métodos) de um ou mais objetos.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,21 +23,19 @@ f1_keywords:
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_plf
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrBack
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrText
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlPreviewCtrlImpl class
+dev_langs: C++
+helpviewer_keywords: CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1802e1bd3a42767cbc5fa0705f9ccdfd3afa2589
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
 Essa classe é uma implementação de ATL de uma janela que é colocada em uma janela do host fornecida pelo Shell para visualização avançada.  
@@ -54,7 +51,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -67,7 +64,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::Create](#create)|Chamado por um manipulador de visualização avançada para criar a janela do Windows.|  
 |[CAtlPreviewCtrlImpl::Destroy](#destroy)|Chamado por um manipulador de visualização avançada quando ele precisa destruir este controle.|  
-|[CAtlPreviewCtrlImpl::Focus](#focus)|Define o foco para esse controle de entrada.|  
+|[CAtlPreviewCtrlImpl::Focus](#focus)|Define o foco de entrada para esse controle.|  
 |[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Lida com a mensagem WM_PAINT.|  
 |[CAtlPreviewCtrlImpl::Redraw](#redraw)|Informa a este controle para redesenhar.|  
 |[CAtlPreviewCtrlImpl::SetHost](#sethost)|Define um novo pai para este controle.|  
@@ -175,7 +172,7 @@ virtual void DoPaint(HDC hdc);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
- Define o foco para esse controle de entrada.  
+ Define o foco de entrada para esse controle.  
   
 ```
 virtual void Focus();
@@ -301,4 +298,3 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
   
 ## <a name="see-also"></a>Consulte também  
  [Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)
-

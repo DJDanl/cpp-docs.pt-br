@@ -1,34 +1,36 @@
 ---
-title: "Como escrever um arquivo bin&#225;rio (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos binários, gravando em C++"
-  - "Arquivos  [C++], binário"
+title: "Como: gravar um arquivo binário (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- binary files, writing in C++
+- files [C++], binary
 ms.assetid: 35d97ee6-fc7e-4c36-be18-8bbb3b44b3ae
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 66d4c46fa82713e55ce39880f5e379cafcdf9ec6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como escrever um arquivo bin&#225;rio (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra dados binários de gravada em um arquivo.  Duas classes do namespace de <xref:System.IO> são usadas: <xref:System.IO.FileStream> e <xref:System.IO.BinaryWriter>.  <xref:System.IO.FileStream> representa o arquivo real, quando <xref:System.IO.BinaryWriter> fornecer uma interface para o fluxo que permite acesso binário.  
+# <a name="how-to-write-a-binary-file-ccli"></a>Como escrever um arquivo binário (C++/CLI)
+O exemplo de código a seguir demonstra como gravar dados binários em um arquivo. Duas classes do <xref:System.IO> namespace são usados: <xref:System.IO.FileStream> e <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream>representa o arquivo real, enquanto <xref:System.IO.BinaryWriter> fornece uma interface para o fluxo que permite acesso binário.  
   
- O exemplo de código a seguir grava um arquivo que contenha inteiros em formato binário.  Este arquivo possa ser lido pelo código em [Como ler um arquivo binário](../Topic/How%20to:%20Read%20a%20Binary%20File%20\(C++-CLI\).md).  
+ O exemplo de código a seguir grava um arquivo que contém números inteiros em formato binário. Esse arquivo pode ser lido com o código em [como: ler um arquivo binário (C + + CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // binary_write.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [E\/S de arquivo e de fluxo](../Topic/File%20and%20Stream%20I-O.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Arquivos e fluxo de e-S](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

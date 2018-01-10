@@ -18,18 +18,19 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fca1b898f43670499c9dace3f912b207f5b7933
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6710b4e849ea95aa9d7399a85b3dc7853d34947a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-manipulation-crt"></a>Manipulação da cadeia de caracteres (CRT)
 Essas rotinas operam em sequências de caracteres de byte único terminadas em nulo, de caracteres largos e de caracteres multibyte. Use as rotinas de manipulação de buffer, descritas em [manipulação de Buffer](../c-runtime-library/buffer-manipulation.md), para trabalhar com matrizes de caracteres que não terminam com um caractere nulo.  
   
 ### <a name="string-manipulation-routines"></a>Rotinas de Manipulação de Cadeia de Caracteres  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md), [_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md), [_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md), [_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Comparar duas sequências de caracteres usando informações de página de código (`_mbsicoll` e `_mbsnicoll` diferenciam maiúsculas de minúsculas)|  
 |[_strdec, _wcsdec, _mbsdec, _mbsdec_l](../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)|Mover um ponteiro de cadeia de caracteres um caractere para trás|  

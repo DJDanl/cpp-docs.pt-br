@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b08b5108d609deca2eed94a05d4eb01d09f10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbb3d19101358012df795000907a0b3e8139601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-program-startup"></a>main: inicialização do programa
 Uma função especial chamada `main` é o ponto inicial de execução de todos os programas do C e C++. Se você estiver gravando o código que obedeça ao modelo de programação [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], você pode usar `wmain`, que é a versão de caractere amplo de `main`.  

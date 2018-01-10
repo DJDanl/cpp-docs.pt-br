@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e654b2b9e60973d29f1867e777c3e5a166d3d1d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86b1d4a47d65a4c3e9b9d72c2a555156402944a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 Faz com que cada variável, o rótulo ou o símbolo absoluto especificado como *nome* disponíveis para todos os outros módulos no programa.  

@@ -1,43 +1,43 @@
 ---
-title: "Preven&#231;&#227;o de conflito da heap | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conflito da heap"
+title: "Impedimento de contenção de Heap | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Preven&#231;&#227;o de conflito da heap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os gerentes padrão de cadeia de caracteres fornecidos pelo MFC e o ATL são invólucros simples em uma pilha global.  Este heap global é totalmente thread\-safe, significando que vários segmentos podem atribuir e liberar memória de ela simultaneamente sem danificar o heap.  Para ajudar a fornecer segurança de segmentos, o heap precisa serializar o acesso a ele.  Geralmente isso é feito com uma seção crítica ou um mecanismo de bloqueio semelhante.  Sempre que dois segmentos tentarem simultaneamente acessar o heap, um segmento está bloqueado até que a solicitação de outro segmento seja concluída.  Para muitos aplicativos, essa situação ocorre e raramente o impacto de desempenho o mecanismo de bloqueio da heap é irrisória.  Em o entanto, para aplicativos que acessam freqüentemente o heap de vários segmento um conflito para o bloqueio de heap pode causar o aplicativo mais lento do que se fosse de segmentação única \(mesmo em vários computadores com cpus\).  
+# <a name="avoidance-of-heap-contention"></a>Impedimento de contenção de Heap
+Os gerenciadores de cadeia de caracteres padrão fornecidos pelo MFC e ATL são wrappers simples sobre um heap global. Esta pilha global é totalmente thread-safe, que significa que vários threads podem alocar e liberar memória dele simultaneamente, sem a corrupção de heap. Para ajudar a fornecer acesso thread-safe, o heap tem que serializar o acesso a mesmo. Isso geralmente é feito com uma seção crítica ou mecanismo de bloqueio semelhante. Sempre que dois threads tentarem acessar simultaneamente o heap, um thread está bloqueado até que a solicitação do outro thread é concluída. Para muitos aplicativos, essa situação ocorre raramente e o impacto no desempenho do mecanismo de bloqueio do heap é insignificante. No entanto, para aplicativos que acessam com frequência o heap de vários threads de contenção de bloqueio da pilha pode causar o aplicativo seja executado mais lentamente do que se fosse single-threaded (mesmo em computadores com várias CPUs).  
   
- Aplicativos que usam [CStringT](../atl-mfc-shared/reference/cstringt-class.md) são especialmente suscetíveis a conflito da heap como as operações em objetos de `CStringT` freqüentemente exigem a realocação de buffer de cadeia de caracteres.  
+ Aplicativos que usam [CStringT](../atl-mfc-shared/reference/cstringt-class.md) são especialmente suscetíveis a contenção de heap porque operações em `CStringT` objetos frequentemente exigem realocação do buffer de cadeia de caracteres.  
   
- Uma maneira de aliviar a heap de conflito entre segmentos é que cada segmento atribuir cadeias de caracteres de um particular, heap do com local.  Como as cadeias de caracteres atribuídas com distribuidor específico de um segmento são usadas somente em aquele segmento, o distribuidor não precisa ser thread\-safe.  
+ Uma maneira de minimizar a contenção de heap entre threads é ter cada thread alocar cadeias de caracteres de um heap particular, o local de thread. Como as cadeias de caracteres é alocado com alocador de um determinado segmento são usados somente no thread, o alocador não precisa ser thread-safe.  
   
-## Exemplo  
- O exemplo a seguir ilustra um procedimento de segmento que atribui seu próprio heap não\-thread\- seguro particular para usar para cadeias de caracteres em aquele segmento:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir ilustra um procedimento de thread que aloca a sua própria pilha non-thread-safe privada usar cadeias de caracteres nesse thread:  
   
- [!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/CPP/avoidance-of-heap-contention_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/cpp/avoidance-of-heap-contention_1.cpp)]  
   
-## Comentários  
- Vários segmentos podem executar usando o mesmo procedimento de segmento mas já que cada segmento possui seu próprio heap não houver nenhum conflito entre segmentos.  Além de isso, o fato de que cada heap não é thread\-safe fornece um aumento mensurável no desempenho se apenas uma cópia do segmento está executando.  Este é o resultado da heap que não usa operações com barreira faces para proteger contra o acesso simultânea.  
+## <a name="comments"></a>Comentários  
+ Vários threads poderiam estar em execução usando o mesmo procedimento de thread, mas como cada thread tem sua própria pilha não há nenhum conflito entre threads. Além disso, o fato de que cada heap não é thread-safe oferece um aumento significativo no desempenho, mesmo que apenas uma cópia do thread está em execução. Este é o resultado do heap não usando operações interconectadas caras para proteger contra acesso simultâneo.  
   
- Para um procedimento mais complicado segmento, pode ser conveniente para armazenar um ponteiro ao gerenciador de cadeia de caracteres de segmento em um slot de \(TLS\) do armazenamento local de segmento.  Isso permite outras funções chamadas de procedimento pelo segmento para acessar o gerenciador de cadeia de caracteres de segmento.  
+ Para um procedimento de thread mais complicado, pode ser conveniente armazenar um ponteiro para o Gerenciador de cadeia de caracteres do thread em um slot de armazenamento local (TLS) do thread. Isso permite que outras funções chamadas pelo procedimento de thread para acessar o Gerenciador de cadeia de caracteres do thread.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciamento de memória com CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+

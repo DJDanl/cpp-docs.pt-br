@@ -1,56 +1,55 @@
 ---
-title: "Op&#231;&#245;es do arquivo de sa&#237;da (/F) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compilador cl.exe, arquivos de saída"
-  - "arquivos de saída"
-  - "arquivos de saída, Opções do compilador  [C++]"
+title: "Arquivo de saída (-F) opções | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /f
+dev_langs: C++
+helpviewer_keywords:
+- output files
+- output files, compiler options [C++]
+- cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fa7bdc75bd994b5220d4f6fbbc0d4defeb68c691
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Op&#231;&#245;es do arquivo de sa&#237;da (/F)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-As opções do arquivo de saída criam ou renomear arquivos de saída.  Afetam todos os arquivos de origem de 2.0 C ou C\+\+ especificados na variável de ambiente de CL, na linha de comando, ou em qualquer arquivo de comando.  
+# <a name="output-file-f-options"></a>Opções do arquivo de saída (/F)
+As opções de arquivo de saída criar ou renomeiam arquivos de saída. Eles afetam todos os arquivos de origem C ou C++ especificados na variável de ambiente CL, na linha de comando ou em qualquer arquivo de comando.  
   
--   [\/FA, \/Fa \(listagem Arquivo\)](../../build/reference/fa-fa-listing-file.md)  
+-   [/FA, /Fa (listando arquivo)](../../build/reference/fa-fa-listing-file.md)  
   
--   [Especificando o nome do caminho](../Topic/Specifying%20the%20Pathname.md)  
+-   [Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)  
   
--   [\/Fd \(Nome\) do Arquivo PDB](../../build/reference/fd-program-database-file-name.md)  
+-   [/FD (arquivo PDB do nome)](../../build/reference/fd-program-database-file-name.md)  
   
--   [\/Fe \(Nome de Arquivo EXE\)](../../build/reference/fe-name-exe-file.md)  
+-   [/FE (nomear o arquivo EXE)](../../build/reference/fe-name-exe-file.md)  
   
--   [\/FI \(O nome forçado inclui Arquivo\)](../Topic/-FI%20\(Name%20Forced%20Include%20File\).md)  
+-   [/Fi (arquivo de inclusão forçado do nome)](../../build/reference/fi-name-forced-include-file.md)  
   
--   [\/Fm \(Nome Mapfile\)](../Topic/-Fm%20\(Name%20Mapfile\).md)  
+-   [/FM (Mapfile de nome)](../../build/reference/fm-name-mapfile.md)  
   
--   [\/Fo \(Objeto\) nome do Arquivo](../../build/reference/fo-object-file-name.md)  
+-   [/FO (nome de arquivo de objeto)](../../build/reference/fo-object-file-name.md)  
   
--   [\/Fp \(Nome .pch Arquivo\)](../Topic/-Fp%20\(Name%20.Pch%20File\).md)  
+-   [/FP (nomear o arquivo. pch)](../../build/reference/fp-name-dot-pch-file.md)  
   
--   [\/Fr \(\/FR, crie .sbr Arquivo\)](../../build/reference/fr-fr-create-dot-sbr-file.md)  
+-   [/FR, /Fr (criar arquivo. SBR)](../../build/reference/fr-fr-create-dot-sbr-file.md)  
   
--   [\/FU \(Arquivo \#using forçado nome\)](../../build/reference/fu-name-forced-hash-using-file.md)  
+-   [/Fu (nome forçado #using arquivo)](../../build/reference/fu-name-forced-hash-using-file.md)  
   
--   [\/Fx \(Código SQL injetado mesclagem\)](../../build/reference/fx-merge-injected-code.md)  
+-   [/FX (mesclar código injetado)](../../build/reference/fx-merge-injected-code.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

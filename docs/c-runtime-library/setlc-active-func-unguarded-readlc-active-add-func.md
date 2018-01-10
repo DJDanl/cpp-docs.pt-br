@@ -31,11 +31,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1746d597613bf76bdbf8c38ff3487b4d0c18fc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a1ecc14403a7a08fed73fb10f15dd25051b0a28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func, ___unguarded_readlc_active_add_func
 OBSOLETO. O CRT exporta essas funções internas somente para preservar a compatibilidade binária.  
@@ -47,7 +48,7 @@ int ___setlc_active_func(void);
 int * ___unguarded_readlc_active_add_func(void);  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O valor retornado não é significativo.  
   
 ## <a name="remarks"></a>Comentários  

@@ -41,11 +41,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a1cc6a80609828d084b56ef4f981c9d03de8070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 Cria um nome de caminho absoluto ou completo para o nome de caminho relativo especificado.  
@@ -97,7 +98,7 @@ wchar_t *_wfullpath(
   
  Se `_DEBUG` e `_CRTDBG_MAP_ALLOC` forem definidos, chamadas para `_fullpath` e `_wfullpath` serão substituídas por chamadas para `_fullpath_dbg` e `_wfullpath_dbg`, para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_fullpath_dbg, _wfullpath_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
   
- Essa função invoca o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md), se `maxlen` for menor ou igual a 0. Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `NULL`.  
+ Essa função invoca o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md), se `maxlen` for menor ou igual a 0. Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `NULL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   

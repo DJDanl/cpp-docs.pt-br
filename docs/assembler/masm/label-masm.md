@@ -1,33 +1,31 @@
 ---
-title: "LABEL (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Label"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LABEL directive"
+title: "RÓTULO (MASM) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Label
+dev_langs: C++
+helpviewer_keywords: LABEL directive
 ms.assetid: 39ec44e8-91e6-4f3c-8cf0-b66479974e42
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 79c9a98c615af36d5e7533889983ac8b2426d655
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# LABEL (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cria uma nova etiqueta, atribuindo o valor do contador do local atual e a determinado `type` para  *nome*.  
+# <a name="label-masm"></a>LABEL (MASM)
+Cria um novo rótulo atribuindo o valor de contador do local atual e a determinado `type` para *nome*.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,5 +33,5 @@ Cria uma nova etiqueta, atribuindo o valor do contador do local atual e a determ
 name LABEL [[NEAR | FAR | PROC]] PTR [[type]]   
 ```  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

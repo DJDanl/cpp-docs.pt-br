@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf60fff6c15313a6f7df1104f67c1f043f885eac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Como usar expressões regulares para reorganizar dados (C++/CLI)
 O exemplo de código a seguir demonstra como o suporte a expressões regulares do .NET Framework pode ser usado para reorganizar ou reformatar dados. O seguinte exemplo de código usa o <xref:System.Text.RegularExpressions.Regex> e <xref:System.Text.RegularExpressions.Match> classes para extrair os nomes e sobrenomes de uma cadeia de caracteres e, em seguida, exibir esses elementos de nome em ordem inversa.  

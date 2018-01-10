@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>Funções vprintf
 Cada uma das funções do `vprintf` usa um ponteiro para uma lista de argumentos e então formata e grava os dados determinados em um destino em particular. As funções diferem na validação de parâmetro executada, se as funções obtêm cadeias de caracteres com caracteres largos e de byte único, o destino de saída e o suporte para a especificação na qual os parâmetros são usados na cadeia de caracteres de formatação.  

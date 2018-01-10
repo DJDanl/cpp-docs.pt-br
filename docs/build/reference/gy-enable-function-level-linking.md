@@ -24,14 +24,15 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e7d83e4409d9c46c926859f39029ea68f2411def
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebe272b12a503a310319526f53f312a033a0ee26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (habilitar vinculação do nível de função)
-Permite que o compilador empacote funções individuais na forma de funções empacotadas (COMDATs).  
+Permite que o compilador empacote funções individuais no formato de funções empacotadas (COMDATs).  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -1,32 +1,32 @@
 ---
-title: "V&#225;rios destinos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "makefiles, destinos"
-  - "vários destinos em NMAKE"
-  - "destinos, múltiplo em NMAKE"
-  - "Programa NMAKE, destinos"
+title: "Vários destinos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- makefiles, targets
+- multiple targets in NMAKE
+- targets, multiple in NMAKE
+- NMAKE program, targets
 ms.assetid: b609a179-0b9f-4b08-9930-998047588ae0
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a70a265318914b70928dce5fae2f486e63c16f0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# V&#225;rios destinos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-NMAKE avalia vários destinos em uma única dependência como se cada foram especificada em um bloco de descrição separada.  
+# <a name="multiple-targets"></a>Vários destinos
+NMAKE avalia vários destinos em uma única dependência como se cada foram especificados em um bloco de descrição separada.  
   
  Por exemplo, isso...  
   
@@ -35,7 +35,7 @@ bounce.exe leap.exe : jump.obj
    echo Building...  
 ```  
   
- ... são avaliadas como este:  
+ ... são avaliados como este:  
   
 ```Output  
 bounce.exe : jump.obj  

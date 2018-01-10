@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f11d86eda98696ea85899817dbecc276d5533a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caxdialogimpl-class"></a>Classe CAxDialogImpl
 Essa classe implementa uma caixa de diálogo (modal ou sem janela restrita) que hospeda os controles ActiveX.  

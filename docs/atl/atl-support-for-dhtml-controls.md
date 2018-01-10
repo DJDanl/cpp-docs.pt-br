@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16848150802ec3fb097f6d19f0b1b4f8b11c8f69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab796752cef10c48036966c2947d711a0e385032
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-support-for-dhtml-controls"></a>Suporte do ATL para controles DHTML
 Usando a ATL, você pode criar um controle com a funcionalidade de DHTML (HTML dinâmico). Um controle DHTML ATL:  

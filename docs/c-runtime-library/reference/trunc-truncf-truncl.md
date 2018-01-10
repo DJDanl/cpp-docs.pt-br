@@ -33,36 +33,22 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1a5d8eb41f1d106718fbb6df6dc19c9af11a6aa5
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 911636e4fa843afa1220dc99e1f679d5bfe88d7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 Determina o inteiro mais próximo que é menor ou igual ao valor de ponto flutuante especificado.  
@@ -125,7 +111,7 @@ long double truncl(
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)

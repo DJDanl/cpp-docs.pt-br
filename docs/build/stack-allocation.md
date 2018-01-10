@@ -1,39 +1,39 @@
 ---
-title: "Aloca&#231;&#227;o da pilha | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Alocação de pilha | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 098e51f2-eda6-40d0-b149-0b618aa48b47
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 514b20847f588dab7a5c205be36c1fbd725df17d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Aloca&#231;&#227;o da pilha
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O prólogo de uma função é responsável por atribuir o espaço de pilha para variáveis locais, salvo registros, parâmetros de pilha, e parâmetros de registro.  
+# <a name="stack-allocation"></a>Alocação da pilha
+Prólogo da função é responsável pela alocação de espaço de pilha para variáveis locais, registros salvos, parâmetros de pilha e registre os parâmetros.  
   
- A área de parâmetro sempre está na parte inferior da pilha \(mesmo se o alloca é usado\), de modo que sempre seja adjacente ao endereço de retorno durante qualquer chamada de função.  Contém pelo menos quatro entradas, mas sempre espaço suficiente para manter todos os parâmetros necessários por qualquer função que possa ser chamada.  Observe que o espaço é alocado sempre para os parâmetros do registro, mesmo se eles mesmos parâmetros são dirigidos nunca à pilha; um receptor é garantido que o espaço foi atribuído para todos os seus parâmetros.  Endereços domiciliários são necessários para os argumentos do registro para que uma área contígua está disponível no caso da função chamada precisa executar o endereço da lista de argumentos \(va\_list\) ou um argumento individual.  Essa área também fornece um local conveniente para salvar argumentos de registro durante a execução de thunk e como uma opção de depuração \(por exemplo, torna os argumentos fácil de localizar durante a depuração se são armazenados nos endereços domiciliários no código de prólogo\).  Mesmo se a função chamada tem menos de 4 parâmetros, esses locais de 4 pilhas possuidos efetivamente pela função chamada, e podem ser usados pela função chamada para outros fins além dos valores de registro do parâmetro de salvar.  O chamador não pode salvar as informações nessa região de pilha através de uma chamada de função.  
+ A área de parâmetro é sempre na parte inferior da pilha (mesmo se alloca é usado), de modo que ele sempre será adjacente para o endereço de retorno durante qualquer chamada de função. Ele contém pelo menos quatro entradas, mas sempre espaço suficiente para conter todos os parâmetros necessários por qualquer função que pode ser chamada. Observe que sempre espaço é alocado para os parâmetros de registro, mesmo se os parâmetros se nunca são adaptadores de rede para a pilha; um receptor é garantido que tenha sido alocado espaço para todos os seus parâmetros. Endereços residenciais são necessários para os argumentos de registro para uma área contígua disponível no caso da função de chamada precisa obter o endereço da lista de argumentos (va_list) ou um argumento individual. Essa área também fornece um local conveniente para salvar o registro argumentos durante a execução de conversão e como uma opção de depuração (por exemplo, ele torna os argumentos fácil encontrar durante a depuração se eles são armazenados em seus endereços de base no código de prólogo). Mesmo se a função chamada tiver menos de 4 parâmetros, esses locais da 4 pilha efetivamente pertencentes a função chamada e podem ser usadas pela função chamada para outras finalidades além de economizar parâmetro valores do registro.  Assim, o chamador pode não salvar informações nessa região da pilha em uma chamada de função.  
   
- Se o espaço é alocado dinamicamente \(alloca\) em uma função, então um registro permanente deve ser usado como um ponteiro de quadro para marcar a base da parte fixa de pilha e esse registro deve ser salvo e inicializada em prólogo.  Observe que quando o alloca for usado, chamadas para o mesmo receptor do mesmo chamador podem ter diferentes endereços domiciliários para seus parâmetros do registro.  
+ Se o espaço é alocado dinamicamente (alloca) em uma função, um registro não volátil deve ser usado como um ponteiro de quadro para marcar a base da parte fixa da pilha e esse registro deve ser salvo e inicializado no prólogo. Observe que, quando alloca é usado, chamadas para o mesmo receptor do mesmo chamador podem ter endereços residenciais diferentes para seus parâmetros de registro.  
   
- A pilha será sempre mantida o byte 16 alinhado, a não ser que dentro de prólogo \(por exemplo, depois que o endereço de retorno é empurrado\), e exceto onde observado em [Tipos de função](../build/function-types.md) para qualquer classe de funções do quadro.  
+ A pilha sempre será mantida 16 bytes alinhado, exceto no prólogo (por exemplo, depois que o endereço de retorno é enviada por push) e exceto quando indicado em [tipos de função](../build/function-types.md) para uma determinada classe de funções de quadro.  
   
- A seguir está um exemplo de layout de pilha onde a função A chama uma função B. de não folha.  O prólogo da função já tem o espaço alocado para todos os parâmetros do registro e de pilha exigidos por B na parte inferior da pilha.  A chamada pressiona o endereço de retorno e o prólogo de b atribui o espaço para suas variáveis locais, registros permanentes, e o espaço necessário para que chama funções.  Se B usa o alloca, o espaço é alocado entre a variável local\/área de salvar permanente do registro e a área de pilha do parâmetro.  
+ A seguir está um exemplo de como o layout de pilha não-folha de chamadas de função A função where prólogo B. função do já alocado espaço para todos os parâmetros de registro e a pilha exigidos por B na parte inferior da pilha. A chamada envia o endereço de retorno e prólogo do B aloca espaço para suas variáveis locais, os registros não volátil e o espaço necessário para que ele chamar funções. Se B usa alloca, o espaço é alocado entre o registro de variável/não volátil local salvar área e a área de pilha do parâmetro.  
   
- ![Gráfico de exemplo 5 de conversão AMD](../build/media/vcamd_conv_ex_5.png "vcAmd\_conv\_ex\_5")  
+ ![Exemplo de conversão AMD](../build/media/vcamd_conv_ex_5.png "vcAmd_conv_ex_5")  
   
- Quando a função B chama outra função, o endereço de retorno é empurrado logo abaixo do endereço domiciliário para RCX.  
+ Quando a função B chama outra função, o endereço do remetente está push logo abaixo do endereço residencial RCX.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Uso da pilha](../build/stack-usage.md)

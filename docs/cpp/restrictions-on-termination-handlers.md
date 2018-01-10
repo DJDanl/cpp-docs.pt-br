@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 593cb54298682c53f534e92f6553d86d2118d98b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71486b167f4e9939d4913b3660ed3513dc02b8f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrictions-on-termination-handlers"></a>Restrições em manipuladores de término
 Você não pode usar uma instrução `goto` para ir diretamente para um bloco de instruções `__try` ou um bloco de instruções `__finally`. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. (No entanto, você pode ignorar um bloco de instruções `__try`.) Além disso, você não pode aninhar um manipulador de exceção ou um manipulador de encerramento dentro de um bloco `__finally`.  

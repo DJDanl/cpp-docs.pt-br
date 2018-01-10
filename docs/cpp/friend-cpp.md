@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- friend_cpp
-dev_langs:
-- C++
+f1_keywords: friend_cpp
+dev_langs: C++
 helpviewer_keywords:
 - member access, from friend functions
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2d8dd1c80e9b006b3689b6d17ad9d7635670cc98
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-c"></a>friend (C++)
 Em algumas circunstâncias, é mais conveniente conceder acesso de nível de membro para funções que não são membros de uma classe ou para todos os membros em uma classe separada. O implementador de classe pode declarar quem são seus amigos. Uma classe ou função não pode declarar em si como friend de qualquer classe. Em uma definição de classe, use o `friend` palavra-chave e o nome de uma função de membro não ou outra classe para conceder a ele acesso aos membros protegidos e privados da sua classe.         Em uma definição de modelo, um parâmetro de tipo pode ser declarado como um amigo.  

@@ -1,33 +1,32 @@
 ---
-title: "Classes de informa&#231;&#245;es da classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.classes.info"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "informações de classe, recuperar"
+title: "Classe de Classes de informações (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.classes.info
+dev_langs: C++
+helpviewer_keywords: class information, retrieving
 ms.assetid: 39365025-f24a-41ae-87ab-4ae8ed085b98
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cc97c5bc3487898da38b537e779cccfbbb662869
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classes de informa&#231;&#245;es da classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="class-information-classes"></a>Classes de informações de classe
 A seguinte classe fornece suporte para recuperar informações de classe:  
   
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) fornece acesso a informações do tipo.  Recupera o IID de saída para o conjunto padrão de objeto.  
+-   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) fornece acesso a informações de tipo. Recupera o IID de saída para o conjunto de eventos padrão do objeto.  
   
-## Consulte também  
- [Visão geral de classe](../atl/atl-class-overview.md)
+## <a name="see-also"></a>Consulte também  
+ [Visão geral da classe](../atl/atl-class-overview.md)
+

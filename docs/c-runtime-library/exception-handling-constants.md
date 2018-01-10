@@ -24,11 +24,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a34b4098b04be1c121ed4a70fdbde8de4a57a94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98ff527e9abbb4e80e9a2460cce9ea067b09a557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-constants"></a>Constantes do tratamento de exceções
 As constantes `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` ou `EXCEPTION_EXECUTE_HANDLER` são retornadas quando ocorre uma exceção durante a execução da seção protegida de uma instrução **try-except**. O valor retornado determina como a exceção será tratada. Para obter mais informações, consulte [Instrução de try-except](../cpp/try-except-statement.md) na *Referência da linguagem C++*.  

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5c056907716f95a82fde01847485837fcba96f66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37d77fdc4df7d2e7239b8bba652d8cf8f4bbc997
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-an-import-library-and-export-file"></a>Usando uma biblioteca de importação e um arquivo de exportação
 Quando um programa (um arquivo executável ou uma DLL) exporta para outro programa que ele também importa de, ou se mais de dois programas exportam para e importar entre si, os comandos para vincular esses programas devem acomodar exportações circulares.  

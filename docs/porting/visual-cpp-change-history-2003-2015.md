@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 Este artigo descreve todas as alterações significativas, partindo do Visual Studio 2015 e voltando até o Visual Studio 2003 e os termos "novo comportamento" ou "agora" neste artigo referem-se ao Visual Studio 2015 e às versões posteriores. Os termos "comportamento antigo" e "antes" referem-se ao Visual Studio 2013 e versões anteriores. 

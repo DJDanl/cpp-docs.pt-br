@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebabc94a289cf28d76903714e9440f50cc1abea2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Você pode usar o **MSBuild** ferramenta para criar um aplicativo do Visual C++ no prompt de comando. O processo de compilação é controlado pelas informações em um arquivo de projeto (. vcxproj) que você pode criar e editar. O arquivo de projeto Especifica opções de compilação com base em estágios, condições e eventos de compilação.  
@@ -38,4 +39,4 @@ Você pode usar o **MSBuild** ferramenta para criar um aplicativo do Visual C++ 
 |[Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Demonstra como compilar um projeto para várias estruturas ou os conjuntos de ferramentas.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Compilar o código C/C++ na linha de comando](../build/building-on-the-command-line.md)
+ [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md)

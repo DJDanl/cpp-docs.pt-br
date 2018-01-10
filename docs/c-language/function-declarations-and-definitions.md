@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea315c065e6f76215939bc4ccd70bcc907361ff4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65be3d2e59a9d672db18ba332d608fdf031f16e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-declarations-and-definitions"></a>Declarações de função e definições
 Os protótipos de função estabelecem o nome da função, seu tipo de retorno, o tipo e o número de seus parâmetros formais. Uma definição de função inclui o corpo da função.  

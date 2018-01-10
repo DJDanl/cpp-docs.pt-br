@@ -1,94 +1,93 @@
 ---
-title: "/Yd (colocar informa&#231;&#245;es de depura&#231;&#227;o no arquivo de projeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /Yd (C++)"
-  - "depurando [C++], arquivos de informações de depuração"
-  - "Opção de compilador Yd [C++]"
-  - "Opção de compilador -Yd [C++]"
+title: "-Yd (colocar informações de depuração no arquivo de objeto) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yd
+dev_langs: C++
+helpviewer_keywords:
+- /Yd compiler option [C++]
+- -Yd compiler option [C++]
+- debugging [C++], debug information files
+- Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /Yd (colocar informa&#231;&#245;es de depura&#231;&#227;o no arquivo de projeto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Os ritmos exibe informações de depuração em todos os arquivos criados de objeto de um arquivo de cabeçalho .pch pré\-compilado \(\) quando usados com as opções de [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) e de [\/Z7](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) .  Preterido.  
+# <a name="yd-place-debug-information-in-object-file"></a>/Yd (colocar informações de depuração no arquivo de projeto)
+Prova completa de depuração informações em todos os arquivos de objeto criado a partir de um arquivo de cabeçalho pré-compilado (. pch) quando usado com o [/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opções. Preterido.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Yd  
 ```  
   
-## Comentários  
- **\/Yd** é substituído; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] agora oferece suporte aos objetos de vários que gravam em um único arquivo .pdb, use **\/Zi** em vez disso.  Para obter mais informações, consulte [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/pt-br/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+## <a name="remarks"></a>Comentários  
+ **/Yd** é preterido; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] agora oferece suporte ao uso de vários objetos de gravar em um arquivo. PDB único, **/Zi** em vez disso. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções do compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).  
   
- A menos que você precise distribuir uma biblioteca que contém informações de depuração, use a opção de [\/Zi](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md) em vez de **\/Z7** e **\/Yd**.  
+ A menos que você precisa distribuir informações de depuração que contém uma biblioteca, use o [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opção em vez de **/Z7** e **/Yd**.  
   
- Armazenar informações de depuração completo em cada arquivo de .obj é necessário para distribuir apenas as bibliotecas que contêm informações de depuração.  Retarda\-se a criação e requer espaço em disco considerável.  Quando **\/Yc** e **\/Z7** são usados sem **\/Yd**, as informações de depuração comuns das lojas do compilador no primeiro arquivo de .obj criou do arquivo de .pch.  O compilador não insere essas informações nos arquivos de .obj criados posteriormente do arquivo de .pch; insere referências cruzadas às informações.  Não importando quantos arquivos de .obj usam o arquivo de .pch, somente um arquivo de .obj contém informações de depuração comuns.  
+ Armazenando informações de depuração completas em todos os arquivos. obj só é necessário para distribuir as bibliotecas que contenham informações de depuração. Ela reduz a compilação e requer espaço em disco considerável. Quando **/Yc** e **/Z7** são usados sem **/Yd**, o compilador armazena informações de depuração comuns no primeiro arquivo. obj criado a partir do arquivo. pch. O compilador não inserir essas informações em arquivos. obj subsequentemente criados do arquivo. pch; ele insere referências cruzadas para as informações. Independentemente de quantos arquivos. obj usam o arquivo. pch, apenas um arquivo. obj contém as informações de depuração comuns.  
   
- Embora esse comportamento padrão resulta em uma construção mais rápida hora e reduzir as demandas de espaço, ele é indesejável se uma pequena alteração exige recriar o arquivo de .obj que contém informações de depuração comuns.  Nesse caso, o compilador deve recriar todos os arquivos de .obj que contêm referências cruzadas para o arquivo original .obj.  Além disso, se um arquivo de .pch comum é usado por projetos diferentes, a confiança em referências cruzadas em um único arquivo de .obj é difícil.  
+ Embora essa resultados de comportamento padrão mais rápido criar vezes e reduz as exigências de espaço em disco, não é desejável, se uma pequena alteração requer a recriação do arquivo. obj que contém as informações de depuração comuns. Nesse caso, o compilador deve recriar todos os arquivos. obj, que contém referências cruzadas no arquivo. obj original. Além disso, se um arquivo. pch comum é usado por projetos diferentes, a dependência de referências cruzadas para um arquivo. obj único é difícil.  
   
- Para obter mais informações sobre cabeçalhos pré\-compilados, consulte:  
+ Para obter mais informações sobre cabeçalhos pré-compilados, consulte:  
   
--   [\/Y \(cabeçalhos pré\-compilados\)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md)  
   
--   [Criando arquivos de cabeçalho pré\-compilados](../../build/reference/creating-precompiled-header-files.md)  
+-   [Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador na caixa **Opções Adicionais**.  
+4.  Digite a opção de compilador no **opções adicionais** caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Exemplos  
- Suponha que você tenha dois arquivos de base, F.cpp e G.cpp, que contém cada dessas instruções de **\#include** :  
+## <a name="examples"></a>Exemplos  
+ Suponha que você tem dois arquivos de base, F.cpp e G.cpp, cada uma contendo esses **#include** instruções:  
   
 ```  
 #include "windows.h"  
 #include "etc.h"  
 ```  
   
- O comando a seguir cria o arquivo de cabeçalho pré\-compilado ETC.pch e o arquivo de objeto F.obj:  
+ O comando a seguir cria o cabeçalho pré-compilado ETC.pch e o arquivo de objeto F.obj arquivo:  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- O arquivo de objeto F.obj inclui o tipo e as informações do símbolo para WINDOWS.h e ETC.h \(e alguns outros arquivos de cabeçalho que inclua\).  Agora você pode usar o cabeçalho pré\-compilado ETC.pch para criar o arquivo de origem G.cpp:  
+ O arquivo de objeto F.obj inclui o tipo e informações de símbolo para Windows. h e ETC.h (e outros arquivos de cabeçalho incluem). Agora você pode usar o cabeçalho pré-compilado ETC.pch para compilar o arquivo de origem G.cpp:  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- O arquivo de objeto G.obj não inclui informações de depuração para o cabeçalho pré\-compilado mas somente as referências que informações no arquivo de F.obj.  Observe que você deve vincular ao arquivo de F.obj.  
+ O arquivo de objeto G.obj não inclui as informações de depuração para o cabeçalho pré-compilado, mas simplesmente faz referência a essas informações no arquivo F.obj. Observe que você deve estabelecer um vínculo com o arquivo F.obj.  
   
- Se o cabeçalho pré\-compilado não foi criado com **\/Z7**, você ainda pode usá\-lo nas compilações posteriores usando **\/Z7**.  No entanto, as informações de depuração é colocada no arquivo do objeto atual, e símbolos locais para as funções e tipos definidos no cabeçalho pré\-compilado não estão disponíveis para o depurador.  
+ Se o cabeçalho pré-compilado não foi compilado com **/Z7**, você ainda pode usá-lo em compilações posteriores usando **/Z7**. No entanto, as informações de depuração são colocadas no arquivo do objeto atual e símbolos locais para funções e tipos definidos no cabeçalho pré-compilado não estão disponíveis para o depurador.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

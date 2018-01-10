@@ -47,11 +47,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04c06a172485525105c1e49de88855273984e145
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64c09dc8c8ce1ce5493ac4b2515c6b0be2910627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 Calcula o valor absoluto do argumento.  
@@ -172,7 +173,7 @@ Microsoft implementation-specific results:
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [_cabs](../../c-runtime-library/reference/cabs.md)   
  [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
  [imaxabs](../../c-runtime-library/reference/imaxabs.md)

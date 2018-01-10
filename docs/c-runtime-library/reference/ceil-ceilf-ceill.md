@@ -22,6 +22,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
@@ -39,11 +40,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 124ddd7ec5f6cbef9f4f3a9a01f04533fe8d977b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4831b9f6f046dbc1a5d337f22e6be3dc3f4a5662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 Calcula o limite máximo de um valor.  
@@ -72,7 +74,7 @@ long double ceill(
  `x`  
  Valor de ponto flutuante.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  As funções `ceil` retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a `x`. Nenhum erro é retornado.  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
@@ -90,7 +92,7 @@ long double ceill(
 |-------------|---------------------|  
 |`ceil`, `ceilf`, `ceill`|\<math.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [floor](../../c-runtime-library/reference/floor-floorf-floorl.md).  

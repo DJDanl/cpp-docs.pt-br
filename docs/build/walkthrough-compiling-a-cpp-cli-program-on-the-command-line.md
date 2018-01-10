@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9fc173111e2188aef8c06657844000d44bfb84f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++/CLI na linha de comando
 É possível criar programas Visual C++ que tenham CLR (Common Language Runtime) como destino e usem .NET Framework e depois compilá-los na linha de comando. O Visual C++ tem suporte à linguagem de programação C++/CLI, que possui tipos e operadores adicionais para atingir o modelo de programação .NET. Para obter uma introdução para o C + + linguagem CLI, consulte [C++ puro: Olá c++ CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). Para obter informações gerais, consulte [programação .NET com C + + CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  

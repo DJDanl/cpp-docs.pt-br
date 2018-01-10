@@ -1,30 +1,30 @@
 ---
-title: "Conven&#231;&#245;es de nomenclatura, par&#226;metros e tipo de retorno | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "convenções de chamada, funções auxiliares"
-  - "funções auxiliares, convenções de chamada"
-  - "funções auxiliares, tipos de retorno"
+title: "Convenções de chamada, parâmetros e tipo de retorno | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- calling conventions, helper functions
+- helper functions, calling conventions
+- helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3c57a1a4fe659819d8635b2a6a05d565ffa95250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Conven&#231;&#245;es de nomenclatura, par&#226;metros e tipo de retorno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="calling-conventions-parameters-and-return-type"></a>Convenções de chamada, parâmetros e tipo de retorno
 O protótipo de rotina do auxiliar é:  
   
 ```  
@@ -37,32 +37,32 @@ FARPROC WINAPI __delayLoadHelper2(
  onde:  
   
  `pidd`  
- Um ponteiro para `const` um `ImgDelayDescr` \(consulte delayimp.h\) que contém os deslocamentos de vários dados relacionados à importação, um carimbo de data\/hora para associar informações e um conjunto de atributos que fornece mais informações sobre o conteúdo do descritor.  No momento, há apenas um atributo, `dlattrRva`, que indica que os endereços do descritor estão relacionados a endereços virtuais \(ao contrário dos endereços virtuais\).  
+ Um ponteiro para `const` um `ImgDelayDescr` (consulte delayimp.h) que contém os deslocamentos de vários dados relacionados à importação, um carimbo de data/hora para associar informações e um conjunto de atributos que fornece mais informações sobre o conteúdo do descritor. No momento, há apenas um atributo, `dlattrRva`, que indica que os endereços do descritor estão relacionados a endereços virtuais (ao contrário dos endereços virtuais).  
   
- Para ver a definição da estrutura `PCImgDelayDescr`, consulte [Definições de estrutura e constante](../../build/reference/structure-and-constant-definitions.md).  
+ A definição do `PCImgDelayDescr` estrutura, consulte [estrutura e definições de constantes](../../build/reference/structure-and-constant-definitions.md).  
   
  `ppfnIATEntry`  
- Um ponteiro para o slot na IAT \(tabela de endereço de importação\) de carregamento atrasado a ser atualizado com o endereço da função importada.  A rotina do auxiliar deve armazenar o mesmo valor que estiver retornando para esse local.  
+ Um ponteiro para o slot na IAT (tabela de endereço de importação) de carregamento atrasado a ser atualizado com o endereço da função importada. A rotina do auxiliar deve armazenar o mesmo valor que estiver retornando para esse local.  
   
-## Valores de retorno esperados  
+## <a name="expected-return-values"></a>Valores de retorno esperados  
  Se a função tiver êxito, ela retornará o endereço da função importada.  
   
- Se a função falhar, ela gerará uma exceção e retornará 0.  Há três tipos de exceções possíveis:  
+ Se a função falhar, ela gerará uma exceção e retornará 0. Há três tipos de exceções possíveis:  
   
 -   Parâmetro inválido, que acontece quando os parâmetros presentes em `pidd` não são especificados corretamente.  
   
--   `LoadLibrary` falhou na DLL \(biblioteca de vínculo dinâmico\) especificada.  
+-   `LoadLibrary` falhou na DLL (biblioteca de vínculo dinâmico) especificada.  
   
 -   Falha de `GetProcAddress`.  
   
  Você é responsável por gerenciar essas exceções.  
   
-## Comentários  
- A convenção de chamada da função do auxiliar é `__stdcall`.  O tipo de valor retornado não é relevante. Por isso, usa\-se FARPROC.  Essa função tem vínculo C.  
+## <a name="remarks"></a>Comentários  
+ A convenção de chamada da função do auxiliar é `__stdcall`. O tipo de valor retornado não é relevante. Por isso, usa-se FARPROC. Essa função tem vínculo C.  
   
- O valor retornado do auxiliar de carregamento atrasado deve ser armazenado no local do ponteiro da função apresentada, a menos que você queira que a rotina do auxiliar seja usada como gancho de notificação.  Nesse caso, seu código é responsável por encontrar o indicador de função adequado para retornar.  O código de conversão gerado pelo vinculador usa o valor retornado como destino real da importação e pula diretamente para ele.  
+ O valor retornado do auxiliar de carregamento atrasado deve ser armazenado no local do ponteiro da função apresentada, a menos que você queira que a rotina do auxiliar seja usada como gancho de notificação. Nesse caso, seu código é responsável por encontrar o indicador de função adequado para retornar. O código de conversão gerado pelo vinculador usa o valor retornado como destino real da importação e pula diretamente para ele.  
   
-## Amostra  
+## <a name="sample"></a>Amostra  
  O código a seguir mostra como implementar uma função de gancho simples.  
   
 ```  
@@ -142,5 +142,5 @@ PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Noções básicas sobre a função auxiliar](../../build/reference/understanding-the-helper-function.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Especificações de exceção (lançar, noexcept) (C++)
 Especificações de exceção são um recurso de linguagem C++ que indicam a intenção do programador sobre os tipos de exceção que pode ser propagada por uma função. Você pode especificar que uma função pode não ser encerrado ou por uma exceção usando uma *especificação de exceção*. O compilador pode usar essas informações para otimizar a chamadas para a função e encerrar o programa se uma exceção inesperada ignora a função. Há dois tipos de especificação de exceção. O *noexcept especificação* é novo no C++ 11. Especifica se o conjunto de exceções potenciais que podem escapar a função está vazio. O *especificação de exceção dinâmico*, ou `throw(optional_type_list)` especificação foi preterido no C++ 11 e apenas parcialmente com suporte pelo Visual Studio. Essa especificação de exceção foi projetada para fornecer informações de resumo sobre quais exceções podem ser geradas fora de uma função, mas na prática, ele foi encontrado para ser problemático. Uma especificação de exceção dinâmico que revelar um pouco úteis foi o incondicional `throw()` especificação. Por exemplo, a declaração da função:  

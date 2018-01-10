@@ -1,37 +1,38 @@
 ---
-title: "finally | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave finally [C++]"
+title: Por fim | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dd357c8eeed9eddc6940ce02de6e5d2b4f8c68d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# finally
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Além de `try` e cláusulas de `catch` , a manipulação de exceção de CLR oferece suporte a uma cláusula de `finally` .  A semântica é idêntica ao bloco de `__finally` a manipulação de exceção estruturado \(SEH\).  Um bloco de `__finally` pode seguir um bloco de `try` ou de `catch` .  
+# <a name="finally"></a>finally
+Além `try` e `catch` cláusulas, suporte de tratamento de exceções de CLR um `finally` cláusula. A semântica é idêntica do `__finally` bloco em (SEH) de tratamento de exceções estruturado. Um `__finally` bloco pode seguir um `try` ou `catch` bloco.  
   
-## Comentários  
- O propósito do bloco de `finally` é limpar todos os recursos restantes depois da exceção ocorreu.  Observe que o bloco de `finally` é executado sempre, mesmo se nenhuma exceção foi gerada.  O bloco de `catch` é executado apenas se uma exceção gerenciada é gerada dentro do bloco associado de `try` .  
+## <a name="remarks"></a>Comentários  
+ A finalidade de `finally` bloco é limpar os recursos que, após a exceção ocorreu. Observe que o `finally` bloco sempre é executado, mesmo se nenhuma exceção foi lançada. O `catch` bloco é executado apenas se uma exceção gerenciada é gerada em associado `try` bloco.  
   
- `finally` é uma palavra\-chave sensível ao contexto; consulte [Palavras\-chave Contextuais](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
+ `finally`é uma palavra-chave contextual; consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
   
-## Exemplo  
- O exemplo a seguir demonstra um bloco simples de `finally` :  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra um simples `finally` bloco:  
   
 ```  
 // keyword__finally.cpp  
@@ -58,8 +59,11 @@ int main() {
 }  
 ```  
   
-  **na captura**  
-**MyException**  
-**em finalmente**   
-## Consulte também  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+```Output  
+in catch  
+MyException  
+in finally  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Tratamento de Exceção](../windows/exception-handling-cpp-component-extensions.md)

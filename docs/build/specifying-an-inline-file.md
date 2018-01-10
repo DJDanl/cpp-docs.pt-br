@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3cb38558254ff900af798aebd2960047df0d89df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef2183390b2aca2fb54e1468bd59e697374a355a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-an-inline-file"></a>Especificando um arquivo embutido
 Especificar dois colchetes angulares (<<) no comando onde *filename* deve aparecer. Os colchetes não pode ser uma expansão de macro.  

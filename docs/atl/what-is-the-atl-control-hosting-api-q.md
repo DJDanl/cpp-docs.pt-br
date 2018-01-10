@@ -1,52 +1,52 @@
 ---
-title: "O que &#233; ATL API de Hospedagem? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "APIs [C++], hospedar"
-  - "hospedando controles API"
-  - "controles [ATL], hospedando APIs"
+title: "O que é o ATL API de hospedagem de controle? | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- APIs [C++], hosting
+- control-hosting API
+- controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 15
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# O que &#233; ATL API de Hospedagem?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL que hospeda API é o conjunto de funções que permite que qualquer janela atua como um recipiente de controles ActiveX.  Essas funções podem para vincular estaticamente ou dinamicamente em seu projeto já que estão disponíveis como código\-fonte e expostos por ATL90.dll.  Funções de hospedagem são listadas na tabela abaixo.  
+# <a name="what-is-the-atl-control-hosting-api"></a>O que é o ATL API de hospedagem de controle?
+ATL da hospedagem de controles API é o conjunto de funções que permite que qualquer janela atuar como um contêiner de controle ActiveX. Essas funções podem ser estaticamente ou dinamicamente vinculado em seu projeto, porque eles estão disponíveis como código-fonte e expostos pelo ATL90.dll. As funções de controle de hospedagem são listadas na tabela a seguir.  
   
 |Função|Descrição|  
-|------------|---------------|  
-|[AtlAxAttachControl](../Topic/AtlAxAttachControl.md)|Cria um objeto host, conectá\-lo a janela fornecida, então anexa um controle existente.|  
-|[AtlAxCreateControl](../Topic/AtlAxCreateControl.md)|Cria um objeto host, conectá\-lo a janela fornecida, então carregá\-lo um controle.|  
-|[AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)|Cria um controle ActiveX licenciado, inicializa\-o, e hospedá\-lo na janela especificada, semelhante a [AtlAxCreateControl](../Topic/AtlAxCreateControl.md).|  
-|[AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)|Cria um objeto host, conectá\-lo a janela fornecida, então carregá\-lo um controle \(também permite que os coletores de eventos são configurados\).|  
-|[AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)|Cria um controle ActiveX licenciado, inicializa\-o, e hospedá\-lo na janela especificada, semelhante a [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md).|  
-|[AtlAxCreateDialog](../Topic/AtlAxCreateDialog.md)|Cria uma caixa de diálogo sem\-modo de um recurso da caixa de diálogo e retorna o identificador de janela.|  
-|[AtlAxDialogBox](../Topic/AtlAxDialogBox.md)|Cria uma caixa de diálogo modal de um recurso da caixa de diálogo.|  
-|[AtlAxGetControl](../Topic/AtlAxGetControl.md)|Retorna o ponteiro de interface de **IUnknown** do controle hospedado em uma janela.|  
-|[AtlAxGetHost](../Topic/AtlAxGetHost.md)|Retorna o ponteiro de interface de **IUnknown** do objeto host conectado a uma janela.|  
-|[AtlAxWinInit](../Topic/AtlAxWinInit.md)|Inicializa o código de controle de hospedagem.|  
-|[AtlAxWinTerm](../Topic/AtlAxWinTerm.md)|Uninitializes o código de controle de hospedagem.|  
+|--------------|-----------------|  
+|[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Cria um objeto de host, conecta-se à janela fornecida e anexa um controle existente.|  
+|[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Cria um objeto de host, conecta-se à janela fornecida e carrega um controle.|  
+|[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Cria um controle ActiveX licenciado, inicializa e hospeda na janela especificada, semelhante ao [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|  
+|[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Cria um objeto de host, conecta-se à janela fornecida e carrega um controle (também permite que os coletores de eventos para ser configurado).|  
+|[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Cria um controle ActiveX licenciado, inicializa e hospeda na janela especificada, semelhante ao [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|  
+|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Cria uma caixa de diálogo sem janela restrita de um recurso de caixa de diálogo e retorna o identificador de janela.|  
+|[AtlAxDialogBox](reference/composite-control-global-functions.md#atlaxdialogbox)|Cria uma caixa de diálogo modal de um recurso de caixa de diálogo.|  
+|[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Retorna o **IUnknown** ponteiro de interface do controle hospedado em uma janela.|  
+|[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Retorna o **IUnknown** ponteiro de interface de objeto de host conectado a uma janela.|  
+|[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)|Inicializa o código de hospedagem de controles.|  
+|[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)|Uninitializes o código de hospedagem de controles.|  
   
- Os parâmetros de `HWND` nas três primeiras funções devem ser uma janela existente de \(praticamente\) qualquer tipo.  Se você chamar qualquer uma de essas três funções explicitamente \(normalmente, você não tem que\), não passar um identificador para uma janela que já está atuando como um host \(se você fizer isso, o objeto existente host não será liberado.\)  
+ O `HWND` parâmetros nas três primeiras funções devem ser uma janela existente de (quase) qualquer tipo. Se você chamar qualquer uma dessas três funções explicitamente (normalmente, você não precisará), não passar um identificador para uma janela que já está atuando como um host (nesse caso, o objeto de host existente não ser liberado).  
   
- a primeira ligação de controle sete [AtlAxWinInit](../Topic/AtlAxWinInit.md) implicitamente.  
+ Chamam as funções primeiro sete [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) implicitamente.  
   
 > [!NOTE]
->  A API de hospedagem forma a base de suporte de ATL para retenção de controle ActiveX.  Em o entanto, há geralmente uma pequena necessidade de chamar diretamente essas funções se você aproveita ou se torna de uso completo de classes envoltório de ATL.  Para obter mais informações, consulte [ATL classes que facilita a retenção do controle ActiveX?](../atl/which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  A API de hospedagem de controles de formulários a base de suporte do ATL para contenção de controle ActiveX. No entanto, geralmente há pouca necessidade de chamar diretamente essas funções se aproveitar ou fazer uso total de classes de wrapper da ATL. Para obter mais informações, consulte [que Classes facilitar ActiveX contenção de controle ATL](which-atl-classes-facilitate-activex-control-containment-q.md).  
   
-## Consulte também  
- [Perguntas frequentes sobre contenção de controle](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>Consulte também  
+ [Perguntas frequentes sobre contenção de controle](which-atl-classes-facilitate-activex-control-containment-q.md)

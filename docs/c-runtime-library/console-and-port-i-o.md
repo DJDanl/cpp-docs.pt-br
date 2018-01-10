@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a741008b894c5349bd198c2abfd13e11a158c4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-and-port-io"></a>Console e E/S de porta
 Essas rotinas fazem leitura e gravação no seu console ou na porta especificada. As rotinas de E/S do console não são compatíveis com as rotinas de biblioteca de E/S de fluxo ou E/S de nível inferior. O console ou porta não precisa ser aberto ou fechado antes da realização da E/S; portanto, não há rotinas de abrir ou fechar nessa categoria. Nos sistemas operacionais Windows, a saída dessas funções é sempre direcionada para o console e não pode ser redirecionada.  

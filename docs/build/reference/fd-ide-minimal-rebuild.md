@@ -1,37 +1,36 @@
 ---
-title: "/FD (recompila&#231;&#227;o m&#237;nima de IDE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/FD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /FD (C++)"
-  - "Opção de compilador FD [C++]"
-  - "Opção de compilador -FD [C++]"
+title: "-FD (recompilação mínima de IDE) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /FD
+dev_langs: C++
+helpviewer_keywords:
+- /FD compiler option [C++]
+- -FD compiler option [C++]
+- FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c0dfcf34be03204b920e5a4459c6a2d7ea6c506d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /FD (recompila&#231;&#227;o m&#237;nima de IDE)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/FD** não é exposta aos usuários exceto na página de propriedades de [Linha de comando](../../ide/command-line-property-pages.md) da caixa de diálogo de **Páginas de Propriedades** de projeto criando c, se e somente se [\/Gm \(Habilitar a recriação mínima\)](../../build/reference/gm-enable-minimal-rebuild.md) também não é.  **\/FD** não tiver nenhum efeito diferente do ambiente de desenvolvimento.  **\/FD** não é exposta na saída de **cl \/?**.  
+# <a name="fd-ide-minimal-rebuild"></a>/FD (recompilação mínima de IDE)
+**/FD** não é exposto a usuários, exceto de [linha de comando](../../ide/command-line-property-pages.md) página de propriedades de um projeto de C++ **páginas de propriedade** caixa de diálogo se e somente se [/GM (habilitar mínimo recriar)demanual](../../build/reference/gm-enable-minimal-rebuild.md) também não está selecionado. **/FD** não tem nenhum efeito diferente do ambiente de desenvolvimento. **/FD** não é exposta na saída de **cl /?**.  
   
- Se você não habilita **\/Gm** no ambiente de desenvolvimento, **\/FD** será usado.  **\/FD** assegura que o arquivo de .idb tem informações adequadas de dependência.  **\/FD** é usado somente pelo ambiente de desenvolvimento, e não deve ser usado de linha de comando ou de um script de criação.  
+ Se você não habilitar **/GM manual** no ambiente de desenvolvimento, **/FD** será usado. **/FD** garante que o arquivo .idb tem informações suficientes de dependência. **/FD** só é usado pelo ambiente de desenvolvimento, e não deve ser usado da linha de comando ou um script de compilação.  
   
-## Consulte também  
- [Opções do arquivo de saída \(\/F\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>Consulte também  
+ [Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)   
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

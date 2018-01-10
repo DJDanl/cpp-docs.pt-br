@@ -1,68 +1,68 @@
 ---
-title: "/PDB (usar banco de dados do programa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdb"
-  - "VC.Project.VCLinkerTool.ProgramDatabaseFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos .pdb, criando"
-  - "Opção de vinculador /PDB"
-  - "arquivos PDB, criando"
-  - "opção de vinculador PDB"
-  - "opção de vinculador -PDB"
+title: -PDB (Usar banco de dados de programa) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /pdb
+- VC.Project.VCLinkerTool.ProgramDatabaseFile
+dev_langs: C++
+helpviewer_keywords:
+- -PDB linker option
+- /PDB linker option
+- PDB linker option
+- PDB files, creating
+- .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b8b255e88a199397463d26d408d425234571552
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /PDB (usar banco de dados do programa)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdb-use-program-database"></a>/PDB (usar banco de dados do programa)
 ```  
 /PDB:filename  
 ```  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  *filename*  
- Um nome especificado pelo usuário para o base de dados \(PDB\) de programa que o vinculador cria.  Substitui o nome padrão.  
+ Um nome de usuário especificado para o banco de dados do programa (PDB) que o vinculador cria. Ele substitui o nome padrão.  
   
-## Comentários  
- Por padrão, quando [\/DEBUG](../../build/reference/debug-generate-debug-info.md) for especificado, o vinculador cria um base de dados \(PDB\) de programa que contém informações de depuração.  O nome de arquivo padrão para o PDB tem o nome de base de programa e a extensão .pdb.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, quando [/Debug](../../build/reference/debug-generate-debug-info.md) for especificado, o vinculador cria um banco de dados do programa (PDB) que contém informações de depuração. O nome de arquivo padrão para o PDB tem o nome base do programa e a extensão. PDB.  
   
- Use \/PDB:*nome de arquivo* para especificar o nome do arquivo PDB.  \/DEBUG Se não for especificado, a opção \/PDB será ignorada.  
+ Use /PDB:*filename* para especificar o nome do arquivo PDB. Se /DEBUG não for especificado, a opção /PDB é ignorada.  
   
- Um arquivo PDB pode ser até GB.  
+ Um arquivo PDB pode ser de até 2GB.  
   
- Para obter mais informações, consulte [arquivos .pdb como a entrada do vinculador](../../build/reference/dot-pdb-files-as-linker-input.md).  
+ Para obter mais informações, consulte [arquivos. PDB como entrada de vinculador](../../build/reference/dot-pdb-files-as-linker-input.md).  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Clique o **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Depurar** .  
+3.  Clique o **depurar** página de propriedades.  
   
-4.  Modifique a propriedade de **Gerar Arquivo de Banco de Dados de Programa** .  
+4.  Modificar o **gerar arquivo de banco de dados do programa** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

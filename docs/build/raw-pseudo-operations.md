@@ -1,42 +1,42 @@
 ---
-title: "Pseudo-opera&#231;&#245;es brutas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Pseudo-operações brutas | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52ce7fb4455f87001bcfe87e1368ed0c09cda6b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Pseudo-opera&#231;&#245;es brutas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico lista as operações pseudo\-.  
+# <a name="raw-pseudo-operations"></a>Pseudo-operações brutas
+Este tópico lista as operações de pseudo.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
   
-|Operação pseudo\-|Descrição|  
-|-----------------------|---------------|  
-|QUADRO \\ PROC \[: ehandler\]|As causas MASM gerar uma entrada de tabela de função em .pdata e desenrolar informações em .xdata para tratamento de exceção estruturada de uma função desenrolam o comportamento.  Se o ehandler estiver presente, este é proc inseriu em .xdata como o tratador específico de linguagem.<br /><br /> Quando o atributo de QUADRO é usado, deve ser seguido por uma diretiva de .ENDPROLOG.  Se a função é uma função de folha \(como definido em [Tipos de função](../build/function-types.md)\) o atributo de QUADRO é desnecessário, como é o restante dessas pseudo de operações.|  
-|Registro de .PUSHREG|Gera um UWOP\_PUSH\_NONVOL desenrolam a entrada de código para o número especificado do registro usando o deslocamento atual no prólogo.<br /><br /> Isso deve ser usado somente com registros permanentes inteiro.  Para envia de registros voláteis, use um .ALLOCSTACK 8, em vez disso|  
-|Registro de .SETFRAME, deslocamento|Preenche o campo e o deslocamento de registro do quadro em informações de desenrolamento usando o registro e o deslocamento especificados.  O deslocamento deve ser um múltiplas de 16 e menor ou igual a 240.  Essa diretiva também gera um UWOP\_SET\_FPREG desenrola a entrada de código para o registro especificado usando o deslocamento atual de prólogo.|  
-|Tamanho de .ALLOCSTACK|Gera um UWOP\_ALLOC\_SMALL ou um UWOP\_ALLOC\_LARGE com o tamanho especificado para o deslocamento atual no prólogo.<br /><br /> O operando de tamanho deve ser um múltiplas de 8.|  
-|Registro de .SAVEREG, deslocamento|Gera ou um UWOP\_SAVE\_NONVOL ou um UWOP\_SAVE\_NONVOL\_FAR desenrola a entrada de código para o registro e o deslocamento especificados usando o deslocamento atual de prólogo.  MASM escolherá a codificação mais eficiente.<br /><br /> O deslocamento deve ser positivo, e um múltiplas de 8.  O deslocamento é relativo à base do quadro do procedimento, que é geralmente em RSP, ou, se usando um ponteiro de quadro, ponteiro não sofrem escala de quadro.|  
-|.SAVEXMM128 registro, deslocamento|Gera ou um UWOP\_SAVE\_XMM128 ou um UWOP\_SAVE\_XMM128\_FAR desenrola a entrada de código para o registro especificado e o deslocamento de MMX usando o deslocamento atual de prólogo.  MASM escolherá a codificação mais eficiente.<br /><br /> O deslocamento deve ser positivo, e um múltiplas de 16.  O deslocamento é relativo à base do quadro do procedimento, que é geralmente em RSP, ou, se usando um ponteiro de quadro, ponteiro não sofrem escala de quadro.|  
-|.PUSHFRAME Código \[\]|Gera um UWOP\_PUSH\_MACHFRAME desenrolam a entrada de código.  Se o código opcional é especificado, a entrada de código de desenrolamento é dada um modificador de 1.  Se não o modificador é 0.|  
-|.ENDPROLOG|Sinaliza o final de declarações de prólogo.  Deve ocorrer nos primeiros 255 bytes de função.|  
+|Operação de pseudo|Descrição|  
+|----------------------|-----------------|  
+|QUADRO de PROC [: ehandler]|Causas MASM para gerar uma função de tabela de entrada. pData e desenrolar informações .xdata para uma função do estruturado comportamento de desenrolamento de tratamento de exceção.  Se ehandler estiver presente, esse procedimento é inserido no .xdata como o identificador específico da linguagem.<br /><br /> Quando o atributo de quadro é usado, ele deve ser seguido por um. Diretiva ENDPROLOG.  Se a função é uma função de folha (conforme definido em [tipos de função](../build/function-types.md)) o quadro é desnecessária, assim como o restante dessas operações pseudo.|  
+|. Reg PUSHREG|Gera uma entrada de código de desenrolamento UWOP_PUSH_NONVOL para o número de registro especificado usando o atual deslocamento no prólogo.<br /><br /> Isso só deve ser usado com registros de inteiro não volátil.  Para verificações de registradores voláteis, use um. 8 ALLOCSTACK, em vez disso|  
+|. Deslocamento do registro SETFRAME|Preenche o quadro de registrar o campo e o deslocamento nas informações de liberação usando o registro especificado e o deslocamento. O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera uma entrada de código de desenrolamento UWOP_SET_FPREG para o registro especificado usando o deslocamento de prólogo atual.|  
+|. Tamanho ALLOCSTACK|Gera um UWOP_ALLOC_SMALL ou um UWOP_ALLOC_LARGE com o tamanho especificado para o deslocamento atual no prólogo.<br /><br /> O operando de tamanho deve ser um múltiplo de 8.|  
+|. Deslocamento do registro SAVEREG|Gera um UWOP_SAVE_NONVOL ou uma entrada de código de desenrolamento UWOP_SAVE_NONVOL_FAR para o registro especificado e o deslocamento usando o deslocamento de prólogo atual. MASM escolherá a codificação mais eficiente.<br /><br /> Deslocamento deve ser positivo e um múltiplo de 8.  Deslocamento é relativo a base do quadro do procedimento, que é geralmente RSP, ou, se usar um ponteiro de quadro, o ponteiro de quadro fora de escala.|  
+|. Deslocamento do registro de SAVEXMM128|Gera um UWOP_SAVE_XMM128 ou uma entrada de código de desenrolamento UWOP_SAVE_XMM128_FAR para o registrador XMM especificado e o deslocamento usando o deslocamento de prólogo atual. MASM escolherá a codificação mais eficiente.<br /><br /> Deslocamento deve ser positivo e um múltiplo de 16.  Deslocamento é relativo a base do quadro do procedimento, que é geralmente RSP, ou, se usar um ponteiro de quadro, o ponteiro de quadro fora de escala.|  
+|. PUSHFRAME [código]|Gera uma entrada de código de desenrolamento UWOP_PUSH_MACHFRAME. Se o código opcional for especificado, a entrada de código de desenrolamento tem um modificador de 1. Caso contrário, o modificador é 0.|  
+|.ENDPROLOG|Sinaliza o término das declarações de prólogo.  Deve ocorrer nos primeiros 255 bytes da função.|  
   
- Aqui está um prólogo de função de exemplo com uso adequado da maioria dos opcodes:  
+ Aqui está um prólogo da função de exemplo com o uso correto da maioria dos opcodes:  
   
 ```  
 sample PROC FRAME     
@@ -85,5 +85,5 @@ ret
 sample ENDP  
 ```  
   
-## Consulte também  
- [Auxiliares desenrolados para MASM](../build/unwind-helpers-for-masm.md)
+## <a name="see-also"></a>Consulte também  
+ [Desenrolar auxiliares para MASM](../build/unwind-helpers-for-masm.md)

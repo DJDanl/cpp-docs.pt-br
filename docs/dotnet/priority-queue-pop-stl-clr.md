@@ -1,42 +1,42 @@
 ---
-title: "priority_queue::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro pop [STL/CLR]"
+title: 'priority_queue:: pop (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: d363b3f1-247b-466a-a300-c5918b0dfd4e
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6894a4acff991b069f7c5b587fd8a90c5a3a40ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Remove o elemento superior \- proirity.  
+# <a name="priorityqueuepop-stlclr"></a>priority_queue::pop (STL/CLR)
+Remove o elemento mais alto proirity.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void pop();  
 ```  
   
-## Comentários  
- A função de membro remove o elemento a prioridade mais alta de sequência controlada, que deve estar vazio.  Você usará para encurtar a fila por um elemento regressiva.  
+## <a name="remarks"></a>Comentários  
+ A função de membro remove o elemento de prioridade mais alta da sequência controlada, que deve ser não vazio. Você pode usá-lo para reduzir a fila por um elemento na parte traseira.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_priority_queue_pop.cpp   
@@ -66,13 +66,16 @@ int main()
   
 ```  
   
-  **c um b**  
- **b a**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+c a b  
+b a  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
   
-## Consulte também  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::push](../dotnet/priority-queue-push-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)

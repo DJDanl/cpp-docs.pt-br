@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbc9324753f6ec2c9a332af00a00dd85116e1943
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 574c4564394e251dde9345d3658304019dae838d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unprototyped-functions"></a>Funções sem protótipo
 Para funções não totalmente prototipadas, o chamador passará valores inteiros como números inteiros e valores de ponto flutuante como precisão dupla. Para valores de ponto flutuante somente, o registro de inteiro e o registro de ponto flutuante conterá o valor de float caso o chamador espera que o valor nos registradores inteiro.  

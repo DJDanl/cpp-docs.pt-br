@@ -1,36 +1,37 @@
 ---
-title: "CRestrictions::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRestrictions.Open"
-  - "ATL::CRestrictions::Open"
-  - "ATL.CRestrictions.Open"
-  - "CRestrictions::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Open"
+title: 'Crestrictions:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRestrictions.Open
+- ATL::CRestrictions::Open
+- ATL.CRestrictions.Open
+- CRestrictions::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bbb0b175a6fa5a6cf93b4fe107884d5bb84f2487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CRestrictions::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna um conjunto de resultados de acordo com as restrições usuário fornecidas.  
+# <a name="crestrictionsopen"></a>CRestrictions::Open
+Retorna um resultado definido de acordo com as restrições de fornecido pelo usuário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -47,27 +48,27 @@ Retorna um conjunto de resultados de acordo com as restrições usuário forneci
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `session`  
- \[in\] especifica um objeto de sessão existente usada para conectar\-se à fonte de dados.  
+ [in] Especifica um objeto de sessão existente, usado para se conectar à fonte de dados.  
   
  *lpszParam*  
- \[in\] especifica as restrições no conjunto de linhas de esquema.  
+ [in] Especifica as restrições no conjunto de linhas de esquema.  
   
  `bBind`  
- \[in\] especifica se associar automaticamente o mapa da coluna.  A opção é **true**, o que causa o mapa da coluna a ser associado automaticamente.  A configuração `bBind` a **false** impede a associação automático da coluna de forma que você possa se associar manualmente. \(A associação é manual de interesse específico aos usuários OLAP\).  
+ [in] Especifica se deve associar o mapa de coluna automaticamente. O padrão é **true**, que faz com que o mapa de coluna a ser associado automaticamente. Configuração `bBind` para **false** impede que a associação automática do mapa de coluna para que você pode vincular manualmente. (Associação manual é de especial interesse para os usuários OLAP).  
   
-## Valor de retorno  
- Um dos valores padrão de `HRESULT` .  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT` valores.  
   
-## Comentários  
- Você pode especificar um máximo de sete limitações em um conjunto de linhas de esquema.  
+## <a name="remarks"></a>Comentários  
+ Você pode especificar um máximo de sete restrições em um conjunto de linhas de esquema.  
   
- Consulte [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) para obter informações sobre restrições definidas em cada conjunto de linhas de esquema.  
+ Consulte [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) para obter informações sobre as restrições definidas em cada conjunto de linhas de esquema.  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbsch.h  
   
-## Consulte também  
- [Classe CRestrictions](../Topic/CRestrictions%20Class.md)   
- [Classes Rowset do esquema e Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRestrictions](../../data/oledb/crestrictions-class.md)   
+ [Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

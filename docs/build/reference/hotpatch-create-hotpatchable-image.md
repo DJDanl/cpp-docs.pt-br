@@ -1,66 +1,66 @@
 ---
-title: "/hotpatch (Criar imagem hotpatchable) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/hotpatch"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicação de patch sob demanda"
-  - "Opção de compilador -hotpatch [C++]"
-  - "Opção de compilador /hotpatch (C++)"
-  - "aplicação de patch sob demanda"
+title: -hotpatch (Criar imagem Hotpatchable) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /hotpatch
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs: C++
+helpviewer_keywords:
+- hot patching
+- -hotpatch compiler option [C++]
+- /hotpatch compiler option [C++]
+- hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad7ab4e6450d33923b728f20c8a35185edd2b05e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /hotpatch (Criar imagem hotpatchable)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Criar imagem hotpatchable)
 Prepara uma imagem para patch instantâneo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /hotpatch  
 ```  
   
-## Comentários  
- Quando **\/hotpatch** é usado em uma compilação, o compilador garante que a primeira instrução de cada função tenha pelo menos dois bytes, que é necessária para o patch instantâneo.  
+## <a name="remarks"></a>Comentários  
+ Quando **/hotpatch** é usado em uma compilação, o compilador garante a primeira instrução de cada função é pelo menos dois bytes, que é exigido para aplicação de patch ativa.  
   
- Para concluir a preparação e criar uma imagem capaz de aplicar patches, depois de usar **\/hotpatch** para compilar, você deve usar [\/FUNCTIONPADMIN \(Criar imagem hotpatchable\)](../../build/reference/functionpadmin-create-hotpatchable-image.md) para vincular.  Quando você compila e vincula uma imagem usando uma invocação de cl.exe, **\/hotpatch** implica **\/functionpadmin**.  
+ Para concluir a preparação para fazer hotpatchable uma imagem, depois de usar **/hotpatch** para compilar, você deve usar [/FUNCTIONPADMIN (Criar imagem de Hotpatchable)](../../build/reference/functionpadmin-create-hotpatchable-image.md) para vincular. Quando você compilar e vincular uma imagem usando uma chamada de cl.exe, **/hotpatch** implica **/functionpadmin**.  
   
- Como as instruções são sempre de dois bytes ou maiores na arquitetura de BRAÇO, e porque a compilação de x64 sempre será tratada como se **\/hotpatch** foi especificado, você não precisa especificar **\/hotpatch** quando você cria para os destinos; no entanto, você ainda deverá vincular usando **\/functionpadmin** para criar imagens hotpatchable para eles.  A opção de compilador **\/hotpatch** afeta somente a compilação do x86.  
+ Porque as instruções são sempre de dois bytes ou maior na arquitetura ARM e porque x64 compilação sempre é tratada como se **/hotpatch** tiver sido especificado, você não precisa especificar **/hotpatch** quando compilar para esses destinos; No entanto, você ainda deve vincular usando **/functionpadmin** criar imagens hotpatchable para eles. O **/hotpatch** compilador opção só afeta x86 compilação.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Selecione a pasta **C\/C\+\+**.  
+2.  Selecione o **C/C++** pasta.  
   
-3.  Selecione a página de propriedades **Linha de Comando** .  
+3.  Selecione o **linha de comando** página de propriedades.  
   
-4.  Adicione a opção de compilador à caixa **Opções Adicionais**.  
+4.  Adicione a opção de compilador para o **opções adicionais** caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Orientação  
- Para obter mais informações sobre o gerenciamento de atualização, consulte "Guia segurança para o gerenciamento de atualização" em [http:\/\/www.microsoft.com\/technet\/security\/guidance\/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
+## <a name="guidance"></a>Diretrizes  
+ Para obter mais informações sobre o gerenciamento de atualização, consulte "Diretrizes para atualização de gerenciamento de segurança" em [http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

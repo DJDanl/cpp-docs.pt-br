@@ -1,49 +1,32 @@
 ---
-title: Classe CComQIPtr | Documentos do Microsoft
+title: Classe CComQIPtr | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr::CComQIPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComQIPtr class
+dev_langs: C++
+helpviewer_keywords: CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e2060a0be3f9780191c316c2df41115e66033d4d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomqiptr-class"></a>Classe CComQIPtr
-Uma classe de ponteiro inteligente para gerenciar os ponteiros de interface.  
+Uma classe de ponteiro inteligente para o gerenciamento de ponteiros de interface COM.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,14 +37,14 @@ class CComQIPtr: public CComPtr<T>
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- Uma interface COM especificando o tipo de ponteiro a ser armazenado.  
+ Uma interface COM especificando o tipo de ponteiro para ser armazenado.  
   
  `piid`  
  Um ponteiro para o IID da `T`.  
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -74,7 +57,7 @@ class CComQIPtr: public CComPtr<T>
 |[CComQIPtr::operator =](#operator_eq)|Atribui um ponteiro para o ponteiro de membro.|  
   
 ## <a name="remarks"></a>Comentários  
- ATL usa `CComQIPtr` e [CComPtr](../../atl/reference/ccomptr-class.md) para gerenciar os ponteiros de interface, que derivam de [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Ambas as classes executam por meio de chamadas de contagem de referência automática `AddRef` e **versão**. Operadores sobrecarregados lidar com operações de ponteiro.  
+ ATL usa `CComQIPtr` e [CComPtr](../../atl/reference/ccomptr-class.md) para gerenciar os ponteiros de interface COM, que derivam de [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Ambas as classes executam por meio de chamadas de contagem de referência automática `AddRef` e **versão**. Operadores sobrecarregados lidar com operações de ponteiro.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -84,7 +67,7 @@ class CComQIPtr: public CComPtr<T>
  `CComQIPtr`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcomcli. h  
+ **Cabeçalho:** atlcomcli.h  
   
 ##  <a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
  O construtor.  
@@ -134,4 +117,3 @@ T* operator= (IUnknown* lp) throw();
  [Classe CComPtrBase](../../atl/reference/ccomptrbase-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)   
  [Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)
-

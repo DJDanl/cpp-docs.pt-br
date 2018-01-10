@@ -17,25 +17,26 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a711a8087fef7978eceaadece317d4aac95d6340
-ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.workload: cplusplus
+ms.openlocfilehash: 11b28793e5e659e3135061e3a6fd410d9b1c9f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-conversion"></a>Conversão de dados
 Essas rotinas convertem dados de um formulário para outro. Geralmente, essas rotinas são executadas mais rapidamente do que as conversões que podem ser escritas. Cada rotina que começa com um prefixo `to` é implementada como função e como macro. Consulte [Escolher entre funções e macros](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md) para obter informações sobre como escolher uma implementação.  
   
 ### <a name="data-conversion-routines"></a>Rotinas de conversão de dados  
   
-|Rotina|Uso|  
+|Rotina|Use|  
 |-------------|---------|  
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Localizar o valor absoluto de um inteiro|  
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converter cadeia de caracteres em `float`|  
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Converter cadeia de caracteres em `int`|  
 |[_atoi64, _atoi64_l, _wtoi64, _wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Converter cadeia de caracteres em `__int64`|  
 |[atol, _atol_l, _wtol, _wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Converter cadeia de caracteres em `long`|  
-|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Converter caracteres UTF-16 ou UTF-32 em um equivalente multibyte|  
+|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Converter caracteres UTF-16 ou UTF-32 em caracteres multibyte equivalentes|  
 |[_ecvt](../c-runtime-library/reference/ecvt.md), [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Converter `double` em cadeia de caracteres de comprimento especificado|  
 |[_fcvt](../c-runtime-library/reference/fcvt.md), [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Converter `double` em cadeia de caracteres com número especificado de dígitos após o separador decimal|  
 |[_gcvt](../c-runtime-library/reference/gcvt.md), [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Converter número `double` em cadeia de caracteres; armazenar cadeia de caracteres no buffer|  
@@ -49,7 +50,7 @@ Essas rotinas convertem dados de um formulário para outro. Geralmente, essas ro
 |[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|Converter caractere multibyte em código hiragana de 1 byte|  
 |[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|Converter caractere multibyte em código katakana de 1 byte|  
 |[_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)|Converter caractere multibyte de 2 bytes no caractere multibyte de 1 byte correspondente|  
-|[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Converter um caractere multibyte em um caractere UTF-16 ou UTF-32 equivalente|  
+|[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Converter caracteres multibyte em caracteres UTF-16 ou UTF-32 equivalentes|  
 |[mbstowcs, _mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md), [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|Converter sequência de caracteres multibyte na sequência de caracteres largos correspondente|  
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Converter um caractere multibyte em um caractere largo correspondente|  
 |[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Converter cadeia de caracteres em `double`|  

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- process_cpp
-dev_langs:
-- C++
+f1_keywords: process_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __declspec keyword [C++], process
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d4f2500adaaa7941444b22d7ce548370fc370533
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6754adcb348cb6eb061e32fc58e78f43663b1a90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process"></a>process
 Especifica que o processo de aplicativo gerenciado deve ter uma única cópia de uma determinada variável global, variável de membro estática ou variável local estática compartilhada por todos os domínios de aplicativo no processo. Isso é usado principalmente para ser usado ao compilar com **/clr: puro**, pois em **/clr: pure** são variáveis globais e estáticos por domínio de aplicativo, por padrão. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015. Ao compilar com **/clr**, variáveis globais e estáticos são por processo por padrão (não precisa usar `__declspec(process)`.  

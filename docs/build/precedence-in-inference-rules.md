@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d22db9de1fc1941798c73c3c1c05a8ccd8571525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7374da0541fc66464947af5a7b2ea7ea7b5c1d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precedence-in-inference-rules"></a>Precedência em regras de inferência
 Se uma regra de inferência é definida várias vezes, NMAKE usa a definição de precedência mais alta. A lista a seguir mostra a ordem de prioridade do mais alto ao mais baixo:  

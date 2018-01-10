@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b448bdc601bbe050d93cc26976fa0925ce9fff14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acf1c5f64251c97091cef00d4fa6345e1f46de53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 Calcula o valor absoluto do argumento de ponto flutuante.  
@@ -98,6 +99,6 @@ long double fabsl(
  Consulte o exemplo de [abs](../../c-runtime-library/reference/abs-labs-llabs-abs64.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
  [_cabs](../../c-runtime-library/reference/cabs.md)   

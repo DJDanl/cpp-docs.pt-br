@@ -1,33 +1,33 @@
 ---
-title: "Criando texto de arquivo embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos embutidos, criando texto"
-  - "programa NMAKE, arquivos embutidos"
-  - "texto, arquivo embutido"
+title: Criando arquivo embutido texto | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, creating text
+- NMAKE program, inline files
+- text, inline file
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dcc27a303e9d03d2e899a76703bcfae5abfd0c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Criando texto de arquivo embutido
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os arquivos temporários ou embutidos são permanentes.  
+# <a name="creating-inline-file-text"></a>Criando texto de arquivo embutido
+Arquivos embutidos são temporária ou permanente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,10 +38,10 @@ Os arquivos temporários ou embutidos são permanentes.
 <<[KEEP | NOKEEP]  
 ```  
   
-## Comentários  
- Especifique *o inlinetext* na primeira linha após o comando.  Marcar o final com os colchetes angulares duplas \(\<\<\) no início de uma linha separada.  O arquivo contém todo o *inlinetext* antes de colchetes de restrição.  *O inlinetext* pode ter expansões e substituições macro, mas não políticas ou comentários de makefile.  Espaços, as guias, e os caracteres de nova linha são tratados literal.  
+## <a name="remarks"></a>Comentários  
+ Especifique *inlinetext* na primeira linha após o comando. Marcar o fim com colchetes duplos (<<) no início de uma linha separada. O arquivo contém todos os *inlinetext* antes dos colchetes de delimitação. O *inlinetext* pode ter expansões de macro e substituições, mas não as diretivas ou comentários de makefile. Espaços, tabulações e caracteres de nova linha são tratados literalmente.  
   
- Um arquivo temporário existir para a duração da sessão e pode ser reutilizado por outros comandos.  Especifique **KEEP** após os colchetes angulares de fechamento para reter o arquivo após a sessão de NMAKE; um arquivo sem nome é preservado em disco com o nome de arquivo gerado.  Não especifique **NOKEEP** ou nada para um arquivo temporário.  **KEEP** e **NOKEEP** não diferenciam maiúsculas de minúsculas.  
+ Um arquivo temporário existe para a duração da sessão e pode ser reutilizado por outros comandos. Especifique **manter** após os colchetes de fechamento para reter o arquivo após a sessão NMAKE; um arquivo sem nome é preservado no disco com o nome de arquivo gerado. Especifique **NOKEEP** ou nada para um arquivo temporário. **Manter** e **NOKEEP** não diferenciam maiusculas de minúsculas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Arquivos embutidos em um makefile](../build/inline-files-in-a-makefile.md)

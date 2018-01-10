@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04f2871af749091e97ec1731650f998739995781
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-implementing-a-property-page"></a>Exemplo: Implementando uma página de propriedades
 Este exemplo mostra como criar uma página de propriedade que exibe (e permite que você altere) propriedades do [Classes de documento](../mfc/document-classes.md) interface.  

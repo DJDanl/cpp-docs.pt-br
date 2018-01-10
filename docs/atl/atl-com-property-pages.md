@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de062b5c9aedb064206dfc40f7c722a298ded774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b1c31aeaba25f4eadad5225dd2f5607cf7053c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-property-pages"></a>Página de propriedades ATL COM
 Páginas de propriedades COM fornecem uma interface de usuário para definir as propriedades (ou chamar os métodos) de um ou mais objetos. Páginas de propriedade forem usadas extensivamente por controles ActiveX para fornecer interfaces do usuário avançadas que permitem que as propriedades de controle a ser definido em tempo de design.  

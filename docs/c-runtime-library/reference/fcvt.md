@@ -34,11 +34,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 495460722a72f6002b602336d3a01bff4b9d3af6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c66666d615dc94f74f17736de6011ec05f1eeca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvt"></a>_fcvt
 Converte um número de ponto flutuante em uma cadeia de caracteres. Uma versão mais segura dessa função está disponível. Consulte [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md).  
@@ -122,7 +123,7 @@ source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)
