@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 22b7a25d0695b7e12a4fbecbf47bbc7feb32148f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
 Representa um vetor de *N* valores inteiros que especificam os limites de um *N*-dimensional espaço que tem uma origem de 0. Os valores do vetor são ordenados do mais significativos para menos significativo.  
@@ -49,7 +50,7 @@ class extent;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

@@ -1,42 +1,42 @@
 ---
-title: "vector::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro rend [STL/CLR]"
+title: 'Vector:: rend (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 8dc1927f-9214-468d-877e-eda20c03e90d
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d322895e2421bfd11d6d402f332aa84daff74ece
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# vector::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Designa o término da sequência controlada invertida.  
+# <a name="vectorrend-stlclr"></a>vector::rend (STL/CLR)
+Designa o fim da sequência controlada invertida.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Comentários  
- A função de membro retorna um iterador invertido que aponta apenas além de início da sequência controlada.  Consequentemente, designa `end` de sequência inversa.  Use\-a para obter um iterador que designa o final de `current` de sequência controlada consultada em ordem inversa, mas seu status pode ser alterado se o comprimento da sequência controlada é alterado.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada visto na ordem inversa, mas seu status pode alterar se altera o comprimento da sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_vector_rend.cpp   
@@ -72,17 +72,20 @@ int main()
   
 ```  
   
-  **um b c**  
-**\*\-\- \-\-rend\(\) \= b**  
-**\*\-\-rend\(\) \= a**  
- **x y c**   
-## Requisitos  
- cliext \<\/vetor de**Cabeçalho:** \>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+ y x c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/vetor >  
   
-## Consulte também  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::begin](../dotnet/vector-begin-stl-clr.md)   
- [vector::end](../dotnet/vector-end-stl-clr.md)   
- [vector::rbegin](../dotnet/vector-rbegin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [vetor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector:: Begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)   
+ [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md)   
+ [vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)

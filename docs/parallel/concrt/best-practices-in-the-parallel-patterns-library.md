@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea611f555abe21a6ad3196bca287a7bd4ff00aa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Práticas recomendadas na Biblioteca de Padrões Paralelos
 Este documento descreve a melhor maneira para fazer uso eficiente de biblioteca de padrões paralelos (PPL). PPL fornece algoritmos, objetos e contêineres para fins gerais para executar o paralelismo refinado.  

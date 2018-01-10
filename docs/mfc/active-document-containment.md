@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 749d4badb3a7b5a2c61fa753a840765f14e2a329
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containment"></a>Contenção de documento ativa
 Contenção de documentos ativos é uma tecnologia que fornece uma única estrutura na qual trabalhar com documentos, em vez de forçá-lo a criar e usar várias estruturas de aplicativo para cada tipo de documento. Ele difere de tecnologia OLE básica OLE funciona com objetos inseridos dentro de um documento composto no qual apenas uma única parte do conteúdo pode estar ativa. Com contenção de documentos ativos, você pode ativar um documento inteiro (isto é, um aplicativo inteiro, incluindo associados de menus, barras de ferramentas e assim por diante) dentro do contexto de uma única estrutura.  

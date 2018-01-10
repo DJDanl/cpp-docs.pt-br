@@ -1,44 +1,26 @@
 ---
-title: Recurso compilador Erro Fatal RW1030 | Documentos do Microsoft
+title: Recurso compilador Erro Fatal RW1030 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RW1030
-dev_langs:
-- C++
-helpviewer_keywords:
-- RW1030
+f1_keywords: RW1030
+dev_langs: C++
+helpviewer_keywords: RW1030
 ms.assetid: 10727997-9ded-4afc-93b3-58fb435c3da8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 61c79a5c2116c643eec66a34f2eda62c720861bb
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e3e642bd021567a95b03ea73f8a6322139fd8e8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-fatal-error-rw1030"></a>Erro fatal RW1030 (compilador de recurso)
 Erro de saída  

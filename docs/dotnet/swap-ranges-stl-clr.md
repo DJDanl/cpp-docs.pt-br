@@ -1,33 +1,33 @@
 ---
-title: "swap_ranges (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::swap_ranges"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função swap_ranges [STL/CLR]"
+title: swap_ranges (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::swap_ranges
+dev_langs: C++
+helpviewer_keywords: swap_ranges function [STL/CLR]
 ms.assetid: 3fb39a84-b088-48f1-8bb7-2bbe68b048a9
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c3b486446ff1f2061fa28a31bceaf5e560beec15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# swap_ranges (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Troca os elementos de um intervalo com os elementos de outro, igual \- o intervalo é dimensionado.  
+# <a name="swapranges-stlclr"></a>swap_ranges (STL/CLR)
+Troca os elementos de um intervalo com os elementos de outro, de tamanho igual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
@@ -35,13 +35,13 @@ template<class _FwdIt1, class _FwdIt2> inline
         _FwdIt2 _First2);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `swap_ranges`STL.  Para obter mais informações, consulte [swap\_ranges](../Topic/swap_ranges.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `swap_ranges`. Para obter mais informações, consulte [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

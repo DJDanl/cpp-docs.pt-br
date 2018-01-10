@@ -1,62 +1,62 @@
 ---
-title: "Formatando a sa&#237;da de uma etapa de compila&#231;&#227;o personalizada ou evento de compila&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "eventos de compilação [C++], formato de saída"
-  - "etapas de compilação [C++], formato de saída"
-  - "compilações [C++], compilar eventos"
-  - "compilações [C++], etapas de compilação personalizada"
-  - "etapas de compilação personalizada [C++], formato de saída"
-  - "eventos [C++], compilar"
+title: "Formatando a saída de uma etapa de compilação personalizada ou evento de compilação | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- builds [C++], build events
+- custom build steps [C++], output format
+- events [C++], build
+- build events [C++], output format
+- build steps [C++], output format
+- builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53720e93c7d45f1eaeb0e62749194720373bee1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Formatando a sa&#237;da de uma etapa de compila&#231;&#227;o personalizada ou evento de compila&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se a saída de uma etapa de criação ou de um evento personalizado de compilação são formatadas corretamente, os usuários acessam os seguintes benefícios:  
+# <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formatando a saída de uma etapa de build personalizado ou evento de build
+Se a saída de uma etapa de compilação personalizada ou evento de compilação está formatada corretamente, os usuários podem obter os seguintes benefícios:  
   
--   Avisos e erros são contados na janela de **Saída** .  
+-   Erros e avisos são contados no **saída** janela.  
   
--   As saídas aparecem na janela de **Lista de Tarefas** .  
+-   Saída é exibida no **lista de tarefas** janela.  
   
--   Clique na saída na janela de **Saída** exibe o tópico apropriado.  
+-   Clicar na saída no **saída** janela exibe o tópico apropriado.  
   
--   As operações de F1 são habilitadas na janela de **Lista de Tarefas** ou na janela de **Saída** .  
+-   F1 operações estão habilitadas no **lista de tarefas** janela ou **saída** janela.  
   
- O formato de saída deve ser:  
+ O formato da saída deve ser:  
   
- {*filename* \(*line\#* \[, *column\#*\]\) &#124; *toolname*} **:**  
+ {*filename* (*linha #* [, *coluna #*]) &#124; *toolname*} **:**  
   
- \[*any text*\] {**error** &#124; **warning**} *code\#\#\#\#***:** *localizable string*  
+ [*qualquer texto*] {**erro** &#124; **aviso**} *código # # #***:***cadeia de caracteres localizável*  
   
- \[ *any text* \]  
+ [ *qualquer texto* ]  
   
- Where:  
+ Sendo que:  
   
--   {*a* &#124; *b*} é uma opção de *a* ou de *b*.  
+-   {*um* &#124; *b*} é uma opção do *um* ou *b*.  
   
--   \[\]`ccc`é uma cadeia de caracteres ou um parâmetro opcional.  
+-   [`ccc`] é um parâmetro ou uma cadeia de caracteres opcional.  
   
  Por exemplo:  
   
- C:\\*sourcefile.cpp*\(134\): erro C2143: erro de sintaxe: missing “; ” antes de “}”  
+ C:\\*sourcefile.cpp*(134): erro C2143: erro de sintaxe: faltando ';' antes '}'  
   
- LINK: erro fatal LNK1104: o não pode abrir arquivo '*somelib.lib*'  
+ LINK: erro fatal LNK1104: não é possível abrir o arquivo '*somelib.lib*'  
   
-## Consulte também  
- [Noções básicas de etapas e eventos de compilação personalizados](../ide/understanding-custom-build-steps-and-build-events.md)
+## <a name="see-also"></a>Consulte também  
+ [Noções básicas sobre etapas e eventos compilação personalizada](../ide/understanding-custom-build-steps-and-build-events.md)

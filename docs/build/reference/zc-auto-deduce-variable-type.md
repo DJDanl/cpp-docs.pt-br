@@ -1,58 +1,57 @@
 ---
-title: "/Zc:auto (deduzir tipo vari&#225;vel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Zc:auto"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opções de compilador /Zc (C++)"
-  - "Deduzir tipo de variável (C++)"
-  - "opções de compilador Zc (C++)"
-  - "opções de compilador -Zc (C++)"
+title: "-Zc: auto (deduzir tipo variável) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Zc:auto
+dev_langs: C++
+helpviewer_keywords:
+- -Zc compiler options (C++)
+- Deduce variable type (C++)
+- /Zc compiler options (C++)
+- Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd2f0ff353e1243685c94da0c28f29e810b2a9ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /Zc:auto (deduzir tipo vari&#225;vel)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A opção **\/Zc:auto\[\-\]** do compilador instrui o compilador sobre como usar a [palavra\-chave "auto"](../../cpp/auto-keyword.md) para declarar variáveis.  Se você especificar a opção padrão, **\/Zc:auto**, o compilador deduzirá o tipo de variável declarada com base em sua expressão de inicialização.  Se você especificar  **\/Zc:auto\-**, o compilador alocará a variável na classe de armazenamento automática.  
+# <a name="zcauto-deduce-variable-type"></a>/Zc:auto (deduzir tipo variável)
+O **/ZC: auto [-]** opção de compilador informa ao compilador como usar o [palavra-chave auto](../../cpp/auto-keyword.md) para declarar variáveis. Se você especificar a opção padrão, **/ZC: auto**, o compilador deduz o tipo da variável declarada de sua expressão de inicialização. Se você especificar **/Zc:auto-**, o compilador aloca a variável para a classe de armazenamento automático.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /Zc:auto[-]  
 ```  
   
-## Comentários  
- O padrão C\+\+ define um significado original e um significado revisado para a palavra\-chave `auto`.  Antes de [!INCLUDE[cpp_dev10_long](../Token/cpp_dev10_long_md.md)], a palavra\-chave declara uma variável na classe de armazenamento automática, ou seja, uma variável que tem tempo de vida local.  Começando com [!INCLUDE[cpp_dev10_long](../Token/cpp_dev10_long_md.md)], a palavra\-chave deduz o tipo de variável com base na expressão de inicialização da declaração. Use a opção **\/Zc:auto\[\-\]** do compilador para instruí\-lo a usar o significado original ou revisado da palavra\-chave `auto`.  
+## <a name="remarks"></a>Comentários  
+ O padrão C++ define um significado original e um significado revisado para a palavra-chave `auto`. Antes de [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], a palavra-chave declara uma variável na classe de armazenamento automático; ou seja, uma variável que tem um tempo de vida de local. Começando com [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], a palavra-chave deduz o tipo de uma variável da expressão de inicialização da declaração. Use o **/ZC: auto [-]** opção de compilador para informar ao compilador para usar o significado original ou revisado o `auto` palavra-chave.  
   
- O compilador emite uma mensagem de diagnóstico pertinente se o uso da palavra\-chave `auto` for contrário à opção atual do compilador.  Para obter mais informações, consulte [Palavra\-chave auto](../../cpp/auto-keyword.md).  Para obter mais informações sobre problemas de conformidade com o Visual C\+\+, consulte [Comportamento não padrão](../Topic/Nonstandard%20Behavior.md).  
+ O compilador emite uma mensagem de diagnóstico pertinente se o uso da palavra-chave `auto` for contrário à opção atual do compilador. Para obter mais informações, consulte [palavra-chave auto](../../cpp/auto-keyword.md). Para obter mais informações sobre problemas de conformidade com o Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).  
   
-### Para definir essa opção do compilador no Visual Studio  
+### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para definir essa opção do compilador no Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto.  Para obter detalhes, consulte [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique no nó **Propriedades de Configuração**.  
+2.  Clique o **propriedades de configuração** nó.  
   
-3.  Clique no nó **C\/C\+\+**.  
+3.  Clique o **C/C++** nó.  
   
-4.  Clique no nó **Linha de Comando**.  
+4.  Clique o **linha de comando** nó.  
   
-5.  Adicione **\/Zc:auto** ou **\/Zc:auto\-** ao painel **Opções Adicionais:**.  
+5.  Adicionar **/ZC: auto** ou **/Zc:auto-** para o **opções adicionais:** painel.  
   
-## Consulte também  
- [\/Zc \(conformidade\)](../../build/reference/zc-conformance.md)   
- [Palavra\-chave auto](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [/ZC (conformidade)](../../build/reference/zc-conformance.md)   
+ [Palavra-chave auto](../../cpp/auto-keyword.md)

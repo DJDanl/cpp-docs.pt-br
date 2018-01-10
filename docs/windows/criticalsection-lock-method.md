@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo CriticalSection::Lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Lock"
+title: "Método CriticalSection: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock
+dev_langs: C++
+helpviewer_keywords: Lock method
 ms.assetid: 37cb184c-e13c-49ef-b6a0-13908a956414
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: af996faeebd0fcddb85993badd71ceecd32d494e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo CriticalSection::Lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-As esperas para a propriedade da seção crítica especificada objeto.  A função retorna quando o thread de chamada é concedido a propriedade.  
+# <a name="criticalsectionlock-method"></a>Método CriticalSection::Lock
+Esperas de propriedade do objeto especificado de seção crítica. A função retorna quando o thread de chamada é concedido a propriedade.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 SyncLock Lock();  
@@ -37,20 +37,20 @@ SyncLock Lock();
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `cs`  
- Um objeto especificado pelo usuário da seção crítica.  
+ Um objeto de seção crítica especificado pelo usuário.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto de bloqueio que pode ser usado para desbloquear a seção crítica atual.  
   
-## Comentários  
- A primeira função de **Lock** afeta o objeto atual da seção crítica.  A segunda função de **Lock** afeta uma seção crítica especificada pelo usuário.  
+## <a name="remarks"></a>Comentários  
+ A primeira **bloqueio** function afeta o objeto atual da seção crítica. A segunda **bloqueio** function afeta uma seção crítica especificado pelo usuário.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Consulte também  
- [Classe CriticalSection](../Topic/CriticalSection%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CriticalSection](../windows/criticalsection-class.md)

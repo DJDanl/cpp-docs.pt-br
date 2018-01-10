@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ece6e335360c151271187ae75d45adafb1f57c15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Tipos de arquivo criados para projetos do Visual C++
 Este tópico descreve todos os tipos de arquivos que estão associados com projetos do Visual C++ para aplicativos de área de trabalho clássicos. Os arquivos reais incluídos em seu projeto dependem do tipo de projeto e as opções selecionadas ao usar um assistente.  

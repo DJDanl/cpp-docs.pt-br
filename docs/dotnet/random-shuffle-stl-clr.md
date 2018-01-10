@@ -1,33 +1,33 @@
 ---
-title: "random_shuffle (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::random_shuffle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função random_shuffle [STL/CLR]"
+title: random_shuffle (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::random_shuffle
+dev_langs: C++
+helpviewer_keywords: random_shuffle function [STL/CLR]
 ms.assetid: 0f9d93e2-f50f-40e6-bbe4-2ca3231a895e
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed0a6e63fa11a531f090e367e9ae8cd82242608b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# random_shuffle (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Reorganiza uma sequência de elementos de `N` em um intervalo em um de `N`\! as possíveis selecionada aleatoriamente.  
+# <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
+Reorganiza uma sequência de `N` elementos em um intervalo em um dos `N`! possíveis organizações selecionadas aleatoriamente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _RanIt> inline  
@@ -36,13 +36,13 @@ template<class _RanIt, class _Fn1> inline
     void random_shuffle(_RanIt _First, _RanIt _Last, _Fn1% _Func);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `random_shuffle`STL.  Para obter mais informações, consulte [random\_shuffle](../Topic/random_shuffle.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `random_shuffle`. Para obter mais informações, consulte [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

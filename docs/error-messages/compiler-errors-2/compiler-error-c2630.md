@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2630
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2630
+f1_keywords: C2630
+dev_langs: C++
+helpviewer_keywords: C2630
 ms.assetid: 7a655a9c-bab4-495b-97a3-a3f34cf5369a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a2e2f839992a6ff1a6e3389d53d3b58e750daaa6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5a983ed18961374d999ad0a19e22be9a5316ed4c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2630"></a>C2630 de erro do compilador
 'symbol' encontrado no qual deve ser uma lista separada por vírgulas  

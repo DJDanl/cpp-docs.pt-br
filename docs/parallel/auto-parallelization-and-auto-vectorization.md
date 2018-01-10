@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f84f891a12da90efbe68371d077e2d41b111ea0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Paralelização automática e vetorização automática
 Paralelizador automático e Vetorizador automático são projetados para fornecer ganhos de desempenho automático para loops em seu código.  
@@ -117,7 +118,7 @@ for (int i = 0; i < 1000; ++i)
   
 ## <a name="see-also"></a>Consulte também  
  [loop](../preprocessor/loop.md)   
- [Programação paralela em código nativo](http://go.microsoft.com/fwlink/?linkid=263662)   
+ [Programação paralela em código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [/Qpar (Paralelizador automático)](../build/reference/qpar-auto-parallelizer.md)   
  [/Qpar-Report (nível de Paralelizador automático relatórios)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [/Qvec-Report (nível de Vetorizador automático relatórios)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)   

@@ -1,32 +1,34 @@
 ---
-title: "Como recuperar a vers&#227;o do .NET Framework (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework, version"
-  - "propriedade Version, recuperando a versão do .NET Framework"
+title: "Como: recuperar a versão do .NET Framework (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .NET Framework, version
+- Version property, retrieving .NET Framework version
 ms.assetid: fc786fbc-c915-4b15-bcad-0d68cf2c44bd
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 343c3d9933006a5e2f938429138c595c5fb28b91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como recuperar a vers&#227;o do .NET Framework (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código a seguir demonstra como determinar a versão do .NET Framework instalado atualmente com a propriedade de <xref:System.Environment.Version%2A> , que é um ponteiro para um objeto de <xref:System.Version> que contém informações de versão.  
+# <a name="how-to-retrieve-the-net-framework-version-ccli"></a>Como recuperar a versão do .NET Framework (C++/CLI)
+O exemplo de código a seguir demonstra como determinar a versão do .NET Framework instalada atualmente com o <xref:System.Environment.Version%2A> propriedade, que é um ponteiro para um <xref:System.Version> objeto que contém as informações de versão.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // dotnet_ver.cpp  
@@ -49,6 +51,6 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Operações do Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Operações do Windows (C + + CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

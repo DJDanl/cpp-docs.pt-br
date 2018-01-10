@@ -63,11 +63,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b659ae9b1abfe98ba393e7252e79336b2bd3cfb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f774282823d68a3b5f2107b7297714ce8aa918f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Classe CMFCToolBarEditBoxButton
 Um botão de barra de ferramentas que contém um controle de edição ( [CEdit classe](../../mfc/reference/cedit-class.md)).  
@@ -80,7 +81,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -208,7 +209,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  Uma referência para o botão de origem da qual copiar.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para copiar outro botão da barra de ferramentas para este botão de barra de ferramentas. `src`deve ser do tipo `CMFCToolBarEditBoxButton`.  
+ Chame este método para copiar outro botão da barra de ferramentas para este botão de barra de ferramentas. `src` deve ser do tipo `CMFCToolBarEditBoxButton`.  
   
 ##  <a name="createedit"></a>CMFCToolBarEditBoxButton::CreateEdit  
  Cria um novo controle de edição no botão.  

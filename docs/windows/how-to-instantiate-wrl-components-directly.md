@@ -1,60 +1,62 @@
 ---
-title: "Como instanciar componentes WRL diretamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: 'Como: instanciar componentes WRL diretamente | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f2d307304c103b62ff5ba20e1af25797745bd035
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como instanciar componentes WRL diretamente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Saiba como usar [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) [Microsoft::WRL::Make](../windows/make-function.md) e funções de [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) para criar uma instância de um componente do módulo que define o.  
+# <a name="how-to-instantiate-wrl-components-directly"></a>Como instanciar componentes WRL diretamente
+Saiba como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++[Microsoft::WRL::Make](../windows/make-function.md) e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funções para criar uma instância de um componente do módulo que Define a ele.  
   
- Criando uma instância do componente diretamente, você pode reduzir a sobrecarga quando não precisar fábricas da classe ou outros mecanismos.  Você pode criar uma instância de um componente diretamente em ambos os aplicativos de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] e em aplicativos de área de trabalho.  
+ Instanciando componentes diretamente, você pode reduzir a sobrecarga quando você não precisa fábricas de classe ou outros mecanismos. Você pode instanciar um componente diretamente em ambos os aplicativos de plataforma Universal do Windows e em aplicativos de área de trabalho.  
   
- Para saber como usar [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] para criar um componente básico de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e para criar\-lo uma instância de um aplicativo externo de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] , consulte [Passo a passo: Criando um componente básico do Tempo de Execução do Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  Para saber como usar [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] para criar um componente COM clássico e para criar\-lo uma instância de um aplicativo externo de área de trabalho, consulte [Como criar um componente COM clássico](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
+ Para saber como usar a biblioteca de modelos C++ do Windows em tempo de execução para criar um componente básico do tempo de execução do Windows e uma instância de um aplicativo externo de plataforma Universal do Windows, consulte [passo a passo: Criando um componente de tempo de execução do Windows básico](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md). Para saber como usar a biblioteca de modelos C++ do Windows Runtime para criar um componente COM clássico e criar uma instância de um aplicativo externo de área de trabalho, consulte [como: criar um componente COM clássico](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
   
- Este documento mostra dois exemplos.  O primeiro exemplo usa a função de `Make` para criar uma instância de um componente.  O segundo exemplo usa a função de `MakeAndInitialize` para criar uma instância de um componente que pode falhar durante a compilação. \(Porque COM geralmente usa valores de `HRESULT` , em vez de exceções, para indicar erros, um tipo de COM normalmente não lança do construtor.  `MakeAndInitialize` permite que um componente para validar seus argumentos de compilação com o método de `RuntimeClassInitialize` .\) Os dois exemplos definem uma interface e implemente básicos de agente que têm interface definindo uma classe que mensagens de gravações no console.  
+ Este documento mostra dois exemplos. O primeiro exemplo usa o `Make` função para criar uma instância de um componente. O segundo exemplo usa o `MakeAndInitialize` função para criar uma instância de um componente que pode falhar durante a construção. (Como COM normalmente usa `HRESULT` valores, em vez de exceções para indicar erros, um tipo COM normalmente não lançar de seu construtor. `MakeAndInitialize`permite que um componente validar seus argumentos de construção por meio de `RuntimeClassInitialize` método.) Os dois exemplos definem uma interface de agente de log básica e implementam essa interface definindo uma classe que grava mensagens no console.  
   
 > [!IMPORTANT]
->  Você não pode usar o operador de `new` para criar uma instância componentes de [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] .  Consequentemente, recomendamos que você sempre use `Make` ou `MakeAndInitialize` para criar uma instância diretamente um componente.  
+>  Não é possível usar o `new` operador para instanciar os componentes da biblioteca de modelos C++ do Windows Runtime. Portanto, é recomendável que você sempre use `Make` ou `MakeAndInitialize` para criar uma instância de um componente diretamente.  
   
-### Para criar uma instância de um componente básico do registrador  
+### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Para criar e instanciar um componente básico do agente de log  
   
-1.  No Visual Studio, crie um projeto de **Aplicativo do Console Win32** .  O nome do projeto, por exemplo, `WRLLogger`.  
+1.  No Visual Studio, crie um **aplicativo do Console Win32** projeto. Nome do projeto, por exemplo, `WRLLogger`.  
   
-2.  Adicionar um arquivo de **Midl Arquivo \(.idl\)** ao projeto, nomeie o arquivo `ILogger.idl`, e adicione esse código:  
+2.  Adicionar um **arquivo Midl (. idl)** arquivo ao projeto, nomeie o arquivo `ILogger.idl`e, em seguida, adicione este código:  
   
-     [!CODE [wrl-logger-make#1](../CodeSnippet/VS_Snippets_Misc/wrl-logger-make#1)]  
+     [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
 3.  Use o código a seguir para substituir o conteúdo de WRLLogger.cpp.  
   
-     [!CODE [wrl-logger-make#2](../CodeSnippet/VS_Snippets_Misc/wrl-logger-make#2)]  
+     [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
-### Para controlar a falha de compilação para o componente básico do registrador  
+### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>Para lidar com falhas de construção para o componente do agente de log básica  
   
-1.  Use o código a seguir para substituir a definição da classe de `CConsoleWriter` .  Esta versão mantém uma variável de membro particular de cadeia de caracteres e substitui o método de `RuntimeClass::RuntimeClassInitialize` .  `RuntimeClassInitialize` falha se a chamada a `SHStrDup` falha.  
+1.  Use o código a seguir para substituir a definição do `CConsoleWriter` classe. Esta versão contém um membro privado de cadeia de caracteres variável e substituições de `RuntimeClass::RuntimeClassInitialize` método. `RuntimeClassInitialize`falha se a chamada para `SHStrDup` falhar.  
   
-     [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.cpp)]  
+     [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  Use o código a seguir para substituir a definição de `wmain`.  Esta versão `MakeAndInitialize` usa para criar uma instância do objeto de `CConsoleWriter` e verifica o resultado de `HRESULT` .  
+2.  Use o código a seguir para substituir a definição de `wmain`. Essa versão usa `MakeAndInitialize` para instanciar o `CConsoleWriter` objeto e verifica o `HRESULT` resultados.  
   
-     [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
+     [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   
-## Consulte também  
- [Biblioteca de Modelos C\+\+ do Tempo de Execução do Windows \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)   
- [Microsoft::WRL::Make](../windows/make-function.md)   
+## <a name="see-also"></a>Consulte também  
+ [Biblioteca de modelos C++ do Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
+ [Microsoft::WRL::make](../windows/make-function.md)   
  [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)

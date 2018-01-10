@@ -41,11 +41,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcc050c834d6c070b85e1f4494fd1888b3fc2ad6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="special-cwinapp-services"></a>Serviços CWinApp especiais
 Além de executar o loop de mensagem e fornecendo uma oportunidade para inicializar o aplicativo e limpar depois dele, [CWinApp](../mfc/reference/cwinapp-class.md) fornece vários outros serviços.  

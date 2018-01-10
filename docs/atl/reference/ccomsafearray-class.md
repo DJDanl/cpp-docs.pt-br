@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,36 +31,19 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 Essa classe é um wrapper para o **SAFEARRAY** estrutura.  
@@ -79,7 +61,7 @@ class CComSafeArray
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -93,7 +75,7 @@ class CComSafeArray
 |[CComSafeArray::Add](#add)|Adiciona um ou mais elementos, ou um **SAFEARRAY** estrutura para um `CComSafeArray`.|  
 |[CComSafeArray::Attach](#attach)|Anexa uma **SAFEARRAY** estrutura para um `CComSafeArray` objeto.|  
 |[CComSafeArray::CopyFrom](#copyfrom)|Copia o conteúdo de um **SAFEARRAY** estrutura no `CComSafeArray` objeto.|  
-|[CComSafeArray::CopyTo](#copyto)|Cria uma cópia do `CComSafeArray` objeto.|  
+|[CComSafeArray::CopyTo](#copyto)|Cria uma cópia do objeto `CComSafeArray`.|  
 |[CComSafeArray::Create](#create)|Cria um objeto `CComSafeArray`.|  
 |[CComSafeArray::Destroy](#destroy)|Destrói um objeto `CComSafeArray`.|  
 |[CComSafeArray::Detach](#detach)|Desanexa um **SAFEARRAY** de um `CComSafeArray` objeto.|  
@@ -158,7 +140,7 @@ class CComSafeArray
  **Cabeçalho:** atlsafe.h  
   
 ## <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Utilities #75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  Adiciona um ou mais elementos, ou um **SAFEARRAY** estrutura para um `CComSafeArray`.  
@@ -276,7 +258,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
  Esse método copia o conteúdo de um **SAFEARRAY** em atual `CComSafeArray` objeto. O conteúdo existente da matriz é substituído.  
   
 ##  <a name="copyto"></a>CComSafeArray::CopyTo  
- Cria uma cópia do `CComSafeArray` objeto.  
+ Cria uma cópia do objeto `CComSafeArray`.  
   
 ```
 HRESULT CopyTo(LPSAFEARRAY* ppArray);
@@ -305,7 +287,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
  Um ponteiro para um **SAFEARRAYBOUND** objeto.  
   
  `uDims`  
- O número de dimensões da matriz.  
+ O número de dimensões na matriz.  
   
  `ulCount`  
  O número de elementos na matriz.  
@@ -610,4 +592,3 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  [CComSafeArray::Create](#create)   
  [CComSafeArray::Destroy](#destroy)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

@@ -1,31 +1,32 @@
 ---
-title: "Como converter | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversão unboxing"
+title: 'Como: converter | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94e9403d7def0603fc8be56ce1bd0d67db8911b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como converter
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mostra como unbox e modificar um valor.  
+# <a name="how-to-unbox"></a>Como converter
+Mostra como converter e modificar um valor.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // vcmcppv2_unboxing.cpp  
@@ -43,8 +44,11 @@ int main() {
 }  
 ```  
   
-  **13**  
-**14**  
-**14**   
-## Consulte também  
- [Boxing](../windows/boxing-cpp-component-extensions.md)
+```Output  
+13  
+14  
+14  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Conversão boxing](../windows/boxing-cpp-component-extensions.md)

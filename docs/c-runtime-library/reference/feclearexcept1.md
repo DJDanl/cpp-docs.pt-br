@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- feclearexcept
+apiname: feclearexcept
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,34 +26,19 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
-helpviewer_keywords:
-- feclearexcept function
+dev_langs: C++
+helpviewer_keywords: feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5ccfb294bcc92f38b7e5e5f912f85de554a72296
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 327c2b70a1c5afd26953f830217d0a9c05e4d4e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feclearexcept"></a>feclearexcept
 Tenta limpar os sinalizadores de exceção de ponto flutuante especificados pelo argumento.  
@@ -94,8 +78,8 @@ int feclearexcept(
 |--------------|--------------|------------------|  
 |`feclearexcept`|\<fenv.h>|\<cfenv>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [fetestexcept](../../c-runtime-library/reference/fetestexcept1.md)

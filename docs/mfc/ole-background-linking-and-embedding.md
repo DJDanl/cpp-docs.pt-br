@@ -1,0 +1,45 @@
+---
+title: 'Plano de fundo OLE: Vinculando e inserindo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE embedded items [MFC]
+- item types [MFC], defined
+- item types [MFC]
+- OLE [MFC], linked items
+- linked items (OLE) [MFC]
+- embedded objects [MFC]
+- OLE items [MFC], types
+ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d9b7de075b3c32d130639c60c7fcc389ae37da54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
+---
+# <a name="ole-background-linking-and-embedding"></a>tela de fundo OLE: vinculando e inserindo
+Usando o comando Colar em um aplicativo de contêiner pode criar um componente incorporado ou item inserido. Os dados de origem para um item inserido são armazenados como parte do documento OLE que o contém. Dessa forma, um arquivo de documento para um documento do processador de texto pode conter texto e também pode conter bitmaps, gráficos, fórmulas ou qualquer outro tipo de dados.  
+  
+ OLE oferece uma maneira para incorporar dados de outro aplicativo: Criando um componente vinculado, ou o item vinculado ou um link. As etapas para criar um item vinculado são semelhantes aos usados para criar um item inserido, exceto pelo fato de você usar o comando Colar vínculo em vez do comando Colar. Ao contrário de um componente incorporado, um componente vinculado armazena um caminho para os dados originais, que é geralmente em um arquivo separado.  
+  
+ Por exemplo, se você estiver trabalhando em uma palavra documento de processador e cria um item vinculado a algumas células da planilha, os dados para o item vinculado são armazenados no documento original da planilha. O documento de processador de texto contém apenas as informações que especificam onde o item pode ser encontrado, ou seja, ele contém um link para o documento de planilha original. Quando você clicar duas vezes as células, o aplicativo de planilha é iniciado e o documento de planilha original será carregado a partir de onde ele foi armazenado.  
+  
+ Cada item OLE, se incorporado ou vinculado, tem um tipo associado com base no aplicativo que o criou. Por exemplo, um item de Microsoft Paintbrush é um tipo de item e um item do Microsoft Excel é outro tipo. No entanto, alguns aplicativos, podem criar mais de um tipo de item. Por exemplo, o Microsoft Excel pode criar itens de planilha, itens do gráfico e itens de folha de macro. Cada um desses itens pode ser identificada exclusivamente pelo sistema usando um identificador de classe ou **CLSID**.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Plano de fundo OLE](../mfc/ole-background.md)   
+ [Plano de fundo OLE: Contêineres e servidores](../mfc/ole-background-containers-and-servers.md)   
+ [Contêineres: Itens clientes](../mfc/containers-client-items.md)   
+ [Servidores: itens de servidor](../mfc/servers-server-items.md)
+

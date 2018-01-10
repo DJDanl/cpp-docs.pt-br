@@ -1,29 +1,29 @@
 ---
-title: "A.20   Binding of barrier Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Associação de A.20 das diretivas de barreira | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a3fdcc26-6873-429b-998e-de451401483b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b8cc2799f0aea9e75b3aad44d3cfa9e3f5e7de4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# A.20   Binding of barrier Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Regras de ligação diretriz chamada para um  **barreira** diretiva para vincular a colocar mais próximo `parallel` diretiva.  Para obter mais informações sobre vinculação de diretiva, consulte  [seção 2.8](../../parallel/openmp/2-8-directive-binding.md) na página 32.  
+# <a name="a20---binding-of-barrier-directives"></a>A.20  Vinculação de diretivas barrier
+A associação de diretiva regras chamada para um **barreira** diretiva para ligar para o mais próximo de circunscrição `parallel` diretiva. Para obter mais informações sobre associação de diretiva, consulte [seção 2.8](../../parallel/openmp/2-8-directive-binding.md) na página 32.  
   
- No exemplo a seguir, a chamada de  *principal* para  *sub2* é compatível com porque o  **barreira** \(em  *sub3*\) é vinculado à região paralela em  *sub2*.  A chamada de  *principal* para  *sub1* é compatível com porque o  **barreira** vincula\-se à região paralela na sub\-rotina  *sub2*.  A chamada de  *principal* para  *sub3* é compatível com porque o  **barreira** não se vincula a qualquer região paralela e será ignorado.  Observe também que o  **barreira** sincroniza somente a equipe de threads na região paralela delimitador e nem todos os threads criados na  *sub1*.  
+ No exemplo a seguir, a chamada de *principal* para *sub2* é compatível porque o **barreira** (em *sub3*) vincula a região parallel em *sub2*. A chamada de *principal* para *sub1* é compatível porque o **barreira** associa a região parallel na sub-rotina *sub2*.  A chamada de *principal* para *sub3* é compatível porque o **barreira** não associar a qualquer região paralela e será ignorado. Observe também que o **barreira** sincroniza apenas a equipe de threads na região parallel delimitador e não todos os threads criados no *sub1*.  
   
 ```  
 int main()  

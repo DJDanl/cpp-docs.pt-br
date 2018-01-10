@@ -1,47 +1,29 @@
 ---
-title: num_threads | Documentos do Microsoft
+title: num_threads | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- num_threads
-dev_langs:
-- C++
-helpviewer_keywords:
-- num_threads OpenMP clause
+f1_keywords: num_threads
+dev_langs: C++
+helpviewer_keywords: num_threads OpenMP clause
 ms.assetid: 09a56fc8-25c7-43e4-bbb5-71cb955d0b93
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ae50d220bc6727d32ff813984ff05a490e548322
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7289a843c33fbc9ba23d6006997dea8e09ba7c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numthreads"></a>num_threads
-Define o número de threads em uma equipe de thread.  
+Define o número de segmentos em uma equipe de thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +42,7 @@ num_threads(num)
   
  `num_threads`aplica-se para as seguintes diretivas:  
   
--   [paralelo](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   

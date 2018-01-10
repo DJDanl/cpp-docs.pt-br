@@ -13,11 +13,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a37b20af7ee9ef43c64fc0df24b47a380000eb6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de Modelos C++ do Windows Runtime  (WRL)
 A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblioteca de modelo que fornece uma maneira de baixo nível para criar e usar componentes de tempo de execução do Windows.  
@@ -142,5 +145,5 @@ A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblio
 |[Modelo de projeto de biblioteca de classe](../windows/wrl-class-library-project-template.md)|Descreve como acessar o modelo de projeto de biblioteca de classes WRL. Este modelo o ajuda a simplificar a tarefa de usar o Visual Studio para criar componentes de tempo de execução do Windows.|  
 |[APIs de chave por categoria](../windows/key-wrl-apis-by-category.md)|Realça principal biblioteca de modelos C++ do Windows Runtime tipos, funções e macros.|  
 |[Referência](../windows/wrl-reference.md)|Contém informações de referência para a biblioteca de modelos do Windows em tempo de execução C++.|  
-|[Referência rápida (tempo de execução do Windows e do Visual C++)](http://go.microsoft.com/fwlink/?LinkId=229180)|Descreve brevemente C + + recursos CX que oferecem suporte à execução do Windows.|  
-|[Usando componentes de tempo de execução do Windows em Visual C++](http://go.microsoft.com/fwlink/?LinkId=229155)|Mostra como usar C + c++ /CX para criar um componente básico do tempo de execução do Windows.|
+|[Referência rápida (tempo de execução do Windows e do Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Descreve brevemente C + + recursos CX que oferecem suporte à execução do Windows.|  
+|[Usando componentes de tempo de execução do Windows em Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Mostra como usar C + c++ /CX para criar um componente básico do tempo de execução do Windows.|

@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f42c738983cb0d2017614279a35ab79ae677fb1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-extension-dlls"></a>DLLs de extensão do MFC
 Uma extensão do MFC DLL é uma DLL que implementa normalmente reutilizáveis classes derivadas de classes existentes de biblioteca Microsoft Foundation Class.  

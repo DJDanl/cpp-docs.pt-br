@@ -322,11 +322,12 @@ caps.latest.revision: "48"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1cf7e830f2c003135ceda9b63b244f9858b14d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 O `CMFCToolBar` é semelhante a classe [classe CToolBar](../../mfc/reference/ctoolbar-class.md), mas fornece suporte adicional para recursos de interface do usuário. Isso inclui simples barras de ferramentas, barras de ferramentas com imagens hot, ícones grandes, os botões de pager, bloqueadas barras de ferramentas, controles rebar, texto em imagens, imagens de plano de fundo e com guias barras de ferramentas. O `CMFCToolBar` classe também contém suporte interno para personalização de usuário das barras de ferramentas e menus, arrastar e soltar entre barras de ferramentas e menus, botões da caixa de combinação, editar caixa botões, selecionadores e botões de acumulação.
@@ -341,7 +342,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

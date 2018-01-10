@@ -1,3 +1,1 @@
----
----
-SDK do Windows
+Windows SDK

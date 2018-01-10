@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f243b18b2666c21a6d83eabe35ecd6ad9df5905c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-using-adonet-ccli"></a>Acesso a dados usando ADO.NET (C++/CLI)
 ADO.NET é a API do .NET Framework para acesso a dados e fornece o poder e a facilidade de uso sem correspondência por soluções de acesso de dados anterior. Esta seção descreve alguns dos problemas que envolvem ADO.NET que são exclusivos para usuários do Visual C++, como empacotamento tipos nativos.  

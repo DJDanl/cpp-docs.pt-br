@@ -1,53 +1,35 @@
 ---
-title: "Compilador aviso (nível 1) C4691 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4691 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4691
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4691
+f1_keywords: C4691
+dev_langs: C++
+helpviewer_keywords: C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 36508be81f315fa8f2058a542144cd8162c573e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 17673ee3e65d2e0cd0d989c56759b62de38f5fdc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4691"></a>Compilador C4691 de aviso (nível 1)
-'type': tipo referenciado era esperado no assembly não referenciado 'arquivo', tipo definido na unidade de tradução atual usada  
+'type': tipo referenciado era esperado no assembly não referenciado 'file', tipo definido na unidade de tradução atual usada  
   
- O arquivo de metadados que contém a definição do tipo original não é referenciado, e o compilador está usando uma definição de tipo local.  
+ O arquivo de metadados que contém a definição do tipo original não é referenciado e, em seguida, o compilador é usando uma definição de tipo local.  
   
- No caso em que você está recriando *arquivo*, podem ser ignorados ou desativado com pragma C4691 [aviso](../../preprocessor/warning.md).  Ou seja, se o arquivo que você está criando é o mesmo que o arquivo onde o compilador espera encontrar a definição de tipo, você pode ignorar C4691.  
+ No caso em que você estiver recriando *arquivo*, pode ser ignorado ou desativado com pragma C4691 [aviso](../../preprocessor/warning.md).  Ou seja, se o arquivo que você está criando é o mesmo que o arquivo onde o compilador espera encontrar a definição de tipo, você pode ignorar C4691.  
   
- No entanto, pode ocorrer um comportamento inesperado se o compilador usa uma definição que não seja do mesmo assembly referenciado em metadados. Tipos CLR são digitados não apenas pelo nome do tipo, mas também pelo assembly.  Ou seja, um tipo Z do assembly z.dll é diferente de um tipo Z do assembly y.dll.  
+ No entanto, pode ocorrer um comportamento inesperado se o compilador usa uma definição que não seja do mesmo assembly que é referenciado nos metadados; Tipos CLR são digitados não apenas pelo nome do tipo, mas também pelo assembly.  Ou seja, um tipo Z do assembly z.dll é diferente de um tipo Z do assembly y.dll.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo contém a definição do tipo original.  
@@ -72,7 +54,7 @@ public:
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4691.  Observe que este exemplo contém uma definição para Original_Type e não faz referência a C4691a.dll.  
+ O exemplo a seguir gera C4691.  Observe que esse exemplo contém uma definição para Original_Type e não faz referência a C4691a.dll.  
   
  Para resolver, fazer referência ao arquivo de metadados que contém a definição do tipo original e remova a declaração de local e a definição.  
   

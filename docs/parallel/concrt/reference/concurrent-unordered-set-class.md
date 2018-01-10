@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cdf70daec8e357f6da456cab5fe71760b7734fe3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfbdcac3bd4d16b96b2ce961b102dfa8c2deea6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedset-class"></a>Classe concurrent_unordered_set
 O `concurrent_unordered_set` classe é um contêiner de simultaneidade-safe que controla uma sequência de comprimento variável de elementos do tipo K. A sequência é representada de forma que permite a simultaneidade safe acrescentar, acesso de elemento, acesso de iterador e operações de passagem de iterador.  
@@ -289,7 +290,7 @@ std::pair<const_iterator,
   
 ### <a name="parameters"></a>Parâmetros  
  `KVal`  
- O valor da chave para pesquisar.  
+ O valor chave a ser pesquisado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [par](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) em que o primeiro elemento é um iterador para o início e o segundo elemento é um iterador até o final do intervalo.  
@@ -309,7 +310,7 @@ const_iterator find(const key_type& KVal) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `KVal`  
- O valor da chave para pesquisar.  
+ O valor chave a ser pesquisado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador que aponta para o local do primeiro elemento que corresponde a chave fornecida ou o iterador `end()` se esse elemento não existe.  

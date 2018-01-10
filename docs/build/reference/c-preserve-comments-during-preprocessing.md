@@ -1,48 +1,48 @@
 ---
-title: "/C (preservar coment&#225;rios durante o pr&#233;-processamento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.KeepComments"
-  - "/c"
-  - "VC.Project.VCCLWCECompilerTool.KeepComments"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /c (C++)"
-  - "Opção de compilador c [C++]"
-  - "Opção de compilador -c [C++]"
-  - "comentários, sem remoção durante o pré-processamento"
-  - "preservar comentários durante o pré-processamento"
+title: "-C (preservar comentários durante o pré-processamento) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.KeepComments
+- /c
+- VC.Project.VCCLWCECompilerTool.KeepComments
+dev_langs: C++
+helpviewer_keywords:
+- comments, not stripping during preprocessing
+- preserve comments during preprocessing
+- -c compiler option [C++]
+- c compiler option [C++]
+- /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d27e6ed0f6a2ff6e6f63bc1b87522fb598953c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /C (preservar coment&#225;rios durante o pr&#233;-processamento)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Preserva comentários durante o pré\-processamento.  
+# <a name="c-preserve-comments-during-preprocessing"></a>/C (preservar comentários durante o pré-processamento)
+Preserva comentários durante o pré-processamento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /C  
 ```  
   
-## Comentários  
- Essa opção requer **\/E**do compilador, **\/P**, ou a opção de **\/EP** .  
+## <a name="remarks"></a>Comentários  
+ Essa opção de compilador requer o **/E**, **/p**, ou **/EP** opção.  
   
- O exemplo de código a seguir exibirá o comentário do código\-fonte.  
+ O exemplo de código a seguir exibirá o comentário do código fonte.  
   
 ```  
 // C_compiler_option.cpp  
@@ -50,30 +50,30 @@ Preserva comentários durante o pré\-processamento.
 int i;   // a variable  
 ```  
   
- Este exemplo gerará a seguinte saída.  
+ Este exemplo produzirá a saída a seguir.  
   
 ```  
 #line 1 "C_compiler_option.cpp"  
 int i;   // a variable  
 ```  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Pré\-Processador** .  
+3.  Clique o **pré-processador** página de propriedades.  
   
-4.  Modifique a propriedade de **Mantenha Comentários** .  
+4.  Modificar o **manter comentários** propriedade.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)   
- [\/E \(pré\-processar em stdout\)](../../build/reference/e-preprocess-to-stdout.md)   
- [\/P \(pré\-processar em um arquivo\)](../../build/reference/p-preprocess-to-a-file.md)   
- [\/EP \(pré\-processar para stdout sem diretivas \#line\)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
+ [/E (pré-processar em stdout)](../../build/reference/e-preprocess-to-stdout.md)   
+ [/P (pré-processar em um arquivo)](../../build/reference/p-preprocess-to-a-file.md)   
+ [/EP (pré-processar para stdout sem diretivas de #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

@@ -56,11 +56,12 @@ caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30ad4a6d1ca47e8e1daa9d9d25f49bf91d50d169
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 984cb8fb3c034d19f4d171f756f2336773187976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 Formata e imprime no console. Versões mais seguras estão disponíveis; consulte [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).  

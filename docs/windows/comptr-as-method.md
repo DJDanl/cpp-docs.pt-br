@@ -1,31 +1,31 @@
 ---
-title: "M&#233;todo ComPtr::As | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::As"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método As"
+title: "Método Comptr: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::As
+dev_langs: C++
+helpviewer_keywords: As method
 ms.assetid: 2ad6c262-9bdb-4c59-a330-1af8bcd445cc
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7edf8ebb089b3e39135edb14931197c984c6946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo ComPtr::As
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Retorna um objeto ComPtr que representa a interface identificada pelo parâmetro do modelo especificado.  
+# <a name="comptras-method"></a>Método ComPtr::As
+Retorna um objeto ComPtr que representa a interface identificada pelo parâmetro de modelo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,16 +49,16 @@ HRESULT As(
   
 #### <a name="parameters"></a>Parâmetros  
  `U`  
- A interface a ser representada pelo parâmetro `p`.  
+ A interface para ser representado pelo parâmetro `p`.  
   
  `p`  
- Um objeto ComPtr que representa a interface especificada pelo parâmetro `U`. Parâmetro `p` não deve fazer referência ao objeto ComPtr atual.  
+ Um objeto ComPtr que representa a interface especificada pelo parâmetro `U`. Parâmetro `p` não devem se referir ao objeto ComPtr atual.  
   
 ## <a name="remarks"></a>Comentários  
- O primeiro modelo é a forma que você deve usar em seu código. O segundo modelo é uma especialização de auxiliar interno, que oferece suporte a recursos da linguagem C++, como o [automático](../cpp/auto-cpp.md) palavra-chave de dedução de tipo.  
+ O primeiro modelo é o formulário que você deve usar em seu código. O segundo é uma especialização de auxiliar interno, que dá suporte a recursos de linguagem do C++, como o [automática](../cpp/auto-cpp.md) palavra-chave de dedução de tipo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se for bem-sucedida; Caso contrário, um HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

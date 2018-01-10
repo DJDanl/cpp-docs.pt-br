@@ -1,63 +1,48 @@
 ---
-title: C2483 de erro do compilador | Documentos do Microsoft
+title: C2483 de erro do compilador | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2483
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2483
+f1_keywords: C2483
+dev_langs: C++
+helpviewer_keywords: C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 391be3c032bc48a20304befec1fb61cbe14e7f60
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5f7f9f30724c02d44e054bf16ff1460370c30e06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2483"></a>C2483 de erro do compilador
-'identifier': objeto de construtor ou destruidor não pode ser declarado 'thread'  
-  
- Variáveis declaradas com o `thread` atributo não pode ser inicializado com um construtor ou outra expressão que requer avaliação do tempo de execução. Uma expressão estática é necessário para inicializar `thread` dados.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2483.  
-  
-```  
-// C2483.cpp  
-// compile with: /c  
-__declspec(thread) struct A {  
-   A(){}  
-   ~A(){}  
+
+>'*identificador*': o objeto com o construtor ou destruidor não pode ser declarado 'thread'
+
+Essa mensagem de erro é obsoleta no Visual Studio 2015 e versões posteriores. Nas versões anteriores, as variáveis declaradas com o `thread` atributo não pode ser inicializado com um construtor ou outra expressão que requer avaliação do tempo de execução. Uma expressão estática é necessário para inicializar `thread` dados.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2483 no Visual Studio 2013 e versões anteriores.
+
+```cpp
+// C2483.cpp
+// compile with: /c
+__declspec(thread) struct A {
+   A(){}
+   ~A(){}
 } aa;   // C2483 error  
-  
-__declspec(thread) struct B {} b;   // OK  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [thread](../../cpp/thread.md)
+
+__declspec(thread) struct B {} b;   // OK
+```
+
+## <a name="see-also"></a>Consulte também
+
+[thread](../../cpp/thread.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1489fa4ec75b94c9daad7216a28599c6ef67e5a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ebcd6e484385ada3cd3d5ccfe450e7e25f539eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-mdi-child-windows"></a>Gerenciando janelas filhos MDI
 Janelas de quadro principal MDI (uma por aplicativo) contêm uma janela filho especial chamada de **MDICLIENT** janela. O **MDICLIENT** janela gerencia a área cliente da janela do quadro principal, e tem janelas filho: as janelas de documentos, derivadas de `CMDIChildWnd`. Como as janelas de documentos são janelas com moldura próprios (windows de filho MDI), eles também podem ter seus próprios filhos. Em todos esses casos, a janela pai gerencia suas janelas filho e encaminha alguns comandos para eles.  

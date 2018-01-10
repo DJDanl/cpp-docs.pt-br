@@ -1,87 +1,87 @@
 ---
-title: "Menu Imagem (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Menu Imagem"
+title: "Imagem do Menu (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.bitmap
+dev_langs: C++
+helpviewer_keywords: Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 8
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Menu Imagem (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Menu imagem, que aparece somente quando o editor de imagens estiver ativo, possui comandos para edição de imagens, gerenciamento de paletas de cores e definindo opções da janela do Editor de imagens.  Além disso, os comandos para o uso de imagens do dispositivo estão disponíveis ao trabalhar com ícones e cursores.  
+# <a name="image-menu-image-editor-for-icons"></a>Menu Imagem (editor de imagens para ícones)
+Menu imagem, que aparece apenas quando o editor de imagens está ativo, tem comandos para edição de imagens, gerenciar paletas de cores e definir opções de janela de Editor de imagem. Além disso, os comandos para o uso de imagens de dispositivo estão disponíveis ao trabalhar com ícones e cursores.  
   
  **Inverter cores**  
- Inverte as cores.  Para obter mais informações, consulte  [invertendo as cores em uma seleção de](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
+ Inverte as cores. Para obter mais informações, consulte [invertendo as cores em uma seleção](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
   
- **Inverter horizontalmente**  
- Inverte horizontalmente a imagem ou seleção.  Para obter mais informações, consulte  [como Virar uma imagem](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Inverter Horizontalmente**  
+ Inverte a imagem ou seleção horizontalmente. Para obter mais informações, consulte [invertendo uma imagem](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Virar verticalmente**  
- Inverte verticalmente a imagem ou seleção.  Para obter mais informações, consulte  [como Virar uma imagem](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Inverter Verticalmente**  
+ Inverte a imagem ou seleção verticalmente. Para obter mais informações, consulte [invertendo uma imagem](../windows/flipping-an-image-image-editor-for-icons.md).  
   
  **Girar 90 graus**  
- Gira a imagem ou seleção 90 graus.  Para obter mais informações, consulte  [como Virar uma imagem](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ A imagem ou seleção gira 90 graus. Para obter mais informações, consulte [invertendo uma imagem](../windows/flipping-an-image-image-editor-for-icons.md).  
   
  **Mostrar janela de cores**  
- Abre o  [janela de cores](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md), no qual você pode escolher as cores a usar para sua imagem.  Para obter mais informações, consulte  [trabalhar com cores](../mfc/working-with-color-image-editor-for-icons.md).  
+ Abre o [janela cores](../windows/colors-window-image-editor-for-icons.md), no qual você pode escolher as cores a serem usados para a imagem. Para obter mais informações, consulte [trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md).  
   
- **Usar seleção como pincel**  
- Permite que você criar um pincel personalizado a partir de uma parte de uma imagem.  Sua seleção torna\-se um pincel personalizado que distribui as cores na seleção entre a imagem.  Cópias da seleção são deixadas ao longo do caminho de arrastar.  Quanto mais lentamente você arrastar, quanto mais cópias são feitas.  Para obter mais informações, consulte  [criar um pincel personalizado](../Topic/Creating%20a%20Custom%20Brush%20\(Image%20Editor%20for%20Icons\).md).  
+ **Usar seleção como Pincel**  
+ Permite que você crie um pincel personalizado de uma parte de uma imagem. Sua seleção se torna um pincel personalizado que distribui as cores na seleção através da imagem. Cópias da seleção deixadas ao longo do caminho de arrastar. Mais lenta você arrastar, mais cópias são feitas. Para obter mais informações, consulte [criando um pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- **Copiar e delinear seleção**  
- Cria uma cópia da seleção atual e destaca a ele.  Se a cor de plano de fundo está contida na seleção atual, ele será excluído se você tiver  [transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) selecionada.  
+ **Copiar e seleção de estrutura de tópicos**  
+ Cria uma cópia da seleção atual e descreve a ele. Se a cor de plano de fundo estiver contida na seleção atual, ele será excluído se você tiver [transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) selecionado.  
   
  **Ajustar as cores**  
- Abre o  [Seletor de cores personalizado](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), que lhe permite personalizar as cores que você pode usar para sua imagem.  Para obter mais informações, consulte  [Personalizando ou alterando cores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ Abre o [seletor de cores personalizadas](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), que permite que você personalize as cores que você pode usar para a imagem. Para obter mais informações, consulte [personalizando ou alterando cores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Carregar paleta**  
- Abre o  [caixa de diálogo Carregar paleta de cores](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), que permite que você carregue a paleta de cores salvas anteriormente para um arquivo. PAL.  
+ **Paleta de carga**  
+ Abre o [caixa de diálogo carregar a paleta de cores](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), que permite que você carregue as cores da paleta salvas anteriormente para um arquivo. PAL.  
   
- **Salvar paleta**  
+ **Salvar a paleta**  
  Salva a paleta de cores para um arquivo. PAL.  
   
  **Desenho opaco**  
- Quando selecionada, torna a seleção atual opaca.  Quando desmarcada, torna transparente a seleção atual.  Para obter mais informações, consulte  [Escolhendo um opaco ou transparente do plano de fundo](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+ Quando selecionado, faz a seleção atual opaca. Quando desmarcada, faz a seleção atual transparente. Para obter mais informações, consulte [escolhendo um opaco ou plano de fundo transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- **Editor de Barra de Ferramentas**  
- Abre o  [caixa de diálogo novo recurso da barra de ferramentas](../mfc/new-toolbar-resource-dialog-box.md).  
+ **Editor de barra de ferramentas**  
+ Abre o [caixa de diálogo novo recurso da barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md).  
   
  **Configurações da grade**  
- Abre o  [caixa de diálogo Configurações de grade](../mfc/grid-settings-dialog-box-image-editor-for-icons.md) na qual você pode especificar grades para sua imagem.  
+ Abre o [caixa de diálogo Configurações de grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md) no qual você pode especificar grades para sua imagem.  
   
  **Novo tipo de imagem**  
- Abre o  [nova \<Device\> Caixa de diálogo tipo de imagem](../mfc/new-device-image-type-dialog-box-image-editor-for-icons.md).  Um recurso único ícone pode conter várias imagens de tamanhos diferentes; Windows pode usar o tamanho do ícone apropriado dependendo de como será a ser exibido.  Um novo tipo de dispositivo não modifica o tamanho do ícone, mas em vez disso, cria uma nova imagem dentro do ícone.  Só se aplica a ícones e cursores.  
+ Abre o [novo \<dispositivo > caixa de diálogo de tipo de imagem](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Um recurso único ícone pode conter várias imagens de tamanhos diferentes; Windows pode usar o tamanho de ícone apropriado dependendo de como ela será a ser exibido. Um novo tipo de dispositivo não modifica o tamanho do ícone, mas em vez disso, cria uma nova imagem dentro do ícone. Aplica-se somente a ícones e cursores.  
   
- **Tipo de imagem do ícone\/Cursor atual**  
- Abre um submenu que lista primeira cursor ou ícone imagens disponíveis \(as nove primeira\).  O último comando no submenu,  **mais...**, abre o  [Abrir \<Device\> Caixa de diálogo Image](../Topic/Open%20%3CDevice%3E%20Image%20Dialog%20Box%20\(Image%20Editor%20for%20Icons\).md).  
+ **Tipo de imagem de ícone/Cursor atual**  
+ Abre um submenu que lista os primeiro ícone ou cursor imagens disponíveis (as nove primeiro). O último comando no submenu, **mais...** , abre o [abrir \<dispositivo > caixa de diálogo imagem](../windows/open-device-image-dialog-box-image-editor-for-icons.md).  
   
  **Excluir tipo de imagem**  
- Exclui a imagem de dispositivo selecionado.  
+ Exclui a imagem do dispositivo selecionado.  
   
  **Ferramentas**  
- Inicia um submenu que contém todas as ferramentas disponíveis para o  [barra de ferramentas do Editor de imagens](../mfc/toolbar-image-editor-for-icons.md).  
+ Inicia um submenu que contém todas as ferramentas disponíveis para o [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
-## Consulte também  
- [Teclas de aceleração](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
+

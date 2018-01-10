@@ -1,44 +1,46 @@
 ---
-title: "Associando comandos de menu ao texto da barra de status em aplicativos MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barras de status, associando itens de menu"
-  - "menus, texto da barra de status"
+title: Associando comandos de Menu com o texto da barra de Status em aplicativos MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- status bars, associating menu items
+- menus, status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea0f68bbd0c426aee8141c27d6852bfaaa6ed523
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Associando comandos de menu ao texto da barra de status em aplicativos MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O aplicativo pode exibir texto descritivo para cada um dos comandos de menu, que um usuário pode selecionar. Você pode fazer isso atribuindo uma cadeia de caracteres de texto para cada comando de menu usando o **Prompt** propriedade na janela Propriedades. Se você tiver uma cadeia de caracteres no [tabela de cadeia de caracteres](../mfc/string-editor.md) cuja ID é o mesmo que o comando, um aplicativo MFC automaticamente exibirá esse recurso de cadeia de caracteres na barra de status do aplicativo em execução quando o usuário focalizar um item de menu.  
+# <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Associando comandos de menu ao texto da barra de status em aplicativos MFC
+O aplicativo pode exibir o texto descritivo para cada um dos comandos de menu que um usuário pode selecionar. Você pode fazer isso atribuindo uma cadeia de caracteres de texto para cada comando de menu usando o **Prompt** propriedade na janela Propriedades. Se você tiver uma cadeia de caracteres no [tabela de cadeia de caracteres](../windows/string-editor.md) cuja ID é o mesmo que o comando, um aplicativo MFC automaticamente exibirá esse recurso de cadeia de caracteres na barra de status do aplicativo em execução quando o usuário focalizar um item de menu.  
   
-### Para associar um comando de menu com um cadeia de caracteres de texto da barra de status  
+### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Para associar um comando de menu com uma barra de cadeia de caracteres de texto de status  
   
 1.  No **Menu** editor, selecione o comando de menu.  
   
-2.  No [janela propriedades](../Topic/Properties%20Window.md), digite o texto da barra de status associado no **Prompt** caixa.  
+2.  No [janela propriedades](/visualstudio/ide/reference/properties-window), digite o texto da barra de status associado no **Prompt** caixa.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
  **Requisitos**  
   
  MFC  
   
-## Consulte também  
- [Cadeias de caracteres](../atl-mfc-shared/strings-atl-mfc.md)   
- [Adicionando comandos a um menu](../Topic/Adding%20Commands%20to%20a%20Menu.md)   
- [Editor de menu](../Topic/Menu%20Editor.md)
+## <a name="see-also"></a>Consulte também  
+ [Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [Adicionando comandos a um Menu](../windows/adding-commands-to-a-menu.md)   
+ [Editor de Menu](../windows/menu-editor.md)

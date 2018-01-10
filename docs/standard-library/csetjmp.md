@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 755303943805f380be4ec03f4793192d5113a210
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1670392659a61b0e9a5dc193500bf9af4741f5fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcsetjmpgt"></a>&lt;csetjmp&gt;
 Inclui o cabeçalho \<setjmp.h> da biblioteca C Padrão e adiciona os nomes associados ao namespace `std`.  

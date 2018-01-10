@@ -1,54 +1,56 @@
 ---
-title: "Reflex&#227;o (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], reflexão"
-  - "tipos de dados [C++], reflexão"
-  - "Método GetType"
-  - "metadados, reflexão"
-  - "reflexão [C++]"
-  - "reflexão [C++], sobre reflexão"
-  - "palavra-chave typeid [C++]"
+title: "Reflexão (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- typeid keyword [C++]
+- reflection [C++}, about reflection
+- metadata, reflection
+- GetType method
+- .NET Framework [C++], reflection
+- data types [C++], reflection
+- reflection [C++}
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Reflex&#227;o (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A reflexão permite que os tipos de dados conhecidos sejam inspecionados em tempo de execução.  A reflexão permite a enumeração dos tipos de dados em um determinado assembly, e os membros de uma classe ou de um tipo de dado valor podem ser descobertos.  Isso é verdadeiro quer o tipo esteve chamado ou referenciado em tempo de compilação.  Isso torna a reflexão um recurso útil para ferramentas de gerenciamento de desenvolvimento e code.  
+# <a name="reflection-ccli"></a>Reflexão (C++/CLI)
+Reflexão permite que os tipos de dados conhecidos a ser inspecionado em tempo de execução. Reflexão permite a enumeração dos tipos de dados em um determinado assembly e os membros de um determinado tipo de classe ou o valor podem ser descobertos. Isso é verdadeiro independentemente do tipo era conhecido ou referenciado em tempo de compilação. Isso torna a reflexão um recurso útil para desenvolvimento e ferramentas de gerenciamento de código.  
   
- Observe que o nome do assembly fornecido é o nome forte \(consulte [Assemblies de nome forte](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md)\), que inclui a versão do assembly, cultura, e assinando informações.  Observe também que o nome do namespace no qual o tipo de dados é definido pode ser recuperado, junto com o nome da classe base.  
+ Observe que o nome do assembly fornecido é o nome forte (consulte [Creating and Using Strong-Named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), que inclui a versão do assembly, cultura e informações de assinatura. Observe também que o nome do namespace no qual o tipo de dados é definido pode ser recuperado, junto com o nome da classe base.  
   
- O modo mais comum de acessar recursos de reflexão é com o método de <xref:System.Object.GetType%2A> .  Esse método é fornecido por [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), que todas as classes com coletadas derivam.  
+ A maneira mais comum para acessar recursos de reflexão é por meio de <xref:System.Object.GetType%2A> método. Este método é fornecido por [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), da qual derivam todas as classes de coleta de lixo.  
   
- A reflexão em um arquivo criado com o compilador do Visual C\+\+ é permitida se o arquivo é criado com as opções do compilador de **\/clr:pure** ou de **\/clr:safe** .  Consulte [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md) para maiores informações.  
+ Reflexão em um .exe criados com o compilador do Visual C++ só será permitido se o .exe é criado com o **/clr: pure** ou **/CLR: safe** opções do compilador. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015. Consulte [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) para obter mais informações.  
   
  Tópicos desta seção:  
   
--   [Como implementar uma arquitetura de componente de plug\-in usando a reflexão](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
+-   [Como implementar uma arquitetura de componente de plug-in usando a reflexão (C++/CLI)](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
   
--   [Como enumerar tipos de dados em assemblies usando reflexão](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
+-   [Como enumerar tipos de dados em assemblies usando reflexão (C++/CLI)](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
   
- Para obter mais informações, consulte [Namespace de System.Reflection](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)  
+ Para obter mais informações, consulte [Namespace System. Reflection](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)  
   
-## Exemplo  
- O método de `GetType` retorna um ponteiro para um objeto da classe de <xref:System.Type> , que descreve o tipo na quando o objeto é baseado. \(O objeto de **Tipo** não contém nenhuma informação de instância específica.\) Um um item é o nome de tipo completo, que pode ser exibido como segue:  
+## <a name="example"></a>Exemplo  
+ O `GetType` método retorna um ponteiro para um <xref:System.Type> objeto de classe, que descreve o tipo após quando o objeto é baseado. (O **tipo** objeto não contém todas as informações específicas da instância.) Um desses itens é o nome completo do tipo, que pode ser exibido da seguinte maneira:  
   
- Observe que o nome do tipo inclui o escopo completo no qual o tipo é definido, incluindo o namespace, e que é exibido na sintaxe do .NET, com um ponto como o operador de resolução de escopo.  
+ Observe que o nome do tipo inclui o escopo completo no qual o tipo é definido, incluindo o namespace, e que ele é exibido na sintaxe do .NET, com um ponto como o operador de resolução do escopo.  
   
 ```  
 // vcpp_reflection.cpp  
@@ -60,9 +62,12 @@ int main() {
 }  
 ```  
   
-  **o nome completo do tipo “da cadeia de caracteres de exemplo” é “System.String”**   
-## Exemplo  
- Os tipos de valores podem ser usados com a função de `GetType` além disso, mas devem ser boxed primeiro.  
+```Output  
+full type name of 'sample string' is 'System.String'  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Tipos de valor podem ser usados com o `GetType` funcionarão bem, mas deve ser boxed primeiro.  
   
 ```  
 // vcpp_reflection_2.cpp  
@@ -75,11 +80,14 @@ int main() {
 }  
 ```  
   
-  **tipo de i \= “System.Int32”**   
-## Exemplo  
- Como com o método de `GetType` , o operador de [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) retorna um ponteiro para um objeto de **Tipo** , portanto esse código indica o nome **System.Int32**do tipo.  Exibir nomes de tipo é o recurso o mais básico de reflexão, mas uma técnica é potencialmente mais útil inspecionar ou descobrir os valores válidos para tipos enumerados.  Isso pode ser feito usando a função estática de **Enum::GetNames** , que retorna uma matriz de cadeias de caracteres, cada uma contendo um valor de enumeração no formulário de texto.  O exemplo a seguir recupera uma matriz de cadeias de caracteres que descreve os valores de enumeração do valor para o enum de **Opções** \(CLR\) e os exibe em um loop.  
+```Output  
+type of i = 'System.Int32'  
+```  
   
- Se uma quarta opção é adicionada à enumeração de **Opções** , esse código relatará o novo padrão sem recompilação, mesmo se a enumeração é definida em um assembly separado.  
+## <a name="example"></a>Exemplo  
+ Assim como acontece com o `GetType` método, o [typeid](../windows/typeid-cpp-component-extensions.md) operador retorna um ponteiro para um **tipo** do objeto, para que esse código indica o nome do tipo **System. Int32**. Exibindo nomes de tipo é o recurso mais básico de reflexão, mas é uma técnica útil potencialmente mais inspecionar ou descobrir os valores válidos para tipos enumerados. Isso pode ser feito usando estático **Enum::GetNames** de função, que retorna uma matriz de cadeias de caracteres, cada uma contendo um valor de enumeração em formato de texto.  O exemplo a seguir recupera uma matriz de cadeias de caracteres que descreve os valores de enumeração do valor para o **opções** enum (CLR) e os exibe em um loop.  
+  
+ Se uma quarta opção é adicionada a **opções** enumeração, esse código relatará a nova opção sem recompilação, mesmo se a enumeração é definida em um assembly separado.  
   
 ```  
 // vcpp_reflection_3.cpp  
@@ -104,13 +112,16 @@ int main() {
 }  
 ```  
   
-  **há 3 opções opções no enum “**  
-**0: Opção**  
-**1: Option2**  
-**2: Option3**  
-**o valor de “o” é Option2**   
-## Exemplo  
- O objeto de `GetType` oferece suporte a vários membros e propriedades que podem ser usados para examinar um tipo.  Este código a seguir recupera e exibe algumas dessas informações:  
+```Output  
+there are 3 options in enum 'Options'  
+0: Option1  
+1: Option2  
+2: Option3  
+value of 'o' is Option2  
+```  
+  
+## <a name="example"></a>Exemplo  
+ O `GetType` objeto oferece suporte a um número de membros e propriedades que podem ser usadas para examinar um tipo. Este código recupera e exibe algumas dessas informações:  
   
 ```  
 // vcpp_reflection_4.cpp  
@@ -137,15 +148,18 @@ int main() {
 }  
 ```  
   
-  **informações de tipo para a “cadeia de caracteres”:**  
-**nome do assembly: mscorlib, Version\=1.0.5000.0, Culture\=neutral,**   
-**PublicKeyToken\=b77a5c561934e089**  
-**namespace: O sistema**  
-**tipo de base: System.Object**  
-**é a matriz: False**  
-**é a classe: True**   
-## Exemplo  
- A reflexão também permite a enumeração dos tipos em um assembly e de membros dentro das classes.  Para demonstrar esse recurso, defina uma classe simples:  
+```Output  
+type information for 'String':  
+assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral,   
+PublicKeyToken=b77a5c561934e089  
+namespace: System  
+base type: System.Object  
+is array: False  
+is class: True  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Reflexão também permite a enumeração de tipos em um assembly e os membros de classes. Para demonstrar esse recurso, defina uma classe simple:  
   
 ```  
 // vcpp_reflection_5.cpp  
@@ -165,14 +179,14 @@ public:
 };  
 ```  
   
-## Exemplo  
- Se o código anterior é compilado em uma DLL chamado vcpp\_reflection\_6.dll, você pode usar a reflexão para inspecionar o conteúdo desse assembly.  Isso envolve o uso da função de API estático [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) de reflexão para carregar o assembly.  Esta função retorna o endereço de um objeto de **Assembly** que pode ser consultado sobre os módulos e os tipos em.  
+## <a name="example"></a>Exemplo  
+ Se o código acima é compilado em uma DLL chamada vcpp_reflection_6.dll, você pode usar reflexão para inspecionar o conteúdo deste assembly. Isso envolve o uso de função de API de reflexão estático [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) para carregar o assembly. Essa função retorna o endereço de um **Assembly** objeto que pode ser consultado, em seguida, sobre os módulos e tipos em.  
   
- Uma vez que o sistema de reflexão carrega com êxito o assembly, uma matriz de objetos de **Tipo** é recuperada com a função de [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) .  Cada elemento da matriz contém informações sobre um tipo diferente, embora nesse caso, somente uma classe é definida.  Usando um loop, cada **Tipo** nesta matriz é consultado sobre os membros do tipo que usam a função de **Type::GetMembers** .  Esta função retorna uma matriz de objetos de **MethodInfo** , cada objeto que contém informações sobre a função de membro, membro de dados, ou propriedade no tipo.  
+ Depois que o sistema de reflexão carrega com êxito o assembly, uma matriz de **tipo** objetos é recuperado com o [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) função. Cada elemento da matriz contém informações sobre um tipo diferente, embora nesse caso, somente uma classe é definida. Usando um loop, cada **tipo** nesta matriz é consultado sobre os membros de tipo usando o **Type::GetMembers** função. Essa função retorna uma matriz de **MethodInfo** objetos, cada objeto que contém informações sobre a função de membro, o membro de dados ou a propriedade no tipo.  
   
- Observe que a lista de métodos inclui as funções definidas explicitamente em **TestClass** e as funções herdadas implicitamente da classe de **System::Object** .  Como parte da descrição em .NET em vez de na sintaxe do Visual C\+\+, as propriedades aparecem como o membro de dados subjacentes acessado por funções obter\/cluster.  As funções obter\/conjunto aparecem nessa lista como métodos normais.  A reflexão tem suporte com Common Language Runtime, não pelo compilador do Visual C\+\+.  
+ Observe que a lista de métodos inclui as funções explicitamente definidas em **TestClass** e as funções implicitamente herdado da **System::Object** classe. Como parte do sendo descrita no .NET, em vez de na sintaxe do Visual C++, as propriedades aparecem como membro de dados subjacente, acessado pelas funções de get/set. As funções get/set aparecem nessa lista como métodos regulares. Reflexão tem suporte o common language runtime, não pelo compilador do Visual C++.  
   
- Embora você use este código para inspecionar um assembly que você defina, você também pode usar esse código para inspecionar os assemblies do .NET.  Por exemplo, se você alterar TestAssembly ao mscorlib, você verá uma listagem de cada tipo e método definidos em mscorlib.dll.  
+ Embora esse código é usado para inspecionar um assembly que você definiu, você também pode usar este código para inspecionar os assemblies do .NET. Por exemplo, se você alterar TestAssembly para mscorlib, você verá uma lista de cada tipo e método definido em mscorlib.dll.  
   
 ```  
 // vcpp_reflection_6.cpp  
@@ -221,5 +235,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>Classe enable_if
 Condicionalmente cria uma instância de um tipo para resolução de sobrecarga SFINAE. O typedef `enable_if<Condition,Type>::type` aninhado existe - e é um sinônimo de `Type` - se, e apenas se `Condition` for `true`.  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- Em C++, a falha de substituição de parâmetros de modelo não é um erro em si – isso é chamado de *SFINAE* (Falha de substituição não é um erro). Em geral, `enable_if` é usado para remover candidatos da resolução de sobrecarga (ou seja, seleciona o conjunto de sobrecarga) de modo que uma definição possa ser rejeitada a favor de outra. Isso está de acordo com o comportamento SFINAE. Para obter informações sobre SFINAE, consulte [Falha de substituição não é um erro](http://go.microsoft.com/fwlink/LinkId=394798) na Wikipédia.  
+ Em C++, a falha de substituição de parâmetros de modelo não é um erro em si – isso é chamado de *SFINAE* (Falha de substituição não é um erro). Em geral, `enable_if` é usado para remover candidatos da resolução de sobrecarga (ou seja, seleciona o conjunto de sobrecarga) de modo que uma definição possa ser rejeitada a favor de outra. Isso está de acordo com o comportamento SFINAE. Para obter informações sobre SFINAE, consulte [Falha de substituição não é um erro](http://go.microsoft.com/fwlink/p/?linkid=394798) na Wikipédia.  
   
  Seguem quatro cenários de exemplo:  
   

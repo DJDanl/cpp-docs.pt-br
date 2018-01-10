@@ -1,51 +1,33 @@
 ---
-title: "Compilador aviso (nível 3) C4018 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4018 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4018
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4018
+f1_keywords: C4018
+dev_langs: C++
+helpviewer_keywords: C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d34475e0be7ef98d7b31d41aeccaed193da7672b
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 84a8efdd90a4f93e1eda779ca0e23e339099181e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4018"></a>Compilador C4018 de aviso (nível 3)
-'expression': incompatibilidade assinada/não  
+'expression': incompatibilidade assinada/não assinada  
   
  Comparando um número assinado e necessário ao compilador para converter o valor assinado em não assinado.  
   
- Esse aviso pode ser corrigido se você converter um dos dois tipos, ao testar tipos assinados e não assinados.  
+ Esse aviso pode ser corrigido, se você converter um dos dois tipos ao testar tipos assinados e não assinados.  
   
  O exemplo a seguir gera C4018:  
   

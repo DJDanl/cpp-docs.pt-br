@@ -1,47 +1,29 @@
 ---
-title: para (OpenMP) | Documentos do Microsoft
+title: para (OpenMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- for
-dev_langs:
-- C++
-helpviewer_keywords:
-- for OpenMP directive
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 59b424cc0efb429ed6d01fb46a469594b2737dbe
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97c32bd93ca208d76fbcb418c6e851e3c50f49ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Faz com que o trabalho feito um loop for dentro de uma região paralela seja dividido entre threads.  
+Faz com que o trabalho feito um loop dentro de uma região parallel podem ser divididas entre threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,10 +36,10 @@ Faz com que o trabalho feito um loop for dentro de uma região paralela seja div
  onde,  
   
  `clause` (opcional)  
- Zero ou mais cláusulas. Consulte a seção de comentários para obter uma lista das cláusulas de suporte **para**.  
+ Zero ou mais cláusulas. Consulte a seção comentários para obter uma lista das cláusulas de suporte **para**.  
   
  `for_statement`  
- Um loop for. Um comportamento indefinido ocorrerá se o código do usuário no loop alterações a variável de índice.  
+ Um loop for. Um comportamento indefinido ocorrerá se o código de usuário na alterações de loop a variável de índice.  
   
 ## <a name="remarks"></a>Comentários  
  O **para** diretiva suporta as seguintes cláusulas OpenMP:  
@@ -68,17 +50,17 @@ Faz com que o trabalho feito um loop for dentro de uma região paralela seja div
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [ordenado](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [redução](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [agenda](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
  Se **paralela** também for especificado, `clause` pode ser qualquer cláusula aceitos pela **paralela** ou **para** diretivas, exceto **nowait**.  
   
- Para obter mais informações, consulte [2.4.1 constructo for](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Para obter mais informações, consulte [2.4.1 para construção de](../../../parallel/openmp/2-4-1-for-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   

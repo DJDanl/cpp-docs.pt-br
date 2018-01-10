@@ -1,33 +1,33 @@
 ---
-title: "Fun&#231;&#227;o Make | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Make"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função Make"
+title: "Função make | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Make
+dev_langs: C++
+helpviewer_keywords: Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aac2a50e3c50941d607dea32c9f7c9eecde8e589
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Fun&#231;&#227;o Make
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inicializa a classe especificada de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] .  Use esta função para criar uma instância de um componente que é definido no módulo.  
+# <a name="make-function"></a>Função Make
+Inicializa a classe de tempo de execução do Windows especificada. Use esta função para criar uma instância de um componente que é definido no mesmo módulo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <  
@@ -171,74 +171,74 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- Uma classe especificada pelo usuário que herde de `WRL::RuntimeClass`.  
+ Uma classe especificada pelo usuário que herda de `WRL::RuntimeClass`.  
   
  `TArg1`  
- Tipo de argumento 1 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 1 que é passado para a classe de tempo de execução especificado.  
   
  `TArg2`  
- Tipo de argumento 2 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 2 que é passado para a classe de tempo de execução especificado.  
   
  `TArg3`  
- Tipo de argumento 3 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 3 que é passado para a classe de tempo de execução especificado.  
   
  `TArg4`  
- Tipo de argumento 4 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 4 que é passado para a classe de tempo de execução especificado.  
   
  `TArg5`  
- Tipo de argumento 5 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 5 é passado para a classe de tempo de execução especificado.  
   
  `TArg6`  
- Tipo de argumento 6 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 6 que é passado para a classe de tempo de execução especificado.  
   
  `TArg7`  
- Tipo de argumento 7 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 7 que é passado para a classe de tempo de execução especificado.  
   
  `TArg8`  
- Tipo de argumento 8 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 8 que é passado para a classe de tempo de execução especificado.  
   
  `TArg9`  
- Tipo de argumento 9 que é passado para a classe especificada de tempo de execução.  
+ Tipo de argumento 9 que é passado para a classe de tempo de execução especificado.  
   
  `arg1`  
- Argumento 1 que é passado para a classe especificada de tempo de execução.  
+ Argumento 1 que é passado para a classe de tempo de execução especificado.  
   
  `arg2`  
- Argumento 2 que é passado para a classe especificada de tempo de execução.  
+ Argumento 2 que é passado para a classe de tempo de execução especificado.  
   
  `arg3`  
- Argumento 3 que é passado para a classe especificada de tempo de execução.  
+ Argumento 3 que é passado para a classe de tempo de execução especificado.  
   
  `arg4`  
- Argumento 4 que é passado para a classe especificada de tempo de execução.  
+ Argumento de 4 que é passado para a classe de tempo de execução especificado.  
   
  `arg5`  
- Argumento 5 que é passado para a classe especificada de tempo de execução.  
+ Argumento 5 que é passado para a classe de tempo de execução especificado.  
   
  `arg6`  
- Argumento 6 que é passado para a classe especificada de tempo de execução.  
+ Argumento 6 que é passado para a classe de tempo de execução especificado.  
   
  `arg7`  
- Argumento 7 que é passado para a classe especificada de tempo de execução.  
+ Argumento 7 que é passado para a classe de tempo de execução especificado.  
   
  `arg8`  
- Argumento 8 que é passado para a classe especificada de tempo de execução.  
+ Argumento 8 que é passado para a classe de tempo de execução especificado.  
   
  `arg9`  
- Argumento 9 que é passado para a classe especificada de tempo de execução.  
+ Argumento 9 que é passado para a classe de tempo de execução especificado.  
   
-## Valor de retorno  
- Um objeto de `ComPtr<T>` se bem\-sucedido; caso contrário, `nullptr`.  
+## <a name="return-value"></a>Valor de retorno  
+ Um `ComPtr<T>` objeto se for bem-sucedida; caso contrário, `nullptr`.  
   
-## Comentários  
- Consulte [Como instanciar componentes WRL diretamente](../windows/how-to-instantiate-wrl-components-directly.md) para conhecer as diferenças entre esses função e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md), e para obter um exemplo.  
+## <a name="remarks"></a>Comentários  
+ Consulte [como: instanciar componentes WRL diretamente](../windows/how-to-instantiate-wrl-components-directly.md) para conhecer as diferenças entre esta função e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)e para obter um exemplo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

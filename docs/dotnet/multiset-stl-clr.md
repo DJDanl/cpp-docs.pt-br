@@ -1,37 +1,38 @@
 ---
-title: "multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho &lt;cliext/set&gt; [STL/CLR]"
-  - "Cabeçalho &lt;set&gt; [STL/CLR]"
-  - "classe multiset [STL/CLR]"
+title: multiconjunto (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/set> header [STL/CLR]
+- <set> header [STL/CLR]
+- multiset class [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe do modelo descreve um objeto que controla uma sequência de variar\- comprimento de elementos que tenha acesso bidirecional.  Você usa o contêiner `multiset` para gerenciar uma sequência de elementos como \(quase\) equilibrou a árvore ordenada de nós, cada um elemento armazenando.  
+# <a name="multiset-stlclr"></a>multiset (STL/CLR)
+A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso bidirecional. Você usa o contêiner `multiset` para gerenciar uma sequência de elementos como uma árvore equilibrada (quase) ordenada de nós, cada armazenamento de um elemento.  
   
- Na descrição abaixo, `GValue` é o mesmo que `GKey`, que é por sua vez o mesmo que `Key` a menos que o último é um tipo de referência, nesse caso é `Key^`.  
+ Na descrição abaixo, `GValue` é o mesmo que `GKey`, que é o mesmo que por sua vez `Key` , a menos que o último é um tipo de referência, caso em que é `Key^`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Key>  
@@ -47,113 +48,113 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Chave  
- O tipo de componente principal de um elemento na sequência controlada.  
+ O tipo do componente principal de um elemento na sequência controlada.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-|Definição de tipo|Descrição|  
-|-----------------------|---------------|  
-|[multiset::const\_iterator](../dotnet/multiset-const-iterator-stl-clr.md)|O tipo de um iterador de constante para a sequência controlada.|  
-|[multiset::const\_reference](../dotnet/multiset-const-reference-stl-clr.md)|O tipo de uma referência constante para um elemento.|  
-|[multiset::const\_reverse\_iterator](../dotnet/multiset-const-reverse-iterator-stl-clr.md)|O tipo de um iterador invertido constante para a sequência controlada.|  
-|[multiset::difference\_type](../dotnet/multiset-difference-type-stl-clr.md)|O tipo de distância de possivelmente \(assinado\) entre dois elementos.|  
-|[multiset::generic\_container](../dotnet/multiset-generic-container-stl-clr.md)|O tipo de interface genérica para o contêiner.|  
-|[multiset::generic\_iterator](../Topic/multiset::generic_iterator%20\(STL-CLR\).md)|O tipo de um iterador para a interface genérica para o contêiner.|  
-|[multiset::generic\_reverse\_iterator](../Topic/multiset::generic_reverse_iterator%20\(STL-CLR\).md)|O tipo de um iterador de cima para baixo para a interface genérica para o contêiner.|  
-|[multiset::generic\_value](../dotnet/multiset-generic-value-stl-clr.md)|O tipo de um elemento para a interface genérica para o contêiner.|  
-|[multiset::iterator](../dotnet/multiset-iterator-stl-clr.md)|O tipo de um iterador para a sequência controlada.|  
-|[multiset::key\_compare](../dotnet/multiset-key-compare-stl-clr.md)|O delegado de ordenação para duas chaves.|  
-|[multiset::key\_type](../dotnet/multiset-key-type-stl-clr.md)|O tipo de uma chave classificação.|  
-|[multiset::reference](../dotnet/multiset-reference-stl-clr.md)|O tipo de uma referência para um elemento.|  
-|[multiset::reverse\_iterator](../dotnet/multiset-reverse-iterator-stl-clr.md)|O tipo de um iterador de cima para baixo para a sequência controlada.|  
-|[multiset::size\_type](../dotnet/multiset-size-type-stl-clr.md)|O tipo de distância \(não negativo\) de entre dois elementos.|  
-|[multiset::value\_compare](../Topic/multiset::value_compare%20\(STL-CLR\).md)|O delegado de ordenação para dois valores do elemento.|  
-|[multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)|O tipo de um elemento.|  
+|Definição do tipo|Descrição|  
+|---------------------|-----------------|  
+|[multiset::const_iterator (STL/CLR)](../dotnet/multiset-const-iterator-stl-clr.md)|O tipo de um iterador de constante para a sequência controlada.|  
+|[multiset::const_reference (STL/CLR)](../dotnet/multiset-const-reference-stl-clr.md)|O tipo de uma referência de constante para um elemento.|  
+|[multiset::const_reverse_iterator (STL/CLR)](../dotnet/multiset-const-reverse-iterator-stl-clr.md)|O tipo de um iterador reverso de constante para a sequência controlada.|  
+|[multiset::difference_type (STL/CLR)](../dotnet/multiset-difference-type-stl-clr.md)|O tipo de uma distância (possivelmente assinado) entre dois elementos.|  
+|[multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)|O tipo da interface genérica para o contêiner.|  
+|[multiset::generic_iterator (STL/CLR)](../dotnet/multiset-generic-iterator-stl-clr.md)|O tipo de um iterador para a interface genérica para o contêiner.|  
+|[multiset::generic_reverse_iterator (STL/CLR)](../dotnet/multiset-generic-reverse-iterator-stl-clr.md)|O tipo de um iterador inverso para a interface genérica para o contêiner.|  
+|[multiset::generic_value (STL/CLR)](../dotnet/multiset-generic-value-stl-clr.md)|O tipo de um elemento para a interface genérica para o contêiner.|  
+|[multiset::iterator (STL/CLR)](../dotnet/multiset-iterator-stl-clr.md)|O tipo de um iterador para a sequência controlada.|  
+|[multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)|O representante de ordenação para duas chaves.|  
+|[multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)|O tipo de uma chave de classificação.|  
+|[multiset::reference (STL/CLR)](../dotnet/multiset-reference-stl-clr.md)|O tipo de uma referência para um elemento.|  
+|[multiset::reverse_iterator (STL/CLR)](../dotnet/multiset-reverse-iterator-stl-clr.md)|O tipo de um iterador inverso para a sequência controlada.|  
+|[multiset::size_type (STL/CLR)](../dotnet/multiset-size-type-stl-clr.md)|O tipo de uma distância (negativo) entre dois elementos.|  
+|[multiset::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)|O representante de ordenação para dois valores de elemento.|  
+|[multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)|O tipo de um elemento.|  
   
-|Função de membro|Descrição|  
-|----------------------|---------------|  
-|[multiset::begin](../dotnet/multiset-begin-stl-clr.md)|Designa o início da sequência controlada.|  
-|[multiset::clear](../dotnet/multiset-clear-stl-clr.md)|Remove todos os elementos.|  
-|[multiset::count](../dotnet/multiset-count-stl-clr.md)|Conta os elementos que correspondem a uma chave especificada.|  
-|[multiset::empty](../dotnet/multiset-empty-stl-clr.md)|Testa se nenhum elemento estiver presente.|  
-|[multiset::end](../dotnet/multiset-end-stl-clr.md)|Designa o término da sequência controlada.|  
-|[multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)|Encontra variam que corresponde a uma chave especificada.|  
-|[multiset::erase](../dotnet/multiset-erase-stl-clr.md)|Remove os elementos nas posições especificadas.|  
-|[multiset::find](../Topic/multiset::find%20\(STL-CLR\).md)|Localiza um elemento que corresponde a uma chave especificada.|  
-|[multiset::insert](../Topic/multiset::insert%20\(STL-CLR\).md)|Adiciona os elementos.|  
-|[multiset::key\_comp](../Topic/multiset::key_comp%20\(STL-CLR\).md)|Copia o representante de ordenação para duas chaves.|  
-|[multiset::lower\_bound](../Topic/multiset::lower_bound%20\(STL-CLR\).md)|Localiza o início do intervalo que corresponde a uma chave especificada.|  
-|[multiset::make\_value](../Topic/multiset::make_value%20\(STL-CLR\).md)|Cria um objeto de valor.|  
-|[multiset::multiset](../dotnet/multiset-multiset-stl-clr.md)|Cria um objeto contêiner.|  
-|[multiset::rbegin](../dotnet/multiset-rbegin-stl-clr.md)|Designa o início da sequência controlada invertida.|  
-|[multiset::rend](../Topic/multiset::rend%20\(STL-CLR\).md)|Designa o término da sequência controlada invertida.|  
-|[multiset::size](../dotnet/multiset-size-stl-clr.md)|Conta o número de elementos.|  
-|[multiset::swap](../dotnet/multiset-swap-stl-clr.md)|Alterna o conteúdo de dois contêineres.|  
-|[multiset::to\_array](../dotnet/multiset-to-array-stl-clr.md)|Copia a sequência controlada a uma nova matriz.|  
-|[multiset::upper\_bound](../dotnet/multiset-upper-bound-stl-clr.md)|Localiza de extremidade do intervalo que corresponde a uma chave especificada.|  
-|[multiset::value\_comp](../dotnet/multiset-value-comp-stl-clr.md)|Copia o representante de ordenação para dois valores do elemento.|  
+|Função membro|Descrição|  
+|---------------------|-----------------|  
+|[multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)|Designa o início da sequência controlada.|  
+|[multiset::clear (STL/CLR)](../dotnet/multiset-clear-stl-clr.md)|Remove todos os elementos.|  
+|[multiset::count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)|Contagens de elementos de correspondência de uma chave especificada.|  
+|[multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)|Testa se nenhum elemento está presente.|  
+|[multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)|Designa o fim da sequência controlada.|  
+|[multiset::equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)|Localiza o intervalo que corresponde a uma chave especificada.|  
+|[multiset::erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)|Remove os elementos em posições especificadas.|  
+|[multiset::find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)|Localiza um elemento que corresponde a uma chave especificada.|  
+|[multiset::insert (STL/CLR)](../dotnet/multiset-insert-stl-clr.md)|Adiciona elementos.|  
+|[multiset::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)|Copia o delegado de ordenação de duas chaves.|  
+|[multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)|Localiza o início do intervalo que corresponde a uma chave especificada.|  
+|[multiset::make_value (STL/CLR)](../dotnet/multiset-make-value-stl-clr.md)|Constrói um objeto de valor.|  
+|[multiset::multiset (STL/CLR)](../dotnet/multiset-multiset-stl-clr.md)|Constrói um objeto contêiner.|  
+|[multiset::rbegin (STL/CLR)](../dotnet/multiset-rbegin-stl-clr.md)|Designa o início da sequência controlada invertida.|  
+|[multiset::rend (STL/CLR)](../dotnet/multiset-rend-stl-clr.md)|Designa o fim da sequência controlada invertida.|  
+|[multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)|Conta o número de elementos.|  
+|[multiset::swap (STL/CLR)](../dotnet/multiset-swap-stl-clr.md)|Alterna o conteúdo de dois contêineres.|  
+|[multiset::to_array (STL/CLR)](../dotnet/multiset-to-array-stl-clr.md)|Copia uma nova matriz sequência controlada.|  
+|[multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)|Localiza o final do intervalo que corresponde a uma chave especificada.|  
+|[multiset::value_comp (STL/CLR)](../dotnet/multiset-value-comp-stl-clr.md)|Copia o delegado de ordenação de dois valores de elemento.|  
   
 |Operador|Descrição|  
-|--------------|---------------|  
-|[multiset::operator\=](../dotnet/multiset-operator-assign-stl-clr.md)|Substitui a sequência controlada.|  
-|[operador\!\= \(multiset\)](../dotnet/operator-inequality-multiset-stl-clr.md)|Determina se um objeto de `multiset` não é igual a outro objeto de `multiset` .|  
-|[operador\< \(multiset\)](../dotnet/operator-less-than-multiset-stl-clr.md)|Determina se um objeto de `multiset` é menor que outro objeto de `multiset` .|  
-|[operador\<\= \(multiset\)](../Topic/operator%3C=%20\(multiset\)%20\(STL-CLR\).md)|Determina se um objeto de `multiset` é menor ou igual a outro objeto de `multiset` .|  
-|[operador\=\= \(multiset\)](../Topic/operator==%20\(multiset\)%20\(STL-CLR\).md)|Determina se um objeto de `multiset` é igual a outro objeto de `multiset` .|  
-|[operador\> \(multiset\)](../dotnet/operator-greater-than-multiset-stl-clr.md)|Determina se um objeto de `multiset` é maior que outro objeto de `multiset` .|  
-|[operador\>\= \(multiset\)](../Topic/operator%3E=%20\(multiset\)%20\(STL-CLR\).md)|Determina se um objeto de `multiset` é maior ou igual a outro objeto de `multiset` .|  
+|--------------|-----------------|  
+|[multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)|Substitui a sequência controlada.|  
+|[operator!= (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)|Determina se um `multiset` objeto não é igual a outro `multiset` objeto.|  
+|[operator< (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)|Determina se um `multiset` objeto é menor que outro `multiset` objeto.|  
+|[operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)|Determina se um `multiset` objeto é menor ou igual a outro `multiset` objeto.|  
+|[operator== (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)|Determina se um `multiset` objeto é igual a outro `multiset` objeto.|  
+|[operator> (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)|Determina se um `multiset` objeto é maior que outro `multiset` objeto.|  
+|[operator>= (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)|Determina se um `multiset` objeto é maior que ou igual a outro `multiset` objeto.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interface|Descrição|  
-|---------------|---------------|  
-|<xref:System.ICloneable>|Duplica um objeto.|  
-|<xref:System.Collections.IEnumerable>|Sequência por meio dos elementos.|  
-|<xref:System.Collections.ICollection>|Mantenha o grupo de elementos.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Sequência por meio dos elementos digitados.|  
-|<xref:System.Collections.Generic.ICollection%601>|Mantenha o grupo de elementos de tipo.|  
-|ITreeKey\<, valor\>|Mantenha o contêiner genérico.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Duplicar um objeto.|  
+|<xref:System.Collections.IEnumerable>|Sequência de elementos.|  
+|<xref:System.Collections.ICollection>|Manter o grupo de elementos.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Sequência de elementos com tipo.|  
+|<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos com tipo.|  
+|ITree\<chave, valor >|Manter contêiner genérico.|  
   
-## Comentários  
- O objeto aloca e libera armazenamento para a sequência que controla como nós individuais.  Insere os elementos da \(quase\) equilibrou a árvore que mantém ordenado alterando os links entre nós, nunca copiar o conteúdo de um nó para outro.  Isso significa que você pode inserir e remover os elementos livremente sem os outros elementos de perturbação.  
+## <a name="remarks"></a>Comentários  
+ O objeto aloca e libera o armazenamento para a sequência em que ele controla como os nós individuais. Ele insere elementos em uma árvore equilibrada (quase) que mantém ordenada alterando os links entre nós nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente, sem prejudicar elementos restantes.  
   
- O objeto classifica a sequência que controla chamando um objeto armazenado delegado do tipo [multiset::key\_compare](../dotnet/multiset-key-compare-stl-clr.md).  Você pode especificar o objeto armazenado delegado quando você constrói o multiset; se você não especificar um objeto de delegação, o padrão será a comparação `operator<(key_type, key_type)`.  Você acessa esse objeto armazenado chamando a função de membro [multiset::key\_comp](../Topic/multiset::key_comp%20\(STL-CLR\).md)`()`.  
+ O objeto classifica a sequência controla chamando um objeto de representante armazenado do tipo [multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md). Você pode especificar o objeto do representante armazenado quando você construir o multiconjunto; Se você não especificar nenhum objeto do representante, o padrão é a comparação `operator<(key_type, key_type)`. Acessar esse objeto armazenado chamando a função de membro [multiset:: key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`.  
   
- Esse objeto de delegação restrita deve impor a ordenação fraco em chaves do tipo [multiset::key\_type](../dotnet/multiset-key-type-stl-clr.md).  Isso significa que, para algumas duas chaves `X` e `Y`:  
+ Esse é um objeto de representante deve impor uma ordenação fraca estrita nas chaves do tipo [multiset:: key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md). Isso significa que, para qualquer duas chaves `X` e `Y`:  
   
- `key_comp()(X, Y)` retorna o mesmo resultado booliano em cada chamada.  
+ `key_comp()(X, Y)`Retorna o mesmo Boolean resultar em cada chamada.  
   
- Se `key_comp()(X, Y)` é true, então `key_comp()(Y, X)` deve ser false.  
+ Se `key_comp()(X, Y)` for true, então `key_comp()(Y, X)` deve ser false.  
   
- Se `key_comp()(X, Y)` é true, então `X` seriam ordenado antes de `Y`.  
+ Se `key_comp()(X, Y)` for true, em seguida, `X` deve ser ordenados antes `Y`.  
   
- Se `!key_comp()(X, Y) && !key_comp()(Y, X)` é true, então `X` e `Y` são ditos ter ordenação equivalente.  
+ Se `!key_comp()(X, Y) && !key_comp()(Y, X)` for true, em seguida, `X` e `Y` são deve ter ordenação equivalente.  
   
- Para qualquer elemento `X` que preceder `Y` na sequência controlada, `key_comp()(Y, X)` será false. \(Para o objeto padrão de delegação, as chaves nunca diminuem em valor.\) Ao contrário da classe [set](../dotnet/set-stl-clr.md)do modelo, um objeto da classe `multiset` do modelo não exige que as chaves para todos os elementos são exclusivos. \(Dois ou mais chaves podem ter ordenação equivalente.\)  
+ Para qualquer elemento `X` que precede `Y` na sequência controlada, `key_comp()(Y, X)` é false. (Para o objeto do representante padrão, as chaves nunca diminuir em valor.) Ao contrário de classe de modelo [definido (STL/CLR)](../dotnet/set-stl-clr.md), um objeto da classe de modelo `multiset` não requer que as chaves para todos os elementos sejam exclusivas. (Duas ou mais teclas podem ter ordenação equivalente).  
   
- Cada elemento serve como um ey e um valor.  A sequência é representada de forma a permitir que a pesquisa, inserir, e a remoção de um elemento com um número arbitrário de operações proporcionais ao logaritmo o número de elementos na sequência \(hora logarítmicos\).  Além disso, inserindo um elemento não invalida iteradores, e removendo um elemento invalida apenas os iteradores que apontam no elemento removido.  
+ Cada elemento serve como um ey e um valor. A sequência é representada de forma que permita a pesquisa, inserção e remoção de um elemento arbitrário com um número de operações proporcionais de logaritmo do número de elementos na sequência (logarítmica tempo). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.  
   
- Um multiset oferece suporte aos iteradores bidirecionais, o que significa que você pode avançar para os elementos adjacentes um iterador dados que designa um elemento na sequência controlada.  Um nó principal especial corresponde ao iterador retornado por [multiset::end](../dotnet/multiset-end-stl-clr.md)`()`.  Você pode diminuir este iterador para alcançar o elemento o mais recente na sequência controlada, se houver.  É possível incrementar um iterador de multiset para alcançar o nó principal, e comparará no igual a `end()`.  Mas você não pode desreferenciar o iterador retornado por `end()`.  
+ Um multiconjunto suporta iteradores bidirecional, o que significa que você pode depurar a elementos adjacentes recebe um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde para o iterador retornado por [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`. Você pode diminuir este iterador para alcançar o último elemento na sequência controlada, se presente. Você pode aumentar um iterador multiset para alcançar o nó principal e, em seguida, comparará igual a `end()`. Mas você não pode cancelar o iterador retornado por `end()`.  
   
- Observe que você não pode se referir a um elemento de multiset determinado diretamente a posição numérica \-\- isso requer um iterador de acesso aleatório.  
+ Observe que você não pode se referir a um elemento multiset diretamente considerando sua posição numérica - que requer um iterador de acesso aleatório.  
   
- Um iterador de multiset armazena um identificador para o nó associado de multiset, por sua vez que armazena um identificador para o contêiner associado.  Você pode usar iteradores apenas com seus objetos de contêiner associados.  Um iterador de multiset permanece válido desde que o nó associado de multiset é associado a um multiset.  Além disso, um iterador válido é dereferencable \-\- você pode usá\-lo para acessar ou modificar o valor do elemento que designa \-\- contanto que não é igual a `end()`.  
+ Um iterador multiset armazena um identificador para o nó multiset associado, que por sua vez, armazena um identificador para o contêiner associado. Você pode usar iteradores apenas com os objetos de contêiner associado. Um iterador multiset permanece válido desde que o nó multiset associado está associado a alguns multiset. Além disso, um iterador válido é dereferencable - você pode usá-lo para acessar ou alterar o valor do elemento ele designa – desde que ele não é igual a `end()`.  
   
- Apagando ou removendo um elemento chama o destruidor para seu valor armazenado.  Destruir o contêiner apaga todos os elementos.  Assim, um contêiner cujo tipo de elemento é uma classe de referência garante que nenhum elemento é maior que o contêiner.  A observe, entretanto, que manipula um contêiner faz `not` destrói seus elementos.  
+ Apagar ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento duram mais tempo o contêiner. No entanto, observe que um contêiner de identificadores não `not` destruir seus elementos.  
   
-## Requisitos  
- cliext \<\/conjunto de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/set >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
+## <a name="see-also"></a>Consulte também  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [Map (STL/CLR)](../dotnet/map-stl-clr.md)   
  [multiset](../dotnet/multiset-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [Biblioteca STL\/CLR](../dotnet/stl-clr-library-reference.md)
+ [conjunto (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Referência de biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)

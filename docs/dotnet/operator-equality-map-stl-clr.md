@@ -1,33 +1,33 @@
 ---
-title: "operador== (map) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator== [STL/CLR]"
+title: operador = = (map) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: 6f7672af-71f8-4086-ac42-173203e52951
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f15172d7ece8ba171e28d0f9d417428369d622e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# operador== (map) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comparação igual na lista.  
+# <a name="operator-map-stlclr"></a>operador== (map) (STL/CLR)
+Lista de comparação igual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Key,  
@@ -36,17 +36,17 @@ template<typename Key,
         map<Key, Mapped>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  esquerda  
- Contêiner esquerdo da ser comparada.  
+ Contêiner esquerdo a comparar.  
   
  direita  
- Contêiner direito da ser comparada.  
+ Contêiner direito a comparar.  
   
-## Comentários  
- A função do operador só retornará true se as sequências controladas por `left` e por `right` têm o mesmo tamanho e, para cada posição `i`, `left``[i] ==` `right``[i]`.  Use\-a para testar se `left` é ordenado da mesma forma que `right` quando os dois mapas são elemento comparado pelo elemento.  
+## <a name="remarks"></a>Comentários  
+ A função de operador retorna true somente se as sequências controlados por `left` e `right` ter o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você pode usá-lo para testar se `left` é ordenado igual `right` quando os dois mapas são comparado elemento pelo elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_map_operator_eq.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
- **um \[1\] \[2\] \[bde 4\]**  
-**\[um b c\] \=\= \[um b c\] é true**  
-**\[um b c\] \=\= b de um \[\] é false**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [map](../dotnet/map-stl-clr.md)   
- [operador\!\= \(map\)](../dotnet/operator-inequality-map-stl-clr.md)   
- [operador\< \(map\)](../Topic/operator%3C%20\(map\)%20\(STL-CLR\).md)   
- [operador\>\= \(map\)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
- [operador\> \(map\)](../dotnet/operator-greater-than-map-stl-clr.md)   
- [operador\<\= \(map\)](../dotnet/operator-less-or-equal-map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [Map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [operador! = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)   
+ [operador\< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   
+ [operador > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
+ [operador > (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)   
+ [operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d7c2c20604b2630b5125da839b275170559c08e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc867d0a39a3e3869403c359e2d19a258366b679
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-reference"></a>Referência da Biblioteca Padrão C++
 É possível chamar um programa do C++ em um grande número de funções por meio dessa implementação em conformidade da Biblioteca Padrão C++. Essas funções realizam serviços essenciais como entrada e saída, além de oferecer implementações eficientes das operações mais usadas.  

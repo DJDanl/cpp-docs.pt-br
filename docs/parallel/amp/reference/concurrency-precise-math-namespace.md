@@ -1,11 +1,10 @@
 ---
-title: 'Namespace Concurrency:: precise_math | Documentos do Microsoft'
+title: 'Namespace Concurrency:: precise_math | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -139,37 +138,21 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: bc8487cf007eaf1373389b6cc6d3f4bdac09b698
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Namespace Concurrency::precise_math
-Funções no `precise_math` namespace são compatíveis com C99. Precisão única e versões de precisão dupla de cada função estão incluídas. Por exemplo, `acos` é a versão de precisão dupla e `acosf` é a versão de precisão única. Essas funções, incluindo as funções de precisão única, exigem suporte estendido de precisão dupla do Accelerator. Você pode usar o [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) para determinar se você pode executar essas funções em um acelerador específico. 
+Funções no `precise_math` namespace são C99 compatíveis. Única precisão e versões de precisão dupla de cada função são incluídas. Por exemplo, `acos` é a versão de precisão dupla e `acosf` é a versão de precisão única. Essas funções, incluindo as funções de precisão simples, exigem suporte estendido de precisão dupla no acelerador. Você pode usar o [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) para determinar se você pode executar essas funções em um acelerador específico. 
 
   
 ## <a name="syntax"></a>Sintaxe  
@@ -212,20 +195,20 @@ namespace precise_math;
 |[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Calcula o valor cosseno hiperbólico do argumento|  
 |[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Sobrecarregado. Calcula o valor cosseno de pi * x|  
 |[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Calcula o valor cosseno de pi * x|  
-|[erf](concurrency-precise-math-namespace-functions.md#erf)|Sobrecarregado. Computa a função de erro de x|  
-|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Sobrecarregado. Calcula a função de erro complementar de x|  
-|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Calcula a função de erro complementar de x|  
+|[erf](concurrency-precise-math-namespace-functions.md#erf)|Sobrecarregado. Calcula a função de erro de x|  
+|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Sobrecarregado. Calcula a função de erro complementar do x|  
+|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Calcula a função de erro complementar do x|  
 |[erfcinv](concurrency-precise-math-namespace-functions.md#erfcinv)|Sobrecarregado. Calcula a função de erro complementar inverso de x|  
 |[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|Calcula a função de erro complementar inverso de x|  
-|[erff](concurrency-precise-math-namespace-functions.md#erff)|Computa a função de erro de x|  
-|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Sobrecarregado. Computa a função de erro inverso de x|  
-|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Computa a função de erro inverso de x|  
-|[exp](concurrency-precise-math-namespace-functions.md#exp)|Sobrecarregado. Calcula a exponencial do argumento de base-e|  
-|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Sobrecarregado. Calcula o exponencial do argumento de base-10|  
-|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Calcula o exponencial do argumento de base-10|  
+|[erff](concurrency-precise-math-namespace-functions.md#erff)|Calcula a função de erro de x|  
+|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Sobrecarregado. Calcula a função de erro inverso de x|  
+|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Calcula a função de erro inverso de x|  
+|[exp](concurrency-precise-math-namespace-functions.md#exp)|Sobrecarregado. Calcula o exponencial do argumento de base-e|  
+|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Sobrecarregado. Calcula o exponencial do argumento de base 10|  
+|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Calcula o exponencial do argumento de base 10|  
 |[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Sobrecarregado. Calcula o exponencial do argumento de base-2|  
 |[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Calcula o exponencial do argumento de base-2|  
-|[expf](concurrency-precise-math-namespace-functions.md#expf)|Calcula a exponencial do argumento de base-e|  
+|[expf](concurrency-precise-math-namespace-functions.md#expf)|Calcula o exponencial do argumento de base-e|  
 |[expm1](concurrency-precise-math-namespace-functions.md#expm1)|Sobrecarregado. Calcula a exponencial de base e do argumento, menos 1|  
 |[expm1f](concurrency-precise-math-namespace-functions.md#expm1f)|Calcula a exponencial de base e do argumento, menos 1|  
 |[fabs](concurrency-precise-math-namespace-functions.md#fabs)|Sobrecarregado. Retorna o valor absoluto do argumento|  
@@ -234,41 +217,41 @@ namespace precise_math;
 |[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Determina a diferença positiva entre os argumentos|  
 |[floor](concurrency-precise-math-namespace-functions.md#floor)|Sobrecarregado. Calcula a base do argumento|  
 |[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Calcula a base do argumento|  
-|[fma](concurrency-precise-math-namespace-functions.md#fma)|Sobrecarregado. Computação ( x * y) + z, arredondado como uma operação ternária|  
-|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Computação ( x * y) + z, arredondado como uma operação ternária|  
-|[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Sobrecarregado. Determinar o valor numérico máximo dos argumentos|  
-|[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Determinar o valor numérico máximo dos argumentos|  
-|[fmin](concurrency-precise-math-namespace-functions.md#fmin)|Sobrecarregado. Determinar o valor numérico mínimo dos argumentos|  
-|[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Determinar o valor numérico mínimo dos argumentos|  
-|[Função fmod (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Sobrecarregado. Calcula o restante de ponto flutuante de x/y|  
+|[fma](concurrency-precise-math-namespace-functions.md#fma)|Sobrecarregado. Computação ( x * y) + z, arredondado conforme uma operação ternária|  
+|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Computação ( x * y) + z, arredondado conforme uma operação ternária|  
+|[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Sobrecarregado. Determinar o valor numérico máximo de argumentos|  
+|[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Determinar o valor numérico máximo de argumentos|  
+|[fmin](concurrency-precise-math-namespace-functions.md#fmin)|Sobrecarregado. Determine o valor numérico mínimo de argumentos|  
+|[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Determine o valor numérico mínimo de argumentos|  
+|[Função (C++ AMP) fmod](concurrency-precise-math-namespace-functions.md#fmod)|Sobrecarregado. Calcula o restante de ponto flutuante de x/y|  
 |[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Calcula o restante de ponto flutuante de x/y|  
-|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Sobrecarregado. Classifica o valor do argumento como NaN, infinito, normal subnormal, zero|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Sobrecarregado. Classifica o valor do argumento como normal infinito, NaN, e subnormal, zero|  
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Sobrecarregado. Obtém a mantissa e expoente de x|  
 |[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Obtém a mantissa e expoente de x|  
 |[hypot](concurrency-precise-math-namespace-functions.md#hypot)|Sobrecarregado. Calcula a raiz quadrada da soma dos quadrados de x e y|  
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Calcula a raiz quadrada da soma dos quadrados de x e y|  
-|[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Sobrecarregado. Extraia o expoente de x como um valor inteiro assinado|  
-|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extraia o expoente de x como um valor inteiro assinado|  
+|[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Sobrecarregado. Extrair o expoente de x como um valor inteiro assinado|  
+|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extrair o expoente de x como um valor inteiro assinado|  
 |[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|Sobrecarregado. Determina se o argumento tem um valor finito|  
-|[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Sobrecarregado. Determina se o argumento for um infinito|  
-|[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Sobrecarregado. Determina se o argumento é um NaN|  
-|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Sobrecarregado. Determina se o argumento é um normal|  
-|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Sobrecarregado. Calcula um número real de mantissa e expoente|  
-|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Calcula um número real de mantissa e expoente|  
-|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Sobrecarregado. Calcula o logaritmo natural do valor absoluto do gama do argumento|  
-|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Calcula o logaritmo natural do valor absoluto do gama do argumento|  
+|[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Sobrecarregado. Determina se o argumento é um infinito|  
+|[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Sobrecarregado. Determina se o argumento é uma NaN|  
+|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Sobrecarregado. Determina se o argumento for um normal|  
+|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Sobrecarregado. Calcula um número real da mantissa e expoente|  
+|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Calcula um número real da mantissa e expoente|  
+|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Sobrecarregado. Calcula o logaritmo natural do valor absoluto de gama do argumento|  
+|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Calcula o logaritmo natural do valor absoluto de gama do argumento|  
 |[log](concurrency-precise-math-namespace-functions.md#log)|Sobrecarregado. Calcula o logaritmo de base e do argumento|  
-|[log10](concurrency-precise-math-namespace-functions.md#log10)|Sobrecarregado. Calcula o logaritmo de base&10; do argumento|  
-|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Calcula o logaritmo de base&10; do argumento|  
-|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Sobrecarregado. Calcula o logaritmo de base e de 1 mais o argumento|  
-|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Calcula o logaritmo de base e de 1 mais o argumento|  
-|[log2](concurrency-precise-math-namespace-functions.md#log2)|Sobrecarregado. Calcula o logaritmo de base&2; do argumento|  
-|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Calcula o logaritmo de base&2; do argumento|  
-|[logb](concurrency-precise-math-namespace-functions.md#logb)|Sobrecarregado. Extrai o expoente de x, como um valor inteiro em formato de ponto flutuante|  
-|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Extrai o expoente de x, como um valor inteiro em formato de ponto flutuante|  
+|[log10](concurrency-precise-math-namespace-functions.md#log10)|Sobrecarregado. Calcula o logaritmo de base 10 do argumento|  
+|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Calcula o logaritmo de base 10 do argumento|  
+|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Sobrecarregado. Calcula o logaritmo de base e de 1 e o argumento|  
+|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Calcula o logaritmo de base e de 1 e o argumento|  
+|[log2](concurrency-precise-math-namespace-functions.md#log2)|Sobrecarregado. Calcula o logaritmo de base 2 do argumento|  
+|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Calcula o logaritmo de base 2 do argumento|  
+|[logb](concurrency-precise-math-namespace-functions.md#logb)|Sobrecarregado. Extrai o expoente de x, como um valor inteiro no formato de ponto flutuante|  
+|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Extrai o expoente de x, como um valor inteiro no formato de ponto flutuante|  
 |[logf](concurrency-precise-math-namespace-functions.md#logf)|Calcula o logaritmo de base e do argumento|  
-|[modf](concurrency-precise-math-namespace-functions.md#modf)|Sobrecarregado. Divide x em frações e partes do inteiro.|  
-|[modff](concurrency-precise-math-namespace-functions.md#modff)|Divide x em frações e partes do inteiro.|  
+|[modf](concurrency-precise-math-namespace-functions.md#modf)|Sobrecarregado. Divide x em frações e partes de inteiro.|  
+|[modff](concurrency-precise-math-namespace-functions.md#modff)|Divide x em frações e partes de inteiro.|  
 |[nan](concurrency-precise-math-namespace-functions.md#nan)|Retorna um NaN silencioso|  
 |[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Retorna um NaN silencioso|  
 |[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Sobrecarregado. Arredonda o argumento para um valor inteiro no formato de ponto flutuante, usando a direção de arredondamento atual.|  
@@ -285,16 +268,16 @@ namespace precise_math;
 |[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Retorna o recíproco da raiz do cubo do argumento|  
 |[remainder](concurrency-precise-math-namespace-functions.md#remainder)|Sobrecarregado. Calcula o restante: y REM de x|  
 |[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|Calcula o restante: y REM de x|  
-|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Sobrecarregado. Calcula o restante mesmo como y REM de x. Também calcula 23 bits inferiores de x o quociente de y e retorna esse valor o mesmo sinal x/y. Ele armazena esse valor assinado no inteiro apontado por _Quo.|  
-|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Calcula o restante mesmo como y REM de x. Também calcula 23 bits inferiores de x o quociente de y e retorna esse valor o mesmo sinal x/y. Ele armazena esse valor assinado no inteiro apontado por _Quo.|  
+|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Sobrecarregado. Calcula o restante mesmo como y REM de x. Também calcula os bits inferiores 23 de x o quociente de y e retorna esse valor o mesmo sinal que x/y. Ele armazena esse valor assinado Integer apontada pelo _Quo.|  
+|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Calcula o restante mesmo como y REM de x. Também calcula os bits inferiores 23 de x o quociente de y e retorna esse valor o mesmo sinal que x/y. Ele armazena esse valor assinado Integer apontada pelo _Quo.|  
 |[round](concurrency-precise-math-namespace-functions.md#round)|Sobrecarregado. Arredonda x para o inteiro mais próximo|  
 |[roundf](concurrency-precise-math-namespace-functions.md#roundf)|Arredonda x para o inteiro mais próximo|  
 |[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|Sobrecarregado. Retorna o recíproco da raiz quadrada do argumento|  
 |[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|Retorna o recíproco da raiz quadrada do argumento|  
-|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Sobrecarregado. Multiplica x por FLT_RADIX para o y de energia|  
-|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Multiplica x por FLT_RADIX para o y de energia|  
-|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Sobrecarregado. Multiplica x por FLT_RADIX para o y de energia|  
-|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Multiplica x por FLT_RADIX para o y de energia|  
+|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Sobrecarregado. Multiplica x por FLT_RADIX para o y power|  
+|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Multiplica x por FLT_RADIX para o y power|  
+|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Sobrecarregado. Multiplica x por FLT_RADIX para o y power|  
+|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Multiplica x por FLT_RADIX para o y power|  
 |[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Sobrecarregado. Determina se o sinal de x é negativo|  
 |[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Determina se o sinal de x é negativo|  
 |[sin](concurrency-precise-math-namespace-functions.md#sin)|Sobrecarregado. Calcula o valor do seno do argumento|  
@@ -305,24 +288,23 @@ namespace precise_math;
 |[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Calcula o valor do seno hiperbólico do argumento|  
 |[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|Sobrecarregado. Calcula o valor do seno de pi * x|  
 |[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Calcula o valor do seno de pi * x|  
-|[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Sobrecarregado. Calcula a raiz squre do argumento|  
-|[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Calcula a raiz squre do argumento|  
+|[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Sobrecarregado. Calcula a raiz de squre do argumento|  
+|[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Calcula a raiz de squre do argumento|  
 |[tan](concurrency-precise-math-namespace-functions.md#tan)|Sobrecarregado. Calcula o valor tangente do argumento|  
 |[tanf](concurrency-precise-math-namespace-functions.md#tanf)|Calcula o valor tangente do argumento|  
-|[tanh](concurrency-precise-math-namespace-functions.md#tanh)|Sobrecarregado. Calcula o valor de tangente hiperbólico do argumento|  
-|[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Calcula o valor de tangente hiperbólico do argumento|  
+|[tanh](concurrency-precise-math-namespace-functions.md#tanh)|Sobrecarregado. Calcula o valor tangente hiperbólico do argumento|  
+|[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Calcula o valor tangente hiperbólico do argumento|  
 |[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|Sobrecarregado. Calcula o valor tangente de pi * x|  
 |[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Calcula o valor tangente de pi * x|  
 |[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Sobrecarregado. Calcula a função gama de x|  
 |[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Calcula a função gama de x|  
-|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Sobrecarregado. Trunca o argumento para o componente inteiro|  
-|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Trunca o argumento para o componente inteiro|  
+|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Sobrecarregado. Trunca o argumento para o componente de número inteiro|  
+|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Trunca o argumento para o componente de número inteiro|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_math. h  
+ **Cabeçalho:** amp_math.h  
   
  **Namespace:** Simultaneidade  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

@@ -1,31 +1,31 @@
 ---
-title: "M&#233;todo EventSource::InvokeAll | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::InvokeAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método InvokeAll"
+title: "Método: Invokeall | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::InvokeAll
+dev_langs: C++
+helpviewer_keywords: InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 45835b6929ae73559c427d374430b64e7ff21a61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo EventSource::InvokeAll
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Chama cada manipulador de eventos associado atual [EventSource](../windows/eventsource-class.md) usando os argumentos e os tipos de argumento especificado do objeto.  
+# <a name="eventsourceinvokeall-method"></a>Método EventSource::InvokeAll
+Chama cada manipulador de eventos associado atual [EventSource](../windows/eventsource-class.md) usando os argumentos e tipos de argumento especificados do objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -185,37 +185,37 @@ void InvokeAll(
   
 #### <a name="parameters"></a>Parâmetros  
  `T0`  
- O tipo de argumento do manipulador de evento inicial.  
+ O tipo de argumento do manipulador de evento de zero.  
   
  `T1`  
- O tipo do primeiro argumento do manipulador de eventos.  
+ O tipo do primeiro argumento de manipulador de eventos.  
   
  `T2`  
- O tipo do segundo argumento do manipulador de eventos.  
+ O tipo do segundo argumento de manipulador de eventos.  
   
  `T3`  
  O tipo do terceiro argumento de manipulador de eventos.  
   
  `T4`  
- O tipo do quarto argumento do manipulador de eventos.  
+ O tipo do quarto argumento de manipulador de eventos.  
   
  `T5`  
  O tipo do quinto argumento de manipulador de eventos.  
   
  `T6`  
- O tipo de argumento do manipulador de evento sexto.  
+ O tipo do sexto argumento de manipulador de eventos.  
   
  `T7`  
- O tipo de argumento do manipulador de evento sétimo.  
+ O tipo do sétimo argumento de manipulador de eventos.  
   
  `T8`  
  O tipo de argumento do manipulador de evento oitavo.  
   
  `T9`  
- O tipo de argumento do manipulador de evento nono.  
+ O tipo do argumento nono de manipulador de eventos.  
   
  `arg0`  
- O argumento do manipulador de evento inicial.  
+ O argumento de manipulador de eventos de zero.  
   
  `arg1`  
  O primeiro argumento de manipulador de eventos.  
@@ -233,13 +233,13 @@ void InvokeAll(
  O quinto argumento de manipulador de eventos.  
   
  `arg6`  
- Sexto argumento do manipulador de eventos.  
+ O sexto argumento de manipulador de eventos.  
   
  `arg7`  
- Sétimo argumento do manipulador de eventos.  
+ O sétimo argumento de manipulador de eventos.  
   
  `arg8`  
- O argumento do manipulador de evento oitavo.  
+ O argumento do manipulador de eventos oitavo.  
   
  `arg9`  
  O nono argumento de manipulador de eventos.  

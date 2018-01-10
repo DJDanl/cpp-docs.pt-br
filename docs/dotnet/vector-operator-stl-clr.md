@@ -1,46 +1,46 @@
 ---
-title: "vector::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatormember [] [STL/CLR]"
+title: Vector::Operator(STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator[]
+dev_langs: C++
+helpviewer_keywords: operatormember [] [STL/CLR]
 ms.assetid: 379a7029-460d-4de8-918b-c79e3e13b9d4
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4fa87557c7df4560abf77999d414d630de7e6da1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# vector::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectoroperatorstlclr"></a>Vector::Operator(STL/CLR)
 Acessa um elemento em uma posição especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 reference operator[](size_type pos);  
 ```  
   
-#### Parâmetros  
- posição  
- Posição do elemento acessar.  
+#### <a name="parameters"></a>Parâmetros  
+ POS  
+ Posição do elemento a acessar.  
   
-## Comentários  
- O operador de membro retorna um referene para o elemento na posição `pos`.  Use\-a para acessar um elemento cuja posição você conhece.  
+## <a name="remarks"></a>Comentários  
+ O operador de membro retorna um referene para o elemento na posição `pos`. Você pode usá-lo para acessar um elemento cuja posição você sabe.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_vector_operator_sub.cpp   
@@ -69,13 +69,16 @@ int main()
   
 ```  
   
-  **um b c**  
- **um x c**   
-## Requisitos  
- cliext \<\/vetor de**Cabeçalho:** \>  
+```Output  
+a b c  
+a x c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/vetor >  
   
-## Consulte também  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::at](../dotnet/vector-at-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [vetor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)

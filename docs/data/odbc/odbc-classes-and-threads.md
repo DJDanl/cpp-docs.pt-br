@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c71005e4cce6f62ca4dceb1c618f2ffd18b2bbab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1d1d922dfc34fa3e5530eca77a6501ad3e331fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-classes-and-threads"></a>Classes e threads ODBC
 A partir do MFC 4.2, há suporte multithread para as classes MFC ODBC. No entanto, observe que MFC não fornece suporte multithread para as classes DAO.  

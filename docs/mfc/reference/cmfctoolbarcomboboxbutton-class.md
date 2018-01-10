@@ -75,11 +75,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18fafd4fece0047a8dcb95e50f8d4e5133ca3760
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7732d58c8e37683f670f6f13bb4df5f49e4ef24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 Um botão de barra de ferramentas que contém um controle de caixa de combinação ( [classe CComboBox](../../mfc/reference/ccombobox-class.md)).  
@@ -92,7 +93,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -1065,7 +1066,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="parameters"></a>Parâmetros  
  [in, out] `ar`  
- O `CArchive` objeto a ser serializado.  
+ O objeto `CArchive` a ser serializado.  
   
 ### <a name="remarks"></a>Comentários  
  Configurações de `CArchive` objeto determinar se esse método lê ou grava o arquivo morto.  

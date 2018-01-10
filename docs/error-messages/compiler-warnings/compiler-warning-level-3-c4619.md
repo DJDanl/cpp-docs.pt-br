@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 3) C4619 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4619 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4619
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4619
+f1_keywords: C4619
+dev_langs: C++
+helpviewer_keywords: C4619
 ms.assetid: 701fea21-01aa-4bea-93d4-1cb8824170b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9ce8da2a6d4787a024c2ead4426a0374f5bdbbff
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 01f2b9d3e7cc935b100272e74c94da9dec5c5a92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4619"></a>Compilador C4619 de aviso (nível 3)
-\#Aviso de Pragma: há um número de aviso 'number'  
+\#Aviso de Pragma: há um número de aviso 'número'  
   
- Foi feita uma tentativa para desativar um aviso de que não existe.  
+ Foi feita uma tentativa para desabilitar um aviso de que não existe.  
   
  Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   

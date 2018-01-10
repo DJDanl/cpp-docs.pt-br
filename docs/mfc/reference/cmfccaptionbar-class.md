@@ -77,11 +77,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4449ebd1563fe02705913fd4f19e51d195b3d732
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c23129c1ac857e812b0da837b19322741087934
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccaptionbar-class"></a>Classe CMFCCaptionBar
 Um `CMFCCaptionBar` objeto é uma barra de controle que pode exibir três elementos: um bitmap, um rótulo de texto e um botão. Ele só pode exibir um elemento de cada tipo de cada vez. Você pode alinhar cada elemento para as bordas esquerdas ou direita do controle ou no centro. Você também pode aplicar um estilo 3D ou simples para as bordas superior e inferior da barra de legenda.  

@@ -1,27 +1,27 @@
 ---
-title: "A.6   Using the lastprivate Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.6 usando a cláusula lastprivate | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: cf3bf0cc-aa46-4e44-9433-e2969e3be2c1
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1744787e1dfb90fa9af93db5dba4eecd600b4334
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# A.6   Using the lastprivate Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Às vezes, a execução correta depende do valor que a última iteração de um loop atribui a uma variável.  Tais programas devem listar todas as variáveis como argumentos para uma `lastprivate` cláusula \([seção 2.7.2.3](../Topic/2.7.2.3%20lastprivate.md) na página 27\) para que os valores das variáveis são os mesmos quando o loop é executado em seqüência.  
+# <a name="a6---using-the-lastprivate-clause"></a>A.6   Usando a cláusula lastprivate
+Execução correta, às vezes, dependendo do valor que a última iteração de um loop atribui a uma variável. Esses programas devem listar todas as variáveis como argumentos para um `lastprivate` cláusula ([seção 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) na página 27) para que os valores das variáveis são os mesmos quando o loop é executado em sequência.  
   
 ```  
 #pragma omp parallel  
@@ -33,4 +33,4 @@ manager: "ghogen"
 a[i]=b[i];  
 ```  
   
- No exemplo anterior, o valor de `i` será igual ao final da região paralela `n–1`, como no caso seqüencial.
+ No exemplo anterior, o valor de `i` será igual ao final da região parallel `n-1`, como no caso de sequencial.

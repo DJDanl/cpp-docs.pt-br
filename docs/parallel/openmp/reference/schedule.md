@@ -1,44 +1,26 @@
 ---
-title: agenda | Documentos do Microsoft
+title: agenda | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- schedule
-dev_langs:
-- C++
-helpviewer_keywords:
-- schedule OpenMP clause
+f1_keywords: schedule
+dev_langs: C++
+helpviewer_keywords: schedule OpenMP clause
 ms.assetid: 286f1fc3-6598-4837-b4c8-8b1fa3193965
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9f39e46f38c09967c6109470f7ed8f4f15135ff8
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b83c5e6541cbbdfe64b5f2b7731f7a77832f7293
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule"></a>agenda
 Aplica-se para o [para](../../../parallel/openmp/reference/for-openmp.md) diretiva.  
@@ -65,7 +47,7 @@ schedule(type[,size])
  Especifica o tamanho de iterações. `size`deve ser um inteiro. Não é válida quando `type` é `runtime`.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte [2.4.1 constructo for](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Para obter mais informações, consulte [2.4.1 para construção de](../../../parallel/openmp/2-4-1-for-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   

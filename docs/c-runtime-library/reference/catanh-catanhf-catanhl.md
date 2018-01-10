@@ -33,37 +33,22 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c70314e30419f6315fc1c3afe84e8e9fc104d728
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f670a916af4aa347bcc6249e397cfdf004b54b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 Recupera a tangente hiperbólica inversa de um número complexo, com cortes de ramificação fora do intervalo [-1; + 1] no eixo real.  
@@ -92,7 +77,7 @@ _Lcomplex catanhl(
  `z`  
  Um número complexo que representa um ângulo, em radianos.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  A tangente hiperbólica inversa de `z`, em radianos. O resultado é não vinculado ao longo do eixo real e no intervalo [-iπ/2; + 2/iπ] ao longo do eixo imaginário. Ocorrerá um erro de domínio se `z` estiver fora do intervalo [-1, + 1]. Ocorrerá um erro de polo se `z` for -1 ou + 1.  
   
 ## <a name="remarks"></a>Comentários  
@@ -107,7 +92,7 @@ _Lcomplex catanhl(
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
  [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   

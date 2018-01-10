@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 4) C4336 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4336 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4336
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4336
+f1_keywords: C4336
+dev_langs: C++
+helpviewer_keywords: C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 877dc8835e71ba7995d1bd9b3cc51844398fc605
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 524d5d1aab2b63854ec334f6eb94a62e9fb127c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4336"></a>Compilador C4336 de aviso (nível 4)
 Importar biblioteca 'type_lib1' de tipo de referência cruzado antes de importar 'type_lib2'  
   
- Uma biblioteca de tipos foi referenciada com o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva. No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb foi encontrado pelo compilador.  
+ Uma biblioteca de tipo referenciada com o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva. No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb foi encontrado pelo compilador.  
   
  Bibliotecas de tipo dois determinado em disco criado a partir de dois arquivos a seguir (compilados com midl.exe):  
   
@@ -60,7 +42,7 @@ library c4336aLib
 };  
 ```  
   
- Biblioteca de tipos do segundo:  
+ A segunda biblioteca de tipos:  
   
 ```  
 // c4336b.idl  

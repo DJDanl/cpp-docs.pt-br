@@ -1,49 +1,49 @@
 ---
-title: "multimap::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro make_value [STL/CLR]"
+title: multimap::make_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 9ae5ace0-e529-4247-8cd6-4e96c0611a75
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8a4b6519cc298219269ab0f35afc880449669caf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria um objeto de valor.  
+# <a name="multimapmakevalue-stlclr"></a>multimap::make_value (STL/CLR)
+Constrói um objeto de valor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  key  
- Valor de chave a ser usado.  
+ Valor da chave a ser usado.  
   
- mapeado  
- Valor mapeado para pesquisar por.  
+ Mapeado  
+ Valor mapeado para pesquisar.  
   
-## Comentários  
- A função de membro retorna um objeto de `value_type` cuja chave é `key` e cujo valor é mapeado `mapped`.  Use\-a para compor um objeto apropriado para uso com várias outras funções de membro.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna um `value_type` objeto cuja chave `key` e cujo valor mapeado é `mapped`. Você pode usá-lo para compor um objeto adequado para uso com várias outras funções de membro.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_multimap_make_value.cpp   
@@ -67,14 +67,17 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [multimapa](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_type](../dotnet/multimap-key-type-stl-clr.md)   
- [multimap::mapped\_type](../dotnet/multimap-mapped-type-stl-clr.md)   
- [multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [multimapa (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)   
+ [multimap:: mapped_type (STL/CLR)](../dotnet/multimap-mapped-type-stl-clr.md)   
+ [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

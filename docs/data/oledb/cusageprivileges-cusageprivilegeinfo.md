@@ -1,84 +1,86 @@
 ---
-title: "CUsagePrivileges, CUsagePrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szObjectCatalog"
-  - "CUsagePrivilegeInfo"
-  - "m_bIsGrantable"
-  - "OBJECT_NAME"
-  - "m_szPrivilegeType"
-  - "OBJECT_SCHEMA"
-  - "IS_GRANTABLE"
-  - "CUsagePrivileges"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "m_szObjectSchema"
-  - "OBJECT_CATALOG"
-  - "m_szObjectType"
-  - "m_szObjectName"
-  - "m_szGrantee"
-  - "OBJECT_TYPE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de parâmetro CUsagePrivilegeInfo"
-  - "Classe CUsagePrivileges (typedef)"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szObjectCatalog"
-  - "m_szObjectName"
-  - "m_szObjectSchema"
-  - "m_szObjectType"
-  - "m_szPrivilegeType"
-  - "OBJECT_CATALOG"
-  - "OBJECT_NAME"
-  - "OBJECT_SCHEMA"
-  - "OBJECT_TYPE"
+title: CUsagePrivileges, CUsagePrivilegeInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szObjectCatalog
+- CUsagePrivilegeInfo
+- m_bIsGrantable
+- OBJECT_NAME
+- m_szPrivilegeType
+- OBJECT_SCHEMA
+- IS_GRANTABLE
+- CUsagePrivileges
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- m_szObjectSchema
+- OBJECT_CATALOG
+- m_szObjectType
+- m_szObjectName
+- m_szGrantee
+- OBJECT_TYPE
+dev_langs: C++
+helpviewer_keywords:
+- OBJECT_NAME
+- GRANTOR
+- OBJECT_CATALOG
+- CUsagePrivileges typedef class
+- m_szPrivilegeType
+- OBJECT_SCHEMA
+- m_szObjectSchema
+- m_szObjectType
+- IS_GRANTABLE
+- OBJECT_TYPE
+- CUsagePrivilegeInfo parameter class
+- m_szGrantee
+- m_szObjectCatalog
+- m_szGrantor
+- GRANTEE
+- m_bIsGrantable
+- m_szObjectName
 ms.assetid: 09460e7f-3947-4837-ad1e-407b94acedb8
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ae759b77aa5e95eda7334cea1357e8882667aba9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CUsagePrivileges, CUsagePrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chame a classe **CUsagePrivileges** do typedef para implementar a sua classe **CUsagePrivilegeInfo**do parâmetro.  
+# <a name="cusageprivileges-cusageprivilegeinfo"></a>CUsagePrivileges, CUsagePrivilegeInfo
+Chamar a classe typedef **CUsagePrivileges** para implementar sua classe de parâmetro **CUsagePrivilegeInfo**.  
   
-## Comentários  
- Consulte [Classes do conjunto de linhas de esquema e classes de Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) para obter mais informações sobre como usar classes do typedef.  
+## <a name="remarks"></a>Comentários  
+ Consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obter mais informações sobre como usar classes do typedef.  
   
- Essa classe identifica os privilégios de PLAN nos objetos definidos no catálogo ao qual está disponível ou concedido por um determinado usuário.  
+ Essa classe identifica os privilégios de uso nos objetos definidos no catálogo que estão disponíveis para ou concedido por um determinado usuário.  
   
- A tabela a seguir lista os membros de dados da classe e suas colunas correspondentes OLE DB.  Consulte [Conjunto de linhas de USAGE\_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms722743.aspx)*na referência do programador de OLE DB* para obter mais informações sobre o esquema e de colunas.  
+ A tabela a seguir lista os membros de dados de classe e o OLE DB colunas correspondentes. Consulte [USAGE_PRIVILEGES linhas](https://msdn.microsoft.com/en-us/library/ms722743.aspx) no *referência do programador de DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
-|Membros de dados|Colunas de OLE DB|  
-|----------------------|-----------------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szObjectCatalog|OBJECT\_CATALOG|  
-|m\_szObjectSchema|OBJECT\_SCHEMA|  
-|m\_szObjectName|OBJECT\_NAME|  
-|m\_szObjectType|OBJECT\_TYPE|  
-|m\_szPrivilegeType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|Membros de dados|Colunas de banco de dados OLE|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szObjectCatalog|OBJECT_CATALOG|  
+|m_szObjectSchema|OBJECT_SCHEMA|  
+|m_szObjectName|OBJECT_NAME|  
+|m_szObjectType|OBJECT_TYPE|  
+|m_szPrivilegeType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbsch.h  
   
-## Consulte também  
- [Classe CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

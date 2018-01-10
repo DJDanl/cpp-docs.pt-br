@@ -1,48 +1,47 @@
 ---
-title: "P&#225;gina de propriedades Ferramenta de Gerador de Dados XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCXMLDataGeneratorTool.GeneratedProxyLanguage"
-  - "VC.Project.VCXMLDataGeneratorTool.Output"
-  - "VC.Project.VCXMLDataGeneratorTool.SupressStartupBanner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Página de propriedades Ferramenta de Gerador de Dados XML"
+title: "Página de propriedades de ferramenta do gerador de dados XML | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCXMLDataGeneratorTool.GeneratedProxyLanguage
+- VC.Project.VCXMLDataGeneratorTool.Output
+- VC.Project.VCXMLDataGeneratorTool.SupressStartupBanner
+dev_langs: C++
+helpviewer_keywords: XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5367e5a083f9556327abd004e22ac3daff34dfb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# P&#225;gina de propriedades Ferramenta de Gerador de Dados XML
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O  **Ferramenta de gerador de dados XML**  página de propriedades se tornam disponível quando você adiciona um conjunto de dados a um projeto.  
+# <a name="xml-data-generator-tool-property-page"></a>Página de propriedades Ferramenta de Gerador de Dados XML
+O **ferramenta de gerador de dados XML** página de propriedade fica disponível quando você adiciona um conjunto de dados a um projeto.  
   
- O  **Ferramenta de gerador de dados XML**  página de propriedades contém as seguintes propriedades:  
+ O **ferramenta de gerador de dados XML** página de propriedades contém as seguintes propriedades:  
   
  **Arquivo de saída**  
- Especifica o nome do arquivo de saída para usar.  
+ Especifica o nome do arquivo de saída a ser usado.  
   
  **Suprimir faixa de inicialização**  
- Suprime a exibição das mensagens de faixa e informações de inicialização.  
+ Suprime a exibição das mensagens de informações e faixa de inicialização.  
   
  **Linguagem Proxy gerada**  
- Determina se ou não emitir código gerenciado.  
+ Determina se deve ou não emitir código gerenciado.  
   
- Para obter informações sobre como acessar o  **Ferramenta de gerador de dados XML** página de propriedades, consulte  [How To: especificar propriedades do projeto com páginas de propriedade](../Topic/How%20to:%20Specify%20Project%20Properties%20with%20Property%20Pages.md).  
+ Para obter informações sobre como acessar o **ferramenta de gerador de dados XML** página de propriedades, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
   
- Para obter informações sobre como acessar programaticamente os membros desse objeto, consulte<xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
+ Para obter informações sobre como acessar os membros desse objeto de forma programática, consulte<xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Páginas de propriedade](../ide/property-pages-visual-cpp.md)

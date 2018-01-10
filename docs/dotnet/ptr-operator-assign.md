@@ -1,36 +1,37 @@
 ---
-title: "ptr::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.operator="
-  - "msclr.com.ptr.operator="
-  - "msclr::com::ptr::operator="
-  - "ptr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: 'PTR:: = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.operator=
+- msclr.com.ptr.operator=
+- msclr::com::ptr::operator=
+- ptr::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 58619910-46c0-4db8-b183-c811b23b2df1
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e58d177a8d12970ec5c4b9d1b8b86405f153bdc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Anexa um objeto à `com::ptr`.  
+# <a name="ptroperator"></a>ptr::operator=
+Anexa um objeto COM um `com::ptr`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 ptr<_interface_type> % operator=(  
@@ -38,23 +39,23 @@ ptr<_interface_type> % operator=(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `_right`  
- O ponteiro da interface COM a ser anexada.  
+ O ponteiro de interface COM para anexar.  
   
-## Valor de retorno  
- Uma referência de controle em `com::ptr`.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma referência de controle sobre o `com::ptr`.  
   
-## Exceções  
- Se `com::ptr` já tiver uma referência a um objeto COM, `operator=` gerencie <xref:System.InvalidOperationException>.  
+## <a name="exceptions"></a>Exceções  
+ Se o `com::ptr` já possui uma referência a um objeto COM, `operator=` lança <xref:System.InvalidOperationException>.  
   
-## Comentários  
- Atribuindo um objeto COM a `com::ptr` faz referência ao objeto COM o mas não libera a referência do chamador a ela.  
+## <a name="remarks"></a>Comentários  
+ Atribuição de um objeto COM um `com::ptr` faz referência ao objeto COM, mas não libera a referência do chamador a ele.  
   
- Esse operador tem o mesmo efeito que `Attach`.  
+ Este operador tem o mesmo efeito que `Attach`.  
   
-## Exemplo  
- Este exemplo de CLR implementa uma classe que usa `com::ptr` para encapsular o objeto de `IXMLDOMDocument` de membro particular.  De `ReplaceDocument` da função de membro as chamadas `Release` primeiro em alguns anteriormente de propriedade de objeto e usar `operator=` para anexar um objeto de documento novo.  
+## <a name="example"></a>Exemplo  
+ Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto.  O `ReplaceDocument` primeiro chamadas de função de membro `Release` em qualquer pertenciam a objeto e, em seguida, usa `operator=` para anexar um novo objeto de documento.  
   
 ```  
 // comptr_op_assign.cpp  
@@ -128,13 +129,13 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ COM \\ ptr.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\com\ptr.h >  
   
- msclr::com de**Namespace**  
+ **Namespace** msclr::com  
   
-## Consulte também  
- [Membros ptr](../dotnet/ptr-members.md)   
- [ptr::Attach](../dotnet/ptr-attach.md)   
- [ptr::Detach](../Topic/ptr::Detach.md)   
+## <a name="see-also"></a>Consulte também  
+ [Membros PTR](../dotnet/ptr-members.md)   
+ [PTR::Attach](../dotnet/ptr-attach.md)   
+ [PTR::Detach](../dotnet/ptr-detach.md)   
  [ptr::Release](../dotnet/ptr-release.md)

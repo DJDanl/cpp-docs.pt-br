@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54ca5ac28d4f5fb044b78ad7b846cd20d73e2c22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68b4a5ba27d4fcb6fcaac7c80662d778c7cbbca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
 O `AFX_GLOBAL_DATA` estrutura contém campos e métodos que são usados para gerenciar a estrutura ou personalizar a aparência e comportamento do seu aplicativo.  
@@ -34,7 +35,7 @@ struct AFX_GLOBAL_DATA
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -371,7 +372,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
  Um [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) estrutura que contém as métricas escalonáveis associadas com a área não cliente de uma janela nonminimized.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se esse método for bem-sucedida; Caso contrário, `FALSE`.  
+ `TRUE` se esse método tiver êxito; caso contrário, `FALSE`.  
  
   
 ### <a name="see-also"></a>Consulte também   
@@ -468,7 +469,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>Consulte também  
- [Automação de interface do usuário e Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
+ [Automação de interface do usuário e Acessibilidade Ativa da Microsoft](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  Determina se o D2D foi inicializado  
@@ -666,7 +667,7 @@ BOOL Resume();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se esse método for bem-sucedida; Caso contrário, `FALSE`. No modo de depuração, esse método declara se esse método for bem-sucedido.  
+ `TRUE` se esse método tiver êxito; caso contrário, `FALSE`. No modo de depuração, esse método declara se esse método for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
  Este método é chamado quando a estrutura recebe o [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) mensagem.  
@@ -697,7 +698,7 @@ BOOL SetLayeredAttrib(
  Uma combinação bit a bit (ou) de sinalizadores que especificam quais parâmetros de método a ser usado. Especifique LWA_COLORKEY para usar o `crKey` parâmetro como a cor de transparência. Especifique LWA_ALPHA para usar o `bAlpha` parâmetro para determinar a opacidade da janela em camadas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se esse método for bem-sucedida; Caso contrário, `FALSE`.   
+ `TRUE` se esse método tiver êxito; caso contrário, `FALSE`.   
  
 ### <a name="see-also"></a>Consulte também   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
@@ -721,7 +722,7 @@ BOOL SetMenuFont(
  `TRUE`para especificar que o texto seja executada horizontalmente; `FALSE` para especificar que o texto é executado verticalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se esse método for bem-sucedida; Caso contrário, `FALSE`. No modo de depuração, esse método declara se esse método for bem-sucedido.  
+ `TRUE` se esse método tiver êxito; caso contrário, `FALSE`. No modo de depuração, esse método declara se esse método for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método cria uma horizontal regular fonte, um sublinhado, e uma fonte em negrito é usado em default itens de menu. Opcionalmente, esse método cria uma fonte vertical regular. Para obter mais informações sobre fontes lógicas, consulte [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  

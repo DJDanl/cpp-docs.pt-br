@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a61d2d7679542059a40c8ae6b2c3eb03910ec2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3b016fb60670dc8674691c52d593b468e597eed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="x64-software-conventions"></a>Convenções de software x64
 Esta seção descreve o Visual C++ chamando metodologia convenção para [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], extensão de 64 bits para x86 arquitetura.  

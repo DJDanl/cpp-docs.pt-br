@@ -1,58 +1,43 @@
 ---
-title: C2482 de erro do compilador | Documentos do Microsoft
+title: C2482 de erro do compilador | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2482
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2482
+f1_keywords: C2482
+dev_langs: C++
+helpviewer_keywords: C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6fe5215311dc41672379b1d62d5a24b9f4bb07b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c4a5d081e7a19f09f10e40e3799f724f44b295fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2482"></a>C2482 de erro do compilador
-'identifier': inicialização dinâmica de dados 'thread' não permitidos  
-  
- Variáveis declaradas com o `thread` atributo não pode ser inicializado com uma expressão que requer avaliação do tempo de execução. Uma expressão estática é necessário para inicializar `thread` dados.  
-  
- O exemplo a seguir gera C2482:  
-  
-```  
-// C2482.cpp  
-// compile with: /c  
-#define Thread __declspec( thread )  
-Thread int tls_i = tls_i;   // C2482  
-  
-int j = j;   // OK in C++; C error  
-Thread int tls_i = sizeof( tls_i );   // Okay in C and C++  
+
+>'*identificador*': inicialização dinâmica de dados 'thread' não permitidos
+
+Essa mensagem de erro é obsoleta no Visual Studio 2015 e versões posteriores. Nas versões anteriores, as variáveis declaradas usando o `thread` atributo não pode ser inicializado com uma expressão que requer avaliação do tempo de execução. Uma expressão estática é necessário para inicializar `thread` dados.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2482 no Visual Studio 2013 e anteriores:
+
+```cpp
+// C2482.cpp
+// compile with: /c
+#define Thread __declspec( thread )
+Thread int tls_i = tls_i;   // C2482
+
+int j = j;   // OK in C++; C error
+Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
 ```

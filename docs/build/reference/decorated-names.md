@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1db1d851e72bcce893f5e49b83b95ebf3366f15a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2ad7fc8e6d9b7fa261d7811086ef02738c77e49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decorated-names"></a>Nomes decorados
 Funções, dados e objetos em programas C e C++ são representados internamente por seus nomes decorados. Um *decorado nome* é uma cadeia de caracteres codificada criada pelo compilador durante a compilação de uma definição de função, de dados ou de objeto. Registra as convenções de chamada, tipos, parâmetros de função e outras informações junto com o nome. Este decoração do nome, também conhecida como *desconfiguração do nome*, ajuda o vinculador a encontrar as funções corretas e os objetos ao vincular um executável.  

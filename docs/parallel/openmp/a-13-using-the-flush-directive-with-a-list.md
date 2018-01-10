@@ -1,27 +1,27 @@
 ---
-title: "A.13   Using the flush Directive with a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A. 13 usando a diretiva de liberação com uma lista | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6c9d0736-07c2-47b1-a216-5293f03b6397
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da5a7f10abe03364e4de9bdd2bd0258ea8a5e1a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# A.13   Using the flush Directive with a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo a seguir usa a `flush` diretriz para sincronização ponto a ponto de objetos específicos entre os pares de segmentos:  
+# <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   Usando a diretiva flush com uma lista
+O exemplo a seguir usa a `flush` diretiva para sincronização ponto a ponto de objetos específicos entre pares de threads:  
   
 ```  
 int   sync[NUMBER_OF_THREADS];  

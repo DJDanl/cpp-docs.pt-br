@@ -1,51 +1,33 @@
 ---
-title: "Compilador (níveis 2 e 4) de aviso C4200 | Documentos do Microsoft"
+title: "Compilador (níveis 2 e 4) de aviso C4200 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4200
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4200
+f1_keywords: C4200
+dev_langs: C++
+helpviewer_keywords: C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 23210613dfd0d044c443ac479aa90d7169c2eceb
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f160476deb2ab3e4ad0ff00100305c934dfb14c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-levels-2-and-4-c4200"></a>Compilador (níveis 2 e 4) de aviso C4200
+# <a name="compiler-warning-levels-2-and-4-c4200"></a>Compilador C4200 de aviso (níveis 2 e 4)
 extensão não padrão usada: matriz de tamanho zero na estrutura/união  
   
  Indica que uma estrutura ou união contém uma matriz de tamanho zero.  
   
- A declaração de uma matriz de tamanho zero é uma extensão da Microsoft. Isso causa um aviso de nível&2; quando um arquivo C++ é compilado e um aviso de nível&4; quando um arquivo C é compilado. A compilação do C++ também fornece esse aviso: "Não é possível gerar operador construtor de cópia ou de atribuição de cópia quando UDT tiver uma matriz de tamanho zero." Este exemplo gera um aviso C4200:  
+ A declaração de uma matriz de tamanho zero é uma extensão da Microsoft. Isso causa um aviso de nível 2 quando um arquivo C++ é compilado e um aviso de nível 4 quando um arquivo C é compilado. A compilação do C++ também fornece esse aviso: "Não é possível gerar operador construtor de cópia ou de atribuição de cópia quando UDT tiver uma matriz de tamanho zero." Este exemplo gera um aviso C4200:  
   
 ```cpp  
 // C4200.cpp  

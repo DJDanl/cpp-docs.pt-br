@@ -1,70 +1,70 @@
 ---
-title: "Suporte multithread para c&#243;digo anterior (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "programação simultânea [C++]"
-  - "vários threads simultâneos"
-  - "vários threads"
-  - "multithreading [C++]"
-  - "multithreading [C++], sobre multithreading"
-  - "programação [C++], com multithread"
-  - "threading [C++]"
+title: "Suporte multithread para código anterior (Visual C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- threading [C++]
+- multiple threads
+- concurrent programming [C++]
+- programming [C++], multithreaded
+- multithreading [C++], about multithreading
+- multiple concurrent threads
+- multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1037b8b81c9286ac1b1dd9303294b4300e7c9309
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Suporte multithread para c&#243;digo anterior (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O Visual C\+\+ permite que você tenha vários segmentos simultâneos de execução sendo executados simultaneamente.  Com o multithreading, você pode rotacionar as tarefas em segundo plano, gerenciar fluxos simultâneos de entrada, gerenciar uma interface de usuário, e muito mais.  
+# <a name="multithreading-support-for-older-code-visual-c"></a>Suporte multithread para código anterior (Visual C++)
+Visual C++ permitem que você tenha vários threads simultâneos de execução em execução simultaneamente. Com multithread, você pode executar tarefas em segundo plano, gerenciar simultâneos fluxos de entrada, gerenciar uma interface de usuário e muito mais.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)  
  Fornece suporte para a criação de aplicativos multithread com o Microsoft Windows  
   
- [Multithreading com C\+\+ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
- Descreve o que são processos e threads e qual é a abordagem MFC para multithreading.  
+ [Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+ Descreve quais são os processos e threads e o método do MFC para multithreading é.  
   
  [Multithread e localidades](../parallel/multithreading-and-locales.md)  
- Discute problemas que ocorrem ao usar a funcionalidade de localidade da biblioteca em tempo de execução do C e biblioteca do C\+\+ padrão em um aplicativo com vários segmentos.  
+ Aborda problemas que surgem ao usar a funcionalidade de localidade da biblioteca de tempo de execução do C e a biblioteca padrão C++ em um aplicativo multithread.  
   
-## Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [CWinThread](../mfc/reference/cwinthread-class.md)  
- Representa um thread de execução em um aplicativo.  
+ Representa um segmento de execução dentro de um aplicativo.  
   
  [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Descreve uma classe virtual pura que fornece funcionalidades comuns a objetos de sincronização no Win32.  
+ Descreve uma classe pura virtual que fornece funcionalidade comum para os objetos de sincronização no Win32.  
   
  [CSemaphore](../mfc/reference/csemaphore-class.md)  
- Representa um semáforo, que é um objeto de sincronização que permite um número limitado de threads em um ou mais processos para acessar um recurso.  
+ Representa um semáforo, que é um objeto de sincronização que permite que um número limitado de threads em um ou mais processos para acessar um recurso.  
   
  [CMutex](../mfc/reference/cmutex-class.md)  
- Representa um mutex, que é um objeto de sincronização que permite um acesso mutuamente exclusivo de thread a um recurso.  
+ Representa um mutex, que é um objeto de sincronização que permite que um thread mutuamente acesse um recurso.  
   
- [CCriticalSection](../Topic/CCriticalSection%20Class.md)  
- Representa uma seção crítica, que é um objeto de sincronização que permite que um thread por vez para acessar um recurso ou seção de código.  
+ [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
+ Representa uma seção crítica, o que é um objeto de sincronização que permite que um segmento por vez para acessar um recurso ou uma seção de código.  
   
  [CEvent](../mfc/reference/cevent-class.md)  
- Representa um evento, que é um objeto de sincronização que permite que um thread notifique outro sobre a ocorrência de um evento.  
+ Representa um evento, que é um objeto de sincronização que permite que um thread notificar o outro que um evento ocorreu.  
   
  [CMultiLock](../mfc/reference/cmultilock-class.md)  
- Representa o mecanismo de controle de acesso usado no acesso de controle a recursos em um programa multithreaded.  
+ Representa o mecanismo de controle de acesso usado para controlar o acesso a recursos em um programa multi-threaded.  
   
  [CSingleLock](../mfc/reference/csinglelock-class.md)  
- Representa o mecanismo de controle de acesso usado no acesso de controle a um recurso em um programa multithreaded.  
+ Representa o mecanismo de controle de acesso usado para controlar o acesso a um recurso em um programa multi-threaded.  
   
- [\(NOTINBUILD\)Visual C\+\+ Programming Methodologies](http://msdn.microsoft.com/pt-br/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
- Fornece links para tópicos que descrevem informações conceituais sobre as bibliotecas do Visual C\+\+ e para tópicos que discutem diversas tecnologias e técnicas de codificação.
+ [(NOTINBUILD) Metodologias de programação do Visual C++](http://msdn.microsoft.com/en-us/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
+ Fornece links para tópicos que descrevem informações conceituais sobre as bibliotecas do Visual C++ e tópicos que descrevem diversas tecnologias e técnicas de codificação.

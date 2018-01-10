@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d81cd7e569cd2baa8ab50b1904fa3ac15b36d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>thread
 
 **Seção específica da Microsoft**  
-O **thread** modificador de classe de armazenamento estendido é usada para declarar uma variável local de thread. Para o portátil equivalente em C++ 11 e posterior, use o [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de classe de armazenamento.
+O **thread** modificador de classe de armazenamento estendido é usada para declarar uma variável local de thread. Para o portátil equivalente em C++ 11 e posterior, use o [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de classe de armazenamento para código portátil. No Windows **thread_local** é implementado com **__declspec(thread)**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,13 +47,18 @@ Declarações de variáveis locais de thread devem usar [estendido a sintaxe do 
 __declspec( thread ) int tls_i = 1;  
 ```
 
-Você deve observar estas diretrizes ao declarar objetos e variáveis locais de thread:
+Ao usar variáveis locais de thread em bibliotecas carregadas dinamicamente, você precisa estar ciente dos fatores que podem causar uma variável local de thread não seja inicializada corretamente:
+
+1) Se a variável é inicializada com uma chamada de função (incluindo construtores), essa função será chamada somente para o segmento que causou a binário/DLL carregar no processo de e para esses threads iniciadas depois que o binário/DLL foi carregado. As funções de inicialização não são chamadas por qualquer outro thread já estava em execução quando o DLL foi carregado. Inicialização dinâmica ocorre na chamada para DLL_THREAD_ATTACH DllMain, mas o DLL nunca obtém a mensagem se a DLL não está no processo de quando o thread é iniciado. 
+
+2) Variáveis locais de thread que são inicializadas estaticamente com valores constantes geralmente são inicializadas corretamente em todos os threads. No entanto, a partir de dezembro de 2017 há um problema de conformidade conhecidos no compilador Microsoft C++ no qual as variáveis de constexpr recebem dinâmico em vez de inicialização estática.  
+  
+   Observação: Esses dois problemas devem ser corrigidos em futuras atualizações do compilador.
+
+
+Além disso, você deve observar estas diretrizes ao declarar variáveis e objetos de thread local:
 
 - Você pode aplicar o **thread** atributo somente para a classe e declarações de dados e as definições. **thread** não pode ser usado em definições ou declarações de função.
-
-- O uso do **thread** atributo pode interferir com [carregamento de atraso](../build/reference/linker-support-for-delay-loaded-dlls.md) da DLL importa.
-
-- Em sistemas XP, **thread** pode não funcionar corretamente se uma DLL usa dados __declspec(thread) e ele é carregado dinamicamente por meio de LoadLibrary.
 
 - Você pode especificar o **thread** atributo apenas em itens de dados com duração de armazenamento estático. Isso inclui objetos de dados globais (ambos **estático** e **extern**), locais objetos static e membros de dados estáticos de classes. Você não pode declarar objetos automática de dados com o **thread** atributo.
 

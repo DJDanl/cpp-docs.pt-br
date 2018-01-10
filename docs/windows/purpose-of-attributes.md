@@ -1,39 +1,40 @@
 ---
-title: "Purpose of Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], about attributes"
+title: A finalidade dos atributos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: attributes [C++], about attributes
 ms.assetid: 3aff8bfa-a2a3-4fcb-a2c6-1d96a2b4c68d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ed20c29d017527d5c2ce0b0c5ab8053fc75dc6ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Purpose of Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Atributos estendem C\+\+ em direções atualmente não é possíveis sem quebrar a estrutura clássica do idioma.  Atributos permitem que os provedores \(DLLs separadas\) para estender a funcionalidade de idioma dinamicamente.  O principal objetivo dos atributos é simplificar a autoria de componentes COM, para além de aumentar o nível de produtividade do desenvolvedor de componentes.  Atributos podem ser aplicados a praticamente qualquer construção de C\+\+, como, por exemplo, classes, funções de membro ou membros de dados.  Este é um realce dos benefícios oferecidos por essa nova tecnologia:  
+# <a name="purpose-of-attributes"></a>Finalidade de atributos
+Atributos estendem C++ em direções atualmente não é possíveis sem quebrar a estrutura clássica do idioma. Atributos permitem que provedores (DLLs separadas) para estender a funcionalidade de idioma dinamicamente. O objetivo principal de atributos é simplificar a criação de componentes COM, além de aumentar o nível de produtividade do desenvolvedor do componente. Atributos podem ser aplicados a praticamente qualquer construção C++, como classes, membros de dados ou funções de membro. Um realce dos benefícios fornecidos por esta nova tecnologia é o seguinte:  
   
 -   Expõe uma convenção de chamada simple e familiar.  
   
--   Usos inserido o código, que, ao contrário das macros, é reconhecido pelo depurador.  
+-   Usa inserido o código, que, ao contrário das macros, é reconhecido pelo depurador.  
   
--   Permite fácil derivação de classes base sem detalhes de implementação extenuante.  
+-   Permite o fácil derivação de classes base sem os detalhes de implementação penosa.  
   
--   Substitui a grande quantidade de código IDL necessário por um componente COM alguns atributos concisos.  
+-   Substitui a grande quantidade de código IDL exigido por um componente com alguns atributos concisos.  
   
- Por exemplo, para implementar um coletor de eventos simples para uma classe genérica do ATL, você pode aplicar o  [event\_receiver](../windows/event-receiver.md) de atributo para uma classe específica, como `CMyReceiver`.  O  **event\_receiver** atributo é então compilado pelo compilador Visual C\+\+, que insere o código apropriado no arquivo de objeto.  
+ Por exemplo, para implementar um coletor de eventos simples para uma classe genérica do ATL, você pode aplicar o [event_receiver](../windows/event-receiver.md) atributo a uma classe específica como `CMyReceiver`. O **event_receiver** atributo, em seguida, é compilado, o compilador do Visual C++, que insere o código apropriado para o arquivo de objeto.  
   
 ```  
 [event_receiver(com)]  
@@ -44,7 +45,7 @@ class CMyReceiver
 }  
 ```  
   
- Você pode então configurar o  **CMyReceiver** métodos `handler1` e `handler2` para manipular eventos \(usando a função intrínseca  [\_\_hook](../cpp/hook.md)\) de uma fonte de evento, que podem ser criadas usando  [event\_source](../windows/event-source.md).  
+ Você pode, em seguida, configurar o **CMyReceiver** métodos `handler1` e `handler2` para tratar eventos (usando a função intrínseca [hook](../cpp/hook.md)) de uma fonte de evento, você pode criar usando [event_source](../windows/event-source.md).  
   
-## Consulte também  
- [Concepts](../windows/attributed-programming-concepts.md)
+## <a name="see-also"></a>Consulte também  
+ [Conceitos](../windows/attributed-programming-concepts.md)

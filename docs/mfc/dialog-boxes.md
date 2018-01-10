@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e4417fc2d4714a249b04bb0c1d04e5642495835
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-boxes"></a>Caixas de diálogo
 Aplicativos do Windows com frequência se comunicar com o usuário por meio de caixas de diálogo. Classe [CDialog](../mfc/reference/cdialog-class.md) fornece uma interface para gerenciar caixas de diálogo, o editor de caixa de diálogo Visual C++ torna fácil criar caixas de diálogo e criar seus recursos de modelo de caixa de diálogo e assistentes de código simplificam o processo de inicialização e Validando os controles em uma caixa de diálogo e de coleta de valores inseridos pelo usuário.  

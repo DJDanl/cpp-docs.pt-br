@@ -1,56 +1,52 @@
 ---
-title: "warning | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "warning_CPP"
-  - "vc-pragma.warning"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "pragma de aviso pop"
-  - "pragmas, warning"
-  - "aviso de pragma push"
-  - "pragma de aviso"
+title: Aviso | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- warning_CPP
+- vc-pragma.warning
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, warning
+- push pragma warning
+- pop warning pragma
+- warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 275ca0a1101141ef1c0f4217597a644a6dbd8c46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# warning
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="warning-pragma"></a>Pragma de aviso
 Permite a modificação seletiva do comportamento de mensagens de aviso do compilador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-      #pragma warning(   
-      warning-specifier  
-       :   
-      warning-number-list [; warning-specifier : warning-number-list...] )  
+```
+#pragma warning(   
+    warning-specifier : warning-number-list [; warning-specifier : warning-number-list...] )  
 #pragma warning( push[ ,n ] )  
 #pragma warning( pop )  
 ```  
   
-## Comentários  
- Os seguintes parâmetros de especificador de aviso estão disponíveis.  
+## <a name="remarks"></a>Comentários  
+Os seguintes parâmetros de especificador de aviso estão disponíveis.  
   
 |especificador de aviso|Significado|  
-|----------------------------|-----------------|  
-|`1, 2, 3, 4`|Aplique o nível fornecido aos avisos especificados.  Isso também ativa um aviso especificado que é desativado por padrão.|  
-|`default`|Redefina o comportamento de aviso para seu valor padrão.  Isso também ativa um aviso especificado que é desativado por padrão.  O aviso será gerado em seu nível padrão e documentado.<br /><br /> Para obter mais informações, consulte [Avisos de compilador desativados por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).|  
+|------------------------|-------------|  
+|`1, 2, 3, 4`|Aplique o nível fornecido aos avisos especificados. Isso também ativa um aviso especificado que é desativado por padrão.|  
+|`default`|Redefina o comportamento de aviso para seu valor padrão. Isso também ativa um aviso especificado que é desativado por padrão. O aviso será gerado em seu nível padrão e documentado.<br /><br /> Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
 |`disable`|Não emita a mensagem de aviso especificada.|  
 |`error`|Relate os avisos especificados como erros.|  
 |`once`|Exiba as mensagens especificadas somente uma vez.|  
@@ -58,13 +54,13 @@ Permite a modificação seletiva do comportamento de mensagens de aviso do compi
   
  A seguinte instrução de código mostra que um parâmetro `warning-number-list` pode conter vários números de aviso e que vários parâmetros `warning-specifier` podem ser especificados na mesma política de pragma.  
   
-```  
+```cpp  
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )  
 ```  
   
  Essa funcionalidade é equivalente ao código a seguir.  
   
-```  
+```cpp  
 // Disable warning messages 4507 and 4034.  
 #pragma warning( disable : 4507 34 )  
   
@@ -77,9 +73,9 @@ Permite a modificação seletiva do comportamento de mensagens de aviso do compi
   
  O compilador adiciona 4000 a todos os números de aviso que estejam entre 0 e 999.  
   
- Para os números de aviso no intervalo de 4700 a 4999, que são os associados à geração de códigos, o estado do aviso em vigor quando o compilador encontra a chave aberta de uma função ficará em vigor pelo restante da função.  Usar o pragma de `warning` na função para alterar o estado de um aviso que tem um número maior que 4699 só entrará em vigor depois do término da função.  O exemplo a seguir mostra a colocação correta de pragmas de `warning` para desabilitar uma mensagem de aviso de geração de código e, depois, para restaurá\-la.  
+ Para os números de aviso no intervalo de 4700 a 4999, que são os associados à geração de códigos, o estado do aviso em vigor quando o compilador encontra a chave aberta de uma função ficará em vigor pelo restante da função. Usar o pragma de `warning` na função para alterar o estado de um aviso que tem um número maior que 4699 só entrará em vigor depois do término da função. O exemplo a seguir mostra a colocação correta de pragmas de `warning` para desabilitar uma mensagem de aviso de geração de código e, depois, para restaurá-la.  
   
-```  
+```cpp  
 // pragma_warning.cpp  
 // compile with: /W1  
 #pragma warning(disable:4700)  
@@ -97,20 +93,18 @@ int main() {
   
  Em um corpo de função, a configuração mais recente do pragma de `warning` será aplicada à função inteira.  
   
-## Enviar por push e mostrar  
- O pragma de `warning` também oferece suporte à sintaxe a seguir.  
+## <a name="push-and-pop"></a>Enviar por push e mostrar  
+ O `warning` pragma também oferece suporte a sintaxe a seguir, onde `n` representa um nível de aviso (de 1 a 4).  
   
- `#pragma warning(` `push` \[ `,``n` \] `)`  
+ `#pragma warning( push [ , n ] )`  
   
- `#pragma warning(` `pop )`  
+ `#pragma warning( pop )`  
+   
+ O pragma `warning( push )` armazena o estado de aviso atual para cada aviso. O pragma `warning( push, n )` armazena o estado atual de cada aviso e define o nível de aviso global como `n`.  
   
- Onde `n` representa um nível de aviso \(de 1 a 4\).  
+ O pragma `warning( pop )` pops o último estado de aviso inserido na pilha. Todas as modificações feitas no estado de aviso entre `push` e `pop` serão desfeitas. Considere este exemplo:  
   
- O pragma de `warning( push )` armazena o estado atual de aviso de cada aviso.  O pragma de `warning( push,` `n``)` armazena o estado atual de cada aviso e define o nível de aviso global para `n`.  
-  
- O pragma de `warning( pop )` mostra o último estado de aviso enviado por push para a pilha.  Todas as modificações feitas no estado de aviso entre `push` e `pop` serão desfeitas.  Considere este exemplo:  
-  
-```  
+```cpp  
 #pragma warning( push )  
 #pragma warning( disable : 4705 )  
 #pragma warning( disable : 4706 )  
@@ -119,17 +113,17 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- No final desse código, `pop` restaura o estado de todos os avisos \(inclui 4705, 4706, 4707\) e o que era no início do código.  
+ No final desse código, `pop` restaura o estado de todos os avisos (inclui 4705, 4706, 4707) e o que era no início do código.  
   
- Quando você grava arquivos de cabeçalho, pode usar `push` e `pop` para garantir que as alterações de estado de aviso feitas por um usuário não impeçam que os cabeçalhos sejam compilados corretamente.  Use `push` no início do cabeçalho e `pop` no final.  Por exemplo, se você tiver um cabeçalho não compilado de forma limpa no nível de aviso 4, o código a seguir alteraria o nível de aviso para 3 e restauraria o nível de aviso original no final do cabeçalho.  
+ Quando você grava arquivos de cabeçalho, pode usar `push` e `pop` para garantir que as alterações de estado de aviso feitas por um usuário não impeçam que os cabeçalhos sejam compilados corretamente. Use `push` no início do cabeçalho e `pop` no final. Por exemplo, se você tiver um cabeçalho não compilado de forma limpa no nível de aviso 4, o código a seguir alteraria o nível de aviso para 3 e restauraria o nível de aviso original no final do cabeçalho.  
   
-```  
+```cpp  
 #pragma warning( push, 3 )  
 // Declarations/definitions  
 #pragma warning( pop )   
 ```  
   
- Para obter mais informações sobre as opções do compilador que ajudam a suprimir avisos, consulte [\/FI](../Topic/-FI%20\(Name%20Forced%20Include%20File\).md) e [\/w](../build/reference/compiler-option-warning-level.md).  
+ Para obter mais informações sobre o compilador opções que ajudam você suprimir avisos, consulte [/FI](../build/reference/fi-name-forced-include-file.md) e [/w](../build/reference/compiler-option-warning-level.md).  
   
-## Consulte também  
- [Diretivas Pragma e a palavra\-chave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

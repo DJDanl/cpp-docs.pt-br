@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9186b7c056321dcb3ef394e44ae93d530e29810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Multithread: criando threads de interface do usuário
 Um thread de interface do usuário geralmente é usado para manipular a entrada do usuário e responder a eventos de usuário independentemente de threads de execução de outras partes do aplicativo. O thread principal do aplicativo (fornecido na sua `CWinApp`-classe derivada) já foi criada e iniciada. Este tópico descreve as etapas necessárias para criar threads adicionais da interface do usuário.  

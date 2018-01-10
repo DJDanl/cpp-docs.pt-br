@@ -1,51 +1,53 @@
 ---
-title: "Criando novas barras de ferramentas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.toolbar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Inserir Recurso"
-  - "Editor da barra de ferramentas, criando novas barras de ferramentas"
-  - "barras de ferramentas [C++], criando"
+title: Criando novas barras de ferramentas | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.toolbar
+dev_langs: C++
+helpviewer_keywords:
+- toolbars [C++], creating
+- Toolbar editor, creating new toolbars
+- Insert Resource
 ms.assetid: 1b28264b-0718-4df8-9f65-979805d2efef
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4315d101f194b9c0ff1a66b9e7cf81dc778cf372
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Criando novas barras de ferramentas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para criar uma nova barra de ferramentas  
+# <a name="creating-new-toolbars"></a>Criando novas barras de ferramentas
+### <a name="to-create-a-new-toolbar"></a>Para criar uma nova barra de ferramentas  
   
-1.  Em  **recurso** exibir, seu arquivo. rc com o botão direito e escolha  **Add Resource** no menu de atalho.  \(Se você tiver uma barra de ferramentas em seu arquivo. rc, você pode simplesmente direito a  **barra de ferramentas** pasta e selecione  **Inserir barra de ferramentas** no menu de atalho.\)  
+1.  Em **recurso** exibir, clique em seu arquivo. RC e escolha **adicionar recurso** no menu de atalho. (Se você tiver uma barra de ferramentas no arquivo. RC, simplesmente clique o **barra de ferramentas** pasta e selecione **Inserir barra de ferramentas** no menu de atalho.)  
   
-     **Nota** se o seu projeto já não contém um arquivo. rc, consulte  [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+     **Observação** se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  No  **Add Resource** caixa de diálogo, selecione  **barra de ferramentas** na  **Tipo de recurso** lista, em seguida clique em  **New**.  
+2.  No **adicionar recurso** caixa de diálogo, selecione **barra de ferramentas** no **tipo de recurso** lista e, em seguida, clique em **novo**.  
   
-     Se um sinal de adição \(\+\) será exibido ao lado do  **barra de ferramentas** tipo de recurso, isso significa que os modelos de barra de ferramentas estão disponíveis.  Clique no sinal de adição para expandir a lista de modelos, selecione um modelo e clique em  **New**.  
+     Se um sinal de adição (+) aparece ao lado de **barra de ferramentas** tipo de recurso, isso significa que os modelos de barra de ferramentas estão disponíveis. Clique no sinal de adição para expandir a lista de modelos, selecione um modelo e clique em **novo**.  
   
-     \- ou \-  
+     \- ou -  
   
-3.  [Converter um bitmap existente em uma barra de ferramentas](../mfc/converting-bitmaps-to-toolbars.md).  
+3.  [Converter um bitmap existente em uma barra de ferramentas](../windows/converting-bitmaps-to-toolbars.md).  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
- MFC ou ATL  
+ MFC ou do ATL  
   
-## Consulte também  
- [Editor de Barra de Ferramentas](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Consulte também  
+ [Editor de barra de ferramentas](../windows/toolbar-editor.md)
+

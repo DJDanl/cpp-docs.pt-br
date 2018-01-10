@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::mem_fun1_ref_t
-- mem_fun1_ref_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- mem_fun1_ref_t class
+f1_keywords: xfunctional/std::mem_fun1_ref_t
+dev_langs: C++
+helpviewer_keywords: mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 2a16a4ed9133f3d72562053845a99b58cfe2777c
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e685960f026fb6ec88e6b64adf59eda1453ca3ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memfun1reft-class"></a>Classe mem_fun1_ref_t
 Uma classe de adaptador que permite que uma função membro **non_const** que usa um único argumento seja chamada como um objeto de função binária quando inicializada com um argumento de referência.  
@@ -73,7 +54,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
  Uma função binária adaptável.  
   
 ## <a name="remarks"></a>Comentários  
- A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno (**left**.\* `_Pm`)( **right**).  
+ A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Define a função de membro `operator()` como retornando ( **esquerdo**.\* `_Pm`) ( **direita**).  
   
 ## <a name="example"></a>Exemplo  
  Normalmente, o construtor de `mem_fun1_ref_t` não é usado diretamente; a função auxiliar `mem_fun_ref` é usada para adaptar funções membro. Consulte [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) para obter um exemplo de como usar adaptadores de função membro.  
@@ -86,7 +67,6 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

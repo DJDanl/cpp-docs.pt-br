@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fc416d6856b2b84005e4e1d66e17a3b10e93eb6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: e503c3ecbf0cd7245aadeb231030a91577e1e865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE e ferramentas de desenvolvimento do Visual C++
 Como parte do Visual Studio Integrated Development Environment (IDE), o Visual C++ compartilha muitas janelas e ferramentas em comum com outras linguagens. Muitos deles, incluindo **Solution Explorer**, o Editor de código e o depurador estão documentados em [IDE do Visual Studio](/visualstudio/ide/visual-studio-ide). Geralmente, uma ferramenta compartilhada ou a janela tem um conjunto de recursos ligeiramente diferente para C++ que para as linguagens .NET ou Javascript. Alguns windows ou ferramentas só estão disponíveis no Visual Studio Pro ou o Visual Studio Enterprise.   

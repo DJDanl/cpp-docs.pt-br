@@ -71,11 +71,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80801671644275b482b6b10a9f977704c2b523cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Suporte para Compilador de Traços de Tipo (Extensões de Componentes C++)
 O oferece suporte ao compilador *digite características*, que indicam várias características de um tipo em tempo de compilação.  
@@ -89,7 +92,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
  (Na lista a seguir, exemplos de código são gravados somente em C + + CLI. Mas também há suporte para a característica de tipo correspondente no [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] , a menos que indicado de outra forma. O termo "tipo de plataforma" se refere a tipos de tempo de execução do Windows ou tipos common language runtime.)  
   
--   `__has_assign(` `type` `)`  
+-   `__has_assign(``type``)`  
   
      Retorna VERDADEIRO se a plataforma ou tipo nativo com um operador de atribuição de cópia.  
   
@@ -105,7 +108,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_copy(` `type` `)`  
+-   `__has_copy(``type``)`  
   
      Retorna VERDADEIRO se a plataforma ou tipo nativo tem um construtor de cópia.  
   
@@ -121,7 +124,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_finalizer(` `type` `)`  
+-   `__has_finalizer(``type``)`  
   
      (Não há suportada no [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Retorna VERDADEIRO se o tipo CLR tem um finalizador. Consulte [destruidores e finalizadores em como: definir e consumir classes e estruturas (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.  
   
@@ -140,7 +143,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_nothrow_assign(` `type` `)`  
+-   `__has_nothrow_assign(``type``)`  
   
      Retorna VERDADEIRO se um operador de atribuição de cópia tenha uma especificação de exceção vazio.  
   
@@ -158,7 +161,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_nothrow_constructor(` `type` `)`  
+-   `__has_nothrow_constructor(``type``)`  
   
      Retorna VERDADEIRO se o construtor padrão tem uma especificação de exceção vazio.  
   
@@ -176,7 +179,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_nothrow_copy(` `type` `)`  
+-   `__has_nothrow_copy(``type``)`  
   
      Retorna VERDADEIRO se o construtor de cópia tenha uma especificação de exceção vazio.  
   
@@ -194,7 +197,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_trivial_assign(` `type` `)`  
+-   `__has_trivial_assign(``type``)`  
   
      Retorna VERDADEIRO se o tipo tiver um operador de atribuição simples, gerado pelo compilador.  
   
@@ -210,7 +213,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_trivial_constructor(` `type` `)`  
+-   `__has_trivial_constructor(``type``)`  
   
      Retorna VERDADEIRO se o tipo tem um construtor trivial, gerado pelo compilador.  
   
@@ -226,7 +229,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_trivial_copy(` `type` `)`  
+-   `__has_trivial_copy(``type``)`  
   
      Retorna VERDADEIRO se o tipo tem um construtor de cópia trivial, gerado pelo compilador.  
   
@@ -242,7 +245,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_trivial_destructor(` `type` `)`  
+-   `__has_trivial_destructor(``type``)`  
   
      Retorna VERDADEIRO se o tipo tem um destruidor trivial, gerado pelo compilador.  
   
@@ -259,7 +262,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_user_destructor(` `type` `)`  
+-   `__has_user_destructor(``type``)`  
   
      Retorna VERDADEIRO se a plataforma ou tipo nativo tem um destruidor declarados por usuário.  
   
@@ -278,7 +281,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__has_virtual_destructor(` `type` `)`  
+-   `__has_virtual_destructor(``type``)`  
   
      Retorna VERDADEIRO se o tipo tem um destruidor virtual.  
   
@@ -299,7 +302,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_abstract(` `type` `)`  
+-   `__is_abstract(``type``)`  
   
      Retorna VERDADEIRO se o tipo for um tipo abstrato. Para obter mais informações sobre tipos abstratos nativo, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).  
   
@@ -343,7 +346,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_class(` `type` `)`  
+-   `__is_class(``type``)`  
   
      Retorna VERDADEIRO se o tipo for native class ou struct.  
   
@@ -379,7 +382,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_delegate(` `type` `)`  
+-   `__is_delegate(``type``)`  
   
      Retornará true se `type` for um representante. Para obter mais informações, consulte [delegado (extensões de componentes C++)](../windows/delegate-cpp-component-extensions.md).  
   
@@ -392,7 +395,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_empty(` `type` `)`  
+-   `__is_empty(``type``)`  
   
      Retorna VERDADEIRO se o tipo não tem nenhum membro de dados da instância.  
   
@@ -410,7 +413,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_enum(` `type` `)`  
+-   `__is_enum(``type``)`  
   
      Retorna VERDADEIRO se o tipo é um enum nativo.  
   
@@ -434,7 +437,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_interface_class(` `type` `)`  
+-   `__is_interface_class(``type``)`  
   
      Retorna VERDADEIRO se passado a uma interface de plataforma. Para obter mais informações, consulte [classe de interface](../windows/interface-class-cpp-component-extensions.md).  
   
@@ -450,7 +453,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_pod(` `type` `)`  
+-   `__is_pod(``type``)`  
   
      Retorna VERDADEIRO se o tipo é uma classe ou uma união com nenhum construtor ou os membros não estáticos particulares ou protegidos, não classes base e nenhuma função virtual. Consulte o C++ padrão, seções 8.5.1/1, 9/4 e 3.9 a 10 para obter mais informações sobre compartimentos.  
   
@@ -468,7 +471,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_polymorphic(` `type` `)`  
+-   `__is_polymorphic(``type``)`  
   
      Retorna VERDADEIRO se um tipo nativo possui funções virtual.  
   
@@ -486,7 +489,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_ref_array(` `type` `)`  
+-   `__is_ref_array(``type``)`  
   
      Retorna VERDADEIRO se passado a uma matriz de plataforma. Para obter mais informações, consulte [matrizes](../windows/arrays-cpp-component-extensions.md).  
   
@@ -500,7 +503,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_ref_class(` `type` `)`  
+-   `__is_ref_class(``type``)`  
   
      Retorna VERDADEIRO se passado a uma classe de referência. Para obter mais informações sobre tipos de referência definidos pelo usuário, consulte [Classes e estruturas](../windows/classes-and-structs-cpp-component-extensions.md).  
   
@@ -515,7 +518,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_sealed(` `type` `)`  
+-   `__is_sealed(``type``)`  
   
      Retorna VERDADEIRO se passado uma plataforma ou tipo nativo marcado como sealed. Para obter mais informações, consulte [lacrado](../windows/sealed-cpp-component-extensions.md).  
   
@@ -528,7 +531,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_simple_value_class(` `type` `)`  
+-   `__is_simple_value_class(``type``)`  
   
      Retorna VERDADEIRO se passado um tipo de valor que não contém nenhuma referência para o heap coletado como lixo. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e estruturas](../windows/classes-and-structs-cpp-component-extensions.md).  
   
@@ -548,7 +551,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_union(` `type` `)`  
+-   `__is_union(``type``)`  
   
      Retorna VERDADEIRO se um tipo é uma união.  
   
@@ -567,7 +570,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
     ```  
   
--   `__is_value_class(` `type` `)`  
+-   `__is_value_class(``type``)`  
   
      Retorna VERDADEIRO se passado a um tipo de valor. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e estruturas](../windows/classes-and-structs-cpp-component-extensions.md).  
   

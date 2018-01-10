@@ -1,44 +1,26 @@
 ---
-title: omp_test_lock | Documentos do Microsoft
+title: omp_test_lock | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_test_lock
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_test_lock OpenMP function
+f1_keywords: omp_test_lock
+dev_langs: C++
+helpviewer_keywords: omp_test_lock OpenMP function
 ms.assetid: 314ca85e-0749-4c16-800f-b0f36fed256d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6aebdb4e78c6f154bbbd7b934dd62b40e6906e19
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 03637ea17ee93d9e593d332dac61a29901359520
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="omptestlock"></a>omp_test_lock
 As tentativas de definir um bloqueio, mas não bloqueia a execução de thread.  
@@ -55,7 +37,7 @@ int omp_test_lock(
  onde,  
   
  `lock`  
- Uma variável do tipo [omp_lock_t ()](../../../parallel/openmp/reference/omp-lock-t.md) que foi inicializado com [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+ Uma variável do tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) que foi inicializado com [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [3.2.5 funções omp_test_lock e omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  

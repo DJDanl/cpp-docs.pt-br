@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae41d50f227c2fa70091aee4e17bf28a40a9b287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 792f112952493fe1ee86d52a6a235604ebee9db5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dragging-images-from-an-image-list"></a>Arrastando imagens a partir de uma lista de imagens
 [CImageList](../mfc/reference/cimagelist-class.md) inclui funções para arrastar uma imagem na tela. As funções de arrastar mover uma imagem sem problemas, cor e sem qualquer piscando do cursor. Podem ser arrastadas imagens mascaradas e não mascaradas.  

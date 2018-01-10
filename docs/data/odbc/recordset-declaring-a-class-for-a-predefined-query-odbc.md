@@ -1,57 +1,59 @@
 ---
-title: "Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conjunto de registros ODBC, consultas"
-  - "consultas predefinidos e conjuntos de registros"
-  - "conjuntos de registros, consultas predefinidas"
-  - "conjuntos de registros, procedimentos armazenados"
-  - "procedimentos armazenados, e conjunto de registros"
+title: 'Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, queries
+- predefined queries and recordsets
+- stored procedures, and recordsets
+- recordsets, predefined queries
+- recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ecdc146610fe20dcc007d6b1223d7108e1ee595
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico se aplica às classes ODBC do MFC.  
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)
+Este tópico se aplica às classes MFC ODBC.  
   
- Este tópico explica como criar uma classe do conjunto de registros para uma consulta predefinido \(às vezes chamada de um procedimento armazenado, como no Microsoft SQL Server\).  
+ Este tópico explica como criar uma classe de conjunto de registros para uma consulta predefinida (às vezes chamada de um procedimento armazenado, como Microsoft SQL Server).  
   
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` no qual a busca de linhas do volume não foi implementado.  Se buscar em massa de linha é implementado, o processo é muito semelhante.  Para entender as diferenças entre clusters de registros que linha do volume de implementar à busca e aqueles que não, para ver [Conjunto de registros: Buscando registros em massa \(ODBC\)](../Topic/Recordset:%20Fetching%20Records%20in%20Bulk%20\(ODBC\).md).  
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se a busca de linhas em massa é implementada, o processo é muito semelhante. Para entender as diferenças entre conjuntos de registros que implementam a busca de linhas em massa e os que não, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Alguns sistemas de gerenciamento da base de dados \(DBMSs\) permitem que você crie uma consulta predefinida e denomine\-a de seus programas como uma função.  A consulta tem um nome, pode levar parâmetros, e pode retornar registros.  O procedimento deste tópico descreve como chamar uma consulta predefinida que registros de retorna \(e talvez usa parâmetros\).  
+ Alguns sistemas de gerenciamento de banco de dados (DBMSs) permitem que você crie uma consulta predefinida e chamá-lo a partir de seus programas como uma função. A consulta tem um nome, pode levar a parâmetros e pode retornar registros. O procedimento neste tópico descreve como chamar uma consulta predefinida que retorna registros (e talvez usa parâmetros).  
   
- As classes de base de dados do não oferecem suporte a consultas atualizar predefinidas.  A diferença entre um instantâneo predefinidas a consulta e uma consulta predefinida dynaset não é updateability mas se as alterações feitas por outros usuários \(ou outros conjuntos de registros em seu programa\) são visíveis no conjunto de registros.  
+ As classes de banco de dados não dão suporte a consultas predefinidas de atualização. A diferença entre uma consulta predefinida do instantâneo e uma consulta predefinida dynaset não é capacidade de atualização, mas se as alterações feitas por outros usuários (ou outros conjuntos de registros em seu programa) são visíveis em seu conjunto de registros.  
   
 > [!TIP]
->  Você não precisa de um conjunto de registros de chamar uma consulta predefinida que não retorna registros.  Preparar a instrução SQL como descrito abaixo, mas a execução chamando a função de membro [ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md)de `CDatabase` .  
+>  Não é necessário um conjunto de registros para chamar uma consulta predefinida que não retorna registros. Preparar a instrução SQL, conforme descrito abaixo, mas executá-lo chamando o `CDatabase` função de membro [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
- Você pode criar uma única classe do conjunto de registros para gerenciar chamar uma consulta predefinida, mas você deve realizar o trabalho você mesmo.  Os assistentes não oferecem suporte à criação de uma classe especificamente para essa finalidade.  
+ Você pode criar uma classe de conjunto de registros único para gerenciar a chamar uma consulta predefinida, mas você deve fazer parte do trabalho. Os assistentes não dão suporte a criação de uma classe especificamente para essa finalidade.  
   
-#### Para criar uma classe para chamar uma consulta predefinido \(procedimento armazenado\)  
+#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>Para criar uma classe para chamar uma consulta predefinida (procedimento armazenado)  
   
-1.  Use [Assistente do consumidor MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar Classe** para criar uma classe do conjunto de registros para a tabela que contribui com a maioria das colunas retornadas pela consulta.  Isso fornece um avanço.  
+1.  Use o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar classe** para criar uma classe de conjunto de registros para a tabela que contribui mais colunas retornadas pela consulta. Isso fornece um ponto de partida.  
   
-2.  Adicionar manualmente membros de dados do campo para todas as colunas das tabelas que a consulta retorna mas que o assistente não tenha criado para você.  
+2.  Adicione manualmente os membros de dados de campo para todas as colunas de todas as tabelas que a consulta retorna, mas que o assistente não tiver criado para você.  
   
-     Por exemplo, se a consulta retorna três colunas cada uma das duas tabelas adicionais, adicione seis membros de dados do campo \(tipos de dados apropriados\) para a classe.  
+     Por exemplo, se a consulta retorna três colunas de duas tabelas adicionais, adicione membros de dados de campo seis (dos tipos de dados apropriado) à classe.  
   
-3.  Adicionar manualmente chamadas de função de [RFX](../../data/odbc/record-field-exchange-rfx.md) na função de membro de [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) da classe, uma que corresponde ao tipo de dados de cada membro de dados do campo adicionado.  
+3.  Adicionar manualmente [RFX](../../data/odbc/record-field-exchange-rfx.md) chamadas de função no [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) adicionado de função de membro da classe, um correspondente ao tipo de dados de cada membro de dados do campo.  
   
     ```  
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:   
@@ -59,11 +61,11 @@ Este tópico se aplica às classes ODBC do MFC.
     ```  
   
     > [!NOTE]
-    >  Você deve saber os tipos de dados e a ordem das colunas retornadas no conjunto de resultados.  A ordem das chamadas de função de RFX em `DoFieldExchange` deve corresponder à ordem das colunas do conjunto de resultados.  
+    >  Você deve saber os tipos de dados e a ordem das colunas retornadas no resultado definido. A ordem da função RFX chamadas em `DoFieldExchange` deve corresponder à ordem das colunas do conjunto de resultados.  
   
-4.  Adicionar manualmente inicializações para os novos membros de dados do campo no construtor de classe do conjunto de registros.  
+4.  Adicione manualmente as inicializações para os novos membros de dados de campo no construtor da classe de conjunto de registros.  
   
-     Você também deve aumentar o valor de inicialização do membro de dados de [m\_nFields](../Topic/CRecordset::m_nFields.md) .  O assistente grava a inicialização, mas abrangem somente os membros de dados do campo que adiciona para você.  Por exemplo:  
+     Você também deve incrementar o valor de inicialização para o [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membro de dados. O assistente grava a inicialização, mas ele aborda apenas os membros de dados do campo adiciona para você. Por exemplo:  
   
     ```  
     m_nFields += 6;  
@@ -71,27 +73,27 @@ Este tópico se aplica às classes ODBC do MFC.
   
      Alguns tipos de dados não devem ser inicializados aqui, por exemplo, `CLongBinary` ou matrizes de bytes.  
   
-5.  Se a consulta usa parâmetros, adicione um membro de dados para cada parâmetro, uma chamada de função de RFX para cada uma, e uma inicialização de cada um.  
+5.  Se a consulta usa parâmetros, adicione um membro de dados para cada parâmetro, uma chamada de função RFX para cada e uma inicialização para cada parâmetro.  
   
-6.  Você deve aumentar `m_nParams` para cada parâmetro é adicionado, como você fez `m_nFields` para campos adicionados na etapa 4 deste procedimento.  Para obter mais informações, consulte [Conjunto de registros: A parametrização de um conjunto de registros \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+6.  Você deve incrementar `m_nParams` para cada parâmetro adicionado, como você fez `m_nFields` para adicionar campos na etapa 4 deste procedimento. Para obter mais informações, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-7.  Escreva manualmente uma cadeia de caracteres da instrução SQL com o seguinte formato:  
+7.  Grave manualmente uma cadeia de caracteres da instrução SQL da seguinte forma:  
   
     ```  
     {CALL proc-name [(? [, ?]...)]}  
     ```  
   
-     onde **CALL** é uma palavra\-chave do ODBC, **proc\-name** é o nome da consulta como se sabe na fonte de dados, e “?” os itens são espaços reservados para valores de parâmetro fornecidos ao conjunto de registros em tempo de execução \(se houver\).  O exemplo a seguir prepara um espaço reservado para um parâmetro:  
+     onde **chamar** é uma palavra-chave do ODBC, **nome proc** é o nome da consulta, como é conhecido na fonte de dados e o "?" itens são espaços reservados para os valores de parâmetro que você fornecer para o conjunto de registros em tempo de execução (se houver) . O exemplo a seguir prepara um espaço reservado para um parâmetro:  
   
     ```  
     CString mySQL = "{CALL Delinquent_Accts (?)}";  
     ```  
   
-8.  No código que abre o conjunto de registros, defina os valores dos membros de dados do parâmetro do conjunto de registros e chame a função de membro de **Abrir** , passando a cadeia de caracteres SQL para o parâmetro de **lpszSQL** .  Ou então, substitua a cadeia de caracteres retornada pela função de membro de `GetDefaultSQL` em sua classe.  
+8.  No código que abre o conjunto de registros, defina os valores do parâmetro do conjunto de registros de membros de dados e, em seguida, chame o **abrir** função de membro, passando a cadeia de caracteres SQL o **lpszSQL** parâmetro. Ou, em vez disso, substitua a cadeia de caracteres retornada pelo `GetDefaultSQL` a função de membro em sua classe.  
   
- Os exemplos a seguir mostram o procedimento para chamar uma consulta predefinida, `Delinquent_Accts`nomeado, que usa um parâmetro para um número de distrito de vendas.  Essa consulta retorna três colunas: `Acct_No`, `L_Name`, `Phone`.  Todas as colunas são da tabela Customers.  
+ Os exemplos a seguir mostram o procedimento para chamar uma consulta predefinida, denominada `Delinquent_Accts`, que usa um parâmetro para um número de vendas regional. Esta consulta retorna três colunas: `Acct_No`, `L_Name`, `Phone`. São todas as colunas da tabela Customers.  
   
- O seguinte conjunto de registros especifica membros de dados do campo para as colunas retornadas pela consulta e um parâmetro para o número de distrito de vendas solicitou em tempo de execução.  
+ O conjunto de registros a seguir especifica os membros de dados de campo para as colunas que a consulta retorna e um parâmetro para as vendas Distrito número solicitado em tempo de execução.  
   
 ```  
 class CDelinquents : public CRecordset  
@@ -105,9 +107,9 @@ class CDelinquents : public CRecordset
 };  
 ```  
   
- Esta declaração de classe é como o assistente a gravação, com exceção do membro de `m_lDistParam` adicionado manualmente.  Outros membros não são mostrados aqui.  
+ Esta declaração de classe é como o assistente grava, exceto para o `m_lDistParam` membro adicionado manualmente. Outros membros não são mostrados aqui.  
   
- O exemplo a seguir mostra as inicializações para os membros de dados no construtor de `CDelinquents` .  
+ O exemplo a seguir mostra as inicializações dos membros de dados do `CDelinquents` construtor.  
   
 ```  
 CDelinquents::CDelinquents(CDatabase* pdb)  
@@ -124,9 +126,9 @@ CDelinquents::CDelinquents(CDatabase* pdb)
 }  
 ```  
   
- Observe as inicializações para [m\_nFields](../Topic/CRecordset::m_nFields.md) e [m\_nParams](../Topic/CRecordset::m_nParams.md).  O assistente inicializa `m_nFields`; você inicializa `m_nParams`.  
+ Observe as inicializações para [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) e [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). Inicializa o assistente `m_nFields`; inicializar `m_nParams`.  
   
- O exemplo a seguir mostra as funções de RFX em `CDelinquents::DoFieldExchange`:  
+ O exemplo a seguir mostra as funções RFX em `CDelinquents::DoFieldExchange`:  
   
 ```  
 void CDelinquents::DoFieldExchange(CFieldExchange* pFX)  
@@ -140,9 +142,9 @@ void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- Além de fazer chamadas de RFX para as três colunas retornadas, esse código gerencia associar o parâmetro que você passa em tempo de execução.  O parâmetro é fechado à coluna de `Dist_No` \(número de distrito\).  
+ Além de fazer as chamadas RFX para as três colunas retornadas, esse código gerencia a associação de parâmetro que passar em tempo de execução. O parâmetro é marcado para o `Dist_No` coluna (número regional).  
   
- O exemplo seguinte mostra como configurar a cadeia de caracteres SQL e como usá\-la para abrir o conjunto de registros.  
+ O exemplo a seguir mostra como configurar a cadeia de caracteres do SQL e como usá-lo para abrir o conjunto de registros.  
   
 ```  
 // Construct a CDelinquents recordset object  
@@ -155,13 +157,13 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
     // Use the recordset ...  
 ```  
   
- Esse código cria um instantâneo, passa um parâmetro anterior obtido do usuário, e chame a consulta predefinida.  Quando a consulta é executada, retorna registros para o distrito especificado de vendas.  Cada registro contém colunas para o número de conta, o sobrenome do cliente, e o número de telefone de cliente.  
+ Esse código cria um instantâneo, passa um parâmetro obtido anteriormente do usuário e chama a consulta predefinida. Quando a consulta é executada, ela retorna registros para a região de vendas especificada. Cada registro contém colunas para o número da conta, o sobrenome do cliente e o número de telefone do cliente.  
   
 > [!TIP]
->  Talvez você queira tratar um valor de retorno \(parâmetro de saída\) de um procedimento armazenado.  Para obter mais informações e um exemplo, consulte [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md).  
+>  Você talvez queira manipular um valor de retorno (parâmetro de saída) de um procedimento armazenado. Para obter mais informações e um exemplo, consulte [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
   
-## Consulte também  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: repetindo consulta a um conjunto de registros \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
- [Conjunto de registros: declarando uma classe para uma tabela \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Conjunto de registros: realizando uma junção \(ODBC\)](../Topic/Recordset:%20Performing%20a%20Join%20\(ODBC\).md)
+## <a name="see-also"></a>Consulte também  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
+ [Conjunto de registros: Declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [Conjunto de registros: realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb39b5089b7cd4849e5afd3eaac239c0c2ab3adf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04619ee7851d2e2d6ad569583dfbb2e619d37026
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objetos e origens de dados (OLE)
 Quando você executar uma transferência de dados, usando a área de transferência ou arrastar e soltar, os dados têm uma origem e um destino. Um aplicativo fornece os dados para copiar e outro aplicativo aceita para colá-lo. Cada lado da transferência precisa para executar operações diferentes nos mesmos dados para a transferência seja bem-sucedida. A biblioteca Microsoft Foundation Class (MFC) fornece duas classes que representam cada lado dessa transferência:  

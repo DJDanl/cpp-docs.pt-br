@@ -1,50 +1,52 @@
 ---
-title: "Convertendo uma imagem de um formato em outro (editor de imagens para &#237;cones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "gráficos [C++], convertendo formatos"
-  - "Editor de imagem [C++], convertendo formatos de imagem"
-  - "imagens [C++], convertendo formatos"
-  - "imagens [C++], edição autônoma"
+title: "Convertendo uma imagem de um formato para outro (Editor de imagens para ícones) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], stand-alone editing
+- Image editor [C++], converting image formats
+- graphics [C++], converting formats
+- images [C++], converting formats
 ms.assetid: 0409c2bd-3bd8-4d72-9c71-c683b6cf51be
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2defaafb1c0edb58f3fbd50ecc47ad26309ca38b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Convertendo uma imagem de um formato em outro (editor de imagens para &#237;cones)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode abrir imagens GIF ou JPEG no editor de imagem e salvá\-las como bitmaps.  Além disso, você pode abrir um arquivo de bitmap e salvá\-lo como um GIF ou JPEG.  Imagens que você trabalha com não precisam ser parte de um projeto para edição no ambiente de desenvolvimento \(consulte  [edição de imagem independente](../Topic/Editing%20an%20Image%20Outside%20of%20a%20Project%20\(Image%20Editor%20for%20Icons\).md)\).  
+# <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Convertendo uma imagem de um formato em outro (editor de imagens para ícones)
+Você pode abrir imagens GIF ou JPEG no editor de imagem e salvá-los como bitmaps. Além disso, você pode abrir um arquivo de bitmap e salvá-lo como um GIF ou JPEG. Imagens de trabalhar com não precisam ser parte de um projeto para edição no ambiente de desenvolvimento (consulte [edição autônoma imagens](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  
   
-### Para converter uma imagem de um formato para outro  
+### <a name="to-convert-an-image-from-one-format-to-another"></a>Para converter uma imagem de um formato para outro  
   
-1.  Abra a imagem no  **imagem** editor.  
+1.  Abra a imagem no **imagem** editor.  
   
-2.  From the **File** menu, choose **Save *filename* As**.  
+2.  Do **arquivo** menu, escolha **salvar *filename* como**.  
   
-3.  No  **Salvar arquivo como** na caixa de  **nome do arquivo** , digite o nome do arquivo e a extensão que indica o formato desejado.  
+3.  No **salvar arquivo como** na caixa de **nome de arquivo** , digite o nome do arquivo e a extensão que indica o formato desejado.  
   
-4.  Clique em **Save**.  
+4.  Clique em **Salvar**.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
  Nenhum  
   
-## Consulte também  
- [Editando recursos gráficos](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Consulte também  
+ [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
+

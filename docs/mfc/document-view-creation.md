@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e98f6e4b1b9ecd5848c2701043aa9b0b7dcea7d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6997189f23ea7599dde0a1b19ba9f0ea350378d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documentview-creation"></a>Criação de documento/exibição
 A estrutura fornece implementações do `New` e **abrir** comandos (entre outros) no **arquivo** menu. A criação de um novo documento e a exibição associada e a janela do quadro é um esforço de colaboração entre o objeto de aplicativo, um modelo de documento, o documento criado recentemente e a janela do quadro recém-criado. A tabela a seguir resume os objetos que criam o que.  

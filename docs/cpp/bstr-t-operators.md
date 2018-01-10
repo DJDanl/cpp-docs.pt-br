@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47b0193f272a64d5caea4baa3b8f893ae874c7a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c8f88644d999988ff6b9ec39a4d78bd008709f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrt-operators"></a>Operadores (_bstr_t)
 Para obter informações sobre o `_bstr_t` operadores, consulte [bstr_t classe](../cpp/bstr-t-class.md).  

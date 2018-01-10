@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 1) C4325 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4325 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4325
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4325
+f1_keywords: C4325
+dev_langs: C++
+helpviewer_keywords: C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b6d2838c9b9d94c8d5b95b410f8e98761996b5f8
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ab31150efc02601d7392470198e162e979ac4917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Compilador C4325 de aviso (nível 1)
-**atributos de seção padrão '**   
+**atributos para seção padrão '**   
  ***seção* ' ignorado**  
   
  Você não pode alterar os atributos de uma seção padrão. Por exemplo:  
@@ -50,17 +32,17 @@ ms.lasthandoff: 02/25/2017
 #pragma section(".sdata", long)  
 ```  
   
- Isso substituirá o `.sdata` seção padrão que usa o **curto** tipo de dados com o **longo** tipo de dados.  
+ Isso substituiria o `.sdata` seção padrão que usa o **curto** tipo de dados com o **longo** tipo de dados.  
   
- Incluem seções padrão cujos atributos não podem ser alteradas,  
+ Incluem seções padrão cujos atributos não pode ser alterado,  
   
 -   . Data  
   
 -   .sdata  
   
--   BSS  
+-   .BSS  
   
--   .sbss  
+-   . sbss  
   
 -   . Text  
   
@@ -68,11 +50,11 @@ ms.lasthandoff: 02/25/2017
   
 -   .sconst  
   
--   . RDATA  
+-   RDATA  
   
 -   .srdata  
   
- Seções adicionais podem ser adicionadas mais tarde.  
+ Seções adicionais podem ser adicionadas posteriormente.  
   
 ## <a name="see-also"></a>Consulte também  
  [seção](../../preprocessor/section.md)

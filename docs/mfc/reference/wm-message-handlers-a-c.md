@@ -46,11 +46,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1def2165ea0a58a4ede9d220879e32f5a6ac3c91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9272b54be2717276825dd770bfa15865fea6e631
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wm-message-handlers-a---c"></a>Manipuladores de mensagens WM_: A - C
 As seguintes entradas de mapa à esquerda correspondem aos protótipos de função à direita:  

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6754b308343eb9cce4fdb84d0fcf159cb19a164a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13a2897d5e442794198870e7f6bed36196744888
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-levels-of-functionality"></a>Especificando níveis de funcionalidade
 Este artigo descreve como adicionar os seguintes níveis de funcionalidade ao seu [CObject](../mfc/reference/cobject-class.md)-classe derivada:  

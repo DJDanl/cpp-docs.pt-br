@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f66df471d66a82a565fc5c072757664567d1f25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Como usar expressões regulares para pesquisar e substituir (C++/CLI)
 O exemplo de código a seguir demonstra como a classe de expressão regular <xref:System.Text.RegularExpressions.Regex> podem ser usados para executar a pesquisa e substituição. Isso é feito com o <xref:System.Text.RegularExpressions.Regex.Replace%2A> método. A versão usada usa duas cadeias de caracteres como entrada: a cadeia de caracteres a ser modificado e a cadeia de caracteres a ser inserido no lugar de seções (se houver) que correspondem ao padrão fornecido para o <xref:System.Text.RegularExpressions.Regex> objeto.  

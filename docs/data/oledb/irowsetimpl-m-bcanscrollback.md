@@ -1,37 +1,38 @@
 ---
-title: "IRowsetImpl::m_bCanScrollBack | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl::m_bCanScrollBack"
-  - "ATL::IRowsetImpl::m_bCanScrollBack"
-  - "IRowsetImpl.m_bCanScrollBack"
-  - "ATL.IRowsetImpl.m_bCanScrollBack"
-  - "m_bCanScrollBack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bCanScrollBack"
+title: 'Irowsetimpl:: M_bcanscrollback | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl::m_bCanScrollBack
+- ATL::IRowsetImpl::m_bCanScrollBack
+- IRowsetImpl.m_bCanScrollBack
+- ATL.IRowsetImpl.m_bCanScrollBack
+- m_bCanScrollBack
+dev_langs: C++
+helpviewer_keywords: m_bCanScrollBack
 ms.assetid: 69de3179-bf56-415e-935f-e98bcb34debe
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2f0fd3e481033947ddce11193872085b553d5ff7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetImpl::m_bCanScrollBack
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Indica se um provedor pode fazer com que o cursor rolar para trás.  
+# <a name="irowsetimplmbcanscrollback"></a>IRowsetImpl::m_bCanScrollBack
+Indica se um provedor pode ter sua rolagem do cursor com versões anteriores.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,12 +40,12 @@ unsigned  m_bCanScrollBack:1;
   
 ```  
   
-## Comentários  
- Vinculado a **DBPROP\_CANSCROLLBACKWARDS** a propriedade no grupo de **DBPROPSET\_ROWSET** .  O provedor deve oferecer suporte **DBPROP\_CANSCROLLBACKWARDS** para que **m\_bCanFetchBackwards** será true.  
+## <a name="remarks"></a>Comentários  
+ Vinculado para o **DBPROP_CANSCROLLBACKWARDS** propriedade o **DBPROPSET_ROWSET** grupo. O provedor deve oferecer suporte **DBPROP_CANSCROLLBACKWARDS** para **m_bCanFetchBackwards** seja verdadeira.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Classe IRowsetImpl](../Topic/IRowsetImpl%20Class.md)   
- [IRowsetImpl::m\_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe IRowsetImpl](../../data/oledb/irowsetimpl-class.md)   
+ [IRowsetImpl::m_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)

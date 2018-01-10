@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 01db4832d46fea6739a9e4cea0354986fe16023b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7068b8ef6cf3b445f1a06f9d6b06fd621cbebfbe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 Inclui o cabeçalho \<stdarg.h> da biblioteca C Padrão e adiciona os nomes associados ao namespace `std`.  

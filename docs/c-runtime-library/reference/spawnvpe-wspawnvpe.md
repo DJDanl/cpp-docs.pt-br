@@ -42,11 +42,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c23bb43633fd0c59f042f98a52762a281f7a2f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eda03fa80228a218e34c472df2400f7bfe1d8a3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 Cria e executa um novo processo.  
@@ -116,7 +117,7 @@ intptr_t _wspawnvpe(
 |`_spawnvpe`|\<stdio.h> ou \<process.h>|  
 |`_wspawnvpe`|\<stdio.h> ou \<wchar.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  

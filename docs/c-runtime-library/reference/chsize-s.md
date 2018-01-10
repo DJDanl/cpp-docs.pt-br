@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _chsize_s
+apiname: _chsize_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - chsize_s
 - _chsize_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], changing size
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: eb8292d70a77a5901c710349d6912e46cfda8f63
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8b00b0afdf9ba2daac8b4a64a8527d3b73e3c0cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsizes"></a>_chsize_s
 Altera o tamanho de um arquivo. Esta é uma versão de [_chsize](../../c-runtime-library/reference/chsize.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -77,7 +60,7 @@ errno_t _chsize_s(
  `size`  
  Novo tamanho do arquivo em bytes.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  `_chsize_s` retornará o valor 0 se o tamanho do arquivo for alterado com sucesso. Um valor retornado diferente de zero indica um erro: o valor retornado será `EACCES` se o arquivo especificado estiver protegido contra acesso, `EBADF` se o arquivo especificado for somente leitura ou o descritor for inválido, `ENOSPC` se não restar espaço no dispositivo ou `EINVAL` se o tamanho for menor que zero. `errno` é definido como o mesmo valor.  
   
  Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
