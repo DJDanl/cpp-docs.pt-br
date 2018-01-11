@@ -1,44 +1,45 @@
 ---
-title: "CBookmark::GetBuffer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CBookmark<0>.GetBuffer"
-  - "ATL.CBookmark.GetBuffer"
-  - "ATL::CBookmark<0>::GetBuffer"
-  - "ATL::CBookmark::GetBuffer"
-  - "CBookmark.GetBuffer"
-  - "ATL::CBookmark<nSize>::GetBuffer"
-  - "ATL.CBookmark<nSize>.GetBuffer"
-  - "CBookmark<0>.GetBuffer"
-  - "CBookmark<nSize>::GetBuffer"
-  - "CBookmark<0>::GetBuffer"
-  - "CBookmark<nSize>.GetBuffer"
-  - "CBookmark::GetBuffer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetBuffer"
+title: 'Cbookmark:: Getbuffer | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CBookmark<0>.GetBuffer
+- ATL.CBookmark.GetBuffer
+- ATL::CBookmark<0>::GetBuffer
+- ATL::CBookmark::GetBuffer
+- CBookmark.GetBuffer
+- ATL::CBookmark<nSize>::GetBuffer
+- ATL.CBookmark<nSize>.GetBuffer
+- CBookmark<0>.GetBuffer
+- CBookmark<nSize>::GetBuffer
+- CBookmark<0>::GetBuffer
+- CBookmark<nSize>.GetBuffer
+- CBookmark::GetBuffer
+dev_langs: C++
+helpviewer_keywords: GetBuffer method
 ms.assetid: f24465e8-8dd2-478f-8efe-73f44895b034
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1f232d13aad0447363ed8a62a13bcf9dda5adbd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CBookmark::GetBuffer
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera o ponteiro para o buffer do medidor.  
+# <a name="cbookmarkgetbuffer"></a>CBookmark::GetBuffer
+Recupera o ponteiro para o buffer de indicador.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -46,11 +47,11 @@ virtual BYTE* GetBuffer( ) const throw( );
   
 ```  
   
-## Valor de retorno  
- Um ponteiro para o buffer do medidor.  
+## <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o buffer de indicador.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CBookmark](../../data/oledb/cbookmark-class.md)

@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::plus
-- plus
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::plus
+dev_langs: C++
 helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 65dd34958f89d80608cf21b360d76f0c26cda38a
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c5ada1bbac90f9ea190ffefbafe12916717411c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="plus-struct"></a>Struct plus
 Um objeto de função predefinido que executa a operação de adição (`operator+` binário) em seus argumentos.  
@@ -75,7 +57,7 @@ struct plus<void>
  O operando direito da operação de adição. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O resultado de `Left``+``Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado pelo binário `operator+`.  
+ O resultado de `Left + Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado pelo binário `operator+`.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -135,7 +117,6 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -123,11 +123,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8259103f719fadb0543ae91ffc3334d38affdea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
 O `CMDIChildWndEx` classe fornece a funcionalidade de um Windows várias janelas do documento interface MDI filho. Ela estende a funcionalidade de [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). A estrutura requer esta classe quando um aplicativo MDI usa algumas classes MFC.  
@@ -334,7 +335,7 @@ BOOL DockPaneLeftOf(
  Um ponteiro para o painel que serve como o ponto de referência.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`em caso de sucesso, `FALSE` em caso de falha.  
+ `TRUE` em caso de êxito, `FALSE` em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método usa o painel especificado por `pBar` e encaixa-lo no lado esquerdo do painel especificado pelo `pLeftOf`.  

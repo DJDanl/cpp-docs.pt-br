@@ -1,51 +1,53 @@
 ---
-title: "Configurando propriedades do acelerador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "propriedades de acelerador"
-  - "Propriedades [C++], propriedades de acelerador"
-  - "Tipo de propriedade"
-  - "Propriedade de chave"
-  - "Propriedade de Modificador"
+title: Configurando propriedades do acelerador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accelerator properties
+- properties [C++], accelerator properties
+- Type property
+- Key property
+- Modifier property
 ms.assetid: 0fce9156-3025-4e18-b034-e219a4c65812
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 83eea84c89a9f9873b687333b7454d9f3c9c41b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Configurando propriedades do acelerador
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-No Visual C++ .NET, você pode definir propriedades de acelerador no [janela propriedades](../Topic/Properties%20Window.md) a qualquer momento. Você também pode usar o editor de aceleradores para modificar as propriedades de acelerador na tabela de aceleração. As alterações feitas usando a janela Propriedades ou o editor de aceleradores têm o mesmo resultado: edições são refletidas imediatamente na tabela de aceleração.  
+# <a name="setting-accelerator-properties"></a>Configurando propriedades do acelerador
+Você pode definir propriedades de acelerador no [janela propriedades](/visualstudio/ide/reference/properties-window) a qualquer momento. Você também pode usar o editor de aceleradores para modificar as propriedades de acelerador na tabela de teclas aceleradoras. As alterações feitas usando a janela Propriedades ou o editor de aceleradores têm o mesmo resultado: edições são refletidas imediatamente na tabela de teclas aceleradoras.  
   
  Há três propriedades para cada Acelerador [ID](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160/locales/en-US):  
   
--   O [propriedade modificador](../windows/accelerator-modifier-property.md) define o controle de combinações de teclas para o acelerador.  
+-   O [propriedade de modificador](../windows/accelerator-modifier-property.md) define o controle combinações de tecla para o acelerador.  
   
     > [!NOTE]
-    >  Na janela Propriedades, essa propriedade aparece como três propriedades booleanas separadas, que pode ser controlada independentemente: Alt, Ctrl ou Shift.  
+    >  Na janela Propriedades, essa propriedade aparece como três propriedades Boolianas separadas, que pode ser controlado independentemente: Shift, Alt e Ctrl.  
   
--   O [propriedade de chave](../Topic/Accelerator%20Key%20Property.md) define a chave real para usar como o acelerador.  
+-   O [propriedade de chave](../windows/accelerator-key-property.md) define a chave real para usar como o acelerador.  
   
 -   O [a propriedade Type](../windows/accelerator-type-property.md) determina se a chave é interpretada como virtual (VIRTKEY) ou ASCII/ANSI.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [passo a passo: usando recursos para localização com o ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Teclas de aceleração predefinidas](../windows/predefined-accelerator-keys.md)   
- [Editores de recursos](../mfc/resource-editors.md)   
- [Editor de aceleradores](../Topic/Accelerator%20Editor.md)
+ [Editores de recursos](../windows/resource-editors.md)   
+ [Editor de aceleradores](../windows/accelerator-editor.md)

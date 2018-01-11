@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 4) C4266 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4266 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4266
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4266
+f1_keywords: C4266
+dev_langs: C++
+helpviewer_keywords: C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: de3ff46a0e0429153c989db38ec1d10ab7794d6f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e7d94cc47d6df61a286d97f5a6d3a382ad3820cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4266"></a>Compilador C4266 de aviso (nível 4)
-'function': nenhuma substituição disponível para função membro virtual da base 'type'; função é ocultada  
+'function': nenhuma substituição disponível para a função de membro virtual de base 'type'; função é ocultada  
   
  Uma classe derivada não substituiu todas as sobrecargas de uma função virtual.  
   
@@ -64,7 +46,7 @@ class LocalBinding : private Engine {
 };   // C4266  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C4266b.cpp  

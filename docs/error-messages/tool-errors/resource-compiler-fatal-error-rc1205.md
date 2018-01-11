@@ -1,46 +1,28 @@
 ---
-title: Recurso compilador Erro Fatal RC1205 | Documentos do Microsoft
+title: Recurso compilador Erro Fatal RC1205 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RC1205
-dev_langs:
-- C++
-helpviewer_keywords:
-- RC1205
+f1_keywords: RC1205
+dev_langs: C++
+helpviewer_keywords: RC1205
 ms.assetid: 6cfbe019-ad8a-4267-b4b9-0d675bb3819a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ec2e650a0bd2123bf8c9b72dd508bacbcec5aa91
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 633375acf5342d566b0257be3a8c89013c941691
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-fatal-error-rc1205"></a>Erro fatal RC1205 (compilador de recurso)
-página de código inválida  
+página de código inválido  
   
- Especificar a página de código (/ c) opção foi seguida por uma página de código inválido. Consulte [páginas de código](../../c-runtime-library/code-pages.md) no *referência da biblioteca de tempo de execução* para obter mais informações.
+ Especificar a página de código (/c) opção foi seguida por uma página de código inválido. Consulte [páginas de código](../../c-runtime-library/code-pages.md) no *referência da biblioteca de tempo de execução* para obter mais informações.

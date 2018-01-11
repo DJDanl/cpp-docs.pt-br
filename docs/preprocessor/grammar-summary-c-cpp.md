@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 075c960967a04d4850c964f69041e89bd405d066
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf98754c5efc0f897775fd4e99ba5d6d6ea98218
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="grammar-summary-cc"></a>Resumo de gramática (C/C++)
 Esta seção descreve a gramática formal do pré-processador. Ele aborda a sintaxe de diretivas de pré-processamento e operadores discutidos [o pré-processador](../preprocessor/preprocessor.md) e em [diretivas Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  

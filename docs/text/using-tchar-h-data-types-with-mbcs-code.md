@@ -1,80 +1,80 @@
 ---
-title: "Usando tipos de dados TCHAR.H com c&#243;digo _MBCS | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ""tchar.h""
-  - "TCHAR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de dados de texto genérico [C++]"
-  - "mapeamentos de texto genérico [C++]"
-  - "mapeando texto genérico"
-  - "mapeamentos [C++], TCHAR.H"
-  - "MBCS [C++], mapeamentos de texto genérico"
-  - "Tipos de dados TCHAR.H, mapeamento"
+title: "Usando TCHAR. Tipos de dados H com código MBCS | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tchar.h
+- TCHAR
+dev_langs: C++
+helpviewer_keywords:
+- mapping generic-text
+- generic-text data types [C++]
+- generic-text mappings [C++]
+- MBCS [C++], generic-text mappings
+- TCHAR.H data types, mapping
+- mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Usando tipos de dados TCHAR.H com c&#243;digo _MBCS
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando **\_MBCS** constante manifesto for definido, mapas dados de uma rotina de genérico\- texto a um dos seguintes tipos de rotinas:  
+# <a name="using-tcharh-data-types-with-mbcs-code"></a>Usando tipos de dados TCHAR.H com código _MBCS
+Quando o manifesto constante **MBCS** é definida, uma rotina de texto genérico determinada mapeado para um dos seguintes tipos de rotinas de:  
   
--   Uma rotina de SBCS que trata bytes, caracteres, e cadeias de caracteres multibyte adequadamente.  Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo **char\***.  Por exemplo, mapas de `_tprintf` a `printf`; os argumentos de cadeia de caracteres a `printf` são do tipo **char\***.  Se você usar o tipo de dados de genérico\- texto de **\_TCHAR** para seus tipos de cadeia de caracteres, os tipos de parâmetro formal com e reais para `printf` correspondem porque **\_TCHAR**\* é mapeado para **char\***.  
+-   Uma rotina SBCS que lida com bytes, caracteres e cadeias de caracteres multibyte. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo **char\***. Por exemplo, `_tprintf` mapeia para `printf`; os argumentos de cadeia de caracteres para `printf` são do tipo **char\***. Se você usar o **TCHAR** tipos de tipo de dados de texto genérico para a cadeia de caracteres, os tipos de parâmetro formal e real para `printf` corresponder porque **TCHAR** \* mapeia para **char \***.  
   
--   Uma rotina MBCS\-específica.  Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo `unsigned` **char\***.  Por exemplo, mapas de `_tcsrev` a `_mbsrev`, que espera e retorna uma cadeia de caracteres de tipo `unsigned` **char\***.  Se você usar o tipo de dados de genérico\- texto de **\_TCHAR** para seus tipos de cadeia de caracteres, há um conflito potencial do tipo porque os mapas de **\_TCHAR** para digitar `char`.  
+-   Uma rotina específica do MBCS. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo `unsigned` **char\***. Por exemplo, `_tcsrev` mapeia para `_mbsrev`, que espera e retorna uma cadeia de caracteres do tipo `unsigned` **char\***. Se você usar o **TCHAR** tipo de dados de texto genérico para seus tipos de cadeia de caracteres, não há um possível conflito de tipo porque **TCHAR** mapeia para o tipo `char`.  
   
- A lista a seguir apresenta três soluções para evitar esse conflito de tipo \(e os avisos do compilador do compilador C ou C\+\+ erros que resultariam\):  
+ A seguir estão três soluções para evitar esse conflito de tipo (e os avisos do compilador C ou erros do compilador C++ que resultariam):  
   
--   Use o comportamento padrão.  Tchar.h fornece o texto genérico\- protótipos de rotina para rotinas em bibliotecas de tempo de execução, como no exemplo a seguir.  
+-   Use o comportamento padrão. TCHAR. h fornece protótipos de rotina de texto genérico para rotinas nas bibliotecas de tempo de execução, como no exemplo a seguir.  
   
     ```  
     char * _tcsrev(char *);  
     ```  
   
-     Nas caixas padrão, o protótipo para mapas de `_tcsrev` a `_mbsrev` por meio de um thunk em Libc.lib.  Isso altera os tipos de parâmetros de entrada de `_mbsrev` e o valor de retorno de saída de  **\_TCHAR\*** \(isto é, `char` **\***\) a  `unsigned``char` **\***.  Esse método garante a correspondência de tipo quando você estiver usando **\_TCHAR**, mas é relativamente lento devido a sobrecarga da chamada de função.  
+     No caso padrão, o protótipo para `_tcsrev` mapeia para `_mbsrev` por meio de uma conversão em Libc.lib. Isso altera os tipos do `_mbsrev` parâmetros de entrada e saída retornam o valor de **TCHAR \***  (ou seja, `char`  **\*** ) para `unsigned` `char` **\***. Esse método garante o tipo correspondente ao usar **TCHAR**, mas é relativamente lenta devido à sobrecarga de chamada de função.  
   
--   Use a função que inlining inserindo a seguinte instrução de pré\-processador em seu código.  
+-   Use inlining de função incorporando a seguinte instrução de pré-processador em seu código.  
   
     ```  
     #define _USE_INLINING  
     ```  
   
-     Esse método faz um thunk da função embutida, desde que em Tchar.h, mapeie a rotina de genérico\- texto diretamente para a rotina apropriado de MBCS.  O trecho de código de Tchar.h fornece um exemplo de como isso é feito.  
+     Este método faz com que uma conversão de função embutida, fornecido em TCHAR. h para mapear a rotina de texto genérico diretamente para a rotina MBCS apropriada. O seguinte trecho de código de TCHAR. h fornece um exemplo de como isso é feito.  
   
     ```  
     __inline char *_tcsrev(char *_s1)  
     {return (char *)_mbsrev((unsigned char *)_s1);}  
     ```  
   
-     Se você pode usar inlining, esta será a melhor solução, porque garante a correspondência do tipo e não tem nenhum custo de tempo adicional.  
+     Se você pode usar o inlining, essa é a melhor solução, pois ela garante o tipo de correspondência e tem um custo sem tempo adicional.  
   
--   Mapeamento direto de uso inserindo a seguinte instrução de pré\-processador em seu código.  
+-   Use o mapeamento direto ao incorporar a seguinte instrução de pré-processador em seu código.  
   
     ```  
     #define _MB_MAP_DIRECT  
     ```  
   
-     Esta abordagem fornece uma alternativa rápida se você não quiser usar o comportamento padrão nem pode usar inlining.  Faz com que a rotina de genérico\- texto a ser mapeada por uma macro diretamente à versão de MBCS da rotina, como no exemplo de Tchar.h.  
+     Essa abordagem fornece uma alternativa rápida se você não quiser usar o comportamento padrão ou não é possível usar inlining. Faz com que a rotina de texto genérico deve ser mapeado por uma macro diretamente para a versão MBCS da rotina, como no exemplo a seguir do TCHAR. h.  
   
     ```  
     #define _tcschr _mbschr  
     ```  
   
-     Quando você usa essa abordagem, você deve ter cuidado para assegurar o uso de tipos de dados apropriados para argumentos de cadeia de caracteres e retornam valores de cadeia de caracteres.  Você pode usar a conversão de tipo para assegurar que a correspondência adequada ou é do tipo UDT possam usar o tipo de dados de genérico\- texto de **\_TXCHAR** .  mapas de**\_TXCHAR** para digitar `char` no código de SBCS mas mapeia para digitar `unsigned` `char` no código de MBCS.  Para obter mais informações sobre macros de genérico\- texto, consulte [Mapeamentos de Genérico\- texto](../c-runtime-library/generic-text-mappings.md)*na referência da biblioteca de tempo de execução*.  
+     Quando você usar essa abordagem, você deve ter cuidado para garantir o uso de tipos de dados apropriados para argumentos de cadeia de caracteres e valores de retorno de cadeia de caracteres. Você pode usar a conversão de tipo para garantir a correspondência do tipo correto ou você pode usar o **txchar** tipo de dados de texto genérico. **Txchar** mapeia para o tipo `char` no código SBCS mas mapeia para o tipo `unsigned` `char` no código MBCS. Para obter mais informações sobre as macros de texto genérico, consulte [mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md) no *referência da biblioteca de tempo de execução*.  
   
-## Consulte também  
- [Mapeamentos de texto genéricos em Tchar.h](../Topic/Generic-Text%20Mappings%20in%20Tchar.h.md)
+## <a name="see-also"></a>Consulte também  
+ [Mapeamentos de texto genéricos em Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

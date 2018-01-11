@@ -1,47 +1,29 @@
 ---
-title: Classe uninitialized_object | Documentos do Microsoft
+title: Classe uninitialized_object | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
 - AMPRT/Concurrency::uninitialized_object
-dev_langs:
-- C++
-helpviewer_keywords:
-- uninitialized_object class
+dev_langs: C++
+helpviewer_keywords: uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1ff7840ec3ff4ab00b7e13d647c329a892dade42
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 75d3050c128b067833352ea82aee38bcd2a7019d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninitializedobject-class"></a>Classe uninitialized_object
 A exceção que é lançada quando é usado um objeto não inicializado.  
@@ -54,11 +36,11 @@ class uninitialized_object : public runtime_exception;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor uninitialized_object](#ctor)|Inicializa uma nova instância da classe `uninitialized_object`.|  
+|[Construtor de uninitialized_object](#ctor)|Inicializa uma nova instância da classe `uninitialized_object`.|  
 
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -74,7 +56,7 @@ class uninitialized_object : public runtime_exception;
  **Namespace:** Simultaneidade  
 ## <a name="uninitialized_object__ctor"></a>unsupported_feature 
 
-Cria uma nova instância da exceção unsupported_feature.  
+Constrói uma nova instância da exceção unsupported_feature.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -94,4 +76,3 @@ unsupported_feature() throw();
 
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

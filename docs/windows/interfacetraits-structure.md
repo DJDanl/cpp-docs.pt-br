@@ -1,40 +1,39 @@
 ---
-title: "Estrutura InterfaceTraits | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura InterfaceTraits"
+title: Estrutura InterfaceTraits | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits
+dev_langs: C++
+helpviewer_keywords: InterfaceTraits structure
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c28c7c1eef2fc278a0667ec4b7c635005331467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Estrutura InterfaceTraits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="interfacetraits-structure"></a>Estrutura InterfaceTraits
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<  
    typename I0  
 >  
 struct __declspec(novtable) InterfaceTraits;  
-  
 template<  
    typename CloakedType  
 >  
@@ -44,49 +43,49 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `I0`  
  O nome de uma interface.  
   
  `CloakedType`  
- Para RuntimeClass, implementa e ChainInterfaces, que não está na lista de IDs de suporte da interface.  
+ Para RuntimeClass, implementa e ChainInterfaces, uma interface que não seja na lista de suporte para as IDs de interface.  
   
-## Comentários  
- Implementa características de uma interface comum.  
+## <a name="remarks"></a>Comentários  
+ Características em comum implementa uma interface.  
   
- O segundo modelo é uma especialização para interfaces cloaked.  O terceiro modelo é uma especialização para parâmetros de nada.  
+ O segundo é uma especialização de interfaces encobertos. O terceiro modelo é uma especialização de parâmetros Nil.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs Públicas  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|`Base`|Um sinônimo para o parâmetro do modelo de `I0` .|  
-  
-### Métodos Públicos  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método InterfaceTraits::CanCastTo](../Topic/InterfaceTraits::CanCastTo%20Method.md)|Indica se o ponteiro especificado pode ser convertido em um ponteiro para `Base`.|  
+|----------|-----------------|  
+|`Base`|Um sinônimo para o `I0` parâmetro do modelo.|  
+  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método InterfaceTraits::CanCastTo](../windows/interfacetraits-cancastto-method.md)|Indica se o ponteiro especificado pode ser convertido em um ponteiro para `Base`.|  
 |[Método InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Converte o ponteiro especificado para um ponteiro para `Base`.|  
-|[Método InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Converte o ponteiro especificado para um ponteiro para IUnknown.|  
-|[Método InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Atribui a ID da interface de `Base` ao elemento da matriz especificado pelo argumento de índice.|  
-|[Método InterfaceTraits::Verify](../Topic/InterfaceTraits::Verify%20Method.md)|Verifica se a base seja derivada corretamente.|  
+|[Método InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Converte o ponteiro especificado para um ponteiro IUnknown.|  
+|[Método InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Atribui a ID de interface de `Base` ao elemento de matriz especificado pelo argumento de índice.|  
+|[Método InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Verifica que Base é derivada corretamente.|  
   
-### Constantes públicas  
+### <a name="public-constants"></a>Constantes públicas  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Constante InterfaceTraits::IidCount](../Topic/InterfaceTraits::IidCount%20Constant.md)|Contém o número de IDs de interface associados ao objeto atual de InterfaceTraits.|  
+|----------|-----------------|  
+|[Constante InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Contém o número da interface que IDs associadas com o objeto de InterfaceTraits atual.|  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `InterfaceTraits`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

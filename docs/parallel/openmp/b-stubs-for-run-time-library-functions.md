@@ -1,32 +1,32 @@
 ---
-title: "B. Stubs for Run-time Library Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "B. Stubs para funções de biblioteca em tempo de execução | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# B. Stubs for Run-time Library Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Esta seção apresenta os stubs para as funções da biblioteca de tempo de execução definidas no OpenMP C e C\+\+ API.  Os stubs são fornecidos para habilitar a portabilidade para plataformas que não suportam o OpenMP C e C\+\+ API.  Nessas plataformas, OpenMP programas devem ser vinculados com uma biblioteca que contém essas funções de stub.  As funções de stub supõem que as diretivas no programa OpenMP são ignoradas.  Como tal, eles emulam semântica serial.  
+# <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs para funções de biblioteca em tempo de execução
+Esta seção fornece stubs para as funções de biblioteca de tempo de execução definidas no OpenMP C e C++ API. Os stubs são fornecidos para habilitar a portabilidade para plataformas que não dão suporte a OpenMP C e C++ API. Nessas plataformas, OpenMP programas devem ser vinculados a uma biblioteca que contém essas funções de stub. As funções de stub assumem que as diretivas no programa OpenMP são ignoradas. Assim, eles emularem semântica serial.  
   
 > [!NOTE]
->  A variável de bloqueio que aparece nas funções do bloqueio deve ser acessada exclusivamente por meio dessas funções.  Ele não deve ser inicializado ou modificado de alguma forma no programa do usuário.  Os usuários não devem fazer suposições sobre os mecanismos usados pelas implementações do OpenMP C e C\+\+ para implementar os bloqueios com base no esquema de usados pelas funções do stub.  
+>  A variável de bloqueio que aparece nas funções de bloqueio deve ser acessada exclusivamente por meio dessas funções. Ele não deve ser inicializado ou modificado de outra forma no programa de usuário. Os usuários não devem fazer suposições sobre mecanismos usados por implementações OpenMP C e C++ para implementar bloqueios com base no esquema usado pelas funções de stub.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 #include <stdio.h>  

@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo AsyncBase::TryTransitionToError | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::TryTransitionToError"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método TryTransitionToError"
+title: "Método: Trytransitiontoerror | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::TryTransitionToError
+dev_langs: C++
+helpviewer_keywords: TryTransitionToError method
 ms.assetid: f6d11c25-1ce3-43f9-af1c-97c4dc0f6f0f
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6da3d84e3e5e1ee0fd71da1cf59ec79497f81d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo AsyncBase::TryTransitionToError
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica se o código de erro especificado é possível alterar o estado de erro interno.  
+# <a name="asyncbasetrytransitiontoerror-method"></a>Método AsyncBase::TryTransitionToError
+Indica se o código de erro especificado pode modificar o estado de erro interno.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 bool TryTransitionToError(  
@@ -35,20 +35,20 @@ bool TryTransitionToError(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `error`  
  Um erro HRESULT.  
   
-## Valor de retorno  
- `true` se o estado de erro interno foi alterado; caso contrário, `false`.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se o estado de erro interno foi alterado; Caso contrário, `false`.  
   
-## Comentários  
- Essa operação altera o estado de erro somente se o estado de erro já estará definido como S\_OK.  Essa operação não tem nenhum efeito se o estado do erro é já erro, cancelado, concluído, ou fechada.  
+## <a name="remarks"></a>Comentários  
+ Esta operação modifica o estado de erro somente se o estado de erro já está definido como S_OK. Esta operação não tem efeito se o estado de erro já é um erro, cancelado, concluído ou fechado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe AsyncBase](../windows/asyncbase-class.md)

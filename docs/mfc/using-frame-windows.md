@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6245ea3f406311ab018f19ed1071c609c4e981f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e54a232b246665a1ef82fb48166eed2aff0fd9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-frame-windows"></a>Usando janelas com moldura
 A estrutura MFC cria janelas com moldura de documento — e os modos de exibição e documentos — como parte de sua implementação do novo e comandos abertos no menu arquivo. Como o framework faz a maior parte do trabalho de quadro de janela para você, você tocar somente uma pequena função na criação, usando e destruir essas janelas. Você pode, no entanto, criar explicitamente suas próprias janelas com moldura e janelas filho para fins especiais.  

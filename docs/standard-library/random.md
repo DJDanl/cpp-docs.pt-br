@@ -15,11 +15,12 @@ caps.latest.revision: "58"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e89416c18fce65f19ff63c73ef441ee0bdb6165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 Define instalações para a geração aleatória de números, permitindo a criação de números aleatórios distribuídos uniformemente.  
@@ -54,7 +55,7 @@ Define instalações para a geração aleatória de números, permitindo a cria�
   
 -   O emparelhamento mais útil para a maioria dos aplicativos é o mecanismo `mt19937` com `uniform_int_distribution`, como mostrado no [exemplo de código](#code) posteriormente neste artigo.  
   
- Há muitas opções dentre as quais escolher no cabeçalho `<random>`, e deve-se dar preferência a qualquer uma delas em relação à antiga função de Tempo de Execução C`rand()`. Para obter informações sobre o que há de errado com o `rand()` e como o `<random>` lida com esses imprevistos, veja [este vídeo](http://go.microsoft.com/fwlink/?LinkId=397615).  
+ Há muitas opções dentre as quais escolher no cabeçalho `<random>`, e deve-se dar preferência a qualquer uma delas em relação à antiga função de Tempo de Execução C`rand()`. Para obter informações sobre o que há de errado com o `rand()` e como o `<random>` lida com esses imprevistos, veja [este vídeo](http://go.microsoft.com/fwlink/p/?linkid=397615).  
   
 ##  <a name="code"></a> Exemplos  
  O exemplo de código a seguir mostra como gerar alguns números aleatórios;nesse caso cinco deles usando um gerador criado com semente não determinista.  
@@ -451,7 +452,7 @@ Esse código demonstra duas aleatorizações diferentes, aleatorizar um vetor de
   
  <sup>* Quando fornecido com uma semente conhecida.</sup>  
   
- Embora o Padrão ISO C++ não exija que o `random_device` seja protegido por criptografia, no Visual Studio, ele é implementado com proteção criptográfica. (O termo “proteção criptográfica” não implica em garantias, mas se refere ao nível mínimo de entropia e, portanto, ao nível de previsibilidade, que um determinado algoritmo aleatório oferece. Para obter mais informações, consulte o artigo da Wikipédia [Cryptographically secure pseudorandom number generator](http://go.microsoft.com/fwlink/LinkId=398017) (Gerador de número pseudoaleatório protegido criptograficamente.) Como o Padrão ISO C++ não requer isso, outras plataformas podem implementar `random_device` como um gerador de número pseudoaleatório simples (sem proteção criptográfica) e pode ser adequado somente como uma fonte de semeação para outro gerador. Verifique a documentação dessas plataformas ao usar `random_device` no código entre plataformas.  
+ Embora o Padrão ISO C++ não exija que o `random_device` seja protegido por criptografia, no Visual Studio, ele é implementado com proteção criptográfica. (O termo “proteção criptográfica” não implica em garantias, mas se refere ao nível mínimo de entropia e, portanto, ao nível de previsibilidade, que um determinado algoritmo aleatório oferece. Para obter mais informações, consulte o artigo da Wikipédia [Cryptographically secure pseudorandom number generator](http://go.microsoft.com/fwlink/p/?linkid=398017) (Gerador de número pseudoaleatório protegido criptograficamente.) Como o Padrão ISO C++ não requer isso, outras plataformas podem implementar `random_device` como um gerador de número pseudoaleatório simples (sem proteção criptográfica) e pode ser adequado somente como uma fonte de semeação para outro gerador. Verifique a documentação dessas plataformas ao usar `random_device` no código entre plataformas.  
   
  Por definição, resultados do `random_device` não são reproduzíveis e um efeito colateral é que ele pode ser executado de maneira significativamente mais lenta do que outros URNGs. A maioria dos aplicativos que não exige proteção criptográfica usa o `mt19937` ou um mecanismo semelhante, embora possa ser útil propagá-lo com uma chamada para `random_device`, como mostrado no [exemplo de código](#code).  
   

@@ -1,11 +1,10 @@
 ---
-title: Classe network_link_registry | Documentos do Microsoft
+title: Classe network_link_registry | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,38 +15,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- network_link_registry class
+dev_langs: C++
+helpviewer_keywords: network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
-O `network_link_registry` gerencia a classe base abstrata os links entre os blocos de origem e destino.  
+O `network_link_registry` gerencia a classe base abstrata os links entre blocos de origem e destino.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,10 +49,10 @@ class network_link_registry;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`const_pointer`|Um tipo que fornece um ponteiro para um `const` elemento em uma `network_link_registry` objeto.|  
+|`const_pointer`|Um tipo que fornece um ponteiro para um `const` elemento em um `network_link_registry` objeto.|  
 |`const_reference`|Um tipo que fornece uma referência a um `const` elemento armazenado em uma `network_link_registry` objeto para ler e executar operações constantes.|  
 |`iterator`|Um tipo que fornece um iterador que pode ler ou modificar qualquer elemento em uma `network_link_registry` objeto.|  
-|`type`|Um tipo que representa o tipo de bloco armazenado na `network_link_registry` objeto.|  
+|`type`|Um tipo que representa o tipo de bloco armazenado no `network_link_registry` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -77,7 +60,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|Quando substituído em uma classe derivada, adiciona um link para o `network_link_registry` objeto.|  
 |[begin](#begin)|Quando substituído em uma classe derivada, retorna um iterador para o primeiro elemento no `network_link_registry` objeto.|  
-|[contém](#contains)|Quando substituído em uma classe derivada, pesquisa a `network_link_registry` objeto para um bloco especificado.|  
+|[contém](#contains)|Quando substituído em uma classe derivada, procura o `network_link_registry` objeto para um bloco especificado.|  
 |[count](#count)|Quando substituído em uma classe derivada, retorna o número de itens de `network_link_registry` objeto.|  
 |[remove](#remove)|Quando substituído em uma classe derivada, remove um bloco especificado a partir de `network_link_registry` objeto.|  
   
@@ -113,14 +96,14 @@ virtual iterator begin() = 0;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador que trata o primeiro elemento no `network_link_registry` objeto.  
+ Um iterador de endereçamento do primeiro elemento no `network_link_registry` objeto.  
   
 ### <a name="remarks"></a>Comentários  
  O estado final do iterador é indicado por um `NULL` link.  
   
 ##  <a name="contains"></a>contém 
 
- Quando substituído em uma classe derivada, pesquisa a `network_link_registry` objeto para um bloco especificado.  
+ Quando substituído em uma classe derivada, procura o `network_link_registry` objeto para um bloco especificado.  
   
 ```
 virtual bool contains(_EType _Link) = 0;
@@ -131,7 +114,7 @@ virtual bool contains(_EType _Link) = 0;
  Um ponteiro para um bloco que está sendo procurado no `network_link_registry` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o bloco for encontrado, `false` caso contrário.  
+ `true`Se o bloco foi encontrado, `false` caso contrário.  
   
 ##  <a name="count"></a>Contagem 
 
@@ -163,4 +146,3 @@ virtual bool remove(_EType _Link) = 0;
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe single_link_registry](single-link-registry-class.md)   
  [Classe multi_link_registry](multi-link-registry-class.md)
-

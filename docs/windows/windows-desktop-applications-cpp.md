@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c826d3999ac1f044bcc0ffc25e58f86ec7b7e881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3d8e65a62dcac8e97f8f416cd54050a76920afe6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-desktop-applications-c"></a>Aplicativos de área de trabalho do Windows (C++)
 Esta seção discute como criar aplicativos de área de trabalho do C++ que são executados em uma janela.  

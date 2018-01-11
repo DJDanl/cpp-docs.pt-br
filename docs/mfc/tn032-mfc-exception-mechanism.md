@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2be26d5a3c5ab456d745119d540276edeed2d0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf82d4b158cedd2d8f6916dfb01d26db6c62d83b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>TN032: mecanismo de exceção MFC
 Versões anteriores do Visual C++ não oferecia suporte para o mecanismo de exceção padrão do C++ e MFC fornecido macros **TRY/CATCH/THROW** que foram usados. Esta versão do Visual C++ totalmente dá suporte a exceções C++. Esta anotação coberto alguns dos detalhes de implementação avançada de macros anteriores incluindo como objetos de pilha com base em limpeza automaticamente. Como as exceções do C++ oferecem suporte a pilha de desenrolamento por padrão, essa observação técnica não é mais necessária.  

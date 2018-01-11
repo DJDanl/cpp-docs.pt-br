@@ -1,68 +1,67 @@
 ---
-title: "Adicionando uma vari&#225;vel de membro (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.member.variable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variáveis de membro"
-  - "variáveis de membro, adicionando"
+title: "Adicionar uma variável de membro (Visual C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes.member.variable
+dev_langs: C++
+helpviewer_keywords:
+- member variables, adding
+- member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52d98e3eae6e468db7c2737efac8c2b7ab04abd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Adicionando uma vari&#225;vel de membro (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode adicionar uma variável de membro a uma classe usando o modo de exibição de classe.  Variáveis de membro podem ser apenas para  [troca de dados e validação de dados](../mfc/dialog-data-exchange-and-validation.md), ou podem ser genéricos.  O Assistente de variável de membro de dados é projetado especificamente para levar as informações relevantes e usá\-lo para inserir elementos em seus arquivos de origem nos locais apropriados.  Você pode adicionar uma variável de membro do  [editor de diálogo](../mfc/dialog-editor.md) na  [Exibição de recurso](../windows/resource-view-window.md), ou a partir de  [Class View](http://msdn.microsoft.com/pt-br/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+# <a name="adding-a-member-variable--visual-c"></a>Adicionando uma variável de membro (Visual C++)
+Você pode adicionar uma variável de membro para uma classe usando o modo de exibição de classe. Variáveis de membro podem ser para [troca de dados e validação de dados](../mfc/dialog-data-exchange-and-validation.md), ou podem ser genéricos. O Assistente de variável de membro de dados é projetado especificamente para tomar as informações relevantes e usá-lo para inserir elementos nos arquivos de origem nos locais apropriados. Você pode adicionar uma variável de membro do [editor de caixa de diálogo](../windows/dialog-editor.md) na [exibição recursos](../windows/resource-view-window.md), ou de [exibição de classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
->  Quando você está projetando e implementando uma caixa de diálogo, talvez seja mais eficiente usar a caixa de diálogo editor para adicionar os controles de caixa de diálogo e, em seguida, para implementar as variáveis de membro dos controles.  
+>  Quando você está projetando e implementando uma caixa de diálogo, talvez seja mais eficiente usar a caixa de diálogo editor para adicionar os controles de caixa de diálogo e, em seguida, para implementar a variáveis de membro dos controles.  
   
-### Para adicionar uma variável de membro para um controle de caixa de diálogo no modo de exibição de recurso usando o Assistente para Adicionar variável de membro  
+### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>Para adicionar uma variável de membro para um controle de caixa de diálogo no modo de exibição de recursos usando o Assistente para adição de variável de membro  
   
-1.  No modo de exibição de recursos, expanda o nó do projeto e o nó de diálogo para exibir a lista das caixas de diálogo do projeto.  
+1.  No modo de exibição de recursos, expanda o nó do projeto e o nó de caixa de diálogo para exibir a lista de caixas de diálogo do projeto.  
   
-2.  Clique duas vezes na caixa de diálogo ao qual você deseja adicionar a variável de membro para abri\-lo no editor de diálogo.  
+2.  Clique duas vezes a caixa de diálogo na qual você deseja adicionar a variável de membro para abri-lo no editor de caixa de diálogo.  
   
-3.  Na caixa de diálogo exibida no editor de diálogo, clique com o botão direito no controle ao qual você deseja adicionar a variável de membro.  
+3.  Na caixa de diálogo exibida no editor de caixa de diálogo, clique o controle para o qual você deseja adicionar a variável de membro.  
   
-4.  No menu de atalho, clique em  **Adicionar variável** para exibir o  [O Assistente de variável de membro adicionar](../ide/add-member-variable-wizard.md).  
+4.  No menu de atalho, clique em **Adicionar variável** para exibir o [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md).  
   
     > [!NOTE]
-    >  Um valor padrão já é fornecido em  **ID de controle de**.  
+    >  Um valor padrão já é fornecido no **ID de controle**.  
   
-5.  Forneça as informações nas caixas do assistente apropriado.  Consulte  [controles de caixa de diálogo e tipos de variáveis](../Topic/Dialog%20Box%20Controls%20and%20Variable%20Types.md) para obter mais informações.  
+5.  Forneça as informações nas caixas apropriadas do assistente. Consulte [controles de caixa de diálogo e tipos de variáveis](../ide/dialog-box-controls-and-variable-types.md) para obter mais informações.  
   
-6.  Clique em  **Concluir** para adicionar o código de definição e implementação para o projeto e fechar o assistente.  
+6.  Clique em **concluir** para adicionar o código de implementação e a definição para o projeto e fechar o assistente.  
   
-### Para adicionar uma variável de membro do modo de exibição de classe usando o Assistente para Adicionar variável de membro  
+### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Para adicionar uma variável de membro de classe de exibição usando o Assistente para adição de variável de membro  
   
-1.  Em  [Class View](http://msdn.microsoft.com/pt-br/8d7430a9-3e33-454c-a9e1-a85e3d2db925), expanda o nó do projeto para exibir as classes no projeto.  
+1.  Em [exibição de classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), expanda o nó do projeto para exibir as classes no projeto.  
   
-2.  A classe à qual você deseja adicionar uma variável de atalho.  
+2.  Clique com botão direito a classe à qual você deseja adicionar uma variável.  
   
-3.  No menu de atalho, clique em  **Add**e, em seguida, clique em  **Adicionar variável** para exibir o Assistente de variável de membro adicionar.  
+3.  No menu de atalho, clique em **adicionar**e, em seguida, clique em **Adicionar variável** para exibir o Assistente de variável de membro adicionar.  
   
-4.  Forneça as informações nas caixas do assistente apropriado.  Consulte  [O Assistente de variável de membro adicionar](../ide/add-member-variable-wizard.md) para obter detalhes.  
+4.  Forneça as informações nas caixas apropriadas do assistente. Consulte [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) para obter detalhes.  
   
-5.  Clique em  **Concluir** para adicionar o código de definição e implementação para o projeto e fechar o assistente.  
+5.  Clique em **concluir** para adicionar o código de implementação e a definição para o projeto e fechar o assistente.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma classe](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)   
- [Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)   
+ [Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)   
+ [Adicionar uma função de membro](../ide/adding-a-member-function-visual-cpp.md)   
  [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navegando na estrutura da classe](../ide/navigating-the-class-structure-visual-cpp.md)
+ [Navegando na estrutura de classe](../ide/navigating-the-class-structure-visual-cpp.md)

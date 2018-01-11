@@ -1,46 +1,43 @@
 ---
-title: "tlbid | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tlbid"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "atributo tlbid"
+title: tlbid | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: tlbid
+dev_langs: C++
+helpviewer_keywords: tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 812b105fc02782b611b3f55061e448062dcd07c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# tlbid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico do C\+\+**  
+# <a name="tlbid"></a>tlbid
+**Específicas do C++**  
   
  Permite carregar bibliotecas diferentes de biblioteca de tipos primárias.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 tlbid(number)  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `number`  
  O número da biblioteca de tipos em `filename`.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Caso várias bibliotecas de tipos estejam compiladas em uma única DLL, é possível carregar bibliotecas que não sejam a biblioteca de tipos principal usando `tlbid`.  
   
  Por exemplo:  
@@ -55,8 +52,8 @@ tlbid(number)
 LoadTypeLib("MyResource.dll\\2");  
 ```  
   
- **FIM de Específico do C\+\+**  
+ **TÉRMINO específicas do C++**  
   
-## Consulte também  
- [Atributos \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Diretiva \#import](../Topic/%23import%20Directive%20\(C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,38 +1,39 @@
 ---
-title: "Exibi&#231;&#227;o de registro (Acesso a dados MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO [C++], exibições de registro"
-  - "bancos de dados [C++], exibições de registro"
-  - "formulários [C++], tarefas de acesso a dados"
-  - "MFC [C++], exibições de registro"
-  - "conjuntos de registros ODBC [C++], exibições de registro"
-  - "exibições de registro [C++]"
+title: "Gravar modos de exibição (MFC acesso a dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], record views
+- ODBC recordsets [C++], record views
+- databases [C++], record views
+- record views [C++]
+- forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e698cad29405fce4b5a0d23e166217502753dc1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Exibi&#231;&#227;o de registro (Acesso a dados MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esta seção aplica\-se apenas às classes MFC ODBC e DAO.  Para obter informações sobre modos de exibição de registros do banco de dados OLE, consulte [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) e [usando as exibições de registro OLE DB](../data/oledb/using-ole-db-record-views.md).  
+# <a name="record-views--mfc-data-access"></a>Exibição de registro (Acesso a dados MFC)
+Esta seção se aplica apenas às classes MFC ODBC. Para obter informações sobre exibições de registro de OLE DB, consulte [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) e [usando OLE DB exibições de registro](../data/oledb/using-ole-db-record-views.md).  
   
- Para dar suporte a aplicativos de acesso a dados baseada em formulários, a biblioteca de classes fornece as classes [CRecordView](../mfc/reference/crecordview-class.md) e [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  Uma exibição do registro é um objeto de exibição de formulário cujos controles são mapeados diretamente para os membros de dados de campo um objeto de [conjunto de registros](../data/odbc/recordset-odbc.md) \(e indiretamente para as colunas correspondentes em um resultado da consulta ou tabela na fonte de dados\).  Como sua classe base, [CFormView](../mfc/reference/cformview-class.md), `CRecordView` e `CDaoRecordView` baseia\-se em um recurso de modelo de diálogo.  
+ Para oferecer suporte a aplicativos de acesso a dados baseado em formulário, a biblioteca de classes fornece a classe [CRecordView](../mfc/reference/crecordview-class.md). Uma exibição de registro é um objeto de exibição de formulário cujos controles são mapeados diretamente para os membros de dados do campo de um [registros](../data/odbc/recordset-odbc.md) objeto (e indiretamente para as colunas correspondentes em uma tabela na fonte de dados ou o resultado da consulta). Como sua classe base [CFormView](../mfc/reference/cformview-class.md), `CRecordView` baseia-se em um recurso de modelo de caixa de diálogo.  
   
-## Usos do formulário  
+## <a name="form-uses"></a>Usos do formulário  
  Formulários são úteis para uma variedade de tarefas de acesso a dados:  
   
 -   Inserir dados  
@@ -41,12 +42,12 @@ Esta seção aplica\-se apenas às classes MFC ODBC e DAO.  Para obter informaç
   
 -   Atualizando dados  
   
-## Ler mais sobre as exibições de registro  
- O material nos tópicos aplicam\-se a classes baseadas em ODBC e baseadas em DAO.  Use `CRecordView` para ODBC e `CDaoRecordView` para DAO.  
+## <a name="further-reading-about-record-views"></a>Ler mais sobre as exibições de registro  
+ O material nos tópicos aplicam-se a classes baseadas em ODBC e baseadas em DAO. Use `CRecordView` para ODBC e `CDaoRecordView` para DAO.  
   
  Os tópicos incluem:  
   
--   [Recursos de classes de exibição do registro](../data/features-of-record-view-classes-mfc-data-access.md)  
+-   [Recursos de Classes de exibição de registro](../data/features-of-record-view-classes-mfc-data-access.md)  
   
 -   [Troca de dados para exibições de registro](../data/data-exchange-for-record-views-mfc-data-access.md)  
   
@@ -56,6 +57,6 @@ Esta seção aplica\-se apenas às classes MFC ODBC e DAO.  Para obter informaç
   
 -   [Usando uma exibição de registro](../data/using-a-record-view-mfc-data-access.md)  
   
-## Consulte também  
- [Programação de acesso a dados \(MFC\/ATL\)](../data/data-access-programming-mfc-atl.md)   
+## <a name="see-also"></a>Consulte também  
+ [Acesso a dados (MFC/ATL) de programação](../data/data-access-programming-mfc-atl.md)   
  [Lista de drivers ODBC](../data/odbc/odbc-driver-list.md)

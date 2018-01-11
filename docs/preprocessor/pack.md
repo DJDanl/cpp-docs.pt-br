@@ -1,78 +1,77 @@
 ---
-title: "pack | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pack_CPP"
-  - "vc-pragma.pack"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "pragma pack"
-  - "pragmas, pack"
+title: pacote | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pack_CPP
+- vc-pragma.pack
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, pack
+- pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4a6dc351d0184d43a1cf79f1cec9e9bae33aecf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# pack
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pack"></a>pack
 Especifica o alinhamento de empacotamento da estrutura, união e membros da classe.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 #pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
 ```  
   
-## Comentários  
- Para uma classe do pacote é colocar seus membros diretamente após uma da outra na memória, o que pode significar que alguns ou todos os membros podem ser alinhados em um limite menor do que o alinhamento padrão a arquitetura de destino.  `pack` dá o controle no nível de declaração de dados.  Isso é diferente da opção de compilador [\/Zp](../Topic/-Zp%20\(Struct%20Member%20Alignment\).md), que fornece apenas o controle a nível de módulo.  `pack` entra em vigor no primeiro `struct`, `union`, ou a declaração `class` após a consideração do pragma.  `pack` não tem nenhum efeito em definições.  Chamar `pack` sem argumentos define `n` como um valor definido na opção de compilador **\/Zp**.  Se a opção de compilador não for definida, o valor padrão é 8.  
+## <a name="remarks"></a>Comentários  
+ Para uma classe do pacote é colocar seus membros diretamente após a outra na memória, o que pode significar que alguns ou todos os membros podem ser alinhados em um limite menor do que o alinhamento padrão a arquitetura de destino. `pack` dá o controle no nível de declaração de dados. Isso é diferente da opção de compilador [/Zp](../build/reference/zp-struct-member-alignment.md), que fornece apenas o controle de nível de módulo. `pack` entra em vigor no primeiro `struct`, `union`, ou a declaração `class` após a consideração do pragma. `pack` não tem nenhum efeito em definições. Chamando `pack` com nenhum conjunto de argumentos `n` o valor definido na opção de compilador **/Zp**. Se a opção de compilador não for definida, o valor padrão é 8.  
   
- Se você alterar o alinhamento de uma estrutura, isso pode não usar tanto espaço na memória, mas você pode passar por uma redução de desempenho ou mesmo uma exceção gerada por hardware devido ao acesso não alinhado.  Você pode alterar esse comportamento de exceção usando [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+ Se você alterar o alinhamento de uma estrutura, isso pode não usar tanto espaço na memória, mas você pode passar por uma redução de desempenho ou mesmo uma exceção gerada por hardware devido ao acesso não alinhado.  Você pode modificar esse comportamento de exceção usando [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
- **show** \(opcional\)  
- Exibe o valor atual de byte para o alinhamento de empacotamento.  O valor é exibido por uma mensagem de aviso.  
+ **Mostrar** (opcional)  
+ Exibe o valor atual de byte para o alinhamento de empacotamento. O valor é exibido por uma mensagem de aviso.  
   
- **push** \(opcional\)  
- Impulsiona o valor atual do alinhamento de empacotamento atual na pilha interna do compilador e define o valor atual do alinhamento do empacotamento atual como `n`.  Se `n` não for especificado, o valor atual do alinhamento do empacotamento é impulsionado.  
+ **push** (opcional)  
+ Impulsiona o valor atual do alinhamento de empacotamento atual na pilha interna do compilador e define o valor atual do alinhamento do empacotamento atual como `n`. Se `n` não for especificado, o valor atual do alinhamento do empacotamento é impulsionado.  
   
- **pop** \(opcional\)  
- Remove o registro do topo da pilha interna do compilador.  Se `n` não for especificado com **pop**, o valor de empacotamento associado ao registro resultante na parte superior da pilha é o novo valor do alinhamento de empacotamento.  Se `n` for especificado, por exemplo, `#pragma pack(pop, 16)`, `n` se torna o novo valor de alinhamento de empacotamento.  Se você exibir com `identifier`, por exemplo, `#pragma pack(pop, r1)`, todos os registros na pilha são exibidos até o registro que tem `identifier` for localizado.  Esse registro é exibido e o valor de empacotamento associado ao registro resultante na parte superior da pilha é o novo valor do alinhamento de empacotamento.  Se você exibir com `identifier` que não foi encontrando em nenhum registro na pilha, então **pop** é ignorado.  
+ **pop** (opcional)  
+ Remove o registro do topo da pilha interna do compilador. Se `n` não for especificado com **pop**, em seguida, o valor de remessa associado ao registro resultante na parte superior da pilha é o novo valor de alinhamento de empacotamento. Se `n` for especificado, por exemplo, `#pragma pack(pop, 16)`, `n` se torna o novo valor de alinhamento de empacotamento. Se você exibir com `identifier`, por exemplo, `#pragma pack(pop, r1)`, todos os registros na pilha são exibidos até o registro que tem `identifier` for localizado. Esse registro é exibido e o valor de empacotamento associado ao registro resultante na parte superior da pilha é o novo valor do alinhamento de empacotamento. Se você inserir com um `identifier` que não é encontrada em nenhum registro na pilha, em seguida, o **pop** é ignorado.  
   
- `identifier` \(opcional\)  
- Quando usado com **push**, atribui um nome ao registro na pilha interna do compilador.  Quando usado com **pop**, elimina registros da pilha interna até que `identifier` seja removido; se `identifier` não for localizado na pilha interna, nada será exibido.  
+ `identifier` (opcional)  
+ Quando usado com **push**, atribui um nome para o registro na pilha do compilador interno. Quando usado com **pop**, pops registros na pilha interna até `identifier` for removido; se `identifier` não foi encontrado na pilha interna, nada é exibido.  
   
- `n` \(opcional\)  
- Especifica o valor, em bytes, a ser usado para empacotamento.  Se a opção de compilador [\/Zp](../Topic/-Zp%20\(Struct%20Member%20Alignment\).md) não estiver definida para o módulo, o valor padrão é de 8. `n`.  Os valores válidos são 1, 2, 4, 8 e 16.  O alinhamento de um membro estará em um limite que é um múltiplo de `n` ou um múltiplo do tamanho do membro, o que for menor.  
+ `n` (opcional)  
+ Especifica o valor, em bytes, a ser usado para empacotamento. Se a opção de compilador [/Zp](../build/reference/zp-struct-member-alignment.md) não está definido para o módulo, o valor padrão para `n` é 8. Os valores válidos são 1, 2, 4, 8 e 16. O alinhamento de um membro estará em um limite que é um múltiplo de `n` ou um múltiplo do tamanho do membro, o que for menor.  
   
- `#pragma pack(pop,` `identifier``,` `n``)` é indefinido.  
+ `#pragma pack(pop, identifier, n)`é indefinido.  
   
  Para obter mais informações sobre como modificar o alinhamento, consulte estes tópicos:  
   
--   [\_\_alignof](../cpp/alignof-operator.md)  
+-   [alignof](../cpp/alignof-operator.md)  
   
 -   [align](../cpp/align-cpp.md)  
   
--   [\_\_unaligned](../cpp/unaligned.md)  
+-   [__unaligned](../cpp/unaligned.md)  
   
--   [Exemplos de alinhamento da estrutura](../build/examples-of-structure-alignment.md) \(específico para x64\)  
+-   [Exemplos de alinhamento da estrutura](../build/examples-of-structure-alignment.md) (específico para x64)  
   
     > [!WARNING]
-    >  Observe que no Visual Studio de 2015 e mais tarde você pode usar os operadores de alignof e alignas padrão que, diferentemente `__alignof` e `declspec( align )` são portáteis em compiladores.  O padrão C\+\+ não trata de remessa, você ainda deve usar `pack` \(ou a extensão correspondente em outros compiladores\) para especificar alinhamentos menores que a arquitetura de destino word.  
+    >  Observe que no Visual Studio 2015 e mais tarde você pode usar os operadores de alignof e alignas padrão que, diferentemente `__alignof` e `declspec( align )` são portáveis entre compiladores. O padrão C++ não trata de empacotamento, você ainda deve usar `pack` (ou a extensão correspondente em outros compiladores) para especificar alinhamentos menores que a arquitetura de destino word.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o pragma `pack` para alterar o alinhamento de uma estrutura.  
   
 ```  
@@ -109,8 +108,8 @@ int main() {
 0 4 6  
 ```  
   
-## Exemplo  
- O exemplo a seguir mostra como usar a sintaxe **push**, **pop** e **show**.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como usar o **push**, **pop**, e **Mostrar** sintaxe.  
   
 ```  
 // pragma_directives_pack_2.cpp  
@@ -125,5 +124,5 @@ int main() {
 #pragma pack(show)   // C4810  
 ```  
   
-## Consulte também  
- [Diretivas Pragma e a palavra\-chave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

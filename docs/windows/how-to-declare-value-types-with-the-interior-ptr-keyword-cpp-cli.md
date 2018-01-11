@@ -1,40 +1,42 @@
 ---
-title: "How to: Declare Value Types with the interior_ptr Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr keyword"
-  - "value types, declaring"
+title: 'Como: declarar tipos de valor com a palavra-chave interior_ptr (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4b42cbbbc175b3d48baa7b7b2e1c1a5b0e4cbf15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Declare Value Types with the interior_ptr Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`interior_ptr` pode ser usado com um tipo de valor.  
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Como declarar tipos de valores com a palavra-chave interior_ptr (C++/CLI)
+Um `interior_ptr` pode ser usado com um tipo de valor.  
   
 > [!IMPORTANT]
->  Esse recurso de idioma é suportado pela opção do compilador de **\/clr** , mas não pela opção do compilador de **\/ZW** .  
+>  Este recurso de idioma é suportado pelo **/clr** opção de compilador, mas não pelo **/ZW** opção de compilador.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Descrição  
- O exemplo de [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] mostra como usar `interior_ptr` com um tipo de valor.  
+### <a name="description"></a>Descrição  
+ Os seguintes C + + CLI exemplo mostra como usar um `interior_ptr` com um tipo de valor.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -64,7 +66,7 @@ int main() {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 1  
@@ -75,14 +77,14 @@ int main() {
 3  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Descrição  
- Em um tipo de valor, o ponteiro de `this` avalia a um interior\_ptr.  
+### <a name="description"></a>Descrição  
+ Em um tipo de valor, o `this` ponteiro é avaliada como um interior_ptr.  
   
- No corpo de uma função de membro de não estáticos de um tipo de valor `V`, `this` é uma expressão de tipo `interior_ptr<V>` cujo valor é o endereço do objeto para o qual a função é chamada.  
+ No corpo de uma função de membro não estático de um tipo de valor `V`, `this` é uma expressão do tipo `interior_ptr<V>` cujo valor é o endereço do objeto para o qual a função é chamada.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -96,14 +98,14 @@ value struct V {
 };  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Descrição  
- O exemplo a seguir mostra como usar endereços de operador com membros estáticos.  
+### <a name="description"></a>Descrição  
+ O exemplo a seguir mostra como usar o operador address-of com membros estáticos.  
   
- O endereço de um membro estático do tipo do Visual C\+\+ gerencie um ponteiro nativo.  O endereço de um membro estático do tipo de valor é um ponteiro gerenciado como o membro do tipo de valor é atribuído no heap de tempo de execução e pode ser movido pelo coletor de lixo.  
+ O endereço de um membro de tipo estático do Visual C++ produz um ponteiro nativo.  O endereço de um membro de tipo de valor estático é um ponteiro gerenciado porque o membro de tipo de valor é alocado no heap do tempo de execução e pode ser movido pelo coletor de lixo.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -129,7 +131,7 @@ int main() {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 22  
@@ -137,5 +139,5 @@ int main() {
 hello  
 ```  
   
-## Consulte também  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Consulte também  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

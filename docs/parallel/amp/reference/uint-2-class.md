@@ -1,11 +1,10 @@
 ---
-title: Classe uint_2 | Documentos do Microsoft
+title: Classe uint_2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,34 +33,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60d3379da90611fe51b5ebb3bc6cdc2dbf4968d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint2-class"></a>Classe uint_2
 Representa um vetor curto de dois inteiros sem sinal.  
@@ -107,17 +90,17 @@ class uint_2;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|uint_2::Operator-||  
+|uint_2::Operator –||  
 |uint_2::Operator % =||  
-|uint_2::Operator < / =||  
+|uint_2::Operator & =||  
 |uint_2::Operator * =||  
 |uint_2::Operator / =||  
 |uint_2::Operator ^ =||  
-|uint_2::Operator | =||  
+|uint_2::Operator &#124; =||  
 |uint_2::Operator ~||  
 |uint_2::Operator + +||  
-|+ = uint_2::Operator||  
-|uint_2::Operator\<=||  
+|+ uint_2::Operator =||  
+|uint_2::Operator <\<=||  
 |uint_2::Operator =||  
 |uint_2::Operator =||  
 |uint_2::Operator >> =||  
@@ -207,7 +190,7 @@ explicit inline uint_2(
  O valor para inicializar o elemento 1.  
   
  `_V`  
- O valor de inicialização.  
+ O valor para a inicialização.  
   
  `_Other`  
  O objeto usado para inicializar.  
@@ -220,4 +203,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
-

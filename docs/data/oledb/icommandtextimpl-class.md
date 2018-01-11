@@ -1,33 +1,33 @@
 ---
-title: "Classe ICommandTextImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe ICommandText"
+title: Classe ICommandTextImpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ICommandText
+dev_langs: C++
+helpviewer_keywords: ICommandText class
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 53b5e19fbeaccfb61380054426315ad9b92f624a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe ICommandTextImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornece uma implementação da interface de [ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx) .  
+# <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
+Fornece uma implementação para o [ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx) interface.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <class T >  
@@ -35,31 +35,31 @@ class ATL_NO_VTABLE ICommandTextImpl
    : public ICommandImpl<T, ICommandText>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- A classe do comando derivada de **ICommandTextImpl**.  
+ O comando de classe derivada de **ICommandTextImpl**.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos da interface  
-  
-|||  
-|-|-|  
-|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|Retorna o comando de texto definido pela última chamada a [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
-|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|Define o texto do comando, substituindo o texto existente do comando.|  
-  
-### Membros de dados  
+### <a name="interface-methods"></a>Métodos de interface  
   
 |||  
 |-|-|  
-|[m\_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|Armazena o texto do comando.|  
+|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|Retorna o texto de comandos definidos pela última chamada para [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
+|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|Define o texto de comando, substituindo o texto do comando existente.|  
   
-## Comentários  
+### <a name="data-members"></a>Membros de Dados  
+  
+|||  
+|-|-|  
+|[m_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|Armazena o texto do comando.|  
+  
+## <a name="remarks"></a>Comentários  
  Uma interface obrigatória em comandos.  
   
-## Requisitos  
- **Header:** altdb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** altdb.h  
   
-## Consulte também  
- [Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

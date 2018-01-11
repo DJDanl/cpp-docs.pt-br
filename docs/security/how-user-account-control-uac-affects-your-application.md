@@ -18,20 +18,21 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 742d84300a7139e392bda19142643fe469231bdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e609c16d63974506a06d6ec553cf4be09509acb9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Como o Controle de Conta de Usuário (UAC) afeta o aplicativo
 O UAC (Controle de Conta de Usuário) é um recurso do Windows Vista no qual as contas de usuário têm privilégios limitados. Você pode encontrar informações detalhadas sobre o UAC nestes sites:  
   
--   [Guia passo a passo do controle de conta de usuário do Windows Vista](http://go.microsoft.com/fwlink/?linkid=53781)  
+-   [Guia passo a passo do controle de conta de usuário do Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
   
--   [Diretrizes para aplicativos em um ambiente com menos privilégios e as práticas recomendadas do desenvolvedor](http://go.microsoft.com/fwlink/?linkid=82444)  
+-   [Diretrizes para aplicativos em um ambiente com menos privilégios e as práticas recomendadas do desenvolvedor](http://go.microsoft.com/fwlink/p/?linkid=82444)  
   
--   [Compreender e configurar o controle de conta de usuário no Windows Vista](http://go.microsoft.com/fwlink/?LinkId=82445)  
+-   [Compreender e configurar o controle de conta de usuário no Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Criando projetos após a habilitação do UAC  
  Se você criar um projeto do Visual C++ no Windows Vista com o UAC desabilitado e, posteriormente, habilitar o UAC, deverá limpar e recriar o projeto para que funcione corretamente.  

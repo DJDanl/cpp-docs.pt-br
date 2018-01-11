@@ -17,11 +17,12 @@ caps.latest.revision: "40"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 87521d761a0355903408debe3ff27d26a006368b
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="concurrency-runtime"></a>Tempo de Execução de Simultaneidade
 O tempo de execução de simultaneidade para C++ o ajudará a gravação robusta, escalável e responsivos aplicativos paralelos. Ele aumenta o nível de abstração para que você não precisa gerenciar os detalhes de infraestrutura que são relacionados a simultaneidade. Você também pode usar isso para especificar o agendamento políticas que atendem a qualidade das demandas de serviço de seus aplicativos. Use estes recursos para ajudá-lo a começar a trabalhar com o tempo de execução de simultaneidade.  
@@ -108,9 +109,9 @@ O tempo de execução de simultaneidade para C++ o ajudará a gravação robusta
 |||  
 |-|-|  
 |[Padrões de programação assíncrona e dicas em Hilo (aplicativos da Windows Store usando C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Saiba como usamos o tempo de execução de simultaneidade para implementar operações assíncronas em Hilo, um [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo usando o C++ e XAML.|  
-|[Exemplos de código para o tempo de execução de simultaneidade e a biblioteca de padrões paralelos no Visual Studio 2010](http://go.microsoft.com/fwlink/linkid=183875)|Fornece exemplos de aplicativos e utilitários que demonstram o tempo de execução de simultaneidade.|  
-|[Programação paralela no blog de código nativo](http://go.microsoft.com/fwlink/linkid=183873)|Fornece artigos de blog detalhes adicionais sobre a programação paralela em tempo de execução de simultaneidade.|  
-|[Computação paralela no Fórum do C++ e o código nativo](http://go.microsoft.com/fwlink/linkid=183874)|Permite que você participe de discussões da comunidade sobre o tempo de execução de simultaneidade.|  
+|[Exemplos de código para o tempo de execução de simultaneidade e a biblioteca de padrões paralelos no Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornece exemplos de aplicativos e utilitários que demonstram o tempo de execução de simultaneidade.|  
+|[Programação paralela no blog de código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornece artigos de blog detalhes adicionais sobre a programação paralela em tempo de execução de simultaneidade.|  
+|[Computação paralela no Fórum do C++ e o código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Permite que você participe de discussões da comunidade sobre o tempo de execução de simultaneidade.|  
 |[Programação paralela](/dotnet/standard/parallel-programming/index)|Ensina sobre o modelo de programação paralelo que está disponível na [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
   
 ## <a name="see-also"></a>Consulte também  

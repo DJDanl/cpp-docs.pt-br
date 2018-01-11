@@ -37,11 +37,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d53e49ae0a28201ac32cd1eb722c9889258f23b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0825641039828073da4520c2f0704f50e0e6f21
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
 Gera uma distribuição Extreme Value.  
@@ -78,9 +79,9 @@ public:
 ```    
 ### <a name="parameters"></a>Parâmetros  
 *RealType*  
-O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado de ponto flutuante assume `double` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
-*URNG* O mecanismo gerador de números aleatórios. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG* O mecanismo gerador de números aleatórios. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
   
 ## <a name="remarks"></a>Comentários  
  A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou um tipo `double` caso nenhum seja fornecido, distribuído de acordo com a distribuição Extreme Value. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -94,7 +95,7 @@ O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os
   
  Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
- Para obter informações detalhadas sobre a distribuição Extreme Value, consulte o artigo de Wolfram MathWorld [Distribuição Extreme Value](http://go.microsoft.com/fwlink/LinkId=401110).  
+ Para obter informações detalhadas sobre a distribuição Extreme Value, consulte o artigo de Wolfram MathWorld [Distribuição Extreme Value](http://go.microsoft.com/fwlink/p/?linkid=401110).  
   
 ## <a name="example"></a>Exemplo  
   

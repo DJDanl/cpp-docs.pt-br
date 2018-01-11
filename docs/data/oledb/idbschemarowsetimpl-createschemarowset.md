@@ -1,107 +1,92 @@
 ---
-title: "IDBSchemaRowsetImpl::CreateSchemaRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBSchemaRowsetImpl::CreateSchemaRowset"
-  - "ATL::IDBSchemaRowsetImpl::CreateSchemaRowset"
-  - "CreateSchemaRowset"
-  - "IDBSchemaRowsetImpl.CreateSchemaRowset"
-  - "ATL.IDBSchemaRowsetImpl.CreateSchemaRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método CreateSchemaRowset"
+title: 'Idbschemarowsetimpl:: Createschemarowset | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBSchemaRowsetImpl::CreateSchemaRowset
+- ATL::IDBSchemaRowsetImpl::CreateSchemaRowset
+- CreateSchemaRowset
+- IDBSchemaRowsetImpl.CreateSchemaRowset
+- ATL.IDBSchemaRowsetImpl.CreateSchemaRowset
+dev_langs: C++
+helpviewer_keywords: CreateSchemaRowset method
 ms.assetid: ad3e3e4d-45b9-461c-b7b8-3af6843631b1
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25d8149cb2e32505d87ef845b525684746d2b8da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# IDBSchemaRowsetImpl::CreateSchemaRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="idbschemarowsetimplcreateschemarowset"></a>IDBSchemaRowsetImpl::CreateSchemaRowset
 Implementa uma função de criador do objeto COM para o objeto especificado pelo parâmetro de modelo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-template < class   
-SchemaRowsetClass  
- >  
+      template < class   
+      SchemaRowsetClass  
+       >  
 HRESULT CreateSchemaRowset(  
-   IUnknown *  
-pUnkOuter  
-,  
-   ULONG   
-cRestrictions  
-,  
-   const VARIANT   
-rgRestrictions  
-[],  
-   REFIID   
-riid  
-,  
-   ULONG   
-cPropertySets  
-,  
-   DBPROPSET   
-rgPropertySets  
-[],  
-   IUnknown**   
-ppRowset  
-,  
-   SchemaRowsetClass*&   
-pSchemaRowset  
+   IUnknown *pUnkOuter,  
+   ULONG cRestrictions,  
+   const VARIANT rgRestrictions[],  
+   REFIID riid,  
+   ULONG cPropertySets,  
+   DBPROPSET rgPropertySets[],  
+   IUnknown** ppRowset,  
+   SchemaRowsetClass*& pSchemaRowset   
 );  
-  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `pUnkOuter`  
- \[in\] Um outer [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) ao agregar, caso contrário **nulo**.  
+ [in] Um externa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) ao agregar, caso contrário, **nulo**.  
   
  `cRestrictions`  
- \[in\] A contagem de restrições aplicadas ao conjunto de linhas de esquema.  
+ [in] A contagem de restrições aplicadas ao conjunto de linhas de esquema.  
   
  `rgRestrictions`  
- \[in\] Uma matriz de `cRestrictions` **VARIANT**s a ser aplicado ao conjunto de linhas.  
+ [in] Uma matriz de `cRestrictions` **VARIANT**s a ser aplicado ao conjunto de linhas.  
   
  `riid`  
- \[in\] A interface [QueryInterface](../../atl/queryinterface.md) para a saída **IUnknown**.  
+ [in] A interface para [QueryInterface](../../atl/queryinterface.md) para a saída **IUnknown**.  
   
  `cPropertySets`  
- \[in\] Define o número de propriedade para definir.  
+ [in] Define o número de propriedade para definir.  
   
  `rgPropertySets`  
- \[in\] Uma matriz de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estruturas que especificam as propriedades que está sendo definidas.  
+ [in] Uma matriz de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estruturas que especificar as propriedades que está sendo definidas.  
   
  `ppRowset`  
- \[out\] A saída **IUnknown** solicitado pelo `riid`. Isso **IUnknown** é uma interface no objeto de conjunto de linhas de esquema.  
+ [out] A saída **IUnknown** solicitado pelo `riid`. Isso **IUnknown** é uma interface no objeto de conjunto de linhas de esquema.  
   
  `pSchemaRowset`  
- \[out\] Um ponteiro para uma instância da classe de conjunto de linhas de esquema. Normalmente, esse parâmetro não for usado, mas ele pode ser usado se for necessário realizar mais trabalho no conjunto de linhas de esquema antes de entregar a um objeto COM. A vida útil do `pSchemaRowset` é limitado pelo `ppRowset`.  
+ [out] Um ponteiro para uma instância da classe de conjunto de linhas de esquema. Normalmente, esse parâmetro não for usado, mas ele pode ser usado se você deve executar o trabalho mais no conjunto de linhas de esquema antes de enviar a um objeto COM. O tempo de vida de `pSchemaRowset` estiver associado ao `ppRowset`.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
-## Comentários  
- Essa função implementa um criador genérico para todos os tipos de conjuntos de linhas do esquema. Normalmente, o usuário não chama essa função. Ele é chamado pela implementação do mapa de esquema.  
+## <a name="remarks"></a>Comentários  
+ Essa função implementa um criador de genérico para todos os tipos de conjuntos de linhas de esquema. Normalmente, o usuário não chama essa função. Ele é chamado pela implementação de mapa de esquema.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)   
- [IDBSchemaRowsetImpl Class Members](http://msdn.microsoft.com/pt-br/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
- [SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)   
- [Classes Rowset do esquema e Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md)
+ [Membros de classe IDBSchemaRowsetImpl](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   
+ [Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

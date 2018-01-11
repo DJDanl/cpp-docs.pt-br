@@ -1,66 +1,67 @@
 ---
-title: "CDataSource::OpenWithPromptFileName | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource.OpenWithPromptFileName"
-  - "OpenWithPromptFileName"
-  - "ATL::CDataSource::OpenWithPromptFileName"
-  - "ATL.CDataSource.OpenWithPromptFileName"
-  - "CDataSource::OpenWithPromptFileName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método OpenWithPromptFileName"
+title: 'Cdatasource:: Openwithpromptfilename | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource.OpenWithPromptFileName
+- OpenWithPromptFileName
+- ATL::CDataSource::OpenWithPromptFileName
+- ATL.CDataSource.OpenWithPromptFileName
+- CDataSource::OpenWithPromptFileName
+dev_langs: C++
+helpviewer_keywords: OpenWithPromptFileName method
 ms.assetid: 89460504-1aaf-4412-aa7b-fa5a4b39ada3
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 272fd65eb0fda3a087853ca3a5793618d356fc7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::OpenWithPromptFileName
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este método solicita ao usuário uma caixa de diálogo, então, abre uma fonte de dados usando o arquivo especificado pelo usuário.  
+# <a name="cdatasourceopenwithpromptfilename"></a>CDataSource::OpenWithPromptFileName
+Esse método solicita ao usuário uma caixa de diálogo, em seguida, abre uma fonte de dados usando o arquivo especificado pelo usuário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-        HRESULT OpenWithPromptFileName(   
-   HWND hWnd = GetActiveWindow(   
-   ),   
-   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,   
-   LPCOLESTR szInitialDirectory = NULL    
+      HRESULT OpenWithPromptFileName(   
+   HWND hWnd = GetActiveWindow(   
+   ),   
+   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,   
+   LPCOLESTR szInitialDirectory = NULL    
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `hWnd`  
- \[in\] Identificador para a janela que deve ser o pai da caixa de diálogo.  
+ [in] Identificador para a janela que está ser o pai da caixa de diálogo.  
   
  `dwPromptOptions`  
- \[in\] Determina o estilo da caixa de diálogo de localizador para exibir.  Consulte Msdasc.h para obter valores possíveis.  
+ [in] Determina o estilo da caixa de diálogo de localizador para exibir. Consulte Msdasc.h para os valores possíveis.  
   
  *szInitialDirectory*  
- \[in\] O diretório inicial para exibir a caixa de diálogo do localizador.  
+ [in] O diretório inicial para exibir a caixa de diálogo do localizador.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT`.  
   
-## Comentários  
- Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, a inscrição automática de transação e assim por diante.  Para obter mais informações, consulte "Serviço OLE DB" na referência de OLE DB do programador em [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/oledb\/htm\/oledbole\_db\_services.asp?frame\=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+## <a name="remarks"></a>Comentários  
+ Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, inscrição de transação automática e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB do programador em [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Classe CDataSource](../Topic/CDataSource%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CDataSource](../../data/oledb/cdatasource-class.md)

@@ -1,50 +1,54 @@
 ---
-title: "ComPtrRefBase::operator Operador IInspectable** | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador IInspectable** Operador"
+title: Operador IInspectable * * Comptrrefbase | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**
+dev_langs: C++
+helpviewer_keywords: operator IInspectable** operator
 ms.assetid: 06ac1051-606c-449b-a566-cac78ca53762
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d83580537a81b1c75f44e32e6aa43b2b014c8373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRefBase::operator Operador IInspectable**
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator Operador IInspectable**
 
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
-  
-## Sintaxe  
-  
-```  
-operator IInspectable**() const;  
-```  
-  
-## Comentários  
- Converte o membro de dados atual de [ptr\_](../windows/comptrrefbase-ptr-data-member.md) à ponteiro\-à\-um\-ponteiro\- à interface de IInspectable.  
-  
- Um erro é emitido se o ComPtrRefBase atual não se deriva de IInspectable.  
-  
- Isso converte estará disponível apenas se **\_\_WRL\_CLASSIC\_COM\_\_** é definido.  
-  
-## Requisitos  
- **Cabeçalho:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## Consulte também  
- [Classe ComPtrRefBase](../windows/comptrrefbase-class.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+operator IInspectable**() const;
+```
+
+## <a name="remarks"></a>Comentários
+
+Converte atual [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados para um ponteiro-para-um-ponteiro-para a interface IInspectable.
+
+Um erro é emitido se o ComPtrRefBase atual não deriva de IInspectable.
+
+Essa conversão está disponível somente se **&#95; &#95; WRL_CLASSIC_COM #95; &#95;**  está definido.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ComPtrRefBase](../windows/comptrrefbase-class.md)   
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e45a136941ccaf34108085a14ddefb64bcdb3fa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94ec633718dda81a5183a59eb46387b361d0f004
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
@@ -38,7 +39,7 @@ class CSplitterWndEx : public CSplitterWnd
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -84,7 +85,7 @@ virtual void OnDrawSplitter(
  Ponteiro para o contexto de dispositivo. Se esse parâmetro for `NULL`, o framework redesenha a janela ativa.  
   
  [in] `nType`  
- Uma da `CSplitterWnd::ESplitType` valores de enumeração que especifica o elemento de janela separadora para desenhar. Os valores válidos são `splitBox`, `splitBar`, `splitIntersection`, e `splitBorder`.  
+ Uma da `CSplitterWnd::ESplitType` valores de enumeração que especifica o elemento de janela separadora para desenhar. Os valores válidos são `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.  
   
  [in] `rect`  
  Um retângulo que especifica as dimensões e o local para desenhar o elemento de janela de divisão especificada.  

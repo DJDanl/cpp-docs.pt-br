@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cc8ffa40b337765a0970e95862947155c7ae6f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-design-for-exception-safety"></a>Como projetar tendo em vista a segurança da exceção
 Uma das vantagens do mecanismo de exceção é que a execução, junto com dados sobre a exceção, catch de saltos diretamente da instrução que gera a exceção para a primeira instrução que o manipule. O manipulador pode ser qualquer número de níveis para cima na pilha de chamadas. Funções que são chamadas entre a instrução try e a instrução throw deve não sabe nada sobre a exceção que é lançada.  No entanto, eles precisam ser criados de forma que eles podem ir fora do escopo "inesperadamente" em qualquer ponto onde podem se propagar até abaixo de uma exceção e portanto sem deixando objetos criados parcialmente, vazamento memória ou estruturas de dados que esteja em estado inutilizável.  

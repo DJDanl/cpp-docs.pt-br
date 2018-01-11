@@ -1,32 +1,34 @@
 ---
-title: "Como converter System::String na cadeia de caracteres padr&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Biblioteca Padrão C++, convertendo System::String na cadeia de caracteres padrão"
-  - "conversão de cadeia de caracteres, System::String"
+title: "Como: converter System:: String em cadeia de caracteres padrão | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting System::String to standard string
+- string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6bac914a2803390fa737acce5d424d56079777a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como converter System::String na cadeia de caracteres padr&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode converter <xref:System.String> a `std::string` ou a `std::wstring`, sem usar `PtrToStringChars` em Vcclr.h.  
+# <a name="how-to-convert-systemstring-to-standard-string"></a>Como converter System::String na cadeia de caracteres padrão
+Você pode converter um <xref:System.String> para `std::string` ou `std::wstring`, sem usar `PtrToStringChars` em Vcclr.h.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // convert_system_string.cpp  
@@ -72,5 +74,5 @@ abcd
 efgh  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

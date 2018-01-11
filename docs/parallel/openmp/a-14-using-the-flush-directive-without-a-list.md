@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb948476b52cdf76e0a114bed5c95f46bb6ba86e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a88558de3c04f1ae05922b1ad5bc7f63aed996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   Usando a diretiva flush sem uma lista
 O exemplo a seguir (para [seção 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) na página 20) distingue os objetos compartilhados afetados por um `flush` diretiva com nenhuma lista de objetos compartilhados que não são afetados:  

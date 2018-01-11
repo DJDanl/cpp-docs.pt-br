@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>Destruidores (C++)
 Um destruidor é uma função de membro que é invocada automaticamente quando o objeto sai do escopo ou é destruído explicitamente por uma chamada para `delete`. Um destruidor tem o mesmo nome que a classe, precedido por um til (`~`). Por exemplo, o destruidor da classe `String` é declarado: `~String()`. Se você não definir um destruidor, o compilador fornecerá um padrão; para muitas classes, isso é suficiente. Você só precisa definir um destruidor personalizado quando a classe armazena identificadores de recursos do sistema que precisam ser liberados ou ponteiros que possui a memória que eles apontem para.
@@ -74,7 +72,7 @@ int main() {
   
  No exemplo anterior, o destruidor `String::~String` usa o operador `delete` para desalocar o espaço alocado dinamicamente para o armazenamento de texto.  
   
-## <a name="delcaring-destructors"></a>Delcaring destruidores  
+## <a name="declaring-destructors"></a>Declarando destruidores  
  Destruidores são funções com o mesmo nome que a classe mas precedidas por um til (`~`)  
   
  Várias regras controlam a declaração de destruidores. Destruidores:  
@@ -208,7 +206,7 @@ class E : public C, public D, virtual public B
   
  A ordem de construção ou de destruição primeiro é muito importante quando os construtores ou os destruidores em uma classe se baseiam em outro componente criado antes ou que dura por mais tempo — por exemplo, se o destruidor de `A` (mostrada na figura anterior) depende que `B` ainda esteja presente quando o código for executado, ou vice-versa.  
   
- Essas interdependências entre classes em um gráfico de herança são inerentemente perigosas, pois as classes derivadas posteriormente podem alterar qual é o caminho mais à esquerda, alterando assim a ordem de construção e destruição.  
+ Essas interdependências entre classes em um grafo de herança são inerentemente perigosas, pois as classes derivadas posteriormente podem alterar qual é o caminho mais à esquerda, alterando assim a ordem de construção e destruição.  
   
 ### <a name="nonvirtual-base-classes"></a>Classes de base não virtuais  
  Os destruidores de classes base não virtuais são chamados na ordem inversa da qual os nomes da classe base são declarados. Considere a seguinte declaração de classe:  
@@ -232,4 +230,3 @@ ps->~String();     // Virtual call
 ```  
   
  A notação de chamadas explícitas aos destruidores, mostrada anteriormente, pode ser usada independentemente de o tipo definir um destruidor. Isso permite fazer essas chamadas explícitas sem saber se há um destruidor definido para o tipo. Uma chamada explícita para um destruidor que não tem nenhum definido não tem efeito.  
-

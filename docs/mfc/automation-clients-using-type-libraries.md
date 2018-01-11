@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 696765451079301e2a25cc831c34e41802dd33f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b63f6d05415b163e523589756ba2eb67ab2c61a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-clients-using-type-libraries"></a>Clientes de automação: usando bibliotecas de tipo
 Clientes de automação devem ter informações sobre propriedades e métodos de objetos de servidor se os clientes são manipular objetos do servidor. Propriedades têm tipos de dados. métodos geralmente valores de retorno e aceitam parâmetros. O cliente requer informações sobre os tipos de dados de tudo isso para vincular estaticamente para o tipo de objeto de servidor.  

@@ -1,33 +1,33 @@
 ---
-title: "replace_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::replace_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função replace_if [STL/CLR]"
+title: replace_if (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::replace_if
+dev_langs: C++
+helpviewer_keywords: replace_if function [STL/CLR]
 ms.assetid: 485ed698-551f-4808-8562-9e32b151786d
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0595dce05cb6e217a08eb4efae693633af58f3ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# replace_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Examinará cada elemento em um intervalo e substitua\-o se satisfizer um predicado especificado.  
+# <a name="replaceif-stlclr"></a>replace_if (STL/CLR)
+Examina cada elemento em um intervalo e o substitui se ele atender a um predicado especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _FwdIt, class _Pr, class _Ty> inline  
@@ -35,13 +35,13 @@ template<class _FwdIt, class _Pr, class _Ty> inline
         const _Ty% _Val);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `replace_if`STL.  Para obter mais informações, consulte [replace\_if](../Topic/replace_if.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `replace_if`. Para obter mais informações, consulte [replace_if](../standard-library/algorithm-functions.md#replace_if).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

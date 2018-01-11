@@ -1,38 +1,40 @@
 ---
-title: "ICommandImpl::ICommandImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.ICommandImpl.ICommandImpl"
-  - "ATL::ICommandImpl::ICommandImpl"
-  - "ICommandImpl"
-  - "ICommandImpl::ICommandImpl"
-  - "ICommandImpl.ICommandImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe ICommandImpl, construtor"
-  - "Construtor ICommandImpl"
+title: 'Icommandimpl:: Icommandimpl | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.ICommandImpl.ICommandImpl
+- ATL::ICommandImpl::ICommandImpl
+- ICommandImpl
+- ICommandImpl::ICommandImpl
+- ICommandImpl.ICommandImpl
+dev_langs: C++
+helpviewer_keywords:
+- ICommandImpl constructor
+- ICommandImpl class, constructor
 ms.assetid: 5dbf0716-785e-4db8-b36f-9e34364f7ac9
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2da4f3741028642e90b004b19d71b837d4d2bbd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl::ICommandImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="icommandimplicommandimpl"></a>ICommandImpl::ICommandImpl
 O construtor.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -40,8 +42,8 @@ ICommandImpl( );
   
 ```  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Classe ICommandImpl](../Topic/ICommandImpl%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe ICommandImpl](../../data/oledb/icommandimpl-class.md)

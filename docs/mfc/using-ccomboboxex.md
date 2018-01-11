@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 803f58daf4a4be4773c81db51b6289602f930820
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59732c2315bafca46bdcf99f31beaa528336669b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ccomboboxex"></a>Usando CComboBoxEx
 O controle de caixa de combinação estendida é uma extensão de controle de caixa de combinação padrão que oferece suporte nativo para imagens de item. Essas imagens podem ser usadas para indicar o status de itens individuais na caixa de combinação, como os itens atualmente selecionados e desmarcados. Para que as imagens de item facilmente acessível, o controle oferece suporte à lista de imagem.  

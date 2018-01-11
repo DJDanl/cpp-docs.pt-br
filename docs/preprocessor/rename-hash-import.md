@@ -1,63 +1,60 @@
 ---
-title: "rename (#import) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Rename"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "atributo rename"
+title: Renomear (#import) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Rename
+dev_langs: C++
+helpviewer_keywords: rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe5efd48867d5911a6512c32c3e91d80201d03ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# rename (#import)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico do C\+\+**  
+# <a name="rename-import"></a>rename (#import)
+**Específicas do C++**  
   
  Soluciona os problemas de colisão de nome.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 rename("OldName","NewName")  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `OldName`  
  Nome antigo na biblioteca de tipos.  
   
  `NewName`  
  Nome a ser usado em vez do nome antigo.  
   
-## Comentários  
- Se esse atributo for especificado, o compilador substituirá todas as ocorrências de *OldName* em uma biblioteca de tipos pelo *NewName* fornecido pelo usuário nos arquivos de cabeçalho resultantes.  
+## <a name="remarks"></a>Comentários  
+ Se esse atributo for especificado, o compilador substitui todas as ocorrências de *OldName* em uma biblioteca de tipo com o usuário forneceu *NewName* nos arquivos de cabeçalho resultante.  
   
- Esse atributo pode ser usado quando um nome na biblioteca de tipos coincide com uma definição de macro nos arquivos de cabeçalho do sistema.  Se essa situação não for resolvida, vários erros de sintaxe serão gerados, como [C2059 de erro do compilador](../Topic/Compiler%20Error%20C2059.md) e [Erro do Compilador C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).  
+ Esse atributo pode ser usado quando um nome na biblioteca de tipos coincide com uma definição de macro nos arquivos de cabeçalho do sistema. Se essa situação não for resolvida, vários erros de sintaxe serão gerados como [C2059 de erro do compilador](../error-messages/compiler-errors-1/compiler-error-c2059.md) e [C2061 de erro do compilador](../error-messages/compiler-errors-1/compiler-error-c2061.md).  
   
 > [!NOTE]
 >  A substituição é para um nome usado na biblioteca de tipos, e não para um nome usado no arquivo de cabeçalho resultante.  
   
- Por exemplo, suponha que exista uma propriedade chamada `MyParent` em uma biblioteca de tipos, e uma macro `GetMyParent` seja definida em um arquivo de cabeçalho e usada antes de `#import`.  Como `GetMyParent` é o nome padrão de uma função de wrapper para a propriedade de tratamento de erros **get**, ocorrerá uma colisão de nomes.  Para contornar o problema, use o seguinte atributo na instrução `#import`:  
+ Por exemplo, suponha que exista uma propriedade chamada `MyParent` em uma biblioteca de tipos, e uma macro `GetMyParent` seja definida em um arquivo de cabeçalho e usada antes de `#import`. Como `GetMyParent` é o nome padrão de uma função de wrapper para o tratamento de erro **obter** propriedade, uma colisão de nomes será feita. Para contornar o problema, use o seguinte atributo na instrução `#import`:  
   
 ```  
 rename("MyParent","MyParentX")  
 ```  
   
- que altera o nome `MyParent` na biblioteca de tipos.  Uma tentativa de alterar o nome do wrapper `GetMyParent` falhará:  
+ que altera o nome `MyParent` na biblioteca de tipos. Uma tentativa de alterar o nome do wrapper `GetMyParent` falhará:  
   
 ```  
 rename("GetMyParent","GetMyParentX")  
@@ -65,8 +62,8 @@ rename("GetMyParent","GetMyParentX")
   
  Isso acontece porque o nome `GetMyParent` ocorre apenas no arquivo de cabeçalho resultante da biblioteca de tipos.  
   
- **FIM de Específico do C\+\+**  
+ **TÉRMINO específicas do C++**  
   
-## Consulte também  
- [Atributos \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Diretiva \#import](../Topic/%23import%20Directive%20\(C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

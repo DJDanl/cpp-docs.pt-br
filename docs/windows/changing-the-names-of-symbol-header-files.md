@@ -1,54 +1,55 @@
 ---
-title: "Alterando os nomes de arquivos de cabe&#231;alho de s&#237;mbolo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.symbol.changing.header"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos de cabeçalho, alterando nomes"
-  - "nomes [C++], arquivos de cabeçalho de símbolo"
-  - "arquivos de recurso, vários"
-  - "Caixa de diálogo Recurso Inclui"
-  - "Resource.h"
-  - "arquivos de cabeçalho de símbolo"
-  - "arquivos de cabeçalho de símbolo, alterando nomes"
-  - "símbolos, arquivos de cabeçalho de símbolo"
+title: "Alterando os nomes dos arquivos de cabeçalho de símbolo | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.symbol.changing.header
+dev_langs: C++
+helpviewer_keywords:
+- resource files, multiple
+- Resource Includes dialog box
+- symbol header files, changing names
+- symbol header files
+- header files, changing names
+- names [C++], symbol header files
+- symbols, symbol header files
+- Resource.h
 ms.assetid: b948284a-7899-402e-ab12-9f2c8480ca9d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8ccc7cc8662e33e5999ceafbcd8f029e2675341b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Alterando os nomes de arquivos de cabe&#231;alho de s&#237;mbolo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Normalmente, todos os símbolos definições são salvas em Resource.h.  No entanto, talvez seja necessário alterar isso incluem o nome do arquivo para que você possa, por exemplo, trabalhar com mais de um arquivo de recurso no mesmo diretório.  
+# <a name="changing-the-names-of-symbol-header-files"></a>Alterando os nomes de arquivos de cabeçalho de símbolo
+Normalmente, todos os símbolos definições são salvas em Resource.h. No entanto, talvez seja necessário alterar essa incluem o nome de arquivo para que você pode, por exemplo, trabalhar com mais de um arquivo de recurso no mesmo diretório.  
   
-### Para alterar o nome do arquivo de cabeçalho de símbolo de recurso  
+### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Para alterar o nome do arquivo de cabeçalho de símbolo de recurso  
   
-1.  Em [exibição recurso](../windows/resource-view-window.md), clique em seu arquivo. RC e escolha [recurso inclui](../windows/resource-includes-dialog-box.md) no menu de atalho.  
+1.  Em [exibição recursos](../windows/resource-view-window.md), clique em seu arquivo. RC e escolha [inclui recursos](../windows/resource-includes-dialog-box.md) no menu de atalho.  
   
     > [!NOTE]
-    >  Se seu projeto ainda não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  No **arquivo de cabeçalho de símbolo** digite o novo nome para o arquivo de inclusão.  
+2.  No **arquivo de cabeçalho de símbolo** , digite o novo nome para o arquivo de inclusão.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [Recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
   
  Requisitos  
   
  Win32  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibindo símbolos de recurso](../windows/viewing-resource-symbols.md)   
- [IDs de símbolo predefinido](../windows/predefined-symbol-ids.md)
+ [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)

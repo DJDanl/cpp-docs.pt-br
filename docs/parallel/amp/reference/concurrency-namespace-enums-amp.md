@@ -1,5 +1,5 @@
 ---
-title: "Enumerações de namespace de simultaneidade (AMP) | Documentos do Microsoft"
+title: "Enumerações de namespace de simultaneidade (AMP) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,18 +9,18 @@ ms.topic: article
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b9555023e01cb765ca943fcaaf785cdc2b4e2d0d
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8979ab026d5bf6aef9d0dd8677bf2ec47a8c6142
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumerações de namespace de simultaneidade (AMP)
 |||  
@@ -37,15 +37,15 @@ enum access_type;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`access_type_auto`|Escolher automaticamente o melhor `access_type` Accelerator.|  
+|`access_type_auto`|Escolher automaticamente a melhor `access_type` para o acelerador.|  
 |`access_type_none`|Dedicada. A alocação só é acessível do Accelerator e não na CPU.|  
-|`access_type_read`|Compartilhado. A alocação é acessível do Accelerator e legível na CPU.|  
-|`access_type_read_write`|Compartilhado. A alocação é acessível do Accelerator e pode ser gravada na CPU.|  
-|`access_type_write`|Compartilhado. A alocação é acessível do Accelerator e legível e gravável na CPU.|  
+|`access_type_read`|Compartilhado. A alocação é acessível do Accelerator e pode ser lida na CPU.|  
+|`access_type_read_write`|Compartilhado. A alocação está acessível do Accelerator e é gravável na CPU.|  
+|`access_type_write`|Compartilhado. A alocação está acessível do Accelerator e é legível e gravável na CPU.|  
 
   
 ##  <a name="queuing_mode"></a>Enumeração queuing_mode  
- Especifica os modos de enfileiramento de mensagens que são compatíveis com o acelerador.  
+ Especifica os modos de enfileiramento de mensagens que têm suporte para o acelerador.  
   
 ```  
 enum queuing_mode;  
@@ -54,9 +54,8 @@ enum queuing_mode;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`queuing_mode_immediate`|Um modo de enfileiramento de mensagens que especifica que qualquer comandos como, por exemplo, [função parallel_for_each (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), são enviados ao dispositivo acelerador correspondentes assim que elas retornam ao chamador.|  
-|`queuing_mode_automatic`|Um modo de enfileiramento de mensagens que especifica que comandos serão enfileirados em uma fila de comando que corresponde do [accelerator_view](accelerator-view-class.md) objeto. Os comandos são enviados ao dispositivo quando [accelerator_view:: Flush](accelerator-view-class.md#flush) é chamado.|   
+|`queuing_mode_immediate`|Um modo de enfileiramento de mensagens que especifica que quaisquer comandos como, por exemplo, [função (C++ AMP) parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each), são enviados para o dispositivo correspondente do acelerador assim que elas retornam ao chamador.|  
+|`queuing_mode_automatic`|Um modo de enfileiramento de mensagens que especifica os comandos serão enfileirados em uma fila de comando que corresponde do [accelerator_view](accelerator-view-class.md) objeto. Comandos são enviados para o dispositivo quando [accelerator_view:: Flush](accelerator-view-class.md#flush) é chamado.|   
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

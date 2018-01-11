@@ -1,50 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4944 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4944 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4944
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4944
+f1_keywords: C4944
+dev_langs: C++
+helpviewer_keywords: C4944
 ms.assetid: e2905eb1-2e3b-4fab-a48b-c0cae0fd997f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f8c6e857bf9b77cfcf0f0f0e511e71f7b9ecaa60
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 425a72b75f1ad057a4a09ed11d4dfcfb4acfcb72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4944"></a>Compilador C4944 de aviso (nível 1)
-'symbol': não é possível importar o símbolo de 'assembly1': como 'symbol' já existe no escopo atual  
+'symbol': não é possível importar símbolo de 'assembly1': como 'symbol' já existe no escopo atual  
   
- Um símbolo foi definido em um arquivo de código fonte e, em seguida, um # instrução using um assembly que também definiu o símbolo referenciado. O símbolo no assembly é ignorado.  
+ Um símbolo foi definido em um arquivo de código fonte e, em seguida, um #using instrução referenciado a um assembly que também definido o símbolo. O símbolo no assembly é ignorado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um componente com um tipo chamado ClassA.  

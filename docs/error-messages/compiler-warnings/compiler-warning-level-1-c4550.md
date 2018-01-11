@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4550 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4550 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4550
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4550
+f1_keywords: C4550
+dev_langs: C++
+helpviewer_keywords: C4550
 ms.assetid: f902b4ed-5f17-48ea-b693-92f4fb8c8054
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 084768b15af085404194f6bb5466bd0020aab438
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 08b0e586500b4de2ed0005d118f6302e67ecc7d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4550"></a>Compilador C4550 de aviso (nível 1)
-expressão é avaliada como uma função cuja lista de argumentos está faltando  
+expressão é avaliada como uma função que está faltando uma lista de argumentos  
   
- Um ponteiro cancelado para uma função não tem uma lista de argumentos.  
+ Um ponteiro desreferenciado para uma função não tem uma lista de argumentos.  
   
 ## <a name="example"></a>Exemplo  
   

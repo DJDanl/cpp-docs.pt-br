@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72180969287f0d921b76b467925dd193fcf7cc61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8a73eb8e9b5c3f3ba67e4466a6e7138010fd430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-directive-cclr"></a># Diretiva using (C + + CLR)
 Importa os metadados para um programa compilado com [/clr](../build/reference/clr-common-language-runtime-compilation.md).  

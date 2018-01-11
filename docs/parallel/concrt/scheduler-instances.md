@@ -1,134 +1,140 @@
 ---
-title: "Inst&#226;ncias de agendador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instâncias de agendador"
+title: "Instâncias de Agendador | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 7
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Inst&#226;ncias de agendador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este documento descreve a função de instâncias do agendador em tempo de execução de simultaneidade e como usar as classes de [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) e de [concurrency::CurrentScheduler](../Topic/CurrentScheduler%20Class.md) para criar e gerenciar instâncias do agendador.  As instâncias do agendador são úteis quando você deseja associar políticas explícitas de programar com tipos específicos de cargas de trabalho.  Por exemplo, você pode criar uma instância do agendador para executar algumas tarefas em uma prioridade alto de thread e para usar o agendador padrão para executar outras tarefas na prioridade normal de thread.  
+# <a name="scheduler-instances"></a>Instâncias de agendador
+Este documento descreve a função de instâncias de Agendador em tempo de execução de simultaneidade e como usar o [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) e [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classes para criar e gerenciar instâncias de Agendador. Instâncias de Agendador são úteis quando você deseja associar políticas de agendamento explícitas com tipos específicos de cargas de trabalho. Por exemplo, você pode criar uma instância de Agendador para executar algumas tarefas em uma prioridade de thread com privilégios elevados e use o agendador padrão para executar outras tarefas com a prioridade normal de threads.  
   
 > [!TIP]
->  O tempo de execução de simultaneidade fornece um agendador padrão, e em virtude disso não é necessário criar um relatório em seu aplicativo.  Como o agendador de tarefas o ajuda a ajustar o desempenho dos aplicativos, recomendamos que você comece com [Biblioteca de padrões paralelos \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md) ou [Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md) se você é novato em tempo de execução de simultaneidade.  
+>  O tempo de execução de simultaneidade fornece um agendador padrão e, portanto, não é necessário criá-lo em seu aplicativo. Como o Agendador de tarefas Ajuda a ajustar o desempenho de seus aplicativos, é recomendável que você inicie com o [biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) ou [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) se você estiver novo no tempo de execução de simultaneidade.  
   
-##  <a name="top"></a> Seções  
+##  <a name="top"></a>Seções  
   
--   [O agendador do e as classes de CurrentScheduler](#classes)  
+-   [O Agendador e Classes de CurrentScheduler](#classes)  
   
--   [Criando uma instância do agendador](#creating)  
+-   [Criando uma instância de Agendador](#creating)  
   
--   [Gerenciando o tempo de vida de uma instância do agendador](#managing)  
+-   [Gerenciar o tempo de vida de uma instância de Agendador](#managing)  
   
 -   [Métodos e recursos](#features)  
   
 -   [Exemplo](#example)  
   
-##  <a name="classes"></a> O agendador do e as classes de CurrentScheduler  
- O agendador de tarefas permite que aplicativos usar uma ou mais *instâncias do agendador* para agendar o trabalho.  A classe de [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) representa uma instância do agendador e encapsula a funcionalidade que está relacionada a agendar tarefas.  
+##  <a name="classes"></a>O Agendador e Classes de CurrentScheduler  
+ O Agendador de tarefas permite que os aplicativos usam uma ou mais *instâncias de Agendador* para agendar o trabalho. O [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) classe representa uma instância de agendador e encapsula a funcionalidade que está relacionada ao agendamento de tarefas.  
   
- Um thread que é anexado a um agendador é conhecido como *um contexto de execução*, ou apenas *o contexto*.  Um agendador pode ser ativo no contexto atual a qualquer momento.  O agendador ativa também é conhecido como *o agendador atual*.  O tempo de execução de simultaneidade usa a classe de [concurrency::CurrentScheduler](../Topic/CurrentScheduler%20Class.md) para fornecer acesso ao agendador atual.  O agendador atual para um contexto pode ser diferente do agendador atual para outro contexto.  O tempo de execução não fornece uma representação de nível de processo do agendador atual.  
+ Um thread que está anexado a um agendador é conhecido como um *contexto de execução*, ou apenas *contexto*. Um agendador pode estar ativo no contexto atual a qualquer momento. O Agendador active também é conhecido como o *Agendador atual*. O tempo de execução de simultaneidade usa o [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classe para fornecer acesso para o Agendador atual. O Agendador atual para um contexto pode ser diferente do Agendador atual para outro contexto. O tempo de execução não fornece uma representação de nível de processo do Agendador atual.  
   
- Normalmente, a classe de `CurrentScheduler` é usada para acessar o agendador atual.  A classe de `Scheduler` é útil quando você precisa gerenciar um agendador que não seja atual.  
+ Normalmente, o `CurrentScheduler` classe é usada para acessar o Agendador atual. O `Scheduler` classe é útil quando você precisa gerenciar um agendador que não é atual.  
   
- As seções a seguir descrevem como criar e gerenciar uma instância do agendador.  Para obter um exemplo completo que mostra essas tarefas, consulte [Como gerenciar uma instância de agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).  
+ As seções a seguir descrevem como criar e gerenciar uma instância do Agendador. Para obter um exemplo completo que ilustra essas tarefas, consulte [como: gerenciar uma instância de Agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).  
   
- \[[Superior](#top)\]  
+ [[Superior](#top)]  
   
-##  <a name="creating"></a> Criando uma instância do agendador  
- Essas há três maneiras de criar um objeto de `Scheduler` :  
+##  <a name="creating"></a>Criando uma instância de Agendador  
+ Esses três maneiras para criar um `Scheduler` objeto:  
   
--   Se nenhum agendador existir, o tempo de execução cria um agendador padrão para quando você usa a funcionalidade de tempo de execução, por exemplo, um algoritmo paralelo, para executar o trabalho.  O agendador padrão se tornará o agendador atual para o contexto que inicia o trabalho paralelo.  
+-   Se o Agendador não existir, o tempo de execução cria um agendador padrão para você quando você usar a funcionalidade de tempo de execução, por exemplo, um algoritmo paralelo, para executar o trabalho. O agendador padrão torna-se o Agendador atual para o contexto que inicia o trabalho em paralelo.  
   
--   O método de [concurrency::CurrentScheduler::Create](../Topic/CurrentScheduler::Create%20Method.md) cria um objeto de `Scheduler` que usa uma política específica e esse agendador associado ao contexto atual.  
+
+-   O [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create) método cria um `Scheduler` objeto que usa uma política específica e que o Agendador está associado ao contexto atual.  
   
--   O método de [concurrency::Scheduler::Create](../Topic/Scheduler::Create%20Method.md) cria um objeto de `Scheduler` que usa uma política específica, mas não o associa ao contexto atual.  
+-   O [concurrency::Scheduler::Create](reference/scheduler-class.md#create) método cria um `Scheduler` objeto que usa uma política específica, mas não associá-lo com o contexto atual.  
+
   
- Permitir que o tempo de execução crie um agendador padrão permite que todas as tarefas simultâneas compartilhar o mesmo agendador.  Normalmente, a funcionalidade fornecida por [A paralela da biblioteca](../../parallel/concrt/parallel-patterns-library-ppl.md) \(PPL\) ou por [Biblioteca assíncrona de agentes](../../parallel/concrt/asynchronous-agents-library.md) é usada para executar o trabalho paralelo.  Consequentemente, você não precisa trabalhar diretamente com o agendador para controlar política ou seu tempo de vida.  Quando você usa o PPL ou a biblioteca de agentes, o tempo de execução cria o agendador padrão se não existir e a torna o agendador atual para cada contexto.  Quando você criar um agendador e o define como o agendador atual, os tempo de execução usa esse agendador agendar tarefas.  Criar instâncias adicionais do agendador apenas quando você precisar de uma política específica de programação.  Para obter mais informações sobre as políticas associadas a um agendador, consulte [Políticas de agendador](../../parallel/concrt/scheduler-policies.md).  
+ Permitir que o tempo de execução criar um agendador padrão permite que todas as tarefas simultâneas compartilhar o mesmo Agendador. Normalmente, a funcionalidade fornecida pelo [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) ou o [biblioteca de agentes assíncrona](../../parallel/concrt/asynchronous-agents-library.md) é usada para executar o trabalho paralelos. Portanto, você não precisa trabalhar diretamente com o Agendador para controlar sua política ou o tempo de vida. Quando você usa a PPL ou a biblioteca de agentes, o tempo de execução cria o agendador padrão se não existir e se torna o Agendador atual para cada contexto. Quando você cria um agendador e defina-o como o Agendador atual, o tempo de execução usa que o Agendador para agendar tarefas. Crie instâncias de Agendador adicionais somente quando precisar de uma política específica de agendamento. Para obter mais informações sobre as políticas associadas um agendador, consulte [políticas de Agendador](../../parallel/concrt/scheduler-policies.md).  
   
- \[[Superior](#top)\]  
+ [[Superior](#top)]  
   
-##  <a name="managing"></a> Gerenciando o tempo de vida de uma instância do agendador  
- O tempo de execução usa um mecanismo de referência\- contagem para controlar o tempo de vida de objetos de `Scheduler` .  
+##  <a name="managing"></a>Gerenciar o tempo de vida de uma instância de Agendador  
+ O tempo de execução usa um mecanismo de contagem de referência para controlar o tempo de vida de `Scheduler` objetos.  
   
- Quando você usa o método de `CurrentScheduler::Create` ou o método de `Scheduler::Create` para criar um objeto de `Scheduler` , o tempo de execução define a contagem inicial de referência do agendador a um.  O tempo de execução incrementa a contagem de referência quando você chama o método de [concurrency::Scheduler::Attach](../Topic/Scheduler::Attach%20Method.md) .  O método de `Scheduler::Attach` associa o objeto de `Scheduler` junto com o contexto atual.  Isso torna o agendador atual.  Quando você chama o método de `CurrentScheduler::Create` , o tempo de execução ambos cria um objeto de `Scheduler` e anexe\-o ao contexto atual \(e definirá a contagem de referência a uma\).  Você também pode usar o método de [concurrency::Scheduler::Reference](../Topic/Scheduler::Reference%20Method.md) para incrementar a contagem de referência de um objeto de `Scheduler` .  
+
+ Quando você usa o `CurrentScheduler::Create` método ou o `Scheduler::Create` método para criar um `Scheduler` do objeto, o tempo de execução define a contagem de referência inicial de que o Agendador para um. O tempo de execução incrementa a contagem de referência quando você chama o [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) método. O `Scheduler::Attach` método associa o `Scheduler` objeto junto com o contexto atual. Isso torna o Agendador atual. Quando você chama o `CurrentScheduler::Create` método, o runtime cria um `Scheduler` do objeto e anexa ao contexto atual (e define a contagem de referência para um). Você também pode usar o [concurrency::Scheduler::Reference](reference/scheduler-class.md#reference) método usado para incrementar a contagem de referência de um `Scheduler` objeto.  
   
- O tempo de execução do diminuirá a contagem de referência quando você chama o método de [concurrency::CurrentScheduler::Detach](../Topic/CurrentScheduler::Detach%20Method.md) para desanexar o agendador atual, ou chama o método de [concurrency::Scheduler::Release](../Topic/Scheduler::Release%20Method.md) .  Quando a contagem de referência chegar a zero, o tempo de execução ao concluir agendamento de tarefas do objeto de `Scheduler` depois.  Uma tarefa em execução é permitida incrementar a contagem de referência do agendador atual.  Em virtude disso, se a contagem de referência atingir incrementos de zero e uma tarefa a contagem de referência, o tempo de execução não destrói o objeto de `Scheduler` até que a contagem de referência o escopo novamente zero e todas as tarefas é concluído.  
+ Diminui o tempo de execução que a contagem de referência quando você chama o [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) método para desanexar o Agendador atual, ou chame o [concurrency::Scheduler::Release](reference/scheduler-class.md#release) método. Quando a contagem de referência chega a zero, o tempo de execução destrói o `Scheduler` objeto agendada depois que todas as tarefas concluir. Uma tarefa em execução é permitida para incrementar a contagem de referência do Agendador atual. Portanto, se a contagem de referência chega a zero e uma tarefa incrementa a contagem de referência, o tempo de execução não destrói o `Scheduler` objeto até que a contagem de referência chega a zero novamente e concluir todas as tarefas.  
+
   
- O tempo de execução mantém uma pilha interna de objetos de `Scheduler` para cada contexto.  Quando você chamar o método de `Scheduler::Attach` ou de `CurrentScheduler::Create` , o tempo de execução que objeto de `Scheduler` na pilha no contexto atual.  Isso torna o agendador atual.  Quando você chama `CurrentScheduler::Detach`, o tempo de execução aparece no agendador atual da pilha para o contexto atual e define anterior como o agendador atual.  
+ O tempo de execução mantém uma pilha interna de `Scheduler` objetos para cada contexto. Quando você chama o `Scheduler::Attach` ou `CurrentScheduler::Create` envios de método, o tempo de execução que `Scheduler` objeto para a pilha para o contexto atual. Isso torna o Agendador atual. Quando você chama `CurrentScheduler::Detach`, o tempo de execução aparece o Agendador atual da pilha de contexto atual e define aquele anterior como o Agendador atual.  
   
- O tempo de execução fornece várias maneiras para gerenciar o ciclo de vida de uma instância do agendador.  A tabela a seguir mostra o método apropriado que se libera ou desanexa o agendador do contexto atual para cada método que cria ou anexa um agendador ao contexto atual.  
+ O tempo de execução fornece várias maneiras de gerenciar o tempo de vida de uma instância do Agendador. A tabela a seguir mostra o método apropriado que libera ou desanexa o Agendador do contexto atual para cada método que cria ou anexa um agendador ao contexto atual.  
   
-|Crie ou anexar o método|Liberar ou o método desanexar|  
-|-----------------------------|-----------------------------------|  
+|Criar ou método attach|Liberar ou método detach|  
+|-----------------------------|------------------------------|  
 |`CurrentScheduler::Create`|`CurrentScheduler::Detach`|  
 |`Scheduler::Create`|`Scheduler::Release`|  
 |`Scheduler::Attach`|`CurrentScheduler::Detach`|  
 |`Scheduler::Reference`|`Scheduler::Release`|  
   
- Chamando a versão inadequada ou desanexar o método gerencia o comportamento não especificado em tempo de execução.  
+ Chamando o inadequado de versão ou desanexar o comportamento do método produz não especificado no tempo de execução.  
   
- Quando você usar a funcionalidade, por exemplo, o PPL, o que faz com que o tempo de execução crie o agendador padrão para você, não liberam nem desanexar este agendador.  O tempo de execução gerencia o tempo de vida de qualquer agendador que cria.  
+ Quando você usa a funcionalidade, por exemplo, PPL, que faz com que o tempo de execução criar o agendador padrão para você, não liberar ou desanexar neste Agendador. O tempo de execução gerencia o tempo de vida de qualquer Agendador que ele cria.  
   
- Como o tempo de execução não destrói um objeto de `Scheduler` antes que todas as tarefas sejam concluídas, você pode usar o método de [concurrency::Scheduler::RegisterShutdownEvent](../Topic/Scheduler::RegisterShutdownEvent%20Method.md) ou o método de [concurrency::CurrentScheduler::RegisterShutdownEvent](../Topic/CurrentScheduler::RegisterShutdownEvent%20Method.md) para receber uma notificação quando um objeto de `Scheduler` é destruído.  Isso é útil quando você precisa esperar cada tarefa que está agendada por um objeto de `Scheduler` para ser concluída.  
+
+ Porque o tempo de execução não destrói um `Scheduler` objeto antes de concluir todas as tarefas, você pode usar o [concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) método ou o [concurrency::CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) método para receber uma notificação quando um `Scheduler` objeto é destruído. Isso é útil quando você deve esperar para todas as tarefas agendadas por um `Scheduler` objeto para concluir.  
   
- \[[Superior](#top)\]  
+ [[Superior](#top)]  
   
-##  <a name="features"></a> Métodos e recursos  
- Esta seção resume os métodos importantes das classes de `CurrentScheduler` e de `Scheduler` .  
+##  <a name="features"></a>Métodos e recursos  
+ Esta seção resume os métodos importantes do `CurrentScheduler` e `Scheduler` classes.  
   
- Pense da classe de `CurrentScheduler` como um auxiliar para criar um agendador para uso no contexto atual.  A classe de `Scheduler` permite controlar um agendador que pertence a outro contexto.  
+ Imagine a `CurrentScheduler` classe como um auxiliar para a criação de um agendador para uso no contexto atual. O `Scheduler` classe permite que você controle um agendador que pertence a outro contexto.  
   
- A tabela a seguir mostra os métodos importantes que são definidos pela classe de `CurrentScheduler` .  
-  
-|Método|Descrição|  
-|------------|---------------|  
-|[Criar](../Topic/CurrentScheduler::Create%20Method.md)|Cria um objeto de `Scheduler` que usa a política especificada e a associa ao contexto atual.|  
-|[Obter...](../Topic/CurrentScheduler::Get%20Method.md)|Recupera um ponteiro para o objeto de `Scheduler` associado ao contexto atual.  Esse método não incrementa a contagem de referência do objeto de `Scheduler` .|  
-|[Detach](../Topic/CurrentScheduler::Detach%20Method.md)|Desanexa o agendador atual do contexto atual e define anterior como o agendador atual.|  
-|[RegisterShutdownEvent](../Topic/CurrentScheduler::RegisterShutdownEvent%20Method.md)|Registra um evento que define o tempo de execução quando o agendador atual é destruído.|  
-|[CreateScheduleGroup](../Topic/CurrentScheduler::CreateScheduleGroup%20Method.md)|Cria um objeto de [concurrency::ScheduleGroup](../Topic/ScheduleGroup%20Class.md) no agendador atual.|  
-|[ScheduleTask](../Topic/CurrentScheduler::ScheduleTask%20Method.md)|Adiciona uma tarefa de peso leve à fila de programação do agendador atual.|  
-|[GetPolicy](../Topic/CurrentScheduler::GetPolicy%20Method.md)|Recupera uma cópia da política associada ao agendador atual.|  
-  
- A tabela a seguir mostra os métodos importantes que são definidos pela classe de `Scheduler` .  
+ A tabela a seguir mostra os métodos importantes que são definidos pelo `CurrentScheduler` classe.  
   
 |Método|Descrição|  
-|------------|---------------|  
-|[Criar](../Topic/Scheduler::Create%20Method.md)|Cria um objeto de `Scheduler` que usa a política especificada.|  
-|[Anexar](../Topic/Scheduler::Attach%20Method.md)|Associa o objeto de `Scheduler` junto com o contexto atual.|  
-|[Referência](../Topic/Scheduler::Reference%20Method.md)|Adiciona a referência do contador do objeto de `Scheduler` .|  
-|[Versão](../Topic/Scheduler::Release%20Method.md)|Diminui a referência do contador do objeto de `Scheduler` .|  
-|[RegisterShutdownEvent](../Topic/Scheduler::RegisterShutdownEvent%20Method.md)|Registra um evento que o tempo de execução quando define o objeto de `Scheduler` é destruído.|  
-|[CreateScheduleGroup](../Topic/Scheduler::CreateScheduleGroup%20Method.md)|Cria um objeto de [concurrency::ScheduleGroup](../Topic/ScheduleGroup%20Class.md) no objeto de `Scheduler` .|  
-|[ScheduleTask](../Topic/Scheduler::ScheduleTask%20Method.md)|Agenda uma tarefa de peso leve do objeto de `Scheduler` .|  
-|[GetPolicy](../Topic/Scheduler::GetPolicy%20Method.md)|Recupera uma cópia da política associada ao objeto de `Scheduler` .|  
-|[SetDefaultSchedulerPolicy](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md)|Define a política para que o tempo de execução ao criar o agendador padrão.|  
-|[ResetDefaultSchedulerPolicy](../Topic/Scheduler::ResetDefaultSchedulerPolicy%20Method.md)|Restaura a política padrão para aquela que estava ativo antes da chamada a `SetDefaultSchedulerPolicy`.  Se o agendador padrão é criado quando essa chamada, as configurações padrão da política de tempo de execução usa para criar o agendador.|  
+|------------|-----------------|  
+|[Criar](reference/currentscheduler-class.md#create)|Cria um `Scheduler` objeto que usa a política especificada e o associa ao contexto atual.|  
+|[Get](reference/currentscheduler-class.md#get)|Recupera um ponteiro para o `Scheduler` objeto que está associado com o contexto atual. Esse método não incrementa a contagem de referência de `Scheduler` objeto.|  
+|[Desanexar](reference/currentscheduler-class.md#detach)|Desanexa o Agendador atual do contexto atual e define aquele anterior como o Agendador atual.|  
+|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Registra um evento que o tempo de execução define quando o Agendador atual é destruído.|  
+|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Cria um [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objeto no Agendador do atual.|  
+|[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|Adiciona uma tarefa leve à fila de agendamento do Agendador atual.|  
+|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|Recupera uma cópia da política que está associada com o Agendador atual.|  
   
- \[[Superior](#top)\]  
+ A tabela a seguir mostra os métodos importantes que são definidos pelo `Scheduler` classe.  
+  
+|Método|Descrição|  
+|------------|-----------------|  
+|[Criar](reference/scheduler-class.md#create)|Cria um `Scheduler` objeto que usa a política especificada.|  
+|[Anexar](reference/scheduler-class.md#attach)|Associa o `Scheduler` objeto junto com o contexto atual.|  
+|[Referência](reference/scheduler-class.md#reference)|Incrementa o contador de referência do `Scheduler` objeto.|  
+|[Versão](reference/scheduler-class.md#release)|Diminui o contador de referência do `Scheduler` objeto.|  
+|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Registra um evento que o tempo de execução define quando o `Scheduler` objeto é destruído.|  
+|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Cria um [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objeto o `Scheduler` objeto.|  
+|[ScheduleTask](reference/scheduler-class.md#scheduletask)|Agenda de uma tarefa leve o `Scheduler` objeto.|  
+|[GetPolicy](reference/scheduler-class.md#getpolicy)|Recupera uma cópia da política que está associada com o `Scheduler` objeto.|  
+|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Define a política de execução a ser usada ao criar o agendador padrão.|  
+|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Restaura a política padrão para aquele que estava ativa antes da chamada para `SetDefaultSchedulerPolicy`. Se o agendador padrão for criado após essa chamada, o tempo de execução usa configurações de política padrão para criar o Agendador.|  
+
+  
+ [[Superior](#top)]  
   
 ##  <a name="example"></a> Exemplo  
- Para obter exemplos básicos como criar e gerenciar uma instância do agendador, consulte [Como gerenciar uma instância de agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).  
+ Para obter exemplos básicos de como criar e gerenciar uma instância de Agendador, consulte [como: gerenciar uma instância de Agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).  
   
-## Consulte também  
- [Agendador de Tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Como gerenciar uma instância de agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
- [Políticas de agendador](../../parallel/concrt/scheduler-policies.md)   
- [Grupos de agendas](../../parallel/concrt/schedule-groups.md)
+## <a name="see-also"></a>Consulte também  
+ [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
+ [Como: gerenciar uma instância de Agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
+ [Políticas de Agendador](../../parallel/concrt/scheduler-policies.md)   
+ [Grupos Agendados](../../parallel/concrt/schedule-groups.md)
+

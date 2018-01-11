@@ -1,11 +1,10 @@
 ---
-title: Classe task_completion_event | Documentos do Microsoft
+title: Classe task_completion_event | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_completion_event class
+dev_langs: C++
+helpviewer_keywords: task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcompletionevent-class"></a>Classe task_completion_event
 A classe `task_completion_event` permite atrasar a execução de uma tarefa até que uma condição seja atendida, ou iniciar uma tarefa em resposta a um evento externo.  
@@ -65,7 +48,7 @@ class task_completion_event<void>;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -89,7 +72,7 @@ class task_completion_event<void>;
  `task_completion_event`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** ppltasks.h  
+ **Cabeçalho:** ppltasks  
   
  **Namespace:** simultaneidade  
   
@@ -105,13 +88,13 @@ bool set() const ;
   
 ### <a name="parameters"></a>Parâmetros  
  `_Result`  
- O resultado para definir este evento com.  
+ O resultado para definir esse evento com.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O método retorna `true` se tiver êxito na configuração do evento. Retorna `false` se o evento já estiver definido.  
+ O método retorna `true` se ela foi bem-sucedida na configuração de evento. Ele retorna `false` se o evento já está definido.  
   
 ### <a name="remarks"></a>Comentários  
- Na presença de vários ou de chamadas simultâneas para `set`, somente a primeira chamada será bem-sucedida e seu resultado (se houver) será armazenado no evento de conclusão de tarefas. Os conjuntos restantes são ignorados e o método retornará false. Quando você define um evento de conclusão de tarefas, todas as tarefas criadas de que eventos serão concluída imediatamente e as continuações, se houver, serão agendadas. Tarefa objetos de conclusão que têm um `_ResultType` que `void` irá passar o valor para seus continuações.  
+ Na presença de várias chamadas simultâneas para ou `set`, somente a primeira chamada será bem-sucedida e seu resultado (se houver) será armazenado no evento de conclusão de tarefas. Os conjuntos restantes são ignorados e o método retornará false. Quando você define um evento de conclusão de tarefas, todas as tarefas criada do que evento será concluída imediatamente, e seus continuações, se houver, serão agendadas. Tarefa de objetos de conclusão que têm um `_ResultType` diferente de `void` irá passar o valor para seus continuações.  
   
 ##  <a name="set_exception"></a>set_exception 
 
@@ -141,4 +124,3 @@ task_completion_event();
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)
-

@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a41ca93c91fad26c507c4e468e3c4ebf007c3aab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-in-a-view"></a>Desenhando uma exibição
 Desenhando quase todos em seu aplicativo ocorre no modo de exibição `OnDraw` função de membro, você deve substituir em sua classe de exibição. (A exceção é mouse desenho, discutido em [Interpretando entrada por meio de uma exibição de usuário](../mfc/interpreting-user-input-through-a-view.md).) O `OnDraw` substituir:  

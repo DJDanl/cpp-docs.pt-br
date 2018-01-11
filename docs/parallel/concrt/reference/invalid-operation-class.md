@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32053eaadc80a69b2ecdcf8887092ac8fadbdf8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67bd4819f3f1820ae9a13cc07fc2db692a362433
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidoperation-class"></a>Classe invalid_operation
 Esta classe descreve uma exceção gerada quando uma operação inválida é executada com mais precisão não é descrita por outro tipo de exceção lançado pelo tempo de execução de simultaneidade.  
@@ -35,7 +36,7 @@ class invalid_operation : public std::exception;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

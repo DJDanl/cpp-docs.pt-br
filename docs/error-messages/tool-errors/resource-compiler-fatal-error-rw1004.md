@@ -1,46 +1,28 @@
 ---
-title: Erro Fatal RW1004 do compilador de recurso | Documentos do Microsoft
+title: Recurso compilador Erro Fatal RW1004 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RW1004
-dev_langs:
-- C++
-helpviewer_keywords:
-- RW1004
+f1_keywords: RW1004
+dev_langs: C++
+helpviewer_keywords: RW1004
 ms.assetid: 89cfcb02-a5d3-4271-be4f-df2ec3f94f3e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6bab309c9b3efbae9fff0d404a6cc31dbab64880
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6d06f8bec0c06ba9624cf0aeec23319783f6a9d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-fatal-error-rw1004"></a>Erro fatal RW1004 (compilador de recurso)
 Fim inesperado do arquivo  
   
- Esse erro pode ser causado por falta de avanço de linha e caracteres de retorno de carro na última linha de um arquivo de texto.
+ Esse erro pode ser causado pela falta de avanço de linha e caracteres de retorno de carro na última linha de um arquivo de texto.

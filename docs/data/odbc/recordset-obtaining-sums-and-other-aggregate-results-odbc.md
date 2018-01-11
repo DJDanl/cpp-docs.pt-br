@@ -1,103 +1,105 @@
 ---
-title: "Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conjunto de registros ODBC, recuperando valores agregados SQL"
-  - "conjuntos de registros, recuperando valores agregados SQL"
-  - "recuperando valores agregados SQL de conjuntos de registros"
-  - "valores agregados SQL"
-  - "valores agregados SQL, recuperando a partir de conjuntos de registros"
-  - "Projetos SQL Server, recuperando valores agregados de conjuntos de registros"
-  - "SQL, recuperando valores agregados de conjuntos de registros"
+title: 'Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SQL, retrieving aggregate values from recordsets
+- recordsets, retrieving SQL aggregate values
+- retrieving SQL aggregate values from recordsets
+- ODBC recordsets, retrieving SQL aggregate values
+- SQL aggregate values
+- SQL Server projects, retrieving aggregate values from recordsets
+- SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico se aplica às classes ODBC do MFC.  
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)
+Este tópico se aplica às classes MFC ODBC.  
   
- Este tópico explica como obter resultados agregados usando as seguintes palavras\-chave de [SQL](../../data/odbc/sql.md) :  
+ Este tópico explica como obter os resultados de agregação usando o seguinte [SQL](../../data/odbc/sql.md) palavras-chave:  
   
--   **SOMA** Calcula o total de valores em uma coluna com um tipo de dados numérico.  
+-   **Soma** calcula o total dos valores em uma coluna com um tipo de dados numéricos.  
   
--   **MÍN.** Extrai o menor valor de uma coluna com um tipo de dados numérico.  
+-   **MIN** extrai o menor valor em uma coluna com um tipo de dados numéricos.  
   
--   **MÁX** Extrai o maior valor de uma coluna com um tipo de dados numérico.  
+-   **MAX** extrai o maior valor em uma coluna com um tipo de dados numéricos.  
   
--   **MÉDIA** Calcula um valor médio de todos os valores em uma coluna com um tipo de dados numérico.  
+-   **AVG** calcula um valor médio de todos os valores em uma coluna com um tipo de dados numéricos.  
   
--   **CONTAGEM** Conta o número de registros em uma coluna de qualquer tipo de dados.  
+-   **Contagem de** conta o número de registros em uma coluna de qualquer tipo de dados.  
   
- Você usa estas funções do SQL para obter informações estatísticas sobre os registros em uma fonte de dados em vez de para extrair registros na fonte de dados.  O conjunto de registros que é criado normalmente consiste em um único registro \(se todas as colunas são agregações\) que contém um valor. \(Pode haver mais de um registro se você usou uma cláusula de **AGRUPAR POR** .\) Esse valor será o resultado de cálculo ou de extração executado pela função do SQL.  
+ Você usar essas funções SQL para obter informações estatísticas sobre os registros em uma fonte de dados em vez de extrair os registros da fonte de dados. O conjunto de registros que é criado normalmente consiste em um único registro (se todas as colunas são agregados) que contém um valor. (Pode haver mais de um registro que você usou uma **GROUP BY** cláusula.) Esse valor é o resultado do cálculo ou extração executada pela função SQL.  
   
 > [!TIP]
->  Para adicionar uma cláusula do SQL **AGRUPAR POR** \(e possivelmente uma cláusula de **HAVING** \) à instrução SQL, acrescentar\-la ao final de **m\_strFilter**.  Por exemplo:  
+>  Para adicionar um SQL **GROUP BY** cláusula (e possivelmente um **HAVING** cláusula) para a instrução SQL, anexá-la ao final da **m_strFilter**. Por exemplo:  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  
 ```  
   
- Você pode limitar o número de registros que você usa para obter agregar resultados filtrando e classificando as colunas.  
+ Você pode limitar o número de registros que você pode usar para obter resultados de agregação, filtrar e classificar as colunas.  
   
 > [!CAUTION]
->  Alguns operadores de agregação retornam um tipo de dados diferente das colunas em que estão agregando.  
+>  Alguns operadores de agregação retornam um tipo de dados diferente das colunas em que elas são de agregação.  
   
--   **SOMA** e **MÉDIA** podem retornar o tipo de dados maior seguir \(por exemplo, chame com `int` retorna **LONG** ou **double**\).  
+-   **Soma** e **AVG** pode retornar o tipo de dados maior (por exemplo, chamar com `int` retorna **longo** ou **duplo**).  
   
--   **CONTAGEM** geralmente retorna **LONG** independentemente do tipo da coluna de destino.  
+-   **Contagem de** geralmente retorna **longo** independentemente do tipo de coluna de destino.  
   
--   **MÁX** e retorno de **MÍN.** o mesmo tipo de dados das colunas que calculam.  
+-   **MAX** e **MIN** retornar o mesmo tipo de dados como colunas de calculam a eles.  
   
-     Por exemplo, o assistente de **Adicionar Classe** cria `long` `m_lSales` para acomodar uma coluna vendas, mas você precisa substituí\-lo por um membro de dados de `double m_dblSumSales` para acomodar o resultado de agregação.  Consulte o exemplo a seguir.  
+     Por exemplo, o **Adicionar classe** assistente cria `long` `m_lSales` acomodar uma coluna de vendas, mas você precisa substituir isso com um `double m_dblSumSales` membro de dados para acomodar o resultado da agregação. Consulte o exemplo a seguir.  
   
-#### Para obter um resultado de agregação para um conjunto de registros  
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Para obter um resultado de agregação para um conjunto de registros  
   
-1.  Crie um conjunto de registros conforme descrito em [Adicionando um consumidor de MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) que contém as colunas que você deseja obter resultados agregados.  
+1.  Criar um conjunto de registros, conforme descrito em [adicionando um consumidor de ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) que contém as colunas do qual você deseja obter resultados de agregação.  
   
-2.  Modifique a função de [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) para o conjunto de registros.  Substituir a cadeia de caracteres que representa o nome da coluna \(o segundo argumento de chamadas de funções de [RFX](../../data/odbc/record-field-exchange-using-rfx.md) \) com uma cadeia de caracteres que representa a função de agregação na coluna.  Por exemplo, substitua:  
+2.  Modificar o [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) função para o conjunto de registros. Substitua a cadeia de caracteres que representa o nome da coluna (o segundo argumento de [RFX](../../data/odbc/record-field-exchange-using-rfx.md) chamadas de função) com uma cadeia de caracteres que representa a função de agregação na coluna. Por exemplo, substitua:  
   
     ```  
     RFX_Long(pFX, "Sales", m_lSales);  
     ```  
   
-     com:  
+     Com:  
   
     ```  
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)  
     ```  
   
-3.  Abra o conjunto de registros.  O resultado da operação de agregação é deixado em `m_dblSumSales`.  
+3.  Abra o conjunto de registros. O resultado da operação de agregação é deixado no `m_dblSumSales`.  
   
 > [!NOTE]
->  O assistente atribui realmente nomes de membro de dados sem prefixos húngaros.  Por exemplo, o assistente gerará `m_Sales` para uma coluna vendas, em vez de anterior usado nome de `m_lSales` para ilustração.  
+>  Na verdade, o assistente atribui nomes de membros de dados sem prefixos húngaras. Por exemplo, o assistente pode produzir `m_Sales` para uma coluna de vendas, em vez de `m_lSales` nome usado anteriormente para ilustração.  
   
- Se você estiver usando uma classe de [CRecordView](../../mfc/reference/crecordview-class.md) para exibir os dados, você tem que alterar a chamada da função de DDX para exibir o novo valor do membro de dados; nesse caso, a alteração do:  
+ Se você estiver usando um [CRecordView](../../mfc/reference/crecordview-class.md) da classe para exibir os dados, você precisa alterar a chamada de função DDX para exibir o novo valor de membro de dados; nesse caso, mudando de:  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);  
 ```  
   
- :  
+ Para:  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);  
 ```  
   
-## Consulte também  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: como conjuntos de registros selecionam registros \(ODBC\)](../Topic/Recordset:%20How%20Recordsets%20Select%20Records%20\(ODBC\).md)
+## <a name="see-also"></a>Consulte também  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

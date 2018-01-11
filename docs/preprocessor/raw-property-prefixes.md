@@ -1,56 +1,53 @@
 ---
-title: "raw_property_prefixes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "raw_property_prefixes"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Atributo raw_property_prefixes"
+title: raw_property_prefixes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: raw_property_prefixes
+dev_langs: C++
+helpviewer_keywords: raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 190a7ce7fbca4fea477771b5c125c96ecc187216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# raw_property_prefixes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico do C\+\+**  
+# <a name="rawpropertyprefixes"></a>raw_property_prefixes
+**Específicas do C++**  
   
  Especifica prefixos alternativos para três métodos da propriedade.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `GetPrefix`  
- Prefixo para ser usado nos métodos **propget**.  
+ Prefixo a ser usado para o **propget** métodos.  
   
  `PutPrefix`  
- Prefixo para ser usado nos métodos **propput**.  
+ Prefixo a ser usado para o **propput** métodos.  
   
  `PutRefPrefix`  
- Prefixo para ser usado nos métodos **propputref**.  
+ Prefixo a ser usado para o **propputref** métodos.  
   
-## Comentários  
- Por padrão, os métodos **propget**, **propput** e **propputref** são expostos por funções de membro nomeadas com prefixos de **get\_**, **put\_** e **putref\_** respectivamente.  Esses prefixos são compatíveis com os nomes usados nos arquivos de cabeçalho gerados pelo MIDL.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, de baixo nível **propget**, **propput**, e **propputref** métodos são expostos pelas funções de membro chamadas com prefixos de **get _**, **Put _**, e **putref_** respectivamente. Esses prefixos são compatíveis com os nomes usados nos arquivos de cabeçalho gerados pelo MIDL.  
   
- **FIM de Específico do C\+\+**  
+ **TÉRMINO específicas do C++**  
   
-## Consulte também  
- [Atributos \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Diretiva \#import](../Topic/%23import%20Directive%20\(C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,51 +1,51 @@
 ---
-title: "&lt; C&#243;digo &gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "<code>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Marca XML C++ < code >"
-  - "marcação XML C++ code"
+title: "&lt;código&gt; (Visual C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- <code>
+dev_langs: C++
+helpviewer_keywords:
+- <code> C++ XML tag
+- code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 863ad36def9b32269ff4b1a0c131f46e67189a45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt; C&#243;digo &gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A marca \< código \> fornece uma maneira para indicar uma ou mais linhas como código.  
+# <a name="ltcodegt-visual-c"></a>&lt;código&gt; (Visual C++)
+O \<código > marca fornece uma maneira para indicar uma ou mais linhas de código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 <code>content</code>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `content`  
  O texto a que ser marcado como código.  
   
-## Comentários  
- Use [\< c \>](../Topic/%3Cc%3E%20\(Visual%20C++\).md) para indicar uma parte do texto deve ser marcada como código.  
+## <a name="remarks"></a>Comentários  
+ Use [ \<c >](../ide/c-visual-cpp.md) para indicar uma parte do texto deve ser marcada como código.  
   
- Compile com [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação para um arquivo.  
+ Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
-## Exemplo  
- Consulte o [\< exemplo \>](../ide/example-visual-cpp.md) tópico para obter um exemplo de como usar a marca \< código \>.  
+## <a name="example"></a>Exemplo  
+ Consulte o tópico [\<example>](../ide/example-visual-cpp.md) para obter um exemplo de como usar a marca \<code>.  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

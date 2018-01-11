@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 200e50e2a10470e7078d31b35849c82ee9c11fd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da8fba1e5be97c692b08b8e89cf36b4ae6f5ddab
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fisherfdistribution-class"></a>Classe fisher_f_distribution
 Gera uma distribuição Fisher F.  
@@ -76,9 +77,9 @@ public:
 ```  
 #### <a name="parameters"></a>Parâmetros  
 *RealType*  
-O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado de ponto flutuante assume `double` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+*URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Comentários  
  A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou um tipo `double` caso nenhum seja fornecido, distribuído de acordo com a Distribuição F de Fisher. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -100,7 +101,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
   
  Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
- Para obter informações detalhadas sobre a Distribuição F, consulte o artigo da Wolfram MathWorld [F-Distribution](http://go.microsoft.com/fwlink/LinkId=400899).  
+ Para obter informações detalhadas sobre a Distribuição F, consulte o artigo da Wolfram MathWorld [F-Distribution](http://go.microsoft.com/fwlink/p/?linkid=400899).  
   
 ## <a name="example"></a>Exemplo  
   

@@ -1,49 +1,31 @@
 ---
-title: Aviso LNK4104 das ferramentas de vinculador | Documentos do Microsoft
+title: Aviso LNK4104 das ferramentas de vinculador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4104
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4104
+f1_keywords: LNK4104
+dev_langs: C++
+helpviewer_keywords: LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d2eebc34c34c3748fae78f615a163430b1c2ac22
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b26286f375f54a20e1d3db534576f692179ade24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Aviso LNK4104 (Ferramentas de Vinculador)
-exportação do símbolo 'symbol' deve ser PRIVADO  
+exportação de símbolo 'symbol' deve ser PRIVATE  
   
- O `symbol` pode ser uma das seguintes opções:  
+ O `symbol` pode ser um dos seguintes:  
   
 -   `DllCanUnloadNow`  
   
@@ -75,4 +57,4 @@ exportação do símbolo 'symbol' deve ser PRIVADO
   
 -   `RasCustomEntryDlg`  
   
- Esse aviso é emitido quando você estiver criando uma biblioteca de importação para uma DLL e exportar uma das funções acima sem especificá-lo como particular no arquivo de definição de módulo. Em geral, essas funções são exportadas para uso somente pelo OLE. Colocá-los na biblioteca de importação pode levar a um comportamento incomum quando um programa vinculado incorretamente para a biblioteca faz chamadas para eles. Para obter mais informações sobre a palavra-chave PRIVADA, consulte [exportações](../../build/reference/exports.md).
+ Esse aviso é emitido quando você estiver criando uma biblioteca de importação para uma DLL e exportar uma das funções acima sem especificá-lo como particular no arquivo de definição de módulo. Em geral, essas funções são exportadas para uso somente pelo OLE. Colocando-as na biblioteca de importação pode resultar em comportamento incomum quando um programa vinculado à biblioteca incorretamente faz chamadas a eles. Para obter mais informações sobre a palavra-chave PRIVADA, consulte [exportações](../../build/reference/exports.md).

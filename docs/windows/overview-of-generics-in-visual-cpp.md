@@ -1,61 +1,63 @@
 ---
-title: "Overview of Generics in Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], about generics"
-  - "default initializers [C++]"
-  - "type parameters [C++]"
-  - "constructed types"
-  - "type arguments [C++]"
-  - "constructed types, open [C++]"
-  - "open constructed types [C++]"
-  - "constructed types, closed [C++]"
+title: "Visão geral de genéricos no Visual C++ | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], about generics
+- default initializers [C++]
+- type parameters [C++]
+- constructed types
+- type arguments [C++]
+- constructed types, open [C++]
+- open constructed types [C++]
+- constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Overview of Generics in Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os produtos genéricas tipos são parametrizadas com suporte do Common Language Runtime.  Um tipo com parâmetros é um tipo que é definido com um parâmetro de tipo desconhecido que é especificado quando o genérico é usado.  
+# <a name="overview-of-generics-in-visual-c"></a>Visão geral de genéricos no Visual C++
+Genéricos são parametrizados tipos com suporte pelo common language runtime. Um tipo parametrizado é um tipo que é definido com um parâmetro de tipo desconhecido que é especificado quando a classe genérica é usada.  
   
-## Por que produtos genéricas?  
- Os modelos da suporte C\+\+ e modelos e produtos genéricas suporte a tipos com parâmetros para criar classes da coleção.  No entanto, os modelos oferecem a parametrização de tempo de compilação.  Você não pode fazer referência a um assembly que contém uma definição de modelo e criar novas especializações do modelo.  Depois de criado, um modelo especializado aparência classe ou qualquer outro método.  Ao contrário, os produtos genéricas serão emitidos em MSIL como um tipo com parâmetros conhecido em tempo de execução para ser um tipo com parâmetros; o código\-fonte que faz referência a um assembly que contém um tipo genérico pode criar especializações de tipo genérico.  Para obter mais informações sobre a comparação de modelos de produtos e genéricas do Visual C\+\+, consulte [Generics and Templates \(Visual C\+\+\)](../windows/generics-and-templates-visual-cpp.md).  
+## <a name="why-generics"></a>Por que genéricos?  
+ C++ dá suporte a modelos e ambos os modelos e tipos parametrizados para criar classes de coleção com suporte a genéricos. No entanto, os modelos oferecem parametrização de tempo de compilação. Você não pode fazer referência a um assembly que contém uma definição de modelo e criar novos especializações do modelo. Depois de compilado, um modelo especializado parece com qualquer outra classe ou método. Por outro lado, genéricos são emitidos em MSIL como um tipo parametrizado conhecido pelo tempo de execução para um tipo com parâmetros; código-fonte que faz referência a um assembly que contém um tipo genérico pode criar especializações do tipo genérico. Para obter mais informações sobre a comparação de modelos do Visual C++ e genéricos, consulte [genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
-## Funções e tipos genéricos  
- Os tipos da classe, à medida que são tipos gerenciados, podem ser genéricas.  Um exemplo desse pode ser uma classe de `List` .  O tipo de um objeto da lista será o parâmetro de tipo.  Se você for uma classe de `List` para muitos tipos diferentes de objetos, antes dos produtos genéricas você pode usar `List` que usa **System::Object** como o tipo de item.  Mas isso permitiria que qualquer objeto \(que inclui objetos do tipo errado\) é usado na lista.  Essa lista será chamada sem\-tipo uma classe de coleção.  O melhor forma, você pode verificar o tipo em tempo de execução e gerar uma exceção.  Ou, você pode usar um modelo, que perdesse a qualidade genérico criada uma vez em um assembly.  Os consumidores do assembly não podem criar suas próprias especializações do modelo.  Os produtos genéricas permitem que você crie classes da coleção, indicam `List<int>` \(leitura como “lista de int”\) e `List<double>` lista de double \(“”\) que gerencia um erro de tempo de compilação se você tentar colocar um tipo que a coleção não tenha sido criada para aceitar digitada na coleção.  Além disso, esses tipos genéricos permanecem depois que são criados.  
+## <a name="generic-functions-and-types"></a>Tipos e funções genéricas  
+ Tipos de classe, desde que eles sejam tipos gerenciados, podem ser genéricos. Um exemplo disso pode ser um `List` classe. O tipo de um objeto da lista seria o parâmetro de tipo. Se for necessário um `List` classe para muitos tipos diferentes de objetos, antes de genéricos, talvez você tenha usado um `List` que usa **System::Object** como o tipo de item. Mas isso permitiria que qualquer objeto (incluindo objetos do tipo errado) a ser usado na lista. Essa lista deve ser chamada uma classe de coleção não tipado. Na melhor das hipóteses, você poderá verificar o tipo em tempo de execução e gera uma exceção. Ou, talvez você tenha usado um modelo, que poderá perder sua qualidade genérica, uma vez compilada em um assembly. Os consumidores de seu assembly não foi possível criar suas próprias especializações do modelo. Genéricos permitem que você crie classes de coleção tipada, digamos que `List<int>` (leitura como "Lista de int") e `List<double>` ("lista de duplo") não que geraria um erro de tempo de compilação se você tentar colocar um tipo que a coleção foi projetado para aceitar em com tipo coleção. Além disso, esses tipos de permanecem genéricos depois que são compilados.  
   
- Uma descrição da sintaxe de classes genéricas podem ser encontradas na nova namespace de [Generic Classes \(C\+\+\/CLI\)](../Topic/Generic%20Classes%20\(C++-CLI\).md)`.` A, <xref:System.Collections.Generic>, apresenta um conjunto de tipos com parâmetros da coleção que incluem <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.LinkedList%601>.  Consulte [Genéricos na biblioteca de classes .NET Framework](../Topic/Generics%20in%20the%20.NET%20Framework%20Class%20Library%20\(C%23%20Programming%20Guide\).md) para maiores informações.  
+ Uma descrição da sintaxe de classes genéricas que pode ser encontrada no [Classes genéricas (C + + CLI)](../windows/generic-classes-cpp-cli.md) `.` um novo namespace, <xref:System.Collections.Generic>, apresenta um conjunto de tipos de coleção com parâmetros incluindo <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601>e <xref:System.Collections.Generic.LinkedList%601>.  
   
- As funções de membro da classe de instância e estáticos, os representantes, e as funções globais também podem ser genéricas.  As funções genéricas podem ser necessárias se os parâmetros de função são de um tipo desconhecido, ou se a própria função deve trabalhar com tipos genéricos.  Em muitos casos em que **System::Object** pode ter sido usado no passado como um parâmetro para um tipo de objeto desconhecido, um parâmetro de tipo genérico pode ser usado, permitindo para um código fortemente tipado mais segura.  Qualquer tentativa para passar um tipo que a função não foi criada para será sinalizada como um erro em tempo de compilação.  Usando **System::Object** como um parâmetro de função, transmita inadvertido de um objeto que a função não foi planejada tratar não será detectado, e precisará converter o tipo de objeto desconhecido em um tipo específico no corpo da função, e esclarece a possibilidade de um InvalidCastException.  Com um genérico, o código que tenta transmitir um objeto à função provocará um conflito de tipo para que o corpo da função é garantido para ter o tipo correto.  
+ Instância e funções de membro de classe estática, representantes e funções globais também podem ser genéricas. Funções genéricas podem ser necessárias se os parâmetros da função de um tipo desconhecido ou se a função em si deve trabalhar com tipos genéricos. Em muitos casos onde **System::Object** pode ter sido usado no passado como um parâmetro para um tipo de objeto desconhecido, um parâmetro de tipo genérico pode ser usado em vez disso, permitindo mais código fortemente tipado. Qualquer tentativa de passar de um tipo que a função não foi projetada para seria sinalizada como um erro em tempo de compilação. Usando **System::Object** como um parâmetro de função, a transmissão acidental de um objeto que não era deve lidar com a função não seriam detectada e você precisa converter o tipo de objeto desconhecido para um tipo específico do corpo da função e a conta para a possibilidade de uma InvalidCastException. Com um genérico, o código tentar passar um objeto para a função causará um conflito de tipo para que o corpo da função é garantido que têm o tipo correto.  
   
- Os mesmos benefícios aplicam à coleção as classes criadas em produtos genéricas.  As classes da coleção no passado **System::Object** usariam para armazenar os elementos em uma coleção.  A inserção dos objetos de um tipo que a coleção não esteve criada para não foi sinalizada em tempo de compilação, e geralmente nem mesmo quando os objetos forem inseridos.  Geralmente, um objeto será convertido em outro tipo quando foi acessado na coleção.  Somente quando a conversão falha no tipo inesperado será detectado.  Os produtos genéricas resolver esse problema em tempo de compilação detectando qualquer código que inserir um tipo que não corresponde a \(ou para converter implicitamente\) o parâmetro de tipo de coleção genérica.  
+ Os mesmos benefícios se aplica a classes de coleção criados em genéricos. Classes de coleção no passado usaria **System::Object** para armazenar elementos em uma coleção. Inserção de objetos de um tipo que a coleção não foi projetada para não foi sinalizada durante a compilação e geralmente nem mesmo quando os objetos foram inseridos. Normalmente, um objeto deve ser convertido para outro tipo quando ele foi acessado na coleção. Somente quando a conversão falha seria o tipo inesperado detectado. Genéricos resolve esse problema em tempo de compilação, detectar qualquer código que insere um tipo que não correspondem (ou se convertem implicitamente) o parâmetro de tipo de coleção genérica.  
   
- Para obter uma descrição da sintaxe, consulte [Generic Functions \(C\+\+\/CLI\)](../windows/generic-functions-cpp-cli.md).  
+ Para obter uma descrição da sintaxe, consulte [funções genéricas (C + + CLI)](../windows/generic-functions-cpp-cli.md).  
   
-## Terminologia usada com produtos genéricas  
+## <a name="terminology-used-with-generics"></a>Terminologia usada com genéricos  
   
-##### Parâmetros de tipo  
- Uma declaração genérico contém um ou mais tipos desconhecidos conhecidos como *parâmetros de tipo*.  Os parâmetros de tipo dados são um nome que representa o tipo dentro do corpo da instrução genérico.  O parâmetro de tipo for usado como um tipo dentro do corpo da instrução genérico.  A declaração genérico para ListT\<\> contém o parâmetro de tipo T.  
+##### <a name="type-parameters"></a>Parâmetros de tipo  
+ Uma declaração de generic contém um ou mais tipos desconhecidos, conhecidos como *parâmetros de tipo*. Parâmetros de tipo recebem um nome que representa o tipo de dentro do corpo da declaração genérico. O parâmetro de tipo é usado como um tipo dentro do corpo da declaração genérico. A declaração de generic para lista < T\> contém o parâmetro de tipo T.  
   
-##### Argumentos do tipo  
- *O argumento de tipo* é o tipo real usado no lugar do parâmetro de tipo genérico quando o é especializado para um tipo específico ou digite.  Por exemplo, `int` é o argumento do tipo em `List<int>`.  Os tipos de valor e os tipos de identificador são os únicos tipos permitidos em como um argumento de tipo genérico.  
+##### <a name="type-arguments"></a>Argumentos de tipo  
+ O *argumento de tipo* é o tipo real usado no lugar do parâmetro de tipo quando genérica é especializada para um tipo específico ou tipos. Por exemplo, `int` é o argumento de tipo em `List<int>`. Tipos de valor e tipos de identificador são os únicos tipos permitidos em como um argumento de tipo genérico.  
   
-##### Tipo construído  
- Um tipo construído de um tipo genérico é referido como *um tipo construído*.  Um tipo especificado não total, como `List<T>` é *um tipo construído aberto*; um tipo especificado total, como `List<double>,` é *um tipo construído fechado* ou *tipo especializado*.  Abrir construído tipos pode ser usado na definição de outros tipos ou métodos genéricos e não pode ser completamente especificado até que incluir genérico próprios seja especificado.  Por exemplo, o seguinte é um uso de um tipo construído aberto como uma classe base de um genérico:  
+##### <a name="constructed-type"></a>Tipo construído  
+ Um tipo construído de um tipo genérico é conhecido como um *tipo construído*. Um tipo não totalmente especificado, tais como `List<T>` é um *abrir tipo construído*; um tipo totalmente especificada, tais como `List<double>,` é um *fechado tipo construído* ou *especializadas de tipo* . Tipos construídos abertos podem ser usados na definição de outros tipos ou métodos genéricos e não podem ser totalmente especificados até que o delimitador genérico é especificado. Por exemplo, este é um uso de um tipo construído aberto como uma classe base para um genérico:  
   
  `// generics_overview.cpp`  
   
@@ -69,13 +71,13 @@ Os produtos genéricas tipos são parametrizadas com suporte do Common Language 
   
  `ref class Queue : public List<T> {};`  
   
-##### Restrição  
- Uma restrição é uma limitação em tipos que podem ser usados como um parâmetro de tipo.  Por exemplo, uma classe genérico determinada pode aceitar apenas as classes que herdam de uma classe especificada, ou implementa uma interface especificada.  Para obter mais informações, consulte [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../Topic/Constraints%20on%20Generic%20Type%20Parameters%20\(C++-CLI\).md).  
+##### <a name="constraint"></a>Restrição  
+ Uma restrição é uma restrição sobre os tipos que podem ser usados como um parâmetro de tipo. Por exemplo, uma determinada classe genérica pode aceitar somente as classes que herdam de uma classe especificada ou implementar uma interface especificada. Para obter mais informações, consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
-## Tipos e tipos de valor de referência  
- Os identificadores tipos e os tipos de valores podem ser usados como argumentos do tipo.  Na definição genérico, em que cada tipo pode ser usado, a sintaxe é a de tipos de referência.  Por exemplo, o operador de **\-\>** é usado para acessar membros de tipo de parâmetro de tipo mesmo que o tipo usado se houver é um tipo de referência ou um tipo de valor.  Quando um tipo de valor é usado como o argumento do tipo, o tempo de execução gerencia o código que usa os tipos de valores diretamente sem o caso dos tipos de valor.  
+## <a name="reference-types-and-value-types"></a>Tipos de referência e tipos de valor  
+ Tipos de identificadores e tipos de valor podem ser usados como argumentos de tipo. Na definição genérica, no qual tipo pode ser usado, a sintaxe é a que tipos de referência. Por exemplo, o  **->**  operador é usado para acessar membros de tipo do parâmetro de tipo, se o tipo usado eventualmente é um tipo de referência ou um tipo de valor ou não. Quando um tipo de valor é usado como o argumento de tipo, o tempo de execução gera o código que usa os tipos de valor diretamente sem conversão boxing de tipos de valor.  
   
- Ao usar um tipo de referência como um argumento de tipo genérico, use a sintaxe do identificador.  Ao usar um tipo de valor como um argumento genérico do tipo, use o nome do tipo diretamente.  
+ Ao usar um tipo de referência como um argumento de tipo genérico, use a sintaxe de identificador. Ao usar um tipo de valor como um argumento de tipo genérico, use o nome do tipo diretamente.  
   
  `// generics_overview_2.cpp`  
   
@@ -97,8 +99,8 @@ Os produtos genéricas tipos são parametrizadas com suporte do Common Language 
   
  `}`  
   
-## Parâmetros de tipo  
- Os parâmetros de tipo em uma classe genérico são tratados como outros identificadores.  Porém, como o tipo não for conhecido, há limitações no uso.  Por exemplo, você não pode usar os membros e os métodos de parâmetro de tipo classificação a menos que o parâmetro de tipo é conhecido para oferecer suporte a esses membros.  Ou seja, para acessar um membro com o parâmetro de tipo, você deve adicionar o tipo que contém o membro à lista de restrição de parâmetro de tipo.  
+## <a name="type-parameters"></a>Parâmetros de tipo  
+ Parâmetros de tipo em uma classe genérica são tratados como outros identificadores. No entanto, porque o tipo não é conhecido, há restrições sobre seu uso. Por exemplo, você não pode usar os membros e os métodos da classe de parâmetro de tipo, a menos que o parâmetro de tipo é conhecido para dar suporte a esses membros. Ou seja, para acessar um membro por meio do parâmetro de tipo, você deve adicionar o tipo que contém o membro à lista de restrição do parâmetro de tipo.  
   
  `// generics_overview_3.cpp`  
   
@@ -129,13 +131,13 @@ int main() {
 }  
 ```  
   
- Essas restrições se aplicam aos operadores também.  Um parâmetro de tipo genérico irrestritas não pode usar os operadores de `==` e de `!=` para comparar duas instâncias do parâmetro de tipo, caso o tipo não oferece suporte a estes operadores.  Essas verificações são necessárias para produtos genéricos, mas não para modelos, como os produtos genéricas podem ser habilidosos em tempo de execução com qualquer classe que satisfaz as restrições, quando é muito tarde para verificar o uso de membros inválidos.  
+ Essas restrições se aplicam aos operadores também. Um parâmetro de tipo genérico irrestrita não pode usar o `==` e `!=` operadores para comparar duas instâncias do parâmetro de tipo, caso o tipo não oferece suporte a esses operadores. Essas verificações são necessárias para genéricos, mas não para os modelos, pois podem ser especializados genéricos em tempo de execução com qualquer classe que satisfaça as restrições, quando é tarde demais para verificar o uso de membros inválidos.  
   
- Uma instância padrão do parâmetro de tipo pode ser criada usando o operador de `()` .  Por exemplo:  
+ Uma instância padrão do parâmetro de tipo pode ser criada usando o `()` operador. Por exemplo:  
   
  `T t = T();`  
   
- onde `T` é um parâmetro de tipo em uma definição genérico da classe ou do método, inicializa a variável com seu valor padrão.  Se `T` é uma classe de referência será um ponteiro nulo; se `T` é uma classe de valor, o objeto é inicializado como zero.  Isso é chamado *de inicializador padrão*.  
+ onde `T` é um parâmetro de tipo em uma definição de classe ou método genérico, inicializa a variável para o valor padrão. Se `T` é uma classe de referência é um ponteiro nulo; se `T` é uma classe de valor, o objeto é inicializado a zero. Isso é chamado de um *padrão inicializador*.  
   
-## Consulte também  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>Consulte também  
+ [Genéricos](../windows/generics-cpp-component-extensions.md)

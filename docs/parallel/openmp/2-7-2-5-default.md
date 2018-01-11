@@ -1,51 +1,51 @@
 ---
-title: "2.7.2.5 default | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2.5 padrão de | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c856df07-705c-4ad3-9105-a268dd33e939
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee328be7f9f0c4876738f8179c26e700c57702c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.2.5 default
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O  **padrão** cláusula permite que o usuário afetam os atributos de compartilhamento de dados de variáveis.  A sintaxe do  **padrão** cláusula é da seguinte maneira:  
+# <a name="2725-default"></a>2.7.2.5 default
+O **padrão** cláusula permite que o usuário afetar os atributos de compartilhamento de dados de variáveis. A sintaxe do **padrão** cláusula é o seguinte:  
   
 ```  
 default(shared | none)  
 ```  
   
- Especificando  **default\(shared\)** é equivalente a explicitamente listando cada variável visível no momento em um  **compartilhado** cláusula, a menos que ele seja  **threadprivate** ou  **contras**`t`\-qualificado.  Na ausência de um explícita  **padrão** cláusula, o comportamento padrão é o mesmo que se  **default\(shared\)** foram especificados.  
+ Especificando **default(shared)** é equivalente a listagem explícita de cada variável visível no momento em um **compartilhado** cláusula, a menos que ele seja **threadprivate** ou **contras**`t`-qualificado. Na ausência de uma explícita **padrão** cláusula, o comportamento padrão é o mesmo que se **default(shared)** foram especificadas.  
   
- Especificando  **default\(none\)** requer que pelo menos um dos seguintes deve ser verdadeiro para cada referência a uma variável na extensão lexical da construção paralela:  
+ Especificando **default (none)** requer que pelo menos um dos seguintes deve ser verdadeiro para todas as referências a uma variável na extensão de léxica da construção paralela:  
   
--   A variável é explicitamente listada em uma cláusula de atributo de compartilhamento de dados de uma construção que contém a referência.  
+-   A variável é listada explicitamente em uma cláusula de atributo de compartilhamento de dados de uma construção que contém a referência.  
   
--   A variável é declarada dentro a construção parallel.  
+-   A variável é declarada dentro da construção paralela.  
   
--   A variável é  **threadprivate**.  
+-   A variável é **threadprivate**.  
   
--   A variável tem um  **const**\-qualificado do tipo.  
+-   A variável tiver um **const**-qualificado do tipo.  
   
--   A variável é a variável de controle de loop para uma  **para** loop que segue imediatamente um  **para** ou  **paralela para** diretiva e a referência da variável é exibido dentro do loop.  
+-   A variável é a variável de controle de loop for para um **para** loop que segue imediatamente um **para** ou **paralelo para** diretiva e a referência de variável é exibido dentro do loop .  
   
- Especifica uma variável em um  **firstprivate**,  **lastprivate**, ou  **redução** cláusula de uma diretiva incluso faz com que uma referência à variável implícita no contexto de delimitador.  Tais referências implícitas também estão sujeitos aos requisitos listados acima.  
+ Especificando uma variável em uma **firstprivate**, **lastprivate**, ou **redução** cláusula de uma diretiva anexada faz com que uma referência implícita para a variável de circunscrição contexto. Essas referências implícita também estão sujeitos aos requisitos listados acima.  
   
- Um único  **padrão** cláusula pode ser especificada em um  **paralela** diretiva.  
+ Um único **padrão** cláusula pode ser especificada em uma **paralela** diretiva.  
   
- Padrão de uma variável atributo de compartilhamento de dados pode ser sobrescrito, usando o  **particular**,  **firstprivate**,  **lastprivate**,  **redução de**, e  **compartilhado** cláusulas, como demonstrado pelo exemplo a seguir:  
+ Padrão de uma variável atributo de compartilhamento de dados pode ser substituído usando o **privada**, **firstprivate**, **lastprivate**, **redução**, e **compartilhado** cláusulas, como demonstrado pelo exemplo a seguir:  
   
 ```  
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\  

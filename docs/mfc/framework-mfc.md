@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09be7a5efbf3f78aa3cbc1862b811fff3d487c75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c021b11809b3e6598e694fdaa46b7f829358e24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 O trabalho com a estrutura de biblioteca Microsoft Foundation Class (MFC) baseia-se em grande parte algumas classes principais e várias ferramentas do Visual C++. Algumas classes encapsulam uma grande parte da interface de programação de aplicativo (API) do Win32. Outras classes encapsulam conceitos de aplicativo, como documentos, exibições e o aplicativo em si. Ainda outros encapsulam recursos OLE e a funcionalidade de acesso a dados ODBC e DAO.  

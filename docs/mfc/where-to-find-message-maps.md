@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 741c7a62083680c434f7eaa1c415441449525344
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa0b0b31d76c55851d69f4c528f11e7d23ff0d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-to-find-message-maps"></a>Onde encontrar mapas de mensagens
 Quando você cria um novo aplicativo de esqueleto com o Assistente de aplicativo, o Assistente de aplicativo grava um mapa de mensagem para cada classe de destino do comando que cria para você. Isso inclui o aplicativo derivado, documento, exibição e classes de janela do quadro. Alguns desses mapas de mensagem já tem as entradas fornecidas pelo Assistente de aplicativo para determinadas mensagens e comandos predefinidos, e alguns são apenas espaços reservados para manipuladores que serão adicionados.  

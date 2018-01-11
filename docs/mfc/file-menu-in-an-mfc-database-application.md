@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9e75a88eb4093387317a3cdb84be4b0b73f4201
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51f630f5a3fe1ee5833ac2796ff2acb1841af4c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu de arquivo em um aplicativo de banco de dados MFC
 Se você criar um aplicativo de banco de dados MFC e não usa a serialização, como deve interpretar abrir, fechar, salvar e salvar como comandos no menu arquivo enquanto não houver nenhum diretrizes de estilo para essa pergunta, aqui estão algumas sugestões:  

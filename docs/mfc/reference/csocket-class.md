@@ -31,11 +31,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fa709c0f58becfa18b286ba9c84d01c4c853dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csocket-class"></a>Classe CSocket
 Deriva `CAsyncSocket`herda o encapsulamento de API do Windows Sockets e representa um nível mais alto de abstração do que um `CAsyncSocket` objeto.  
@@ -48,7 +49,7 @@ class CSocket : public CAsyncSocket
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

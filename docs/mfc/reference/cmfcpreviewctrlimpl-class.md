@@ -47,11 +47,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab328ca6f114ffb390ad99b6684e26a7d2d56266
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8def8a8085bebdd09ce58cb6d9abd026fe713fe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 Essa classe implementa uma janela que é colocada em uma janela do host fornecida pelo Shell para visualização avançada.  
@@ -64,7 +65,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -77,7 +78,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::Create](#create)|Sobrecarregado. Chamado por um manipulador de visualização avançada para criar a janela do Windows.|  
 |[CMFCPreviewCtrlImpl::Destroy](#destroy)|Chamado por um manipulador de visualização avançada quando ele precisa destruir este controle.|  
-|[CMFCPreviewCtrlImpl::Focus](#focus)|Define o foco para esse controle de entrada.|  
+|[CMFCPreviewCtrlImpl::Focus](#focus)|Define o foco de entrada para esse controle.|  
 |[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Retorna um documento conectado a este controle de visualização.|  
 |[CMFCPreviewCtrlImpl::Redraw](#redraw)|Informa a este controle para redesenhar.|  
 |[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chamado pelo manipulador de visualização para criar uma relação entre a implementação de documento e o controle de visualização.|  
@@ -174,7 +175,7 @@ virtual void DoPaint(
 
 
 ## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
-Define o foco para esse controle de entrada.  
+Define o foco de entrada para esse controle.  
   
 ### <a name="syntax"></a>Sintaxe  
   

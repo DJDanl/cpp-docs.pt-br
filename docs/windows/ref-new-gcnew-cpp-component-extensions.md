@@ -1,58 +1,60 @@
 ---
-title: "ref new, gcnew  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "gcnew"
-  - "ref new"
-  - "gcnew_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ref new keyword (C++)"
-  - "gcnew keyword [C++]"
+title: "REF novo gcnew (extensões de componentes C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- gcnew
+- ref new
+- gcnew_cpp
+dev_langs: C++
+helpviewer_keywords:
+- ref new keyword (C++)
+- gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 616117f7274d6f68456aa23614fb354a71982fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ref new, gcnew  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O `ref new` palavra\-chave agregação aloca uma instância de um tipo que será limpo quando o objeto se torna inacessível e que retorna um identificador \([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)\) para o objeto alocado.  
+# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Extensões de Componentes C++)
+O `ref new` palavra-chave agregação aloca uma instância de um tipo que será limpo quando o objeto se torna inacessível e que retorna um identificador ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) para o objeto alocado.  
   
-## Todos os Tempos de Execução  
- Memória para uma instância de um tipo que está alocada por `ref new` é desalocado automaticamente.  
+## <a name="all-runtimes"></a>Todos os Tempos de Execução  
+ Memória para uma instância de um tipo que está alocada por `ref new` é desalocada automaticamente.  
   
- Um `ref new` operação throws `OutOfMemoryException` se não for possível alocar memória.  
+ Um `ref new` operação lança `OutOfMemoryException` se não é possível alocar memória.  
   
- Para obter mais informações sobre como a memória para tipos nativos do C\+\+ é alocada e desalocada, consulte [o novo e excluir operadores](../cpp/new-and-delete-operators.md).  
+ Para obter mais informações sobre como a memória para tipos nativos do C++ é alocada e desalocada, consulte [o novo e excluir operadores](../cpp/new-and-delete-operators.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Use `ref new` ao alocar memória para objetos de tempo de execução do Windows cuja vida útil que você deseja administrar automaticamente.  O objeto será desalocado automaticamente quando sua contagem de referência chega a zero, o que ocorre após a última cópia da referência tiver saído do escopo.  Para obter mais informações, consulte [classes e estruturas Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+## <a name="windows-runtime"></a>Tempo de Execução do Windows  
+ Use `ref new` para alocar memória para objetos de tempo de execução do Windows cujo tempo de vida que você deseja administrar automaticamente. O objeto é desalocado automaticamente quando sua contagem de referência chega a zero, o que ocorre depois que a última cópia da referência estiver fora do escopo. Para obter mais informações, consulte [classes e estruturas Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### Requisitos  
- Opção do compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opção do compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Memória para um tipo gerenciado \(tipo de valor ou referência\) está alocada por `gcnew`, e desalocadas por meio da coleta de lixo.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Memória para um tipo gerenciado (tipo de valor ou referência) é alocada por `gcnew`e desalocadas por meio de coleta de lixo.  
   
-### Requisitos  
- Opção do compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opção de compilador: **/clr**  
   
-### Exemplos  
+### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- O exemplo a seguir usa `gcnew` para alocar um objeto Message.  
+ O exemplo a seguir usa `gcnew` para alocar um objeto de mensagem.  
   
 ```  
 // mcppv2_gcnew_1.cpp  
@@ -92,6 +94,9 @@ int main()
   
  **Saída**  
   
-  **32**   
-## Consulte também  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+32  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

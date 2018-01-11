@@ -1,8 +1,8 @@
 ---
-title: Etapa 0 - suporte instalar C++ no Visual Studio | Microsoft Docs
+title: Instalar o suporte do C++ no Visual Studio | Microsoft Docs
 description: Instalar o suporte do Visual Studio para Visual C++
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 840f23d894e8aacc53a735fa8e1c25a671ed3a2a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: b895569e5535fb05c1e2383df224f149815dd47f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar o suporte do C++ no Visual Studio
 
@@ -36,16 +37,16 @@ Para obter detalhes sobre o espaço em disco e os requisitos de sistema operacio
 1. Baixe o instalador do Visual Studio de 2017 mais recente para o Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Instalar o Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Instalar Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > A edição Community é para desenvolvedores individuais, aprendizado de sala de aula, pesquisa acadêmica e desenvolvimento de software livre. Para outros usos, instalar <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio Professional de 2017</a> ou <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
+   > A edição Community é para desenvolvedores individuais, aprendizado em sala de aula, pesquisa acadêmica e desenvolvimento de software livre. Para outros usos, instale o <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> ou o <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
 
 1. Localize o arquivo do instalador baixado e executá-lo. Ele pode ser exibido no navegador, ou talvez você ache na sua pasta de Downloads. O instalador precisa de privilégios de administrador para executar. Você pode ver um **User Account Control** caixa de diálogo solicitando que você conceda permissão para permitir que o instalador fazer alterações ao seu sistema; escolher **Sim**. Se você estiver tendo problemas, localize o arquivo baixado no Explorador de arquivos, clique no ícone de instalação e escolha **executar como administrador** no menu de contexto.
 
    ![Execute o instalador do Visual Studio de 2017](../build/media/vscpp-concierge-run-installer.gif "executar o instalador do Visual Studio")
 
-1. O instalador apresenta uma lista de cargas de trabalho, que são grupos de opções relacionadas para as áreas de desenvolvimento específico. Suporte para C++ agora faz parte de cargas de trabalho opcionais que não são instalados por padrão.
+1. O instalador apresenta uma lista de cargas de trabalho, que são grupos de opções relacionadas para áreas de desenvolvimento específicas. Suporte para C++ agora faz parte de cargas de trabalho opcionais que não são instalados por padrão.
 
    ![Desenvolvimento de área de trabalho com C++](../build/media/desktop-development-with-cpp.png "desenvolvimento de área de trabalho com C++")
 
@@ -74,6 +75,6 @@ Quando o Visual Studio está em execução, você estará pronto para continuar 
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Etapa 1: Criar um projeto de C++](vscpp-step-1-create.md)
+> [Criar um projeto de C++](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

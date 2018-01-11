@@ -1,29 +1,30 @@
 ---
-title: "Membro de dados Module::objectCount_ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::objectCount_Data"
-dev_langs: 
-  - "C++"
+title: Membro de dados Module::objectCount_ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::objectCount_Data
+dev_langs: C++
 ms.assetid: 921ffa74-e3c1-4fb3-91a6-fa7654779d8f
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d6be8496d35f56590be6c3398b9c4db4879eafe7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Membro de dados Module::objectCount_
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mantém o registro de quantas classes foram criados com o [fazer](../windows/make-function.md) função.  
+# <a name="moduleobjectcount-data-member"></a>Membro de dados Module::objectCount_
+Mantém o controle das classes quantos foram criados com o [fazer](../windows/make-function.md) função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,4 +38,4 @@ volatile long objectCount_;
  **Namespace:** Microsoft:: wrl
  
  ## <a name="see-also"></a>Consulte também
- [Classe de módulo](../windows/module-class.md)
+ [Classe Module](../windows/module-class.md)

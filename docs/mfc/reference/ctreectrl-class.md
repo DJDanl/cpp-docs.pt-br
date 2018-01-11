@@ -173,11 +173,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5437cef55a0e46f38eaf0e97b56ed9f82b4bb31c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 573b81ce8d78cde67b63579caa5ed96bbe557ae3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ctreectrl-class"></a>Classe CTreeCtrl
 Fornece a funcionalidade do controle de exibição de árvore comuns do Windows.  
@@ -190,7 +191,7 @@ class CTreeCtrl : public CWnd
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -1328,7 +1329,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
  O identificador para um item de exibição de árvore ( `HTREEITEM`) que corresponde do `uAccId` parâmetro. Para obter mais informações, consulte o `hItem` membro o [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) estrutura.  
   
 ### <a name="remarks"></a>Comentários  
- Os recursos de acessibilidade são aplicativos que ajudam as pessoas com deficiências usam computadores. Um identificador de acessibilidade é usado pelo `IAccessible` interface para especificar um elemento de forma exclusiva em uma janela. Para obter mais informações sobre os identificadores de acessibilidade, pesquise o tópico "Sobre o suporte à acessibilidade ativa" em [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Os recursos de acessibilidade são aplicativos que ajudam as pessoas com deficiências usam computadores. Um identificador de acessibilidade é usado pelo `IAccessible` interface para especificar um elemento de forma exclusiva em uma janela. Para obter mais informações sobre os identificadores de acessibilidade, pesquise o tópico "Sobre o suporte à acessibilidade ativa" em [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Esse método envia o [TVM_MAPACCIDTOHTREEITEM](http://msdn.microsoft.com/library/windows/desktop/bb773734) mensagem, que é descrita no SDK do Windows.  
   
@@ -1359,7 +1360,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
  O identificador de acessibilidade que corresponde do `hItem` parâmetro.  
   
 ### <a name="remarks"></a>Comentários  
- Os recursos de acessibilidade são aplicativos que ajudam as pessoas com deficiências usam computadores. Um identificador de acessibilidade é usado pelo `IAccessible` interface para especificar um elemento de forma exclusiva em uma janela. Para obter mais informações sobre os identificadores de acessibilidade, pesquise o tópico "Sobre o suporte à acessibilidade ativa" em [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Os recursos de acessibilidade são aplicativos que ajudam as pessoas com deficiências usam computadores. Um identificador de acessibilidade é usado pelo `IAccessible` interface para especificar um elemento de forma exclusiva em uma janela. Para obter mais informações sobre os identificadores de acessibilidade, pesquise o tópico "Sobre o suporte à acessibilidade ativa" em [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Esse método envia o [TVM_MAPHTREEITEMTOACCID](http://msdn.microsoft.com/library/windows/desktop/bb773735) mensagem, que é descrita no SDK do Windows.  
   
@@ -1987,7 +1988,7 @@ void ShowInfoTip(HTREEITEM hItem);
 |[in] `hItem`|Um identificador para um item de exibição de árvore no controle. Para obter mais informações, consulte o `hItem` membro o [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) estrutura.|  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre a diferença entre dicas de ferramenta e infotips, pesquise o tópico "Dicas de ferramenta e Infotips" em [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Para obter mais informações sobre a diferença entre dicas de ferramenta e infotips, pesquise o tópico "Dicas de ferramenta e Infotips" em [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Esse método envia o [TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) mensagem, que é descrita no SDK do Windows.  
   

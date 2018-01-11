@@ -1,60 +1,60 @@
 ---
-title: "&lt;incluir&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-  - "<include>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marca XML C++ <include>"
-  - "marca XML C++ include"
+title: '&lt;incluir&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+dev_langs: C++
+helpviewer_keywords:
+- include C++ XML tag
+- <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9a6b07ce540d67a44e46a24fb943dac93bb95a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;incluir&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A marca de \<include\> permite consultar os comentários em outro arquivo que descrevem os tipos e membros no código\-fonte.  Esta é uma alternativa para colocar comentários de documentação diretamente no seu arquivo de código\-fonte.  Por exemplo, você pode usar \<include\> para inserir comentários padrão “texto” constante que são usados em toda sua equipe ou empresa.  
+# <a name="ltincludegt-visual-c"></a>&lt;incluir&gt; (Visual C++)
+A marca \<include> permite consultar comentários em outro arquivo que descrevem os tipos e membros em seu código-fonte. Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.  Por exemplo, você pode usar \<incluem > inserir comentários "boilerplate" padrão que são usados em toda a sua equipe ou da empresa.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 <include file='filename' path='tagpath' />  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `filename`  
- O nome do arquivo que contém documentação.  O nome de arquivo pode ser qualificada com um caminho.  Envolva\-o com aspas simples ou double \- marcas.  O compilador emite um aviso se não encontrar `filename`.  
+ O nome do arquivo que contém a documentação. O nome do arquivo pode ser qualificado com um caminho.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se ele não encontrar `filename`.  
   
  `tagpath`  
- Uma expressão XPath válida que seleciona desejado nó\- definido contido no arquivo.  
+ Uma expressão XPath válida que seleciona o nó-conjunto desejado contido no arquivo.  
   
  `name`  
- O especificador do nome na marca que precede comentários; `name` terá `id`.  
+ O especificador de nome na marca que precede os comentários; `name` terá um `id`.  
   
  `id`  
- O ID para a marca que precede comentários.  Envolva\-o com aspas simples ou double \- marcas.  
+ A ID da marca que precede os comentários.  Coloque o nome entre aspas simples ou duplas.  
   
-## Comentários  
- A marca de \<include\> usa a sintaxe XPath XML.  Consulte a documentação XPath para que as maneiras personalizem usando \<include\>.  
+## <a name="remarks"></a>Comentários  
+ A marca \<include> usa a sintaxe XML XPath. Consulte a documentação do XPath para maneiras de personalizar usando \<incluem >.  
   
- Compile com [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação para um arquivo.  
+ Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
-## Exemplo  
- Este é um exemplo de arquivos múltiplos.  O primeiro arquivo, que usa \<include\>, contém os seguintes comentários de documentação:  
+## <a name="example"></a>Exemplo  
+ Este é um exemplo de vários arquivos. O primeiro arquivo usa \<incluem >, contém os comentários de documentação a seguir:  
   
 ```  
 // xml_include_tag.cpp  
@@ -74,7 +74,7 @@ public ref class Test2 {
 };  
 ```  
   
- O segundo arquivo, xml\_include\_tag.doc, contém os seguintes comentários de documentação:  
+ O segundo arquivo, xml_include_tag.doc, contém os comentários de documentação a seguir:  
   
 ```  
 <MyDocs>  
@@ -94,7 +94,7 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## Saída do programa  
+## <a name="program-output"></a>Saída do Programa  
   
 ```  
 <?xml version="1.0"?>  
@@ -117,5 +117,5 @@ The summary for this other type.
 </doc>  
 ```  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

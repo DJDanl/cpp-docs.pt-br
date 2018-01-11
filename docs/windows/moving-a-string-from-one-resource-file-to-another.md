@@ -1,56 +1,57 @@
 ---
-title: "Movendo uma cadeia de caracteres de um arquivo de recurso para outro | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos de script de recurso, movendo cadeias de caracteres"
-  - "edição de cadeia de caracteres, movendo cadeias de caracteres entre recursos"
-  - "Editor de Cadeias de Caracteres, movendo cadeias de caracteres entre arquivos"
-  - "cadeias de caracteres [C++], movendo entre arquivos"
+title: Movendo uma cadeia de caracteres de um arquivo de recurso para outro | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], moving between files
+- resource script files, moving strings
+- string editing, moving strings between resources
+- String editor, moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-caps.latest.revision: 12
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ecb999052aa23d173a6a4113007cbd8452510e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Movendo uma cadeia de caracteres de um arquivo de recurso para outro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para mover uma seqüência de caracteres do arquivo de script de um recurso para outro  
+# <a name="moving-a-string-from-one-resource-file-to-another"></a>Movendo uma cadeia de caracteres de um arquivo de recurso para outro
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Para mover uma cadeia de caracteres do arquivo de script de um recurso para outro  
   
-1.  Abra as tabelas de cadeia de caracteres em ambos os arquivos. rc.  \(Para obter mais informações, consulte  [Recursos de exibição em um recurso Script arquivo fora de um projeto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).\)  
+1.  Abra as tabelas de cadeia de caracteres em ambos os arquivos. rc. (Para obter mais informações, consulte [exibir recursos em um recurso Script arquivo fora de um projeto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).)  
   
     > [!NOTE]
-    >  Se o seu projeto já não contém um arquivo. rc, consulte  [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Clique com o botão direito a seqüência de caracteres que você deseja mover e escolha  **Recortar** no menu de atalho.  
+2.  Clique com botão direito a cadeia de caracteres que você deseja mover e escolha **Recortar** no menu de atalho.  
   
-3.  Coloque o cursor no destino  **O Editor de seqüência de caracteres** janela.  
+3.  Posicione o cursor no destino **Editor de cadeia de caracteres** janela.  
   
-4.  No arquivo. rc ao qual você deseja mover a seqüência de caracteres, clique com o botão direito e escolha  **Colar** no menu de atalho.  
+4.  No arquivo. RC para o qual você deseja mover a cadeia de caracteres, com o botão direito e escolha **colar** no menu de atalho.  
   
     > [!NOTE]
-    >  Se o  **ID** ou  **valor** a conflitos de seqüência de caracteres movidos com uma existente  **ID** ou  **valor** no arquivo de destino, tanto o  **ID** ou o  **valor** as alterações de seqüência de caracteres movidos.  Se uma seqüência de caracteres existir com o mesmo  **ID**, o  **ID** as alterações de seqüência de caracteres movidos.  Se uma seqüência de caracteres existir com o mesmo  **valor**, o  **valor** as alterações de seqüência de caracteres movidos.  
+    >  Se o **ID** ou **valor** dos conflitos movido de cadeia de caracteres com um existente **ID** ou **valor** no arquivo de destino, ou o **ID** ou **valor** das alterações de cadeia de caracteres movido. Se existir uma cadeia de caracteres com o mesmo **ID**, o **ID** das alterações de cadeia de caracteres movido. Se existir uma cadeia de caracteres com o mesmo **valor**, o **valor** das alterações de cadeia de caracteres movido.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados \(aquelas que visam common language runtime\), consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados (aquelas que se destinam a common language runtime), consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisitos**  
   
  Win32  
   
-## Consulte também  
- [Editor de Cadeia de Caracteres](../mfc/string-editor.md)   
- [Arquivos de recursos](../mfc/resource-files-visual-studio.md)   
- [Personalizando layouts de janela](../Topic/Customizing%20window%20layouts%20in%20Visual%20Studio.md)   
- [Seqüências de caracteres](_win32_Strings)   
- [sobre seqüências de caracteres](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Consulte também  
+ [Editor de cadeia de caracteres](../windows/string-editor.md)   
+ [Arquivos de recurso](../windows/resource-files-visual-studio.md)   
+ [Personalizando layouts de janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio)   
+

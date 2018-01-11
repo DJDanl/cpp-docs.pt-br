@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1b8b675f6125ce6449dc1627e8ba1f375f87aade
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 344f413eb2325156996700b6975826600ab997f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparando uma máquina de teste para executar um executável de depuração
 Para preparar o computador para testar a versão de depuração de um aplicativo que é criado com o Visual C++, você precisa implantar versões de depuração da biblioteca do Visual C++ DLLs que o aplicativo depende. Para identificar quais DLLs devem ser desenvolvidos, siga as etapas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Normalmente, as versões de depuração do Visual C++ biblioteca DLLs têm nomes que terminam em "d". Por exemplo, a versão de depuração de msvcr100.dll é denominada msvcr100d.dll.  

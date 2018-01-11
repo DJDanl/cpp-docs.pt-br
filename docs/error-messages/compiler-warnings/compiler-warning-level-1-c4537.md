@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4537 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4537 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4537
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4537
+f1_keywords: C4537
+dev_langs: C++
+helpviewer_keywords: C4537
 ms.assetid: 9454493c-d419-475e-8f35-9c00233c9329
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8204d93513582dea21182d98507d4692c67120a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8cdc3cc00b1b6ea52657f441423e61c3003652ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4537"></a>Compilador C4537 de aviso (nível 1)
-'object': 'operador' aplicado ao tipo UDT não  
+'object': 'operator' aplicado a tipo não UDT  
   
- Uma referência foi passada em que um objeto (tipo definido pelo usuário) era esperado. Uma referência não é um objeto, mas o código de assembler embutido não é capaz de fazer a distinção. O compilador gera código como se ***objeto*** foram uma instância.  
+ Uma referência foi passada em que um objeto (tipo definido pelo usuário) era esperado. Uma referência não é um objeto, mas o código do assembler embutido não é capaz de fazer a distinção. O compilador gera o código como se ***objeto*** foram uma instância.  
   
  O exemplo a seguir gera C4537:  
   

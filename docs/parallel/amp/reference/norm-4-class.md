@@ -1,11 +1,10 @@
 ---
-title: Classe norm_4 | Documentos do Microsoft
+title: Classe norm_4 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::get_wzy
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1889e0de5f1c7ac588822d8c1268e2775b186542
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd224633ae41fcdfdae09f4fe2f7de97e0b3836
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm4-class"></a>Classe norm_4
 Representa um vetor curto de quatro números normais.  
@@ -471,11 +455,11 @@ class norm_4;
 |Nome|Descrição|  
 |----------|-----------------|  
 |norm_4::Operator-||  
-|norm_4::Operator-||  
+|norm_4::Operator –||  
 |norm_4::Operator * =||  
 |norm_4::Operator / =||  
 |norm_4::Operator + +||  
-|+ = norm_4::Operator||  
+|+ norm_4::Operator =||  
 |norm_4::Operator =||  
 |norm_4::Operator =||  
   
@@ -713,7 +697,7 @@ explicit inline norm_4(
  O valor para inicializar o elemento 3.  
   
  `_V`  
- O valor de inicialização.  
+ O valor para a inicialização.  
   
  `_Other`  
  O objeto usado para inicializar.  
@@ -726,4 +710,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
-

@@ -1,68 +1,75 @@
 ---
-title: "_BitScanForward, _BitScanForward64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_BitScanForward"
-  - "_BitScanForward_cpp"
-  - "_BitScanForward64_cpp"
-  - "_BitScanForward64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_BitScanForward intrínseca"
-  - "BitScanForward intrínseca"
-  - "instrução BSF"
+title: _BitScanForward, _BitScanForward64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _BitScanForward
+- _BitScanForward_cpp
+- _BitScanForward64_cpp
+- _BitScanForward64
+dev_langs: C++
+helpviewer_keywords:
+- _BitScanForward intrinsic
+- bsf instruction
+- BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eec7487b88b58e3d2a3cceff78893dbd82f3acf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# _BitScanForward, _BitScanForward64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específico da Microsoft**  
+# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+**Seção específica da Microsoft**  
   
- Pesquise os dados de máscara do bit menos significativo \(LSB\) para o bit mais significativo \(MSB\) para um conjunto de bits \(1\).  
+ Pesquise os dados de máscara do bit menos significativo (LSB) para o bit mais significativo (MSB) para um conjunto de bits (1).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-unsigned char _BitScanForward(    unsigned long * Index,    unsigned long Mask ); unsigned char _BitScanForward64(    unsigned long * Index,    unsigned __int64 Mask );  
+unsigned char _BitScanForward(  
+   unsigned long * Index,  
+   unsigned long Mask  
+);  
+unsigned char _BitScanForward64(  
+   unsigned long * Index,  
+   unsigned __int64 Mask  
+);  
 ```  
   
-#### Parâmetros  
- \[out\] `Index`  
- Carregado com a posição de bit do primeiro bit do conjunto \(1\) encontrado.  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `Index`  
+ Carregado com a posição de bit do primeiro bit do conjunto (1) encontrado.  
   
- \[in\] `Mask`  
+ [in] `Mask`  
  O valor de 32 bits ou 64 bits a pesquisar.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  0 se a máscara for zero. diferente de zero, caso contrário.  
   
-## Comentários  
- Se bit definido for encontrado, a posição de bit do primeiro bit definido encontrado será retornada ao primeiro parâmetro.  Se nenhum bit definido for encontrado, 0 será retornado; caso contrário, 1.  
+## <a name="remarks"></a>Comentários  
+ Se bit definido for encontrado, a posição de bit do primeiro bit definido encontrado será retornada ao primeiro parâmetro. Se nenhum bit definido for encontrado, 0 será retornado; caso contrário, 1.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
-|----------------|-----------------|  
-|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // BitScanForward.cpp  
@@ -93,20 +100,20 @@ int main()
 }  
 ```  
   
-## Entrada  
+## <a name="input"></a>Entrada  
   
 ```  
 12  
 ```  
   
-## Exemplo de saída  
+## <a name="sample-output"></a>Saída de Exemplo  
   
 ```  
 Enter a positive integer as the mask:   
 Mask: 12 Index: 2  
 ```  
   
-### FIM de Específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e36523d2fffd4f90897daf2fd22c4dba66c8fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowset-class"></a>Classe CRowset
 Encapsula um objeto de conjunto de linhas do OLE DB e vários relacionados interfaces e fornece métodos de manipulação de dados do conjunto de linhas.  
@@ -53,7 +56,7 @@ class CRowset
 |[Excluir](../../data/oledb/crowset-delete.md)|Exclui linhas do conjunto de linhas usando [IRowsetChange:DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx).|  
 |[FindNextRow](../../data/oledb/crowset-findnextrow.md)|Localiza a próxima linha correspondente após o indicador especificado.|  
 |[GetApproximatePosition](../../data/oledb/crowset-getapproximateposition.md)|Retorna a posição aproximada de uma linha correspondente a um indicador.|  
-|[GetData](../../data/oledb/crowset-getdata.md)|Recupera dados de cópia do conjunto de linhas da linha.|  
+|[GetData](../../data/oledb/crowset-getdata.md)|Recupera dados da cópia do conjunto de linhas da linha.|  
 |[GetDataHere](../../data/oledb/crowset-getdatahere.md)|Recupera dados de buffer especificado.|  
 |[GetOriginalData](../../data/oledb/crowset-getoriginaldata.md)|Recupera os dados obtidos de mais recentemente ou transmitida para a fonte de dados, ignorando as alterações pendentes.|  
 |[GetRowStatus](../../data/oledb/crowset-getrowstatus.md)|Retorna o status de todas as linhas.|  

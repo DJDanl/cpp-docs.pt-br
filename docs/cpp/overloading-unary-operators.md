@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54c3e7eff420c5ed562e71235d204800eff5019a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d124410b785e44a9dcb55890b4723ebbae2da56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overloading-unary-operators"></a>Operadores unários de sobrecarga
 Os operadores unários que podem ser sobrecarregados são os seguintes:  
@@ -55,7 +56,7 @@ Os operadores unários que podem ser sobrecarregados são os seguintes:
   
  As regras a seguir são verdadeiras para todos os outros operadores unários. Para declarar uma função de operador unário como um membro não estático, você deve declará-la na forma:  
   
- `ret-type operator` `op` `()`  
+ `ret-type operator``op``()`  
   
  em que `ret-type` é o tipo de retorno e `op` é um dos operadores listados na tabela anterior.  
   

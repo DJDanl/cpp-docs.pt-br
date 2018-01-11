@@ -1,43 +1,45 @@
 ---
-title: "OLE DB Consumer Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], database"
-  - "attributes [C++], data access"
-  - "databases [C++], attributes"
-  - "OLE DB consumers [C++], attributes"
-  - "database attributes [C++]"
-  - "attributes [C++], OLE DB consumer"
+title: Atributos de consumidor OLE DB | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], database
+- attributes [C++], data access
+- databases [C++], attributes
+- OLE DB consumers [C++], attributes
+- database attributes [C++]
+- attributes [C++], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a42ce4f1d8f3a9f61840433ef83470882e42e647
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# OLE DB Consumer Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Os atributos de consumidor do OLE DB injetar código, com base na  [OLE DB consumidor modelos](../data/oledb/ole-db-consumer-templates-reference.md), para criar um trabalho OLE DB consumidor que realiza tarefas como, por exemplo, tabelas de abertura, execução de comandos e acesso a dados.  
+# <a name="ole-db-consumer-attributes"></a>Atributos de consumidor de banco de dados OLE
+Os atributos de consumidor OLE DB injetar código, com base no [OLE DB modelos de consumidor](../data/oledb/ole-db-consumer-templates-reference.md), para criar um trabalho OLE DB consumidor que executa tarefas como tabelas de abertura, execução de comandos e acesso a dados.  
   
 |Atributo|Descrição|  
-|--------------|---------------|  
-|[db\_accessor](../windows/db-accessor.md)|Vincula as colunas em um conjunto de linhas e liga\-los aos mapas de acessador correspondente.|  
-|[db\_column](../windows/db-column.md)|Vincula uma coluna especificada para o conjunto de linhas.|  
-|[db\_command](../windows/db-command.md)|Executa um comando de banco de dados OLE.|  
-|[db\_param](../windows/db-param.md)|Associa a variável de membro especificado com um parâmetro de entrada ou saído.|  
-|[db\_source](../windows/db-source.md)|Cria e encapsula uma conexão, por meio de um provedor, a uma fonte de dados.|  
-|[db\_table](../windows/db-table.md)|Abre uma tabela OLE DB.|  
+|---------------|-----------------|  
+|[db_accessor](../windows/db-accessor.md)|Associa as colunas em um conjunto de linhas e associa-os aos mapas de acessador correspondente.|  
+|[db_column](../windows/db-column.md)|Associa uma coluna especificada para o conjunto de linhas.|  
+|[db_command](../windows/db-command.md)|Executa um comando OLE DB.|  
+|[db_param](../windows/db-param.md)|Associa a variável de membro especificado com um parâmetro de entrada ou saído.|  
+|[db_source](../windows/db-source.md)|Cria e encapsula uma conexão, por meio de um provedor, para uma fonte de dados.|  
+|[db_table](../windows/db-table.md)|Abre uma tabela de banco de dados OLE.|  
   
-## Consulte também  
- [Attributes by Group](../windows/attributes-by-group.md)
+## <a name="see-also"></a>Consulte também  
+ [Atributos por grupo](../windows/attributes-by-group.md)

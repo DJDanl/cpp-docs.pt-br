@@ -1,38 +1,40 @@
 ---
-title: "Recuperando dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dados [C++], buscando"
-  - "buscando"
-  - "Modelos de consumidor OLE DB [C++], buscando dados"
-  - "conjuntos de linhas [C++], buscando"
+title: Buscando dados | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b18847666d4f0f57d23e9b179e3e186a1b3ff736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Recuperando dados
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Depois que você abre a fonte de dados, a sessão, e os objetos do conjunto de linhas, você pode buscar dados.  Dependendo do tipo de acessador que você está usando, você pode precisar associar colunas.  
+# <a name="fetching-data"></a>Recuperando dados
+Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você pode buscar dados. Dependendo do tipo de acessador que você está usando, talvez seja necessário associar colunas.  
   
-### Para buscar dados  
+### <a name="to-fetch-data"></a>Para buscar dados  
   
-1.  Abra o conjunto de linhas usando o comando apropriado de **Abrir** .  
+1.  Abra o conjunto de linhas usando apropriada **abrir** comando.  
   
-2.  Se você estiver usando `CManualAccessor`, associe as colunas de saída se ainda não tiver feito isso.  Para associar as colunas, chame `GetColumnInfo`, e criar um acessador com associações, conforme mostrado no seguinte exemplo:  
+2.  Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não tiver feito isso. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com associações, conforme mostrado no exemplo a seguir:  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +51,7 @@ Depois que você abre a fonte de dados, a sessão, e os objetos do conjunto de l
     rs.Bind();  
     ```  
   
-3.  Grave um loop de `while` para recuperar os dados.  No loop `MoveNext` , chame para avançar o cursor e para testar o valor de retorno em S\_OK, conforme mostrado no seguinte exemplo:  
+3.  Gravar um `while` loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e testar o valor de retorno com S_OK, conforme mostrado no exemplo a seguir:  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -59,9 +61,9 @@ Depois que você abre a fonte de dados, a sessão, e os objetos do conjunto de l
     }  
     ```  
   
-4.  Dentro do loop de `while` , você pode buscar os dados de acordo com seu tipo de acessador.  
+4.  Dentro de `while` loop, você pode buscar os dados de acordo com seu tipo de acessador.  
   
-    -   Se você usar a classe de [CAccessor](../Topic/CAccessor%20Class.md) , você deve ter um registro de usuário que contenha os membros de dados.  Você pode acessar os dados usando esses membros de dados, conforme mostrado no seguinte exemplo:  
+    -   Se você usar o [CAccessor](../../data/oledb/caccessor-class.md) classe, você deve ter um registro de usuário que contém membros de dados. Você pode acessar seus dados usando os membros de dados, conforme mostrado no exemplo a seguir:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -73,7 +75,7 @@ Depois que você abre a fonte de dados, a sessão, e os objetos do conjunto de l
         }  
         ```  
   
-    -   Se você usar a classe de `CDynamicAccessor` ou de `CDynamicParameterAccessor` , você pode buscar dados usando as funções `GetValue` acessando e `GetColumn`, conforme mostrado no exemplo a seguir.  Se você quiser determinar o tipo de dados que você está usando, use `GetType`.  
+    -   Se você usar o `CDynamicAccessor` ou `CDynamicParameterAccessor` classe, você pode buscar dados usando as funções acessa `GetValue` e `GetColumn`, conforme mostrado no exemplo a seguir. Se você quiser determinar o tipo de dados você está usando, use `GetType`.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -88,7 +90,7 @@ Depois que você abre a fonte de dados, a sessão, e os objetos do conjunto de l
         }  
         ```  
   
-    -   Se você usar `CManualAccessor`, você deve especificar seus próprios membros de dados, associá\-los você mesmo, e acessar diretamente, conforme mostrado no seguinte exemplo:  
+    -   Se você usar `CManualAccessor`, você deve especificar seus próprios membros de dados, associá-las e acessá-los diretamente, conforme mostrado no exemplo a seguir:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -100,5 +102,5 @@ Depois que você abre a fonte de dados, a sessão, e os objetos do conjunto de l
         }  
         ```  
   
-## Consulte também  
- [Trabalhando com modelos de consumidor de banco de dados OLE](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Consulte também  
+ [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

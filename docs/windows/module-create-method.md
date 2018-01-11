@@ -1,30 +1,30 @@
 ---
-title: "M&#233;todo Module::Create | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::Create"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Create"
+title: "Método Module: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::Create
+dev_langs: C++
+helpviewer_keywords: Create method
 ms.assetid: bfa97fd7-5226-4604-92a5-3b9697053e64
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f025c446dd6a7dab9b37d126d65e640a02b939b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo Module::Create
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulecreate-method"></a>Método Module::Create
 Cria uma instância de um módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -54,10 +54,10 @@ WRL_NOTHROW static Module& Create(
  Chamado quando o último objeto de instância do módulo é liberado.  
   
  `object`  
- O `object` e `method` os parâmetros são usados em combinação. Aponta para o último objeto de instância quando o último objeto de instância no módulo é liberado.  
+ O `object` e `method` parâmetros são usados em combinação. Aponta para o último objeto de instância quando o último objeto de instância no módulo é liberado.  
   
  `method`  
- O `object` e `method` os parâmetros são usados em combinação. Aponta para o método do último objeto de instância quando o último objeto de instância no módulo é liberado.  
+ O `object` e `method` parâmetros são usados em combinação. Aponta para o método do objeto de última instância, quando o último objeto de instância no módulo é liberado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Referência ao módulo.  
@@ -68,6 +68,6 @@ WRL_NOTHROW static Module& Create(
  **Namespace:** Microsoft:: wrl  
   
 ## <a name="see-also"></a>Consulte também  
-[Classe de módulo](../windows/module-class.md)
+[Classe Module](../windows/module-class.md)
 
  

@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>Contêineres da biblioteca padrão C++
 A biblioteca padrão fornece vários contêineres fortemente tipados para armazenar coleções de objetos relacionados. Os contêineres são modelos de classe; Quando você declara uma variável de contêiner, você pode especificar o tipo dos elementos que esse contêiner armazenará. Contêineres podem ser criados com listas de inicializadores. Elas têm funções membro para adição e remoção de elementos e execução de outras operações.  
@@ -182,15 +166,14 @@ int main()
 >  Você também pode usar [loops for baseados em intervalo](../cpp/range-based-for-statement-cpp.md) para iterar por coleções de biblioteca padrão C++.  
   
 ## <a name="comparing-containers"></a>Comparando contêineres  
- Todos os contêineres sobrecarregam o operator== para comparar dois contêineres do mesmo tipo que têm o mesmo tipo de elemento. Você pode usar == para comparar um vector\<string> a outro vector\<string>, mas você não pode usá-lo para comparar um vector\<string> a um list\<string> ou um vector\<string> a um vector\<char*>.  No C++98/03, você pode usar [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae) ou [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) para comparar tipos de contêineres e/ou tipos de elemento diferentes. No C++11, você também pode usar [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f). Mas em todos esses casos, as funções assumem que os contêineres têm o mesmo comprimento. Se o segundo intervalo é menor do que o primeiro, temos como resultado um comportamento indefinido. Se o segundo intervalo for maior, os resultados ainda poderão ser incorretos porque a comparação nunca continuará após o final do primeiro intervalo.  
+ Todos os contêineres sobrecarregam o operator== para comparar dois contêineres do mesmo tipo que têm o mesmo tipo de elemento. Você pode usar == para comparar um vector\<string> a outro vector\<string>, mas você não pode usá-lo para comparar um vector\<string> a um list\<string> ou um vector\<string> a um vector\<char*>.  No C++98/03, você pode usar [std::equal](algorithm-functions.md#equal) ou [std::mismatch](algorithm-functions.md#mismatch) para comparar tipos de contêineres e/ou tipos de elemento diferentes. No C++11, você também pode usar [std::is_permutation](algorithm-functions.md#is_permutation). Mas em todos esses casos, as funções assumem que os contêineres têm o mesmo comprimento. Se o segundo intervalo é menor do que o primeiro, temos como resultado um comportamento indefinido. Se o segundo intervalo for maior, os resultados ainda poderão ser incorretos porque a comparação nunca continuará após o final do primeiro intervalo.  
   
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparando tipos diferentes de contêineres (C++14)  
- No C++14 e posterior, você pode comparar tipos de contêineres e/ou de elementos diferentes, usando uma das sobrecargas de função [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae), [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) ou [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f) que utilizam dois intervalos completos. Essas sobrecargas permitem que você compare contêineres com comprimentos diferentes. Essas sobrecargas são muito menos suscetíveis a erros de usuário e são otimizadas para retornar false em tempo constante quando contêineres de comprimentos diferentes são comparados. Portanto, recomendamos que você use essas sobrecargas, a menos que (1) você tenha um motivo muito claro para não fazê-lo ou (2) você esteja usando um contêiner [std::list](../standard-library/list-class.md), que não se beneficia de otimizações de intervalo duplo.  
+ No C++14 e posterior, você pode comparar tipos de contêineres e/ou de elementos diferentes, usando uma das sobrecargas de função **std::equal**, **std::mismatch** ou **std::is_permutation** que utilizam dois intervalos completos. Essas sobrecargas permitem que você compare contêineres com comprimentos diferentes. Essas sobrecargas são muito menos suscetíveis a erros de usuário e são otimizadas para retornar false em tempo constante quando contêineres de comprimentos diferentes são comparados. Portanto, recomendamos que você use essas sobrecargas, a menos que (1) você tenha um motivo muito claro para não fazê-lo ou (2) você esteja usando um contêiner [std::list](../standard-library/list-class.md), que não se beneficia de otimizações de intervalo duplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres](../cpp/containers-modern-cpp.md)   
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)   
  [\<sample container>](../standard-library/sample-container.md)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

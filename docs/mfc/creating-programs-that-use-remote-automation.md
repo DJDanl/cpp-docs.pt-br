@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 393e8aea159e83e43b83a9f06522466c60baba9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deb832e0baed30507ef3f9929fb5f12805b7a807
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Criando programas que usam automação remota
 Qualquer objeto de automação e qualquer controlador de automação, é possível usar automação remota sem qualquer alteração feita no código-fonte, sem a necessidade de recompilação e sem a necessidade de vinculando novamente. Depois que você tiver uma configuração que funciona localmente (ou seja, no mesmo computador), você precisa passar por apenas algumas etapas para executá-lo remotamente.  

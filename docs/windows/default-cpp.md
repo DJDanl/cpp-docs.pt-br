@@ -1,62 +1,61 @@
 ---
-title: "default (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributo padrão"
-  - "atributos [c#], o atributo padrão"
-  - "padrões de atributo padrão"
+title: "padrão (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.default
+dev_langs: C++
+helpviewer_keywords:
+- default attribute
+- attributes [C#], default attribute
+- defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b24b0ed9b8e547a52388b6f93a4955da782331b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# default (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica que a dispinterface definidos dentro de uma coclass ou personalizado representa a interface de programação padrão.  
+# <a name="default-c"></a>default (C++)
+Indica que o personalizado ou dispinterface definidos em uma coclass representa a interface de programação padrão.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-[ default(  
-interface1  
-,  
+      [ default(  
+   interface1,  
    interface2  
 ) ]  
-  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Interface1*  
- A interface padrão que será disponibilizada para os ambientes de script que cria um objeto com base na classe definida com a **padrão** atributo.  
+ A interface padrão que será disponibilizada para os ambientes de script que cria um objeto com base na classe definida com o **padrão** atributo.  
   
  Se nenhuma interface padrão for especificado, a primeira ocorrência de uma interface nonsource é usada como o padrão.  
   
- *interface2*\(opcional\)  
- A interface de origem padrão. Você também deve especificar essa interface com o [fonte](../Topic/source%20\(C++\).md) atributo.  
+ *Interface2*(opcional)  
+ A interface de origem padrão. Você também deve especificar essa interface com o [fonte](../windows/source-cpp.md) atributo.  
   
  Se nenhuma interface de origem padrão for especificado, a primeira interface de origem é usada como o padrão.  
   
-## Comentários  
- A **padrão** C\+\+ atributo tem a mesma funcionalidade que o [padrão](http://msdn.microsoft.com/library/windows/desktop/aa366787) atributo MIDL. A **padrão** atributo também é usado com o [caso](../windows/case-cpp.md) atributo.  
+## <a name="remarks"></a>Comentários  
+ O **padrão** atributo C++ tem a mesma funcionalidade que o [padrão](http://msdn.microsoft.com/library/windows/desktop/aa366787) atributo MIDL. O **padrão** atributo também é usado com o [caso](../windows/case-cpp.md) atributo.  
   
-## Exemplo  
- O código a seguir mostra como **padrão** é usado na definição de coclass para especificar **ICustomDispatch** como a interface de programação padrão:  
+## <a name="example"></a>Exemplo  
+ O código a seguir mostra como **padrão** é usado na definição de uma coclass para especificar **ICustomDispatch** como a interface de programação padrão:  
   
 ```  
 // cpp_attr_ref_default.cpp  
@@ -107,23 +106,22 @@ int main() {
 }  
 ```  
   
- O [fonte](../Topic/source%20\(C++\).md) atributo também tem um exemplo de como usar **padrão**.  
+ O [fonte](../windows/source-cpp.md) atributo também apresenta um exemplo de como usar **padrão**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Aplica\-se a**|**classe**, `struct`, membro de dados|  
+|**Aplica-se a**|**classe**, `struct`, membro de dados|  
 |**Repetível**|Não|  
-|**Atributos necessários**|**coclass** \(quando aplicada ao **classe** ou `struct`\)|  
+|**Atributos necessários.**|**coclass** (quando aplicado a **classe** ou `struct`)|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de classe](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

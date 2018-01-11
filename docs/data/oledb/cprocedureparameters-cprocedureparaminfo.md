@@ -1,105 +1,107 @@
 ---
-title: "CProcedureParameters CProcedureParamInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szDefault"
-  - "CProcedureParameters"
-  - "m_bHasDefault"
-  - "CProcedureParamInfo"
-  - "IS_NULLABLE"
-  - "m_szCatalog"
-  - "ORDINAL_POSITION"
-  - "m_nOrdinalPosition"
-  - "NUMERIC_PRECISION"
-  - "m_nDataType"
-  - "m_szSchema"
-  - "CHARACTER_OCTET_LENGTH"
-  - "NUMERIC_SCALE"
-  - "m_szParameterName"
-  - "m_nMaxLength"
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "m_nPrecision"
-  - "m_szName"
-  - "DATA_TYPE"
-  - "m_nOctetLength"
-  - "m_nType"
-  - "m_bIsNullable"
-  - "m_nScale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "CHARACTER_OCTET_LENGTH"
-  - "Classe CProcedureParameters (typedef)"
-  - "Classe de parâmetro CProcedureParamInfo"
-  - "DATA_TYPE"
-  - "Membro de dados de classe DESCRIPTION"
-  - "IS_NULLABLE"
-  - "m_bHasDefault"
-  - "m_bIsNullable"
-  - "m_nDataType"
-  - "m_nMaxLength"
-  - "m_nOctetLength"
-  - "m_nOrdinalPosition"
-  - "m_nPrecision"
-  - "m_nScale"
-  - "m_nType"
-  - "m_szCatalog"
-  - "m_szDefault"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szParameterName"
-  - "m_szSchema"
-  - "NUMERIC_PRECISION"
-  - "NUMERIC_SCALE"
-  - "ORDINAL_POSITION"
+title: CProcedureParameters CProcedureParamInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szDefault
+- CProcedureParameters
+- m_bHasDefault
+- CProcedureParamInfo
+- IS_NULLABLE
+- m_szCatalog
+- ORDINAL_POSITION
+- m_nOrdinalPosition
+- NUMERIC_PRECISION
+- m_nDataType
+- m_szSchema
+- CHARACTER_OCTET_LENGTH
+- NUMERIC_SCALE
+- m_szParameterName
+- m_nMaxLength
+- CHARACTER_MAXIMUM_LENGTH
+- m_nPrecision
+- m_szName
+- DATA_TYPE
+- m_nOctetLength
+- m_nType
+- m_bIsNullable
+- m_nScale
+dev_langs: C++
+helpviewer_keywords:
+- NUMERIC_PRECISION
+- DATA_TYPE
+- ORDINAL_POSITION
+- m_nMaxLength
+- DESCRIPTION class data member
+- m_szParameterName
+- m_szSchema
+- m_nType
+- m_bHasDefault
+- CHARACTER_OCTET_LENGTH
+- CProcedureParameters typedef class
+- m_szCatalog
+- m_nPrecision
+- m_nOrdinalPosition
+- NUMERIC_SCALE
+- m_nOctetLength
+- IS_NULLABLE
+- m_szName
+- m_bIsNullable
+- CProcedureParamInfo parameter class
+- m_szDescription
+- m_szDefault
+- m_nDataType
+- m_nScale
+- CHARACTER_MAXIMUM_LENGTH
 ms.assetid: 61f8d55a-684a-47a3-b102-068cc3f52d84
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d3f4a28a882a9de9bdb3630ebc2bb7d2adda48c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CProcedureParameters CProcedureParamInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chame a classe **CProcedureParameters** do typedef para implementar a sua classe **CProcedureParamInfo**do parâmetro.  
+# <a name="cprocedureparameters-cprocedureparaminfo"></a>CProcedureParameters CProcedureParamInfo
+Chamar a classe typedef **CProcedureParameters** para implementar sua classe de parâmetro **CProcedureParamInfo**.  
   
-## Comentários  
- Consulte [Classes do conjunto de linhas de esquema e classes de Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) para obter mais informações sobre como usar classes do typedef.  
+## <a name="remarks"></a>Comentários  
+ Consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obter mais informações sobre como usar classes do typedef.  
   
- Esta classe retorna informações sobre os parâmetros e códigos de retorno de procedimentos.  
+ Essa classe retorna informações sobre os parâmetros e códigos de retorno de procedimentos.  
   
- A tabela a seguir lista os membros de dados da classe e suas colunas correspondentes OLE DB.  Consulte [Conjunto de linhas de PROCEDURE\_PARAMETERS](https://msdn.microsoft.com/en-us/library/ms713623.aspx)*na referência do programador de OLE DB* para obter mais informações sobre o esquema e de colunas.  
+ A tabela a seguir lista os membros de dados de classe e o OLE DB colunas correspondentes. Consulte [conjunto de linhas PROCEDURE_PARAMETERS](https://msdn.microsoft.com/en-us/library/ms713623.aspx) no *referência do programador de DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
-|Membros de dados|Colunas de OLE DB|  
-|----------------------|-----------------------|  
-|m\_szCatalog|PROCEDURE\_CATALOG|  
-|m\_szSchema|PROCEDURE\_SCHEMA|  
-|m\_szName|PROCEDURE\_NAME|  
-|m\_szParameterName|PARAMETER\_NAME|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
-|m\_nType|PARAMETER\_TYPE|  
-|m\_bHasDefault|PARAMETER\_HASDEFAULT|  
-|m\_szDefault|PARAMETER\_DEFAULT|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_nMaxLength|CHARACTER\_MAXIMUM\_LENGTH|  
-|m\_nOctetLength|CHARACTER\_OCTET\_LENGTH|  
-|m\_nPrecision|NUMERIC\_PRECISION|  
-|m\_nScale|NUMERIC\_SCALE|  
-|m\_szDescription|DESCRIÇÃO|  
+|Membros de dados|Colunas de banco de dados OLE|  
+|------------------|--------------------|  
+|m_szCatalog|PROCEDURE_CATALOG|  
+|m_szSchema|PROCEDURE_SCHEMA|  
+|m_szName|PROCEDURE_NAME|  
+|m_szParameterName|PARAMETER_NAME|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
+|m_nType|TIPO_DE_PARÂMETRO|  
+|m_bHasDefault|PARAMETER_HASDEFAULT|  
+|m_szDefault|PARAMETER_DEFAULT|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_nDataType|DATA_TYPE|  
+|m_nMaxLength|CHARACTER_MAXIMUM_LENGTH|  
+|m_nOctetLength|CHARACTER_OCTET_LENGTH|  
+|m_nPrecision|NUMERIC_PRECISION|  
+|m_nScale|NUMERIC_SCALE|  
+|m_szDescription|DESCRIÇÃO|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbsch.h  
   
-## Consulte também  
- [Classe CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

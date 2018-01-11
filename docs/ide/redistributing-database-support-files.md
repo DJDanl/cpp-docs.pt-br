@@ -1,38 +1,38 @@
 ---
-title: "Redistribuindo arquivos de suporte de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivos de suporte de banco de dados [C++], redistribuindo"
-  - "redistribuindo arquivos de suporte de banco de dados"
+title: Redistribuindo arquivos de suporte do banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- redistributing database support files
+- database support files [C++], redistributing
 ms.assetid: d80cffe0-177c-4515-9de7-fbf0517eb8d6
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7517222b1dc2e61f45c23a9fc91709672f304768
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/03/2018
 ---
-# Redistribuindo arquivos de suporte de banco de dados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-É possível redistribuir arquivos de suporte para Objetos de acesso a dados \(DAO\) e tecnologias de banco de dados no Microsoft Data Access SDK.  
+# <a name="redistributing-database-support-files"></a>Redistribuindo arquivos de suporte de banco de dados
+Você pode redistribuir os arquivos de suporte para objetos de acesso de dados (DAO) e para as tecnologias de banco de dados do Microsoft Data Access SDK.  
   
-## Instalando arquivos de suporte DAO  
- Para obter a versão mais recente do DAO, consulte [Artigo 239114: Como obter o service pack mais recente para o Mecanismo de Banco de Dados do Microsoft Jet 4.0](http://go.microsoft.com/fwlink/?LinkId=198014) no site de suporte da Microsoft.  
+## <a name="installing-dao-support-files"></a>Instalar arquivos de suporte do DAO  
+ Para obter a versão mais recente do DAO, consulte [artigo 239114: como obter o service pack mais recente para o mecanismo de banco de dados do Microsoft Jet 4.0](http://go.microsoft.com/fwlink/p/?linkid=198014) no site da Microsoft Support.  
   
-## Instalando os arquivos de suporte do SDK de acesso a dados do Microsoft  
- Use Mdac\_typ.exe para instalar o suporte para ODBC, OLE DB, ADO \(Objetos de Dados ActiveX\) e RDS \(Serviços de Dados Remotos\).  Mdac\_typ.exe está localizado na pasta \\WCU\\MDAC28\\ da mídia de instalação do Visual Studio.  Você também pode baixar Mdac\_typ.exe do site [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=198015).  
+## <a name="installing-microsoft-data-access-sdk-support-files"></a>Instalar arquivos de suporte do Microsoft Data Access SDK  
+ Use Mdac_typ.exe para instalar o suporte para ODBC, OLE DB, ActiveX Data Objects (ADO) e serviços de dados remota (RDS). Mdac_typ.exe está localizado em de... Pasta \WCU\MDAC28\ na mídia de instalação do Visual Studio. Você também pode baixar Mdac_typ.exe do [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=198015) site.  
   
- Para obter mais informações, no site do [O MSDN](http://go.microsoft.com/fwlink/?LinkId=198016), pesquise por "Redistribuindo o MDAC 2.8 SP1".  Se você estiver usando os projetos de configuração do Visual Studio para implantar seu aplicativo, consulte [Deployment and Dependencies](http://msdn.microsoft.com/pt-br/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
+ Para obter mais informações, sobre o [MSDN](http://go.microsoft.com/fwlink/p/?linkid=198016) site, procure "Redistribuir o MDAC 2.8 SP1". Se você estiver usando projetos de instalação do Visual Studio para implantar seu aplicativo, consulte [implantação e dependências](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
   
-## Consulte também  
- [Redistribuindo arquivos do Visual C\+\+](../Topic/Redistributing%20Visual%20C++%20Files.md)
+## <a name="see-also"></a>Consulte também  
+ [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md)

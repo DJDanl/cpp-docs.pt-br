@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo AsyncBase::TryTransitionToCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método TryTransitionToCompleted"
+title: "Método: Trytransitiontocompleted | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
+dev_langs: C++
+helpviewer_keywords: TryTransitionToCompleted method
 ms.assetid: 8d038e0a-47ec-4cfc-8aeb-6821282df67a
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aeecd31e25d55222e18e1aa95f41b70ce7f5f889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo AsyncBase::TryTransitionToCompleted
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="asyncbasetrytransitiontocompleted-method"></a>Método AsyncBase::TryTransitionToCompleted
 Indica se a operação assíncrona atual foi concluída.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 bool TryTransitionToCompleted(  
@@ -35,13 +35,13 @@ bool TryTransitionToCompleted(
 );  
 ```  
   
-## Valor de retorno  
- `true` se a operação assíncrona foi concluída; caso contrário, `false`.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se a operação assíncrona foi concluída; Caso contrário, `false`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe AsyncBase](../windows/asyncbase-class.md)

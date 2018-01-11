@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 3) C4197 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4197 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4197
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4197
+f1_keywords: C4197
+dev_langs: C++
+helpviewer_keywords: C4197
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7a9b537416866c5201b38aac1b11a0d553026ca7
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eaa66b3d1effe1afd6adbe3a70b82ab98e162569
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4197"></a>Compilador C4197 de aviso (nível 3)
-'type': volátil de nível superior na conversão é ignorado  
+'type': volatile de alto nível em conversão é ignorado  
   
- O compilador detectou uma conversão para um tipo de valor r que é qualificado com [volátil](../../cpp/volatile-cpp.md), ou uma conversão de um tipo de valor r para algum tipo que é qualificado com volátil. Acordo com o padrão C (6.5.3), propriedades associadas a tipos qualificados são significativas apenas para expressões l-value.  
+ O compilador detectou uma conversão para um tipo de r que é qualificado com [volátil](../../cpp/volatile-cpp.md), ou uma conversão de um tipo de r para alguns que são qualificados com volátil. De acordo com a C padrão (6.5.3), propriedades associadas a tipos qualificados são significativas somente para expressões de valor de l.  
   
  O exemplo a seguir gera C4197:  
   

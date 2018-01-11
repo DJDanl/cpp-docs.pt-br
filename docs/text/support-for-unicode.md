@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: b58901f213d5e69eb50ad449a87266736fba0af7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 150f161b71efc07bc7b5a08d79e17fac0dea7931
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-unicode"></a>Suporte para Unicode
 Unicode é uma especificação de suporte a todos os conjuntos de caracteres, inclusive aqueles que não podem ser representados apenas em byte. Se você estiver programando para um mercado internacional, recomendamos que você use o Unicode ou [conjuntos de caracteres multibyte](../text/support-for-multibyte-character-sets-mbcss.md) (MBCSs), ou habilitar o programa para construí-lo para um alterando uma opção.  

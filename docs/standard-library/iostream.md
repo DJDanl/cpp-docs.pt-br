@@ -24,11 +24,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e5b749f16b2aa66aba486bd4dd3449f4e485683a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 430981da5ec304bf832e759d40870ee88f3e6557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 Declara objetos que controlam a leitura e a gravação nos fluxos padrão. Frequentemente, este é o único cabeçalho que você precisa incluir para executar a entrada e a saída de um programa C++.  

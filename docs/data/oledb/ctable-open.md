@@ -1,36 +1,37 @@
 ---
-title: "CTable::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CTable.Open"
-  - "ATL::CTable::Open"
-  - "CTable::Open"
-  - "CTable.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Open"
+title: 'Ctable:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CTable.Open
+- ATL::CTable::Open
+- CTable::Open
+- CTable.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 5d006d95-74d7-4e2b-b243-a33bc53b5455
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e664ddb310892004b95c81c8c7d93d8035b82cd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CTable::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ctableopen"></a>CTable::Open
 Abre a tabela.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -54,33 +55,33 @@ HRESULT Open(
 ) throw ( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `session`  
- \[in\] a sessão para a qual a tabela é aberta.  
+ [in] A sessão para o qual a tabela é aberta.  
   
  *wszTableName*  
- \[in\] o nome da tabela para abrir, passado como uma cadeia de caracteres Unicode.  
+ [in] O nome da tabela para abrir, passado como uma cadeia de caracteres Unicode.  
   
  *szTableName*  
- \[in\] o nome da tabela para abrir, passado como uma cadeia de caracteres ANSI.  
+ [in] O nome da tabela para abrir, passado como uma cadeia de caracteres ANSI.  
   
- *dbid*  
- \[in\] **DBID** da tabela a ser aberta.  
+ *DBID*  
+ [in] O **DBID** da tabela para abrir.  
   
  *pPropSet*  
- \[in\] o ponteiro da uma matriz de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) a estrutura que contém as propriedades e dos valores a serem definidos.  Consulte [Conjuntos de propriedades e grupos de propriedade](https://msdn.microsoft.com/en-us/library/ms713696.aspx)*na referência do programador do* OLE DB em [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  O valor padrão de NULL não especifica nenhuma propriedade.  
+ [in] Um ponteiro para uma matriz de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estruturas contendo propriedades e valores a serem definidos. Consulte [conjuntos de propriedades e grupos de propriedade](https://msdn.microsoft.com/en-us/library/ms713696.aspx) no *referência do programador de OLE DB* no SDK do Windows. O valor padrão de NULL não especifica que nenhuma propriedade.  
   
  `ulPropSets`  
- \[in\] o número de estruturas de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) transmitido no argumento *de pPropSet* .  
+ [in] O número de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estruturas passado a *pPropSet* argumento.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Para obter mais detalhes, consulte [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)*na referência do programador de OLE DB*.  
+## <a name="remarks"></a>Comentários  
+ Para obter mais detalhes, consulte [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/en-us/library/ms716724.aspx) no *referência do programador de DB OLE*.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CTable](../../data/oledb/ctable-class.md)

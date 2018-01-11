@@ -1,33 +1,33 @@
 ---
-title: "SafeModulus | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeModulus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função SafeModulus"
+title: SafeModulus | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeModulus
+dev_langs: C++
+helpviewer_keywords: SafeModulus function
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 383382de2720ac7a72403bd3578e235af7bdbe05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# SafeModulus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Executa a operação do módulo em dois números.  
+# <a name="safemodulus"></a>SafeModulus
+Executa a operação de módulo em dois números.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename T, typename U>  
@@ -38,34 +38,34 @@ inline bool SafeModulus (
 ) throw ();  
 ```  
   
-#### Parâmetros  
- \[entrada\] `t`  
- O divisor.  Isso deve ser do tipo T.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `t`  
+ O divisor. Isso deve ser do tipo T.  
   
- \[entrada\] `u`  
- O dividendo.  Isso deve ser do tipo U.  
+ [in] `u`  
+ O dividendo. Isso deve ser do tipo u  
   
- \[saída\] `result`  
- O parâmetro `SafeModulus` onde armazena o resultado.  
+ [out] `result`  
+ O parâmetro onde `SafeModulus` armazena o resultado.  
   
-## Valor de retorno  
- `true` se nenhum erro ocorre; `false` se ocorrer um erro.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se nenhum erro ocorrer; `false` se ocorrer um erro.  
   
-## Comentários  
- Esse método é parte de [Biblioteca de SafeInt](../windows/safeint-library.md) e é criado para uma única operação do módulo sem criar uma instância de [Classe SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Comentários  
+ Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de módulo único sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Esse método deve ser usado apenas quando uma única operação matemática deve ser protegida.  Se houver várias operações, você deve usar a classe de `SafeInt` em vez de chamar funções autônomas individuais.  
+>  Este método só deve ser usado quando uma operação matemática único deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
   
- Para obter mais informações sobre os tipos T e U de modelo, consulte [Funções \(SafeInt\)](../windows/safeint-functions.md).  
+ Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Consulte também  
- [Funções \(SafeInt\)](../windows/safeint-functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções (SafeInt)](../windows/safeint-functions.md)   
  [Biblioteca de SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)   
  [SafeDivide](../windows/safedivide.md)

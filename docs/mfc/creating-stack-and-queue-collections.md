@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d2f21d64aaafb133aa756c4ada472bf6cde9c23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-stack-and-queue-collections"></a>Criando coleções de pilhas e filas
 Este artigo explica como criar outras estruturas de dados, como [pilhas](#_core_stacks) e [filas](#_core_queues), lista de classes do MFC. Os exemplos usam classes derivadas de `CList`, mas você pode usar `CList` diretamente, a menos que você precisa adicionar funcionalidade.  

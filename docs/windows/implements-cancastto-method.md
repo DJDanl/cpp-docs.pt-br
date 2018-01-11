@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo Implements::CanCastTo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método CanCastTo"
+title: "Método: cancastto | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: a8e85c7d-4dcd-446d-bebc-a97da46ce44a
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f1607b5fc290c398350b9e5c9d81eb50088b61c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo Implements::CanCastTo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="implementscancastto-method"></a>Método Implements::CanCastTo
 Obtém um ponteiro para a interface especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 __forceinline HRESULT CanCastTo(  
@@ -36,23 +36,23 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `riid`  
- Uma referência a uma ID de interface  
+ Uma referência a uma ID de interface.  
   
  `ppv`  
- Se tiver êxito, um ponteiro para a interface especificada por `riid`.  
+ Se for bem-sucedido, um ponteiro para a interface especificada pelo `riid`.  
   
-## Valor de retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que indica o erro, como E\_NOINTERFACE.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro, como E_NOINTERFACE.  
   
-## Comentários  
- Essa é uma função interna de auxiliar que executa uma operação de QueryInterface.  
+## <a name="remarks"></a>Comentários  
+ Isso é uma função auxiliar interno que executa uma operação de QueryInterface.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
- [Implementa estrutura](../Topic/Implements%20Structure.md)
+## <a name="see-also"></a>Consulte também  
+ [Estrutura Implements](../windows/implements-structure.md)

@@ -1,58 +1,58 @@
 ---
-title: "Localizando uma cadeia de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cadeias de caracteres [C++]"
-  - "cadeias de caracteres [C++], procurando"
+title: Localizando uma cadeia de caracteres | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.string
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], searching
+- strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-caps.latest.revision: 12
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a66b5dd34aa21a2a0791ecbc71bfd4abcc90c4fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Localizando uma cadeia de caracteres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode procurar por um ou mais seqüências de caracteres na tabela de cadeia de caracteres e usar  [expressões regulares](../Topic/Using%20Regular%20Expressions%20in%20Visual%20Studio.md) com o  **Find in Files** comando \(**Editar** menu\) para localizar todas as ocorrências de seqüências de caracteres que correspondem um padrão.  
+# <a name="finding-a-string"></a>Localizando uma cadeia de caracteres
+Você pode pesquisar um ou mais cadeias de caracteres na tabela de cadeia de caracteres e usar [expressões regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) com o **localizar nos arquivos** comando (**editar** menu) para localizar todas as instâncias de cadeias de caracteres que correspondem a um padrão.  
   
-### Para localizar uma seqüência de caracteres da tabela de cadeia de caracteres  
+### <a name="to-find-a-string-in-the-string-table"></a>Para localizar uma cadeia de caracteres na tabela de cadeia de caracteres  
   
-1.  Abra a tabela de cadeia de caracteres clicando duas vezes no ícone correspondente na  [Exibição de recurso](../windows/resource-view-window.md).  
+1.  Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição recursos](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se o seu projeto já não contém um arquivo. rc, consulte  [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Sobre o  **Editar** menu, clique em  **Localizar e substituir**, em seguida, escolha  **Localizar**.  
+2.  Sobre o **editar** menu, clique em **localizar e substituir**, escolha **localizar**.  
   
-3.  No  **Localizar** caixa, selecione uma seqüência de pesquisa anterior na lista suspensa ou digite o identificador de recurso ou de texto de legenda da seqüência de caracteres que deseja localizar.  
+3.  No **localizar** caixa, selecione uma cadeia de caracteres de pesquisa anterior na lista suspensa ou digite o identificador de texto ou recurso de legenda da cadeia de caracteres que você deseja localizar.  
   
-4.  Selecione qualquer uma da  **Localizar** opções.  
+4.  Selecione qualquer uma da **localizar** opções.  
   
-5.  Clique em  **Localizar próxima**.  
+5.  Clique em **Localizar próximo**.  
   
     > [!TIP]
-    >  Para usar expressões regulares ao pesquisar arquivos, use o  **Find in Files** comando.  Digite uma expressão regular para corresponder a um padrão ou clique no botão à direita da  **Localizar** caixa para exibir uma lista de expressões regulares de pesquisa.  Quando você seleciona uma expressão dessa lista, ela é substituída como o texto de pesquisa no  **Localizar**  caixa.  Se você usar expressões regulares, certifique\-se a  **usar: expressões regulares** caixa de seleção está selecionada.  
+    >  Para usar expressões regulares ao pesquisar arquivos, use o **localizar nos arquivos** comando. Digite uma expressão regular para corresponder a um padrão ou clique no botão à direita do **localizar** caixa para exibir uma lista de expressões regulares de pesquisa. Quando você seleciona uma expressão na lista, ele é substituído como o texto de pesquisa no **localizar** caixa. Se você usar expressões regulares, o **usar: expressões regulares** caixa de seleção é marcada.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados \(aquelas que visam common language runtime\), consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados (aquelas que se destinam a common language runtime), consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisitos**  
   
  Win32  
   
-## Consulte também  
- [Editor de Cadeia de Caracteres](../mfc/string-editor.md)   
- [Seqüências de caracteres](_win32_Strings)   
- [sobre seqüências de caracteres](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Consulte também  
+ [Editor de cadeias de caracteres](../windows/string-editor.md)   
+

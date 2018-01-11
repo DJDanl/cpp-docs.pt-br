@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 Encapsula um bitmap GDI (interface) do dispositivo de gráficos Windows e fornece funções de membro para manipular o bitmap.  
@@ -62,7 +63,7 @@ class CBitmap : public CGdiObject
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -286,7 +287,7 @@ DWORD GetBitmapBits(
   
 ### <a name="parameters"></a>Parâmetros  
  `dwCount`  
- O número de bytes a serem copiados para o buffer.  
+ O número de bytes a serem copiados no buffer.  
   
  `lpBits`  
  Ponteiro para o buffer que receberá o bitmap.  
@@ -374,7 +375,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Comentários  
  Por padrão, `LoadMappedBitmap` mapeará as cores usadas em glifos de botão.  
   
- Para obter informações sobre como criar um bitmap mapeado, consulte a função do Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) e [substituição](http://msdn.microsoft.com/library/windows/desktop/bb760448) estrutura no SDK do Windows.  
+ Para obter informações sobre como criar um bitmap mapeado, consulte a função do Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) e [substituição](http://msdn.microsoft.com/library/windows/desktop/bb760448) estrutura no SDK do Windows.  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Carrega um bitmap predefinido usado pelo Windows.  

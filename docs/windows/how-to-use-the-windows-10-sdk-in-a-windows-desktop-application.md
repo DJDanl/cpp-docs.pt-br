@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d8aea199ff45da06d434150bb8346f24131136f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows
 Quando você cria um projeto de área de trabalho clássico do Windows no Visual Studio de 2017, ela é configurada por padrão para compilar com a versão do SDK do Windows 10 foi instalado quando a carga de trabalho de área de trabalho do C++ foi instalada ou atualizado pela última vez. Esta versão do SDK do Windows é compatível com todas as versões recentes do Windows. Se você deseja direcionar uma versão anterior do SDK, você pode abrir o projeto | Propriedades e escolha entre as outras versões do SDK disponíveis na lista suspensa de versão de SDK do Windows.  
@@ -26,7 +29,7 @@ Quando você cria um projeto de área de trabalho clássico do Windows no Visual
   
 ### <a name="to-target-the-windows-10-sdk"></a>Para direcionar o SDK do Windows 10  
   
-1.  Verifique se que o SDK do Windows 10 está instalado. O SDK do Windows 10 é instalado como parte do [ferramentas para Windows 10](http://go.microsoft.com/fwlink/?LinkID=617631).  
+1.  Verifique se que o SDK do Windows 10 está instalado. O SDK do Windows 10 é instalado como parte do [ferramentas para Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
   
 2.  Abra o menu de atalho para o nó do projeto e escolha **redirecionar SDK versão**.  
   

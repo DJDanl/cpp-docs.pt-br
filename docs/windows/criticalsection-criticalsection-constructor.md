@@ -1,33 +1,33 @@
 ---
-title: "Construtor CriticalSection::CriticalSection | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::CriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Seção crítica, o construtor"
+title: 'Construtor CriticalSection:: CriticalSection | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::CriticalSection
+dev_langs: C++
+helpviewer_keywords: CriticalSection, constructor
 ms.assetid: 930b89be-4d74-46bd-8879-5dd4d15bcbd0
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 532a7b2e046bbdb64db118741a939dadb049f081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Construtor CriticalSection::CriticalSection
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inicializa um objeto de sincronização que é semelhante a um objeto do mutex, mas pode ser usado somente por threads de um único processo.  
+# <a name="criticalsectioncriticalsection-constructor"></a>Construtor CriticalSection::CriticalSection
+Inicializa um objeto de sincronização que é semelhante a um objeto mutex, mas pode ser usado por apenas os segmentos de um único processo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 explicit CriticalSection(  
@@ -35,17 +35,17 @@ explicit CriticalSection(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `spincount`  
- A contagem de rotação do objeto da seção crítica.  O valor padrão é 0.  
+ A contagem de rotação para o objeto de seção crítica. O valor padrão é 0.  
   
-## Comentários  
- Para obter mais informações sobre as seções e de spincounts crticial, consulte a função de **InitializeCriticalSectionAndSpinCount** na seção de sincronização do SDK de apis do windows.  
+## <a name="remarks"></a>Comentários  
+ Para obter mais informações sobre seções críticas e spincounts, consulte o **InitializeCriticalSectionAndSpinCount** função na seção de sincronização da documentação do API do Windows.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Consulte também  
- [Classe CriticalSection](../Topic/CriticalSection%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CriticalSection](../windows/criticalsection-class.md)

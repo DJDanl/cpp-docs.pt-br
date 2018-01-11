@@ -1,69 +1,70 @@
 ---
-title: "CDynamicAccessor::SetLength | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::SetLength"
-  - "CDynamicAccessor.SetLength"
-  - "CDynamicAccessor::SetLength"
-  - "ATL.CDynamicAccessor.SetLength"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método SetLength"
+title: 'Cdynamicaccessor:: SetLength | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::SetLength
+- CDynamicAccessor.SetLength
+- CDynamicAccessor::SetLength
+- ATL.CDynamicAccessor.SetLength
+dev_langs: C++
+helpviewer_keywords: SetLength method
 ms.assetid: 8109ae73-04ec-4a47-be97-ba1e60080384
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a01bd3f22e2a7bd14f2f83e1d7e4c28f3ff9601a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetLength
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorsetlength"></a>CDynamicAccessor::SetLength
 Define o comprimento da coluna especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      bool SetLength(   
-   DBORDINAL nColumn,   
-   DBLENGTH nLength    
+      bool SetLength(   
+   DBORDINAL nColumn,   
+   DBLENGTH nLength    
 ) throw( );  
-bool SetLength(   
-   const CHAR* pColumnName,   
-   DBLENGTH nLength    
+bool SetLength(   
+   const CHAR* pColumnName,   
+   DBLENGTH nLength    
 ) throw( );  
-bool SetLength(   
-   const WCHAR* pColumnName,   
-   DBLENGTH nLength    
+bool SetLength(   
+   const WCHAR* pColumnName,   
+   DBLENGTH nLength    
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `nColumn`  
- \[in\] o número da coluna.  Início dos números de coluna com 1.  Um valor de 0 se refere à coluna do indicador, se houver.  
+ [in] O número da coluna. Coluna de números começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.  
   
  `nLength`  
- \[in\] o tamanho da coluna em bytes.  
+ [in] O comprimento da coluna em bytes.  
   
  `pColumnName`  
- \[in\] de ponteiro para uma cadeia de caracteres que contém o nome da coluna.  
+ [in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.  
   
-## Valor de retorno  
- Retorna **true** se o comprimento da coluna especificada for definido com êxito.  Caso contrário, essa função retornará **false**.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna **true** se o comprimento de coluna especificada é definido com êxito. Caso contrário, essa função retorna **false**.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::GetLength](../../data/oledb/cdynamicaccessor-getlength.md)

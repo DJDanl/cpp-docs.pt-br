@@ -1,76 +1,76 @@
 ---
-title: "Adicionando ou excluindo uma cadeia de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tabelas de cadeias de caracteres, adicionando cadeias de caracteres"
-  - "tabelas de cadeias de caracteres, excluindo cadeias de caracteres"
-  - "cadeias de caracteres [C++], adicionando a tabelas de cadeias de caracteres"
-  - "cadeias de caracteres [C++], excluindo em tabelas de cadeias de caracteres"
+title: Adicionando ou excluindo uma cadeia de caracteres | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.string
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], adding to string tables
+- string tables, deleting strings
+- strings [C++], deleting in string tables
+- string tables, adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
-caps.latest.revision: 11
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0e485e1c689814e63c5a43edba2ded80967d576a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Adicionando ou excluindo uma cadeia de caracteres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode inserir rapidamente novas entradas na tabela de cadeia de caracteres usando o editor de seqüência de caracteres.  Novas seqüências de caracteres são colocadas no final da tabela e recebem o próximo identificador disponível.  Você pode editar as propriedades de identificação, valor ou legenda no  [janela Propriedades do](../Topic/Properties%20Window.md) conforme necessário.  
+# <a name="adding-or-deleting-a-string"></a>Adicionando ou excluindo uma cadeia de caracteres
+Você pode inserir rapidamente novas entradas na tabela de cadeia de caracteres usando o editor de cadeia de caracteres. Novas cadeias de caracteres são colocadas no final da tabela e recebem o próximo identificador disponível. Você pode editar as propriedades de ID, o valor ou a legenda no [janela propriedades](/visualstudio/ide/reference/properties-window) conforme necessário.  
   
- O editor de seqüência certifica\-se de que não usar uma identificação que já está em uso.  Se você selecionar uma ID já em uso, o editor de seqüência irá notificá\-lo e, em seguida, atribuir uma ID exclusiva genérica, por exemplo IDS\_STRING58113.  
+ O editor de cadeia de caracteres torna-se de que você não usa uma ID que já está em uso. Se você selecionar uma ID já em uso, o editor de cadeia de caracteres notificá-lo e, em seguida, atribuir uma ID exclusiva genérica, por exemplo IDS_STRING58113.  
   
-### Para adicionar uma entrada de tabela de cadeia de caracteres  
+### <a name="to-add-a-string-table-entry"></a>Para adicionar uma entrada de tabela de cadeia de caracteres  
   
-1.  Abra a tabela de cadeia de caracteres clicando duas vezes no ícone correspondente na  [Exibição de recurso](../windows/resource-view-window.md).  
+1.  Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição recursos](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se o seu projeto já não contém um arquivo. rc, consulte  [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Clique com o botão direito dentro da tabela de cadeia de caracteres e escolha  **Nova cadeia de caracteres** no menu de atalho.  
+2.  Clique dentro da tabela de cadeia de caracteres e escolha **nova cadeia de caracteres** no menu de atalho.  
   
-3.  No  **seqüência de caracteres** editor, selecione um  **ID** na lista drop\-down de ID ou digite um local de diretamente no ID.  
+3.  No **cadeia de caracteres** editor, selecione um **ID** na lista suspensa ou digite um local diretamente no ID.  
   
-4.  Editar o  **valor**, se necessário.  
+4.  Editar o **valor**, se necessário.  
   
-5.  Digite uma entrada para o  **legenda**.  
+5.  Digite uma entrada para o **legenda**.  
   
     > [!NOTE]
-    >  Seqüências de caracteres nulas não são permitidas em tabelas de cadeia de caracteres do Windows.  Se você criar uma entrada na tabela de cadeia de caracteres que é uma seqüência nula, você receberá uma mensagem pedindo para "Insira uma seqüência de caracteres para esta entrada da tabela."  
+    >  Cadeias de caracteres nulas não são permitidas em tabelas de cadeia de caracteres do Windows. Se você criar uma entrada na tabela de cadeia de caracteres que é uma cadeia de caracteres nula, você receberá uma mensagem pedindo para "Insira uma cadeia de caracteres para esta entrada de tabela."  
   
-### Para excluir uma entrada de tabela de cadeia de caracteres  
+### <a name="to-delete-a-string-table-entry"></a>Para excluir uma entrada de tabela de cadeia de caracteres  
   
 1.  Selecione a entrada que você deseja excluir.  
   
-2.  Sobre o  **Editar** menu, clique em  **Excluir**.  
+2.  Sobre o **editar** menu, clique em **excluir**.  
   
- \- ou \-  
+ \- ou -  
   
--   Clique com o botão direito a seqüência de caracteres que você deseja excluir e escolha  **Excluir** no menu de atalho.  
+-   Clique com botão direito a cadeia de caracteres que você deseja excluir e escolha **excluir** no menu de atalho.  
   
- \- ou \-  
+ \- ou -  
   
--   Pressione o  **Excluir** chave.  
+-   Pressione a **excluir** chave.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados \(aquelas que visam common language runtime\), consulte  [recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) na  *.Guia. do desenvolvedor do NET Framework* Para informações sobre como adicionar manualmente os arquivos de recursos para projetos gerenciados, acesso a recursos, exibindo recursos estáticos e a atribuição de seqüências de caracteres de recursos a propriedades, consulte  [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/pt-br/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados (aquelas que se destinam a common language runtime), consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisitos**  
   
  Win32  
   
-## Consulte também  
- [Editor de Cadeia de Caracteres](../mfc/string-editor.md)   
- [Seqüências de caracteres](_win32_Strings)   
- [sobre seqüências de caracteres](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Consulte também  
+ [Editor de cadeias de caracteres](../windows/string-editor.md)   
+

@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c1a284af52195db1c25d6175876d732da7255962
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8de1c19ac793dd78ee55a15bc1156408936174bc
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 Gera uma sequência aleatória usando o algoritmo de subtração com transferência (Fibonacci com retardo).  
@@ -45,7 +46,7 @@ class subtract_with_carry_engine;
   
 #### <a name="parameters"></a>Parâmetros  
  `UIntType`  
- O tipo de resultado inteiro sem sinal. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+ O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
  `W`  
  **Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`  
@@ -81,7 +82,7 @@ class subtract_with_carry_engine;
  `ranlux48_base`: usado como base para `ranlux48`.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- Para obter informações detalhadas sobre o algoritmo de mecanismo de subtração com transferência, consulte o artigo da Wikipédia [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/LinkId=402445) (Gerador de retardamento de Fibonacci).  
+ Para obter informações detalhadas sobre o algoritmo de mecanismo de subtração com transferência, consulte o artigo da Wikipédia [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/p/?linkid=402445) (Gerador de retardamento de Fibonacci).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<random>  
