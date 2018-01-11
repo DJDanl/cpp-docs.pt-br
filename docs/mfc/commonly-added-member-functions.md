@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e96bac13e1f9b1cc956f5955c211f71114965aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: abe8bf2fb80775e8b99e3bae7fe6a3460e686096
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commonly-added-member-functions"></a>Funções de membro normalmente adicionadas
 Se a caixa de diálogo contém pushbuttons diferente Okey ou em Cancelar, você precisa gravar funções de membro de manipulador de mensagens em sua classe de caixa de diálogo para responder às mensagens de notificação de controle que elas geram. Para obter um exemplo, consulte o [Rabisco](../visual-cpp-samples.md) programa de exemplo. Você também pode lidar com mensagens de notificação de controle de outros controles na caixa de diálogo.  

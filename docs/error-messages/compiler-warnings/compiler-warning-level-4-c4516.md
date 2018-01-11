@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 4) C4516 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4516 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4516
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4516
+f1_keywords: C4516
+dev_langs: C++
+helpviewer_keywords: C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2837f23e414d4f6ee58020375851c0874faf1e07
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 137fe601e911b309d28281ecee7e67a88e1bb0a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4516"></a>Compilador C4516 de aviso (nível 4)
-'class::symbol': acesso declarações são preteridas; declarações usando membros fornecem uma alternativa melhor  
+'class::symbol': declarações de acesso são preteridas; declarações de using membro fornecem uma alternativa melhor  
   
- O Comitê de C++ ANSI declarou declarações de acesso (alterando o acesso de um membro em uma classe derivada sem a [usando](../../cpp/using-declaration.md) palavra-chave) fiquem desatualizados. Declarações de acesso podem não ser compatível com versões futuras do C++.  
+ O Comitê de C++ ANSI declarou declarações de acesso (alterando o acesso de um membro em uma classe derivada sem a [usando](../../cpp/using-declaration.md) palavra-chave) fiquem desatualizados. Declarações de acesso podem não ter suporte em versões futuras do C++.  
   
  O exemplo a seguir gera C4516:  
   

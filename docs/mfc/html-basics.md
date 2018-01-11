@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcd94b8b797a03bb81107daab5b3b1e3259bda34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852a4894478d139013d70813316976a20e99dd41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="html-basics"></a>Noções básicas de HTML
 A maioria dos navegadores têm a capacidade de examinar a fonte HTML das páginas que você procura. Quando você exibir a fonte, você verá um número de marcas do HTML (linguagem de marcação de hipertexto), entre colchetes angulares (<>), intercalados com texto.  

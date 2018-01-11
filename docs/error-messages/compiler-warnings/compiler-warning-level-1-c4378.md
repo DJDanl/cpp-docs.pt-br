@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4378 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4378 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4378
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4378
+f1_keywords: C4378
+dev_langs: C++
+helpviewer_keywords: C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 70d7dcf7f569021f71708cc98b167eae0c7854c8
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fea0b26b6aeaaa1c10316a8b17c6a988f3130bf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Compilador C4378 de aviso (nível 1)
-Deve obter ponteiros de função para executar inicializadores; considere o uso de System::ModuleHandle::ResolveMethodHandle  
+Deve obter ponteiros de função para executar inicializadores; Considere System::ModuleHandle::ResolveMethodHandle  
   
- Em **/clr**, símbolos de inicializador contêm tokens de função, não os ponteiros de funções.  Você precisa converter tokens para ponteiros usando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.</xref:System.ModuleHandle.ResolveMethodHandle%2A>  
+ Em **/clr**, símbolos de inicializador contêm tokens de função, não os ponteiros de funções.  É necessário converter tokens para ponteiros usando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4378.  

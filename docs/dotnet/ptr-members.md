@@ -1,29 +1,31 @@
 ---
-title: "Membros ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: Membros PTR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 84607ea2-149b-4c6d-b802-282f7f59d42d
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b0057fc06d6a025dbc2a5537f0885271b3693ba3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Membros ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ptr-members"></a>Membros ptr
 Membros de `com::ptr`.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [ptr::ptr](../dotnet/ptr-ptr.md)  
   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)  
@@ -32,7 +34,7 @@ Membros de `com::ptr`.
   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)  
   
- [ptr::Detach](../Topic/ptr::Detach.md)  
+ [ptr::Detach](../dotnet/ptr-detach.md)  
   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)  
   
@@ -40,13 +42,13 @@ Membros de `com::ptr`.
   
  [ptr::Release](../dotnet/ptr-release.md)  
   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)  
+ [ptr::operator=](../dotnet/ptr-operator-assign.md)  
   
- [ptr::operator\-\>](../Topic/ptr::operator-%3E.md)  
+ [ptr::operator->](../dotnet/ptr-operator-arrow.md)  
   
- [ptr::operator\!](../Topic/ptr::operator!.md)  
+ [ptr::operator!](../dotnet/ptr-operator-logical-not.md)  
   
- [Bool ptr::operator](../Topic/ptr::operator%20bool.md)  
+ [ptr::operator bool](../dotnet/ptr-operator-bool.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe com::ptr](../dotnet/com-ptr-class.md)

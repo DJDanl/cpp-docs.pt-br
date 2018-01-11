@@ -1,34 +1,34 @@
 ---
-title: "Como implementar palavras-chave do C# is e as (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave as C# [C++]"
-  - "Palavra-chave is C# [C++]"
+title: "Como: implementar é e como palavras-chave c# (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- as C# keyword [C++]
+- is C# keyword [C++]
 ms.assetid: bc66c0d1-696b-480d-977c-5d9d1ad1ece6
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d73cc06a79dd20743044803dd9c53b9e67e72995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como implementar palavras-chave do C# is e as (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico mostra como implementar a funcionalidade de palavras\-chave `is` e de `as` C\# no Visual C\+\+.  
+# <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>Como implementar palavras-chave do C# is e as (C++/CLI)
+Este tópico mostra como implementar a funcionalidade do `is` e `as` palavras-chave c# no Visual C++.  
   
- Para obter mais informações, consulte [is](../Topic/is%20\(C%23%20Reference\).md) e [as](../Topic/as%20\(C%23%20Reference\).md).  
-  
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // CS_is_as.cpp  
@@ -61,6 +61,9 @@ int main() {
 }  
 ```  
   
-  **o é uma cadeia de caracteres**   
-## Consulte também  
- [Interoperabilidade com outras linguagens .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+o is a string  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Interoperabilidade com outras linguagens .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

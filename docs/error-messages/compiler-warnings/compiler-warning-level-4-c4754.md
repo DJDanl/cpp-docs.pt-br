@@ -1,45 +1,26 @@
 ---
-title: "Compilador aviso (nível 4) C4754 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4754 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4754
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4754
+f1_keywords: C4754
+dev_langs: C++
+helpviewer_keywords: C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5a8678f7bdc2a83cb86ab53f5f2793003f4a0c03
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae6bad6452e1d119659c8588531c82671d031863
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Compilador C4754 de aviso (nível 4)
 Regras de conversão para operações aritméticas em uma comparação significam que uma ramificação não pode ser executada.  
@@ -104,15 +85,15 @@ int wrap_overflow(unsigned long a)
 }  
 ```  
   
- O `sizeof()` operador retorna um `size_t`, cujo tamanho é dependente da arquitetura. O código de exemplo funciona em arquiteturas de 32 bits em que um `size_t` é um tipo de 32 bits. No entanto, em arquiteturas de 64 bits, `size_t` é um tipo de 64 bits. As regras de conversão de inteiros significam que `a` é elevado para um valor de 64 bits na expressão `a + b < a` como se ele foi gravado `(size_t)a + (size_t)b < (size_t)a`. Quando `a` e `b` são inteiros de 32 bits, a operação de adição de 64 bits nunca pode estourar e nunca contém a restrição. Como resultado, o código nunca detecta uma condição de estouro de inteiro em arquiteturas de 64 bits. Este exemplo faz com que o compilador emita este aviso:  
+ O `sizeof()` operador retorna um `size_t`, cujo tamanho é dependente da arquitetura. O código de exemplo funciona em arquiteturas de 32 bits em que um `size_t` é um tipo de 32 bits. No entanto, em arquiteturas de 64 bits, `size_t` é um tipo de 64 bits. As regras de conversão de inteiros significam que `a` é elevado para um valor de 64-bit na expressão `a + b < a` como se tivesse sido escrito `(size_t)a + (size_t)b < (size_t)a`. Quando `a` e `b` são números inteiros de 32 bits, nunca pode estourar, a operação de adição de 64 bits e nunca mantém a restrição. Como resultado, o código nunca detecta uma condição de estouro de inteiro em arquiteturas de 64 bits. Este exemplo faz com que o compilador emite esse aviso:  
   
 ```Output  
 Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).  
 ```  
   
- Observe que a mensagem de aviso lista explicitamente o valor da constante 4 em vez da cadeia de caracteres de origem original — no momento a análise de aviso encontra o código incorreto, `sizeof(unsigned long)` já foi convertido em uma constante. Portanto, você precisará controlar para baixo da expressão na fonte de código é associado com o valor da constante na mensagem de aviso. As fontes mais comuns de código resolvido para constantes em mensagens de aviso C4754 são expressões como `sizeof(TYPE)` e `strlen(szConstantString)`.  
+ Observe que a mensagem de aviso lista explicitamente o valor da constante 4 em vez de cadeia de caracteres de origem original, no momento, a análise de aviso encontra o código incorreto, `sizeof(unsigned long)` já foi convertido em uma constante. Portanto, você pode ter que acompanhar para baixo da expressão na fonte de código é associado com o valor da constante na mensagem de aviso. As fontes mais comuns de código resolvido para constantes em mensagens de aviso C4754 são expressões como `sizeof(TYPE)` e `strlen(szConstantString)`.  
   
- Nesse caso, o código fixo é semelhante a isso:  
+ Nesse caso, o código fixo seria semelhante a isso:  
   
 ```cpp  
 // Casting the result of sizeof() to unsigned long ensures  
@@ -122,7 +103,7 @@ if (a + (unsigned long)sizeof(unsigned long) < a)
   
 ```  
   
- **Observação** o número da linha referenciado em avisos do compilador é a última linha de uma instrução. Em uma mensagem de aviso sobre uma instrução condicional complexa que é distribuída em várias linhas, a linha que tenha o defeito de código pode ser várias linhas antes da linha que é relatado. Por exemplo:  
+ **Observação** o número da linha referenciado em avisos do compilador é a última linha de uma instrução. Em uma mensagem de aviso sobre uma instrução condicional complexa que é distribuída entre várias linhas, a linha que tenha o defeito de código pode ser várias linhas antes da linha que é relatado. Por exemplo:  
   
 ```cpp  
 unsigned long a;  

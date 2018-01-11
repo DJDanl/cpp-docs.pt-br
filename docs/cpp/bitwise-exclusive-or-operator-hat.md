@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c6d7713a28fa6c0dbe7a5543afa65cd927f614e7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6d6bd80c7144ea3f4a2288e07b7801612ed62efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operador OR exclusivo bit a bit: ^
 ## <a name="syntax"></a>Sintaxe  
@@ -43,7 +41,7 @@ O operador OR exclusivo bit a bit (**^**) compara cada bit de seu primeiro opera
 Ambos os operandos para o operador OR exclusivo bit a bit devem ser do tipo integral. Conversões aritméticas usuais abordados [conversões padrão](standard-conversions.md) são aplicadas para os operandos.  
   
 ## <a name="operator-keyword-for-"></a>Palavra-chave do operador para ^  
-O **xor** operador é equivalente a texto ** ^ **. Há duas maneiras para acessar o **xor** operador em seus programas: incluem o arquivo de cabeçalho `iso646.h`, ou de compilação com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador (desabilitar extensões de linguagem).  
+O **xor** operador é equivalente a texto  **^** . Há duas maneiras para acessar o **xor** operador em seus programas: incluem o arquivo de cabeçalho `iso646.h`, ou de compilação com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador (desabilitar extensões de linguagem).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -63,6 +61,5 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
 
 

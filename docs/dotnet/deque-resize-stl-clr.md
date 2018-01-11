@@ -1,50 +1,50 @@
 ---
-title: "deque::resize (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "redimensionar membro [STL/CLR]"
+title: 'deque:: Resize (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: c83f3c57-38b3-4706-a124-59bafbf88484
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fac11adade64d03696cbe73b09d1c35dfdd026b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::resize (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeresize-stlclr"></a>deque::resize (STL/CLR)
 Altera o número de elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### Parâmetros  
- new\_size  
+#### <a name="parameters"></a>Parâmetros  
+ new_size  
  Novo tamanho de sequência controlada.  
   
- val  
+ Val  
  Valor do elemento de preenchimento.  
   
-## Comentários  
- As funções de membro ambas garantem que [deque::size](../Topic/deque::size%20\(STL-CLR\).md)`()` retorna `new_size`daqui em diante.  Se deve fazer a sequência controlada mais longa, a primeira função de membro adiciona os elementos com valor `value_type()`, enquanto a segunda função de membro acrescentar os elementos com valor `val`.  Para fazer a sequência controlada mais curto, ambas as funções de membro apagam efetivamente hora posterior de [deque::size](../Topic/deque::size%20\(STL-CLR\).md)`() -` `new_size` do elemento.  Você usará para garantir que a sequência controlada tem o tamanho `new_size`, por fragmentação ou o preenchimento a sequência controlada atual.  
+## <a name="remarks"></a>Comentários  
+ As funções de membro ambos Certifique-se de que [deque (STL/CLR)](../dotnet/deque-size-stl-clr.md) `()` daqui em diante retorna `new_size`. Se for necessário tornar a sequência controlada mais longa, a primeira função membro acrescentará elementos com valor `value_type()`, enquanto a segunda função membro acrescentará elementos com valor `val`. Para tornar a sequência controlada mais curto, ambas as funções de membro efetivamente apagar o último elemento [deque (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() -` `new_size` vezes. Você pode usá-lo para garantir que a sequência controlada tem tamanho `new_size`, cortar ou preenchimento atual sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_resize.cpp   
@@ -75,17 +75,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0 0**  
-**size\(\) \= 0**  
- **x x x x x**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::clear](../dotnet/deque-clear-stl-clr.md)   
- [deque::erase](../Topic/deque::erase%20\(STL-CLR\).md)   
- [deque::insert](../dotnet/deque-insert-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: Clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)   
+ [deque (STL/CLR)](../dotnet/deque-erase-stl-clr.md)   
+ [deque::insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)

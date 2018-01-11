@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23988e9d8669bee558ec5418f44921d60bec08d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8496b5228fe4002bb1ca80f8fbe793fd5e16ca81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceções: obtendo e excluindo exceções
 As instruções e os exemplos a seguir mostram como capturar e excluir exceções. Para obter mais informações sobre o **tente**, **catch**, e `throw` palavras-chave, consulte [manipulação de exceção C++](../cpp/cpp-exception-handling.md).  

@@ -39,11 +39,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c1da38d40c45ecd6dc36eed594304894a25dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0443ce4ec90a9c6aef8fb07854200341cc369cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ldiv-lldiv"></a>ldiv, lldiv
 Calcula o quociente e o resto de dois inteiros como uma operação.  
@@ -72,7 +73,7 @@ lldiv_t lldiv(
  `ldiv` retorna uma estrutura do tipo [ldiv_t](../../c-runtime-library/standard-types.md) que compreende o quociente e o resto. `lldiv` retorna uma estrutura do tipo [lldiv_t](../../c-runtime-library/standard-types.md) que compreende o quociente e o resto.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `ldiv` e `lldiv` dividem `numer` por `denom` e, assim, calculam o quociente e o restante. O sinal do quociente é o mesmo do quociente matemático. O valor absoluto do quociente é o maior inteiro que é menor que o valor absoluto do quociente matemático. Se o denominador for 0, o programa será encerrado com uma mensagem de erro. `ldiv` e `lldiv` são o mesmo que `div`, exceto pelo fato de que os argumentos de `ldiv` e os membros da estrutura retornada são todos do tipo `long` e os argumentos de `lldiv` e os membros da estrutura retornada são do tipo `long long`.  
+ As funções `ldiv` e `lldiv` dividem `numer` por `denom` e, assim, calculam o quociente e o restante. O sinal do quociente é o mesmo do quociente matemático. O valor absoluto do quociente é o maior inteiro que é menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro. `ldiv` e `lldiv` são o mesmo que `div`, exceto pelo fato de que os argumentos de `ldiv` e os membros da estrutura retornada são todos do tipo `long` e os argumentos de `lldiv` e os membros da estrutura retornada são do tipo `long long`.  
   
  As estruturas `ldiv_t` e `lldiv_t` são definidas em \<stdlib.h>.  
   
@@ -82,7 +83,7 @@ lldiv_t lldiv(
 |-------------|---------------------|  
 |`ldiv`, `lldiv`|\<stdlib.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Libraries  
  Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
@@ -115,6 +116,6 @@ For 5149627 / 234879, the quotient is 21, and the remainder is 217168
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [div](../../c-runtime-library/reference/div.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)

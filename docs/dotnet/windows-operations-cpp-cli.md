@@ -1,62 +1,64 @@
 ---
-title: "Opera&#231;&#245;es do Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], Operações do Windows"
-  - "Visual C++, Operações do Windows"
-  - "Windows [C++], Tarefas específicas do Windows"
-  - "Operações do Windows [C++]"
+title: "Operações do Windows (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], Windows-specific tasks
+- .NET Framework [C++], Windows operations
+- Visual C++, Windows operations
+- Windows operations [C++]
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1fb24f111fc3ad10b788deec286a0052ce822970
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Opera&#231;&#245;es do Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Demonstra mais tarefas específicas usando o [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+# <a name="windows-operations-ccli"></a>Operações do Windows (C++/CLI)
+Demonstra várias tarefas específicas do Windows usando o [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
- Os tópicos a seguir demonstram as várias operações do windows executadas com [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] usando o Visual C\+\+.  
+ Os tópicos a seguir demonstram várias operações do Windows executadas com o [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] usando o Visual C++.  
   
-## Nesta seção  
- [Como determinar se o desligamento foi iniciado](../dotnet/how-to-determine-if-shutdown-has-started-cpp-cli.md)  
+## <a name="in-this-section"></a>Nesta seção  
+ [Como determinar se o desligamento foi iniciado (C++/CLI)](../dotnet/how-to-determine-if-shutdown-has-started-cpp-cli.md)  
   
- [Como determinar o estado interativo do usuário](../dotnet/how-to-determine-the-user-interactive-state-cpp-cli.md)  
+ [Como determinar o estado interativo do usuário (C++/CLI)](../dotnet/how-to-determine-the-user-interactive-state-cpp-cli.md)  
   
- [Como ler dados a partir do Registro do Windows](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)  
+ [Como ler dados do Registro do Windows (C++/CLI)](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)  
   
- [Como ler contadores de desempenho do Windows](../dotnet/how-to-read-windows-performance-counters-cpp-cli.md)  
+ [Como ler contadores de desempenho do Windows (C++/CLI)](../dotnet/how-to-read-windows-performance-counters-cpp-cli.md)  
   
- [Como recuperar texto a partir da Área de Transferência](../Topic/How%20to:%20Retrieve%20Text%20from%20the%20Clipboard%20\(C++-CLI\).md)  
+ [Como recuperar texto da área de transferência (C++/CLI)](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)  
   
- [Como recuperar a versão do .NET Framework](../dotnet/how-to-retrieve-the-dotnet-framework-version-cpp-cli.md)  
+ [Como recuperar a versão do .NET Framework (C++/CLI)](../dotnet/how-to-retrieve-the-dotnet-framework-version-cpp-cli.md)  
   
- [Como recuperar o nome de usuário atual](../Topic/How%20to:%20Retrieve%20the%20Current%20Username%20\(C++-CLI\).md)  
+ [Como recuperar o nome de usuário atual (C++/CLI)](../dotnet/how-to-retrieve-the-current-username-cpp-cli.md)  
   
- [Como recuperar o nome da máquina local](../dotnet/how-to-retrieve-the-local-machine-name-cpp-cli.md)  
+ [Como recuperar o nome do computador local (C++/CLI)](../dotnet/how-to-retrieve-the-local-machine-name-cpp-cli.md)  
   
- [Como recuperar a versão do Windows](../dotnet/how-to-retrieve-the-windows-version-cpp-cli.md)  
+ [Como recuperar a versão do Windows (C++/CLI)](../dotnet/how-to-retrieve-the-windows-version-cpp-cli.md)  
   
- [Como recuperar tempo decorrido desde a inicialização](../dotnet/how-to-retrieve-time-elapsed-since-startup-cpp-cli.md)  
+ [Como recuperar tempo decorrido desde a inicialização (C++/CLI)](../dotnet/how-to-retrieve-time-elapsed-since-startup-cpp-cli.md)  
   
- [Como armazenar texto na Área de Transferência](../dotnet/how-to-store-text-in-the-clipboard-cpp-cli.md)  
+ [Como armazenar texto na área de transferência (C++/CLI)](../dotnet/how-to-store-text-in-the-clipboard-cpp-cli.md)  
   
- [Como gravar dados no Registro do Windows](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)  
+ [Como gravar dados no Registro do Windows (C++/CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)  
   
-## Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  <xref:System.Environment>  
   
-## Consulte também  
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

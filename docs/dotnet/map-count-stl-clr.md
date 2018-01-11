@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 307dca37280e7474fce3c037d4b4f6845c3f7a0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4308f060285918a8436160cdde59860fda39542b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapcount-stlclr"></a>map::count (STL/CLR)
 Localiza o número de elementos que correspondem a uma chave especificada.  
@@ -35,7 +38,7 @@ size_type count(key_type key);
  O valor chave a ser pesquisado.  
   
 ## <a name="remarks"></a>Comentários  
- A função de membro retorna o número de elementos na sequência controlada que têm uma ordenação equivalente com `key`. Você pode usá-lo para determinar o número de elementos que correspondem a uma chave especificada no momento na sequência controlada.  
+ A função de membro retorna o número de elementos na sequência controlada que têm uma ordenação equivalente com `key`. Usado para determinar o número de elementos que estão na sequência controlada no momento e que correspondem a uma chave especificada.  
   
 ## <a name="example"></a>Exemplo  
   

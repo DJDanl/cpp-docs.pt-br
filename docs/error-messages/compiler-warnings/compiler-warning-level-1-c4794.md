@@ -1,52 +1,33 @@
 ---
-title: "Compilador aviso (nível 1) C4794 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4794 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4794
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4794
+f1_keywords: C4794
+dev_langs: C++
+helpviewer_keywords: C4794
 ms.assetid: badc9c36-fa1a-4fec-929b-7bfda7a7b79f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9e929445b378d5307dd2de39c11bf77d07ced9c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5c6878e2e0fb3fed9cb349bd0dd651a24c02aae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4794"></a>Compilador C4794 de aviso (nível 1)
-segmento da variável de armazenamento local de thread 'variável' alterado de 'nome da seção' para '.tls$ '  
+segmento de variável de armazenamento local de thread 'variável' alterado de 'nome da seção' para '. TLS$ '  
   
- Você usou [#pragma data_seg](../../preprocessor/data-seg.md) colocar uma variável tls em uma seção que não começa com .tls$.  
+ Você usou [#pragma data_seg](../../preprocessor/data-seg.md) para colocar uma variável de tls em uma seção que não começa com $. TLS.  
   
- O $ .tls*x* seção continuará a existir no arquivo de objeto onde [__declspec(thread)](../../cpp/thread.md) variáveis são definidas. Uma seção .tls no arquivo EXE ou DLL resultarão essas seções.  
+ $ A. TLS*x* seção vai existir no arquivo de objeto onde [__declspec(thread)](../../cpp/thread.md) variáveis são definidas. Uma seção. TLS EXE ou DLL resultarão essas seções.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4794:  

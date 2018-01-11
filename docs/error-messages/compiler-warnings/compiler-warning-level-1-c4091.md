@@ -1,52 +1,34 @@
 ---
-title: "Compilador aviso (nível 1) C4091 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4091 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4091
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4091
+f1_keywords: C4091
+dev_langs: C++
+helpviewer_keywords: C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fa247ce7c76524bf2f6d339f6eee527be7e87ae1
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9be40d65b657a7ac34fb105a2b1b16c702e4922c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4091"></a>Compilador C4091 de aviso (nível 1)
-'palavra-chave': ignorado esquerda 'type' quando nenhuma variável é declarada  
+'palavra-chave': ignorado à esquerda de 'type' quando nenhuma variável é declarada  
   
- O compilador detectou uma situação em que o usuário provavelmente se destina a uma variável a ser declarado, mas o compilador não foi capaz de declarar a variável.  
+ O compilador detectou uma situação em que o usuário provavelmente se destina a uma variável para ser declarada, mas o compilador não foi capaz de declarar a variável.  
   
 ## <a name="example"></a>Exemplo  
- Um `__declspec` atributo no início de uma declaração de tipo definido pelo usuário se aplica à variável desse tipo. C4091 indica que nenhuma variável é declarada. O exemplo a seguir gera C4091.  
+ Um `__declspec` atributo no início de uma declaração de tipo definido pelo usuário aplica-se a variável do tipo. C4091 indica que nenhuma variável é declarada. O exemplo a seguir gera C4091.  
   
 ```  
 // C4091.cpp  
@@ -62,7 +44,7 @@ class __declspec(dllimport) X3 {};
 ```  
   
 ## <a name="example"></a>Exemplo  
- Se um identificador é um typedef, ela também não pode ser um nome de variável. O exemplo a seguir gera C4091.  
+ Se um identificador é um typedef, ele não pode ser também um nome de variável. O exemplo a seguir gera C4091.  
   
 ```  
 // C4091_b.cpp  

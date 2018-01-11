@@ -1,47 +1,29 @@
 ---
-title: C2506 de erro do compilador | Documentos do Microsoft
+title: C2506 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2506
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2506
+f1_keywords: C2506
+dev_langs: C++
+helpviewer_keywords: C2506
 ms.assetid: cfed21cd-2404-46f2-985e-d0c2c3820830
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2015867e0d6b60e9845b67ca09d449297e4215ba
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9d084e04e90c7fce9756e72a8b19d566ee829287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2506"></a>C2506 de erro do compilador
-'member': '__declspec(modifier)' não pode ser aplicado a esse símbolo  
+'member': '__declspec(modifier)' não pode ser aplicado a este símbolo  
   
  Você não pode declarar por processo ou por appdomain para membros estáticos de uma classe gerenciada.  
   

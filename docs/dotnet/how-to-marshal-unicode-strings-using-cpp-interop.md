@@ -1,44 +1,46 @@
 ---
-title: "Como realizar marshaling de cadeias de caracteres Unicode usando interop C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Interoperabilidade C++, cadeias de caracteres"
-  - "realização de marshaling em dados [C++], cadeias de caracteres"
-  - "interoperabilidade [C++], cadeias de caracteres"
-  - "realização de marshaling [C++], cadeias de caracteres"
-  - "Unicode, realizando marshaling em cadeias de caracteres"
+title: 'Como: cadeias de caracteres Unicode marshaling usando Interop C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9226eaf035cee7614f2d072a5e2493c067012c2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como realizar marshaling de cadeias de caracteres Unicode usando interop C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico demonstra uma faceta de interoperabilidade do Visual C\+\+.  Para obter mais informações, consulte [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Como realizar marshaling de cadeias de caracteres Unicode usando interop C++
+Este tópico demonstra uma faceta de interoperabilidade do Visual C++. Para obter mais informações, consulte [usando Interop C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Os exemplos de código a seguir usam as políticas de \#pragma de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) para implementar gerenciado e funções não gerenciada no mesmo arquivo, mas essas funções interoperam da mesma forma que se definido em arquivos separados.  Os arquivos que contêm somente funções não gerenciado não precisam ser compilados com [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisam ser compilada com [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Este tópico mostra como as cadeias de caracteres Unicode podem ser passadas de um gerenciado para uma função não gerenciado, e vice\-versa.  Para interoperar com outros tipos de cadeias de caracteres, consulte os seguintes tópicos:  
+ Este tópico demonstra como cadeias de caracteres Unicode podem ser passados do gerenciada em uma função não gerenciada e vice-versa. Para interagir com outros tipos de cadeias de caracteres, consulte os tópicos a seguir:  
   
--   [Como realizar marshaling de cadeias de caracteres ANSI usando interop C\+\+](../Topic/How%20to:%20Marshal%20ANSI%20Strings%20Using%20C++%20Interop.md)  
+-   [Como realizar marshaling de cadeias de caracteres ANSI usando interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
--   [Como realizar marshaling de cadeias de caracteres COM usando interop C\+\+](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [Como realizar marshaling de cadeias de caracteres COM usando interop do C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
-## Exemplo  
- Para transmitir uma cadeia de caracteres Unicode de um gerenciado para uma função não gerenciado, a função de PtrToStringChars \(declarada em Vcclr.h\) pode ser usada para acessar na memória na cadeia de caracteres gerenciado é armazenada.  Como esse endereço será transmitido para uma função nativo, é importante que a memória está fixada com [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) para impedir que os dados de cadeia de caracteres estado realocado, deve um ciclo de coleta de lixo ocorrer quando a função não gerenciado executar.  
+## <a name="example"></a>Exemplo  
+ Para passar uma cadeia de caracteres Unicode de um gerenciado para uma função não gerenciada, a função PtrToStringChars (declarada em Vcclr.h) pode ser usada para acessar na memória em que a cadeia de caracteres gerenciada é armazenada. Como esse endereço será passado para uma função nativa, é importante que a memória ser fixado com [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) para impedir que os dados de cadeia de caracteres que está sendo realocado, um ciclo de coleta de lixo sejam efetuadas durante o executa a função não gerenciada.  
   
 ```  
 // MarshalUnicode1.cpp  
@@ -69,8 +71,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir demonstra o marshaling de dados exigido para acessar uma cadeia de caracteres Unicode em uma função gerenciada chamada por uma função não gerenciado.  A função gerenciada, ao receber a cadeia de caracteres Unicode nativo, convertida em uma cadeia de caracteres gerenciado usando o método de <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> .  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra o marshaling de dados necessárias para acessar uma cadeia de caracteres Unicode em uma função gerenciada chamada por uma função não gerenciada. A função gerenciada, ao receber a cadeia de caracteres Unicode nativo, converte-o em uma cadeia de caracteres gerenciada usando o <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> método.  
   
 ```  
 // MarshalUnicode2.cpp  
@@ -102,5 +104,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

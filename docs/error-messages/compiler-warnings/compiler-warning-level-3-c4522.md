@@ -1,51 +1,33 @@
 ---
-title: "Compilador aviso (nível 3) C4522 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4522 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4522
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4522
+f1_keywords: C4522
+dev_langs: C++
+helpviewer_keywords: C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c64c2f22412bc5b937d18a7233a378f9630fb848
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8bccf54eced4c410310a57d919617850d928ea06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4522"></a>Compilador C4522 de aviso (nível 3)
 'class': vários operadores de atribuição especificados  
   
- A classe tem vários operadores de atribuição de um único tipo. Esse aviso é informativo; os construtores são podem ser chamados em seu programa.  
+ A classe tem vários operadores de atribuição de um único tipo. Esse aviso é informativo; os construtores são que pode ser chamados em seu programa.  
   
- Use o [aviso](../../preprocessor/warning.md) pragma para suprimir esse aviso.  
+ Use o [aviso](../../preprocessor/warning.md) pragma para suprimir este aviso.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4522.  

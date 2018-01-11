@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 4) C4610 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4610 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4610
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4610
+f1_keywords: C4610
+dev_langs: C++
+helpviewer_keywords: C4610
 ms.assetid: 23c1a16c-9ca9-4bf6-9911-a72b785560c2
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bcb0a0381bf2b10d26cb2624d458ccaf46a97ca9
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 49c894789aa64510a7f65e7e3693c94a88f36f82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4610"></a>Compilador C4610 de aviso (nível 4)
-o objeto 'class' nunca pode ser instanciado - construtor definido pelo usuário necessário  
+o objeto 'class' nunca pode ser instanciado - construtor definido pelo usuário é necessária  
   
- A classe não tem nenhum definido pelo usuário ou construtores padrão. Sem instanciação é executada. O exemplo a seguir gera C4610:  
+ A classe padrão construtores ou não tem nenhum definido pelo usuário. Nenhum instanciação é executada. O exemplo a seguir gera C4610:  
   
 ```  
 // C4610.cpp  

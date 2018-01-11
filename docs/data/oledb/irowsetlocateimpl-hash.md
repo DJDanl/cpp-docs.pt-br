@@ -1,34 +1,35 @@
 ---
-title: "IRowsetLocateImpl::Hash | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl::Hash"
-  - "IRowsetLocateImpl.Hash"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Hash"
+title: 'Irowsetlocateimpl:: hash | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetLocateImpl::Hash
+- IRowsetLocateImpl.Hash
+dev_langs: C++
+helpviewer_keywords: Hash method
 ms.assetid: 7df4386d-80fb-4332-a85f-baae98cdc6e0
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c3cb64979b8c1ff7a5b9d2e9441a91da0c77f2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetLocateImpl::Hash
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retorna valores de hash dos indicadores especificados.  
+# <a name="irowsetlocateimplhash"></a>IRowsetLocateImpl::Hash
+Retorna o hash valores para os indicadores especificados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -42,14 +43,14 @@ Retorna valores de hash dos indicadores especificados.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `hReserved`  
- \[in\] corresponde ao parâmetro de `hChapter` a [IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx).  
+ [in] Corresponde à `hChapter` parâmetro [IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx).  
   
- Para outros parâmetros, consulte [IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx)*na referência do programador de OLE DB*.  
+ Para outros parâmetros, consulte [IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx) no *referência do programador de DB OLE*.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)

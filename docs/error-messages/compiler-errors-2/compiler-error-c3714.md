@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3714
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3714
+f1_keywords: C3714
+dev_langs: C++
+helpviewer_keywords: C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 69f3f5c90524b02cad8a36babaceeb32544e7aff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7d58e06d99975fd4ccff9ea4bace755ff1d758cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3714"></a>C3714 de erro do compilador
 'method': um método de manipulador de eventos deve ter a mesma convenção de chamada como a origem 'method'  

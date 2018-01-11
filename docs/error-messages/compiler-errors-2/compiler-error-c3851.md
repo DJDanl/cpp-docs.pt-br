@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3851
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3851
+f1_keywords: C3851
+dev_langs: C++
+helpviewer_keywords: C3851
 ms.assetid: da30c21c-33aa-4439-8fb3-2f5021ea4985
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6c5f0cca8f3c1dfc4b3b35d494ebf73459a74d03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: ed2a62b859e37455041171c81bb6830db372c697
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3851"></a>C3851 de erro do compilador
 'char': um-nome de caractere universal não pode designar um caractere no conjunto de caracteres básicas  

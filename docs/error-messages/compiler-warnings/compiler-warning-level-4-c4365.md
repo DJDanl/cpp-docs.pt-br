@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 4) C4365 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4365 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4365
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4365
+f1_keywords: C4365
+dev_langs: C++
+helpviewer_keywords: C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 15b1e12d9d0bf4b60f32eef5a095fe45b800080c
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4496256938cf2f4a6f64291c85c74d50e5549f3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4365"></a>Compilador C4365 de aviso (nível 4)
-'action': conversão de 'type_1' em 'type_2', incompatibilidade assinada/não  
+'Ação': conversão de 'type_1' em 'type_2', a incompatibilidade de signed/unsigned  
   
- Por exemplo, você tentou converter um valor sem sinal para um valor assinado.  
+ Por exemplo, você tentou converter um valor sem sinal em um valor assinado.  
   
  C4365 está desativado por padrão.  Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   

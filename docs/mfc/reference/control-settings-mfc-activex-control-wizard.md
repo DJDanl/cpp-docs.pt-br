@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 119c98c8cf5f5a3077afce4e706b177513113d03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Configurações de controle, Assistente de Controle ActiveX MFC
 Use esta página do Assistente para especificar como você deseja que o controle se comporta. Por exemplo, base de controle em tipos de controle padrão do Windows, otimizar seu comportamento e aparência ou indicar que o controle pode agir como um contêiner para outros controles.  
@@ -59,7 +60,7 @@ Use esta página do Assistente para especificar como você deseja que o controle
  Especifica que o controle tem o padrão do Windows **sobre** caixa de diálogo que exibe o número de versão e informações sobre direitos autorais.  
   
 > [!NOTE]
->  Como o usuário acessar a Ajuda para o controle depende de como você implementou a Ajuda e se você tiver integrado a Ajuda de controle com a Ajuda do contêiner. Para obter mais informações sobre como integrar o ajuda, o [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) site, procure "Adicionando sensível ao contexto ajuda para um controle ActiveX MFC".  
+>  Como o usuário acessar a Ajuda para o controle depende de como você implementou a Ajuda e se você tiver integrado a Ajuda de controle com a Ajuda do contêiner. Para obter mais informações sobre como integrar o ajuda, o [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) site, procure "Adicionando sensível ao contexto ajuda para um controle ActiveX MFC".  
   
  Quando você seleciona essa opção, ele insere o `AboutBox` controlar o método na classe de controle de projeto (C*NomeDoProjeto*Ctrl.cpp) e adiciona AboutBox ao mapa de expedição do projeto. Por padrão, essa opção é selecionada.  
   
@@ -82,7 +83,7 @@ Use esta página do Assistente para especificar como você deseja que o controle
  Permite que o controle processar notificações de ponteiro do mouse, se o controle está ativo ou não. Quando você seleciona essa opção, o `pointerInactive` sinalizador é um dos sinalizadores que são retornados pelo [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Para obter mais informações sobre como usar essa opção, consulte [fornecendo Mouse interação enquanto inativo](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
  **Atua como um controle de quadro simples**  
- Especifica que o controle é um contêiner para outros controles, definindo o `OLEMISC_SIMPLEFRAME` bit para o controle. Para obter mais informações, sobre o [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) site, procure "Contenção de Site de quadro simples".  
+ Especifica que o controle é um contêiner para outros controles, definindo o `OLEMISC_SIMPLEFRAME` bit para o controle. Para obter mais informações, sobre o [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) site, procure "Contenção de Site de quadro simples".  
   
  **Carrega as propriedades de forma assíncrona**  
  Permite a reinicialização de quaisquer dados assíncronos anteriores e inicia uma nova carga da propriedade assíncrona do controle.  

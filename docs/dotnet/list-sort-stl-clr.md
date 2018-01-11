@@ -1,33 +1,33 @@
 ---
-title: "list::sort (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro sort [STL/CLR]"
+title: 'List:: Sort (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::sort
+dev_langs: C++
+helpviewer_keywords: sort member [STL/CLR]
 ms.assetid: f811d5f4-a19e-4194-8765-1e68097c52f0
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159391bc7d362c755c194f478692b2a271d779ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# list::sort (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Classifica a sequência controlada.  
+# <a name="listsort-stlclr"></a>list::sort (STL/CLR)
+Ordena a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void sort();  
@@ -35,18 +35,18 @@ template<typename Pred2>
     void sort(Pred2 pred);  
 ```  
   
-#### Parâmetros  
- pred  
+#### <a name="parameters"></a>Parâmetros  
+ Pred  
  Comparador para pares do elemento.  
   
-## Comentários  
- A primeira função de membro reorganiza os elementos na sequência controlada de modo que sejam classificados por `operator<` \-\- os elementos não diminuir o valor como você passa com a sequência.  Você usa essa função de membro para classificar a sequência em ordem crescente.  
+## <a name="remarks"></a>Comentários  
+ A primeira função de membro reorganiza os elementos na sequência controlada de modo que elas são ordenadas por `operator<` – elementos não diminuir à medida que você percorre a sequência. Você pode usar essa função de membro para classificar a sequência em ordem crescente.  
   
- A segunda função de membro se comportará da mesma forma que os primeiros, exceto que a sequência é solicitada por `pred` \-\- `pred``(X, Y)` é false para qualquer elemento que `X` seguir o elemento `Y` na sequência resultante.  Você usará para classificar a sequência em uma ordem que você especifica para uma função ou um delegação de predicado.  
+ A segunda função de membro se comporta como o primeiro, exceto que a sequência é ordenada pela `pred`  --  `pred(X, Y)` é false para qualquer elemento `X` que segue o elemento `Y` na sequência resultante. Você pode usá-lo para classificar a sequência em uma ordem que você especificar uma função de predicado ou delegado.  
   
- Ambas as funções executam um tipo estável \-\- nenhum par de elementos na sequência controlada original é invertido na sequência resultante controlada.  
+ As funções de executam uma classificação estável - nenhum par de elementos na sequência controlada original é revertida na sequência controlada resultante.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_list_sort.cpp   
@@ -81,17 +81,20 @@ int main()
   
 ```  
   
-  **um b c**  
- **b para c**  
- **um b c**   
-## Requisitos  
- cliext \<\/lista de**Cabeçalho:** \>  
+```Output  
+a b c  
+c b a  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)   
- [list::reverse \(STL\/CLR\)](../dotnet/list-reverse-stl-clr.md)   
- [list::splice](../Topic/list::splice%20\(STL-CLR\).md)   
- [list::unique](../dotnet/list-unique-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)   
+ [List:: reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)   
+ [List:: splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)   
+ [list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)

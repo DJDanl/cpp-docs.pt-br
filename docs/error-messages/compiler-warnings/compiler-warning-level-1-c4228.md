@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4228 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4228 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4228
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4228
+f1_keywords: C4228
+dev_langs: C++
+helpviewer_keywords: C4228
 ms.assetid: 9301d660-d601-464e-83f5-7ed844a3c6dc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8e64b3cc33f5f6a879a7a97fcd53561e3ad6a70d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e924a89b6da03f9ae14baabb222a7baa87dd120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4228"></a>Compilador C4228 de aviso (nível 1)
-extensão não padrão usada : qualificadores após vírgula em lista de declaradores são ignorados  
+extensão não padrão usada: qualificadores após a vírgula na lista de declaradores são ignorados  
   
- Uso de qualificadores como **const** ou `volatile` depois de uma vírgula ao declarar variáveis é uma extensão da Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
+ Como o uso de qualificadores **const** ou `volatile` depois de uma vírgula ao declarar variáveis é uma extensão da Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
   
 ## <a name="example"></a>Exemplo  
   

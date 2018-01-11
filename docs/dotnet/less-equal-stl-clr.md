@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec26c1a09c39c9f7a06b70252b122eb7ff56f2b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f0ecc202e1a83f0f32b0febef488bb1979cccb86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lessequal-stlclr"></a>less_equal (STL/CLR)
 A classe de modelo descreve um functor que, quando chamado, retorna true somente se o primeiro argumento é menor ou igual à segunda. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.  

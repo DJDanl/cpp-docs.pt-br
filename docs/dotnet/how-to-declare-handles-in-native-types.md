@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7507a0c941fa651f55fdf462b9d832cfd929632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Como declarar identificadores em tipos nativos
 Você não pode declarar um tipo de identificador em um tipo nativo. vcclr.h fornece o modelo de wrapper de tipo seguro `gcroot` para se referir a um objeto CLR do heap C++. Este modelo permite que você inserir um identificador virtual em um tipo nativo e tratá-lo como se fosse o tipo subjacente. Na maioria dos casos, você pode usar o `gcroot` objeto como o tipo incorporado sem qualquer conversão. No entanto, com [para cada um, no](../dotnet/for-each-in.md), você deve usar `static_cast` para recuperar a referência gerenciada subjacente.  

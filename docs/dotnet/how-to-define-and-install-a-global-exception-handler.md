@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 970ecd355b42c83102c034c4639f152b1971dae6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1d9b1125fc54ecbd75fc49b36498a99f5e86f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Como definir e instalar um identificador de exceção global
 O exemplo de código a seguir demonstra como sem tratamento de exceções podem ser capturados. O formulário de exemplo contém um botão que, quando pressionadas, executa uma referência nula, fazendo com que uma exceção seja lançada. Essa funcionalidade representa uma falha de código típico. A exceção resultante é capturada pelo manipulador de exceção de todo o aplicativo instalado, a função principal.  

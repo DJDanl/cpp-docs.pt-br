@@ -1,42 +1,42 @@
 ---
-title: "hash_multimap::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "limpar membro [STL/CLR]"
+title: 'hash_multimap:: Clear (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 8ad99f08-93b3-42b7-be07-f9a8ec556554
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 581579af2aae110bcf36166c58d671b1a27dfd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapclear-stlclr"></a>hash_multimap::clear (STL/CLR)
 Remove todos os elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void clear();  
 ```  
   
-## Comentários  
- A função de membro chama efetivamente [hash\_multimap::erase](../dotnet/hash-multimap-erase-stl-clr.md)`(` [hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`.  Use\-a para garantir que a sequência controlada está vazia.  
+## <a name="remarks"></a>Comentários  
+ A função de membro efetivamente chama [hash_multimap:: Erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap:: Begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap:: end (STL/CLR) ](../dotnet/hash-multimap-end-stl-clr.md)`())`. Você pode usá-lo para garantir que a sequência controlada está vazia.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multimap_clear.cpp   
@@ -74,15 +74,18 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**size\(\) \= 0**  
- **um \[1\] \[b 2\]**  
-**size\(\) \= 0**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::erase](../dotnet/hash-multimap-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)

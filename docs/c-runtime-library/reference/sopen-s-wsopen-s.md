@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - wsopen_s
 - _wsopen_s
 - sopen_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sopen_s function
 - _wsopen_s function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 19c59eafafa9be23a9c9bc2705e93db23ba7bc7d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 403fc7f285aeebf5fc7b6d4ebb39d1e922d8edc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 Abre um arquivo para compartilhamento. Estas versões de [_sopen e _wsopen](../../c-runtime-library/reference/sopen-wsopen.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -110,7 +94,7 @@ errno_t _wsopen_s(
  O caminho determinado é um diretório ou o arquivo é somente leitura, mas foi realizada uma tentativa de operação de abertura para gravação.  
   
  `EEXIST`  
-Sinalizadores  `_O_CREAT` e `_O_EXCL` foram especificados, mas `filename` já existe.  
+ Sinalizadores `_O_CREAT` e `_O_EXCL` foram especificados, mas `filename` já existe.  
   
  `EINVAL`  
  Argumento `oflag`, `shflag` ou `pmode` inválido, ou `pfh` ou `filename` é um ponteiro nulo.  

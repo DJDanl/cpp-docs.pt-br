@@ -1,49 +1,31 @@
 ---
-title: Ferramentas de vinculador LNK1313 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1313 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1313
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1313
+f1_keywords: LNK1313
+dev_langs: C++
+helpviewer_keywords: LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2ded29d6ce466200e9ae86522920e4a0013bc532
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a9030921178fc23c225a775359724cf5c932d95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1313"></a>Erro das Ferramentas de Vinculador LNK1313
 módulo ijw/native detectado; não é possível vincular com módulos puros  
   
- A versão atual do Visual C++ não oferece suporte à vinculação de arquivos. obj gerenciado/nativo de mistos ou nativos com arquivos. obj compilados com **/clr: puro**.  
+ A versão atual do Visual C++ não suporta a vinculação de arquivos. obj de código gerenciado/nativo misto ou nativo com arquivos. obj compilados com **/clr: pure**.  
   
 ## <a name="example"></a>Exemplo  
   

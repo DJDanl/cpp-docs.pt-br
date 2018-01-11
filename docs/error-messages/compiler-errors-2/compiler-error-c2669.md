@@ -1,47 +1,29 @@
 ---
-title: C2669 de erro do compilador | Documentos do Microsoft
+title: C2669 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2669
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2669
+f1_keywords: C2669
+dev_langs: C++
+helpviewer_keywords: C2669
 ms.assetid: f9cb8111-bcdc-484b-a863-2c42e15a0496
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 78a55159984f995724b04a49387b6b46fba7caf2
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 98413ed9ccd216c2fef9687f248d9e759b283f2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2669"></a>C2669 de erro do compilador
-função membro não permitida em union anônima  
+função de membro não permitida em union anônima  
   
 [Uniões anônimas](../../cpp/unions.md#anonymous_unions) não pode ter funções de membro.  
   

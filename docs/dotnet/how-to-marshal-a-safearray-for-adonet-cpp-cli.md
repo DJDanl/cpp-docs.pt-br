@@ -1,37 +1,39 @@
 ---
-title: "Como realizar marshaling de um SAFEARRAY para ADO.NET (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET [C++], realizando marshaling em tipos SAFEARRAY"
-  - "SAFEARRAY, marshaling"
+title: 'Como: marshaling de um SAFEARRAY para ADO.NET (C++ /CLI CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- SAFEARRAY, marshaling
+- ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: 1034b9d7-ecf1-40f7-a9ee-53180e87a58c
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 397312a5cc8ef4869f5ce8576e5787e141c1a414
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como realizar marshaling de um SAFEARRAY para ADO.NET (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Demonstra como adicionar `SAFEARRAY` nativo para um base de dados e como o marshaling uma matriz gerenciado de um base de dados a `SAFEARRAY`nativo.  
+# <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>Como realizar marshaling de um SAFEARRAY para ADO.NET (C++/CLI)
+Demonstra como adicionar um nativo `SAFEARRAY` para um banco de dados e como realizar marshaling de uma matriz gerenciada de um banco de dados para um nativo `SAFEARRAY`.  
   
-## Exemplo  
- Neste exemplo, a classe DatabaseClass é criada para interagir com um objeto do ADO.NET <xref:System.Data.DataTable> .  Observe que essa classe é um `class` C\+\+ nativo \(em relação a `ref class` ou a `value class`\).  Isso é necessário porque nós desejamos para usar essa classe de código nativo, e você não pode usar gerenciado em código nativo.  Esta classe será criada para atingir CLR, como é indicado por `#pragma managed` diretivo precedendo a declaração da classe.  Para obter mais informações sobre essa política, consulte [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md).  
+## <a name="example"></a>Exemplo  
+ Neste exemplo, a classe DatabaseClass é criada para interagir com um ADO.NET <xref:System.Data.DataTable> objeto. Observe que essa classe é um C++ nativo `class` (em comparação com um `ref class` ou `value class`). Isso é necessário porque queremos usar essa classe de código nativo, e você não pode usar os tipos gerenciados em código nativo. Essa classe será compilada para direcionar o CLR, conforme indicado pelo `#pragma managed` diretiva antes da declaração de classe. Para obter mais informações sobre essa diretiva, consulte [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md).  
   
- Observe o membro particular da classe de DatabaseClass: `gcroot<DataTable ^> table`.  Como os tipos nativos não podem conter tipos gerenciados, a palavra\-chave de `gcroot` é necessário.  Para obter mais informações sobre `gcroot`, consulte: [Como declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Observe o membro privado da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
   
- O restante do código neste exemplo é código C\+\+ nativo, como é indicado por `#pragma unmanaged``main`acima diretivo.  Neste exemplo, estamos criando uma nova instância de DatabaseClass e estamos chamar os métodos para criar uma tabela e popular algumas linhas na tabela.  Observe que os tipos de `SAFEARRAY` nativos estão sendo passados como valores para a coluna ArrayIntsCol da base de dados.  Dentro de DatabaseClass, esses tipos de `SAFEARRAY` marshaling para objetos gerenciados usando a funcionalidade marshaling localizada no namespace de <xref:System.Runtime.InteropServices?displayProperty=fullName> .  Especificamente, o método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> é usado ao marshaling `SAFEARRAY` a uma matriz de inteiros gerenciado, e o método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> é usado ao marshaling uma matriz de inteiros gerenciado a `SAFEARRAY`.  
+ O restante do código neste exemplo é o código C++ nativo, conforme indicado pelo `#pragma unmanaged` diretiva anterior `main`. Neste exemplo, estamos criando uma nova instância de DatabaseClass e chamar seus métodos para criar uma tabela e preencher linhas na tabela. Observe que nativo `SAFEARRAY` tipos estão sendo passados como valores para a coluna de banco de dados ArrayIntsCol. Dentro de DatabaseClass, essas `SAFEARRAY` tipos são empacotados para objetos gerenciados, usando a funcionalidade de marshaling encontrada no <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Especificamente, o método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> é usado para empacotar um `SAFEARRAY` para uma matriz gerenciada de inteiros e o método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> é usado para realizar marshaling de uma matriz gerenciada de inteiros em uma `SAFEARRAY`.  
   
 ```  
 // adonet_marshal_safearray.cpp  
@@ -162,21 +164,24 @@ int main()
 }  
 ```  
   
-  **0 1 2 3 4 5 6 7 8 9**    
-## Compilando o código  
+```Output  
+0 1 2 3 4 5 6 7 8 9   
+```  
   
--   Para compilar o código de linha de comando, salve o exemplo de código em um arquivo chamado adonet\_marshal\_safearray.cpp e digite a seguinte instrução:  
+## <a name="compiling-the-code"></a>Compilando o código  
+  
+-   Para compilar o código da linha de comando, salve o exemplo de código em um arquivo chamado adonet_marshal_safearray.cpp e digite a seguinte instrução:  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp  
     ```  
   
-## Segurança do .NET Framework  
- Para obter informações sobre problemas de segurança que envolvem o ADO.NET, consulte [Protegendo aplicativos ADO.NET](../Topic/Securing%20ADO.NET%20Applications.md).  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Para obter informações sobre problemas de segurança que envolvem ADO.NET, consulte [Protegendo aplicativos ADO.NET](/dotnet/framework/data/adonet/securing-ado-net-applications).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.InteropServices>   
- [Acesso a dados](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](http://msdn.microsoft.com/pt-br/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
- [Nativo e interoperabilidade .NET](../Topic/Native%20and%20.NET%20Interoperability.md)
+ [Acesso a dados usando ADO.NET (C++ /CLI CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [Interoperabilidade](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [Interoperabilidade entre .NET e nativo](../dotnet/native-and-dotnet-interoperability.md)

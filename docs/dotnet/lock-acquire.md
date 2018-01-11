@@ -1,37 +1,38 @@
 ---
-title: "lock::acquire | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::acquire"
-  - "acquire"
-  - "msclr.lock.acquire"
-  - "msclr::lock::acquire"
-  - "lock.acquire"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método acquire"
+title: Lock::acquire | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::acquire
+- acquire
+- msclr.lock.acquire
+- msclr::lock::acquire
+- lock.acquire
+dev_langs: C++
+helpviewer_keywords: acquire method
 ms.assetid: c214274e-7519-4739-82aa-91b04a32d3f9
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 622d308b04edc1793da792c6f371753b80c37680
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# lock::acquire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adquire um bloqueio em um objeto, opcionalmente esperando para adquirir para sempre o bloqueio, para uma quantidade especificada de tempo, ou não.  
+# <a name="lockacquire"></a>lock::acquire
+Adquire um bloqueio em um objeto, opcionalmente, esperando para adquirir o bloqueio para sempre, por um certo período de tempo ou não.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void acquire();  
@@ -43,20 +44,20 @@ void acquire(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `_timeout`  
- Valor de tempo limite em milissegundos ou como <xref:System.TimeSpan>.  
+ Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.  
   
-## Exceções  
- Gerencie <xref:System.ApplicationException> se a aquisição do bloqueio não ocorre antes do tempo limite.  
+## <a name="exceptions"></a>Exceções  
+ Gera <xref:System.ApplicationException> se aquisição de bloqueio não ocorrerá antes do tempo limite.  
   
-## Comentários  
- Se o valor de tempo limite não for fornecido, o tempo limite padrão é <xref:System.Threading.Timeout.Infinite>.  
+## <a name="remarks"></a>Comentários  
+ Se não for fornecido um valor de tempo limite, o tempo limite padrão é <xref:System.Threading.Timeout.Infinite>.  
   
- Se um bloqueio já tiver sido adquirido, essa função não fará nada.  
+ Se já tiver sido adquirido um bloqueio, essa função não faz nada.  
   
-## Exemplo  
- Este exemplo usa uma única instância de uma classe em vários threads.  A classe usar um bloqueio em para assegurar que acessa a seus dados internos são consistentes para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe para verificar periodicamente se algum thread de trabalho ainda existe, e para sair de espera até que todos os threads de trabalho foi concluído suas tarefas.  
+## <a name="example"></a>Exemplo  
+ Este exemplo usa uma única instância de uma classe em vários threads.  A classe usa um bloqueio em si mesmo para garantir que acessa a seus dados internos é consistente para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe Verifique periodicamente para ver se qualquer threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
   
 ```  
 // msl_lock_acquire.cpp  
@@ -130,22 +131,25 @@ int main() {
 }  
 ```  
   
-  **O thread 3, o contador \= 0**  
-**O thread 3, o contador \= 10**  
-**O thread 5, o contador \= 0**  
-**O thread 5, o contador \= 10**  
-**O thread 7, o contador \= 0**  
-**O thread 7, o contador \= 10**  
-**O thread 4, o contador \= 0**  
-**O thread 4, o contador \= 10**  
-**O thread 6, o contador \= 0**  
-**O thread 6, o contador \= 10**  
-**Todos os threads concluídos.**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\lock.h >  
   
-## Consulte também  
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
  [Membros de bloqueio](../dotnet/lock-members.md)   
- [lock::try\_acquire](../Topic/lock::try_acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

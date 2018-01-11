@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 623fe260a1fc51e9812e3f05031e171668f9c136
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e56df3ec4604a02ba9cf1075152a11eefe7e28f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdataexchange-class"></a>Classe CDataExchange
 Dá suporte a troca de dados de caixa de diálogo (DDX) e as rotinas de validação (DDV) de dados de caixa de diálogo usadas pelo Microsoft Foundation classes.  
@@ -48,7 +49,7 @@ class CDataExchange
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

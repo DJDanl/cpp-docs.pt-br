@@ -1,43 +1,43 @@
 ---
-title: "3.1.9 omp_set_nested Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.9 função omp_set_nested | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4afc3aa-bb96-4314-9849-fd5df5f437d9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0910e7df0ebd423b9967fd0eb7931b7434ba94fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1.9 omp_set_nested Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O  **omp\_set\_nested** função ativa ou desativa o paralelismo aninhado.  O formato é o seguinte:  
+# <a name="319-ompsetnested-function"></a>3.1.9 função omp_set_nested
+O **omp_set_nested** função habilita ou desabilita o paralelismo aninhado. O formato é o seguinte:  
   
 ```  
 #include <omp.h>  
 void omp_set_nested(int nested);  
 ```  
   
- Se  *aninhadas* for avaliada como 0, aninhados paralelismo estiver desativado, o que é o padrão e regiões paralelas aninhados são serializados e executados pelo thread atual.  Se  *aninhados* for avaliada como um valor diferente de zero, paralelismo aninhado está ativado e regiões paralelas que estão aninhados podem implantar threads adicionais Times aninhados.  
+ Se *aninhada* é avaliada como 0, aninhados paralelismo estiver desabilitado, o que é o padrão e regiões paralelas aninhados são serializadas e executadas pelo thread atual. Se *aninhada* é avaliada como um valor diferente de zero, paralelismo aninhado está habilitado e regiões paralelas aninhados podem implantar threads adicionais para formar equipes aninhadas.  
   
- Esta função tem os efeitos descritos acima, quando chamado a partir de uma parte do programa em que o  **omp\_in\_parallel** função retorna zero.  Se ela é chamada a partir de uma parte do programa em que o  **omp\_in\_parallel** função retorna um valor diferente de zero, o comportamento desta função é indefinido.  
+ Essa função tem os efeitos descritos acima, quando chamado a partir de uma parte do programa de onde o **omp_in_parallel** função retornará zero. Se ele é chamado de uma parte do programa de onde o **omp_in_parallel** função retorna um valor diferente de zero, o comportamento dessa função é indefinido.  
   
- Essa chamada tem precedência sobre o  **OMP\_NESTED** variável de ambiente.  
+ Essa chamada tem precedência sobre o **OMP_NESTED** variável de ambiente.  
   
- Quando o paralelismo aninhado é ativado, o número de segmentos usados para executar a regiões paralelas aninhados é definidos na implementação.  Como resultado, compatível com OpenMP implementações podem serializar aninhados regiões paralelas, mesmo quando o paralelismo aninhado está ativado.  
+ Quando o paralelismo aninhado estiver habilitado, o número de threads usados para executar regiões paralelas aninhadas é definido pela implementação. Como resultado, implementações OpenMP compatíveis são permitidas para serializar aninhadas regiões paralelas mesmo quando o paralelismo aninhado está habilitado.  
   
-## Entre as referências:  
+## <a name="cross-references"></a>Entre referências:  
   
--   **OMP\_NESTED** consulte variável, do ambiente  [seção 4.4](../Topic/4.4%20OMP_NESTED.md) na página 49.  
+-   **OMP_NESTED** consulte de variável de ambiente [seção 4.4](../../parallel/openmp/4-4-omp-nested.md) na página 49.  
   
--   **omp\_in\_parallel** funcionam, consulte  [seção 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) na página 38.
+-   **omp_in_parallel** funcionam, consulte [seção 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) na página 38.

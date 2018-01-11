@@ -1,48 +1,29 @@
 ---
-title: "Compilador aviso (nível 4) C4816 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4816 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4816
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4816
+f1_keywords: C4816
+dev_langs: C++
+helpviewer_keywords: C4816
 ms.assetid: 60f730ae-d942-4db9-ab97-41d4a874d8da
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 536525ab3b15a1fc588313e7cdc5487465ee9c7f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8002b165d80763c00fe7fa7d2b3c44cddbd2e199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4816"></a>Compilador C4816 de aviso (nível 4)
-'param': o parâmetro tem uma matriz de tamanho zero que será truncada (a menos que o objeto é passado por referência)  
+'param': parâmetro possui uma matriz de tamanho zero que será truncada (a menos que o objeto é passado por referência)  
   
  Um parâmetro para um objeto com uma matriz de tamanho zero não foi passado por referência. A matriz não será copiada quando o objeto é passado.  
   

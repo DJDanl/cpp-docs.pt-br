@@ -1,48 +1,29 @@
 ---
-title: "Compilador aviso (nível 3) C4638 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4638 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4638
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4638
+f1_keywords: C4638
+dev_langs: C++
+helpviewer_keywords: C4638
 ms.assetid: 2c07923a-e103-4e40-bd11-fdfed428a5ec
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fe7277c93e15094a4b7efb15e578f58494c1611f
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b141f0103fc9a7318c4616459e998740bedbe482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4638"></a>Compilador C4638 de aviso (nível 3)
-Destino de comentário de documento XML: referência símbolo desconhecido 'symbol'  
+Destino de comentário de documento XML: referência a símbolo desconhecido 'symbol'  
   
  O compilador não pôde resolver um símbolo (***símbolo***). O símbolo deve ser válido na compilação.  
   

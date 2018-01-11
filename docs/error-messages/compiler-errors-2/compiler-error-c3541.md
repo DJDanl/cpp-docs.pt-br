@@ -1,49 +1,31 @@
 ---
-title: C3541 de erro do compilador | Documentos do Microsoft
+title: C3541 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3541
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3541
+f1_keywords: C3541
+dev_langs: C++
+helpviewer_keywords: C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a6f031b6038960058af0f688f464adcc07bb0b71
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eeef2650dd772784ceee5e7802a46650e4cfcbe1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3541"></a>C3541 de erro do compilador
 'type': typeid não pode ser aplicado a um tipo que contém 'auto'  
   
- O [typeid](../../windows/typeid-cpp-component-extensions.md) operador não pode ser aplicado para o tipo indicado porque ela contém o `auto` especificador.  
+ O [typeid](../../windows/typeid-cpp-component-extensions.md) operador não pode ser aplicado para o tipo indicado porque ele contém o `auto` especificador.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir produz C3541.  
