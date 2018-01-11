@@ -243,7 +243,6 @@
 ## [Macros de classe de janela](window-class-macros.md)
 ## [Macros de mensagens do Windows](windows-messages-macros.md)
 # [Variáveis globais da ATL](atl-global-variables.md)
-## [_pAtlModule](patlmodule.md)
 # [Assistentes e caixas de diálogo do ATL](atl-wizards-and-dialog-boxes.md)
 ## [Configurações do aplicativo, Assistente de projeto da ATL](application-settings-atl-project-wizard.md)
 ## [Assistente do componente Active Server Page da ATL, ASP](asp-atl-active-server-page-component-wizard.md)
