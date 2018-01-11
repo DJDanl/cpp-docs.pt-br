@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _setmaxstdio
+apiname: _setmaxstdio
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,24 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - maximum open files
 - _setmaxstdio function
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d0f1d6153b918476e6f643f26fd913f6e601b75b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 3c18b478c83c57a8a3bfd8238b367dbe4846d025
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 Define o máximo para o número de arquivos abertos simultaneamente no nível `stdio`.  

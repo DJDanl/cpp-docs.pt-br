@@ -40,11 +40,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d391e24a5b14bd015b43f88b2a687011d84d35fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b714d1643ae929245f93f770fe67a87b0c75b54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 Obtém um valor do ambiente atual. Estas versões de [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -143,7 +144,7 @@ errno_t _wgetenv_s(
 |`getenv_s`|\<stdlib.h>|  
 |`_wgetenv_s`|\<stdlib.h> ou \<wchar.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   
