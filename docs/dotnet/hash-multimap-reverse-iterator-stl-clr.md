@@ -1,42 +1,42 @@
 ---
-title: "hash_multimap::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro reverse_iterator [STL/CLR]"
+title: 'hash_multimap:: reverse_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 000d3250-befa-4604-b042-11424cb179dc
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e54d43934eb23591820782d8eadde6f70bb56760
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de um iterador de cima para baixo para a sequência controlada.  
+# <a name="hashmultimapreverseiterator-stlclr"></a>hash_multimap::reverse_iterator (STL/CLR)
+O tipo de um iterador inverso para a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Comentários  
- O tipo descreve um objeto do tipo não for especificado `T3` que pode servir como um iterador de cima para baixo para a sequência controlada.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um objeto do tipo especificado `T3` que pode servir como um iterador inverso para sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multimap_reverse_iterator.cpp   
@@ -61,14 +61,17 @@ int main()
   
 ```  
   
-  **c \[3\] \[2\] \[bum 1\]**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::const\_iterator](../dotnet/hash-multimap-const-iterator-stl-clr.md)   
- [hash\_multimap::const\_reverse\_iterator](../Topic/hash_multimap::const_reverse_iterator%20\(STL-CLR\).md)   
- [hash\_multimap::iterator](../dotnet/hash-multimap-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: const_iterator (STL/CLR)](../dotnet/hash-multimap-const-iterator-stl-clr.md)   
+ [hash_multimap:: const_reverse_iterator (STL/CLR)](../dotnet/hash-multimap-const-reverse-iterator-stl-clr.md)   
+ [hash_multimap::iterator (STL/CLR)](../dotnet/hash-multimap-iterator-stl-clr.md)

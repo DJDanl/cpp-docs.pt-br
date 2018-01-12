@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- function templates overload resolution
+dev_langs: C++
+helpviewer_keywords: function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: f5c4a8e6392bc5b4338738b56099adac268e7af1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 64bc9371fcddad5f76f1474832a8d69188b60583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Resolução de sobrecarga das chamadas de modelo de função
 Um modelo de função pode sobrecarregar funções de fora do modelo com o mesmo nome. Nesse cenário, as chamadas de função são resolvidas primeiro com o uso de dedução de argumentos do modelo para criar uma instância do modelo de função com uma especialização exclusiva. Se a dedução de argumentos do modelo falhar, as outras sobrecargas de função são consideradas resolver a chamada. Essas outras sobrecargas, também conhecidas como conjunto de candidatas, incluem funções fora do modelo e outros modelos de função com instâncias. Se a dedução de argumentos do modelo for bem sucedida, a função gerada será comparada com as outras funções para determinar a melhor correspondência, de acordo com as regras de resolução de sobrecarga. Para obter mais informações, consulte [sobrecarga de função](function-overloading.md).  
@@ -97,4 +94,3 @@ void f(T1, T2)
  [Resolução de nome](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
  
-

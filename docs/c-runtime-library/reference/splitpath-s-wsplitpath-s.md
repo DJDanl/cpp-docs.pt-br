@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6cfb2d72b728b64aeb00c3b8437f9c47e02fb813
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 Divide um nome de caminho em componentes. Estas são versões de [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -160,7 +144,7 @@ errno_t _wsplitpath_s(
  Se qualquer um dos buffers é curto demais para conter o resultado, essas funções limpam todos os buffers para cadeias de caracteres vazias, definem `errno` como `ERANGE` e retornam `ERANGE`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_splitpath_s` divide um caminho em seus quatro componentes. `_splitpath_s` manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte que está sendo usada no momento. `_wsplitpath_s` é uma versão de caractere largo de `_splitpath_s`; os argumentos para `_``wsplitpath_s` são cadeias de caracteres largas. Caso contrário, essas funções se comportam de forma idêntica  
+ A função `_splitpath_s` divide um caminho em seus quatro componentes. `_splitpath_s` manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte que está sendo usada no momento. `_wsplitpath_s` é uma versão de caractere largo de `_splitpath_s`; os argumentos para `_wsplitpath_s` são cadeias de caracteres largas. Caso contrário, essas funções se comportam de forma idêntica  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   

@@ -1,35 +1,36 @@
 ---
-title: "Classe ICommandPropertiesImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandPropertiesImpl"
-  - "ATL.ICommandPropertiesImpl"
-  - "ATL::ICommandPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe ICommandPropertiesImpl"
+title: Classe ICommandPropertiesImpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandPropertiesImpl
+- ATL.ICommandPropertiesImpl
+- ATL::ICommandPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: ICommandPropertiesImpl class
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5878e7fa6345e294025b45474b1b384d01283c49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe ICommandPropertiesImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornece uma implementação da interface de [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) .  
+# <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
+Fornece uma implementação de [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) interface.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <class T, class PropClass = T>  
@@ -37,28 +38,28 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- A sua classe derivada, de  
+ Sua classe derivada de  
   
  `PropClass`  
  A classe de propriedades.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos da interface  
+### <a name="interface-methods"></a>Métodos de interface  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|Retorna a lista de propriedades do grupo de propriedades de conjunto de linhas que são solicitadas atualmente para o conjunto de linhas.|  
-|[SetProperties](../Topic/ICommandPropertiesImpl::SetProperties.md)|Define propriedades no grupo de propriedades do conjunto de linhas.|  
+|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|Retorna a lista de propriedades no grupo de propriedades do conjunto de linhas que atualmente são solicitadas para o conjunto de linhas.|  
+|[SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)|Define as propriedades do grupo de propriedade do conjunto de linhas.|  
   
-## Comentários  
- Isso é obrigatório em comandos.  A implementação é fornecida por uma função estática definida pela macro de [BEGIN\_PROPSET\_MAP](../Topic/BEGIN_PROPSET_MAP.md) .  
+## <a name="remarks"></a>Comentários  
+ Isso é obrigatório em comandos. A implementação é fornecida por uma função estática definida pelo [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

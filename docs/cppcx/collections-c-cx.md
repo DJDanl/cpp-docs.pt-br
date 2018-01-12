@@ -12,11 +12,12 @@ caps.latest.revision: "35"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c8496e0128d3ebd88c5a3a2fafad593c135f6fbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections-ccx"></a>Coleções (C++/CX)
 Em C + + programa CX, você pode usar livremente de contêineres de modelo STL (biblioteca padrão), ou qualquer outro tipo de coleção definida pelo usuário. No entanto, quando você passa coleções de e para trás pela interface de binária de aplicativo do Windows Runtime (ABI) — por exemplo, para um controle XAML ou a um cliente JavaScript — deve usar tipos de coleção de tempo de execução do Windows.  

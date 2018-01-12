@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08f597a160b3447743646c4cccfc2e05485a47b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Como criar e usar instâncias unique_ptr
 Um [unique_ptr](../standard-library/unique-ptr-class.md) não compartilha o ponteiro. Ele não pode ser copiado para outro `unique_ptr`, passado por valor para uma função ou usado em qualquer algoritmo de biblioteca padrão C++ que requer cópias a serem feitas. Um `unique_ptr` só pode ser movido. Isso significa que a propriedade do recurso de memória é transferida para outro `unique_ptr` e que o `unique_ptr` original não a possui mais. É recomendável que você restrinja um objeto a um proprietário, porque a propriedade múltipla adiciona complexidade à lógica do programa. Portanto, quando você precisar de um ponteiro inteligente para um objeto C++ simples, usar `unique_ptr`, e quando você cria um `unique_ptr`, use o [make_unique](../standard-library/memory-functions.md#make_unique) função auxiliar.  

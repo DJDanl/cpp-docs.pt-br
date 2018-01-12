@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a8ee337c6e647f88fc4ef8730f100681c37a170
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hospedando um controle de usuário dos Windows Forms como uma exibição MFC
 MFC usa a classe CWinFormsView para hospedar um controle de usuário do Windows Forms em uma exibição MFC. Modos de exibição de formulários do Windows MFC são controles ActiveX. O controle de usuário é hospedado como um filho do modo nativo e ocupa toda a área cliente do modo nativo.  

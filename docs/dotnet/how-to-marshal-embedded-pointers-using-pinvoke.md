@@ -19,11 +19,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8f6716a11919c300dc3153ca678767503a35088
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8ae331bb6bb6b35fc4353ad08240fd3d23136a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Como realizar marshaling de ponteiros inseridos usando PInvoke
 Funções que são implementadas em DLLs não gerenciados podem ser chamadas de código gerenciado usando a funcionalidade de invocação de plataforma (P/Invoke). Se o código-fonte para a DLL não estiver disponível, o P/Invoke é a única opção para interoperar. No entanto, ao contrário de outras linguagens .NET, o Visual C++ fornece uma alternativa para P/Invoke. Para obter mais informações, consulte [usando Interop C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [como: marshaling incorporado ponteiros usando Interop C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  

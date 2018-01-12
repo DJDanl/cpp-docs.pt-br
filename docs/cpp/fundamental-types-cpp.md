@@ -4,60 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __wchar_t_cpp
-- long_double_cpp
-- unsigned
-- wchar_t_cpp
-- float_cpp
-- wchar_t
-- char
-- char_cpp
-- signed
-- __wchar_t
-- signed_cpp
-- short
-- double_cpp
-- int_cpp
-- long
-- __intn_cpp
-- short_cpp
-- double
-- unsigned_cpp
-- float
-- __intn
-- long_cpp
-- int
-- long_double
-- unsigned_int
-- __int8
-- __int8_cpp
-- __int16
-- __int16_cpp
-- __int32
-- __int32_cpp
-- __int64
-- __int64_cpp
-- __int128
 - __int128_cpp
-dev_langs:
-- C++
+- __wchar_t_cpp
+- char_cpp
+- double_cpp
+- float_cpp
+- int_cpp
+- long_cpp
+- long_double_cpp
+- short_cpp
+- signed_cpp
+- unsigned_cpp
+- unsigned_int_cpp
+- wchar_t_cpp
+dev_langs: C++
 helpviewer_keywords:
 - specifiers [C++], type
 - float keyword [C++]
 - char keyword [C++]
 - __wchar_t keyword [C++]
 - signed types [C++], summary of data types
-- Integer data type, C++ data types
+- Integer data type [C++], C++ data types
 - arithmetic operations [C++], types
 - int data type
 - unsigned types [C++], summary of data types
-- short data type
-- double data type, summary of types
+- short data type [C++]
+- double data type [C++], summary of types
 - long long keyword [C++]
 - long double keyword [C++]
 - unsigned types [C++]
@@ -66,7 +42,7 @@ helpviewer_keywords:
 - storage [C++], basic type
 - integral types, C++
 - wchar_t keyword [C++]
-- floating-point numbers, C++ data types
+- floating-point numbers [C++], C++ data types
 - long keyword [C++]
 - type specifiers [C++]
 - integral types
@@ -74,31 +50,16 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 595c2d84ad18cae0c15ddba36388f66f10fecd49
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamental-types--c"></a>Tipos fundamentais (C++)
 Tipos fundamentais em C++ são divididos em três categorias: integral, ponto, flutuante e void. Os tipos integrais são capazes de manipular números inteiros. Tipos de ponto flutuante são capazes de especificar os valores que podem ter partes fracionários.  
@@ -123,7 +84,7 @@ Tipos fundamentais em C++ são divididos em três categorias: integral, ponto, f
 ||`int`|Tipo `int` é um tipo integral que seja maior ou igual ao tamanho do tipo `short` `int`e menor que ou igual ao tamanho do tipo `long`.<br /><br /> Objetos do tipo `int` podem ser declarados como `signed` `int` ou `unsigned` `int`. `Signed``int` é um sinônimo para `int`.|  
 ||`__int8`, `__int16`, `__int32`, `__int64`|Inteiros dimensionados `__int n`, onde `n` é o tamanho, em bits, da variável de inteiro. `__int8`, `__int16`, `__int32` e `__int64` são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. `(__int128`Não há suporte.)|  
 ||`long`|Tipo `long` (ou `long` `int`) é um tipo integral que seja maior ou igual ao tamanho do tipo `int`.<br /><br /> Objetos do tipo `long` podem ser declarados como `signed` `long` ou `unsigned` `long`. `Signed``long` é um sinônimo para `long`.|  
-||`long` `long`|Maior do que sem um sinal `long`.<br /><br /> Objetos do tipo `long long` podem ser declarados como `signed` `long long` ou `unsigned` `long long`. `Signed``long long` é um sinônimo para `long long`.|  
+||`long` `long`|Maior do que sem um sinal `long`.<br /><br /> Objetos do tipo `long long` podem ser declarados como `signed` `long long` ou `unsigned` `long long`. `signed``long long` é um sinônimo para `long long`.|  
 ||`wchar_t`, `__wchar_t`|Uma variável do tipo `wchar_t` designa um tipo de caracteres multibyte ou de caractere largo. Por padrão, `wchar_t` é um tipo nativo, mas você pode usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) fazer `wchar_t` um typedef para `unsigned short`. O `__wchar_t` tipo é um sinônimo específicas da Microsoft para o nativo `wchar_t` tipo.<br /><br /> Use o prefixo L antes de um caractere ou uma cadeia de caracteres literal para designar o tipo de caractere largo.|  
 |Ponto flutuante|`float`|Tipo `float` é flutuante menor tipo de ponto.|  
 ||`double`|Tipo `double` é um tipo de ponto que é maior que ou igual ao tipo flutuante `float`, mas menor que ou igual ao tamanho do tipo `long` `double`.<br /><br /> Específico da Microsoft: A representação de `long double` e `double` é idêntica. No entanto, `long double` e `double` são tipos separados.|  

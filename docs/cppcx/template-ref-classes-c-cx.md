@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 91e039f3154d7b459e3bde9804604218b5ce1c4d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b8bb720ef9275f9023cf15986f011573f4c510b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="template-ref-classes-ccx"></a>Classes de referência de modelo (C++/CX)
 Os modelos do C++ não são publicados em metadados e, portanto, não podem ter acessibilidade pública ou protegida no seu programa. Naturalmente, você pode usar modelos padrão do C++ internamente em seu programa. Além disso, você pode definir uma classe ref privada como um modelo e pode declarar explicitamente uma classe ref de modelo especializado como um membro privado em uma classe ref pública.  

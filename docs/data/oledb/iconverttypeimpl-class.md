@@ -1,37 +1,38 @@
 ---
-title: "Classe IConvertTypeImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IConvertTypeImpl<T>"
-  - "IConvertTypeImpl"
-  - "ATL.IConvertTypeImpl"
-  - "ATL::IConvertTypeImpl"
-  - "ATL::IConvertTypeImpl<T>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe IConvertTypeImpl"
+title: Classe IConvertTypeImpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IConvertTypeImpl<T>
+- IConvertTypeImpl
+- ATL.IConvertTypeImpl
+- ATL::IConvertTypeImpl
+- ATL::IConvertTypeImpl<T>
+dev_langs: C++
+helpviewer_keywords: IConvertTypeImpl class
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: efd09f1cc89f640ad1886057de4df25e3ce67b5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe IConvertTypeImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornece uma implementação da interface de [IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx) .  
+# <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
+Fornece uma implementação de [IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx) interface.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <class T>  
@@ -39,24 +40,24 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- A sua classe derivada, de `IConvertTypeImpl`.  
+ A classe derivada de `IConvertTypeImpl`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos da interface  
+### <a name="interface-methods"></a>Métodos de interface  
   
 |||  
 |-|-|  
-|[CanConvert](../../data/oledb/iconverttypeimpl-canconvert.md)|Fornece informações sobre a disponibilidade conversões de tipo em um comando ou em um conjunto de linhas.|  
+|[CanConvert](../../data/oledb/iconverttypeimpl-canconvert.md)|Fornece informações sobre a disponibilidade de conversões de tipo em um comando ou em um conjunto de linhas.|  
   
-## Comentários  
- Esta interface é obrigatória em comandos, em conjuntos de linhas, e em conjuntos de linhas do índice.  **IConvertTypeImpl** implementa a interface delegando a conversão o objeto fornecido pelo OLE DB.  
+## <a name="remarks"></a>Comentários  
+ Esta interface é obrigatório em comandos, conjuntos de linhas e conjuntos de linhas do índice. **IConvertTypeImpl** implementa a interface delegando para o objeto de conversão fornecido pelo OLE DB.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
- [Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Consulte também  
+ [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

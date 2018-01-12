@@ -1,36 +1,37 @@
 ---
-title: "CSession::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CSession::Open"
-  - "CSession::Open"
-  - "CSession.Open"
-  - "ATL.CSession.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Open"
+title: 'Csession:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CSession::Open
+- CSession::Open
+- CSession.Open
+- ATL.CSession.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: c2050c2c-9817-4857-be49-189f346968f6
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3aa0f6b694bc594ec00511ce39b7887bf26ecae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CSession::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="csessionopen"></a>CSession::Open
 Abre uma nova sessão para o objeto de fonte de dados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -41,24 +42,24 @@ Abre uma nova sessão para o objeto de fonte de dados.
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `ds`  
- \[in\] a fonte de dados para que a sessão deve ser aberta.  
+ [in] A fonte de dados para o qual a sessão está para ser aberto.  
   
  *pPropSet*  
- \[in\] o ponteiro da uma matriz de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) a estrutura que contém as propriedades e dos valores a serem definidos.  Consulte [Conjuntos de propriedades e grupos de propriedade](https://msdn.microsoft.com/en-us/library/ms713696.aspx)*na referência do programador do* OLE DB em [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Um ponteiro para uma matriz de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estruturas contendo propriedades e valores a serem definidos. Consulte [conjuntos de propriedades e grupos de propriedade](https://msdn.microsoft.com/en-us/library/ms713696.aspx) no *referência do programador de OLE DB* no SDK do Windows.  
   
  `ulPropSets`  
- \[in\] o número de estruturas de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) transmitido no argumento *de pPropSet* .  
+ [in] O número de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estruturas passado a *pPropSet* argumento.  
   
-## Valor de retorno  
- `HRESULT`padrão.  
+## <a name="return-value"></a>Valor de retorno  
+ Um padrão `HRESULT`.  
   
-## Comentários  
- Você deve abrir o objeto de fonte de dados usando [CDataSource::Open](../../data/oledb/cdatasource-open.md) antes de passá\-lo para `CSession::Open`.  
+## <a name="remarks"></a>Comentários  
+ Você deve abrir o objeto de fonte de dados usando [cdatasource:: Open](../../data/oledb/cdatasource-open.md) antes de passá-lo para `CSession::Open`.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CSession](../../data/oledb/csession-class.md)

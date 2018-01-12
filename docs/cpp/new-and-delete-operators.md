@@ -4,36 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
 C++ dá suporte à alocação dinâmica e a desalocação de objetos usando o [novo](../cpp/new-operator-cpp.md) e [excluir](../cpp/delete-operator-cpp.md) operadores. Esses operadores alocam memória para objetos de um pool chamado de repositório livre. O `new` operador chama a função especial [operador novo](../cpp/new-operator-cpp.md)e o `delete` operador chama a função especial [operador delete](../cpp/delete-operator-cpp.md).  
   
- No Visual C++ .NET 2002, o `new` função na biblioteca padrão C++ dará suporte o comportamento especificado no C++ padrão, que é lançar uma exceção std:: bad_alloc se a alocação de memória falha. Se ainda quiser que a versão de não lançamento do `new`, vincular seu programa com nothrownew.obj. No entanto, quando você vincula com nothrownew.obj, o padrão `operator new` na biblioteca padrão C++ não funciona mais.  
+ O `new` o comportamento especificado no C++ padrão, que é lançar uma exceção std:: bad_alloc se a alocação de memória não oferece suporte a função na biblioteca padrão C++. Se ainda quiser que a versão de não lançamento do `new`, vincular seu programa com nothrownew.obj. No entanto, quando você vincula com nothrownew.obj, o padrão `operator new` na biblioteca padrão C++ não funciona mais.  
   
  Para obter uma lista dos arquivos de biblioteca que compõem a biblioteca de tempo de execução do C e a biblioteca padrão C++, consulte [recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md).  
   
@@ -58,7 +56,7 @@ Os dois escopos para funções `operator new` são descritos na tabela a seguir.
 |**:: operador novo**|Global|  
 |*nome da classe* **:: operador novo**|Classe|  
   
- O primeiro argumento para **operador novo** deve ser do tipo **size_t** (um tipo definido em STDDEF. H) e o tipo de retorno é sempre **void \* **.  
+ O primeiro argumento para **operador novo** deve ser do tipo **size_t** (um tipo definido em STDDEF. H) e o tipo de retorno é sempre **void \*** .  
   
  Global **operador novo** função é chamada quando o **novo** operador é usado para alocar objetos dos tipos internos, objetos de tipo de classe que não contêm definidas pelo usuário **novo operador** funções e matrizes de qualquer tipo. Quando o **novo** operador é usado para alocar os objetos de um tipo de classe onde um **operador novo** for definida, essa classe **operador novo** é chamado.  
   
@@ -155,7 +153,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Somente um dos dois formulários de anterior pode estar presente para uma determinada classe. O primeiro formulário aceita um único argumento de tipo **void \* **, que contém um ponteiro para o objeto a ser desalocada. O segundo formulário — tamanho desalocação — leva dois argumentos, o primeiro deles é um ponteiro para o bloco de memória para desalocar e o segundo é o número de bytes a ser desalocada. É o tipo de retorno de ambos os formulários `void` (**operador delete** não pode retornar um valor).  
+ Somente um dos dois formulários de anterior pode estar presente para uma determinada classe. O primeiro formulário aceita um único argumento de tipo **void \*** , que contém um ponteiro para o objeto a ser desalocada. O segundo formulário — tamanho desalocação — leva dois argumentos, o primeiro deles é um ponteiro para o bloco de memória para desalocar e o segundo é o número de bytes a ser desalocada. É o tipo de retorno de ambos os formulários `void` (**operador delete** não pode retornar um valor).  
   
  A intenção do segundo formulário é para acelerar a pesquisa para a categoria de tamanho correto do objeto a ser excluído, que geralmente não é armazenado próximos a alocação em si e provavelmente eliminado do cache; o segundo formulário é particularmente útil quando um **operador delete** função de uma classe base é usada para excluir um objeto de uma classe derivada.  
   
@@ -232,5 +230,4 @@ void f() {
    delete [] pX;  
 }  
 ```  
-
 

@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b10254ca101bcf19aff3c84abac4a122f242eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-file-translation"></a>Visão geral da translação de arquivo
 Os programas C++, como os programas C, consistem em um ou mais arquivos. Cada um desses arquivos é convertido na seguinte ordem conceitual (a ordem real segue a regra “como está”: a conversão deve ocorrer como se estas etapas tivessem sido cumpridas):  

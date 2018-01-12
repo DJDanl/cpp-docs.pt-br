@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-differences"></a>Diferenças de tratamento de exceções
 A principal diferença entre o tratamento de exceções estruturado e o tratamento de exceções de C++ é que o modelo do tratamento de exceções de C++ lida com tipos, enquanto o modelo de tratamento de exceções estruturado do C lida exceções de um tipo — especificamente, `unsigned int`. Ou seja, as exceções de C são identificadas por um valor inteiro sem sinal, enquanto as exceções de C++ são identificadas pelo tipo de dados. Quando uma exceção é gerada em C, cada manipulador possível executa um filtro que examina o contexto da exceção de C e determine se aceitará a exceção, a transmitirá para algum outro manipulador, ou a ignorará. Quando uma exceção é gerada em C++, ela pode ser de qualquer tipo.  

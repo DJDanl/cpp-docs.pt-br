@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c076c62fe47149f1602e8c87881461f32ea642c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5658a2d0fb06f6bb9e9b8f2ab062f621b189cc75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnnameex"></a>COLUMN_NAME_EX
 Representa uma associação no conjunto de linhas para a coluna específica no conjunto de linhas. Semelhante ao [COLUMN_NAME](../../data/oledb/column-name.md), exceto que essa macro também usa o tipo de dados, tamanho, precisão, escala, comprimento de coluna e status da coluna.  

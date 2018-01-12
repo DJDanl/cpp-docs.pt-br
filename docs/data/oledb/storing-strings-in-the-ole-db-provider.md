@@ -1,29 +1,30 @@
 ---
-title: "Armazenando cadeias de caracteres no provedor de banco de dados OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "registros de usuário, edição"
+title: Armazenamento de cadeias de caracteres no provedor OLE DB | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11c058bacee52eb2b1df771a27d8695113f1c71d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Armazenando cadeias de caracteres no provedor de banco de dados OLE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Em MyProviderRS.h, o assistente do provedor OLE DB de ATL cria um registro de usuário padrão chamado `CWindowsFile`.  Para tratar as duas cadeias de caracteres, para alterar `CWindowsFile` ou adicionar seu próprio registro de usuário conforme mostrado no seguinte código:  
+# <a name="storing-strings-in-the-ole-db-provider"></a>Armazenando cadeias de caracteres no provedor de banco de dados OLE
+Em myproviderrs. H, o OLE DB Provider assistente ATL cria um registro de usuário padrão chamado `CWindowsFile`. Para lidar com as duas cadeias de caracteres, modifique `CWindowsFile` ou adicionar seu próprios registro de usuário, conforme mostrado no código a seguir:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -50,11 +51,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Os membros de dados `szCommand` e `szText` representam as duas cadeias de caracteres, com `szCommand2` e `szText2` que fornecem colunas adicionais se necessário.  O membro de dados `dwBookmark` não é necessário para esse provedor somente leitura simples mas é usado posteriormente para adicionar uma interface de `IRowsetLocate` ; consulte [Aprimorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md).  O operador de `==` compara instâncias \(implementar esse operador é opcional\).  
+ Os membros de dados `szCommand` e `szText` representar as duas cadeias de caracteres com `szCommand2` e `szText2` fornecendo colunas adicionais, se necessário. O membro de dados `dwBookmark` não é necessária para este provedor somente leitura simples, mas é usado posteriormente para adicionar um `IRowsetLocate` interface, consulte [melhorando a leitura apenas provedor simples](../../data/oledb/enhancing-the-simple-read-only-provider.md). O `==` operador compara instâncias (implementar esse operador é opcional).  
   
- Quando isso for feito, o provedor deve estar pronto para compilar e executar.  Para testar o provedor, é necessário um consumidor com funcionalidade correspondente.  [Implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md) mostra como criar um consumidor de teste.  Execute o consumidor de teste com o provedor.  Verifique se o consumidor de teste recupera as cadeias de caracteres adequadas do provedor quando você clica no botão de **Executar** na caixa de diálogo de **Test Consumer** .  
+ Quando isso for feito, o provedor deve estar pronto para compilar e executar. Para testar o provedor, você precisa de um consumidor com funcionalidade de correspondência. [Implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md) mostra como criar esse um consumidor de teste. Execute o consumidor de teste com o provedor. Verifique se que o consumidor de teste recupera as cadeias de caracteres corretas do provedor quando você clica o **executar** no botão o **testar consumidor** caixa de diálogo.  
   
- Quando você testar com êxito o provedor, talvez você queira aumentar sua funcionalidade implementando interfaces adicionais.  Um exemplo é mostrado em [Aprimorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+ Quando o provedor foi testada com sucesso, você talvez queira aperfeiçoar sua funcionalidade implementando interfaces adicionais. Um exemplo é mostrado em [melhorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Implementando o provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md)

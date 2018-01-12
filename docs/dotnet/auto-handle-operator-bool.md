@@ -1,49 +1,50 @@
 ---
-title: "Bool auto_handle::operator | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.operator bool"
-  - "msclr.auto_handle.operator bool"
-  - "operator bool"
-  - "msclr::auto_handle::operator bool"
-  - "auto_handle::operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bool auto_handle::operator"
+title: 'bool auto_handle:: | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.operator bool
+- msclr.auto_handle.operator bool
+- operator bool
+- msclr::auto_handle::operator bool
+- auto_handle::operator bool
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator bool
 ms.assetid: 2e535e99-cf87-4008-b588-02c587d77453
-caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4108baa84028c4168d2c08557b9837fa845facb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Bool auto_handle::operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operador para usar `auto_handle` em uma expressão condicional.  
+# <a name="autohandleoperator-bool"></a>Bool auto_handle::operator
+Operador para o uso de `auto_handle` em uma expressão condicional.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 operator bool();  
 ```  
   
-## Valor de retorno  
- `true` se o objeto for válido; ajustado `false` de outra forma.  
+## <a name="return-value"></a>Valor de retorno  
+ `true`Se o objeto encapsulado é válido. `false` caso contrário.  
   
-## Comentários  
- Esse operador é convertido na verdade `_detail_class::_safe_bool` que é mais segura que `bool` porque ela não pode ser convertido em um tipo integral.  
+## <a name="remarks"></a>Comentários  
+ Esse operador realmente converte em `_detail_class::_safe_bool` que é mais seguro que `bool` porque ele não pode ser convertido em um tipo integral.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // msl_auto_handle_operator_bool.cpp  
@@ -66,14 +67,17 @@ int main() {
 }  
 ```  
   
-  **o s1 não é válido**  
-**s2 é válido**  
-**s2 agora é inválido**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ auto\_handle.h\>  
+```Output  
+s1 is invalid  
+s2 is valid  
+s2 is now invalid  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\auto_handle.h >  
   
-## Consulte também  
- [Membros auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator\!](../dotnet/auto-handle-operator-logical-not.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Consulte também  
+ [Membros auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator!](../dotnet/auto-handle-operator-logical-not.md)

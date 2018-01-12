@@ -1,33 +1,33 @@
 ---
-title: "hash_set::hash_set (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::hash_set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro hash_set [STL/CLR]"
+title: 'hash_set:: hash_set (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::hash_set
+dev_langs: C++
+helpviewer_keywords: hash_set member [STL/CLR]
 ms.assetid: 006414ed-db5a-4c08-ac81-4a8ae57d0aad
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a01d8dcfda1bbb7f05db9fde7b16aa5094fba2bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::hash_set (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cria um objeto contêiner.  
+# <a name="hashsethashset-stlclr"></a>hash_set::hash_set (STL/CLR)
+Constrói um objeto contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 hash_set();  
@@ -50,104 +50,90 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  primeiro  
  Início do intervalo a ser inserido.  
   
  hashfn  
- Função de hash para mapear chaves para os segmentos.  
+ Função para chaves de mapeamento para buckets de hash.  
   
  last  
- O fim do intervalo a ser inserido.  
+ Fim do intervalo a ser inserido.  
   
- pred  
- Ordenando o predicado da sequência controlada.  
+ Pred  
+ Ordenação de predicado para sequência controlada.  
   
  direita  
- Objeto ou intervalo a ser inserido.  
+ Objeto ou intervalo a inserir.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O construtor:  
   
  `hash_set();`  
   
- inicializa a sequência controlada sem os elementos, com o predicado padrão de ordenação `key_compare()`, e com a função de hash padrão.  Use\-a para especificar inicial uma sequência vazia, controlada com o predicado e a função de hash ordenando padrão.  
+ inicializa a sequência controlada com nenhum elemento com o padrão de ordenação predicado `key_compare()`e com a função de hash padrão. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o padrão de ordenação de função de predicado e hash.  
   
  O construtor:  
   
  `explicit hash_set(key_compare^ pred);`  
   
- inicializa a sequência controlada sem os elementos, com o predicado de ordenação `pred`, e com a função de hash padrão.  Use\-a para especificar inicial uma sequência vazia, controlada pelo predicado especificado e ordenando a função de hash padrão.  
+ inicializa a sequência controlada com nenhum elemento, com o predicado ordenação `pred`e com a função de hash padrão. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o predicado de ordenação especificado e a função de hash padrão.  
   
  O construtor:  
   
  `hash_set(key_compare^ pred, hasher^ hashfn);`  
   
- inicializa a sequência controlada sem os elementos, com o predicado de ordenação `pred`, e com a função de hash `hashfn`.  Use\-a para especificar inicial uma sequência vazia, controlada com o predicado e a função de hash ordenando especificados.  
+ inicializa a sequência controlada com nenhum elemento, com o predicado ordenação `pred`e com a função de hash `hashfn`. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com a função de predicado e hash ordenação especificada.  
   
  O construtor:  
   
  `hash_set(hash_set<Key>% right);`  
   
- inicializa a sequência controlada pela sequência `[``right``.`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``.`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())`, com o padrão de ordenação predicado, e com a função de hash padrão.  Use\-a para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto `right`de hash\_set, com o predicado e a função de hash ordenando padrão.  
+ inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`), com o padrão de ordenação de predicado e com a função de hash padrão. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto hash_set `right`com o predicado de classificação padrão e a função de hash.  
   
  O construtor:  
   
  `hash_set(hash_set<Key>^ right);`  
   
- inicializa a sequência controlada pela sequência `[``right``->`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``->`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())`, com o padrão de ordenação predicado, e com a função de hash padrão.  Use\-a para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto `right`de hash\_set, com o predicado e a função de hash ordenando padrão.  
+ inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`), com o padrão de ordenação de predicado e com a função de hash padrão. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto hash_set `right`com o predicado de classificação padrão e a função de hash.  
   
  O construtor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last);`  
   
- `hash_set(InIter first, InIter last);`  
-  
- inicializa a sequência controlada pela sequência `[``first``,` `last``)`, com o padrão de ordenação predicado, e com a função de hash padrão.  Use\-a para tornar a sequência controlada uma cópia de outra sequência, com o predicado e a função de hash ordenando padrão.  
+ inicializa a sequência controlada com a sequência [`first`, `last`), com o padrão de ordenação de predicado e com a função de hash padrão. Você pode usá-lo para fazer uma cópia de outra sequência, de sequência controlada com o padrão de ordenação de função de predicado e hash.  
   
  O construtor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`  
   
- `hash_set(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- inicializa a sequência controlada pela sequência `[``first``,` `last``)`, com o predicado de ordenação `pred`, e com a função de hash padrão.  Use\-a para tornar a sequência controlada uma cópia de outra sequência, com o predicado ordenando especificado e a função de hash padrão.  
+ inicializa a sequência controlada com a sequência [`first`, `last`), com o predicado ordenação `pred`e com a função de hash padrão. Você pode usá-lo para fazer uma cópia de outra sequência, com o predicado de ordenação especificado e a função de hash padrão de sequência controlada.  
   
  O construtor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_set(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- inicializa a sequência controlada pela sequência `[``first``,` `last``)`, com o predicado de ordenação `pred`, e com a função de hash `hashfn`.  Use\-a para tornar a sequência controlada uma cópia de outra sequência, com o predicado e a função de hash ordenando especificados.  
+ inicializa a sequência controlada com a sequência [`first`, `last`), com o predicado ordenação `pred`e com a função de hash `hashfn`. Você pode usá-lo para fazer uma cópia de outra sequência, com a função especificada e ordenação de predicado e hash de sequência controlada.  
   
  O construtor:  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o padrão de ordenação predicado, e com a função de hash padrão.  Use\-a para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador, com o predicado e a função de hash ordenando padrão.  
+ inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o padrão de ordenação de predicado e com a função de hash padrão. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com o padrão de ordenação de função de predicado e hash de sequência controlada.  
   
  O construtor:  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
-  
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o predicado de ordenação `pred`, e com a função de hash padrão.  Use\-a para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador, com o predicado e a função de hash para classificar a opção especificada.  
+ inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o predicado ordenação `pred`e com a função de hash padrão. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com a função de hash padrão e o predicado de ordenação especificado de sequência controlada.  
   
  O construtor:  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `key_compare^ pred, hasher^ hashfn);`  
+ inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o predicado ordenação `pred`e com a função de hash `hashfn`. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com a função de predicado e hash ordenação especificada de sequência controlada.  
   
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o predicado de ordenação `pred`, e com a função de hash `hashfn`.  Use\-a para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador, com o predicado e a função de hash ordenando especificados.  
-  
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_set_construct.cpp   
@@ -256,26 +242,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **um b c**  
-**size\(\) \= 0**  
- **um b c**  
-**size\(\) \= 0**  
- **b para c**  
- **um b c**  
- **um b c**  
- **b para c**  
- **um b c**  
- **um b c**  
- **b para c**  
- **um b c**  
- **um b c**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
   
- cliext de**Namespace:**  
+ a b c  
+ a b c  
+ c b a  
   
-## Consulte também  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::generic\_container](../Topic/hash_set::generic_container%20\(STL-CLR\).md)   
- [hash\_set::operator\=](../dotnet/hash-set-operator-assign-stl-clr.md)
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)   
+ [hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)

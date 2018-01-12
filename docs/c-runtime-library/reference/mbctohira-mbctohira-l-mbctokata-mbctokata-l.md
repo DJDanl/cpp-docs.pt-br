@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - mbctokata_l
 - mbctohira_l
 - _mbctokata_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbctokata function
 - _mbctokata_l function
@@ -47,36 +45,22 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9fdc3daaea6594331d21197867008567fcf030c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5fd3af95988ffeac5801e2d64f81c0947f26c3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 Converte entre caracteres Hiragana e Katakana.  
   
 > [!IMPORTANT]
->  Essa API não pode ser usada em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintaxe  
   

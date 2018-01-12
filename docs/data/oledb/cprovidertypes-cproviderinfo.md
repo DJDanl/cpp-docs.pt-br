@@ -1,124 +1,126 @@
 ---
-title: "CProviderTypes, CProviderInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_bIsLong"
-  - "m_szLocalTypeName"
-  - "m_guidType"
-  - "m_bCaseSensitive"
-  - "m_szVersion"
-  - "m_szCreateParams"
-  - "IS_NULLABLE"
-  - "m_bAutoUniqueValue"
-  - "LITERAL_SUFFIX"
-  - "COLUMN_SIZE"
-  - "CProviderTypes"
-  - "LOCAL_TYPE_NAME"
-  - "MINIMUM_SCALE"
-  - "m_nMinScale"
-  - "m_nColumnSize"
-  - "m_szLiteralSuffix"
-  - "m_bFixedPrecScale"
-  - "m_szLiteralPrefix"
-  - "m_nMaxScale"
-  - "m_szTypeLib"
-  - "m_nDataType"
-  - "m_bUnsignedAttribute"
-  - "m_nSearchable"
-  - "m_bBestMatch"
-  - "m_szTypeName"
-  - "DATA_TYPE"
-  - "MAXIMUM_SCALE"
-  - "CProviderInfo"
-  - "FIXED_PREC_SCALE"
-  - "m_bIsNullable"
-  - "IS_LONG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_SIZE"
-  - "Classe de parâmetro CProviderInfo"
-  - "Classe CProviderTypes (typedef)"
-  - "DATA_TYPE"
-  - "FIXED_PREC_SCALE"
-  - "IS_LONG"
-  - "IS_NULLABLE"
-  - "LITERAL_SUFFIX"
-  - "LOCAL_TYPE_NAME"
-  - "m_bAutoUniqueValue"
-  - "m_bBestMatch"
-  - "m_bCaseSensitive"
-  - "m_bFixedPrecScale"
-  - "m_bIsLong"
-  - "m_bIsNullable"
-  - "m_bUnsignedAttribute"
-  - "m_guidType"
-  - "m_nColumnSize"
-  - "m_nDataType"
-  - "m_nMaxScale"
-  - "m_nMinScale"
-  - "m_nSearchable"
-  - "m_szCreateParams"
-  - "m_szLiteralPrefix"
-  - "m_szLiteralSuffix"
-  - "m_szLocalTypeName"
-  - "m_szTypeLib"
-  - "m_szTypeName"
-  - "m_szVersion"
-  - "MAXIMUM_SCALE"
-  - "MINIMUM_SCALE"
+title: CProviderTypes, CProviderInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_bIsLong
+- m_szLocalTypeName
+- m_guidType
+- m_bCaseSensitive
+- m_szVersion
+- m_szCreateParams
+- IS_NULLABLE
+- m_bAutoUniqueValue
+- LITERAL_SUFFIX
+- COLUMN_SIZE
+- CProviderTypes
+- LOCAL_TYPE_NAME
+- MINIMUM_SCALE
+- m_nMinScale
+- m_nColumnSize
+- m_szLiteralSuffix
+- m_bFixedPrecScale
+- m_szLiteralPrefix
+- m_nMaxScale
+- m_szTypeLib
+- m_nDataType
+- m_bUnsignedAttribute
+- m_nSearchable
+- m_bBestMatch
+- m_szTypeName
+- DATA_TYPE
+- MAXIMUM_SCALE
+- CProviderInfo
+- FIXED_PREC_SCALE
+- m_bIsNullable
+- IS_LONG
+dev_langs: C++
+helpviewer_keywords:
+- DATA_TYPE
+- MAXIMUM_SCALE
+- m_nMinScale
+- m_guidType
+- LOCAL_TYPE_NAME
+- m_bAutoUniqueValue
+- m_bBestMatch
+- m_bIsLong
+- m_bUnsignedAttribute
+- CProviderInfo parameter class
+- FIXED_PREC_SCALE
+- m_nColumnSize
+- m_szVersion
+- CProviderTypes typedef class
+- m_szCreateParams
+- IS_NULLABLE
+- m_bIsNullable
+- m_szTypeLib
+- m_szLiteralPrefix
+- m_nMaxScale
+- m_nDataType
+- m_bCaseSensitive
+- m_bFixedPrecScale
+- m_nSearchable
+- MINIMUM_SCALE
+- m_szTypeName
+- m_szLocalTypeName
+- IS_LONG
+- LITERAL_SUFFIX
+- COLUMN_SIZE
+- m_szLiteralSuffix
 ms.assetid: 6f1620ff-c2f0-4f5b-931c-27b0cd2a580d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7e0f3b5e505695eca01437bf8d1999ffccca881a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CProviderTypes, CProviderInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chame a classe **CProviderTypes** do typedef para implementar a sua classe **CProviderInfo**do parâmetro.  
+# <a name="cprovidertypes-cproviderinfo"></a>CProviderTypes, CProviderInfo
+Chamar a classe typedef **CProviderTypes** para implementar sua classe de parâmetro **CProviderInfo**.  
   
-## Comentários  
- Consulte [Classes do conjunto de linhas de esquema e classes de Typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) para obter mais informações sobre como usar classes do typedef.  
+## <a name="remarks"></a>Comentários  
+ Consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obter mais informações sobre como usar classes do typedef.  
   
- Essa classe identifica os tipos de dados \(base\) suportados pelo provedor de dados.  
+ Essa classe identifica os tipos de dados (base) suportados pelo provedor de dados.  
   
- A tabela a seguir lista os membros de dados da classe e suas colunas correspondentes OLE DB.  Consulte [Conjunto de linhas de PROVIDER\_TYPES](https://msdn.microsoft.com/en-us/library/ms709785.aspx)*na referência do programador de OLE DB* para obter mais informações sobre o esquema e de colunas.  
+ A tabela a seguir lista os membros de dados de classe e o OLE DB colunas correspondentes. Consulte [linhas PROVIDER_TYPES](https://msdn.microsoft.com/en-us/library/ms709785.aspx) no *referência do programador de DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
-|Membros de dados|Colunas de OLE DB|  
-|----------------------|-----------------------|  
-|m\_szTypeName|TYPE\_NAME|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_nColumnSize|COLUMN\_SIZE|  
-|m\_szLiteralPrefix|LITERAL\_PREFIX|  
-|m\_szLiteralSuffix|LITERAL\_SUFFIX|  
-|m\_szCreateParams|CREATE\_PARAMS|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_bCaseSensitive|CASE\_SENSITIVE|  
-|m\_nSearchable|SEARCHABLE|  
-|m\_bUnsignedAttribute|UNSIGNED\_ATTRIBUTE|  
-|m\_bFixedPrecScale|FIXED\_PREC\_SCALE|  
-|m\_bAutoUniqueValue|AUTO\_UNIQUE\_VALUE|  
-|m\_szLocalTypeName|LOCAL\_TYPE\_NAME|  
-|m\_nMinScale|MINIMUM\_SCALE|  
-|m\_nMaxScale|MAXIMUM\_SCALE|  
-|m\_guidType|GUID|  
-|m\_szTypeLib|TYPELIB|  
-|m\_szVersion|VERSION|  
-|m\_bIsLong|IS\_LONG|  
-|m\_bBestMatch|BEST\_MATCH|  
+|Membros de dados|Colunas de banco de dados OLE|  
+|------------------|--------------------|  
+|m_szTypeName|TYPE_NAME|  
+|m_nDataType|DATA_TYPE|  
+|m_nColumnSize|COLUMN_SIZE|  
+|m_szLiteralPrefix|LITERAL_PREFIX|  
+|m_szLiteralSuffix|LITERAL_SUFFIX|  
+|m_szCreateParams|CREATE_PARAMS|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_bCaseSensitive|CASE_SENSITIVE|  
+|m_nSearchable|PESQUISÁVEL|  
+|m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|  
+|m_bFixedPrecScale|FIXED_PREC_SCALE|  
+|m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|  
+|m_szLocalTypeName|LOCAL_TYPE_NAME|  
+|m_nMinScale|MINIMUM_SCALE|  
+|m_nMaxScale|MAXIMUM_SCALE|  
+|m_guidType|GUID|  
+|m_szTypeLib|TYPELIB|  
+|m_szVersion|VERSION|  
+|m_bIsLong|IS_LONG|  
+|m_bBestMatch|BEST_MATCH|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbsch.h  
   
-## Consulte também  
- [Classe CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

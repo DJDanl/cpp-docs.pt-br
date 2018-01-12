@@ -1,35 +1,36 @@
 ---
-title: "IErrorRecordsImpl::GetErrorSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IErrorRecordsImpl.GetErrorSource"
-  - "GetErrorSource"
-  - "IErrorRecordsImpl::GetErrorSource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetErrorSource"
+title: 'Ierrorrecordsimpl:: Geterrorsource | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IErrorRecordsImpl.GetErrorSource
+- GetErrorSource
+- IErrorRecordsImpl::GetErrorSource
+dev_langs: C++
+helpviewer_keywords: GetErrorSource method
 ms.assetid: 5436f1ce-c5a4-403b-a62b-c58e70e5c925
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 312b8e28201447def0f09da9bcefc4a78e15d8ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# IErrorRecordsImpl::GetErrorSource
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Obtém o código\-fonte que ocasionou o erro de um registro de erro.  
+# <a name="ierrorrecordsimplgeterrorsource"></a>IErrorRecordsImpl::GetErrorSource
+Obtém o código-fonte que causou o erro de um registro de erro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,15 +39,15 @@ Obtém o código\-fonte que ocasionou o erro de um registro de erro.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `rCurError`  
- Um registro de `ERRORINFO` em uma interface de **IErrorInfo** .  
+ Um `ERRORINFO` registro em um **IErrorInfo** interface.  
   
-## Valor de retorno  
- Ponteiro para uma cadeia de caracteres que contém a origem do erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Ponteiro para uma cadeia de caracteres que contém o código-fonte para o erro.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)

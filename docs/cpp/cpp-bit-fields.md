@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 71f70995cf1a59153a380f0e22f0321fd59abee0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bit-fields"></a>Campos de bit C++
 As classes e as estruturas podem conter membros que ocupam menos armazenamento do que um tipo integral. Esses membros são especificados como campos de bits. A sintaxe para o campo de bits *Declarador de membro* especificação segue:  

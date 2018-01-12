@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wctrans
+apiname: wctrans
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wctrans
-dev_langs:
-- C++
+f1_keywords: wctrans
+dev_langs: C++
 helpviewer_keywords:
 - character codes, wctrans
 - characters, codes
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4af5c7079060553946214066e0a4868a403a4ac1
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: babda33f03b29e2b8ccaa9967038c3299c4bc6ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctrans"></a>wctrans
 Determina um mapeamento de um conjunto de códigos de caracteres para outro.  

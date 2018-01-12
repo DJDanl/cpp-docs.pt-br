@@ -52,11 +52,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a04c78f70f1d1338e1c5578b4cb9a641aea30c73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0909838cb526212d52d156f9af0366bcdcb7f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 Grava a saída formatada no console usando um ponteiro para uma lista de argumentos e dá suporte a parâmetros posicionais na cadeia de caracteres de formato.  

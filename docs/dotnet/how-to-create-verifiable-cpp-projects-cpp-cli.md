@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aad327c26c8684804c294fe5eb6b5bf41507f603
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d6a7806183766d96c0d106d9d9e890b046f4563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Como criar projetos C++ verificáveis (C++/CLI)
 Assistentes de aplicativo do Visual C++ não criam projetos verificáveis, mas os projetos podem ser convertidos para que seja verificável. Este tópico descreve como definir propriedades do projeto e modificar arquivos de origem do projeto para transformar seus projetos do Visual C++ para produzir aplicativos verificáveis.  

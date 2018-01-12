@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8dad678572d0f49d3859ad37d307942b3561f71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85681b2e2aeeb6dbeb6ffdf511827fb1fc1cb029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-override-of-an-interface-member"></a>Substituição explícita de um membro de interface
 A sintaxe para declarar uma substituição explícita de um membro de interface dentro de uma classe foi alterado de extensões gerenciadas para C++ para Visual C++.  

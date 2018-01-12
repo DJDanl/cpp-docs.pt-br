@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class scope [C++], rules
 - classes [C++], scope
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2e4a728d23dc9a04b62c9852823f359c3a7cb150
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>Resumo das regras de escopo
 O uso de um nome deve ser inequívoco dentro de seu escopo (até o ponto onde a sobrecarga é determinada). Se o nome indica que uma função, a função deve ser ambígua em relação ao número e tipo de parâmetros. Se o nome permanecerá inequívoco, [acesso de membro](../cpp/member-access-control-cpp.md) as regras são aplicadas.  
@@ -46,7 +44,7 @@ O uso de um nome deve ser inequívoco dentro de seu escopo (até o ponto onde a 
 ## <a name="qualified-names"></a>Nomes qualificados  
  Os nomes usados com o operador de resolução de escopo binário (`::`) são chamados de "nomes qualificados". O nome especificado depois do operador de resolução de escopo deve ser membro da classe especificada à esquerda do operador ou membro de sua classe base.  
   
- Nomes especificados depois do operador de seleção de membro (**.** ou ** -> **) devem ser membros do tipo de classe do objeto especificado à esquerda do operador ou membros de sua classe base (s). Nomes especificados à direita do operador de seleção de membro (**->**) também podem ser objetos de outro tipo de classe, contanto que o lado esquerdo da ** -> ** é um objeto de classe e a classe define um operador de seleção de membro sobrecarregado (**->**) que é avaliada como um ponteiro para outro tipo de classe. (Esta disposição é discutida em mais detalhes em [acesso de membro de classe](../cpp/member-access.md).)  
+ Nomes especificados depois do operador de seleção de membro (**.** ou  **->** ) devem ser membros do tipo de classe do objeto especificado à esquerda do operador ou membros de sua classe base (s). Nomes especificados à direita do operador de seleção de membro (**->**) também podem ser objetos de outro tipo de classe, contanto que o lado esquerdo da  **->**  é um objeto de classe e a classe define um operador de seleção de membro sobrecarregado (**->**) que é avaliada como um ponteiro para outro tipo de classe. (Esta disposição é discutida em mais detalhes em [acesso de membro de classe](../cpp/member-access.md).)  
   
  O compilador pesquisa por nomes na seguinte ordem, parando quando o nome é encontrado:  
   
@@ -66,7 +64,7 @@ O uso de um nome deve ser inequívoco dentro de seu escopo (até o ponto onde a 
   
 1.  Os nomes precedidos por `::` forçam a pesquisa a iniciar no escopo global.  
   
-2.  Nomes precedido pelo **classe**, `struct`, e **união** palavras-chave forçar o compilador a pesquisa apenas **classe**, `struct`, ou **union ** nomes.  
+2.  Nomes precedido pelo **classe**, `struct`, e **união** palavras-chave forçar o compilador a pesquisa apenas **classe**, `struct`, ou **union**  nomes.  
   
 3.  Nomes no lado esquerdo do operador de resolução do escopo (`::`) pode ser apenas **classe**, `struct`, **namespace**, ou **união** nomes.  
   

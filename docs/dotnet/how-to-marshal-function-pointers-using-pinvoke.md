@@ -1,49 +1,51 @@
 ---
-title: "Como realizar marshaling de ponteiros de fun&#231;&#227;o usando PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "realização de marshaling em dados [C++], retornos de chamado e delegados"
-  - "interoperabilidade [C++], retornos de chamado e delegados"
-  - "realização de marshaling [C++], retornos de chamado e delegados"
-  - "invocação de plataforma [C++], retornos de chamado e delegados"
+title: "Como: marshaling de ponteiros de função usando PInvoke | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], callbacks and delegates
+- interop [C++], callbacks and delegates
+- platform invoke [C++], callbacks and delegates
+- marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como realizar marshaling de ponteiros de fun&#231;&#227;o usando PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico explica como os representantes gerenciados podem ser usados em vez dos ponteiros da função ao interoperar com funções não gerenciados usando recursos do .NET Framework P\/Invoke.  No entanto, os desenvolvedores do Visual C\+\+ devem usar os recursos do C\+\+ Interoperabilidade vez \(quando possível P\/Invoke\) porque fornece vez relatório de erros de tempo de compilação, não são tipo seguro, e podem ser fastidiosos de implementar.  Se a API não gerenciado é empacotado como uma DLL e o código\-fonte não estiverem disponíveis, P\/Invoke é a única opção.  Se não, consulte os seguintes tópicos:  
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Como realizar marshaling de ponteiros de função usando PInvoke
+Este tópico explica como gerenciados delegados pode ser usado no lugar de ponteiros de função quando interoperar com não gerenciados funções usando recursos do .NET Framework P/Invoke. No entanto, os programadores de Visual C++ são incentivados a usar os recursos de interoperabilidade C++ em vez disso (quando for possível) porque P/Invoke oferece pouco tempo de compilação relatório de erro, não é de tipo seguro e poderá ser tedioso implementar. Se a API não gerenciada é empacotada como uma DLL e o código-fonte não estiver disponível, o P/Invoke é a única opção. Caso contrário, consulte os tópicos a seguir:  
   
--   [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Como realizar marshal de retornos de chamadas e delegados usando o C\+\+ Interop](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [Como realizar marshaling de retornos de chamada e delegados usando interop do C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
- APIs não gerenciado que usam ponteiros de funções como argumentos podem ser chamados de código gerenciado com um representante gerenciado no lugar do ponteiro nativo da função.  Realiza marshaling do compilador os automaticamente o delegado a funções não gerenciado como um ponteiro de função e inserções transição gerenciado\/necessária código não gerenciado.  
+ APIs não gerenciadas que usam ponteiros de funções como argumentos podem ser chamados de código gerenciado com um delegado gerenciado em vez do ponteiro de função nativa. O compilador automaticamente empacota o delegado para funções não gerenciadas como um ponteiro de função e insere o código necessário transição gerenciado/não gerenciado.  
   
-## Exemplo  
- O código a seguir consiste em um módulo não gerenciado e gerenciado.  O módulo não gerenciado é uma DLL que define uma função chamada TakesCallback que aceita um ponteiro de função.  Este endereço é usado para executar a função.  
+## <a name="example"></a>Exemplo  
+ O código a seguir consiste em uma não gerenciado e um módulo gerenciado. O módulo não gerenciado é uma DLL que define uma função chamada TakesCallback que aceita um ponteiro de função. Este endereço é usado para executar a função.  
   
- O módulo gerenciado define um representante que marshaling para o código nativo como um ponteiro de função e usa o atributo de <xref:System.Runtime.InteropServices.DllImportAttribute> para expor a função nativo de TakesCallback ao código gerenciado.  Na função principal, uma instância do delegado é criada e passada à função de TakesCallback.  Saída de programa que demonstram essa função obtém executado pela função nativo de TakesCallback.  
+ O módulo gerenciado define um delegado que passa por marshaling para o código nativo como um ponteiro de função e usa o <xref:System.Runtime.InteropServices.DllImportAttribute> atributo para expor a função TakesCallback nativa para o código gerenciado. A função principal, uma instância do representante é criada e passada para a função TakesCallback. A saída de programa demonstra que essa função seja executada pela função TakesCallback nativo.  
   
- A função gerenciada suprime a coleta de lixo para que o representante gerenciado impede que a coleta de lixo do .NET Framework realocando o delegado quando a função nativo executar.  
+ A função gerenciada suprime a coleta de lixo para o representante gerenciado para evitar a coleta de lixo do .NET Framework de realocar o representante enquanto executa a função nativa.  
   
- O módulo gerenciado é compilado com \/clr, mas trabalho de \/clr:pure também.  
+ O módulo gerenciado é compilado com /clr, mas com /clr: pure funciona bem. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll5.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -67,7 +69,7 @@ int TakesCallback(CALLBACK fp, int n) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalDelegate.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -95,7 +97,7 @@ int main() {
 }  
 ```  
   
- Observe que nenhuma parte da DLL está exposta ao código gerenciado usando a diretiva tradicional de \#include.  De fato, a DLL é acessado em tempo de execução, apenas assim que os problemas com as funções com <xref:System.Runtime.InteropServices.DllImportAttribute> importadas não serão detectados em tempo de compilação.  
+ Observe que nenhuma parte da DLL é exposto para o código gerenciado usando o tradicional # diretiva include. Na verdade, a DLL é acessada no tempo de execução, para problemas com funções importados com <xref:System.Runtime.InteropServices.DllImportAttribute> não serão detectadas em tempo de compilação.  
   
-## Consulte também  
- [Usando PInvoke explícito em C\+\+ \(atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando PInvoke explícito no C++ (atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

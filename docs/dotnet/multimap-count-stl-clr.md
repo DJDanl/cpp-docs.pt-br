@@ -1,46 +1,46 @@
 ---
-title: "multimap::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contar membro [STL/CLR]"
+title: 'multimap:: Count (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: f8e3700c-b968-4ab0-86f1-d4ae7d9e0093
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1f6410ab2acec636c41b206749e1b00490e07e10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapcount-stlclr"></a>multimap::count (STL/CLR)
 Localiza o número de elementos que correspondem a uma chave especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  key  
- Valor de chave para pesquisar por.  
+ O valor chave a ser pesquisado.  
   
-## Comentários  
- A função de membro retorna o número de elementos na sequência controlada que têm o equivalente que regras com `key`.  Use\-a para determinar atualmente o número de elementos na sequência controlada que correspondem a uma chave especificada.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna o número de elementos na sequência controlada que têm uma ordenação equivalente com `key`. Usado para determinar o número de elementos que estão na sequência controlada no momento e que correspondem a uma chave especificada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_multimap_count.cpp   
@@ -68,15 +68,18 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**count \(L'A\) \= 0**  
-**count \(L'b\) \= 1**  
-**count \(L'C\) \= 0**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [multimapa](../dotnet/multimap-stl-clr.md)   
- [multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [multimapa (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)

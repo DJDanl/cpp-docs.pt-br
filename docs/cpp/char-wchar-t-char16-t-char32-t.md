@@ -18,11 +18,12 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4eaccef4253d2b677f01801b680bb94d8a4d3516
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c01d4718bbc1781ea4705945bb90874384e09058
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
 O caractere de tipos wchar_t, char16_t e char32_t são criados em tipos que representam os caracteres alfanuméricos, bem como glifos não-alfanuméricos e caracteres não imprimíveis. Char é de oito bits de tamanho, wchar_t e char16_t são 16 bits de tamanho e char32_t é de 32 bits.  

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63eb2b4c7415dc463b38346909bd2b6fd902c332
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b94f6b89ec00cc044cbaa93a4f0f914860db71e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-type-function-arguments"></a>Argumentos de funções de tipo de referência
 É geralmente mais eficiente passar referências, em vez de objetos grandes, para funções. Isso permite que o compilador passe o endereço do objeto enquanto mantém a sintaxe que seria usada para acessar o objeto. Considere o seguinte exemplo que usa a estrutura `Date`:  

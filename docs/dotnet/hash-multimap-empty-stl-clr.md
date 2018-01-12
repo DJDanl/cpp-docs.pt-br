@@ -1,42 +1,42 @@
 ---
-title: "hash_multimap::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro vazio [STL/CLR]"
+title: 'hash_multimap:: Empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 5fd29e90-e33a-460f-9d42-491b82dbaa40
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 55c103ff31a734f137cd96c083ceb39662d7bec2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testa se nenhum elemento estiver presente.  
+# <a name="hashmultimapempty-stlclr"></a>hash_multimap::empty (STL/CLR)
+Testa se nenhum elemento está presente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 bool empty();  
 ```  
   
-## Comentários  
- A função de membro retorna true para uma sequência vazia controlada.  É equivalente a [hash\_multimap::size](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`.  Você usa para testar se o hash\_multimap está vazia.  
+## <a name="remarks"></a>Comentários  
+ A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [hash_multimap:: Size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`. Você pode usá-lo para testar se o hash_multimap está vazio.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multimap_empty.cpp   
@@ -67,16 +67,19 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**size\(\) \= 3**  
-**empty\(\) \= false**  
-**size\(\) \= 0**  
-**empty\(\) \= retifica**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::size](../dotnet/hash-multimap-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)

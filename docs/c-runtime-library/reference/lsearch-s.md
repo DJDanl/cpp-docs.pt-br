@@ -38,11 +38,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb44e7b2c79b1e8719768634bfe028207b9e8d11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearchs"></a>_lsearch_s
 Executa uma pesquisa linear para um valor. Uma versão de [_lsearch](../../c-runtime-library/reference/lsearch.md) com melhorias de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  

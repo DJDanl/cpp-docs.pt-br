@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c48ee39a9053e098b67367d0c144fbf6e284b9d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nested-class-declarations"></a>Declarações de classe aninhada
 Uma classe pode ser declarada dentro do escopo de outra classe. Essa classe é chamada de “classe aninhada”. As classes aninhadas são consideradas como estando dentro do escopo da classe delimitadora e estão disponíveis para uso dentro desse escopo. Para fazer referência a uma classe aninhada a partir de um escopo diferente de seu escopo delimitador imediato, você deve usar um nome totalmente qualificado.  

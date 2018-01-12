@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aab6ea73fc5726771877640268c89edea4d0745a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 68b013f3b1211c42ffc7355df73f47f6520fac1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Atualização de interface do usuário para exibições de registro (Acesso a dados MFC)
 `CRecordView`Fornece manipuladores de atualização de interface do usuário de padrão para os comandos de navegação. Esses manipuladores automatizam habilitando e desabilitando os objetos de interface do usuário – itens de menu e botões da barra de ferramentas. O Assistente de aplicativo fornece menus padrão e, se você escolher o **barra de ferramentas Encaixável** opção, um conjunto de botões de barra de ferramentas para os comandos. Se você criar uma classe de exibição do registro usando `CRecordView`, poderá adicionar objetos de interface do usuário semelhantes ao seu aplicativo.  

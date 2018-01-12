@@ -1,41 +1,43 @@
 ---
-title: "Usando acessadores | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acessadores [C++], Modelos de banco de dados OLE"
-  - "Modelos de consumidor OLE DB, acessadores"
-  - "conjuntos de linhas [C++], acessadores"
+title: Usando acessadores | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], OLE DB Templates
+- OLE DB consumer templates, accessors
+- rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7ce54717a65630089b4bfa0cafe0af70f0292206
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Usando acessadores
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Os tópicos a seguir explicam como determinar que tipo de acessador é melhor para seu aplicativo de dados e como usar os diferentes tipos de acessadores disponíveis:  
+# <a name="using-accessors"></a>Usando acessadores
+Os tópicos a seguir explicam como determinar qual tipo de acessador é melhor para seus dados de aplicativo e, em seguida, como usar os diferentes tipos de acessadores disponíveis:  
   
--   [Determinando quais acessador usar](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
+-   [Determinando quais acessador a ser usado](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
   
--   [Usando vários acessadores em um conjunto de linhas](../Topic/Using%20Multiple%20Accessors%20on%20a%20Rowset.md)  
+-   [Usando vários acessadores em um conjunto de linhas](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
   
 -   [Usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md)  
   
--   [Usando acessadores manuais](../Topic/Using%20Manual%20Accessors.md)  
+-   [Usando acessadores manuais](../../data/oledb/using-manual-accessors.md)  
   
 -   [Acessando dados XML](../../data/oledb/accessing-xml-data.md)  
   
-## Consulte também  
- [Trabalhando com modelos de consumidor de banco de dados OLE](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Consulte também  
+ [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

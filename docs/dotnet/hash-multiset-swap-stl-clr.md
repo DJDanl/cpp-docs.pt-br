@@ -1,46 +1,46 @@
 ---
-title: "hash_multiset::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro swap [STL/CLR]"
+title: 'hash_multiset:: swap (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: b79372ab-ca51-494a-89cf-4e2da3ee3ff7
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 28dfb2a37e2ffc68f92f7c976ae83c98b4f89e4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetswap-stlclr"></a>hash_multiset::swap (STL/CLR)
 Alterna o conteúdo de dois contêineres.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void swap(hash_multiset<Key>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  direita  
- Contêiner para alternar conteúdo com.  
+ Contêiner com o qual trocar conteúdos.  
   
-## Comentários  
- A função de membro alterna entre as sequências controladas `this` e `right`.  Fazer isso no momento e constantes não gerencie nenhuma exceção.  Use\-a como um modo rápido de troca o conteúdo de dois contêineres.  
+## <a name="remarks"></a>Comentários  
+ A função membro troca as sequências controladas entre `this` e `right`. Isso é feito no tempo constante e ele não lança exceções. Você pode usá-lo como uma maneira rápida de trocar o conteúdo de dois contêineres.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multiset_swap.cpp   
@@ -83,15 +83,18 @@ int main()
   
 ```  
   
-  **um b c**  
- **d e f**  
- **d e f**  
- **um b c**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
   
-## Consulte também  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::operator\=](../dotnet/hash-multiset-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)

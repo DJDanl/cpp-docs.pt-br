@@ -1,33 +1,33 @@
 ---
-title: "equal_to (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função equal_to [STL/CLR]"
+title: equal_to (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::equal_to
+dev_langs: C++
+helpviewer_keywords: equal_to function [STL/CLR]
 ms.assetid: 9dd6e27d-e695-470f-b7a7-19a6db970ee5
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 824fe03c771e0da40f9a587ad076df03604fd53c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# equal_to (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe do modelo descreve um funtor que, quando chamado, retorna true apenas se o primeiro argumento for igual ao segundo.  Use\-a especifica um objeto de função em termos de seu tipo de argumento.  
+# <a name="equalto-stlclr"></a>equal_to (STL/CLR)
+A classe de modelo descreve um functor que, quando chamado, retornará true somente se o primeiro argumento for igual à segunda. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Arg>  
@@ -50,34 +50,34 @@ public:
     };  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Arg  
  O tipo dos argumentos.  
   
-## Funções de membro  
+## <a name="member-functions"></a>Funções membro  
   
-|Definição de tipo|Descrição|  
-|-----------------------|---------------|  
-|delegate\_type|O tipo delegado genérico.|  
-|first\_argument\_type|O tipo do primeiro argumento de funtor.|  
-|result\_type|O tipo de resultado de funtor.|  
-|second\_argument\_type|O tipo de argumento de funtor segundo.|  
+|Definição do tipo|Descrição|  
+|---------------------|-----------------|  
+|delegate_type|O tipo de delegado genérico.|  
+|first_argument_type|O tipo do primeiro argumento functor.|  
+|tipo_resultado|O tipo do resultado functor.|  
+|second_argument_type|O tipo do segundo argumento functor.|  
   
 |Membro|Descrição|  
-|------------|---------------|  
-|equal\_to|Constrói o funtor.|  
+|------------|-----------------|  
+|equal_to|Constrói o functor.|  
   
 |Operador|Descrição|  
-|--------------|---------------|  
-|operator\(\)|Computa a função desejada.|  
-|operador delegate\_type^\(\)|Converte o funtor a um representante.|  
+|--------------|-----------------|  
+|operator()|Calcula a função desejada.|  
+|operador delegate_type^()|Converte o functor a um delegado.|  
   
-## Comentários  
- A classe do modelo descreve um funtor de dois argumentos.  Define o operador `operator()` membro de forma que, quando o objeto é chamado como uma função, retorna true apenas se o primeiro argumento for igual ao segundo.  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo descreve uma functor de dois argumentos. Define o operador de membro `operator()` para que, quando o objeto é chamado como uma função, ela retorna true somente se o primeiro argumento é igual à segunda.  
   
- Você também pode passar o objeto como um argumento da função cujo tipo é `delegate_type^` e ele será convertido adequadamente.  
+ Você também pode passar o objeto como um argumento de função cujo tipo é `delegate_type^` e ele será convertido corretamente.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_equal_to.cpp   
@@ -117,13 +117,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/funcional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/funcional >  
   
-## Consulte também  
- [not\_equal\_to](../dotnet/not-equal-to-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [not_equal_to (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)

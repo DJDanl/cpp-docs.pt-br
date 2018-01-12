@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- event handling [C++], Visual C++
+dev_langs: C++
+helpviewer_keywords: event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0ff5032966cb44ff8d14dd6e0a33fb5f8cf56ed7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e30e9259a5b3e59b9f8c2f3af877bca3a98c84dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-native-c"></a>Tratamento de eventos em C++ nativo
 Manipulação de eventos de C++ nativo, você configura um receptor de origem e de eventos do evento usando o [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = `native`. Esses atributos as permitem que as classes às quais eles são aplicados disparem eventos e manipulem eventos em um contexto nativo, e não de COM.  

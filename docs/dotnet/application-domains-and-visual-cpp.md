@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57a45bd6f73040623fe90626b1c3896df3258dd8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a66731b9645458441f1c3e1f211c74be698e7231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-domains-and-visual-c"></a>Domínios de aplicativo e Visual C++
 Se você tiver um `__clrcall` função virtual, o vtable será por domínio de aplicativo (appdomain). Se você criar um objeto em um appdomain, você só pode chamar a função virtual de dentro do appdomain. Todas as funções definidas no **/clr: pure** compilandos usam o `__clrcall` convenção de chamada. Portanto, todos os vtables definidos no **/clr: pure** compilandos são por appdomain. No modo misto (**/clr**) será necessário por processo vtables se seu tipo não tiver nenhuma `__clrcall` funções virtuais. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  

@@ -1,32 +1,34 @@
 ---
-title: "Como armazenar texto na &#193;rea de Transfer&#234;ncia (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Área de Transferência, armazenando texto"
-  - "texto, armazenando na Área de Transferência"
+title: "Como: armazenar texto na área de transferência (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, storing in Clipboard
+- Clipboard, storing text
 ms.assetid: 9996023f-b700-47ad-8ad9-1ba201eaa5a6
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05544d3ea65ee68fc6df8731e5de084be6d460ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como armazenar texto na &#193;rea de Transfer&#234;ncia (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo de código usa o objeto de <xref:System.Windows.Forms.Clipboard> definido no namespace de <xref:System.Windows.Forms> para armazenar uma cadeia de caracteres.  Esse objeto fornece duas funções de membro: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> e <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>.  Os dados são armazenados na área de transferência enviando qualquer objeto derivado de <xref:System.Object> a <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  
+# <a name="how-to-store-text-in-the-clipboard-ccli"></a>Como armazenar texto na Área de Transferência (C++/CLI)
+O seguinte exemplo de código usa o <xref:System.Windows.Forms.Clipboard> objeto definido no <xref:System.Windows.Forms> namespace para armazenar uma cadeia de caracteres. Esse objeto fornece duas funções de membro: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> e <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Dados são armazenados na área de transferência enviando qualquer objeto derivado de <xref:System.Object> para <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // store_clipboard.cpp  
@@ -53,7 +55,7 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## Consulte também  
- [Como recuperar texto a partir da Área de Transferência](../Topic/How%20to:%20Retrieve%20Text%20from%20the%20Clipboard%20\(C++-CLI\).md)   
- [Operações do Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programação do .NET com o C \+ \+ \/ CLI \(Visual C\+\+\)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Como: recuperar o texto da área de transferência (C + + CLI)](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)   
+ [Operações do Windows (C + + CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

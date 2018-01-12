@@ -1,42 +1,42 @@
 ---
-title: "list::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "limpar membro [STL/CLR]"
+title: 'List:: Clear (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 5aac9a64-52f6-4a73-8b24-e30ceedcbc20
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb17552a3ba8988de67cfe4d3530fd544b953f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# list::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listclear-stlclr"></a>list::clear (STL/CLR)
 Remove todos os elementos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void clear();  
 ```  
   
-## Comentários  
- A função de membro chama efetivamente [list::erase](../dotnet/list-erase-stl-clr.md)`(` [list::begin](../Topic/list::begin%20\(STL-CLR\).md)`(),` [list::end](../Topic/list::end%20\(STL-CLR\).md)`())`.  Use\-a para garantir que a sequência controlada está vazia.  
+## <a name="remarks"></a>Comentários  
+ A função de membro efetivamente chama [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [List:: Begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. Você pode usá-lo para garantir que a sequência controlada está vazia.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_list_clear.cpp   
@@ -73,15 +73,18 @@ int main()
   
 ```  
   
-  **um b c**  
-**size\(\) \= 0**  
- **um b**  
-**size\(\) \= 0**   
-## Requisitos  
- cliext \<\/lista de**Cabeçalho:** \>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/lista >  
   
-## Consulte também  
- [list](../dotnet/list-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02b91ab17d29463584752a281a0c13c3ee86920a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11f6b7086fb3403402d9a3da47a596c837868d3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnnamelengthstatus"></a>COLUMN_NAME_LENGTH_STATUS
 Representa uma associação no conjunto de linhas para a coluna específica no conjunto de linhas. Semelhante ao [COLUMN_NAME](../../data/oledb/column-name.md), exceto que essa macro também usa o comprimento da coluna e o status da coluna.  

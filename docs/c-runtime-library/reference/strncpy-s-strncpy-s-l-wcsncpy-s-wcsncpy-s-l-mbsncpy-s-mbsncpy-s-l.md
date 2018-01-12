@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -54,30 +52,16 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3d0d2f76b88f1518b24860b3e8efb7c2214c2845
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3d99dbf05d6ce70177b6ef3c5344e5f4059c0aac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 Copia caracteres de uma cadeia de caracteres para outra.  Essas versões do [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -247,7 +231,7 @@ errno_t _mbsncpy_s_l(
 |`wcsncpy_s`, `_wcsncpy_s_l`|\<string.h> ou \<wchar.h>|  
 |`_mbsncpy_s`, `_mbsncpy_s_l`|\<mbstring.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   

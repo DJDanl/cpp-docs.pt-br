@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b668dbf882203c10cfdba182140296539f49ad4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5acba997b40f35d6769bd9dc9cb07e15df7eb549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 Calcula o restante dos dois valores inteiros e armazena um valor inteiro com sinal e magnitude aproximada do quociente em um local especificado no parâmetro.  
@@ -130,7 +131,7 @@ Approximate signed quotient is -3
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   
  [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   

@@ -1,43 +1,43 @@
 ---
-title: "hash_set::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro value_compare [STL/CLR]"
+title: 'hash_set:: value_compare (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: fac89cb4-79de-44be-8ef0-202e278d0401
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7b27abcb15811bd5163e61f2b3d877cf03483d6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O delegado de ordenação para dois valores do elemento.  
+# <a name="hashsetvaluecompare-stlclr"></a>hash_set::value_compare (STL/CLR)
+O representante de ordenação para dois valores de elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o delegado que determina a ordem dos argumentos de valor.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo para o representante que determina a ordem de seus argumentos de valor.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_set_value_compare.cpp   
@@ -62,16 +62,19 @@ int main()
   
 ```  
   
-  **compare \(L'a, L'a\) \= retificam**  
-**compare \(L'a, L'b\) \= retificam**  
-**compare \(L'b, L'a\) \= false**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
   
-## Consulte também  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::key\_compare](../Topic/hash_set::key_compare%20\(STL-CLR\).md)   
- [hash\_set::value\_comp](../dotnet/hash-set-value-comp-stl-clr.md)   
- [hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)   
+ [hash_set:: value_comp (STL/CLR)](../dotnet/hash-set-value-comp-stl-clr.md)   
+ [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

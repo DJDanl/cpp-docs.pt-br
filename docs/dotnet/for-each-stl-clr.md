@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fd29816817230c89f309340daf298569a16d0a8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60a30015720c4877d2e94f219364798ce5cfc54e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="foreach-stlclr"></a>for_each (STL/CLR)
 Aplica um objeto de função especificado a cada elemento em uma ordem progressiva dentro de um intervalo e retorna o objeto de função.  

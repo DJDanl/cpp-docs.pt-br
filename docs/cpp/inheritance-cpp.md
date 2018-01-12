@@ -17,16 +17,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8538418b6457994162500dea013f2addd4269849
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50b6b180a6def741daa47a5054f1c61d3265ebd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inheritance--c"></a>Herança (C++)
 Esta seção explica como usar classes derivadas para gerar programas extensíveis.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Novas classes podem derivar de classes existentes usando um mecanismo chamado "herança" (consulte a informações a partir do [herança única](../cpp/single-inheritance.md)). As classes que são usadas para derivação são chamadas "classes base" de uma classe derivada específica. Uma classe derivada é declarada mediante a seguinte sintaxe:  
   
 ```  

@@ -1,43 +1,43 @@
 ---
-title: "deque::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro generic_iterator [STL/CLR]"
+title: deque::generic_iterator (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 865d1ec3-e660-4d18-9ff7-2302a3e74d49
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 313f369020248ab6c5a51e429d1c1f0a00cb1236
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequegenericiterator-stlclr"></a>deque::generic_iterator (STL/CLR)
 O tipo de um iterador para uso com a interface genérica para o contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerRandomAccessIterator<generic_value> generic_iterator;  
 ```  
   
-## Comentários  
- O tipo descreve um iterador genérico que pode ser usado com a interface genérica para esta classe do contêiner do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um iterador genérico que pode ser usado com a interface genérica para esta classe de contêiner do modelo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_generic_iterator.cpp   
@@ -74,15 +74,18 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**  
- **uma c**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+a b c  
+a b c  
+a a c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::generic\_container](../Topic/deque::generic_container%20\(STL-CLR\).md)   
- [deque::generic\_reverse\_iterator](../Topic/deque::generic_reverse_iterator%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)   
+ [deque::generic_reverse_iterator (STL/CLR)](../dotnet/deque-generic-reverse-iterator-stl-clr.md)

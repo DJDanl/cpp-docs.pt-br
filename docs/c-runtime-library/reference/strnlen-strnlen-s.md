@@ -68,11 +68,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0dfc872694485262386d0858e97b9835a2d507b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59c9d1f893dbc024a0645e70119d1069c3383ed8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 Obtém o tamanho de uma cadeia de caracteres usando a localidade atual ou uma que foi enviada. Essas são versões mais seguras do [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).  
@@ -168,7 +169,7 @@ size_t _mbstrnlen_l(
 |`_mbsnlen`, `_mbsnlen_l`|\<mbstring.h>|  
 |`_mbstrnlen`, `_mbstrnlen_l`|\<stdlib.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   

@@ -1,33 +1,35 @@
 ---
-title: "Diferen&#231;as no comportamento do tratamento de exce&#231;&#245;es em /CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Macro EXCEPTION_CONTINUE_EXECUTION"
-  - "Função set_se_translator"
+title: "Diferenças no comportamento em - CLR de tratamento de exceções | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- EXCEPTION_CONTINUE_EXECUTION macro
+- set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Diferen&#231;as no comportamento do tratamento de exce&#231;&#245;es em /CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[Conceitos básicos de usar exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md) discute a manipulação de exceção nos aplicativos gerenciados.  Neste tópico, as diferenças de comportamento padrão de manipulação de exceção e algumas restrições são abordadas em detalhes.  Para obter mais informações, consulte [A função de \_set\_se\_translator](../c-runtime-library/reference/set-se-translator.md).  
+# <a name="differences-in-exception-handling-behavior-under-clr"></a>Diferenças no comportamento do tratamento de exceções em /CLR
+[Conceitos básicos em usar exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md) discute a manipulação de exceções em aplicativos gerenciados. Neste tópico, as diferenças no comportamento padrão de tratamento de exceção e algumas restrições são discutidas em detalhes. Para obter mais informações, consulte [a função set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a> Ignorar finalmente de um bloco  
- No código nativo C\/C\+\+, ignorar de um bloco de**finally** do que usa a manipulação de exceção estruturado \(SEH\) é permitido embora gerencia um aviso.  Em [\/clr](../build/reference/clr-common-language-runtime-compilation.md), ignorar de um bloco de **finally** causa um erro:  
+##  <a name="vcconjumpingoutofafinallyblock"></a>Saltando fora de um bloco Finally  
+ No código C/C++ nativo, saltando fora de um _**finalmente** bloco usando a manipulação de exceção estruturada (SEH) é permitido, embora ele produz um aviso.  Em [/clr](../build/reference/clr-common-language-runtime-compilation.md), indo de uma **finalmente** bloco causa um erro:  
   
 ```  
 // clr_exception_handling_4.cpp  
@@ -40,10 +42,10 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Aumentando exceções em um filtro de exceção  
- Quando uma exceção é gerada durante o processamento de [filtro de exceção](../cpp/writing-an-exception-filter.md) no código gerenciado, a exceção será capturada e tratada como se retornar 0 do filtro.  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>Gerar exceções em um filtro de exceção  
+ Quando uma exceção é gerada durante o processamento de um [filtro de exceção](../cpp/writing-an-exception-filter.md) em código gerenciado, a exceção é capturada e tratada como se o filtro retorna 0.  
   
- Isto está em contraste com o comportamento em código nativo onde uma exceção aninhada é emitido, o campo de **ExceptionRecord** na estrutura de **EXCEPTION\_RECORD** \(como retornado por [GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)\) é definido, e conjuntos de campos de **ExceptionFlags** o bit 0x10.  O exemplo a seguir ilustra a diferença no comportamento:  
+ Isso está em contraste com o comportamento em código nativo em que uma exceção aninhada é gerada, o **ExceptionRecord** campo o **EXCEPTION_RECORD** estrutura (como retornado por [ GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) for definido e o **sinalizadores de exceção** campo define o bit 0x10. O exemplo a seguir ilustra essa diferença no comportamento:  
   
 ```  
 // clr_exception_handling_5.cpp  
@@ -96,17 +98,17 @@ int main() {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 Caught a nested exception  
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a> Lança novamente dissociado  
- **\/clr** não oferece suporte a rethrowing uma exceção fora de um manipulador de captura \(conhecido como um lançar novamente dissociado\).  As exceções desse tipo são tratadas como um lançar novamente padrão do C\+\+.  Se um lançar novamente dissociado for encontrado quando há uma exceção gerenciada ativa, a exceção será envolvida a exceção e no rethrown c. criando  As exceções desse tipo só podem ser capturadas como uma exceção do tipo [System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
+##  <a name="vccondisassociatedrethrows"></a>Relança desassociado  
+ **/CLR** não suporta relançamento de uma exceção fora de um manipulador catch (conhecido como um rethrow desassociado). Exceções deste tipo são tratadas como um rethrow C++ padrão. Se um rethrow desassociado for encontrado quando há uma exceção gerenciada ativa, a exceção é empacotada como uma exceção de C++ e geradas novamente. Exceções desse tipo só podem ser capturadas como uma exceção do tipo [System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
   
- O exemplo a seguir demonstra um rethrown gerenciado de exceção como a exceção c: criando  
+ O exemplo a seguir demonstra uma exceção gerenciada lançada novamente como uma exceção de C++:  
   
 ```  
 // clr_exception_handling_6.cpp  
@@ -148,14 +150,14 @@ int main() {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Filtros de exceção e EXCEPTION\_CONTINUE\_EXECUTION  
- Se um filtro retorna `EXCEPTION_CONTINUE_EXECUTION` em um aplicativo gerenciado, será tratado como se o filtro `EXCEPTION_CONTINUE_SEARCH`retornado.  Para obter mais informações sobre essas constantes, consulte [tentativa\-exceto a instrução](../cpp/try-except-statement.md).  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtros de exceção e EXCEPTION_CONTINUE_EXECUTION  
+ Se um filtro retorna `EXCEPTION_CONTINUE_EXECUTION` em um aplicativo gerenciado, ele será tratado como se o filtro retornou `EXCEPTION_CONTINUE_SEARCH`. Para obter mais informações sobre essas constantes, consulte [tente-exceto instrução](../cpp/try-except-statement.md).  
   
  O exemplo a seguir demonstra essa diferença:  
   
@@ -188,14 +190,14 @@ int main() {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a> A função de \_set\_se\_translator  
- A função de tradutor, definido por uma chamada a `_set_se_translator`, captura mantê\-las afeta apenas em código não gerenciado.  O exemplo a seguir demonstra esta limitação:  
+##  <a name="vcconthe_set_se_translatorfunction"></a>A função set_se_translator  
+ A função de conversor, definido por uma chamada para `_set_se_translator`, afeta apenas compromete em código não gerenciado. O exemplo a seguir demonstra essa limitação:  
   
 ```  
 // clr_exception_handling_8.cpp  
@@ -272,7 +274,7 @@ int main( int argc, char ** argv ) {
 }  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 This is invoked since _set_se_translator is not supported when /clr is used  
@@ -280,7 +282,7 @@ In my_trans_func.
 Caught an SEH exception with exception code: e0000101  
 ```  
   
-## Consulte também  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)   
- [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tratamento de exceções](../windows/exception-handling-cpp-component-extensions.md)   
+ [Safe_cast](../windows/safe-cast-cpp-component-extensions.md)   
  [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)

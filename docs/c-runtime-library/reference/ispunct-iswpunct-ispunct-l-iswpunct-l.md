@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - iswpunct
 - _istpunct
 - ispunct
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _istpunct function
 - _ispunct_l function
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d257ca609e5a2933915d5441f7addb613d8c2abd
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9856ed0cb5f4ea9a346f07c4ad98a8cf7c534f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 Determina se um inteiro representa um caractere de pontuação.  
@@ -118,7 +102,7 @@ int _iswpunct_l(
 |`_ispunct_l`|\<ctype.h>|  
 |`_iswpunct_l`|\<ctype.h> ou \<wchar.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

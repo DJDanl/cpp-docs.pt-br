@@ -1,46 +1,46 @@
 ---
-title: "hash_map::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro lower_bound [STL/CLR]"
+title: 'hash_map:: lower_bound (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 7c88987a-9c77-4874-8052-192a148abbf1
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 81e27b23a3847c6ed6ccfc6e4b0e37c73664b9a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmaplowerbound-stlclr"></a>hash_map::lower_bound (STL/CLR)
 Localiza o início do intervalo que corresponde a uma chave especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  key  
- Valor de chave para pesquisar por.  
+ O valor chave a ser pesquisado.  
   
-## Comentários  
- A função de membro determina o primeiro elemento `X` na sequência controlada que o uso do mesmo partição que `key` e tem o equivalente de ordenação da `key`.  Se tal elemento, ele retornará [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`()`; se não retorna um iterador que designa `X`.  Você usa para localizar no início de uma sequência de elementos na sequência controlada que correspondem a uma chave especificada.  
+## <a name="remarks"></a>Comentários  
+ A função de membro determina o primeiro elemento `X` na sequência controlada coloca em hash para o mesmo bucket como `key` e tem ordenação equivalente ao `key`. Se esse elemento não existe, ele retorna [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador que designa `X`. Você pode usá-lo para localizar o início de uma sequência de elementos no momento na sequência controlada que correspondem a uma chave especificada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_map_lower_bound.cpp   
@@ -74,18 +74,21 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= retifica**  
-**\*lower\_bound \(\) \= \[L'aum 1\]**  
-**\*lower\_bound \(\) \= \[L'bb 2\]**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = [a 1]  
+*lower_bound(L'b') = [b 2]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::count](../dotnet/hash-map-count-stl-clr.md)   
- [hash\_map::equal\_range](../dotnet/hash-map-equal-range-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::upper\_bound](../dotnet/hash-map-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: Count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)   
+ [hash_map:: equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)   
+ [hash_map:: Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::upper_bound (STL/CLR)](../dotnet/hash-map-upper-bound-stl-clr.md)

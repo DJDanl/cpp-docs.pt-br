@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c934ce36ae20727340ea9d2e6bd4d95272c908f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7b4d8dd6f6dced2b4847939b0d7ed560f1d59479
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 Fornece uma implementação da interface `IRowset`.  
@@ -58,14 +61,14 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|Adiciona uma contagem de referência para um identificador de linha existente.|  
+|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|Adiciona uma contagem de referência em um identificador de linha existente.|  
 |[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|Chamado pelo [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) para alocar um novo **HROW**. Não é chamado diretamente pelo usuário.|  
-|[GetData](../../data/oledb/irowsetimpl-getdata.md)|Recupera dados de cópia do conjunto de linhas da linha.|  
+|[GetData](../../data/oledb/irowsetimpl-getdata.md)|Recupera dados da cópia do conjunto de linhas da linha.|  
 |[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|Retorna o status para o campo especificado.|  
-|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|Busca linhas sequencialmente, lembre-se a posição anterior.|  
+|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|Busca linhas sequencialmente, lembrando da posição anterior.|  
 |[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|O construtor. Não é chamado diretamente pelo usuário.|  
 |[RefRows](../../data/oledb/irowsetimpl-refrows.md)|Chamado pelo [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) e [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md). Não é chamado diretamente pelo usuário.|  
-|[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|Versões de linhas.|  
+|[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|Libera linhas.|  
 |[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Reposiciona a próxima posição de busca na sua posição inicial; ou seja, sua posição quando o conjunto de linhas foi inicialmente criado.|  
 |[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|Define os sinalizadores de status para o campo especificado.|  
   

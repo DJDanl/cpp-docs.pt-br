@@ -1,42 +1,42 @@
 ---
-title: "hash_set::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro de referência [STL/CLR]"
+title: 'hash_set:: Reference (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 98116382-be98-4b97-bf83-0e340603dd4c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7f9fbbae5a80c9e30b1688480a890b7e1b284eda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetreference-stlclr"></a>hash_set::reference (STL/CLR)
 O tipo de uma referência para um elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O tipo descreve uma referência a um elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_set_reference.cpp   
@@ -64,13 +64,16 @@ int main()
   
 ```  
   
-  **um b c**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
   
-## Consulte também  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::const\_reference](../dotnet/hash-set-const-reference-stl-clr.md)   
- [hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: const_reference (STL/CLR)](../dotnet/hash-set-const-reference-stl-clr.md)   
+ [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

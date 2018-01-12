@@ -42,11 +42,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ea0c9053ef052359a0dc827299ade1ef2bbcb20f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4a14a5166e357c3b25622c49f75b2b26fed4f55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 Obtém uma linha do fluxo `stdin`. Estas versões de [gets, _getws](../../c-runtime-library/gets-getws.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -106,7 +107,7 @@ wchar_t *_getws_s(
 |`gets_s`|\<stdio.h>|  
 |`_getws`|\<stdio.h> ou \<wchar.h>|  
   
- Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   

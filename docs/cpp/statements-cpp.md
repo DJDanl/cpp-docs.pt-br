@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- statements [C++], C++
+dev_langs: C++
+helpviewer_keywords: statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: fe9bff3b9705e560d61f2a64a931c79f9ccc8602
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0d61dfb9e670e472ddaf7b46136e02a52ef3299e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statements-c"></a>Instruções (C++)
 As instruções em C++ são os elementos do programa que controlam como e em que ordem os objetos são manipulados. Esta seção inclui:  

@@ -1,42 +1,42 @@
 ---
-title: "deque::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro iterador [STL/CLR]"
+title: 'deque:: Iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: 3529e793-5d56-4cb2-898d-fdedb90b5c0c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 263862aa76e8e913de7650b10bbfc6dc2914ed0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeiterator-stlclr"></a>deque::iterator (STL/CLR)
 O tipo de um iterador para a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## Comentários  
- O tipo descreve um objeto do tipo não for especificado `T1` que pode servir como um iterador de acesso aleatório para a sequência controlada.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um objeto do tipo especificado `T1` que pode servir como um iterador de acesso aleatório para a sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_iterator.cpp   
@@ -67,13 +67,16 @@ int main()
   
 ```  
   
-  **um b c**  
- **x b c**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+a b c  
+x b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::const\_iterator](../Topic/deque::const_iterator%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)

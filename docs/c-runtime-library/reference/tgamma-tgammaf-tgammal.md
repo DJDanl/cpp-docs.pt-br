@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24c4cc90ed77a57ad053f5608ad5eaf2d1ed62f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 Determina a função gama do valor especificado.  
@@ -114,5 +115,5 @@ long double tgammal(
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [lgamma, lgammaf, lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)

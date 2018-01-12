@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f59a90828f338d918f753c8ba79236fd7edc1587
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertendo projetos do modo misto em linguagem intermediária pura
 Todos os projetos de CLR do Visual C++ link para as bibliotecas de tempo de execução C por padrão. Consequentemente, esses projetos são classificados como aplicativos de modo misto, porque eles combinam código nativo com o código que tem como alvo o common language runtime (código gerenciado). Quando eles são compilados, eles são compilados na linguagem intermediária (IL), também conhecido como Microsoft intermediate language (MSIL).  

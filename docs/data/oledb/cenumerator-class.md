@@ -1,56 +1,56 @@
 ---
-title: "Classe CEnumerator | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CEnumerator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CEnumerator"
+title: Classe CEnumerator | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CEnumerator
+dev_langs: C++
+helpviewer_keywords: CEnumerator class
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a64ac02e7b16bfab70966ffaf2a1897ae955f8c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CEnumerator
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Usa um objeto de enumerador do OLE DB, que expõe a interface de [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) para retornar um conjunto de linhas que descreve todas as fontes de dados e enumeradores.  
+# <a name="cenumerator-class"></a>Classe CEnumerator
+Usa um objeto de enumerador de OLE DB, que expõe o [ISourcesRowset da](https://msdn.microsoft.com/en-us/library/ms715969.aspx) interface para retornar um conjunto de linhas que descreve todas as fontes de dados e enumeradores.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-class CEnumerator :   
+class CEnumerator :   
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[Localizar](../Topic/CEnumerator::Find.md)|Pesquisas por meio dos provedores disponíveis \(fontes de dados\) que procuram um com o nome especificado.|  
-|[GetMoniker](../../data/oledb/cenumerator-getmoniker.md)|Recupera a interface de `IMoniker` para o registro atual.|  
-|[Abrir](../Topic/CEnumerator::Open.md)|Abre o enumerador.|  
+|[Find](../../data/oledb/cenumerator-find.md)|Pesquisas por meio de provedores disponíveis (fontes de dados) procurando um com o nome especificado.|  
+|[GetMoniker](../../data/oledb/cenumerator-getmoniker.md)|Recupera o `IMoniker` interface para o registro atual.|  
+|[Abrir](../../data/oledb/cenumerator-open.md)|Abre o enumerador.|  
   
-## Comentários  
- Você pode recuperar os dados de **ISourcesRowset** indiretamente dessa classe.  
+## <a name="remarks"></a>Comentários  
+ Você pode recuperar o **ISourcesRowset da** dados indiretamente a partir dessa classe.  
   
-## Requisitos  
- **Header:**atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:**atldbcli.h  
   
-## Consulte também  
- [DBViewer](../../top/visual-cpp-samples.md)   
- [Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [DBViewer](../../visual-cpp-samples.md)   
+ [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

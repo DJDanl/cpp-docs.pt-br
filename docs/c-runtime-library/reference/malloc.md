@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fb2ce8a8a2df102f2e455668ab798957b9ad46c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloc"></a>malloc
 Aloca os blocos de memória.  
@@ -72,7 +54,7 @@ void *malloc(
  Bytes para alocar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `malloc` retornará um ponteiro nulo para o espaço alocado ou `NULL` se houver memória suficiente disponível. Para retornar um ponteiro para um tipo que não seja o `void`, digite a conversão no valor retornado. O espaço de armazenamento apontado pelo valor retornado é garantido para ser sutilmente alinhado para armazenamento de qualquer tipo de objeto que tenha um requisito de alinhamento menor ou igual ao alinhamento fundamental. (No Visual C++, o alinhamento fundamental é o alinhamento necessário para um `double` ou 8 bytes. No código que direciona plataformas de 64 bits, ele tem 16 bytes.) Use [aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) para alocar armazenamento para objetos que tenham um requisito de alinhamento maior — por exemplo, os tipos SSE [__m128](../../cpp/m128.md) e `__m256` e os tipos que são declarados por usar `__declspec(align(``n``))`, em que `n` é maior que 8. Se `size` for 0, `malloc` alocará um item de comprimento zero no heap e retornará um ponteiro válido para esse item. Sempre verifique o retorno de `malloc`, mesmo que a quantidade de memória solicitada seja pequena.  
+ `malloc` retornará um ponteiro nulo para o espaço alocado ou `NULL` se houver memória suficiente disponível. Para retornar um ponteiro para um tipo que não seja o `void`, digite a conversão no valor retornado. O espaço de armazenamento apontado pelo valor retornado é garantido para ser sutilmente alinhado para armazenamento de qualquer tipo de objeto que tenha um requisito de alinhamento menor ou igual ao alinhamento fundamental. (No Visual C++, o alinhamento fundamental é o alinhamento necessário para um `double` ou 8 bytes. No código que direciona plataformas de 64 bits, ele tem 16 bytes.) Use [aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) para alocar armazenamento para objetos que tenham um requisito de alinhamento maior — por exemplo, os tipos SSE [__m128](../../cpp/m128.md) e `__m256` e os tipos que são declarados por usar `__declspec(align( n ))`, em que `n` é maior que 8. Se `size` for 0, `malloc` alocará um item de comprimento zero no heap e retornará um ponteiro válido para esse item. Sempre verifique o retorno de `malloc`, mesmo que a quantidade de memória solicitada seja pequena.  
   
 ## <a name="remarks"></a>Comentários  
  A função `malloc` aloca um bloco de memória de, pelo menos, `size` bytes. O bloco pode ser maior que `size` bytes por causa do espaço necessário para as informações de alinhamento e manutenção.  
@@ -106,7 +88,7 @@ void *malloc(
 |-------------|---------------------|  
 |`malloc`|\<stdlib.h> e \<malloc.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Libraries  
  Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
@@ -154,4 +136,3 @@ Memory freed
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

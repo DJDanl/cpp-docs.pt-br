@@ -1,70 +1,69 @@
 ---
-title: "CDynamicParameterAccessor::GetParamIO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetParamIO"
-  - "CDynamicParameterAccessor::GetParamIO"
-  - "ATL.CDynamicParameterAccessor.GetParamIO"
-  - "CDynamicParameterAccessor.GetParamIO"
-  - "ATL::CDynamicParameterAccessor::GetParamIO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetParamIO"
+title: 'Cdynamicparameteraccessor:: Getparamio | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetParamIO
+- CDynamicParameterAccessor::GetParamIO
+- ATL.CDynamicParameterAccessor.GetParamIO
+- CDynamicParameterAccessor.GetParamIO
+- ATL::CDynamicParameterAccessor::GetParamIO
+dev_langs: C++
+helpviewer_keywords: GetParamIO method
 ms.assetid: 9c485e39-c67e-4df7-a707-c773019c4d1e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 340153a86584483f61ae4d6dd8a8becefbcd91d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamIO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determina se o parâmetro especificado é uma entrada ou um parâmetro de saída.  
+# <a name="cdynamicparameteraccessorgetparamio"></a>CDynamicParameterAccessor::GetParamIO
+Determina se o parâmetro especificado é um parâmetro de entrada ou saído.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      bool GetParamIO(   
-   DBORDINAL nParam,   
-   DBPARAMIO * pParamIO    
+      bool GetParamIO(   
+   DBORDINAL nParam,   
+   DBPARAMIO * pParamIO    
 ) const throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `nParam`  
- \[in\] o número do parâmetro \(deslocamento de 1\).  O parâmetro 0 é reservado para valores de retorno.  O número do parâmetro for o índice do parâmetro com base na ordem de SQL ou na chamada do procedimento armazenado.  Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.  
+ [in] O número do parâmetro (deslocamento de 1). Parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem na chamada de procedimento armazenado ou SQL. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.  
   
  *pParamIO*  
- Um ponteiro para a variável que contém o tipo de **DBPARAMIO** \(entrada ou saída\) do parâmetro especificado.  É definido como segue:  
+ Um ponteiro para a variável que contém o **DBPARAMIO** (entrada ou saída) o tipo do parâmetro especificado. Ele é definido da seguinte maneira:  
   
- `typedef DWORD DBPARAMIO;`  
+```  
+typedef DWORD DBPARAMIO;  
   
- `enum DBPARAMIOENUM`  
+enum DBPARAMIOENUM {  
+    DBPARAMIO_NOTPARAM   = 0,  
+    DBPARAMIO_INPUT      = 0x1,  
+    DBPARAMIO_OUTPUT     = 0x2  
+};  
+```  
   
- `{   DBPARAMIO_NOTPARAM   = 0,`  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna **true** em caso de sucesso ou **false** em caso de falha.  
   
- `DBPARAMIO_INPUT      = 0x1,`  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
- `DBPARAMIO_OUTPUT     = 0x2`  
-  
- `};`  
-  
-## Valor de retorno  
- Retorna **true** no êxito ou **false** a falha.  
-  
-## Requisitos  
- **Header:** atldbcli.h  
-  
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

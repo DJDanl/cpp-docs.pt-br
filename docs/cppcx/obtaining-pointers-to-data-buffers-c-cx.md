@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a302aa560e5a51e369b380dc1a853ab9100d8461
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c914241682aa53735d27138da2864b0db124c8d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtendo ponteiros para buffers de dados (C++/CX)
 No Tempo de Execução do Windows, a interface [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) oferece meios baseados em transmissão de linguagem neutra para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Tempo de Execução do Windows definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.  

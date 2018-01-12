@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b94388f233c8ffb6577d88e137245475c3656de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 475be5a079b17dffbc6c8867c522da4823a778ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equalrange-stlclr"></a>equal_range (STL/CLR)
 Localiza um par de posições em um intervalo ordenado, o primeiro menor ou equivalente à posição de um elemento especificado e o segundo maior que a posição do elemento, em que o sentido de equivalência ou de ordenação usada para estabelecer as posições na sequência pode ser especificado por um predicado binário.  

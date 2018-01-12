@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _lfind_s
+apiname: _lfind_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c50893f1dc73db9f928eaea346a381d1bd991d2f
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 Executa uma pesquisa linear da chave especificada. Uma versão de [_lfind](../../c-runtime-library/reference/lfind.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  

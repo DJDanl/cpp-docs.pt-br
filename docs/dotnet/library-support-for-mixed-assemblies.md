@@ -1,58 +1,60 @@
 ---
-title: "Suporte de biblioteca para assemblies mistos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bibliotecas [C++], assemblies mistos"
-  - "assemblies mistos [C++], suporte a biblioteca"
-  - "msvcm90[d].dll"
-  - "msvcmrt[d].lib"
+title: Suporte de biblioteca para Assemblies mistos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- msvcm90[d].dll
+- mixed assemblies [C++], library support
+- msvcmrt[d].lib
+- libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b3bc50416eceac64c134a31a4d7384e33db69b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Suporte de biblioteca para assemblies mistos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ oferece suporte ao uso da biblioteca padrão C\+\+, da biblioteca de tempo de execução comum \(\), CRT de ATL, e de MFC para os aplicativos criados com [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  Isso permite que os aplicativos existentes que usam essas bibliotecas para também usar recursos do.NET Framework.  
+# <a name="library-support-for-mixed-assemblies"></a>Suporte de biblioteca para assemblies mistos
+Visual C++ oferece suporte ao uso da biblioteca padrão C++, a biblioteca de tempo de execução comum (CRT), ATL e MFC para aplicativos compilados com [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md). Isso permite que os aplicativos existentes que usam essas bibliotecas para usar recursos do .NET Framework também.  
   
- Esse suporte apresenta as seguintes novas bibliotecas da DLL e de importação:  
+ Esse suporte apresenta as seguintes bibliotecas de importação e a DLL de novo:  
   
--   \[\] Msvcmrt de .lib se você compila com \/clr.  Links mistos de assemblies a esse biblioteca de importação.  
+-   Msvcmrt [d]. lib se você compilar com /clr. Assemblies mistos links para essa biblioteca de importação.  
   
--   \[\] Msvcm90 de .dll e de Msvcurt \[\] .lib se você compila com \/clr:pure.  A DLL é um assembly do tipo misto que fornece suporte gerenciado \(CRT\) de tempo de execução C, e é parte de um assembly gerenciado instalado em cachê de assembly global \(GAC\).  Os assemblies puro vinculam a essa biblioteca de importação e terminam acima associado a Msvcm90.dll.  
+-   Msvcm90. [d] dll e. lib de Msvcurt [d] se você compilar com /clr: pure. A DLL é um conjunto misto fornecendo suporte gerenciado do tempo de execução do C (CRT) e faz parte de um assembly gerenciado instalado no cache de assembly global (GAC). Assemblies puros o link para esta biblioteca de importação e terminam associado ao Msvcm90.dll.  
   
- Esse suporte fornece vários benefícios relacionados:  
+ Esse suporte fornece que vários benefícios relacionados ao:  
   
--   O CRT e a biblioteca padrão do C\+\+ estão disponíveis para o código misto e puro.  O CRT e a biblioteca padrão do C\+\+ fornecidos não são verificáveis; finalmente, seus chamadas são roteados no mesmo CRT e a biblioteca padrão do C\+\+ que você está usando o código nativo.  
+-   A biblioteca padrão C++ e CRT estão disponíveis para código misto e puro. O CRT e biblioteca padrão do C++ fornecidas não são verificáveis; Por fim, as chamadas ainda são roteadas para o mesmo CRT e biblioteca padrão C++ como você está usando no código nativo.  
   
--   Corrija a manipulação de exceção unificada nas imagens puras e mistas.  
+-   Corrija o tratamento de exceção unificada em imagens puros e mistos.  
   
--   Inicialização estático de variáveis C\+\+ em imagens puras e mistas.  
+-   Inicialização estática de variáveis de C++ em imagens puras e mistas.  
   
--   Suporte para variáveis do appdomains e do processo em código gerenciado.  
+-   Suporte para variáveis per-AppDomain e por processo no código gerenciado.  
   
--   Resolve problemas de bloqueio de carregador se a DLL que foram mesclados no Visual C\+\+ .NET e Visual C\+\+ .NET 2003.  
+-   Resolve os problemas de bloqueio do carregador aplicado a mistos DLLs compiladas no Visual Studio 2003 e versões anteriores.  
   
- Além disso, esse suporte apresenta as seguintes restrições:  
+ Além disso, esse suporte apresenta as seguintes limitações:  
   
--   Somente o modelo de DLL de CRT tem suporte \(para o código compilado com \/clr ou \/clr:pure\).  
+-   Há suporte para apenas o modelo de DLL do CRT (para código compilado com /clr ou /clr: pure).  
   
--   Você não pode combinar objetos simples e mesclados em uma única imagem se esses objetos usarão as bibliotecas Visual C\+\+ \(como todos os objetos devem ser simples em uma imagem pura\).  Se você fizer isso, você receberá erros de link\- Horas.  
+-   Você não pode misturar puros e mistos objetos em uma única imagem se esses objetos usam as bibliotecas do Visual C++ (porque todos os objetos devem ser puros em uma imagem simples). Se você fizer isso, você recebe erros de tempo de vinculação.  
   
- Você deve atualizar o Common Language Runtime \(CLR\) para a versão atual como se não garante para trabalhar com versões anteriores.  O código compilado com essas alterações não será executado na versão 1.x. de CLR.  
+ Você deve atualizar o tempo de execução de linguagem comum (CLR) para a versão atual que não é garantido que ele funciona com versões anteriores. Criado com essas alterações de código não será executado na versão do CLR 1. x.  
   
-## Consulte também  
- [Assemblies mistos \(nativos e gerenciados\)](../Topic/Mixed%20\(Native%20and%20Managed\)%20Assemblies.md)
+## <a name="see-also"></a>Consulte também  
+ [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -1,40 +1,42 @@
 ---
-title: "Melhorando o provedor somente leitura simples | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe IRowsetLocate"
-  - "Classe IRowsetLocate, adicionando a provedores de modelo OLE DB"
-  - "provedores somente leitura [C++]"
-  - "provedores somente leitura simples [C++]"
+title: Melhorando o provedor somente leitura simples | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- read-only poviders [C++]
+- IRowsetLocate class
+- IRowsetLocate class, adding to OLE DB template providers
+- simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ad1ccd39ff66e4c193364549f58c78c6b743af0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Melhorando o provedor somente leitura simples
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Esta seção mostra como aprimorar [provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md) criado na seção anterior.  `IRowsetLocateImpl` cria uma implementação da interface de `IRowsetLocate` e adiciona suporte do medidor para você.  
+# <a name="enhancing-the-simple-read-only-provider"></a>Melhorando o provedor somente leitura simples
+Esta seção mostra como aprimorar a [provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md) criado na seção anterior. `IRowsetLocateImpl`cria uma implementação para o `IRowsetLocate` de interface e adiciona suporte a indicadores para você.  
   
- Quando você tem um provedor de funcionamento, talvez você queira aprimorar\-lo para fazer a atualização do provedor, trata transações, ou aprimora o desempenho do algoritmo de busca.  A maioria dos aprimoramentos do provedor envolvem adicionar uma interface para um objeto COM existente.  
+ Quando você tiver um provedor de trabalho, você talvez queira aprimorá-lo para fazer a atualização do provedor, manipular transações ou melhorar o desempenho do algoritmo de busca de linhas. A maioria dos aprimoramentos de provedor envolvem a inclusão de uma interface para um objeto COM existente.  
   
- O exemplo nos seguintes tópicos aprimora o mecanismo de busca adicionando a interface de `IRowsetLocate` a `CAgentRowset`.  Os tópicos a seguir mostram como:  
+ O exemplo nos tópicos a seguir aumenta o mecanismo de busca de linhas, adicionando o `IRowsetLocate` interface `CAgentRowset`. Os tópicos mostram como para:  
   
--   [Faça RMyProviderRowset herdar de IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).  
+-   [Verifique RMyProviderRowset herdam IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).  
   
 -   [Determinar dinamicamente as colunas retornadas ao consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criando um provedor somente leitura simples](../../data/oledb/creating-a-simple-read-only-provider.md)

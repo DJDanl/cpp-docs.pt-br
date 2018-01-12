@@ -1,42 +1,42 @@
 ---
-title: "collection_adapter::mapped_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::mapped_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro mapped_type [STL/CLR]"
+title: collection_adapter::mapped_type (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::mapped_type
+dev_langs: C++
+helpviewer_keywords: mapped_type member [STL/CLR]
 ms.assetid: eece6a47-611a-47d4-8dfc-cfbbc4aeb67b
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b3e9f01c99333a292e934535785c695df2b9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::mapped_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de um valor do dicionário.  
+# <a name="collectionadaptermappedtype-stlclr"></a>collection_adapter::mapped_type (STL/CLR)
+O tipo de um valor de dicionário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef Value mapped_type;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o parâmetro `Value`do modelo, em uma especialização para `IDictionary` ou `IDictionary<Value>`; se não for definido.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo para o parâmetro de modelo `Value`, em uma especialização de `IDictionary` ou `IDictionary<Value>`; caso contrário, ele não está definido.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_collection_adapter_mapped_type.cpp   
@@ -69,12 +69,15 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**   
-## Requisitos  
- cliext \<\/adaptador de**Cabeçalho:** \>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext adaptador >  
   
-## Consulte também  
- [collection\_adapter](../Topic/collection_adapter%20\(STL-CLR\).md)   
- [collection\_adapter::key\_type](../dotnet/collection-adapter-key-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::key_type (STL/CLR)](../dotnet/collection-adapter-key-type-stl-clr.md)

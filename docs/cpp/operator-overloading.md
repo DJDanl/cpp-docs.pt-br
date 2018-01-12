@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3844dc5b53defcb02f1dab1a97f05760d05d531f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operador
 A palavra-chave `operator` declara uma função especificando o que `operator-symbol` significa quando aplicado às instâncias de uma classe. Isso confere ao operador mais de um significado, ou seja, o "sobrecarrega". O compilador distingue entre os diversos significados de um operador examinando os tipos de seus operandos.  

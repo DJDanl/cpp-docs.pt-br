@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 671bc9f6f21871e27cc6edc54f4fc45de4317e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e3f6d964f4cf4debefa3044a458704554233447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsort"></a>qsort
 Executa uma classificação rápida. Uma versão mais segura dessa função está disponível, consulte [qsort_s](../../c-runtime-library/reference/qsort-s.md).  
@@ -94,7 +95,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 |-------------|---------------------|  
 |`qsort`|\<stdlib.h> e \<search.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   

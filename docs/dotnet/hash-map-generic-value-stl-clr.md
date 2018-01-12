@@ -1,42 +1,42 @@
 ---
-title: "hash_map::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro generic_value [STL/CLR]"
+title: hash_map::generic_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: e370feb3-3d2d-493e-b29d-4e97756c33b0
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0ef280be9426d0832c1c1f6568d8cfe72279a757
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapgenericvalue-stlclr"></a>hash_map::generic_value (STL/CLR)
 O tipo de um elemento para uso com a interface genérica para o contêiner.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Comentários  
- O tipo descreve um objeto do tipo `GValue` que descreve o valor armazenado do elemento para uso com a interface genérica para esta classe do contêiner do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenados para uso com a interface genérica para esta classe de contêiner do modelo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_map_generic_value.cpp   
@@ -71,16 +71,19 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
- **um \[1\] \[2\] \[b3 c\]**  
- **\[um 1\]**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::generic\_container](../dotnet/hash-map-generic-container-stl-clr.md)   
- [hash\_map::generic\_iterator](../dotnet/hash-map-generic-iterator-stl-clr.md)   
- [hash\_map::generic\_reverse\_iterator](../dotnet/hash-map-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)   
+ [hash_map::generic_iterator (STL/CLR)](../dotnet/hash-map-generic-iterator-stl-clr.md)   
+ [hash_map::generic_reverse_iterator (STL/CLR)](../dotnet/hash-map-generic-reverse-iterator-stl-clr.md)

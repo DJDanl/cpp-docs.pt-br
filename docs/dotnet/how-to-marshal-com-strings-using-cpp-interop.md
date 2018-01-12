@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c2400407c6a8ec5191df46f049113ad1d435ad1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 45a79f3aa78d229c71aba5a1d1144d05afe7bbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Como realizar marshaling de cadeias de caracteres COM usando interop C++
 Este tópico demonstra como um BSTR (o formato de cadeia de caracteres básicas vantajosa em programação COM) pode ser passados do gerenciada em uma função não gerenciada e vice-versa. Para interagir com outros tipos de cadeias de caracteres, consulte os tópicos a seguir:  

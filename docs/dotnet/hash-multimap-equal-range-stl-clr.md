@@ -1,46 +1,46 @@
 ---
-title: "hash_multimap::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro equal_range [STL/CLR]"
+title: 'hash_multimap:: equal_range (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: 3ea11e31-d4af-4d2e-a80b-eafe12c97d0c
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 298292aba489ac30ebe7e66ff621bb9f1019e7b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Encontra variam que corresponde a uma chave especificada.  
+# <a name="hashmultimapequalrange-stlclr"></a>hash_multimap::equal_range (STL/CLR)
+Localiza o intervalo que corresponde a uma chave especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  key  
- Valor de chave para pesquisar por.  
+ O valor chave a ser pesquisado.  
   
-## Comentários  
- A função de membro retorna um par de iteradores `cliext::pair<iterator, iterator>(` [hash\_multimap::lower\_bound](../Topic/hash_multimap::lower_bound%20\(STL-CLR\).md)`(``key``),` [hash\_multimap::upper\_bound](../Topic/hash_multimap::upper_bound%20\(STL-CLR\).md)`(``key``))`.  Use\-a para determinar atualmente o intervalo dos elementos na sequência controlada que correspondem a uma chave especificada.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna um par de iteradores `cliext::pair<iterator, iterator>(` [hash_multimap:: lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap:: upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)`(key))`. Você pode usá-lo para determinar o intervalo de elementos que correspondem a uma chave especificada no momento na sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multimap_equal_range.cpp   
@@ -77,17 +77,20 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**o equal\_range \(L'x vazia\) \= retifica**  
- **\[b 2\]**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
   
-## Consulte também  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::count](../dotnet/hash-multimap-count-stl-clr.md)   
- [hash\_multimap::find](../dotnet/hash-multimap-find-stl-clr.md)   
- [hash\_multimap::lower\_bound](../Topic/hash_multimap::lower_bound%20\(STL-CLR\).md)   
- [hash\_multimap::upper\_bound](../Topic/hash_multimap::upper_bound%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: Count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)   
+ [hash_multimap:: Find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)   
+ [hash_multimap:: lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)   
+ [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)

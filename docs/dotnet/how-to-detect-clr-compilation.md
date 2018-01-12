@@ -1,34 +1,36 @@
 ---
-title: "Como detectar a compila&#231;&#227;o /clr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /clr [C++], detectando uso de"
-  - "compilação, detectando /clr"
+title: "Como: detectar - clr compilação | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- compilation, detecting /clr
+- /clr compiler option [C++], detecting use of
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 51fa6b5e222b980bdf3a8757434f1caaed0085c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como detectar a compila&#231;&#227;o /clr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Use a macro de `_MANAGED` ou de `_M_CEE` para verificar se um módulo foi criado com **\/clr**.  Para obter mais informações, consulte [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="how-to-detect-clr-compilation"></a>Como detectar a compilação /clr
+Use o `_MANAGED` ou `_M_CEE` macro para ver se um módulo é compilado com **/clr**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Para obter mais informações sobre macros, consulte [Macros predefinidas](../preprocessor/predefined-macros.md).  
+ Para obter mais informações sobre as macros, consulte [Macros predefinidas](../preprocessor/predefined-macros.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // detect_CLR_compilation.cpp  
@@ -44,5 +46,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1879def3a66765c48d9f86e4b7f0c56785a0cf91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) é uma maneira de se comunicar com um banco de dados relacional que permite que você defina a consulta, modificar e controla os dados. Usando a sintaxe SQL, você pode construir uma instrução que extrai os registros de acordo com os critérios que você especificar.  
@@ -54,9 +57,9 @@ SQL (Structured Query Language) é uma maneira de se comunicar com um banco de d
   
 |Palavra-chave SQL|Os assistentes e as classes de banco de dados usá-lo|  
 |-----------------|---------------------------------------------|  
-|**SELECIONE**|Para identificar quais tabelas e colunas na fonte de dados devem ser usados.|  
-|**ONDE**|Para aplicar um filtro que restringe a seleção.|  
-|**ORDENAR POR**|Para aplicar uma ordem de classificação para o conjunto de registros.|  
+|**SELECT**|Para identificar quais tabelas e colunas na fonte de dados devem ser usados.|  
+|**WHERE**|Para aplicar um filtro que restringe a seleção.|  
+|**ORDER BY**|Para aplicar uma ordem de classificação para o conjunto de registros.|  
 |**INSERIR**|Para adicionar novos registros a um conjunto de registros.|  
 |**EXCLUIR**|Para excluir registros de um conjunto de registros.|  
 |**ATUALIZAÇÃO**|Para modificar os campos de um registro.|  

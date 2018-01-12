@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3db30aedfd18a34672c19e01e2353f6583b856b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 29211f494c905f3d82ebe3238706b2528dadce0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locking"></a>_locking
 Bloqueia ou desbloqueia os bytes de um arquivo.  

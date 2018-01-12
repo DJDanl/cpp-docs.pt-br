@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 829f7302cf1086162c81be78acb05abcdb0fdf1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1c18ea36a4ebced809ea32e74dca9dcb00e3968
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programação do .NET com C + + CLI (Visual C++)
 Os tópicos a seguir descrevem como o Visual C++ pode direcionar a plataforma .NET.  

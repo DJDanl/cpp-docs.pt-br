@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28c2526b15e0c6049b1f279b76d48455bdc82ac6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8e58f2994755363b91b639eebc871066e321a479
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listpushfront-stlclr"></a>list::push_front (STL/CLR)
 Adiciona um novo elemento primeiro.  

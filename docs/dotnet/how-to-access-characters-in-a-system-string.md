@@ -1,38 +1,40 @@
 ---
-title: "Como acessar caracteres em um System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caracteres [C++], acessando em System::String"
-  - "exemplos [C++], cadeias de caracteres"
-  - "cadeias de caracteres [C++], acessando caracteres"
+title: 'Como: acessar caracteres em um System:: String | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como acessar caracteres em um System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode acessar caracteres de um objeto de <xref:System.String> para chamadas de alto desempenho para funções não gerenciado que usam cadeias de caracteres de `wchar_t*` .  O método produz um ponteiro dentro do primeiro caractere do objeto de <xref:System.String> .  Esse ponteiro pode ser manipulado diretamente ou fixado e passado a uma função que espera uma cadeia de caracteres comum de `wchar_t` .  
+# <a name="how-to-access-characters-in-a-systemstring"></a>Como acessar caracteres em um System::String
+Você pode acessar caracteres de um <xref:System.String> objeto para chamadas de alto desempenho gerenciado para funções que usam `wchar_t*` cadeias de caracteres. O método gera um ponteiro interior para o primeiro caractere do <xref:System.String> objeto. Esse ponteiro pode ser manipulado diretamente ou fixado e transmitido para uma função esperando um comum `wchar_t` cadeia de caracteres.  
   
-## Exemplo  
- `PtrToStringChars` retorna <xref:System.Char>, que é um ponteiro interior \(também conhecido como `byref`\).  Como tal, está sujeita à coleta de lixo.  Você não precisa manter esse ponteiro a menos que você esteja que o passar a uma função nativo.  
+## <a name="example"></a>Exemplo  
+ `PtrToStringChars`Retorna um <xref:System.Char>, que é um ponteiro interior (também conhecido como um `byref`). Como tal, está sujeito a coleta de lixo. Você não precisa Fixar este ponteiro, a menos que você vai passá-lo para uma função nativa.  
   
- Considere o seguinte código.  Fixar\-se não é necessário porque `ppchar` é um ponteiro interior, e se o coletor de lixo move a cadeia de caracteres que aponte para, também atualizará `ppchar`.  Sem [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md), o código funcionará e não terá a ocorrência de desempenho potencial causada fixando\-se.  
+ Considere o código a seguir.  Fixando não é necessária porque `ppchar` é um ponteiro interior, e se o coletor de lixo move aponta para a cadeia de caracteres, ele também atualizará `ppchar`. Sem um [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md), o código irá funcionar e não ter o impacto potencial no desempenho causado por fixar.  
   
- Se você passar `ppchar` a uma função nativo, deverá ser um ponteiro fixando\-se; o coletor de lixo não poderá atualizar os ponteiros no quadro de pilhas não gerenciado.  
+ Se você passar `ppchar` para uma função nativa, em seguida, ele deve ser um ponteiro de fixação; o coletor de lixo não será capaz de atualizar qualquer ponteiros do quadro de pilha não gerenciada.  
   
 ```  
 // PtrToStringChars.cpp  
@@ -50,9 +52,12 @@ int main() {
 }  
 ```  
   
-  **abcdefg**   
-## Exemplo  
- Este exemplo mostra onde se for necessário manter.  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Este exemplo mostra onde a anexação é necessária.  
   
 ```  
 // PtrToStringChars_2.cpp  
@@ -75,9 +80,12 @@ int main() {
 }  
 ```  
   
- **7**   
-## Exemplo  
- Um ponteiro interior tem todas as propriedades de um ponteiro de C\+\+ nativo.  Por exemplo, você pode usá\-lo para percorrer uma estrutura de dados vinculada e fazer inserções e exclusões usando somente um ponteiro:  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Um ponteiro interior tem todas as propriedades de um ponteiro de C++ nativo. Por exemplo, você pode usá-la para percorrer uma estrutura de dados vinculado e fazer inserções e exclusões usando somente um ponteiro:  
   
 ```  
 // PtrToStringChars_3.cpp  
@@ -99,5 +107,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

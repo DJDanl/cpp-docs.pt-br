@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c182404618e36fe3b7fa0ed72d3a2e39569f7ac0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 677a6a0e0107f3ed0d0dc402f36e9d6dd4505c7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="override-specifier"></a>substituir especificador
 Você pode usar a palavra-chave `override` para designar as funções membro que substituem uma função virtual em uma classe base.  

@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5794cd9ec0eb5afc879507bcf8942d6481ebca4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>Funções (C++)
 Uma função é um bloco de código que executa uma operação. Uma função pode, opcionalmente, definir parâmetros de entrada que permitem que os chamadores passar argumentos para a função. Uma função, opcionalmente, pode retornar um valor como saída. Funções são úteis para encapsular as operações comuns em um único bloco reutilizável, de preferência com um nome que descreva claramente que a função faz. A função a seguir aceita dois inteiros de um chamador e retorna a soma; `a` e `b` são *parâmetros* do tipo `int`.  

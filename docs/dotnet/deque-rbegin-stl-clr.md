@@ -1,42 +1,42 @@
 ---
-title: "deque::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro rbegin [STL/CLR]"
+title: rbegin (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: 5d399c1d-bd7e-4b2e-bde0-11a000e29679
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d111fc2739dba0b6a8531c6fe5a8b149b901f818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequerbegin-stlclr"></a>deque::rbegin (STL/CLR)
 Designa o início da sequência controlada invertida.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## Comentários  
- A função de membro retorna um iterador invertido que designa o elemento o último de sequência controlada, ou apenas além do início de uma sequência vazia.  Consequentemente, designa `beginning` de sequência inversa.  Use\-a para obter um iterador que designa o início de `current` de sequência controlada consultada em ordem inversa, mas seu status pode ser alterado se o comprimento da sequência controlada é alterado.  
+## <a name="remarks"></a>Comentários  
+ A função de membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` pode alterá-início da sequência controlada visto na ordem inversa, mas seu status se altera o comprimento da sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_deque_rbegin.cpp   
@@ -71,17 +71,20 @@ int main()
   
 ```  
   
-  **um b c**  
-**\*rbegin\(\) \= c**  
-**\*\+\+rbegin\(\) \= b**  
- **um x y**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+ a y x  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::begin](../dotnet/deque-begin-stl-clr.md)   
- [deque::end](../Topic/deque::end%20\(STL-CLR\).md)   
- [deque::rend](../Topic/deque::rend%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque (STL/CLR)](../dotnet/deque-begin-stl-clr.md)   
+ [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md)   
+ [deque::rend (STL/CLR)](../dotnet/deque-rend-stl-clr.md)

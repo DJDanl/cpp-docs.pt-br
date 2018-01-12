@@ -1,31 +1,32 @@
 ---
-title: "Adicionando uma interface ao provedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelos de provedor do OLE DB, Interfaces de objeto"
+title: Adicionando uma Interface ao provedor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cd67039848eedc0568e68e1e62f6192b822b9f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Adicionando uma interface ao provedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determine objeto que você deseja adicionar a interface \(normalmente fonte de dados, conjunto de linhas, comando, ou objetos de sessão criados pelo assistente do provedor OLE DB\).  É possível que o objeto que você precisa adicionar a interface é uma que o provedor não oferecer suporte a.  Nesse caso, execute o assistente do provedor OLE DB de ATL para criar o objeto.  Clique com o botão direito do mouse na exibição da classe **Adicionar Classe** , clique no menu de **Adicionar** , e clique em **ATL OLE DB Provider**.  Talvez você queira colocar o código de interface em um diretório separado e para copiar os arquivos em seu provedor do projeto.  
+# <a name="adding-an-interface-to-your-provider"></a>Adicionando uma interface ao provedor
+Determine qual objeto que você deseja adicionar a interface para (geralmente dados fonte, conjunto de linhas, comando ou sessão objetos criados pelo OLE DB Provider Assistente). É possível que o objeto que você precisa adicionar a interface é aquele que seu provedor não oferece suporte. Nesse caso, execute o ATL OLE DB Provider Assistente para criar o objeto. Clique com botão direito no projeto no modo de exibição de classe, clique em **Adicionar classe** do **adicionar** menu e clique **ATL OLE DB Provider**. Você talvez queira colocar o código de interface em um diretório separado e, em seguida, copiar os arquivos para o projeto de provedor.  
   
- Se você criou uma nova classe para dar suporte à interface, faça o objeto ser herdada da classe.  Por exemplo, você pode adicionar a classe **IRowsetIndexImpl** a um objeto de conjunto de linhas:  
+ Se você criou uma nova classe para oferecer suporte à interface, torne o objeto herdar dessa classe. Por exemplo, você pode adicionar a classe **IRowsetIndexImpl** para um objeto de conjunto de linhas:  
   
 ```  
 template <class Creator>  
@@ -34,7 +35,7 @@ public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,
    public IRowsetIndexImpl< ... >   
 ```  
   
- Adicionar à interface **COM\_MAP** no objeto usando a macro de COM\_INTERFACE\_ENTRY.  Se não houver nenhum mapa, crie um.  Por exemplo:  
+ Adicionar a interface para **COM_MAP** no objeto usando a macro COM_INTERFACE_ENTRY. Se não houver nenhum mapa, crie um. Por exemplo:  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -42,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Para o objeto de conjunto de linhas, o encadeamento o mapa do seu objeto pai de forma que o objeto pode delegar a classe pai.  Neste exemplo, adicione a macro de COM\_INTERFACE\_ENTRY\_CHAIN ao mapa:  
+ Para o objeto de conjunto de linhas, a cadeia de mapa de seu pai do objeto para que o objeto pode delegar a classe pai. Neste exemplo, adicione a macro COM_INTERFACE_ENTRY_CHAIN ao mapa:  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -51,5 +52,5 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
-## Consulte também  
- [Trabalhando com modelos de provedor de banco de dados OLE](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Consulte também  
+ [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

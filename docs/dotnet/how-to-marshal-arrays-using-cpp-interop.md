@@ -1,38 +1,40 @@
 ---
-title: "Como realizar marshaling de matrizes usando interop C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrizes [C++], marshaling"
-  - "Interoperabilidade C++, matrizes"
-  - "realização de marshaling em dados [C++], matrizes"
-  - "interoperabilidade [C++], matrizes"
-  - "realização de marshaling [C++], matrizes"
+title: 'Como: marshaling de matrizes usando Interop C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- arrays [C++], marshaling
+- marshaling [C++], arrays
+- interop [C++], arrays
+- C++ Interop, arrays
+- data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 526a87029f6447183988391c9b7b5a95baa8b8c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como realizar marshaling de matrizes usando interop C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico demonstra uma faceta de interoperabilidade do Visual C\+\+.  Para obter mais informações, consulte [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Como realizar marshaling de matrizes usando interop C++
+Este tópico demonstra uma faceta de interoperabilidade do Visual C++. Para obter mais informações, consulte [usando Interop C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Os exemplos de código a seguir usam as políticas de \#pragma de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) para implementar gerenciado e funções não gerenciada no mesmo arquivo, mas essas funções interoperam da mesma forma que se definido em arquivos separados.  Os arquivos que contêm somente funções não gerenciado não precisam ser compilados com [\/clr \(compilação do Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisam ser compilada com [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemplo  
- O exemplo a seguir demonstra como passar uma matriz gerenciada em uma função não gerenciado.  A função gerenciado usa [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) para suprimir a coleta de lixo para a matriz antes de chamar a função não gerenciado.  Fornecendo a função não gerenciado um ponteiro fixado no heap de GC, a sobrecarga de fazer uma cópia da matriz pode ser evitado.  Para demonstrar que a função não gerenciado está acessando a memória heap de GC, altera o conteúdo da matriz e as alterações são refletidas quando o controle gerenciado de resumos da função.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como passar uma matriz gerenciada para uma função não gerenciada. Usa a função gerenciada [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) para suprimir a coleta de lixo para a matriz antes de chamar a função não gerenciada. Ao fornecer a função não gerenciada com um ponteiro fixado no heap de GC, a sobrecarga de fazer uma cópia da matriz pode ser evitada. Para demonstrar que a função não gerenciada está acessando a memória de heap de GC, ela modifica o conteúdo da matriz e as alterações são refletidas quando a função gerenciada retoma o controle.  
   
 ```  
 // PassArray1.cpp  
@@ -89,8 +91,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir demonstra passe uma matriz não gerenciada em uma função gerenciada.  A função gerenciado acessa a memória da matriz diretamente \(em vez de criar uma matriz gerenciado e de copiar o conteúdo da matriz\), que permite que as modificações feitas pela função gerenciada a ser refletido na função não gerenciado quando recupera o controle.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como passar uma matriz não gerenciada para uma função gerenciada. A função gerenciada acessa a memória de matriz diretamente (em vez de criar uma matriz gerenciada e copiar o conteúdo da matriz), que permite que as alterações feitas pela função gerenciada sejam refletidas na função não gerenciada quando ele recupera o controle.  
   
 ```  
 // PassArray2.cpp  
@@ -136,5 +138,5 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

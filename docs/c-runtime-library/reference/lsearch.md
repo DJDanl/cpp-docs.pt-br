@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _lsearch
+apiname: _lsearch
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch
 - lsearch
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -37,30 +34,16 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 86dd9925775d50a8e1c79f677f3e5b1d9ad3ae37
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ffb2c0ec3547278f048855bb72a2e4ae1bb00287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearch"></a>_lsearch
 Executa uma pesquisa linear para um valor e o adicionará ao final da lista se ele não for encontrado. Uma versão mais segura dessa função está disponível; consulte [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md).  

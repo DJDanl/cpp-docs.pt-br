@@ -41,11 +41,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f711ca2a09126b6a2e914ab094f5f491a9998c41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 972d3057990a5cab21f6e5b05159f9f67a8bdf98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 Calcula a raiz quadrada.  
@@ -120,7 +121,7 @@ The square root of 45.35 is 6.73
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [EXP, expf, SOL](../../c-runtime-library/reference/exp-expf.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)   

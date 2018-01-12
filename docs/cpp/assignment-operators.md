@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - or_eq
 - +=
 - '*='
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - or_eq operator
 - '&= operator'
@@ -45,16 +43,16 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 34ed921ed7eb690372f1635ed845271fa7520a86
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 ## <a name="syntax"></a>Sintaxe  

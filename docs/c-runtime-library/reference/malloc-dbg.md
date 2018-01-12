@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _malloc_dbg
+apiname: _malloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,22 @@ apitype: DLLExport
 f1_keywords:
 - malloc_dbg
 - _malloc_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - malloc_dbg function
 - memory allocation
 - _malloc_dbg function
 ms.assetid: c97eca51-140b-4461-8bd2-28965b49ecdb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 7c1d34b3e426149f1e3fc895469ac5ed16a1d2f8
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fc67af9abb5602cca81eefa6aaeb131423057678
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 Aloca um bloco de memória no heap com espaço adicional para um cabeçalho de depuração e buffers de substituição (apenas versão de depuração).  

@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <<
 - '>>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - << operator [C++], with specific objects
 - left shift operators [C++]
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7dece9ac4045fa8b46e5edf8b266312242000229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de deslocamento de deslocamento à esquerda e direita (&gt; &gt; e &lt; &lt;)
 Operadores shift bit a bit são o operador right shift (>>), que move os bits de *shift expressão* para a direita e o operador de deslocamento à esquerda (<<), que move os bits de *shift-expressão* à esquerda. <sup>1</sup>  
@@ -201,7 +199,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>Detalhes adicionais  
- O resultado de uma operação de shift será indefinido se *aditivo expressão* for negativo ou se *aditivo expressão* é maior que ou igual ao número de bits (promovida) * expressão de SHIFT*. Nenhuma operação shift é realizada se *aditivo expressão* é 0.  
+ O resultado de uma operação de shift será indefinido se *aditivo expressão* for negativo ou se *aditivo expressão* é maior que ou igual ao número de bits (promovida)  *expressão de SHIFT*. Nenhuma operação shift é realizada se *aditivo expressão* é 0.  
   
 ```cpp  
 #include <iostream>  

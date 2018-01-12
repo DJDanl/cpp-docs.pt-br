@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cbbef3b1f83b1b39c92ef689d5924b8962f32b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59b1a50c44d5719cf3c699a14e5139d9e9816938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Habilitando e desabilitando serviços de banco de dados OLE
 O Gerenciador de componentes de serviço do OLE DB compara as propriedades especificadas pelo consumidor para aqueles suportados pelo provedor para determinar se os componentes de serviço individual podem ser invocados para atender a funcionalidade estendida solicitada pelo consumidor. Por exemplo, se um aplicativo solicita um cursor rolável e o provedor oferece suporte apenas a um cursor somente de encaminhamento, o Gerenciador de componentes de serviço chama o componente de serviço do mecanismo de Cursor do cliente para fornecer funcionalidade rolável. Se o aplicativo depende de funcionalidade estendida com suporte por padrão no conjunto de linhas do provedor e o aplicativo não definir explicitamente as propriedades para solicitar que a funcionalidade, a funcionalidade pode não aparecer no conjunto de linhas retornado pelo cliente Mecanismo de cursor. Para ser interoperáveis, aplicativos sempre devem definir as propriedades para solicitar explicitamente a funcionalidade estendida onde for necessário.  

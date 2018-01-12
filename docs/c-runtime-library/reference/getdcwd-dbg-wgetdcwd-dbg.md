@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - getdcwd_dbg
 - _wgetdcwd_dbg
 - wgetdcwd_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - working directory
 - _getdcwd_dbg function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9131d9769d96d7668db180c5c9595ea786770e8b
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2009a88f522b60305c6f910a155faa8e675e2147
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 Versões de depuração das funções [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md) (disponíveis somente durante a depuração).  

@@ -25,11 +25,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7be8bbf011964411431d754afa058763e70e3265
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos gerados pelo Assistente do Consumidor
 Assistente de ATL OLE DB consumidor e o Assistente de aplicativo MFC geram determinadas funções das quais você deve estar ciente. Observe que alguns métodos são implementados de maneira em projetos atribuídos, portanto, há algumas limitações; cada caso é abordado abaixo. Para obter informações sobre como exibir o código injetado, consulte [depurar código injetado](/visualstudio/debugger/how-to-debug-injected-code).  

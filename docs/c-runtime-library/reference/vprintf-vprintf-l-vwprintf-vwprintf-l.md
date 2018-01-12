@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ apitype: DLLExport
 f1_keywords:
 - vwprintf
 - _vtprintf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - vwprintf function
 - _vwprintf_l function
@@ -43,30 +41,16 @@ helpviewer_keywords:
 - _vtprintf_l function
 - formatted text [C++]
 ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bcb54b081d77f6a7346a48680d56850eda7eb630
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 455f335b359aa7867b844fb7d339d7671e9a2f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-vprintfl-vwprintf-vwprintfl"></a>vprintf, _vprintf_l, vwprintf, _vwprintf_l
 Grava saída formatada usando um ponteiro para uma lista de argumentos. Versões mais seguras dessas funções estão disponíveis, consulte [vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l](../../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md).  
@@ -137,7 +121,7 @@ int _vwprintf_l(
   
  \* Necessário para compatibilidade com UNIX V.  
   
- Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

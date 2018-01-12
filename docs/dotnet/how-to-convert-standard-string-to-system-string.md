@@ -1,33 +1,35 @@
 ---
-title: "Como converter cadeia de caracteres padr&#227;o em System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Biblioteca Padrão C++, convertendo cadeias de caracteres em System::String"
-  - "conversão de cadeia de caracteres [C++], cadeia de caracteres de Biblioteca Padrão C++"
-  - "cadeias de caracteres [C++], convertendo"
+title: "Como: converter a cadeia de caracteres padrão em System:: String | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting strings to System::String
+- string conversion [C++], C++ Standard Library string
+- strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c6a2bc4fb1a73954e182ea192047a7ec6ca20c1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como converter cadeia de caracteres padr&#227;o em System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico mostra como converter uma cadeia de caracteres de biblioteca padrão \(C\+\+\)[\<string\>](../standard-library/string.md)a <xref:System.String>.  
+# <a name="how-to-convert-standard-string-to-systemstring"></a>Como converter cadeia de caracteres padrão em System::String
+Este tópico mostra como converter uma cadeia de caracteres da biblioteca padrão C++ ([\<cadeia de caracteres >](../standard-library/string.md)) para um <xref:System.String>.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // convert_standard_string_to_system_string.cpp  
@@ -49,8 +51,11 @@ int main() {
 }  
 ```  
   
-  **testar**  
-**testar**  
-**testar**   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+test  
+test  
+test  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

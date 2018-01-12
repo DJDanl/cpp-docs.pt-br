@@ -14,11 +14,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-assemblies-c"></a>Assemblies amigáveis (C++)
 Para tempos de execução aplicável, o *assemblies amigáveis* tipos que estão no escopo de namespace ou escopo global em um componente de assembly acessível a um ou mais assemblies de cliente ou. netmodules faz com que o recurso de idioma.  

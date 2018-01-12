@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wctype
+apiname: wctype
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,38 +20,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- wctype
-dev_langs:
-- C++
+f1_keywords: wctype
+dev_langs: C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a617d02460dd1a1aca92daaab4cb477cd23ebee
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6dec5a3fd89703b3e27f9acf8c9edf976fdd18f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctype"></a>wctype
 Determina uma regra de classificação para códigos de caracteres largos.  

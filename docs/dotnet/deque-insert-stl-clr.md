@@ -1,33 +1,33 @@
 ---
-title: "deque::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inserir membro [STL/CLR]"
+title: 'deque:: Insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: a3b86c46-e6a8-42d0-b642-5a8f05ddd68c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 79e03fe5db67162134f5267fc54fab74e4e6b20f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeinsert-stlclr"></a>deque::insert (STL/CLR)
 Adiciona os elementos em uma posição especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 iterator insert(iterator where, value_type val);  
@@ -38,41 +38,41 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parâmetros  
- count  
- Número de elementos a ser inserido.  
+#### <a name="parameters"></a>Parâmetros  
+ `count`  
+ Número de elementos a inserir.  
   
- primeiro  
+ `first`  
  Início do intervalo a ser inserido.  
   
- last  
- O fim do intervalo a ser inserido.  
+ `last`  
+ Fim do intervalo a ser inserido.  
   
- direita  
- Enumeração o a ser inserido.  
+ `right`  
+ Enumeração para inserir.  
   
- val  
+ `val`  
  Valor do elemento a ser inserido.  
   
- onde  
- Onde no contêiner inserir antes.  
+ `where`  
+ Onde no contêiner para inserir antes.  
   
-## Comentários  
- Cada uma das funções de membro, insere antes do elemento apontado por `where` na sequência controlada, uma sequência especificada pelos operandos restantes.  
+## <a name="remarks"></a>Comentários  
+ Cada membro funções inserções, antes do elemento apontada pelo `where` na sequência controlada, uma sequência especificado pelo operandos restantes.  
   
- A primeira função de membro insere um elemento com valor `val` e retorna um iterador que designa o elemento inserido recentemente.  Use\-a para inserir um único elemento antes de um local designado por um iterador.  
+ A primeira função de membro insere um elemento com o valor `val` e retorna um iterador que designa o elemento recentemente inserido. Você pode usá-lo para inserir um único elemento antes de um local designado por um iterador.  
   
- A segunda função de membro insere uma reprodução dos elementos de `count` de valor `val`.  Use\-a para inserir elementos zero ou mais contíguas que são todas as cópias do mesmo valor.  
+ A segunda função membro insere uma repetição de elementos `count` de valor `val`. Você pode usá-lo para inserir zero ou mais elementos contíguos que são todas as cópias do mesmo valor.  
   
- Se `InIt` é do tipo inteiro, a terceira função de membro se comportará da mesma maneira que `insert(``where``, (size_type)``first``, (value_type)``last``)`.  Se não, insere a sequência `[``first``,` `last``)`.  Use\-a para inserir elementos zero ou mais contíguos copiado de outra sequência.  
+ Se `InIt` for um tipo inteiro, a terceira função membro se comportará da mesma forma que `insert(where, (size_type)first, (value_type)last)`. Caso contrário, ele insere a sequência [`first`, `last`). Você pode usá-lo para inserir zero ou mais elementos contíguos copiados de outra sequência.  
   
- A quarta função de membro insere a sequência designada por `right`.  Use\-a para inserir uma sequência descrita por um enumerador.  
+ A função de membro quarta insere a sequência designada pelo `right`. Você pode usá-lo para inserir uma sequência descrita por um enumerador.  
   
- Ao inserir um único elemento, o número de cópias do elemento é linear no número de elementos entre o ponto de inserção e término mais próximo da sequência. \(Ao inserir um ou mais elementos em um ou outro fim de sequência, nenhuma cópia do elemento ocorre.\) Se `InIt` é um iterador de entrada, a terceira função de membro é efetivamente uma única inserção para cada elemento na sequência.  Caso contrário, ao inserir elementos de `N` , o número de cópias do elemento é linear em `N` mais o número de elementos entre o ponto de inserção e término mais próximo da sequência.  
+ Ao inserir um único elemento, o número de cópias do elemento é linear no número de elementos entre o ponto de inserção e a extremidade mais próximo da sequência. (Ao inserir um ou mais elementos em ambas as extremidades da sequência, nenhuma cópia do elemento ocorre). Se `InIt` é um iterador de entrada, a terceira função do membro efetivamente executa uma inserção única para cada elemento na sequência. Caso contrário, quando inserir `N` elementos, o número de cópias do elemento é linear em `N` mais o número de elementos entre o ponto de inserção e a extremidade mais próximo da sequência.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cliext_deque_insert.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -122,17 +122,20 @@ int main()
   
 ```  
   
-  **um b c**  
-**insert\(begin\(\)\+1, L'x\) \= x**  
- **um x b c**  
- **y y**  
- **y um x y b**  
- **um x y b c um x y b**   
-## Requisitos  
- **Cabeçalho:** \<cliext\/deque\>  
+```Output  
+ a b c  
+insert(begin()+1, L'x') = x  
+ a x b c  
+ y y  
+ y y a x b  
+ a x b c y y a x b  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/deque >  
   
-## Consulte também  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)

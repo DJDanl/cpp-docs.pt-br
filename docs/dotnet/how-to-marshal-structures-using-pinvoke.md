@@ -18,11 +18,14 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Como realizar marshaling de estruturas usando PInvoke
 Este documento explica como nativas funções que aceitam cadeias de caracteres de estilo C podem ser chamadas de funções gerenciadas que fornecem uma instância de <xref:System.String> usando P/Invoke. Embora, recomendamos que você use os recursos de interoperabilidade C++ em vez de P/Invoke porque P/Invoke fornece relatórios, pouco de erros de tempo de compilação não é fortemente tipado e poderá ser tediosa implementar, se a API não gerenciada é empacotada como uma DLL e o código-fonte não é disponível, P/Invoke é a única opção. Caso contrário, consulte os seguintes documentos:  

@@ -1,33 +1,33 @@
 ---
-title: "divides (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::divides"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "função divides [STL/CLR]"
+title: Divide (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::divides
+dev_langs: C++
+helpviewer_keywords: divides function [STL/CLR]
 ms.assetid: 4c36026a-02ba-475d-af68-854599647f4b
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b634b9e0d04575d17936d9dd855dfab4d8f13c16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# divides (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe do modelo descreve um funtor que, quando chamado, retorna o primeiro argumento dividido por segundo.  Use\-a especifica um objeto de função em termos de seu tipo de argumento.  
+# <a name="divides-stlclr"></a>divides (STL/CLR)
+A classe de modelo descreve um functor que, quando chamado, retorna o primeiro argumento dividido pela segunda. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Arg>  
@@ -50,34 +50,34 @@ public:
     };  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Arg  
- O tipo dos argumentos e o valor de retorno.  
+ O tipo do valor de retorno e argumentos.  
   
-## Funções de membro  
+## <a name="member-functions"></a>Funções membro  
   
-|Definição de tipo|Descrição|  
-|-----------------------|---------------|  
-|delegate\_type|O tipo delegado genérico.|  
-|first\_argument\_type|O tipo do primeiro argumento de funtor.|  
-|result\_type|O tipo de resultado de funtor.|  
-|second\_argument\_type|O tipo de argumento de funtor segundo.|  
+|Definição do tipo|Descrição|  
+|---------------------|-----------------|  
+|delegate_type|O tipo de delegado genérico.|  
+|first_argument_type|O tipo do primeiro argumento functor.|  
+|tipo_resultado|O tipo do resultado functor.|  
+|second_argument_type|O tipo do segundo argumento functor.|  
   
 |Membro|Descrição|  
-|------------|---------------|  
-|divide|Constrói o funtor.|  
+|------------|-----------------|  
+|divides|Constrói o functor.|  
   
 |Operador|Descrição|  
-|--------------|---------------|  
-|operator\(\)|Computa a função desejada.|  
-|operador delegate\_type^\(\)|Converte o funtor a um representante.|  
+|--------------|-----------------|  
+|operator()|Calcula a função desejada.|  
+|operador delegate_type^()|Converte o functor a um delegado.|  
   
-## Comentários  
- A classe do modelo descreve um funtor de dois argumentos.  Define o operador `operator()` membro de forma que, quando o objeto é chamado como uma função, retorna o primeiro argumento dividido por segundo.  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo descreve uma functor de dois argumentos. Define o operador de membro `operator()` para que, quando o objeto é chamado como uma função, ele retorna o primeiro argumento dividido pela segunda.  
   
- Você também pode passar o objeto como um argumento da função cujo tipo é `delegate_type^` e ele será convertido adequadamente.  
+ Você também pode passar o objeto como um argumento de função cujo tipo é `delegate_type^` e ele será convertido corretamente.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_divides.cpp   
@@ -117,14 +117,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **2 3**   
-## Requisitos  
- cliext \<de**Cabeçalho:** \/funcional\>  
+```Output  
+4 3  
+2 1  
+2 3  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/funcional >  
   
-## Consulte também  
- [módulo](../dotnet/modulus-stl-clr.md)   
- [multiplies](../Topic/multiplies%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [módulo (STL/CLR)](../dotnet/modulus-stl-clr.md)   
+ [multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)

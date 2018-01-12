@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f62806dd07860a6cf1c4d49f10885c0856d8c11f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88c341abab34595da58d435be28f50e86cb47403
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-arguments"></a>Argumentos padrão
 Em muitos casos, as funções têm os argumentos que são usados com tão raramente que um valor padrão bastaria. Para resolver isso, a facilidade do argumento padrão permite especificar apenas os argumentos de uma função que são significativos em uma determinada chamada. Para ilustrar esse conceito, considere o exemplo apresentado [sobrecarga de função](../cpp/function-overloading.md).  

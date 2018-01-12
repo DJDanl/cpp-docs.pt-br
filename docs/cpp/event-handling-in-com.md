@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3173d01898fc63327c5e4d4c6ce4f536b1245450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-com"></a>Tratamento de eventos em COM
 Manipulação de eventos de COM, você configura um receptor de origem e de eventos do evento usando o [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = **com**. Esses atributos injetam o código apropriado para interfaces personalizadas, duais e de expedição a fim de permitir que as classes às quais são aplicados acionem eventos e manipulem eventos por meio de pontos de conexão COM.  

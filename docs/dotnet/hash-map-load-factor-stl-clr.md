@@ -1,42 +1,42 @@
 ---
-title: "hash_map::load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro load_factor [STL/CLR]"
+title: hash_map::load_factor (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::load_factor
+dev_langs: C++
+helpviewer_keywords: load_factor member [STL/CLR]
 ms.assetid: e3a29b1f-ea20-4153-87b0-3935044d4d7a
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9ab07fb96c4adba271de11012cd394621c2e099b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Conta os elementos médio por segmento.  
+# <a name="hashmaploadfactor-stlclr"></a>hash_map::load_factor (STL/CLR)
+Conta a média de elementos por bucket.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 float load_factor();  
 ```  
   
-## Comentários  
- A função de membro retorna `(float)`[hash\_map::size](../dotnet/hash-map-size-stl-clr.md)`() /` [hash\_map::bucket\_count](../dotnet/hash-map-bucket-count-stl-clr.md)`()`.  Use\-a para determinar o tamanho médio do segmento.  
+## <a name="remarks"></a>Comentários  
+ Retorna a função de membro `(float)` [hash_map:: Size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md) `() /` [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)`()`. Você pode usá-lo para determinar o tamanho médio de bucket.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_map_load_factor.cpp   
@@ -82,22 +82,27 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Requisitos  
- cliext \<\/hash\_map de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- cliext de**Namespace:**  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Consulte também  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::bucket\_count](../dotnet/hash-map-bucket-count-stl-clr.md)   
- [hash\_map::max\_load\_factor](../dotnet/hash-map-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_map >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)   
+ [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)

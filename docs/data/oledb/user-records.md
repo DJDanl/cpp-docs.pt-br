@@ -25,11 +25,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9acb0a85ce469351ce1dcd34707f2125815f6c92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-records"></a>Registros de usuário
 Para usar um acessador estático (ou seja, um acessador é derivado de **CAccessor)**, o consumidor deve ter um registro de usuário. O registro do usuário é uma classe do C++ que contém elementos de dados para o identificador de entrada ou saída. Assistente de ATL OLE DB consumidor gera um registro de usuário para o consumidor. Você pode adicionar métodos para o registro do usuário para tarefas opcionais, como o tratamento de comandos.  

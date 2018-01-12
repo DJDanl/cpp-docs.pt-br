@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1984ba2b2291c14403af1237a9c990de2c0e0217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a41a5a97e94bdf9476d8345a7f9e103b81466f6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentais (C++/CX)
 Além de tipos C++ padrão internos, C + + CX dá suporte ao sistema de tipo é definido de acordo com a arquitetura de tempo de execução do Windows fornece definições de tipo para tipos de Windows Runtime fundamentais que são mapeados para tipos C++ padrão. C + + CX implementa booliano, caractere e os tipos numéricos fundamentais. Essas definições de tipo são definidas no namespace `default` , que nunca precisa ser especificado explicitamente. Além disso, C + + CX fornece wrappers e implementações concretas para determinados tipos de tempo de execução do Windows e as interfaces.  
@@ -27,7 +28,7 @@ Além de tipos C++ padrão internos, C + + CX dá suporte ao sistema de tipo é 
 |Namespace|C + + nome CX|Definição|Nome padrão do C++|Intervalo de valores|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |Plataforma|Boolean|Um valor Booliano de 8 bits.|bool|`true` (diferente de zero) e `false` (zero)|  
-|default|char16|Um valor não numérico de 16 bits que representa um ponto de código Unicode (UTF-16).|wchar_t<br /><br /> - ou -<br /><br /> L'c'|(Especificado pelo padrão Unicode)|  
+|default|char16|Um valor não numérico de 16 bits que representa um ponto de código Unicode (UTF-16).|wchar_t<br /><br /> -ou-<br /><br /> L'c'|(Especificado pelo padrão Unicode)|  
   
 ## <a name="numeric-types"></a>Tipos numéricos  
  A tabela a seguir lista os tipos numéricos internos. Os tipos numéricos são declarados no namespace `default` e são definições de tipo para o tipo interno do C++ correspondente. Nem todos os tipos internos do C++ (longos, por exemplo) têm suporte em tempo de execução do Windows. Para obter consistência e clareza, é recomendável que você use C + + nome CX.  
@@ -51,7 +52,7 @@ Além de tipos C++ padrão internos, C + + CX dá suporte ao sistema de tipo é 
 |Nome|Definição|  
 |----------|----------------|  
 |Objeto|Representa qualquer tipo de tempo de execução do Windows.|  
-|Cadeia de caracteres|Uma série de caracteres que representam o texto.|  
+|Cadeia de Caracteres|Uma série de caracteres que representam o texto.|  
 |Rect|Um conjunto de quatro números de ponto flutuante que representam o local e o tamanho de um retângulo.|  
 |SizeT|Um par ordenado de números de ponto flutuante que especifica uma altura e largura.|  
 |Ponto|Um par ordenado de coordenadas x e y de ponto flutuante que define um ponto em um plano bidimensional.|  

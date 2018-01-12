@@ -1,42 +1,42 @@
 ---
-title: "hash_multiset::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro size_type [STL/CLR]"
+title: 'hash_multiset:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: cf4e2a5f-6d46-4ade-9bb4-407e12f310b3
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23056cd9e9bb24c5b3ffe57052f90657dcf63d55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de uma distância entre dois assinado o elemento.  
+# <a name="hashmultisetsizetype-stlclr"></a>hash_multiset::size_type (STL/CLR)
+O tipo de uma distância assinado entre dois elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Comentários  
- O tipo descreve uma contagem não negativa do elemento.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve uma contagem de elementos não-negativo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_multiset_size_type.cpp   
@@ -66,13 +66,16 @@ int main()
   
 ```  
   
-  **um b c**  
-**end\(\)\- inicie \(\) \= 3**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
   
-## Consulte também  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::empty](../dotnet/hash-multiset-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)

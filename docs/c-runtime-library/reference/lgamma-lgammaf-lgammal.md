@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: afc048d131bd75a9645c045b3bceae90344c07eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4bd91c4dd26582e98f4a6ee9f92ad0293c460433
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 Determina o logaritmo natural do valor absoluto da função gama do valor especificado.  
@@ -109,5 +110,5 @@ long double lgammal(
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [tgamma, tgammaf, tgammal](../../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)

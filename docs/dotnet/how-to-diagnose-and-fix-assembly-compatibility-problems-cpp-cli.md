@@ -1,53 +1,55 @@
 ---
-title: "Como diagnosticar e corrigir problemas de compatibilidade do assembly (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compatibilidade, entre assemblies"
-  - "exceções, diagnosticando comportamento antigo"
-  - "controle de versão"
-  - "controle de versão, diagnosticando conflitos"
+title: 'Como: diagnosticar e corrigir problemas de compatibilidade do Assembly (C + + CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 297c71e3-04a8-4d24-a5dc-b04a2c5cc6fb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a175705bd5d303187a11bf3e7779669a3a30e483
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como diagnosticar e corrigir problemas de compatibilidade do assembly (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico explica o que pode ocorrer quando a versão de um assembly referenciado em tempo de compilação não corresponde à versão do assembly referenciado em tempo de execução, e como evitar o problema.  
+# <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Como diagnosticar e corrigir problemas de compatibilidade do assembly (C++/CLI)
+Este tópico explica o que pode acontecer quando a versão de um assembly referenciado em tempo de compilação não corresponde à versão do assembly referenciado em tempo de execução e como evitar o problema.  
   
- Quando um assembly é criado, outros assemblies podem ser referenciados com a sintaxe de `#using` .  Durante a compilação, esses assemblies são acessados pelo compilador.  Informações desses assemblies é usada para tomar decisões de otimização.  
+ Quando um assembly é compilado, outros assemblies podem ser referenciados com o `#using` sintaxe. Durante a compilação, esses assemblies são acessados pelo compilador. Informações desses assemblies são usadas para tomar decisões de otimização.  
   
- No entanto, se o assembly referenciado é alterado e recompilado, e não recompile o assembly de referência que é dependente nele, os assemblies não podem ainda ser compatível.  As decisões de otimização que eram válidos no início não podem estar corretas no que diz respeito a nova versão do assembly.  Vários erros de tempo de execução podem ocorrer devido a essas incompatibilidades.  Não há nenhuma exceção específica que será gerada nesses casos.  A maneira como a falha será relatada em tempo de execução depende da natureza de alteração de código que causou o problema.  
+ No entanto, se o assembly referenciado é alterado e recompilado, e você não recompilar o assembly de referência que depende dele, os assemblies podem não ser ainda compatível. As decisões de otimização que eram válidas no primeiro podem não estar corretas em relação a nova versão do assembly. Vários erros de tempo de execução poderão ocorrer devido a essas incompatibilidades. Não há nenhuma exceção específica que será produzida em tais casos. A maneira como a falha será relatada em tempo de execução depende da natureza da alteração de código que causou o problema.  
   
- Esses erros não devem ser um problema no código de produção final como o aplicativo inteiro é recriado para a versão lançada do produto.  Os assemblies que são liberados no utilitário devem ser marcados com um número de versão oficial, que garante que esses problemas sejam evitados.  Para obter mais informações, consulte [Controle de versão de assemblies](../Topic/Assembly%20Versioning.md).  
+ Esses erros não devem ser um problema no seu código de produção final desde que o aplicativo inteiro será recriado para a versão de lançamento do produto. Assemblies que são lançados para o público devem ser marcados com um número de versão oficial, que garante que esses problemas serão evitados. Para obter mais informações, consulte [Controle de versão do assembly](/dotnet/framework/app-domains/assembly-versioning).  
   
-### Diagnosticar e corrigir um erro de incompatibilidade  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnosticar e corrigir um erro de incompatibilidade  
   
-1.  Se você encontrar exceções em tempo de execução ou outras condições de erro que ocorrem no código que faz referência a outro assembly, e tem a nenhuma outra causa identificada, você pode controlar um assembly expirado.  
+1.  Se você encontrar exceções de tempo de execução ou outras condições de erro que ocorrem no código que faz referência a outro conjunto e nenhum outro provocaram identificado, você pode lidar com um assembly desatualizado.  
   
-2.  Primeiro, o isolado e reproduz a exceção ou outra condição de erro.  Um problema que ocorre devido a uma exceção desatualizada deve ser reprodutível.  
+2.  Primeiro, isolar e reproduzir a exceção ou outra condição de erro. Um problema que ocorre devido a uma exceção desatualizada deve ser reproduzido.  
   
-3.  Verifique o carimbo de data\/hora de todos os assemblies referenciados em seu aplicativo.  
+3.  Verifique se o carimbo de hora de qualquer assembly referenciado em seu aplicativo.  
   
-4.  Se os carimbos de data\/hora de quaisquer assemblies referenciados serão posterior ao carimbo de data\/hora de criação do último seu aplicativo, então o seu aplicativo estiver expirado.  Se isso ocorrer, recompilar o aplicativo ao assembly o mais recente, e faça as alterações de código necessárias.  
+4.  Se os carimbos de hora de todos os assemblies referenciados são posteriores ao que o carimbo de hora da última compilação do seu aplicativo, seu aplicativo está desatualizado. Nesse caso, recompilar o aplicativo com o assembly mais recente e fazer as alterações de código necessárias.  
   
-5.  Executar novamente o aplicativo, execute as etapas que reproduzem o problema, e verifica se a exceção não ocorra.  
+5.  Execute novamente o aplicativo, execute as etapas que reproduza o problema e verifique se a exceção não ocorrerá.  
   
-## Exemplo  
- O programa seguir ilustra o problema reduzindo a acessibilidade de um método, e tentando acessar esse método em outro assembly sem recompilação.  Tentativa de criar `changeaccess.cpp` primeiro.  Este é o assembly referenciado que mudará.  Em seguida `referencing.cpp`.  A compilação tiver êxito.  Agora, reduza a acessibilidade do método chamado.  Recompilar `changeaccess.cpp` com o sinalizador `/DCHANGE_ACCESS`.  Isso torna o método protegido, em vez de particular, o que pode levar mais tempo ser chamado legalmente.  Sem recompilar `referencing.exe`, execute novamente o aplicativo.  <xref:System.MethodAccessException> ocorrerá uma exceção.  
+## <a name="example"></a>Exemplo  
+ O programa a seguir ilustra o problema, reduzindo a acessibilidade de um método e tentar acessar esse método em outro assembly sem recompilar. Tente compilar `changeaccess.cpp` primeiro. Este é o assembly referenciado que será alterado. Em seguida, compile `referencing.cpp`. A compilação for bem-sucedida. Agora, reduza a acessibilidade do método chamado. Recompilar `changeaccess.cpp` com o sinalizador `/DCHANGE_ACCESS`. Isso torna o método protegido, em vez de particular, para que mais pode ser chamado legal. Sem recompilar `referencing.exe`, execute novamente o aplicativo. Uma exceção <xref:System.MethodAccessException> resultará.  
   
 ```  
 // changeaccess.cpp  
@@ -100,6 +102,6 @@ int main() {
   
 ```  
   
-## Consulte também  
- [Diretiva \#using](../preprocessor/hash-using-directive-cpp.md)   
- [Tipos gerenciados](../Topic/Managed%20Types%20\(C++-CLI\).md)
+## <a name="see-also"></a>Consulte também  
+ [#using diretiva](../preprocessor/hash-using-directive-cpp.md)   
+ [Tipos gerenciados (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

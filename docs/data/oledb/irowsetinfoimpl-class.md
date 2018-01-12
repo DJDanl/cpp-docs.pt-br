@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d34fdaa37901d8bdce3dce312d674024a84ad0e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cba03cfdda0b7a55c8f4719d5340566ee5dc6050
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
 Fornece uma implementação para o [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interface.  
@@ -49,7 +52,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)|Retorna as configurações atuais de todas as propriedades com suporte pelo conjunto de linhas.|  
+|[GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)|Retorna as configurações atuais de todas as propriedades compatíveis com o conjunto de linhas.|  
 |[GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)|Retorna um ponteiro de interface para o conjunto de linhas ao qual se aplica a um indicador.|  
 |[GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)|Retorna um ponteiro de interface no objeto (comando ou sessão) que criou esse conjunto de linhas.|  
   

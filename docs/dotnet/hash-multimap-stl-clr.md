@@ -18,11 +18,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd7b35758caaf76904eb3144d22d747c22f02804
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b6927b25d627874f5a3d649099a4ed5e099bc6cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso bidirecional. Você usa o contêiner `hash_multimap` para gerenciar uma sequência de elementos como uma tabela de hash, cada entrada da tabela de armazenar um bidirecional vinculado a lista de nós e cada nó de armazenamento de um elemento. Um elemento consiste em uma chave, para ordenar a sequência e um valor mapeado, o que vai ao longo da simultaneamente.  

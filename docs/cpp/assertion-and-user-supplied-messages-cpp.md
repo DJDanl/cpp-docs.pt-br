@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - user-supplied messages [C++], run time
 - user-supplied messages [C++], preprocessor time
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: def12cc22267d2cc25be790b7e6e6eebd4c46479
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Asserção e mensagens fornecidas pelo usuário (C++)
 Os C++ linguagem dá suporte a três tratamento de erros mecanismos que ajudam a depurar seu aplicativo: o [#error diretiva](../preprocessor/hash-error-directive-c-cpp.md), o [static_assert](../cpp/static-assert.md) palavra-chave e o [assert Macro Assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro. Todos os três mecanismos emitem mensagens de erro e dois também testam asserções de software. Uma asserção de software especifica uma condição que você espera ser verdadeira (true) em um ponto específico de seu programa. Se uma asserção de tempo de compilação falhar, o compilador emite uma mensagem de diagnóstico e um erro de compilação. Se uma asserção de tempo de execução falhar, o sistema operacional emite uma mensagem de diagnóstico e fecha seu aplicativo.  

@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>Escopo (Visual C++)
 Os nomes de C++ podem ser usados apenas em determinadas regiões de um programa. Essa área é chamada de "escopo" do nome. O escopo determina o "tempo de vida" de um nome que não denota um objeto de extensão estática. O escopo também determina a visibilidade de um nome quando os construtores e os destruidores de classe são chamados e quando as variáveis locais para o escopo são inicializadas. (Para obter mais informações, consulte [construtores](../cpp/constructors-cpp.md) e [destruidores](../cpp/destructors-cpp.md).) Há cinco tipos de escopo:  

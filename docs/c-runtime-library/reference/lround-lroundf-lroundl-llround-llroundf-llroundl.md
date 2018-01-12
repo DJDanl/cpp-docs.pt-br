@@ -47,11 +47,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 596d1d40043fceb9a75549a460776b5b7d9de552
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b75aecc6fe207d019ff9c84ddaaa718408e6059b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 Arredonda um valor de ponto flutuante para o inteiro mais próximo.  
@@ -111,7 +112,7 @@ long long llroundl(
 |-------------|---------------------|  
 |`lround`, `lroundf`, `lroundl`, `llround`, `llroundf`, `llroundl`|\<math.h>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -150,7 +151,7 @@ lroundl(-2.500000) is -4
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
  [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   

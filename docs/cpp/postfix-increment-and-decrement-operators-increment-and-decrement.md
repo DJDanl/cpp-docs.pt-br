@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
 - ++
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators [C++], syntax
 - member-selection operators [C++]
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operadores de incremento e de decremento pós-fixados: ++ e --
 ## <a name="syntax"></a>Sintaxe  
@@ -55,7 +53,7 @@ i++;
   
  Quando um operador de sufixo é aplicado a um argumento de função, o valor do argumento não tem garantia de incremento ou decremento antes de ser passada para a função.  Consulte a seção 1.9.17 no padrão C++ para obter mais informações.  
   
- Aplicar o operador de incremento de sufixo para um ponteiro para uma matriz de objetos do tipo **longo** realmente adiciona quatro para a representação interna do ponteiro. Isso faz com que o ponteiro, que anteriormente referido a * n *elemento th da matriz, para referir-se a (*n*+ 1) elemento th.  
+ Aplicar o operador de incremento de sufixo para um ponteiro para uma matriz de objetos do tipo **longo** realmente adiciona quatro para a representação interna do ponteiro. Isso faz com que o ponteiro, que anteriormente referido a  *n* elemento th da matriz, para referir-se a (*n*+ 1) elemento th.  
   
  Os operandos de operadores de incremento e decremento operadores de sufixo devem ser modificáveis (não **const**) l-valores do tipo aritmético ou ponteiro. O tipo do resultado é o mesmo que o *sufixo expressão*, mas não é mais um l-value.  
   

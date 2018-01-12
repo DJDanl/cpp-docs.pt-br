@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _putw
+apiname: _putw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 5e6cb1b57135502d7e75df7d0db7cb363a1fe003
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bca1143f123b0092266f7a314ac0c863779950ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putw"></a>_putw
 Grava um valor inteiro em um fluxo.  
@@ -80,7 +63,7 @@ Grava um valor inteiro em um fluxo.
  Ponteiro para a estrutura **FILE**.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o valor gravado. Um valor retornado de `EOF` pode indicar um erro. Como `EOF` também é um valor inteiro legítimo, use `ferror` para verificar se há um erro. Se `stream` for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `EOF`.  
+ Retorna o valor gravado. Um valor retornado de `EOF` pode indicar um erro. Como `EOF` também é um valor inteiro legítimo, use `ferror` para verificar se há um erro. Se `stream` for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `EOF`.  
   
  Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

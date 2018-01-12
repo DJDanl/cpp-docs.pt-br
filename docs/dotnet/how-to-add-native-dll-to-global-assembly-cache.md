@@ -1,40 +1,42 @@
 ---
-title: "Como adicionar DLL nativo ao cache de assembly global | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], nativa"
-  - "GAC (cache de assembly global), carregando DLLs nativas"
-  - "DLLs nativas [C++]"
+title: 'Como: adicionar DLL nativo ao Cache de Assembly Global | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], native
+- GAC (global assembly cache), loading native DLLs
+- native DLLs [C++]
 ms.assetid: 25e8d78a-b197-4269-b4e9-237a544ab3c8
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: be55fd47cd6024d0660ed0c3e4594c9430f80cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como adicionar DLL nativo ao cache de assembly global
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Você pode colocar um DLL nativa \(não por\) em cachê de assembly global.  
+# <a name="how-to-add-native-dll-to-global-assembly-cache"></a>Como adicionar DLL nativo ao cache de assembly global
+Você pode colocar uma DLL nativa (não COM) no Cache de Assembly Global.  
   
-## Exemplo  
- **\/ASSEMBLYLINKRESOURCE** permite digitar um DLL nativa em um assembly.  
+## <a name="example"></a>Exemplo  
+ **/ASSEMBLYLINKRESOURCE** permite que você inserir uma DLL nativa em um assembly.  
   
- Para obter mais informações, consulte [\/ASSEMBLYLINKRESOURCE \(Link para recurso do .NET Framework\)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md).  
+ Para obter mais informações, consulte [/ASSEMBLYLINKRESOURCE (Link para Recurso do .NET Framework)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md).  
   
 ```  
 /ASSEMBLYLINKRESOURCE:MyComponent.dll  
 ```  
   
-## Consulte também  
- [Usando interop C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

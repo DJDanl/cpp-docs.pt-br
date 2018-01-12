@@ -1,33 +1,35 @@
 ---
-title: "Recuperando um BLOB | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB (objeto binário grande), recuperando"
-  - "OLE DB, BLOBs (objetos binários grandes)"
-  - "recuperando BLOBs"
+title: Recuperando um BLOB | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- retrieving BLOBs
+- BLOB (binary large object), retrieving
+- OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 36ffc4fca7859b49067517e1085e1d854f733e24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Recuperando um BLOB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Você pode recuperar um objeto binário grande \(BLOB\) de várias maneiras.  Você pode usar **DBTYPE\_BYTES** para recuperar o BLOB com uma sequência de bytes ou para usar uma interface como `ISequentialStream`.  Para obter mais informações, consulte [Objetos de BLOBS e OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx)*na referência do programador de OLE DB*.  
+# <a name="retrieving-a-blob"></a>Recuperando um BLOB
+Você pode recuperar um objeto binário grande (BLOB) de várias maneiras. Você pode usar **DBTYPE_BYTES** para recuperar o BLOB como uma sequência de bytes ou usar uma interface como `ISequentialStream`. Para obter mais informações, consulte [BLOBS e objetos OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) no *referência do programador de DB OLE*.  
   
- O código a seguir mostra como recuperar um BLOB usando `ISequentialStream`.  [BLOB\_ENTRY](../Topic/BLOB_ENTRY.md) macro permite que você especifique a interface e os sinalizadores usados para a interface.  Depois de abrir a tabela, o código a seguir chama **Ler** repetidamente em `ISequentialStream` para ler bytes de BLOB.  O código a seguir chama **Versão** para descartar do ponteiro de interface antes de chamar `MoveNext` para obter o registro.  
+ O código a seguir mostra como recuperar um BLOB usando `ISequentialStream`. A macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) permite que você especifique a interface e os sinalizadores usados para a interface. Depois de abrir a tabela, o código chama **leitura** repetidamente em `ISequentialStream` para ler os bytes do BLOB. O código chama **versão** de descartar o ponteiro de interface antes de chamar `MoveNext` para obter o próximo registro.  
   
 ```  
 class CCategories  
@@ -56,8 +58,8 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Para obter mais informações sobre macros que manipulam dados BLOB, consulte “macros do mapa coluna” em [Macros e funções globais para modelos do consumidor OLE DB](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md).  
+ Para obter mais informações sobre as macros que manipulam dados BLOB, consulte "Macros de mapa de coluna" [Macros e funções globais para modelos OLE DB consumidor](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usando acessadores](../../data/oledb/using-accessors.md)   
- [Macros e funções globais para modelos de consumidor de banco de dados OLE](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)
+ [Macros e funções globais para modelos de consumidor do OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

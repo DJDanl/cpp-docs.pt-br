@@ -1,46 +1,46 @@
 ---
-title: "hash_set::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator= [STL/CLR]"
+title: hash_set::Operator = (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 25ee3afd-90cd-483f-ae03-b52ce1396090
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 10c96dd8b8445679f54dc1850ade00a5c5a55fc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetoperator-stlclr"></a>hash_set::operator= (STL/CLR)
 Substitui a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 hash_set<Key>% operator=(hash_set<Key>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  direita  
- Contêiner a ser copiada.  
+ O contêiner a ser copiado.  
   
-## Comentários  
- O membro que o operador copia `right` ao objeto, retornará `*this`.  Você usará para substituir a sequência controlada por uma cópia de sequência controlada em `right`.  
+## <a name="remarks"></a>Comentários  
+ As cópias de operador de membro `right` para o objeto, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada em `right`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_hash_set_operator_as.cpp   
@@ -72,12 +72,15 @@ int main()
   
 ```  
   
-  **um b c**  
- **um b c**   
-## Requisitos  
- cliext \<\/hash\_set de**Cabeçalho:** \>  
+```Output  
+a b c  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/hash_set >  
   
-## Consulte também  
- [hash\_set](../dotnet/hash-set-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)

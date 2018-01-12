@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_error_mode
+apiname: _set_error_mode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,42 +24,27 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 205a6bed342ce1489664a5e9e37880612492b04d
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7987686fb0b9faa03cf4d5e4795116e9f0a608bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seterrormode"></a>_set_error_mode
 Modifica `__error_mode` para determinar um local não padrão em que o tempo de execução C grava uma mensagem de erro para um erro que pode finalizar o programa.  
   
 > [!IMPORTANT]
->  Essa API não pode ser usada em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintaxe  
   

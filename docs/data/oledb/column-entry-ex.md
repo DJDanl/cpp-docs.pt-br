@@ -1,33 +1,33 @@
 ---
-title: "COLUMN_ENTRY_EX | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_EX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Macro COLUMN_ENTRY_EX"
+title: COLUMN_ENTRY_EX | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_EX
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_EX macro
 ms.assetid: dfad1b67-51c3-4289-b89a-da42d7e8bb88
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c477d2142fd64461754633593e07d86dc7f4d60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# COLUMN_ENTRY_EX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Representa uma associação no conjunto de linhas para a coluna específica no base de dados.  
+# <a name="columnentryex"></a>COLUMN_ENTRY_EX
+Representa uma associação no conjunto de linhas para a coluna específica no banco de dados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -51,61 +51,61 @@ status
   
 ```  
   
-#### Parâmetros  
- Consulte [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)*na referência do programador de OLE DB*.  
+#### <a name="parameters"></a>Parâmetros  
+ Consulte [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) no *referência do programador de OLE DB*.  
   
  `nOrdinal`  
- \[in\] o número da coluna.  
+ [in] O número da coluna.  
   
  `wType`  
- \[in\] o tipo de dados.  
+ [in] O tipo de dados.  
   
  `nLength`  
- \[in\] o tamanho dos dados em bytes.  
+ [in] O tamanho dos dados em bytes.  
   
  `nPrecision`  
- \[in\] a precisão máxima para uso quando obtendo dados e `wType` é `DBTYPE_NUMERIC`.  Caso contrário, esse parâmetro será ignorado.  
+ [in] A precisão máxima para usar ao obter dados e `wType` é `DBTYPE_NUMERIC`. Caso contrário, esse parâmetro é ignorado.  
   
  `nScale`  
- \[in\] a escala a ser usado quando obtendo dados e `wType` é `DBTYPE_NUMERIC` ou **DBTYPE\_DECIMAL**.  
+ [in] A escala para usar ao obter dados e `wType` é `DBTYPE_NUMERIC` ou **DBTYPE_DECIMAL**.  
   
  `data`  
- \[in\] o membro de dados correspondente no registro do usuário.  
+ [in] O membro de dados correspondente no registro do usuário.  
   
  *length*  
- \[in\] a variável a ser associado ao comprimento da coluna.  
+ [in] A variável a ser associado para o comprimento da coluna.  
   
  *status*  
- \[in\] a variável a ser associado ao status da coluna.  
+ [in] A variável a ser associado ao status de coluna.  
   
-## Comentários  
- A macro de `COLUMN_ENTRY_EX` é usado nos seguintes locais:  
+## <a name="remarks"></a>Comentários  
+ O `COLUMN_ENTRY_EX` macro é usada nos seguintes locais:  
   
--   Entre [BEGIN\_COLUMN\_MAP](../Topic/BEGIN_COLUMN_MAP.md) e macros do [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md) .  
+-   Entre o [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) e [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macros.  
   
--   Entre [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) e macros do [END\_ACCESSOR](../Topic/END_ACCESSOR.md) .  
+-   Entre o [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macros.  
   
--   Entre [BEGIN\_PARAM\_MAP](../Topic/BEGIN_PARAM_MAP.md) e macros do [END\_PARAM\_MAP](../../data/oledb/end-param-map.md) .  
+-   Entre o [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) e [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.  
   
-## Exemplo  
- Consulte [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md).  
+## <a name="example"></a>Exemplo  
+ Consulte [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
   
-## Consulte também  
- [Macros e funções globais para modelos de consumidor de banco de dados OLE](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../Topic/BEGIN_COLUMN_MAP.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)   
- [COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)   
- [COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../Topic/COLUMN_ENTRY_PS_LENGTH_STATUS.md)   
- [COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)   
- [COLUMN\_ENTRY\_PS\_STATUS](../Topic/COLUMN_ENTRY_PS_STATUS.md)   
- [END\_ACCESSOR](../Topic/END_ACCESSOR.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>Consulte também  
+ [Macros e funções globais para modelos de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)   
+ [COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)   
+ [COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)   
+ [COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)   
+ [COLUMN_ENTRY_PS_LENGTH_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
+ [COLUMN_ENTRY_STATUS](../../data/oledb/column-entry-status.md)   
+ [COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

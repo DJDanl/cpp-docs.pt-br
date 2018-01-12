@@ -33,23 +33,22 @@ f1_keywords:
 - math/nearbyint
 - math/narbyintf
 - math/narbyintl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - nearbyint function
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1ca4667a6b469a024345ee7efb378c19ea73d200
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d95f92d15dcf4b8baf84b762b994bdb52930346d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 Arredonda o valor especificado de ponto flutuante para um inteiro e retorna esse valor em um formato de ponto flutuante.  

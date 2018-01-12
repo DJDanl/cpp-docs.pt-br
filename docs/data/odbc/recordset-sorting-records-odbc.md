@@ -1,43 +1,45 @@
 ---
-title: "Conjunto de registros: classificando registros (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conjunto de registros ODBC, classificando"
-  - "conjuntos de registros, classificando"
-  - "classificando dados, dados do conjunto de registros"
+title: 'Conjunto de registros: Classificando registros (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sorting data, recordset data
+- ODBC recordsets, sorting
+- recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 846b3cfd4d5abe6d0eb76cfb12840f094564c926
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Conjunto de registros: classificando registros (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tópico se aplica às classes ODBC do MFC.  
+# <a name="recordset-sorting-records-odbc"></a>Conjunto de registros: classificando registros (ODBC)
+Este tópico se aplica às classes MFC ODBC.  
   
- Este tópico explica como classificar o conjunto de registros.  Você pode especificar uma ou mais colunas na qual basear o tipo, e você pode especificar a ordem crescente ou decrescente \(`ASC` ou **DESC**; `ASC` é o padrão\) para cada coluna especificada.  Por exemplo, se você especificar duas colunas, os registros são classificados primeiro na primeira coluna nomeada e na segunda coluna denominada.  Uma cláusula **ORDER BY** do SQL define uma classificação.  Quando a estrutura anexa a cláusula **ORDER BY** à consulta SQL do conjunto de registros, a cláusula controla a ordenação de seleção.  
+ Este tópico explica como classificar o conjunto de registros. Você pode especificar uma ou mais colunas no qual basear a classificação, e você pode especificar a ordem crescente ou decrescente (`ASC` ou **DESC**; `ASC` é o padrão) para cada coluna de especificada. Por exemplo, se você especificar duas colunas, os registros são classificados primeiro na primeira coluna nomeada e, em seguida, a segunda coluna nomeada. Um SQL **ORDER BY** cláusula define uma classificação. Quando a estrutura acrescenta o **ORDER BY** cláusula SQL do conjunto de registros de consulta, os controles de cláusula a seleção da ordenação.  
   
- Você deve estabelecer a ordem de classificação de um conjunto de registros depois que você constrói o objeto mas antes de chamar a função de membro de **Abrir** \(ou antes de chamar a função de membro de **Requery** para um objeto existente do conjunto de registros cuja função de membro de **Abrir** ser chamada anteriormente\).  
+ Você deve estabelecer a ordem de classificação do conjunto de registros depois de construir o objeto, mas antes de chamar seus **abrir** função de membro (ou antes de chamar o **Requery** função de membro de um objeto de conjunto de registros existentes cujo **abrir** função membro foi chamada anteriormente).  
   
-#### Para especificar uma ordem de classificação para um conjunto de registros objeto  
+#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Para especificar uma ordem de classificação para um objeto de conjunto de registros  
   
-1.  Cria um novo objeto do conjunto de registros \(ou preparar para chamar para **Requery** existente\).  
+1.  Criar um novo objeto de conjunto de registros (ou preparar para chamar **Requery** por um já existente).  
   
-2.  Defina o valor do membro de dados de [m\_strSort](../Topic/CRecordset::m_strSort.md) do objeto.  
+2.  Definir o valor do objeto [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) membro de dados.  
   
-     O tipo é uma cadeia de caracteres com terminação nula.  O conteúdo da cláusula ORDER BY mas não da palavra\-chave **ORDER BY**.  Por exemplo, use:  
+     A classificação é uma cadeia de caracteres terminada em nulo. Ele contém o conteúdo a **ORDER BY** cláusula, mas não a palavra-chave **ORDER BY**. Por exemplo, use:  
   
     ```  
     recordset.m_strSort = "LastName DESC, FirstName DESC";  
@@ -49,11 +51,11 @@ Este tópico se aplica às classes ODBC do MFC.
     recordset.m_strSort = "ORDER BY LastName DESC, FirstName DESC";  
     ```  
   
-3.  Definir todas as outras opções que você precise, como um filtro, bloqueando o modo, ou os parâmetros.  
+3.  Defina qualquer outra opção que você precisa, como um filtro, o modo de bloqueio ou parâmetros.  
   
-4.  Chame **Abrir** para o novo objeto \(ou **Requery** para um objeto existente\).  
+4.  Chamar **abrir** para o novo objeto (ou **Requery** para um objeto existente).  
   
- Os registros selecionados são ordenados como especificados.  Por exemplo, para classificar um conjunto de registros do estudante em ordem decrescente pelo sobrenome, o nome, faça o seguinte:  
+ Os registros selecionados são ordenados conforme especificado. Por exemplo, para classificar um conjunto de registros de alunos em ordem decrescente pelo sobrenome e nome, faça o seguinte:  
   
 ```  
 // Construct the recordset  
@@ -64,12 +66,12 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );  
 ```  
   
- O conjunto de registros contém todos os registros do aluno, classificados em ordem decrescente \(Z à\) pelo sobrenome, seguida pelo nome.  
+ O conjunto de registros contém todos os registros do aluno, classificados em ordem decrescente (Z a) por sobrenome, em seguida, por nome.  
   
 > [!NOTE]
->  Se você escolher substituir a cadeia de caracteres padrão do SQL do conjunto de registros passando sua própria cadeia de caracteres SQL da **Abrir**, não defina um tipo se a cadeia de caracteres personalizado tem uma cláusula de **ORDER BY** .  
+>  Se você optar por substituir a cadeia de caracteres do conjunto de registros padrão SQL passando sua própria cadeia de caracteres SQL para **abrir**, não defina uma classificação se a cadeia de caracteres personalizada tem uma **ORDER BY** cláusula.  
   
-## Consulte também  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: parametrizando um conjunto de registros \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
- [Conjunto de registros: filtrando registros \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)
+## <a name="see-also"></a>Consulte também  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
+ [Conjunto de registros: filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

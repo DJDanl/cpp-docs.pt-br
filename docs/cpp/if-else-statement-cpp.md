@@ -4,30 +4,28 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
 - if_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7f6d2a553e34b5f15e53fa142241af83d8e91255
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
 Controla a ramificação condicional. Instruções o *blocos se* são executadas somente se o *expressão se* é avaliada como um valor diferente de zero (ou `true`). Se o valor de *expressão* é diferente de zero, *statement1* e quaisquer outras instruções no bloco são executadas e o outro bloco, se presente, será ignorado. Se o valor de *expressão* for zero, em seguida, o bloco se será ignorado e o outro bloco, se presente, é executado. São expressões avaliadas como diferente de zero

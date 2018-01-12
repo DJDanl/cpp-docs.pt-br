@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9601c60f9942719a5360b30acb0c98d86b9300df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fb76054313946df5b085081a3a619ae3fb3de2ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
 Fornece uma implementação de [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) interface.  
@@ -60,7 +63,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
   
 |||  
 |-|-|  
-|[AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)|Adiciona uma contagem de referência para um acessador existente.|  
+|[AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)|Adiciona uma contagem de referência a acessador existente.|  
 |[CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)|Cria um acessador de um conjunto de associações.|  
 |[GetBindings](../../data/oledb/iaccessorimpl-getbindings.md)|Retorna as associações em um acessador.|  
 |[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|Libera um acessador.|  

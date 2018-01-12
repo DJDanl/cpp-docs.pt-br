@@ -1,70 +1,69 @@
 ---
-title: "__stosd | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instrução stosd"
-  - "instrução de stosd rep"
-  - "__stosd intrínseco"
+title: __stosd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosd
+dev_langs: C++
+helpviewer_keywords:
+- stosd instruction
+- rep stosd instruction
+- __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 213a014df3336a8a42188dc45876228a533f4a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# __stosd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="stosd"></a>__stosd
+**Seção específica da Microsoft**  
   
- Gera uma instrução de seqüência de armazenamento \(`rep stosd`\).  
+ Gera uma instrução de cadeia de caracteres de repositório (`rep stosd`).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
+void __stosd(   
+   unsigned long* Dest,   
+   unsigned long Data,   
+   size_t Count   
 );  
 ```  
   
-#### Parâmetros  
- \[out\]`Dest`  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `Dest`  
  O destino da operação.  
   
- \[in\]`Data`  
- Os dados para armazenar.  
+ [in] `Data`  
+ Os dados a serem armazenados.  
   
- \[in\]`Count`  
- O comprimento do bloco de doublewords de gravação.  
+ [in] `Count`  
+ O comprimento do bloco de doublewords para gravação.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
-|`__stosd`|x86,[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
+|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- O resultado é que o doubleword `Data` gravados em um bloco de `Count` doublewords na posição de memória apontada por `Dest`.  
+## <a name="remarks"></a>Comentários  
+ O resultado é que o doubleword `Data` é gravado em um bloco de `Count` doublewords no local de memória apontado pela `Dest`.  
   
- Esta rotina só está disponível como um intrínseco.  
+ Essa rotina só está disponível como função intrínseca.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // stosd.c  
@@ -89,8 +88,11 @@ printf_s( "%u %u %u %u",
 }  
 ```  
   
-  **0 99999 99999 0**   
-## END Microsoft específicos  
+```Output  
+0 99999 99999 0  
+```  
   
-## Consulte também  
+**Fim da seção específica da Microsoft**  
+  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
