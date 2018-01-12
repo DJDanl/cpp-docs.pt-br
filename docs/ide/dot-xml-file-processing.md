@@ -1,86 +1,85 @@
 ---
-title: "Processamento de arquivo .xml | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentação XML, processando o arquivo XML"
+title: . Processamento de arquivo XML | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Processamento de arquivo .xml
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O compilador gera uma cadeia de caracteres de identificação para cada construct no seu código marcado para gerar a documentação.  Para obter mais informações, consulte [Recomendados comentários de documentação de marcas](../Topic/Recommended%20Tags%20for%20Documentation%20Comments%20\(Visual%20C++\).md).  A cadeia de caracteres de identificação identifica exclusivamente o constructo.  Programas que processam o arquivo .xml podem usar a cadeia de caracteres de identificação para identificar o item correspondente de metadados ou de reflexão do .NET Framework que a documentação se aplica.  
+# <a name="xml-file-processing"></a>Processamento de arquivo .xml
+O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. Para obter mais informações, consulte [recomendado marcas de comentários de documentação](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo. XML podem usar a cadeia de caracteres de ID para identificar o correspondente do .NET Framework reflexão ou metadados de item ao qual se aplica a documentação.  
   
- O arquivo .xml não é uma representação hierárquica de seu código, é uma lista simples com uma identificação gerada para cada elemento.  
+ O arquivo. XML não é uma representação hierárquica de seu código, é uma lista simples com uma identificação gerada para cada elemento.  
   
- O compilador observa as regras a seguir quando ele gera as cadeias de caracteres de identificação:  
+ O compilador observa as seguintes regras quando gera as cadeias de identificação:  
   
 -   Nenhum espaço em branco é colocado na cadeia de caracteres.  
   
--   A primeira parte da cadeia de caracteres de identificação identifica o tipo de participante que está sendo identificada, com um único caractere seguido por dois pontos.  Os seguintes tipos de membros são usados:  
+-   A primeira parte da cadeia de caracteres de identificação identifica o tipo de membro identificado, com um único caractere seguido por dois-pontos. São usados os seguintes tipos de membro:  
   
-    |Caractere.|Descrição|  
-    |----------------|---------------|  
-    |N|Espaço para nome<br /><br /> Você não pode adicionar comentários a um namespace, referências de documentação de cref a um namespace é possível.|  
-    |T|tipo: classe, estrutura, interface, representante, enum|  
+    |Caractere|Descrição|  
+    |---------------|-----------------|  
+    |N|namespace<br /><br /> Você não pode adicionar comentários de documentação para um namespace, cref referências a um namespace são possíveis.|  
+    |T|tipo: classe, interface, struct, enumeração, delegado|  
     |D|typedef|  
     |F|campo|  
-    |P|propriedade \(incluindo indicadores ou outras propriedades indexadas\)|  
-    |M|método \(que inclui métodos especiais como construtores, operadores, e assim por diante\)|  
+    |P|propriedade (incluindo indexadores ou outras propriedades indexadas)|  
+    |M|método (incluindo métodos especiais como construtores, operadores e assim por diante)|  
     |E|evento|  
-    |\!|cadeia de caracteres de erro<br /><br /> O restante da cadeia de caracteres fornece informações sobre o erro.  O compilador do Visual C\+\+ gera informações de erro para links que não podem ser resolvidos.|  
+    |!|cadeia de caracteres de erro<br /><br /> O restante da cadeia de caracteres fornece informações sobre o erro. O compilador do Visual C++ gera informações de erro para links que não podem ser resolvidos.|  
   
--   A segunda parte da cadeia de caracteres é o nome totalmente qualificado do item, começando a raiz de namespace.  O nome do item, seu tipo ou tipos incluindo, e namespace são separados em pontos.  Se o próprio nome do item tem pontos, são substituídos pelo hash sinal \(“\# "\).  Pressupõe\-se que nenhum item possui um hash sinal diretamente em seu nome.  Por exemplo, o nome totalmente qualificado do construtor de `String` seria System.String.\#ctor “”.  
+-   A segunda parte da cadeia de caracteres é o nome totalmente qualificado do item, iniciando na raiz do namespace. O nome do item, seu delimitador tipo ou tipos e namespace são separados por pontos. Se o nome do próprio item tiver pontos, eles serão substituídos pelo sustenido ('#'). Presume-se que nenhum item possui um sinal de hash diretamente em seu nome. Por exemplo, o nome totalmente qualificado do `String` construtor seria "# ctor".  
   
--   Para propriedades e métodos, se houver argumentos para o método, a lista de argumentos colocados entre parênteses segue.  Se não houver nenhum argumento, nenhum parêntese estará presente  Os argumentos são separados por vírgulas.  A codificação de cada argumento segue diretamente como é codificada em uma assinatura do.NET Framework:  
+-   Para propriedades e métodos, se houver argumentos para o método, seguirá a lista de argumentos entre parênteses. Se não houver nenhum argumento, não haverá parênteses. Os argumentos são separados por vírgulas. A codificação de cada argumento segue diretamente a maneira como ele é codificado em uma assinatura do .NET Framework:  
   
-    -   Tipos base.  Os tipos normais \(ELEMENT\_TYPE\_CLASS ou ELEMENT\_TYPE\_VALUETYPE\) são representadas como o nome de tipo totalmente qualificado.  
+    -   Tipos base. Tipos regulares (ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE) são representados como o nome totalmente qualificado do tipo.  
   
-    -   O tipos intrínsecos \(por exemplo, ELEMENT\_TYPE\_I4, ELEMENT\_TYPE\_OBJECT, ELEMENT\_TYPE\_STRING, ELEMENT\_TYPE\_TYPEDBYREF.  e ELEMENT\_TYPE\_VOID\) são representadas como o nome de tipo totalmente qualificado correspondente completo, por exemplo, para **System.Int32** ou de **System.TypedReference**.  
+    -   Tipos intrínsecos (por exemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. e ELEMENT_TYPE_VOID) são representadas como o nome totalmente qualificado do tipo completo correspondente, por exemplo, **System. Int32** ou **TypedReference**.  
   
-    -   ELEMENT\_TYPE\_PTR é representado como “\*” seguindo o tipo alterado.  
+    -   ELEMENT_TYPE_PTR é representado como um '*' após o tipo modificado.  
   
-    -   ELEMENT\_TYPE\_BYREF é representado como “@” após um do tipo alterado.  
+    -   ELEMENT_TYPE_BYREF é representado como um '@' após o tipo modificado.  
   
-    -   ELEMENT\_TYPE\_PINNED é representado como um “^” que segue o tipo alterado.  O compilador do Visual C\+\+ nunca gera esse.  
+    -   ELEMENT_TYPE_PINNED é representado como um '^' após o tipo modificado. O compilador do Visual C++ nunca gera.  
   
-    -   ELEMENT\_TYPE\_CMOD\_REQ é representado como “&#124;” e o nome totalmente qualificado da classe modificadoras, seguindo o tipo alterado.  O compilador do Visual C\+\+ nunca gera esse.  
+    -   ELEMENT_TYPE_CMOD_REQ é representado como um '&#124;' e o nome totalmente qualificado da classe do modificador, após o tipo modificado. O compilador do Visual C++ nunca gera.  
   
-    -   ELEMENT\_TYPE\_CMOD\_OPT é representado como “\!” e o nome totalmente qualificado da classe modificadoras, seguindo o tipo alterado.  
+    -   ELEMENT_TYPE_CMOD_OPT é representado como um '!' e o nome totalmente qualificado da classe do modificador, após o tipo modificado.  
   
-    -   ELEMENT\_TYPE\_SZARRAY é representado como “\[\]” após o tipo de elemento da matriz.  
+    -   ELEMENT_TYPE_SZARRAY é representado como "[]" após o tipo de elemento da matriz.  
   
-    -   ELEMENT\_TYPE\_GENERICARRAY é representado como “\[\]?” após o tipo de elemento da matriz.  O compilador do Visual C\+\+ nunca gera esse.  
+    -   ELEMENT_TYPE_GENERICARRAY é representado como "[?]" após o tipo de elemento da matriz. O compilador do Visual C++ nunca gera.  
   
-    -   ELEMENT\_TYPE\_ARRAY é representado como \[*lowerbound*:`size`,*lowerbound*:`size`\] onde o número de vírgulas é a classificação \- 1, e os limites inferiores e o tamanho de cada dimensão, se conhecidos, é representado em decimal.  Se um limite inferior ou um tamanho não são especificados, é simplesmente omitidos.  Se o limite inferior e o tamanho de uma dimensão particular são omitidos, “: ” for omitido também.  Por exemplo, uma matriz dimensional 2 com 1 como os limites inferiores e tamanhos não especificado é \[1: 1:\].  
+    -   ELEMENT_TYPE_ARRAY é representado como [*lowerbound*:`size`,*lowerbound*:`size`] em que o número de vírgulas é a classificação -1 e os limites e o tamanho inferiores de cada dimensão, se conhecidos, são representados no formato decimal. Se um limite ou tamanho inferior não for especificado, ele é simplesmente omitido. Se o limite e o tamanho inferiores de uma determinada dimensão forem omitidos, o ':' será omitido também. Por exemplo, uma matriz bidimensional com 1 como limites inferiores e tamanhos não especificados é [1:,1:].  
   
-    -   ELEMENT\_TYPE\_FNPTR é representado como “\=FUNC:`type`\(*assinatura*\)”, onde `type` é o tipo de retorno, e *assinatura* é argumentos do método.  Se não houver nenhum argumento, os parênteses são omitidos.  O compilador do Visual C\+\+ nunca gera esse.  
+    -   ELEMENT_TYPE_FNPTR é representado como "=FUNC:`type`(*assinatura*)", em que `type` é o tipo de retorno e *assinatura* são os argumentos do método. Se não houver nenhum argumento, os parênteses serão omitidos. O compilador do Visual C++ nunca gera.  
   
-     Os seguintes componentes da assinatura não são representados como eles são usados não diferenciando métodos sobrecarregados:  
+     Os seguintes componentes de assinatura não são representados, porque nunca são usadas para diferenciar métodos sobrecarregados:  
   
     -   convenção de chamada  
   
     -   tipo de retorno  
   
-    -   ELEMENT\_TYPE\_SENTINEL  
+    -   ELEMENT_TYPE_SENTINEL  
   
--   Para operadores de conversão, somente o valor de retorno do método é codificada como “~” seguido pelo tipo de retorno, como codificado anteriormente.  
+-   Somente operadores de conversão, o valor de retorno do método é codificado como um ' ~' seguido pelo tipo de retorno, codificado como anteriormente.  
   
--   Para tipos genéricos, o nome do tipo será seguido por uma marcação de volta e em seguida por um número que indica o número de parâmetros de tipo genéricos.  Por exemplo,  
+-   Para tipos genéricos, o nome do tipo será seguido por um backtick e, em seguida, um número que indica o número de parâmetros de tipo genérico.  Por exemplo,  
   
     ```  
     <member name="T:MyClass`2">  
@@ -88,10 +87,10 @@ O compilador gera uma cadeia de caracteres de identificação para cada construc
   
      Para um tipo que é definido como `public class MyClass<T, U>`.  
   
-     Para os métodos que usam tipos genéricos como parâmetros, os parâmetros de tipo genéricos são especificados como números precedidos com as escalas suporta \(por exemplo, '0 '1\).  Cada número que representa uma notação com base zero da matriz de parâmetros de tipo genéricos.  
+     Para colocar tipos genéricos como parâmetros de métodos, os parâmetros de tipo genéricos são especificados como números precedidos de tiques back (por exemplo \`0, \`1).  Cada número que representa uma notação de matriz com base em zero para parâmetros genéricos do tipo.  
   
-## Exemplo  
- Os exemplos a seguir mostram como as cadeias de caracteres de identificação de uma classe e seus membros seriam gerados.  
+## <a name="example"></a>Exemplo  
+ Os exemplos a seguir mostram como a ID de cadeias de caracteres para uma classe e seus membros serão gerados.  
   
 ```  
 // xml_id_strings.cpp  
@@ -187,5 +186,5 @@ namespace N {
 }  
 ```  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

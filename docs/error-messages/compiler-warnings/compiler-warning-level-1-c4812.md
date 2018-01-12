@@ -1,50 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4812 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4812 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4812
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4812
+f1_keywords: C4812
+dev_langs: C++
+helpviewer_keywords: C4812
 ms.assetid: a7f5721f-2019-44de-ad62-ed30bac8b1f3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 49172e1b6427e68954d45ced61597108728c210d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 17232fa4419044ae8138ceefd72883149db78d6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4812"></a>Compilador C4812 de aviso (nível 1)
-estilo de declaração e obsoleto: em vez disso, use 'new_syntax'  
+estilo de declaração obsoleta: use 'new_syntax' em vez disso  
   
- Na versão atual do Visual C++, a especialização de construtor explícito ainda é suportada, mas não podem ser suportado em uma versão futura.  
+ Na versão atual do Visual C++, ainda há suporte para a especialização explícita de construtor, mas não podem ter suporte em uma versão futura.  
   
  O exemplo a seguir gera C4812:  
   

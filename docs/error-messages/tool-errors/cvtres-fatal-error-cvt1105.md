@@ -1,48 +1,30 @@
 ---
-title: CVTRES Erro Fatal CVT1105 | Documentos do Microsoft
+title: CVTRES Erro Fatal CVT1105 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- CVT1105
-dev_langs:
-- C++
-helpviewer_keywords:
-- CVT1105
+f1_keywords: CVT1105
+dev_langs: C++
+helpviewer_keywords: CVT1105
 ms.assetid: 6fb98e2b-836e-4e1e-9bd8-4e1465ad4e85
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c267d3bf0968a9d631cd11b141e9c36bcee70728
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ebda633a6a1c6f57fea22ddd0bc7473d97987490
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cvtres-fatal-error-cvt1105"></a>Erro fatal CVT1105 (CVTRES)
-não é possível realizar busca no arquivo  
+não é possível buscar no arquivo  
   
- Não foi possível acessar um local no arquivo CVTRES.  
+ CVTRES não foi possível ir para um local no arquivo.  
   
  Esse erro pode ser causado por corrupção de arquivo.

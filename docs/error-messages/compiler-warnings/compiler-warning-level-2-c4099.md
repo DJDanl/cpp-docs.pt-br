@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 2) C4099 | Documentos do Microsoft"
+title: "Compilador aviso (nível 2) C4099 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4099
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4099
+f1_keywords: C4099
+dev_langs: C++
+helpviewer_keywords: C4099
 ms.assetid: 00bb803d-cae7-4ab8-8969-b46f54139ac8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 855b31903ba36f6c1ab3030e91354175441451a9
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1eb64e859ef40397edeb872cc7f6f228f7ae89e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Aviso do compilador (nível 2) C4099
-'identifier': nome do tipo visto pela primeira vez usando 'objecttype1' agora visto usando 'objecttype2'  
+'Identificador': nome de tipo visto primeiro usando 'objecttype1' agora visto usando 'objecttype2'  
   
  Um objeto declarado como uma estrutura é definido como uma classe ou um objeto declarado como uma classe é definido como uma estrutura. O compilador usa o tipo de dado na definição.  
   

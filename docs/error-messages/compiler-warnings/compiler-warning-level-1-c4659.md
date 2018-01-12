@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4659 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4659 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4659
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4659
+f1_keywords: C4659
+dev_langs: C++
+helpviewer_keywords: C4659
 ms.assetid: e29ba8db-7917-43f6-8e34-868b752279ae
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 22cf922c9da26d81452f0939aad6202479340ad5
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dd974c730a67489d9197b448f02a5042f77159f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4659"></a>Compilador C4659 de aviso (nível 1)
-\#pragma 'pragma': uso de segmento reservado 'segmento' tem um comportamento indefinido, use #pragma comment (linker...)  
+\#pragma 'pragma': uso de segmento reservado 'segmento' possui comportamento indefinido, use #pragma comment (linker,...)  
   
- A opção .drectve foi usada para passar uma opção para o vinculador. Em vez disso, usar o pragma [comentário](../../preprocessor/comment-c-cpp.md) para passar uma opção de vinculador.  
+ A opção. drectve foi usada para passar uma opção para o vinculador. Em vez disso, use pragma [comentário](../../preprocessor/comment-c-cpp.md) para passar uma opção de vinculador.  
   
 ```  
 // C4659.cpp  

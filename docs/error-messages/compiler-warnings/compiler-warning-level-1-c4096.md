@@ -1,51 +1,33 @@
 ---
-title: "Compilador aviso (nível 1) C4096 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4096 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4096
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4096
+f1_keywords: C4096
+dev_langs: C++
+helpviewer_keywords: C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 38ba5ca53ea2939a6532df47cfd85741c87d24cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3c8fd8e18743a4cf0c9004236ab60bb30219119e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Compilador C4096 de aviso (nível 1)
-'a': não é uma interface COM; não será emitido para IDL  
+'a': não é uma interface COM; não será emitida para IDL  
   
- Uma definição de interface desejada como uma interface COM não foi definida como uma interface COM e, portanto, não será emitida para o arquivo IDL.  
+ A definição de uma interface que você pode ter pretendido como uma interface COM não foi definida como uma interface COM e, portanto, não será emitida para o arquivo IDL.  
   
- Consulte [atributos de Interface](../../windows/interface-attributes.md) para atributos uma lista que indicam uma interface é uma interface COM.  
+ Consulte [atributos de Interface](../../windows/interface-attributes.md) para uma lista de atributos que indicam uma interface é uma interface COM.  
   
  O exemplo a seguir gera C4096:  
   

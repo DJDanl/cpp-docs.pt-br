@@ -1,48 +1,30 @@
 ---
-title: "PRJ0018 de aviso de compilação de projeto | Documentos do Microsoft"
+title: Aviso prj0018 no Build do projeto | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- PRJ0018
-dev_langs:
-- C++
-helpviewer_keywords:
-- PRJ0018
+f1_keywords: PRJ0018
+dev_langs: C++
+helpviewer_keywords: PRJ0018
 ms.assetid: 1a3d9e40-6a35-4a74-b6ba-8079f7a82217
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 26e1ab131360bd980f2f8fba2d29f925a98bf537
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9b5ed1a404a96f60d2e18a4970766f4821453b12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-warning-prj0018"></a>Aviso PRJ0018 no Build do Projeto
-As variáveis de ambiente a seguir não foram encontradas:  
+As seguintes variáveis de ambiente não foram encontradas:  
   
  Uma variável de ambiente não está definida. Esse erro lista as variáveis de ambiente que não foram definidas.  
   
- Consulte [Macros para comandos de compilação personalizada](../../ide/common-macros-for-build-commands-and-properties.md) para obter informações sobre as macros no processo de compilação.
+ Consulte [Macros para os comandos de compilação personalizada](../../ide/common-macros-for-build-commands-and-properties.md) para obter informações sobre as macros no processo de compilação.

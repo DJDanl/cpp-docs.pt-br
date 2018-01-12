@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2005
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2005
+f1_keywords: LNK2005
+dev_langs: C++
+helpviewer_keywords: LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
-ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2005"></a>Erro das Ferramentas de Vinculador LNK2005
 *símbolo* já definido no objeto  
@@ -49,7 +31,7 @@ Esse erro é seguido por um erro fatal [LNK1169](../../error-messages/tool-error
   
 ### <a name="possible-causes-and-solutions"></a>Possíveis causas e soluções  
   
-Geralmente, esse erro significa que tenham interrompido a *regra de definição de um*, que permite apenas uma definição para qualquer modelo usado, a função, o tipo ou o objeto em um arquivo de objeto em questão e apenas uma definição entre o executável inteiro de objetos visíveis externamente ou funções.  
+Geralmente, esse erro significa que tenham interrompido a *regra de definição de um*, que permite apenas uma definição para qualquer modelo usado, a função, o tipo ou o objeto em um arquivo de objeto em questão e apenas uma definição entre o executável inteiro para objetos visíveis externamente ou funções.  
   
 Aqui estão algumas causas comuns desse erro.  
   
@@ -118,7 +100,7 @@ Aqui estão algumas causas comuns desse erro.
   
 -   Esse erro pode ocorrer se você vincular mais de uma versão da biblioteca padrão ou CRT. Por exemplo, se você tentar vincular tanto de varejo e depuração CRT bibliotecas ou as versões estáticas e dinâmicas de uma biblioteca ou duas versões diferentes de uma biblioteca padrão para o executável, esse erro pode ser relatado muitas vezes. Para corrigir esse problema, remova o comando de link na apenas uma cópia de cada biblioteca. Não recomendamos misturar varejo e bibliotecas, ou diferentes versões de uma biblioteca, no mesmo executável de depuração.  
   
-    Para informar o vinculador para usar bibliotecas diferente dos padrões, na linha de comando, especifique as bibliotecas para usar e usar o [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) opção de desabilitar as bibliotecas padrão. No IDE, adicione referências ao seu projeto para especificar as bibliotecas para usar e, em seguida, abra o **páginas de propriedade** caixa de diálogo para seu projeto e, no **vinculador**, **entrada** página de propriedades, definir **ignorar todas as bibliotecas padrão**, ou **ignorar bibliotecas específicas de padrão** propriedades para desabilitar as bibliotecas padrão.   
+    Para informar o vinculador para usar bibliotecas diferente dos padrões, na linha de comando, especifique as bibliotecas para usar e usar o [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) opção de desabilitar as bibliotecas padrão. No IDE, adicione referências ao seu projeto para especificar as bibliotecas para usar e, em seguida, abra o **páginas de propriedade** caixa de diálogo para seu projeto e, no **vinculador**, **entrada** propriedade Defina o **ignorar todas as bibliotecas padrão**, ou **ignorar bibliotecas específicas de padrão** propriedades para desabilitar as bibliotecas padrão.   
   
 -   Esse erro pode ocorrer se você combinar o uso de bibliotecas estáticas e dinâmicas ao usar o [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção. Por exemplo, esse erro pode ocorrer se você criar uma DLL para uso em seu executável que vincula-se no CRT estático. Para corrigir esse problema, use apenas as bibliotecas estáticas ou apenas as bibliotecas dinâmico para todo o executável em qualquer biblioteca que você criar para usar no executável.  
   
@@ -147,4 +129,3 @@ Se você estiver usando uma versão mais antiga do conjunto de ferramentas, cons
   
 -   [Você recebe erros LNK2005 quando você compila um projeto executável (.exe) do ATL no Visual C++](https://support.microsoft.com/kb/184235).  
   
-

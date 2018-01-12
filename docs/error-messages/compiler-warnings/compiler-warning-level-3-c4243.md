@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 3) C4243 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4243 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4243
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4243
+f1_keywords: C4243
+dev_langs: C++
+helpviewer_keywords: C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ab21da8a86eab959e80699f66acd3befffb70707
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b3449dc305495848517687b7404dbdab5528e9a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4243"></a>Compilador C4243 de aviso (nível 3)
-conversão de 'tipo de conversão' existe de 'type1' em 'type2', mas está inacessível  
+conversão de 'tipo de conversão' existe a partir de 'type1' em 'type2', mas é inacessível  
   
  Um ponteiro para uma classe derivada é convertido em um ponteiro para uma classe base, mas a classe derivada herda da classe base com acesso particular ou protegido.  
   

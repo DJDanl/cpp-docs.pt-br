@@ -1,50 +1,31 @@
 ---
-title: "Compilador aviso (nível 3) C4161 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4161 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4161
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4161
+f1_keywords: C4161
+dev_langs: C++
+helpviewer_keywords: C4161
 ms.assetid: 03d3be61-83f1-4009-8310-8758ab67055f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 60840412a5e0fcb09a919cd45048814d75cd6895
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1d61de9a9a02f55114319af677db29630038966a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4161"></a>Compilador C4161 de aviso (nível 3)
-\#pragma pragma(pop...): mais pops de envios  
+\#pragma pragma(pop...): mais ativações do que envios  
   
- Porque seu código-fonte contém um mais pop de envios de pragma ***pragma***, a pilha pode não se comportar conforme o esperado. Para evitar o aviso, certifique-se de que o número de pops não exceder o número de envios.  
+ Porque seu código-fonte contém um mais pop que envios para pragma ***pragma***, a pilha não pode se comportar conforme o esperado. Para evitar o aviso, certifique-se de que o número de ativações não exceder o número de envios por push.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4161:  

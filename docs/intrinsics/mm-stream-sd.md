@@ -1,36 +1,35 @@
 ---
-title: "_mm_stream_sd | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_sd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mm_stream_sd intrínseco"
-  - "instrução movntsd"
+title: _mm_stream_sd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_sd
+dev_langs: C++
+helpviewer_keywords:
+- _mm_stream_sd intrinsic
+- movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da88116f58c6e33d35a69ebb6ac2433a8fe8f4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_stream_sd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="mmstreamsd"></a>_mm_stream_sd
+**Seção específica da Microsoft**  
   
- Grava dados de 64 bits para um local de memória sem polua os caches.  
+ Grava dados de 64 bits em um local de memória sem polua caches.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void _mm_stream_sd(  
@@ -39,30 +38,30 @@ void _mm_stream_sd(
 );  
 ```  
   
-#### Parâmetros  
- \[out\]`Dest`  
- Um ponteiro para o local onde serão gravados os dados de origem.  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `Dest`  
+ Um ponteiro para o local onde os dados de origem serão gravados.  
   
- \[in\]`Source`  
- Um valor de 128 bits que contém o `double` valor a ser gravado em sua parte inferior de 64 bits..  
+ [in] `Source`  
+ Um valor de 128 bits que contém o `double` valor a ser gravado no seu inferior de 64 bits.  
   
-## Valor de retorno  
- Nenhum.  
+## <a name="return-value"></a>Valor de retorno  
+ nenhuma.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
 |`_mm_stream_sd`|SSE4a|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Nesse intrínsecas gera o `movntsd` instrução.  Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseca com `InfoType=0x80000001` e verificar o bit 6 do `CPUInfo[2] (ECX)`.  Esse bit será 1 se o hardware suporta esta instrução e 0 caso contrário.  
+## <a name="remarks"></a>Comentários  
+ Nesse intrínsecas gera o `movntsd` instrução. Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseco com `InfoType=0x80000001` e verifique o bit 6 de `CPUInfo[2] (ECX)`. Esse bit for 1, se o hardware der suporte a essa instrução e 0 caso contrário.  
   
- Se você executar o código que usa o `_mm_stream_sd` intrínseca em hardware não oferece suporte a `movntsd` instruções, os resultados são imprevisíveis.  
+ Se você executar o código que usa o `_mm_stream_sd` intrínseco no hardware que não oferece suporte a `movntsd` instrução, os resultados são imprevisíveis.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -85,13 +84,15 @@ int main()
   
 ```  
   
-  **\[0\] d \= \-1, d \[1\] \= 1**   
-## END Microsoft específicos  
- Copyright 2007 pela Advanced Micro dispositivos, Inc. todos os direitos reservados.  Reproduzido com permissão do Advanced Micro dispositivos, Inc.  
+```Output  
+d[0] = -1, d[1] = 1  
+```  
   
-## Consulte também  
- [\_mm\_stream\_ss](../Topic/_mm_stream_ss.md)   
- [\_mm\_store\_sd](http://msdn.microsoft.com/pt-br/8e672d0d-0a96-45b9-a783-392a2457de42)   
- [\_mm\_sfence](http://msdn.microsoft.com/pt-br/b6c0d18e-3628-4318-826b-45f66782e870)   
- [Streaming SIMD Extensions that Support the Cache](http://msdn.microsoft.com/pt-br/8f03493a-d5f5-4457-892e-0b6540494872)   
+**Fim da seção específica da Microsoft**  
+ Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Consulte também  
+ [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   
+ [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)   
+ [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)   
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

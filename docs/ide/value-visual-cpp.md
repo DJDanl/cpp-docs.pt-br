@@ -1,48 +1,48 @@
 ---
-title: "&lt;valor&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "value"
-  - "<value>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marca XML C++ <value>"
-  - "marca XML C++ value"
+title: '&lt;valor&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- value
+- <value>
+dev_langs: C++
+helpviewer_keywords:
+- value C++ XML tag
+- <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;valor&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A marca de \<value\> permite que você descreva métodos de propriedade e do assessor de propriedade.  Observe que quando você adicionar uma propriedade com um assistente de código no ambiente de desenvolvimento integrado Visual Studio, adicionar uma marca de [\<summary\>](../ide/summary-visual-cpp.md) para a nova propriedade.  Você deve adicionar manualmente em uma marca de \<value\> para descrever o valor que a propriedade representa.  
+# <a name="ltvaluegt-visual-c"></a>&lt;valor&gt; (Visual C++)
+O \<valor > marca permite descrever uma propriedade e métodos de acessador de propriedade. Observe que quando você adiciona uma propriedade com um Assistente de código no ambiente de desenvolvimento integrado do Visual Studio, ele adicionará um [ \<resumo >](../ide/summary-visual-cpp.md) marca para a nova propriedade. Então, você deve adicionar manualmente uma marca \<value> para descrever o valor que a propriedade representa.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 <value>property-description</value>  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `property-description`  
- Uma descrição para a propriedade.  
+ Uma descrição da propriedade.  
   
-## Comentários  
- Compile com [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação para um arquivo.  
+## <a name="remarks"></a>Comentários  
+ Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // xml_value_tag.cpp  
@@ -66,5 +66,5 @@ public:
 };  
 ```  
   
-## Consulte também  
- [A Documentação XML](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Documentação XML](../ide/xml-documentation-visual-cpp.md)

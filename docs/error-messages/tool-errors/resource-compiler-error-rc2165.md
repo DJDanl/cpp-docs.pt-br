@@ -1,50 +1,32 @@
 ---
-title: RC2165 de erro do compilador de recurso | Documentos do Microsoft
+title: RC2165 de erro do compilador de recurso | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RC2165
-dev_langs:
-- C++
-helpviewer_keywords:
-- RC2165
+f1_keywords: RC2165
+dev_langs: C++
+helpviewer_keywords: RC2165
 ms.assetid: bf7d4630-9355-47e3-87fa-6693fcf0ef0d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b4e68efc75156754a7a4cfc5f4ba5898f9d24f5d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 16c2d226d6212ba2cdbffbaba7f21f5c8019f2e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-error-rc2165"></a>Erro RC2165 (compilador de recurso)
-string não encontrada na instrução DLGINCLUDE  
+cadeia de caracteres não encontrada na instrução DLGINCLUDE  
   
  A instrução não especificou um arquivo de inclusão válido.  
   
- O **DLGINCLUDE** instrução deve usar a sintaxe a seguir:  
+ O **DLGINCLUDE** instrução deve usar a seguinte sintaxe:  
   
  **DLGINCLUDE "*filename*. h" * *

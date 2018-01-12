@@ -1,53 +1,35 @@
 ---
-title: Ferramentas de vinculador LNK1140 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1140 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1140
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1140
+f1_keywords: LNK1140
+dev_langs: C++
+helpviewer_keywords: LNK1140
 ms.assetid: 468d7651-a7cd-47b9-aead-5bb2fab56121
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c6b7fd082fa5e0cb601c3cfb00917e7f059e5e79
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a5a7bce157359d547f91ba2b560cf258e231b4a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1140"></a>Erro das Ferramentas de Vinculador LNK1140
-muitos módulos para o programa de banco de dados; vincular ao /PDB:NONE  
+muitos módulos para o banco de dados do programa; Vincular ao /PDB: NONE  
   
  O projeto contém mais de 4096 módulos.  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
   
-1.  Vincular novamente usando [/PDB: nenhum](../../build/reference/pdb-use-program-database.md).  
+1.  Vincular novamente usando [/PDB: NONE](../../build/reference/pdb-use-program-database.md).  
   
 2.  Compile alguns módulos sem informações de depuração.  
   

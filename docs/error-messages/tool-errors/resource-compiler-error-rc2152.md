@@ -1,44 +1,26 @@
 ---
-title: RC2152 de erro do compilador de recurso | Documentos do Microsoft
+title: RC2152 de erro do compilador de recurso | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RC2152
-dev_langs:
-- C++
-helpviewer_keywords:
-- RC2152
+f1_keywords: RC2152
+dev_langs: C++
+helpviewer_keywords: RC2152
 ms.assetid: 8efcba8f-9971-43cc-a1cd-8d7c9aec133c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2058fb0c7ff40d169f3a566ac1cc5c9bffe50e12
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 41924f6a435d1e5f78aae57618e7c37f5dc5da74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-error-rc2152"></a>Erro RC2152 (compilador de recurso)
 caractere de controle inválido  

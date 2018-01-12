@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 4) C4400 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4400 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4400
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4400
+f1_keywords: C4400
+dev_langs: C++
+helpviewer_keywords: C4400
 ms.assetid: f135fe98-4f92-4e07-9d71-2621b36ee755
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 69a85c9d21670d97c9d7a956abf54496719f0875
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 615a315ff2d9ff3f517c0b046317400792760b73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4400"></a>Compilador C4400 de aviso (nível 4)
-'type': não há suporte para const/volátil qualificadores nesse tipo  
+'type': não há suporte para qualificadores const/volatile neste tipo  
   
  O [const](../../cpp/const-cpp.md)e [volátil](../../cpp/volatile-cpp.md)qualificadores não funcionará com variáveis de tipos common language runtime.  
   

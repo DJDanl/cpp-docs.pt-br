@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4047 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4047 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4047
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4047
+f1_keywords: C4047
+dev_langs: C++
+helpviewer_keywords: C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4d39939ef2094c1fdb99521ac99c69b91b42f1ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9d42913533129fad2cbdc803e6f3d81bdea3ebd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4047"></a>Compilador C4047 de aviso (nível 1)
-'operator': 'identifier1' é diferente nos níveis de indireção de 'identifier2'  
+'operator': 'identifier1' difere em níveis de indireção de 'identifier2'  
   
- Um ponteiro pode apontar para uma variável (um nível de indireção) a outro ponteiro aponta para uma variável (dois níveis de indireção) e assim por diante.  
+ Um ponteiro pode apontar para uma variável (um nível de indireção) para outro ponteiro que aponta para uma variável (dois níveis de indireção) e assim por diante.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4047:  

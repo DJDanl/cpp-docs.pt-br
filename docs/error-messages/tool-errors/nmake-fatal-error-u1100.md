@@ -1,48 +1,30 @@
 ---
-title: NMAKE Erro Fatal U1100 | Documentos do Microsoft
+title: NMAKE Erro Fatal U1100 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- U1100
-dev_langs:
-- C++
-helpviewer_keywords:
-- U1100
+f1_keywords: U1100
+dev_langs: C++
+helpviewer_keywords: U1100
 ms.assetid: c71910a7-c581-4d9c-a38c-d2d557d56289
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d1e2dad3730a7b2b6ec42b6ad469352beff49f2b
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e7c4a42e47a29775bb53fdc0fd2f25c7bdc252f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-fatal-error-u1100"></a>Erro fatal U1100 (NMAKE)
-macro 'macroname' é inválida no contexto da regra de lote 'rule'  
+macro 'nomedamacro' é inválida no contexto da regra de lote 'rule'  
   
- NMAKE gera este erro quando o bloco de comando de uma regra de modo de lote direta ou indiretamente referencia uma macro de arquivo especial que não é $<.></.>  
+ NMAKE gera este erro quando o bloco de comando de uma regra de modo de lote direta ou indiretamente referencia uma macro de arquivo especial que não é $<.  
   
- $< is the only allowed macro for batch-mode rules. is="" the="" only="" allowed="" macro="" for="" batch-mode=""></ is the only allowed macro for batch-mode rules.>
+ $< é o único permitido macro para regras de modo de lote.

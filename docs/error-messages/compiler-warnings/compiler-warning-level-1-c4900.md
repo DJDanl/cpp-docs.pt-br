@@ -1,47 +1,28 @@
 ---
-title: "Compilador aviso (nível 1) C4900 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4900 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4900
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4900
+f1_keywords: C4900
+dev_langs: C++
+helpviewer_keywords: C4900
 ms.assetid: 826997ec-0803-4794-ad35-bb463f679658
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6d7c9158721aec18db85e6db385cbad02b85ee82
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 297d4097304a2a66baa784ca06f78e185112e13b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4900"></a>Compilador C4900 de aviso (nível 1)
-incompatibilidade de idioma intermediário entre 'tool1' versão 'version1' e 'tool2' 'versão&2;'  
+incompatibilidade de linguagem intermediária entre 'tool1' versão 'version1' e 'tool2' 'versão 2'  
   
- A linguagem intermediária usada em *tool1* e *tool2* não corresponde. Verifique se a versão mais atual de cada ferramenta foi instalada.
+ A linguagem intermediária usada em *tool1* e *tool2* não correspondem. Verifique se a versão mais recente de cada ferramenta foi instalada.

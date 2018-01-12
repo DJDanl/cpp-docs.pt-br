@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e5607fd240c7a97691189b8a3afa5e7c0171e26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="history-of-dcom"></a>Histórico de DCOM
 Automação foi introduzida em 1993 antecipada, era pode ser usado apenas entre aplicativos em execução no mesmo computador. No entanto, porque ela compartilhada de bases mesmo que o resto do OLE, que é, COM (ou Component Object Model), sempre intenção era que ela se tornaria "remoto" quando COM próprio foi atualizado para incluir recursos de comunicação remota. Ele também foi planejado que a transição da operação puramente local para operação distribuída exigem pouca ou nenhuma alteração ao código existente.  

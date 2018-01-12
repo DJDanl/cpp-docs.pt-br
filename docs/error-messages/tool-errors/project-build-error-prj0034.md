@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b96edfdabeaf4ae31f4eaabb334f56bf29c99c70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e68097d234519cdea75875d355ef798672ad4b22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-error-prj0034"></a>Erro de Build PRJ0034 no Projeto
 A propriedade 'Additional Dependencies' para o nível de projeto personalizado compilação etapa contida 'macro' que é avaliado como 'macro_expansion'.  

@@ -13,11 +13,12 @@ ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 770b7f70e52859b1489b984d8aef3c3876a9ca83
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: d38538ce929410782eee7a0a6540bb62a05b7669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake projetos em Visual C++
 Este artigo pressupõe que você esteja familiarizado com CMake, uma ferramenta de plataforma cruzada, o código-fonte aberto para definir os processos de compilação que são executados em várias plataformas.  
@@ -26,7 +27,7 @@ Até recentemente, os usuários do Visual Studio podem usar CMake para gerar arq
 
 **Visual Studio 2017 versão 15,3**: suporte é fornecido para geradores Ninja e o Visual Studio.
 
-**Visual Studio 2017 versão 15.4**: é adicionado suporte para CMake no Linux. Para obter mais informações, consulte [configurar um projeto de CMake Linux](../linux/cmake-linux-project.md).
+**Visual Studio 2017 versão 15.4**: é adicionado suporte para CMake no Linux. Para obter mais informações, consulte [Configurar um projeto do Linux CMake](../linux/cmake-linux-project.md).
 
 ## <a name="installing"></a>Instalando o
 Ferramentas do Visual C++ para CMake é instalada por padrão como parte do desenvolvimento da área de trabalho com carga de trabalho do C++.

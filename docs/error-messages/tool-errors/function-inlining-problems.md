@@ -1,15 +1,13 @@
 ---
-title: "Problemas de Inlining da função | Documentos do Microsoft"
+title: "Problemas de Inlining da função | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - /Ob1 C++ compiler option
 - inline functions, problems
@@ -18,37 +16,23 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7f29cb8fb61dfc9f50cc5677e0d4f18f83627cdb
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97ffa56fc748eea8f65f5fe79c7a9defa7238f82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-inlining-problems"></a>Problemas de inlining da função
-Se você estiver usando o inlining de função, você deve:  
+Se você estiver usando inlining de função, você deve:  
   
 -   Ter as funções embutidas implementadas no arquivo de cabeçalho que você incluir.  
   
--   Ter inlining ligados no arquivo de cabeçalho.  
+-   Ter inlining ativadas no arquivo de cabeçalho.  
   
 ```  
 // LNK2019_function_inline.cpp  
@@ -80,11 +64,11 @@ int main() {
 }  
 ```  
   
- Se você estiver usando o `#pragma inline_depth` compilador diretiva, verifique se você tem um valor maior ou igual a 2 definido. Um valor de zero será desligado inlining. Verifique também se você estiver usando o **/Ob1** ou **/Ob2** opções do compilador.  
+ Se você estiver usando o `#pragma inline_depth` compilador diretiva, não se esqueça você tiver um valor maior ou igual a 2 definida. Um valor de zero desativa inlining. Verifique também se você estiver usando o **/Ob1** ou **/Ob2** opções do compilador.  
   
- Combinação de opções de compilação embutido e não embutida em módulos diferentes, às vezes, pode causar problemas. Se uma biblioteca C++ é criada pela função inlining ativada ([/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md)), mas o correspondente arquivo de cabeçalho que descreve as funções tiver inlining desativado (nenhuma opção), você receberá o erro LNK2001. As funções não obter embutidas no código do arquivo de cabeçalho, mas uma vez que eles não estão no arquivo de biblioteca não há nenhum endereço para resolver a referência.  
+ Combinação de opções de compilação embutido e não embutido em módulos diferentes pode causar problemas. Se uma biblioteca C++ é criada com a função inlining ativada ([/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md)), mas o arquivo de cabeçalho que descrevem as funções tiver inlining desativado (nenhuma opção), você receberá o erro LNK2001. As funções não obter embutidas no código do arquivo de cabeçalho, mas como eles não estão no arquivo de biblioteca não há nenhum endereço para resolver a referência.  
   
- Da mesma forma, um projeto que usa a função inlining ainda define as funções em um arquivo. cpp em vez de no cabeçalho do arquivo também obterá LNK2019. O arquivo de cabeçalho é incluído em todos os lugares considerado apropriado, mas as funções são apenas embutida quando o arquivo. cpp passa pelo compilador. Portanto, o vinculador vê as funções como externos não resolvidos quando usados em outros módulos.  
+ Da mesma forma, um projeto que usa a função inlining ainda define as funções em um arquivo. cpp em vez de no cabeçalho de arquivo também obterá LNK2019. O arquivo de cabeçalho é incluído em todos os lugares for apropriado, mas as funções são apenas embutida quando o arquivo. cpp passa pelo compilador; Portanto, o vinculador considera as funções não resolvidos externos quando usada em outros módulos.  
   
 ```  
 // LNK2019_FIP.h  
@@ -93,7 +77,7 @@ struct testclass {
 };  
 ```  
   
- e, em seguida,  
+ E, em seguida,  
   
 ```  
 // LNK2019_FIP.cpp  
@@ -102,7 +86,7 @@ struct testclass {
 inline void testclass::PublicStatMemFunc1(void) {}  
 ```  
   
- e, em seguida,  
+ E, em seguida,  
   
 ```  
 // LNK2019_FIP_2.cpp  

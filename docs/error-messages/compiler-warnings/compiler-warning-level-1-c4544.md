@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4544 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4544 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4544
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4544
+f1_keywords: C4544
+dev_langs: C++
+helpviewer_keywords: C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 25f71c8fb56083135dd2cdf9645c9ef8dbfbd975
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b84683c4b3fffcb9e23c6d80fb3f81684006f15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4544"></a>Compilador C4544 de aviso (nível 1)
-'declaração de ': argumento de modelo ignorado nesta declaração de modelo padrão  
+'declaração de ': argumento de template ignorado nessa declaração de template padrão  
   
- Um argumento de modelo padrão foi especificado em um local incorreto e foi ignorado. Um argumento de modelo padrão para um modelo de classe só pode ser especificado na declaração ou definição do modelo de classe e não em um membro do modelo de classe.  
+ Um argumento de template padrão foi especificado em um local incorreto e foi ignorado. Um argumento de modelo padrão para um modelo de classe só pode ser especificado na declaração ou definição do modelo de classe e não em um membro do modelo de classe.  
   
  Este exemplo gera C4545 e o próximo exemplo mostra como corrigi-lo:  
   

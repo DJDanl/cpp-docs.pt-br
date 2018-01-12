@@ -1,37 +1,37 @@
 ---
-title: "__inword | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__indword_cpp"
-  - "__indword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "na instrução"
-  - "__inword intrínseco"
+title: __inword | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __indword_cpp
+- __indword
+dev_langs: C++
+helpviewer_keywords:
+- in instruction
+- __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 98d05ad6b424d12c911e726f04f0e0971c3df392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# __inword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="inword"></a>__inword
+**Seção específica da Microsoft**  
   
  Lê dados da porta especificada usando o `in` instrução.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 unsigned short __inword(  
@@ -39,25 +39,25 @@ unsigned short __inword(
 );  
 ```  
   
-#### Parâmetros  
- \[in\]`Port`  
- Ler a partir da porta.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `Port`  
+ A porta leiam.  
   
-## Valor de retorno  
- Palavra de leitura de dados.  
+## <a name="return-value"></a>Valor de retorno  
+ A palavra de leitura de dados.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseca|Arquitetura|  
-|----------------|-----------------|  
-|`__inword`|x86,[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Intrínseco|Arquitetura|  
+|---------------|------------------|  
+|`__inword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Comentários  
- Esta rotina só está disponível como um intrínseco.  
+## <a name="remarks"></a>Comentários  
+ Essa rotina só está disponível como função intrínseca.  
   
-## END Microsoft específicos  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

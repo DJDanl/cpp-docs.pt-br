@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 3) C4641 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4641 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4641
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4641
+f1_keywords: C4641
+dev_langs: C++
+helpviewer_keywords: C4641
 ms.assetid: 28fe5c3e-6039-42da-9100-1312b5b15aea
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 40a34698c937f44a855da398b3f6926396664066
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c140bb3664f72646e74ab9f47909dade76a50ca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4641"></a>Compilador C4641 de aviso (nível 3)
 Comentário de documento XML tem uma referência cruzada ambígua  
   
- O compilador não pôde resolver inequivocamente uma referência. Para resolver esse aviso, especifique as informações de parâmetro necessárias para fazer a referência ambígua.  
+ O compilador não pôde resolver inequivocamente uma referência. Para resolver este aviso, especifique as informações de parâmetro necessárias para liberar a referência não ambígua.  
   
  Para obter mais informações, consulte [documentação XML](../../ide/xml-documentation-visual-cpp.md).  
   

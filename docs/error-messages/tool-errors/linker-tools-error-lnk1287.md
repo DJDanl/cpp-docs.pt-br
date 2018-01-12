@@ -1,46 +1,28 @@
 ---
-title: Ferramentas de vinculador LNK1287 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1287 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1287
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1287
+f1_keywords: LNK1287
+dev_langs: C++
+helpviewer_keywords: LNK1287
 ms.assetid: 48dc379d-370c-42f6-8028-5bbcf1cc88bd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 17023188a87f463aa34251bfa61681e2c259af92
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 84182a84ceb3ca0c448497bd51e8d768d65f85ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1287"></a>Erro das Ferramentas de Vinculador LNK1287
-função do ponto de entrada gerenciado inválido  
+função de ponto de entrada gerenciado inválido  
   
  O ponto de entrada não é válido para uma imagem gerenciada. O tipo de retorno de uma função de ponto de entrada gerenciado só pode ser `void` ou `int`. O tipo do parâmetro de uma função de ponto de entrada gerenciado só pode ser `void` ou `String []`.

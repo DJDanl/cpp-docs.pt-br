@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b9ae6b2b922a3d3d70cf49ca5ee80283e9fc218
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4412c37ed0544c276a9ff1a16c367de06c7d1e9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-method--visual-c"></a>Adicionando um método (Visual C++)
 Você pode usar o [Assistente para adição de método](../ide/add-method-wizard.md) para adicionar um método para uma interface em seu projeto. Se o projeto contém uma classe associada à interface, o assistente modifica a classe muito.  

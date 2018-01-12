@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 53fa4efec4d30753613c02705869c766a5c251eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c27aeb10a58c828b6503ce96ddaadf138c258f27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Adicionando funcionalidade com assistentes de código (C++)
 Depois de criar um projeto, você deve alterar ou adicionar a funcionalidade do projeto. Essas tarefas incluem a criação de novas classes, adicionando novas funções de membro e variáveis e a adição de automação métodos e propriedades. Os assistentes de código são projetados para permitir que você a fazer tudo isso.  

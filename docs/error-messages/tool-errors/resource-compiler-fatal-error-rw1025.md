@@ -1,51 +1,33 @@
 ---
-title: Recurso compilador Erro Fatal RW1025 | Documentos do Microsoft
+title: Recurso compilador Erro Fatal RW1025 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RW1025
-dev_langs:
-- C++
-helpviewer_keywords:
-- RW1025
+f1_keywords: RW1025
+dev_langs: C++
+helpviewer_keywords: RW1025
 ms.assetid: 561a02af-e7e0-442a-8ad3-a00b2ca1b62e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4029f07c4025720f92e7ca95cadcd915c542dc6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 487968f8a1242dd4c36e4bbd9b4ede08a5ab4d95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>Erro fatal RW1025 (compilador de recurso)
 Sem memória heap distante  
   
- Verifique se há software residente na memória que pode ocupar muito espaço. Use o programa CHKDSK para descobrir quanta memória você tiver.  
+ Verifique se há software residentes na memória que pode ser ocupando muito espaço. Use o programa CHKDSK para saber quanta memória você tiver.  
   
- Se você estiver criando um arquivo grande de recursos, dividir o script de recurso em dois arquivos. Depois de criar dois arquivos. res, use a linha de comando do MS-DOS para reuni-las:  
+ Se você estiver criando um arquivo de recurso grande, divida o script de recurso em dois arquivos. Depois de criar dois arquivos. res, use a linha de comando MS-DOS para reuni-las:  
   
 ```  
 copy first.res /b + second.res /b full.res  

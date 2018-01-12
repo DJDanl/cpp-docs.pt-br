@@ -1,52 +1,33 @@
 ---
-title: "Compilador aviso (nível 4) C4100 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4100 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4100
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4100
+f1_keywords: C4100
+dev_langs: C++
+helpviewer_keywords: C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 62e8239f7472fcf3e7fb4b2ca6bc65995f20b3fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 72236ee0c100388906689121a0936daf23c58e89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Compilador C4100 de aviso (nível 4)
-'identifier': parâmetro formal sem referência  
+'Identificador': parâmetro formal não referenciado  
   
- O parâmetro formal não é referenciado no corpo da função. O parâmetro sem referência será ignorado.  
+ O parâmetro formal não é referenciado no corpo da função. O parâmetro não referenciado será ignorado.  
   
- C4100 também pode ser emitido quando o código chama um destruidor no parâmetro de tipo primitivo não referenciados uma outra forma.  Essa é uma limitação do compilador do Visual C++.  
+ C4100 também pode ser emitido quando o código chama um destruidor no parâmetro de tipo primitivo não referenciados um caso contrário.  Essa é uma limitação do compilador Visual C++.  
   
  O exemplo a seguir gera C4100:  
   

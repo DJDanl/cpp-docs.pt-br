@@ -1,70 +1,54 @@
 ---
-title: Ferramentas de vinculador LNK1306 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1306 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1306
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1306
+f1_keywords: LNK1306
+dev_langs: C++
+helpviewer_keywords: LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 85ccd30abe8784a185fadc39dcdf91b8ac6cd125
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 32b6589fa5e4d7dc02ccb9a6c3157c109725b895
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="linker-tools-error-lnk1306"></a>Erro das Ferramentas de Vinculador LNK1306
-Não é possível gerenciar a função de ponto de entrada DLL; compilar para nativo  
+# <a name="linker-tools-error-lnk1306"></a>Erro das Ferramentas de Vinculador LNK1306  
   
- DllMain não pode ser compilado para MSIL; ele deve ser compilado para nativo.  
+> Função de ponto de entrada DLL não pode ser gerenciada; compilar para nativo  
   
- Para resolver,  
+`DllMain`não podem ser compilados para MSIL; ele deve ser compilado para nativo.  
+  
+Para resolver esse problema,  
   
 -   Compile o arquivo que contém o ponto de entrada sem **/clr**.  
   
 -   Coloque o ponto de entrada em um `#pragma unmanaged` seção.  
   
--   Para saber mais, veja  
+Para obter mais informações, consulte:  
   
 -   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md)  
   
--   [Inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md)  
+-   [Inicialização de assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md)  
   
--   [Comportamento da biblioteca em tempo de execução](../../build/run-time-library-behavior.md)  
+-   [Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../../build/run-time-library-behavior.md)  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera LNK1306.  
   
-```  
+O exemplo a seguir gera LNK1306.  
+  
+```cpp  
 // LNK1306.cpp  
 // compile with: /clr /link /dll /entry:NewDllMain  
 // LNK1306 error expected  
@@ -72,4 +56,17 @@ Não é possível gerenciar a função de ponto de entrada DLL; compilar para na
 int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
    return 1;  
 }  
-```
+```  
+  
+Para corrigir esse problema, não use a opção /clr para compilar este arquivo ou use um `#pragma` diretiva para colocar a definição de ponto de entrada em uma seção não gerenciada, conforme mostrado neste exemplo:  
+  
+```cpp  
+// LNK1306fix.cpp  
+// compile with: /clr /link /dll /entry:NewDllMain  
+#include <windows.h>  
+#pragma managed(push, off)  
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
+   return 1;  
+}  
+#pragma managed(pop)  
+```  

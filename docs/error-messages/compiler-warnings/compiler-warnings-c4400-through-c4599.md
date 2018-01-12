@@ -1,6 +1,6 @@
 ---
 title: C4400 de avisos do compilador por meio de C4599 | Microsoft Docs
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -132,22 +132,20 @@ ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 580f47f53d84cfba5aa55916bb88c8764c63553a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de avisos do compilador por meio de C4599
 
-Os artigos desta parte da documentação contém informações sobre um subconjunto de avisos do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de aviso e, em seguida, escolha a tecla F1.
+Os artigos nesta seção da documentação explicam um subconjunto das mensagens de aviso são geradas pelo compilador.
 
-> [!NOTE]
-> Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro ou aviso é documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).
-
-## <a name="in-this-section"></a>Nesta seção
+## <a name="warning-messages"></a>Mensagens de aviso
 
 |Aviso|Mensagem|
 |-------------|-------------|

@@ -1,36 +1,34 @@
 ---
-title: "Assistente de Adi&#231;&#227;o de Fun&#231;&#227;o de Membro | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.function.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente de Adição de Função de Membro [C++]"
+title: "Adicionar Assistente de função de membro | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.function.overview
+dev_langs: C++
+helpviewer_keywords: Add Member Function Wizard [C++]
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 775b519b304549b474cd21980ef5a4cbe8f2d4d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Assistente de Adi&#231;&#227;o de Fun&#231;&#227;o de Membro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="add-member-function-wizard"></a>Assistente de Adição de Função de Membro
 Este assistente adiciona uma declaração de função de membro para o arquivo de cabeçalho e uma implementação de função de membro de stub para o arquivo de implementação para a classe selecionada.  
   
  Depois de adicionar a função de membro usando o assistente, você pode editar o código no ambiente de desenvolvimento.  
   
  **Tipo de retorno**  
- Define o tipo de retorno da função de membro que você está adicionando.  Você pode fornecer seu próprio tipo de retorno, ou você pode selecionar da lista de tipos disponíveis.  Para obter informações sobre os tipos, consulte  [Tipos fundamentais](../cpp/fundamental-types-cpp.md).  
+ Define o tipo de retorno da função de membro que você está adicionando. Você pode fornecer seu próprio tipo de retorno, ou você pode selecionar na lista de tipos disponíveis. Para obter informações sobre os tipos, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).  
   
 ||||  
 |-|-|-|  
@@ -43,7 +41,7 @@ Este assistente adiciona uma declaração de função de membro para o arquivo d
  Define o nome da função de membro que você está adicionando.  
   
  **Tipo de parâmetro**  
- Define o tipo do parâmetro que você está adicionando para a função de membro, se a função de membro tiver parâmetros.  Você pode fornecer seu próprio tipo de parâmetro, ou você pode selecionar da lista de tipos disponíveis.  
+ Define o tipo de parâmetro que você está adicionando para a função de membro, se a função de membro tiver parâmetros. Você pode fornecer seu próprio tipo de parâmetro, ou você pode selecionar na lista de tipos disponíveis.  
   
 ||||  
 |-|-|-|  
@@ -55,34 +53,34 @@ Este assistente adiciona uma declaração de função de membro para o arquivo d
  Define o nome de um parâmetro que você está adicionando para a função de membro, se a função de membro tiver parâmetros.  
   
  **Lista de parâmetros**  
- Exibe uma lista de parâmetros que você adicionou à função de membro.  Para adicionar um parâmetro à lista, forneça um tipo e nome na  **tipo de parâmetro** e  **o nome do parâmetro** caixas e clique em  **Add**.  Para remover um parâmetro na lista, selecione o parâmetro e clique em  **Remover**.  
+ Exibe uma lista de parâmetros que você adicionou à função de membro. Para adicionar um parâmetro à lista, forneça um tipo e nome no **tipo de parâmetro** e **nome do parâmetro** caixas e clique em **adicionar**. Para remover um parâmetro na lista, selecione o parâmetro e clique em **remover**.  
   
  **Access**  
- Define o acesso à função de membro.  Modificadores de acesso são as palavras\-chave que especificam o acesso a que outras classes têm à função de membro.  Consulte  [O controle de acesso de membro](../cpp/member-access-control-cpp.md) para obter mais informações sobre como especificar o acesso.  O nível de acesso da função de membro é definido como  **pública** por padrão.  
+ Define o acesso à função de membro. Modificadores de acesso são palavras-chave que especificam o outras classes de acesso à função de membro. Consulte [controle de acesso de membro](../cpp/member-access-control-cpp.md) para obter mais informações sobre como especificar o acesso. O nível de acesso da função de membro é definido como **pública** por padrão.  
   
--   [Público](../cpp/public-cpp.md)  
+-   [public](../cpp/public-cpp.md)  
   
--   [Protegido](../Topic/protected%20\(C++\).md)  
+-   [protected](../cpp/protected-cpp.md)  
   
--   [Particular](../Topic/private%20\(C++\).md)  
+-   [private](../cpp/private-cpp.md)  
   
- Verifique se a nova função de membro é estático ou virtual e se ela está embutida ou puro.  Se você definir a função de membro ser puro, o `Virtual` caixa de seleção estiver marcada e o  **in\-line** caixa de seleção ficará indisponível.  O padrão é uma função de membro não estática, nonvirtual.  
+ Verifique se a nova função de membro é estático ou virtual, e se ele é embutido ou puro. Se você definir a função de membro para ser puro, o `Virtual` caixa de seleção estiver marcada e o **embutido** caixa de seleção torna-se indisponível. O padrão é uma função de membro não estático, não virtual.  
   
 |Opção|Descrição|  
-|-----------|---------------|  
-|[Estático](../misc/static-cpp.md)|Especifica que a função atua como um global e pode ser chamada fora da classe, mesmo com nenhuma instanciação de classe.  A função de membro não tem acesso aos membros não\-static.  Uma função de membro especificada como `Static` não pode ser virtual.|  
-|[Virtual](../cpp/virtual-cpp.md)|Garante que a função de membro correto é chamada de um objeto, independentemente da expressão usada para fazer com que a função de membro chamada.  Uma função de membro especificada como `Virtual` não pode ser estático.|  
-|**Puro**|Indica que nenhuma implementação é fornecida para a função de membro virtual que está sendo declarada; Portanto,  **puro** pode ser especificado somente em funções de membro virtual.  Consulte  [Sintaxe de declaração de membro da classe](../Topic/Class-Member%20Declaration%20Syntax.md) para obter mais informações.<br /><br /> Uma classe que contém pelo menos uma função de membro virtual pura é considerada uma classe abstrata.  Classes derivadas da classe abstrata devem implementar a função de membro virtual puro ou, também, são classes abstratas.|  
-|[Interno](../Topic/Inline%20Functions%20\(C++\).md)|Instrui o compilador para inserir uma cópia do corpo da função de membro em cada local em que a função de membro é chamada.  Uma função de membro especificada como  **in\-line** não pode ser puro.|  
+|------------|-----------------|  
+|[Estático](../cpp/storage-classes-cpp.md)|Especifica que a função atua como global e pode ser chamada de fora da classe, mesmo com nenhuma instanciação de classe. A função de membro não tem acesso a membros não estáticos. Uma função de membro especificada como `Static` não pode ser virtual.|  
+|[Virtual](../cpp/virtual-cpp.md)|Garante que a função de membro correto é chamada de um objeto, independentemente da expressão usada para fazer com que a função de membro chamada. Uma função de membro especificada como `Virtual` não pode ser estático.|  
+|**Puro**|Indica que nenhuma implementação é fornecida para a função de membro virtual que está sendo declarada; Portanto, **puro** pode ser especificada somente em funções membro virtual. Uma classe que contém pelo menos uma função de membro puramente virtual é considerada uma classe abstrata. Classes derivadas da classe abstrata devem implementar a função de membro puramente virtual ou, também são classes abstratas.|  
+|[Embutido](../cpp/inline-functions-cpp.md)|Instrui o compilador para inserir uma cópia do corpo da função de membro em cada local que é chamada de função de membro. Uma função de membro especificada como **embutido** não pode ser puro.|  
   
  **arquivo. cpp**  
- Define o local do arquivo onde a implementação de função de membro de stub é gravada.  Por padrão, ele é escrito no arquivo. cpp para a classe à qual a função de membro é adicionada.  Clique no botão de reticências para alterar o nome do arquivo.  A implementação da função de membro é adicionada ao conteúdo do arquivo selecionado.  
+ Define o local do arquivo em que a implementação de função de membro de stub é gravada. Por padrão, ela é gravada no arquivo. cpp para a classe à qual a função de membro é adicionada. Clique no botão de reticências para alterar o nome do arquivo. A implementação da função de membro é adicionada ao conteúdo do arquivo selecionado.  
   
- **Comment**  
+ **Comentário**  
  Fornece um comentário no arquivo de cabeçalho para a função de membro.  
   
  **Assinatura de função**  
- Exibe a função de membro, como ele aparece no código quando você clica em  **Concluir**.  Você não pode editar o texto dessa caixa.  Para alterar a função de membro, altere as caixas apropriadas no assistente.  
+ Exibe a função de membro como ele aparece no código, quando você clica em **concluir**. Você não pode editar o texto nesta caixa. Para alterar a função de membro, altere as caixas apropriadas no assistente.  
   
-## Consulte também  
- [Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Adicionar uma função de membro](../ide/adding-a-member-function-visual-cpp.md)

@@ -1,53 +1,35 @@
 ---
-title: "Compilador aviso (nível 4) C4366 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4366 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4366
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4366
+f1_keywords: C4366
+dev_langs: C++
+helpviewer_keywords: C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 70729752ad878a46654f05c1edc84d0c8201a127
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 221cc02e5a2592599bad0ee9a77de59b19dda6f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4366"></a>Compilador C4366 de aviso (nível 4)
-O resultado do operador unário 'operator' pode ser não alinhado  
+O resultado do operador unário 'operator' deve ser unaligned  
   
- Se um membro de estrutura pode nunca ser não alinhado devido a remessa, o compilador irá avisá-quando a que o endereço do membro é atribuído a um ponteiro alinhado. Por padrão, todos os ponteiros são alinhados.  
+ Se um membro da estrutura nunca pode ser não alinhado devido a remessa, o compilador avisará a quando se o endereço do membro está atribuído a um ponteiro alinhado. Por padrão, todos os ponteiros são alinhados.  
   
- Para resolver C4366, alterar o alinhamento da estrutura ou declare o ponteiro com o [unaligned](../../cpp/unaligned.md) palavra-chave.  
+ Para resolver C4366, altere o alinhamento da estrutura ou declarar o ponteiro com o [unaligned](../../cpp/unaligned.md) palavra-chave.  
   
- Para obter mais informações, consulte unaligned e [pack](../../preprocessor/pack.md).  
+ Para obter mais informações, consulte unaligned e [pacote](../../preprocessor/pack.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4366.  

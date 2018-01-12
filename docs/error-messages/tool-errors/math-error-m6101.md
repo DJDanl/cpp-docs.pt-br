@@ -1,44 +1,26 @@
 ---
-title: "Erro de matemáticos M6101 | Documentos do Microsoft"
+title: "Erro de matemáticos M6101 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- M6101
-dev_langs:
-- C++
-helpviewer_keywords:
-- M6101
+f1_keywords: M6101
+dev_langs: C++
+helpviewer_keywords: M6101
 ms.assetid: 8c8d5097-d725-4a2c-92e9-fcf28c871d74
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1ebd626dbd469112cff4e4b95ac40de99d47568e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 381d7f419aaba7ddc727cd3a21c5785f8279226e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="math-error-m6101"></a>Erro M6101 (Math)
 inválidos  
@@ -47,4 +29,4 @@ inválidos
   
  Esse erro pode ser causado quando um operando é NaN (não um número) ou infinito.  
   
- Programa é encerrado com código de saída 129.
+ Programa será encerrado com código de saída 129.
