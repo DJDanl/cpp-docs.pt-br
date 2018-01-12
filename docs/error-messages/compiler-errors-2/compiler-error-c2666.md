@@ -1,48 +1,29 @@
 ---
-title: C2666 de erro do compilador | Documentos do Microsoft
+title: C2666 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2666
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2666
+f1_keywords: C2666
+dev_langs: C++
+helpviewer_keywords: C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2ce61109a2d428bbaa5fffdf4bd39de46d09a077
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1542eb409c77e8a9919f1884a59810e587d11f11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2666"></a>C2666 de erro do compilador
-'identifier': número sobrecargas têm conversões semelhantes  
+'Identificador': número sobrecargas possuem conversões similares  
   
  Uma função sobrecarregada ou o operador é ambíguo.   Listas de parâmetros formais podem ser muito semelhantes para o compilador resolver a ambiguidade.  Para resolver esse erro, converta explicitamente um ou mais dos parâmetros reais.  
   
@@ -62,15 +43,15 @@ int main() {
 }  
 ```  
   
- Esse erro também pode ser gerado como resultado de trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003:  
+ Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003:  
   
--   operadores binários e conversões definidas pelo usuário em tipos de ponteiro  
+-   operadores binários e conversões definidas pelo usuário para tipos de ponteiro  
   
 -   conversão de qualificação não é o mesmo que a conversão de identidade  
   
- Para os operadores binários \<, >, \<=, e > = um passado parâmetro agora é convertido implicitamente para o tipo do operando se o tipo do parâmetro define um operador de conversão definida pelo usuário para converter o tipo do operando. Agora há potencial de ambiguidade.  
+ Para os operadores binários \<, >, \<= e > =, um passado parâmetro agora é convertido implicitamente no tipo de operando se o tipo do parâmetro define um operador de conversão definida pelo usuário para converter para o tipo do operando. Agora há potencial de ambiguidade.  
   
- Para o código que é válido no Visual Studio .NET 2003 e no versões do Visual Studio .NET do Visual C++, chame o operador de classe explicitamente usando a sintaxe da função.  
+ O código que é válido no Visual Studio .NET 2003 e versões do Visual Studio .NET do Visual C++, ligue para o operador de classe explicitamente usando a sintaxe da função.  
   
 ## <a name="example"></a>Exemplo  
   

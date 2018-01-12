@@ -1,53 +1,35 @@
 ---
-title: "Compilador aviso (nível 1) C4407 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4407 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4407
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4407
+f1_keywords: C4407
+dev_langs: C++
+helpviewer_keywords: C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d500312686ddef76950c3038f52101ad946ee7df
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 736b5f99115d6e2a39ee77005c7b3248ac191453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4407"></a>Compilador C4407 de aviso (nível 1)
-conversão entre diferentes representações de ponteiro para membro, compilador pode gerar código incorreto  
+conversão entre diferente ponteiro para representações de membro, compilador pode gerar código incorreto  
   
  Foi detectada uma conversão incorreta.  
   
- C4407 podem ser geradas devido ao trabalho de conformidade do compilador que foi feito no Visual C++ 2005. Ponteiro para membro agora requer um nome qualificado e o operador address-of (&).  
+ C4407 pode ser gerado devido ao trabalho de conformidade do compilador que foi feito no Visual C++ 2005. Ponteiro para membro agora requer um nome qualificado e o operador address-of (&).  
   
- C4407 pode ocorrer se você converter entre um vários herança ponteiro para membro para um única herança ponteiro para membro. Às vezes, isso pode funcionar, mas às vezes, ele não pode porque a representação de ponteiro para membro herança única não conter informações suficientes. Compilando com a **/vmm** podem ajudar a (para obter mais informações, consulte [/vmm, /vms, /vmv (representação de finalidade geral)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Você também pode tentar reorganizar suas classes base; o compilador está detectando uma perda de informações na conversão porque uma classe base é um deslocamento diferente de zero a derivada.  
+ C4407 pode ocorrer se você converter entre vários herança ponteiro-para-membro para um herança única ponteiro para membro. Às vezes, isso pode funcionar, mas, às vezes, ele não é possível porque a representação de ponteiro para membro de herança única não conter informações suficientes. Compilando com o **/vmm** pode ajudar (para obter mais informações, consulte [/vmm, /vms, /vmv (representação de finalidade geral)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Você também pode tentar reorganizar suas classes base; o compilador é detectar uma perda de informações na conversão porque uma classe base está em um deslocamento diferente de zero de derivada.  
   
  O exemplo a seguir gera C4407:  
   

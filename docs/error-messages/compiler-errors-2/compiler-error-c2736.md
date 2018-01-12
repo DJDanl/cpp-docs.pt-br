@@ -1,47 +1,29 @@
 ---
-title: C2736 de erro do compilador | Documentos do Microsoft
+title: C2736 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2736
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2736
+f1_keywords: C2736
+dev_langs: C++
+helpviewer_keywords: C2736
 ms.assetid: 95a6bc28-c0cb-49dc-87e6-e993dbbba881
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a2605d3b9b89ee686752a6cee5a7cd8d3c1044da
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6356e6de30222c46b2831830e108ed3cc084c905
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2736"></a>C2736 de erro do compilador
-palavra-chave 'palavra-chave' não é permitido em conversão  
+palavra-chave de 'palavra-chave' não é permitido em conversão  
   
  A palavra-chave é inválida em uma conversão.  
   

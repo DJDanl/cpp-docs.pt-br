@@ -1,49 +1,31 @@
 ---
-title: C2776 de erro do compilador | Documentos do Microsoft
+title: C2776 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2776
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2776
+f1_keywords: C2776
+dev_langs: C++
+helpviewer_keywords: C2776
 ms.assetid: 9d80addc-62c7-40fc-a2cc-60303abb87df
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a37f6b16def059b148353aaabd795b19ca991ce3
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6a51ff76a635c1c55b0a12c28c8f1d93360dee6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2776"></a>C2776 de erro do compilador
-apenas um método 'get' pode ser especificado por propriedade  
+somente um método 'get' pode ser especificado por propriedade  
   
- Você pode especificar apenas uma `get` funcionar a [propriedade](../../cpp/property-cpp.md) atributo estendido. Esse erro ocorre quando várias `get` funções são especificadas.  
+ Você pode especificar apenas uma `get` funcionar no [propriedade](../../cpp/property-cpp.md) atributos estendidos. Esse erro ocorre quando várias `get` funções são especificadas.  
   
  O exemplo a seguir gera C2776:  
   

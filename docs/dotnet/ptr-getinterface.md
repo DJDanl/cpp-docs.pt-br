@@ -1,53 +1,54 @@
 ---
-title: "ptr::GetInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::GetInterface"
-  - "msclr::com::ptr::GetInterface"
-  - "GetInterface"
-  - "msclr.com.ptr.GetInterface"
-  - "ptr.GetInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetInterface"
+title: PTR::GetInterface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::GetInterface
+- msclr::com::ptr::GetInterface
+- GetInterface
+- msclr.com.ptr.GetInterface
+- ptr.GetInterface
+dev_langs: C++
+helpviewer_keywords: GetInterface method
 ms.assetid: d85553ec-fb88-4fd6-9df2-ddcaa8b2dc70
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 286a0dfa19d5d18d76dea1164d9d038667e1ef57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::GetInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Retorna um ponteiro para o objeto COM atribuído.  
+# <a name="ptrgetinterface"></a>ptr::GetInterface
+Retorna um ponteiro para o objeto COM exclusividade.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 _interface_type * GetInterface();  
 ```  
   
-## Valor de retorno  
- Um ponteiro para o objeto COM atribuído.  
+## <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o objeto COM exclusividade.  
   
-## Exceções  
- Internamente, `QueryInterface` é chamado COM o objeto de propriedade e qualquer erro `HRESULT` é convertido em uma exceção por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>Exceções  
+ Internamente, `QueryInterface` é chamado no objeto COM propriedade e qualquer erro `HRESULT` é convertido em uma exceção por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Comentários  
- `com::ptr` adicionar uma referência ao objeto COM o nome do chamador e também mantém sua própria referência no objeto COM.  O chamador deve finalmente liberar a referência no objeto retornado será destruído ou nunca.  
+## <a name="remarks"></a>Comentários  
+ O `com::ptr` adiciona uma referência ao objeto COM em nome do chamador e também mantém sua própria referência no objeto COM. O chamador deve liberar, por fim, a referência no objeto retornado ou nunca serão destruído.  
   
-## Exemplo  
- Este exemplo de CLR implementa uma classe que usa `com::ptr` para encapsular o objeto de `IXMLDOMDocument` de membro particular.  A função de membro de `GetDocument` usa `GetInterface` para retornar um ponteiro para o objeto COM.  
+## <a name="example"></a>Exemplo  
+ Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto. O `GetDocument` usa a função de membro `GetInterface` para retornar um ponteiro para o objeto COM.  
   
 ```  
 // comptr_getinterface.cpp  
@@ -163,12 +164,15 @@ int main() {
 }  
 ```  
   
-  **\<wordpersnickety\>\<\/palavras\>**   
-## Requisitos  
- msclr \<de**Arquivo de cabeçalho** \\ COM \\ ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- msclr::com de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Arquivo de cabeçalho** \<msclr\com\ptr.h >  
   
-## Consulte também  
- [Membros ptr](../dotnet/ptr-members.md)   
+ **Namespace** msclr::com  
+  
+## <a name="see-also"></a>Consulte também  
+ [Membros PTR](../dotnet/ptr-members.md)   
  [ptr::QueryInterface](../dotnet/ptr-queryinterface.md)

@@ -1,33 +1,33 @@
 ---
-title: "operador&lt; (multimap) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator< [STL/CLR]"
+title: operador&lt; (multimapa) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: ee9ea41c-54f3-42e5-918c-d89b373ffadb
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 35e464ef5a9df212deca765e24a081d328b811a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# operador&lt; (multimap) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lista menor que a comparação.  
+# <a name="operatorlt-multimap-stlclr"></a>operador&lt; (multimapa) (STL/CLR)
+Lista menor de comparação.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Key,  
@@ -36,17 +36,17 @@ template<typename Key,
         multimap<Key, Mapped>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  esquerda  
- Contêiner esquerdo da ser comparada.  
+ Contêiner esquerdo a comparar.  
   
  direita  
- Contêiner direito da ser comparada.  
+ Contêiner direito a comparar.  
   
-## Comentários  
- A função do operador retornará true se, da mais baixa posição `i` para que `!(``right``[i] <` `left``[i])` ele também será true `left`que`[i] <` `right``[i]`.  Caso contrário, retorna `left``->size() <` `right``->size()` que você usa para testar se `left` é ordenado antes de `right` quando os dois multimaps elemento são comparados pelo elemento.  
+## <a name="remarks"></a>Comentários  
+ O operador função retornará true se, para a posição mais baixa `i` para o qual `!(right[i] < left[i])` é verdade que também `left[i] < right[i]`. Caso contrário, retornará `left->size() < right->size()` usá-lo para testar se `left` são ordenados antes `right` quando os dois multimaps estão em comparação com o elemento pelo elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_multimap_operator_lt.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **um \[1\] \[2\] \[b3 c\]**  
- **um \[1\] \[2\] \[bde 4\]**  
-**\[um b c\] \< \[um b c\] é false**  
-**\[um b c\] \< \[\] de um b é true**   
-## Requisitos  
- cliext \<\/mapa de**Cabeçalho:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/mapa >  
   
-## Consulte também  
- [multimapa](../dotnet/multimap-stl-clr.md)   
- [operador\=\= \(multimap\)](../dotnet/operator-equality-multimap-stl-lr.md)   
- [operador\!\= \(multimap\)](../Topic/operator!=%20\(multimap\)%20\(STL-CLR\).md)   
- [operador\>\= \(multimap\)](../Topic/operator%3E=%20\(multimap\)%20\(STL-CLR\).md)   
- [operador\> \(multimap\)](../dotnet/operator-greater-than-multimap-stl-clr.md)   
- [operador\<\= \(multimap\)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [multimapa (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [operador = = (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)   
+ [operador! = (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)   
+ [operador > = (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
+ [operador > (multimap) (STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)   
+ [operator<= (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)

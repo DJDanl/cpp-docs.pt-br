@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7eb84d1979d3655c49e5fe089fe04d44708d16a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 A classe de modelo descreve um objeto que controla um comprimento variável ordenados de sequência de elementos com acesso limitado. Usar o adaptador de contêiner `priority_queue` para gerenciar um contêiner subjacente como uma fila de prioridade.  
@@ -72,7 +75,7 @@ template<typename Value,
 |[priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)|Conta o número de elementos.|  
 |[priority_queue::top (STL/CLR)](../dotnet/priority-queue-top-stl-clr.md)|Acessa o elemento de prioridade mais alta.|  
 |[priority_queue::to_array (STL/CLR)](../dotnet/priority-queue-to-array-stl-clr.md)|Copia uma nova matriz sequência controlada.|  
-|[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)|Copia o delegado de ordenação de dois elementos.|  
+|[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)|Copia o delegado de ordenação para dois elementos.|  
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  

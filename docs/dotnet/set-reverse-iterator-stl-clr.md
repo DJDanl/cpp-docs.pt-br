@@ -1,42 +1,42 @@
 ---
-title: "set::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro reverse_iterator [STL/CLR]"
+title: 'set:: reverse_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 40337a62-991c-424e-9559-a9040c07657a
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7c95ca772cb342b77890ccabcb1941e409c5c917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# set::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de um iterador de cima para baixo para a sequência controlada.  
+# <a name="setreverseiterator-stlclr"></a>set::reverse_iterator (STL/CLR)
+O tipo de um iterador inverso para a sequência controlada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Comentários  
- O tipo descreve um objeto do tipo não for especificado `T3` que pode servir como um iterador de cima para baixo para a sequência controlada.  
+## <a name="remarks"></a>Comentários  
+ O tipo descreve um objeto do tipo especificado `T3` que pode servir como um iterador inverso para sequência controlada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_set_reverse_iterator.cpp   
@@ -61,14 +61,17 @@ int main()
   
 ```  
   
-  **b para c**   
-## Requisitos  
- cliext \<\/conjunto de**Cabeçalho:** \>  
+```Output  
+c b a  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/set >  
   
-## Consulte também  
- [set](../dotnet/set-stl-clr.md)   
- [set::const\_iterator](../dotnet/set-const-iterator-stl-clr.md)   
- [set::const\_reverse\_iterator](../dotnet/set-const-reverse-iterator-stl-clr.md)   
- [set::iterator](../Topic/set::iterator%20\(STL-CLR\).md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [conjunto (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: const_iterator (STL/CLR)](../dotnet/set-const-iterator-stl-clr.md)   
+ [set:: const_reverse_iterator (STL/CLR)](../dotnet/set-const-reverse-iterator-stl-clr.md)   
+ [set::iterator (STL/CLR)](../dotnet/set-iterator-stl-clr.md)

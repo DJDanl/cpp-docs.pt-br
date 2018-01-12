@@ -1,11 +1,10 @@
 ---
 title: "Erros de compilação do C/C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -186,7 +185,6 @@ f1_keywords:
 - LNK4020
 - LNK4030
 - LNK4031
-- LNK4037
 - LNK4038
 - LNK4040
 - LNK4041
@@ -302,52 +300,31 @@ f1_keywords:
 - R6022
 - R6023
 - R6034
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - builds [C++], errors
 - errors [C++]
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1a370ddc7c314cae0cb1a048cacb704480525b0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="cc-build-errors"></a>Erros de compilação do C/C++
-Os artigos nesta seção da documentação explicam as mensagens de erro que são geradas por ferramentas de compilação. O [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] ferramentas de compilador e compilação podem relatar vários tipos de erros e avisos. As ferramentas de compilação podem fazer suposições sobre a intenção de código e tentará continuar após um erro ou aviso for encontrado, para que mais problemas podem ser relatados ao mesmo tempo. Se as ferramentas de assumir errado, posterior erros ou avisos podem não se aplicar ao seu projeto. Quando você corrigir problemas em seu projeto, sempre começam com o primeiro erro ou aviso que é relatado e recriar frequentemente.  
-  
- Para obter ajuda sobre uma mensagem de erro específica no Visual Studio, selecione um número de erro no **saída** janela e pressione a tecla F1 para abrir o MSDN página para esse erro. No MSDN, você também pode pesquisar artigos sobre erros ou procurar a lista de erros por categoria no painel de navegação.  
-  
-> [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro ou aviso é documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
-  
- Para obter links para recursos adicionais sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], consulte [a Ajuda do Visual C++ e da comunidade](../../visual-cpp-help-and-community.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de build do C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+# <a name="cc-build-errors"></a>Erros de build do C/C++
+
+Os artigos nesta seção da documentação explicam diagnóstico mensagens de erro e aviso geradas pelas ferramentas de compilação.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de build do C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

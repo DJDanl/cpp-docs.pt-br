@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 2) C4302 | Documentos do Microsoft"
+title: "Compilador (nível 2) do aviso C4302 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4302
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4302
+f1_keywords: C4302
+dev_langs: C++
+helpviewer_keywords: C4302
 ms.assetid: f5e1c939-e134-4cca-ba1e-9b15a81549ae
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 80a1ae49e25336e83667c9fa065346a456564b32
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b72b6149e1f904bb78d8c4c1f909faf8b9c0efe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4302"></a>Compilador C4302 de aviso (nível 2)
-'conversion': truncamento de 'type 1' para 'type 2'  
+'conversão de ': truncamento de 'type 1' para 'type 2'  
   
  O compilador detectou uma conversão de um tipo maior em um tipo menor. Informações podem ser perdidas.  
   

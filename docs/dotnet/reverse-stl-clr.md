@@ -1,46 +1,46 @@
 ---
-title: "reverse (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::reverse"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função reverse [STL/CLR]"
+title: Reverse (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::reverse
+dev_langs: C++
+helpviewer_keywords: reverse function [STL/CLR]
 ms.assetid: dce0c588-fd18-45fa-b8c6-feccb9f15bb7
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 00546929b751f9bb13bc87097d0b687f3050b3bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# reverse (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inverte a ordem dos elementos dentro de um intervalo.  
+# <a name="reverse-stlclr"></a>reverse (STL/CLR)
+Inverte a ordem dos elementos em um intervalo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _BidIt> inline  
     void reverse(_BidIt _First, _BidIt _Last);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `reverse`STL.  Para obter mais informações, consulte [reverse](../Topic/reverse.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `reverse`. Para obter mais informações, consulte [inversa](../standard-library/algorithm-functions.md#reverse).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

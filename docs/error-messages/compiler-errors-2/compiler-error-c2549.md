@@ -1,47 +1,29 @@
 ---
-title: C2549 de erro do compilador | Documentos do Microsoft
+title: C2549 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2549
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2549
+f1_keywords: C2549
+dev_langs: C++
+helpviewer_keywords: C2549
 ms.assetid: 29310094-54a3-4605-bc6d-a312a68daf5d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a2609b657546739c3574f8d856c75c8b7cc0e2ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b9fee101854043999c3a0259ddbcaad43c41d64f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2549"></a>C2549 de erro do compilador
-conversão definida pelo usuário não pode especificar um tipo de retorno  
+conversão definida pelo usuário não é possível especificar um tipo de retorno  
   
  O exemplo a seguir gera C2549:  
   

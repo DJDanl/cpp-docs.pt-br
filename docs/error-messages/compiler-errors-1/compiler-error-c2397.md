@@ -1,36 +1,35 @@
 ---
-title: C2397 de erro do compilador | Documentos do Microsoft
+title: C2397 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2397
-dev_langs:
-- C++
+f1_keywords: C2397
+dev_langs: C++
 ms.assetid: b418cf5a-d50d-4a6c-98a7-994ae35046d1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 31f2b548fd13bc7702d44ef4a6d5dc5c34a5eb3c
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 315d375524884ec987fea747b1d3c20f2ad56173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2397"></a>C2397 de erro do compilador
 conversão de 'type_1' em 'type_2' requer uma conversão de restrição  
   
- Uma conversão implícita de restrição foi encontrada ao usar inicialização uniforme.  
+ Uma conversão implícita de restrição foi encontrada ao usar a inicialização uniforme.  
   
- A linguagem C permite conversões de estreitamento implícitas na inicialização e atribuições e C++ segue o naipe, embora narrowing inesperada é uma causa de muitos erros de código. Para tornar o código mais seguro, o C++ padrão exige que uma mensagem de diagnóstico quando ocorre uma conversão de restrição em uma lista de inicialização. No Visual C++, o diagnóstico é C2397 de erro do compilador ao usar o início de sintaxe com suporte de inicialização uniforme no Visual Studio 2015. O compilador gera [C4838 de aviso do compilador (nível 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md) ao usar a sintaxe de inicialização de agregação com suporte pelo Visual Studio 2013 ou lista.  
+ Linguagem C permite conversões de estreitamento implícitas na inicialização e atribuições e C++ segue o naipe, mesmo que inesperado de estreitamento é uma causa de muitos erros de código. Para tornar o código mais seguro, o C++ padrão requer uma mensagem de diagnóstico quando ocorre uma conversão de restrição em uma lista de inicialização. No Visual C++, o diagnóstico é C2397 de erro do compilador ao usar o início da sintaxe com suporte de inicialização uniforme no Visual Studio 2015. O compilador gera [C4838 de aviso do compilador (nível 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md) ao usar a sintaxe de inicialização de agregação com suporte do Visual Studio 2013 ou lista.  
   
- Uma conversão de restrição pode ser okey quando você conhece que o possível intervalo de valores convertidos pode se ajustar no destino. Nesse caso, você sabe mais do que o compilador faz. Se você fizer uma conversão de restrição intencionalmente, fazer suas intenções explícita usando uma conversão estática. Caso contrário, essa mensagem de erro indica quase sempre que tem um bug no código. Você pode corrigi-lo, assegurando-se de que os objetos que você inicializar têm tipos que são grandes o suficiente para lidar com as entradas.  
+ Uma conversão de restrição pode ser okey quando você sabe que o intervalo de valores convertidos possível pode se ajustar no destino. Nesse caso, você sabe mais do que o compilador faz. Se você fizer uma conversão de restrição intencionalmente, faça sua intenção explícita, usando uma conversão estática. Caso contrário, essa mensagem de erro indica quase sempre que ter um bug no seu código. Você pode corrigi-lo, certificando-se os objetos que você inicializar têm tipos que são grandes o suficiente para lidar com as entradas.  
   
- O exemplo a seguir gera C2397 e mostra uma maneira de corrigir:  
+ O exemplo a seguir gera C2397 e mostra uma maneira de corrigir isso:  
   
 ```  
 // C2397.cpp -- C++ narrowing conversion diagnostics  

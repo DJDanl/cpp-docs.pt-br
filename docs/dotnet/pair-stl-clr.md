@@ -1,33 +1,33 @@
 ---
-title: "par (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classe de par [STL/CLR]"
+title: par (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair
+dev_langs: C++
+helpviewer_keywords: pair class [STL/CLR]
 ms.assetid: 3326b4d9-a52a-49e5-8103-9aa5e8b352de
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8c4ae8ee9fbcfddd6009d4e91134d59a9a02cc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# par (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe do modelo descreve um objeto que encapsula um par de valores.  
+# <a name="pair-stlclr"></a>par (STL/CLR)
+A classe de modelo descreve um objeto que encapsula um par de valores.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Value1,  
@@ -35,41 +35,41 @@ template<typename Value1,
     ref class pair;  
 ```  
   
-#### Parâmetros  
- Valor1  
- O tipo de valor primeiro envolvido.  
+#### <a name="parameters"></a>Parâmetros  
+ Value1  
+ O tipo do primeiro valor encapsulado.  
   
- Valor2  
- O tipo de segundo valor envolvido.  
+ Value2  
+ O tipo do segundo valor quebrado.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-|Definição de tipo|Descrição|  
-|-----------------------|---------------|  
-|[pair::first\_type](../dotnet/pair-first-type-stl-clr.md)|O tipo da primeira envolver o valor.|  
-|[pair::second\_type](../dotnet/pair-second-type-stl-clr.md)|O tipo do segundo valor envolvido.|  
+|Definição do tipo|Descrição|  
+|---------------------|-----------------|  
+|[pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)|O tipo do primeiro valor encapsulado.|  
+|[pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)|O tipo do segundo valor encapsulado.|  
   
 |Objeto de membro|Descrição|  
-|----------------------|---------------|  
-|[pair::first](../dotnet/pair-first-stl-clr.md)|O primeiro valor armazenado.|  
-|[pair::second](../dotnet/pair-second-stl-clr.md)|O segundo valor armazenado.|  
+|-------------------|-----------------|  
+|[pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)|O primeiro valor armazenado.|  
+|[pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)|O segundo valor armazenado.|  
   
-|Função de membro|Descrição|  
-|----------------------|---------------|  
-|[pair::pair](../dotnet/pair-pair-stl-clr.md)|Cria um objeto do par.|  
-|[pair::swap](../Topic/pair::swap%20\(STL-CLR\).md)|Alterna o conteúdo de dois pares.|  
+|Função membro|Descrição|  
+|---------------------|-----------------|  
+|[pair::pair (STL/CLR)](../dotnet/pair-pair-stl-clr.md)|Constrói um objeto do par.|  
+|[pair::swap (STL/CLR)](../dotnet/pair-swap-stl-clr.md)|Alterna o conteúdo de dois pares.|  
   
 |Operador|Descrição|  
-|--------------|---------------|  
-|[pair::operator\=](../dotnet/pair-operator-assign-stl-clr.md)|Substitui os pares de valores armazenados.|  
+|--------------|-----------------|  
+|[pair::operator= (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)|Substitui o armazenado par de valores.|  
   
-## Comentários  
- O objeto armazena um par de valores.  Você usa essa classe do modelo para combinar os dois valores em um único objeto.  Observe que os repositórios de `cliext::pair` \(descrito aqui apenas para tipos gerenciados\); para armazenar um par de tipos não gerenciado, use `std::pair`declarado em `<utility>`.  
+## <a name="remarks"></a>Comentários  
+ O objeto armazena um par de valores. Você pode usar essa classe de modelo para combinar dois valores em um único objeto. Observe que `cliext::pair` (descrita aqui) armazena apenas os tipos gerenciados; para armazenar um par de não gerenciado tipos usam `std::pair`, declarado em `<utility>`.  
   
-## Requisitos  
- cliext \<\/utilitário de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/utilitário >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [make\_pair](../dotnet/make-pair-stl-clr.md)
+## <a name="see-also"></a>Consulte também  
+ [make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)

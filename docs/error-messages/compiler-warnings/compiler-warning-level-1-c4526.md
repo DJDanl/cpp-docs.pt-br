@@ -1,47 +1,29 @@
 ---
-title: "Compilador aviso (nível 1) C4526 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4526 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4526
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4526
+f1_keywords: C4526
+dev_langs: C++
+helpviewer_keywords: C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 98c4e325fc38bf3e9ce8949660c9b38b4017866a
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a74d7d2e2c745a4c8e29736c1e3a7fc38892d5f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4526"></a>Compilador C4526 de aviso (nível 1)
-'function': função de membro estático não pode substituir a função virtual ' virtual function'override ignorado, ficará oculta a função virtual  
+'function': função membro static não pode substituir função virtual ' function'override virtual ignorada, função virtual será ocultada  
   
  A função de membro estático atende aos critérios para substituir a função virtual, o que torna a função de membro virtual e estáticos.  
   
@@ -60,8 +42,8 @@ struct myStruct2: public myStruct1 {
 };  
 ```  
   
- Estas são as possíveis correções:  
+ Estas são as soluções possíveis:  
   
--   Se a função foi destinada para substituir a função de classe base virtual, remova o especificador estático.  
+-   Se a função foi criada para substituir a função de classe base virtual, remova o especificador estático.  
   
--   Se a função foi deve ser uma função de membro estático, renomeá-lo para que ele não entre em conflito com a função virtual da classe base.
+-   Se a função foi criada para ser uma função de membro estático, renomeie-o para que ele não entra em conflito com a função virtual de classe base.

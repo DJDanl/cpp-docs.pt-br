@@ -1,42 +1,42 @@
 ---
-title: "priority_queue::push (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::push"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro push [STL/CLR]"
+title: 'priority_queue:: push (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::push
+dev_langs: C++
+helpviewer_keywords: push member [STL/CLR]
 ms.assetid: 317d3feb-0688-4658-866b-a26cae060354
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4b88448d1566076841b5f20754d02f3b62428b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::push (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuepush-stlclr"></a>priority_queue::push (STL/CLR)
 Adiciona um novo elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void push(value_type val);  
 ```  
   
-## Comentários  
- A função de membro insere um elemento com o valor `val` na sequência controlada, e reclassifica a sequência controlada para manter a disciplina do heap.  Use\-a para adicionar outro elemento na fila.  
+## <a name="remarks"></a>Comentários  
+ A função de membro insere um elemento com o valor `val` para a sequência controlada e reclassifica sequência controlada para manter a disciplina de heap. Você pode usá-lo para adicionar outro elemento para a fila.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_priority_queue_push.cpp   
@@ -60,12 +60,15 @@ int main()
   
 ```  
   
-  **c um b**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+c a b  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
   
-## Consulte também  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::pop](../dotnet/priority-queue-pop-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)

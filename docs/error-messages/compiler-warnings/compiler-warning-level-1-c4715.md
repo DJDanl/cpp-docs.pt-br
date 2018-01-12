@@ -1,49 +1,31 @@
 ---
-title: "Compilador aviso (nível 1) C4715 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4715 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4715
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4715
+f1_keywords: C4715
+dev_langs: C++
+helpviewer_keywords: C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a992e4e5afe21dcbc42e25e97a0a676b40c8889a
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2b060585cd3ba6b51c9c91d42e5f3fecaf74ae1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4715"></a>Compilador C4715 de aviso (nível 1)
 'function': nem todos os caminhos de controle retornam um valor  
   
- A função especificada não pode retornar um valor.  
+ A função especificada potencialmente não pode retornar um valor.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -57,7 +39,7 @@ int func1( int i )
 }  
 ```  
   
- Para evitar esse aviso, modifique o código para que todos os caminhos de atribuir um valor de retorno para a função:  
+ Para evitar este aviso, modifique o código para que todos os caminhos de atribuir um valor de retorno da função:  
   
 ```  
 // C4715b.cpp  
@@ -69,7 +51,7 @@ int func1( int i )
 }  
 ```  
   
- É possível que seu código pode conter uma chamada para uma função que nunca retorne, como no exemplo a seguir:  
+ É possível que seu código pode conter uma chamada para uma função que nunca retorna, como no exemplo a seguir:  
   
 ```  
 // C4715c.cpp  
@@ -88,4 +70,4 @@ int glue()
 }  
 ```  
   
- Esse código também gera um aviso, porque o compilador não sabe que `fatal` nunca retorna. Para impedir que esse código gera uma mensagem de erro, declarar `fatal` usando [__declspec(noreturn)](../../cpp/noreturn.md).
+ Esse código também gera um aviso, porque o compilador não sabe que `fatal` nunca retorna. Para impedir que esse código gera uma mensagem de erro, declare `fatal` usando [__declspec(noreturn)](../../cpp/noreturn.md).

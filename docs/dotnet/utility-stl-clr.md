@@ -1,63 +1,64 @@
 ---
-title: "utility (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/utility>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho &lt;cliext/utility&gt; [STL/CLR]"
-  - "Cabeçalho &lt;utility&gt; [STL/CLR]"
-  - "cabeçalho de utilitário [STL/CLR]"
+title: "utilitário (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/utility>
+dev_langs: C++
+helpviewer_keywords:
+- <utility> header [STL/CLR]
+- utility header [STL/CLR]
+- <cliext/utility> header [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3876ee887cfeec811d88684927ea9a03af1a8f1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# utility (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inclui o cabeçalho `<cliext/utility>` de STL\/CLR para definir a classe `pair` do modelo e as várias funções de suporte do modelo.  
+# <a name="utility-stlclr"></a>utility (STL/CLR)
+Incluir o cabeçalho STL/CLR `<cliext/utility>` para definir a classe de modelo `pair` e várias funções de modelo de suporte.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #include <utility>  
 ```  
   
-## Declarações  
+## <a name="declarations"></a>Declarações  
   
 |Classe|Descrição|  
-|------------|---------------|  
-|[par](../dotnet/pair-stl-clr.md)|Encapsula um par de elementos.|  
+|-----------|-----------------|  
+|[pair (STL/CLR)](../dotnet/pair-stl-clr.md)|Encapsule um par de elementos.|  
   
 |Operador|Descrição|  
-|--------------|---------------|  
-|[operador\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)|Comparação igual do par.|  
-|[operador\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)|Correspondidos a comparação diferente.|  
-|[operador\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)|Pares menor que a comparação.|  
-|[operador\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|Pares menor que ou igual comparação.|  
-|[operador\> \(pair\)](../dotnet/operator-greater-than-pair-stl-clr.md)|Pares maiores do que a comparação.|  
-|[operador\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|Pares maiores que ou igual comparação.|  
+|--------------|-----------------|  
+|[operator== (pair) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)|Par igual a comparação.|  
+|[operator!= (pair) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)|Par não igual a comparação.|  
+|[operator< (pair) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)|Par menor do que a comparação.|  
+|[operador\<= (pair) (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|Emparelhe menor ou igual comparação.|  
+|[operator> (pair) (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)|Par maior que a comparação.|  
+|[operator>= (pair) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|Par de maior que ou igual comparação.|  
   
 |Função|Descrição|  
-|------------|---------------|  
-|[make\_pair](../dotnet/make-pair-stl-clr.md)|Faça um par de um par de valores.|  
+|--------------|-----------------|  
+|[make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)|Tornar um par de um par de valores.|  
   
-## Requisitos  
- cliext \<\/utilitário de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/utilitário >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [Biblioteca STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)

@@ -1,33 +1,33 @@
 ---
-title: "set_union (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função set_union [STL/CLR]"
+title: set_union (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set_union
+dev_langs: C++
+helpviewer_keywords: set_union function [STL/CLR]
 ms.assetid: 8bafbf10-172c-47d9-88af-19b9b0c1c31f
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf750404a2f93df0c7a587beb354bf81817dbe1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# set_union (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Junta todos os elementos que pertencem a pelo menos um dos dois intervalos de origem classificados em um único intervalo, classificado de destino, onde o critério de ordenação pode ser especificado por um predicado binário.  
+# <a name="setunion-stlclr"></a>set_union (STL/CLR)
+Une todos os elementos que pertencem a pelo menos um dos dois intervalos de origem classificados em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado binário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
@@ -38,13 +38,13 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest, _Pr _Pred);  
 ```  
   
-## Comentários  
- Essa função se comportará da mesma forma como a função `set_union`STL.  Para obter mais informações, consulte [set\_union](../Topic/set_union.md).  
+## <a name="remarks"></a>Comentários  
+ Essa função se comporta como a função de biblioteca padrão C++ `set_union`. Para obter mais informações, consulte [set_union](../standard-library/algorithm-functions.md#set_union).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/algoritmo >  
   
- cliext de**Namespace:**  
+ **Namespace:** cliext  
   
-## Consulte também  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>Consulte também  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

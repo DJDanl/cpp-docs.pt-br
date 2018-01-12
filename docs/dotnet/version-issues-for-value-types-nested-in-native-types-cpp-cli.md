@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problemas de versão para tipos de valor aninhados em tipos nativos (C++/CLI)
 Considere a possibilidade de um componente de assembly assinado (nome forte) usado para criar um assembly de cliente. O componente contiver um tipo de valor que é usado no cliente como o tipo de um membro de uma união nativo, uma classe ou uma matriz. Se uma versão futura do componente altera o tamanho ou o layout do tipo de valor, o cliente deverá ser recompilado.  

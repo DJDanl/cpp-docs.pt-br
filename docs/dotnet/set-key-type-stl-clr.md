@@ -1,42 +1,42 @@
 ---
-title: "set::key_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::key_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro key_type [STL/CLR]"
+title: 'set:: key_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::key_type
+dev_langs: C++
+helpviewer_keywords: key_type member [STL/CLR]
 ms.assetid: 2c057cf7-ac3d-40a6-b7fc-eb1c0a317381
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 03044f7c769491282713183b773cda34710c1f46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# set::key_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O tipo de uma chave classificação.  
+# <a name="setkeytype-stlclr"></a>set::key_type (STL/CLR)
+O tipo de uma chave de classificação.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef Key key_type;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o parâmetro `Key`do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo do parâmetro de modelo `Key`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_set_key_type.cpp   
@@ -64,13 +64,16 @@ int main()
   
 ```  
   
-  **um b c**   
-## Requisitos  
- cliext \<\/conjunto de**Cabeçalho:** \>  
+```Output  
+a b c  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/set >  
   
-## Consulte também  
- [set](../dotnet/set-stl-clr.md)   
- [set::key\_compare](../dotnet/set-key-compare-stl-clr.md)   
- [set::value\_type](../dotnet/set-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [conjunto (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)   
+ [set::value_type (STL/CLR)](../dotnet/set-value-type-stl-clr.md)

@@ -1,59 +1,59 @@
 ---
-title: "vector::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "apagar membro [STL/CLR]"
+title: 'Vector:: Erase (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 624905eb-83c0-499b-a07a-c10aebd7acc3
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f6f0b8fcef4715355038c3eaca88ee9c69b3375c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# vector::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Remove os elementos nas posições especificadas.  
+# <a name="vectorerase-stlclr"></a>vector::erase (STL/CLR)
+Remove os elementos em posições especificadas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  primeiro  
- Início do intervalo para apagar.  
+ Início do intervalo a ser apagado.  
   
  last  
- O fim do intervalo para apagar.  
+ Fim do intervalo a ser apagado.  
   
  onde  
- Elemento para apagar.  
+ Elemento apagar.  
   
-## Comentários  
- A primeira função de membro remove o elemento de sequência controlada apontada por `where`.  Use\-a para remover um único elemento.  
+## <a name="remarks"></a>Comentários  
+ A primeira função de membro remove o elemento de sequência controlada apontada pelo `where`. Você pode usá-lo para remover um único elemento.  
   
- A segunda função de membro remove os elementos de sequência controlada no intervalo `[``first``,` `last``)`.  Use\-a para remover os elementos zero ou mais contíguas.  
+ A segunda função de membro remove os elementos da sequência controlada no intervalo [`first`, `last`). Você pode usá-lo para remover a zero ou mais elementos contíguos.  
   
- Ambas as funções de membro retornam um iterador que designa o primeiro elemento que permanece além de todos os elementos removidos, ou [vector::end](../dotnet/vector-end-stl-clr.md)`()` se tal elemento existe.  
+ Ambas as funções de membro retornam um iterador que designa o primeiro elemento restantes além de quaisquer elementos removidos, ou [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `()` se esse elemento não existe.  
   
- Para apagar os elementos, o número de cópias do elemento é linear no número de elementos entre o final da exclusão e término mais próximo da sequência. \(Para apagar um ou mais elementos em um ou outro fim de sequência, nenhuma cópia do elemento ocorre.\)  
+ Ao apagar elementos, o número de cópias do elemento é linear no número de elementos entre o fim de apagamento e a extremidade mais próximo da sequência de. (Quando apagando um ou mais elementos em ambas as extremidades da sequência, nenhuma cópia do elemento ocorre).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_vector_erase.cpp   
@@ -93,16 +93,19 @@ int main()
   
 ```  
   
-  **um b c**  
-**erase\(begin\(\)\) \= b**  
- **b c e d**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## Requisitos  
- cliext \<\/vetor de**Cabeçalho:** \>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/vetor >  
   
-## Consulte também  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::clear](../dotnet/vector-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [vetor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)

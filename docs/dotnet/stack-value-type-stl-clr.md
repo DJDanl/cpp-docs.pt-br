@@ -1,42 +1,42 @@
 ---
-title: "stack::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro value_type [STL/CLR]"
+title: 'Stack:: value_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 867ff1a7-c91c-4168-9b85-21fd0dcf4806
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 90bea3aa13d9a5521d2a40758a94c6a380f97289
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackvaluetype-stlclr"></a>stack::value_type (STL/CLR)
 O tipo de um elemento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef Value value_type;  
 ```  
   
-## Comentários  
- O tipo é um sinônimo para o parâmetro `Value`do modelo.  
+## <a name="remarks"></a>Comentários  
+ O tipo é um sinônimo do parâmetro de modelo `Value`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_stack_value_type.cpp   
@@ -64,13 +64,16 @@ int main()
   
 ```  
   
-  **b para c**   
-## Requisitos  
- cliext \<\/pilha de**Cabeçalho:** \>  
+```Output  
+c b a  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/pilha >  
   
-## Consulte também  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::const\_reference](../dotnet/stack-const-reference-stl-clr.md)   
- [stack::reference](../dotnet/stack-reference-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [pilha (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [Stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)   
+ [stack::reference (STL/CLR)](../dotnet/stack-reference-stl-clr.md)
