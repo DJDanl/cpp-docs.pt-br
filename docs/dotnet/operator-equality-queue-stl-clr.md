@@ -1,33 +1,33 @@
 ---
-title: "operador== (queue) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membro operator== [STL/CLR]"
+title: operador = = (queue) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: ad183c61-a24a-4851-aac7-2a47a1371ec2
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7ca0d4596db074ef5896358d6e73d8422f6f5419
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# operador== (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Linha a comparação igual.  
+# <a name="operator-queue-stlclr"></a>operador== (queue) (STL/CLR)
+Comparação de igual de fila.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  esquerda  
- Contêiner esquerdo da ser comparada.  
+ Contêiner esquerdo a comparar.  
   
  direita  
- Contêiner direito da ser comparada.  
+ Contêiner direito a comparar.  
   
-## Comentários  
- A função do operador só retornará true se as sequências controladas por `left` e por `right` têm o mesmo tamanho e, para cada posição `i`, `left``[i] ==` `right``[i]`.  Use\-a para testar se `left` é ordenado da mesma forma que `right` quando as duas filas são elemento comparado pelo elemento.  
+## <a name="remarks"></a>Comentários  
+ A função de operador retorna true somente se as sequências controlados por `left` e `right` ter o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você pode usá-lo para testar se `left` é ordenado igual `right` quando as duas filas são comparado elemento pelo elemento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cliext_queue_operator_eq.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **um b c**  
- **um de b**  
-**\[um b c\] \=\= \[um b c\] é true**  
-**\[um b c\] \=\= b de um \[\] é false**   
-## Requisitos  
- cliext \<\/fila de**Cabeçalho:** \>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- cliext de**Namespace:**  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<cliext/fila >  
   
-## Consulte também  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [operador\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)   
- [operador\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operador\>\= \(queue\)](../Topic/operator%3E=%20\(queue\)%20\(STL-CLR\).md)   
- [operador\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)   
- [operador\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Consulte também  
+ [fila (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [operador! = (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
+ [operador\< (queue) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [operador > = (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [operador > (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)   
+ [operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
