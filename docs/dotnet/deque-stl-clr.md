@@ -18,11 +18,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso aleatório. Você usa o contêiner `deque` para gerenciar uma sequência de elementos que se parece com um bloco de contíguo de armazenamento, mas que pode aumentar ou diminuir em ambas as extremidades sem a necessidade de copiar todos os elementos restantes. Assim, ela pode implementar com eficiência um `double-ended queue`. (Portanto, o nome.)  

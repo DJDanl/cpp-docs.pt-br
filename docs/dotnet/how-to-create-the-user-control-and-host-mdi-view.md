@@ -16,11 +16,14 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 298a08689d6c4aa69d4a52af5fad965e3e353b5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Como criar o controle de usuário e hospedar uma exibição MDI
 As etapas a seguir mostram como criar um controle de usuário do .NET Framework, criar o controle de usuário em uma biblioteca de classe de controle (especificamente, um projeto de biblioteca de controle do Windows) e, em seguida, compilar o projeto em um assembly. O controle, em seguida, pode ser consumido de um aplicativo MFC que usa as classes derivadas de [classe CView](../mfc/reference/cview-class.md) e [CWinFormsView classe](../mfc/reference/cwinformsview-class.md).  

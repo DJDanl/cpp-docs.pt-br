@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e565cf9ad0c333d13e606f3d7408eee5842ed83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 376d79f2f4cd80e5ad5504e22b11d3dba0d282f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapkeycomp-stlclr"></a>map::key_comp (STL/CLR)
 Copia o delegado de ordenação de duas chaves.  
@@ -31,7 +34,7 @@ key_compare^key_comp();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A função de membro retorna o delegado de classificação usado para ordenar a sequência controlada. Você pode usá-lo para comparar duas chaves.  
+ A função de membro retorna o delegado de classificação usado para ordenar a sequência controlada. Use-o para comparar duas chaves.  
   
 ## <a name="example"></a>Exemplo  
   
