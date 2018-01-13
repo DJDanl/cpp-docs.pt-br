@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Portando de UNIX para Win32
 Ao migrar aplicativos do UNIX para o Windows, há várias opções:  
@@ -44,11 +45,11 @@ Ao migrar aplicativos do UNIX para o Windows, há várias opções:
 ### <a name="unix-migration-guides"></a>Guias de migração do UNIX  
  O Guia de migração de aplicativos UNIX personalizados fornece ajuda técnica sobre migração de código do ambiente UNIX para o ambiente Win32.  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  O Guia de projeto de migração do Unix complementa o Guia de migração de aplicativos UNIX personalizados oferecendo ajuda de alto nível sobre migração de projetos substanciais do Unix para Win32. O guia fornece conselhos sobre problemas a serem considerados em cada estágio da migração do projeto. O guia pode ser baixado em:  
   
- [http://go.microsoft.com/fwlink/?linkid=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows SFU (Services for UNIX)  
  O Microsoft Windows SFU (Services for UNIX) oferece um amplo conjunto de serviços de plataforma cruzada para integrar o Windows a ambientes baseados no UNIX existentes. O Services for UNIX oferece compartilhamento de arquivos, administração e acesso remotos, sincronização de senha, gerenciamento comum de diretórios, um conjunto comum de utilitários e um shell.  

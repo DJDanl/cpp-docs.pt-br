@@ -18,36 +18,37 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38dfcb75db204a501cb3669a5ba292037d7b7759
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedência e ordem da avaliação
 A precedência e a associatividade dos operadores C afetam o agrupamento e a avaliação dos operandos nas expressões. A precedência de um operador é significante somente quando outros operadores com precedência maior ou menor estão presentes. As expressões com operadores de maior precedência são avaliadas primeiro. A precedência também pode ser descrita pela palavra “associação”. Os operadores com maior precedência são ditos ter uma associação mais próxima.  
   
  A tabela a seguir resume a precedência e a associatividade (a ordem em que os operandos são avaliados) dos operadores C, listando-os em ordem decrescente de precedência. Onde vários operadores aparecem juntos, eles têm a mesma precedência e são avaliados de acordo com sua associatividade. Os operadores na tabela são descritos nas seções que começam com [Operadores de sufixo](../c-language/postfix-operators.md). O restante desta seção fornece informações gerais sobre a precedência e associatividade.  
   
-### <a name="precedence-and-associativity-of-c-operators"></a>Precedência e associatividade de operadores C  
+## <a name="precedence-and-associativity-of-c-operators"></a>Precedência e associatividade de operadores C  
   
-|Symbol1|Tipo de operação|Associatividade|  
+|Símbolo <sup>1</sup>|Tipo de operação|Associatividade|  
 |-------------|-----------------------|-------------------|  
-|**[ ] ( ) . ->** sufixo `++` e sufixo **--**|Expressão|Da esquerda para a direita|  
-|prefixo `++` e prefixo **-- sizeof &   \*   + - ~ !**|Unário|Da direita para a esquerda|  
+|**\[ ] ( ) . ->**<br /><br />**++** **--** (sufixo)|Expressão|Da esquerda para a direita|  
+**sizeof & \* + - ~ !**<br /><br />**++ --** (prefixo)|Unário|Da direita para a esquerda|  
 |*typecasts*|Unário|Da direita para a esquerda|  
 |**\* / %**|Multiplicativo|Da esquerda para a direita|  
 |**+ -**|Aditivo|Da esquerda para a direita|  
-|**<\< >>**|Deslocamento bit a bit|Da esquerda para a direita|  
+|**\<\< >>**|Deslocamento bit a bit|Da esquerda para a direita|  
 |**\< > \<= >=**|Relacional|Da esquerda para a direita|  
 |**== !=**|Igualdade|Da esquerda para a direita|  
 |**&**|Bitwise-AND|Da esquerda para a direita|  
 |**^**|Bitwise-exclusive-OR|Da esquerda para a direita|  
 |**&#124;**|Bitwise-inclusive-OR|Da esquerda para a direita|  
 |**&&**|Logical-AND|Da esquerda para a direita|  
-|`&#124;&#124;`|Logical-OR|Da esquerda para a direita|  
+|**&#124;&#124;**|Logical-OR|Da esquerda para a direita|  
 |**? :**|Expressão condicional|Da direita para a esquerda|  
-|**= \*= /= %=**<br /><br /> **+= -= <\<= >>=&=**<br /><br /> **^= &#124;=**|Atribuição simples e composta2|Da direita para a esquerda|  
+|**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|Atribuição simples e composta <sup>2</sup>|Da direita para a esquerda|  
 |**,**|Avaliação sequencial|Da esquerda para a direita|  
   
  1. Os operadores são listados em ordem decrescente de precedência. Quando vários operadores aparecem na mesma linha ou em um grupo, eles têm a mesma precedência.  
@@ -60,22 +61,20 @@ A precedência e a associatividade dos operadores C afetam o agrupamento e a ava
   
  Os operadores lógicos também garantem a avaliação de seus operandos da esquerda para a direita. No entanto, eles avaliam o menor número de operandos necessários para determinar o resultado da expressão. Isso é chamado de avaliação de" curto-circuito". Assim, alguns operandos da expressão não podem ser avaliados. Por exemplo, na expressão  
   
-```  
-x && y++  
-```  
+`x && y++`  
   
  o segundo operando, `y++`, será avaliado somente se `x` for true (diferente de zero). Assim, `y` não será incrementado se `x` for false (0).  
   
- **Exemplos**  
+## <a name="examples"></a>Exemplos
   
  A lista a seguir mostra como o compilador associa automaticamente várias expressões de exemplo:  
-  
+
 |Expressão|Associação automática|  
 |----------------|-----------------------|  
-|`a & b &#124;&#124; c`|`(a & b) &#124;&#124; c`|  
-|`a = b &#124;&#124; c`|`a = (b &#124;&#124; c)`|  
-|`q && r &#124;&#124; s--`|`(q && r) &#124;&#124; s--`|  
-  
+|a & b &#124;&#124; c|(a & b) &#124;&#124; c|  
+|a = b &#124;&#124; c|a = (b &#124;&#124; c)|  
+|q && r &#124;&#124; s--|(q && r) &#124;&#124; s--|  
+
  Na primeira expressão, o operador AND bit a bit (`&`) tem uma maior precedência que o operador OR lógico (`||`), então `a & b` forma o primeiro operando da operação OR lógica.  
   
  Na segunda expressão, o operador OR lógico (`||`) tem maior precedência que o operador de atribuição simples (`=`), então `b || c` é agrupado como o operando à direita na atribuição. Observe que o valor atribuído a `a` é 0 ou 1.  
@@ -86,13 +85,11 @@ x && y++
   
 |Expressão ilegal|Agrupamento padrão|  
 |------------------------|----------------------|  
-|`p == 0 ? p += 1: p += 2`|`( p == 0 ? p += 1 : p ) += 2`|  
+|p == 0 ? p += 1: p += 2|( p == 0 ? p += 1 : p ) += 2|  
   
  Nessa expressão, o operador de igualdade (`==`) tem a precedência mais alta, então `p == 0` é agrupado como um operando. O operador de expressão condicional (`? :`) tem a próxima precedência mais alta. Seu primeiro operando é `p == 0`, e o segundo operando é `p += 1`. No entanto, o último operando do operador de expressão condicional é considerado `p` em vez de `p += 2`, já que essa ocorrência de `p` se associa ainda mais ao operador de expressão condicional do que ao operador de atribuição composta. Um erro de sintaxe ocorre porque `+= 2` não tem um operando à esquerda. Você deve usar parênteses para evitar erros desse tipo e gerar um código mais legível. Por exemplo, você pode usar parênteses como mostrado abaixo para corrigir e esclarecer o exemplo anterior:  
   
-```  
-( p == 0 ) ? ( p += 1 ) : ( p += 2 )  
-```  
+`( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores C](../c-language/c-operators.md)
