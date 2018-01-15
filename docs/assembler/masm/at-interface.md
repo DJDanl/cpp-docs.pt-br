@@ -1,33 +1,31 @@
 ---
-title: "@Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@Interface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@Interface symbol"
+title: '@Interface| Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@Interface'
+dev_langs: C++
+helpviewer_keywords: '@Interface symbol'
 ms.assetid: 266ecba9-9e96-4086-8ee4-a3d0161b6e29
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59e14539215ec9d7409b26bd593b61769b7732fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# @Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Informações sobre os parâmetros de idioma \(equacionar numérico\).  
+# <a name="interface"></a>@Interface
+Informações sobre os parâmetros de idioma (numéricos serão iguais).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,5 +33,5 @@ Informações sobre os parâmetros de idioma \(equacionar numérico\).
   
 ```  
   
-## Consulte também  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de símbolos](../../assembler/masm/symbols-reference.md)

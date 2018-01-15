@@ -1,68 +1,68 @@
 ---
-title: "/J (o tipo char padr&#227;o n&#227;o &#233; assinado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.DefaultCharIsUnsigned"
-  - "VC.Project.VCCLWCECompilerTool.DefaultCharIsUnsigned"
-  - "/j"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /J (C++)"
-  - "tipo de dados char"
-  - "o tipo char padrão não é assinado"
-  - "padrões, tipo char"
-  - "Opção de compilador J [C++]"
-  - "Opção de compilador -J [C++]"
+title: "-J (char padrão é de tipo não assinado) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.DefaultCharIsUnsigned
+- VC.Project.VCCLWCECompilerTool.DefaultCharIsUnsigned
+- /j
+dev_langs: C++
+helpviewer_keywords:
+- defaults, char type
+- char data type
+- -J compiler option [C++]
+- /J compiler option [C++]
+- J compiler option [C++]
+- default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5195822908c13217244a344357a6140d67a9e7df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /J (o tipo char padr&#227;o n&#227;o &#233; assinado)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Altera o tipo padrão de `char` de `signed char` a `unsigned char`, e o tipo de `char` zero é estendido quando é alargado a um tipo de `int` .  
+# <a name="j-default-char-type-is-unsigned"></a>/J (o tipo char padrão não é assinado)
+Altera o padrão de `char` tipo `signed char` para `unsigned char`e o `char` tipo é estendido para zero quando ele será ampliado para um `int` tipo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /J  
 ```  
   
-## Comentários  
- Se um valor de `char` é declarado explicitamente como `signed`, a opção de **\/J** não afeta o, e o valor sinal\- é estendido quando é alargado a um tipo de `int` .  
+## <a name="remarks"></a>Comentários  
+ Se um `char` valor é declarado explicitamente como `signed`, o **/J** opção não afeta e o valor é de assinatura estendida quando ele será ampliado para um `int` tipo.  
   
- A opção de **\/J** define `_CHAR_UNSIGNED`, que é usada com `#ifndef` no arquivo de LIMITS.h para definir o intervalo do tipo padrão de `char` .  
+ O **/J** opção define `_CHAR_UNSIGNED`, que é usado com `#ifndef` no arquivo Limits. h para definir o intervalo padrão do `char` tipo.  
   
- ANSI C e C\+\+ 2.0 não requer uma implementação específica do tipo de `char` .  Essa opção é útil quando você está trabalhando com dados de caractere que serão convertidos se houver em um idioma diferente do inglês.  
+ ANSI C e C++ não requerem uma implementação específica do `char` tipo. Essa opção é útil quando você estiver trabalhando com dados de caractere que eventualmente serão convertidos em um idioma diferente do inglês.  
   
 > [!NOTE]
->  Se você usar esta opção do compilador com ATL\/MFC, um erro pode ser gerado.  Embora você pode desabilitar esse erro definindo `_ATL_ALLOW_CHAR_UNSIGNED`, essa solução alternativa não tem suporte e não pode funcionar sempre.  
+>  Se você usar essa opção de compilador com ATL/MFC, um erro pode ser gerado. Você pode desativar esse erro definindo `_ATL_ALLOW_CHAR_UNSIGNED`, essa solução alternativa não é suportada e não pode funcionar sempre.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Em **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.  
+1.  No **Gerenciador de Soluções**, abra o menu de atalho para o projeto e escolha **Propriedades**.  
   
-2.  Na caixa de diálogo de **Páginas de Propriedades** de projeto, no painel esquerdo em **Propriedades de Configuração**, expanda **C\/C\+\+** e selecione **Linha de Comando**.  
+2.  No projeto **páginas de propriedade** caixa de diálogo, no painel esquerdo, em **propriedades de configuração**, expanda **C/C++** e, em seguida, selecione **delinhadecomando**.  
   
-3.  No painel de **Opções Adicionais** , especifique a opção do compilador de **\/J** .  
+3.  No **opções adicionais** painel, especifique o **/J** opção de compilador.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)   
- [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
+ [Trabalhando com Propriedades do Projeto](../../ide/working-with-project-properties.md)

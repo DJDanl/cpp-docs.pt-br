@@ -1,73 +1,69 @@
 ---
-title: "Arquivos .Lib como entrada de vinculador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.AdditionalDependencies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos .lib"
-  - "arquivos COFF, importar bibliotecas"
-  - "bibliotecas padrão [C++]"
-  - "bibliotecas padrão [C++], saída de vinculador"
-  - "padrões [C++], bibliotecas"
-  - "importar bibliotecas, arquivos de vinculador"
-  - "bibliotecas [C++], Arquivos .lib como entrada de vinculador"
-  - "vinculando [C++], bibliotecas OMF"
-  - "bibliotecas OMF"
+title: . Lib arquivos como entrada de vinculador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.AdditionalDependencies
+dev_langs: C++
+helpviewer_keywords:
+- OMF libraries
+- linking [C++], OMF libraries
+- import libraries, linker files
+- libraries [C++], .lib files as linker input
+- COFF files, import libraries
+- default libraries [C++], linker output
+- default libraries [C++]
+- defaults [C++], libraries
+- .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Arquivos .Lib como entrada de vinculador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O LINK aceita as bibliotecas padrão das bibliotecas de COFF e de importação de COFF, que geralmente têm a extensão .lib.  As bibliotecas padrão contêm objetos e são criadas pela ferramenta de LIB.  As bibliotecas de importação contêm informações sobre seguinte exporta em outros programas e são criadas por qualquer um LINK quando o compila um programa que contém exporta ou pela ferramenta de LIB.  Para obter informações sobre como usar o LIB para criar o padrão ou importar bibliotecas, consulte [Referência de LIB](../../build/reference/lib-reference.md).  Para obter detalhes sobre como usar o LINK para criar uma biblioteca de importação, consulte a opção de [\/DLL](../../build/reference/dll-build-a-dll.md) .  
+# <a name="lib-files-as-linker-input"></a>Arquivos .Lib como entrada de vinculador
+LINK aceita bibliotecas padrão COFF e COFF importar bibliotecas, que geralmente têm a extensão. lib. Bibliotecas padrão contêm objetos e são criadas pela ferramenta LIB. Bibliotecas de importação contêm informações sobre exportações em outros programas e são criadas pelo LINK quando ele cria um programa que contém exportações ou pela ferramenta LIB. Para obter informações sobre como usar LIB para criar um padrão ou bibliotecas de importação, consulte [referência LIB](../../build/reference/lib-reference.md). Para obter detalhes sobre como usar o LINK para criar uma biblioteca de importação, consulte o [/DLL](../../build/reference/dll-build-a-dll.md) opção.  
   
- Uma biblioteca é especificada COMO VINCULAR como um argumento de nome de arquivo ou uma biblioteca padrão.  O LINK resolver referências externas procurando primeiro em bibliotecas especificadas na linha de comando, então em bibliotecas padrão especificada com a opção de [\/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md) , em bibliotecas padrão e nomeadas em arquivos de .obj.  Se for especificado um caminho com o nome da biblioteca, o LINK na biblioteca nesse diretório.  Se nenhum caminho for especificado, o LINK procura primeiro no diretório que o LINK está executando do e, em todos os diretórios especificados na variável de ambiente de LIB.  
+Uma biblioteca é especificada para o LINK como um argumento de nome de arquivo ou uma biblioteca padrão. LINK resolve referências externas pesquisando primeiro bibliotecas especificadas na linha de comando, em seguida, padrão bibliotecas especificado com o [/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md) opção, e, em seguida, padrão bibliotecas nomeados em arquivos. obj. Se um caminho for especificado com o nome da biblioteca, o LINK procura a biblioteca no diretório. Se nenhum caminho for especificado, o LINK procura primeiro no diretório que está executando o LINK do e, em seguida, em qualquer diretório especificado na variável de ambiente LIB.  
   
-### Para adicionar arquivos de .lib como o vinculador entrou no ambiente de desenvolvimento  
+## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>Para adicionar arquivos. lib como entrada de vinculador no ambiente de desenvolvimento  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Configurando as propriedades de projeto do Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **Vinculador**.  
+2.  Escolha o **entrada** página de propriedades no **vinculador** pasta.  
   
-3.  Clique na página de propriedades de **Entrada** .  
+3.  Modificar o **dependências adicionais** propriedade para adicionar os arquivos. lib.  
   
-4.  Modifique a propriedade de **Dependências Adicionais** .  
+## <a name="to-programmatically-add-lib-files-as-linker-input"></a>Para adicionar programaticamente os arquivos. lib como entrada de vinculador  
   
-### Para adicionar arquivos programaticamente de .lib como a entrada do vinculador  
+-   Consulte [AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx).  
   
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalDependencies%2A>.  
+## <a name="example"></a>Exemplo  
+O exemplo a seguir mostra como criar e usar um arquivo. Primeiro, crie um arquivo. lib:  
   
-## Exemplo  
- O exemplo a seguir mostra como criar e usar um arquivo de .lib:  
-  
-```  
+```cpp  
 // lib_link_input_1.cpp  
-// compile with: /LD  
+// compile by using: cl /LD lib_link_input_1.cpp  
 __declspec(dllexport) int Test() {  
    return 213;  
 }  
 ```  
   
-## Exemplo  
- E depois:  
+E, em seguida, compile Este exemplo usando o arquivo. lib que você acabou de criar:  
   
-```  
+```cpp  
 // lib_link_input_2.cpp  
-// compile with: /EHsc lib_link_input_1.lib  
+// compile by using: cl /EHsc lib_link_input_1.lib lib_link_input_2.cpp   
 __declspec(dllimport) int Test();  
 #include <iostream>  
 int main() {  
@@ -75,7 +71,10 @@ int main() {
 }  
 ```  
   
-  **213**   
-## Consulte também  
- [Arquivos de entrada LINK](../../build/reference/link-input-files.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+```Output  
+213  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Arquivos de entrada de LINK](../../build/reference/link-input-files.md)   
+ [Opções do vinculador](../../build/reference/linker-options.md)

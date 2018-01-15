@@ -1,60 +1,61 @@
 ---
-title: "Exportando fun&#231;&#245;es do C++ a serem usadas em execut&#225;veis da linguagem C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exportando DLLs [C++], funções C++ em executáveis C"
-  - "exportando funções [C++], funções C++ em executáveis C"
-  - "funções [C++], funções C++ em executáveis C"
-  - "funções [C++], exportando"
+title: "Exportando funções C++ para uso em executáveis da linguagem C | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], C++ functions in C executables
+- exporting DLLs [C++], C++ functions in C executables
+- exporting functions [C++], C++ functions in C executables
+- functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Exportando fun&#231;&#245;es do C++ a serem usadas em execut&#225;veis da linguagem C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se você tiver funções em uma DLL gravado em C\+\+ que você deseja acessar c \- módulo de idioma, você deve declarar essas funções com esse tipo de C em vez de vinculação C\+\+.  Salvo indicação em contrário, o compilador do C\+\+ usa as convenções de nomenclatura de tipo seguras C\+\+ \(também conhecida como decoração o nome\) e de chamada C\+\+, que podem ser difíceis de chamar C.  
+# <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportando funções do C++ a serem usadas em executáveis da linguagem C  
   
- Para especificar o vínculo de C, especifique **extern** "**C**” para suas declarações de função.  Por exemplo:  
+Se você tem funções em uma DLL escrita em C++ que você deseja acessar de um módulo de linguagem C, você deve declarar essas funções com vínculo a C em vez de vinculação do C++. A menos que especificado em contrário, o compilador do C++ usa fortemente tipado (também conhecido como decoração do nome) de nomenclatura do C++ e C++ chamando convenções, o que podem ser difícil de chamada de C.  
+  
+Para especificar o vínculo a C, especifique `extern "C"` para suas declarações de função. Por exemplo:  
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  
 ```  
   
-## O que você deseja fazer?  
+## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?  
   
--   [Exportação de uma DLL usando arquivos .def](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Exportar de uma DLL usando arquivos. def](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Exportar de uma DLL usando \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Exportar de uma DLL usando dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Exportar e importar usando AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Exportar e importar usando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Exportar funções de C para uso em executáveis de linguagem C ou C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Exportar funções C para uso em executáveis C ou linguagem C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Determine o método de exportação a ser usado](../build/determining-which-exporting-method-to-use.md)  
+-   [Determinar qual método de exportação a ser usado](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importar em um aplicativo usando \_\_declspec \(dllimport\)](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importar para um aplicativo usando __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [Inicialize um DLL](../build/initializing-a-dll.md)  
+-   [Inicializar uma DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [Nomes decorados](../Topic/Decorated%20Names.md)  
+-   [Nomes decorados](../build/reference/decorated-names.md)  
   
--   [Especificações de vinculação](http://msdn.microsoft.com/pt-br/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)  
+-   [Usando extern para especificar a ligação](../cpp/using-extern-to-specify-linkage.md)  
   
-## Consulte também  
- [Exportando a partir de uma DLL](../build/exporting-from-a-dll.md)
+## <a name="see-also"></a>Consulte também  
+ [Exportando de uma DLL](../build/exporting-from-a-dll.md)

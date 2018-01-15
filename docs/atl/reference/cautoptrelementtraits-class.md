@@ -1,11 +1,10 @@
 ---
-title: Classe CAutoPtrElementTraits | Documentos do Microsoft
+title: Classe CAutoPtrElementTraits | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,41 +12,25 @@ f1_keywords:
 - ATLCOLL/ATL::CAutoPtrElementTraits
 - ATLCOLL/ATL::CAutoPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CAutoPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtrElementTraits class
+dev_langs: C++
+helpviewer_keywords: CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 1c543eaa678d86e083207915bcb4f43766ee23c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ffbec269e7bbf750cc3b877aa7a93d1cde74756b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrelementtraits-class"></a>Classe CAutoPtrElementTraits
 Essa classe fornece métodos, funções estáticas e typedefs útil ao criar coleções de ponteiros inteligentes.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,11 +50,11 @@ class CAutoPtrElementTraits
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.|  
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.|  
 |[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe fornece métodos, funções estáticas e definições de tipo para auxílio a criação de objetos de classe de coleção que contém ponteiros inteligentes. As classes [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) derivam de `CAutoPtrElementTraits`. Se criar uma coleção de ponteiros inteligentes que requer novo vetor e operadores de exclusão, use [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) em vez disso.  
+ Essa classe fornece métodos, funções estáticas e definições de tipo para ajudando a criação de objetos de classe de coleção que contém ponteiros inteligentes. As classes [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) derivam `CAutoPtrElementTraits`. Se a criação de uma coleção de ponteiros inteligentes que requer um vetor novo e excluir operadores, use [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) em vez disso.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -88,7 +71,7 @@ class CAutoPtrElementTraits
  **Cabeçalho:** atlcoll.h  
   
 ##  <a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
- O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.  
+ O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.  
   
 ```
 typedef CAutoPtr<T>& INARGTYPE;
@@ -104,4 +87,3 @@ typedef T *& OUTARGTYPE;
 ## <a name="see-also"></a>Consulte também  
  [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

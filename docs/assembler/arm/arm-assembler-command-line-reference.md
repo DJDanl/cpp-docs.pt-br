@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bb9bbdd6deb0a8e459f2f2b8d5b6188c7517e6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Referência de linha de comando do assembler ARM
 Este artigo fornece informações de linha de comando sobre assembler ARM Microsoft, *armasm*, que compila ARMv7 Thumb linguagem de assembly para a implementação da Microsoft do formato de arquivo de objeto (COFF) comum. O vinculador poderá vincular código COFF com o código de objeto que é produzido por do assembler ARM ou pelo compilador C, junto com as bibliotecas de objetos que são criados pelo bibliotecário.  
@@ -41,7 +42,7 @@ armasm [[options]] -o objectfile sourcefile
  Adicione as pastas especificadas para o caminho de pesquisa de inclusão.  
   
  -Predefinir`directive`  
- Especifique uma diretiva SETA, SETL ou conjuntos para predefinir um símbolo. Exemplo: **armasm.exe-predefinir "" contagem de SETA 150 source.asm**. Para obter mais informações, consulte o [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Especifique uma diretiva SETA, SETL ou conjuntos para predefinir um símbolo. Exemplo: **armasm.exe-predefinir "" contagem de SETA 150 source.asm**. Para obter mais informações, consulte o [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Desabilite todas as mensagens de aviso.  

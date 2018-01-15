@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e42c349436bd0df4f1e26b35d238b6e1ee75c32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cl-command-files"></a>Arquivos de comando CL
 Um arquivo de comando é um arquivo de texto que contém opções e os nomes de arquivos caso contrário, você digitaria no [linha de comando](../../build/reference/compiler-command-line-syntax.md) ou especificar usando o [variável de ambiente CL](../../build/reference/cl-environment-variables.md). CL aceita um arquivo de comando do compilador como um argumento na variável de ambiente CL ou na linha de comando. Em vez da linha de comando ou da variável de ambiente CL, um arquivo de comando permite que você use várias linhas de opções e nomes de arquivo.  

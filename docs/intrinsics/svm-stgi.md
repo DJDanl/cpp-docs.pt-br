@@ -1,56 +1,55 @@
 ---
-title: "__svm_stgi | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_stgi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__svm_stgi intrínseco"
-  - "Instrução STGI"
+title: __svm_stgi | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_stgi
+dev_langs: C++
+helpviewer_keywords:
+- __svm_stgi intrinsic
+- STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94e386827ae747fb3289354ba380d390756359ff
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/03/2018
 ---
-# __svm_stgi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos do Microsoft**  
+# <a name="svmstgi"></a>__svm_stgi
+**Seção específica da Microsoft**  
   
  Define o sinalizador global de interrupção.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void __svm_stgi(void);  
 ```  
   
-## Comentários  
- O `__svm_stgi` função é equivalente a `STGI` instrução da máquina.  O indicador de interrupção global determina se o microprocessador ignora, adia ou trata de interrupções devido a eventos como, por exemplo, uma exceção de debug, um alerta de temperatura de hardware ou uma conclusão de e\/S.  
+## <a name="remarks"></a>Comentários  
+ O `__svm_stgi` função é equivalente a `STGI` instrução da máquina. O sinalizador global interrupção determina se o microprocessador ignora, adia ou manipula interrupções devido a eventos como uma conclusão de e/s, um alerta de temperatura de hardware ou uma exceção de depuração.  
   
- Esta função oferece suporte a interação do monitor de máquina virtual de um host com um sistema operacional e seus aplicativos de convidado.  Para obter mais informações, procure o documento, "Manual de volumes do programador de arquitetura AMD64 2: programação de sistema," documento número 24593, revisão 3.11, no [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) site.  
+ Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Manual Volume do programador de arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documento no [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
-|----------------|-----------------|  
-|`__svm_stgi`|x86,[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__svm_stgi`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Arquivo de cabeçalho** \<intrin.h\>  
+ **Arquivo de cabeçalho** \<intrin.h >  
   
-## Específicos do Microsoft final  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_clgi](../intrinsics/svm-clgi.md)
+ [__svm_clgi](../intrinsics/svm-clgi.md)

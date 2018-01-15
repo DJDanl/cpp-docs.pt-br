@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 59e68b8f5c5b98c761bbccb46d09d79ba5e38163
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 381fbb4facf9c05a5167e855f039c627669e600f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data"></a>@data
 O nome do grupo de dados padrão. Avalia a DGROUP para todos os modelos, exceto **simples**. Avalia a **simples** sob o **simples** modelo de memória (macro de texto).  

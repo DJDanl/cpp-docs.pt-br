@@ -1,42 +1,42 @@
 ---
-title: "Vis&#227;o geral de conven&#231;&#245;es de chamada de x64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Visão geral do x64 convenções de chamada | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 12
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Vis&#227;o geral de conven&#231;&#245;es de chamada de x64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Duas alterações importantes de x86 a [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] é o recurso de 64 bits addressing e um conjunto de plano de 16 registros de 64 bits para uso geral.  Dado o conjunto expandido do registro, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] usa apenas [\_\_fastcall](../cpp/fastcall.md) que chama a convenção e um modelo RISC\- base de manipulação de exceção.  O modelo de `__fastcall` usa registros para que os primeiros quatro argumentos e o quadro de pilha passa os outros parâmetros.  
+# <a name="overview-of-x64-calling-conventions"></a>Visão geral de convenções de chamada de x64
+Duas diferenças importantes entre x86 e [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] são a capacidade de endereçamento de 64 bits e registra um conjunto simples de 16 64 bits para uso geral. Fornecido expandidos registrar conjunto, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] usa o [fastcall](../cpp/fastcall.md) chamando convenção e um modelo de tratamento de exceção com RISC. O `__fastcall` convenção usa registros para os quatro primeiros argumentos e o quadro de pilha para passar argumentos adicionais.  
   
- As seguintes ajuda a opção de compilador você otimiza o aplicativo para [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]:  
+ A seguinte opção de compilador ajuda a otimizar seu aplicativo para [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [\/favor \(Otimizar para especificações da arquitetura\)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (otimizar para especificações da arquitetura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-## Convenção de chamada  
- A interface de binária de aplicativo \(ABI\) de [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] é uma convenção de chamada de rápido\- chamada de 4 registros, com pilha suporte para esses registros.  Há uma correspondência um\-para\-um entre argumentos strict em uma função, e os registros para esses argumentos.  Nenhum argumento que não couber em 8 bytes, ou não é 1, 2, 4, ou 8 bytes, devem ser passados por referência.  Não há nenhuma tentativa de espalhar um único argumento por vários registros.  A pilha de registro x87 não é usado.  Pode ser usada, mas deve ser considerada volátil através de chamadas de função.  Todas as operações de ponto flutuante são feitas usando os registros de 16 MMX.  Os argumentos são passados em registros RCX, RDX, R8, e R9.  Se os argumentos são flutuante\/double, eles são passados em XMM0L, em XMM1L, em XMM2L, e em XMM3L.  argumentos de 16 bytes são passados por referência.  Passagem de parâmetro é descrito em detalhes em [Passagem de parâmetro](../build/parameter-passing.md).  Além desses registros, RAX, R10, R11, XMM4, e XMM5 são voláteis.  Todos outros registros são permanentes.  O uso do registro está documentado em detalhes em [Uso do Registro](../build/register-usage.md) e em [Registros salvos de chamador\/receptor](../build/caller-callee-saved-registers.md).  
+## <a name="calling-convention"></a>Convenção de chamada  
+ O [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Interface binária do aplicativo (ABI) usa uma convenção de chamada de quatro registro fast chamada por padrão. Espaço é alocado na pilha de chamadas como um armazenamento de sombra para chamados salvar esses registros. Há uma correspondência estrita entre os argumentos para uma chamada de função e os registros usados para esses argumentos. Um argumento que não se encaixa em 8 bytes, ou não é 1, 2, 4 ou 8 bytes, deve ser transmitido por referência. Não há nenhuma tentativa para distribuir um único argumento entre vários registros. O x87 pilha de registro é usada. Ele pode ser usado pelo receptor, mas deve ser considerado volátil em chamadas de função. Ponto flutuante de todas as operações são feitas usando a 16 XMM registra. Argumentos inteiros são passados em registros RCX, RDX, R8 e R9. Argumentos são passados em XMM0L, XMM1L, XMM2L e XMM3L de ponto flutuante. argumentos de 16 bytes são passados por referência. Passagem de parâmetro é descrito detalhadamente no [parâmetro passando](../build/parameter-passing.md). Além desses registros RAX R10, R11, XMM4 e XMM5 são considerados voláteis. Todos os outros registros não são voláteis. Uso de registro está documentado em detalhes em [registrar o uso do](../build/register-usage.md) e [chamador/receptor salvo registra](../build/caller-callee-saved-registers.md).  
   
- O chamador é responsável para atribuir espaço para parâmetros para o receptor, e sempre deve atribuir espaço suficiente para os parâmetros 4 do registro, mesmo se o receptor não tem que vários parâmetros.  Isso ajuda na simplicidade de suporte C unprototyped funções, e o vararg C\/C\+\+ funciona.  Para o vararg ou funções unprototyped, todos os valores de flutuante devem ser duplicados no registro de uso geral correspondente.  Todos os parâmetros anteriores dos primeiros 4 devem ser armazenados na pilha, acima de armazenamento reverso para os primeiros 4, antes da chamada.  Os detalhes de função de Vararg podem ser encontrados em [Varargs](../build/varargs.md).  Informações de função de Unprototyped é detalhada em [Funções sem protótipo](../build/unprototyped-functions.md).  
+ O chamador é responsável pela alocação de espaço para os parâmetros para o receptor e sempre deve alocar espaço suficiente para armazenar os quatro parâmetros de registro, mesmo que o chamador não tem muitos parâmetros. Isso simplifica o suporte para funções da linguagem C sem protótipo e funções de C/C++ vararg. Para funções vararg ou unprototyped, qualquer ponto flutuante valores deve ser duplicado no registro correspondente para fins gerais. Quaisquer parâmetros além os quatro primeiros devem ser armazenados na pilha, acima o armazenamento de sombra para os quatro primeiros, antes da chamada. Detalhes da função vararg podem ser encontradas em [Varargs](../build/varargs.md). Informações de função sem protótipo são detalhadas na [funções sem protótipo](../build/unprototyped-functions.md).  
   
-## Alinhamento  
- A maioria das estruturas são alinhadas ao alinhamento natural.  As exceções são principais o ponteiro de pilha e memória de malloc ou de alloca, que são alinhadas ao byte 16, para ajudar o desempenho.  O alinhamento acima de 16 bytes deve ser feito manualmente, mas como 16 bytes são um tamanho comuns de alinhamento para operações de MMX, isso deve bastar para a maioria de código.  Para obter mais informações sobre o layout e o alinhamento de estrutura consulte [Tipos e armazenamento](../build/types-and-storage.md).  Para obter informações sobre o layout da pilha, consulte [Uso da pilha](../build/stack-usage.md).  
+## <a name="alignment"></a>Alinhamento  
+ A maioria das estruturas são alinhadas com o alinhamento natural. As principais exceções são o ponteiro de pilha e `malloc` ou `alloca` memória, que são alinhados com 16 bytes para ajudar o desempenho. Alinhamento acima de 16 bytes deve ser feito manualmente, mas como 16 bytes é um tamanho comum de alinhamento para operações de XMM, isso deve funcionar para grande parte do código. Para obter mais informações sobre o layout da estrutura e o alinhamento, consulte [tipos e armazenamento](../build/types-and-storage.md). Para obter informações sobre o layout de pilha, consulte [uso da pilha](../build/stack-usage.md).  
   
-## Incapacidade de enrolar  
- Todas as funções de folha \[as funções que nem chamam uma função, ou atribuem todo o espaço de pilha elas mesmas\] devem ser anotadas com os dados \[chamados de xdata ou ehdata, que são apontados de pdata\] que descreve o sistema operacional como os desenrolar corretamente, para recuperar registros permanentes.  Os prólogos e os epílogos são altamente restritos, de modo que eles possam ser corretamente descritos em xdata.  O ponteiro de pilha deve ser alinhado a 16 bytes, exceto as funções de folha, em toda a região de código que não é parte de um epílogo ou um prólogo.  Para obter detalhes sobre a estrutura apropriada de prólogo e de epílogos de função, consulte [Prólogo e epílogo](../build/prolog-and-epilog.md).  Para obter mais informações sobre manipulação de exceção e manipulação de exceções\/de pdata e de xdata de desenrolamento consulte [Tratamento de exceções \(x64\)](../build/exception-handling-x64.md).  
+## <a name="unwindability"></a>Unwindability  
+ Funções de folha são funções que não mudam de quaisquer registros não volátil. Uma função de folha não pode alterar RSP não volátil, por exemplo, chamando uma função ou a alocação de espaço de pilha adicionais para variáveis locais. Para recuperar os registros não volátil quando uma exceção é manipulada, funções de não-folha devem ser anotadas com dados estáticos que descreve como corretamente desenrolar a função em uma instrução arbitrária. Esses dados são armazenados como *pdata*, ou dados de procedimento, que por sua vez se refere a *xdata*, dados de manipulação de exceções. O xdata contém as informações de liberação e pode apontar para pdata adicional ou uma função de manipulador de exceção. Prólogos e epilogs são altamente restrita para que eles possam ser corretamente descritos xdata. O ponteiro de pilha deve ser alinhado a 16 bytes em qualquer região de código que não faz parte de um epílogo ou prólogo, exceto nas funções de folha. Funções de folha podem ser retornou simplesmente simulando um retorno, portanto, pdata e xdata não são necessários. Para obter detalhes sobre a estrutura apropriada de Prólogos de função e epilogs, consulte [prólogo e epílogo](../build/prolog-and-epilog.md). Para obter mais informações sobre o tratamento de exceção e a manipuladores de exceção e liberação de pdata e xdata, consulte [(x64) de tratamento de exceção](../build/exception-handling-x64.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Convenções de software x64](../build/x64-software-conventions.md)

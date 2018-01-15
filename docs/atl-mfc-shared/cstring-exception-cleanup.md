@@ -1,33 +1,34 @@
 ---
-title: "Limpeza de exce&#231;&#227;o de CString | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Objetos de CString, exceções"
-  - "tratamento de exceção, código de limpeza"
+title: "Limpeza de exceção de CString | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- CString objects, exceptions
+- exception handling, cleanup code
 ms.assetid: 28b9ce70-be63-4a0d-92a8-44bbfbc95e83
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 496fdfe6a609bd4eceae225c2568c915d38aef07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Limpeza de exce&#231;&#227;o de CString
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Em versões anteriores MFC, é importante que você faz após o uso de objetos de [CString](../atl-mfc-shared/reference/cstringt-class.md) .  Com versão MFC 3,0 e posterior, a limpeza explícita não é mais necessário.  
+# <a name="cstring-exception-cleanup"></a>Limpeza de exceção de CString
+Em versões anteriores do MFC, era importante limpar [CString](../atl-mfc-shared/reference/cstringt-class.md) objetos após o uso. Com MFC versão 3.0 e posterior, limpeza explícita não é mais necessária.  
   
- Sob o mecanismo de manipulação de exceção C\+\+ que o MFC agora usa, você não tem que se preocupar na limpeza após uma exceção.  Para obter uma descrição de como C\+\+ “” desenrola a pilha depois que uma exceção é detectada, consulte [a tentativa, a captura, e as instruções throw](../cpp/try-throw-and-catch-statements-cpp.md).  Mesmo se você usar macros MFC **TRY**\/**CATCH** em vez de **try** palavra\-chave e **catch**C\+\+, o MFC usa o mecanismo de exceção C\+\+ abaixo, portanto você ainda não precisa limpar explicitamente.  
+ Sob o mecanismo MFC agora usa de manipulação de exceções de C++, você não precisa se preocupar sobre a limpeza após uma exceção. Para obter uma descrição de como C++ "esvazia" a pilha após uma exceção for detectada, consulte [try, catch e instruções throw](../cpp/try-throw-and-catch-statements-cpp.md). Mesmo se você usar o MFC **tente**/**CATCH** macros em vez das palavras-chave C++ **tente** e **catch**, MFC usa C++ mecanismo de exceção abaixo, para que você ainda não é necessário limpar explicitamente.  
   
-## Consulte também  
- [Cadeias de caracteres](../atl-mfc-shared/strings-atl-mfc.md)   
+## <a name="see-also"></a>Consulte também  
+ [Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
+

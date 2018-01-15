@@ -1,55 +1,54 @@
 ---
-title: "@ (especificar um arquivo de resposta do vinculador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opção de vinculador @"
-  - "arquivos de comando [C++]"
-  - "arquivos de comando [C++], arquivo de resposta de vinculador"
-  - "vinculador [C++], arquivos de resposta"
-  - "arquivos de resposta, vinculador C/C++"
+title: '@ (Especificar um arquivo de resposta de vinculador) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@'
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], response files
+- command files [C++]
+- command files [C++], linker response file
+- '@ linker option'
+- response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d384bc3cf657b7e81ea116dd317370ee1ea17cc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# @ (especificar um arquivo de resposta do vinculador)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="-specify-a-linker-response-file"></a>@ (especificar um arquivo de resposta do vinculador)
 ```  
 @response_file  
 ```  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  `response_file`  
- Um arquivo de texto que especifica comandos do vinculador.  
+ Um arquivo de texto especificando comandos do vinculador.  
   
-## Comentários  
- Consulte [@ \(especificar uma resposta Arquivo do compilador\)](../../build/reference/at-specify-a-compiler-response-file.md) para obter mais informações.  
+## <a name="remarks"></a>Comentários  
+ Consulte [@ (especificar um arquivo de resposta do compilador)](../../build/reference/at-specify-a-compiler-response-file.md) para obter mais informações.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Essa opção do vinculador não está disponível no ambiente de desenvolvimento do Visual Studio.  
+1.  Essa opção de vinculador não está disponível no ambiente de desenvolvimento do Visual Studio.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
-1.  Essa opção do vinculador não pode ser modificada programaticamente.  
+1.  Essa opção de vinculador não pode ser alterada de forma programática.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

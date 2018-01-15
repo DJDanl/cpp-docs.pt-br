@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6457e82928a5a705377b90e2acc0989768fcd9f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f49ce6bed9e77680017b0aa26b677fd18e3efc1a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Mensagens de diagnóstico do ARM Assembler
 O assembler ARM Microsoft (*armasm*) emite erros e avisos de diagnósticos quando encontrá-las. Este artigo descreve as mensagens mais comumente encontrados.  
@@ -33,7 +34,7 @@ filename(lineno) : [error|warning] Anum: message
   
 ### <a name="errors"></a>Erros  
  A2193: essa instrução gera um comportamento imprevisível  
- A arquitetura ARM não garante o que acontece quando essa instrução é executada.  Para obter detalhes sobre os formulários bem definidos dessa instrução, consulte o [Manual de referência de arquitetura ARM](http://go.microsoft.com/fwlink/?LinkId=246464).  
+ A arquitetura ARM não garante o que acontece quando essa instrução é executada.  Para obter detalhes sobre os formulários bem definidos dessa instrução, consulte o [Manual de referência de arquitetura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).  
   
 ```  
   
@@ -115,7 +116,7 @@ ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecat
 ```  
   
  A4509: Essa forma de instrução condicional é preterida  
- Essa forma de instrução condicional foi substituída pelo ARM na arquitetura do ARMv8. É recomendável que você altere o código para usar ramificações condicionais. Para ver quais instruções condicionais ainda têm suporte, consulte o [Manual de referência de arquitetura ARM](http://go.microsoft.com/fwlink/?LinkId=246464).  
+ Essa forma de instrução condicional foi substituída pelo ARM na arquitetura do ARMv8. É recomendável que você altere o código para usar ramificações condicionais. Para ver quais instruções condicionais ainda têm suporte, consulte o [Manual de referência de arquitetura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).  
   
  Esse aviso não é emitido quando o `-oldit` opção de linha de comando é usada.  
   

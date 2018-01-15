@@ -1,33 +1,31 @@
 ---
-title: ".586P | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".586P"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".586P directive"
+title: . 586P | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .586P
+dev_langs: C++
+helpviewer_keywords: .586P directive
 ms.assetid: 90da2a7d-66f4-4073-b1a9-874de6e8f05d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a2cede44a8659778e18ae20f36afa1fcd44a90de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# .586P
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Permite a montagem de todas as instruções para o processador Pentium \(inclusive com privilégios\).  
+# <a name="586p"></a>.586P
+Permite que o assembly de todas as instruções (inclusive privilegiados) para o processador Pentium.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,5 +33,5 @@ Permite a montagem de todas as instruções para o processador Pentium \(inclusi
   
 ```  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

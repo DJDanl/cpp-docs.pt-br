@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 893efea83bd0d84813a70ec39e5d50fde47dd732
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 A partir de ATL 7.0, `CComModule` foi preterido: consulte [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.  
@@ -363,10 +347,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Parâmetros  
  `dwClsContext`  
- [in] Especifica o contexto no qual o objeto de classe é para ser executado. Os valores possíveis são **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, ou **CLSCTX_LOCAL_SERVER**. Para obter uma descrição destes valores, consulte [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Especifica o contexto no qual o objeto de classe é para ser executado. Os valores possíveis são **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, ou **CLSCTX_LOCAL_SERVER**. Para obter uma descrição destes valores, consulte [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) no SDK do Windows.  
   
  `dwFlags`  
- [in] Determina os tipos de conexão para o objeto de classe. Os valores possíveis são **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, ou **REGCLS_MULTI_SEPARATE**. Para obter uma descrição destes valores, consulte [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Determina os tipos de conexão para o objeto de classe. Os valores possíveis são **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, ou **REGCLS_MULTI_SEPARATE**. Para obter uma descrição destes valores, consulte [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um valor padrão de HRESULT.  
@@ -642,4 +626,3 @@ virtual HRESULT UpdateRegistryFromResourceS(
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

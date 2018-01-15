@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a408af2ac7de2f71c98467e08c49187c346304e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="worker-archetype"></a>Trabalho arquétipo
 Classes de acordo com o *trabalho* arquétipo fornecer o código para processar os itens de trabalho em fila em um pool de threads.  
@@ -29,7 +30,7 @@ Classes de acordo com o *trabalho* arquétipo fornecer o código para processar 
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Inicializar](#initialize)|Chamado para inicializar o objeto de trabalho antes de todas as solicitações são passadas para [Execute](#execute).|  
+|[Initialize](#initialize)|Chamado para inicializar o objeto de trabalho antes de todas as solicitações são passadas para [Execute](#execute).|  
 |[Executar](#execute)|Chamado para processar um item de trabalho.|  
 |[Encerrar](#terminate)|Chamado para inicializar o objeto de trabalho depois que todas as solicitações foram passadas para [Execute](#execute).|  
   

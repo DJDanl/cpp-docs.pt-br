@@ -1,35 +1,35 @@
 ---
-title: "operator ADDR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ADDR"
-  - "operator ADDR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADDR operator"
-  - "operator ADDR"
+title: operador ADDR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ADDR
+- operator ADDR
+dev_langs: C++
+helpviewer_keywords:
+- ADDR operator
+- operator ADDR
 ms.assetid: 9c2a46e4-3222-4a5b-baa2-07bdb62b7d03
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f9c5777412810087e840b1db290a58babd4aa4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# operator ADDR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Consulte o  [INVOKE](../../assembler/masm/invoke.md) diretiva.  
+# <a name="operator-addr"></a>operador ADDR
+Consulte o [INVOKE](../../assembler/masm/invoke.md) diretiva.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -37,5 +37,5 @@ ADDR
   
 ```  
   
-## Consulte também  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de operadores](../../assembler/masm/operators-reference.md)

@@ -1,68 +1,68 @@
 ---
-title: "Usando C ou C++ em blocos __asm | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __asm [C++], elementos C/C++ em"
-  - "comentários, em blocos __asm"
-  - "constantes, em blocos __asm"
-  - "assembly embutido, mesclando instruções com instruções C/C++"
-  - "Macros , blocos __asm"
-  - "diretivas de pré-processador"
-  - "diretivas de pré-processador, usado em blocos __asm"
-  - "pré-processador, Diretivas ()"
-  - "símbolos, em blocos __asm"
-  - "nomes de tipos, usado em blocos __asm"
-  - "nomes typedef, usado em blocos __asm"
+title: Usando C ou C++ em blocos ASM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembly, mixing instructions with C/C++ statements
+- symbols, in __asm blocks
+- macros, __asm blocks
+- preprocessor directives, used in __asm blocks
+- type names, used in __asm blocks
+- preprocessor directives
+- preprocessor, directives
+- constants, in __asm blocks
+- comments, in __asm blocks
+- typedef names, used in __asm blocks
+- __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Usando C ou C++ em blocos __asm
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específico da Microsoft  
- Como as instruções de assembly embutidos podem ser combinadas com as instruções de 2.0 C ou C\+\+, podem fazer referência a variáveis de 2.0 C ou C\+\+ por nome e usar muitos outros elementos desses idiomas.  
+# <a name="using-c-or-c-in-asm-blocks"></a>Usando C ou C++ em blocos __asm
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ Como as instruções de assembly embutido podem ser combinadas com instruções C ou C++, podem se referir a variáveis de C ou C++ por nome e usar muitos outros elementos desses idiomas.  
   
- Um bloco de `__asm` pode usar os seguintes elementos de linguagem:  
+ Um `__asm` bloco pode usar os seguintes elementos de linguagem:  
   
--   Símbolos, inclusive rótulos e nomes de variável e de função  
+-   Símbolos, incluindo rótulos e nomes de variáveis e funções  
   
--   Constantes, inclusive constantes e membros simbólicos de `enum`  
+-   Constantes, incluindo as constantes simbólicas e `enum` membros  
   
--   Macros e políticas de pré\-processador  
+-   Macros e diretivas de pré-processador  
   
--   Comentários \( **\/\* \*\/** e **\/\/** \)  
+-   Comentários (ambos  **/ \* \* /**  e  **//**  )  
   
--   Nomes de tipo \(onde um tipo de MASM seria legais\)  
+-   Digite nomes (onde um tipo MASM seria legal)  
   
--   nomes de`typedef` , geralmente usados com os operadores como **PTR** e **TIPO** ou para especificar a estrutura ou o sindicalistas  
+-   `typedef`nomes, geralmente usados com operadores, como **PTR** e **tipo** ou para especificar membros de estrutura ou união  
   
- Dentro de um bloco de `__asm` , você pode especificar constantes de número inteiro com notação de 2.0 C ou a notação de raiz de assembler \(0x100 e 100h são equivalentes, por exemplo\).  Isso permite que você defina \(usando\) `#define`uma constante em C e use a em 2.0 C ou C\+\+ e partes do assembly do programa.  Você também pode especificar constantes em octal precedendo\-as com um 0.  Por exemplo, 0777 especifica uma constante octal.  
+ Dentro de um `__asm` bloco, você pode especificar constantes inteiras com notação C ou notação de base do assembler (0x100 e 100 h são equivalentes, por exemplo). Isso permite que você defina (usando `#define`) uma constante em C e, em seguida, usá-lo em C ou C++ e assembly partes do programa. Você também pode especificar constantes em octal, precedendo-as com um 0. Por exemplo, 0777 Especifica uma constante octal.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [Usando operadores em blocos de \_\_asm](../../assembler/inline/using-operators-in-asm-blocks.md)  
+-   [Usando operadores em blocos __asm](../../assembler/inline/using-operators-in-asm-blocks.md)  
   
--   [Usando blocos de \_\_asm de 2.0 C ou C\+\+ Symbols\_in](../Topic/Using%20C%20or%20C++%20Symbols%20in%20__asm%20Blocks.md)  
+-   [Usando C ou C++ Symbols_in blocos de ASM](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
   
--   [Acessando C ou C\+\+ 2.0 dados em blocos de \_\_asm](../Topic/Accessing%20C%20or%20C++%20Data%20in%20__asm%20Blocks.md)  
+-   [Acessando dados C ou C++ em blocos __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)  
   
--   [Funções de gravação com assembly embutido](../../assembler/inline/writing-functions-with-inline-assembly.md)  
+-   [Escrevendo funções com assembly embutido](../../assembler/inline/writing-functions-with-inline-assembly.md)  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assembler embutido](../../assembler/inline/inline-assembler.md)

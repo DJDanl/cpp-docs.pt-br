@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd9bee6423c0eea98941331dcff86c002dd4ef9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f462eeea9f2bca566745d425b84bd1506f52fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-imports"></a>Associando importações
 O comportamento de vinculador padrão é criar uma tabela de endereço de importação associável para a DLL carregada com atraso. Se a DLL está associada, a função auxiliar tentará usar as informações associadas em vez de chamar **GetProcAddress** em cada um dos imports referenciado. Se o carimbo de hora ou o endereço preferencial não coincidem com aqueles da DLL carregada, a função auxiliar pressupõem a tabela de endereço associado importação está desatualizada e continuará como se ele não existe.  

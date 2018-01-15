@@ -15,18 +15,19 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 128b19c1175fb5f39599a9ccaeae66d1fc53fdab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a762fc573953bcfb09180b9b830b761448d87a0d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Como integrar ferramentas personalizar a propriedades de projeto
 Você pode adicionar opções de ferramenta personalizada para o Visual Studio **páginas de propriedade** janela criando um arquivo de esquema XML subjacente.  
   
  O **propriedades de configuração** seção o **páginas de propriedade** janela exibe os grupos de configuração que são conhecidos como *regras*. Cada regra contém as configurações para uma ferramenta ou um grupo de recursos. Por exemplo, o **vinculador** regra contém as configurações para a ferramenta do vinculador. As configurações em uma regra podem ser subdivididas em *categorias*.  
   
- Este documento explica como criar um arquivo em um diretório de conjunto que contém propriedades de sua ferramenta personalizada para que as propriedades são carregadas quando o Visual Studio inicia. Para obter informações sobre como modificar o arquivo, consulte [plataforma Extensibilty parte 2](http://go.microsoft.com/fwlink/?LinkID=191489) no blog da equipe de projeto do Visual Studio.  
+ Este documento explica como criar um arquivo em um diretório de conjunto que contém propriedades de sua ferramenta personalizada para que as propriedades são carregadas quando o Visual Studio inicia. Para obter informações sobre como modificar o arquivo, consulte [plataforma Extensibilty parte 2](http://go.microsoft.com/fwlink/p/?linkid=191489) no blog da equipe de projeto do Visual Studio.  
   
 ### <a name="to-add-or-change-project-properties"></a>Para adicionar ou alterar propriedades do projeto  
   

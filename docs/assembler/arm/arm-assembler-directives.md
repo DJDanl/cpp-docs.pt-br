@@ -1,119 +1,115 @@
 ---
-title: "ARM Assembler Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Diretivas do Assembler ARM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/03/2018
 ---
-# ARM Assembler Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Na maior parte, o montador ARM Microsoft usa a linguagem de assembly do ARM, documentada no capítulo 7 do [guia de ferramentas do ARM montador](http://go.microsoft.com/fwlink/?LinkId=246102).  No entanto, as implementações Microsoft de algumas diretivas assembly diferem as diretivas de assembly do ARM.  Este artigo explica as diferenças.  
+# <a name="arm-assembler-directives"></a>Diretivas do assembler ARM
+A maior parte do tempo, o assembler ARM Microsoft usa a linguagem de assembly do ARM, que está documentada no capítulo 7 da [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102). No entanto, as implementações Microsoft algumas diretivas de assembly diferem as diretivas de assembly do ARM. Este artigo explica as diferenças.  
   
-## Implementações Microsoft de diretivas de Assembly do ARM  
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft implementações das diretivas de Assembly do ARM  
  ÁREA  
- Montador ARM da Microsoft oferece suporte a esses atributos de área: ALINHAR, código, CODEALIGN, dados, NOINIT, READONLY, READWRITE, POLEGAR, ARM.  
+ O assembler ARM Microsoft dá suporte a esses atributos de área: ALINHAR, código, CODEALIGN, dados, NOINIT, READONLY, READWRITE, THUMB, ARM.  
   
- Todos, exceto o POLEGAR e o ARM funcionam conforme documentado na [guia de ferramentas do ARM montador](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Todos exceto THUMB e ARM funcionam conforme documentado no [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
- Montador Microsoft ARM, POLEGAR indica que uma seção de código contém código Thumb e é o padrão para seções de código.  ARM indica que a seção contém código ARM.  
+ Em assembler ARM Microsoft, THUMB indica que uma seção de código contém código Thumb e é o padrão para seções de código.  ARM indica que a seção contém código ARM.  
   
  ATTR  
  Sem suporte.  
   
  CODE16  
- Não é suportada porque ele implica a sintaxe do polegar UAL pre, montador Microsoft ARM permite.  Use a diretiva de POLEGAR, juntamente com sintaxe UAL.  
+ Não tem suporte porque isso implica pre-UAL Thumb a sintaxe, que o assembler ARM Microsoft não permite.  Use a diretiva de digital em vez disso, juntamente com a sintaxe do UAL.  
   
- COMUM  
+ COMUNS  
  Não há suporte para a especificação de um alinhamento para a região comum.  
   
  DCDO  
  Sem suporte.  
   
  DN, QN, SN  
- Não há suporte para a especificação de um tipo ou uma pista no registro de alias.  
+ Não há suporte para a especificação de um tipo ou uma rota no registro de alias.  
   
  ENTRADA  
  Sem suporte.  
   
  EQU  
- Não há suporte para a especificação de um tipo de símbolo definido.  
+ Não há suporte para a especificação de um tipo para o símbolo definido.  
   
  EXPORTAÇÃO e GLOBAL  
  ```  
-  
 EXPORTsym {[type]}  
-  
 ```  
   
- `sym`é o símbolo a ser exportado.  `[type]`, se especificado, pode ser `[DATA]` para indicar que o símbolo aponta para dados ou `[FUNC]` para indicar que o símbolo aponta para o código.  
+ `sym`é o símbolo a ser exportado.  `[type]`, se especificado, pode ser `[DATA]` para indicar que o símbolo aponta para dados ou `[FUNC]` para indicar que o símbolo de pontos de código.  
   
  GLOBAL é um sinônimo para exportação.  
   
  EXPORTAS  
  Sem suporte.  
   
- MOLDURA  
+ QUADRO  
  Sem suporte.  
   
  FUNÇÃO e PROC  
- Embora a sintaxe assembly suporta a especificação de um personalizado convenção de chamada em procedimentos listando registradores são salvar chamador e aqueles que são chamado salvar, o montador Microsoft ARM aceita a sintaxe mas ignora as listas de registro.  As informações de depuração são produzidas pelo montador suporta padrão convenção de chamada.  
+ Embora a sintaxe de assembly oferece suporte à especificação de um personalizado convenção de chamada em procedimentos, listando os registros de salvamento do chamador e aqueles que são receptor salvamento, do assembler ARM Microsoft aceita a sintaxe e ignora as listas de registro.  As informações de depuração que são produzidas pelo assembler oferece suporte somente a convenção de chamada de padrão.  
   
  IMPORTAÇÃO e EXTERN  
  ```  
-  
 IMPORT sym{, WEAK alias{, TYPE t}}  
-  
 ```  
   
  `sym`é o nome do símbolo a ser importado.  
   
- Se FRACO `alias` for especificado, indica que `sym` é um externo fraco.  Não se for encontrada nenhuma definição para ele em tempo de link, em vez disso, todas as referências a ele ligar para `alias`.  
+ Se FRACA `alias` for especificado, ele indicará que `sym` é um externo fraco. Se nenhuma definição para ele é encontrada em vez do link, todas as referências a ele em vez disso, associar a `alias`.  
   
- Se tipo de  `t` for especificado, em seguida, `t` indica como o vinculador deve tentar resolver `sym`.  Esses valores para `t` são possíveis:   
-1 — Não realize uma pesquisa de biblioteca`sym`   
-2 – Realizar uma pesquisa de biblioteca`sym`   
-3 —`sym` é um alias de `alias` \(padrão\)  
+ Se tipo `t` for especificado, então `t` indica como o vinculador deve tentar resolver `sym`.  Esses valores para `t` são possíveis:   
+1 — não execute uma pesquisa de biblioteca para`sym`  
+2 – realizar uma pesquisa de biblioteca para`sym`  
+3 –`sym` é um alias para `alias` (padrão)  
   
- EXTERNO é um sinônimo para importação, exceto que `sym` é importado apenas se houver referências a ele no assembly atual.  
+ EXTERN é um sinônimo para importação, exceto que `sym` são importados apenas se houver referência a ele no assembly atual.  
   
  MACRO  
- Não há suporte para o uso de uma variável para o código de condição de uma macro.  Valores padrão para parâmetros não são suportados de macro.  
+ Não há suporte para o uso de uma variável para manter o código de condição de uma macro. Valores padrão para parâmetros não têm suporte de macro.  
   
  NOFP  
  Sem suporte.  
   
- OPT, TTL, SUBT  
- Não é suportada porque o montador ARM Microsoft não produz listagens.  
+ ACEITAR, TTL, SUBT  
+ Não tem suporte porque o assembler ARM Microsoft não produzir listagens.  
   
  PRESERVE8  
  Sem suporte.  
   
- RELOC  
- `RELOC n`só podem seguir uma instrução ou uma diretiva de definição de dados.  Não há nenhum "símbolo anônimo" que pode ser realocado.  
+ REALOCAÇÃO  
+ `RELOC n`só pode seguir uma instrução ou uma diretiva de definição de dados. Não há nenhum "símbolo anônimo" que pode ser realocado.  
   
- EXIGEM  
+ EXIGIR  
  Sem suporte.  
   
  REQUIRE8  
  Sem suporte.  
   
  THUMBX  
- Não é suportada porque o montador ARM da Microsoft não suporta o conjunto de instruções Thumb\-2EE.  
+ Não tem suportada porque o assembler ARM Microsoft não oferece suporte para o conjunto de instruções Thumb 2EE.  
   
-## Consulte também  
- [ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de linha de comando do Assembler ARM](../../assembler/arm/arm-assembler-command-line-reference.md)   
+ [Mensagens de diagnóstico do assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)

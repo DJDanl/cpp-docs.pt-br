@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f30254c1c18f49bf7e125fc855a32e9e8d2b8154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43eff661ff9a72ca72554a87b2177cbe07ad10f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-registry-component-registrar"></a>Componente de registro ATL (Registrar)
 O registrador da ATL fornece acesso otimizado para o registro do sistema por meio de uma interface personalizada. O registrador é free-thread e permite a vinculação estática de código para clientes do C++.  

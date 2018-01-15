@@ -1,32 +1,33 @@
 ---
-title: "Compila&#231;&#227;o e teste o projeto de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles de composição, compilação e teste o projeto"
-  - "controles de composição, contêiner para"
+title: Compilar e testar o projeto ATL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- composite controls, building and testing the project
+- composite controls, containers for
 ms.assetid: 5c1541f8-f6cb-4c22-bd22-c66bcfbaa077
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0a3dbd570a16228c02215560e8133a77b98a2489
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Compila&#231;&#227;o e teste o projeto de ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="building-and-testing-the-atl-project"></a>Compilar e testar o projeto ATL
+Conforme mencionado em [inserindo um controle composto](../atl/inserting-a-composite-control.md), um dos componentes inicias do projeto é uma página HTML padrão que hospeda o novo controle composto. Depois de terminar de modificar o controle composto, clique em **compilar solução** ou **recompilar solução** do **criar** menu. Depois que o projeto é compilado com êxito, carregar a página HTML, localizada no diretório raiz do seu projeto do controle composto, no Internet Explorer ou outro navegador e testar a funcionalidade de seu controle.  
+  
+ Você também pode testar o controle composto usando a ferramenta de contêiner de teste, ou qualquer outro aplicativo que pode hospedar um controle ActiveX. Consulte [testando propriedades e eventos com contêiner de teste](../mfc/testing-properties-and-events-with-test-container.md) para obter informações sobre como acessar o contêiner de teste.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)
 
-Como mencionado em [inserindo um controle composto](../atl/inserting-a-composite-control.md), um dos componentes inicial do projeto é uma página HTML padrão que hospeda o novo controle composto.  Depois que você concluir alterar o controle, clique **Compilar solução** ou **Recompilar solução** composto do menu de **Compilar** .  Depois de projeto as compilações com êxito, carregar o página HTML, localizado no diretório raiz do projeto de controle composto, no Internet Explorer ou outro navegador e testar a funcionalidade do controle.  
-  
- Você também pode testar seu controle composto usando a ferramenta do contêiner de teste, ou qualquer outro aplicativo que pode hospedar um controle ActiveX.  Consulte [Propriedades e eventos de teste com recipientes de teste](../mfc/testing-properties-and-events-with-test-container.md) para obter informações sobre como acessar o recipiente de teste.  
-  
-## Consulte também  
- [Fundamentos do controle composto](../Topic/ATL%20Composite%20Control%20Fundamentals.md)

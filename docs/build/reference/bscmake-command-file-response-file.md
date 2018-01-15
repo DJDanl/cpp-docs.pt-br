@@ -1,40 +1,40 @@
 ---
-title: "Arquivo de comando BSCMAKE (arquivo de resposta) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSCMAKE, arquivo de comando"
-  - "BSCMAKE, arquivo de resposta"
-  - "arquivos de comando"
-  - "arquivos de comando, BSCMAKE"
-  - "arquivos de resposta"
-  - "arquivos de resposta, BSCMAKE"
+title: Arquivo de comando BSCMAKE (arquivo de resposta) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BSCMAKE, response file
+- BSCMAKE, command file
+- response files, BSCMAKE
+- command files, BSCMAKE
+- response files
+- command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0c250af9f1af96bb051be0b2cd347ecd8d98d809
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Arquivo de comando BSCMAKE (arquivo de resposta)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Você pode fornecer a parte ou qualquer linha de comando entrou em um arquivo de comando.  Especificar o arquivo de comando usando a seguinte sintaxe:  
+# <a name="bscmake-command-file-response-file"></a>Arquivo de comando BSCMAKE (arquivo de resposta)
+Você pode fornecer parte ou toda a entrada de linha de comando em um arquivo de comando. Especifique o arquivo de comando usando a seguinte sintaxe:  
   
 ```  
 BSCMAKE @filename  
 ```  
   
- Apenas um arquivo de comando é permitido.  Você pode especificar um caminho com o *nome de arquivo*.  Antecedeu *o nome do arquivo* com uma arroba \(@\).  BSCMAKE pressupõe que uma extensão.  Você pode especificar *sbrfiles* adicionais na linha de comando após *o nome do arquivo*.  O arquivo de comando é um arquivo de texto que contém entrada a BSCMAKE na mesma ordem que você especificaria o na linha de comando.  Separar os argumentos de linha de comando com um ou mais espaços, guias, ou caracteres de nova linha.  
+ Arquivo de comando somente uma é permitido. Você pode especificar um caminho com *filename*. Preceder *filename* com um sinal de arroba (@). BSCMAKE não assume uma extensão. Você pode especificar adicionais *sbrfiles* na linha de comando após *filename*. O arquivo de comando é um arquivo de texto que contém a entrada para BSCMAKE na mesma ordem como seria especificado na linha de comando. Separe os argumentos de linha de comando com um ou mais espaços, tabulações ou caracteres de nova linha.  
   
  O comando a seguir chama BSCMAKE usando um arquivo de comando:  
   
@@ -42,7 +42,7 @@ BSCMAKE @filename
 BSCMAKE @prog1.txt  
 ```  
   
- O seguinte é um arquivo de comando de exemplo:  
+ Este é um arquivo de comando de exemplo:  
   
 ```  
 /n /v /o main.bsc /El  
@@ -53,5 +53,5 @@ verdate.h c:\src\inc\screen.h
 file1.sbr file2.sbr file3.sbr file4.sbr  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de BSCMAKE](../../build/reference/bscmake-reference.md)

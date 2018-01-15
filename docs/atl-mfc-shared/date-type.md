@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b487cc29bb61943bca676b3473897f04be59230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-type"></a>Tipo de data
 O **data** tipo é implementado usando um número de ponto flutuante de 8 bytes. Dias são representados por incrementos de números inteiros, iniciando em 30 de dezembro de 1899, meia-noite como zero hora. Os valores de hora são expressos como o valor absoluto da parte fracionária do número. A tabela a seguir ilustra várias datas junto com seus **data** equivalente numérico do tipo:  

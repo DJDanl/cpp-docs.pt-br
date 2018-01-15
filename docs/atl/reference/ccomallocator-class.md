@@ -1,11 +1,10 @@
 ---
-title: Classe CComAllocator | Documentos do Microsoft
+title: Classe CComAllocator | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,38 +13,22 @@ f1_keywords:
 - ATLBASE/ATL::CComAllocator::Allocate
 - ATLBASE/ATL::CComAllocator::Free
 - ATLBASE/ATL::CComAllocator::Reallocate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComAllocator class
+dev_langs: C++
+helpviewer_keywords: CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: d395d347e81b24462a41de5ae3b9d8791d7f82fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
-Essa classe fornece métodos para gerenciamento de memória usando rotinas de memória COM.  
+Essa classe fornece métodos para o gerenciamento de memória usando COM rotinas de memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,18 +42,18 @@ class CComAllocator
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComAllocator::Allocate](#allocate)|Chame esse método estático para alocar memória.|  
-|[CComAllocator::Free](#free)|Chame esse método estático para liberar a memória alocada.|  
-|[CComAllocator::Reallocate](#reallocate)|Chame esse método estático para realocar a memória.|  
+|[CComAllocator::Allocate](#allocate)|Chame este método estático para alocar memória.|  
+|[CComAllocator::Free](#free)|Chame este método estático para liberar a memória alocada.|  
+|[CComAllocator::Reallocate](#reallocate)|Chame este método estático para realocar a memória.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe é usada por [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para fornecer a memória COM rotinas de alocação. A classe equivalente, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornece os mesmos métodos usando rotinas de CRT.  
+ Essa classe é usada por [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para fornecer a memória COM as rotinas de alocação. A classe correspondente, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornece os mesmos métodos usando rotinas do CRT.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="allocate"></a>CComAllocator::Allocate  
- Chame essa função estática para alocar memória.  
+ Chame a função estática para alocar memória.  
   
 ```
 static void* Allocate(size_t nBytes) throw();
@@ -87,7 +70,7 @@ static void* Allocate(size_t nBytes) throw();
  Aloca memória. Consulte [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) para obter mais detalhes.  
   
 ##  <a name="free"></a>CComAllocator::Free  
- Chame essa função estática para liberar a memória alocada.  
+ Chame a função estática para liberar a memória alocada.  
   
 ```
 static void Free(void* p) throw();
@@ -101,7 +84,7 @@ static void Free(void* p) throw();
  Libera a memória alocada. Consulte [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) para obter mais detalhes.  
   
 ##  <a name="reallocate"></a>CComAllocator::Reallocate  
- Chame essa função estática para realocar a memória.  
+ Chame a função estática para realocar a memória.  
   
 ```
 static void* Reallocate(void* p, size_t nBytes) throw();
@@ -124,4 +107,3 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  [Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
  [Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-
