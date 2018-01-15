@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38b8389418657499d43263399f1a05b3a0326c84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78aa34f1790b2e86dae183b96c88b4ed35483927
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 Um tipo de classe de exibição que fornece a funcionalidade de uma janela de controle de edição e pode ser usado para implementar a funcionalidade do editor de texto simples.  
@@ -68,7 +69,7 @@ class CEditView : public CCtrlView
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

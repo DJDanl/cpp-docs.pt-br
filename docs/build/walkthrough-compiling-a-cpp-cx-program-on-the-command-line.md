@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3ae72f5f8cd268bae88a0b5f0be74864317ad0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++/CX na linha de comando
 Você pode criar programas Visual C++ destinados ao Windows Runtime e compilá-los na linha de comando. O Visual C++ oferece suporte a extensões de componente do Visual C++ (C++/CX), que possuem tipos e operadores adicionais destinados ao modelo de programação do Windows Runtime. Você pode usar C++/CX para compilar aplicativos para Windows Phone 8.1, do Windows Store e do Windows Desktop. Para obter mais informações, consulte [um Tour do c++ /CLI CX](http://msdn.microsoft.com/magazine/dn166929.aspx) e [extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md).  

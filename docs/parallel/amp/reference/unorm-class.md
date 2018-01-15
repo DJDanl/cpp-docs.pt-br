@@ -1,48 +1,31 @@
 ---
-title: Classe unorm | Documentos do Microsoft
+title: Classe unorm | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - unorm
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fffce416bebda4bcc1d5aa0078135aff27bdb7e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm-class"></a>Classe unorm
-Representa um número unorm. Cada elemento é flutuante ponto número no intervalo de [0.0 f, 1, 0F].  
+Representa um número unorm. Cada elemento é um flutuante ponto número no intervalo de [0.0 f, 1.0 f].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,22 +35,22 @@ class unorm;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor unorm](#ctor)|Sobrecarregado. Construtor padrão. Inicialize 0.0 f.|  
+|[Construtor de unorm](#ctor)|Sobrecarregado. Construtor padrão. Inicialize 0.0 f.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|unorm::Operator-||  
-|unorm::operator float|Operador de conversão. Converter o número unorm flutuante valor de ponto.|  
+|unorm::Operator –||  
+|unorm::operator float|Operador de conversão. Converter o número de unorm um flutuante valor de ponto.|  
 |unorm::Operator * =||  
 |unorm::Operator / =||  
 |unorm::Operator + +||  
-|+ = unorm::Operator||  
+|+ unorm::Operator =||  
 |unorm::Operator =||  
 |unorm::Operator =||  
   
@@ -124,8 +107,7 @@ inline explicit unorm(
  O valor usado para inicializar.  
   
  `_Other`  
- O objeto de norma usado para inicializar.  
+ O objeto de modelo usado para inicializar.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
-

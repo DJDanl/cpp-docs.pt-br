@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be77c7986675fe30b4e2b1ea12287c6a83b4d66f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a1da85da1c7e56f16ec98dd78bb0af58c242a99d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-attributes-reference"></a>Referência de atributos C++
 A Microsoft define um conjunto de atributos que simplificam a programação COM e desenvolvimento de tempo de execução de linguagem comum do .NET Framework. Quando você incluir atributos nos arquivos de origem, o compilador funciona com provedor DLLs para inserir código ou modificar o código nos arquivos de objeto gerado.  

@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 695e3e07af26c709dadc70935e1e4d72705ecab8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-containers-and-objects"></a>Contêineres e objetos em paralelo
 A biblioteca de padrões paralelos (PPL) inclui vários contêineres e objetos que fornecem acesso thread-safe para seus elementos.  

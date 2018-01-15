@@ -1,29 +1,31 @@
 ---
-title: "M&#233;todo HStringReference::CopyTo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Método Hstringreference: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 179d9b14-1ced-4b16-b297-19ca1e92a462
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5fb6ac1f645207c048e88078c7fcdc8297f8d1b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo HStringReference::CopyTo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia o objeto HStringReference atual para um objeto HSTRING.  
+# <a name="hstringreferencecopyto-method"></a>Método HStringReference::CopyTo
+Copia o HStringReference atual objeto para um objeto HSTRING.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -32,17 +34,17 @@ HRESULT CopyTo(
    ) const throw();  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `str`  
- O HSTRING que recebe a cópia.  
+ HSTRING que recebe a cópia.  
   
-## Comentários  
- Este método chama a função [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx).  
+## <a name="remarks"></a>Comentários  
+ Este método chama o [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) função.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe HStringReference](../windows/hstringreference-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45121b3dba14e5672333debf364f5aea2e3e3cd5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44130ba1991a9e14340e44427e0bb80c5bac0a47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="contextunblockunbalanced-class"></a>Classe context_unblock_unbalanced
 Esta classe descreve uma exceção lançada quando chamadas para o `Block` e `Unblock` métodos de um `Context` objeto não estão emparelhados corretamente.  
@@ -35,7 +36,7 @@ class context_unblock_unbalanced : public std::exception;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::common_type
-dev_langs:
-- C++
+f1_keywords: type_traits/std::common_type
+dev_langs: C++
 helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d0da3f7ce0ea655bf1dbe00439b7db13348e7ef7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 90b6f671e33af5ae3a58d51d7cbf23f1beed494c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commontype-class"></a>Classe common_type
 Determina o tipo comum de um ou mais tipos.  
@@ -130,7 +127,6 @@ ClassType: true
   
 ## <a name="see-also"></a>Consulte também  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

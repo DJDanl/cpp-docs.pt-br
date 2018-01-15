@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>Compilador C4055 de aviso (nível 1)  
   
 'conversão de ': de ponteiro de dados 'type1' para o ponteiro de função 'type2'  

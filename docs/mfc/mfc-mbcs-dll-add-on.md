@@ -1,7 +1,7 @@
 ---
 title: Suplemento MFC MBCS DLL | Microsoft Docs
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 1/04/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-windows
@@ -11,28 +11,27 @@ dev_langs: C++
 helpviewer_keywords:
 - MBCS
 - MFC
-ms.assetid: bebec0ff-e019-42ca-b5df-8c218ac5b54a
-caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 176ed47b4d6a799cf53d2a1cea8cb232f1c2c4aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6f134110ff95956cc37d6e038a680ff27cbc298
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>Suplemento MFC MBCS DLL
- Você precisa as DLLs multibyte para compilar um projeto no Visual Studio 2015 que tem o **do conjunto de caracteres** propriedade definida como **do conjunto de caracteres multibyte Use** ou **não definido**.  
 
-**Visual Studio 2013**: baixar o DLL em [biblioteca MFC Multibyte para Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770).
+Suporte para MFC e suas bibliotecas (MBCS) do conjunto de caracteres multibyte exige uma etapa adicional durante a instalação do Visual Studio no Visual Studio 2013, 2015 e 2017.
 
-**Visual Studio 2015**: A DLL está incluída nos componentes de instalação do Visual C++. Visual C++ e MFC são configurações de instalação opcional na instalação do Visual Studio. Para certificar-se de que o MFC é instalado, escolha **personalizado** na instalação e, em **linguagens de programação**, certifique-se de que **Visual C++** e **Microsoft Foundation Classes para C++** estão selecionados. Se você já tiver instalado o Visual Studio, você deverá instalar o Visual C++ e/ou MFC quando você tenta criar um projeto MFC.  
-  
-**2017 do Visual Studio**: A DLL é instalada com o **desenvolvimento de área de trabalho com C++** carga de trabalho quando você seleciona **suporte MFC e ATL** do **decomponentesopcionais** painel.
+**Visual Studio 2013**: por padrão, as bibliotecas MFC instaladas no Visual Studio 2013 somente suporte ao desenvolvimento de Unicode. Você precisa as DLLs de MBCS para compilar um projeto no Visual Studio 2013 que tenha o **do conjunto de caracteres** propriedade definida como **do conjunto de caracteres multibyte Use** ou **não definido**. Baixe o DLL em [biblioteca MFC Multibyte para Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770).
 
-  
-## <a name="see-also"></a>Consulte também  
- [Versões de biblioteca do MFC](../mfc/mfc-library-versions.md)
+**Visual Studio 2015**: tanto Unicode e MBCS MFC DLLs são incluídos nos componentes de instalação do Visual C++, mas o suporte para MFC não está instalado por padrão. Visual C++ e MFC são configurações de instalação opcional na instalação do Visual Studio. Para certificar-se de que o MFC é instalado, escolha **personalizado** na instalação e, em **linguagens de programação**, certifique-se de que **Visual C++** e **Microsoft Foundation Classes para C++** estão selecionados. Se você já tiver instalado o Visual Studio, você deverá instalar o Visual C++ e/ou MFC quando você tenta criar um projeto MFC.
+
+**2017 do Visual Studio**: O Unicode e MBCS MFC DLLs são instalados com o **desenvolvimento de área de trabalho com C++** carga de trabalho quando você seleciona **suportam a MFC e ATL** do  **Componentes opcionais** painel. Se a instalação não incluir esses componentes, você pode iniciar o instalador do **novos projetos** caixa de diálogo usando o **abrir instalador do Visual Studio** link.
+
+## <a name="see-also"></a>Consulte também
+
+[Versões de biblioteca do MFC](../mfc/mfc-library-versions.md)
 

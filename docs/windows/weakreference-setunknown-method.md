@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82a556ddc855c2ab9793f74fa091c464e094cb80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 682a80859c4a65854efbc5886eacefdf82cc5817
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakreferencesetunknown-method"></a>Método WeakReference::SetUnknown
 Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  

@@ -1,44 +1,26 @@
 ---
-title: omp_get_nested | Documentos do Microsoft
+title: omp_get_nested | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_get_nested
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_get_nested OpenMP function
+f1_keywords: omp_get_nested
+dev_langs: C++
+helpviewer_keywords: omp_get_nested OpenMP function
 ms.assetid: e9784847-516e-40d3-89f7-b8b6898d8667
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8d38a516844f22e5f6f07b484f9c11a297d8560c
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 557625a40707119633adc1d73775b1e66f67efec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompgetnested"></a>omp_get_nested
 Retorna um valor que indica se o paralelismo aninhado está habilitado.  

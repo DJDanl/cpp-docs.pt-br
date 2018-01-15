@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84b68f4fa5ba207a9cb615877936ca08bdc2259b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae039aec64d761a82ccf71ee12965c0deb9c7aed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-c-amp"></a>Referência (C++ AMP)
 Esta seção contém informações de referência para o tempo de execução C++ Accelerated Massive Parallelism (C++ AMP).  

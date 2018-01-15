@@ -1,11 +1,10 @@
 ---
-title: Classe concurrent_priority_queue | Documentos do Microsoft
+title: Classe concurrent_priority_queue | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,37 +18,22 @@ f1_keywords:
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
-dev_langs:
-- C++
-helpviewer_keywords:
-- concurrent_priority_queue class
+dev_langs: C++
+helpviewer_keywords: concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
-O `concurrent_priority_queue` classe é um contêiner que permite que vários threads para itens simultaneamente push e pop. Itens são exibidos em ordem de prioridade em que a prioridade é determinada por um functor fornecido como um argumento de modelo.  
+O `concurrent_priority_queue` classe é um contêiner que permite que vários threads para itens simultaneamente por push e pop. Itens são disparados em ordem de prioridade, onde a prioridade é determinada por um functor fornecido como um argumento de modelo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,13 +47,13 @@ template <typename T,
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- O tipo de dados dos elementos a ser armazenado na fila de prioridade.  
+ O tipo de dados dos elementos a ser armazenada na fila de prioridade.  
   
  `_Compare`  
- O tipo de objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa na fila de prioridade. Esse argumento é opcional e o predicado binário `less<``T``>` é o valor padrão.  
+ O tipo do objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa na fila de prioridade. Esse argumento é opcional e o predicado binário `less<T>` é o valor padrão.  
   
  `_Ax`  
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória para a fila de prioridade simultâneas. Esse argumento é opcional e o valor padrão é `allocator<``T``>`.  
+ O tipo que representa o objeto de alocador armazenados que encapsula os detalhes sobre a alocação e desalocação de memória para a fila de prioridade simultâneas. Esse argumento é opcional e o valor padrão é `allocator<T>`.  
   
 ## <a name="members"></a>Membros  
   
@@ -77,8 +61,8 @@ template <typename T,
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`allocator_type`|Um tipo que representa a classe do alocador na fila de prioridade simultâneas.|  
-|`const_reference`|Um tipo que representa um const fazem referência a um elemento do tipo armazenado em uma fila de prioridade simultâneas.|  
+|`allocator_type`|Um tipo que representa a classe de alocador para a fila de prioridade simultâneas.|  
+|`const_reference`|Um tipo que representa uma constante fazem referência a um elemento do tipo armazenado em uma fila de prioridade simultâneas.|  
 |`reference`|Um tipo que representa uma referência a um elemento do tipo armazenado em uma fila de prioridade simultâneas.|  
 |`size_type`|Um tipo que conta o número de elementos em uma fila de prioridade simultâneas.|  
 |`value_type`|Um tipo que representa o tipo de dados armazenado em uma fila de prioridade simultâneas.|  
@@ -93,22 +77,22 @@ template <typename T,
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[clear](#clear)|Apaga todos os elementos na ordem de prioridade simultânea. Esse método não é uma prova de simultaneidade.|  
-|[empty](#empty)|Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é uma prova de simultaneidade.|  
-|[get_allocator](#get_allocator)|Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
-|[push](#push)|Sobrecarregado. Adiciona um elemento para a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
-|[size](#size)|Retorna o número de elementos na fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
-|[swap](#swap)|Alterna o conteúdo de duas filas de prioridade simultâneas. Esse método não é uma prova de simultaneidade.|  
-|[try_pop](#try_pop)|Remove e retorna o elemento mais alto de prioridade da fila se a fila está vazio. Esse método é uma prova de simultaneidade.|  
+|[clear](#clear)|Apaga todos os elementos na prioridade de simultâneas. Este método não é seguro de simultaneidade.|  
+|[empty](#empty)|Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é seguro de simultaneidade.|  
+|[get_allocator](#get_allocator)|Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é seguro de simultaneidade.|  
+|[push](#push)|Sobrecarregado. Adiciona um elemento para a fila de prioridade simultâneas. Esse método é seguro de simultaneidade.|  
+|[size](#size)|Retorna o número de elementos na fila de prioridade simultâneas. Esse método é seguro de simultaneidade.|  
+|[swap](#swap)|Alterna o conteúdo de duas filas simultâneas de prioridade. Este método não é seguro de simultaneidade.|  
+|[try_pop](#try_pop)|Remove e retorna o elemento mais alto de prioridade da fila se a fila não está vazio. Esse método é seguro de simultaneidade.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_priority_queue` objeto a este. Esse método não é uma prova de simultaneidade.|  
+|[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_priority_queue` deste objeto. Este método não é seguro de simultaneidade.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações detalhadas sobre o `concurrent_priority_queue` classe, consulte [paralela contêineres e objetos](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Para obter informações detalhadas sobre o `concurrent_priority_queue` de classe, consulte [objetos e contêineres paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `concurrent_priority_queue`  
@@ -120,7 +104,7 @@ template <typename T,
   
 ##  <a name="clear"></a>Limpar 
 
- Apaga todos os elementos na ordem de prioridade simultânea. Esse método não é uma prova de simultaneidade.  
+ Apaga todos os elementos na prioridade de simultâneas. Este método não é seguro de simultaneidade.  
   
 ```
 void clear();
@@ -169,7 +153,7 @@ concurrent_priority_queue(
  A classe de alocador a ser usada com esse objeto.  
   
  `_Init_capacity`  
- A capacidade inicial do `concurrent_priority_queue` objeto.  
+ A capacidade inicial igual a `concurrent_priority_queue` objeto.  
   
  `_Begin`  
  A posição do primeiro elemento no intervalo de elementos a serem copiados.  
@@ -178,24 +162,24 @@ concurrent_priority_queue(
  A posição do primeiro elemento além do intervalo de elementos a serem copiados.  
   
  `_Src`  
- A fonte `concurrent_priority_queue` copiar ou mover elementos de objeto.  
+ A fonte `concurrent_priority_queue` objeto para copiar ou mover os elementos do.  
   
 ### <a name="remarks"></a>Comentários  
- Todos os construtores armazenam um objeto alocador `_Al` e inicializar a fila de prioridade.  
+ Todos os construtores armazenam um objeto de alocador `_Al` e inicializar a fila de prioridade.  
   
  O primeiro construtor Especifica uma fila de prioridade inicial vazio e, opcionalmente, especifica um alocador.  
   
  O segundo construtor Especifica uma fila de prioridade com uma capacidade inicial `_Init_capacity` e, opcionalmente, especifica um alocador.  
   
- O terceiro construtor especifica valores fornecidos pelo intervalo iterador [ `_Begin`, `_End`) e, opcionalmente, especifica um alocador.  
+ O terceiro construtor especifica valores fornecidos pelo intervalo iterator [ `_Begin`, `_End`) e, opcionalmente, especifica um alocador.  
   
- Os construtores quarto e quinto especificam uma cópia da fila de prioridade `_Src`.  
+ Os quarto e quinto construtores especificar uma cópia da fila de prioridade `_Src`.  
   
  Os sexto e o sétimo construtores especificam um movimento da fila de prioridade `_Src`.  
   
 ##  <a name="empty"></a>vazio 
 
- Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é uma prova de simultaneidade.  
+ Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é seguro de simultaneidade.  
   
 ```
 bool empty() const;
@@ -206,7 +190,7 @@ bool empty() const;
   
 ##  <a name="get_allocator"></a>get_allocator 
 
- Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.  
+ Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é seguro de simultaneidade.  
   
 ```
 allocator_type get_allocator() const;
@@ -217,7 +201,7 @@ allocator_type get_allocator() const;
   
 ##  <a name="operator_eq"></a>operador = 
 
- Atribui o conteúdo de outro `concurrent_priority_queue` objeto a este. Esse método não é uma prova de simultaneidade.  
+ Atribui o conteúdo de outro `concurrent_priority_queue` deste objeto. Este método não é seguro de simultaneidade.  
   
 ```
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -230,11 +214,11 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
  A fonte `concurrent_priority_queue` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência a esta `concurrent_priority_queue` objeto.  
+ Uma referência a este `concurrent_priority_queue` objeto.  
   
-##  <a name="push"></a>envio por push 
+##  <a name="push"></a>push 
 
- Adiciona um elemento para a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.  
+ Adiciona um elemento para a fila de prioridade simultâneas. Esse método é seguro de simultaneidade.  
   
 ```
 void push(const value_type& _Elem);
@@ -248,7 +232,7 @@ void push(value_type&& _Elem);
   
 ##  <a name="size"></a>tamanho 
 
- Retorna o número de elementos na fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.  
+ Retorna o número de elementos na fila de prioridade simultâneas. Esse método é seguro de simultaneidade.  
   
 ```
 size_type size() const;
@@ -260,9 +244,9 @@ size_type size() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho retornado é garantido para incluir todos os elementos adicionados por chamadas para a função `push`. No entanto, ele pode não refletir resultados de operações simultâneas pendentes.  
   
-##  <a name="swap"></a>troca 
+##  <a name="swap"></a>swap 
 
- Alterna o conteúdo de duas filas de prioridade simultâneas. Esse método não é uma prova de simultaneidade.  
+ Alterna o conteúdo de duas filas simultâneas de prioridade. Este método não é seguro de simultaneidade.  
   
 ```
 void swap(concurrent_priority_queue& _Queue);
@@ -270,11 +254,11 @@ void swap(concurrent_priority_queue& _Queue);
   
 ### <a name="parameters"></a>Parâmetros  
  `_Queue`  
- O `concurrent_priority_queue` objeto trocar o conteúdo com.  
+ O objeto `concurrent_priority_queue` com o qual trocar conteúdo.  
   
 ##  <a name="try_pop"></a>try_pop 
 
- Remove e retorna o elemento mais alto de prioridade da fila se a fila está vazio. Esse método é uma prova de simultaneidade.  
+ Remove e retorna o elemento mais alto de prioridade da fila se a fila não está vazio. Esse método é seguro de simultaneidade.  
   
 ```
 bool try_pop(reference _Elem);
@@ -282,15 +266,14 @@ bool try_pop(reference _Elem);
   
 ### <a name="parameters"></a>Parâmetros  
  `_Elem`  
- Uma referência a uma variável que será preenchida com o elemento de prioridade mais alto, se a fila está vazio.  
+ Uma referência a uma variável que será preenchida com o elemento de prioridade mais alto, se a fila não está vazio.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se um valor foi aparecido, `false` caso contrário.  
+ `true`Se um valor foi exibido, `false` caso contrário.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
-
 
 
 

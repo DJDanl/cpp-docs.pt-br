@@ -1,48 +1,50 @@
 ---
-title: "Alterando as propriedades de um recurso | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "propriedades [Visual Studio], recursos"
-  - "recursos [Visual Studio], propriedades"
+title: Alterando as propriedades de um recurso | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- properties [Visual Studio], resources
+- resources [Visual Studio], properties
 ms.assetid: c4373b36-2651-4954-afa6-3f66300673d4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a79c4bfa17abacaa68f5c6be608ff911505d9912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Alterando as propriedades de um recurso
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="changing-the-properties-of-a-resource"></a>Alterando as propriedades de um recurso
+### <a name="to-edit-the-properties-of-a-resource"></a>Para editar as propriedades de um recurso  
+  
+1.  Em [exibição recursos](../windows/resource-view-window.md), o recurso que você deseja editar e escolha de atalho **propriedades** no menu de atalho.  
+  
+     **Observação** se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+  
+2.  No [janela propriedades](/visualstudio/ide/reference/properties-window), alterar as propriedades do recurso.  
+  
+### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>Para desfazer alterações feitas nas propriedades de um recurso  
+  
+1.  Verifique se que o recurso tem foco no modo de exibição de recursos.  
+  
+2.  Escolha **desfazer** do **editar** menu.  
+  
 
-### Para editar as propriedades de um recurso  
-  
-1.  Em [exibição recurso](../windows/resource-view-window.md), clique o recurso que deseja editar e escolha **propriedades** no menu de atalho.  
-  
-     **Observação** se seu projeto ainda não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  No [janela propriedades](../Topic/Properties%20Window.md), altere as propriedades do recurso.  
-  
-### Para desfazer uma alteração que você fez nas propriedades de um recurso  
-  
-1.  Verifique se que o recurso tem foco no modo de exibição de recurso.  
-  
-2.  Escolha **Desfazer** do **Editar** menu.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [Recursos em aplicativos](../Topic/Resources%20in%20Desktop%20Apps.md) no *Guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
   
  **Requisitos**  
   
  Nenhum  
   
-## Consulte também  
- [Editores de recursos](../mfc/resource-editors.md)
+## <a name="see-also"></a>Consulte também  
+ [Editores de recursos](../windows/resource-editors.md)

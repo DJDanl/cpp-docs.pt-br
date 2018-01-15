@@ -148,11 +148,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25a555048252039a2d888fe69d50b1a6ef422e4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0fa73588a2ee2b593e12f98cac387d9d4323ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmultimap-class"></a>Classe unordered_multimap
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variado de elementos do tipo `std::pair<const Key, Ty>`. A sequência é ordenada sem muita rigidez por uma função de hash, que particiona a sequência em um conjunto ordenado de subsequências chamado bucket. Dentro de cada bucket uma função de comparação determina se um par de elementos tem ordenação equivalente. Cada elemento armazena dois objetos, uma chave de classificação e um valor. A sequência é representada de forma a permitir pesquisa, inserção e remoção de um elemento com um número arbitrário de operações que podem ser independentes do número de elementos na sequência (tempo constante), pelo menos quando todos os buckets forem de comprimento aproximadamente igual. No pior caso, quando todos os elementos estiverem em um bucket, o número de operações será proporcional ao número de elementos na sequência (tempo linear). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.  

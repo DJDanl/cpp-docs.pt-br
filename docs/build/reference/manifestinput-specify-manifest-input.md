@@ -1,43 +1,43 @@
 ---
-title: "/MANIFESTINPUT (especificar entrada de manifesto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: -MANIFESTINPUT (especificar entrada de manifesto) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1eec78675845e3f738bb0b6b440b3a71f1fd572
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /MANIFESTINPUT (especificar entrada de manifesto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica um arquivo de entrada de manifesto para incluir no manifesto que é inserido na imagem.  
+# <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (especificar entrada de manifesto)
+Especifica um arquivo de manifesto de entrada para incluir no manifesto do que é inserido na imagem.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```c#  
+```  
 /MANIFESTINPUT:filename  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `filename`  
- O arquivo de manifesto a ser incluído no manifesto inserido.  
+ O arquivo de manifesto para incluir no manifesto inserido.  
   
-## Comentários  
- A opção de **\/MANIFESTINPUT** especifica o caminho de um arquivo de entrada para usar para criar o manifesto inserido em uma imagem executável.  Se você tiver vários arquivos de entrada de manifesto, use a opção várias vezes — uma vez para cada arquivo de entrada.  Os arquivos de entrada de manifesto são mesclados para criar o manifesto inserido.  Esta opção requer a opção de **\/MANIFEST:EMBED**.  
+## <a name="remarks"></a>Comentários  
+ O **/MANIFESTINPUT** opção especifica o caminho de um arquivo de entrada a ser usado para criar o manifesto inserido em uma imagem executável. Se você tiver o manifesto de vários arquivos de entrada, use a opção várias vezes, uma vez para cada arquivo de entrada. Os arquivos de manifesto de entrada são mesclados para criar o manifesto inserido. Essa opção requer o **/manifesto: inserir** opção.  
   
- Esta opção não pode ser definida diretamente no [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  Em vez disso, use a propriedade **Arquivos de Manifesto Adicionais** do projeto para especificar arquivos de manifesto adicionais a serem incluídos.  Para obter mais informações, consulte [Caixa de diálogo Entrada e Saída, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedade de \<Projectname\>](../../ide/input-and-output-manifest-tool.md).  
+ Essa opção não pode ser definida diretamente em [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Em vez disso, use o **arquivos de manifesto adicionais** propriedade do projeto para especificar os arquivos de manifesto adicionais para incluir. Para obter mais informações, consulte [entrada e saída, a ferramenta de manifesto, propriedades de configuração, \<Projectname > caixa de diálogo de páginas de propriedade](../../ide/input-and-output-manifest-tool.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

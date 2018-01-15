@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _callnewh
+apiname: _callnewh
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,20 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _callnewh
-dev_langs:
-- C++
-helpviewer_keywords:
-- _callnewh
+f1_keywords: _callnewh
+dev_langs: C++
+helpviewer_keywords: _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 37b95f22528690b1e9b37c38e2b63792906b5459
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 86085472c63d2ad3fbc1cf53d893bd8da2f8c244
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callnewh"></a>_callnewh
 Chama o *novo manipulador* atualmente instalado.  
@@ -71,7 +51,7 @@ int _callnewh(
  `size`  
  A quantidade de memória que o [novo operador](../../cpp/new-operator-cpp.md) tentou alocar.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

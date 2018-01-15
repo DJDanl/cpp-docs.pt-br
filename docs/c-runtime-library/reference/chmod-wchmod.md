@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c0db1569ea6a90892b7eb3d0d8f08f3c9fcf7115
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5abc8e8952f19f3314608085af42ddfdfef87936
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 Altera as configurações de permissão de arquivo.  
@@ -87,7 +71,7 @@ int _wchmod(
  `pmode`  
  Configuração de permissão para o arquivo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor de retorno de -1 indica falha. Se não for possível localizar o arquivo especificado, `errno` será definido como `ENOENT`; se um parâmetro for inválido, `errno` será definido como `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  

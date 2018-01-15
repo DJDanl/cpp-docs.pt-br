@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e21b07685943559bace8b8e2b0fbdebdb3a870c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a9e88a28ca99fdad07e91ab305944b2de276db8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 Calcula a tangente hiperbólica inversa.  
@@ -88,7 +89,7 @@ long double atanhl(
 |--------------|--------------|------------------|  
 |`atanh`, `atanhf`, `atanhl`|\<math.h>|\<cmath>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -119,7 +120,7 @@ atanh( 0.655794 ) = 0.785398
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   

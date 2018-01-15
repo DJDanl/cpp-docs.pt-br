@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo InvokeHelper::Invoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper::Invoke"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Invoke"
+title: "Método Invokehelper: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper::Invoke
+dev_langs: C++
+helpviewer_keywords: Invoke method
 ms.assetid: 98618815-c30e-4699-b3dd-203c91b1bf3b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8707ac96c0417eddb015d7e802433bf071dda80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo InvokeHelper::Invoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="invokehelperinvoke-method"></a>Método InvokeHelper::Invoke
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 STDMETHOD(  
@@ -62,45 +62,45 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `arg1`  
- O argumento 1.  
+ Argumento 1.  
   
  `arg2`  
- O argumento 2.  
+ Argumento 2.  
   
  `arg3`  
- O argumento 3.  
+ Argumento 3.  
   
  `arg4`  
- O argumento 4.  
+ Argumento de 4.  
   
  `arg5`  
- O argumento 5.  
+ Argumento de 5.  
   
  `arg6`  
- O argumento 6.  
+ Argumento 6.  
   
  `arg7`  
- O argumento 7.  
+ Argumento de 7.  
   
  `arg8`  
- O argumento 8.  
+ Argumento de 8.  
   
  `arg9`  
- O argumento 9.  
+ Argumento de 9.  
   
-## Valor de retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que descreve o erro.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve o erro.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Chama o manipulador de eventos cuja assinatura contém o número especificado de argumentos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** event.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estrutura InvokeHelper](../windows/invokehelper-structure.md)   
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

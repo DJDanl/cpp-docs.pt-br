@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9ce3d795816de7eced1927523aa57965f43603aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61112fc5c701c7fa027d98b873332fd00df3dfad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="txt-files-as-linker-input"></a>Arquivos .Txt como entrada de vinculador
 LINK espera vários arquivos de texto como entrada adicional. O [arquivo de comando](../../build/reference/link-command-files.md) especificador (@) e o [endereço Base](../../build/reference/base-base-address.md) (/base), [/DEF](../../build/reference/def-specify-module-definition-file.md), e [/ORDER](../../build/reference/order-put-functions-in-order.md) especificam de opções de todos os arquivos de texto. Esses arquivos podem ter qualquer extensão, não apenas ao. txt.  

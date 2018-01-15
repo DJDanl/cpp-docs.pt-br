@@ -29,11 +29,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 418b0d76292667da6a4083dc0565867b9d2c1f13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: tela de fundo
 Este artigo explica a natureza e a finalidade de soquetes do Windows. O artigo também:  

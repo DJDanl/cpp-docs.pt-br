@@ -1,69 +1,69 @@
 ---
-title: "aggregates | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.aggregates"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributo de agregações"
-  - "agregação [C++]"
-  - "objetos agregados [C++], atributo de agregações"
-  - "agregações [C++]"
+title: "agregações | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.aggregates
+dev_langs: C++
+helpviewer_keywords:
+- aggregates attribute
+- aggregation [C++]
+- aggregate objects [C++], aggregates attribute
+- aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f3fc74f10e0b5900030d48b37d1918de8807d152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# aggregates
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="aggregates"></a>aggregates
 Indica que o objeto agrega o objeto especificado pelo CLSID.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-[ aggregates(  
-clsid,  
-variable_name  
+      [ aggregates(  
+   clsid,  
+   variable_name  
 ) ]  
-  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `clsid`  
  Especifica o CLSID do objeto agregável.  
   
  `variable_name`  
- O nome da variável deve ser inserido. Essa variável contém o **IUnknown** do objeto que está sendo agregado.  
+ O nome da variável que deve ser inserido. Essa variável contém o **IUnknown** do objeto que está sendo agregado.  
   
-## Comentários  
- Quando aplicado a um objeto, o **agregações** atributo C\+\+ implementa um wrapper externo para o objeto que está sendo agregado \(especificada por `clsid`\).  
+## <a name="remarks"></a>Comentários  
+ Quando aplicado a um objeto, o **agregações** atributo C++ implementa um wrapper externo para o objeto que está sendo agregado (especificada por `clsid`).  
   
- Este atributo requer que o [coclass](../windows/coclass.md), [progid](../Topic/progid.md), ou [vi\_progid](../windows/vi-progid.md) atributo \(ou outro atributo implica um desses\) também ser aplicada ao mesmo elemento. Se qualquer atributo único é usado, os outros dois serão aplicados automaticamente. Por exemplo, se **progid** é aplicado, **vi\_progid** e **coclass** também são aplicadas.  
+ Este atributo requer que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicados ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se **progid** é aplicado, **vi_progid** e **coclass** também são aplicadas.  
   
  **Projetos ATL**  
   
- Se esse atributo for usado em um projeto que usa o ATL, altera o comportamento do atributo. Primeiro, a seguinte entrada é adicionada ao mapa de COM do objeto de destino:  
+ Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Primeiro, a seguinte entrada é adicionada ao mapa COM do objeto de destino:  
   
 ```  
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)  
 ```  
   
- Segundo, o [DECLARE\_GET\_CONTROLLING\_UNKNOWN](../Topic/DECLARE_GET_CONTROLLING_UNKNOWN.md) macro também é adicionada.  
+ Segundo, o [DECLARE_GET_CONTROLLING_UNKNOWN](../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) macro também é adicionada.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // cpp_attr_ref_aggregates.cpp  
@@ -90,24 +90,24 @@ struct CObject : IObject
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Aplica\-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**,`struct`|  
 |**Repetível**|Sim|  
-|**Atributos necessários**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi\_progid**.|  
+|**Atributos necessários.**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi_progid**.|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Atributos COM](../windows/com-attributes.md)   
+ [Atributos de classe](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
  [Agregável](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
- [COM\_INTERFACE\_ENTRY\_AUTOAGGREGATE\_BLIND](../Topic/COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
+ 

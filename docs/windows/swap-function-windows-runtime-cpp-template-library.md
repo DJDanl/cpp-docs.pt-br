@@ -14,11 +14,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b48be8c5cd4702d0d4ee2dd7d541829e3bf94ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e3278b21d57de0aa23e8b371ae286df4f64327b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Função de troca (Biblioteca em Tempo de Execução C++ do Windows Runtime )
 Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  

@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ae47ec92ecea46aba5f0e1bf144a34fd5532af9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinando quais DLLs devem ser redistribuídas
 
@@ -39,7 +40,7 @@ As DLLs redistribuíveis individuais também estão incluídas na instalação d
 
 Para determinar quais DLLs necessário redistribuir com seu aplicativo, colete uma lista de DLLs que seu aplicativo depende. Normalmente, eles estão listados como entradas para o vinculador de biblioteca de importação. Determinadas bibliotecas, como vcruntime e o Universal C Runtime Library (UCRT), são incluídas por padrão. Se seu aplicativo ou uma de suas dependências usa LoadLibrary ao carregar dinamicamente uma DLL, essa DLL pode não estar listado nas entradas para o vinculador. Uma maneira de coletar a lista de DLLs carregadas dinamicamente é executar dependência Walker (depends.exe) em seu aplicativo, conforme descrito em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Infelizmente, essa ferramenta está desatualizada e pode reportar que ele não é possível localizar determinadas DLLs.
 
-Quando você tem a lista de dependências, compará-la à lista vinculada no arquivo Redist encontrado no diretório de instalação do Microsoft Visual Studio, ou para a "lista REDIST" DLLs redistribuíveis que é mencionada na seção "Arquivos de código distribuível" dos termos de licença do Software Microsoft para sua cópia do Visual Studio. Para o Visual Studio de 2017, consulte [Código distribuível para o Microsoft Visual Studio 2017 (inclui utilitários, extensibilidade e arquivos do BuildServer)](http://go.microsoft.com/fwlink/?LinkId=823098). Para o Visual Studio 2015, consulte [Código distribuível para o Microsoft Visual Studio 2015 e Microsoft Visual Studio 2015 SDK (inclui utilitários e arquivos do BuildServer)](http://go.microsoft.com/fwlink/?LinkId=799794). Para Visual Studio 2013, a lista está disponível online em [Código distribuível para o Microsoft Visual Studio 2013 e o SDK do Microsoft Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=313603).
+Quando você tem a lista de dependências, compará-la à lista vinculada no arquivo Redist encontrado no diretório de instalação do Microsoft Visual Studio, ou para a "lista REDIST" DLLs redistribuíveis que é mencionada na seção "Arquivos de código distribuível" dos termos de licença do Software Microsoft para sua cópia do Visual Studio. Para o Visual Studio de 2017, consulte [Código distribuível para o Microsoft Visual Studio 2017 (inclui utilitários, extensibilidade e arquivos do BuildServer)](http://go.microsoft.com/fwlink/p/?linkid=823098). Para o Visual Studio 2015, consulte [Código distribuível para o Microsoft Visual Studio 2015 e Microsoft Visual Studio 2015 SDK (inclui utilitários e arquivos do BuildServer)](http://go.microsoft.com/fwlink/p/?linkid=799794). Para Visual Studio 2013, a lista está disponível online em [Código distribuível para o Microsoft Visual Studio 2013 e o SDK do Microsoft Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=313603).
 
 Em versões do Visual Studio antes de Visual Studio 2015, a biblioteca de tempo de execução do C (CRT) foi incluída como uma DLL redistribuível, em msvc*versão*. dll. A partir do Visual Studio 2015, as funções de CRT foram refatorar o vcruntime e a UCRT. Agora, a UCRT é um componente do sistema no Windows 10, gerenciado pelo Windows Update. Ele está disponível em todos os sistemas operacionais Windows 10. Para implantar seu aplicativo para sistemas operacionais anteriores, talvez seja necessário redistribuir a UCRT também. Uma versão anterior da UCRT é incluído nos arquivos de pacotes redistribuíveis do Visual Studio, que só é instalado em sistemas operacionais anteriores ao Windows 10, e apenas se nenhuma versão da UCRT já está instalado. Para obter uma versão instalável UCRT para sistemas de nível inferior como um pacote de atualização do sistema Microsoft, consulte [Windows 10 Universal C Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=48234) no Microsoft Download Center.
 
@@ -56,7 +57,7 @@ A tabela a seguir descreve algumas das DLLs Visual C++ que pode depender de seu 
 |MFC*versão*. dll|Microsoft Foundation Classes (MFC) de biblioteca.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md).|
 |MFC*versão* *idioma*. dll|Microsoft Foundation Classes (MFC) recursos de biblioteca.|Aplicativos que usam recursos de idioma específico para MFC.|
 |MFC*versão*u.dll|Biblioteca do MFC com suporte a Unicode.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) necessita de suporte de Unicode.|
-|mfcmifc80|Biblioteca do MFC Interfaces gerenciadas.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index).|
+|mfcmifc80.dll|Biblioteca do MFC Interfaces gerenciadas.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index).|
 |mfcm*versão*. dll|Biblioteca gerenciada do MFC.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index).|
 |mfcm*versão*u.dll|Biblioteca gerenciada MFC com suporte a Unicode.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index) necessita de suporte de Unicode.|
 |vcamp*versão*. dll|Biblioteca de AMP para código nativo.|Aplicativos que usam o [biblioteca C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) código.|

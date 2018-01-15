@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d4c22557424ed9460381846a37f4944cb2e9387
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 936f6a3bab0a5ad3c6e9cf33110ba67056a918e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-managed-resource-files"></a>Editando arquivos de recurso gerenciados
 Arquivos de recurso gerenciado (. resx) são arquivos XML. Quando você adiciona um arquivo de recurso gerenciado ao seu projeto do **Adicionar Novo Item** caixa de diálogo, o **Editor de recursos gerenciados** é aberta por padrão.  

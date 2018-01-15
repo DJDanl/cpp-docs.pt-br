@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceb64bb71ad43dd1a6e6fd45a3a0480d68eb643a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Exemplo de um Gerenciador de cadeia de caracteres personalizada
 A biblioteca do ATL para implementar um exemplo de um Gerenciador de cadeia de caracteres personalizada usado pela classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), chamado **CFixedStringMgr**. `CFixedStringT`é derivado de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa uma cadeia de caracteres que aloca seus dados de caractere como parte do `CFixedStringT` objeto em si, desde que a cadeia de caracteres é menor que o comprimento especificado pelo **t_nChars** parâmetro do modelo de `CFixedStringT`. Com essa abordagem, a cadeia de caracteres não precisa de heap, a menos que o comprimento da cadeia de caracteres ultrapassar o tamanho do buffer fixo. Porque `CFixedStringT` não sempre use um heap para alocar a seus dados de cadeia de caracteres, não é possível usar **CAtlStringMgr** como seu gerente de cadeia de caracteres. Ele usa um Gerenciador de cadeia de caracteres personalizada (**CFixedStringMgr**), a implementação de [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Essa interface é discutida em [implementação um Gerenciador de personalizado cadeia de caracteres (método avançado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  

@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30e597a9d8587128e4de1b2bb80db15143620821
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5bdc0204c538f476c791657d8b29a28b7baedd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-styles-c"></a>Estilos de janela com moldura (C++)
 As janelas de quadro obter com o framework são adequadas para a maioria dos programas, mas você pode obter flexibilidade adicional, usando as funções avançadas [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) e a função global MFC [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow`é uma função de membro de `CWnd`.  

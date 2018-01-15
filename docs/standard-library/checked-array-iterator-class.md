@@ -24,11 +24,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb39271a7df2471c1373e6b272bbf262f34375ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 A classe `checked_array_iterator` permite que você transforme uma matriz ou um ponteiro em um iterador verificado. Use essa classe como um wrapper (usando a função [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)) para matrizes ou ponteiros brutos como uma maneira direcionada de fornecer verificação e gerenciar avisos de ponteiros não verificados, em vez de silenciar esses avisos globalmente. Se necessário, você pode usar a versão não verificada da classe, [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).  
@@ -557,7 +558,7 @@ checked_output_iterator2 is less than checked_output_iterator
 reference operator*() const;
 ```  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O valor do elemento abordado por `checked_array_iterator`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -615,7 +616,7 @@ c[0].first = 10
 pointer operator->() const;
 ```  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o elemento tratado pelo `checked_array_iterator`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -632,7 +633,7 @@ checked_array_iterator& operator++();
 checked_array_iterator<_Iterator> operator++(int);
 ```  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O primeiro operador retorna o `checked_array_iterator` pré-incrementado e o segundo, o operador pós-incrementado, retorna uma cópia do `checked_array_iterator` incrementado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -677,7 +678,7 @@ checked_array_iterator<_Iterator>& operator--();
 checked_array_iterator<_Iterator> operator--(int);
 ```  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  O primeiro operador retorna o `checked_array_iterator` pré-decrementado e o segundo, o operador pós-decrementado, retorna uma cópia do `checked_array_iterator` decrementado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -724,7 +725,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
  `_Off`  
  O deslocamento pelo qual incrementar o iterador.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Uma referência ao elemento tratado pelo `checked_array_iterator`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -768,7 +769,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
  `_Off`  
  O deslocamento a ser adicionado a `checked_array_iterator`.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um `checked_array_iterator` que trata o elemento de deslocamento.  
   
 ### <a name="remarks"></a>Comentários  
@@ -812,7 +813,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
  `_Off`  
  O deslocamento pelo qual incrementar o iterador.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Uma referência ao elemento tratado pelo `checked_array_iterator`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -859,7 +860,7 @@ difference_type operator-(const checked_array_iterator& right) const;
  `_Off`  
  O deslocamento a ser decrementado do `checked_array_iterator`.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um `checked_array_iterator` que trata o elemento de deslocamento.  
   
 ### <a name="remarks"></a>Comentários  
@@ -878,7 +879,7 @@ reference operator[](difference_type _Off) const;
  `_Off`  
  O deslocamento do endereço `checked_array_iterator`.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A referência ao deslocamento de elemento.  
   
 ### <a name="remarks"></a>Comentários  

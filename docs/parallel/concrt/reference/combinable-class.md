@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89bccb4ce3803708d919f0778c49428c399a3b70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combinable-class"></a>Classe combinable
 O `combinable<T>` objeto destina-se a fornecer thread privada cópias de dados, para executar cálculos de subgrupos de local de thread livre de bloqueios durante os algoritmos paralelos. No final da operação em paralelo, os cálculos sub particular de thread, em seguida, podem ser mesclados em um resultado final. Esta classe pode ser usado em vez de uma variável compartilhada e pode resultar em uma melhoria de desempenho se caso contrário, haverá muita contenção nessa variável compartilhada.  
@@ -44,11 +45,11 @@ class combinable;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[podem ser combinadas](#ctor)|Sobrecarregado. Constrói um novo `combinable` objeto.|  
+|[podem ser combinadas](#ctor)|Sobrecarregado. Constrói um novo objeto `combinable`.|  
 |[~ Destruidor combinable](#dtor)|Destrói um objeto `combinable`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -87,7 +88,7 @@ void clear();
   
 ##  <a name="ctor"></a>podem ser combinadas 
 
- Constrói um novo `combinable` objeto.  
+ Constrói um novo objeto `combinable`.  
   
 ```
 combinable();

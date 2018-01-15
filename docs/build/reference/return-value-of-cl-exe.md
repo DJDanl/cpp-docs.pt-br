@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1530d5669f4f24162dc62f53e2988f05d3c1010f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85ca64178a4914cfbbc8b3a717b87ab5590cd778
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-value-of-clexe"></a>Valor de retorno de cl.exe
 O cl.exe retorna zero para êxito (sem erros) e um número diferente de zero para outros casos.  

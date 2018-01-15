@@ -1,11 +1,10 @@
 ---
-title: Classe single_link_registry | Documentos do Microsoft
+title: Classe single_link_registry | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - AGENTS/concurrency::single_link_registry::contains
 - AGENTS/concurrency::single_link_registry::count
 - AGENTS/concurrency::single_link_registry::remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- single_link_registry class
+dev_langs: C++
+helpviewer_keywords: single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: fc99e9af586520d60c20302e8b828a188df9efda
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singlelinkregistry-class"></a>Classe single_link_registry
 O `single_link_registry` objeto é um `network_link_registry` que gerencia apenas um único bloco de origem ou de destino.  
@@ -63,12 +46,12 @@ class single_link_registry : public network_link_registry<_Block>;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[single_link_registry](#ctor)|Constrói um objeto `single_link_registry`.|  
-|[~ single_link_registry destruidor](#dtor)|Destrói o `single_link_registry` objeto.|  
+|[~ single_link_registry destruidor](#dtor)|Destrói a `single_link_registry` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -78,7 +61,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |[begin](#begin)|Retorna um iterador para o primeiro elemento no `single_link_registry` objeto. (Substitui [network_link_registry:: Begin](network-link-registry-class.md#begin).)|  
 |[contém](#contains)|Pesquisas de `single_link_registry` objeto para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Conta o número de itens de `single_link_registry` objeto. (Substitui [network_link_registry:: Count](network-link-registry-class.md#count).)|  
-|[remove](#remove)|Remove um link do `single_link_registry` objeto. (Substitui [network_link_registry:: remove](network-link-registry-class.md#remove).)|  
+|[remove](#remove)|Remove um link entre a `single_link_registry` objeto. (Substitui [network_link_registry:: remove](network-link-registry-class.md#remove).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [network_link_registry](network-link-registry-class.md)  
@@ -103,7 +86,7 @@ virtual void add(_EType _Link);
  Um ponteiro para um bloco a ser adicionado.  
   
 ### <a name="remarks"></a>Comentários  
- O método lança um [invalid_link_target](invalid-link-target-class.md) exceção se já houver um link nesse registro.  
+ O método gera uma [invalid_link_target](invalid-link-target-class.md) exceção se já houver um link nesse registro.  
   
 ##  <a name="begin"></a>começar 
 
@@ -114,7 +97,7 @@ virtual iterator begin();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador que trata o primeiro elemento no `single_link_registry` objeto.  
+ Um iterador de endereçamento do primeiro elemento no `single_link_registry` objeto.  
   
 ### <a name="remarks"></a>Comentários  
  O estado final é indicado por um `NULL` link.  
@@ -129,7 +112,7 @@ virtual bool contains(_EType _Link);
   
 ### <a name="parameters"></a>Parâmetros  
  `_Link`  
- Um ponteiro para um bloco que deve ser procurado no `single_link_registry` objeto.  
+ Um ponteiro para um bloco a ser procurado no `single_link_registry` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se o link foi encontrado, `false` caso contrário.  
@@ -147,7 +130,7 @@ virtual size_t count();
   
 ##  <a name="remove"></a>Remover 
 
- Remove um link do `single_link_registry` objeto.  
+ Remove um link entre a `single_link_registry` objeto.  
   
 ```
 virtual bool remove(_EType _Link);
@@ -170,16 +153,15 @@ single_link_registry();
   
 ##  <a name="dtor"></a>~ single_link_registry 
 
- Destrói o `single_link_registry` objeto.  
+ Destrói a `single_link_registry` objeto.  
   
 ```
 virtual ~single_link_registry();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O método lança um [invalid_operation](invalid-operation-class.md) exceção se for chamado antes que o link seja removido.  
+ O método gera uma [invalid_operation](invalid-operation-class.md) exceção se for chamado antes que o link é removido.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe multi_link_registry](multi-link-registry-class.md)
-

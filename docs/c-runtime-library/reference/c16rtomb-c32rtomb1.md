@@ -30,36 +30,21 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 585fd26bf3ea6a2d392a61b4f7793a0a9e84e267
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9eb43d6b225bce002eb2ce5293cb048d3062bcd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 Converta um caractere largo UTF-16 ou UTF-32 em um caractere multibyte na localidade atual.  
@@ -89,7 +74,7 @@ size_t c32rtomb(
  [in, out] `state`  
  Um ponteiro para um objeto `mbstate_t`.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O número de bytes armazenados no objeto de matriz `mbchar`, incluindo quaisquer sequências de deslocamento. Se `wchar` não for um caractere largo válido, o valor (`size_t`)(-1) será retornado, `errno` será definido como `EILSEQ` e o valor de `state` será não especificado.  
   
 ## <a name="remarks"></a>Comentários  

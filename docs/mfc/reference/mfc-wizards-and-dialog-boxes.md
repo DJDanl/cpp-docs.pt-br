@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a4c9d15f5b86aea78ae02837f0b7073189894d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 198fd62e8134a14930d88b478d5ed78b1e8d8e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Assistentes e caixas de diálogo do MFC
 Os assistentes do Microsoft Foundation Class (MFC) geram código padronizado para vários tipos de objetos e componentes. Você pode executar os assistentes, abrindo o menu de atalho para um projeto no **Solution Explorer** e escolhendo **adicionar**, **classe**.  

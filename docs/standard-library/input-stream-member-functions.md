@@ -4,26 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f9fb195bfb5e6e35d035ba5a3660bb91644a04ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-stream-member-functions"></a>Funções de Membro de Fluxo de Entrada
 Funções de membro de fluxo de entrada são usadas para entrada de disco. As funções de membro incluem:  
@@ -204,5 +202,4 @@ int main( )
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxos de entrada](../standard-library/input-streams.md)
-
 

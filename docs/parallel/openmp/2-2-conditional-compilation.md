@@ -1,27 +1,27 @@
 ---
-title: "2.2 Conditional Compilation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.2 compilação condicional | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8f9c914d-736c-48cf-899d-c8029dbe1e32
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1fb58458710c18f89f4057061b9c67b4eef1bbf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.2 Conditional Compilation
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O \_**OPENMP** nome da macro é definido pelas implementações compatíveis com OpenMP como a constante decimal  *yyyymm*, qual será o ano e mês da especificação aprovada.  Esta macro não deve ser o assunto de um  **\# define** ou um  **\#undef** diretiva de pré\-processamento.  
+# <a name="22-conditional-compilation"></a>2.2 Compilação condicional
+O _**OPENMP** nome de macro é definido pelas implementações OpenMP compatível como a constante decimal *yyyymm*, que será o ano e o mês da especificação aprovada. Esta macro não deve ser o assunto de uma **#define** ou um **#undef** diretiva de pré-processamento.  
   
 ```  
 #ifdef _OPENMP  
@@ -29,4 +29,4 @@ iam = omp_get_thread_num() + index;
 #endif  
 ```  
   
- Se os fornecedores de definem as extensões para OpenMP, eles podem especificar outras macros predefinidas.
+ Se fornecedores definam ampliações OpenMP, eles podem especificar macros predefinidas adicionais.

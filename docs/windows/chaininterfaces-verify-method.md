@@ -1,48 +1,48 @@
 ---
-title: "M&#233;todo ChainInterfaces::Verify | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces::Verify"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Verify"
+title: "Método Chaininterfaces: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces::Verify
+dev_langs: C++
+helpviewer_keywords: Verify method
 ms.assetid: c591e130-8686-4130-ba69-1aaedc250038
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d34d117091fd8807dfefda074e510910bf059560
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo ChainInterfaces::Verify
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verifica se cada interface definida por `I0` parâmetros do modelo com `I9` herde IUnknown e\/ou de IInspectable, e que `I0` herda de `I1` com `I9`.  
+# <a name="chaininterfacesverify-method"></a>Método ChainInterfaces::Verify
+Verifica se cada interface definidos pelos parâmetros de modelo `I0` por meio de `I9` herda de IUnknown e/ou IInspectable que `I0` herda de `I1` por meio de `I9`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 WRL_NOTHROW __forceinline static void Verify();  
 ```  
   
-## Comentários  
- Se a operação de verificação falhará, `static_assert` emite uma mensagem de erro que descreve a falha.  
+## <a name="remarks"></a>Comentários  
+ Se a operação de verificação falhar, um `static_assert` emite uma mensagem de erro que descreve a falha.  
   
-## Comentários  
- Os parâmetros `I0` e `I1` de modelo são necessários, e os parâmetros `I2` com `I9` são opcionais.  
+## <a name="remarks"></a>Comentários  
+ Parâmetros de modelo `I0` e `I1` são necessários e os parâmetros `I2` por meio de `I9` são opcionais.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estrutura ChainInterfaces](../windows/chaininterfaces-structure.md)

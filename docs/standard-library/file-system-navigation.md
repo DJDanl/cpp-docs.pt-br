@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60e7e32c79965e50255c5728cad3e9d399ea2df1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-system-navigation"></a>Navegação no sistema de arquivos
 O cabeçalho \<filesystem > implementa a Especificação técnica para o Sistema de arquivos C++ ISO/IEC TS 18822:2015 (rascunho final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e tem tipos e funções que permitem escrever código independente da plataforma para navegar no sistema de arquivos. Por ser de plataforma cruzada, ele contém APIs que não são relevantes para sistemas Windows. Por exemplo, isso significa que `is_fifo(const path&)` sempre retorna `false` no Windows.   
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
 Use as APIs \<filesystem> para as seguintes tarefas:  
   
 -   iterar em arquivos e diretórios em um caminho especificado  
@@ -231,4 +214,3 @@ Press Enter to exit
 O cabeçalho \<filesystem> fornece o tipo [directory_iterator](../standard-library/directory-iterator-class.md) para iterar em diretórios únicos e a classe [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) para iterar recursivamente em um diretório e seus subdiretórios. Depois que você construir um iterador passando para ele um objeto `path`, o iterador apontará para o primeiro directory_entry no caminho. Crie o iterador final chamando o construtor padrão.  
   
 Ao iterar em um diretório, há vários tipos de itens que você pode encontrar, incluindo, mas não se limitando a, diretórios, arquivos, links simbólicos e arquivos de soquete. O `directory_iterator` retorna seus itens como objetos [directory_entry](../standard-library/directory-entry-class.md).  
-

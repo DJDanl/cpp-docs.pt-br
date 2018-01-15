@@ -1,105 +1,105 @@
 ---
-title: "Resumo de programa&#231;&#227;o Unicode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unicode [C++], funções e tempo de execução MFC e C"
-  - "Unicode [C++], programando com"
+title: "Resumo de programação Unicode | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Unicode [C++], programming with
+- Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Resumo de programa&#231;&#227;o Unicode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Para aproveitar MFC e suporte de tempo de execução C para Unicode, você precisa:  
+# <a name="unicode-programming-summary"></a>Resumo de programação Unicode
+Para aproveitar o suporte de tempo de execução MFC e C para Unicode, você precisa:  
   
--   Define **\_UNICODE**.  
+-   Definir **Unicode**.  
   
-     Define o símbolo **\_UNICODE** antes de criar o programa.  
+     Definir o símbolo **Unicode** antes de criar seu programa.  
   
 -   Especifique o ponto de entrada.  
   
-     Na página de **Saída** da pasta do vinculador na caixa de diálogo de [Páginas de propriedades](../ide/property-pages-visual-cpp.md) de projeto, defina o símbolo de ponto de entrada para **wWinMainCRTStartup**.  
+     Sobre o **saída** página da pasta vinculador do projeto [páginas de propriedade](../ide/property-pages-visual-cpp.md) caixa de diálogo caixa, defina o símbolo de ponto de entrada **wWinMainCRTStartup**.  
   
--   Use funções portáteis e tipos de tempo de execução.  
+-   Use tipos e funções de tempo de execução portátil.  
   
-     Use as funções apropriadas de tempo de execução C para a manipulação de cadeia de caracteres Unicode.  Você pode usar a família de **wcs** de funções, mas você pode preferir macros \(international habilitados\) totalmente portátil de **\_TCHAR** .  Macros todos esses são prefixados com **\_tcs**; substituição, um para um, da família de **str** de funções.  Essas funções são descritas em detalhes na seção de [Internacionalização](../c-runtime-library/internationalization.md)*de referência da biblioteca de tempo de execução*.  Para obter mais informações, consulte [Mapeamentos de Genérico\- texto em Tchar.h](../Topic/Generic-Text%20Mappings%20in%20Tchar.h.md).  
+     Use as funções apropriadas do tempo de execução C para manipulação de cadeia de caracteres Unicode. Você pode usar o **wcs** família de funções, mas você talvez prefira totalmente portátil (internacionalmente ativado) **TCHAR** macros. Essas macros são prefixadas com **_tcs**; eles substituem, um para um, para o **str** família de funções. Essas funções são descritas detalhadamente no [internacionalização](../c-runtime-library/internationalization.md) seção o *referência da biblioteca de tempo de execução*. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Use **\_TCHAR** e os tipos de dados portáteis relacionadas descritas em [Suporte para Unicode](../text/support-for-unicode.md).  
+     Use **TCHAR** e os tipos de dados portátil relacionados descritos na [suporte para Unicode](../text/support-for-unicode.md).  
   
--   Tratar cadeias de caracteres literais corretamente.  
+-   Lidar corretamente com cadeias de caracteres literais.  
   
-     O compilador do Visual C\+\+ interpreta uma cadeia de caracteres literal codificada como:  
+     O compilador do Visual C++ interpreta a cadeia de caracteres literal codificada como:  
   
     ```  
     L"this is a literal string"  
     ```  
   
-     para mostrar uma cadeia de caracteres de caracteres Unicode.  Você pode usar o mesmo prefixo de caracteres literais.  Use a macro de **\_T** para codificar genèrica cadeias de caracteres literais, assim que criam como cadeias de caracteres Unicode em Unicode ou como as cadeias de caracteres ANSI \(inclusive MBCS\) sem Unicode.  Por exemplo, em vez de:  
+     como uma cadeia de caracteres Unicode. Você pode usar o mesmo prefixo de caracteres literal. Use o **t** macro codificar cadeias de caracteres literais genericamente, para que eles são compilados como cadeias de caracteres Unicode em Unicode ou como cadeias de caracteres ANSI (incluindo MBCS) sem Unicode. Por exemplo, em vez de:  
   
     ```  
     pWnd->SetWindowText( "Hello" );  
     ```  
   
-     use:  
+     Uso:  
   
     ```  
     pWnd->SetWindowText( _T("Hello") );  
     ```  
   
-     Com **\_UNICODE** definiu, **\_T** converte a cadeia de caracteres literal para o formulário L\- prefixado; caso contrário, **\_T** converte a cadeia de caracteres sem o prefixo L.  
+     Com **Unicode** definido, **t** converte a cadeia de caracteres literal para o formulário de prefixo L; caso contrário, **t** converte a cadeia de caracteres sem o prefixo L.  
   
     > [!TIP]
-    >  A macro de **\_T** é idêntico a macro de `_TEXT` .  
+    >  O **t** macro é idêntica de `_TEXT` macro.  
   
--   Tenha cuidado ao passar os comprimentos de cadeia de caracteres às funções.  
+-   Tenha cuidado passando os comprimentos de cadeia de caracteres para funções.  
   
-     Algumas funções desejam o número de caracteres em uma cadeia de caracteres; outro desejam o número de bytes.  Por exemplo, se **\_UNICODE** é definido, o seguinte chamada a um objeto de `CArchive` não funcionará \(`str` é `CString`\):  
+     Algumas funções deseja que o número de caracteres em uma cadeia de caracteres; outros deseja que o número de bytes. Por exemplo, se **Unicode** for definida, a seguinte chamada para um `CArchive` objeto não funcionará (`str` é um `CString`):  
   
     ```  
     archive.Write( str, str.GetLength( ) );    // invalid  
     ```  
   
-     Em um aplicativo Unicode, o comprimento é o número de caracteres mas não o número de bytes correto, porque cada caractere é de 2 bytes de comprimento.  Em vez disso, você deve usar:  
+     Em um aplicativo de Unicode, o comprimento fornece o número de caracteres, mas não o número correto de bytes, porque cada caractere é de 2 bytes de largura. Em vez disso, você deve usar:  
   
     ```  
     archive.Write( str, str.GetLength( ) * sizeof( _TCHAR ) );    // valid  
     ```  
   
-     que especifica o número de bytes correto para gravação.  
+     que especifica o número correto de bytes a serem gravados.  
   
-     Porém, as funções de membro de MFC que são a caracteres, em vez de orientado, trabalho sem essa codificação adicional:  
+     No entanto, as funções de membro MFC que são orientadas a caracteres, em vez de orientado a bytes, funcionarão sem ela extra de codificação:  
   
     ```  
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut` usa um número de caracteres, um número de bytes.  
+     `CDC::TextOut`Obtém um número de caracteres, não é um número de bytes.  
   
--   Use [fopen\_s, \_wfopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) para abrir arquivos Unicode.  
+-   Use [fopen_s, wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) para abrir arquivos Unicode.  
   
- Para resumir, MFC o e a biblioteca de tempo de execução a seguir fornecem suporte para Unicode que programa no Windows 2000:  
+ Para resumir, MFC e a biblioteca de tempo de execução fornecem o seguinte suporte para Unicode de programação com o Windows 2000:  
   
--   Com exceção das funções de membro da classe base de dados de, todas as funções de MFC estiverem habilitadas, incluindo `CString`.  `CString` também fornece funções de conversão Unicode\/ANSI.  
+-   Exceto para funções de membro de classe de banco de dados, todas as funções MFC são habilitados para Unicode, incluindo `CString`. `CString`também fornece funções de conversão Unicode/ANSI.  
   
--   A biblioteca de tempo de execução fornece versões Unicode de todas as funções de cadeia de caracteres\- manipulação. \(Biblioteca de tempo de execução também fornece as versões portáteis adequadas para Unicode ou para MBCS.  Esses são macros de **\_tcs** .\)  
+-   A biblioteca de tempo de execução fornece versões Unicode de todas as funções de manipulação de cadeia de caracteres. (A biblioteca de tempo de execução também fornece versões portátil adequadas para Unicode ou MBCS. Estes são os **_tcs** macros.)  
   
--   Tchar.h o fornece os tipos de dados portáteis e a macro de **\_T** para converter cadeias de caracteres literais e caracteres.  Para obter mais informações, consulte [Mapeamentos de Genérico\- texto em Tchar.h](../Topic/Generic-Text%20Mappings%20in%20Tchar.h.md).  
+-   TCHAR. h fornece tipos de dados portátil e **t** macro para a conversão de caracteres e cadeias de caracteres literais. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
   
--   A biblioteca de tempo de execução fornece uma ampla versão do caractere de **main**.  Use **wmain** para fazer seu aplicativo cientes do.  
+-   A biblioteca de tempo de execução fornece uma versão de caractere largo de **principal**. Use **wmain** para tornar seu aplicativo com reconhecimento de Unicode.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Suporte para Unicode](../text/support-for-unicode.md)

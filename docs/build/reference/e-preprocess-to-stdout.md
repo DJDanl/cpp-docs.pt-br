@@ -1,57 +1,56 @@
 ---
-title: "/E (pr&#233;-processar em stdout) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/e"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /E (C++)"
-  - "Opção de compilador -E [C++]"
-  - "saída de pré-processador"
-  - "saída de pré-processador, copiar em stdout"
+title: "-E (pré-processar em stdout) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /e
+dev_langs: C++
+helpviewer_keywords:
+- -E compiler option [C++]
+- /E compiler option [C++]
+- preprocessor output, copy to stdout
+- preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ed083c960421ce17c0ce61036cd05191fc12c797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /E (pr&#233;-processar em stdout)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Preprocesses arquivos de origem de 2.0 C e C\+\+ e copia os arquivos pré\-processados para o dispositivo de saída padrão.  
+# <a name="e-preprocess-to-stdout"></a>/E (pré-processar em stdout)
+Pré-processa arquivos de origem C e C++ e copia os arquivos pré-processado para o dispositivo de saída padrão.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /E  
 ```  
   
-## Comentários  
- Neste processo, todas as políticas de pré\-processador são realizadas, as expansões macro são executadas, e os comentários são removidos.  Para preservar comentários na saída pré\-processados, use a opção do compilador de [\/C \(preservar comentários durante o pré\-processamento\)](../../build/reference/c-preserve-comments-during-preprocessing.md) também.  
+## <a name="remarks"></a>Comentários  
+ Nesse processo, todas as diretivas de pré-processador são executadas, expansões de macro são executadas e comentários são removidos. Para preservar comentários na saída pré-processada, use o [/C (preservar comentários durante o pré-processamento)](../../build/reference/c-preserve-comments-during-preprocessing.md) também a opção de compilador.  
   
- adiciona**\/E** políticas de `#line` à saída no início e o término de cada arquivo incluído e delimitando as linhas removidas por políticas de pré\-processador para a compilação condicional.  Essas políticas renumber as linhas do arquivo pré\-processados.  No resultado, os erros gerados durante estados avançadas de processamento se referem aos números de linhas do arquivo de origem original em vez de linhas no arquivo pré\-processados.  
+ **/E** adiciona `#line` diretivas para a saída no início e no final de cada arquivo incluído e em torno de linhas removidas por diretivas de pré-processador para compilação condicional. Essas diretivas renumerar as linhas do arquivo pré-processados. Como resultado, os erros gerados durante posteriores estágios do processamento de consultem os números de linha do arquivo original em vez de linhas no arquivo pré-processados.  
   
- A opção de **\/E** suprime a compilação.  Você deve enviar novamente o arquivo pré\-processados para a compilação.  **\/E** também elimina os arquivos de saída de **\/FA**, de **\/Fa**, e as opções de **\/Fm** .  Para obter mais informações, consulte [\/FA, \/Fa \(listando arquivo\)](../../build/reference/fa-fa-listing-file.md) e [\/Fm \(mapfile de nome\)](../Topic/-Fm%20\(Name%20Mapfile\).md).  
+ O **/E** opção inibe compilação. Você deverá reenviar o arquivo pré-processados para compilação. **/E** também suprime os arquivos de saída de **/FA**, **/Fa**, e **/Fm** opções. Para obter mais informações, consulte [/FA, /Fa (listando arquivo)](../../build/reference/fa-fa-listing-file.md) e [/Fm (Mapfile de nome)](../../build/reference/fm-name-mapfile.md).  
   
- Para suprimir políticas de `#line` , use a opção de [\/EP \(pré\-processar para stdout sem diretivas \#line\)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) em vez disso.  
+ Para suprimir `#line` diretivas, use o [/EP (pré-processar para stdout sem diretivas de #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opção.  
   
- Para enviar a saída pré\-processados para um arquivo em vez a `stdout`, use a opção de [\/P \(pré\-processar em um arquivo\)](../../build/reference/p-preprocess-to-a-file.md) em vez disso.  
+ Para enviar a saída pré-processada em um arquivo em vez de para `stdout`, use o [/P (pré-processar em um arquivo)](../../build/reference/p-preprocess-to-a-file.md) opção.  
   
- Para suprimir políticas de `#line` e enviar junto a saída pré\-processados para um arquivo, use **\/P** e um **\/EP** .  
+ Para suprimir `#line` diretivas e envia a saída pré-processada em um arquivo, use **/p** e **/EP** juntos.  
   
- Você não pode usar cabeçalhos pré\-compilados com a opção de **\/E** .  
+ Não é possível usar cabeçalhos pré-compilados com o **/E** opção.  
   
- Observe que a eles em um arquivo separado, espaços não são emitidos depois de tokens.  Isso pode resultar em um programa ilegal ou ter efeitos colaterais não intencionais.  O seguinte programa cria com êxito:  
+ Observe que, quando o pré-processamento para um arquivo separado, espaços não são emitidos depois de tokens. Isso pode resultar em um programa inválido ou ter efeitos colaterais não intencionais. O programa a seguir é compilado com êxito:  
   
 ```  
 #define m(x) x  
@@ -61,35 +60,35 @@ m(int)main( )
 }  
 ```  
   
- No entanto, se você criar com:  
+ No entanto, se você compilar com:  
   
 ```  
 cl -E test.cpp > test2.cpp  
 ```  
   
- `int main` em test2.cpp será `intmain`incorretamente.  
+ `int main`em test2.cpp incorretamente será `intmain`.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção do compilador na caixade **Opções Adicionais**.  
+4.  Digite a opção de compilador no **opções adicionais**caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.  
   
-## Exemplo  
- A linha de comando a seguir preprocesses `ADD.C`, preserva comentários, adiciona políticas de `#line` , e exibe o resultado no dispositivo de saída padrão:  
+## <a name="example"></a>Exemplo  
+ A seguinte linha de comando pré-processa `ADD.C`, preserva comentários, adiciona `#line` diretivas e exibe o resultado no dispositivo de saída padrão:  
   
 ```  
 CL /E /C ADD.C  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

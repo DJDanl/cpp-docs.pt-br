@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25c116950380ee182d1f59bb65ee1e8a1442181f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79f062a1b1b2e97a37d88ce3ac30d76b5adc43de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="month-calendar-control-examples"></a>Exemplos de controle de calendário mensal
 O [CMNCTRL1](../visual-cpp-samples.md) aplicativo de exemplo demonstra os vários atributos do `CMonthCalCtrl` classe. O controle, encontrado em uma guia separada na amostra, demonstra a funcionalidade básica e permite que o usuário modifique dinamicamente determinados atributos.  

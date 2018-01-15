@@ -1,48 +1,55 @@
 ---
-title: "Como usar combin&#225;vel para combinar conjuntos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classe podem ser combinada, por exemplo:"
-  - "combinando conjuntos com combinable [Tempo de Execução de Simultaneidade]"
+title: "Como: usar Combinável para combinar conjuntos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- combinable class, example
+- combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-caps.latest.revision: 14
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8bbd36e9536707bc639e8f80cc019b7fda18f793
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como usar combin&#225;vel para combinar conjuntos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-combinable-to-combine-sets"></a>Como usar combinável para combinar conjuntos
+Este tópico mostra como usar o [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe para calcular o conjunto de números primos.  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir calcula o conjunto de números primos duas vezes. Cada cálculo armazena o resultado em uma [std::bitset](../../standard-library/bitset-class.md) objeto. O exemplo primeiro calcula o conjunto em série e, em seguida, calcula o conjunto em paralelo. O exemplo também imprime no console o tempo necessário para executar ambos os cálculos.  
+  
+ Este exemplo usa o [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo e uma `combinable` objeto para gerar conjuntos de local de thread. Ele usa o [concurrency::combinable::combine_each](reference/combinable-class.md#combine_each) método para combinar os conjuntos de local de thread para o conjunto final.  
 
-Este tópico mostra como usar a classe de [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) para computar o conjunto de números à esquerda.  
   
-## Exemplo  
- O exemplo a seguir calcula o conjunto de números principais duas vezes em.  Cada cálculo armazena o resultado em um objeto de [std::bitset](../Topic/bitset%20Class.md) .  O exemplo a seguir calcula o primeiro conjunto em série e computa o conjunto em paralelo.  O exemplo também imprime ao console o tempo necessário para executar computações ambas.  
+ [!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]  
   
- Este exemplo usa o algoritmo de [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) e um objeto de `combinable` para gerar conjuntos de thread local.  Usa o método de [concurrency::combinable::combine\_each](../Topic/combinable::combine_each%20Method.md) para combinar os conjuntos de thread local no conjunto final.  
+ A seguinte saída de exemplo é para um computador com quatro processadores.  
   
- [!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/CPP/how-to-use-combinable-to-combine-sets_1.cpp)]  
+```Output  
+serial time: 312 ms  
+ 
+parallel time: 78 ms  
+```  
   
- A seguinte saída de exemplo é para um computador que tem quatro processadores.  
+## <a name="compiling-the-code"></a>Compilando o código  
+ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `parallel-combine-primes.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
   
-  **tempo seriais: 312 ms**  
-**tempo paralelos: 78 ms**   
-## Compilando o código  
- Copie o código de exemplo e cole\-o em um projeto do Visual Studio, ou cole\-o em um arquivo chamado `parallel-combine-primes.cpp` e execute o comando a seguir em uma janela de prompt de comando do Visual Studio.  
+ **cl.exe /EHsc paralelo-combinar-primes.cpp**  
   
- **cl.exe \/EHsc parallel\-combine\-primes.cpp**  
-  
-## Consulte também  
- [Contêineres e objetos em paralelo](../../parallel/concrt/parallel-containers-and-objects.md)   
+## <a name="see-also"></a>Consulte também  
+ [Objetos e contêineres paralelos](../../parallel/concrt/parallel-containers-and-objects.md)   
  [Classe combinable](../../parallel/concrt/reference/combinable-class.md)   
- [Método combinable::combine\_each](../Topic/combinable::combine_each%20Method.md)
+ [combinable:: método combine_each](reference/combinable-class.md#combine_each)
+
+

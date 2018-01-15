@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -43,16 +41,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 50967f59b594cfba30167b67dcb2802541a5eafc
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>Classe allocator
 A classe de modelo descreve um objeto que gerencia a alocação de armazenamento e a liberação de matrizes de objetos do tipo **Type**. Um objeto da classe **allocator** é o objeto alocador padrão especificado nos construtores para várias classes de modelo de contêiner na Biblioteca Padrão do C++.  
@@ -1051,5 +1049,4 @@ The modified vector v is:
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

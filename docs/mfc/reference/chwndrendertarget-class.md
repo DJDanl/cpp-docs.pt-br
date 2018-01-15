@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7576d1a5635cf30084c1f36b4ec14ad2a9f9b74d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f11f7e329b623639fb1441e4d9e18720a6b6b94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chwndrendertarget-class"></a>Classe CHwndRenderTarget
 Um wrapper para ID2D1HwndRenderTarget.  
@@ -54,7 +55,7 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

@@ -1,86 +1,92 @@
 ---
-title: "Como usar excesso de assinatura para deslocar lat&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "excesso de assinatura, usando [tempo de execução de simultaneidade]"
-  - "usando excesso de assinatura [Tempo de Execução de Simultaneidade]"
+title: "Como: usar o excesso de assinatura para deslocar latência | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- oversubscription, using [Concurrency Runtime]
+- using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-caps.latest.revision: 17
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1a8f059abffd261de2002ed5d18067c48d74876
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como usar excesso de assinatura para deslocar lat&#234;ncia
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A sobresubscrição pode melhorar a eficiência total de alguns aplicativos que contêm as tarefas que têm uma quantidade de alta latência.  Este tópico ilustra como usar a sobresubscrição para deslocar a latência que é causado ler dados de uma conexão de rede.  
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Como usar excesso de assinatura para deslocar latência
+Excesso de assinatura pode melhorar a eficiência geral de alguns aplicativos que contêm as tarefas que têm uma grande quantidade de latência. Este tópico ilustra como usar excesso de assinatura para deslocar a latência é causada pela leitura de dados de uma conexão de rede.  
   
-## Exemplo  
- Este exemplo usa [Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md) para baixar arquivos de servidores HTTP.  A classe de `http_reader` é derivado de [concurrency::agent](../../parallel/concrt/reference/agent-class.md) e usa a mensagem que passa de forma assíncrona à leitura dos nomes de URL para baixar.  
+## <a name="example"></a>Exemplo  
+ Este exemplo usa o [biblioteca de agentes assíncrona](../../parallel/concrt/asynchronous-agents-library.md) Baixe arquivos de servidores HTTP. O `http_reader` classe derivada de [concurrency::agent](../../parallel/concrt/reference/agent-class.md) e usa passando para ler assincronamente quais nomes de URL para fazer o download da mensagem.  
   
- A classe de `http_reader` usa a classe de [concurrency::task\_group](../Topic/task_group%20Class.md) para ler simultaneamente cada arquivo.  Cada tarefa chama o método de [concurrency::Context::Oversubscribe](../Topic/Context::Oversubscribe%20Method.md) com o parâmetro de `_BeginOversubscription` definido como `true` para habilitar a sobresubscrição no contexto atual.  Cada tarefa usar as classes \(MFC\) [CInternetSession](../Topic/CInternetSession%20Class.md) do Microsoft e classes de [CHttpFile](../Topic/CHttpFile%20Class.md) para baixar o arquivo.  Finalmente, cada tarefa `Context::Oversubscribe` chama com o parâmetro de `_BeginOversubscription` definido como `false` para desabilitar a sobresubscrição.  
+ O `http_reader` classe usa a [concurrency::task_group](reference/task-group-class.md) classe para cada arquivo de leitura ao mesmo tempo. Cada tarefa chama o [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método com o `_BeginOversubscription` parâmetro definido como `true` para habilitar o excesso de assinatura no contexto atual. Cada tarefa, em seguida, usa o Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) classes para baixar o arquivo. Por fim, cada tarefa chama `Context::Oversubscribe` com o `_BeginOversubscription` parâmetro definido como `false` para desabilitar o excesso de assinatura.  
   
- Quando a sobresubscrição é habilitada, o tempo de execução cria um thread adicional na qual executar tarefas.  Cada um desses threads pode também o oversubscribe o contexto atual e cria assim threads adicionais.  A classe de `http_reader` usa um objeto de [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md) para limitar o número de threads que o aplicativo usa.  O agente inicializa o buffer com um número fixo dos valores do token.  Para cada operação de download, o agente lê um valor de token do buffer antes do início e nas gravações de operação que avaliam de volta ao buffer após a conclusão da operação.  Quando o buffer estiver vazia, o agent espera por uma das operações de download para escrever um valor de para o buffer.  
+ Quando o excesso de assinatura é habilitado, o tempo de execução cria um thread adicional para execução de tarefas. Cada um desses threads pode subscrever também o contexto atual e, assim, criam threads adicionais. O `http_reader` classe usa um [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objeto para limitar o número de threads que o aplicativo usa. O agente inicializa o buffer com um número fixo de valores do token. Para cada operação de download, o agente lê um valor do token do buffer antes da operação inicia e, em seguida, grava esse valor para o buffer após a conclusão da operação. Quando o buffer está vazio, o agente espera para uma das operações de download para gravar um valor de volta para o buffer.  
   
- O exemplo a seguir limita o número de tarefas simultâneas a duas vezes o número de threads de hardware disponível.  Esse valor é um bom ponto inicial a ser usado quando você faz experiências com a sobresubscrição.  Você pode usar um valor que se encaixe em um ambiente específico de processamento ou alterar dinamicamente esse valor para responder à carga de trabalho atual.  
+ O exemplo a seguir limita o número de tarefas simultâneas para duas vezes o número de threads de hardware disponíveis. Esse valor é um bom ponto de partida para usar ao fazer experiências com excesso de assinatura. Você pode usar um valor que atenda a um ambiente de processamento específico ou dinamicamente altere este valor para responder à carga de trabalho real.  
   
- [!CODE [concrt-download-oversubscription#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#1)]  
+ [!code-cpp[concrt-download-oversubscription#1](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_1.cpp)]  
   
- Este exemplo gerencia a seguinte saída em um computador que tenha quatro processadores:  
+ Este exemplo produz a saída a seguir em um computador que tem quatro processadores:  
   
-  **Transferência http:\/\/www.adatum.com\/..**  
-**Transferência http:\/\/www.adventure\-works.com\/..**  
-**Transferência http:\/\/www.alpineskihouse.com\/..**  
-**Transferência http:\/\/www.cpandl.com\/..**  
-**Transferência http:\/\/www.cohovineyard.com\/..**  
-**Transferência http:\/\/www.cohowinery.com\/..**  
-**Transferência http:\/\/www.cohovineyardandwinery.com\/..**  
-**Transferência http:\/\/www.contoso.com\/..**  
-**Transferência http:\/\/www.consolidatedmessenger.com\/..**  
-**Transferência http:\/\/www.fabrikam.com\/..**  
-**Transferência http:\/\/www.fourthcoffee.com\/..**  
-**Transferência http:\/\/www.graphicdesigninstitute.com\/..**  
-**Transferência http:\/\/www.humongousinsurance.com\/..**  
-**Transferência http:\/\/www.litwareinc.com\/..**  
-**Transferência http:\/\/www.lucernepublishing.com\/..**  
-**Transferência http:\/\/www.margiestravel.com\/..**  
-**Transferência http:\/\/www.northwindtraders.com\/..**  
-**Transferência http:\/\/www.proseware.com\/..**  
-**Transferência http:\/\/www.fineartschool.net..**  
-**Transferência http:\/\/www.tailspintoys.com\/..**  
-**Baixado 1801040 bytes em 3276 ms.** O exemplo pode ser executado mais rapidamente quando a sobresubscrição está habilitada porque as tarefas adicionais são executadas quando outras tarefas aguardam uma operação latente para concluir.  
+```Output  
+Downloading http://www.adatum.com/...  
+Downloading http://www.adventure-works.com/...  
+Downloading http://www.alpineskihouse.com/...  
+Downloading http://www.cpandl.com/...  
+Downloading http://www.cohovineyard.com/...  
+Downloading http://www.cohowinery.com/...  
+Downloading http://www.cohovineyardandwinery.com/...  
+Downloading http://www.contoso.com/...  
+Downloading http://www.consolidatedmessenger.com/...  
+Downloading http://www.fabrikam.com/...  
+Downloading http://www.fourthcoffee.com/...  
+Downloading http://www.graphicdesigninstitute.com/...  
+Downloading http://www.humongousinsurance.com/...  
+Downloading http://www.litwareinc.com/...  
+Downloading http://www.lucernepublishing.com/...  
+Downloading http://www.margiestravel.com/...  
+Downloading http://www.northwindtraders.com/...  
+Downloading http://www.proseware.com/...  
+Downloading http://www.fineartschool.net...  
+Downloading http://www.tailspintoys.com/...  
+Downloaded 1801040 bytes in 3276 ms.  
+```  
   
-## Compilando o código  
- Copie o código de exemplo e cole\-o em um projeto do Visual Studio, ou cole\-o em um arquivo chamado `download-oversubscription.cpp` e depois executado dos comandos a seguir em uma janela de prompt de comando do Visual Studio.  
+ O exemplo pode executar mais rápido quando excesso de assinatura foi habilitado porque as tarefas adicionais executadas enquanto outras tarefas de espera para a concluir uma operação latente.  
   
- **cl.exe \/EHsc \/MD \/D "\_AFXDLL" download\-oversubscription.cpp**  
+## <a name="compiling-the-code"></a>Compilando o código  
+ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `download-oversubscription.cpp` e, em seguida, execute um dos seguintes comandos em uma janela de Prompt de comando do Visual Studio.  
   
- **cl.exe \/EHsc \/MT download\-oversubscription.cpp**  
+ **cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**  
   
-## Programação robusta  
- Sempre sobresubscrição do depois que ele não for mais necessário.  Considere uma função que não trata uma exceção que é lançada por outra função.  Se você não desabilita a sobresubscrição antes que a função retorna, todo o trabalho adicional paralelo também oversubscribe o contexto atual.  
+ **cl.exe /EHsc /MT download-oversubscription.cpp**  
   
- Você pode usar o padrão *Aquisição de recurso é inicialização* \(RAII\) para limitar a sobresubscrição a um escopo fornecido.  No padrão de RAII, uma estrutura de dados é atribuída na pilha.  Se a estrutura de dados inicializa ou adquire um recurso quando é criada e destrói o ou versões esse recurso quando a estrutura de dados é destruída.  O padrão de RAII garante que o destruidor é chamado antes que o escopo inclusive encerrado.  Em virtude disso, o recurso está gerenciadas corretamente quando uma exceção é lançada quando ou uma função contém várias instruções de `return` .  
+## <a name="robust-programming"></a>Programação robusta  
+ Depois que você não precisa sempre desabilite a excesso de assinatura. Considere uma função que não lida com a exceção que é lançada por outra função. Se você não desabilitar excesso de assinatura antes que a função retorna, qualquer trabalho paralelo adicional também será subscrever o contexto atual.  
   
- O exemplo a seguir define uma estrutura denominada `scoped_blocking_signal`.  O construtor da estrutura de `scoped_blocking_signal` habilita a sobresubscrição e o destruidor desabilita a sobresubscrição.  
+ Você pode usar o *recurso aquisição é inicialização* padrão (RAII) para limitar o excesso de assinatura para um determinado escopo. Em padrão RAII, uma estrutura de dados é alocada na pilha. Essa estrutura de dados inicializa ou adquire um recurso quando ele é criado e destrói ou libera esse recurso quando a estrutura de dados é destruída. O padrão RAII garante que o destruidor é chamado antes de sair do escopo delimitador. Portanto, o recurso é gerenciado corretamente quando uma exceção é lançada ou quando uma função contém várias `return` instruções.  
   
- [!CODE [concrt-download-oversubscription#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#2)]  
+ O exemplo a seguir define uma estrutura denominada `scoped_blocking_signal`. O construtor do `scoped_blocking_signal` estrutura permite que o excesso de assinatura e o destruidor desabilita o excesso de assinatura.  
   
- O exemplo a seguir altera o corpo do método de `download` para usar RAII para assegurar que a sobresubscrição está desabilitada antes que a função retorna.  Essa técnica assegura que o método de `download` exceções gerais é seguro.  
+ [!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]  
   
- [!CODE [concrt-download-oversubscription#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#3)]  
+ O exemplo a seguir modifica o corpo do `download` método RAII para garantir que excesso de assinatura está desabilitado antes da função retorna. Essa técnica garante que o `download` método é segura para a exceção.  
   
-## Consulte também  
+ [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]  
+  
+## <a name="see-also"></a>Consulte também  
  [Contextos](../../parallel/concrt/contexts.md)   
- [Método Context::Oversubscribe](../Topic/Context::Oversubscribe%20Method.md)
+ [Método: oversubscribe](reference/context-class.md#oversubscribe)
+
+

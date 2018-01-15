@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc784af1c23576ff68c8be8b4b400cd10cc8b0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbcb635cd37a40c2de1599d271658de308e8cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/ZC:throwingNew (lança novos pressupor operador)  
 Quando o `/Zc:throwingNew` opção for especificada, o compilador otimiza a chamadas para `operator new` para ignorar a procura um retorno de ponteiro nulo. Essa opção informa ao compilador para assumir que vinculados implementações de `operator new` e alocadores personalizados está de acordo com o padrão do C++ e lançam em caso de falha de alocação. Por padrão no Visual Studio, o compilador gera pessimistically verificações nulas (`/Zc:throwingNew-`) para essas chamadas, pois os usuários podem vincular com uma implementação de não lançamento de `operator new` ou gravar rotinas de alocador personalizado que retornam ponteiros nulos.  

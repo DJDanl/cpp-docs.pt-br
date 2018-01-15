@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - VTS_OPTEXCLUSIVE
 - VTS_YSIZE_PIXELS
 - VTS_XSIZE_PIXELS
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - VTS_XPOS_HIMETRIC constant [MFC]
 - VTS_FONT constant [MFC]
@@ -44,16 +42,16 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d9bd9af96a51697d1800eea1ef2883835375210d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: cc8daf0853a97e8903b47d29f70e190430931fd5
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variant-parameter-type-constants"></a>Constantes do tipo de parâmetro variante
 Este tópico lista as novas constantes que indicam os tipos de parâmetro variante projetados para uso com as classes de controle OLE da biblioteca Microsoft Foundation Class.  
@@ -98,4 +96,3 @@ Este tópico lista as novas constantes que indicam os tipos de parâmetro varian
   
 ## <a name="see-also"></a>Consulte também  
  [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
-

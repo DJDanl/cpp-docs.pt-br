@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- locale/std::collate_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- collate_byname class
+f1_keywords: locale/std::collate_byname
+dev_langs: C++
+helpviewer_keywords: collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 03a043e26aabde7e985c53dd33900f2ca1926487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8cb03c73fca3c2076655d8a6d93de9f215cc6dfc
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collatebyname-class"></a>Classe collate_byname
 Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta de agrupamento de uma determinada localidade, permitindo a recuperação de informações específicas a uma área cultural no que diz respeito a convenções de classificação de cadeia de caracteres.  
@@ -66,7 +62,6 @@ protected:
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

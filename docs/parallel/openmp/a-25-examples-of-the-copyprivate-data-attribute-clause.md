@@ -1,27 +1,27 @@
 ---
-title: "A.25   Examples of the copyprivate Data Attribute Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Exemplos A.25 do dados de atributo cláusula copyprivate | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7b1cb6a5-5691-4b95-b3ac-d7543ede6405
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cdf7598e00bab72966fe79454567b0a59dcbaae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# A.25   Examples of the copyprivate Data Attribute Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Exemplo 1:** a `copyprivate` cláusula \([seção 2.7.2.8](../Topic/2.7.2.8%20copyprivate.md) na página 32\) pode ser usado para transmitir valores adquiridos por um único thread diretamente para todas as instâncias das variáveis particulares em outros threads.  
+# <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Exemplos da cláusula de atributo de dados copyprivate
+**Exemplo 1:** o `copyprivate` cláusula ([seção 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na página 32) pode ser usado para transmitir valores adquiridos por um único thread diretamente para todas as instâncias das variáveis privadas em outros threads.  
   
 ```  
 float x, y;  
@@ -41,9 +41,9 @@ void init( )
 }  
 ```  
   
- Se a rotina  *init* é chamado de uma região serial, o seu comportamento não é afetado pela presença das diretivas.  Após a chamada para o  *get\_values* rotina foi executada por um segmento, nenhum thread deixa a construção até que os objetos particulares designados por  *um*,  *b*,  *x*, e  *y* em todos os threads tornam\-se definido com os valores lidos.  
+ Se a rotina *init* é chamado de uma região de série, seu comportamento não é afetado pela presença das diretivas. Após a chamada para o *get_values* rotina foi executada por um thread, nenhum thread deixa a construção até que os objetos particulares designados pelo *um*, *b*, *x*, e *y* em todos os threads se tornam definidos com os valores lidos.  
   
- **Exemplo 2:** em comparação com o exemplo anterior, suponha que a leitura deve ser realizada por um segmento específico, digamos que o thread mestre.  Nesse caso, o `copyprivate` cláusula não pode ser usada para fazer a difusão diretamente, mas ele pode ser usado para fornecer acesso a um objeto compartilhado temporário.  
+ **Exemplo 2:** em contraste com o exemplo anterior, suponha que a leitura deve ser executada por um determinado thread, significa que o thread principal. Nesse caso, o `copyprivate` cláusula não pode ser usada para fazer a transmissão diretamente, mas pode ser usado para fornecer acesso a um objeto compartilhado temporário.  
   
 ```  
 float read_next( )   
@@ -74,7 +74,7 @@ float read_next( )
 }  
 ```  
   
- **Exemplo 3:** suponha que o número de objetos de bloqueio necessários dentro de uma região paralela não pode ser facilmente determinado antes para digitá\-la.  O `copyprivate` cláusula pode ser usada para fornecer acesso a objetos de bloqueio compartilhado que são alocados dentro daquela região paralela.  
+ **Exemplo 3:** suponha que o número de objetos de bloqueio necessário em uma região parallel facilmente não pode ser determinado antes de inseri-la. O `copyprivate` cláusula pode ser usada para fornecer acesso a objetos de bloqueio compartilhado são alocados nessa região paralela.  
   
 ```  
 #include <omp.h>  

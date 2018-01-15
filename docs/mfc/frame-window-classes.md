@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60f3938042cd42c7b02c12eb4e6316a00783c280
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5e67ef155c029285d0b306ca2d05179e993de78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-classes"></a>Classes de janela com moldura
 Cada aplicativo tem um "janela do quadro principal", uma janela de área de trabalho que geralmente tem o nome do aplicativo na sua legenda. Cada documento geralmente tem um "janela do quadro do documento." Uma janela do quadro de documento contém pelo menos um modo de exibição, que apresenta os dados do documento.  

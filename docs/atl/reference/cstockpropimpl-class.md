@@ -1,11 +1,10 @@
 ---
-title: Classe CStockPropImpl | Documentos do Microsoft
+title: Classe CStockPropImpl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -66,43 +65,28 @@ f1_keywords:
 - ATLCTL/ATL::putref_Font
 - ATLCTL/ATL::putref_MouseIcon
 - ATLCTL/ATL::putref_Picture
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CStockPropImpl class
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 366da264f62364a39f6dfe9903a1a19a89266d33
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 719ee1e0a39cbf3cd7d7721807bb4a9dcf2883d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 Essa classe fornece métodos para dar suporte a valores de propriedade de estoque.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -121,16 +105,16 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- A classe implementando o controle e derivando de `CStockPropImpl`.  
+ A classe de implementação do controle e a derivação de `CStockPropImpl`.  
   
  `InterfaceName`  
- Uma interface dupla expor as propriedades de estoque.  
+ Uma interface dupla expõe as propriedades de estoque.  
   
  `piid`  
  Um ponteiro para o IID da `InterfaceName`.  
   
  `plibid`  
- Um ponteiro para a ID da biblioteca da biblioteca de tipos que contém a definição de `InterfaceName`.  
+ Um ponteiro para a ID da biblioteca do tipo de biblioteca que contém a definição de `InterfaceName`.  
   
  `wMajor`  
  A versão principal da biblioteca de tipos. O valor padrão é 1.  
@@ -147,70 +131,70 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
   
 |||  
 |-|-|  
-|[get_Appearance](#get_appearance)|Chame esse método para obter o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.|  
+|[get_Appearance](#get_appearance)|Chame este método para obter o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.|  
 |[get_AutoSize](#get_autosize)|Chame esse método para obter o status do sinalizador que indica se o controle não pode ser qualquer outro tamanho.|  
-|[get_BackColor](#get_backcolor)|Chame esse método para obter a cor de plano de fundo do controle.|  
-|[get_BackStyle](#get_backstyle)|Chame esse método para obter o estilo de plano de fundo do controle, transparente ou opaco.|  
-|[get_BorderColor](#get_bordercolor)|Chame esse método para obter a cor da borda do controle.|  
-|[get_BorderStyle](#get_borderstyle)|Chame esse método para obter o estilo da borda do controle.|  
+|[get_BackColor](#get_backcolor)|Chame este método para obter a cor de plano de fundo do controle.|  
+|[get_BackStyle](#get_backstyle)|Chame este método para obter o estilo de plano de fundo do controle, transparente ou opaco.|  
+|[get_BorderColor](#get_bordercolor)|Chame este método para obter a cor da borda do controle.|  
+|[get_BorderStyle](#get_borderstyle)|Chame este método para obter o estilo da borda do controle.|  
 |[get_BorderVisible](#get_bordervisible)|Chame esse método para obter o status do sinalizador que indica se a borda do controle está visível ou não.|  
-|[get_BorderWidth](#get_borderwidth)|Chame esse método para obter a largura (em pixels) da borda do controle.|  
+|[get_BorderWidth](#get_borderwidth)|Chame este método para obter a largura (em pixels) da borda do controle.|  
 |[get_Caption](#get_caption)|Chame esse método para obter o texto especificado em legenda um objeto.|  
-|[get_DrawMode](#get_drawmode)|Chame esse método para obter o modo de desenho do controle, por exemplo, XOR caneta ou Inverter cores.|  
+|[get_DrawMode](#get_drawmode)|Chame este método para obter o modo de desenho de controle, por exemplo, a caneta XOR ou Inverter cores.|  
 |[get_DrawStyle](#get_drawstyle)|Chame esse método para obter o estilo de desenho do controle, por exemplo, sólido, tracejado ou pontilhado.|  
-|[get_DrawWidth](#get_drawwidth)|Chame esse método para obter a desenho largura (em pixels) usada por métodos de desenho do controle.|  
+|[get_DrawWidth](#get_drawwidth)|Chame este método para obter a largura de desenho (em pixels) usada pelos métodos de desenho do controle.|  
 |[get_Enabled](#get_enabled)|Chame esse método para obter o status do sinalizador que indica se o controle está habilitado.|  
-|[get_FillColor](#get_fillcolor)|Chame esse método para obter a cor de preenchimento do controle.|  
+|[get_FillColor](#get_fillcolor)|Chame este método para obter a cor de preenchimento do controle.|  
 |[get_FillStyle](#get_fillstyle)|Chame esse método para obter o estilo de preenchimento do controle, por exemplo, sólido, transparente ou diagonais.|  
 |[get_Font](#get_font)|Chame esse método para obter um ponteiro para propriedades de fonte do controle.|  
-|[get_ForeColor](#get_forecolor)|Chame esse método para obter a cor de primeiro plano do controle.|  
-|[get_HWND](#get_hwnd)|Chame esse método para obter o identificador de janela associado ao controle.|  
-|[get_MouseIcon](#get_mouseicon)|Chame esse método para obter as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse está sobre o controle.|  
-|[get_MousePointer](#get_mousepointer)|Chame esse método para obter o tipo de ponteiro de mouse exibido quando o mouse está sobre o controle, por exemplo, seta, cruzada ou ampulheta.|  
+|[get_ForeColor](#get_forecolor)|Chame este método para obter a cor de primeiro plano do controle.|  
+|[get_HWND](#get_hwnd)|Chame este método para obter o identificador de janela associado ao controle.|  
+|[get_MouseIcon](#get_mouseicon)|Chame este método para obter as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse estiver sobre o controle.|  
+|[get_MousePointer](#get_mousepointer)|Chame este método para obter o tipo de ponteiro de mouse exibido quando o mouse estiver sobre o controle, por exemplo, seta, cruzada ou ampulheta.|  
 |[get_Picture](#get_picture)|Chame esse método para obter um ponteiro para as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibido.|  
-|[get_ReadyState](#get_readystate)|Chame esse método para obter o estado pronto do controle, por exemplo, carregar ou carregado.|  
-|[get_TabStop](#get_tabstop)|Chame esse método para obter o sinalizador que indica se o controle é uma parada de tabulação ou não.|  
-|[get_Text](#get_text)|Chame esse método para obter o texto que é exibido com o controle.|  
+|[get_ReadyState](#get_readystate)|Chame este método para obter o estado do controle pronto, por exemplo, carregar ou carregado.|  
+|[get_TabStop](#get_tabstop)|Chame este método para obter o sinalizador que indica se o controle é uma parada de tabulação ou não.|  
+|[get_Text](#get_text)|Chame este método para obter o texto que é exibido com o controle.|  
 |[getvalid](#get_valid)|Chame esse método para obter o status do sinalizador que indica se o controle é válido ou não.|  
-|[get_Window](#get_window)|Chame esse método para obter o identificador de janela associado ao controle. Idêntico ao [CStockPropImpl::get_HWND](#get_hwnd).|  
-|[put_Appearance](#put_appearance)|Chame esse método para definir o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.|  
-|[put_AutoSize](#put_autosize)|Chame esse método para definir o valor do sinalizador que indica se o controle não pode ser qualquer outro tamanho.|  
-|[put_BackColor](#put_backcolor)|Chame esse método para definir a cor de plano de fundo do controle.|  
-|[put_BackStyle](#put_backstyle)|Chame esse método para definir o estilo de plano de fundo do controle.|  
-|[put_BorderColor](#put_bordercolor)|Chame esse método para definir a cor da borda do controle.|  
-|[put_BorderStyle](#put_borderstyle)|Chame esse método para definir o estilo da borda do controle.|  
-|[put_BorderVisible](#put_bordervisible)|Chame esse método para definir o valor do sinalizador que indica se a borda do controle está visível ou não.|  
-|[put_BorderWidth](#put_borderwidth)|Chame esse método para definir a largura da borda do controle.|  
-|[put_Caption](#put_caption)|Chame esse método para definir o texto a ser exibido com o controle.|  
-|[put_DrawMode](#put_drawmode)|Chame esse método para definir o modo do controle desenho, por exemplo, XOR caneta ou Inverter cores.|  
+|[get_Window](#get_window)|Chame este método para obter o identificador de janela associado ao controle. Idêntico ao [CStockPropImpl::get_HWND](#get_hwnd).|  
+|[put_Appearance](#put_appearance)|Chame este método para definir o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.|  
+|[put_AutoSize](#put_autosize)|Chame este método para definir o valor do sinalizador que indica se o controle não pode ser qualquer outro tamanho.|  
+|[put_BackColor](#put_backcolor)|Chame este método para definir a cor de plano de fundo do controle.|  
+|[put_BackStyle](#put_backstyle)|Chame este método para definir o estilo de plano de fundo do controle.|  
+|[put_BorderColor](#put_bordercolor)|Chame este método para definir a cor da borda do controle.|  
+|[put_BorderStyle](#put_borderstyle)|Chame este método para definir o estilo da borda do controle.|  
+|[put_BorderVisible](#put_bordervisible)|Chame este método para definir o valor do sinalizador que indica se a borda do controle está visível ou não.|  
+|[put_BorderWidth](#put_borderwidth)|Chame este método para definir a largura da borda do controle.|  
+|[put_Caption](#put_caption)|Chame este método para definir o texto a ser exibido com o controle.|  
+|[put_DrawMode](#put_drawmode)|Chame este método para definir o modo de desenho de controle, por exemplo, a caneta XOR ou Inverter cores.|  
 |[put_DrawStyle](#put_drawstyle)|Chame esse método para definir o estilo de desenho do controle, por exemplo, sólido, tracejado ou pontilhado.|  
-|[put_DrawWidth](#put_drawwidth)|Chame esse método para definir a largura (em pixels) usada por métodos de desenho do controle.|  
-|[put_Enabled](#put_enabled)|Chame esse método para definir o sinalizador que indica se o controle está habilitado.|  
-|[put_FillColor](#put_fillcolor)|Chame esse método para definir a cor de preenchimento do controle.|  
+|[put_DrawWidth](#put_drawwidth)|Chame este método para definir a largura (em pixels) usada pelos métodos de desenho do controle.|  
+|[put_Enabled](#put_enabled)|Chame este método para definir o sinalizador que indica se o controle está habilitado.|  
+|[put_FillColor](#put_fillcolor)|Chame este método para definir a cor de preenchimento do controle.|  
 |[put_FillStyle](#put_fillstyle)|Chame esse método para definir o estilo de preenchimento do controle, por exemplo, sólido, transparente ou diagonais.|  
-|[put_Font](#put_font)|Chame esse método para definir propriedades da fonte do controle.|  
-|[put_ForeColor](#put_forecolor)|Chame esse método para definir a cor de primeiro plano do controle.|  
+|[put_Font](#put_font)|Chame esse método para definir propriedades de fonte do controle.|  
+|[put_ForeColor](#put_forecolor)|Chame este método para definir a cor de primeiro plano do controle.|  
 |[put_HWND](#put_hwnd)|Esse método retornará E_FAIL.|  
-|[put_MouseIcon](#put_mouseicon)|Chame esse método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse está sobre o controle.|  
-|[put_MousePointer](#put_mousepointer)|Chame esse método para definir o tipo de ponteiro de mouse exibido quando o mouse está sobre o controle, por exemplo, seta, cruzada ou ampulheta.|  
-|[put_Picture](#put_picture)|Chame esse método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibido.|  
-|[put_ReadyState](#put_readystate)|Chame esse método para definir o estado pronto do controle, por exemplo, carregar ou carregado.|  
-|[put_TabStop](#put_tabstop)|Chame esse método para definir o valor do sinalizador que indica se o controle é uma parada de tabulação ou não.|  
-|[put_Text](#put_text)|Chame esse método para definir o texto que é exibido com o controle.|  
-|[putvalid](#put_valid)|Chame esse método para definir o sinalizador que indica se o controle é válido ou não.|  
-|[put_Window](#put_window)|Esse método chama [CStockPropImpl::put_HWND](#put_hwnd), que retornará E_FAIL.|  
-|[putref_Font](#putref_font)|Chame esse método para definir propriedades de fonte do controle, com uma contagem de referência.|  
-|[putref_MouseIcon](#putref_mouseicon)|Chame esse método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse está sobre o controle, com uma contagem de referência.|  
-|[putref_Picture](#putref_picture)|Chame esse método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibida, com uma contagem de referência.|  
+|[put_MouseIcon](#put_mouseicon)|Chame este método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse estiver sobre o controle.|  
+|[put_MousePointer](#put_mousepointer)|Chame esse método para definir o tipo de ponteiro de mouse exibido quando o mouse estiver sobre o controle, por exemplo, seta, cruzada ou ampulheta.|  
+|[put_Picture](#put_picture)|Chame este método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibido.|  
+|[put_ReadyState](#put_readystate)|Chame este método para definir o estado do controle pronto, por exemplo, carregar ou carregado.|  
+|[put_TabStop](#put_tabstop)|Chame este método para definir o valor do sinalizador que indica se o controle é uma parada de tabulação ou não.|  
+|[put_Text](#put_text)|Chame este método para definir o texto que é exibido com o controle.|  
+|[putvalid](#put_valid)|Chame este método para definir o sinalizador que indica se o controle é válido ou não.|  
+|[put_Window](#put_window)|Este método chama [CStockPropImpl::put_HWND](#put_hwnd), que retornará E_FAIL.|  
+|[putref_Font](#putref_font)|Chame esse método para definir propriedades da fonte do controle, com uma contagem de referência.|  
+|[putref_MouseIcon](#putref_mouseicon)|Chame este método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse estiver sobre o controle com uma contagem de referência.|  
+|[putref_Picture](#putref_picture)|Chame este método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibida, com uma contagem de referência.|  
   
 ## <a name="remarks"></a>Comentários  
- `CStockPropImpl`Fornece **colocar** e **obter** métodos para cada propriedade de estoque. Esses métodos fornecem o código necessário para definir ou obter o membro de dados associado a cada propriedade para notificar e sincronizar com o contêiner quando qualquer propriedade alterada.  
+ `CStockPropImpl`Fornece **colocar** e **obter** métodos para cada propriedade de estoque. Esses métodos fornecem o código necessário para definir ou obter o membro de dados associado a cada propriedade e para notificar e sincronizar com o contêiner quando qualquer propriedade alterada.  
   
- Visual C++ oferece suporte para propriedades de estoque por meio de seus assistentes. Para obter mais informações sobre como adicionar propriedades de estoque a um controle, consulte o [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md).  
+ Visual C++ fornece suporte para propriedades de estoque por meio de seus assistentes. Para obter mais informações sobre como adicionar propriedades de estoque a um controle, consulte o [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md).  
   
  Para compatibilidade com versões anteriores, `CStockPropImpl` também expõe `get_Window` e `put_Window` métodos que simplesmente chamar `get_HWND` e `put_HWND`, respectivamente. A implementação padrão de `put_HWND` retorna **E_FAIL** como `HWND` deve ser uma propriedade somente leitura.  
   
- As propriedades a seguir também tem um **putref** implementação:  
+ As propriedades a seguir também têm um **putref** implementação:  
   
 -   Fonte  
   
@@ -218,7 +202,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
   
 -   Imagem  
   
- As mesmas propriedades de estoque três exigem seu membro de dados correspondente ser do tipo `CComPtr` ou alguma outra classe que fornece a referência de interface correta de contagem por meio do operador de atribuição.  
+ As mesmas propriedades de estoque três exigem seu membro de dados correspondente ser do tipo `CComPtr` ou qualquer outra classe que fornece a referência de interface correta de contagem por meio do operador de atribuição.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `T`  
@@ -231,7 +215,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
  **Cabeçalho:** atlctl.h  
   
 ##  <a name="get_appearance"></a>CStockPropImpl::get_Appearance  
- Chame esse método para obter o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.  
+ Chame este método para obter o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
@@ -242,7 +226,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
  Variável que recebe o estilo de pintura do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_autosize"></a>CStockPropImpl::get_AutoSize  
  Chame esse método para obter o status do sinalizador que indica se o controle não pode ser qualquer outro tamanho.  
@@ -253,13 +237,13 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
   
 ### <a name="parameters"></a>Parâmetros  
  *pbAutoSize*  
- Variável que recebe o status do sinalizador. TRUE indica que o controle não pode ser qualquer outro tamanho.  
+ Variável que receberá o status do sinalizador. TRUE indica que o controle não pode ser qualquer outro tamanho.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_backcolor"></a>CStockPropImpl::get_BackColor  
- Chame esse método para obter a cor de plano de fundo do controle.  
+ Chame este método para obter a cor de plano de fundo do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
@@ -270,10 +254,10 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
  Variável que recebe a cor de plano de fundo do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_backstyle"></a>CStockPropImpl::get_BackStyle  
- Chame esse método para obter o estilo de plano de fundo do controle, transparente ou opaco.  
+ Chame este método para obter o estilo de plano de fundo do controle, transparente ou opaco.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
@@ -284,10 +268,10 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
  Variável que recebe o estilo de plano de fundo do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_bordercolor"></a>CStockPropImpl::get_BorderColor  
- Chame esse método para obter a cor da borda do controle.  
+ Chame este método para obter a cor da borda do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
@@ -298,10 +282,10 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
  Variável que recebe a cor da borda do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_borderstyle"></a>CStockPropImpl::get_BorderStyle  
- Chame esse método para obter o estilo da borda do controle.  
+ Chame este método para obter o estilo da borda do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
@@ -312,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
  Variável que recebe o estilo da borda do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_bordervisible"></a>CStockPropImpl::get_BorderVisible  
  Chame esse método para obter o status do sinalizador que indica se a borda do controle está visível ou não.  
@@ -323,13 +307,13 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
   
 ### <a name="parameters"></a>Parâmetros  
  *pbBorderVisible*  
- Variável que recebe o status do sinalizador. TRUE indica que a borda do controle está visível.  
+ Variável que receberá o status do sinalizador. TRUE indica que a borda do controle está visível.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_borderwidth"></a>CStockPropImpl::get_BorderWidth  
- Chame esse método para obter a largura da borda do controle.  
+ Chame este método para obter a largura da borda do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
@@ -340,7 +324,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
  Variável que recebe a largura da borda do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_caption"></a>CStockPropImpl::get_Caption  
  Chame esse método para obter o texto especificado em legenda um objeto.  
@@ -354,10 +338,10 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
  O texto a ser exibido com o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_drawmode"></a>CStockPropImpl::get_DrawMode  
- Chame esse método para obter o modo de desenho do controle, por exemplo, XOR caneta ou Inverter cores.  
+ Chame este método para obter o modo de desenho de controle, por exemplo, a caneta XOR ou Inverter cores.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
@@ -368,7 +352,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
  Variável que recebe o modo de desenho do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_drawstyle"></a>CStockPropImpl::get_DrawStyle  
  Chame esse método para obter o estilo de desenho do controle, por exemplo, sólido, tracejado ou pontilhado.  
@@ -382,10 +366,10 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
  Variável que recebe o estilo de desenho do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_drawwidth"></a>CStockPropImpl::get_DrawWidth  
- Chame esse método para obter a desenho largura (em pixels) usada por métodos de desenho do controle.  
+ Chame este método para obter a largura de desenho (em pixels) usada pelos métodos de desenho do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
@@ -393,10 +377,10 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
   
 ### <a name="parameters"></a>Parâmetros  
  *pnDrawWidth*  
- Variável que recebe o valor do controle largura, em pixels.  
+ Variável que recebe o valor de largura do controle, em pixels.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_enabled"></a>CStockPropImpl::get_Enabled  
  Chame esse método para obter o status do sinalizador que indica se o controle está habilitado.  
@@ -407,13 +391,13 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
   
 ### <a name="parameters"></a>Parâmetros  
  `pbEnabled`  
- Variável que recebe o status do sinalizador. TRUE indica que o controle está habilitado.  
+ Variável que receberá o status do sinalizador. TRUE indica que o controle está habilitado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_fillcolor"></a>CStockPropImpl::get_FillColor  
- Chame esse método para obter a cor de preenchimento do controle.  
+ Chame este método para obter a cor de preenchimento do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
@@ -424,7 +408,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
  Variável que recebe a cor de preenchimento do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_fillstyle"></a>CStockPropImpl::get_FillStyle  
  Chame esse método para obter o estilo de preenchimento do controle, por exemplo, sólido, transparente ou crosshatched.  
@@ -438,7 +422,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
  Variável que recebe o estilo de preenchimento do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_font"></a>CStockPropImpl::get_Font  
  Chame esse método para obter um ponteiro para propriedades de fonte do controle.  
@@ -452,10 +436,10 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
  Variável que recebe um ponteiro para propriedades de fonte do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_forecolor"></a>CStockPropImpl::get_ForeColor  
- Chame esse método para obter a cor de primeiro plano do controle.  
+ Chame este método para obter a cor de primeiro plano do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
@@ -466,10 +450,10 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
  Variável que recebe a cor de primeiro plano de controles.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_hwnd"></a>CStockPropImpl::get_HWND  
- Chame esse método para obter o identificador de janela associado ao controle.  
+ Chame este método para obter o identificador de janela associado ao controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
@@ -480,10 +464,10 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
  O identificador de janela associado ao controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_mouseicon"></a>CStockPropImpl::get_MouseIcon  
- Chame esse método para obter as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse está sobre o controle.  
+ Chame este método para obter as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse estiver sobre o controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
@@ -494,10 +478,10 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
  Variável que recebe um ponteiro para as propriedades da imagem do gráfico.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_mousepointer"></a>CStockPropImpl::get_MousePointer  
- Chame esse método para obter o tipo de ponteiro de mouse exibido quando o mouse está sobre o controle, por exemplo, seta, cruzada ou ampulheta.  
+ Chame este método para obter o tipo de ponteiro de mouse exibido quando o mouse estiver sobre o controle, por exemplo, seta, cruzada ou ampulheta.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
@@ -505,10 +489,10 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
   
 ### <a name="parameters"></a>Parâmetros  
  *pnMousePointer*  
- Variável que recebe o tipo de ponteiro de mouse.  
+ Variável que recebe o tipo de ponteiro do mouse.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_picture"></a>CStockPropImpl::get_Picture  
  Chame esse método para obter um ponteiro para as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibido.  
@@ -522,10 +506,10 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
  Variável que recebe um ponteiro para as propriedades da imagem. Consulte [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) para obter mais detalhes.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_readystate"></a>CStockPropImpl::get_ReadyState  
- Chame esse método para obter o estado pronto do controle, por exemplo, carregar ou carregado.  
+ Chame este método para obter o estado do controle pronto, por exemplo, carregar ou carregado.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
@@ -536,7 +520,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
  Variável que recebe o estado pronto do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_tabstop"></a>CStockPropImpl::get_TabStop  
  Chame esse método para obter o status do sinalizador que indica se o controle é uma parada de tabulação ou não.  
@@ -547,13 +531,13 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
   
 ### <a name="parameters"></a>Parâmetros  
  *pbTabStop*  
- Variável que recebe o status do sinalizador. TRUE indica que o controle é uma parada de tabulação.  
+ Variável que receberá o status do sinalizador. TRUE indica que o controle é uma parada de tabulação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_text"></a>CStockPropImpl::get_Text  
- Chame esse método para obter o texto que é exibido com o controle.  
+ Chame este método para obter o texto que é exibido com o controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
@@ -564,7 +548,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
  O texto que é exibido com o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_valid"></a>CStockPropImpl::getvalid  
  Chame esse método para obter o status do sinalizador que indica se o controle é válido ou não.  
@@ -575,13 +559,13 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
   
 ### <a name="parameters"></a>Parâmetros  
  *pbValid*  
- Variável que recebe o status do sinalizador. TRUE indica que o controle é válido.  
+ Variável que receberá o status do sinalizador. TRUE indica que o controle é válido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="get_window"></a>CStockPropImpl::get_Window  
- Chame esse método para obter o identificador de janela associado ao controle. Idêntico ao [CStockPropImpl::get_HWND](#get_hwnd).  
+ Chame este método para obter o identificador de janela associado ao controle. Idêntico ao [CStockPropImpl::get_HWND](#get_hwnd).  
   
 ```
 HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
@@ -592,10 +576,10 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
  O identificador de janela associado ao controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_appearance"></a>CStockPropImpl::put_Appearance  
- Chame esse método para definir o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.  
+ Chame este método para definir o estilo de pintura usada pelo controle, por exemplo, simples ou 3D.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
@@ -606,7 +590,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
  O novo estilo de pintura a ser usado pelo controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_autosize"></a>CStockPropImpl::put_AutoSize  
  Chame esse método para definir o valor de sinalizador que indica se o controle não pode ser qualquer outro tamanho.  
@@ -620,10 +604,10 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
  TRUE se o controle não pode ser qualquer outro tamanho.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_backcolor"></a>CStockPropImpl::put_BackColor  
- Chame esse método para definir a cor de plano de fundo do controle.  
+ Chame este método para definir a cor de plano de fundo do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
@@ -634,10 +618,10 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
  A nova cor de plano de fundo do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_backstyle"></a>CStockPropImpl::put_BackStyle  
- Chame esse método para definir o estilo de plano de fundo do controle.  
+ Chame este método para definir o estilo de plano de fundo do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
@@ -648,10 +632,10 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
  O novo estilo de plano de fundo do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_bordercolor"></a>CStockPropImpl::put_BorderColor  
- Chame esse método para definir a cor da borda do controle.  
+ Chame este método para definir a cor da borda do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
@@ -659,13 +643,13 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
   
 ### <a name="parameters"></a>Parâmetros  
  *clrBorderColor*  
- A nova cor de borda. O tipo de dados OLE_COLOR é representado internamente como um inteiro longo de 32 bits.  
+ A nova cor da borda. O tipo de dados OLE_COLOR internamente é representado como um inteiro longo de 32 bits.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_borderstyle"></a>CStockPropImpl::put_BorderStyle  
- Chame esse método para definir o estilo da borda do controle.  
+ Chame este método para definir o estilo da borda do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
@@ -676,10 +660,10 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
  O novo estilo de borda.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_bordervisible"></a>CStockPropImpl::put_BorderVisible  
- Chame esse método para definir o valor do sinalizador que indica se a borda do controle está visível ou não.  
+ Chame este método para definir o valor do sinalizador que indica se a borda do controle está visível ou não.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
@@ -690,10 +674,10 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
  TRUE se a borda deve ser visível.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_borderwidth"></a>CStockPropImpl::put_BorderWidth  
- Chame esse método para definir a largura da borda do controle.  
+ Chame este método para definir a largura da borda do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
@@ -704,10 +688,10 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
  A nova largura da borda do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_caption"></a>CStockPropImpl::put_Caption  
- Chame esse método para definir o texto a ser exibido com o controle.  
+ Chame este método para definir o texto a ser exibido com o controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
@@ -718,10 +702,10 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
  O texto a ser exibido com o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_drawmode"></a>CStockPropImpl::put_DrawMode  
- Chame esse método para definir o modo do controle desenho, por exemplo, XOR caneta ou Inverter cores.  
+ Chame este método para definir o modo de desenho de controle, por exemplo, a caneta XOR ou Inverter cores.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
@@ -732,7 +716,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
  O novo modo de desenho do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_drawstyle"></a>CStockPropImpl::put_DrawStyle  
  Chame esse método para definir o estilo de desenho do controle, por exemplo, sólido, tracejado ou pontilhado.  
@@ -746,10 +730,10 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
  O novo estilo de desenho do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_drawwidth"></a>CStockPropImpl::put_DrawWidth  
- Chame esse método para definir a largura (em pixels) usada por métodos de desenho do controle.  
+ Chame este método para definir a largura (em pixels) usada pelos métodos de desenho do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
@@ -757,13 +741,13 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
   
 ### <a name="parameters"></a>Parâmetros  
  *nDrawWidth*  
- A nova largura a ser usado pelo controle de métodos de desenho.  
+ Métodos de desenho do nova largura a ser usado pelo controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_enabled"></a>CStockPropImpl::put_Enabled  
- Chame esse método para definir o valor do sinalizador que indica se o controle está habilitado.  
+ Chame este método para definir o valor do sinalizador que indica se o controle está habilitado.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
@@ -774,10 +758,10 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
  TRUE se o controle está habilitado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_fillcolor"></a>CStockPropImpl::put_FillColor  
- Chame esse método para definir a cor de preenchimento do controle.  
+ Chame este método para definir a cor de preenchimento do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
@@ -785,10 +769,10 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
   
 ### <a name="parameters"></a>Parâmetros  
  *clrFillColor*  
- A nova cor de preenchimento do controle.  
+ A nova cor de preenchimento para o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_fillstyle"></a>CStockPropImpl::put_FillStyle  
  Chame esse método para definir o estilo de preenchimento do controle, por exemplo, sólido, transparente ou diagonais.  
@@ -802,10 +786,10 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
  O novo estilo de preenchimento para o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_font"></a>CStockPropImpl::put_Font  
- Chame esse método para definir propriedades da fonte do controle.  
+ Chame esse método para definir propriedades de fonte do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
@@ -816,10 +800,10 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
  Um ponteiro para propriedades de fonte do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_forecolor"></a>CStockPropImpl::put_ForeColor  
- Chame esse método para definir a cor de primeiro plano do controle.  
+ Chame este método para definir a cor de primeiro plano do controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
@@ -830,7 +814,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
  A nova cor de primeiro plano do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_hwnd"></a>CStockPropImpl::put_HWND  
  Esse método retornará E_FAIL.  
@@ -850,7 +834,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
  O identificador de janela é um valor somente leitura.  
   
 ##  <a name="put_mouseicon"></a>CStockPropImpl::put_MouseIcon  
- Chame esse método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse está sobre o controle.  
+ Chame este método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse estiver sobre o controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
@@ -861,10 +845,10 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
  Um ponteiro para as propriedades da imagem do gráfico.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_mousepointer"></a>CStockPropImpl::put_MousePointer  
- Chame esse método para definir o tipo de ponteiro de mouse exibido quando o mouse está sobre o controle, por exemplo, seta, cruzada ou ampulheta.  
+ Chame esse método para definir o tipo de ponteiro de mouse exibido quando o mouse estiver sobre o controle, por exemplo, seta, cruzada ou ampulheta.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
@@ -875,10 +859,10 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
  O tipo de ponteiro do mouse.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_picture"></a>CStockPropImpl::put_Picture  
- Chame esse método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibido.  
+ Chame este método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibido.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
@@ -889,10 +873,10 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
  Um ponteiro para as propriedades da imagem. Consulte [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) para obter mais detalhes.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_readystate"></a>CStockPropImpl::put_ReadyState  
- Chame esse método para definir o estado pronto do controle, por exemplo, carregar ou carregado.  
+ Chame este método para definir o estado do controle pronto, por exemplo, carregar ou carregado.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
@@ -903,10 +887,10 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
  O estado do controle pronto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_tabstop"></a>CStockPropImpl::put_TabStop  
- Chame esse método para definir o sinalizador que indica se o controle é uma parada de tabulação ou não.  
+ Chame este método para definir o sinalizador que indica se o controle é uma parada de tabulação ou não.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
@@ -917,10 +901,10 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
  TRUE se o controle é uma parada de tabulação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_text"></a>CStockPropImpl::put_Text  
- Chame esse método para definir o texto que é exibido com o controle.  
+ Chame este método para definir o texto que é exibido com o controle.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
@@ -931,10 +915,10 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
  O texto que é exibido com o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_valid"></a>CStockPropImpl::putvalid  
- Chame esse método para definir o sinalizador que indica se o controle é válido ou não.  
+ Chame este método para definir o sinalizador que indica se o controle é válido ou não.  
   
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
@@ -945,10 +929,10 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
  TRUE se o controle é válido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ##  <a name="put_window"></a>CStockPropImpl::put_Window  
- Esse método chama [CStockPropImpl::put_HWND](#put_hwnd), que retornará E_FAIL.  
+ Este método chama [CStockPropImpl::put_HWND](#put_hwnd), que retornará E_FAIL.  
   
 ```
 HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
@@ -965,7 +949,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
  O identificador de janela é um valor somente leitura.  
   
 ##  <a name="putref_font"></a>CStockPropImpl::putref_Font  
- Chame esse método para definir propriedades de fonte do controle, com uma contagem de referência.  
+ Chame esse método para definir propriedades da fonte do controle, com uma contagem de referência.  
   
 ```
 HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
@@ -976,13 +960,13 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
  Um ponteiro para propriedades de fonte do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  O mesmo que [CStockPropImpl::put_Font](#put_font), mas com uma contagem de referência.  
   
 ##  <a name="putref_mouseicon"></a>CStockPropImpl::putref_MouseIcon  
- Chame esse método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse está sobre o controle, com uma contagem de referência.  
+ Chame este método para definir as propriedades da imagem do gráfico (ícone, bitmap ou metarquivo) a ser exibida quando o mouse estiver sobre o controle com uma contagem de referência.  
   
 ```
 HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
@@ -993,13 +977,13 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
  Um ponteiro para as propriedades da imagem do gráfico.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  O mesmo que [CStockPropImpl::put_MouseIcon](#put_mouseicon), mas com uma contagem de referência.  
   
 ##  <a name="putref_picture"></a>CStockPropImpl::putref_Picture  
- Chame esse método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibida, com uma contagem de referência.  
+ Chame este método para definir as propriedades da imagem de um gráfico (ícone, bitmap ou metarquivo) a ser exibida, com uma contagem de referência.  
   
 ```
 HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
@@ -1010,7 +994,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
  Um ponteiro para as propriedades da imagem. Consulte [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) para obter mais detalhes.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  O mesmo que [CStockPropImpl::put_Picture](#put_picture), mas com uma contagem de referência.  
@@ -1018,4 +1002,3 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)   
  [Classe IDispatchImpl](../../atl/reference/idispatchimpl-class.md)
-

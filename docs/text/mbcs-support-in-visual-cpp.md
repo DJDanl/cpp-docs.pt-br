@@ -32,11 +32,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 65d5fc64db1e43d9b0914a9d8671e466f4ee87e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbcs-support-in-visual-c"></a>Suporte de MBCS no Visual C++
 Quando executado em uma versão habilitada MBCS do sistema operacional Windows 2000 ou Windows XP, o sistema de desenvolvimento do Visual C++ (incluindo o editor de código fonte integrado, depurador e ferramentas de linha de comando) está habilitado para MBCS, com exceção da janela de memória.  

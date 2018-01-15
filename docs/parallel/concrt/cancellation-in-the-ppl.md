@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90edebe8e57e6720ad1cb7a83b59f478532c16c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelamento no PPL
 Este documento explica a função de cancelamento na biblioteca de padrões paralelos (PPL), como cancelar o trabalho paralelo e como determinar quando o trabalho paralelo foi cancelado.  
@@ -86,7 +87,7 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
  Para obter mais exemplos que Cancelar tarefas paralelas, consulte [passo a passo: conectando usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [como: cancelamento de uso para parar um loop paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), e [como: Use Tratamento de exceções para quebra de um loop paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
 ###  <a name="tokens"></a>Usando um Token de cancelamento para cancelar o trabalho paralelo  
- O `task`, `task_group`, e `structured_task_group` classes de suporte ao cancelamento com o uso de tokens de cancelamento. PPL define o [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) e [Concurrency](../../parallel/concrt/reference/cancellation-token-class.md) classes para essa finalidade. Quando você usa um token de cancelamento para cancelar o trabalho, o tempo de execução não inicia um novo trabalho assina esse token. Um trabalho que já está ativo pode usar [is_canceled] ((... /.. / parallel/concrt/reference/cancellation-token-class.md#is_canceled) a função de membro para monitorar o token de cancelamento e parar quando possível.  
+ O `task`, `task_group`, e `structured_task_group` classes de suporte ao cancelamento com o uso de tokens de cancelamento. PPL define o [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) e [Concurrency](../../parallel/concrt/reference/cancellation-token-class.md) classes para essa finalidade. Quando você usa um token de cancelamento para cancelar o trabalho, o tempo de execução não inicia um novo trabalho assina esse token. Um trabalho que já está ativo pode usar o [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) a função de membro para monitorar o token de cancelamento e parar quando possível.  
   
 
  Para iniciar o cancelamento, chame o [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) método. Responder ao cancelamento das seguintes maneiras:  

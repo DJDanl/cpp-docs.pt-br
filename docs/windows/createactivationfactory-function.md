@@ -15,11 +15,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e36a76de38290cfd1571f1c5743745561f14e438
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b6b2fe8ad131a3cafda03f8ddb0d32fad3e56173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createactivationfactory-function"></a>Função CreateActivationFactory
 Cria uma fábrica que produz instâncias da classe especificada que podem ser ativadas pelo tempo de execução do Windows.  

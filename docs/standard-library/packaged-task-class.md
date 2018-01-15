@@ -31,11 +31,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: 74960f3078788e6ae627d29d06f6999d48f57d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e060a7d9a73cd275810541fc57ad34a2c62c4097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="packagedtask-class"></a>Classe packaged_task
 Descreve um *provedor assíncrono* que é um wrapper de chamada e cuja assinatura de chamada é `Ty(ArgTypes...)`. O *estado assíncrono associado* mantém uma cópia de seu objeto que pode ser chamado, bem como o possível resultado.  
@@ -49,7 +50,7 @@ class packaged_task;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

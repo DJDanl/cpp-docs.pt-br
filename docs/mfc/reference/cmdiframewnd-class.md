@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1968d34302cea355f174c96fb51b5bec3941fcb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc40ac38d4f74848448b26284ad225faad04864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewnd-class"></a>Classe CMDIFrameWnd
 Fornece a funcionalidade de um Windows várias janelas de quadro MDI (interface) do documento, juntamente com os membros para gerenciar a janela.  
@@ -62,7 +63,7 @@ class CMDIFrameWnd : public CFrameWnd
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

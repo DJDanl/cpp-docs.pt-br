@@ -1,85 +1,83 @@
 ---
-title: "/Ox (otimiza&#231;&#227;o total) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ToolOptimization"
-  - "/ox"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /Ox (C++)"
-  - "código rápido"
-  - "otimização total"
-  - "Opção de compilador Ox [C++]"
-  - "Opção de compilador -Ox [C++]"
+title: "-Ox (habilitar a maioria das otimizações de velocidade) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ToolOptimization
+- /ox
+dev_langs: C++
+helpviewer_keywords:
+- Ox compiler option [C++]
+- fast code [C++]
+- /Ox compiler option [C++]
+- -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /Ox (otimiza&#231;&#227;o total)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="ox-enable-most-speed-optimizations"></a>/OX (habilitar otimizações de velocidade mais)
 
-A opção do compilador de **\/Ox** gerencia o código a velocidade de execução de favorece sobre o tamanho menor.  
-  
-## Sintaxe  
-  
-```  
-/Ox  
-```  
-  
-## Comentários  
- Especificar a opção de compilador de **\/Ox** é o mesmo que o uso das seguintes opções:  
-  
--   [\/Ob \(expansão de função embutida\)](../../build/reference/ob-inline-function-expansion.md), onde o parâmetro de opção é 2 \(**\/Ob2**\)  
-  
--   [\/Og \(otimizações globais\)](../../build/reference/og-global-optimizations.md)  
-  
--   [\/Oi \(gerar funções intrínsecas\)](../Topic/-Oi%20\(Generate%20Intrinsic%20Functions\).md)  
-  
--   [\/Ot \(Código rápido em detrimento\)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)  
-  
--   [\/Oy \(omissão do ponteiro de quadro\)](../../build/reference/oy-frame-pointer-omission.md)  
-  
- **\/Ox** é mutuamente exclusiva de:  
-  
--   [\/O1 \(Minimize o tamanho\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)  
-  
--   [\/O2 \(Maximizar a velocidade\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)  
-  
--   [\/Od \(desabilitar\)](../../build/reference/od-disable-debug.md)  
-  
- A opção do compilador de **\/Ox** também permite que a otimização nomeada do valor de retorno, o que elimina o construtor de cópia e o destruidor de um valor de retorno baseado pilha.  Para obter mais informações, consulte [\/O1, \/O2 \(minimizar tamanho, maximizar velocidade\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).  
-  
- Você pode cancelar para substituir a opção do compilador de **\/Ox** se você especificar **\/Oxs**, que combina a opção do compilador de **\/Ox** com [\/Os \(Código em detrimento pequeno\)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md).  As opções combinadas favorecem o tamanho de código menor.  
-  
- Geralmente, especifique [\/O2 \(Maximizar a velocidade\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) em vez de **\/Ox**, e [\/O1 \(Minimize o tamanho\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) em vez de **\/Oxs**.  
-  
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
-  
-2.  Clique na pasta **C\/C\+\+**.  
-  
-3.  Clique na página de propriedades de **Otimização** .  
-  
-4.  Modifique a propriedade de **Otimização** .  
-  
-### Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.  
-  
-## Consulte também  
- [\/O opções \(otimizar código\)](../../build/reference/o-options-optimize-code.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+O **/Ox** opção de compilador permite uma combinação de otimizações que favorecem a velocidade. Em algumas versões do Visual Studio IDE e a mensagem de Ajuda do compilador, isso é chamado *otimização total*, mas o **/Ox** opção de compilador permite apenas um subconjunto das opções de otimização de velocidade habilitado por **/O2**.
+
+## <a name="syntax"></a>Sintaxe
+
+> /Ox
+
+## <a name="remarks"></a>Comentários
+
+O **/Ox** compilador opção habilita o **/O** opções de compilador que favorecer velocidade. O **/Ox** opção de compilador não inclui adicional [/GF (eliminar cadeias de caracteres duplicadas)](../../build/reference/gf-eliminate-duplicate-strings.md) e [/Gy (habilitar vinculação do nível de função)](../../build/reference/gy-enable-function-level-linking.md) opções habilitadas pelo [/O1 ou /O2 (minimizar tamanho, maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md). As opções adicionais aplicadas pelo **/O1** e **/O2** pode fazer com que os ponteiros para cadeias de caracteres ou funções para compartilhar um endereço de destino, que pode afetar a depuração e a conformidade de linguagem estrita. O **/Ox** opção é uma maneira fácil de habilitar a maioria das otimizações sem incluir **/GF** e **/Gy**. Para obter mais informações, consulte as descrições do [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) e [/Gy](../../build/reference/gy-enable-function-level-linking.md) opções.
+
+O **/Ox** opção de compilador é o mesmo que usar as seguintes opções em combinação:
+
+- [/OB (expansão de função embutida)](../../build/reference/ob-inline-function-expansion.md), onde o parâmetro de opção é 2 (**/Ob2**)
+
+- [/Og (otimizações globais)](../../build/reference/og-global-optimizations.md)
+
+- [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md)
+
+- [/OT (favorecer código rápido)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
+
+- [/Oy (omissão do ponteiro de quadro)](../../build/reference/oy-frame-pointer-omission.md)
+
+**/OX** é mutuamente exclusivo de:
+
+- [/O1 (minimizar tamanho)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+
+- [/ O2 (maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+
+- [/Od (desabilitar (Depurar))](../../build/reference/od-disable-debug.md)
+
+Você pode cancelar a diferença em direção a velocidade do **/Ox** opção de compilador se você especificar **/Oxs**, que combina o **/Ox** opção de compilador com [/Os (favorecer pequeno Código)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). As opções combinadas favorecerem tamanho menor de código.
+
+Para aplicar todas as otimizações de nível de arquivo disponíveis para compilações de versão, é recomendável que você especificar [/O2 (maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) em vez de **/Ox**, e [/O1 (minimizar tamanho)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) em vez disso de **/Oxs**. Para otimização ainda mais na versão compilações, considere também o [/GL (otimização de programa total)](../../build/reference/gl-whole-program-optimization.md) opção de compilador e [/LTCG (geração de código Link-time)](../../build/reference/ltcg-link-time-code-generation.md) opção de vinculador.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Em **propriedades de configuração**, abra **C/C++** e, em seguida, escolha o **otimização** página de propriedades.
+
+1. Modificar o **otimização** propriedade.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)  
+[Opções do Compilador](../../build/reference/compiler-options.md)  
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

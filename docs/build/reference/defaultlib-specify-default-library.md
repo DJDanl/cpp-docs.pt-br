@@ -1,57 +1,57 @@
 ---
-title: "/DEFAULTLIB (especificar biblioteca padr&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.DefaultLibraries"
-  - "/defaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /DEFAULTLIB"
-  - "opção de vinculador DEFAULTLIB"
-  - "opção de vinculador -DEFAULTLIB"
-  - "bibliotecas, adicionando à lista de"
+title: "-DEFAULTLIB (especificar biblioteca padrão) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.DefaultLibraries
+- /defaultlib
+dev_langs: C++
+helpviewer_keywords:
+- -DEFAULTLIB linker option
+- DEFAULTLIB linker option
+- /DEFAULTLIB linker option
+- libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 40fe07543dd9dc65d93cc9f79504f5fd324204dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /DEFAULTLIB (especificar biblioteca padr&#227;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (especificar biblioteca padrão)
 ```  
 /DEFAULTLIB:library  
 ```  
   
-## Comentários  
- onde:  
+## <a name="remarks"></a>Comentários  
+ em que:  
   
  *biblioteca*  
- O nome de uma biblioteca para pesquisar ao resolver referências externas.  
+ O nome de uma biblioteca de pesquisa ao resolver referências externas.  
   
-## Comentários  
- A opção \/DEFAULTLIB adiciona uma *biblioteca* à lista de bibliotecas que VINCULAM pesquisas ao resolver referencia.  Uma biblioteca especificada com \/DEFAULTLIB é pesquisada depois que as bibliotecas especificadas na linha de comando antes das bibliotecas padrão e nomeadas em arquivos de .obj.  
+## <a name="remarks"></a>Comentários  
+ A opção /DEFAULTLIB adiciona uma *biblioteca* à lista de bibliotecas de LINK busca ao resolver referências. Uma biblioteca especificada com /DEFAULTLIB é pesquisada após bibliotecas especificadas na linha de comando e antes de bibliotecas padrão chamadas nos arquivos. obj.  
   
- A opção de [Ignorar todas as bibliotecas padrão](../../build/reference/nodefaultlib-ignore-libraries.md) \(\/NODEFAULTLIB\) substitui \/DEFAULTLIB:*biblioteca*.  [Ignorar bibliotecas](../../build/reference/nodefaultlib-ignore-libraries.md) \(\/NODEFAULTLIB: a opção*de biblioteca*\) substitui \/DEFAULTLIB:*biblioteca* quando o mesmo nome *da biblioteca* é especificado em ambos.  
+ O [ignorar todas as bibliotecas padrão](../../build/reference/nodefaultlib-ignore-libraries.md) (/ /NODEFAULTLIB) opção substitui /DEFAULTLIB:*biblioteca*. O [ignorar bibliotecas](../../build/reference/nodefaultlib-ignore-libraries.md) (/ /NODEFAULTLIB:*biblioteca*) opção substitui /DEFAULTLIB:*biblioteca* quando o mesmo *biblioteca* nome é especificado em ambos.  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
--   Essa opção do vinculador não está disponível no ambiente de desenvolvimento do Visual Studio.  Para adicionar uma biblioteca para o estágio de link, use a propriedade de **Dependências Adicionais** da página de propriedades de **Entrada** .  
+-   Essa opção de vinculador não está disponível no ambiente de desenvolvimento do Visual Studio. Para adicionar uma biblioteca para a fase de link, use o **dependências adicionais** propriedade a partir de **entrada** página de propriedades.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

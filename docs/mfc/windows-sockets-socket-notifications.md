@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37a45443efe1ad45e21c5729907135d0e037baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: notificações de soquete
 Este artigo descreve as funções de notificação em classes de soquete. Essas funções de membro são funções de retorno de chamada que o framework chama para notificar o objeto de soquete de eventos importantes. As funções de notificação são:  

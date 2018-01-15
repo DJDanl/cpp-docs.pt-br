@@ -33,36 +33,22 @@ f1_keywords:
 - complex/ctan
 - complex/ctanf
 - complex/ctanl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ctan function
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: abb3d5a96fb0c671cbfe194800c1c4335286eedc
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e8cf5ceb03a91210ed7ce03c59cef38b36bea487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 Recupera a tangente de um número complexo.  
@@ -111,7 +97,7 @@ _Lcomplex ctanl(
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   

@@ -1,45 +1,45 @@
 ---
-title: "M&#233;todo HandleT::Get | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::Get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "método Get"
+title: "Método Handlet: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::Get
+dev_langs: C++
+helpviewer_keywords: Get method
 ms.assetid: fbb81fb2-a6f9-4459-9fa2-98da566909d6
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63902b5c911766163163ea3b2f8ee2d53ed77a8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo HandleT::Get
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="handletget-method"></a>Método HandleT::Get
 Obtém o valor do identificador subjacente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typename HandleTraits::Type Get() const;  
 ```  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Um identificador.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Consulte também  
- [Classe HandleT](../Topic/HandleT%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe HandleT](../windows/handlet-class.md)

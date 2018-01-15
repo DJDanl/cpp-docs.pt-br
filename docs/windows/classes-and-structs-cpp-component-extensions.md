@@ -18,11 +18,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45fc41430fbbf04f8b1b56fe6355fb0b81f8e1ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Classes e Estruturas (Extensões de Componentes C++)
 Declara uma classe ou estrutura cujo *vida útil do objeto* é gerenciada automaticamente. Quando o objeto não está mais acessível ou sai do escopo, o Visual C++ descarta automaticamente a memória alocada para o objeto.  

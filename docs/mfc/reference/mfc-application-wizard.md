@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fac78eddcdf36ecc295841019f9e3f05e537802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-wizard"></a>Assistente de aplicativo MFC
 O Assistente de aplicativo MFC gera um aplicativo que, quando compilado, implementa os recursos básicos de um aplicativo executável (.exe) do Windows. O aplicativo de início do MFC inclui arquivos de origem (. cpp) C++, arquivos de recurso (. rc), arquivos de cabeçalho (. h) e um arquivo de projeto (. vcxproj). O código gerado nesses arquivos de início é baseado em MFC.  
@@ -29,7 +30,7 @@ O Assistente de aplicativo MFC gera um aplicativo que, quando compilado, impleme
 > [!NOTE]
 >  Dependendo das opções que você selecionar, o assistente cria arquivos adicionais no seu projeto. Por exemplo, se você selecionar **ajuda contextual** no [recursos avançados](../../mfc/reference/advanced-features-mfc-application-wizard.md) página, o assistente cria os arquivos necessários compilar os arquivos de Ajuda do projeto. Para obter mais informações sobre os arquivos que o assistente cria, consulte [tipos de arquivo criados para projetos do Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)e consulte o arquivo Leiame no projeto.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Esta página do assistente descreve as configurações do aplicativo atual para o aplicativo do MFC que você está criando. Por padrão, o assistente cria um projeto da seguinte maneira:  
   
 -   [Tipo de aplicativo, Assistente de aplicativo do MFC](../../mfc/reference/application-type-mfc-application-wizard.md)  
@@ -42,7 +43,7 @@ O Assistente de aplicativo MFC gera um aplicativo que, quando compilado, impleme
   
     -   O projeto é criado usando o estilo de projeto do Visual Studio e permite a alternância do estilo visual.  
   
-    -   O projeto usa MFC em uma DLL compartilhada. Para obter mais informações, consulte [DLLs no Visual C++](../../build/dlls-in-visual-cpp.md).  
+    -   O projeto usa MFC em uma DLL compartilhada. Para saber mais, consulte [DLLs no Visual C++](../../build/dlls-in-visual-cpp.md).  
   
 -   [Suporte a documento composto, Assistente de aplicativo MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   

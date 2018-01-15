@@ -1,33 +1,33 @@
 ---
-title: "retval | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.retval"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "retval attribute"
+title: retval | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.retval
+dev_langs: C++
+helpviewer_keywords: retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cf7aa0cf8dd9767f603807ee18e23fe02d3446c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# retval
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="retval"></a>retval
 Designa o parâmetro que recebe o valor de retorno do membro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,29 +35,28 @@ Designa o parâmetro que recebe o valor de retorno do membro.
   
 ```  
   
-## Comentários  
- O  **retval** o atributo do C\+\+ tem a mesma funcionalidade que o  [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **retval** atributo C++ tem a mesma funcionalidade que o [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atributo MIDL.  
   
- **retval** deve aparecer no último argumento na declaração de uma função.  
+ **retval** devem aparecer no último argumento na declaração da função.  
   
-## Exemplo  
- Consulte o exemplo para  [vinculáveis](../windows/bindable.md) para uso do exemplo  **retval**.  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo para [associável](../windows/bindable.md) para uso do exemplo **retval**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Parâmetro de interface, método de interface|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|**Limite**|  
-|**Atributos inválidos**|**Em**|  
+|**Aplica-se a**|Parâmetro de interface, método de interface|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|**out**|  
+|**Atributos inválidos**|**in**|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de parâmetro](../windows/parameter-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   

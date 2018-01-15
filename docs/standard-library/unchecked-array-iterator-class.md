@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 82c040c4d3e773809d2202c553206e5c98f132db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c36cadfa048a51c43b4e71f0e03b699434021dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uncheckedarrayiterator-class"></a>Classe unchecked_array_iterator
 A classe `unchecked_array_iterator` permite que você encapsule uma matriz ou um ponteiro em um iterador não verificado. Use essa classe como um wrapper (usando a função [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)) para matrizes ou ponteiros brutos como uma maneira direcionada de gerenciar avisos de ponteiros não verificados, em vez de silenciar esses avisos globalmente. Se possível, prefira a versão verificada dessa classe, [checked_array_iterator](../standard-library/checked-array-iterator-class.md).  

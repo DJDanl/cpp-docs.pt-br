@@ -1,33 +1,33 @@
 ---
-title: "string (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string attribute"
+title: cadeia de caracteres (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.string
+dev_langs: C++
+helpviewer_keywords: string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7579dc9d3f7aec17982a0f60e20719c0b52eda42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# string (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica que o unidimensional `char`, `wchar_t`,  **bytes** \(ou equivalente\) matriz ou o ponteiro para essa matriz deve ser tratado como uma seqüência de caracteres.  
+# <a name="string-c"></a>string (C++)
+Indica que o unidimensional `char`, `wchar_t`, **bytes** (ou equivalente) array ou ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,11 +35,11 @@ Indica que o unidimensional `char`, `wchar_t`,  **bytes** \(ou equivalente\) mat
   
 ```  
   
-## Comentários  
- O  **seqüência de caracteres** o atributo do C\+\+ tem a mesma funcionalidade que o  [seqüência de caracteres](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **cadeia de caracteres** atributo C++ tem a mesma funcionalidade que o [cadeia de caracteres](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.  
   
-## Exemplo  
- O código a seguir mostra como usar  **seqüência de caracteres** em uma interface e em um typedef:  
+## <a name="example"></a>Exemplo  
+ O código a seguir mostra como usar **cadeia de caracteres** em uma interface e em um typedef:  
   
 ```  
 // cpp_attr_ref_string.cpp  
@@ -54,21 +54,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Matriz ou o ponteiro para uma matriz, o parâmetro interface, o método de interface|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|Matriz ou ponteiro para uma matriz, o parâmetro de interface, o método de interface|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Array Attributes](../windows/array-attributes.md)   
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de matriz](../windows/array-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,24 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- vector<bool> class
+- std::vector [C++], const_pointer
+- std::vector [C++], const_reference
+- std::vector [C++], pointer
+- std::vector [C++], flip
+- std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 535ce75fb600b919b5e255bc580a93e448e81d59
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f8117c3ac56305637164886c6c27f7f20528d64a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 A classe `vector<bool>` é uma especialização parcial de [vector](../standard-library/vector-class.md) para elementos do tipo `bool`. Ela tem um alocador para o tipo subjacente que é usado pela especialização, que fornece otimização de espaço ao armazenar um valor `bool` por bit.  
@@ -386,5 +374,4 @@ static void swap(
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
-
 

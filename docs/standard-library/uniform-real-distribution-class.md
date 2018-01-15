@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::uniform_real_distribution::param_type::b
 - random/std::uniform_real_distribution::param_type::operator==
 - random/std::uniform_real_distribution::param_type::operator!=
-- random/std::uniform_real_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::uniform_real_distribution [C++]
 - std::uniform_real_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 484997806cadb75b0322e9d194fe37ab30dae3b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 0491a5ed53dafa56b5c6de77b8c5f0998d5554a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniformrealdistribution-class"></a>Classe uniform_real_distribution
 Gera uma distribuição de ponto flutuante uniforme (todos os valores têm a mesma probabilidade) no intervalo de saída que é inclusivo-exclusivo.  
@@ -82,7 +79,7 @@ public:
  ``` 
 ### <a name="parameters"></a>Parâmetros  
 *RealType*  
-O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado de ponto flutuante assume `double` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Comentários  
 A classe de modelo descreve uma distribuição inclusive-exclusive que produz valores de um tipo de ponto flutuante integral especificado pelo usuário, com tal distribuição que todo valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -243,7 +240,6 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
   
 ## <a name="see-also"></a>Consulte também  
  [\<random>](../standard-library/random.md)
-
 
 
 

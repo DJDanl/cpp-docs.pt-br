@@ -189,11 +189,12 @@ caps.latest.revision: "39"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de4de5d693e786cd2cb1f7e4a0e45c9f7df66d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b968985c598dafe2ed96295c7388d650dc18c636
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewndex-class"></a>Classe CWinAppEx é
 Implementa a funcionalidade de uma janela única interface de documento (SDI) sobrepostas ou janela do quadro de janela pop-up e fornece membros para gerenciar a janela. Ele estende o [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -211,7 +212,7 @@ class CFrameWndEx : public CFrameWnd
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ajusta o layout do item de cliente OLE e área do cliente do quadro.|  
-|`CFrameWndEx::AddDockSite`|Esse método não é usado.|  
+|`CFrameWndEx::AddDockSite`|Este método não é usado.|  
 |[CFrameWndEx::AddPane](#addpane)|Registra uma barra de controle com o Gerenciador de encaixe.|  
 |[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Recalcula o layout de todos os painéis que está encaixada na janela do quadro.|  
 |[CFrameWndEx::DelayUpdateFrameMenu](#delayupdateframemenu)|Define o menu do quadro e, em seguida, atualiza-la quando o processamento do comando estiver ocioso.|  
@@ -773,7 +774,7 @@ virtual BOOL LoadFrame(
  Ponteiro para um [CCreateContext estrutura](../../mfc/reference/ccreatecontext-structure.md) classe que é usada pelo framework durante a criação do aplicativo.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` caso o método tenha sido bem-sucedido; do contrário, `FALSE`.  
+ `TRUE` se o método foi bem-sucedido; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   

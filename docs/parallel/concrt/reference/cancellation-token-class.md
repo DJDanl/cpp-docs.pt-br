@@ -1,11 +1,10 @@
 ---
-title: Classe cancellation_token | Documentos do Microsoft
+title: Classe cancellation_token | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,38 +16,22 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token class
+dev_langs: C++
+helpviewer_keywords: cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtoken-class"></a>Classe cancellation_token
-O `cancellation_token` classe representa a capacidade de determinar se alguma operação foi solicitada para cancelar. Um token fornecido pode ser associado com uma `task_group`, `structured_task_group`, ou `task` para fornecer cancelamento implícito. Também pode ser controlado de cancelamento ou ter um retorno de chamada registrado para se e quando associado `cancellation_token_source` é cancelada.  
+O `cancellation_token` classe representa a capacidade de determinar se alguma operação foi solicitada para cancelar. Um token fornecido pode ser associado com um `task_group`, `structured_task_group`, ou `task` para fornecer cancelamento implícita. Ele também pode ser controlado de cancelamento ou tem um retorno de chamada registrado para se e quando associado `cancellation_token_source` é cancelada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +41,7 @@ class cancellation_token;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -73,7 +56,7 @@ class cancellation_token;
 |[is_cancelable](#is_cancelable)|Retorna uma indicação de se esse token pode ser cancelado ou não.|  
 |[is_canceled](#is_canceled)|Retorna `true` se o token foi cancelado.|  
 |[none](#none)|Retorna um token de cancelamento que nunca pode estar sujeitos a cancelamento.|  
-|[register_callback](#register_callback)|Registra uma função de retorno de chamada com o token. Quando o token for cancelado, o retorno de chamada será feito. Observe que, se o token já está cancelado no ponto em que esse método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.|  
+|[register_callback](#register_callback)|Registra uma função de retorno de chamada com o token. Se o token é cancelado, e quando o retorno de chamada será feito. Observe que, se o token já é cancelado no ponto em que este método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -190,7 +173,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ##  <a name="register_callback"></a>register_callback 
 
- Registra uma função de retorno de chamada com o token. Quando o token for cancelado, o retorno de chamada será feito. Observe que, se o token já está cancelado no ponto em que esse método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.  
+ Registra uma função de retorno de chamada com o token. Se o token é cancelado, e quando o retorno de chamada será feito. Observe que, se o token já é cancelado no ponto em que este método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.  
   
 ```
 template<typename _Function>
@@ -205,8 +188,7 @@ template<typename _Function>
  O objeto de função que será chamado quando este `cancellation_token` é cancelada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A `cancellation_token_registration` objeto que pode ser utilizado com o `deregister` método para cancelar o registro de um retorno de chamada registrado anteriormente e impedir que ele está sendo feita. O método gerará uma [invalid_operation](invalid-operation-class.md) exceção se for chamado um `cancellation_token` objeto que foi criado usando o [cancellation_token:: none](#none) método.  
+ Um `cancellation_token_registration` objeto que pode ser utilizado com o `deregister` método para cancelar o registro de um retorno de chamada registrado anteriormente e impedi-lo de que está sendo feita. O método lançará um [invalid_operation](invalid-operation-class.md) exceção se for chamado um `cancellation_token` objeto que foi criado usando o [cancellation_token:: none](#none) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)
-

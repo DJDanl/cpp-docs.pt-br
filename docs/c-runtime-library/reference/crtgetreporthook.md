@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtGetReportHook
+apiname: _CrtGetReportHook
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 35916e544ac6fdf5ff6597fa52fbb0489011a5e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69c49895f50f18e96a1d673df3e80e6bb7d88824
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 Recupera a função de relatório definida pelo cliente para vinculá-lo ao tempo de execução C do processo de relatório de depuração (somente versão de depuração).  

@@ -1,50 +1,49 @@
 ---
-title: "/RAWDATA | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/rawdata"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção /RAWDATA (dumpbin)"
-  - "dados brutos"
-  - "opção dumpbin RAWDATA"
-  - "opção dumpbin -RAWDATA"
+title: -RAWDATA | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /rawdata
+dev_langs: C++
+helpviewer_keywords:
+- RAWDATA dumpbin option
+- raw data
+- -RAWDATA dumpbin option
+- /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 475ec5a827a1453a6f9474762d5be41299fc87e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /RAWDATA
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rawdata"></a>/RAWDATA
 ```  
 /RAWDATA[:{1|2|4|8|NONE[,number]]  
 ```  
   
-## Comentários  
- Esta opção exibe o conteúdo de cada seção brutos no arquivo.  Os argumentos controlam o formato de exibição, conforme mostrado abaixo:  
+## <a name="remarks"></a>Comentários  
+ Esta opção exibe o conteúdo bruto de cada seção no arquivo. Os argumentos de controlam o formato de exibição, conforme mostrado abaixo:  
   
 |Argumento|Resultado|  
-|---------------|---------------|  
-|1|A opção.  Os conteúdos serão exibidos em bytes hexadecimais, e também como caracteres ASCII se tiverem uma representação impressa.|  
-|2|Os conteúdos são exibidos como 2 valores hexadecimais de byte.|  
-|4|Os conteúdos são exibidos como 4 valores hexadecimais de byte.|  
-|8|Os conteúdos são exibidos como 8 valores hexadecimais de byte.|  
-|NONE|Os dados brutos serão suprimidos.  Esse argumento é útil para controlar a saída do \/ALL.|  
-|*Número*|As linhas exibidas são definidas para uma largura que contém valores de `number` por linha.|  
+|--------------|------------|  
+|1|O padrão. Conteúdo é exibido em bytes hexadecimais e também como caracteres ASCII se eles têm uma representação impressa.|  
+|2|Conteúdo é exibido como valores hexadecimais de 2 bytes.|  
+|4|Conteúdo é exibido como valores hexadecimais de 4 bytes.|  
+|8|Conteúdo é exibido como valores hexadecimais de 8 bytes.|  
+|NENHUM|Dados brutos são suprimidos. Esse argumento é útil para controlar a saída de/ALL.|  
+|*Número*|Linhas exibidas são definidas para uma largura que contém `number` valores por linha.|  
   
- Somente a opção de DUMPBIN de [\/HEADERS](../../build/reference/headers.md) está disponível para uso em arquivos gerados com a opção do compilador de [\/GL](../../build/reference/gl-whole-program-optimization.md) .  
+ Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

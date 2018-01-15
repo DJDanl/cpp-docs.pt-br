@@ -1,33 +1,33 @@
 ---
-title: "Estrutura MixIn | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::MixIn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura MixIn"
+title: Estrutura MixIn | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::MixIn
+dev_langs: C++
+helpviewer_keywords: MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 883e952dde579cce3f5a65ba4a453f98ddbb4740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Estrutura MixIn
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Assegura que uma classe de tempo de execução deriva das interfaces de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] , se houver, e COM clássico interfaces.  
+# <a name="mixin-structure"></a>Estrutura MixIn
+Garante que uma classe de tempo de execução deriva de tempo de execução do Windows, se houver e a clássico, em seguida, COM interfaces.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<  
@@ -39,26 +39,26 @@ template<
 struct MixIn;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Derived`  
- Um tipo derivado da estrutura de [Implementa](../Topic/Implements%20Structure.md) .  
+ Um tipo derivado de [implementa](../windows/implements-structure.md) estrutura.  
   
  `MixInType`  
  Um tipo base.  
   
  `hasImplements`  
- `true` se `MixInType` é derivado da implementação atual o tipo de base; `false` de outra forma.  
+ `true`Se `MixInType` é derivado do tipo base; a implementação atual `false` caso contrário.  
   
-## Comentários  
- Se uma classe é derivada do [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e a classe COM interfaces, a lista de declaração de classe deve primeiro listar as interfaces de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e em qualquer COM clássico interfaces.  MixIn garante que as interfaces são especificadas na ordem correta.  
+## <a name="remarks"></a>Comentários  
+ Se uma classe é derivada de tempo de execução do Windows e interfaces de classe COM, a lista de declaração de classe deve listar primeiro as interfaces de tempo de execução do Windows e, em seguida, qualquer clássico COM interfaces. Mesclado assegura que as interfaces são especificadas na ordem correta.  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `MixIn`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

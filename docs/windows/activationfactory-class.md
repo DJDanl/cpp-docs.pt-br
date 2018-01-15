@@ -1,33 +1,33 @@
 ---
-title: "Classe ActivationFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe ActivationFactory"
+title: Classe ActivationFactory | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory
+dev_langs: C++
+helpviewer_keywords: ActivationFactory class
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe ActivationFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Habilita uma ou mais classes a ser ativadas por Tempo de Execução do Windows.  
+# <a name="activationfactory-class"></a>Classe ActivationFactory
+Permite que uma ou mais classes sejam ativadas pelo tempo de execução do Windows.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template <  
@@ -38,9 +38,9 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `I0`  
- A interface de zeroth.  
+ A interface de zero.  
   
  `I1`  
  A primeira interface.  
@@ -48,37 +48,37 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
  `I2`  
  A segunda interface.  
   
-## Comentários  
- ActivationFactory fornece métodos do registro e a funcionalidade básica da interface de IActivationFactory.  ActivationFactory também permite fornecer uma implementação personalizada de fábrica.  
+## <a name="remarks"></a>Comentários  
+ ActivationFactory fornece métodos de registro e a funcionalidade básica para a interface IActivationFactory. ActivationFactory também permite que você forneça uma implementação personalizada de fábrica.  
   
- O seguinte fragmento de código a seguir ilustra simbolicamente como usar ActivationFactory.  
+ Maneira simbólica, o fragmento de código a seguir ilustra como usar ActivationFactory.  
   
  [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- O seguinte fragmento de código mostra como usar a estrutura de [Implementa](../Topic/Implements%20Structure.md) para especificar mais de três IDs da interface.  
+ O fragmento de código a seguir mostra como usar o [implementa](../windows/implements-structure.md) para especificar mais de três IDs de interface.  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Construtor ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Inicializa a classe de ActivationFactory.|  
-  
-### Métodos Públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Incrementa a contagem de referência do objeto atual de ActivationFactory.|  
-|[Método ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Recupera uma matriz de IDs implementados da interface.|  
-|[Método ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Obtém o nome da classe de tempo de execução do objeto que o ActivationFactory atual cria uma instância do.|  
-|[Método ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Obtém o nível de confiança do objeto que o ActivationFactory atual cria uma instância do.|  
+|----------|-----------------|  
+|[Construtor ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Inicializa a classe ActivationFactory.|  
+  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Incrementa a contagem de referência do objeto ActivationFactory atual.|  
+|[Método ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Recupera uma matriz de IDs de interface implementada.|  
+|[Método ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Obtém o nome de classe de tempo de execução do objeto que instancia o ActivationFactory atual.|  
+|[Método ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Obtém o nível de confiança do objeto que instancia o ActivationFactory atual.|  
 |[Método ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Recupera um ponteiro para a interface especificada.|  
-|[Método ActivationFactory::Release](../windows/activationfactory-release-method.md)|Diminui a contagem de referência do objeto atual de ActivationFactory.|  
+|[Método ActivationFactory::Release](../windows/activationfactory-release-method.md)|Diminui a contagem de referência do objeto ActivationFactory atual.|  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `I0`  
   
  `ChainInterfaces`  
@@ -99,10 +99,10 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
  `ActivationFactory`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

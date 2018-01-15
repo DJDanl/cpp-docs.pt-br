@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 078ec4a1fa1af6c4660ff1171ab1b671ee9872f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f9880364c24b1e2e5889e9e9e2666683c2237f7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>Método CriticalSectionTraits::Unlock
 Um modelo CriticalSection é especializada para que ele dá suporte à propriedade liberar do objeto especificado de seção crítica.  

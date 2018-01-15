@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fddf56dca48c9fd21e60483603dc1ebe0c4f2b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 081b9ad1d3001c74f2b2c096f5f26fe96c413f68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringattach-method"></a>Método HString::Attach
 Associa o objeto HString especificado com o objeto HString atual.  

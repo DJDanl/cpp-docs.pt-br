@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,44 +13,29 @@ f1_keywords:
 - ATLCTL/ATL::IObjectSafetyImpl::GetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::SetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::m_dwCurrentSafety
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - controls [ATL], safe
 - safe for scripting and initialization (controls)
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: cdcc008797e94988fb42fd6239603fa300a84233
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iobjectsafetyimpl-class"></a>Classe IObjectSafetyImpl
 Essa classe fornece uma implementação padrão da `IObjectSafety` interface para permitir que um cliente recuperar e definir níveis de segurança de um objeto.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -89,7 +73,7 @@ class IObjectSafetyImpl
 ## <a name="remarks"></a>Comentários  
  Classe `IObjectSafetyImpl` fornece uma implementação padrão de `IObjectSafety`. O `IObjectSafety` interface permite que um cliente recuperar e definir níveis de segurança de um objeto. Por exemplo, um navegador da web pode chamar **IObjectSafety::SetInterfaceSafetyOptions** para tornar um controle para inicialização ou seguros para script.  
   
- Observe que o uso de [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro com a **CATID_SafeForScripting** e **CATID_SafeForInitializing** categorias de componentes fornece uma maneira alternativa de especificar que um componente é seguro.  
+ Observe que o uso de [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro com a **CATID_SafeForScripting** e **CATID_SafeForInitializing** categorias de componentes oferece uma alternativa maneira de especificar que um componente é seguro.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -117,7 +101,7 @@ HRESULT GetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em problemas de conta decorrentes da execução de código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.  
   
- Consulte [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) no SDK do Windows.  
   
 ##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
  Armazena o nível de segurança atual do objeto.  
@@ -142,9 +126,8 @@ HRESULT SetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em problemas de conta decorrentes da execução de código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.  
   
- Consulte [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

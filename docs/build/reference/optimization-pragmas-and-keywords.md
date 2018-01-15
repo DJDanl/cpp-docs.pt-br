@@ -1,53 +1,53 @@
 ---
-title: "Pragmas e palavras-chave de otimiza&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "palavras-chave [C++], para otimização"
-  - "otimização, palavras-chave e pragmas"
-  - "pragmas, para otimização"
+title: "Palavras-chave e Pragmas de otimização | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keywords [C++], for optimization
+- pragmas, for optimization
+- optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d6332ef1f223f00bc099fdda8fe4cf6e7b27f21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Pragmas e palavras-chave de otimiza&#231;&#227;o
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Várias palavras\-chave e pragmas que você usa otimização do no seu código c ou C\+\+: 2.0  
+# <a name="optimization-pragmas-and-keywords"></a>Pragmas e palavras-chave de otimização
+Várias palavras-chave e pragmas que você usa em seu código C ou C++ afetam otimização:  
   
--   [\_\_asm](../../assembler/inline/asm.md)  
+-   [__asm](../../assembler/inline/asm.md)  
   
--   [\_\_assume](../../intrinsics/assume.md)  
+-   [__assume](../../intrinsics/assume.md)  
   
--   [embutido, \_inline, ou \_\_forceinline](../../misc/inline-inline-forceinline.md)  
+-   [embutido, _inline, ou \__forceinline](../../cpp/inline-functions-cpp.md)  
   
--   [auto\_inline de \#pragma](../../preprocessor/auto-inline.md)  
+-   [auto_inline #pragma](../../preprocessor/auto-inline.md)  
   
--   [check\_stack de \#pragma](../../preprocessor/check-stack.md)  
+-   [check_stack #pragma](../../preprocessor/check-stack.md)  
   
--   [função de \#pragma](../../preprocessor/function-c-cpp.md)  
+-   [função #pragma](../../preprocessor/function-c-cpp.md)  
   
--   [inline\_depth de \#pragma](../../preprocessor/inline-depth.md)  
+-   [inline_depth #pragma](../../preprocessor/inline-depth.md)  
   
--   [inline\_recursion de \#pragma](../../preprocessor/inline-recursion.md)  
+-   [inline_recursion #pragma](../../preprocessor/inline-recursion.md)  
   
--   [intrínsecas de \#pragma](../../preprocessor/intrinsic.md)  
+-   [#pragma intrínseco](../../preprocessor/intrinsic.md)  
   
--   [o otimiza \#pragma](../../preprocessor/optimize.md)  
+-   [otimizar o #pragma](../../preprocessor/optimize.md)  
   
--   [palavras\-chave de registro](http://msdn.microsoft.com/pt-br/5b66905a-2f7f-4918-bb55-5e66d4bc50f9)  
+-   [palavra-chave Register](../../cpp/storage-classes-cpp.md#register)  
   
-## Consulte também  
- [Otimizando o código](../../build/reference/optimizing-your-code.md)
+## <a name="see-also"></a>Consulte também  
+ [Otimizando seu código](../../build/reference/optimizing-your-code.md)

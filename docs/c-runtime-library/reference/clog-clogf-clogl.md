@@ -33,37 +33,22 @@ f1_keywords:
 - complex/clog
 - complex/clogf
 - complex/clogl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - clog function
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2778a27aa2859d7abb5f247e71397af6aa8b0da6
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 09cc64d10c997702e4dde2cff2b40ee4568bf42e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 Recupera o logaritmo natural de um número complexo, com uma ramificação cortada ao longo do eixo real negativo.  
@@ -92,7 +77,7 @@ _Lcomplex clogl(
  `z`  
  A base do logaritmo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O logaritmo natural de `z`. O resultado é não vinculado ao longo do eixo real e no intervalo [-iπ, + iπ] ao longo do eixo imaginário.  
   
  Os valores de retorno possíveis são:  
@@ -117,7 +102,7 @@ _Lcomplex clogl(
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [cexp, cexpf, cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)   
  [cpow, cpowf, cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
  [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)

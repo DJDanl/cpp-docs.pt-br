@@ -1,31 +1,31 @@
 ---
-title: "Programa C multithread de exemplo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Programa C Multithread de exemplo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Programa C multithread de exemplo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bounce.c é um programa multithread de exemplo que cria um novo thread cada vez que a letra **a** ou **A** é digitado.  Cada thread ignora uma face feliz de cor diferente em torno da tela.  Até 32 segmentos podem ser criados.  A terminação normal do programa ocorre quando `q` ou **Q** são tipados.  Para obter informações sobre a compilação e a vinculação do Bounce.c, consulte [Compilando e vinculando programas multithread](../parallel/compiling-and-linking-multithread-programs.md).  
+# <a name="sample-multithread-c-program"></a>Programa C multithread de exemplo
+Bounce.c é um programa multithread de exemplo que cria um novo thread de cada vez que a letra **um** ou **um** é digitado. Cada thread devoluções rosto feliz de outra cor na tela. Até 32 threads podem ser criados. Um encerramento normal do programa ocorre quando `q` ou **p** é digitado. Para obter informações sobre como compilar e vincular Bounce.c, consulte [compilação e vinculando programas de Multithread](../parallel/compiling-and-linking-multithread-programs.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // sample_multithread_c_program.c  
@@ -212,12 +212,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### Entrada  
+### <a name="input"></a>Entrada  
   
 ```  
 a  
 q  
 ```  
   
-## Consulte também  
- [Multithread com C e Win32](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>Consulte também  
+ [Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)

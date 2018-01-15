@@ -33,37 +33,22 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: dd48583e157389f23f9912d08f00abd80daca745
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bed6a29a270ae6c3e54cd1931a351d3752e2c818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 Recupera o arco seno de um número complexo, com cortes de ramificação fora do intervalo [-1, + 1] no eixo real.  
@@ -92,7 +77,7 @@ _Lcomplex casinl(
  `z`  
  Um número complexo que representa um ângulo, em radianos.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O arco seno de `z`, em radianos. O resultado é não vinculado ao longo do eixo imaginário e no intervalo [-π/2 + π/2] ao longo do eixo real.  
   
 ## <a name="remarks"></a>Comentários  
@@ -107,7 +92,7 @@ _Lcomplex casinl(
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   

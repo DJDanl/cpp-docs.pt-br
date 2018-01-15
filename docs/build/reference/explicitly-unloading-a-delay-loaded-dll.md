@@ -1,36 +1,36 @@
 ---
-title: "Descarregando de maneira expl&#237;cita uma DLL carregada com atraso | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /DELAY:UNLOAD"
-  - "__FUnloadDelayLoadedDLL2"
-  - "Opção de vinculador DELAY:UNLOAD"
-  - "carregamento atrasado de DLLs, descarregando"
+title: "Descarregando de maneira explícita uma DLL carregada com atraso | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /DELAY:UNLOAD linker option
+- DELAY:UNLOAD linker option
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Descarregando de maneira expl&#237;cita uma DLL carregada com atraso
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[\/delay](../../build/reference/delay-delay-load-import-settings.md): descarregar a opção do vinculador permite que você descarregar uma DLL que foi carregado atraso.  Por padrão, quando seu código descarrega o DLL \(usando \/delay:unload e **\_\_FUnloadDelayLoadedDLL2**\), as importações atraso\- carregadas permanecem na tabela de endereço \(IAT\) de importação.  No entanto, se você usar \/delay:unload na linha de comando do vinculador, a função auxiliar dará suporte a descarga explícito da DLL, redefinindo o IAT ao seu formato original; os ponteiros agora inválidos serão substituídos.  O IAT é um campo em [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) que contém o endereço de uma cópia original IAT \(se houver\).  
+# <a name="explicitly-unloading-a-delay-loaded-dll"></a>Descarregando de maneira explícita uma DLL carregada com atraso
+O [/Delay](../../build/reference/delay-delay-load-import-settings.md): opção de vinculador unload permite descarregar uma DLL carregada com atraso. Por padrão, quando seu código descarrega a DLL (usando /Delay: Unload e **__FUnloadDelayLoadedDLL2**), as importações carregadas com atraso permanecerão na tabela de endereço de importação (IAT). No entanto, se você usar /Delay: Unload na linha de comando do vinculador, a função auxiliar dará suporte a descarregamento explícito da DLL, redefinindo o IAT para sua forma original; os ponteiros inválido agora serão substituídos. IAT é um campo de [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) que contém o endereço de uma cópia do original IAT (se houver).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // link with /link /DELAYLOAD:MyDLL.dll /DELAY:UNLOAD  
@@ -57,14 +57,14 @@ int main()
 }  
 ```  
   
-### Comentários  
- Observações importantes em descarregar uma DLL atraso\- carregado:  
+### <a name="comments"></a>Comentários  
+ Observações importantes sobre descarregando uma DLL carregada com atraso:  
   
--   Você pode localizar a implementação da função **\_\_FUnloadDelayLoadedDLL2** no arquivo \\VC7\\INCLUDE\\DELAYHLP.CPP.  
+-   Você pode encontrar a implementação de **__FUnloadDelayLoadedDLL2** função no arquivo \VC7\INCLUDE\DELAYHLP. CPP.  
   
--   O parâmetro de nome da função de **\_\_FUnloadDelayLoadedDLL2** deve corresponder exatamente \(inclusive\) casos que a biblioteca de importação \(contém a cadeia de caracteres também está na tabela de importação na imagem\).  Você pode exibir o conteúdo da biblioteca de importação com [DUMPBIN \/DEPENDENTS](../Topic/-DEPENDENTS.md).  Se uma correspondência sem diferenciação de maiúsculas e minúsculas de cadeia de caracteres for desejada, você pode atualizar **\_\_FUnloadDelayLoadedDLL2** para usar uma das funções de cadeia de caracteres de CRT ou de uma chamada à API do windows.  
+-   O parâmetro name do **__FUnloadDelayLoadedDLL2** função deve corresponder exatamente (incluindo caso) o que a biblioteca de importação contém (ou cadeia de caracteres também é a tabela de importação da imagem). Você pode exibir o conteúdo da biblioteca de importação com [/DEPENDENTS DUMPBIN](../../build/reference/dependents.md). Se desejar fazer uma correspondência de cadeia de caracteres de maiusculas e minúsculas, você pode atualizar **__FUnloadDelayLoadedDLL2** para usar as funções de cadeia de caracteres de CRT ou uma chamada de API do Windows.  
   
- Consulte [Descarregando DLL Atraso\- carregado](../../build/reference/unloading-a-delay-loaded-dll.md) para obter mais informações.  
+ Consulte [descarregando uma DLL Delay-Loaded](../../build/reference/unloading-a-delay-loaded-dll.md) para obter mais informações.  
   
-## Consulte também  
- [Suporte de vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+## <a name="see-also"></a>Consulte também  
+ [Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)

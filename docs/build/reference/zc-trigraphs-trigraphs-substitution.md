@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 56068f6cb630ac12b9c8417940411616cec65c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 739e772c87c937a552e07a32fa5bb80b1a1e2508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (substituição de trígrafos)
 Quando **/ZC: trigraphs** for especificado, o compilador substitui uma sequência de caracteres trigraph usando um caractere de pontuação correspondente. Para desativar a substituição de trigraph, especifique **/Zc:trigraphs-**. Por padrão, **/ZC: trigraphs** está desativado.  

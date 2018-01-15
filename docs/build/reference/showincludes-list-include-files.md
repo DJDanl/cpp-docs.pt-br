@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72f80202d2d1c8018e9c145951664d335ac759b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb88ff6d8a314ebd5cb0390f2c920f5b1d04e3e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (listar arquivos de inclusão)
 Faz com que o compilador gerar uma lista de inclusão de arquivos. Aninhados incluem arquivos também são exibidos (arquivos inclusos dos arquivos que você incluir).  

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- codecvt/std::codecvt_utf8
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt_utf8 class
+f1_keywords: codecvt/std::codecvt_utf8
+dev_langs: C++
+helpviewer_keywords: codecvt_utf8 class
 ms.assetid: 2a87478f-e2d4-4b8d-ad9c-00add01d1bb0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b10e5321e1e46a640734ba87ce17269eace7c291
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 873a4e1834b13ac69370223339dd395b650eb679
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 Representa uma faceta de [localidade](../standard-library/locale-class.md) convertida entre caracteres largos codificados como UCS-2 ou UCS-4 e um fluxo de bytes codificado como UTF-8.
@@ -50,4 +46,3 @@ O fluxo de bytes pode ser gravado em um arquivo binário ou em um arquivo de tex
 ## <a name="requirements"></a>Requisitos
 
 Cabeçalho: <codecvt> Namespace: std
-

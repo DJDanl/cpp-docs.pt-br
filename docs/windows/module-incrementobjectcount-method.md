@@ -1,30 +1,30 @@
 ---
-title: "M&#233;todo Module::IncrementObjectCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::IncrementObjectCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método IncrementObjectCount"
+title: "Método: incrementobjectcount | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::IncrementObjectCount
+dev_langs: C++
+helpviewer_keywords: IncrementObjectCount method
 ms.assetid: 268b79be-15c3-4b07-884e-18da2c7281f2
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea6714958331c7562d248170d7fd45f4b78c4860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo Module::IncrementObjectCount
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="moduleincrementobjectcount-method"></a>Método Module::IncrementObjectCount
 Incrementa o número de objetos rastreados pelo módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,7 +34,7 @@ virtual long IncrementObjectCount();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- A contagem antes da operação de incremento.  
+ A contagem de antes da operação de incremento.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
@@ -42,4 +42,4 @@ virtual long IncrementObjectCount();
  **Namespace:** Microsoft:: wrl
  
  ## <a name="see-also"></a>Consulte também
- [Classe de módulo](../windows/module-class.md)
+ [Classe Module](../windows/module-class.md)

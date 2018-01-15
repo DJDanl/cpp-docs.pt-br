@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79719ba2d029fc210aff94f78f00783f694a0156
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcacceleratorkey-class"></a>Classe CMFCAcceleratorKey
 Uma classe auxiliar que implementa o mapeamento de chave virtual e a formatação.  
@@ -40,7 +41,7 @@ class CMFCAcceleratorKey : public CObject
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

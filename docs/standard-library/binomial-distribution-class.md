@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::binomial_distribution::param_type::t
 - random/std::binomial_distribution::param_type::operator==
 - random/std::binomial_distribution::param_type::operator!=
-- random/std::binomial_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::binomial_distribution [C++]
 - std::binomial_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 493d20359d5656f5e97e601d90e831f6a1d5b438
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ae3889c06ddc69e81ae5e144c70d68d7dc34c3ce
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 Gera uma distribuição Binomial.  
@@ -83,9 +80,9 @@ public:
 ```  
 #### <a name="parameters"></a>Parâmetros  
 *IntType*  
-O tipo de resultado do inteiro assume `int` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado do inteiro assume `int` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+*URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
 
 ## <a name="remarks"></a>Comentários  
 A classe de modelo descreve uma distribuição que gera valores de um tipo integral especificado pelo usuário ou do tipo `int` se não houver nenhuma especificação. Esses valores são distribuídos de acordo com a função de probabilidade discreta distribuição Binomial. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -107,7 +104,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
   
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição binomial, consulte o artigo da Wolfram MathWorld [Binomial Distribution](http://go.microsoft.com/fwlink/LinkId=398469) (Distribuição Binomial).  
+Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição binomial, consulte o artigo da Wolfram MathWorld [Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=398469) (Distribuição Binomial).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -296,7 +293,6 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
   
 ## <a name="see-also"></a>Consulte também  
  [\<random>](../standard-library/random.md)
-
 
 
 

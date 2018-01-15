@@ -1,41 +1,41 @@
 ---
-title: "safe_cast (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "safe_cast"
-  - "safe_cast_cpp"
-  - "stdcli::language::safe_cast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "safe_cast keyword [C++]"
+title: "Safe_cast (extensões de componentes C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- safe_cast
+- safe_cast_cpp
+- stdcli::language::safe_cast
+dev_langs: C++
+helpviewer_keywords: safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# safe_cast (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O `safe_cast` operação retorna a expressão especificada como o tipo especificado, se for bem\-sucedido; caso contrário, lança `InvalidCastException`.  
+# <a name="safecast-c-component-extensions"></a>safe_cast (Extensões de Componentes C++)
+O `safe_cast` operação retorna a expressão especificada como o tipo especificado, se for bem-sucedido; caso contrário, lança `InvalidCastException`.  
   
-## Todos os Tempos de Execução  
- \(Não há nenhum comentários para esse recurso de linguagem que se aplicam a todos os tempos de execução.\)  
+## <a name="all-runtimes"></a>Todos os Tempos de Execução  
+ (Não há nenhum comentários para esse recurso de idioma que se aplicam a todos os tempos de execução).  
   
-### Sintaxe  
+### <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-  
 [default]:: safe_cast<  
 type-id  
 >(  
@@ -44,17 +44,16 @@ expression
   
 ```  
   
-### Parâmetros  
+### <a name="parameters"></a>Parâmetros  
   
-### Observações  
+### <a name="remarks"></a>Comentários  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- `safe_cast` permite que você altere o tipo de uma expressão especificada.  Em situações onde você totalmente esperar uma variável ou parâmetro a ser convertida para um determinado tipo, você pode usar safe\_cast sem um bloco try\-catch para detectar erros de programação durante o desenvolvimento.  Para obter mais informações, consulte [de conversão \(C\+\+ c\+\+ \/CX\)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+## <a name="windows-runtime"></a>Tempo de Execução do Windows  
+ `safe_cast`permite que você altere o tipo de uma expressão especificada. Em situações onde você totalmente espera uma variável ou parâmetro ser conversível para um determinado tipo, você pode usar safe_cast sem um bloco try-catch para detectar erros de programação durante o desenvolvimento. Para obter mais informações, consulte [conversão (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
-### Sintaxe  
+### <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-  
 [default]:: safe_cast<  
 type-id  
 >(  
@@ -63,23 +62,23 @@ expression
   
 ```  
   
-### Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *id do tipo*  
- O tipo para converter *expressão* para.  Um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
+ O tipo para converter *expressão* para. Um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
  *expressão*  
  Uma expressão que é avaliada como um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
-### Observações  
- `safe_cast` lança `InvalidCastException` se não puder converter *expressão* para o tipo especificado por *id do tipo*.  Para capturar `InvalidCastException`, especifique o [\/EH \(modelo de tratamento de exceções\)](../build/reference/eh-exception-handling-model.md) opção de compilador e use uma instrução try\/catch.  
+### <a name="remarks"></a>Comentários  
+ `safe_cast`gera `InvalidCastException` se ele não é possível converter *expressão* para o tipo especificado pelo *id do tipo*. Para capturar `InvalidCastException`, especifique o [/EH (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md) opção de compilador e use uma instrução try/catch.  
   
-### Requisitos  
- Opção do compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opção do compilador: **/ZW**  
   
-### Exemplos  
+### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- O exemplo de código a seguir demonstra como usar `safe_cast` com o [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+ O exemplo de código a seguir demonstra como usar `safe_cast` com o tempo de execução do Windows.  
   
 ```cpp#  
 // safe_cast_ZW.cpp  
@@ -109,14 +108,16 @@ int main(Array<String^>^ args) {
   
  **Saída**  
   
-  **Detectada exceção esperada: InvalidCastException**   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- `safe_cast` permite que você altere o tipo de uma expressão e gerar código MSIL verificável.  
+```Output  
+Caught expected exception: InvalidCastException  
+```  
   
-### Sintaxe  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ `safe_cast`permite que você altere o tipo de uma expressão e gerar código MSIL verificável.  
+  
+### <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-  
 [cli]:: safe_cast<  
 type-id  
 >(  
@@ -125,49 +126,39 @@ expression
   
 ```  
   
-### Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *id do tipo*  
  Um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
  *expressão*  
  Uma expressão que é avaliada como um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
-### Observações  
- A expressão `safe_cast<`*id do tipo*`>(`*expressão*`)` converte a expressão de operando em um objeto do tipo do id do tipo.  
+### <a name="remarks"></a>Comentários  
+ A expressão `safe_cast<` *id do tipo*`>(`*expressão* `)` converte a expressão do operando em um objeto do tipo do id do tipo.  
   
- O compilador aceitará um [static\_cast](../cpp/static-cast-operator.md) na maioria dos lugares aceitará um `safe_cast`.  No entanto, `safe_cast` é garantido para produzir MSIL verificável, enquanto um `static_cast` pode produzir MSIL não possa ser verificado.  Consulte [Código puro e verificável](../dotnet/pure-and-verifiable-code-cpp-cli.md) e [Peverify.exe \(Ferramenta PEVerify\)](../Topic/Peverify.exe%20\(PEVerify%20Tool\).md) para obter mais informações sobre código verificável.  
+ O compilador aceitará uma [static_cast](../cpp/static-cast-operator.md) na maioria dos lugares aceitará uma `safe_cast`.  No entanto, `safe_cast` é garantido para gerar MSIL verificável, enquanto um `static_cast` pode produzir MSIL não verificável.  Consulte [puro e código verificável (C + + CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) e [Peverify.exe (ferramenta PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) para obter mais informações sobre código verificável.  
   
  Como `static_cast`, `safe_cast` invoca conversões definidas pelo usuário.  
   
- Para obter mais informações sobre conversões, consulte [Operadores de conversão](../cpp/casting-operators.md).  
+ Para obter mais informações sobre conversões, consulte [operadores de conversão](../cpp/casting-operators.md).  
   
- `safe_cast` não se aplica uma **const\_cast** \(eliminar **const**\).  
+ `safe_cast`não se aplica uma **const_cast** (eliminar **const**).  
   
- `safe_cast` está no namespace cli.  Consulte [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para obter mais informações.  
+ `safe_cast`está no namespace cli.  Consulte [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para obter mais informações.  
   
- Para obter mais informações sobre **safe\_cas**t, consulte:  
+ Para obter mais informações sobre **safe_cas**t, consulte:  
   
--   [C\-Style Casts with \/clr \(C\+\+\/CLI\)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+-   [Conversões do estilo C com /clr (C + + CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
--   [Como usar safe\_cast em C\+\+\/CLI](../Topic/How%20to:%20Use%20safe_cast%20in%20C++-CLI.md)  
+-   [Como usar safe_cast no C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+
+### <a name="requirements"></a>Requisitos  
+ Opção de compilador: **/clr**  
   
--   [Como fazer downcast com safe\_cast](../misc/how-to-downcast-with-safe-cast.md)  
-  
--   [Como usar safe\_cast e tipos genéricos](../misc/how-to-use-safe-cast-and-generic-types.md)  
-  
--   [Como usar safe\_cast e conversões definidas pelo usuário](../misc/how-to-use-safe-cast-and-user-defined-conversions.md)  
-  
--   [Como usar safe\_cast e conversão boxing](../Topic/How%20to:%20Use%20safe_cast%20and%20Boxing.md)  
-  
--   [Como usar safe\_cast e conversão unboxing](../misc/how-to-use-safe-cast-and-unboxing.md)  
-  
-### Requisitos  
- Opção do compilador: **\/clr**  
-  
-### Exemplos  
+### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- Um exemplo de onde o compilador não aceitará um `static_cast` mas aceitará um `safe_cast` para conversões entre tipos de interface não relacionadas.  Com `safe_cast`, o compilador não emitirá um erro de conversão e executará uma verificação em tempo de execução para ver se a conversão é possível  
+ Um exemplo de onde o compilador não aceitará uma `static_cast` mas aceitará uma `safe_cast` para conversões entre tipos de interface não relacionados.  Com `safe_cast`, o compilador não emitirá um erro de conversão e executará uma verificação em tempo de execução para ver se a conversão é possível  
   
 ```cpp  
 // safe_cast.cpp  
@@ -195,6 +186,9 @@ int main() {
   
  **Saída**  
   
-  **Exceção esperada detectada**   
-## Consulte também  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+Caught expected exception  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

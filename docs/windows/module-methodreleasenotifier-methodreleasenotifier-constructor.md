@@ -1,33 +1,33 @@
 ---
-title: "Construtor Module::MethodReleaseNotifier::MethodReleaseNotifier | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MethodReleaseNotifier, o construtor"
+title: Construtor Module::MethodReleaseNotifier::MethodReleaseNotifier | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: MethodReleaseNotifier, constructor
 ms.assetid: 762e2ca4-0a92-49de-9ff5-d3efa0f067c0
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 045dd8dd0dbee58c0feea33bc7ce4f6cea30e591
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Construtor Module::MethodReleaseNotifier::MethodReleaseNotifier
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inicializa uma nova instância da classe de Module::MethodReleaseNotifier.  
+# <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Construtor Module::MethodReleaseNotifier::MethodReleaseNotifier
+Inicializa uma nova instância da classe methodreleasenotifier.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,7 +39,7 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `object`  
  Um objeto cuja função de membro é um manipulador de eventos.  
   
@@ -47,12 +47,12 @@ MethodReleaseNotifier(
  A função de membro do parâmetro `object` que é o manipulador de eventos.  
   
  `release`  
- Especifique `true` para habilitar chamar o método subjacente de [Module::ReleaseNotifier::Release \(\)](../windows/module-releasenotifier-release.md) ; caso contrário, especifique `false`.  
+ Especifique `true` para habilitar a chamada subjacente [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; caso contrário, especifique `false`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
- [Classe Module::MethodReleaseNotifier](../Topic/Module::MethodReleaseNotifier%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)

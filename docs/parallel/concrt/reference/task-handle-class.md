@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 358d217a131ec3e282775604619f1ff265baf490
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38da8f97dfd689037f52f5e7c67bb51f4577a05a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
 O `task_handle` classe representa um item de trabalho paralelas individual. Ele encapsula as instruções e os dados necessários para executar um trabalho.  
@@ -42,11 +43,11 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[task_handle](#ctor)|Constrói um novo `task_handle` objeto. O trabalho da tarefa é executado invocando a função especificada como um parâmetro para o construtor.|  
+|[task_handle](#ctor)|Constrói um novo objeto `task_handle`. O trabalho da tarefa é executado invocando a função especificada como um parâmetro para o construtor.|  
 |[~ task_handle destruidor](#dtor)|Destrói a `task_handle` objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
@@ -84,7 +85,7 @@ void operator()() const;
   
 ##  <a name="task_handle__ctor"></a>task_handle 
 
- Constrói um novo `task_handle` objeto. O trabalho da tarefa é executado invocando a função especificada como um parâmetro para o construtor.  
+ Constrói um novo objeto `task_handle`. O trabalho da tarefa é executado invocando a função especificada como um parâmetro para o construtor.  
   
 ```  
 task_handle(const _Function& _Func);

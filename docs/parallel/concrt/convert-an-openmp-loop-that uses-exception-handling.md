@@ -1,68 +1,76 @@
 ---
-title: "Como converter um loop OpenMP que usa tratamento de exce&#231;&#245;es para usar o tempo de execu&#231;&#227;o de simultaneidade | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exceção de manipulação, convertendo de OpenMP no tempo de execução de simultaneidade"
-  - "Convertendo de OpenMP no tempo de execução de simultaneidade, tratamento de exceção"
+title: "Como: converter um Loop OpenMP que usa o tratamento de exceção para usar o tempo de execução de simultaneidade | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exception handling, converting from OpenMP to the Concurrency Runtime
+- converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-caps.latest.revision: 11
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d2964c629ce8a3a83799278ac822b589992b4995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Como converter um loop OpenMP que usa tratamento de exce&#231;&#245;es para usar o tempo de execu&#231;&#227;o de simultaneidade
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Como converter um loop OpenMP que usa tratamento de exceções para usar o tempo de execução de simultaneidade
+Este exemplo demonstra como converter um OpenMP [paralela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que executa o tratamento de exceção para usar o mecanismo de tratamento de exceções de tempo de execução de simultaneidade.  
+  
+ Em OpenMP, uma exceção que é lançada em uma região parallel deve ser capturada e tratada na mesma região pelo mesmo thread. Uma exceção que ignora a região paralela é capturada pelo manipulador de exceção sem tratamento, que encerra o processo por padrão.  
+  
 
-Este exemplo demonstra como converter um loop OpenMP [paralela](../../parallel/openmp/reference/parallel.md)[para](../Topic/for%20\(OpenMP\).md) que executa a manipulação de exceção para usar o mecanismo de manipulação de exceção em tempo de execução de simultaneidade.  
+ Em que o tempo de execução de simultaneidade, quando você gera uma exceção no corpo de uma função de trabalho que você passa para um grupo de tarefas, como um [concurrency::task_group](reference/task-group-class.md) ou [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objeto, ou para um algoritmo em paralelo, como [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), o tempo de execução armazena essa exceção e empacota o contexto que aguarda até que o grupo de tarefas ou o algoritmo para concluir. Para grupos de tarefas, o contexto de espera é o contexto que chama [concurrency::task_group::wait](reference/task-group-class.md#wait), [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait), [concurrency::task_group::run_and _wait](reference/task-group-class.md#run_and_wait), ou [concurrency::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait). Para um algoritmo em paralelo, o contexto de espera é o contexto que chamou esse algoritmo. O tempo de execução também interrompe todas as tarefas ativas que estão no grupo de tarefas, inclusive os grupos de tarefas filho, e descarta quaisquer tarefas que ainda não foram iniciados.  
+
+
   
- Em OpenMP, uma exceção que é lançada em uma região paralela deve ser capturada e tratado da mesma região pelo mesmo thread.  Uma exceção que escape a região paralela é capturada pelo manipulador de exceção sem\-tratamento, que encerra o processo por padrão.  
+## <a name="example"></a>Exemplo  
+ Este exemplo demonstra como manipular exceções em um OpenMP `parallel` região e, em uma chamada para `parallel_for`. O `do_work` função faz uma solicitação de alocação de memória que não for bem-sucedida e, portanto, gera uma exceção do tipo [std:: bad_alloc](../../standard-library/bad-alloc-class.md). Na versão que usa OpenMP, o thread que lança a exceção deve também alcançá-la. Em outras palavras, cada iteração de um loop paralelo OpenMP deve lidar com a exceção. Na versão que usa o tempo de execução de simultaneidade, o thread principal captura uma exceção que é lançada por outro thread.  
   
- Em tempo de execução de simultaneidade, quando você gerencie uma exceção no corpo de uma função de trabalho que você transmita a um grupo de trabalho como um objeto de [concurrency::task\_group](../Topic/task_group%20Class.md) ou de [concurrency::structured\_task\_group](../../parallel/concrt/reference/structured-task-group-class.md) , ou um algoritmo paralelo como [concurrency::parallel\_for](../Topic/parallel_for%20Function.md), o tempo de execução que armazena exceção e realiza marshaling ao contexto aguardando o grupo de trabalho ou o algoritmo para concluir.  Para grupos de trabalho, o contexto de espera é o contexto que chama [concurrency::task\_group::wait](../Topic/task_group::wait%20Method.md), [concurrency::structured\_task\_group::wait](../Topic/structured_task_group::wait%20Method.md), [concurrency::task\_group::run\_and\_wait](../Topic/task_group::run_and_wait%20Method.md), ou [concurrency::structured\_task\_group::run\_and\_wait](../Topic/structured_task_group::run_and_wait%20Method.md).  Para um algoritmo paralelo, o contexto de espera é o contexto que chamou esse algoritmo.  O tempo de execução também para todas as tarefas ativas que estão no grupo de trabalho, inclusive aqueles em grupos de trabalho filhos, e em descarta todas as tarefas que ainda não sejam iniciados.  
+ [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]  
   
-## Exemplo  
- Este exemplo demonstra como tratar exceções em uma região OpenMP em `parallel` e uma chamada para `parallel_for`.  A função de `do_work` executa uma solicitação de alocação de memória que não tenha êxito e em virtude disso gerará uma exceção do tipo [std::bad\_alloc](../../standard-library/bad-alloc-class.md).  Na versão que usa OpenMP, o thread que gerou a exceção também deve capturar\-la.  Ou seja cada iteração do loop paralelos OpenMP deve controlar a exceção.  Na versão que usa o tempo de execução de simultaneidade, o thread principal captura uma exceção que é lançada por outro thread.  
+ Este exemplo gerencia a seguinte saída.  
   
- [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/CPP/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]  
+```Output  
+Using OpenMP...  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+Using the Concurrency Runtime...  
+An error of type 'class std::bad_alloc' occurred.  
+```  
   
- O exemplo produz a seguinte saída.  
+ A versão deste exemplo que usa OpenMP, a exceção ocorre no e é tratada por cada iteração do loop. Na versão que usa o tempo de execução de simultaneidade, o tempo de execução armazena a exceção, interrompe todas as tarefas ativas, descarta quaisquer tarefas que ainda não foram iniciados e empacota a exceção para o contexto que chama `parallel_for`.  
   
-  **Usando OpenMP…**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.**  
-**Usando o tempo de execução de simultaneidade…**  
-**Um erro de tipo de “std::bad\_alloc classe” ocorreu.** Na versão deste exemplo que usa OpenMP, a exceção ocorre no e é tratada por cada iteração do loop.  Na versão que usa o tempo de execução de simultaneidade, os repositórios de tempo de execução a exceção, para todas tarefas ativas, em descarta algumas tarefas que ainda não sejam iniciados, e em realiza marshaling a exceção ao contexto que chama `parallel_for`.  
+ Se você precisar que a versão que usa OpenMP termina após a exceção ocorrer, você pode usar um sinalizador booliano para sinalizar para outras iterações do loop que ocorreu o erro. Como no exemplo no tópico [como: converter um OpenMP Loop que cancelamento usa para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md), iterações do loop subsequentes não fará nada se o sinalizador é definido. Por outro lado, se você precisar que o loop que usa o tempo de execução de simultaneidade continuará depois que a exceção ocorrer, lidar com a exceção no próprio corpo do loop paralelo.  
   
- Se você precisar que a versão que usa OpenMP terminar depois que a exceção ocorre, você pode usar um sinalizador booliano para sinalizar a outras interações do loop que o erro ocorreu.  Como no exemplo no tópico [Como converter um loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md), as iterações subsequentes do loop não criam nada se o sinalizador é definido.  Por outro lado, se você requer que o loop que usa o tempo de execução de simultaneidade continuará depois que a exceção ocorre, o tratará a exceção no corpo de loop paralelo em si.  
+ Outros componentes do tempo de execução de simultaneidade, como agentes assíncronos e tarefas leves, não transporte exceções. Em vez disso, exceções sem tratamento são capturadas pelo manipulador de exceção sem tratamento, que encerra o processo por padrão. Para obter mais informações sobre o tratamento de exceção, consulte [tratamento de exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
- Outros componentes de tempo de execução de simultaneidade, como agentes assíncronas e tarefas de peso leve, não transmitem exceções.  Em vez disso, as exceção sem\-tratamento são capturadas pelo manipulador de exceção sem\-tratamento, que encerra o processo por padrão.  Para obter mais informações sobre a manipulação de exceções, consulte [Tratamento de Exceção](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md).  
+ Para obter mais informações sobre `parallel_for` e outros algoritmos de paralelo, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).  
   
- Para obter mais informações sobre como `parallel_for` e outros algoritmos paralelos, consulte [Algoritmos paralelos](../Topic/Parallel%20Algorithms.md).  
+## <a name="compiling-the-code"></a>Compilando o código  
+ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `concrt-omp-exceptions.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
   
-## Compilando o código  
- Copie o código de exemplo e cole\-o em um projeto do Visual Studio, ou cole\-o em um arquivo chamado `concrt-omp-exceptions.cpp` e execute o comando a seguir em uma janela de prompt de comando do Visual Studio.  
+ **cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**  
   
- **cl.exe \/EHsc \/openmp concrt\-omp\-exceptions.cpp**  
-  
-## Consulte também  
- [Migrando de OpenMP no Tempo de Execução de Simultaneidade](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
- [Tratamento de Exceção](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md)   
- [Algoritmos paralelos](../Topic/Parallel%20Algorithms.md)
+## <a name="see-also"></a>Consulte também  
+ [Migrando de OpenMP no tempo de execução de simultaneidade](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
+ [Tratamento de exceções](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
+ [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)
+

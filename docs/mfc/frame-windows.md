@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 648e0cada61e15c29ab908e93cc8e457581f9239
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-windows"></a>Janelas com moldura
 Quando um aplicativo é executado no Windows, o usuário interage com documentos exibidos nas janelas de quadro. Uma janela de quadro do documento tem dois componentes principais: o quadro e o conteúdo que ele quadros. Uma janela do quadro de documento pode ser um [única interface de documento](../mfc/sdi-and-mdi.md) janela do quadro (SDI) ou um [interface de múltiplos documentos](../mfc/sdi-and-mdi.md) janela filho (MDI). O Windows gerencia a maioria da interação do usuário com a janela do quadro: movendo e redimensionando a janela, fechá-lo e minimizar e maximizando a ele. Você gerencia o conteúdo dentro do quadro.  

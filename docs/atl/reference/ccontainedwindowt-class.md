@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,22 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 Essa classe implementa uma janela contida dentro de outro objeto.  
@@ -81,7 +65,7 @@ class CContainedWindowT : public TBase
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -121,18 +105,18 @@ class CContainedWindowT : public TBase
   
  Quando você usa o **adicionar controle com base em** opção no Assistente de projeto de ATL, o assistente adicionará automaticamente um `CContainedWindowT` membro de dados para a classe de implementação do controle. O exemplo a seguir mostra como a janela contida é declarada:  
   
- [!code-cpp[NVC_ATL_Windowing 38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing #39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[40 NVC_ATL_Windowing](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
 |Para obter mais informações sobre|Consulte|  
 |--------------------------------|---------|  
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Usando o windows no ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|  
-|Assistente de Projeto da ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) e tópicos subsequentes de[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Assistente de projeto ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) e tópicos subsequentes no SDK do Windows|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `TBase`  
@@ -237,10 +221,10 @@ HWND Create(
  [in] Especifica o nome da janela. O valor padrão é **nulo**.  
   
  `dwStyle`  
- [in] O estilo da janela. O valor padrão é **WS_CHILD | WS_VISIBLE**. Para obter uma lista de valores possíveis, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] O estilo da janela. O valor padrão é **WS_CHILD &#124; WS_VISIBLE**. Para obter uma lista de valores possíveis, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
   
  `dwExStyle`  
- [in] O estilo de janela estendidos. O valor padrão é 0, indicando que nenhum estilo estendido. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] O estilo de janela estendidos. O valor padrão é 0, indicando que nenhum estilo estendido. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
  `MenuOrID`  
  [in] Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu da janela. O valor padrão é **0U**.  
@@ -450,4 +434,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

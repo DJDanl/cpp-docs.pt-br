@@ -1,33 +1,33 @@
 ---
-title: "defaultcollelem | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultcollelem"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultcollelem attribute"
+title: defaultcollelem | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultcollelem
+dev_langs: C++
+helpviewer_keywords: defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 407742e9f56624e77c171beeb0201da37530388d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# defaultcollelem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Usado para otimização de código Visual Basic.  
+# <a name="defaultcollelem"></a>defaultcollelem
+Usada para otimização de código do Visual Basic.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,11 +35,11 @@ Usado para otimização de código Visual Basic.
   
 ```  
   
-## Comentários  
- O  **defaultcollelem** o atributo do C\+\+ tem a mesma funcionalidade que o  [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **defaultcollelem** atributo C++ tem a mesma funcionalidade que o [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) atributo MIDL.  
   
-## Exemplo  
- O código a seguir mostra um método de interface usando o  **defaultcollelem** atributo:  
+## <a name="example"></a>Exemplo  
+ O código a seguir mostra um método de interface usando o **defaultcollelem** atributo:  
   
 ```  
 // cpp_attr_ref_defaultcollelem.cpp  
@@ -56,20 +56,19 @@ __interface IMyForm
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Método de interface|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|Método de interface|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   

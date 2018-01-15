@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a8ee6a5b1c24ce718a019f8d660b4d433a4055c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aaae665311db47a7129ecaaef816dc3c3b546d45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-and-using-controls"></a>Criando e usando controles
 Verifique a maioria dos controles de caixas de diálogo no Visual C++ [editor de caixa de diálogo](../windows/dialog-editor.md). Mas você também pode criar controles de qualquer caixa de diálogo ou janela.  

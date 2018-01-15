@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fd62c603fd657c545c8fff4e6341f1964d822f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82e562ceb73da2b103360ab9607cecbbe9f1da02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-control-wizard"></a>Assistente de controle ActiveX MFC
 Um controle ActiveX é um tipo específico de [servidor de automação](../../mfc/automation-servers.md); é um componente reutilizável. O aplicativo que hospeda o controle ActiveX é o [clientes de automação](../../mfc/automation-clients.md) desse controle. Se seu objetivo é criar um componente reutilizável, em seguida, use este assistente para criar o controle. Consulte [controles ActiveX MFC](../../mfc/mfc-activex-controls.md) para obter mais informações.  
@@ -57,7 +58,7 @@ Um controle ActiveX é um tipo específico de [servidor de automação](../../mf
   
 -   [Programando controles ActiveX em um contêiner de controle ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Esta página do assistente descreve as configurações do aplicativo atual para o projeto de controle ActiveX MFC que você está criando. Por padrão, o assistente cria um projeto da seguinte maneira:  
   
 -   O projeto padrão não gera arquivos de licença ou ajuda nenhum tempo de execução. Você pode alterar essas configurações padrão no [configurações de aplicativo](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) página. Somente as seleções feitas nesta página do Assistente de controle ActiveX são refletidas no **visão geral** página.  

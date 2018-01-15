@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,38 +27,23 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d4d9ab6b20dbc6fcfec849f2ba583483f0a9fb55
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 38ab921dc120fc82e05845c62dcc355167ad09c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 Carrega e executa novos processos filho.  

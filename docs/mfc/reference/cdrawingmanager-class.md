@@ -67,11 +67,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73b8adbff021a179f3bd3185fa85ee18c84a441a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 689d538c03a35175040663aedb7bd6130aae10fd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 O `CDrawingManager` classe implementa algoritmos complexos de desenho.  
@@ -84,7 +85,7 @@ class CDrawingManager : public CObject
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -576,7 +577,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
  A representação de RGB da cor HLS fornecida.  
   
 ### <a name="remarks"></a>Comentários  
- Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Este método e o `CDrawingManager::HLStoRGB_TWO` método executar a mesma operação, mas requerem valores diferentes para o `H` parâmetro. Nesse método, `H` é uma porcentagem do círculo. No `CDrawingManager::HLStoRGB_TWO` método `H` é um valor de grau entre 0 e 360, que representam vermelho. Por exemplo, com `HLStoRGB_ONE`, um valor de 0,25 para `H` é equivalente a um valor de 90 com `HLStoRGB_TWO`.  
   
@@ -604,7 +605,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
  A representação de RGB da cor HLS fornecida.  
   
 ### <a name="remarks"></a>Comentários  
- Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Este método e o [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) método executar a mesma operação, mas requerem valores diferentes para o `H` parâmetro. Nesse método, `H` é um valor de grau entre 0 e 360, que representam vermelho. No [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) método `H` é uma porcentagem do círculo. Por exemplo, com `HLStoRGB_ONE`, um valor de 0,25 para `H` é equivalente a um valor de 90 com `HLStoRGB_TWO`.  
   
@@ -631,7 +632,7 @@ static COLORREF __stdcall HSVtoRGB(
  A representação de RGB da cor HSV fornecida.  
   
 ### <a name="remarks"></a>Comentários  
- Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
 ##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  Converte um valor de matiz para um componente verde, vermelho ou azul.  
@@ -800,7 +801,7 @@ static void __stdcall RGBtoHSL(
 |[out] `L`|Um ponteiro para um duplo em que o método armazena a luminosidade da cor.|  
   
 ### <a name="remarks"></a>Comentários  
- Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  O valor retornado para `H` é representado como uma fração entre 0 e 1, onde 0 e 1 representam vermelho. Os valores retornados para `S` e `L` são números entre 0 e 1.  
   
@@ -829,7 +830,7 @@ static void __stdcall RGBtoHSV(
  Um ponteiro para um duplo onde esse método armazena o valor resultante para a cor.  
   
 ### <a name="remarks"></a>Comentários  
- Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Uma cor pode ser representada como HSV (matiz, saturação e valor), HSL (matiz, saturação e luminosidade) ou RGB (vermelho, verde e azul). Para obter mais informações sobre as diferentes representações de cor, consulte [cor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  O valor retornado para `H` é um número entre 0 e 360, onde 0 e 360 indicar vermelho. Valores de retorno para `S` e `V` são números entre 0 e 1.  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f06779fb8f2d5265d93cc4376b42669b978c4e5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bcf80eb4d45fe1ae163772b96339c123996ae377
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="project-build-error-prj0003"></a>Erro de Build PRJ0003 no Projeto  
   
@@ -29,7 +30,7 @@ O *linha de comando* comando formado de entrada no **páginas de propriedade** c
 
 Os motivos possíveis para esse erro incluem:  
   
--   Seu projeto depende do servidor ATL. A partir do Visual Studio 2008, servidor ATL não é incluído como parte do Visual Studio, mas foi lançado como um projeto de código-fonte compartilhado no CodePlex. Para baixar as ferramentas e o código-fonte ATL Server, vá para [biblioteca do ATL Server e as ferramentas](http://go.microsoft.com/fwlink/?LinkID=81979).  
+-   Seu projeto depende do servidor ATL. A partir do Visual Studio 2008, servidor ATL não é incluído como parte do Visual Studio, mas foi lançado como um projeto de código-fonte compartilhado no CodePlex. Para baixar as ferramentas e o código-fonte ATL Server, vá para [biblioteca do ATL Server e as ferramentas](http://go.microsoft.com/fwlink/p/?linkid=81979).  
   
 -   Recursos insuficientes do sistema. Feche alguns aplicativos para resolver o problema.  
   

@@ -37,11 +37,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 693e9a21687c56a060bf3b4224050162a6937f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 172686fbd7f6717bda8fe102745696031936dea1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniformintdistribution-class"></a>Classe uniform_int_distribution
 Gera uma distribuição de inteiro uniforme (todo valor é igualmente provável) em um intervalo de saídas inclusive-inclusive.  
@@ -78,7 +79,7 @@ public:
 ```  
 ### <a name="parameters"></a>Parâmetros  
 *IntType*  
-O tipo de resultado do inteiro assume `int` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado do inteiro assume `int` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Comentários  
 A classe de modelo descreve uma distribuição inclusive-inclusive que produz valores de um tipo integral especificado por usuário com uma distribuição, de forma que todo valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.  

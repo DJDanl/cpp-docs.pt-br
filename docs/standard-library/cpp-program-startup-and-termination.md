@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, program startup and termination
 - terminating execution
@@ -18,30 +16,16 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 53e31f3f3a175013a248401f4231bb87cf444681
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 24fda25f0d0766442e05c1661dce5e2f08a01b09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-program-startup-and-termination"></a>Inicialização e encerramento de programas em C++
 Um programa do C++ executa as mesmas operações que um programa do C na inicialização e no encerramento do programa, além de algumas outras descritas aqui.  
@@ -63,6 +47,5 @@ Um programa do C++ executa as mesmas operações que um programa do C na inicial
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 

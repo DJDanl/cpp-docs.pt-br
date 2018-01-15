@@ -1,45 +1,45 @@
 ---
-title: "M&#233;todo SRWLockExclusiveTraits::GetInvalidValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método GetInvalidValue"
+title: "Método Srwlockexclusivetraits: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue
+dev_langs: C++
+helpviewer_keywords: GetInvalidValue method
 ms.assetid: b192f07b-ffbd-4f25-ab96-03d6c5de06b1
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 27de8b97ec232e800663818b9f2b42547a1da799
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo SRWLockExclusiveTraits::GetInvalidValue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>Método SRWLockExclusiveTraits::GetInvalidValue
 Recupera um objeto de SRWLockExclusiveTraits que sempre é inválido.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 inline static Type GetInvalidValue();  
 ```  
   
-## Valor de retorno  
- Um objeto vazio de SRWLockExclusiveTraits.  
+## <a name="return-value"></a>Valor de retorno  
+ Um objeto SRWLockExclusiveTraits vazio.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estrutura SRWLockExclusiveTraits](../windows/srwlockexclusivetraits-structure.md)

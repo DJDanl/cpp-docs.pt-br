@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9aee6ce3d9a3554e4722a143bcb683c40b78ea14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 458a650214ab2186f9697ca587b2b429e9cb5a6f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Seção específica da Microsoft**  
@@ -43,7 +44,7 @@ void __svm_vmload(
 |[in] `VmcbPhysicalAddress`|O endereço físico do VMCB.|  
   
 ## <a name="remarks"></a>Comentários  
- O `__svm_vmload` função é equivalente a `VMLOAD` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Manual Volume do programador de arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documento no [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) site.  
+ O `__svm_vmload` função é equivalente a `VMLOAD` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Manual Volume do programador de arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documento no [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
   
 ## <a name="requirements"></a>Requisitos  
   

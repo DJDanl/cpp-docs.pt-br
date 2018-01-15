@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 74e453298857b94c2c4eb62c5387d4e727f7bb7c
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb2c193fd12578e69abef2db555ebbc4fa061e1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocators"></a>Alocadores
 Alocadores são usados pela Biblioteca Padrão do C++ para tratar da alocação e da desalocação de elementos armazenados em contêineres. Todos os contêineres da Biblioteca Padrão do C++, exceto o std::array, têm um parâmetro de modelo do tipo `allocator<Type>`, em que `Type` representa o tipo do elemento de contêiner. Por exemplo, a classe vector é declarada da seguinte maneira:  
@@ -50,7 +34,7 @@ template <
 class vector  
 ```  
   
- A Biblioteca Padrão do C++ fornece uma implementação padrão de um alocador. No C++&11; e posterior, o alocador padrão é atualizado para exibir uma interface menor, o novo alocador é chamado de *alocador mínimo*. Especificamente, o membro `construct()` do alocador mínimo dá suporte à semântica de movimentação, o que pode melhorar bastante o desempenho. Na maioria dos casos, esse alocador padrão é suficiente. No C++&11;, todos os tipos e funções da Biblioteca Padrão que usam um parâmetro do tipo alocador dão suporte à interface de alocador mínimo, incluindo `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Para obter mais informações sobre o alocador padrão, consulte a [Classe allocator](../standard-library/allocator-class.md).  
+ A Biblioteca Padrão do C++ fornece uma implementação padrão de um alocador. No C++ 11 e posterior, o alocador padrão é atualizado para exibir uma interface menor, o novo alocador é chamado de *alocador mínimo*. Especificamente, o membro `construct()` do alocador mínimo dá suporte à semântica de movimentação, o que pode melhorar bastante o desempenho. Na maioria dos casos, esse alocador padrão é suficiente. No C++ 11, todos os tipos e funções da Biblioteca Padrão que usam um parâmetro do tipo alocador dão suporte à interface de alocador mínimo, incluindo `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Para obter mais informações sobre o alocador padrão, consulte a [Classe allocator](../standard-library/allocator-class.md).  
   
 ## <a name="writing-your-own-allocator-c11"></a>Criando seu próprio alocador (C++11)  
  O alocador padrão usa `new` e `delete` para alocar e desalocar a memória. Se quiser usar um método de alocação de memória diferente, como usar memória compartilhada, você deverá criar seu próprio alocador. Se você estiver usando o C++11 e precisar criar um novo alocador personalizado, crie-o como um alocador mínimo, se possível. Mesmo se você já implementou um alocador do estilo antigo, considere modificá-lo para transformá-lo em um *alocador mínimo* e aproveitar o método `construct()` mais eficiente que será fornecido automaticamente.  
@@ -147,7 +131,6 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

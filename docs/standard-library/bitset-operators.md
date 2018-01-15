@@ -12,10 +12,9 @@ f1_keywords:
 - bitset/std::operator&lt;&lt;
 - bitset/std::operator^
 - bitset/std::operator|
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 ||||  
@@ -54,7 +53,7 @@ operator&(
  `right`  
  A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `AND` bit a bit.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um bitset cujos elementos são o resultado da execução da operação `AND` nos elementos correspondentes de `left` e `right`.  
   
 ### <a name="example"></a>Exemplo  
@@ -100,13 +99,13 @@ basic_ostream<CharType, Traits>& operator<<(
  `right`  
  Um objeto do tipo **bitset\<N>** que deve ser inserido no fluxo de saída como uma cadeia de caracteres.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Uma representação de texto da sequência de bits em **ostr**.  
   
 ### <a name="remarks"></a>Comentários  
  As função de modelo sobrecarrega **operator<<**, permitindo que um bitset seja gravado primeiro ser convertido em uma cadeia de caracteres. A função de modelo é executada efetivamente:  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
 ### <a name="example"></a>Exemplo  
   
@@ -159,11 +158,11 @@ _Istr,
  `right`  
  O bitset que está recebendo os bits do fluxo de entrada.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  A função de modelo retorna a cadeia de caracteres `_Istr`.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo sobrecarrega **operator>>** para armazenar no bitset_ *Right* o valor bitset( `str`), em que `str` é um objeto do tipo [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator** \< **CharType**> > **&**  extraídos de `_Istr`.  
+ A função de modelo sobrecarrega **operator>>** para armazenar no bitset_ *Right* o valor bitset( `str`), em que `str` é um objeto do tipo [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator** \< **CharType**> > **&**  extraídos de `_Istr`.  
   
  A função de modelo extrai elementos de `_Istr` e insere-os em um bitset até:  
   
@@ -240,7 +239,7 @@ operator^(
  `right`  
  A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um bitset cujos elementos são o resultado da execução da operação `EXCLUSIVE-OR` nos elementos correspondentes de `left` e `right`.  
   
 ### <a name="example"></a>Exemplo  
@@ -289,7 +288,7 @@ operator|(
  `right`  
  A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `OR` bit a bit.  
   
-### <a name="return-value"></a>Valor retornado  
+### <a name="return-value"></a>Valor de retorno  
  Um bitset cujos elementos são o resultado da execução da operação `OR` nos elementos correspondentes de `left` e `right`.  
   
 ### <a name="example"></a>Exemplo  
@@ -322,5 +321,4 @@ bitset 3: 0111
   
 ## <a name="see-also"></a>Consulte também  
  [\<bitset>](../standard-library/bitset.md)
-
 

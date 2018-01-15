@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 418b9e1f982e1bb37559ee35b6953d7d3f198b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c13d6352fcd3b2df26e9585b74e17b549106d19b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipuladores de Fluxo de Saída com um Argumento (int ou long)
 A biblioteca de classes iostream fornece um conjunto de macros para criar manipuladores com parâmetros. Manipuladores com um único argumento `int` ou `long` são um caso especial. Para criar um manipulador de fluxo de saída que aceita um único argumento `int` ou `long` (como `setw`), você deve usar a macro _Smanip, que é definida em \<iomanip >. Este exemplo define um manipulador `fillblank` que insere um número especificado de espaços em branco no fluxo:  

@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>Classe CLinkCtrl
 Fornece a funcionalidade de controle de SysLink comuns do Windows.  
@@ -62,7 +63,7 @@ class CLinkCtrl : public CWnd
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Parâmetros  
  `lpszLinkMarkup`  
- Ponteiro para uma cadeia de caracteres terminada em zero que contém o texto para exibir. Para obter mais informações, consulte a seção "Marcação e acesso de Link" no tópico [visão geral de controles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) no [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Ponteiro para uma cadeia de caracteres terminada em zero que contém o texto para exibir. Para obter mais informações, consulte a seção "Marcação e acesso de Link" no tópico [visão geral de controles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwStyle`  
  Especifica o estilo do controle de link. Aplique qualquer combinação de estilos de controle. Consulte [estilos de controle comuns](http://msdn.microsoft.com/library/windows/desktop/bb775498) no `Windows SDK` para obter mais informações.  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Parâmetros  
  `lpszLinkMarkup`  
- Ponteiro para uma cadeia de caracteres terminada em zero que contém o texto para exibir. Para obter mais informações, consulte a seção "Marcação e acesso de Link" no tópico [visão geral de controles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) no [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Ponteiro para uma cadeia de caracteres terminada em zero que contém o texto para exibir. Para obter mais informações, consulte a seção "Marcação e acesso de Link" no tópico [visão geral de controles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwExStyle`  
  Especifica o estilo estendido do controle de link. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  

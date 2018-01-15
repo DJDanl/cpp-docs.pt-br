@@ -17,11 +17,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74b7be820479b2ef9fa742ee343e0aa33c26dfe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 415da036c9ac2f285b97096368754f176d655eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generics--c-component-extensions"></a>Genéricos (Extensões de Componentes C++)
 Genéricos são com parâmetros de tipos e métodos. Nesta seção, saber quais recursos genéricos têm suporte pelo common language runtime e o tempo de execução do Windows e que têm suporte apenas a common language runtime. Além disso, descubra como criar seus próprios métodos e tipos genéricos no Visual C++ e como usar tipos genéricos criados em uma linguagem do .NET Framework no Visual C++. Por fim, esta seção fornece uma comparação dos modelos de C++ e genéricos.  

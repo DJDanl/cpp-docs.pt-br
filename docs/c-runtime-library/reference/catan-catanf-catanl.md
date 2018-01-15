@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11cfea77d86795070f4f679ff69636974e1234b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 333db8403e539d28de766809891a068717c738ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 Recupera o arco tangente de um número complexo com cortes de ramificação fora do intervalo [-1; + 1] no eixo imaginário.  
@@ -76,7 +77,7 @@ _Lcomplex catanl(
  `z`  
  Um número complexo que representa um ângulo, em radianos.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O arco tangente de `z`, em radianos. O resultado é não vinculado ao longo do eixo imaginário e no intervalo [-π/2; + π/2] ao longo do eixo real.  
   
 ## <a name="remarks"></a>Comentários  
@@ -91,7 +92,7 @@ _Lcomplex catanl(
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   

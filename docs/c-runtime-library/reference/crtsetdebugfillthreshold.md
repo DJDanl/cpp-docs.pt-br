@@ -35,11 +35,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4af73cd84e21ea23f7bdacdeff91cacdda322198
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d8fcbf7f354def49056c1e519e910edccde56cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 Recupera ou modifica o limite controlando o comportamento de preenchimento de buffer nas funções de depuração.  

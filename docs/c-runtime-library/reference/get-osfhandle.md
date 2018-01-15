@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Microsoft Docs
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3b15b4577d1d8c0b24df82acff76494474c4e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b810edac60b08ccc31d6767cb11b7176fb981b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -55,15 +56,16 @@ intptr_t _get_osfhandle(
   
 ### <a name="parameters"></a>Parâmetros
 
-*FD* existente do descritor de arquivo.  
+*FD*  
+Um descritor de arquivo existente.  
   
 ## <a name="return-value"></a>Valor de retorno
 
-Tratar de um arquivo do sistema operacional se *fd* é válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna `INVALID_HANDLE_VALUE` (-1) e define `errno` para `EBADF`, que indica o identificador de arquivo inválido.  
+Retorna um identificador de arquivo do sistema operacional se *fd* é válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna `INVALID_HANDLE_VALUE` (-1) e define `errno` para `EBADF`, que indica o identificador de arquivo inválido.  
   
 ## <a name="remarks"></a>Comentários
 
-Para fechar um arquivo cujo identificador de arquivo do sistema operacional é obtido por `_get_osfhandle`, chame [ \_fechar](../../c-runtime-library/reference/close.md) no descritor de arquivo *fd*. O identificador subjacente também é fechado por uma chamada para `_close`, portanto, não é necessário chamar a função `CloseHandle` do Win32 no identificador original.  
+Para fechar um arquivo cujo identificador de arquivo do sistema operacional (SO) é obtido por `_get_osfhandle`, chame [ \_fechar](../../c-runtime-library/reference/close.md) no descritor de arquivo *fd*. Não chame `CloseHandle` no valor de retorno dessa função. O identificador de arquivo do sistema operacional subjacente é de propriedade de *fd* descritor de arquivo e é fechado quando `_close` é chamado em *fd*. Se o descritor de arquivo pertence a um `FILE *` fluxo, em seguida, chamar [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) naquele `FILE *` fluxo fecha o descritor de arquivo e o identificador de arquivo do sistema operacional subjacente. Nesse caso, não chame `_close` no descritor de arquivo.
   
 ## <a name="requirements"></a>Requisitos  
   

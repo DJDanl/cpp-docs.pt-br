@@ -117,11 +117,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 692f2d7a223c4139e1eddb21165f4b5b84d675bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80541bc777d2c77209812cbee621045b7d6c6507
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 Fornece suporte para interfaces de controle personalizado do lado do cliente.  
@@ -134,7 +135,7 @@ class COleControlSite : public CCmdTarget
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -266,7 +267,7 @@ virtual void BindProperty(
  O `CWnd` objeto no qual você chamar esta função deve ser um controle associado a dados.  
   
 ##  <a name="colecontrolsite"></a>COleControlSite::COleControlSite  
- Constrói um novo `COleControlSite` objeto.  
+ Constrói um novo objeto `COleControlSite`.  
   
 ```  
 explicit COleControlSite(COleControlContainer* pCtrlCont);

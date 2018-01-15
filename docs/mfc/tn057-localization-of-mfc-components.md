@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b8d8bcd21128b6d2d78d936e68f60040a75496c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e27b737a76b30e7193a9afb7797a20951294032e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057: localização de componentes MFC
 > [!NOTE]
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
  Esta anotação descreve alguns dos designs e procedimentos que você pode usar para localizar seu componente, se ele controla uma OLE ou um aplicativo ou uma DLL que usa MFC.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Há dois problemas para resolver quando realmente Localizando um componente que usa MFC. Primeiro, você deve localizar seus próprios recursos — cadeias de caracteres, caixas de diálogo e outros recursos que são específicos para o seu componente. A maioria dos componentes desenvolvidos utilizando o MFC também incluem e usam uma série de recursos que são definidos pelo MFC. Você deve fornecer recursos localizados do MFC também. Felizmente, vários idiomas já são fornecidos pelo MFC em si.  
   
  Além disso, o componente deve estar preparado para executar em seu ambiente de destino (ambiente Europeu ou DBCS-habilitado). A maior parte do tempo, isso depende de seu aplicativo tratar caracteres com o conjunto de bit alto corretamente e manipulação de cadeias de caracteres com caracteres de byte duplo. MFC está habilitado, por padrão, para esses ambientes, é possível ter um único binário mundial que é usado em todas as plataformas com diferentes apenas recursos conectados no momento da instalação.  

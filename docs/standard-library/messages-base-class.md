@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmes/std::messages_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- messages_base class
+f1_keywords: xlocmes/std::messages_base
+dev_langs: C++
+helpviewer_keywords: messages_base class
 ms.assetid: 9aad38c6-4c13-445d-b096-364bd0836efb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 54efcdb0b537563f46ce56f91ba5bd7805485824
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e95f92d910919ed0fc07943ff7b452ddd7d6b203
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messagesbase-class"></a>Classe messages_base
 A classe base descreve um tipo `int` do catálogo de mensagens.  
@@ -48,7 +44,6 @@ struct messages_base : locale::facet {
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

@@ -1,30 +1,30 @@
 ---
-title: "Membro de dados Module::releaseNotifier_ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::releaseNotifier_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membro de dados releaseNotifier_"
+title: Membro de dados Module::releaseNotifier_ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::releaseNotifier_
+dev_langs: C++
+helpviewer_keywords: releaseNotifier_ data member
 ms.assetid: 99bb1ceb-469c-489d-8a14-f67f410a83d5
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0660077af97e26e7384dd84b0b620114a6d5d9d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Membro de dados Module::releaseNotifier_
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulereleasenotifier-data-member"></a>Membro de dados Module::releaseNotifier_
 Contém um ponteiro para um objeto ReleaseNotifier.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,4 +39,4 @@ ReleaseNotifier *releaseNotifier_;
  **Namespace:** Microsoft:: wrl
  
  ## <a name="see-also"></a>Consulte também
- [Classe de módulo](../windows/module-class.md)
+ [Classe Module](../windows/module-class.md)

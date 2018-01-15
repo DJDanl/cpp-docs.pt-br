@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee3852b709f18839173adc1737878e3e0abdc4bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2617eabc1b0819be6b4c02c84e5085a3f6ea1dec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassruntimeclass-constructor"></a>Construtor RuntimeClass::RuntimeClass
 Inicializa a instância atual da classe RuntimeClass.  

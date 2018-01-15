@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>Classe CButton
 Fornece a funcionalidade de controles de botão do Windows.  
@@ -102,7 +103,7 @@ class CButton : public CWnd
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -724,7 +725,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
  `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
- Se um controle de link do botão ou o comando requer a permissão de segurança com privilégios elevados para executar uma ação, configurar o controle `elevation required` estado. Subsequentemente, o Windows exibe o ícone de escudo de controle de conta de usuário (UAC) no controle. Para obter mais informações, consulte "Controle de conta de usuário" em [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
+ Se um controle de link do botão ou o comando requer a permissão de segurança com privilégios elevados para executar uma ação, configurar o controle `elevation required` estado. Subsequentemente, o Windows exibe o ícone de escudo de controle de conta de usuário (UAC) no controle. Para obter mais informações, consulte "Controle de conta de usuário" em [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
  Esse método envia o [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) mensagem, que é descrita no SDK do Windows.  
   

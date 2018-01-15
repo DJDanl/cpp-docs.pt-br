@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7ea1cdfa51080cdc91df58eb9fcf2bf1735e39f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdraglistbox-class"></a>Classe CDragListBox
 Além de fornecer a funcionalidade de uma caixa de lista do Windows, o `CDragListBox` classe permite que o usuário mover itens da caixa de lista, como nomes de arquivo, na caixa de listagem.  
@@ -48,7 +49,7 @@ class CDragListBox : public CListBox
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

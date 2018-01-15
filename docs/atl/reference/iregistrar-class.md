@@ -1,11 +1,10 @@
 ---
-title: Interface IRegistrar | Documentos do Microsoft
+title: Interface IRegistrar | Microsoft Docs
 ms.custom: 
 ms.date: 2/1/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLIFASE/ATL::IRegistrar::StringUnregister
 - ATLIFASE/ATL::IRegistrar::ResourceRegister
 - ATLIFASE/ATL::IRegistrar::ResourceUnregister
-dev_langs:
-- C++
-helpviewer_keywords:
-- Iregistrar Interface
+dev_langs: C++
+helpviewer_keywords: Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 199cdfd91a7d1b9882b57118c852352f6fdda43e
-ms.openlocfilehash: e73e095d253d5ec5ca53e4e446019b2da79e5d39
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>Interface IRegistrar
-Essa interface é definida em atliface e é usado internamente pelas funções de membro CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Essa interface é definido em atliface e é usado internamente por funções de membro CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +40,7 @@ Essa interface é definida em atliface e é usado internamente pelas funções d
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Comentários
-Consulte o tópico [usando parâmetros substituíveis (do registrador o pré-processador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obter mais detalhes.  
+Consulte o tópico [usando parâmetros substituíveis (do registrador pré-processador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obter mais detalhes.  
 
 ## <a name="members"></a>Membros  
   
@@ -158,8 +141,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ```  
  
 ## <a name="see-also"></a>Consulte também  
- [Usando parâmetros substituíveis (pré-processador do registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+ [Usando parâmetros substituíveis (pré-processador do Registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
  [Visão geral da classe](../../atl/atl-class-overview.md)   
  [Classes de módulo](../../atl/atl-module-classes.md)   
  [Componente de registro (Registrar)](../../atl/atl-registry-component-registrar.md)  
-

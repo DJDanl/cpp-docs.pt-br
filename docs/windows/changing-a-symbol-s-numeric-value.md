@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97a6def651826ae71cecf33f751f8c0858c691dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ce2c846d844b79a6ff054bb6c209d1f4653a26d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>Alterando um símbolo &#39; s numérico valor
 Para símbolos associados a um único recurso, você pode usar o [janela propriedades](/visualstudio/ide/reference/properties-window) para alterar o valor do símbolo. Você pode usar o [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md) para alterar o valor de símbolos não atualmente atribuído a um recurso. Para obter mais informações, consulte [alterando símbolos não atribuídos](../windows/changing-unassigned-symbols.md).  

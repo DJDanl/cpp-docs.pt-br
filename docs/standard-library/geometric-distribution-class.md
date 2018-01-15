@@ -34,11 +34,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 796393b3e931cb1afad31809498d329e1a80ad99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23ab208a32b193c8cf30eefd9382ac253e2518d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="geometricdistribution-class"></a>Classe geometric_distribution
 Gera uma distribuição geométrica.  
@@ -74,9 +75,9 @@ public:
 ```  
 #### <a name="parameters"></a>Parâmetros  
 *IntType*  
-O tipo de resultado do inteiro assume `int` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado do inteiro assume `int` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+*URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Comentários  
 A classe do modelo descreve uma distribuição que produz valores de um tipo de integral especificado pelo usuário com uma distribuição geométrica. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -98,7 +99,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
   
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a distribuição qui-quadrado, consulte o artigo da Wolfram MathWorld [Geometric Distribution](http://go.microsoft.com/fwlink/LinkId=400529) (Distribuição geométrica).  
+Para obter informações detalhadas sobre a distribuição qui-quadrado, consulte o artigo da Wolfram MathWorld [Geometric Distribution](http://go.microsoft.com/fwlink/p/?linkid=400529) (Distribuição geométrica).  
   
 ## <a name="example"></a>Exemplo  
   

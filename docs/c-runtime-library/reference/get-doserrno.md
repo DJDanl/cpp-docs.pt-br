@@ -33,11 +33,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67f546afa3059508787c7d3a5295d2b85651f125
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8eff0ac1a97c9a1d48b82601eb0d6dc0bb8bed0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 Obtém o valor do erro retornado pelo sistema operacional antes de ele ser convertido para um valor `errno`.  
@@ -55,7 +56,7 @@ errno_t _get_doserrno(
  Um ponteiro para um inteiro que deve ser preenchido com o valor atual da macro global `_doserrno`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se `_get_doserrno` tiver êxito, o valor retornado é zero. Em caso de falha, o valor retornado é um código de erro. Se `pValue` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `EINVAL`.  
+ Se `_get_doserrno` tiver êxito, o valor retornado é zero. Em caso de falha, o valor retornado é um código de erro. Se `pValue` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
  A macro global `_doserrno` é definida como zero durante a inicialização do CRT (tempo de execução C), antes do início do processo de execução. Ela é definida para o valor de erro do sistema operacional retornado por qualquer chamada de função de nível do sistema que retorne um erro de sistema operacional. Ela nunca é redefinida para zero durante a execução. Ao escrever o código para verificar o valor de erro retornado por uma função, sempre limpe `_doserrno` usando [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md) antes da chamada de função. Como outra chamada de função pode substituir `_doserrno`, verifique o valor usando `_get_doserrno` logo após a chamada de função.  

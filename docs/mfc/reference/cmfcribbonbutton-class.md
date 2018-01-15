@@ -125,11 +125,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5215adddf92cee7ff0bc079cf42d6dceea3f99b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 219d305b382d80e4015578b16531158c0f8d643d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 O `CMFCRibbonButton` classe implementa botões que você pode posicionar em elementos da barra de faixa de opções, como painéis, as barras de ferramentas de acesso rápido e menus pop-up.  
@@ -144,7 +145,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

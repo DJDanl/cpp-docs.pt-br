@@ -1,31 +1,31 @@
 ---
-title: "M&#233;todo EventSource::Add | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::Add"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Add"
+title: "Método EventSource: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::Add
+dev_langs: C++
+helpviewer_keywords: Add method
 ms.assetid: 8bded85b-929e-4425-a464-e5de67bb774c
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6e5a39abdced8929ac1a01db596a6099c70853c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo EventSource::Add
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Acrescenta o manipulador de eventos representado pela interface delegado especificado para o conjunto de manipuladores de eventos para o objeto EventSource atual.  
+# <a name="eventsourceadd-method"></a>Método EventSource::Add
+Anexa o manipulador de eventos representado pela interface delegado especificado para o conjunto de manipuladores de eventos para o objeto de EventSource atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +38,13 @@ HRESULT Add(
   
 #### <a name="parameters"></a>Parâmetros  
  `delegateInterface`  
- A interface para um objeto delegado, que representa um manipulador de eventos.  
+ A interface para um objeto de representante, que representa um manipulador de eventos.  
   
  `token`  
- Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como o parâmetro para o [Remove](../Topic/EventSource::Remove%20Method.md) método para descartar o manipulador de eventos.  
+ Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como parâmetro para o [remove](../windows/eventsource-remove-method.md) método para descartar o manipulador de eventos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se for bem-sucedida; Caso contrário, um HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** event.h  

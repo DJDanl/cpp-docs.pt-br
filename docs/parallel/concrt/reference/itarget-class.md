@@ -1,11 +1,10 @@
 ---
-title: Classe ITarget | Documentos do Microsoft
+title: Classe ITarget | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,38 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::ITarget::link_source
 - AGENTS/concurrency::ITarget::unlink_source
 - AGENTS/concurrency::ITarget::unlink_sources
-dev_langs:
-- C++
-helpviewer_keywords:
-- ITarget class
+dev_langs: C++
+helpviewer_keywords: ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4bd6b21e274431449c8fac452995dd66fc1aef1b
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0b67bf07ed7f1621ceb9a9428a03244ee5661707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itarget-class"></a>Classe ITarget
-O `ITarget` classe é a interface de todos os blocos de destino. Blocos de destino consumam mensagens oferecidas a eles por `ISource` blocos.  
+O `ITarget` classe é a interface para todos os blocos de destino. Blocos de destino consumam mensagens oferecidas a eles por `ISource` blocos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +42,7 @@ class ITarget;
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- O tipo de dados de carga nas mensagens aceitas pelo bloco de destino.  
+ O tipo de dados da carga de mensagens aceito pelo bloco de destino.  
   
 ## <a name="members"></a>Membros  
   
@@ -67,22 +50,22 @@ class ITarget;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`filter_method`|A assinatura de qualquer método usado pelo bloco que retorna um `bool` valor para determinar se uma mensagem oferecida deve ser aceitas.|  
+|`filter_method`|A assinatura de qualquer método usado pelo bloco que retorna um `bool` valor para determinar se uma mensagem oferecida deve ser aceita.|  
 |`type`|Um alias de tipo para `T`.|  
   
 ### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[~ Destruidor ITarget](#dtor)|Destrói o `ITarget` objeto.|  
+|[~ Destruidor ITarget](#dtor)|Destrói a `ITarget` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Propagar](#propagate)|Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de código-fonte para este bloco de destino.|  
-|[Enviar](#send)|Quando substituído em uma classe derivada, sincronicamente transmite uma mensagem para o bloco de destino.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceita mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retorna `true`, o destino não pode adiar uma mensagem oferecida, como a fonte a ser identificados no seu registro de link sourse exige que o consumo de uma mensagem adiada em um momento posterior.|  
+|[Propagar](#propagate)|Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de origem para este bloco de destino.|  
+|[send](#send)|Quando substituído em uma classe derivada, sincronicamente transmite uma mensagem para o bloco de destino.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceita mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retorna `true`, o destino não é possível adiar uma mensagem oferecida, como a fonte a ser identificados no seu registro de link sourse requer o consumo de uma mensagem adiada em um momento posterior.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
@@ -105,7 +88,7 @@ class ITarget;
   
 ##  <a name="dtor"></a>~ ITarget 
 
- Destrói o `ITarget` objeto.  
+ Destrói a `ITarget` objeto.  
   
 ```
 virtual ~ITarget();
@@ -121,14 +104,14 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
   
 ### <a name="parameters"></a>Parâmetros  
  `_PSource`  
- O `ISource` bloquear vinculado a este `ITarget` bloco.  
+ O `ISource` bloquear sendo vinculada a este `ITarget` bloco.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função não deve ser chamada diretamente em um `ITarget` bloco. Blocos devem ser conectados usando o `link_target` método `ISource` blocos, que irá chamar o `link_source` método de destino correspondente.  
+ Essa função não deve ser chamada diretamente em um `ITarget` bloco. Blocos devem ser conectados usando o `link_target` método `ISource` blocos, que invocarão o `link_source` método de destino correspondente.  
   
 ##  <a name="propagate"></a>Propagar 
 
- Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de código-fonte para este bloco de destino.  
+ Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de origem para este bloco de destino.  
   
 ```
 virtual message_status propagate(
@@ -141,13 +124,13 @@ virtual message_status propagate(
  Um ponteiro para o `message` objeto.  
   
  `_PSource`  
- Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+ Um ponteiro para o bloco de código-fonte oferta a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ### <a name="remarks"></a>Comentários  
- O método lança um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.  
+ O método gera uma [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.  
   
 ##  <a name="send"></a>Enviar 
 
@@ -164,28 +147,28 @@ virtual message_status send(
  Um ponteiro para o `message` objeto.  
   
  `_PSource`  
- Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+ Um ponteiro para o bloco de código-fonte oferta a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ### <a name="remarks"></a>Comentários  
- O método lança um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.  
+ O método gera uma [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.  
   
- Usando o `send` método fora do início da mensagem e propagar as mensagens em uma rede é perigoso e pode resultar em deadlock.  
+ Usando o `send` método fora de iniciação de mensagem e propagar as mensagens em uma rede é perigoso e pode resultar em um deadlock.  
   
- Quando `send` retorna, a mensagem seja já foi aceita e transferida para o bloco de destino, ou ele foi recusado pelo destino.  
+ Quando `send` retorna, a mensagem seja já foi aceitada e transferida para o bloco de destino, ou ele foi recusado pelo destino.  
   
 ##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
- Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceita mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retorna `true`, o destino não pode adiar uma mensagem oferecida, como a fonte a ser identificados no seu registro de link sourse exige que o consumo de uma mensagem adiada em um momento posterior.  
+ Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceita mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retorna `true`, o destino não é possível adiar uma mensagem oferecida, como a fonte a ser identificados no seu registro de link sourse requer o consumo de uma mensagem adiada em um momento posterior.  
   
 ```
 virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o bloco pode aceitar mensagens de uma fonte que não está vinculada a ele `false` caso contrário.  
+ `true`Se o bloco pode aceitar a mensagem de uma fonte que não está vinculada a ele `false` caso contrário.  
   
 ##  <a name="unlink_source"></a>unlink_source 
 
@@ -200,7 +183,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
  O `ISource` bloquear sendo desvinculado neste `ITarget` bloco.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função não deve ser chamada diretamente em um `ITarget` bloco. Blocos devem ser desconectados usando o `unlink_target` ou `unlink_targets` métodos em `ISource` blocos, que irá chamar o `unlink_source` método de destino correspondente.  
+ Essa função não deve ser chamada diretamente em um `ITarget` bloco. Blocos devem ser desconectados usando o `unlink_target` ou `unlink_targets` métodos em `ISource` blocos, que invocarão o `unlink_source` método de destino correspondente.  
   
 ##  <a name="unlink_sources"></a>unlink_sources 
 
@@ -213,4 +196,3 @@ virtual void unlink_sources() = 0;
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe ISource](isource-class.md)
-

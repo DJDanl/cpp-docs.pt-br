@@ -1,33 +1,33 @@
 ---
-title: "optional (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.optional"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "optional attribute"
+title: opcional (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.optional
+dev_langs: C++
+helpviewer_keywords: optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 028cb0f911ac389e4ad17f54fc16e24f29c8d9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# optional (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="optional-c"></a>optional (C++)
 Especifica um parâmetro opcional para uma função de membro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,11 +35,11 @@ Especifica um parâmetro opcional para uma função de membro.
   
 ```  
   
-## Comentários  
- O  **opcional** o atributo do C\+\+ tem a mesma funcionalidade que o  [opcional](http://msdn.microsoft.com/library/windows/desktop/aa367132) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **opcional** atributo C++ tem a mesma funcionalidade que o [opcional](http://msdn.microsoft.com/library/windows/desktop/aa367132) atributo MIDL.  
   
-## Exemplo  
- O seguinte código mostra como  **opcional** pode ser usado:  
+## <a name="example"></a>Exemplo  
+ O código a seguir mostra como **opcional** pode ser usado:  
   
 ```  
 // cpp_attr_ref_optional.cpp  
@@ -54,20 +54,19 @@ __interface IFireTabCtrl : IDispatch
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Parâmetro de interface|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|Parâmetro de interface|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações sobre os contextos de atributo, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de parâmetro](../windows/parameter-attributes.md)   

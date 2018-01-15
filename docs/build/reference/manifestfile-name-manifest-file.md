@@ -1,57 +1,56 @@
 ---
-title: "/MANIFESTFILE (nomear arquivo de manifesto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ManifestFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /MANIFESTFILE"
-  - "opção de vinculador MANIFESTFILE"
-  - "opção de vinculador -MANIFESTFILE"
+title: -MANIFESTFILE (nomear arquivo de manifesto) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.ManifestFile
+dev_langs: C++
+helpviewer_keywords:
+- MANIFESTFILE linker option
+- -MANIFESTFILE linker option
+- /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4a4ce827da3f6793a94bfb6e726af99b1c59dc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /MANIFESTFILE (nomear arquivo de manifesto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (nomear arquivo de manifesto)
 ```  
 /MANIFESTFILE:filename  
 ```  
   
-## Comentários  
- \/MANIFESTFILE permite alterar o nome padrão do arquivo de manifesto.  O nome padrão do arquivo de manifesto é o nome do arquivo com o .manifest anexado.  
+## <a name="remarks"></a>Comentários  
+ /MANIFESTFILE permite alterar o nome padrão do arquivo de manifesto.  O nome padrão do arquivo de manifesto é o nome de arquivo com. manifest junto.  
   
- \/MANIFESTFILE não terá nenhum efeito se você também não se vincula a [\/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).  
+ /MANIFESTFILE não terá efeito se você também não vincular com [/manifesto](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).  
   
-### Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o nó **Propriedades de Configuração**.  
+2.  Expanda o **propriedades de configuração** nó.  
   
-3.  Expanda o nó **Vinculador**.  
+3.  Expanda o **vinculador** nó.  
   
-4.  Selecione a página de propriedades de **Arquivo de Manifesto** .  
+4.  Selecione o **o arquivo de manifesto** página de propriedades.  
   
-5.  Modifique a propriedade de **Arquivo de Manifesto** .  
+5.  Modificar o **o arquivo de manifesto** propriedade.  
   
-### Para definir essa opção de vinculador por meio de programação  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
 1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções de vinculador](../../build/reference/linker-options.md)
+ [Opções do vinculador](../../build/reference/linker-options.md)

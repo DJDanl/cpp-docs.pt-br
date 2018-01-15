@@ -1,104 +1,104 @@
 ---
-title: "Generic Functions (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "functions [C++], generic"
-  - "generic methods"
-  - "generics [C++], functions"
-  - "methods [C++], generic"
-  - "generic functions"
+title: "Funções genéricas (C + + CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], generic
+- generic methods
+- generics [C++], functions
+- methods [C++], generic
+- generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Functions (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Uma função genérico é uma função que é declarada com parâmetros de tipo.  Quando chamado, os tipos reais são usados em vez dos parâmetros de tipo.  
+# <a name="generic-functions-ccli"></a>Funções genéricas (C++/CLI)
+Uma função genérica é uma função que é declarada com parâmetros de tipo. Quando chamado, tipos reais são usados em vez dos parâmetros de tipo.  
   
-## Todas as Plataformas  
+## <a name="all-platforms"></a>Todas as Plataformas  
  **Comentários**  
   
  Esse recurso não se aplica a todas as plataformas.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Tempo de Execução do Windows  
  **Comentários**  
   
- Esse recurso não tem suporte em [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+ Não há suporte para esse recurso no Windows Runtime.  
   
-### Requisitos  
- Opção do compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opção do compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Uma função genérico é uma função que é declarada com parâmetros de tipo.  Quando chamado, os tipos reais são usados em vez dos parâmetros de tipo.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Uma função genérica é uma função que é declarada com parâmetros de tipo. Quando chamado, tipos reais são usados em vez dos parâmetros de tipo.  
   
  **Sintaxe**  
   
 ```  
 [attributes] [modifiers]  
-return-type identifier <type-parameter identifier(s)>  
+return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
   
 ([formal-parameters])  
-{  
-   function-body  
-}  
+{function-body}  
 ```  
   
  **Parâmetros**  
   
- *attributes* \(opcional\)  
- Declarativa informações adicional.  Para obter mais informações sobre os atributos e das classes de atributo, consulte atributos.  
+ *atributos* (opcional)  
+ Informações adicionais de declarativas. Para obter mais informações sobre atributos e classes de atributos, consulte atributos.  
   
- *modifiers* \(opcional\)  
- Um modificador para a função, como static.  `virtual` não é permitido desde que os métodos virtuais não podem ser genéricas.  
+ *modificadores de* (opcional)  
+ Um modificador para a função, como static.  `virtual`não é permitido, pois os métodos virtuais não podem ser genéricos.  
   
- *return\-type*  
- O tipo retornado pelo método.  Se o tipo de retorno será nulo, nenhum valor de retorno será necessário.  
+ *tipo de retorno*  
+ O tipo retornado pelo método. Se o tipo de retorno void, nenhum valor de retorno é necessário.  
   
  *identifier*  
  O nome da função.  
   
- *type\-parameter identifier\(s\)*  
- Lista separada por vírgula de identificadores.  
+ *parâmetro de tipo identificador (es)*  
+ Lista de identificadores separados por vírgulas.  
   
- *formal\-parameters* \(opcional\)  
+ *parâmetros formais* (opcional)  
  Lista de parâmetros.  
   
- *type\-parameter\-constraints\-clauses*  
- Isso especifica restrições em tipos que podem ser usados como argumentos de tipo, e usa o formato especificado em [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../Topic/Constraints%20on%20Generic%20Type%20Parameters%20\(C++-CLI\).md).  
+ *tipo de parâmetro-restrições cláusulas*  
+ Isso especifica restrições sobre os tipos que podem ser usados como argumentos de tipo e utiliza o formato especificado em [restrições em parâmetros de tipo genérico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
- *function\-body*  
- O corpo do método, que pode fazer referência aos identificadores de parâmetro de tipo.  
+ *corpo da função*  
+ O corpo do método, o que pode fazer referência a identificadores de tipo de parâmetro.  
   
  **Comentários**  
   
- As funções genéricas funções são declaradas com um parâmetro de tipo genérico.  Podem ser métodos em uma classe ou em uma estrutura, ou funções autônomas.  Uma única declaração genérico declara implicitamente uma família de funções que diferem apenas na substituição de um tipo real diferente para o parâmetro de tipo genérico.  
+ Funções genéricas são funções declaradas com um parâmetro de tipo genérico. Eles podem ser métodos em uma classe ou struct ou autônomo funções. Uma única declaração de generic declara implicitamente uma família de funções que diferem apenas na substituição de um tipo diferente de real para o parâmetro de tipo genérico.  
   
- Em [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)], a classe ou os construtores da estrutura não podem ser declaradas com parâmetros de tipo genéricas.  
+ No Visual C++, construtores de classe ou estrutura não podem ser declarados com parâmetros de tipo genérico.  
   
- Quando chamado, o parâmetro de tipo genérico é substituído por um tipo real.  O tipo real pode ser explicitamente especificado entre colchetes angulares usando a sintaxe semelhante a uma chamada de função do modelo.  Se for chamado sem os parâmetros de tipo, o compilador tentará deduzir o tipo real dos parâmetros fornecidos na chamada de função.  Se o argumento desejado do tipo não for possível deduzir os parâmetros usados, o compilador relatará um erro.  
+ Quando chamado, o parâmetro de tipo genérico é substituído por um tipo real. O tipo real pode ser especificado explicitamente em colchetes angulares usando uma sintaxe semelhante a uma chamada de função do modelo. Se for chamado sem os parâmetros de tipo, o compilador tentará deduzir o tipo real de parâmetros fornecidos na chamada de função. Se o argumento de tipo pretendida não pode ser deduzido dos parâmetros usados, o compilador relatará um erro.  
   
-### Requisitos  
- Opção do compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opção de compilador: **/clr**  
   
-### Exemplos  
+### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- O exemplo de código a seguir demonstra uma função genérico.  
+ O exemplo de código a seguir demonstra uma função genérica.  
   
 ```  
 // generics_generic_function_1.cpp  
@@ -133,7 +133,7 @@ int main() {
   
  **Exemplo**  
   
- As funções genéricas podem ser sobrecarregadas com base na assinatura ou no arity, o número de parâmetros de tipo em uma função.  Além disso, as funções genéricas podem ser sobrecarregadas com as funções não genéricas de mesmo nome, como as funções difere em alguns parâmetros de tipo.  Por exemplo, as seguintes funções podem ser sobrecarregadas:  
+ Funções genéricas podem ser sobrecarregadas com base na assinatura ou arity, o número de parâmetros de tipo em uma função. Além disso, funções genéricas podem ser sobrecarregadas com funções de não-genérica de mesmo nome, desde que as funções diferem em alguns parâmetros de tipo. Por exemplo, as funções a seguir podem ser sobrecarregadas:  
   
 ```  
 // generics_generic_function_2.cpp  
@@ -151,7 +151,7 @@ ref struct MyClass {
   
  **Exemplo**  
   
- O exemplo a seguir usa uma função genérica para localizar o primeiro elemento em uma matriz.  Declara `MyClass`, que herda da classe base `MyBaseClass`.  `MyClass` contém uma função genérico, `MyFunction`, que chama outra função genérico, `MyBaseClassFunction`, na classe base.  Em **main**, a função genérico, `MyFunction`, é chamada usando argumentos diferentes do tipo.  
+ O exemplo a seguir usa uma função genérica para localizar o primeiro elemento em uma matriz. Ele declara `MyClass`, que herda da classe base `MyBaseClass`. `MyClass`contém uma função genérica, `MyFunction`, que chama outra função genérica, `MyBaseClassFunction`, dentro da classe base. Em **principal**, a função genérica, `MyFunction`, é chamado com argumentos de tipo diferente.  
   
 ```  
 // generics_generic_function_3.cpp  
@@ -189,8 +189,11 @@ int main() {
   
  **Saída**  
   
-  **Minha função retornou um int: 2003**  
- **Minha função retornou uma cadeia de caracteres: Hello world funções genéricas\!**   
-## Consulte também  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+My function returned an int: 2003  
+My function returned a string: Hello generic functions!  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)   
+ [Genéricos](../windows/generics-cpp-component-extensions.md)

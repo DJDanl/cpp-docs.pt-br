@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e780bda6850ef2096ecaf1dbffeefdb9d11c9f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilar o código C/C++ na linha de comando
 
@@ -48,7 +49,7 @@ Os atalhos de prompt de comando estão instalados em uma determinada versão [!I
 
 Iniciar menu pasta e o atalho nomes reais variam dependendo da versão do [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] você instalou e a instalação apelido se você definir um. Por exemplo, se você tiver o Visual Studio de 2017 instalado e você deu a ele uma instalação apelido do 15,3, atalho do prompt de comando do desenvolvedor é denominado **Prompt de comando do desenvolvedor para VS 2017 (15,3)**, em uma pasta chamada  **Visual Studio de 2017**. 
 
-Se você tiver instalado o [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/?linkid=840931) ou [criar ferramentas do Visual C++ 2015](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, só pode ser nativo específico ou opções de prompt de comando do desenvolvedor de ferramentas cruzadas. 
+Se você tiver instalado o [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) ou [criar ferramentas do Visual C++ 2015](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, só pode ser nativo específico ou opções de prompt de comando do desenvolvedor de ferramentas cruzadas. 
 
 <a name="developer_command_prompt"></a>
 ## <a name="to-open-a-developer-command-prompt-window"></a>Para abrir uma janela de prompt de comando do desenvolvedor  
@@ -86,11 +87,11 @@ Arquivos de comando adicionais estão disponíveis para configurar as arquitetur
 |Argumento de arquitetura de Vcvarsall.bat|Compilador|Arquitetura do computador host|Arquitetura de saída de compilação|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
 |x86|Nativa de 32 bits x86|x86, x64|x86|  
-|x86\_amd64 ou x86\_x64|cross x64 x86|x86, x64|x64|  
+|x86\_amd64 ou x86\_x64|cross x64 x86|x86, x64|X64|  
 |x86_arm|ARM em x86 cruzado|x86, x64|ARM|  
-|AMD64 ou x64|x64 nativo de 64 bits|x64|x64|  
-|AMD64\_x86 ou x64\_x86|cross x86 em x64|x64|x86|  
-|AMD64\_arm ou x64\_arm|Prepare-se em x64 cruzada|x64|ARM|  
+|AMD64 ou x64|x64 nativo de 64 bits|X64|X64|  
+|AMD64\_x86 ou x64\_x86|cross x86 em x64|X64|x86|  
+|AMD64\_arm ou x64\_arm|Prepare-se em x64 cruzada|X64|ARM|  
   
 Você pode usar o **armazenar** ou **uwp** opções para especificar o tipo de plataforma ou nenhum para especificar um aplicativo de área de trabalho. Para especificar a versão do SDK do Windows, você pode usar um número total de SDK do Windows 10 como 10.0.10240.0 ou especifique 8.1 para usar o SDK do Windows 8.1. Use 14.0 para especificar o conjunto de ferramentas de compilador do Visual Studio 2015; Por padrão, o ambiente está configurado para usar o conjunto de ferramentas de compilador do Visual Studio de 2017.
 
@@ -164,7 +165,7 @@ Descreve como criar e compilar um programa C++/CLI que usa o .NET Framework.
 [Instruções passo a passo: compilando um programa C++/CX na linha de comando](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
 Descreve como criar e compilar um programa C++/CX que usa o Tempo de Execução do Windows.  
   
-[Definir o caminho e as variáveis de ambiente para compilações de linha de comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
+[Definir o caminho e variáveis de ambiente para builds de linha de comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
 Descreve como iniciar uma janela de prompt de comando com as variáveis de ambiente necessário definido para compilações de linha de comando que visam x86, x64 e ARM plataformas usando um conjunto de ferramentas de 32 bits ou 64 bits.  
   
 [Referência a NMAKE](../build/nmake-reference.md)  

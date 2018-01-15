@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9cd3657426a2a51a582ab695376287a3e975056
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63e23f6a6520085ff5a5a072cb349d079615b6f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-attributes"></a>Atributos COM
 Os atributos COM injetar código para oferecer suporte a várias áreas de desenvolvimento COM e desenvolvimento de tempo de execução de linguagem comum do .NET Framework. Esses variam de áreas de implementação de interface personalizada e suporte às interfaces existentes para dar suporte a eventos, métodos e propriedades de estoque. Além disso, o suporte foi encontrado para composição e implementação de controle ActiveX.  

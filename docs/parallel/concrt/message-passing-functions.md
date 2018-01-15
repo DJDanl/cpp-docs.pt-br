@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4139068c8871fe69f43168fe925011a48411a74b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-passing-functions"></a>Funções de transmissão de mensagem
 A biblioteca de agentes assíncrona fornece várias funções que permitem que você passar mensagens entre componentes.  

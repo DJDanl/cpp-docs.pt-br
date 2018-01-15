@@ -1,73 +1,75 @@
 ---
-title: "A adi&#231;&#227;o de controles a uma caixa de di&#225;logo faz a caixa de di&#225;logo deixar de funcionar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "controles comuns, solucionando problemas"
-  - "controles [C++], solucionando problemas"
-  - "controles de caixas de diálogo, solucionando problemas"
-  - "caixas de diálogo, solucionando problemas"
-  - "InitCommonControls"
-  - "solucionando problemas de controles"
+title: "Adicionando controles a uma caixa de diálogo faz com que a caixa de diálogo não funcionem | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], troubleshooting
+- common controls, troubleshooting
+- troubleshooting controls
+- dialog boxes, troubleshooting
+- dialog box controls, troubleshooting
+- InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d0ec4825419c7a9d3c9bc35151b84c327a03325b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# A adi&#231;&#227;o de controles a uma caixa de di&#225;logo faz a caixa de di&#225;logo deixar de funcionar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Depois de adicionar um controle comum ou um controle rich edit para uma caixa de diálogo, ela não aparecerá quando você testar a caixa de diálogo ou a própria caixa de diálogo não será exibida.  
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>A adição de controles a uma caixa de diálogo faz a caixa de diálogo deixar de funcionar
+Depois de adicionar um controle comum ou um controle de edição para uma caixa de diálogo, ele não será exibido quando você testar a caixa de diálogo ou a própria caixa de diálogo não aparecerá.  
   
  **Exemplo do problema**  
   
-1.  Crie um projeto do Win32, modificando as configurações do aplicativo para que você criar um aplicativo do Windows \(e não um aplicativo de console\).  
+1.  Crie um projeto do Win32, modificando as configurações do aplicativo para que você criar um aplicativo do Windows (não um aplicativo de console).  
   
-2.  Em  [Exibição de recurso](../windows/resource-view-window.md), clique duas vezes no arquivo. rc.  
+2.  Em [exibição recursos](../windows/resource-view-window.md), clique duas vezes no arquivo. rc.  
   
-3.  Sob a opção de caixa de diálogo, clique duas vezes o  **sobre** caixa.  
+3.  A opção de caixa de diálogo, clique duas vezes o **sobre** caixa.  
   
-4.  Adicionar um  **Controle de endereço IP** à caixa de diálogo.  
+4.  Adicionar uma **controle de endereço IP** à caixa de diálogo.  
   
-5.  Salvar e  **reconstruir todos**.  
+5.  Salvar e **recompilar tudo**.  
   
 6.  Execute o programa.  
   
-7.  Na caixa de diálogo  **Help** menu, clique no  **sobre** de comando; nenhuma caixa de diálogo é exibida.  
+7.  Na caixa de diálogo **ajuda** menu, clique no **sobre** comando; nenhuma caixa de diálogo caixa é exibida.  
   
  **A causa**  
   
- Atualmente, o editor de diálogo não adiciona automaticamente código ao seu projeto quando você arrasta e solta os seguintes controles comuns ou controles em uma caixa de diálogo de edição rico.  Nem o Visual Studio oferece um erro ou aviso quando esse problema ocorre.  Você deve adicionar manualmente o código para o controle.  
+ Atualmente, o editor de caixa de diálogo não adiciona automaticamente código ao seu projeto quando você arrasta e solta os seguintes controles comuns ou controles em uma caixa de diálogo de edição avançada. Nem o Visual Studio fornece um erro ou aviso quando ocorrer esse problema. Você deve adicionar manualmente o código para o controle.  
   
 ||||  
 |-|-|-|  
-|Controle deslizante|Controle de árvore|Selecionador de data hora|  
-|Controle de rotação|Controle Tab|Calendário mensal|  
+|Controle deslizante|Controle de árvore|Seletor de data e hora|  
+|Controle de rotação|Controle de guia|Calendário mensal|  
 |Controle de progresso|Controle de animação|Controle de endereço IP|  
-|Tecla de acesso|Controle de edição avançado|Caixa de combinação estendido|  
-|Controle de lista|Controle Rich Edit 2.0|Custom Control|  
+|Tecla de acesso|Controle de edição avançada|Caixa de combinação estendidas|  
+|Controle de lista|Controle de edição avançada 2.0|Controle personalizado|  
   
-## A correção dos controles comuns  
- Para usar controles comuns em uma caixa de diálogo, você precisará chamar  [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) ou  **AFXInitCommonControls** antes de criar a caixa de diálogo.  
+## <a name="the-fix-for-common-controls"></a>A correção para controles comuns  
+ Para usar controles comuns em uma caixa de diálogo, você precisa chamar [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) ou **AFXInitCommonControls** antes de criar a caixa de diálogo.  
   
-## A correção dos controles RichEdit  
- Você deve chamar  **LoadLibrary** para controles de edição avançados.  Para obter mais informações, consulte  [usando o controle de 1.0 RichEdit com MFC](../Topic/Using%20the%20RichEdit%201.0%20Control%20with%20MFC.md),  [Sobre como editar controles sofisticados de](http://msdn.microsoft.com/library/windows/desktop/bb787873) na [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)], e  [Visão geral do controle de edição de Rich](../mfc/overview-of-the-rich-edit-control.md).  
+## <a name="the-fix-for-richedit-controls"></a>A correção para controles RichEdit  
+ Você deve chamar **LoadLibrary** para controles de edição avançada. Para obter mais informações, consulte [usando o controle RichEdit 1.0 com MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [sobre Rich editar controles](http://msdn.microsoft.com/library/windows/desktop/bb787873) no [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)], e [visão geral do controle de edição de Rich](../mfc/overview-of-the-rich-edit-control.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Consulte também  
- [Solucionando problemas do Editor de Caixa de Diálogo](../mfc/troubleshooting-the-dialog-editor.md)   
- [Editor de Caixa de Diálogo](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Consulte também  
+ [O Editor de caixa de diálogo de solução de problemas](../windows/troubleshooting-the-dialog-editor.md)   
+ [Editor de caixa de diálogo](../windows/dialog-editor.md)
+

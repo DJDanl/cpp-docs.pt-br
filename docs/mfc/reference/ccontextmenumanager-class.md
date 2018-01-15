@@ -39,11 +39,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceed1a7127d86ced1c68d92269a6b1a55f41991f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfaec077501173fade6fa15fba3516cde534b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontextmenumanager-class"></a>Classe CContextMenuManager
 O `CContextMenuManager` objeto gerencia menus de atalho, também conhecido como menus de contexto.  
@@ -56,7 +57,7 @@ class CContextMenuManager : public CObject
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

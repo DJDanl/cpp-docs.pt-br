@@ -1,33 +1,33 @@
 ---
-title: "ms_union | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ms_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ms_union attribute"
+title: ms_union | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ms_union
+dev_langs: C++
+helpviewer_keywords: ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b187c23c60c7294170a66a819f78bebfd5e5f8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ms_union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="msunion"></a>ms_union
 Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,11 +35,11 @@ Controla o alinhamento de representação de dados de rede de uniões nonencapsu
   
 ```  
   
-## Comentários  
- O  **ms\_union** o atributo do C\+\+ tem a mesma funcionalidade que o  [ms\_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **ms_union** atributo C++ tem a mesma funcionalidade que o [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) atributo MIDL.  
   
-## Exemplo  
- O código a seguir mostra a colocação do  **ms\_union**:  
+## <a name="example"></a>Exemplo  
+ O código a seguir mostra a colocação do **ms_union**:  
   
 ```  
 // cpp_attr_ref_ms_union.cpp  
@@ -64,20 +64,19 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Nonencapsulated uniões|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
+|**Aplica-se a**|Nonencapsulated uniões|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|**dispinterface**|  
   
- Para obter mais informações, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

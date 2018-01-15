@@ -1,35 +1,36 @@
 ---
-title: "Destinos de Atributos (Extens&#245;es de Componentes C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributos personalizados, destinos"
+title: "Atributo destinos (extensões de componentes C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Destinos de Atributos (Extens&#245;es de Componentes C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especificadores de uso de atributo permitem especificar destinos de atributos.  Cada atributo é definido para aplicar a determinados elementos de linguagem. Por exemplo, um atributo pode ser definido para aplicar apenas às classes e estruturas.  A lista a seguir mostra os elementos sintáticos possíveis em que um atributo personalizado pode ser usado. Combinações desses valores (usando lógica ou) pode ser usado.  
+# <a name="attribute-targets-c-component-extensions"></a>Destinos de Atributos (Extensões de Componentes C++)
+Especificadores de uso de atributo permitem que você especifique os destinos de atributos.  Cada atributo é definido para aplicar a determinados elementos de linguagem. Por exemplo, um atributo pode ser definido para aplicar apenas às classes e estruturas.  A lista a seguir mostra os elementos sintáticos possíveis no qual um atributo personalizado pode ser usado. Combinações desses valores (usando lógica ou) pode ser usado.  
   
  Para especificar o atributo de destino, para passar um ou mais <xref:System.AttributeTargets> enumeradores para <xref:System.AttributeUsageAttribute> ao definir o atributo.  
   
  A seguir está uma lista dos destinos de atributo válido:  
   
--   `All` (aplica-se a todas as compilações)  
+-   `All`(aplica-se a todas as compilações)  
   
     ```  
   
@@ -41,7 +42,7 @@ Especificadores de uso de atributo permitem especificar destinos de atributos.  
   
     ```  
   
--   `Assembly` (aplica-se a um assembly como um todo)  
+-   `Assembly`(aplica-se a um assembly como um todo)  
   
     ```  
   
@@ -53,7 +54,7 @@ Especificadores de uso de atributo permitem especificar destinos de atributos.  
   
     ```  
   
--   `Module` (aplica-se a um módulo como um todo)  
+-   `Module`(aplica-se a um módulo como um todo)  
   
     ```  
   
@@ -238,17 +239,17 @@ Especificadores de uso de atributo permitem especificar destinos de atributos.  
 [Attr] int MyFn(double x)...  
 ```  
   
- Sintaticamente, há uma maneira de dizer se o atributo se aplicará ao método ou ao valor de retorno do método (neste caso, o padrão é o método). Nesses casos, um especificador de uso do atributo pode ser usado. Por exemplo, para fazer com que o atributo se aplicam ao valor de retorno, use o `returnvalue` especificador, da seguinte maneira:  
+ Sintaticamente, não há nenhuma maneira de saber se o atributo destina-se aplicar ao método ou para o valor de retorno do método (nesse caso, o padrão é o método). Nesses casos, um especificador de uso do atributo pode ser usado. Por exemplo, para fazer com que o atributo se aplicam ao valor de retorno, use o `returnvalue` especificador, da seguinte maneira:  
   
 ```  
 [returnvalue:Attr] int MyFn(double x)... // applies to return value  
 ```  
   
- Especificadores de uso do atributo são necessários nas seguintes situações:  
+ Especificadores de uso do atributo são necessárias nas seguintes situações:  
   
 -   Para especificar um atributo de nível de assembly ou módulo.  
   
--   Para especificar um atributo aplica-se ao valor de retorno do método, não o método:  
+-   Para especificar que um atributo se aplica a valor de retorno do método, não o método:  
   
     ```  
     [method:Attr] int MyFn(double x)...     // Attr applies to method  
@@ -256,7 +257,7 @@ Especificadores de uso de atributo permitem especificar destinos de atributos.  
     [Attr] int MyFn(double x)...            // default: method  
     ```  
   
--   Para especificar que um atributo se aplica ao acessador de propriedade, não a propriedade:  
+-   Para especificar que um atributo se aplica a acessador de propriedade, não a propriedade:  
   
     ```  
     [method:MyAttr(123)] property int Property()    
@@ -264,7 +265,7 @@ Especificadores de uso de atributo permitem especificar destinos de atributos.  
     [MyAttr(123)] property int get_MyPropy() // default: property  
     ```  
   
--   Para especificar que um atributo se aplica ao acessador de um evento, não o evento:  
+-   Para especificar que um atributo se aplica a acessador de um evento, não o evento:  
   
     ```  
     delegate void MyDel();  
@@ -275,7 +276,7 @@ Especificadores de uso de atributo permitem especificar destinos de atributos.  
     }  
     ```  
   
- Um especificador de uso do atributo se aplica apenas ao atributo que segue imediatamente. Isto é  
+ Um especificador de uso do atributo se aplica somente ao atributo que segue imediatamente Isto é  
   
 ```  
 [returnvalue:Attr1, Attr2]  

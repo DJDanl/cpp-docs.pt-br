@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b92eb646b152a7bbd4588fe953a762389ce111dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff80109c1f3a5e03ecb85406cdaea24804f96783
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
 Como o Visual Studio oferece suporte a vários conjuntos de ferramentas de plataforma, você pode direcionar os sistemas operacionais e as bibliotecas de tempo de execução que não são suportadas pelo conjunto de ferramentas padrão. Por exemplo, alternando o conjunto de ferramentas de plataforma, você pode usar C++ 11, C++ 14 e aprimoramentos de C++ 17 idiomas suportados pelo compilador do Visual C++ no Visual Studio para criar aplicativos que visam [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Você pode também usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado binário compatível e ainda aproveitar os recursos mais recentes do IDE do Visual Studio.  
   
 > [!NOTE]
->  Se você estiver usando [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], você deve instalar [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4 para adicionar suporte de conjunto de ferramentas de plataforma para [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Para baixar e instalar uma cópia do [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4, consulte [Microsoft Visual Studio Express 2012 para Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) no Microsoft Download Center. Em seguida, instalar [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/?LinkID=335900) para obter o conjunto de ferramentas de plataforma v110_xp. Use o Windows Update para receber as últimas atualizações de software após a instalação.  
+>  Se você estiver usando [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], você deve instalar [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4 para adicionar suporte de conjunto de ferramentas de plataforma para [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Para baixar e instalar uma cópia do [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] atualização 4, consulte [Microsoft Visual Studio Express 2012 para Windows Desktop](http://go.microsoft.com/fwlink/p/?linkid=265464) no Microsoft Download Center. Em seguida, instalar [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/p/?linkid=335900) para obter o conjunto de ferramentas de plataforma v110_xp. Use o Windows Update para receber as últimas atualizações de software após a instalação.  
   
 ## <a name="windows-xp-targeting-experience"></a>Direcionamento de experiência do Windows XP  
  O conjunto de ferramentas da plataforma Windows XP que está incluído no Visual Studio é uma versão do [!INCLUDE[win7](../build/includes/win7_md.md)] SDK que foi incluído no [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], mas usa o compilador do C++ atual. Ele também configura as propriedades do projeto para valores padrão apropriados — por exemplo, a especificação de um vinculador compatível para o direcionamento de nível inferior. Apenas janelas de aplicativos de área de trabalho que são criados usando o conjunto de ferramentas de plataforma do Windows XP são executados em [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], mas esses aplicativos também podem executar em sistemas de operacionais mais recentes do Windows.  

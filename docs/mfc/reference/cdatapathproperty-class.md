@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1a9f290b6b4a76ac561a8b03bb7a686543b947b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4f258f5872a68931a40d21f7079e4089678baac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatapathproperty-class"></a>Classe CDataPathProperty
 Implementa uma OLE controla a propriedade que pode ser carregada de forma assíncrona.  
@@ -48,7 +49,7 @@ class CDataPathProperty : public CAsyncMonikerFile
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  

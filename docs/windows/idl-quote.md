@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ca11d9b92ba1dd0dc7f5437bf1dec812f2edfcc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idlquote"></a>idl_quote
 Permite que você use as construções de IDL não tem suporte na versão atual do Visual C++ e que eles passam para o arquivo. idl gerado.  

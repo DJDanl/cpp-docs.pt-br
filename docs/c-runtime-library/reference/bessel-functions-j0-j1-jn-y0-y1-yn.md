@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 857b1d9032b65a1b10139988bb84c3be721cccbe
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0d2b866c847055a37e4415b020b3e7e02fdaa5f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 Computa a função Bessel do primeiro ou do segundo tipo, de ordens 0, 1 ou n. As funções Bessel geralmente são usadas nos cálculos da teoria de ondas eletromagnéticas.  
@@ -175,5 +159,5 @@ Bessel functions for x = 2.387000:
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [_matherr](../../c-runtime-library/reference/matherr.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblAcceleration
 - AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblFinalVelocity
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], CParabolicTransitionFromAcceleration
 - CParabolicTransitionFromAcceleration [MFC], Create
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 219d8e153501334a3de02aa12153e05a4345b215
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d8d4c25cc3f5f5b133bbf3fa5301508a387d1fa6
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Classe CParabolicTransitionFromAcceleration
 Encapsula uma transição de aceleração parabólico.  
@@ -47,7 +45,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -139,4 +137,3 @@ DOUBLE m_dblFinalVelocity;
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)
-

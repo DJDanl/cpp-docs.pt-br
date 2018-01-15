@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 940d4c2604f65166faa95ca06ef3cc9b81a47b3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddda6fd1643d828f3ad566b679fa8bf80c49845b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exponentialdistribution-class"></a>Classe exponential_distribution
 Gera uma distribuição exponencial.  
@@ -75,9 +76,9 @@ public:
 ``` 
 ### <a name="parameters"></a>Parâmetros  
 *RealType*  
-O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado de ponto flutuante assume `double` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
-*URNG* O mecanismo gerador de números aleatórios. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG* O mecanismo gerador de números aleatórios. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
   
   
 ## <a name="remarks"></a>Comentários  
@@ -94,7 +95,7 @@ A função membro da propriedade `param()` define ou retorna o pacote de parâme
   
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a distribuição exponencial, consulte o artigo de Wolfram MathWorld [Distribuição exponencial](http://go.microsoft.com/fwlink/LinkId=401098).  
+Para obter informações detalhadas sobre a distribuição exponencial, consulte o artigo de Wolfram MathWorld [Distribuição exponencial](http://go.microsoft.com/fwlink/p/?linkid=401098).  
   
 ## <a name="example"></a>Exemplo  
   

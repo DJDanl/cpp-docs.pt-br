@@ -1,11 +1,10 @@
 ---
-title: Classe CComGITPtr | Documentos do Microsoft
+title: Classe CComGITPtr | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,35 +17,19 @@ f1_keywords:
 - ATLBASE/ATL::CComGITPtr::GetCookie
 - ATLBASE/ATL::CComGITPtr::Revoke
 - ATLBASE/ATL::CComGITPtr::m_dwCookie
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComGITPtr class
+dev_langs: C++
+helpviewer_keywords: CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9fe9d9f6d03a6d72c1ce3332419c738570a53803
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomgitptr-class"></a>Classe CComGITPtr
 Essa classe fornece métodos para lidar com ponteiros de interface e a tabela de interface global (GIT).  
@@ -60,11 +43,11 @@ class CComGITPtr
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- O tipo de ponteiro de interface a ser armazenado no GIT.  
+ O tipo do ponteiro de interface a ser armazenado no GIT.  
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -75,17 +58,17 @@ class CComGITPtr
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComGITPtr::Attach](#attach)|Chame esse método para registrar o ponteiro de interface na tabela de interface global (GIT).|  
-|[CComGITPtr::CopyTo](#copyto)|Chame esse método para copiar a interface da tabela de interface global (GIT) para o ponteiro do passado.|  
-|[CComGITPtr::Detach](#detach)|Chame esse método para desassociar a interface a partir de `CComGITPtr` objeto.|  
-|[CComGITPtr::GetCookie](#getcookie)|Chame esse método para retornar o cookie de `CComGITPtr` objeto.|  
+|[CComGITPtr::Attach](#attach)|Chame este método para registrar o ponteiro de interface na tabela de interface global (GIT).|  
+|[CComGITPtr::CopyTo](#copyto)|Chame este método para copiar a interface da tabela de interface global (GIT) para o ponteiro transmitido.|  
+|[CComGITPtr::Detach](#detach)|Chame esse método para desassociar a interface do `CComGITPtr` objeto.|  
+|[CComGITPtr::GetCookie](#getcookie)|Chame este método para retornar o cookie a `CComGITPtr` objeto.|  
 |[CComGITPtr::Revoke](#revoke)|Chame esse método para remover a interface da tabela de interface global (GIT).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComGITPtr::operator DWORD](#operator_dword)|Retorna o cookie de `CComGITPtr` objeto.|  
+|[CComGITPtr::operator DWORD](#operator_dword)|Retorna o cookie a `CComGITPtr` objeto.|  
 |[CComGITPtr::operator =](#operator_eq)|Operador de atribuição.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
@@ -95,16 +78,16 @@ class CComGITPtr
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|O cookie.|  
   
 ## <a name="remarks"></a>Comentários  
- Objetos que o marshaler livre de agregação e precisam usar ponteiros de interface obtidos de outros objetos devem realizar etapas adicionais para garantir que as interfaces são empacotadas corretamente. Normalmente, isso envolve armazenar os ponteiros de interface no GIT e Obtendo o ponteiro do GITO cada vez que é usada. A classe `CComGITPtr` é fornecido para ajudá-lo a usar ponteiros de interface armazenados no GIT.  
+ Objetos que o marshaler de threads livres de agregação e precisam usar ponteiros de interface obtidos a partir de outros objetos devem realizar etapas adicionais para garantir que as interfaces são empacotadas corretamente. Normalmente, isso envolve armazenar os ponteiros de interface no GIT e obter o ponteiro do GIT cada vez que ele é usado. A classe `CComGITPtr` é fornecido para ajudá-lo a usar ponteiros de interface armazenados no GIT.  
   
 > [!NOTE]
->  O recurso de tabela de interface global só está disponível no Windows 95 com DCOM versão 1.1 e posteriores, Windows 98, Windows NT 4.0 com Service Pack 3 e posterior e Windows 2000.  
+>  O recurso de tabela de interface global só está disponível no Windows 95 com DCOM versão 1.1 e posterior, Windows 98, Windows NT 4.0 com Service Pack 3 e posterior e Windows 2000.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="attach"></a>CComGITPtr::Attach  
- Chame esse método para registrar o ponteiro de interface na tabela de interface global (GIT).  
+ Chame este método para registrar o ponteiro de interface na tabela de interface global (GIT).  
   
 ```
 HRESULT Attach(T* p) throw();
@@ -117,13 +100,13 @@ HRESULT Attach(DWORD dwCookie) throw();
  O ponteiro de interface a ser adicionada para o GIT.  
   
  `dwCookie`  
- O cookie usada para identificar o ponteiro de interface.  
+ O cookie usado para identificar o ponteiro de interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Em compilações de depuração, asserção ocorrerá um erro se o GIT não é válido ou se o cookie é igual a nulo.  
+ Compilações de depuração, um erro de asserção ocorrerá se o GIT não é válido ou se o cookie é igual a NULL.  
   
 ##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
  O construtor.  
@@ -147,12 +130,12 @@ CComGITPtr(CComGITPtr&& rv);
  Um cookie usado para identificar o ponteiro de interface.  
   
  [in] `rv`  
- A fonte `CComGITPtr` objeto mover dados do.  
+ A fonte `CComGITPtr` objeto para mover dados do.  
   
 ### <a name="remarks"></a>Comentários  
  Cria um novo `CComGITPtr` do objeto, usando opcionalmente uma existente `CComGITPtr` objeto.  
   
- Utilizando o construtor `rv` é um construtor de movimentação. Os dados são movidos da fonte de `rv`e então `rv` está desmarcada.  
+ O uso do construtor `rv` é um construtor de movimento. Os dados são movidos da fonte de `rv`e, em seguida, `rv` está desmarcada.  
   
 ##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
  O destruidor.  
@@ -165,7 +148,7 @@ CComGITPtr(CComGITPtr&& rv);
  Remove a interface da tabela de interface global (GIT), usando [CComGITPtr::Revoke](#revoke).  
   
 ##  <a name="copyto"></a>CComGITPtr::CopyTo  
- Chame esse método para copiar a interface da tabela de interface global (GIT) para o ponteiro do passado.  
+ Chame este método para copiar a interface da tabela de interface global (GIT) para o ponteiro transmitido.  
   
 ```
 HRESULT CopyTo(T** pp) const throw();
@@ -176,26 +159,26 @@ HRESULT CopyTo(T** pp) const throw();
  O ponteiro que recebe a interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- A interface do GIT é copiada para o ponteiro do passado. O ponteiro deve ser liberado, o chamador quando ele não é mais necessário.  
+ A interface do GIT é copiada para o ponteiro transmitido. O ponteiro deve ser liberado, o chamador quando ele não é mais necessário.  
   
 ##  <a name="detach"></a>CComGITPtr::Detach  
- Chame esse método para desassociar a interface a partir de `CComGITPtr` objeto.  
+ Chame esse método para desassociar a interface do `CComGITPtr` objeto.  
   
 ```
 DWORD Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o cookie de `CComGITPtr` objeto.  
+ Retorna o cookie a `CComGITPtr` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- É responsabilidade do chamador para remover a interface de GIT, usando [CComGITPtr::Revoke](#revoke).  
+ Cabe ao chamador para remover a interface do GIT, usando [CComGITPtr::Revoke](#revoke).  
   
 ##  <a name="getcookie"></a>CComGITPtr::GetCookie  
- Chame esse método para retornar o cookie de `CComGITPtr` objeto.  
+ Chame este método para retornar o cookie a `CComGITPtr` objeto.  
   
 ```
 DWORD GetCookie() const;
@@ -244,10 +227,10 @@ CComGITPtr& operator= (CComGITPtr&& rv);
  Retorna a atualização `CComGITPtr` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Atribui um novo valor para uma `CComGITPtr` objeto, de um objeto existente ou de uma referência a uma tabela de interface global.  
+ Atribui um novo valor para uma `CComGITPtr` objeto, a partir de um objeto existente ou uma referência a uma tabela de interface global.  
   
 ##  <a name="operator_dword"></a>CComGITPtr::operator DWORD  
- Retorna o cookie associado com o `CComGITPtr` objeto.  
+ Retorna o cookie associado a `CComGITPtr` objeto.  
   
 ```  
 operator DWORD() const;
@@ -264,14 +247,13 @@ HRESULT Revoke() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Remove a interface do GIT.  
   
 ## <a name="see-also"></a>Consulte também  
- [Marshaler livre](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [Acessando Interfaces por Apartments](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
+ [Marshaler de threads livres](../../atl/atl-and-the-free-threaded-marshaler.md)   
+ [Acessando Interfaces entre Apartments](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
  [Quando usar a tabela de Interface Global](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

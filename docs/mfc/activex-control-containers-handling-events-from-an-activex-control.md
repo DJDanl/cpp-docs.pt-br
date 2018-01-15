@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
 - ActiveX control containers [MFC], event sinks
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
-ms.openlocfilehash: a8fb283d8b5b8afbf3b06e27495ccc957e0099ad
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contêineres de controle ActiveX: manipulando eventos a partir de um controle ActiveX
 Este artigo aborda usando a janela Propriedades para instalar os manipuladores de eventos para controles ActiveX em um contêiner de controle ActiveX. Os manipuladores de eventos são usados para receber notificações (de controle) de determinados eventos e executam alguma ação em resposta. Essa notificação é chamada de "disparo" do evento.  
@@ -71,11 +69,10 @@ Este artigo aborda usando a janela Propriedades para instalar os manipuladores d
   
 4.  Selecione o evento que você deseja que a classe de caixa de diálogo para tratar. Neste exemplo, selecione **clique**.  
   
-5.  Na caixa de listagem suspensa à direita, selecione ** \<Adicionar > ClickCircctrl1**.  
+5.  Na caixa de listagem suspensa à direita, selecione  **\<Adicionar > ClickCircctrl1**.  
   
 6.  Clique duas vezes a nova função de manipulador de exibição de classe para saltar para o código de manipulador de eventos na implementação (. Arquivo CPP) de `CContainerDlg`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres de controle ActiveX](../mfc/activex-control-containers.md)
-
 

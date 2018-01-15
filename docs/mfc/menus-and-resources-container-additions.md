@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3c8bec06315982725cce531476cbe7daaf154a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-container-additions"></a>Menus e recursos: adições de contêiner
 Este artigo explica as alterações que precisam ser feitas para os menus e outros recursos em um aplicativo de contêiner de edição visual.  
@@ -84,7 +85,7 @@ Este artigo explica as alterações que precisam ser feitas para os menus e outr
 ##  <a name="_core_string_table_additions_for_container_applications"></a>Adições de tabela de cadeia de caracteres para aplicativos de contêiner  
  A maioria das alterações às tabelas de cadeia de caracteres para aplicativos de contêiner corresponde aos itens de menu adicionais mencionados [adições de Menu do contêiner](#_core_container_menu_additions). Eles fornecem o texto exibido na barra de status quando cada item de menu é exibido. Por exemplo, aqui estão as entradas da tabela de cadeia de caracteres que gera o Assistente de aplicativo:  
   
-|ID|Cadeia de caracteres|  
+|ID|Cadeia de Caracteres|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED**|Falha na inicialização de OLE. Certifique-se de que as bibliotecas OLE são da versão correta.|  
 |**IDP_FAILED_TO_CREATE**|Falha ao criar o objeto. Certifique-se de que o objeto foi digitado no registro do sistema.|  

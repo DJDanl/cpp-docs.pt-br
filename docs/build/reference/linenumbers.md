@@ -1,41 +1,40 @@
 ---
-title: "/LINENUMBERS | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/linenumbers"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção /LINENUMBERS (dumpbin)"
-  - "números de linha"
-  - "opção dumpbin LINENUMBERS"
-  - "opção dumpbin -LINENUMBERS"
+title: -LINENUMBERS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /linenumbers
+dev_langs: C++
+helpviewer_keywords:
+- LINENUMBERS dumpbin option
+- line numbers
+- -LINENUMBERS dumpbin option
+- /LINENUMBERS dumpbin option
 ms.assetid: 1681d582-2c2f-484e-9920-109959549055
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 745d73cd18cf3430f4588889a665775fe3184cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# /LINENUMBERS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="linenumbers"></a>/LINENUMBERS
 ```  
 /LINENUMBERS  
 ```  
   
-## Comentários  
- Esta opção exibe números de linha de COFF.  Números de linha existe em um arquivo de objeto se foi criada com base de dados do programa \(\/Zi\), o C7 correspondente \(\/Z7\), ou a linha apenas números \(\/Zd\).  Um arquivo executável ou uma DLL contêm números de linha de COFF se estiver vinculada com gerenciar informações de depuração \(\/DEBUG\).  
+## <a name="remarks"></a>Comentários  
+ Esta opção exibe números de linha COFF. Números de linha existem em um arquivo de objeto se ele tiver sido compilado com o programa de banco de dados (/Zi) compatível C7 (/ Z7), ou números apenas a linha (/Zd). Um arquivo executável ou DLL contém números de linha COFF se ele foi vinculado com gerar informações de depuração (/debug).  
   
- Somente a opção de DUMPBIN de [\/HEADERS](../../build/reference/headers.md) está disponível para uso em arquivos gerados com a opção do compilador de [\/GL](../../build/reference/gl-whole-program-optimization.md) .  
+ Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

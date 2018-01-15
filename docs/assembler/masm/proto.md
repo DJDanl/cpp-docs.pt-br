@@ -1,33 +1,31 @@
 ---
-title: "PROTO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROTO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROTO directive"
+title: PROTO | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROTO
+dev_langs: C++
+helpviewer_keywords: PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dc776db7f09bc9d74214edf8620c9dcfbe369d85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# PROTO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="proto"></a>PROTO
 Protótipos de uma função.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,5 +33,5 @@ label
  PROTO [[distance]] [[langtype]] [[, [[parameter]]:tag]]...  
 ```  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

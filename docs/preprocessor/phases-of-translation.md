@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cfecdabea3a65815600c36b0ece1b14778305e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22d73156d4f03a32bd9aa382dd0cc610f8a5f03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="phases-of-translation"></a>Fases de translação
 Os programas em C e C++ consistem em um ou mais arquivos de origem, cada um contendo parte do texto do programa. Um arquivo de origem, junto com seus arquivos de inclusão (arquivos que são incluídos a política de pré-processador `#include`) mas sem as seções de código removidas por políticas de compilação condicional, como `#if`, é chamado de uma "unidade de tradução".  

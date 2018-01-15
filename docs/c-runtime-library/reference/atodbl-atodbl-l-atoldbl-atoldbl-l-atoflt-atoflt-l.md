@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -41,8 +40,7 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -58,31 +56,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5dc40e701e50343c26e03a1d2a4fccfeb710504d
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ea51455d2b02c651aeb8e7bb599cbc3133585c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 Converte uma cadeia de caracteres para um duplo (`_atodbl`), duplo longo (`_atoldbl`) ou float (`_atoflt`).  
@@ -203,6 +186,6 @@ Return value: 3
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

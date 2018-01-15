@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::normal_distribution::param_type::stddev
 - random/std::normal_distribution::param_type::operator==
 - random/std::normal_distribution::param_type::operator!=
-- random/std::normal_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::normal_distribution [C++]
 - std::normal_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd2fcbd4b607df958aba3c1e3635b7a48f3837d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c93e36a27b14cdd585d1866ad91c7b993746941f
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="normaldistribution-class"></a>Classe normal_distribution
 Gera uma distribuição Normal.  
@@ -83,7 +80,7 @@ public:
   
 ### <a name="parameters"></a>Parâmetros  
 *RealType*  
-O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+O tipo de resultado de ponto flutuante assume `double` como padrão. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Comentários  
 A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou um tipo `double` caso nenhum seja fornecido, distribuído de acordo com a distribuição Normal. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -105,7 +102,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
   
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a distribuição Normal, consulte o artigo [Distribuição Normal](http://go.microsoft.com/fwlink/LinkId=400924), da Wolfram MathWorld.  
+Para obter informações detalhadas sobre a distribuição Normal, consulte o artigo [Distribuição Normal](http://go.microsoft.com/fwlink/p/?linkid=400924), da Wolfram MathWorld.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -253,7 +250,6 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
   
 ## <a name="see-also"></a>Consulte também  
  [\<random>](../standard-library/random.md)
-
 
 
 

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: adff972c3e2f343c45accc8ff79230e7156ffd44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1efc61e097d7e1136fdb7b6ef740dc00342077e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Adicionando uma classe do MFC de uma biblioteca de tipos
 Use este assistente para criar uma classe do MFC de uma interface em uma biblioteca de tipos disponíveis. Você pode adicionar uma classe do MFC para um [aplicativo MFC](../../mfc/reference/creating-an-mfc-application.md), uma [DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md), ou um [controle ActiveX MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  

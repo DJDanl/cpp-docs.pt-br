@@ -1,47 +1,29 @@
 ---
-title: "redução | Documentos do Microsoft"
+title: "redução | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- reduction
-dev_langs:
-- C++
-helpviewer_keywords:
-- reduction OpenMP clause
+f1_keywords: reduction
+dev_langs: C++
+helpviewer_keywords: reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c9b2d13ac10005590c51275cc9ecbab0407e5a9e
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reduction"></a>reduction
-Especifica que uma ou mais variáveis que são particulares a cada thread são o assunto de uma operação de redução no final da região paralela.  
+Especifica que uma ou mais variáveis que são particulares a cada thread são o assunto de uma operação de redução no final da região de dados paralelo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,17 +35,17 @@ reduction(operation:var)
  onde,  
   
  `operation`  
- O operador para a operação para executar em variáveis (`var`) no final da região paralela.  
+ O operador para a operação para executar nas variáveis (`var`) no final da região de dados paralelo.  
   
  `var`  
- Variáveis de mais um no qual executar a redução escalar. Se mais de uma variável for especificada, separe os nomes de variáveis com uma vírgula.  
+ Variáveis mais um no qual executar a redução de escalar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
   
 ## <a name="remarks"></a>Comentários  
  `reduction`aplica-se para as seguintes diretivas:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [paralelo](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [seções](../../../parallel/openmp/reference/sections-openmp.md)  
   

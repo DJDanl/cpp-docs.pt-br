@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator!=
-- random/std::bernoulli_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bernoulli_distribution [C++]
 - std::bernoulli_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e66f7d0cc0385fea47a9d023f9cb67170de48cb4
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 Gera uma distribuição Bernoulli.  
@@ -79,7 +76,7 @@ public:
   
 ### <a name="parameters"></a>Parâmetros  
   
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+*URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Comentários  
 A classe descreve uma distribuição que produz valores do tipo `bool`, distribuídos de acordo com a função de probabilidade discreta de distribuição Bernoulli. A tabela a seguir contém links para artigos sobre cada um dos membros.  
@@ -101,7 +98,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
   
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição Bernoulli, consulte o artigo da Wolfram MathWorld [Bernoulli Distribution](http://go.microsoft.com/fwlink/LinkId=398467) (Distribuição Bernoulli).  
+Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição Bernoulli, consulte o artigo da Wolfram MathWorld [Bernoulli Distribution](http://go.microsoft.com/fwlink/p/?linkid=398467) (Distribuição Bernoulli).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -210,6 +207,5 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
   
 ## <a name="see-also"></a>Consulte também  
  [\<random>](../standard-library/random.md)
-
 
 

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d2d8aa3d428b45da81b2f9256988e089f121dd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-preprocessing-operators"></a>Operadores de pré-processamento de makefile
 As expressões de pré-processamento makefile podem usar operadores que agem em valores constantes, códigos de saída de comandos, cadeias de caracteres, macros e caminhos do sistema de arquivos. Para avaliar a expressão, o pré-processador primeiro expande macros, executa comandos para, então, realizar as operações. As operações são avaliadas na ordem do agrupamento explícito entre parênteses, em seguida, na ordem da precedência do operador. O resultado é um valor constante.  

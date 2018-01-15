@@ -1,34 +1,33 @@
 ---
-title: "strict_gs_check | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "strict_gs_check"
-  - "strict_gs_check_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strict_gs_check (pragma)"
+title: strict_gs_check | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- strict_gs_check
+- strict_gs_check_CPP
+dev_langs: C++
+helpviewer_keywords: strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5c355bd385a997e8ff3fd9ec323d50bb33b9c6fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# strict_gs_check
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="strictgscheck"></a>strict_gs_check
 Este pragma fornece verificação de segurança aprimorada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #pragma strict_gs_check([push,] on )   
@@ -36,17 +35,17 @@ Este pragma fornece verificação de segurança aprimorada.
 #pragma strict_gs_check(pop)  
 ```  
   
-## Comentários  
- Ele instrui o compilador a inserir um cookie aleatório na pilha de função para ajudar a detectar algumas categorias de saturação de buffer baseada em fila.  Por padrão, a opção \/GS \(verificação de segurança do buffer\) do compilador não insere um cookie para todas as funções.  Para obter mais informações, consulte [\/GS \(verificação de segurança do buffer\)](../Topic/-GS%20\(Buffer%20Security%20Check\).md).  
+## <a name="remarks"></a>Comentários  
+ Ele instrui o compilador a inserir um cookie aleatório na pilha de função para ajudar a detectar algumas categorias de saturação de buffer baseada em fila. Por padrão, a opção /GS (verificação de segurança do buffer) do compilador não insere um cookie para todas as funções. Para obter mais informações, consulte [/GS (verificação de segurança do buffer)](../build/reference/gs-buffer-security-check.md).  
   
- Você deve compilar com \/GS \(verificação de segurança do buffer\) para habilitar strict\_gs\_check.  
+ Você deve compilar com /GS (verificação de segurança do buffer) para habilitar strict_gs_check.  
   
- Use este pragma em módulos de código que são expostos a dados potencialmente nocivos.  Este pragma é muito agressivo. Ele é aplicado às funções que podem não precisar dessa defesa, mas é otimizado para minimizar seu efeito no desempenho do aplicativo resultante.  
+ Use este pragma em módulos de código que são expostos a dados potencialmente nocivos. Este pragma é muito agressivo. Ele é aplicado às funções que podem não precisar dessa defesa, mas é otimizado para minimizar seu efeito no desempenho do aplicativo resultante.  
   
- Mesmo ao usar esse pragma, o ideal é escrever um código seguro.  Ou seja, certifique\-se de que seu código não tem saturações de buffer. O strict\_gs\_check pode proteger seu aplicativo de saturações de buffer remanescentes em seu código.  
+ Mesmo ao usar esse pragma, o ideal é escrever um código seguro. Ou seja, certifique-se de que seu código não tenha nenhum saturações de buffer. strict_gs_check pode proteger seu aplicativo contra saturações de buffer que permanecem em seu código.  
   
-## Exemplo  
- No código a seguir, uma saturação de buffer ocorre quando copiamos uma matriz para uma matriz local.  Quando você cria este código com \/GS, nenhum cookie é inserido na pilha, pois o tipo de dados da matriz é um ponteiro.  A adição do pragma strict\_gs\_check força o cookie da pilha na pilha da função.  
+## <a name="example"></a>Exemplo  
+ No código a seguir, uma saturação de buffer ocorre quando copiamos uma matriz para uma matriz local. Quando você cria este código com /GS, nenhum cookie é inserido na pilha, pois o tipo de dados da matriz é um ponteiro. A adição do pragma strict_gs_check força o cookie da pilha na pilha da função.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -74,6 +73,6 @@ void ** ReverseArray(void **pData,
   
 ```  
   
-## Consulte também  
- [Diretivas Pragma e a palavra\-chave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [\/GS \(verificação de segurança do buffer\)](../Topic/-GS%20\(Buffer%20Security%20Check\).md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ [/GS (verificação de segurança do buffer)](../build/reference/gs-buffer-security-check.md)

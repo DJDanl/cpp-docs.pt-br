@@ -1,82 +1,82 @@
 ---
-title: "pgomgr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "programa pgomgr"
-  - "otimizações guiadas por perfil, pgomgr"
+title: pgomgr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- pgomgr program
+- profile-guided optimizations, pgomgr
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8cbb9a4f8b92a1cd495e1312c1aa8a8f77cefcd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# pgomgr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Adiciona dados do perfil de um ou mais arquivos de .pgc no arquivo de .pgd.  
+# <a name="pgomgr"></a>pgomgr
+Adiciona dados de perfil de um ou mais arquivos. PGC para o arquivo. PGD.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 pgomgr [options] pgcfiles pgdfile  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `options`  
- As seguintes opções podem ser especificadas ao pgomgr:  
+ As opções a seguir podem ser especificadas para pgomgr:  
   
- Opções disponíveis de pgomgr vídeos de**\/help—**\(para curto\/?\).  
+ **/Help —**exibe as opções disponíveis pgomgr (abreviação de /?).  
   
- **\/clear—**Faz com que o arquivo de .pgd a ser apagado de todas as informações de perfil.  Você não pode especificar um arquivo de .pgc quando **\/clear** é especificado.  
+ **/clear —**faz com que o arquivo. PGD limpo de todas as informações de perfil. Não é possível especificar um. PGC arquivo quando **/limpar** for especificado.  
   
- **\/detail**— Exibe as estatísticas detalhadas, incluindo informações sobre a cobertura do gráfico de fluxo.  
+ **detalhes**— exibe as estatísticas detalhadas, incluindo informações de cobertura de gráfico de fluxo.  
   
- **\/summary**— Estatísticas por função vídeos.  
+ **Resumo**— exibe de estatísticas por função.  
   
- **\/unique**— quando usadas com **\/summary**, as causas decoraram nomes de função para exibir.  A opção, quando \/unique não é usado, é que os nomes de função undecorated sejam exibidos.  
+ **/Unique**— quando usado com **resumo**, causas decorado nomes de função para exibir.  O padrão, quando é exclusivo não usado, é para nomes de função não decorados a ser exibido.  
   
- **\/merge :**\[*n*\]**—**faz com que os dados no arquivo ou em arquivos de .pgc a serem adicionados ao arquivo de .pgd.  O parâmetro opcional, *em*, permite que você especifique que os dados devem ser adicionados tempo *de em* .  Por exemplo, se um cenário seria feito normalmente 6 vezes, você pode tornar uma vez em um execução do teste e o adiciona ao arquivo de .pgd seis vezes com **pgomgr \/merge:6**.  
+ **/ mesclagem**[**:***n*]**—**faz com que os dados no arquivo. PGC ou arquivos a ser adicionado ao arquivo. PGD.  O parâmetro opcional,  *n* , permite que você especifique hat os dados deve ser adicionado  *n*  vezes.  Por exemplo, se um cenário geralmente seria realizado 6 horas, você pode fazer isso vez em uma execução de teste e adicioná-lo para o arquivo. PGD seis vezes com **pgomgr /merge:6**.  
   
  `pgcfiles`  
- Um ou mais dados do perfil dos arquivos de .pgc cujos você deseja mesclar no arquivo de .pgd.  Você pode especificar um único arquivo de .pgc um ou mais arquivos de .pgc.  Se você não especifica nenhum arquivo de .pgc, o pgomgr mesclará todos os arquivos de .pgc cujos nomes de arquivo são os mesmos do arquivo de .pgd.  
+ . PGC um ou mais arquivos cujos dados de perfil que você deseja mesclar o arquivo. PGD. Você pode especificar um arquivo. PGC único ou vários arquivos. PGC. Se você não especificar todos os arquivos. PGC, pgomgr mesclará todos os arquivos. PGC cujos nomes de arquivo são o mesmo que o arquivo. PGD.  
   
  `pgdfile`  
- O arquivo de .pgd em que você mescla dados do arquivo ou arquivos de .pgc.  
+ O arquivo. PGD na qual você estiver mesclando dados do arquivo. PGC ou arquivos.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  É possível iniciar esta ferramenta somente usando o prompt de comando [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  Não é possível iniciá\-lo a partir de um prompt de comando do sistema ou do gerenciador de arquivos.  
+>  Você pode iniciar essa ferramenta apenas o [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] prompt de comando. Você não pode iniciá-lo em um prompt de comando do sistema ou no Explorador de arquivos.  
   
-## Exemplo  
- No exemplo a seguir, o arquivo de .pgd foi limpo de dados do perfil.  
+## <a name="example"></a>Exemplo  
+ No exemplo a seguir, o arquivo. PGD foi limpo de dados de perfil.  
   
 ```  
 pgomgr /clear myapp.pgd  
 ```  
   
- No exemplo a seguir, os dados do perfil em myapp1.pgc foram adicionados ao arquivo de .pgd 3 vezes.  
+ No exemplo a seguir, os dados do perfil em myapp1.pgc foi adicionados para o arquivo. PGD 3 vezes.  
   
 ```  
 pgomgr /merge:3 myapp1.pgc myapp.pgd  
 ```  
   
- No exemplo a seguir, os dados do perfil de todos os arquivos de myapp\#.pgc são adicionados ao arquivo de myapp.pgd.  
+ No exemplo a seguir, os dados de perfil de todos os arquivos. PGC de # myapp são adicionados ao arquivo myapp.pgd.  
   
 ```  
 pgomgr -merge myapp1.pgd  
 ```  
   
-## Consulte também  
- [Ferramentas para otimização orientada a perfil](../../build/reference/tools-for-manual-profile-guided-optimization.md)
+## <a name="see-also"></a>Consulte também  
+ [Ferramentas para otimização guiada por perfil manual](../../build/reference/tools-for-manual-profile-guided-optimization.md)

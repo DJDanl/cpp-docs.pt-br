@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fesetexceptflag
+apiname: fesetexceptflag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,35 +26,19 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
-helpviewer_keywords:
-- fesetexceptflag function
+dev_langs: C++
+helpviewer_keywords: fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b23c60333bee887366e11f6da29a73e940a36561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 Define os sinalizadores de status de ponto flutuante especificados no ambiente atual de ponto flutuante.  
@@ -101,7 +84,7 @@ int fesetexceptflag(
 |--------------|--------------|------------------|  
 |`fesetexceptflag`|\<fenv.h>|\<cfenv>|  
   
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

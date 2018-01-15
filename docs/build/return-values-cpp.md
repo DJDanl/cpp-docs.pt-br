@@ -1,52 +1,70 @@
 ---
-title: "Valores de retorno (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Valores de retorno (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 53583524-b337-4228-a9c6-c9bf516babe8
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cdd02ab9c30e641ba7389923062f46dbbed534ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Valores de retorno (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um valor de retorno escalar que se encaixa em 64 bits é retornado por RAX — isso inclui tipos de m64.  Tipos não escalares incluindo floats, duplicatas e tipos de vetor, como [\_\_m128](../Topic/__m128.md), [\_\_m128i](../Topic/__m128i.md), [\_\_m128d](../cpp/m128d.md) são retornados em XMM0.  O estado de bits não utilizados no valor retornado em RAX ou XMM0 é indefinido.  
+# <a name="return-values-c"></a>Valores de retorno (C++)
+Um valor de retorno escalar que pode se ajustar em 64 bits é retornado por meio de RAX — isso inclui tipos de m64. Tipos escalares não incluindo floats, duplicatas e tipos de vetor, como [m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) XMM0 são retornados. O estado de bits não utilizados no valor retornado em RAX ou XMM0 é indefinido.  
   
- Tipos definidos pelo usuário podem ser retornados pelo valor de funções globais e funções de membro estático.  A serem retornadas pelo valor em RAX, tipos definidos pelo usuário devem ter um comprimento de 1, 2, 4, 8, 16, 32 ou 64 bits; Nenhum construtor definido pelo usuário, o destruidor ou o operador de atribuição de cópia; Não há membros de dados de não estático particular ou protegido; Nenhum membro de dados não estático do tipo de referência; Nenhuma classe base; Nenhuma função virtual; e há membros de dados que também não atender a esses requisitos.  \(Isso é essencialmente a definição de C\+\+ 03 tipo POD.  Como a definição foi alterada no C\+\+ 11 standard, não recomendamos usar `std::is_pod` para esse teste.\) Caso contrário, o chamador assume a responsabilidade de alocação de memória e transmitindo um ponteiro para o valor de retorno como o primeiro argumento.  Os argumentos subsequentes são deslocados um argumento para a direita.  O mesmo ponteiro deve ser retornado pelo receptor em RAX.  
+ Tipos definidos pelo usuário podem ser retornados pelo valor de funções globais e funções de membro estático. A ser retornado pelo valor em RAX, tipos definidos pelo usuário devem ter um comprimento de 1, 2, 4, 8, 16, 32 ou 64 bits; Nenhum construtor definido pelo usuário, o destruidor ou o operador de atribuição de cópia; Nenhum membro de dados não estático particulares ou protegidos; Nenhum membro de dados não estático do tipo de referência; Não há classes base; Nenhuma função virtual; e nenhum membro de dados que também não atender a esses requisitos. (Isso é basicamente a definição de C + + 03 tipo POD. Como a definição foi alterado do 11 C++ padrão, não recomendamos o uso `std::is_pod` para este teste.) Caso contrário, o chamador assume a responsabilidade de alocação de memória e transmitindo um ponteiro para o valor de retorno como o primeiro argumento. Argumentos subsequentes são deslocados um argumento para a direita. O mesmo ponteiro deve ser retornado pelo receptor no RAX.  
   
- Estes exemplos mostram como parâmetros e valores de retorno são passados para as funções com as declarações especificadas:  
+ Estes exemplos mostram como parâmetros e valores de retorno são passados para funções com as declarações especificadas:  
   
-## Exemplo de resultado do valor de retorno 1 – 64 bits  
-  **Int64 func1 \(int um float b, c int, int d, int e\);**  
-**Chamador passa uma em RCX, b em XMM1, c em R8, d em R9, e empurrado na pilha,**  
-**receptor retorna o resultado de Int64 em RAX.**   
-## Exemplo de resultado do valor de retorno 2 – 128 bits  
-  **m128 func2 \(float a, b duplo, int c, d m64\);**   
-**Chamador passa uma em XMM0, b em XMM1, c em R8, d em R9,**   
-**receptor retorna o resultado de m128 em XMM0.**   
-## Exemplo de valor de retorno 3 – resultado do tipo de usuário pelo ponteiro  
-  **struct Struct1 {**  
- **int j, k, l;    Struct1 exceder 64 bits.  };**  
-**Func3 Struct1 \(int um duplo b, c int, float d\);**   
-**Chamador aloca memória para Struct1 retornado e passa o ponteiro em RCX,**   
-**um em RDX, b em XMM2, c em R9, d empurrado na pilha;**   
-**receptor retorna um ponteiro ao resultado Struct1 em RAX.**    
-## Exemplo de valor de retorno 4 – resultado do tipo de usuário por valor  
-  **struct {Struct2**  
- **int j, k;    Struct2 se encaixa em 64 bits e atende aos requisitos de retorno do valor.  };**  
-**Struct2 func4 \(int um duplo b, c int, float d\);**   
-**Chamador passa uma em RCX, b em XMM1, c em R8 e d em XMM3;**   
-**receptor retorna resultados Struct2 pelo valor em RAX.**    
-## Consulte também  
+## <a name="example-of-return-value-1---64-bit-result"></a>Exemplo de resultado do valor de retorno 1 de 64 bits  
+  
+```Output  
+__int64 func1(int a, float b, int c, int d, int e);  
+// Caller passes a in RCX, b in XMM1, c in R8, d in R9, e pushed on stack,  
+// callee returns __int64 result in RAX.  
+```  
+  
+## <a name="example-of-return-value-2---128-bit-result"></a>Exemplo de resultado de 2 de 128 bits do valor de retorno  
+  
+```Output  
+__m128 func2(float a, double b, int c, __m64 d);   
+// Caller passes a in XMM0, b in XMM1, c in R8, d in R9,   
+// callee returns __m128 result in XMM0.  
+```  
+  
+## <a name="example-of-return-value-3---user-type-result-by-pointer"></a>Exemplo de valor de retorno 3 – resultado do tipo de usuário pelo ponteiro  
+  
+```Output  
+struct Struct1 {  
+   int j, k, l;    // Struct1 exceeds 64 bits.   
+};  
+Struct1 func3(int a, double b, int c, float d);   
+// Caller allocates memory for Struct1 returned and passes pointer in RCX,   
+// a in RDX, b in XMM2, c in R9, d pushed on the stack;   
+// callee returns pointer to Struct1 result in RAX.  
+```  
+  
+## <a name="example-of-return-value-4---user-type-result-by-value"></a>Exemplo de valor de retorno 4 - resultado do tipo de usuário por valor  
+  
+```Output  
+struct Struct2 {  
+   int j, k;    // Struct2 fits in 64 bits, and meets requirements for return by value.  
+};  
+Struct2 func4(int a, double b, int c, float d);   
+// Caller passes a in RCX, b in XMM1, c in R8, and d in XMM3;   
+// callee returns Struct2 result by value in RAX.  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [Convenção de chamada](../build/calling-convention.md)

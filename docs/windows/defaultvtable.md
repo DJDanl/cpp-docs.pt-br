@@ -1,33 +1,33 @@
 ---
-title: "defaultvtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvtable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvtable attribute"
+title: defaultvtable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvtable
+dev_langs: C++
+helpviewer_keywords: defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 90c3fb3d72d71f4d61aebcef657b71bfaff87efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# defaultvtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Define uma interface como interface padrão vtable para um objeto COM.  
+# <a name="defaultvtable"></a>defaultvtable
+Define uma interface de interface vtable padrão para um objeto COM.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -36,15 +36,15 @@ Define uma interface como interface padrão vtable para um objeto COM.
 ) ]  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `interface`  
- A interface designada que você deseja ter o vtable padrão do objeto COM.  
+ A interface designada que você deseja ter a vtable padrão para o objeto COM.  
   
-## Comentários  
- O  **defaultvtable** o atributo do C\+\+ tem a mesma funcionalidade que o  [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) atributo MIDL.  
+## <a name="remarks"></a>Comentários  
+ O **defaultvtable** atributo C++ tem a mesma funcionalidade que o [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) atributo MIDL.  
   
-## Exemplo  
- O código a seguir mostra os atributos em uma classe que usam  **defaultvtable** para especificar uma interface padrão:  
+## <a name="example"></a>Exemplo  
+ O código a seguir mostra os atributos em uma classe que use **defaultvtable** para especificar uma interface padrão:  
   
 ```  
 // cpp_attr_ref_defaultvtable.cpp  
@@ -72,20 +72,19 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|**classe**,`struct`|  
-|**Reproduzíveis**|Não|  
-|**Atributos obrigatórios**|**coclass**|  
+|**Aplica-se a**|**classe**,`struct`|  
+|**Repetível**|Não|  
+|**Atributos necessários.**|**coclass**|  
 |**Atributos inválidos**|Nenhum|  
   
- Para obter mais informações, consulte  [Atributo contextos](../windows/attribute-contexts.md).  
+ Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
-## Consulte também  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/pt-br/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Consulte também  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de classe](../windows/class-attributes.md)   

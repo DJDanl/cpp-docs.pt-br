@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-stream-member-functions"></a>Funções de Membro de Fluxo de Arquivo de Saída
 Funções de membro de fluxo de saída têm três tipos: aqueles que são equivalentes aos manipuladores, aqueles que executam operações de gravação sem formatação e aqueles que modificam o fluxo do estado e não têm nenhum manipulador ou operador de inserção equivalente. Para saída sequencial e formatada, você pode usar somente os operadores de inserção e manipuladores. Para saída de disco binário de acesso aleatório, você usar outras funções de membro, com ou sem operadores de inserção.  

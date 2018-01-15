@@ -14,11 +14,12 @@ caps.latest.revision: "64"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50589e18914ed452381a416cfb0f59d87b4be6a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec2b8f0f05da535fd6a4f212a08af847c997a860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções de compilador listadas por categoria
 Este artigo contém uma lista categórica de opções do compilador. Para obter uma lista, consulte [compilador opções listadas em ordem alfabética](../../build/reference/compiler-options-listed-alphabetically.md).  

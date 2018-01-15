@@ -1,29 +1,28 @@
 ---
-title: "Controle de edi&#231;&#227;o da mensagem de erro | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controle de edição Mensagem de Erro"
+title: "Controle de edição de mensagem de erro | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Error Message edit control
 ms.assetid: 79320694-c30e-4c37-bb94-6cb36c32d4e6
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 748ad27e9b4e5a1742b7704e6c7e5e14765ec1bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Controle de edi&#231;&#227;o da mensagem de erro
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A caixa de **Mensagem de erro** contém o texto da mensagem de erro do sistema ou da mensagem de erro do módulo com base no valor digitado.  
+# <a name="error-message-edit-control"></a>Controle de edição da mensagem de erro
+O **mensagem de erro** caixa contém o texto da mensagem de erro do sistema ou mensagem de erro do módulo com base no valor inserido.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Controle de edição de valor](../../build/reference/value-edit-control.md)

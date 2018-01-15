@@ -1,33 +1,33 @@
 ---
-title: "M&#233;todo RuntimeClass::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método de liberação"
+title: "Método Runtimeclass: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 0bd6f9e2-ad90-4de6-adef-a6286f458cb6
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4fb06a0d818c23c3e5d79cecb6e0f9a8ae6f9a73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# M&#233;todo RuntimeClass::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Executa uma operação de versão do COM o objeto atual de RuntimeClass.  
+# <a name="runtimeclassrelease-method"></a>Método RuntimeClass::Release
+Executa uma operação de liberação COM no objeto RuntimeClass atual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 STDMETHOD_(  
@@ -36,16 +36,16 @@ STDMETHOD_(
 )();  
 ```  
   
-## Valor de retorno  
- S\_OK se bem\-sucedido; caso contrário, um HRESULT que declara o erro.  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
   
-## Comentários  
- Se a contagem de referência se tornará zero, o objeto de RuntimeClass será excluído.  
+## <a name="remarks"></a>Comentários  
+ Se a contagem de referência se torna zero, o objeto RuntimeClass será excluído.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft:: wrl  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe RuntimeClass](../windows/runtimeclass-class.md)

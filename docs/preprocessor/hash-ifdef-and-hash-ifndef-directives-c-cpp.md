@@ -1,39 +1,38 @@
 ---
-title: "Diretivas #ifdef e #ifndef (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "#ifndef"
-  - "#ifdef"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Diretiva #ifdef"
-  - "Diretiva #ifndef"
-  - "diretiva ifdef (#ifdef)"
-  - "diretiva ifndef (#ifndef)"
-  - "pré-processador, Diretivas ()"
+title: '#Diretivas de ifdef e #ifndef (C/C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- '#ifndef'
+- '#ifdef'
+dev_langs: C++
+helpviewer_keywords:
+- '#ifdef directive'
+- preprocessor, directives
+- ifdef directive (#ifdef)
+- ifndef directive (#ifndef)
+- '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7a56212dc0943c79152b8485bea3a3082bfa73d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# Diretivas #ifdef e #ifndef (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-As políticas **\#ifdef** e **\#ifndef** executam a mesma tarefa da política `#if` quando usadas com **defined**\( *identifier* \).  
+# <a name="ifdef-and-ifndef-directives-cc"></a>Diretivas #ifdef e #ifndef (C/C++)
+O **#ifdef** e **#ifndef** diretivas de executam a mesma tarefa como o `#if` diretiva quando ele é usado com **definido**( *identificador* ).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #ifdef identifier  
@@ -44,18 +43,18 @@ As políticas **\#ifdef** e **\#ifndef** executam a mesma tarefa da política `#
 #if !defined identifier  
 ```  
   
-## Comentários  
- É possível usar as políticas **\#ifdef** e **\#ifndef** em qualquer lugar que `#if` possa ser usado.  A instrução **\#ifdef** *identifier* é equivalente a `#if 1` quando o *identificador* é definido e é equivalente a `#if 0` quando o *identificador* não é definido ou se tiver sido indefinido com a política `#undef`.  Essas políticas verificam somente a presença ou ausência de identificadores definidos com `#define`, não para identificadores declarados no código\-fonte C ou C\+\+.  
+## <a name="remarks"></a>Comentários  
+ Você pode usar o **#ifdef** e **#ifndef** diretivas em qualquer lugar `#if` pode ser usado. O **#ifdef** *identificador* instrução é equivalente a `#if 1` quando *identificador* tiver sido definida, e é equivalente a `#if 0` quando *identificador* não foi definido ou não tem sido definida com o `#undef` diretiva. Essas políticas verificam somente a presença ou ausência de identificadores definidos com `#define`, não para identificadores declarados no código-fonte C ou C++.  
   
- Essas políticas são fornecidas somente para compatibilidade com versões anteriores da linguagem.  A expressão de constante **defined\(** *identifier* **\)** usada com a política `#if` é preferencial.  
+ Essas políticas são fornecidas somente para compatibilidade com versões anteriores da linguagem. O **definido (** *identificador* **)** expressão constante usada com a `#if` diretiva é preferencial.  
   
- A política **\#ifndef** verifica o oposto da condição verificada por **\#ifdef**.  Se o identificador não foi definido \(ou a definição foi removida com `#undef`\), a condição é true \(diferente de zero\).  Caso contrário, a condição será false \(0\).  
+ O **#ifndef** diretiva verifica o oposto da condição verificada pelo **#ifdef**. Se o identificador não foi definido (ou a definição foi removida com `#undef`), a condição é true (diferente de zero). Caso contrário, a condição será false (0).  
   
- **Específico da Microsoft**  
+ **Seção específica da Microsoft**  
   
- O *identificador* pode ser passado da linha de comando usando a opção \/D.  Até 30 macros podem ser especificadas com \/D.  
+ O *identificador* podem ser passados na linha de comando usando a opção /D. Até 30 macros podem ser especificadas com /D.  
   
- Isso é útil para verificar se uma definição existe, uma vez que uma definição pode ser passada da linha de comando.  Por exemplo:  
+ Isso é útil para verificar se uma definição existe, uma vez que uma definição pode ser passada da linha de comando. Por exemplo:  
   
 ```  
 // ifdef_ifndef.CPP  
@@ -65,7 +64,7 @@ As políticas **\#ifdef** e **\#ifndef** executam a mesma tarefa da política `#
 #endif  
 ```  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Diretivas de pré\-processador](../preprocessor/preprocessor-directives.md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

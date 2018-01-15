@@ -1,50 +1,50 @@
 ---
-title: "F. New Features and Clarifications in Version 2.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "F. Novos recursos e esclarecimentos na versão 2.0 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b9a661f183816fec0f7a71c990f1508338100f4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# F. New Features and Clarifications in Version 2.0
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este apêndice resume as principais alterações feitas a especificação do OpenMP C\/C\+\+ na movimentação da versão 1.0 para a versão 2.0.  Os itens a seguir são os novos recursos adicionados a especificação:  
+# <a name="f-new-features-and-clarifications-in-version-20"></a>F. Novos recursos e esclarecimentos na versão 2.0
+Este apêndice resume as principais alterações feitas com a especificação do OpenMP C/C++ na movimentação da versão 1.0 para a versão 2.0. Os seguintes itens são novos recursos adicionados a especificação de:  
   
--   Vírgulas são permitidas as diretivas do OpenMP \([seção 2.1](../Topic/2.1%20Directive%20Format.md) na página 7\).  
+-   Vírgulas são permitidas em diretivas OpenMP ([seção 2.1](../../parallel/openmp/2-1-directive-format.md) na página 7).  
   
--   Adição da `num_threads` cláusula.  Essa cláusula permite que um usuário solicitar um número específico de segmentos de uma construção paralela \([seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página 8\).  
+-   Adição de `num_threads` cláusula. Essa cláusula permite que um usuário solicitar um número específico de segmentos de uma construção paralela ([seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página 8).  
   
--   O `threadprivate` diretiva foi estendida para aceitar variáveis estáticas de escopo de bloco \([seção 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) na página 23\).  
+-   O `threadprivate` diretiva foi estendida para aceitar as variáveis de escopo de bloco estático ([seção 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) na página 23).  
   
--   Matrizes de comprimento variável de C99 são tipos completos e, portanto, podem ser especificados em qualquer lugar completos tipos são permitidos, por exemplo nas listas de `private`, `firstprivate`, e `lastprivate` cláusulas \([seção 2.7.2](../Topic/2.7.2%20Data-Sharing%20Attribute%20Clauses.md) na página 25\).  
+-   Matrizes de comprimento variável C99 são tipos completos e, portanto, podem ser especificados em qualquer lugar tipos completos são permitidos, para a instância na lista de `private`, `firstprivate`, e `lastprivate` cláusulas ([seção 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na página 25).  
   
--   Uma variável private em uma região paralela pode ser marcado como particular novamente em uma diretiva de aninhados \([seção 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na página 25\).  
+-   Uma variável privada em uma região parallel pode ser marcada como particular novamente em uma diretiva aninhada ([seção 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na página 25).  
   
--   O `copyprivate` cláusula foi adicionada.  Ele fornece um mecanismo para usar uma variável particular para difundir um valor de um membro de uma equipe para os outros membros.  É uma alternativa ao uso de uma variável compartilhada para o valor ao fornecer uma variável compartilhada seria difícil \(por exemplo, em uma recursão exigindo uma variável diferente em cada nível\).  O `copyprivate` cláusula só pode aparecer à  **único** diretiva \([seção 2.7.2.8](../Topic/2.7.2.8%20copyprivate.md) na página 32\).  
+-   O `copyprivate` cláusula foi adicionada. Ele fornece um mecanismo para usar uma variável privada para transmitir um valor de um membro de uma equipe para os outros membros. É uma alternativa ao uso de uma variável compartilhada para o valor ao fornecer essa variável compartilhada seria difícil (por exemplo, em uma recursão de necessidade de uma variável diferente em cada nível). O `copyprivate` cláusula só pode aparecer no **único** diretiva ([seção 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na página 32).  
   
--   Adição de rotinas de cronometragem `omp_get_wtick` e `omp_get_wtime` semelhante para as rotinas MPI.  Essas funções são necessárias para executar os intervalos de relógio de parede \([seção 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md) na página 44 e  [seção 3.3.2](../Topic/3.3.2%20omp_get_wtick%20Function.md) na página 45\).  
+-   Adição de rotinas de tempo `omp_get_wtick` e `omp_get_wtime` semelhante às rotinas MPI. Essas funções são necessárias para executar os intervalos de relógio de parede ([seção 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md) na página 44 e [seção 3.3.2](../../parallel/openmp/3-3-2-omp-get-wtick-function.md) na página 45).  
   
--   Foi adicionado um apêndice com uma lista de comportamentos definidos na implementação OpenMP C\/C\+\+.  Uma implementação é necessária para definir e documentar o seu comportamento nesses casos \([Apêndice E](../Topic/E.%20Implementation-Defined%20Behaviors%20in%20OpenMP%20C-C++.md) na página 97\).  
+-   Foi adicionado um apêndice com uma lista de comportamentos definidos na implementação OpenMP C/C++. Uma implementação é necessária para definir e documentar seu comportamento nesses casos ([Apêndice E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md) na página 97).  
   
--   As alterações a seguir servem para esclarecer ou corrigir a recursos na especificação da API OpenMP anterior para C\/C\+\+:  
+-   As seguintes alterações servem para esclarecer ou corrigir recursos na especificação da API do OpenMP anterior para C/C++:  
   
-    -   Esclarecido que o comportamento de `omp_set_nested` e `omp_set_dynamic` quando `omp_in_parallel` retorna diferente de zero é indefinida \([seção 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na página 39, e  [seção 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) na página 40\).  
+    -   Esclareceu que o comportamento de `omp_set_nested` e `omp_set_dynamic` quando `omp_in_parallel` retorna zero é indefinido ([seção 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na página 39, e [seção 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) na página 40).  
   
-    -   Esclarecida a diretriz aninhamento quando paralelo aninhado é usado \([seção 2,9](../../parallel/openmp/2-9-directive-nesting.md) na página 33\).  
+    -   Esclareceu aninhamento de diretiva quando paralelo aninhado é usado ([seção 2.9](../../parallel/openmp/2-9-directive-nesting.md) na página 33).  
   
-    -   As funções de destruição de inicialização e o bloqueio do bloqueio podem ser chamadas em uma região paralela \([seção 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na página 42 e  [seção 3.2.2](../Topic/3.2.2%20omp_destroy_lock%20and%20omp_destroy_nest_lock%20Functions.md) na página 42\).  
+    -   As funções de destruição de inicialização e bloqueio de bloqueio podem ser chamadas em uma região parallel ([seção 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na página 42 e [seção 3.2.2](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md) na página 42).  
   
-    -   Foram adicionados novos exemplos \([Apêndice A](../Topic/A.%20Examples.md) na página 51\).
+    -   Foram adicionados novos exemplos ([Apêndice A](../../parallel/openmp/a-examples.md) na página 51).

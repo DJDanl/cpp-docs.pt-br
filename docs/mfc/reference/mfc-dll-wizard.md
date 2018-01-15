@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 902044e23974b882c52f5cb715d42f0fe1f2f610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-dll-wizard"></a>Assistente de DLL MFC
 Quando você usar o Assistente de DLL do MFC para criar um projeto de DLL MFC, você obtém um aplicativo de início do trabalho com funcionalidade interna que, quando compilado, implementar os recursos básicos de um [DLL](../../build/dlls-in-visual-cpp.md). O programa de início do MFC inclui arquivos de origem (. cpp) C++, arquivos de recurso (. rc) e um arquivo de projeto (. vcxproj). O código gerado nesses arquivos de início é baseado em MFC. Para obter mais informações, consulte os detalhes do arquivo Leiame. txt que é gerado para o seu projeto no Visual Studio, e [Classes e funções geradas pelo Assistente de DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Esta página do assistente descreve atual [configurações de aplicativo para o projeto de DLL MFC](../../mfc/reference/application-settings-mfc-dll-wizard.md) você está criando. Por padrão, o projeto é criado como um projeto de DLL MFC (MFC compartilhada) regular sem nenhuma configuração adicional.  
   
  Para alterar esses padrões, clique em **configurações de aplicativo** na coluna à esquerda dos assistente e faça alterações na página do Assistente de DLL do MFC.  

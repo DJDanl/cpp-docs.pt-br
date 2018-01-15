@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - <system_error>
 - system_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- system_error header
+dev_langs: C++
+helpviewer_keywords: system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 68bfea40f926ed74afd6fd246b57d39b7225cdf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f5f68b5eb7ca9e4fa9ab29d55fdbaf05c49b786c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 Inclua o cabeçalho `<system_error>` para definir a classe de exceção `system_error` e modelos relacionados para o processamento de erros de nível inferior do sistema.  
@@ -88,7 +85,6 @@ Inclua o cabeçalho `<system_error>` para definir a classe de exceção `system_
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

@@ -1,46 +1,46 @@
 ---
-title: "ComPtrRef::operator InterfaceType** Operador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator InterfaceType**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador InterfaceType** Operador"
+title: 'Comptrref:: Operator InterfaceType * * operador | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator InterfaceType**
+dev_langs: C++
+helpviewer_keywords: operator InterfaceType** operator
 ms.assetid: b32e3240-a4f0-4998-a55f-d4e35dc9a15a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c2b88451bfad07c76b40f85b6512dc7f01147911
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRef::operator InterfaceType** Operador
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Oferece suporte à infraestrutura de WRL e não deve ser usado diretamente no seu código.  
+# <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** Operador
+Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 operator InterfaceType**();  
 ```  
   
-## Comentários  
- Exclui o objeto atual de ComPtrRef e retorna um ponteiro\-à\-um\- ponteiro para a interface que é representada pelo objeto de ComPtrRef.  
+## <a name="remarks"></a>Comentários  
+ Exclui o objeto ComPtrRef atual e retorna um ponteiro-para-um-ponteiro para a interface que foi representada pelo objeto ComPtrRef.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Consulte também  
- [Classe ComPtrRef](../Topic/ComPtrRef%20Class.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classe ComPtrRef](../windows/comptrref-class.md)   
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

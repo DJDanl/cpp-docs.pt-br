@@ -1,44 +1,26 @@
 ---
-title: nowait | Documentos do Microsoft
+title: nowait | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- nowait
-dev_langs:
-- C++
-helpviewer_keywords:
-- nowait OpenMP clause
+f1_keywords: nowait
+dev_langs: C++
+helpviewer_keywords: nowait OpenMP clause
 ms.assetid: 8a74265d-879c-46cf-8071-a1084f24f16e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 051001411266cb854d49048cef64c3b0fedf1c12
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a8812e5ee6c568cbe7e529a21f229d7c19900b8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nowait"></a>nowait
 Substitui a barreira implícita em uma diretiva.  
@@ -56,9 +38,9 @@ nowait
   
 -   [seções](../../../parallel/openmp/reference/sections-openmp.md)  
   
--   [único](../../../parallel/openmp/reference/single.md)  
+-   [single](../../../parallel/openmp/reference/single.md)  
   
- Para obter mais informações, consulte [2.4.1 constructo for](../../../parallel/openmp/2-4-1-for-construct.md), [2.4.2 constructo sections](../../../parallel/openmp/2-4-2-sections-construct.md), e [2.4.3 único construir](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Para obter mais informações, consulte [2.4.1 para construção](../../../parallel/openmp/2-4-1-for-construct.md), [2.4.2 constructo sections](../../../parallel/openmp/2-4-2-sections-construct.md), e [2.4.3 único construir](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,33 +18,18 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e295b56290435a1d87ac2f0dbc0951850600534d
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 Um `tiled_extent` objeto é um `extent` objeto de um a três dimensões que subdivide o espaço de extensão em uma, duas ou blocos tridimensionais.  
@@ -84,7 +68,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ## <a name="members"></a>Membros  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -166,7 +150,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Um `extent` que captura as dimensões desse objeto `tiled_extent` instância.  
   
 
-## <a name="pad"></a>  pad   
+## <a name="pad"></a> preenchimento   
 Retorna um novo `tiled_extent` objeto com extensões ajustada a ser divisível por dimensões lado a lado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -243,4 +227,3 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

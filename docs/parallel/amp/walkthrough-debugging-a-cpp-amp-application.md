@@ -18,11 +18,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3dc050418d8053e04053d5eafbd328e49bd473b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Instruções passo a passo: depurando um aplicativo C++ AMP
 Este tópico demonstra como depurar um aplicativo que usa C++ Accelerated Massive Parallelism (C++ AMP) para tirar proveito da unidade de processamento de gráficos (GPU). Ele usa um programa de redução de paralelo resume uma grande variedade de números inteiros. Esta explicação passo a passo ilustra as seguintes tarefas:  
@@ -231,7 +232,7 @@ Pontos de interrupção de CPU
   
 4.  No **tipo de depurador** lista, selecione **somente GPU**.  
   
-5.  Selecione o botão **OK**.  
+5.  Escolha o botão **OK**.  
   
 6.  Defina um ponto de interrupção na linha 30, conforme mostrado na ilustração a seguir.  
   
@@ -393,5 +394,5 @@ Threads agrupados na janela de Threads de GPU
  [Depurando código de GPU](/visualstudio/debugger/debugging-gpu-code)   
  [Como: usar a janela de Threads GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
  [Como: usar a janela Inspeção paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
- [Análise de código do C++ AMP com o Visualizador de simultaneidade](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)
+ [Análise de código do C++ AMP com o Visualizador de simultaneidade](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
 
