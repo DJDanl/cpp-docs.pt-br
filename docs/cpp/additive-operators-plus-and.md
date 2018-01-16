@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02909b9b42ca781f7a178aa4b9dc7440bd89f2a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="additive-operators--and--"></a>Operadores aditivos: + e -
 ## <a name="syntax"></a>Sintaxe  
@@ -117,7 +118,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Subtração de ponteiro  
  Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gera um resultado integral com sinal do tipo ptrdiff_t (definido no arquivo de inclusão padrão STDDEF.H).  
   
- Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor de subtração é um ponteiro para o (*n* - *i*) elemento de matriz th, onde *n* é o elemento apontado por o ponteiro original e *i* é o valor integral do segundo operando.  
+ Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor de subtração é um ponteiro para o (*n* - *,*) elemento de matriz th, onde  *n*  é o elemento apontado por o ponteiro original e *i* é o valor integral do segundo operando.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   

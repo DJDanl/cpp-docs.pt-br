@@ -1,6 +1,6 @@
 ---
 title: C4600 de avisos do compilador por meio de C4799 | Microsoft Docs
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -67,22 +67,20 @@ ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 456d35247f25d20684e8b6957d61428a2b113ca0
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>C4600 de avisos do compilador por meio de C4799
 
-Os artigos desta parte da documentação contém informações sobre um subconjunto de avisos do compilador do Visual C++. Você pode acessar as informações aqui ou, na janela de saída no Visual Studio, você pode selecionar um número de erro e, em seguida, pressione a tecla F1.
+Os artigos nesta seção da documentação explicam um subconjunto das mensagens de aviso são geradas pelo compilador.
 
-> [!NOTE]
-> Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro ou aviso é documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).
-
-## <a name="in-this-section"></a>Nesta seção
+## <a name="warning-messages"></a>Mensagens de aviso
 
 |Aviso|Mensagem|
 |-------------|-------------|
@@ -163,7 +161,7 @@ Você pode obter assistência adicional para erros e avisos nos fóruns público
 |[Compilador C4687 de aviso (erro)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': uma classe sealed abstract não pode implementar uma interface 'interface'|
 |Aviso do compilador (nível 1) C4688|'restrição de ': lista de restrições contém tipo private de assembly 'type'|
 |Aviso do compilador (nível 1) C4689|'%c'': caractere em #pragma detect_mismatch; sem suporte #pragma ignorado|
-|Aviso do compilador (nível 4) C4690|[emitidl (pop)]: mais ativações do que envios|
+|Aviso do compilador (nível 4) C4690|[ emitidl( pop ) ]: mais ativações do que envios|
 |[Aviso do compilador (nível 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': tipo referenciado era esperado no assembly não referenciado 'file', tipo definido na unidade de tradução atual usada|
 |[Aviso do compilador (nível 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'function': assinatura de membro não privado contém tipo nativo privado de assembly 'native_type'|
 |[Aviso do compilador (nível 1, erro) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': uma classe sealed abstract não pode ter qualquer instância membros 'membro de instância'|
