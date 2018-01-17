@@ -20,11 +20,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="zc-conformance"></a>/Zc (conformidade)
 
@@ -32,7 +32,7 @@ Você pode usar o **/Zc** opções do compilador para especificar o comportament
 
 ## <a name="syntax"></a>Sintaxe
 
-> / Zc:_opção_{,_opção_}
+> /Zc:_option_{,_option_}
 
 ## <a name="remarks"></a>Comentários
 
@@ -43,16 +43,17 @@ Estes são os `/Zc` opções do compilador:
 |Opção|Comportamento|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Habilitar C++ 17 excesso alinhados alocação dinâmica (em por padrão em C++ 17).|
-|[Automático\[-\]](zc-auto-deduce-variable-type.md)|Impor o novo significado Standard C++ para `auto` (em por padrão).|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|Impor o novo significado Standard C++ para `auto` (em por padrão).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Habilitar vínculo externo para `constexpr` variáveis (desativado por padrão).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Impor Standard C++ `for` regras de escopo (em por padrão).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Habilitar implícita `noexcept` em funções requeridas (em por padrão).|
-|[embutido\[-\]](zc-inline-remove-unreferenced-comdat.md)|Remover dados ou função não referenciado COMDAT ou tiverem apenas ligação interna (desativada por padrão).|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Remover dados ou função não referenciado COMDAT ou tiverem apenas ligação interna (desativada por padrão).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Aplicar regras de noexcept de 17 C + + (em por padrão em C++ 17 ou posterior).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Um UDT temporário não será associado a uma referência não const lvalue (desligado por padrão).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Aplicar regras de conversão de tipo explícito de C++ padrão (desativado por padrão).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Habilitar C + + 14 global desalocação dimensionada funções (em por padrão).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Desabilitar literal de cadeia de caracteres para `char*` ou `wchar_t*` conversão (desativado por padrão).|
+|[Ternário\[-\]](zc-ternary.md)|Impor regras do operador condicional em tipos de operando (desativado por padrão).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Habilitar a inicialização local estática do thread-safe (em por padrão).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Suponha que `operator new` lança em caso de falha (desativado por padrão).|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilite trígrafos (obsoletos, desativado por padrão).|

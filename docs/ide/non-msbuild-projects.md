@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Abrir projetos de pasta no Visual C++
 Visual Studio de 2017 apresenta o recurso "Abrir pasta", que permite que você abrir uma pasta de arquivos de origem e imediatamente para iniciar a codificação com suporte para IntelliSense, pesquisa, refatoração, depuração e assim por diante. Nenhum arquivo. sln ou. vcxproj é carregado; Se necessário, você pode especificar tarefas personalizadas, bem como criar e iniciar parâmetros por meio de arquivos. JSON simples. Abrir a pasta da plataforma, Visual C++ agora pode dar suporte não apenas flexível coleções de arquivos, mas também praticamente qualquer sistema de compilação, incluindo CMake, Ninja, QMake (para projetos Qt), gyp, SCons, Gradle, Buck, verifique e muito mais. 
@@ -39,8 +39,8 @@ Você pode personalizar um projeto de abrir a pasta por meio de três arquivos J
 |||
 |-|-|
 |CppProperties.json|Especifica informações de configuração personalizados para navegação. Crie esse arquivo, se necessário, na pasta do projeto raiz.|
-|Launch.vs.JSON|Especifica argumentos de linha de comando. Acessados por meio de **Gerenciador de soluções** item de menu de contexto **depuração e iniciar configurações**.|
-|Tasks.vs.JSON|Especifica opções de compilador e de comandos de compilação personalizada. Acessados por meio de **Solution Explorer** item de menu de contexto **configurar tarefas**.|
+|launch.vs.json|Especifica argumentos de linha de comando. Acessados por meio de **Gerenciador de soluções** item de menu de contexto **depuração e iniciar configurações**.|
+|tasks.vs.json|Especifica opções de compilador e de comandos de compilação personalizada. Acessados por meio de **Solution Explorer** item de menu de contexto **configurar tarefas**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configurar o IntelliSense com CppProperties.json
 IntelliSense e pesquisa parcialmente o comportamento depende da configuração de compilação ativo, o que define #include caminhos, opções de compilador e outros parâmetros. Por padrão, o Visual Studio fornece configurações Debug e Release. Para alguns projetos, talvez seja necessário criar uma configuração personalizada para IntelliSense e navegação de recursos compreender totalmente o seu código. Para definir uma nova configuração, crie um arquivo chamado CppProperties.json na pasta raiz. Veja um exemplo:
@@ -72,19 +72,130 @@ Uma configuração pode ter qualquer uma das seguintes propriedades:
 |`undefines`|a lista de macros ser indefinidos maps (a/u para MSVC)|
 |`intelliSenseMode`|o mecanismo IntelliSense a ser usado. Você pode especificar as variantes específicas de arquitetura para MSVC, gcc ou Clang:
 - MSVC-x86 (padrão)
-- MSVC x64
-- MSVC arm
-- Windows-clang-x86
-- Windows-clang-x64
-- Windows-clang-arm
+- msvc-x64
+- msvc-arm
+- windows-clang-x86
+- windows-clang-x64
+- windows-clang-arm
 - Linux-x64
 - Linux-x86
 - Linux-arm
 - gccarm
 
-Dá suporte a CppProperties.json expansão variável de ambiente para incluir caminhos e outros valores de propriedade. A sintaxe é `${env.FOODIR}` para expandir uma variável de ambiente `%FOODIR%`.
+#### <a name="environment-variables"></a>Variáveis de ambiente
+CppProperties.json dá suporte ao sistema expansão variáveis de ambiente para incluir caminhos e outros valores de propriedade. A sintaxe é `${env.FOODIR}` para expandir uma variável de ambiente `%FOODIR%`. Também há suporte para as seguintes variáveis definidas pelo sistema:
 
-Você também tem acesso às seguintes macros internas dentro desse arquivo:
+|Nome da variável|Descrição|  
+|-----------|-----------------|
+|vsdev|Ambiente do Visual Studio padrão|
+|msvc_x86|Compilar para x86 usando x86 ferramentas|
+|msvc_arm|Compilar para ARM usando x86 ferramentas|
+|msvc_arm64|Compilar para ARM64 usando x86 ferramentas|
+|msvc_x86_x64|Compilar para AMD64 usando x86 ferramentas|
+|msvc_x64_x64|Compilar para AMD64 usando ferramentas de 64 bits|
+|msvc_arm_x64|Compilar para ARM usando ferramentas de 64 bits|
+|msvc_arm64_x64|Compilar para ARM64 usando as ferramentas de 64 bits|
+
+Quando a carga de trabalho do Linux é instalada, os ambientes a seguir estão disponíveis para remotamente voltada para Linux e WSL:
+
+|Nome da variável|Descrição|  
+|-----------|-----------------|
+|linux_x86|Linux de destino x86 remotamente|
+|linux_x64|Linux de destino x64 remotamente|
+|linux_arm|Destino ARM Linux remotamente|
+
+Você pode definir variáveis de ambiente personalizadas no CppProperties.json global ou por configuração. O exemplo a seguir mostra como padrão e variáveis de ambiente personalizadas podem ser declaradas e usadas. Global **ambientes** propriedade declara uma variável denominada **incluir** que pode ser usado por qualquer configuração:
+
+```json
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 32-bit environment and toolchain.
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 64-bit environment and toolchain.
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+Você também pode definir um **ambientes** propriedade dentro de uma configuração, para que ele só se aplica a essa configuração e substitui todas as variáveis globais de mesmo nome. No exemplo a seguir, x64 configuração define um local **incluir** variável que substitui o valor global:
+
+```json
+{
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined in the global environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "environments": [
+        {
+          // Append 64-bit specific include path to env.INCLUDE.
+          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
+        }
+      ],
+ 
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined in the local environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+
+Todos os personalizados e variáveis de ambiente padrão também estão disponíveis em tasks.vs.json e launch.vs.json.
+
+#### <a name="macros"></a>Macros
+Você tem acesso às seguintes macros internas dentro CppProperties.json:
 |||
 |-|-|
 |`${workspaceRoot}`| o caminho completo para a pasta de trabalho|
@@ -138,7 +249,7 @@ Você pode automatizar a compilação de scripts ou outras operações externas 
 
 ![Abrir pasta configurar tarefas](media/open-folder-config-tasks.png)
 
-Isso cria (ou abrir) o `tasks.vs.json` arquivo na pasta do VS que o Visual Studio cria na pasta do projeto raiz. Você pode definir qualquer tarefa arbitrária neste arquivo e, em seguida, invoca o **Solution Explorer** menu de contexto. O exemplo a seguir mostra um arquivo de tasks.vs.json que define uma única tarefa. `taskName`Define o nome que aparece no menu de contexto. `appliesTo`define quais arquivos o comando pode ser executado em. O `command` propriedade se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). O `args` propriedade especifica a linha de comando a ser invocado. O `${file}` macro recupera o arquivo selecionado em **Gerenciador de soluções**. O exemplo a seguir exibirá o nome do arquivo. cpp selecionado no momento.
+Isso cria (ou abrir) o `tasks.vs.json` arquivo na pasta do VS que o Visual Studio cria na pasta do projeto raiz. Você pode definir qualquer tarefa arbitrária neste arquivo e, em seguida, invoca o **Solution Explorer** menu de contexto. O exemplo a seguir mostra um arquivo de tasks.vs.json que define uma única tarefa. `taskName`Define o nome que aparece no menu de contexto. `appliesTo`define quais arquivos o comando pode ser executado em. O `command` propriedade se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). Você também pode fazer referência a variáveis de ambiente que são declarados no CppProperties.json ou CMakeSettings.json. O `args` propriedade especifica a linha de comando a ser invocado. O `${file}` macro recupera o arquivo selecionado em **Gerenciador de soluções**. O exemplo a seguir exibirá o nome do arquivo. cpp selecionado no momento.
 
 ```json
 {
@@ -155,6 +266,8 @@ Isso cria (ou abrir) o `tasks.vs.json` arquivo na pasta do VS que o Visual Studi
 }
 ```
 Depois de salvar tasks.vs.json, qualquer arquivo. cpp na pasta de atalho, escolha **Echo filename** no menu de contexto e consulte o nome do arquivo é exibido na janela de saída.
+
+
 
 #### <a name="appliesto"></a>appliesTo
 Você pode criar tarefas para um arquivo ou pasta, especificando seu nome no `appliesTo` campo, por exemplo `"appliesTo" : "hello.cpp"`. As máscaras de arquivo a seguir podem ser usadas como valores:

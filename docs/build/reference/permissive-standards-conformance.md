@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ permissivo-(conformidade com os padrões)
 
@@ -30,7 +30,7 @@ Especifique o modo de conformidade de padrões para o compilador. Use esta opç�
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/ permissivo-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Comentários
 
@@ -42,7 +42,7 @@ O **/ permissivo-** opção é compatível com quase todos os arquivos de cabeç
 
 O **/ permissivo-** opção define a [/ZC: strictstrings](../../build/reference/zc-conformance.md) e [/ZC: rvaluecast](../../build/reference/zc-conformance.md) opções de comportamento em conformidade. Eles padrão não conformes comportamento. Você pode passar específico **/Zc** opções após **/ permissivo-** na linha de comando para substituir esse comportamento.
 
-Em versões do início de compilador no Visual Studio 2017 versão 15,3, o **/ permissivo-** opção define a **/Zc:ternary** opção. O compilador também implementa mais os requisitos para a pesquisa de nome em duas fases. Quando o **/ permissivo-** opção for definida, o compilador analisa definições de modelo de função e de classe, identificando dependentes e independentes nomes usados nos modelos. Nesta versão, a análise de dependência de nome só é executada.
+Em versões do início de compilador no Visual Studio 2017 versão 15,3, o **/ permissivo-** opção define a [/Zc:ternary](../../build/reference/zc-ternary.md) opção. O compilador também implementa mais os requisitos para a pesquisa de nome em duas fases. Quando o **/ permissivo-** opção for definida, o compilador analisa definições de modelo de função e de classe, identificando dependentes e independentes nomes usados nos modelos. Nesta versão, a análise de dependência de nome só é executada.
 
 Extensões específicas do ambiente e áreas de idioma que o padrão permite até a implementação não são afetadas por **/ permissivo-**. Por exemplo, o Microsoft específicos `__declspec`, convenção de chamada e palavras-chave e diretivas pragma específico do compilador ou atributos de tratamento de exceções estruturado não são sinalizados pelo compilador **/ permissivo-** modo.
 
