@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf25d8f3653d2146774efd333daff74a5fb33e2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -40,7 +40,7 @@ Há várias categorias de aplicativos do Windows que você pode desenvolver com 
 
 ##  <a name="BK_WindowsUniversal"></a>Aplicativos universais do Windows
 
-Com o Windows 10, aplicativos são capazes de executar em todos os dispositivos Windows 10, como tablets e celulares, bem como na área de trabalho. Na área de trabalho, eles sejam capazes de executar como uma janela de área de trabalho, em vez de sempre em execução em tela inteira. Esses aplicativos também podem executar o Xbox e em dispositivos futuras.  O modelo de programação para os dois tipos de aplicativos é diferente de aplicativos de desktop do Win32. Esses aplicativos do Windows é executado em uma interface e o tempo de execução do Windows, que fornece os elementos de interface do usuário, serviços essenciais para esses aplicativos e fornece, para os dispositivos de hardware diferentes que têm suporte. Esses aplicativos compilados para código nativo e têm uma interface de usuário XAML ou usam DirectX. Você também pode escrever componentes de tempo de execução do Windows em código nativo que outros aplicativos do Windows podem consumir — isso inclui aplicativos que são escritos em c#, Visual Basic ou JavaScript. Para obter mais informações, consulte [criar um aplicativo de plataforma Universal do Windows em C++](http://go.microsoft.com/fwlink/p/?linkid=534976), [criar seu primeiro jogo UWP usando DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), e [componentes de criação de tempo de execução do Windows em C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Com o Windows 10, aplicativos são capazes de executar em todos os dispositivos Windows 10, como tablets e celulares, bem como na área de trabalho. Na área de trabalho, eles sejam capazes de executar como uma janela de área de trabalho, em vez de sempre em execução em tela inteira. Esses aplicativos também podem executar o Xbox e em dispositivos futuras.  O modelo de programação para os dois tipos de aplicativos é diferente de aplicativos de desktop do Win32. Esses aplicativos do Windows é executado em uma interface e o tempo de execução do Windows, que fornece os elementos de interface do usuário, serviços essenciais para esses aplicativos e fornece, para os dispositivos de hardware diferentes que têm suporte. Esses aplicativos compilados para código nativo e têm uma interface de usuário XAML ou usam DirectX. Você também pode escrever componentes de tempo de execução do Windows em código nativo que outros aplicativos do Windows podem consumir — isso inclui aplicativos que são escritos em c#, Visual Basic ou JavaScript. Para obter mais informações, consulte [criar um aplicativo "Hello world" de UWP em C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [criar um jogo UWP simple com DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), e [componentes de criação de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
 > Para Windows 10, você pode usar o conversor de aplicativo de área de trabalho para empacotar o aplicativo de área de trabalho existente para implantação por meio da Windows Store. Para obter mais informações, consulte [Usando o tempo de execução do Visual C++ em projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e [Traga seu aplicativo da área de trabalho para a UWP (Plataforma Universal do Windows) com a Ponte de Desktop](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).

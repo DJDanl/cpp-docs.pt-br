@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>Usando C++ AMP em aplicativos da Windows Store
 Você pode usar C++ AMP (C++ Accelerated Massive Parallelism) em sua [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo para executar cálculos na GPU (unidade de processamento gráfico) ou outros Aceleradores computacionais. No entanto, C++ AMP não fornece APIs para trabalhar diretamente com os tipos de tempo de execução do Windows e o tempo de execução do Windows não fornece um wrapper para C++ AMP. Quando você usa os tipos de tempo de execução do Windows em seu código, incluindo aqueles que você criou por conta própria — você deve convertê-los em tipos compatíveis com C++ AMP.  
@@ -120,8 +120,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar seu primeiro aplicativo da Windows Store usando C++](http://go.microsoft.com/fwlink/p/?linkid=249073)   
- [Criando componentes de tempo de execução do Windows em C++](http://go.microsoft.com/fwlink/p/?linkid=249076)
-
-
+ [Criar seu primeiro aplicativo da Windows Store usando C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 
