@@ -1,9 +1,6 @@
 ---
 title: Como relatar um problema com o conjunto de ferramentas do Visual C++ | Microsoft Docs
-ms.custom: 
-ms.date: 1/03/2018
-ms.reviewer: 
-ms.suite: 
+ms.date: 1/11/2018
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,31 +9,31 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Como relatar um problema com o Conjunto de Ferramentas do Visual C++
 
-Se você encontrar problemas com o compilador, o vinculador ou outras ferramentas do Visual C++, queremos saber sobre eles.
+Se você encontrar problemas com o compilador, com o vinculador ou com outras ferramentas ou bibliotecas do Visual C++, queremos saber sobre eles.
 
-A melhor maneira de nos informar sobre um problema é nos enviar um relatório que inclui uma descrição do problema encontrado, detalhes sobre como você está compilando seu programa e um pouco de código que possamos usar para reproduzir o problema em nossos computadores. Essas informações nos permitem verificar se o problema existe e não são locais para seu ambiente rapidamente, determinar se ele afeta outras versões do compilador e diagnosticar a causa.
+A melhor maneira de nos informar sobre um problema é enviar um relatório incluindo uma descrição do problema encontrado, detalhes sobre como você está compilando seu programa e uma *reprodução*, um caso de teste completo que possamos usar para reproduzir o problema em nossos computadores. Essas informações nos permitem verificar rapidamente se o problema está em seu código e não em seu ambiente local, determinar se ele afeta outras versões do compilador e diagnosticar a causa.
 
 Neste documento, você poderá ler sobre
 
-- [Como preparar seu relatório](#prepare) e o que o torna um bom relatório.
+- [Como preparar seu relatório](#how-to-prepare-your-report) e o que o torna um bom relatório.
 
-- [Como gerar uma reprodução](#generate) e diferentes tipos de reproduções.
+- [Como gerar uma reprodução](#how-to-generate-a-repro) e diferentes tipos de reproduções.
 
-- [Maneiras de enviar o relatório](#send) e o que as torna diferentes.
+- [Maneiras de enviar o relatório](#ways-to-send-your-report) e o que as torna diferentes.
 
 Os relatórios são importantes para nós e para outros desenvolvedores como você. Obrigado por nos ajudar a melhorar o Visual C++!
 
-## <a name="prepare"></a> Como preparar seu relatório
+## <a name="how-to-prepare-your-report"></a>Como preparar seu relatório
 
-Criar um relatório de alta qualidade é importante porque é muito difícil reproduzir o problema encontrado em nossos computadores sem informações completas. Quanto melhor for seu relatório, mais efetivamente poderemos recriar e diagnosticar o problema.
+Criar um relatório de alta qualidade é importante porque é muito difícil reproduzir o problema encontrado em nossos computadores sem ter informações completas. Quanto melhor for seu relatório, mais efetivamente poderemos recriar e diagnosticar o problema.
 
 No mínimo, o relatório deve conter
 
@@ -46,58 +43,45 @@ No mínimo, o relatório deve conter
 
 - Uma descrição detalhada do problema encontrado.
 
-- Uma "reprodução": código-fonte que demonstra o problema.
+- Uma reprodução: um exemplo de código-fonte completo, simplificado e independente que demonstra o problema.
 
-Continue lendo para saber mais sobre as informações específicas necessárias e onde você pode encontrá-las.
+Continue lendo para saber mais sobre as informações específicas necessárias, onde você pode encontrá-las e sobre como criar uma boa reprodução.
 
 ### <a name="the-toolset-version"></a>A versão do conjunto de ferramentas
 
-Precisamos de informações de versão completas do conjunto de ferramentas que você está usando para que possamos testar sua reprodução com o mesmo conjunto de ferramentas em nossos computadores. Se pudermos reproduzir o problema, essas informações também nos fornecerão um ponto de partida para investigar quais outras versões do conjunto de ferramentas exibem o mesmo problema.
+Precisamos de informações de versão completas da arquitetura de destino e do conjunto de ferramentas que está causando o problema para que possamos testar sua reprodução com o mesmo conjunto de ferramentas em nossos computadores. Se pudermos reproduzir o problema, essas informações também nos fornecerão um ponto de partida para investigar quais outras versões do conjunto de ferramentas exibem o mesmo problema.
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Para relatar a versão completa do compilador que você está usando
 
-1. Pressione a tecla Windows no teclado e comece a digitar `Developer Command Prompt`.
+1. Abra o **Prompt de Comando do Desenvolvedor** correspondente à arquitetura de versão e à configuração do Visual Studio usada para compilar o projeto. Por exemplo, se você compila usando o Visual Studio de 2017 em x64 para destinos x64, escolha **Prompt de Comando de Ferramentas Nativas do x64 para VS 2017**. Para obter mais informações, consulte [Atalhos de prompt de comando do desenvolvedor](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. Escolha a versão **Prompt de Comando do Desenvolvedor** que corresponde à versão do Visual Studio que você está usando quando ela aparecer na lista de correspondências.
-
-1. No console **Prompt de Comando do Desenvolvedor**, digite o comando `cl /Bv /CLR`.
+1. Na janela do console de prompt de comando do desenvolvedor, insira o comando **cl**.
 
 A saída deverá ser parecida com esta:
 
 ```Output
-C:\Compiler>cl /Bv /CLR
-Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40209
-for Microsoft (R) .NET Framework version 4.00.30319.34014
+C:\Users\username\Source>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-Compiler Passes:
- C:\WinCComp\binaries.x86chk\bin\i386\cl.exe:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1xx.dll:      Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c2.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\link.exe:      Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\mspdb120.dll:  Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\1033\clui.dll: Version 18.00.40209.0
- Common Language Runtime:                            Version  4.00.30319.34014
-
-cl : Command line error D8003 : missing source filename
+usage: cl [ option... ] filename... [ /link linkoption... ]
 ```
 
 Copie e cole toda a saída em seu relatório.
 
 ### <a name="the-command-line"></a>A linha de comando
 
-Precisamos da linha de comando completa (cl.exe e seus argumentos) usada para compilar o código para que possamos compilá-lo exatamente da mesma forma que nossos computadores. Isso é importante porque o problema que você encontrou pode existir apenas ao compilar com um determinado argumento ou combinação de argumentos.
+Precisamos da linha de comando exata (cl.exe e todos os seus argumentos) usada para compilar o código, para que possamos compilá-lo exatamente da mesma forma em nossos computadores. Isso é importante porque o problema que você encontrou pode existir apenas ao compilar com um determinado argumento ou combinação de argumentos.
 
 O melhor lugar para localizar essas informações é o log de build imediatamente após o problema. Isso garante que a linha de comando contenha exatamente os mesmos argumentos que podem estar contribuindo para o problema.
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Para relatar o conteúdo da linha de comando
 
-1. Localize o arquivo **CL.command.1.tlog** e abra-o. Por padrão, esse arquivo está localizado em \\...\Visual Studio *version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog.
+1. Localize o arquivo **CL.command.1.tlog** e abra-o. Por padrão, esse arquivo fica localizado na pasta Documentos no \\Visual Studio *versão*\\Projetos\\*NomeDaSolução*\\*NomeDoProjeto*\\*Configuração*\\*NomeDoProjeto*.tlog\\CL.command.1.tlog, ou em sua pasta Usuário, em \\Fonte\\Repos\\*NomeDaSolução*\\*NomeDoProjeto*\\*Configuração*\\*NomeDoProjeto*.tlog\\CL.command.1.tlog. Ele pode estar em um local diferente se você usa outro sistema de compilação ou se alterou o local padrão para seu projeto.
 
    Dentro desse arquivo, você encontrará os nomes dos arquivos de código-fonte seguidos pelos argumentos de linha de comando usados para compilá-los, cada um em linhas separadas.
 
-1. Localize a linha que contém o nome do arquivo de código-fonte em que o problema ocorre. A linha abaixo dela contém o comando cl.exe correspondente e seus argumentos.
+1. Localize a linha que contém o nome do arquivo de código-fonte em que o problema ocorre. A linha abaixo dela contém os argumentos de comando cl.exe correspondentes.
 
 Copie e cole toda a linha de comando em seu relatório.
 
@@ -105,18 +89,37 @@ Copie e cole toda a linha de comando em seu relatório.
 
 Precisamos de uma descrição detalhada do problema que você encontrou para que possamos verificar se vemos o mesmo efeito em nossos computadores. Isso algumas vezes também é útil para sabermos o que você estava tentando realizar e o que esperava que aconteceria.
 
-Forneça as mensagens de erro precisas fornecidas pelo conjunto de ferramentas, uma breve descrição do que você estava tentando realizar para nos ajudar a compreender o código de reprodução e quaisquer outros detalhes que possam nos ajudar a diagnosticar o problema encontrado, como quaisquer soluções alternativas que você possa ter encontrado. Evite repetir informações encontradas em outro lugar no relatório.
+Forneça as mensagens de erro exatas emitidas pelo conjunto de ferramentas ou o comportamento de tempo de execução exato que você vir. Precisamos dessas informações para confirmar se reproduzimos o problema corretamente. Inclua toda a saída do compilador, não apenas a última mensagem de erro. Precisamos ver tudo o que levou ao problema relatado. Se você puder duplicar o problema usando o compilador de linha de comando, essa saída do compilador será preferida. O IDE e outros sistemas de compilação podem filtrar as mensagens de erro que você vê ou podem capturar somente a primeira linha de uma mensagem de erro.
+
+Se o problema é que o compilador aceita código inválido e não gera um diagnóstico, registre isso em seu relatório.
+
+Para relatar um problema de comportamento de tempo de execução, inclua uma cópia exata do que o programa imprime e o que você espera ver. Idealmente, isso está inserido na saída da instrução em si, por exemplo, `printf("This should be 5: %d\n", actual_result);`. Se o programa falhar ou travar, mencione isso também.
+
+Adicione outros detalhes que puderem nos ajudar a diagnosticar o problema, como soluções alternativas que você possa ter encontrado. Evite repetir informações encontradas em outro lugar no relatório.
 
 ### <a name="the-repro"></a>A reprodução
 
-Precisamos de uma *reprodução*, um exemplo de código-fonte autocontido que demonstra o problema encontrado, para que possamos reproduzir o erro em nossos computadores. O tipo de problema encontrado determinará o tipo de reprodução que você deverá incluir em seu relatório. Sem uma reprodução apropriada, não temos nada para investigar.
+Uma reprodução é um exemplo de código-fonte completo e independente que demonstra o problema reproduzindo-o (daí o nome). Precisamos de uma reprodução para que possamos reproduzir o erro em nossos computadores. O código deve ser suficiente para, sozinho, criar um executável simples que seja compilado e executado, ou que seria compilado e executado se não fosse o problema encontrado. Uma reprodução não é um trecho de código. Ela deve ter classes e funções completas e conter todas as diretivas #include necessárias, mesmo para os cabeçalhos padrão.
 
-Reproduções curtas e independentes podem ser incluídas no texto do relatório diretamente, mas reproduções de código-fonte maiores devem ser anexadas ao relatório. As reproduções que não podem ser reduzidas a um único arquivo de código-fonte devem ser empacotadas compactando um diretório que contém todos os arquivos em um arquivo .zip ou semelhante e anexadas ao relatório. Todos os detalhes adicionais específicos do cenário sempre devem ser incluídos no texto do relatório, nunca no código-fonte.
+#### <a name="what-makes-a-good-repro"></a>O que compõe uma boa reprodução
 
-O melhor tipo de reprodução que você pode nos fornecer é uma *reprodução mínima*. Este é um arquivo de código-fonte única e independente (sem referências aos cabeçalhos de usuário) que contém apenas código suficiente para demonstrar o problema. Se você puder fornecer uma reprodução nesse formato, basta anexar o arquivo de código-fonte ao relatório, isso é tudo o que precisamos.
+Uma boa reprodução é:
 
-Se não puder condensar o problema em uma reprodução mínima sem dependências, consulte as seções a seguir para determinar o tipo de reprodução que você deve incluir no relatório.
+- **Mínima.** As reproduções devem ter o menor tamanho possível enquanto ainda demonstram exatamente o problema encontrado. Elas não precisam ser complexas ou realistas, só precisam mostrar um código compatível com a implementação Padrão ou documentada do compilador ou, em caso de ausência de um diagnóstico, o código não compatível. As reproduções simples e objetivas, contendo apenas o código necessário para demonstrar o problema, são as melhores. Se você puder eliminar ou simplificar o código de modo que ele permaneça compatível e deixe o problema inalterado, faça isso. Não é necessário incluir contra-exemplos de códigos que funcionam. 
 
+- **Independente.** As reproduções devem evitar dependências desnecessárias. Se você puder reproduzir o problema sem bibliotecas de terceiros, faça isso. Se puder reproduzir o problema sem nenhum código de biblioteca além de instruções de saída simples (por exemplo, `puts("this shouldn't compile");`, `std::cout << value;` e `printf("%d\n", value);` são adequados), faça isso. O ideal é que o exemplo possa ser condensado em um único arquivo de código-fonte, sem referência a nenhum cabeçalho de usuário. Reduzir a quantidade de código que precisamos considerar como um possível colaborador para o problema é extremamente útil para nós.
+
+- **Com a versão mais recente do compilador.** Sempre que possível, as reproduções devem usar a atualização mais recente da versão mais recente do conjunto de ferramentas ou a versão mais recente de pré-lançamento da próxima atualização ou da próxima versão principal. Em versões mais recentes, os problemas que podem ocorrer nas versões mais antigas do conjunto de ferramentas muito frequentemente foram corrigidos. As correções são implementadas em versões mais antigas apenas em circunstâncias excepcionais.
+
+- **Comparadas com outros compiladores**, se for relevante. As reproduções que envolvem código C++ portátil devem verificar o comportamento em relação a outros compiladores se possível. Em última instância, o Padrão determina a correção do programa e nenhum compilador é perfeito, mas quando o Clang e o GCC aceitam seu código sem um diagnóstico e o MSVC não, é provável que você tenha encontrado um bug em nosso compilador. (Outras possibilidades incluem diferenças de comportamento entre o Unix e o Windows, níveis diferentes de implementação dos padrões de C++ e assim por diante.) Por outro lado, se todos os compiladores rejeitam seu código, é provável que o código esteja incorreto. Ver mensagens de erro diferentes pode ajudá-lo a diagnosticar o problema por conta própria.
+
+   Você pode encontrar listas de compiladores online nos quais pode testar seu código em [Compiladores C++ Online](https://isocpp.org/blog/2013/01/online-c-compilers) no site do ISO C++ ou nesta [Lista de Compiladores C++ Online](https://arnemertz.github.io/online-compilers/) no GitHub. Alguns exemplos específicos incluem [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/). 
+
+   > [!NOTE]
+   > Os sites de compiladores online não são afiliados à Microsoft. Muitos sites de compilador online são executados como projetos pessoais e alguns deles podem não estar disponíveis quando você ler isto. No entanto, uma pesquisa deve localizar outros que possam ser usados.
+
+Problemas no compilador, no vinculador e em bibliotecas tendem a ter aspectos particulares. O tipo de problema encontrado determinará o tipo de reprodução que você deverá incluir em seu relatório. Sem uma reprodução apropriada, não temos nada para investigar. Estes são alguns dos tipos de problemas que você pode ver, bem como instruções para gerar os tipos de reproduções que devem ser usadas para relatar cada tipo.
+ 
 #### <a name="frontend-parser-crash"></a>Falha de front-end (analisador)
 
 As falhas de front-end ocorrem durante a fase de análise do compilador. Normalmente, o compilador emitirá o [Erro Fatal C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e referenciará o arquivo de código-fonte e número de linha em que o erro ocorreu, geralmente ele mencionará um arquivo msc1.cpp, mas você pode ignorar esse detalhe.
@@ -144,13 +147,13 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information
 ```
 
-#### <a name="backend_crash"></a> Falha de back-end (geração de código)
+#### <a name="backend-code-generation-crash"></a>Falha de back-end (geração de código)
 
-As falhas de back-end ocorrem durante a fase de geração do código do compilador. Normalmente, o compilador emitirá o [Erro Fatal C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e poderá não referenciar o arquivo de código-fonte e número de linha associados ao problema, geralmente ele mencionará um arquivo compiler\utc\src\p2\main.c, mas você pode ignorar esse detalhe.
+As falhas de back-end ocorrem durante a fase de geração do código do compilador. Normalmente, o compilador emitirá o [Erro Fatal C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e poderá não referenciar o arquivo de código-fonte e número de linha associados ao problema. Geralmente, ele mencionará um arquivo compiler\\utc\\src\\p2\\main.c, mas você pode ignorar esse detalhe.
 
-Para esse tipo de falha, forneça uma [Reprodução de vinculação](#link-repros) se você estiver usando a LTCG (Geração de Código Durante o Tempo de Vinculação) ou uma [Reprodução pré-processada](#preprocessed-repros) se não estiver. A LTGC é habilitada pelo argumento de linha de comando `/GL` para cl.exe.
+Para esse tipo de falha, forneça uma [Reprodução de vinculação](#link-repros) se você estiver usando a LTCG (Geração de Código Durante o Tempo de Vinculação), habilitada pelo argumento de linha de comando **/GL** para cl.exe. Caso contrário, forneça uma [Reprodução pré-processada](#preprocessed-repros).
 
-Aqui está a saída do compilador de exemplo para esse tipo de falha em que a LTCG **não** é usada. Se a saída do compilador tiver esta aparência, você deverá fornecer uma [Reprodução pré-processada](#preprocessed-repros).
+Este é um exemplo de saída do compilador para uma falha de back-end em que a LTCG não é usada. Se a saída do compilador tiver esta aparência, você deverá fornecer uma [Reprodução pré-processada](#preprocessed-repros).
 
 ```Output
 repro.cpp
@@ -167,14 +170,14 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-Se a linha que começa com **INTERNAL COMPILER ERROR** menciona link.exe, em vez de cl.exe, a LTCG estava habilitada e você deverá fornecer uma [Reprodução de vinculação](#link-repros). Se não estiver claro se a LTCG estava habilitada da mensagem de erro do compilador, talvez seja necessário examinar os argumentos da linha de comando copiada do log de build em uma etapa anterior para o argumento de linha de comando `/GL`.
+Se a linha que começa com **INTERNAL COMPILER ERROR** menciona link.exe, em vez de cl.exe, a LTCG estava habilitada e você deverá fornecer uma [Reprodução de vinculação](#link-repros). Se não está claro se a LTCG estava habilitada com base na mensagem de erro do compilador, talvez seja necessário examinar os argumentos da linha de comando copiada do log de build em uma etapa anterior para o argumento de linha de comando **/GL**.
 
 #### <a name="linker-crash"></a>Falha de vinculador
 
 As falhas de vinculador ocorrerem durante a fase de vinculação, depois que o compilador foi executado. Normalmente, o vinculador emitirá o [Erro das Ferramentas de Vinculador LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md).
 
 > [!NOTE]
-> Se a saída menciona C1001 ou envolve a Geração de Código Durante o Tempo de Vinculação, consulte [Falha de back-end (geração de código)](#backend_crash) em vez disso para obter mais informações.
+> Se a saída menciona C1001 ou envolve a Geração de Código Durante o Tempo de Vinculação, consulte [Falha de back-end (geração de código)](#backend-code-generation-crash) em vez disso para obter mais informações.
 
 Para esse tipo de falha, forneça uma [Reprodução de vinculação](#link-repros).
 
@@ -212,88 +215,80 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Se a vinculação incremental estiver habilitada e a falha tiver ocorrido apenas após a vinculação inicial (isto é, apenas após a primeira vinculação completa na qual a vinculação incremental subsequente se baseia), forneça também uma cópia dos arquivos de objeto (.obj) e de biblioteca (.lib) que correspondem aos arquivos de origem modificados após a vinculação inicial ter sido concluída.
+Se a vinculação incremental está habilitada e a falha ocorreu apenas após uma vinculação inicial bem-sucedida (isto é, apenas após a primeira vinculação completa na qual a vinculação incremental posterior se baseia), forneça também uma cópia dos arquivos de objeto (.obj) e de biblioteca (.lib) que correspondem aos arquivos de origem modificados após a vinculação inicial ter sido concluída.
 
 #### <a name="bad-code-generation"></a>Geração de código incorreto
 
-A geração de código incorreto é rara, mas ocorre quando o compilador erroneamente gera um código incorreto que fará com que o aplicativo falhe em tempo de execução em vez de detectar esse problema no tempo de compilação. Se você acreditar que o problema que está enfrentando resulta na geração de código incorreto, trate o relatório da mesma forma que uma [Falha de back-end (geração de código)](#backend_crash).
+A geração de código incorreto é rara, mas ocorre quando o compilador erroneamente gera um código incorreto que fará com que o aplicativo falhe em tempo de execução em vez de detectar esse problema no tempo de compilação. Se você acreditar que o problema que está enfrentando resulta na geração de código incorreto, trate o relatório da mesma forma que uma [Falha de back-end (geração de código)](#backend-code-generation-crash).
 
-Para esse tipo de falha, forneça uma [Reprodução de vinculação](#link-repros) se você estiver usando a LTCG (Geração de Código Durante o Tempo de Vinculação) ou uma [Reprodução pré-processada](#preprocessed-repros) se não estiver. A LTGC é habilitada pelo argumento de linha de comando `/GL` para cl.exe.
+Para esse tipo de falha, forneça uma [Reprodução de vinculação](#link-repros) se você estiver usando a LTCG (Geração de Código Durante o Tempo de Vinculação), habilitada pelo argumento de linha de comando **/GL** para cl.exe. Caso contrário, forneça uma [Reprodução pré-processada](#preprocessed-repros).
 
-## <a name="generate"></a> Gerar uma reprodução
+## <a name="how-to-generate-a-repro"></a>Como gerar uma reprodução
 
-Uma reprodução é um exemplo de código completo e independente, que demonstra o problema que você está relatando. Uma reprodução **não** é um trecho de código; ela deve ser um exemplo completo compilado e executado (ou que deveria ser compilado e executa não fossem os erros gerados pelo problema que você está relatando). Ele deve conter todas as diretivas #include, mesmo para os cabeçalhos padrão.
-
-Além disso, é uma boa reprodução é
-
-- **Mínima.** As reproduções devem ser o menor possível enquanto ainda demonstram exatamente o problema encontrado. As reproduções não precisam ser complexas nem realistas: reproduções simples e diretas são melhores. Eles não precisam incluir contraexemplos de código que funciona, mas podem incluir se for ilustrativo, apenas o código de exemplo que causa o problema é necessário.
-
-- **Independente.** As reproduções devem evitar dependências desnecessárias. Se você puder reproduzir o problema sem bibliotecas de terceiros, faça isso. Se você puder reproduzir o problema sem nenhum código de biblioteca (`std::out` e `printf()` são ok), faça isso. Reduzir a quantidade de código que precisamos considerar como um possível colaborador para o problema é extremamente útil para nós.
-
-- **Com a versão mais recente do compilador.** As reproduções devem usar a versão mais recente do conjunto de ferramentas sempre que possível. Os problemas que ainda podem ocorrer em versões mais antigas do conjunto de ferramentas muito frequentemente foram corrigidos em versões mais recentes.
-
-- **Comparado a outros compiladores**, se for relevante. As reproduções que envolvem código C++ portátil devem verificar o comportamento em relação a outros compiladores se possível.
-
-   Essa etapa ajuda a determinar se seu código está correto, como quando o MSVC não concorda com Clang e GCC ou incorreto, como quando MSVC, Clang e GCC concordam que seu código produz o erro.
+Para nos ajudar a identificar a origem do problema, é vital ter uma [boa reprodução](#what-makes-a-good-repro). Antes de executar qualquer uma das etapas descritas abaixo para tipos específicos de reproduções, tente condensar o código que demonstra o problema tanto quanto possível. Se possível, tente eliminar ou minimizar dependências, cabeçalhos necessários e bibliotecas, bem como limitar as opções de compilador e as definições de pré-processador usadas.
 
 A seguir estão as instruções para gerar os vários tipos de reproduções que você usará para relatar diferentes tipos de problemas.
 
 ### <a name="preprocessed-repros"></a>Reproduções pré-processadas
 
-Uma reprodução pré-processada é um único arquivo de origem que demonstra um problema e foi gerado da saída do pré-processador C processando o arquivo de origem original. As linhas internas de processo incluíam cabeçalhos para remover dependências de origem adicionais e arquivos de cabeçalho e também resolvem as macros, #ifdefs e outros comandos de pré-processador que poderiam dependem do seu ambiente local.
+Uma *reprodução pré-processada* é um único arquivo de origem que demonstra um problema, gerado da saída do pré-processador C usando a opção de compilador **/P** no arquivo de origem de reprodução original. Essas linhas internas incluíam cabeçalhos para remover dependências de arquivos de cabeçalho e origem adicionais, além de resolver macros, #ifdefs e outros comandos de pré-processador que poderiam depender de seu ambiente local.
 
 > [!NOTE]
-> Observe que reproduções pré-processadas são menos convenientes para problemas que podem ser o resultado de bugs em nossa implementação de biblioteca padrão porque geralmente queremos substituir nossa implementação mais recente, em andamento para ver se já corrigimos o problema. Nesse caso, não pré-processe a reprodução e se você não puder reduzir o problema para um único arquivo de origem, compacte seu código em um arquivo .zip ou semelhante ou considere usar uma reprodução de projeto do IDE (consulte [Outras reproduções](#other-repros) abaixo).
+> As reproduções pré-processadas não são tão úteis para problemas que podem ser resultantes de bugs em nossa implementação de biblioteca padrão porque geralmente queremos substituir nossa implementação mais recente, em andamento, para ver se já corrigimos o problema. Nesse caso, não pré-processe a reprodução e, se você não puder reduzir o problema para um único arquivo de origem, compacte seu código em um arquivo .zip ou semelhante ou considere usar uma reprodução de projeto do IDE. Para obter mais informações, consulte [Outras reproduções](#other-repros).
 
 #### <a name="to-preprocess-a-source-code-file"></a>Para pré-processar um arquivo de código-fonte
 
-1. Pressione a tecla Windows no teclado e comece a digitar `Developer Command Prompt`.
+1. Capture os argumentos de linha de comando usados para criar sua reprodução, conforme descrito em [Para relatar o conteúdo da linha de comando](#to-report-the-contents-of-the-command-line).
 
-1. Escolha a versão **Prompt de Comando do Desenvolvedor** que corresponde à versão do Visual Studio que você está usando quando ela aparecer na lista de correspondências.
+1. Abra o **Prompt de Comando do Desenvolvedor** correspondente à arquitetura de versão e à configuração do Visual Studio usada para compilar o projeto.
 
-1. Na janela do console **Prompt de Comando do Desenvolvedor**, insira o comando `cl /P argumentsfilename.cpp`.
+1. Mude para o diretório que contém seu projeto de reprodução.
 
-Depois de ter o arquivo pré-processado (agora filename.i), é recomendável se certificar de que o problema ainda é reproduzido usando o arquivo pré-processado. Você pode usar o argumento de linha de comando `/TP` para dizer ao cl.exe para ignorar a etapa do pré-processador e tentar compilar como de costume.
+1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **cl/P** *argumentos* *nomedoarquivo.cpp*, em que *argumentos* é a lista de argumentos capturados acima e *nomedoarquivo.cpp* é o nome do arquivo de origem da reprodução. Esse comando replica a linha de comando usada para a reprodução, mas interrompe a compilação após a fase de pré-processamento e gera o código-fonte pré-processado para *nomedoarquivo*.i.
+
+Após ter gerado o arquivo pré-processado, é recomendável certificar-se de que o problema ainda é reproduzido usando o arquivo pré-processado.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Para confirmar que o erro ainda é reproduzido com o arquivo pré-processado
 
-1. Pressione a tecla Windows no teclado e comece a digitar `Developer Command Prompt`.
-
-1. Escolha a versão **Prompt de Comando do Desenvolvedor** que corresponde à versão do Visual Studio que você está usando quando ela aparecer na lista de correspondências.
-
-1. Na janela do console **Prompt de Comando do Desenvolvedor**, insira o comando `cl arguments /TP filename.i`.
+1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **cl** *argumentos* **/TP** *nomedoarquivo*** .i** para instruir o cl.exe a compilar o arquivo pré-processado como um arquivo de origem do C++, em que *argumentos* é a lista de argumentos capturados acima, mas com qualquer argumento **/D** e **/I** removido (porque eles já foram incluídos no arquivo pré-processado), e em que *nomedoarquivo***.i** é o nome de seu arquivo pré-processado.
 
 1. Confirme que o problema é reproduzido.
 
-Por fim, anexe essa reprodução ao seu relatório.
+Por fim, anexe a reprodução pré-processada *nomedoarquivo*.i ao seu relatório.
 
 ### <a name="link-repros"></a>Reproduções de vinculação
 
-Uma reprodução de vinculação é um único diretório que contém artefatos de build que coletivamente demonstram um problema que ocorre no tempo de vinculação, como falha do back-end envolvendo a LTCG (Geração de Código Durante o Tempo de Vinculação) ou uma falha do vinculador, os artefatos de build incluídos são os necessários como entrada do vinculador para que o problema possa ser reproduzido. As reproduções de vinculação podem ser facilmente criadas usando os recursos fornecidos pelo vinculador.
+Uma *reprodução de vinculação* é o conteúdo gerado pelo vinculador de um diretório especificado pela variável de ambiente **link\_repro**. Ela contém artefatos de compilação que, coletivamente, demonstram um problema que ocorre em tempo de vinculação, como uma falha de back-end envolvendo LTCG (Geração de Código Durante o Tempo de Vinculação) ou uma falha do vinculador. Esses artefatos de compilação são aqueles necessários como entrada do vinculador para que o problema possa ser reproduzido. Uma reprodução de vinculação pode ser criada facilmente usando essa variável de ambiente para habilitar a capacidade de geração de reprodução interna do vinculador.
 
 #### <a name="to-generate-a-link-repro"></a>Para gerar uma reprodução de vinculação
 
-1. Abra um prompt de comando e digite o comando `mkdir directory` para criar um diretório para a reprodução de vinculação.
+1. Capture os argumentos de linha de comando usados para criar sua reprodução, conforme descrito em [Para relatar o conteúdo da linha de comando](#to-report-the-contents-of-the-command-line).
 
-1. Defina a variável de ambiente link_repro para o diretório que você acabou de criar. Digite o comando `set link_repro=directory`.
+1. Abra o **Prompt de Comando do Desenvolvedor** correspondente à arquitetura de versão e à configuração do Visual Studio usada para compilar o projeto.
 
-1. Se você quiser executar o build de dentro do Visual Studio, inicie-o do prompt de comando inserindo o comando `devenv`. Isso garante que o valor da variável de ambiente link_repro esteja visível para o Visual Studio.
+1. Na janela do console de prompt de comando do desenvolvedor, mude para o diretório que contém seu projeto de reprodução.
 
-1. Compile seu aplicativo e confirme se o problema esperado ocorreu.
+1. Digite **mkdir linkrepro** para criar um diretório para a reprodução de vinculação.
 
-1. Feche o Visual Studio agora se você o iniciou na etapa 3.
+1. Digite o comando **set link\_repro=linkrepro** para definir a variável de ambiente **link\_repro** para o diretório que você acabou de criar.
 
-1. Limpe a variável de ambiente link_repro. Digite o comando `set link_repro=`
+1. Para compilar o projeto de reprodução no Visual Studio, na janela do console de prompt de comando do desenvolvedor, digite o comando **devenv**. Isso garante que o valor da variável de ambiente **link\_repro** esteja visível para o Visual Studio. Para compilar o projeto na linha de comando, use os argumentos de linha de comando capturados acima para duplicar a compilação de reprodução.
 
-Por fim, compacte a reprodução compactando todo o diretório em um arquivo .zip ou semelhante e anexe-o ao seu relatório.
+1. Compile seu projeto de reprodução e confirme se o problema esperado ocorreu.
+
+1. Feche o Visual Studio se você o usou para executar a compilação.
+
+1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **set link\_repro=** para limpar a variável de ambiente **link\_repro**.
+
+Por fim, compacte a reprodução compactando todo o diretório linkrepro em um arquivo .zip ou semelhante e anexe-o ao seu relatório.
 
 ### <a name="other-repros"></a>Outras reproduções
 
-Se você não puder reduzir o problema para um único arquivo de origem ou reprodução pré-processada e o problema não exigir uma reprodução de vinculação, poderemos investigar e o projeto do IDE. O código dentro do projeto ainda deverá ser mínimo e todas as diretrizes deste documento ainda se aplicam.
+Se você não puder reduzir o problema a um único arquivo de origem ou reprodução pré-processada, e o problema não exigir uma reprodução de vinculação, poderemos investigar um projeto do IDE. Todas as orientações sobre como criar uma boa reprodução ainda se aplicam. O código deve ser mínimo e independente, o problema deve ocorrer em nossas ferramentas mais recentes e, se for relevante, o problema não deve ser visto em outros compiladores.
 
 Crie sua reprodução como um projeto do IDE mínimo e empacote-o compactando toda a estrutura do diretório em um arquivo .zip ou semelhante e anexe-o ao relatório.
 
-## <a name="send"></a> Maneiras de enviar o relatório
+## <a name="ways-to-send-your-report"></a>Maneiras de enviar o relatório
 
 Há várias maneiras de enviar seu relatório para nós. Você pode usar a ferramenta interna [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) do Visual Studio ou as páginas da [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/). Também é possível enviar um email com o relatório, mas os primeiros dois métodos são preferenciais. A escolha depende de como você deseja interagir com os engenheiros que investigarão o relatório e se você deseja acompanhar o progresso ou compartilhar o relatório com a comunidade.
 
@@ -339,4 +334,3 @@ Source code and repro steps:
 
 > [!TIP]
 > Para outros tipos de problemas que podem ocorrer no Visual Studio que não estão relacionados ao conjunto de ferramentas (por exemplo, problemas da interface do usuário, funcionalidade do IDE interrompida ou falhas gerais), a ferramenta Relatar um Problema pode ser uma opção especialmente boa devido aos seus recursos de captura de tela e sua capacidade de registrar ações da interface do usuário que levam ao problema encontrado. Você jamais deve informar esses outros tipos de erros enviando um email para compilercrash@microsoft.com.
-
