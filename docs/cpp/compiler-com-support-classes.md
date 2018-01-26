@@ -18,23 +18,23 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54377893135c2b933c25387bccbb750d2f3eb734
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="compiler-com-support-classes"></a>Classes de suporte COM do compilador
 **Seção específica da Microsoft**  
   
- As classes padrão são usadas para dar suporte a alguns dos tipos COM. As classes são definidas em comdef.h e nos arquivos de cabeçalho gerados a partir da biblioteca de tipos.  
+ As classes padrão são usadas para dar suporte a alguns dos tipos COM. As classes são definidas no \<comdef.h > e os arquivos de cabeçalho gerados a partir da biblioteca de tipos.  
   
 |Classe|Finalidade|  
 |-----------|-------------|  
-|[bstr_t](../cpp/bstr-t-class.md)|Encapsula o tipo `BSTR` para fornecer operadores e métodos úteis.|  
-|[com_error](../cpp/com-error-class.md)|Define o objeto de erro gerado pelo [com_raise_error](../cpp/com-raise-error.md) na maioria das falhas.|  
-|[com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula os ponteiros de interface COM e automatiza as chamadas necessárias para `AddRef`, **versão**, e `QueryInterface`.|  
-|[variant_t](../cpp/variant-t-class.md)|Encapsula o **VARIANT** tipo para fornecer métodos e operadores útil.|  
+|[_bstr_t](../cpp/bstr-t-class.md)|Encapsula o tipo `BSTR` para fornecer operadores e métodos úteis.|  
+|[_com_error](../cpp/com-error-class.md)|Define o objeto de erro gerado pelo [com_raise_error](../cpp/com-raise-error.md) na maioria das falhas.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula os ponteiros de interface COM e automatiza as chamadas necessárias para `AddRef`, **versão**, e `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Encapsula o **VARIANT** tipo para fornecer métodos e operadores útil.|  
   
 **Fim da seção específica da Microsoft**  
   

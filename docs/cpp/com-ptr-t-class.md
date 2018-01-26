@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comptrt-class"></a>Classe _com_ptr_t
 **Seção específica da Microsoft**  
@@ -41,7 +41,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Constrói um objeto `_com_ptr_t`.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Constrói um objeto `_com_ptr_t`.|  
   
 ### <a name="low-level-operations"></a>Operações de nível baixo  
   
@@ -61,13 +61,13 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |||  
 |-|-|  
 |[operador =](../cpp/com-ptr-t-operator-equal.md)|Atribui um novo valor a um objeto `_com_ptr_t` existente.|  
-|[operadores = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Compare o objeto de ponteiro inteligente para outro ponteiro inteligente, o ponteiro de interface bruto, ou **nulo**.|  
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Compare o objeto de ponteiro inteligente para outro ponteiro inteligente, o ponteiro de interface bruto, ou **nulo**.|  
 |[Extratores](../cpp/com-ptr-t-extractors.md)|Extrai o ponteiro de interface COM encapsulado.|  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** comip.h  
+ **Cabeçalho:** \<comip.h >  
   
  **Lib:** comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   

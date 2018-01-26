@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>Classe _com_error
 **Seção específica da Microsoft**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[com_error](../cpp/com-error-com-error.md)|Constrói um objeto `_com_error`.|  
+|[_com_error](../cpp/com-error-com-error.md)|Constrói um objeto `_com_error`.|  
   
 ### <a name="operators"></a>Operadores  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[Descrição](../cpp/com-error-description.md)|Chama a função `IErrorInfo::GetDescription`.|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|Chama a função `IErrorInfo::GetHelpContext`.|  
-|[Arquivo de ajuda](../cpp/com-error-helpfile.md)|Chama a função `IErrorInfo::GetHelpFile`.|  
+|[HelpFile](../cpp/com-error-helpfile.md)|Chama a função `IErrorInfo::GetHelpFile`.|  
 |[Source](../cpp/com-error-source.md)|Chama a função `IErrorInfo::GetSource`.|  
 |[GUID](../cpp/com-error-guid.md)|Chama a função `IErrorInfo::GetGUID`.|  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[Mensagem de erro](../cpp/com-error-errormessage.md)|Recupera a mensagem de cadeia de caracteres para o HRESULT armazenado no objeto `_com_error`.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Recupera a mensagem de cadeia de caracteres para o HRESULT armazenado no objeto `_com_error`.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>Mapeadores de ExepInfo.wCode para HRESULT  
   
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/21/2017
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** comdef.h  
+ **Cabeçalho:** \<comdef.h >  
   
  `Lib:`comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)   
- [Interface IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [IErrorInfo Interface](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

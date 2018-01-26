@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>Operador new (C++)
 Aloca memória para um objeto ou uma matriz de objetos do *nome do tipo* de livre armazenar e retorna um ponteiro tipado adequadamente, diferente de zero para o objeto.  
@@ -69,10 +69,10 @@ delete *p;
   
  A lista a seguir descreve os elementos de gramática de **novo**:  
   
- *posicionamento*  
+ *placement*  
  Fornece uma maneira de passar argumentos adicionais se você sobrecarregar **novo**.  
   
- *nome do tipo*  
+ *type-name*  
  Especifica o tipo a ser alocado; pode ser um tipo definido pelo usuário ou interno. Se a especificação de tipo for complicada, poderá ficar entre parênteses para forçar a ordem de associação.  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  Quando o compilador encontra o **novo** operador para alocar um objeto do tipo `type`, ele emite uma chamada para `type` **:: operador new (sizeof (** `type` **))**  ou, se não definida pelo usuário `operator new` for definida, **:: operador new (sizeof (** `type` **))**. Portanto, o **novo** operador pode alocar a quantidade correta de memória para o objeto.  
   
 > [!NOTE]
->  O argumento `operator new` é do tipo **size_t**. Este tipo é definido em DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H e TIME.H.  
+>  O argumento `operator new` é do tipo **size_t**. Esse tipo é definido em \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio. h >, \<stdlib.h >, \<string.h >, e \<time.h >.  
   
  Uma opção na gramática permite a especificação de *posicionamento* (consulte a gramática para [novo operador](../cpp/new-operator-cpp.md)). O *posicionamento* parâmetro pode ser usado somente para implementações definido pelo usuário de `operator new`; ela permite que informações adicionais a serem passados para `operator new`. Uma expressão com um *posicionamento* campo como `T *TObject = new ( 0x0040 ) T;` é convertido em `T *TObject = T::operator new( sizeof( T ), 0x0040 );` se a classe T possui membro operador novo, caso contrário, para `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   

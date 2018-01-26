@@ -11,7 +11,7 @@ dev_langs: C++
 helpviewer_keywords:
 - ranges, floating-point constants
 - floating-point constants, limits
-- FLOAT.H header file
+- float.h header file
 - limits, floating-point constants
 - floating-point numbers [C++]
 - floating limits
@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 449356b7bce3f17862919e90d7fc7e72b2d57df6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6406d3d2d81fa3025a024606da68d61b5dcefdb7
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="floating-limits"></a>Limites flutuantes
 **Seção específica da Microsoft**  
   
- A tabela a seguir lista os limites nos valores de constantes de ponto flutuante. Esses limites também são definidos no arquivo de cabeçalho padrão FLOAT.H.  
+ A tabela a seguir lista os limites nos valores de constantes de ponto flutuante. Esses limites também são definidos no arquivo de cabeçalho padrão \<float. h >.  
   
 ### <a name="limits-on-floating-point-constants"></a>Limites em constantes de ponto flutuante  
   

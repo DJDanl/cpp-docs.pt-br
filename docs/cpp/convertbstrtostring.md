@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 14a01b33a005d6715160df09fa3f19ca003b7332
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7f3463e34c17bcde4f64b89e1ae083228317293
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Seção específica da Microsoft**  
@@ -72,7 +72,7 @@ char * text: Test
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** comutil.h.  
+ **Cabeçalho:** \<comutil.h >.  
   
  **Lib:** comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   

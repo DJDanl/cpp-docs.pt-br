@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Como criar e usar instâncias CComPtr e CComQIPtr
 Em programação clássica do Windows, bibliotecas geralmente são implementadas como objetos COM (ou mais precisamente, como servidores COM). Muitos componentes do sistema operacional Windows são implementados como servidores COM e muitos colaboradores fornecem bibliotecas neste formulário. Para obter informações sobre os conceitos básicos de COM, consulte [modelo COM (Component Object)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
@@ -30,7 +30,7 @@ Em programação clássica do Windows, bibliotecas geralmente são implementadas
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr`e seus parentes fazem parte do ATL e são definidos em atlcomcli.h. `_com_ptr_t`é declarada no comip.h. O compilador cria especializações de `_com_ptr_t` quando ele gera classes de wrapper de bibliotecas de tipo.  
+ `CComPtr`e seus parentes fazem parte do ATL e são definidos em \<atlcomcli.h >. `_com_ptr_t`é declarada no \<comip.h >. O compilador cria especializações de `_com_ptr_t` quando ele gera classes de wrapper de bibliotecas de tipo.  
   
 ## <a name="example"></a>Exemplo  
  Também fornece ATL `CComQIPtr`, que tem uma sintaxe mais simples para consultar um objeto COM para recuperar uma interface adicional. No entanto, é recomendável `CComPtr` porque ele faz tudo que `CComQIPtr` pode fazer e é semanticamente mais consistente com ponteiros de interface COM bruto. Se você usar um `CComPtr` para consultar uma interface, o ponteiro de interface nova é colocado em um parâmetro de saída. Se a chamada falhar, será retornado um HRESULT que é o padrão comum de COM. Com `CComQIPtr`, o valor de retorno é o ponteiro em si, e se a chamada falhar, o valor de retorno HRESULT interno não pode ser acessado. Nas próximas duas linhas mostram como os mecanismos de tratamento de erros `CComPtr` e `CComQIPtr` são diferentes.  

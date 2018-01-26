@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b9e0d6a7f903d4af39698b2d98c005cbf64515eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee6a34a70465904e6725f42e68eb4a00c03a1661
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exit-function"></a>Função exit
-O **sair** função, declarada no arquivo de inclusão padrão STDLIB. H, encerra um programa C++.  
+O **sair** função, declarada no arquivo de inclusão padrão \<stdlib.h >, encerra um programa C++.  
   
  O valor fornecido como um argumento para **sair** é retornado para o sistema operacional como o código de saída ou de código de retorno do programa. Por convenção, um código de retorno de zero indica que o programa foi encerrado com êxito.  
   
 > [!NOTE]
->  Você pode usar as constantes `EXIT_FAILURE` e `EXIT_SUCCESS`, definidas em STDLIB.H, para indicar o êxito ou a falha do programa.  
+>  Você pode usar as constantes `EXIT_FAILURE` e `EXIT_SUCCESS`, definido em \<stdlib.h >, para indicar êxito ou falha do programa.  
   
  Emitir um `return` instrução from a **principal** função é equivalente a chamar o **sair** função com valor de retorno como seu argumento.  
   

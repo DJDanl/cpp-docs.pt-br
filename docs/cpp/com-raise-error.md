@@ -1,5 +1,5 @@
 ---
-title: com_raise_error | Microsoft Docs
+title: _com_raise_error | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71a4be4ebf6029d0573aee71d74bf9faa241319f
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Seção específica da Microsoft**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **IErrorInfo** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- `_com_raise_error`, que é definido em comdef.h, pode ser substituído por uma versão gravada pelo usuário dos mesmos nome e protótipo. Isso poderia ser feito se você quisesse usar `#import`, mas não quisesse usar ao tratamento de exceções do C++. No caso, uma versão do usuário **com_raise_error** pode optar por fazer uma `longjmp` ou exibir uma caixa de mensagem e parada. No entanto, a versão do usuário não deve retornar, pois o código de suporte do compilador COM não espera que ela retorne.  
+ `_com_raise_error`, que é definido em \<comdef.h >, pode ser substituído por uma versão gravados pelo usuário do mesmo nome e protótipo. Isso poderia ser feito se você quisesse usar `#import`, mas não quisesse usar ao tratamento de exceções do C++. No caso, uma versão do usuário **com_raise_error** pode optar por fazer uma `longjmp` ou exibir uma caixa de mensagem e parada. No entanto, a versão do usuário não deve retornar, pois o código de suporte do compilador COM não espera que ela retorne.  
   
  Você também pode usar [set_com_error_handler](../cpp/set-com-error-handler.md) para substituir a função de tratamento de erros padrão.  
   
@@ -60,7 +60,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** comdef.h  
+ **Cabeçalho:** \<comdef.h >  
   
  **Lib:** se o **wchar_t é do tipo nativo** opção de compilador está ativada, use comsuppw.lib ou comsuppwd.lib. Se **wchar_t é do tipo nativo** está desativado, use comsupp.lib. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   

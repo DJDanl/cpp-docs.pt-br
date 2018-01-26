@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>Instrução try-except
 
@@ -50,11 +50,11 @@ O **tente-exceto** instrução é uma extensão da Microsoft para C e linguagens
 
 ## <a name="syntax"></a>Sintaxe  
   
-> **Try**   
+> **__try**   
 > {  
 >    código protegido  
 > }  
-> **EXCEPT** ( *expressão* )  
+> **__except** ( *expression* )  
 > {  
 >    código de manipulador de exceção  
 > }  
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-Os tipos de ponteiro `PEXCEPTION_RECORD` e `PCONTEXT` são definidos no arquivo de inclusão WINNT. H, e `_EXCEPTION_RECORD` e `_CONTEXT` são definidos no arquivo de inclusão EXCPT. H
+Os tipos de ponteiro `PEXCEPTION_RECORD` e `PCONTEXT` são definidos no arquivo de inclusão \<Winnt. h >, e `_EXCEPTION_RECORD` e `_CONTEXT` são definidos no arquivo de inclusão \<excpt.h >
 
 Você pode usar `GetExceptionCode` dentro do manipulador de exceção. No entanto, você pode usar `GetExceptionInformation` somente dentro de expressão de filtro de exceção. As informações para as quais ele aponta ficam normalmente na pilha e não estarão mais disponíveis quando o controle for transferido para o manipulador de exceção.
 
 A função intrínseca `AbnormalTermination` está disponível dentro de um manipulador de término. Retorna 0 se o corpo do **try-finally** instrução finaliza sequencialmente. Em todos os outros casos, retorna 1.
 
-EXCPT.H define nomes alternativos para estes intrínsecos:
+excpt.h define alguns nomes alternativos para esses intrínsecos:
 
 `GetExceptionCode` equivale a `_exception_code`
 

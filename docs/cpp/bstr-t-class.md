@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bstrt-class"></a>Classe _bstr_t
 **Seção específica da Microsoft**  
@@ -34,13 +34,13 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[bstr_t](../cpp/bstr-t-bstr-t.md)|Constrói um objeto `_bstr_t`.|  
+|[_bstr_t](../cpp/bstr-t-bstr-t.md)|Constrói um objeto `_bstr_t`.|  
   
 ### <a name="operations"></a>Operações  
   
 |||  
 |-|-|  
-|[Atribuir](../cpp/bstr-t-assign.md)|Copia um `BSTR` para o `BSTR` encapsulado por um `_bstr_t`.|  
+|[Assign](../cpp/bstr-t-assign.md)|Copia um `BSTR` para o `BSTR` encapsulado por um `_bstr_t`.|  
 |[Anexar](../cpp/bstr-t-attach.md)|Vincula um wrapper `_bstr_t` a um `BSTR`.|  
 |[copy](../cpp/bstr-t-copy.md)|Constrói uma cópia do `BSTR` encapsulado.|  
 |[Desanexar](../cpp/bstr-t-detach.md)|Retorna o `BSTR` encapsulado por um `_bstr_t` e desanexa o `BSTR` do `_bstr_t`.|  
@@ -56,13 +56,13 @@ ms.lasthandoff: 12/21/2017
 |[+ operador =](../cpp/bstr-t-operator-add-equal-plus.md)|Acrescenta caracteres ao final do objeto `_bstr_t`.|  
 |[operador +](../cpp/bstr-t-operator-add-equal-plus.md)|Concatena duas cadeias de caracteres.|  
 |[operador !](../cpp/bstr-t-operator-logical-not.md)|Verifica se o encapsulada `BSTR` é um **nulo** cadeia de caracteres.|  
-|[operador = =,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Compara dois objetos `_bstr_t`.|  
+|[operator ==, !=, \<, >, \<=, >=](../cpp/bstr-t-relational-operators.md)|Compara dois objetos `_bstr_t`.|  
 |[operador wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrai os ponteiros para o objeto `BSTR` Unicode ou multibyte encapsulado.|  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** comutil.h  
+ **Cabeçalho:** \<comutil.h >  
   
  **Lib:** comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   
