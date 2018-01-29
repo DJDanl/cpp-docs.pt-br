@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
 - '-'
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - operators [C++], addition
 - subtraction operator [C++], additive operators
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>Operadores aditivos: + e -
 ## <a name="syntax"></a>Sintaxe  
@@ -55,21 +58,21 @@ expression - expression
   
 |Tipo|Significado|  
 |----------|-------------|  
-|*aritmética*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|  
+|*arithmetic*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|  
 |*integral*|Os tipos char e int de todos os tamanhos (curto, longo) e enumerações são os tipos “integrais”.|  
-|*escalar*|Os operandos escalares são operandos aritméticos ou de ponteiro.|  
+|*scalar*|Os operandos escalares são operandos aritméticos ou de ponteiro.|  
   
  As combinações legais para usar esses operadores são:  
   
  *aritmética* + *aritmético*  
   
- *escalar* + *integral*  
+ *scalar* + *integral*  
   
- *integral* + *escalar*  
+ *integral* + *scalar*  
   
  *aritmética* - *aritmético*  
   
- *escalar* - *escalar*  
+ *scalar* - *scalar*  
   
  Observe que a adição e subtração não são operações equivalentes.  
   
@@ -116,9 +119,9 @@ for( int i = 0; i < 10; ++i )
 >  O código do formato `pIntArray = pIntArray + 1` raramente é encontrado em programas C++; para executar um incremento, estes formatos são preferíveis: `pIntArray++` ou `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Subtração de ponteiro  
- Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gera um resultado integral com sinal do tipo ptrdiff_t (definido no arquivo de inclusão padrão STDDEF.H).  
+ Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gerará um resultado de inteiro assinado de tipo ptrdiff_t (definidos no arquivo de inclusão padrão \<stddef.h >).  
   
- Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor de subtração é um ponteiro para o (*n* - *,*) elemento de matriz th, onde  *n*  é o elemento apontado por o ponteiro original e *i* é o valor integral do segundo operando.  
+ Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor de subtração é um ponteiro para o (*n* - *i*) elemento de matriz th, onde *n* é o elemento apontado por o ponteiro original e *i* é o valor integral do segundo operando.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
