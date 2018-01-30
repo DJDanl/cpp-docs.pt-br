@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB templates
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3078fa97d298856e302b1f835fdbec2f3d489b63
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="ole-db-templates"></a>Modelos de banco de dados OLE
 Os modelos OLE DB facilitam o acesso de dados OLE DB. Visual C++ fornece classes de modelo que implementam muitas das interfaces de OLE DB usadas com frequência. Você pode usar os modelos de consumidor do Visual C++ para escrever um aplicativo de cliente (consumidor) do OLE DB e os modelos de provedor para escrever um aplicativo de servidor (provedor).  
@@ -64,9 +68,6 @@ Os modelos OLE DB facilitam o acesso de dados OLE DB. Visual C++ fornece classes
   
  [Referência de biblioteca (ATL) do modelo ativo](../../atl/atl-com-desktop-components.md)  
  Fornece material de referência para a biblioteca ATL, um conjunto de classes com base em C++ que simplificam a programação de objetos COM.  
-  
- [Bibliotecas do Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Fornece links para várias bibliotecas fornecidas com Visual C++, incluindo ATL, MFC e OLE DB, biblioteca em tempo de execução do C e a biblioteca do padrão C++.  
   
  [Depuração](/visualstudio/debugger/debugging-in-visual-studio)  
  Fornece links para usar o depurador do Visual Studio para corrigir erros de lógica em seu aplicativo ou procedimentos armazenados.

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>Algoritmos
 Os algoritmos são uma parte fundamental da Biblioteca Padrão do C++. Os algoritmos não funcionam com contêineres em si, mas sim com iteradores. Portanto, o mesmo algoritmo pode ser usado pela maioria ou até por todos os contêineres da Biblioteca Padrão do C++. Esta seção discute as convenções e a terminologia dos algoritmos da Biblioteca Padrão do C++.  
@@ -56,7 +59,7 @@ Os algoritmos são uma parte fundamental da Biblioteca Padrão do C++. Os algori
   
  Uma sequência de elementos designados por iteradores no intervalo [`First`, `Last`) será uma sequência ordenada pelo operador**<** se, para cada *N* no intervalo [0, `Last` - `First`) e para cada *M* no intervalo (N, `Last` - `First`) o predicado !(\*(`First` + *M*) < \*(*First* + *N*)) for true. (Observe que os elementos são classificados em ordem crescente). A função de predicado **operator<** ou qualquer substituição dela, não deve alterar nenhum de seus operandos. Ela deverá produzir o mesmo resultado `bool` sempre que for avaliada e deverá produzir o mesmo resultado se uma cópia de um dos operandos for substituída pelo operando. Além disso, ela deve impor uma ordenação fraca estrita aos operandos que compara.  
   
- Uma sequência de elementos designados por iteradores no intervalo [`First`, `Last`) será um heap ordenado por **operator<** se, para cada *N* no intervalo [1, `Last` - `First`) o predicado !(\*`First` < \*(`First` + *N*)) for true. (O primeiro elemento é o maior). Fora isso, sua estrutura interna é conhecida apenas para as funções de modelo [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), [pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap) e [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap). Assim como acontece com uma sequência ordenada, a função de predicado **operator<** ou qualquer substituição dela, não deve alterar nenhum de seus operandos e deve impor uma ordenação fraca estrita aos operandos que compara. Ela deverá produzir o mesmo resultado `bool` sempre que for avaliada e deverá produzir o mesmo resultado se uma cópia de um dos operandos for substituída pelo operando.  
+ Uma sequência de elementos designados por iteradores no intervalo [`First`, `Last`) será um heap ordenado por **operator<** se, para cada *N* no intervalo [1, `Last` - `First`) o predicado !(\*`First` < \*(`First` + *N*)) for true. (O primeiro elemento é o maior). Sua estrutura interna é conhecida apenas para as funções de modelo [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), e [push_heap](../standard-library/algorithm-functions.md#push_heap). Assim como acontece com uma sequência ordenada, a função de predicado **operator<** ou qualquer substituição dela, não deve alterar nenhum de seus operandos e deve impor uma ordenação fraca estrita aos operandos que compara. Ela deverá produzir o mesmo resultado `bool` sempre que for avaliada e deverá produzir o mesmo resultado se uma cópia de um dos operandos for substituída pelo operando.  
   
  Os algoritmos da Biblioteca Padrão do C++ estão localizados nos arquivos de cabeçalho [\<algorithm>](../standard-library/algorithm.md) e [\<numeric>](../standard-library/numeric.md).  
   

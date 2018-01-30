@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -31,16 +33,17 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d32a69e179acee501c17d96218cc4ef2e10f0c3
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="security-features-in-the-crt"></a>funcionalidades de segurança no CRT
 Muitas funções de CRT antigas têm versões mais recentes e mais seguras. Se houver uma função de segurança, a versão mais antiga e menos segura estará marcada como preterida, e a nova versão terá o sufixo `_s` ("seguro").  
@@ -65,7 +68,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
  Para as funções preteridas sem sobrecargas de modelo seguro, considere definitivamente a atualização manual do código a fim de usar as versões seguras.  
   
- Outra fonte de avisos de depreciação, não relacionados à segurança, são as funções POSIX. Substitua os nomes de função POSIX por seus equivalentes padrão (por exemplo, mude [access](../c-runtime-library/reference/access-crt.md) para [_access](../c-runtime-library/reference/access-waccess.md)), ou desabilite os avisos de depreciação relacionados ao POSIX definindo `_CRT_NONSTDC_NO_WARNINGS`. Para saber mais, consulte [Funções de CRT preteridas](http://msdn.microsoft.com/en-us/7e259932-c6c8-4c1a-9637-639e591681a5).  
+ Outra fonte de avisos de depreciação, não relacionados à segurança, são as funções POSIX. Substitua os nomes de função POSIX por seus equivalentes padrão (por exemplo, mude [access](../c-runtime-library/reference/access-crt.md) para [_access](../c-runtime-library/reference/access-waccess.md)), ou desabilite os avisos de depreciação relacionados ao POSIX definindo `_CRT_NONSTDC_NO_WARNINGS`. Para obter mais informações, consulte [Compatibilidade](compatibility.md).  
   
 ## <a name="additional-security-features"></a>Recursos de segurança adicionais  
  Alguns dos recursos de segurança incluem o seguinte:  

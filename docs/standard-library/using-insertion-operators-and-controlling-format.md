@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usando operadores de inserção e controlando o formato
 Este tópico mostra como controlar o formato e a criação de operadores de inserção para suas próprias classes. O operador de inserção (**<<**), que é programado previamente para todos os tipos de dados C++, envia bytes a um objeto de fluxo de saída. Operadores de inserção trabalham com "manipuladores" predefinidos, que são elementos que alteram o formato padrão de argumentos inteiros.  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Esse comportamento pode ser corrigido manualmente, mas para tornar o ciclo completo de cadeia de caracteres mais conveniente, C++14 adiciona o manipulador de fluxo `std::quoted` a `<iomanip>`. Após a inserção, `quoted()` envolve a cadeia de caracteres com um delimitador (aspas duplas ' " ', por padrão) e, após a extração, manipula o fluxo para extrair todos os caracteres até encontrar o delimitador final. Quaisquer aspas inseridas serão ignoradas com um caractere de escape ('\\\\' por padrão).  
   
- Os delimitadores estão presentes apenas no objeto de fluxo; eles não estão presentes na cadeia de caracteres extraída, mas estão presentes na cadeia de caracteres retornada por [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
+ Os delimitadores são presentes apenas no objeto de fluxo; eles não estão presentes na cadeia de caracteres extraída mas estiverem presentes na cadeia de caracteres retornada por [basic_stringstream:: STR](../standard-library/basic-stringstream-class.md#str).  
   
  O comportamento de espaço em branco das operações de inserção e extração é independe de como uma cadeia de caracteres é representada no código, assim, o operador entre aspas será útil mesmo se a cadeia de caracteres de entrada for uma cadeia de caracteres bruta, literal ou regular. A cadeia de caracteres de entrada, seja qual for seu formato, pode ter aspas incorporadas, quebras de linha, guias e assim por diante e todos esses serão preservados pelo manipulador quoted().  
   
- Para obter mais informações e exemplos de código completo, consulte [quoted]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted).  
+ Para obter mais informações e exemplos de código completo, consulte [entre aspas](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxos de saída](../standard-library/output-streams.md)   

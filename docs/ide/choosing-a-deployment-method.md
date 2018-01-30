@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - redistributing DLLs
 - manifests [C++]
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1c444b3319c60b80bdfdc14000a41d65869d0514
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Escolhendo uma método de implantação
 A menos que seu aplicativo do Visual C++ é independente e pode ser implantado por meio de um comando de cópia, recomendamos que você use o Windows Installer para implantação. O Windows Installer oferece suporte à instalação, ao reparo e à desinstalação, e também oferece suporte à atualização atômica dos arquivos de aplicativo, dependências e das entradas do Registro.  
@@ -57,7 +60,5 @@ A menos que seu aplicativo do Visual C++ é independente e pode ser implantado p
   
 ## <a name="see-also"></a>Consulte também  
  [Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [Não está em compilação: escolhendo uma estratégia de implantação](http://msdn.microsoft.com/en-us/ecd632d8-063c-4028-b785-81bba045107b)   
- [Visão geral de implantação do Windows Installer](http://msdn.microsoft.com/en-us/3ce4610a-b54f-404e-b650-42f4a55dfc3b)   
  [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Exemplos de implantação](../ide/deployment-examples.md)

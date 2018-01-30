@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.runtime
-dev_langs: C++
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9b393bc72bbc6722d353295dc244f75f504b9730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7683dd8c6c896f972df3e47d5ba37a0f413724fa
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="c-run-time-library-reference"></a>Referência da biblioteca em tempo de execução do C
 A biblioteca em tempo de execução da Microsoft fornece rotinas de programação para o sistema operacional Microsoft Windows. Essas rotinas automatizam várias tarefas comuns de programação que não são fornecidas pelas linguagens C e C++.  
@@ -62,11 +66,5 @@ A biblioteca em tempo de execução da Microsoft fornece rotinas de programaçã
  [Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)  
  Discute o código de inicialização e o ponto de entrada usado para uma DLL.  
   
- [Bibliotecas do Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Fornece links para várias bibliotecas fornecidas com Visual C++, incluindo ATL, MFC e OLE DB, biblioteca em tempo de execução do C e a biblioteca do padrão C++.  
-  
  [Depuração](/visualstudio/debugger/debugging-in-visual-studio)  
  Fornece links para usar o depurador do Visual Studio para corrigir erros de lógica em seu aplicativo ou procedimentos armazenados.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de bibliotecas do Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)

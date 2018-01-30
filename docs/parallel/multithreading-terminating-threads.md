@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithread: encerrando threads
 Duas situações normais fazer com que um thread encerrar: a função de controle for encerrada ou o thread não tem permissão para executar até a conclusão. Se um processador de texto usado um thread para impressão em segundo plano, a função controlar seria encerrar normalmente se a impressão concluída com êxito. Se o usuário deseja cancelar a impressão, no entanto, o thread de impressão em segundo plano foi encerrada prematuramente. Este tópico explica como implementar cada situação e como obter o código de saída de um thread após ele ser terminado.  
@@ -58,7 +62,7 @@ Duas situações normais fazer com que um thread encerrar: a função de control
   
 -   Definir o `m_bAutoDelete` membro de dados para **FALSE**. Isso permite que o `CWinThread` objeto sobreviva depois que o thread foi encerrado. Você pode acessar o `m_hThread` membro de dados depois que o thread foi encerrado. Se você usar essa técnica, no entanto, você é responsável por destruir o `CWinThread` porque a estrutura não excluirá automaticamente-lo para você. Esse é o método preferencial.  
   
--   Armazene o identificador do segmento separadamente. Depois que o thread é criado, copie o `m_hThread` membro de dados (usando **:: DuplicateHandle**) a outra variável e acessá-lo através dessa variável. Dessa forma, o objeto é excluída automaticamente quando ocorre um encerramento e você ainda pode descobrir por que o thread foi encerrado. Tenha cuidado para que o thread não terminar antes de você pode duplicar o identificador. A maneira mais segura para fazer isso é passar **CREATE_SUSPENDED** para [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), armazenar o identificador e, em seguida, reiniciar o thread chamando [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
+-   Armazene o identificador do segmento separadamente. Depois que o thread é criado, copie o `m_hThread` membro de dados (usando **:: DuplicateHandle**) a outra variável e acessá-lo através dessa variável. Dessa forma, o objeto é excluída automaticamente quando ocorre um encerramento e você ainda pode descobrir por que o thread foi encerrado. Tenha cuidado para que o thread não terminar antes de você pode duplicar o identificador. A maneira mais segura para fazer isso é passar **CREATE_SUSPENDED** para [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), armazenar o identificador e, em seguida, reiniciar o thread chamando [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
  O método permite que você determine por que um `CWinThread` objeto encerrado.  
   
