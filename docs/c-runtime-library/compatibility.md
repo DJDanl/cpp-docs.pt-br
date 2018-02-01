@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compatibility"></a>Compatibilidade
 A biblioteca UCRT (Biblioteca Em Tempo de Execução do C Universal) dá suporte à maioria das bibliotecas padrão C necessárias para conformidade com C++. Ela implementa a biblioteca C99 (ISO/IEC 9899:1999), com as exceções das macros de tipo genérico definidas em \<tgmath.h> e a compatibilidade de tipo estrito em \<complex.h>. O UCRT também implementa um grande subconjunto da biblioteca C POSIX.1 (ISO/IEC 9945-1:1996, a Interface de Programa Aplicativo do Sistema POSIX), mas ela não está totalmente em conformidade com qualquer padrão POSIX.  Além disso, o UCRT implementa várias funções e macros específicas da Microsoft que não fazem parte de um padrão.  
@@ -34,7 +38,7 @@ A biblioteca UCRT (Biblioteca Em Tempo de Execução do C Universal) dá suporte
   
  Determinadas funções na biblioteca C padrão têm um histórico de uso não seguro, devido a parâmetros mal empregados e buffers não verificados. Essas funções geralmente são a origem dos problemas de segurança no código. A Microsoft criou um conjunto de versões mais seguras dessas funções que verificam o uso do parâmetro e invocam o manipulador de parâmetro inválido quando um problema é detectado no tempo de execução.  Por padrão, o compilador do Visual C++ emite um aviso de substituição quando uma função é usada com uma variante mais segura disponível. Quando você compila seu código em C++, é possível definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1 para eliminar a maioria dos avisos. Isso usa sobrecargas do modelo para chamar as variantes mais seguras ao manter o código-fonte portátil. Para suprimir o aviso, defina `_CRT_SECURE_NO_WARNINGS` antes de incluir cabeçalhos no código que usa essas funções. Para obter mais informações, consulte [Recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
- Exceto conforme indicado na documentação para funções específicas, o UCRT é compatível com a API do Windows.  Não há suporte para determinadas funções em aplicativos da Windows 8 Store ou em aplicativos universais do Windows no Windows 10. Essas funções são listadas em [Funções CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx), que enumera as funções às quais o [Windows Runtime](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9) não dá suporte.  
+ Exceto conforme indicado na documentação para funções específicas, o UCRT é compatível com a API do Windows.  Algumas funções não são compatíveis com os aplicativos da Store para o Windows 8 ou com os aplicativos da UWP (Plataforma Universal do Windows) no Windows 10. Essas funções estão listadas na página [Funções de CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), que enumera as funções com as quais o Windows Runtime e a [UWP](/uwp) não são compatíveis.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
   
