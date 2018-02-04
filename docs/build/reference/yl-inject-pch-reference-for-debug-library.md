@@ -1,14 +1,17 @@
 ---
 title: "-Yl (injetar referência PCH para biblioteca de depuração) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/04/2017
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /yl
-dev_langs: C++
+f1_keywords:
+- /yl
+dev_langs:
+- C++
 helpviewer_keywords:
 - -Yl compiler option [C++]
 - Yl compiler option [C++]
@@ -17,40 +20,43 @@ ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e777977f6d869d2bbc28d980f6445851e54396b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 43e960906c504e5378a77d047c8eb1ab4d4594fe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (injetar referência PCH para biblioteca de depuração)
 
-O **/Yl** opção cria um símbolo comum para um arquivo de cabeçalho pré-compilado e injeta referências a esse símbolo em todos os arquivos que usam o cabeçalho pré-compilado. Isso disponibiliza as informações de tipo completo de símbolos de cabeçalho pré-compilado para o depurador em todos os arquivos que usam o cabeçalho pré-compilado. Essa opção é habilitada por padrão. Erros de vinculador devido à ausência de informações de depuração em bibliotecas vinculadas que usam cabeçalhos pré-compilados pode impedir o uso dessa opção.
+O **/Yl** opção gera um símbolo exclusivo em um arquivo de cabeçalho pré-compilado e uma referência neste símbolo é injetada em todos os arquivos de objeto que usam o cabeçalho pré-compilado.
 
 ## <a name="syntax"></a>Sintaxe
 
 >**/Yl**  
->**/Yl**_nome_  
+>**/Yl**_name_  
 >**/Yl-**  
 
 ### <a name="arguments"></a>Arguments
 
 *name*  
-Um nome opcional usado para definir um símbolo para arquivos armazenados e referenciada no objeto que definem ou usam o cabeçalho pré-compilado.
+Um nome opcional usado como parte do símbolo exclusivo.
 
 *\-*  
 Desabilita explicitamente a um traço (-) o **/Yl** opção de compilador.
 
 ## <a name="remarks"></a>Comentários
 
-O **/Yl** opção permite que o depurador obter informações completas sobre os tipos em um cabeçalho pré-compilado em cada arquivo que inclui o cabeçalho pré-compilado. Esta opção cria um nome de símbolo internos, injeta a definição do símbolo no arquivo de objeto usado para criar o cabeçalho pré-compilado, o [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opção e insere uma referência a símbolo em todos os arquivos que incluem o pré-compilado cabeçalho usando o [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opção de compilador. Como todos os arquivos de origem que usam o cabeçalho pré-compilado para fazer referência ao símbolo nomeado, o vinculador sempre vincula o arquivo de objeto que define o símbolo e o cabeçalho pré-compilado associado, as informações de depuração. Essa opção é habilitada por padrão.
+O **/Yl** opção de compilador cria uma definição de símbolo exclusivo em um arquivo de cabeçalho pré-compilado criado usando o [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opção. Referências a este símbolo são inseridas automaticamente em todos os arquivos que incluem o cabeçalho pré-compilado usando o [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opção de compilador. O **/Yl** opção é habilitada por padrão quando **/Yc** é usado para criar um arquivo de cabeçalho pré-compilado.
 
-O **/Yl**_nome_ opção é usada para criar explicitamente o símbolo de identificação para o arquivo de cabeçalho pré-compilado. O compilador usa o *nome* argumento para criar um símbolo semelhante a \_ \_ @@ \_PchSym\_@00@... @*nome* , onde a cadeia de caracteres representa um geradas pelo vinculador reticências (...). Se o argumento for omitido, o compilador gera automaticamente um nome de símbolo.
+O **/Yl**_nome_ opção é usada para criar um símbolo de identificação no arquivo de cabeçalho pré-compilado. O compilador usa o *nome* argumento como parte do nome do símbolo decorado que cria, semelhante ao \_ \_ @@ \_PchSym\_@00@... @ *nome*, onde o cadeia de caracteres representa o botão de reticências (...) um exclusivo gerado pelo compilador. Se o *nome* argumento for omitido, o compilador gera um nome de símbolo automaticamente. Normalmente, você não precisa saber o nome do símbolo. No entanto, quando seu projeto usa mais de um arquivo de cabeçalho pré-compilado, o **/Yl**_nome_ opção pode ser útil para determinar qual objeto arquivos de uso que o cabeçalho pré-compilado. Você pode usar *nome* como uma cadeia de caracteres de pesquisa para localizar a referência de símbolo em um arquivo de despejo de memória.
 
-**/Yl-** desativa o comportamento padrão e não coloca uma identificação referência de símbolo nos arquivos de objeto que incluem o cabeçalho pré-compilado. Essa opção pode ser necessária para arquivos compilados sem o arquivo de cabeçalho pré-compilado presente.
+**/Yl-** desativa o comportamento padrão e não coloca um símbolo de identificação no arquivo de cabeçalho pré-compilado. Arquivos compilados que incluem esse cabeçalho pré-compilado não obter uma referência de símbolo comum.
 
-Se você usar **/Yl-**, **/Yc** e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opções para criar uma biblioteca, o compilador cria um arquivo de cabeçalho pré-compilado que contém informações de depuração que são armazenadas em um arquivo de objeto em vez de um arquivo. PDB. [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) erros ou [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) avisos podem ocorrer em compilações que usam essa biblioteca e o cabeçalho pré-compilado, se o arquivo de origem usado para criar o cabeçalho pré-compilado não define qualquer símbolos. O vinculador pode excluir este arquivo de objeto de biblioteca do link, junto com as informações de depuração de cabeçalho pré-compilado associado ao nada no arquivo de objeto é referenciado no cliente de biblioteca. Para resolver o problema, especifique **/Yl** quando você usa **/Yc** para criar um arquivo de cabeçalho pré-compilado e **/Yu** para usá-lo. Isso garante que o arquivo de objeto que contém as informações de depuração é incluído em sua compilação.
+Quando **/Yc** não for especificado, qualquer **/Yl** opção não tem nenhum efeito, mas se especificado deve corresponder qualquer **/Yl** opção passados quando **/Yc** é especificado.
+
+Se você usar **/Yl-**, **/Yc** e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opções para criar um arquivo de cabeçalho pré-compilado, as informações de depuração é armazenado no arquivo de objeto para o arquivo de origem usado para criar o cabeçalho pré-compilado, em vez de um arquivo. PDB separado. Se esse arquivo de objeto, em seguida, é feito a parte de uma biblioteca, [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) erros ou [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) avisos podem ocorrer em compilações que usam essa biblioteca e o arquivo de cabeçalho pré-compilado, se o arquivo de origem usado para criar o arquivo de cabeçalho pré-compilado não define qualquer símbolos em si. O vinculador pode excluir o arquivo de objeto do link, junto com as informações de depuração associados, quando nada no arquivo de objeto é referenciado no cliente de biblioteca. Para resolver esse problema, especifique **/Yl** (ou remover o **/Yl-** opção) quando você usa **/Yc** para criar o arquivo de cabeçalho pré-compilado. Isso garante que o arquivo de objeto de biblioteca que contém as informações de depuração obtém vinculado em sua compilação.
 
 Para obter mais informações sobre cabeçalhos pré-compilados, consulte:
 
@@ -62,7 +68,7 @@ Para obter mais informações sobre cabeçalhos pré-compilados, consulte:
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-1. Escolha o **linha de comando** página de propriedades no **C/C++** pasta.
+1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
 1. Adicionar o **/Yl**_nome_ opção de compilador no **opções adicionais** caixa. Escolha **Okey** para salvar suas alterações.
 

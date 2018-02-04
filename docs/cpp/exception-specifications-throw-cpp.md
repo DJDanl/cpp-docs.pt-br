@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -18,12 +20,13 @@ ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbd45c8afed11f613722ecc7586436ff707042d7
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Especificações de exceção (lançar, noexcept) (C++)
 
@@ -34,24 +37,22 @@ Antes de C++ 17 havia dois tipos de especificação de exceção. O *noexcept es
 ```cpp
 void MyFunction(int i) throw();
 ```
-
- informa o compilador que a função não lança exceções. No entanto, em **/std:c + + 14** modo, isso poderá resultar em comportamento inesperado se a função gera uma exceção. Portanto, é recomendável usar o [noexcept](../cpp/noexcept-cpp.md) operador em vez de acima:
+informa o compilador que a função não lança exceções. No entanto, em **/std:c + + 14** modo, isso poderá resultar em comportamento inesperado se a função gera uma exceção. Portanto, é recomendável usar o [noexcept](../cpp/noexcept-cpp.md) operador em vez de acima:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-
-A tabela a seguir resume a implementação do Visual C++ de especificações de exceção:
+A tabela a seguir resume a implementação do Microsoft Visual C++ de especificações de exceção:
 
 |Especificação de exceção|Significado|
 |-----------------------------|-------------|
 |`noexcept`<br>`noexcept(true)`<br>`throw()`|A função não gera uma exceção. Em [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) modo (o que é o padrão), `noexcept` e `noexcept(true)` são equivalentes. Quando uma exceção é gerada de uma função que é declarada `noexcept` ou `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) é invocado. Quando uma exceção é gerada de uma função declarada como `throw()` na **/std:c + + 14** modo, o resultado é um comportamento indefinido. Nenhuma função específica é invocada. Isso é uma divergência de C + + 14 padrão, que são necessários para invocar o compilador [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 versão posterior e 15.5**: em **/std:c + + 17** modo, `noexcept`, `noexcept(true)`, e `throw()` são todas equivalentes. Em **/std:c + + 17** modo, `throw()` é um alias para `noexcept(true)`. Em **/std:c + + 17** modo, quando uma exceção é gerada de uma função declarada com qualquer uma dessas especificações [std::terminate](../standard-library/exception-functions.md#terminate) é invocado de acordo com o padrão C++ 17.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Não há especificação|A função pode lançar uma exceção de qualquer tipo.|
-|`throw(type)`| (**C + + 14 e anteriores**) a função pode lançar uma exceção do tipo `type`. O compilador do C++ da Microsoft aceita a sintaxe, mas o interpretará como `noexcept(false)`. Em **/std:c + + 17** modo, o compilador emite o aviso C5040.|
+|`throw(type)`| (**C + + 14 e anteriores**) a função pode lançar uma exceção do tipo `type`. O compilador aceita a sintaxe, mas o interpretará como `noexcept(false)`. Em **/std:c + + 17** modo, o compilador emite o aviso C5040.|
 
- Se o tratamento de exceção é usado em um aplicativo, deve haver uma função na pilha de chamadas identificadores geradas exceções antes de sair do escopo externo de uma função marcados `noexcept`, `noexcept(true)`, ou `throw()`. Se todas as funções chamadas entre o que lança uma exceção e o que lida com a exceção são especificados como `noexcept`, `noexcept(true)` (ou `throw()` na **/std:c + + 17** modo), o programa é encerrado quando o função noexcept propaga a exceção.
+Se o tratamento de exceção é usado em um aplicativo, deve haver uma função na pilha de chamadas identificadores geradas exceções antes de sair do escopo externo de uma função marcados `noexcept`, `noexcept(true)`, ou `throw()`. Se todas as funções chamadas entre o que lança uma exceção e o que lida com a exceção são especificados como `noexcept`, `noexcept(true)` (ou `throw()` na **/std:c + + 17** modo), o programa é encerrado quando o função noexcept propaga a exceção.
 
- O comportamento de exceção de uma função depende dos seguintes fatores:
+O comportamento de exceção de uma função depende dos seguintes fatores:
 
 - Qual [modo de compilação padrão do idioma](../build/reference/std-specify-language-standard-version.md) está definido.
 - Se você estiver compilando a função em C ou C++.
@@ -60,9 +61,9 @@ A tabela a seguir resume a implementação do Visual C++ de especificações de 
 
 - Se a especificação de exceção for determinada explicitamente.
 
- As especificações explícitas de exceção não são permitidas em funções C. Uma função C não deve para lançar exceções em **/EHsc**e pode gerar exceções estruturadas em **/EHs**, **/EHa**, ou **/EHac**.
+As especificações explícitas de exceção não são permitidas em funções C. Uma função C não deve para lançar exceções em **/EHsc**e pode gerar exceções estruturadas em **/EHs**, **/EHa**, ou **/EHac**.
 
- A tabela a seguir resume se uma função C++ potencialmente pode gerar em várias opções de tratamento de exceção do compilador:
+A tabela a seguir resume se uma função C++ potencialmente pode gerar em várias opções de tratamento de exceção do compilador:
 
 |Função|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
@@ -110,7 +111,7 @@ void __declspec(nothrow) f2(void) {
     }
 }
 
-// only valid if compiled without /EHc 
+// only valid if compiled without /EHc
 // /EHc means assume extern "C" functions don't throw exceptions
 extern "C" void f4(void);
 void f4(void) {
