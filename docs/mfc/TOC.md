@@ -531,7 +531,6 @@
 ##### [Objetos gráficos](graphic-objects.md)
 ###### [construção de objetos em um e dois estágios](one-stage-and-two-stage-construction-of-objects.md)
 ###### [Selecionando um objeto gráfico em um contexto de dispositivo](selecting-a-graphic-object-into-a-device-context.md)
-###### [Limitações de CImage com sistemas operacionais anteriores](cimage-limitations-with-earlier-operating-systems.md)
 #### [Janelas com moldura](frame-windows.md)
 ##### [Classes de janela com moldura](frame-window-classes.md)
 ###### [Classes de janela com moldura criadas pelo Assistente de aplicativo](frame-window-classes-created-by-the-application-wizard.md)
