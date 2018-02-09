@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: UNIX [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06e4b772288f2e7374bb10f1298da33fbc6dcac0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 258f08db457761a37822a872415633d6359b7b47
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introdução ao Visual C++ para usuários do UNIX
 
-Este tópico fornece informações para usuários do UNIX novatos no Visual C++ e que desejam tornar-se produtivos com o Visual C++ e com o IDE (Ambiente de Desenvolvimento Integrado) do Visual Studio.  
+Este tópico fornece informações para usuários do UNIX novatos no Visual Studio e que desejam tornar-se produtivos com o C++ e com o IDE (Ambiente de Desenvolvimento Integrado) do Visual Studio.
   
 ## <a name="getting-started-on-the-command-line"></a>Introdução à linha de comando  
 
-É possível usar o Visual C++ na linha de comando de forma semelhante à que você usaria um ambiente de linha de comando UNIX. A compilação ocorre no prompt de comando usando o compilador C e C++ da linha de comando (CL.EXE), o vinculador (LINK.EXE) e outras ferramentas, incluindo o NMAKE.EXE, a versão da Microsoft do utilitário da marca UNIX.  
+É possível usar o compilador C++ na linha de comando de forma semelhante à que você usaria um ambiente de linha de comando UNIX. A compilação ocorre no prompt de comando usando o compilador C e C++ da linha de comando (CL.EXE), o vinculador (LINK.EXE) e outras ferramentas, incluindo o NMAKE.EXE, a versão da Microsoft do utilitário da marca UNIX.  
   
-No UNIX, os comandos são instalados em uma pasta comum, como /usr/bin. No Visual C++, as ferramentas de linha de comando são instaladas no seu diretório de instalação do Visual Studio no subdiretório VC\bin e seus subdiretórios. Ao contrário do UNIX, essas ferramentas não estão disponíveis em uma janela do prompt de comando simples. Para usar as ferramentas de linha de comando, use um atalho de prompt de comando do desenvolvedor ou execute um arquivo de comando de desenvolvedor, como vcvarsall.bat. Isso configura o caminho e outras variáveis de ambiente necessários para compilar programas do Visual C++ na linha de comando. Para obter mais informações, consulte [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Instruções passo a passo: compilando um programa C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+No UNIX, os comandos são instalados em uma pasta comum, como /usr/bin. No Visual Studio, as ferramentas de linha de comando são instaladas no seu diretório de instalação do Visual Studio no subdiretório VC\bin e seus subdiretórios. Ao contrário do UNIX, essas ferramentas não estão disponíveis em uma janela do prompt de comando simples. Para usar as ferramentas de linha de comando, use um atalho de prompt de comando do desenvolvedor ou execute um arquivo de comando de desenvolvedor, como vcvarsall.bat. Isso configura o caminho e outras variáveis de ambiente necessários para compilar programas do C++ na linha de comando. Para obter mais informações, consulte [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Instruções passo a passo: compilando um programa C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 Para abrir um atalho de prompt de comando do desenvolvedor, digite *prompt de comando do desenvolvedor* no controle de pesquisa de área de trabalho e escolha o resultado **Prompt de comando do desenvolvedor** para a sua versão do Visual Studio. Para escolher um prompt de comando do desenvolvedor pré-configurado para um host e arquitetura de destino específicos, abra o menu **Iniciar** (o ícone do Windows no canto da área de trabalho) e, em seguida, role até a pasta para a sua versão do Visual Studio, como **Visual Studio 2017**. Abra a pasta e escolha o atalho do prompt de comando para a arquitetura preferencial de host e de destino.
   
@@ -47,11 +51,11 @@ Um aplicativo composto por várias bibliotecas e executáveis, cada um deles cri
   
 ## <a name="importing-your-existing-code"></a>Importando seu código existente 
  
-É possível usar o Visual C++ para compilar o código existente configurado para compilação com ou sem um makefile e colocá-lo em um projeto [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+É possível usar o compilador C++ para compilar o código existente configurado para compilação com ou sem um makefile e colocá-lo em um projeto [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Criando um novo projeto  
 
-É possível criar novos projetos no ambiente de desenvolvimento. O Visual C++ oferece vários modelos que fornecem código padrão para vários projetos comuns. É possível usar assistentes de aplicativo para gerar projetos com estruturas de tópicos de código para vários tipos de aplicativo.  
+É possível criar novos projetos no ambiente de desenvolvimento. O Visual Studio oferece vários modelos que fornecem código padrão para vários projetos comuns. É possível usar assistentes de aplicativo para gerar projetos com estruturas de tópicos de código para vários tipos de aplicativo.  
   
 É possível começar com um projeto vazio usando o **Assistente de aplicativo de console (Win32)**. Marque a caixa de seleção **Projeto vazio**. Em seguida, é possível adicionar arquivos novos e existentes ao projeto mais tarde.  
   
@@ -59,9 +63,9 @@ Quando você cria um projeto, é necessário nomeá-lo. Por padrão, o nome do p
   
 ## <a name="microsoft-specific-modifiers"></a>Modificadores específicos da Microsoft  
 
-O Visual C++ contém várias extensões da linguagem de programação C++ padrão para dar suporte à programação para sistemas operacionais Windows. Essas extensões são usadas para especificar atributos de classe de armazenamento, convenções de chamada de função e endereçamento baseado, entre outros. Para obter uma lista completa de todas as extensões do Visual C++, consulte [Microsoft-Specific Modifiers (Modificadores específicos da Microsoft)](../cpp/microsoft-specific-modifiers.md).  
+O compilador do Microsoft Visual C++ implementa várias extensões da linguagem de programação C++ padrão para dar suporte à programação para sistemas operacionais Windows. Essas extensões são usadas para especificar atributos de classe de armazenamento, convenções de chamada de função e endereçamento baseado, entre outros. Para obter uma lista completa de todas as extensões do C++ compatíveis, consulte [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
-É possível desabilitar todas as extensões específicas da Microsoft do C++ usando a opção do compilador **/Za**. Essa opção é recomendada se você desejar escrever um código para ser executado em várias plataformas. Para obter mais informações sobre a opção do compilador **/Za**, consulte [/Za, /Ze (Desabilitar Extensões de Linguagem)](../build/reference/za-ze-disable-language-extensions.md). Para obter mais informações sobre a conformidade do Visual C++, consulte [Comportamento não padrão](../cpp/nonstandard-behavior.md).  
+É possível desabilitar todas as extensões específicas da Microsoft do C++ usando a opção do compilador **/Za**. Essa opção é recomendada se você desejar escrever um código para ser executado em várias plataformas. Para obter mais informações sobre a opção do compilador **/Za**, consulte [/Za, /Ze (Desabilitar Extensões de Linguagem)](../build/reference/za-ze-disable-language-extensions.md). Para obter mais informações sobre a conformidade do compilador C++, consulte [Conformidade com a linguagem Visual C++](../visual-cpp-language-conformance.md) e [Comportamento não padrão](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>Cabeçalhos Pré-compilados  
 

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-linux
+ms.technology:
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 734fc0f88d1cf8f97c7cac215f366eb6834fc517
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
+ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implantar, executar e depurar o projeto do Linux
 
@@ -28,6 +29,9 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
 * Realize a depuração usando os recursos tradicionais do Visual Studio, como pontos de interrupção, janelas Inspeção e focalizar uma variável. Usando esses métodos, você pode depurar como faria normalmente para outros tipos de projeto.
 * Exibir a saída do computador de destino em uma janela especial do Console do Linux. Você também pode usar o console para enviar entradas para o computador de destino.
+
+> [!NOTE]
+> Para a depuração ARM no Linux, consulte esta postagem no blog: [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (Depurando um dispositivo ARM inserido no Visual Studio).
 
 ## <a name="debug-your-linux-project"></a>Depurar o projeto do Linux
 

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5751899dc064da4b17e240411878187a80acbdc
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guia de atualização e portabilidade do Visual C++
 Este tópico fornece um guia para atualizar o código do Visual C++. Isso inclui fazer com que o código seja compilado e executado corretamente em uma versão mais recente das ferramentas, bem como tirar proveito da nova linguagem e dos recursos do Visual Studio. Este tópico também inclui informações sobre como migrar aplicativos herdados para plataformas mais modernas.  
@@ -82,7 +85,7 @@ Este tópico fornece um guia para atualizar o código do Visual C++. Isso inclui
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Discute como usar projetos criados em versões anteriores do Visual C++.|  
-|[Novidades do Visual C++ no Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Alterações no IDE e nas ferramentas do Visual Studio 2015 até o Visual Studio 2017|  
+|[Novidades do compilador C++ no Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Alterações no IDE e nas ferramentas do Visual Studio 2015 até o Visual Studio 2017|  
 |[Aprimoramentos de conformidade do C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Aprimoramentos de conformidade com padrões do Visual Studio 2015 até o Visual Studio 2017|  
 |[Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)|Uma lista de todas as alterações nas bibliotecas e ferramentas de build do Visual C++ do Visual Studio 2003 até 2015 que podem exigir alterações em seu código.|  
 |[O que há de novo no Visual C++ de 2003 até 2015](visual-cpp-what-s-new-2003-through-2015.md)|Todas as informações sobre "Novidades" para o Visual C++ do Visual Studio 2003 até o Visual Studio 2015.|  

@@ -1,23 +1,26 @@
 ---
 title: Como relatar um problema com o conjunto de ferramentas do Visual C++ | Microsoft Docs
 ms.date: 1/11/2018
-ms.technology: cpp
+ms.technology:
+- cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Como relatar um problema com o Conjunto de Ferramentas do Visual C++
 
-Se você encontrar problemas com o compilador, com o vinculador ou com outras ferramentas ou bibliotecas do Visual C++, queremos saber sobre eles.
+Se você encontrar problemas com o compilador, com o vinculador ou com outras ferramentas ou bibliotecas do Microsoft Visual C++, queremos saber sobre eles.
 
 A melhor maneira de nos informar sobre um problema é enviar um relatório incluindo uma descrição do problema encontrado, detalhes sobre como você está compilando seu programa e uma *reprodução*, um caso de teste completo que possamos usar para reproduzir o problema em nossos computadores. Essas informações nos permitem verificar rapidamente se o problema está em seu código e não em seu ambiente local, determinar se ele afeta outras versões do compilador e diagnosticar a causa.
 
