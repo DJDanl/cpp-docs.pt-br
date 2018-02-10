@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,19 +38,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs: C++
-helpviewer_keywords: CSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 Essa classe é um wrapper para o **SECURITY_DESCRIPTOR** estrutura.  
@@ -70,7 +74,7 @@ class CSecurityDesc
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|O construtor.|  
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|O destruidor.|  
+|[CSecurityDesc::~CSecurityDesc](#dtor)|O destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -120,7 +124,7 @@ class CSecurityDesc
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h  
   
-##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
+##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
  O construtor.  
   
 ```
@@ -136,7 +140,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>Comentários  
  O `CSecurityDesc` objeto opcionalmente pode ser criado usando um **SECURITY_DESCRIPTOR** estrutura ou definida anteriormente `CSecurityDesc` objeto.  
   
-##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
+##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc  
  O destruidor.  
   
 ```
@@ -146,7 +150,7 @@ virtual ~CSecurityDesc() throw();
 ### <a name="remarks"></a>Comentários  
  O destruidor libera todos os recursos alocados.  
   
-##  <a name="fromstring"></a>CSecurityDesc::FromString  
+##  <a name="fromstring"></a>  CSecurityDesc::FromString  
  Converte um descritor de segurança do formato de cadeia de caracteres em um descritor de segurança válido e funcional.  
   
 ```
@@ -163,9 +167,9 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Comentários  
  A cadeia de caracteres pode ser criada usando [CSecurityDesc::ToString](#tostring). Converter o descritor de segurança em uma cadeia de caracteres torna mais fácil armazenar e transmitir.  
   
- Este método só está disponível com o Windows 2000 e posterior porque chama [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Este método chama [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
-##  <a name="getcontrol"></a>CSecurityDesc::GetControl  
+##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  Recupera informações do descritor de segurança de controle.  
   
 ```
@@ -180,9 +184,9 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Retorna VERDADEIRO se o método for bem-sucedido, FALSO se ele falhar.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método só é significativo quando usando o Windows 2000 ou posterior, enquanto ela chama [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Este método chama [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
-##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
+##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  Recupera informações do controle de acesso discricionário (DACL) lista do descritor de segurança.  
   
 ```
@@ -205,7 +209,7 @@ bool GetDacl(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o método for bem-sucedido, FALSO se ele falhar.  
   
-##  <a name="getgroup"></a>CSecurityDesc::GetGroup  
+##  <a name="getgroup"></a>  CSecurityDesc::GetGroup  
  Recupera as informações de grupo primário do descritor de segurança.  
   
 ```
@@ -224,7 +228,7 @@ bool GetGroup(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o método for bem-sucedido, FALSO se ele falhar.  
   
-##  <a name="getowner"></a>CSecurityDesc::GetOwner  
+##  <a name="getowner"></a>  CSecurityDesc::GetOwner  
  Recupera informações do proprietário do descritor de segurança.  
   
 ```
@@ -243,7 +247,7 @@ bool GetOwner(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o método for bem-sucedido, FALSO se ele falhar.  
   
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  Retorna um ponteiro para o **SECURITY_DESCRIPTOR** estrutura.  
   
 ```
@@ -253,7 +257,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um ponteiro para o [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) estrutura.  
   
-##  <a name="getsacl"></a>CSecurityDesc::GetSacl  
+##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  Recupera informações de lista (SACL) do sistema de controle de acesso do descritor de segurança.  
   
 ```
@@ -276,7 +280,7 @@ bool GetSacl(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o método for bem-sucedido, FALSO se ele falhar.  
   
-##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
+##  <a name="isdaclautoinherited"></a>  CSecurityDesc::IsDaclAutoInherited  
  Determina se a lista de controle de acesso discricionário (DACL) está configurada para dar suporte a propagação automática.  
   
 ```
@@ -289,7 +293,7 @@ bool IsDaclAutoInherited() const throw();
 ### <a name="remarks"></a>Comentários  
  O sistema define esse bit quando ele executa o algoritmo de herança automática para o objeto e seus objetos filho existente.  
   
-##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
+##  <a name="isdacldefaulted"></a>  CSecurityDesc::IsDaclDefaulted  
  Determina se o descritor de segurança está configurado com uma lista de controle de acesso discricionário (DACL) padrão.  
   
 ```
@@ -306,7 +310,7 @@ bool IsDaclDefaulted() const throw();
   
  Para definir esse sinalizador, use o [CSecurityDesc::SetDacl](#setdacl) método.  
   
-##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
+##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent  
  Determina se o descritor de segurança contém uma lista de controle de acesso discricionário (DACL).  
   
 ```
@@ -323,7 +327,7 @@ bool IsDaclPresent() const throw();
   
  Para definir esse sinalizador, use o [CSecurityDesc::SetDacl](#setdacl) método.  
   
-##  <a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected  
+##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected  
  Determina se a lista de controle de acesso discricionário (DACL) é configurada para evitar modificações.  
   
 ```
@@ -336,9 +340,9 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>Comentários  
  Para definir esse sinalizador, use o [CSecurityDesc::SetDacl](#setdacl) método.  
   
- Esse método só é significativo para o Windows 2000 ou posterior, pois somente o Windows 2000 dá suporte a propagação automática de ACEs herdáveis.  
+ Este método dá suporte à propagação automática de ACEs herdáveis.  
   
-##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
+##  <a name="isgroupdefaulted"></a>  CSecurityDesc::IsGroupDefaulted  
  Determina se o identificador de segurança do grupo do descritor de segurança (SID) foi definido por padrão.  
   
 ```
@@ -351,7 +355,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="remarks"></a>Comentários  
  Para definir esse sinalizador, use o [CSecurityDesc::SetGroup](#setgroup) método.  
   
-##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
+##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted  
  Determina se o identificador de segurança do proprietário do descritor de segurança (SID) foi definido por padrão.  
   
 ```
@@ -364,7 +368,7 @@ bool IsOwnerDefaulted() const throw();
 ### <a name="remarks"></a>Comentários  
  Para definir esse sinalizador, use o [CSecurityDesc::SetOwner](#setowner) método.  
   
-##  <a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited  
+##  <a name="issaclautoinherited"></a>  CSecurityDesc::IsSaclAutoInherited  
  Determina se a lista de controle de acesso do sistema (SACL) está configurada para dar suporte a propagação automática.  
   
 ```
@@ -377,7 +381,7 @@ bool IsSaclAutoInherited() const throw();
 ### <a name="remarks"></a>Comentários  
  O sistema define esse bit quando ele executa o algoritmo de herança automática para o objeto e seus objetos filho existente.  
   
-##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
+##  <a name="issacldefaulted"></a>  CSecurityDesc::IsSaclDefaulted  
  Determina se o descritor de segurança está configurado com uma lista de controle de acesso do sistema (SACL) padrão.  
   
 ```
@@ -392,7 +396,7 @@ bool IsSaclDefaulted() const throw();
   
  Para definir esse sinalizador, use o [CSecurityDesc::SetSacl](#setsacl) método.  
   
-##  <a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent  
+##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent  
  Determina se o descritor de segurança contém uma lista de controle de acesso do sistema (SACL).  
   
 ```
@@ -405,7 +409,7 @@ bool IsSaclPresent() const throw();
 ### <a name="remarks"></a>Comentários  
  Para definir esse sinalizador, use o [CSecurityDesc::SetSacl](#setsacl) método.  
   
-##  <a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
+##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected  
  Determina se a lista de controle de acesso do sistema (SACL) está configurada para evitar modificações.  
   
 ```
@@ -418,9 +422,9 @@ bool IsSaclProtected() const throw();
 ### <a name="remarks"></a>Comentários  
  Para definir esse sinalizador, use o [CSecurityDesc::SetSacl](#setsacl) método.  
   
- Esse método só é significativo para o Windows 2000 ou posterior, pois somente o Windows 2000 dá suporte a propagação automática de ACEs herdáveis.  
+ Este método dá suporte à propagação automática de ACEs herdáveis.  
   
-##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
+##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative  
  Determina se o descritor de segurança no formato autorrelativo.  
   
 ```
@@ -430,7 +434,7 @@ bool IsSelfRelative() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o descritor de segurança está no formato auto-relativo com todas as informações de segurança em um bloco contínuo de memória. Retorna falso se o descritor de segurança está no formato absoluto. Para obter mais informações, consulte [Absolute e descritores de segurança Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute  
+##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  Chame este método para converter o descritor de segurança em formato absoluto.  
   
 ```
@@ -443,7 +447,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="remarks"></a>Comentários  
  Um descritor de segurança no formato absoluto contém ponteiros para as informações que ele contém, em vez de informações em si. Um descritor de segurança no formato autorrelativo contém as informações em um bloco contínuo de memória. Em um descritor de segurança autorrelativo um **SECURITY_DESCRIPTOR** estrutura sempre inicia as informações, mas o descritor de segurança do que outros componentes podem seguir a estrutura em qualquer ordem. Em vez de usar endereços de memória, os componentes do descritor de segurança autorrelativo são identificados por deslocamentos desde o início do descritor de segurança. Esse formato é útil quando um descritor de segurança deve ser armazenado em um disco ou transmitido por meio de um protocolo de comunicação. Para obter mais informações, consulte [Absolute e descritores de segurança Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
+##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  Chame este método para converter o descritor de segurança no formato auto-relativo.  
   
 ```
@@ -456,7 +460,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="remarks"></a>Comentários  
  Um descritor de segurança no formato absoluto contém ponteiros para as informações que ele contém, em vez de que contém as informações em si. Um descritor de segurança no formato autorrelativo contém as informações em um bloco contínuo de memória. Em um descritor de segurança autorrelativo um **SECURITY_DESCRIPTOR** estrutura sempre inicia as informações, mas o descritor de segurança do que outros componentes podem seguir a estrutura em qualquer ordem. Em vez de usar endereços de memória, os componentes do descritor de segurança são identificados por deslocamentos desde o início do descritor de segurança. Esse formato é útil quando um descritor de segurança deve ser armazenado em um disco ou transmitido por meio de um protocolo de comunicação. Para obter mais informações, consulte [Absolute e descritores de segurança Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="operator_eq"></a>CSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Operador de atribuição.  
   
 ```
@@ -478,7 +482,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```  
   
-##  <a name="setcontrol"></a>CSecurityDesc::SetControl  
+##  <a name="setcontrol"></a>  CSecurityDesc::SetControl  
  Define os bits de controle de um descritor de segurança.  
   
 ```
@@ -498,9 +502,9 @@ bool SetControl(
  Retorna true em caso de êxito, false em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Este método está disponível somente no Windows 2000 e posterior, enquanto ela chama [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Este método chama [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
-##  <a name="setdacl"></a>CSecurityDesc::SetDacl  
+##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  Define as informações em uma lista de controle de acesso discricionário (DACL). Se uma DACL já está presente no descritor de segurança, ele será substituído.  
   
 ```
@@ -514,7 +518,7 @@ inline void SetDacl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *DACL*  
+ *Dacl*  
  Referência a um `CDacl` objeto especificando a DACL para o descritor de segurança. Esse parâmetro não deve ser NULL. Para definir uma DACL NULL no descritor de segurança, o primeiro formulário do método deve ser usado com `bPresent` definido como false.  
   
  `bPresent`  
@@ -529,7 +533,7 @@ inline void SetDacl(
 ### <a name="remarks"></a>Comentários  
  Há uma diferença importante entre vazio e uma DACL não existe. Quando uma DACL estiver vazia, ele contém sem entradas de controle de acesso e sem direitos de acesso tem sido concedidos explicitamente. Como resultado, o acesso ao objeto é negado implicitamente. Por outro lado, quando um objeto não tiver nenhuma DACL, nenhuma proteção é atribuída ao objeto e qualquer solicitação de acesso é concedida.  
   
-##  <a name="setgroup"></a>CSecurityDesc::SetGroup  
+##  <a name="setgroup"></a>  CSecurityDesc::SetGroup  
  Define as informações de grupo primário de um descritor de segurança do formato absoluto, substituir as informações de grupo primário já está presentes.  
   
 ```
@@ -546,7 +550,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna true em caso de êxito, false em caso de falha.  
   
-##  <a name="setowner"></a>CSecurityDesc::SetOwner  
+##  <a name="setowner"></a>  CSecurityDesc::SetOwner  
  Define as informações de proprietário de um descritor de segurança do formato absoluto. Ele substitui qualquer informação de proprietário já está presente.  
   
 ```
@@ -563,7 +567,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna true em caso de êxito, false em caso de falha.  
   
-##  <a name="setsacl"></a>CSecurityDesc::SetSacl  
+##  <a name="setsacl"></a>  CSecurityDesc::SetSacl  
  Define as informações em uma lista de controle de acesso do sistema (SACL). Se um SACL já está presente no descritor de segurança, ele será substituído.  
   
 ```
@@ -571,7 +575,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *SACL*  
+ *Sacl*  
  Ponteiro para uma `CSacl` objeto especificando a SACL para o descritor de segurança. Esse parâmetro não deve ser NULL e deve ser um objeto CSacl. Ao contrário de DACLs, não há nenhuma diferença entre NULL e uma SACL vazia, como objetos SACL não especificar os direitos de acesso, apenas informações de auditoria.  
   
  `bDefaulted`  
@@ -580,7 +584,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna true em caso de êxito, false em caso de falha.  
   
-##  <a name="tostring"></a>CSecurityDesc::ToString  
+##  <a name="tostring"></a>  CSecurityDesc::ToString  
  Converte um descritor de segurança em um formato de cadeia de caracteres.  
   
 ```
@@ -616,7 +620,7 @@ bool ToString(
   
  Se a DACL é NULL e o bit de controle SE_DACL_PRESENT não está definido no descritor de segurança de entrada, a cadeia de caracteres de descritor de segurança resultante não tem um componente de d:. Consulte [formato de cadeia de caracteres do descritor de segurança](http://msdn.microsoft.com/library/windows/desktop/aa379570) para obter mais detalhes.  
   
- Este método só está disponível com o Windows 2000 e posterior, enquanto ela chama [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Este método chama [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de segurança](../../visual-cpp-samples.md)   

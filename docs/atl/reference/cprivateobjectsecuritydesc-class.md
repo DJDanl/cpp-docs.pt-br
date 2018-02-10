@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe CPrivateObjectSecurityDesc
 Essa classe representa um objeto de descritor de segurança do objeto particular.  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|O construtor.|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|O destruidor.|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|O destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -75,7 +79,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h  
   
-##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  Chame este método para converter um descritor de segurança e suas listas de controle de acesso (ACLs) em um formato que oferece suporte à propagação automática de entradas de controle de acesso herdáveis (ACEs).  
   
 ```
@@ -105,7 +109,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>Comentários  
  Esse método tentará determinar se as ACEs no controle de acesso discricionário (DACL) de lista e a lista de controle de acesso do sistema (SACL) do descritor de segurança atual foram herdadas do descritor de segurança do pai. Ele chama o [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) função.  
   
-##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  O construtor.  
   
 ```
@@ -115,7 +119,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Comentários  
  Inicializa o objeto `CPrivateObjectSecurityDesc`.  
   
-##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc  
  O destruidor.  
   
 ```
@@ -125,7 +129,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Comentários  
  O destruidor libera todos os recursos alocados e exclui o descritor de segurança do objeto particular.  
   
-##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
  Chame esse método para alocar e inicializar um descritor de segurança autorrelativo para o objeto particular criado pelo Gerenciador de recursos de chamada.  
   
 ```
@@ -177,12 +181,12 @@ bool Create(
 ### <a name="remarks"></a>Comentários  
  Este método chama [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) ou [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
- O segundo método, que permite especificar o tipo de objeto GUID do novo objeto ou controlar como as ACEs são herdadas, só está disponível em sistemas que executam o Windows 2000 e posterior.  
+ O segundo método permite especificar o tipo de objeto GUID do novo objeto ou controlar como as ACEs são herdadas.  
   
 > [!NOTE]
 >  Um descritor de segurança autorrelativo é um descritor de segurança que armazena todas as suas informações de segurança em um bloco contínuo de memória.  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  Chame esse método para recuperar informações do descritor de segurança de um objeto particular.  
   
 ```
@@ -204,7 +208,7 @@ bool Get(
 ### <a name="remarks"></a>Comentários  
  O descritor de segurança é uma estrutura e dados associados que contém as informações de segurança para um objeto protegível.  
   
-##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =  
  Operador de atribuição.  
   
 ```
@@ -218,7 +222,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a atualização `CPrivateObjectSecurityDesc` objeto.  
   
-##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set  
  Chame este método para modificar o descritor de segurança de um objeto particular.  
   
 ```
@@ -256,7 +260,7 @@ bool Set(
  Retorna true em caso de êxito, false em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- O segundo método, que permite especificar o tipo de objeto GUID do objeto ou controlar como as ACEs são herdadas, só está disponível em sistemas que executam o Windows 2000 e posterior.  
+ O segundo método permite especificar o tipo de objeto GUID do objeto ou controlar como as ACEs são herdadas.  
   
 ## <a name="see-also"></a>Consulte também  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

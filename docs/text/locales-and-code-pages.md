@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>Localidades e páginas de código
 Uma identificação de localidade reflete as convenções de locais e o idioma para uma determinada região geográfica. Um idioma específico pode ser falado em mais de um país/região; Por exemplo, português é falada no Brasil, bem como em Portugal. Por outro lado, um país/região pode ter mais de um idioma oficial. Por exemplo, Canadá tem dois idiomas: inglês e francês. Assim, Canadá tem dois locais diferentes: canadense inglês e francês (Canadá). Algumas categorias de localidade dependentes incluem a formatação de datas e o formato de exibição de valores monetários.  
@@ -44,7 +47,7 @@ Uma identificação de localidade reflete as convenções de locais e o idioma p
   
  Para obter mais informações sobre páginas de códigos, consulte [Páginas de código](../c-runtime-library/code-pages.md).  
   
- A biblioteca de tempo de execução C tem dois tipos de páginas de código interno: localidade e multibyte. Você pode alterar a página de código atual durante a execução do programa (consulte a documentação para o [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [setmbcp](../c-runtime-library/reference/setmbcp.md) funções). Além disso, a biblioteca de tempo de execução pode obter e usar o valor da página de código do sistema operacional. No Windows 2000, a página de código do sistema operacional é a página de código "sistema padrão ANSI". Essa página de código é constante para a duração da execução do programa.  
+ A biblioteca de tempo de execução C tem dois tipos de páginas de código interno: localidade e multibyte. Você pode alterar a página de código atual durante a execução do programa (consulte a documentação para o [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [setmbcp](../c-runtime-library/reference/setmbcp.md) funções). Além disso, a biblioteca de tempo de execução pode obter e usar o valor da página de código de sistema operacional, que é constante para a duração da execução do programa.  
   
  Quando a página de código da localidade muda, o comportamento do conjunto de alterações de funções que ditada pela página de código escolhido dependente de localidade. Por padrão, todas as funções dependentes de localidade começam a execução de uma página de código de localidade exclusiva para a localidade "C". Você pode alterar a página de código da localidade interno (assim como outras propriedades específicas da localidade) ao chamar o `setlocale` função. Uma chamada para `setlocale`(LC_ALL, "") define a localidade para que o indicado pela localidade do usuário do sistema operacional.  
   

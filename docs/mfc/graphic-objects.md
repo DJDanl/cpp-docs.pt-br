@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - HRGN
 - HFONT
 - HBITMAP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRgn class [MFC], HRGN handle type
 - HPEN [MFC]
@@ -48,22 +50,23 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fabeeae17b5bc81fdf592ed452a088b75bae544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6dfdba311ed13b1ffbd5e1f830d6fa87cfce915d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="graphic-objects"></a>Objetos gráficos
 O Windows fornece uma variedade de ferramentas a ser usado em contextos de dispositivo de desenho. Ele fornece canetas para desenhar linhas, pincéis preenchimento interiores e fontes para desenhar o texto. MFC fornece classes de objeto de gráfico equivalentes para as ferramentas de desenho no Windows. A tabela a seguir mostra as classes disponíveis e os gráficos equivalentes do Windows tipos de identificador de interface (GDI) do dispositivo.  
   
 > [!NOTE]
->  GDI+ está incluído no Windows XP e está disponível como um redistribuível para Windows NT 4.0 SP6, Windows 2000, Windows 98 e Windows Me. Para baixar o redistribuível mais recente, consulte [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm). Para obter mais informações, consulte a documentação do SDK GDI+ em: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Para obter mais informações, consulte a documentação do SDK GDI+ em: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  Este artigo explica o uso dessas classes de objeto de gráfico:  
   
@@ -111,8 +114,6 @@ O Windows fornece uma variedade de ferramentas a ser usado em contextos de dispo
 -   [Selecionando um objeto gráfico em um contexto de dispositivo](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
 -   [Contextos de dispositivo](../mfc/device-contexts.md)  
-  
--   [Limitações de CImage com sistemas operacionais anteriores](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de janela](../mfc/window-objects.md)

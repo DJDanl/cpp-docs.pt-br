@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>Registro
 Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta uma lista de tipos de objeto para escolher. OLE obtém essa lista do banco de dados de registro do sistema, que contém as informações fornecidas por todos os aplicativos de servidor. Quando um servidor registrado, as entradas que ele coloca o banco de dados do sistema registration (registro) descrevem cada tipo de objeto que fornece, extensões de arquivo e o caminho para si mesmo, entre outras informações.  
@@ -44,12 +47,12 @@ Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta 
 > [!NOTE]
 >  Aplicativos MFC gerados automaticamente pelo Assistente de aplicativo se registram quando eles são executados como aplicativos autônomos.  
   
- Se você quiser registrar seu aplicativo durante a instalação, use o programa RegEdit.exe. (No Windows 95, Windows 98 e Windows ME, RegEdit está no diretório do Windows. No Windows NT e o Windows 2000, RegEdit está no diretório System32 do Windows.) Se você incluir um programa de instalação com o seu aplicativo, ter o programa de instalação executar "RegEdit /S *appname*. reg". (O sinalizador /S indica a operação silenciosa, ou seja, ele não exibe a caixa de diálogo reporting conclusão bem-sucedida do comando.) Caso contrário, instrua o usuário para executar manualmente o RegEdit.  
+ Se você quiser registrar seu aplicativo durante a instalação, use o programa RegEdit.exe. Se você incluir um programa de instalação com o seu aplicativo, ter o programa de instalação executar "RegEdit /S *appname*. reg". (O sinalizador /S indica a operação silenciosa, ou seja, ele não exibe a caixa de diálogo reporting conclusão bem-sucedida do comando.) Caso contrário, instrua o usuário para executar manualmente o RegEdit.  
   
 > [!NOTE]
 >  O arquivo. reg criado pelo Assistente de aplicativo não inclui o caminho completo para o executável. O programa de instalação deve modificar o arquivo. reg para incluir o caminho completo para o executável ou modificar a variável de ambiente PATH para incluir o diretório de instalação.  
   
- RegEdit mescla o conteúdo do arquivo de texto. reg o banco de dados de registro. Para verificar se o banco de dados ou para repará-lo, use o editor do registro. Tome cuidado para evitar a exclusão de entradas OLE essenciais. (No Windows 95, Windows 98 e Windows ME, o editor do registro é RegEdit.exe. No Windows NT e o Windows 2000, é RegEdit32.exe.)  
+ RegEdit mescla o conteúdo do arquivo de texto. reg o banco de dados de registro. Para verificar se o banco de dados ou para repará-lo, use o editor do registro. Tome cuidado para evitar a exclusão de entradas OLE essenciais.  
   
 ##  <a name="_core_server_initialization"></a>Inicialização do servidor  
  Quando você cria um aplicativo de servidor com o Assistente de aplicativo, o assistente for concluído todas as tarefas de inicialização para você automaticamente. Esta seção descreve o que você deve fazer se você escrever um aplicativo de servidor manualmente.  

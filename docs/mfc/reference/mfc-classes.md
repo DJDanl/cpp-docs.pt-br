@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b8ff1adaeab4a51049f91ba5fd5457a35105043c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3775ad9c67e2ab4be4f36d0de257cd075b77ce86
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mfc-classes"></a>Classes MFC
 As classes na lista a seguir estão incluídas na biblioteca Microsoft Foundation Class (MFC).  
@@ -1069,7 +1072,7 @@ As classes na lista a seguir estão incluídas na biblioteca Microsoft Foundatio
  Encapsula os serviços fornecidos pela caixa de diálogo comuns do Windows para impressão.  
   
  [Classe CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)  
- Encapsula os serviços fornecidos por folha de propriedades de impressão do Windows 2000.  
+ Encapsula os serviços fornecidos por folha de propriedades de impressão do Windows.  
   
  [Classe CProgressCtrl](../../mfc/reference/cprogressctrl-class.md)  
  Fornece a funcionalidade de controle de barra de progresso comuns do Windows.  

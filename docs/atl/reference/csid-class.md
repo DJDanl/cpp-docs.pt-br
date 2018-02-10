@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>Classe de CSid
 Essa classe é um wrapper para um `SID` estrutura (identificador de segurança).  
@@ -63,7 +67,7 @@ class CSid
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|O construtor.|  
-|[CSid:: ~ CSid](#dtor)|O destruidor.|  
+|[CSid::~CSid](#dtor)|O destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -93,8 +97,8 @@ class CSid
   
 |||  
 |-|-|  
-|[operador = =](#operator_eq_eq)|Testa dois objetos de descritor de segurança para fins de igualdade|  
-|[operador! =](#operator_neq)|Testa dois objetos de descritor de segurança para desigualdade|  
+|[operator ==](#operator_eq_eq)|Testa dois objetos de descritor de segurança para fins de igualdade|  
+|[operator !=](#operator_neq)|Testa dois objetos de descritor de segurança para desigualdade|  
 |[operador\<](#operator_lt_)|Compara o valor relativo de dois objetos de descritor de segurança.|  
 |[operador >](#operator_gt_)|Compara o valor relativo de dois objetos de descritor de segurança.|  
 |[operador\<=](#operator_lt__eq)|Compara o valor relativo de dois objetos de descritor de segurança.|  
@@ -110,7 +114,7 @@ class CSid
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h  
   
-##  <a name="accountname"></a>CSid::AccountName  
+##  <a name="accountname"></a>  CSid::AccountName  
  Retorna o nome da conta associada a `CSid` objeto.  
   
 ```
@@ -125,7 +129,7 @@ LPCTSTR AccountName() const throw(...);
   
  Se nenhum nome de conta para o `SID` pode ser encontrado, `AccountName` retorna uma cadeia de caracteres vazia. Isso pode ocorrer se um tempo limite da rede impede que esse método encontrando o nome. Isso também ocorre para identificadores de segurança sem nome de conta correspondente, como um logon `SID` que identifica uma sessão de logon.  
   
-##  <a name="csid"></a>CSid::CSid  
+##  <a name="csid"></a>  CSid::CSid  
  O construtor.  
   
 ```
@@ -171,7 +175,7 @@ explicit CSid(
   
  Se a inicialização falhar, o construtor lançará um [CAtlException classe](../../atl/reference/catlexception-class.md).  
   
-##  <a name="dtor"></a>CSid:: ~ CSid  
+##  <a name="dtor"></a>  CSid::~CSid  
  O destruidor.  
   
 ```
@@ -181,7 +185,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>Comentários  
  O destruidor libera todos os recursos adquiridos pelo objeto.  
   
-##  <a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>  CSid::CSidArray  
  Uma matriz de [CSid](../../atl/reference/csid-class.md) objetos.  
   
 ```
@@ -191,7 +195,7 @@ typedef CAtlArray<CSid> CSidArray;
 ### <a name="remarks"></a>Comentários  
  Este typedef Especifica o tipo de matriz que pode ser usado para recuperar identificadores de segurança de uma ACL (lista de controle de acesso). Consulte [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).  
   
-##  <a name="domain"></a>CSid::Domain  
+##  <a name="domain"></a>  CSid::Domain  
  Retorna o nome de domínio associado com o `CSid` objeto.  
   
 ```
@@ -206,7 +210,7 @@ LPCTSTR Domain() const throw(...);
   
  Se nenhum nome de conta para o `SID` pode ser encontrado, **domínio** retorna o domínio como uma cadeia de caracteres vazia. Isso pode ocorrer se um tempo limite da rede impede que esse método encontrando o nome. Isso também ocorre para identificadores de segurança sem nome de conta correspondente, como um logon `SID` que identifica uma sessão de logon.  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  Testes `SID` prefixos (identificador de segurança) para igualdade.  
   
 ```
@@ -224,7 +228,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) no SDK do Windows para obter mais detalhes.  
   
-##  <a name="getlength"></a>CSid::GetLength  
+##  <a name="getlength"></a>  CSid::GetLength  
  Retorna o comprimento do `CSid` objeto.  
   
 ```
@@ -240,7 +244,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  Em compilações de depuração, a função causará uma declaração se o `CSid` objeto não é válido.  
   
-##  <a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>  CSid::GetPSID  
  Retorna um ponteiro para um `SID` estrutura (identificador de segurança).  
   
 ```
@@ -250,7 +254,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o endereço do `CSid` a base do objeto `SID` estrutura.  
   
-##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY  
  Retorna um ponteiro para o **SID_IDENTIFIER_AUTHORITY** estrutura.  
   
 ```
@@ -263,7 +267,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 > [!NOTE]
 >  Em compilações de depuração, a função causará uma declaração se o `CSid` objeto não é válido.  
   
-##  <a name="getsubauthority"></a>CSid::GetSubAuthority  
+##  <a name="getsubauthority"></a>  CSid::GetSubAuthority  
  Retorna uma subautoridade especificada em um `SID` estrutura (identificador de segurança).  
   
 ```
@@ -283,7 +287,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 > [!NOTE]
 >  Em compilações de depuração, a função causará uma declaração se o `CSid` objeto não é válido.  
   
-##  <a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
+##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount  
  Retorna a contagem de subautoridade.  
   
 ```
@@ -298,7 +302,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  Em compilações de depuração, a função causará uma declaração se o `CSid` objeto não é válido.  
   
-##  <a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>  CSid::IsValid  
  Testes de `CSid` objeto validade.  
   
 ```
@@ -311,7 +315,7 @@ bool IsValid() const throw();
 ### <a name="remarks"></a>Comentários  
  O `IsValid` método valida o `CSid` objeto verificando se o número de revisão está dentro de um intervalo conhecido e que o número de subautoridades é menor que o máximo.  
   
-##  <a name="loadaccount"></a>CSid::LoadAccount  
+##  <a name="loadaccount"></a>  CSid::LoadAccount  
  Atualizações de `CSid` objeto, considerando o nome da conta e o domínio ou uma estrutura de SID (identificador de segurança) existente.  
   
 ```
@@ -355,7 +359,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna uma referência para a atualização `CSid` objeto.  
   
-##  <a name="operator_eq_eq"></a>CSid::operator = =  
+##  <a name="operator_eq_eq"></a>  CSid::operator ==  
  Testa dois objetos de descritor de segurança para igualdade.  
   
 ```
@@ -374,7 +378,7 @@ bool operator==(
 ### <a name="return-value"></a>Valor de retorno  
  **True** se os descritores de segurança forem iguais; caso contrário, **false**.  
   
-##  <a name="operator_neq"></a>CSid::operator! =  
+##  <a name="operator_neq"></a>  CSid::operator !=  
  Testa dois objetos de descritor de segurança para fins de desigualdade.  
   
 ```
@@ -479,7 +483,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>Comentários  
  Retorna o endereço do `SID` estrutura.  
   
-##  <a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>  CSid::Sid  
  Retorna o `SID` estrutura (identificador de segurança) como uma cadeia de caracteres.  
   
 ```
@@ -487,9 +491,9 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o `SID` estrutura como uma cadeia de caracteres em um formato adequado para exibição, armazenamento ou transmissão. Equivalente a [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), embora essa função só está disponível no Windows 2000 ou posterior e, portanto, é emulada para sistemas operacionais anteriores.  
+ Retorna o `SID` estrutura como uma cadeia de caracteres em um formato adequado para exibição, armazenamento ou transmissão. Equivalente a [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
   
-##  <a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Retorna uma descrição do estado do `CSid` objeto.  
   
 ```

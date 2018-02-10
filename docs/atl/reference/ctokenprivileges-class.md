@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,19 +22,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
 - ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
 - ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
-dev_langs: C++
-helpviewer_keywords: CTokenPrivileges class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 Essa classe é um wrapper para o **TOKEN_PRIVILEGES** estrutura.  
@@ -54,7 +58,7 @@ class CTokenPrivileges
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|O construtor.|  
-|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|O destruidor.|  
+|[CTokenPrivileges::~CTokenPrivileges](#dtor)|O destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -79,7 +83,7 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Operador de atribuição.|  
   
 ## <a name="remarks"></a>Comentários  
- Um [token de acesso](http://msdn.microsoft.com/library/windows/desktop/aa374909) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado em um sistema Windows NT ou Windows 2000.  
+ Um [token de acesso](http://msdn.microsoft.com/library/windows/desktop/aa374909) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado em um sistema Windows.  
   
  O token de acesso é usado para descrever os vários privilégios de segurança concedidos a cada usuário. Um privilégio consiste em um número de 64 bits, chamado de um identificador local exclusivo ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) e uma cadeia de caracteres do descritor.  
   
@@ -90,7 +94,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h  
   
-##  <a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>  CTokenPrivileges::Add  
  Adiciona um ou mais privilégios para o `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -111,7 +115,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  O primeiro formulário desse método retornará true se os privilégios são adicionado com êxito, false caso contrário.  
   
-##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges  
  O construtor.  
   
 ```
@@ -130,7 +134,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>Comentários  
  O `CTokenPrivileges` objeto opcionalmente pode ser criado usando um **TOKEN_PRIVILEGES** estrutura ou definida anteriormente `CTokenPrivileges` objeto.  
   
-##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>  CTokenPrivileges::~CTokenPrivileges  
  O destruidor.  
   
 ```
@@ -140,7 +144,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>Comentários  
  O destruidor libera todos os recursos alocados.  
   
-##  <a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>  CTokenPrivileges::Delete  
  Exclui um privilégio do `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -155,9 +159,9 @@ bool Delete(LPCTSTR pszPrivilege) throw();
  Retorna VERDADEIRO se o privilégio foi excluído com êxito, false caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método é útil como uma ferramenta para criar tokens restritos no Windows 2000.  
+ Esse método é útil como uma ferramenta para criar tokens restritos.  
   
-##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>  CTokenPrivileges::DeleteAll  
  Exclui todos os privilégios do `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -167,7 +171,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>Comentários  
  Exclui todos os privilégios contidos o `CTokenPrivileges` objeto de token de acesso.  
   
-##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>  CTokenPrivileges::GetDisplayNames  
  Recupera exibe nomes para os privilégios contidos o `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -183,7 +187,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  Esse método retorna um nome de exibição: por exemplo, se o nome do atributo é SE_REMOTE_SHUTDOWN_NAME, o nome de exibição é "Forçar o desligamento de um sistema remoto". Para obter o nome do sistema, use [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
   
-##  <a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>  CTokenPrivileges::GetCount  
  Retorna o número de entradas de privilégio no `CTokenPrivileges` objeto.  
   
 ```
@@ -193,7 +197,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de privilégios contidas o `CTokenPrivileges` objeto.  
   
-##  <a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>  CTokenPrivileges::GetLength  
  Retorna o comprimento do `CTokenPrivileges` objeto.  
   
 ```
@@ -203,7 +207,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de bytes necessários para manter um **TOKEN_PRIVILEGES** estrutura representado pelo `CTokenPrivileges` objeto, incluindo todas as entradas de privilégio que ele contém.  
   
-##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes  
  Recupera os identificadores de local exclusivos (LUID) e os sinalizadores de atributo do `CTokenPrivileges` objeto.  
   
 ```
@@ -222,7 +226,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>Comentários  
  Esse método irá enumerar todos os privilégios contidos o `CTokenPrivileges` objeto de token de acesso e colocar os LUIDs individuais e (opcionalmente) os sinalizadores de atributo em objetos de matriz.  
   
-##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes  
  Recupera os nome e atributo sinalizadores do `CTokenPrivileges` objeto.  
   
 ```
@@ -243,7 +247,7 @@ void GetNamesAndAttributes(
   
  Esse método recupera o nome do atributo, em vez do nome de exibição: por exemplo, se o nome do atributo é SE_REMOTE_SHUTDOWN_NAME, o nome do sistema é "SeRemoteShutdownPrivilege". Para obter o nome de exibição, use o método [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
   
-##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  Retorna um ponteiro para o **TOKEN_PRIVILEGES** estrutura.  
   
 ```
@@ -253,7 +257,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um ponteiro para o [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estrutura.  
   
-##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  Recupera o atributo associado a um nome de privilégio.  
   
 ```

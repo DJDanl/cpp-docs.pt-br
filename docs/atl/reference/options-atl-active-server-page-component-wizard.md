@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.asp.options
-dev_langs: C++
-helpviewer_keywords: ATL Active Server Page Component Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.asp.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6564b340458ae7e9a8e137d2338ba68b3e729a0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opções de Assistente de componente de página Active Server ATL
 Use esta página do Assistente de componente do ATL Active Server página projetar para maior eficiência e suporte de erro para o objeto.  
@@ -38,7 +43,7 @@ Use esta página do Assistente de componente do ATL Active Server página projet
 |**Apartment**|Especifica que o objeto usa apartment threading. Apartment do thread equivalente a uma única. Cada objeto de um componente de apartment-threaded é atribuído um compartimento para seu thread, durante a vida útil do objeto; No entanto, vários threads podem ser usados para vários objetos. Cada compartimento estiver associado a um segmento específico e tem um bombeamento de mensagens do Windows (padrão).<br /><br /> Consulte [single-threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) para obter mais informações.|  
 |**Ambos**|Especifica que o objeto pode usar apartment ou thread livre, dependendo de qual tipo de um thread é criada.|  
 |**Livre**|Especifica que o objeto usa thread livre. Thread livre equivale a um modelo de apartment com vários threads. Consulte [threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693421) para obter mais informações.|  
-|**Neutro** (somente no Windows 2000)|Especifica que o objeto segue as diretrizes para threads apartments, mas ela pode ser executada em qualquer tipo de segmento.|  
+|**Neutral**|Especifica que o objeto segue as diretrizes para threads apartments, mas ela pode ser executada em qualquer tipo de segmento.|  
   
  **Agregação**  
  Indica se o objeto usa [agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558). O objeto de agregação escolhe quais interfaces para expor para clientes e as interfaces são expostas como se o objeto de agregação implementado-los. Os clientes do objeto de agregação se comunicam somente com o objeto de agregação.  
@@ -47,7 +52,7 @@ Use esta página do Assistente de componente do ATL Active Server página projet
 |------------|-----------------|  
 |**Sim**|Especifica se o objeto pode ser agregado. O padrão.|  
 |**No**|Especifica que o objeto não é agregado.|  
-|**Somente**|Especifica que o objeto deve ser agregado.|  
+|**Only**|Especifica que o objeto deve ser agregado.|  
   
  **Suporte**  
  (Descrição do elemento a ser adicionado)  

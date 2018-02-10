@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation Manager
 - Automation servers, Automation Manager
@@ -16,19 +18,20 @@ helpviewer_keywords:
 - Automation clients, Automation Manager
 - AUTMGR32.exe
 ms.assetid: 6bf3429e-1946-41c5-86d0-ad7f5b8585b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 338b619580ef7967d871ff3f960fc467555ab72a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8773bc60d970f66616c35db84b9f161ea12754d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automation-manager-mfc"></a>Gerenciador de automação (MFC)
-AUTMGR32. EXE deve ser copiado para o diretório de sistema do Windows de cada máquina que pretende fornecer objetos de automação remota. Para Windows 95 e Windows 98, esse diretório é normalmente C:\WINDOWS\SYSTEM. Para Windows NT e o Windows 2000, é geralmente C:\WINNT\SYSTEM32.  
+AUTMGR32. EXE deve ser copiado para o diretório de sistema do Windows de cada máquina que pretende fornecer objetos de automação remota. É geralmente C:\WINDOWS\SYSTEM32.  
   
  Se você deseja habilitar os retornos de chamada do servidor para o cliente, esse arquivo executável também deve ser copiado para o diretório do sistema de cada computador cliente.  
   

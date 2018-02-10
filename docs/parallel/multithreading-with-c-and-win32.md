@@ -1,13 +1,15 @@
 ---
 title: Multithread com C e Win32 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows API [C++], multithreading
 - multithreading [C++], C and Win32
@@ -17,19 +19,20 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16353937046384f9dc130048c510197697fb678f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithread com C e Win32
-Microsoft Visual C++ oferece suporte para a criação de aplicativos multithread com o Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me e Windows 98. Considere a possibilidade de usar mais de um thread se seu aplicativo precisar gerenciar várias atividades, como simultâneo do teclado e mouse entrada. Um thread pode processar a entrada do teclado enquanto um thread de segundo filtra as atividades de mouse. Um terceiro segmento pode atualizar a tela de exibição com base nos dados de threads de mouse e teclado. Ao mesmo tempo, outros threads podem acessar arquivos de disco ou obter dados de uma porta de comunicação.  
+Microsoft Visual C++ fornece suporte para a criação de aplicativos multithread. Considere a possibilidade de usar mais de um thread se seu aplicativo precisa para executar operações caras que faria com que a interface do usuário pare de responder.  
   
  Com o Visual C++, há duas maneiras de programa com vários threads: use a biblioteca Microsoft Foundation Class (MFC) ou a biblioteca de tempo de execução do C e a API do Win32. Para obter informações sobre como criar aplicativos multithread com MFC, consulte [Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md) depois de ler os tópicos a seguir sobre multithreading em C.  
   

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 Processa chamada [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (ou [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) para vincular explicitamente para uma DLL. Se a função tiver êxito, a DLL especificada é mapeado no espaço de endereço do processo de chamada e retorna um identificador para a DLL que pode ser usada com outras funções na vinculação explícita — por exemplo, `GetProcAddress` e `FreeLibrary`.  
@@ -39,7 +43,7 @@ Processa chamada [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) 
  Se o Windows não pode carregar a DLL, o processo pode tentar recuperar do erro. Por exemplo, o processo pode notificar o usuário sobre o erro e peça ao usuário para especificar outro caminho para a DLL.  
   
 > [!IMPORTANT]
->  Se o código é executado no Windows NT 4, Windows 2000 ou Windows XP (antes do SP1), certifique-se de especificar o caminho completo de qualquer DLLs. Nesses sistemas operacionais, o diretório atual é pesquisado primeiro quando os arquivos são carregados. Se você não qualificar o caminho do arquivo, um arquivo que não é o desejado pode ser carregado.  
+>  Certifique-se de especificar o caminho completo de qualquer DLLs. O diretório atual é pesquisado pela primeira vez, quando os arquivos são carregados. Se você não qualificar o caminho do arquivo, um arquivo que não é o desejado pode ser carregado.  
   
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?  
   
