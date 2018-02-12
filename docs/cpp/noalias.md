@@ -1,28 +1,32 @@
 ---
 title: noalias | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
@@ -32,13 +36,15 @@ ms.lasthandoff: 12/21/2017
 
 Se uma função é anotada como `noalias`, o otimizador pode assumir que, além dos parâmetros em si, somente as indireções de primeiro nível dos parâmetros do ponteiro são referenciadas ou modificadas na função. O estado global visível é o conjunto de todos os dados que não estão definidos ou referenciados fora do escopo da compilação, e o endereço não é pego. O escopo de compilação é todos os arquivos de origem ([/LTCG (geração de código Link-time)](../build/reference/ltcg-link-time-code-generation.md) compilações) ou um único arquivo de origem (não -**/LTCG** criar).
 
+O `noalias` anotação se aplica apenas dentro do corpo da função anotado. Marcação de uma função como `__declspec(noalias)` não afeta a alias de ponteiros retornado pela função.
+
+Para outra anotação que pode afetar o alias, consulte [__declspec(restrict)](../cpp/restrict.md).
+
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra o uso `__declspec(restrict)` e `__declspec(noalias)`. Normalmente, a memória retornado de `malloc` é `restrict` porque os cabeçalhos de CRT são decorados adequadamente.
+O exemplo a seguir demonstra o uso de `__declspec(noalias)`.
 
-No entanto, no exemplo, os ponteiros `mempool` e `memptr` são globais para o compilador não tem nenhuma garantia de que a memória não está sujeita às alias. Decorando as funções que retornam ponteiros com `__declspec(restrict)` dizem ao compilador que a memória apontada pelo valor de retorno não possui alias.
-
-Decorando a função no exemplo que acessa a memória com `__declspec(noalias)` informa o compilador que essa função não interfere no estado global exceto por ponteiros na lista de parâmetros.
+Quando a função `multiply` que acessa memória é anotada `__declspec(noalias)`, ele informa ao compilador que essa função não modifique o estado global, exceto por meio dos ponteiros na sua lista de parâmetros.
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ Decorando a função no exemplo que acessa a memória com `__declspec(noalias)` 
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>Consulte também
 
 [__declspec](../cpp/declspec.md)  
-[Palavras-chave](../cpp/keywords-cpp.md)
+[Palavras-chave](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  
