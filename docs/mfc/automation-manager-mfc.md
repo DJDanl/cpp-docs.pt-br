@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b8773bc60d970f66616c35db84b9f161ea12754d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation-manager-mfc"></a>Gerenciador de automação (MFC)
 AUTMGR32. EXE deve ser copiado para o diretório de sistema do Windows de cada máquina que pretende fornecer objetos de automação remota. É geralmente C:\WINDOWS\SYSTEM32.  

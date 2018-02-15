@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Criando programas que usam automação remota
 Qualquer objeto de automação e qualquer controlador de automação, é possível usar automação remota sem qualquer alteração feita no código-fonte, sem a necessidade de recompilação e sem a necessidade de vinculando novamente. Depois que você tiver uma configuração que funciona localmente (ou seja, no mesmo computador), você precisa passar por apenas algumas etapas para executá-lo remotamente.  

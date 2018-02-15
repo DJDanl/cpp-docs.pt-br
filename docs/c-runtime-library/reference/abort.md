@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: abort
+ms.topic: reference
+apiname:
+- abort
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: Abort
-dev_langs: C++
+f1_keywords:
+- Abort
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting current process
 - abort function
@@ -30,19 +34,20 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6577ca7927d42e12aa62ed100b9572b7270208f
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02e8c81ef539dc2f078a3b120ca673a0ef612779
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="abort"></a>abort
 
 Anula o processo atual e retorna um código de erro.
 
 > [!NOTE]
-> Não use esse método para desligar um aplicativo da Microsoft Store ou [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo, exceto em teste ou cenários de depuração. Modos de interface do usuário ou por programação para fechar um aplicativo de repositório não são permitidos de acordo com o [políticas do Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Não use esse método para desligar um app Store Microsoft ou Windows UWP (plataforma Universal), exceto em teste ou cenários de depuração. Modos de interface do usuário ou por programação para fechar um aplicativo de repositório não são permitidos de acordo com o [políticas do Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -132,3 +137,4 @@ File could not be opened: No such file or directory
 [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)  
 [_DEBUG](../../c-runtime-library/debug.md)  
 [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)  
+

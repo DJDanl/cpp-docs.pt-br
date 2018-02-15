@@ -1,26 +1,31 @@
 ---
-title: . MODELO | Microsoft Docs
+title: .MODEL | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: .MODEL
-dev_langs: C++
-helpviewer_keywords: .MODEL directive
+ms.topic: reference
+f1_keywords:
+- .MODEL
+dev_langs:
+- C++
+helpviewer_keywords:
+- .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5407e201b25fdf9b5344d438a69e2fc3e972327b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b61cb1b04be84a52b4a455ed1b216727514e1432
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="model"></a>.MODEL
 Inicializa o modelo de memória de programa.  
@@ -41,9 +46,9 @@ Inicializa o modelo de memória de programa.
  `stackoption`  
  Parâmetro opcional.  
   
- `stackoption`não é usado se `memorymodel` é `FLAT`.  
+ `stackoption` não é usado se `memorymodel` é `FLAT`.  
   
- Especificando `NEARSTACK` agrupa o segmento de pilha em um único segmento físico (`DGROUP`) junto com dados. Registro do segmento de pilha (`SS`) é assumido para manter o mesmo endereço de registro do segmento de dados (`DS`). `FARSTACK`não agrupa a pilha com `DGROUP`; portanto, `SS` não é igual a `DS`.  
+ Especificando `NEARSTACK` agrupa o segmento de pilha em um único segmento físico (`DGROUP`) junto com dados. Registro do segmento de pilha (`SS`) é assumido para manter o mesmo endereço de registro do segmento de dados (`DS`). `FARSTACK` não agrupa a pilha com `DGROUP`; portanto, `SS` não é igual a `DS`.  
   
 ## <a name="remarks"></a>Comentários  
  .`MODEL` não é usado em [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  

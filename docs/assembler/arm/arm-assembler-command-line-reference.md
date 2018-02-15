@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Referência de linha de comando do assembler ARM
 Este artigo fornece informações de linha de comando sobre assembler ARM Microsoft, *armasm*, que compila ARMv7 Thumb linguagem de assembly para a implementação da Microsoft do formato de arquivo de objeto (COFF) comum. O vinculador poderá vincular código COFF com o código de objeto que é produzido por do assembler ARM ou pelo compilador C, junto com as bibliotecas de objetos que são criados pelo bibliotecário.  
@@ -35,25 +38,25 @@ armasm [[options]] -o objectfile sourcefile
   
 #### <a name="parameters"></a>Parâmetros  
  `options`  
- -erros`filename`  
+ -erros `filename`  
  Redirecionamento de mensagens de erro e aviso para `filename`.  
   
- -i`dir[;dir]`  
+ -i `dir[;dir]`  
  Adicione as pastas especificadas para o caminho de pesquisa de inclusão.  
   
- -Predefinir`directive`  
+ -Predefinir `directive`  
  Especifique uma diretiva SETA, SETL ou conjuntos para predefinir um símbolo. Exemplo: **armasm.exe-predefinir "" contagem de SETA 150 source.asm**. Para obter mais informações, consulte o [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Desabilite todas as mensagens de aviso.  
   
- -Ignorar`warning`  
+ -Ignorar `warning`  
  Desabilite o aviso especificado. Para os valores possíveis, consulte a seção sobre os avisos.  
   
  -Ajuda  
  Imprima a mensagem de ajuda de linha de comando.  
   
- -machine`machine`  
+ -machine `machine`  
  Especifique o tipo de máquina para definir o cabeçalho PE.  Os valores possíveis para `machine` são:  
 **ARM**— define o tipo de máquina para IMAGE_FILE_MACHINE_ARMNT. Esse é o padrão.   
 **THUMB**— define o tipo de máquina para IMAGE_FILE_MACHINE_THUMB.  
@@ -61,7 +64,7 @@ armasm [[options]] -o objectfile sourcefile
  -oldit  
  Gerar estilo ARMv7 blocos IT.  Por padrão, compatível com ARMv8 IT blocos são gerados.  
   
- -por meio de`filename`  
+ -via `filename`  
  Ler argumentos de linha de comando adicionais do `filename`.  
   
  -16  
@@ -73,7 +76,7 @@ armasm [[options]] -o objectfile sourcefile
  -g  
  Gere informações de depuração.  
   
- -errorReport:`option`  
+ -errorReport: `option`  
  Especifique como interno assembler erros são relatados à Microsoft.  Os valores possíveis para `option` são:   
 **nenhum**— não enviar relatórios.   
 **prompt**— solicitar ao usuário para enviar relatórios imediatamente.   

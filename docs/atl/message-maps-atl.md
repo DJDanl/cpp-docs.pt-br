@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e708fea75c594c7bb9504515c80222ad901c335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12eeb74266e9c303817430958025d6536147356c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="message-maps-atl"></a>Mapas de mensagem (ATL)
 Um mapa de mensagem associa uma função de manipulador com uma mensagem específica, um comando ou uma notificação. Por meio da ATL [macros de mapa de mensagem](../atl/reference/message-map-macros-atl.md), você pode especificar um mapa de mensagem para uma janela. Os procedimentos de janela `CWindowImpl`, `CDialogImpl`, e `CContainedWindowT` direcionar mensagens da janela para seu mapa de mensagem.  
@@ -31,9 +34,9 @@ Um mapa de mensagem associa uma função de manipulador com uma mensagem especí
 ## <a name="chained-message-maps"></a>Mapas de mensagem encadeadas  
  ATL também permite que você para mapas de mensagem de cadeia, que direciona a tratamento para um mapa de mensagem definido em outra classe de mensagens. Por exemplo, você pode implementar comuns a manipulação de mensagens em uma classe separada para fornecer comportamento uniforme para todas as janelas do encadeamento para essa classe. É possível encadear uma classe base ou um membro de dados da sua classe.  
   
- ATL também dá suporte a encadeamento dinâmico, que permite a cadeia de mapa de mensagem de outro objeto em tempo de execução. Para implementar o encadeamento dinâmico, você deve derivar a classe de [CDynamicChain](../atl/reference/cdynamicchain-class.md). Em seguida, declare o [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) macro em seu mapa de mensagem. `CHAIN_MSG_MAP_DYNAMIC`requer um número exclusivo que identifica o objeto e o mapa de mensagens para o qual você está encadeamento. Você deve definir esse valor exclusivo por meio de uma chamada para `CDynamicChain::SetChainEntry`.  
+ ATL também dá suporte a encadeamento dinâmico, que permite a cadeia de mapa de mensagem de outro objeto em tempo de execução. Para implementar o encadeamento dinâmico, você deve derivar a classe de [CDynamicChain](../atl/reference/cdynamicchain-class.md). Em seguida, declare o [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) macro em seu mapa de mensagem. `CHAIN_MSG_MAP_DYNAMIC` requer um número exclusivo que identifica o objeto e o mapa de mensagens para o qual você está encadeamento. Você deve definir esse valor exclusivo por meio de uma chamada para `CDynamicChain::SetChainEntry`.  
   
- É possível encadear a qualquer classe que declara um mapa de mensagem, desde que a classe derivada de [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap`permite que um objeto para expor seus mapas de mensagem a outros objetos. Observe que `CWindowImpl` já deriva de `CMessageMap`.  
+ É possível encadear a qualquer classe que declara um mapa de mensagem, desde que a classe derivada de [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap` permite que um objeto para expor seus mapas de mensagem a outros objetos. Observe que `CWindowImpl` já deriva de `CMessageMap`.  
   
 ## <a name="alternate-message-maps"></a>Mapas de mensagem alternativo  
  Por fim, ATL dá suporte a mapas de mensagem alternativo, declarados com o [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) macro. Cada mapa de mensagem alternativo é identificado por um número exclusivo que você passa para `ALT_MSG_MAP`. Usando mensagens alternativos mapas, você pode manipular as mensagens do windows vários em um mapa. Observe que, por padrão, `CWindowImpl` não usa mapas de mensagem alternativo. Para adicionar esse suporte, substitua o `WindowProc` método no seu `CWindowImpl`-derivado da classe e chamar `ProcessWindowMessage` com o identificador de mapa de mensagem.  

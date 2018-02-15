@@ -1,13 +1,15 @@
 ---
-title: alloca | Microsoft Docs
+title: _alloca | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _alloca
+ms.topic: reference
+apiname:
+- _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104c3df4e6f69d31c5090a87c8029351accd1e1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alloca"></a>_alloca
 Aloca memória na pilha. Essa função é preterida porque uma versão mais segura está disponível. consulte [malloca](../../c-runtime-library/reference/malloca.md).  
@@ -61,7 +65,7 @@ void *_alloca(
  Uma exceção de excedente de pilha será gerada se não for possível alocar o espaço. A exceção de excedente de pilha não é uma exceção de C++; ela é uma exceção estruturada. Em vez de usar o tratamento de exceções de C++, você deve usar a [SEH](../../cpp/structured-exception-handling-c-cpp.md) (Manipulação de Exceção Estruturada).  
   
 ## <a name="remarks"></a>Comentários  
- `_alloca`aloca `size` bytes da pilha de programa. O espaço alocado é liberado automaticamente quando a função de chamada for encerrada (não quando a alocação simplesmente passa fora do escopo). Portanto, não passe o valor do ponteiro retornado por `_alloca` como um argumento para [livre](../../c-runtime-library/reference/free.md).  
+ `_alloca` aloca `size` bytes da pilha de programa. O espaço alocado é liberado automaticamente quando a função de chamada for encerrada (não quando a alocação simplesmente passa fora do escopo). Portanto, não passe o valor do ponteiro retornado por `_alloca` como um argumento para [livre](../../c-runtime-library/reference/free.md).  
   
  Há restrições para chamar `_alloca` explicitamente em um EH (manipulador de exceção). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar `_alloca` explicitamente em qualquer um dos seguintes cenários resulta em falha do programa durante o retorno ao chamar a rotina EH:  
   
@@ -147,5 +151,5 @@ Allocated 1000 bytes of stack at 0x0012FB50
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)   
+ [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)   
  [_malloca](../../c-runtime-library/reference/malloca.md)

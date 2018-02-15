@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (geração de código do tempo de vinculação)
 ```  
@@ -40,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  : INCREMENTAL (opcional)  
  Especifica que o vinculador só se aplica todo o programa otimização ou link-time geração de código (/ltcg) para o conjunto de arquivos afetados por uma edição, em vez de todo o projeto. Por padrão, esse sinalizador não é definido quando /LTCG for especificado, e o projeto inteiro é vinculado usando a otimização de programa inteiro.  
   
- : NOSTATUS &#124; : STATUS (opcional)  
+ :NOSTATUS &#124; :STATUS (optional)  
  Especifica se o vinculador exibe um indicador de progresso que mostra a porcentagem do link for concluída. Por padrão, essas informações de status não são exibidas.  
   
  : Desativado (opcional)  
@@ -61,27 +64,27 @@ ms.lasthandoff: 12/21/2017
   
  Com as seguintes exceções, você não pode adicionar opções de vinculador para a combinação PGO /LTCG e /USEPROFILE que não foram especificados na combinação das opções /LTCG e /GENPROFILE inicialização PGO anterior:  
   
--   [BASE](../../build/reference/base-base-address.md)  
+-   [/BASE](../../build/reference/base-base-address.md)  
   
--   [/ FIXED](../../build/reference/fixed-fixed-base-address.md)  
+-   [/FIXED](../../build/reference/fixed-fixed-base-address.md)  
   
 -   /LTCG  
   
--   [/ MAPA](../../build/reference/map-generate-mapfile.md)  
+-   [/MAP](../../build/reference/map-generate-mapfile.md)  
   
--   [/ MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)  
+-   [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)  
   
 -   [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)  
   
--   [/ ENTRADA SAÍDA](../../build/reference/out-output-file-name.md)  
+-   [/OUT](../../build/reference/out-output-file-name.md)  
   
--   [/ PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)  
+-   [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)  
   
--   [/ PDB](../../build/reference/pdb-use-program-database.md)  
+-   [/PDB](../../build/reference/pdb-use-program-database.md)  
   
 -   [/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)  
   
--   [/ STUB](../../build/reference/stub-ms-dos-stub-file-name.md)  
+-   [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)  
   
 -   [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)  
   
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>/LTCG e módulos MSIL  
  Os módulos que são compilados usando [/GL](../../build/reference/gl-whole-program-optimization.md) e [/clr](../../build/reference/clr-common-language-runtime-compilation.md) pode ser usado como entrada para o vinculador quando **/LTCG** for especificado.  
   
--   **/LTCG** pode aceitar arquivos de objeto nativo misturados arquivos de objeto nativo/gerenciado (compilado usando **/clr**) e arquivos de objeto puro (compilado usando **/clr: pure**), e arquivos de objeto de seguro ( compilado usando **/CLR: safe**). As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
+-   **/LTCG** pode aceitar arquivos de objeto nativo e arquivos de objeto nativo/gerenciado misto (compilados usando **/clr**). As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
--   **/LTCG** pode aceitar. netmodules seguro, que pode ser criado usando **/CLR: safe /LN** no Visual C++ e **/target: Module** em qualquer compilador .NET Visual Studio. . Netmodules produzida usando **/clr** ou **/clr: pure** não são aceitas por **/LTCG**.  
-  
--   /LTCG:PGI não aceita módulos nativos compilados usando **/GL** e **/clr**, ou módulos puros (produzida usando **/clr: pure**)  
+-   /LTCG:PGI não aceita módulos nativos compilados usando **/GL** e **/clr**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   

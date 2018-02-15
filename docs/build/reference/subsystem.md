@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /subsystem
-dev_langs: C++
+f1_keywords:
+- /subsystem
+dev_langs:
+- C++
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 945e0d6da5ff1c5f24f8c0e10693f06334e0a25c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Especifica o ambiente de execução é necessária para a imagem executável.  
@@ -40,7 +44,7 @@ Especifica o ambiente de execução é necessária para a imagem executável.
  Você pode especificar qualquer um dos seguintes subsistemas:  
   
  BOOT_APPLICATION  
- Um aplicativo que é executado no ambiente de inicialização do Windows. Para obter mais informações sobre aplicativos de inicialização, consulte[sobre o provedor WMI de BCD](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Um aplicativo que é executado no ambiente de inicialização do Windows. Para obter mais informações sobre aplicativos de inicialização, consulte [sobre o provedor WMI de BCD](http://msdn.microsoft.com/library/aa362639.aspx).  
   
  CONSOLE  
  Um aplicativo de modo de caractere do Windows. O sistema operacional fornece um console para aplicativos de console.  
@@ -55,7 +59,7 @@ Especifica o ambiente de execução é necessária para a imagem executável.
  Um aplicativo que é executado no subsistema POSIX em Windows.  
   
  WINDOWS  
- Um aplicativo que é executado no ambiente gráfico. Isso inclui aplicativos de área de trabalho e aplicativos da Windows Store.  
+ Um aplicativo que é executado no ambiente gráfico. Isso inclui aplicativos de área de trabalho e aplicativos do Windows UWP (plataforma Universal).  
   
  WINDOWSCE  
  O subsistema WINDOWSCE indica que o aplicativo é destinado para ser executado em um dispositivo que tenha uma versão do kernel do Windows CE. Versões do kernel incluem Pocket PC, Windows Mobile, Windows Phone 7, v 1.0-6.0R3 do Windows CE e Windows Embedded Compact 7.  

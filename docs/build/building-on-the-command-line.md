@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilar o código C/C++ na linha de comando
 
@@ -82,7 +85,7 @@ Arquivos de comando adicionais estão disponíveis para configurar as arquitetur
 >   
 > O arquivo vcvarsall.bat também varia de uma versão para outra. Se a versão atual do Visual C++ está instalada em um computador que também tem uma versão anterior do Visual C++, não execute vcvarsall.bat ou em outro arquivo de comando de versões diferentes na mesma janela do prompt de comando.  
  
-É a maneira mais simples para especificar uma arquitetura de compilação específica em uma janela de comando existente usar o arquivo vcvarsall.bat. Você pode usar vcvarsall.bat para definir variáveis de ambiente para configurar a linha de comando de compilação nativa de 32 bits ou 64 bits ou de compilação cruzada para x86, x64 ou ARM processadores; para o destino da Windows Store, plataforma Universal do Windows ou plataformas de área de trabalho do Windows; para especificar quais SDK do Windows será usado; e para especificar a versão do conjunto de ferramentas de plataforma. Se nenhum argumento for fornecido, vcvarsall.bat configura as variáveis de ambiente para usar o compilador nativo de 32 bits atual para x86 de destinos de área de trabalho do Windows. No entanto, você pode usá-lo para configurar qualquer uma das nativo ou entre as ferramentas de compilador. Se você especificar uma configuração de compilador que não está instalada ou não está disponível em sua arquitetura de computador de compilação, uma mensagem de erro será exibida. Esta tabela mostra os argumentos de arquitetura com suporte:  
+É a maneira mais simples para especificar uma arquitetura de compilação específica em uma janela de comando existente usar o arquivo vcvarsall.bat. Você pode usar vcvarsall.bat para definir variáveis de ambiente para configurar a linha de comando de compilação nativa de 32 bits ou 64 bits ou de compilação cruzada para x86, x64 ou ARM processadores; destino Microsoft Store, plataforma Universal do Windows ou plataformas de área de trabalho do Windows; para especificar quais SDK do Windows será usado; e para especificar a versão do conjunto de ferramentas de plataforma. Se nenhum argumento for fornecido, vcvarsall.bat configura as variáveis de ambiente para usar o compilador nativo de 32 bits atual para x86 de destinos de área de trabalho do Windows. No entanto, você pode usá-lo para configurar qualquer uma das nativo ou entre as ferramentas de compilador. Se você especificar uma configuração de compilador que não está instalada ou não está disponível em sua arquitetura de computador de compilação, uma mensagem de erro será exibida. Esta tabela mostra os argumentos de arquitetura com suporte:  
   
 |Argumento de arquitetura de Vcvarsall.bat|Compilador|Arquitetura do computador host|Arquitetura de saída de compilação|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  

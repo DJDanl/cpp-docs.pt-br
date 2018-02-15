@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
 - VC.Project.VCCLCompilerTool.CompileAsManaged
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler, common language runtime option
 - -clr compiler option [C++]
@@ -20,16 +22,17 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (compilação do Common Language Runtime)
 Permite que aplicativos e componentes usem recursos do CLR (Common Language Runtime).  
@@ -54,19 +57,12 @@ Permite que aplicativos e componentes usem recursos do CLR (Common Language Runt
  [Como: migrar para /clr](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/clr:pure**  
- Produz um Microsoft Intermediate Language (MSIL)-somente o arquivo de saída que tem sem código executável nativo. No entanto, ela pode conter tipos nativos compilados para MSIL.  
-  
- Para obter mais informações, consulte [puro e código verificável (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
-  
  /CLR: pure foi preterido. Uma versão futura do compilador pode não dar suporte a essa opção. É recomendável que você porta código que deve ser MSIL puro para c#.  
   
- **/CLR: safe**  
- Produz um MSIL somente (sem código executável nativo), arquivo de saída verificável. **/CLR: safe** permitem o diagnóstico de verificação ([ferramenta PEVerify (Peverify.exe)](/dotnet/framework/tools/peverify-exe-peverify-tool)).  
+ **/clr:safe**  
+ /CLR: safe foi preterido. Uma versão futura do compilador pode não dar suporte a essa opção. É recomendável que você porta código que deve ser MSIL seguro para c#. 
   
-
- /CLR: safe foi preterido. Uma versão futura do compilador pode não dar suporte a essa opção. É recomendável que você porta código que deve ser MSIL puro, pode ser verificada para c#.  
-  
- **/CLR:noAssembly**  
+ **/clr:noAssembly**  
  Especifica que um manifesto do assembly não deve ser inserido no arquivo de saída. Por padrão, o **noAssembly** opção não está em vigor.  
   
  O **noAssembly** opção é preterida. Use [/LN (criar o módulo MSIL)](../../build/reference/ln-create-msil-module.md) em vez disso.  
@@ -75,12 +71,12 @@ Permite que aplicativos e componentes usem recursos do CLR (Common Language Runt
   
  Antes de Visual C++ 2005, **/clr:noAssembly** necessária **/LD**. **/LD** agora está implícita quando você especificar **/clr:noAssembly**.  
   
- **/CLR:initialAppDomain**  
+ **/clr:initialAppDomain**  
  Permite que um [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] aplicativo para ser executado na versão 1 do CLR. Se você usar **initialAppDomain**, em seguida, você poderá ver alguns dos problemas que são discutidos em [BUG: exceção AppDomainUnloaded quando você usa do managed extensions para componentes do Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) no Microsoft Site de suporte.  
   
  Um aplicativo que é compilado usando **initialAppDomain** não deve ser usado por um aplicativo que usa o ASP.NET porque não há suporte na versão 1 do CLR.  
   
- **/CLR:nostdlib**  
+ **/clr:nostdlib**  
  Instrui o compilador ignorar o diretório \clr padrão. O compilador gera erros se você estiver incluindo várias versões de uma DLL como System. dll. O uso dessa opção permite que você especifique o framework específico a ser usado durante a compilação.  
   
 ## <a name="remarks"></a>Comentários  
@@ -96,7 +92,7 @@ Permite que aplicativos e componentes usem recursos do CLR (Common Language Runt
   
  Por padrão, **/clr** não está em vigor. Quando **/clr** está em vigor, **/MD** também está em vigor. Para obter mais informações, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** garante que as versões dinamicamente vinculadas, multithread das rotinas de tempo de execução são selecionadas dos arquivos de cabeçalho padrão (h). Multithreading é necessário para porque o coletor de lixo CLR executa os finalizadores em um thread auxiliar de programação gerenciada.  
   
- Se você compila usando **/c**, você pode especificar o tipo CLR (IJW, confiável ou puro) do arquivo de saída resultante com [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
+ Se você compila usando **/c**, você pode especificar o tipo CLR do arquivo de saída resultante com [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
  **/CLR** implica **/EHa**e nenhum outro **/EH** opções têm suporte para **/clr**. Para obter mais informações, consulte [/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md).  
   
@@ -109,23 +105,6 @@ Permite que aplicativos e componentes usem recursos do CLR (Common Language Runt
  Quando **/clr** for usado, o `_MANAGED` símbolo é definido como 1. Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).  
   
  As variáveis globais em um arquivo de objeto nativo são inicializadas primeiro (durante DllMain se o executável é uma DLL) e, em seguida, as variáveis globais na seção gerenciada são inicializadas (antes de qualquer código gerenciado é executado). `#pragma`[init_seg](../../preprocessor/init-seg.md) só afeta a ordem de inicialização nas categorias gerenciadas e não gerenciados.  
-  
- Compilando usando **/CLR: safe** é análogo a compilação usando [/platform:anycpu](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option) em linguagens como c#.  
-  
-## <a name="safe-and-pure-images"></a>Imagens puras e seguras  
- Uma imagem pura usa uma versão do CLR da biblioteca C Runtime (CRT). No entanto, CRT não é verificável, portanto você não pode usar o CRT quando você compila usando **/CLR: safe**. Para obter mais informações, consulte [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
-  
- Exemplos de código nativo que não pode aparecer em uma imagem pura assembly embutido, [setjmp](../../c-runtime-library/reference/setjmp.md), e [longjmp](../../c-runtime-library/reference/longjmp.md).  
-  
- Cada ponto de entrada de uma imagem simples ou segurança é gerenciado. Quando você compila usando **/clr**, o ponto de entrada é nativo. Para obter mais informações, consulte [clrcall](../../cpp/clrcall.md).  
-  
- Quando você compila usando **/CLR: safe**, por padrão, as variáveis são [appdomain](../../cpp/appdomain.md) e não pode ser por processo. Para **/clr: pure**, embora **appdomain** é o padrão, você pode usar [processo](../../cpp/process.md) variáveis.  
-  
- Ao executar um arquivo de 32 bits .exe que foi compilado usando **/clr** ou **/clr: pure** em um sistema operacional de 64 bits, o aplicativo será executado no WOW64, que permite que um aplicativo de 32 bits executar em 32 bits CLR em um sistema operacional de 64 bits. Por padrão, um arquivo .exe que é compilado usando **/CLR: safe** será executado no CLR 64 bits em um computador que esteja executando um sistema operacional de 64 bits. (Em um sistema operacional de 32 bits, o mesmo arquivo .exe será executado no CLR de 32 bits.) No entanto, um aplicativo de seguro foi possível carregar um componente de 32 bits. Nesse caso, uma imagem de segurança em execução com suporte de 64 bits do sistema operacional falhará quando ele carrega o aplicativo de 32 bits (BadFormatException). Para garantir que uma imagem de segurança continuará a ser executado quando ele carrega uma imagem de 32 bits em um sistema operacional de 64 bits, você deve usar [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md) para alterar os metadados (.corflags) e marcá-la para ser executado no WOW64. A linha de comando a seguir é um exemplo. (Substitua seu próprio símbolo de entrada).  
-  
- **Cl /CLR: safe t.cpp /link /clrimagetype: pure /entry:?main@@$$HYMHXZ /Subsystem**  
-  
- Para obter informações sobre como obter um nome decorado, consulte [nomes decorados](../../build/reference/decorated-names.md). Para obter mais informações sobre os destinos de 64 bits, consulte [configurar Visual C++ para x64 de 64 bits, destinos](../../build/configuring-programs-for-64-bit-visual-cpp.md). Para obter informações sobre como usar código puro do CLR, consulte [como: migrar para /clr: pure (C + + CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md) e [puro e código verificável (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
 ## <a name="metadata-and-unnamed-classes"></a>Metadados e Classes sem nome  
  Classes sem nome serão exibido nos metadados nomeados da seguinte maneira: `$UnnamedClass$` *crc-de-atual-nome de arquivo*`$`*índice*`$`, onde *índice*é uma contagem sequencial das classes sem nome na compilação. Por exemplo, o exemplo de código a seguir gera uma classe sem nome nos metadados.  

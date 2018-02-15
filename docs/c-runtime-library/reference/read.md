@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -58,7 +63,7 @@ int _read(
   
 ### <a name="parameters"></a>Parâmetros  
 
-*FD*  
+*fd*  
 Descritor de arquivo que se refere ao arquivo aberto.  
   
 *buffer*  
@@ -69,7 +74,7 @@ O número máximo de bytes.
   
 ## <a name="return-value"></a>Valor de retorno  
 
-`_read`Retorna o número de bytes lidos, que pode ser menor que *contagem* se houver menos de *contagem* bytes restantes no arquivo ou se o arquivo foi aberto no modo de texto, caso em que cada linha de retorno de carro feed par `\r\n` é substituído por um caractere de avanço de linha única `\n`. Apenas o caractere de avanço de linha único é contado no valor retornado. A substituição não afeta o ponteiro do arquivo.  
+`_read` Retorna o número de bytes lidos, que pode ser menor que *contagem* se houver menos de *contagem* bytes restantes no arquivo ou se o arquivo foi aberto no modo de texto, caso em que cada linha de retorno de carro feed par `\r\n` é substituído por um caractere de avanço de linha única `\n`. Apenas o caractere de avanço de linha único é contado no valor retornado. A substituição não afeta o ponteiro do arquivo.  
   
 Se a função tentar ler o final do arquivo, ela retornará 0. Se *fd* é não é válido, o arquivo não está aberto para leitura, ou o arquivo está bloqueado, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará um valor -1 e definirá `errno` como `EBADF`.  
   

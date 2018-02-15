@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -29,7 +30,8 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 242646319193e070e59256c71c53a25268e10e64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 333e772c2716b87b43cb71ac1797e714af709b3e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 Determina se um inteiro representa um caractere com letra maiúscula.  
@@ -81,7 +84,7 @@ int _iwsupper_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de uma letra maiúscula. `isupper`Retorna um valor diferente de zero se `c` é um caractere maiusculo (A - Z). `iswupper` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a uma letra maiúscula ou se `c` for um conjunto de caracteres largos definido pela implementação para o qual nenhum de `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de uma letra maiúscula. `isupper` Retorna um valor diferente de zero se `c` é um caractere maiusculo (A - Z). `iswupper` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a uma letra maiúscula ou se `c` for um conjunto de caracteres largos definido pela implementação para o qual nenhum de `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam a localidade passada em vez da localidade atual para seu comportamento que depende da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   

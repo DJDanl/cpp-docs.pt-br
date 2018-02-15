@@ -4,19 +4,22 @@ description: Instalar o suporte do Visual Studio para Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar e executar um projeto de aplicativo de console C++
 
@@ -83,6 +86,8 @@ Se linhas onduladas vermelhas aparecem em qualquer coisa no editor de código fo
 ### <a name="run-your-code-in-a-command-window-issues"></a>Executar seu código em uma janela de comando problemas
 
 Você também pode navegar para a pasta de solução de depuração na linha de comando para executar seu aplicativo. Você não pode executar seu aplicativo de outros diretórios sem especificar o caminho para o aplicativo. No entanto, você pode copiar o seu aplicativo para outro diretório e executá-lo lá.
+
+Se você não vir **cópia como caminho** no menu de atalho, ignorar o menu e, em seguida, mantenha pressionada a tecla Shift enquanto você abri-lo novamente. Isso é apenas para conveniência. Você também pode copiar o caminho para a pasta da barra de pesquisa do Explorador de arquivos e cole-o no **executar** caixa de diálogo e, em seguida, digite o nome do executável no final. É um pouco mais de digitação, mas ele tem o mesmo resultado.
 
 [Voltar.](#run-your-code-in-a-command-window)
 

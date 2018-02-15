@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 Determina se um inteiro representa um caractere de controle.  
@@ -83,7 +86,7 @@ int _iswcntrl_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de controle. `iscntrl`Retorna um valor diferente de zero se `c` é um caractere de controle (0x00-0x1F ou 0x7F). `iswcntrl` retornará um valor diferente de zero se `c` for um caractere largo de controle. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de controle. `iscntrl` Retorna um valor diferente de zero se `c` é um caractere de controle (0x00-0x1F ou 0x7F). `iswcntrl` retornará um valor diferente de zero se `c` for um caractere largo de controle. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   

@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /CLRUNMANAGEDCODECHECK
-dev_langs: C++
+f1_keywords:
+- /CLRUNMANAGEDCODECHECK
+dev_langs:
+- C++
 helpviewer_keywords:
 - -CLRUNMANAGEDCODECHECK linker option
 - /CLRUNMANAGEDCODECHECK linker option
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b0ac6b7c2c0ba9ea14a2ddd9c227143ec71e2b93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f32ae791ebb09d3d2cfced48c42f982580e69b63
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Adicionar SupressUnmanagedCodeSecurityAttribute)
 **/CLRUNMANAGEDCODECHECK** Especifica se o vinculador aplicará <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> para geradas pelo vinculador `PInvoke` chamadas de código gerenciado nas DLLs nativas.  
@@ -36,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Comentários  
  Por padrão, o vinculador aplica o SuppressUnmanagedCodeSecurityAttribute gerado pelo vinculador `PInvoke` chamadas. Quando **/CLRUNMANAGEDCODECHECK** está em vigor, SuppressUnmanagedCodeSecurityAttribute não é aplicada.  
   
- O vinculador apenas adiciona o atributo para objetos que são compilados com **/clr** ou **/clr: pure**. Não gera o vinculador `PInvoke` chamadas em objetos compilados com **/CLR: safe**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
+ O vinculador apenas adiciona o atributo para objetos que são compilados com **/clr** ou **/clr: pure**. No entanto, o **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e serão removidas em uma versão futura do compilador.  
   
  Um `PInvoke` chamada é gerada pelo vinculador quando o vinculador não é possível encontrar um símbolo gerenciado para atender a uma referência de um chamador gerenciado, mas pode encontrar um símbolo nativo para atender a essa referência. Para obter mais informações sobre `PInvoke`, consulte [chamando funções nativas do código gerenciado](../../dotnet/calling-native-functions-from-managed-code.md).  
   

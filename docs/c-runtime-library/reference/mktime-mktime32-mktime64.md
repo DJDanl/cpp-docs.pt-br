@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33ab39945526ac2f53eab653ec374856953fc27e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ee2673f98f219559fd42d192dd934c8fe3eaed8c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 Converta a hora local para um valor de calendário.  
@@ -73,7 +76,7 @@ __time64_t _mktime64(
 ## <a name="return-value"></a>Valor de retorno  
  `_mktime32` retorna o horário do calendário especificado decodificado como valor do tipo [time_t](../../c-runtime-library/standard-types.md). Se *timeptr* faz referência a uma data anterior a meia-noite de 1º de janeiro de 1970, ou se o tempo de calendário não pode ser representado, `_mktime32` retorna -1 convertido no tipo `time_t`. Ao usar `_mktime32` e se *timeptr* faz referência a uma data posterior a 23:59:59 18 de janeiro de 2038, Tempo Universal Coordenado (UTC), ele retornará -1 convertido no tipo `time_t`.  
   
- `_mktime64`retornará -1 convertido no tipo `__time64_t` se *timeptr* faz referência a uma data posterior a 23:59:59, 31 de dezembro de 3000 a UTC.  
+ `_mktime64` retornará -1 convertido no tipo `__time64_t` se *timeptr* faz referência a uma data posterior a 23:59:59, 31 de dezembro de 3000 a UTC.  
   
 ## <a name="remarks"></a>Comentários  
  As funções `mktime`, `_mktime32` e `_mktime64` convertem a estrutura de horário fornecida (possivelmente incompleta) apontada por *timeptr* em uma estrutura completamente definida com valores normalizados e a converte para um valor temporal de calendário `time_t`. O horário convertido tem a mesma codificação dos valores retornados pela função [time](../../c-runtime-library/reference/time-time32-time64.md). Os valores originais dos componentes `tm_wday` e `tm_yday` da estrutura *timeptr* são ignorados e os valores originais dos outros componentes não são restritos aos seus intervalos normais.  

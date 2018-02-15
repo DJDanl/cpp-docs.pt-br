@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++ nativo na linha de comando
-O Visual C++ inclui um compilador de C++ de linha de comando que você pode usar para criar tudo do console básicas de aplicativos para aplicativos universais do Windows, aplicativos da Windows Store e os componentes do .NET.  
+O Visual C++ inclui um compilador de C++ de linha de comando que você pode usar para criar tudo do console básica aplicativos para aplicativos de plataforma Universal do Windows, aplicativos de Desktop, drivers de dispositivo e componentes do .NET.  
   
  Neste passo a passo, você cria um basic, "Olá, mundo"-estilo de programa C++ usando um texto de editor e, em seguida, compile-o na linha de comando. Se você gostaria de tentar o IDE do Visual Studio, em vez de usar a linha de comando, consulte [passo a passo: Trabalhando com projetos e soluções (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   

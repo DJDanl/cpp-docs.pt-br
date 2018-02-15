@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SEGMENT
-dev_langs: C++
-helpviewer_keywords: SEGMENT directive
+ms.topic: reference
+f1_keywords:
+- SEGMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="segment"></a>SEGMENT
 Define um segmento de programa chamado *nome* ter atributos de segmento  
@@ -45,15 +50,15 @@ name ENDS
 |**DWORD**|Próximo endereço de palavra de dupla disponível (4 bytes por palavra dupla).|  
 |**PARA**|Próximo endereço de parágrafo disponíveis (16 bytes por parágrafo).|  
 |**PAGE**|Próximo endereço de páginas disponível (256 bytes por página).|  
-|**ALINHAR**(*n*)|Avançar disponível  *n* endereço do número especificado de bytes. Consulte a seção comentários para obter mais informações.|  
+|**ALIGN**(*n*)|Avançar disponível  *n* endereço do número especificado de bytes. Consulte a seção comentários para obter mais informações.|  
   
  Se esse parâmetro não for especificado, **PARA** é usado por padrão.  
   
  *combine*  
- **PÚBLICO**, **pilha**, **comuns**, **memória**, **em***endereço*, **PRIVADA**  
+ **PÚBLICO**, **pilha**, **comuns**, **memória**, **em * endereço*, **PRIVADA**  
   
- *usar*  
- **USE16**, **USE32**, **SIMPLES**  
+ *use*  
+ **USE16**, **USE32**, **FLAT**  
   
  `characteristics`  
  **INFORMAÇÕES**, **ler**, **gravar**, **EXECUTE**, **compartilhado**, **NOPAGE**, **NOCACHE**, e **descartar**  
@@ -66,7 +71,7 @@ name ENDS
  Não há suportada com **/omf**.  
   
  `class`  
- Designa como segmentos devem ser combinados e ordenados no arquivo montado. Os valores típicos são, `'DATA'`, `'CODE'`, `'CONST'` e`'STACK'`  
+ Designa como segmentos devem ser combinados e ordenados no arquivo montado. Os valores típicos são, `'DATA'`, `'CODE'`, `'CONST'` e `'STACK'`  
   
 ## <a name="remarks"></a>Comentários  
  Para `ALIGN(n)`, `n` pode ser qualquer potência de 2 de 1 para 8192; não tem suporte com **/omf**.  

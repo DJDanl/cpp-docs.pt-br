@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>/clr Restrições
 Observe as seguintes restrições sobre o uso de **/clr**:  
@@ -52,7 +56,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
   
     -   [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
-    -   [/GM manual](../../build/reference/gm-enable-minimal-rebuild.md)  
+    -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
     -   [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
   
@@ -60,11 +64,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
   
     -   **/ZI**  
   
--   A combinação da `_STATIC_CPPLIB` definição de pré-processador (`/D_STATIC_CPPLIB`) e o **/clr** ou **/clr: pure** não há suporte para a opção de compilador. Isso acontece porque a definição causaria o seu aplicativo vincular com estático multithread biblioteca padrão C++, que não é suportado. Para obter mais informações, consulte o [/MD, /MT, /LD (usar biblioteca de tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md) tópico.  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md) não é compatível com **/CLR: safe** ou **/clr: pure**. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
-  
--   Não há suporte para as bibliotecas ATL e MFC pela compilação de modo puro (**/clr: pure**). Você pode usar **/clr: pure** com a biblioteca padrão C++ e CRT se você compilar também com **/MD** ou **/MDd**.  
+-   A combinação da `_STATIC_CPPLIB` definição de pré-processador (`/D_STATIC_CPPLIB`) e o **/clr** não há suporte para a opção de compilador. Isso acontece porque a definição causaria o seu aplicativo vincular com estático multithread biblioteca padrão C++, que não é suportado. Para obter mais informações, consulte o [/MD, /MT, /LD (usar biblioteca de tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md) tópico.  
   
 -   Ao usar **/Zi** com **/clr**, há implicações de desempenho. Para obter mais informações, consulte [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
@@ -75,7 +75,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/GS](../../build/reference/gs-buffer-security-check.md) é ignorada durante a compilação com **/clr**, a menos que uma função é em `#pragma` [não gerenciado](../../preprocessor/managed-unmanaged.md) ou se a função deve ser compilada para nativo, caso em que o compilador Gere aviso C4793, que é desativado por padrão.  
+-   [/GS](../../build/reference/gs-buffer-security-check.md) é ignorada durante a compilação com **/clr**, a menos que uma função é em `#pragma` [não gerenciado](../../preprocessor/managed-unmanaged.md) ou se a função deve ser compilada para nativo, caso em que o compilador gerará Aviso C4793, que é desativado por padrão.  
   
 -   Consulte [/ENTRY](../../build/reference/entry-entry-point-symbol.md) para requisitos de assinatura de função de um aplicativo gerenciado.  
   
@@ -84,8 +84,6 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 -   Funções que possuem um número variável de argumentos (varargs) serão geradas como funções nativas. Quaisquer tipos de dados gerenciado na posição de argumento variável serão possível realizar marshaling em tipos nativos. Observe que <xref:System.String?displayProperty=fullName> tipos são cadeias de caracteres largos, na verdade, mas eles são empacotados em cadeias de caracteres de byte único. Então se um especificador de printf é %S (wchar_t *), ele controlará a uma cadeia de caracteres %s em vez disso.  
   
 -   Ao usar a macro va_arg, você pode obter resultados inesperados ao compilar com **/clr: pure**.  Para obter mais informações, consulte [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
-  
--   Se seu aplicativo passar um argumento de tipo [va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) para uma função declarada tenham um número variável de argumentos, e seu aplicativo é compilado com **/clr: pure**, gera o CLR <xref:System.NotSupportedException>. Se **/clr** é usado em vez disso, as funções afetadas são compiladas para código nativo e executados corretamente. Se **/CLR: safe** é usado, um erro de diagnóstico é emitido.  
   
 -   Não chame, de código gerenciado, todas as funções que orientam a pilha para obter informações de parâmetro (argumentos de função); a camada de P/Invoke faz com que essas informações para serem mais para baixo na pilha.  Por exemplo, não compilar o proxy/stub com **/clr**.  
   
@@ -101,7 +99,5 @@ Observe as seguintes restrições sobre o uso de **/clr**:
   
     -   Uma função que contém referências a alinhado tipos, ou seja, tipos declarados usando `__declspec(align(...))`.  
   
--   Não é possível usar o [suporte COM do compilador](../../cpp/compiler-com-support.md) classes com **/clr: pure** ou **/CLR: safe**.  
-  
 ## <a name="see-also"></a>Consulte também  
- [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (compilação do Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)

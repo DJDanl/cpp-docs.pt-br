@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
-dev_langs: C++
+f1_keywords:
+- VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs:
+- C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 903ab6875457aa8c069c47a2be7f8ff1f5c884a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7517ec459677659067e80930ee48caccf84d52f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Gera metadados do Windows
 Habilita a geração de um arquivo de metadados de tempo de execução do Windows (. winmd).  
@@ -30,12 +34,12 @@ Habilita a geração de um arquivo de metadados de tempo de execução do Window
   
 ## <a name="remarks"></a>Comentários  
  /WINMD  
- A configuração padrão para [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativos. O vinculador gere o arquivo executável binário e o arquivo de metadados. winmd.  
+ A configuração padrão para aplicativos de plataforma Universal do Windows. O vinculador gere o arquivo executável binário e o arquivo de metadados. winmd.  
   
  /WINMD:NO  
  O vinculador gere o arquivo binário executável, mas não é um arquivo. winmd.  
   
- /WINMD: SOMENTE  
+ /WINMD:ONLY  
  O vinculador gerará somente o arquivo. winmd, mas não o arquivo executável binário.  
   
  Por padrão, o nome do arquivo de saída tem a forma `binaryname`. winmd. Para especificar um nome de arquivo diferente, use o [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) opção.  
