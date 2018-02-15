@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -36,7 +37,8 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -47,22 +49,23 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: af774ccf790c258e1b0bc6bc5f8509eb4537607d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a3d44722daa76e7409a43887f91d127c732dd6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 Executa testes sensíveis ao contexto de bytes de início e bytes finais da cadeia de caracteres multibyte e determina se um determinado ponteiro de subcadeia de caracteres aponta para um byte inicial ou para um byte final.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -98,7 +101,7 @@ int _ismbstrail_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_ismbslead`retornará -1 se o caractere é um byte e `_ismbstrail` retornará -1 se o caractere é um byte final. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se um dos argumentos for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `NULL` e definirão `errno` para `EINVAL`.  
+ `_ismbslead` retornará -1 se o caractere é um byte e `_ismbstrail` retornará -1 se o caractere é um byte final. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se um dos argumentos for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `NULL` e definirão `errno` para `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
  `_ismbslead` e `_ismbstrail` são mais lentos que as versões `_ismbblead` e `_ismbbtrail`, porque consideram o contexto da cadeia de caracteres.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -33,7 +34,8 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 Determina se um inteiro representa um caractere alfabético.  
@@ -86,7 +89,7 @@ int _iswalpha_l(
  A localidade a ser usada em vez da localidade atual.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere alfabético. `isalpha`Retorna um valor diferente de zero se `c` está dentro dos intervalos de A - Z ou a - z. `iswalpha` retorna um valor diferente de zero somente para caracteres largos para os quais `iswupper` ou `iswlower` é diferente de zero; ou seja, para qualquer caractere largo que for parte de um conjunto definido pela implementação para o qual nenhum `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere alfabético. `isalpha` Retorna um valor diferente de zero se `c` está dentro dos intervalos de A - Z ou a - z. `iswalpha` retorna um valor diferente de zero somente para caracteres largos para os quais `iswupper` ou `iswlower` é diferente de zero; ou seja, para qualquer caractere largo que for parte de um conjunto definido pela implementação para o qual nenhum `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   

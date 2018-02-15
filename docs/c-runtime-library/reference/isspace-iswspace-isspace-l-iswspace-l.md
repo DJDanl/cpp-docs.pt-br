@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -29,7 +30,8 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 618ba621f385307d3609667c6df5cf56c91da2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5eef3b216ed70bb7fa6a22d02827dec34b44c3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 Determina se um inteiro representa um caractere de espaço.  
@@ -81,7 +84,7 @@ int _iswspace_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de espaço. `isspace`Retorna um valor diferente de zero se `c` é um caractere de espaço em branco (0x09-0x0D ou 0x20). O resultado da condição de teste para a função `isspace` depende da configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o sufixo `_l` usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o sufixo `_l` são idênticas, exceto por usarem a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de espaço. `isspace` Retorna um valor diferente de zero se `c` é um caractere de espaço em branco (0x09-0x0D ou 0x20). O resultado da condição de teste para a função `isspace` depende da configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o sufixo `_l` usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o sufixo `_l` são idênticas, exceto por usarem a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
  `iswspace` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a um caractere de espaço em branco padrão.  
   

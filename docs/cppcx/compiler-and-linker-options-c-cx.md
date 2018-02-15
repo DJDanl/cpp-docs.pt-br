@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opções de compilador e vinculador (C++/CX)
 Uma variável de ambiente, C + + opções do vinculador e opções do compilador CX oferecem suporte à criação de aplicativos para o tempo de execução do Windows.  
@@ -39,7 +40,7 @@ Uma variável de ambiente, C + + opções do vinculador e opções do compilador
 |Opção|Descrição|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|Marca o executável como executável (somente) no appcontainer.|  
-|/WINMD [: {NENHUM &#124; SOMENTE}]|Emite um arquivo .winmd e um arquivo binário associado. Essa opção deve ser transmitida para o vinculador para que um .winmd seja emitido.<br /><br /> **NO**– Não emite um arquivo .winmd, mas emite um arquivo binário.<br /><br /> **ONLY**– Emite um arquivo .winmd, mas não emite um arquivo binário.|  
+|/WINMD[:{NO&#124;ONLY}]|Emite um arquivo .winmd e um arquivo binário associado. Essa opção deve ser transmitida para o vinculador para que um .winmd seja emitido.<br /><br /> **NO**– Não emite um arquivo .winmd, mas emite um arquivo binário.<br /><br /> **ONLY**– Emite um arquivo .winmd, mas não emite um arquivo binário.|  
 |/WINMDFILE:*nomedoarquivo*|O nome do arquivo .winmd para emitir, em vez do nome de arquivo .winmd padrão. Se forem especificados vários nomes de arquivo na linha de comando, o sobrenome será usado.|  
 |/WINMDDELAYSIGN[:NO]|Parcialmente assina o arquivo .winmd e coloca a chave pública no binário.<br /><br /> **NO**– (Padrão) Não assinar o arquivo .winmd.<br /><br /> /WINMDDELAYSIGN não tem nenhum efeito a menos que /WINMDKEYFILE ou /WINMDKEYCONTAINER também seja especificado.|  
 |/WINMDKEYCONTAINER:*nome*|Especifica um contêiner de chave para assinar um assembly. O parâmetro *name* corresponde ao contêiner de chave usado para assinar o arquivo de metadados.|  

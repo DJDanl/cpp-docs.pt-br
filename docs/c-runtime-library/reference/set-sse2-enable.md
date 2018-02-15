@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _set_SSE2_enable
 apilocation:
@@ -39,11 +39,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424bdd9eed44f35b21a78b97b8e418f6c8a3c985
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 7a1d96390925a81935f9d6d07c7ff5b8ce61a3bf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 Habilita ou desabilita o uso de instruções de extensões Streaming SIMD 2 (SSE2) em rotinas de matemática CRT. (Esta função não está disponível em arquiteturas x64 porque SSE2 está habilitado por padrão.)  

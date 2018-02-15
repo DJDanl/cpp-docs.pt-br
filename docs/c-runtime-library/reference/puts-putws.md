@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -45,11 +45,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b57f785ac43866aedfe4bf9dbca59353ca3b51
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 06f90cf85d19fab3dd08b8b0c3d789d263c55fbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="puts-putws"></a>puts, _putws
 Grava uma cadeia de caracteres para **stdout**.  
@@ -95,7 +95,7 @@ int _putws(
 |`puts`|\<stdio.h>|  
 |`_putws`|\<stdio.h>|  
   
- Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, `stdin`, `stdout`, e `stderr`, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
   
 ## <a name="libraries"></a>Libraries  
  Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  

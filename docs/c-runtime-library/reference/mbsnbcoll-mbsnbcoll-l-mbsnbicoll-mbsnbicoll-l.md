@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -49,22 +51,23 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b0ab65644f4a7bcb93ceb2156a5354a81358e47c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0e2c83f9c5d6ccc39b9eadda8f561c63ff91117f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 Compara `n` bytes de duas cadeias de caracteres multibyte usando informações de página de código multibyte.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

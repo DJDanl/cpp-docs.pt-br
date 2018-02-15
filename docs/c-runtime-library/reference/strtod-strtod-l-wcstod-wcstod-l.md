@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -100,13 +103,13 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-`strtod`Retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro, nesse caso, a função retorna + /-`HUGE_VAL`. O sinal de `HUGE_VAL` coincide com o sinal do valor que não pode ser representado. `strtod` retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.
+`strtod` Retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro, nesse caso, a função retorna + /-`HUGE_VAL`. O sinal de `HUGE_VAL` coincide com o sinal do valor que não pode ser representado. `strtod` retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.
 
 `wcstod` retorna valores de maneira semelhante a `strtod`. Para ambas as funções, `errno` é definido como `ERANGE` se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-Cada função converte a cadeia de caracteres de entrada *nptr* para um `double`. O `strtod` função converte *nptr* para um valor de precisão dupla. `strtod`para de ler a cadeia de caracteres *nptr* no primeiro caractere que não reconhece como parte de um número. Este pode ser o caractere nulo de terminação. `wcstod`é uma versão de caractere largo de `strtod`; seu *nptr* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+Cada função converte a cadeia de caracteres de entrada *nptr* para um `double`. O `strtod` função converte *nptr* para um valor de precisão dupla. `strtod` para de ler a cadeia de caracteres *nptr* no primeiro caractere que não reconhece como parte de um número. Este pode ser o caractere nulo de terminação. `wcstod` é uma versão de caractere largo de `strtod`; seu *nptr* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -119,12 +122,12 @@ O `LC_NUMERIC` definição de categoria da localidade atual determina o reconhec
 
 Se *endptr* não é `NULL`, um ponteiro para o caractere que interrompeu a verificação é armazenado no local apontado pela *endptr*. Se nenhuma conversão pode ser executada (sem dígitos válidos foram encontrados ou uma base inválida foi especificada), o valor de *nptr* é armazenado no local apontado pela *endptr*.
 
-`strtod`espera *nptr* para apontar para uma cadeia de caracteres de uma das seguintes formas:
+`strtod` espera *nptr* para apontar para uma cadeia de caracteres de uma das seguintes formas:
 
-[*espaço em branco*] [*sinal*] {*dígitos* [*base* *dígitos*] &#124; *base* *dígitos*} [{**e** &#124; **E**} [*sinal*] *dígitos*]  
-[*espaço em branco*] [*sinal*] {**0x** &#124; **0x**} {*hexdigits* [*base* *hexdigits*] &#124; *base* *hexdigits*} [{**p** &#124; **P**} [*sinal*] *hexdigits*]  
-[*espaço em branco*] [*sinal*] {**INF** &#124; **Infinito**}  
-[*espaço em branco*] [*sinal*] **NAN** [*sequência*]
+[*whitespace*] [*sign*] {*digits* [*radix* *digits*] &#124; *radix* *digits*} [{**e** &#124; **E**} [*sign*] *digits*]  
+[*whitespace*] [*sign*] {**0x** &#124; **0X**} {*hexdigits* [*radix* *hexdigits*] &#124; *radix* *hexdigits*} [{**p** &#124; **P**} [*sign*] *hexdigits*]  
+[*whitespace*] [*sign*] {**INF** &#124; **INFINITY**}  
+[*whitespace*] [*sign*] **NAN** [*sequence*]
 
 Os principais opcional *espaço em branco* pode consistir em caracteres de espaço e tabulação, que são ignorados; *entrada* é um sinal de adição (+) ou menos (-); *dígitos* são um ou mais dígitos decimais; *hexdigits* são um ou mais dígitos hexadecimais; *base* é o caractere de ponto de base, um ponto (.) na localidade padrão "C", ou o local específico de valor se a localidade atual é diferente ou quando *localidade* for especificado; um *sequência* é uma sequência de alfanumérico ou sublinhado. Em formulários de número decimais e hexadecimais, se nenhum dígito aparecer antes do caractere de ponto de base, pelo menos um deve aparecer após o caractere de ponto de base. No formato decimal, os dígitos decimais podem ser seguidos por um expoente, que consiste em uma carta de apresentação (**e** ou **E**) e, opcionalmente, inteiro. No formato hexadecimal, os dígitos hexadecimais podem ser seguidos por um expoente, que consiste em uma carta de apresentação (**p** ou **P**) e um inteiro assinado opcionalmente hexadecimal que representa o expoente como uma potência de 2. Em qualquer forma, se nem uma expoente parte nem um caractere de ponto fracionário aparecer, um caractere de ponto fracionário será considerado siga o último dígito na cadeia de caracteres. Caso é ignorado em ambos os **INF** e **NAN** formulários. O primeiro caractere que não é adequado para uma dessas formas interrompe a verificação.
 

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: localeconv
+ms.topic: reference
+apiname:
+- localeconv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,23 +22,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: localeconv
-dev_langs: C++
+f1_keywords:
+- localeconv
+dev_langs:
+- C++
 helpviewer_keywords:
 - lconv type
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cbd897b353f8a915fb4a29d61d0954b9b5a7f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9e93e21505a661deb470e4b31c8807ef5133a774
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="localeconv"></a>localeconv
 Obtém informações detalhadas sobre configurações de localidade.  
@@ -113,11 +118,11 @@ Os membros `char` da estrutura são números pequenos não negativos e não cara
   
 Os valores de `grouping` e `mon_grouping` são interpretados de acordo com as regras a seguir:  
   
-- `CHAR_MAX`-Não execute qualquer agrupamento adicional.  
+- `CHAR_MAX` -Não execute qualquer agrupamento adicional.  
   
 - 0 - use o elemento anterior para cada um dos dígitos restantes.  
   
-- *n*-Número de dígitos que compõem o grupo atual. O próximo elemento é examinado para determinar o tamanho do próximo grupo de dígitos antes do grupo atual.  
+- *n* -Número de dígitos que compõem o grupo atual. O próximo elemento é examinado para determinar o tamanho do próximo grupo de dígitos antes do grupo atual.  
   
 Os valores para `int_curr_symbol` são interpretados de acordo com as regras a seguir:  
   

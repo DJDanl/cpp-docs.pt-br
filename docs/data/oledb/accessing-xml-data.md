@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data access [C++], XML data
 - XML [C++], accessing data
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9379abfd27f4dd8297864160f35367da0727935
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accessing-xml-data"></a>Acessando dados XML
 Há dois métodos separados de recuperar dados XML de uma fonte de dados: uma usa [CStreamRowset](../../data/oledb/cstreamrowset-class.md) e outra que usa [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
@@ -53,7 +55,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- Normalmente quando você chama `CCommand::Open` (especificando, por exemplo, `CRowset` como o `TRowset` classe), ele obtém uma `IRowset` ponteiro. `ICommand::Execute`Retorna um `IRowset` ponteiro, que é armazenado no `m_spRowset` membro o `CRowset` objeto. Métodos como `MoveFirst`, `MoveNext`, e `GetData` usar esse ponteiro para recuperar os dados.  
+ Normalmente quando você chama `CCommand::Open` (especificando, por exemplo, `CRowset` como o `TRowset` classe), ele obtém uma `IRowset` ponteiro. `ICommand::Execute` Retorna um `IRowset` ponteiro, que é armazenado no `m_spRowset` membro o `CRowset` objeto. Métodos como `MoveFirst`, `MoveNext`, e `GetData` usar esse ponteiro para recuperar os dados.  
   
  Por outro lado, quando você chama `CCommand::Open` (mas especificar `CStreamRowset` como o `TRowset` classe), `ICommand::Execute` retorna um `ISequentialStream` ponteiro, que é armazenado no `m_spStream` membro de dados de [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Você usa o `Read` método para recuperar os dados (cadeia de caracteres Unicode) em formato XML. Por exemplo:  
   
@@ -69,7 +71,7 @@ myCmd.m_spStream->Read()
 >  Suporte a XML usando `CStreamRowset` funciona apenas com o SQL Server 2000 e requer que você tenha o provedor OLE DB para SQL Server 2000 (instalado com o MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Recuperando dados XML usando CXMLAccessor  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) permite que você acesse dados de uma fonte de dados como dados de cadeia de caracteres quando você não possui conhecimento do esquema do repositório de dados. `CXMLAccessor`funciona como `CDynamicStringAccessorW` exceto que o primeiro converte todos os dados acessados do armazenamento de dados como XML formatado dados (marcados). Os nomes de marca XML corresponderem nomes de coluna do repositório de dados possível.  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) permite que você acesse dados de uma fonte de dados como dados de cadeia de caracteres quando você não possui conhecimento do esquema do repositório de dados. `CXMLAccessor` funciona como `CDynamicStringAccessorW` exceto que o primeiro converte todos os dados acessados do armazenamento de dados como XML formatado dados (marcados). Os nomes de marca XML corresponderem nomes de coluna do repositório de dados possível.  
   
  Use `CXMLAccessor` como você faria com qualquer outra classe de acessador, passando-o como um parâmetro de modelo para `CCommand` ou `CTable`:  
   
@@ -82,7 +84,8 @@ CTable<CXMLAccessor, CRowset> rs;
 ```  
 // Open data source, session, and rowset  
 hr = rs.MoveFirst();  
-while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
+
+while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
 {  
     CStringW strRowData;  
     myCmd.GetXMLRowData(strRowData);  

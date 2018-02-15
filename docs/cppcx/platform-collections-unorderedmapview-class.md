@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 Representa uma exibição somente leitura em um *mapa*, que é uma coleção de pares chave-valor.  
@@ -52,17 +54,17 @@ ref class UnorderedMapView sealed;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Unorderedmapview:: Unorderedmapview](#ctor)|Inicializa uma nova instância da classe UnorderedMapView.|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|Inicializa uma nova instância da classe UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Unorderedmapview](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|  
-|[Unorderedmapview](#haskey)|Determina se o UnorderedMapView atual contém a chave especificada.|  
-|[Unorderedmapview](#lookup)|Recupera o elemento na chave especificada no objeto UnorderedMapView atual.|  
-|[Unorderedmapview](#size)|Retorna o número de elementos no objeto UnorderedMapView atual.|  
-|[Unorderedmapview](#split)|Divide um objeto UnorderedMapView original em dois objetos UnorderedMapView.|  
+|[UnorderedMapView::First](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|  
+|[UnorderedMapView::HasKey](#haskey)|Determina se o UnorderedMapView atual contém a chave especificada.|  
+|[UnorderedMapView::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto UnorderedMapView atual.|  
+|[UnorderedMapView::Size](#size)|Retorna o número de elementos no objeto UnorderedMapView atual.|  
+|[UnorderedMapView::Split](#split)|Divide um objeto UnorderedMapView original em dois objetos UnorderedMapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `UnorderedMapView`  
