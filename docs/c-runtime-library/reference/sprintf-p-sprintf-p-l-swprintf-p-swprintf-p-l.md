@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 46e82b8485458290629916a1eb9f44a2bf2f23ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Grave dados formatados em uma cadeia de caracteres com a capacidade de especificar a ordem em que os parâmetros são usados na cadeia de caracteres de formato.  
@@ -120,7 +123,7 @@ int _swprintf_p_l(
   
  `_swprintf_p` é uma versão de caractere largo de `_sprintf_p`; os argumentos de ponteiro para `_swprintf_p` são cadeias de caracteres largos. A detecção de erros de codificação em `_swprintf_p` pode ser diferente da detecção em `_sprintf_p`. `_swprintf_p` e `fwprintf_p` comportam-se de modo idêntico, exceto pelo fato de que `_swprintf_p` grava a saída em uma cadeia de caracteres em vez de um destino do tipo `FILE`, além de que `_swprintf_p` requer que o parâmetro `count` especifique o número máximo de caracteres a serem gravados. As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de usarem o parâmetro de localidade passado, em vez da localidade do thread atual.  
   
- `_sprintf_p` retorna o número de bytes armazenados em `buffer`, sem contar o caractere `NULL` de terminação. `_swprintf_p`Retorna o número de caracteres largos armazenados em `buffer`, sem considerar o encerramento do `NULL` caracteres largos. Se `buffer` ou `format` for um ponteiro nulo, se a contagem for zero ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL`.  
+ `_sprintf_p` retorna o número de bytes armazenados em `buffer`, sem contar o caractere `NULL` de terminação. `_swprintf_p` Retorna o número de caracteres largos armazenados em `buffer`, sem considerar o encerramento do `NULL` caracteres largos. Se `buffer` ou `format` for um ponteiro nulo, se a contagem for zero ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   

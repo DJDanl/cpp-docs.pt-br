@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -102,7 +104,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>Método Unorderedmap:
+## <a name="clear"></a>  Método Unorderedmap:
 
 Remove todos os pares chave-valor do objeto UnorderedMap atual.
 
@@ -112,7 +114,7 @@ Remove todos os pares chave-valor do objeto UnorderedMap atual.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Método Unorderedmap:
+## <a name="first"></a>  Método Unorderedmap:
 
 Retorna um iterador que especifica o primeiro [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.
 
@@ -132,7 +134,7 @@ Um iterador que especifica o primeiro elemento no mapa.
 
 Uma maneira conveniente de manter o iterador retornado por First () é atribuir o valor de retorno a uma variável que é declarada com o **automática** palavra-chave de dedução de tipo. Por exemplo, `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>Método Unorderedmap:
+## <a name="getview"></a>  Método Unorderedmap:
 
 Retorna uma exibição somente leitura do UnorderedMap atual; ou seja, um [Platform::Collections::UnorderedMapView classe](../cppcx/platform-collections-unorderedmapview-class.md) que implementa o [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interface.
 
@@ -190,9 +192,9 @@ A porção de valor do par chave-valor. O tipo de *valor* é o typename *V*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true`Se a chave de um elemento existente no Map atual corresponder *chave* e a parte de valor desse elemento é definida como *valor*. `false`Se nenhum elemento existente no Map atual corresponder *chave* e *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao UnorderedMap atual.
+`true` Se a chave de um elemento existente no Map atual corresponder *chave* e a parte de valor desse elemento é definida como *valor*. `false` Se nenhum elemento existente no Map atual corresponder *chave* e *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao UnorderedMap atual.
 
-## <a name="lookup"></a>Método Unorderedmap:
+## <a name="lookup"></a>  Método Unorderedmap:
 
 Recupera o valor do tipo V que está associado à chave especificada do tipo K.
 
@@ -229,9 +231,9 @@ Um [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/ap
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
-Aplicativos da Windows Store que nós c# ou Visual Basic projeto IMap\<K, V > como IDictionary\<K, V >.
+Aplicativos de Windows Runtime que nós c# ou Visual Basic projeto IMap\<K, V > como IDictionary\<K, V >.
 
-## <a name="remove"></a>Método Unorderedmap::
+## <a name="remove"></a>  Método Unorderedmap::
 
 Exclui os pares de chave-valor especificados do objeto UnorderedMap.
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
-## <a name="size"></a>Método Unorderedmap:
+## <a name="size"></a>  Método Unorderedmap:
 
 Retorna o número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMap.
 

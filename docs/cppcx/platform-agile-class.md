@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 Representa um objeto que tem um MashalingBehavior=Standard como um objeto Agile, que reduz a possibilidade de exceções de threading do tempo de execução. O `Agile<T>` permite que o objeto não Agile chame ou seja chamado do mesmo thread ou de um thread diferente. Para obter mais informações, consulte [de Threading e Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -53,7 +56,7 @@ class Agile;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Agile:: Agile](#ctor)|Inicializa uma nova instância da classe Agile.|  
+|[Agile::Agile](#ctor)|Inicializa uma nova instância da classe Agile.|  
 |[Destruidor Agile::~Agile](#dtor)|Destrói a instância atual da classe Agile.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -86,7 +89,7 @@ class Agile;
   
  **Cabeçalho:** agile.h  
 
-## <a name="ctor"></a>Construtor Agile:: Agile
+## <a name="ctor"></a>  Construtor Agile:: Agile
 Inicializa uma nova instância da classe Agile.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Comentários  
  A primeira versão desse construtor é o construtor padrão. A segunda versão inicializa a nova classe da instância de Agile do objeto especificado pelo parâmetro `object`. A terceira versão é o construtor de cópia. A quarta versão é o construtor de movimento. Esse construtor não pode gerar exceções.  
 
-## <a name="dtor"></a>Agile:: ~ Agile destruidor
+## <a name="dtor"></a>  Agile:: ~ Agile destruidor
 Destrói a instância atual da classe Agile.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -126,7 +129,7 @@ Destrói a instância atual da classe Agile.
 ### <a name="remarks"></a>Comentários  
  Este destruidor também libera o objeto representado pelo objeto Agile atual.  
   
-## <a name="get"></a>Método Agile:
+## <a name="get"></a>   Método Agile:
 Retorna um identificador para o objeto representado pelo objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -142,7 +145,7 @@ Retorna um identificador para o objeto representado pelo objeto Agile atual.
   
  O tipo do valor retornado é, de fato, um tipo interno não revelado. Uma maneira conveniente de manter o valor retornado é atribuí-lo a uma variável que é declarada com o **automática** palavra-chave de dedução de tipo. Por exemplo, `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>Método getaddressof
+## <a name="getaddressof"></a>  Método getaddressof
 Reinicializa o objeto Agile atual e retorna o endereço de um identificador para um objeto do tipo `T`.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>Comentários  
  Esta operação libera a representação atual de um objeto do tipo `T`, se houver; reinicializa membros de dados do objeto Agile; adquire o contexto de threading atual; e, em seguida, retorna o endereço de uma variável de objeto de identificador que pode representar um objeto não agile. Para fazer com que uma instância da classe Agile representar um objeto, use o operador de atribuição ([Agile:: Operator =](#operator-assign)) para atribuir o objeto para a instância da classe Agile.  
 
-## <a name="getaddressofforinout"></a>Método getaddressofforinout
+## <a name="getaddressofforinout"></a>  Método getaddressofforinout
 Retorna o endereço de um identificador para o objeto representado pelo objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Comentários  
  Esta operação adquire o contexto de threading atual e retorna o endereço de um identificador para o objeto subjacente.  
 
-## <a name="release"></a>Método Agile:
+## <a name="release"></a>  Método Agile:
 Descarta o objeto e o contexto subjacentes do objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>Comentários  
  O objeto e o contexto subjacentes do objeto Agile atual serão descartados, caso existam, e o valor do objeto Agile será definido como nulo.  
 
-## <a name="operator-arrow"></a>Agile:: Operator -&gt; operador
+## <a name="operator-arrow"></a>  Agile:: Operator -&gt; operador
 Recupera um endereço de um identificador para o objeto representado pelo objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -214,7 +217,7 @@ const throw();
   
  Esse operador retorna, na verdade, um tipo interno não revelado. Uma maneira conveniente de manter o valor retornado é atribuí-lo a uma variável que é declarada com o **automática** palavra-chave de dedução de tipo.  
 
-## <a name="operator-assign"></a>Agile:: Operator operador =
+## <a name="operator-assign"></a>  Agile:: Operator operador =
 Atribui o objeto especificado ao objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  

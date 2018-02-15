@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 859a25f4fc9698899f1139038e161d28da06220e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 234141df693f67b97bf2ec83bd9063f69addeb0f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wrl-integration-ccx"></a>Integração WRL (C++/CX)
 
@@ -31,7 +32,7 @@ Para obter mais informações sobre criação e consumo [!INCLUDE[cppwrl_short](
 
 O trecho de código a seguir demonstra como usar WRL e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] consumir [!INCLUDE[wrt](includes/wrt-md.md)] classes e examinar um arquivo de metadados.
 
-O exemplo é obtido de um trecho de código no [Fórum de aplicativos da Windows Store](http://social.msdn.microsoft.com/Forums/winappswithnativecode/thread/211ef583-db11-4e55-926b-6d9ab53dbdb4). O autor desse trecho de código oferece os seguintes avisos de isenção de responsabilidade e estipulações:
+O exemplo é extraído de um trecho de código no Fórum de aplicativos do armazenamento de construção do Microsoft. O autor desse trecho de código oferece os seguintes avisos de isenção de responsabilidade e estipulações:
 
 1. O C++ não fornece APIs específicas para refletir nos tipos [!INCLUDE[wrt](includes/wrt-md.md)] , mas os arquivos de metadados do Windows (.winmd) de um tipo são totalmente compatíveis com os arquivos de metadados CLR. O Windows fornece as novas APIs de descoberta de metadados (RoGetMetaDataFile) para acessar o arquivo .winmd de um determinado tipo. No entanto, essas APIs são de uso limitado para os desenvolvedores C++ porque você não pode instanciar uma classe.
 

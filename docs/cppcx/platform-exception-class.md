@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Classe Platform::Exception
 Representa erros que ocorrem durante a execução do aplicativo. Classes de exceção personalizadas não podem ser derivadas de `Platform::Exception`. Se você precisar de uma exceção personalizada, poderá usar `Platform::COMException` e especificar um HRESULT específico de aplicativo.  
@@ -44,22 +47,22 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[Exception:: Exception](#ctor)|Inicializa uma nova instância da classe `Exception`.|  
+|[Exception::Exception](#ctor)|Inicializa uma nova instância da classe `Exception`.|  
   
 ### <a name="methods"></a>Métodos  
  A classe `Exception` herda os métodos `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`e `ToString()` da [Platform::Object Class](../cppcx/platform-object-class.md). A classe `Exception` tem o método a seguir.  
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[: Createexception](#createexception)|Cria uma exceção que representa o valor HRESULT especificado.|  
+|[Exception::CreateException](#createexception)|Cria uma exceção que representa o valor HRESULT especificado.|  
   
 ### <a name="properties"></a>Propriedades  
  A classe Exception também tem as propriedades a seguir.  
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[Exception:: HRESULT](#hresult)|O HRESULT que corresponde à exceção.|  
-|[Exception:: Message](#message)|Uma mensagem que descreve a exceção. Esse valor é somente leitura e não pode ser modificado após a construção de `Exception` .|  
+|[Exception::HResult](#hresult)|O HRESULT que corresponde à exceção.|  
+|[Exception::Message](#message)|Uma mensagem que descreve a exceção. Esse valor é somente leitura e não pode ser modificado após a construção de `Exception` .|  
   
 ### <a name="requirements"></a>Requisitos  
  **Suporte mínimo de cliente:** Windows 8  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Metadados:** platform.winmd  
 
-## <a name="createexception"></a>Método Exception
+## <a name="createexception"></a> Método Exception
 Cria uma Platform::Exception^ a partir de um valor HRESULT especificado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Construtor Exception:: Exception
+## <a name="ctor"></a>  Construtor Exception:: Exception
 Inicializa uma nova instância da classe Exception.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Propriedade Exception:: HRESULT
+## <a name="hresult"></a>  Propriedade Exception:: HRESULT
 O HRESULT que corresponde à exceção.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Propriedade Exception:: Message
+## <a name="message"></a> Propriedade Exception:: Message
 Mensagem que descreve o erro.  
   
 ### <a name="syntax"></a>Sintaxe  

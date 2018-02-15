@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::COMException Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcomexception-class"></a>Classe Platform::COMException
 Representa um ou mais erros COM que ocorrem durante a execução do aplicativo. COMException é a classe base para um conjunto de exceções padrão predefinidas.  
@@ -55,8 +58,8 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[Exception:: HRESULT](#hresult)|O HRESULT que corresponde à exceção.|  
-|[Exception:: Message](#message)|Mensagem que descreve a exceção.|  
+|[Exception::HResult](#hresult)|O HRESULT que corresponde à exceção.|  
+|[Exception::Message](#message)|Mensagem que descreve a exceção.|  
   
 ## <a name="derived-exceptions"></a>Exceções derivadas  
  As exceções predefinidas a seguir são derivadas de COMException. Elas diferem de COMException apenas pelo nome, o nome de seu construtor e seu valor HRESULT subjacente.  
@@ -86,7 +89,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Metadados:** platform.winmd  
 
-## <a name="ctor"></a>Construtor COMException:: COMException
+## <a name="ctor"></a> Construtor COMException:: COMException
 Inicializa uma nova instância da classe COMException.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -101,7 +104,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a>Propriedade COMException:: HRESULT
+## <a name="hresult"></a> Propriedade COMException:: HRESULT
 O HRESULT que corresponde à exceção.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -116,7 +119,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre como interpretar o valor HRESULT, consulte [estrutura de códigos de erro COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
 
-## <a name="message"></a>Propriedade COMException:: Message
+## <a name="message"></a> Propriedade COMException:: Message
 Mensagem que descreve a exceção.  
   
 ### <a name="syntax"></a>Sintaxe  

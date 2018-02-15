@@ -4,34 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8704a4a0733ea8bf688378953af9ff01314271d1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 As classes de provedor usam várias heranças. O código a seguir mostra a cadeia de herança para o objeto de fonte de dados:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSource  
 class ATL_NO_VTABLE CMyProviderSource :   
@@ -44,7 +46,7 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Todos os componentes COM derivam `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx`fornece a implementação para o **IUnknown** interface. Ele pode lidar com qualquer modelo de threading. `CComCoClass`trata qualquer suporte erro necessário. Se você deseja enviar as informações de erro para o cliente, você pode usar algumas das APIs de erro em `CComCoClass`.  
+ Todos os componentes COM derivam `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornece a implementação para o **IUnknown** interface. Ele pode lidar com qualquer modelo de threading. `CComCoClass` trata qualquer suporte erro necessário. Se você deseja enviar as informações de erro para o cliente, você pode usar algumas das APIs de erro em `CComCoClass`.  
   
  O objeto de fonte de dados também herda de várias classes de 'Impl'. Cada classe fornece a implementação de uma interface. A fonte de dados objeto implementa a `IPersist`, `IDBProperties`, **IDBInitialize**, e **IDBCreateSession** interfaces. Cada interface é necessária pelo OLE DB para implementar o objeto de fonte de dados. Você pode escolher dar suporte ou não suporte à funcionalidade específica por herança ou não herdar de uma dessas classes de 'Impl'. Se você deseja dar suporte a **IDBDataSourceAdmin** interface, você herda o **IDBDataSourceAdminImpl** classe para obter a funcionalidade necessária.  
   
