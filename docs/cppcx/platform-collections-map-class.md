@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -115,7 +118,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>Método Map:
+## <a name="clear"></a>  Método Map:
 
 Remove todos os pares chave-valor do objeto Map atual.
 
@@ -125,7 +128,7 @@ Remove todos os pares chave-valor do objeto Map atual.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Método Map:
+## <a name="first"></a>  Método Map:
 
 Retorna um iterador que especifica o primeiro elemento no mapa, ou `nullptr` se o mapa estiver vazio.
 
@@ -144,7 +147,7 @@ Um iterador que especifica o primeiro elemento no mapa.
 
 Uma maneira conveniente de manter o iterador retornado por First () é atribuir o valor de retorno a uma variável que é declarada com o **automática** palavra-chave de dedução de tipo. Por exemplo, `auto x = myMap->First();`.
 
-## <a name="getview"></a>Método: GetView
+## <a name="getview"></a>  Método: GetView
 
 Retorna uma exibição somente leitura do Map atual; ou seja, um [Platform::Collections::MapView classe](../cppcx/platform-collections-mapview-class.md), que implementa o [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interface.
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Um objeto `MapView`.
 
-## <a name="haskey"></a>Método haskey
+## <a name="haskey"></a>  Método haskey
 
 Determina se o Map atual contém a chave especificada.
 
@@ -177,7 +180,7 @@ A chave usada para localizar o elemento Map. O tipo de *chave* é o typename *K*
 
 `true` se a chave for encontrada; caso contrário, `false`.
 
-## <a name="insert"></a>Método Map:
+## <a name="insert"></a>  Método Map:
 
 Adiciona os pares chave-valor especificados ao objeto Map atual.
 
@@ -197,9 +200,9 @@ A porção de valor do par chave-valor. O tipo de *valor* é o typename *V*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true`Se a chave de um elemento existente no Map atual corresponder *chave* e a parte de valor desse elemento é definida como *valor*. `false`Se nenhum elemento existente no Map atual corresponder *chave* e *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao Map atual.
+`true` Se a chave de um elemento existente no Map atual corresponder *chave* e a parte de valor desse elemento é definida como *valor*. `false` Se nenhum elemento existente no Map atual corresponder *chave* e *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao Map atual.
 
-## <a name="lookup"></a>Método Map:
+## <a name="lookup"></a>  Método Map:
 
 Recupera o valor do tipo V que está associado à chave especificada do tipo K, se a chave existir.
 
@@ -222,7 +225,7 @@ O valor que é emparelhado com o *chave*. O tipo do valor de retorno é typename
 
 Se a chave não existir, uma [Platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) é gerada.
 
-## <a name="ctor"></a>Construtor Map:: Map
+## <a name="ctor"></a>  Construtor Map:: Map
 
 Inicializa uma nova instância da classe Map.
 
@@ -256,7 +259,7 @@ O iterador de entrada do primeiro elemento em um intervalo de elementos usados p
 *last*  
 O iterador de entrada do primeiro elemento após um intervalo de elementos usados para inicializar o Map atual.
 
-## <a name="mapchanged"></a>Evento Map:: mapchanged
+## <a name="mapchanged"></a>  Evento Map:: mapchanged
 
 Gerado quando um item é inserido no mapa ou removido dele.
 
@@ -272,9 +275,9 @@ Um [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/ap
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
-Projeto de aplicativos da Windows Store que usam c# ou Visual Basic IMap\<K, V > como IDictionary\<K, V >.
+Projeto de aplicativos de tempo de execução do Windows que usam c# ou Visual Basic IMap\<K, V > como IDictionary\<K, V >.
 
-## <a name="remove"></a>Método Map:
+## <a name="remove"></a>  Método Map:
 
 Exclui os pares chave-valor especificados do objeto Map atual.
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
-## <a name="size"></a>Método Map::
+## <a name="size"></a>  Método Map::
 
 Retorna o número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos no mapa.
 

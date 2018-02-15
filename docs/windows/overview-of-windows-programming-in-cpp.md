@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -28,7 +30,7 @@ Você pode usar o Visual C++ para escrever uma ampla variedade de programas que 
 
 Há várias categorias de aplicativos do Windows que você pode desenvolver com o Visual C++. Essas categorias tem modelos de programação diferentes ou modelos de aplicativo, o que significa que eles usam bibliotecas diferentes e APIs que fornecem acesso à plataforma e fornecem a interface do usuário.
 
-- [Aplicativos universais do Windows](#BK_WindowsUniversal). A terceira categoria de aplicativos do Windows foi introduzida com o Windows 8 e continua o suporte para essa categoria de aplicativos no Windows 10. Esses aplicativos são geralmente chamados de apenas como "aplicativos do Windows" e incluem aplicativos de desktop e portáteis que uma variedade de dispositivos de destino. Você pode escrever esses aplicativos em C + + CX, um dialeto do C++ que inclui suporte para o desenvolvimento de tempo de execução do Windows ou em C++ padrão com usando a biblioteca de tempo de execução do Windows (WRL). Esses aplicativos foram originalmente projetados para ser executado em tela inteira, embora no Windows 10, os usuários têm a opção de executá-los em uma janela de área de trabalho. Esses aplicativos são orientados para toque, mas é fácil de usar o mouse para funcionar se você preferir ou se não houver uma tela sensível ao toque. Esses aplicativos são distribuídos da Windows Store, um fato que levou a eles que está sendo chamado "Aplicativos da Windows Store".
+- [Aplicativos universais do Windows](#BK_WindowsUniversal). A terceira categoria de aplicativos do Windows foi introduzida com o Windows 8 e continua o suporte para essa categoria de aplicativos no Windows 10. Esses aplicativos são geralmente chamados de apenas como "aplicativos do Windows" e incluem aplicativos de desktop e portáteis que uma variedade de dispositivos de destino. Você pode escrever esses aplicativos em C + + CX, um dialeto do C++ que inclui suporte para o desenvolvimento de tempo de execução do Windows ou em C++ padrão com usando a biblioteca de tempo de execução do Windows (WRL). Esses aplicativos foram originalmente projetados para ser executado em tela inteira, embora no Windows 10, os usuários têm a opção de executá-los em uma janela de área de trabalho. Esses aplicativos são orientados para toque, mas é fácil de usar o mouse para funcionar se você preferir ou se não houver uma tela sensível ao toque. Esses aplicativos são distribuídos da Microsoft Store, um fato que levou a eles que está sendo chamado "Store" aplicativos.
 
 - [Área de trabalho, servidor e aplicativos de nuvem e jogos](#BK_Native). Essa categoria inclui aplicativos de área de trabalho do Windows, às vezes chamados de aplicativos Win32 desde que esses aplicativos estavam usando a API do Win32 no antes do Windows 8, todos os aplicativos do Windows foram nessa categoria. Aplicativos nesta categoria podem usar MFC para uma interface de usuário e ATL para interagir com componentes do Windows, que geralmente são objetos COM.
 
@@ -38,12 +40,12 @@ Há várias categorias de aplicativos do Windows que você pode desenvolver com 
 
 - **Aplicativos do .NET framework**. A maioria dos aplicativos do .NET Framework são escritos em c# ou Visual Basic, mas você também pode C + + CLI (a opção de compilador /clr no Visual C++). É recomendável usar C + + CLI para uma camada de interoperabilidade mínimo em um aplicativo maior que inclui o código gerenciado e nativo.
 
-##  <a name="BK_WindowsUniversal"></a>Aplicativos universais do Windows
+##  <a name="BK_WindowsUniversal"></a> Aplicativos universais do Windows
 
 Com o Windows 10, aplicativos são capazes de executar em todos os dispositivos Windows 10, como tablets e celulares, bem como na área de trabalho. Na área de trabalho, eles sejam capazes de executar como uma janela de área de trabalho, em vez de sempre em execução em tela inteira. Esses aplicativos também podem executar o Xbox e em dispositivos futuras.  O modelo de programação para os dois tipos de aplicativos é diferente de aplicativos de desktop do Win32. Esses aplicativos do Windows é executado em uma interface e o tempo de execução do Windows, que fornece os elementos de interface do usuário, serviços essenciais para esses aplicativos e fornece, para os dispositivos de hardware diferentes que têm suporte. Esses aplicativos compilados para código nativo e têm uma interface de usuário XAML ou usam DirectX. Você também pode escrever componentes de tempo de execução do Windows em código nativo que outros aplicativos do Windows podem consumir — isso inclui aplicativos que são escritos em c#, Visual Basic ou JavaScript. Para obter mais informações, consulte [criar um aplicativo "Hello world" de UWP em C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [criar um jogo UWP simple com DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), e [componentes de criação de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
-> Para Windows 10, você pode usar o conversor de aplicativo de área de trabalho para empacotar o aplicativo de área de trabalho existente para implantação por meio da Windows Store. Para obter mais informações, consulte [Usando o tempo de execução do Visual C++ em projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e [Traga seu aplicativo da área de trabalho para a UWP (Plataforma Universal do Windows) com a Ponte de Desktop](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Para Windows 10, você pode usar o conversor de aplicativo de área de trabalho para empacotar o aplicativo de área de trabalho existente para implantação por meio da Microsoft Store. Para obter mais informações, consulte [Usando o tempo de execução do Visual C++ em projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e [Traga seu aplicativo da área de trabalho para a UWP (Plataforma Universal do Windows) com a Ponte de Desktop](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
 
 Para obter exemplos de plataforma Universal do Windows, consulte [exemplos Universal do Windows no GitHub](https://github.com/Microsoft/Windows-universal-samples)
 
@@ -59,7 +61,7 @@ Um novo conceito introduzido no Windows 10 chamadas API contratos substitui a an
 
 Para obter mais informações sobre todos esses conceitos, consulte [guia para aplicativos universais do Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
-##  <a name="BK_Native"></a>Área de trabalho, servidor e aplicativos de nuvem e jogos
+##  <a name="BK_Native"></a> Área de trabalho, servidor e aplicativos de nuvem e jogos
 
 Na nuvem, você pode escrever assemblies de código nativo do Azure em C++ e chamá-los funções da Web que são criados em c#. Para obter mais informações, consulte [SDK do Azure](http://go.microsoft.com/fwlink/p/?LinkId=256416).
 

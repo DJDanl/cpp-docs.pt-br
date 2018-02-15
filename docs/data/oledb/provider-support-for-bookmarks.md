@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - IRowsetLocate class, provider support for bookmarks
 - OLE DB provider templates, bookmarks
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>Suporte do provedor para indicadores
 O exemplo neste tópico adiciona o `IRowsetLocate` interface para o `CMyProviderRowset` classe. Em quase todos os casos, você começa adicionando uma interface para um objeto existente do COM. Você pode testá-lo com a adição de mais chamadas nos modelos de consumidor. O exemplo demonstra como:  
@@ -41,7 +43,7 @@ O exemplo neste tópico adiciona o `IRowsetLocate` interface para o `CMyProvider
   
  Adicionando o `IRowsetLocate` interface é um pouco diferente da maioria das interfaces. Para tornar a linha VTABLEs para cima, o OLE DB modelos de provedor têm um parâmetro de modelo para lidar com a interface derivada. O código a seguir mostra a nova lista de herança:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -49,18 +51,18 @@ O exemplo neste tópico adiciona o `IRowsetLocate` interface para o `CMyProvider
 class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,   
       CTextData, CMyProviderCommand, CAtlArray<CTextData>,   
       CSimpleRow,   
-          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
+          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- A quarta, quinta e sexta parâmetros serão adicionados. Este exemplo usa os padrões para o quarto e quinto parâmetros mas especificam `IRowsetLocateImpl` como o sexto parâmetro. `IRowsetLocateImpl`é uma classe de modelo de banco de dados OLE que utiliza dois parâmetros de modelo: eles ligar o `IRowsetLocate` interface para o `CMyProviderRowset` classe. Para adicionar a maioria das interfaces, você pode ignorar esta etapa e mover para o próximo. Somente o `IRowsetLocate` e `IRowsetScroll` interfaces precisam ser manipulados dessa maneira.  
+ A quarta, quinta e sexta parâmetros serão adicionados. Este exemplo usa os padrões para o quarto e quinto parâmetros mas especificam `IRowsetLocateImpl` como o sexto parâmetro. `IRowsetLocateImpl` é uma classe de modelo de banco de dados OLE que utiliza dois parâmetros de modelo: eles ligar o `IRowsetLocate` interface para o `CMyProviderRowset` classe. Para adicionar a maioria das interfaces, você pode ignorar esta etapa e mover para o próximo. Somente o `IRowsetLocate` e `IRowsetScroll` interfaces precisam ser manipulados dessa maneira.  
   
  Você precisa saber o `CMyProviderRowset` para chamar `QueryInterface` para o `IRowsetLocate` interface. Adicione a linha `COM_INTERFACE_ENTRY(IRowsetLocate)` ao mapa. O mapa de interface de `CMyProviderRowset` deve aparecer como mostrado no código a seguir:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> > _RowsetBaseClass;  
+typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>> _RowsetBaseClass;  
   
 BEGIN_COM_MAP(CMyProviderRowset)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
@@ -74,7 +76,7 @@ END_COM_MAP()
   
  Para lidar com o **icolumnsinfo:: Getcolumnsinfo** chamar, exclua o **PROVIDER_COLUMN** mapear no `CTextData` classe. A macro PROVIDER_COLUMN_MAP define uma função `GetColumnInfo`. Você precisa definir seus próprios `GetColumnInfo` função. A declaração da função deve ter esta aparência:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -92,7 +94,7 @@ class CTextData
   
  Em seguida, implementar a `GetColumnInfo` de função no arquivo MyProviderRS.cpp da seguinte maneira:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
   
@@ -161,13 +163,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo`primeiro verifica se uma propriedade chamada **DBPROP_IRowsetLocate** está definido. OLE DB tem propriedades para cada uma das interfaces opcionais desativar o objeto de conjunto de linhas. Se o consumidor deseja usar uma dessas interfaces opcionais, ele define uma propriedade como true. O provedor pode, em seguida, verifique se a propriedade e realizar ação especial com base nele.  
+ `GetColumnInfo` primeiro verifica se uma propriedade chamada **DBPROP_IRowsetLocate** está definido. OLE DB tem propriedades para cada uma das interfaces opcionais desativar o objeto de conjunto de linhas. Se o consumidor deseja usar uma dessas interfaces opcionais, ele define uma propriedade como true. O provedor pode, em seguida, verifique se a propriedade e realizar ação especial com base nele.  
   
  Em sua implementação, você pode obter a propriedade usando o ponteiro para o objeto de comando. O `pThis` ponteiro representa a classe de conjunto de linhas ou de comando. Como você pode usar modelos aqui, você precisa passar isso como um `void` ponteiro ou o código não compila.  
   
  Especifique uma matriz estática para conter as informações de coluna. Se o consumidor não deseja que a coluna de indicador, uma entrada na matriz é desperdiçada. É possível alocar dinamicamente essa matriz, mas você precisa certificar-se de destrui-la corretamente. Este exemplo define e usa as macros ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX para inserir as informações na matriz. Você pode adicionar as macros para o arquivo myproviderrs. H, conforme mostrado no código a seguir:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -198,13 +200,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
   
  Para testar o código no consumidor, você precisa fazer algumas alterações para o `OnRun` manipulador. A primeira alteração para a função é que você adicione código para adicionar uma propriedade ao conjunto de propriedades. O código define o **DBPROP_IRowsetLocate** propriedade como true, indicando assim o provedor que você deseja que a coluna de indicador. O `OnRun` código de manipulador de deve aparecer da seguinte maneira:  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // TestProv Consumer Application in TestProvDlg.cpp  
   
 void CTestProvDlg::OnRun()   
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -229,7 +231,8 @@ void CTestProvDlg::OnRun()
       DBCOMPARE compare;  
       if (ulCount == 2)  
          tempBookmark = table.bookmark;  
-      HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
+
+HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
                  &compare);  
       if (FAILED(hr))  
          ATLTRACE(_T("Compare failed: 0x%X\n"), hr);  
@@ -251,7 +254,7 @@ void CTestProvDlg::OnRun()
   
  Você também precisa atualizar o registro de usuário no consumidor. Adicionar uma entrada na classe para manipular um indicador e uma entrada de **COLUMN_MAP**:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   

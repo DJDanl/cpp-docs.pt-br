@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos gerados pelo Assistente do Consumidor
 Assistente de ATL OLE DB consumidor e o Assistente de aplicativo MFC geram determinadas funções das quais você deve estar ciente. Observe que alguns métodos são implementados de maneira em projetos atribuídos, portanto, há algumas limitações; cada caso é abordado abaixo. Para obter informações sobre como exibir o código injetado, consulte [depurar código injetado](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll`Abre a fonte de dados, conjuntos de linhas e ativa indicadores se elas estiverem disponíveis.  
+-   `OpenAll` Abre a fonte de dados, conjuntos de linhas e ativa indicadores se elas estiverem disponíveis.  
   
--   `CloseAll`Fecha todos os conjuntos de linhas e libera todas as execuções de comando.  
+-   `CloseAll` Fecha todos os conjuntos de linhas e libera todas as execuções de comando.  
   
--   `OpenRowset`é chamado pelo OpenAll para abrir conjuntos de linhas ou de linhas do consumidor.  
+-   `OpenRowset` é chamado pelo OpenAll para abrir conjuntos de linhas ou de linhas do consumidor.  
   
--   `GetRowsetProperties`recupera um ponteiro para a propriedade do conjunto de linhas com as propriedades que podem ser definidas.  
+-   `GetRowsetProperties` recupera um ponteiro para a propriedade do conjunto de linhas com as propriedades que podem ser definidas.  
   
--   `OpenDataSource`Abre a fonte de dados usando a cadeia de caracteres de inicialização especificado no **propriedades de vínculo de dados** caixa de diálogo.  
+-   `OpenDataSource` Abre a fonte de dados usando a cadeia de caracteres de inicialização especificado no **propriedades de vínculo de dados** caixa de diálogo.  
   
--   `CloseDataSource`Fecha a fonte de dados de forma apropriada.  
+-   `CloseDataSource` Fecha a fonte de dados de forma apropriada.  
   
 ## <a name="openall-and-closeall"></a>OpenAll e CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** chama esse método para abrir o conjunto de linhas ou conjuntos de linhas no consumidor. Normalmente, você não precisa chamar `OpenRowset` , a menos que você deseja trabalhar com várias fontes/sessões/conjuntos de linhas dados. `OpenRowset`é declarada no arquivo de cabeçalho de classe comando ou de tabela:  
+ **OpenAll** chama esse método para abrir o conjunto de linhas ou conjuntos de linhas no consumidor. Normalmente, você não precisa chamar `OpenRowset` , a menos que você deseja trabalhar com várias fontes/sessões/conjuntos de linhas dados. `OpenRowset` é declarada no arquivo de cabeçalho de classe comando ou de tabela:  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Esse método retorna um ponteiro para o conjunto de propriedades do conjunto de linhas; Você pode usar esse ponteiro para definir propriedades como DBPROP_IRowsetChange. `GetRowsetProperties`é usado na classe de registro de usuário da seguinte maneira. Você pode modificar este código para definir as propriedades do conjunto de linhas adicionais:  
+ Esse método retorna um ponteiro para o conjunto de propriedades do conjunto de linhas; Você pode usar esse ponteiro para definir propriedades como DBPROP_IRowsetChange. `GetRowsetProperties` é usado na classe de registro de usuário da seguinte maneira. Você pode modificar este código para definir as propriedades do conjunto de linhas adicionais:  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

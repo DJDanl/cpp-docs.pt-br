@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - versions [C++]
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2656b7e1901104b29300f5adb6647e7f3ac1db57
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Ferramentas do Visual C++ e recursos em edições do Visual Studio
 As tabelas a seguir mostram os recursos do Visual C++ que estão disponíveis no Visual Studio. Um X em uma célula indica que o recurso está disponível. uma célula vazia indica que o recurso não está disponível. Notas entre parênteses indicam que um recurso está disponível, mas restrito.  
@@ -34,7 +37,7 @@ As tabelas a seguir mostram os recursos do Visual C++ que estão disponíveis no
 |Plataforma|Visual Studio Express para Windows 10|O Visual Studio Express para Windows Desktop|Comunidade do Visual Studio/Professional|Visual Studio Enterprise|  
 |Área de Trabalho do Windows||X|X|X|  
 |Plataforma universal do Windows ((telefone, tablet, PC, Xbox, IoT e HoloLens))|X||X|X|  
-|Windows Store 8.1|||X|X|  
+|Microsoft Store 8.1|||X|X|  
 |Windows Phone 8.0|||X|X|  
 |Android|||X|X|  
 |iOS|||X|X|  
@@ -66,10 +69,10 @@ As tabelas a seguir mostram os recursos do Visual C++ que estão disponíveis no
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
 |Modelos XAML para UWP, Windows 8.1, Windows Phone 8.0|X||X|X|  
 |Aplicativo Direct3D|X||X|X|  
-|DLL (aplicativos da Windows Store)|X||X|X|  
-|Biblioteca Estática (aplicativos da Windows Store)|X||X|X|  
+|DLL (Universal do Windows)|X||X|X|  
+|Biblioteca estática (Universal do Windows)|X||X|X|  
 |Componente do Tempo de Execução do Windows|X||X|X|  
-|Biblioteca de Teste de Unidade (aplicativos da Windows Store)|X||X|X|  
+|Aplicativo de teste de unidade (Universal do Windows)|X||X|X|  
 |Projeto ATL|||X|X|  
 |Biblioteca de classes (CLR)||X|X|X|  
 |Aplicativo do Console CLR||X|X|X|  

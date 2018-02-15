@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="testing-the-read-only-provider"></a>Testando o provedor somente leitura simples
 Para testar um provedor, você precisa de um consumidor. Isso será útil se o consumidor pode corresponder a com o provedor. Os modelos de consumidor OLE DB são um wrapper fino em torno do OLE DB e correspondem com os objetos COM do provedor. Como a fonte é fornecida com os modelos de consumidor, é fácil depurar um provedor com eles. Os modelos de consumidor também são uma maneira muito menor e mais rápida para desenvolver aplicativos de consumidor.  
@@ -53,7 +55,7 @@ Para testar um provedor, você precisa de um consumidor. Isso será útil se o c
   
  Abra o arquivo de cabeçalho para a caixa de diálogo classe (neste caso TestProvDlg.h). Adicione o seguinte código para o arquivo de cabeçalho (fora de qualquer declaração de classe):  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // TestProvDlg.h  
   
@@ -76,13 +78,13 @@ END_COLUMN_MAP()
   
  Adicionar uma função de manipulador para o **executar** botão pressionando CTRL e clicando duas vezes o **executar** botão. Coloque o código a seguir na função:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   
 void CtestProvDlg::OnRun()  
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -122,7 +124,7 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
   
  Passe a cadeia de caracteres "c:\\\samples\\\myprov\\\MyData.txt" no `table.Open` linha. Se você entrar o `Open` chamada, verá que essa cadeia de caracteres é passada para o `SetCommandText` método no provedor. Observe que o `ICommandText::Execute` método usado essa cadeia de caracteres.  
   
- Para buscar os dados, chame `MoveNext` na tabela. `MoveNext`chamadas de **GetNextRows**, `GetRowCount`, e `GetData` funções. Quando não houver mais nenhuma linha (ou seja, a posição atual no conjunto de linhas é maior do que `GetRowCount`), o loop será encerrado:  
+ Para buscar os dados, chame `MoveNext` na tabela. `MoveNext` chamadas de **GetNextRows**, `GetRowCount`, e `GetData` funções. Quando não houver mais nenhuma linha (ou seja, a posição atual no conjunto de linhas é maior do que `GetRowCount`), o loop será encerrado:  
   
 ```  
 while (table.MoveNext() == S_OK)  

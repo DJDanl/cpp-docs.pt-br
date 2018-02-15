@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-reference-ccx"></a>Referência rápida (C++/CX)
-O tempo de execução do Windows oferece suporte a aplicativos de plataforma Universal do Windows que executam somente em um ambiente de sistema operacional confiável, usam funções autorizadas, tipos de dados e dispositivos e são distribuídos por meio de [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C + + CX simplifica a criação de aplicativos para o tempo de execução do Windows. Este artigo é uma referência rápida; Para obter a documentação mais completa, consulte [sistema de tipo](../cppcx/type-system-c-cx.md) e [extensões de componentes para plataformas de tempo de execução](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+O tempo de execução do Windows oferece suporte a aplicativos de Windows UWP (plataforma Universal) que execute somente em um ambiente de sistema operacional confiável, usam funções autorizadas, tipos de dados e dispositivos e são distribuídos por meio da Microsoft Store. C + + CX simplifica a criação de aplicativos para o tempo de execução do Windows. Este artigo é uma referência rápida; Para obter a documentação mais completa, consulte [sistema de tipo](../cppcx/type-system-c-cx.md) e [extensões de componentes para plataformas de tempo de execução](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
- Ao compilar na linha de comando, use o **/ZW** opção de compilador para criar um aplicativo de plataforma Universal do Windows ou um componente de tempo de execução do Windows. Para acessar as declarações de tempo de execução do Windows, que são definidas nos arquivos de metadados (. winmd) de tempo de execução do Windows, especifique o `#using` diretiva ou o **/FU** opção de compilador. Quando você cria um projeto para um aplicativo de plataforma Universal do Windows, o Visual Studio por padrão define essas opções e adiciona as referências a todas as bibliotecas de tempo de execução do Windows.  
+ Ao compilar na linha de comando, use o **/ZW** opção de compilador para criar um aplicativo UWP ou um componente de tempo de execução do Windows. Para acessar as declarações de tempo de execução do Windows, que são definidas nos arquivos de metadados (. winmd) de tempo de execução do Windows, especifique o `#using` diretiva ou o **/FU** opção de compilador. Quando você cria um projeto para um aplicativo UWP, o Visual Studio por padrão define essas opções e adiciona as referências a todas as bibliotecas de tempo de execução do Windows.  
   
 ## <a name="quick-reference"></a>Referência rápida  
   
@@ -50,7 +51,7 @@ O tempo de execução do Windows oferece suporte a aplicativos de plataforma Uni
 |declaração de estrutura|`struct` *identifier* `{}`<br /><br /> (isto é, uma estrutura POD (Plain Old Data))|`value class` *identifier* `{}`<br /><br /> `value struct` *identifier* `{}`|Declara uma estrutura POD que tem acessibilidade privada padrão.<br /><br /> Uma classe de valor pode ser representada nos metadados do Windows, mas uma classe padrão do C++ padrão não pode.<br /><br /> Declara uma estrutura POD que tem acessibilidade pública padrão.<br /><br /> Uma estrutura de valor pode ser representada nos metadados do Windows, mas uma estrutura padrão C++ não pode.|  
 |declaração de interface|classe abstrata que contém apenas funções virtuais puras.|`interface class` *identifier* `{}`<br /><br /> `interface struct` *identifier* `{}`|Declara uma interface que tem acessibilidade privada padrão.<br /><br /> Declara uma interface que tem acessibilidade pública padrão.|  
 |delegado|`std::function`|`public delegate` *return-type* *delegate-type-identifier* `(` *[parâmetros]* `);`|Declara um objeto que pode ser chamado como uma chamada de função.|  
-|evento|(Não se aplica)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> -ou-<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> -ou-<br /><br /> `auto`*identificador de token* = *obj*. *identificador de evento*`::add(`*identificador de delegado*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> -ou-<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Declara um objeto de evento, que armazena uma coleção de manipuladores de eventos (delegados) que são chamados quando ocorre um evento.<br /><br /> Cria um manipulador de eventos.<br /><br /> Adiciona um manipulador de eventos.<br /><br /> A adição de um manipulador de eventos retorna um token de evento (*token-identifier*). Se você pretende remover explicitamente o manipulador de eventos, deverá salvar o token de evento para uso posterior.<br /><br /> Remove um manipulador de eventos.<br /><br /> Para remover um manipulador de eventos, você deve especificar o token de evento salvo quando o manipulador de eventos foi adicionado.|  
+|evento|(Não se aplica)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> -ou-<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> -ou-<br /><br /> `auto` *token-identifier* = *obj*. *event-identifier*`::add(`*delegate-identifier*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> -ou-<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Declara um objeto de evento, que armazena uma coleção de manipuladores de eventos (delegados) que são chamados quando ocorre um evento.<br /><br /> Cria um manipulador de eventos.<br /><br /> Adiciona um manipulador de eventos.<br /><br /> A adição de um manipulador de eventos retorna um token de evento (*token-identifier*). Se você pretende remover explicitamente o manipulador de eventos, deverá salvar o token de evento para uso posterior.<br /><br /> Remove um manipulador de eventos.<br /><br /> Para remover um manipulador de eventos, você deve especificar o token de evento salvo quando o manipulador de eventos foi adicionado.|  
 |propriedade|(Não se aplica)|`property` *T* *identifier*;<br /><br /> `property` *T* *identifier* `[` *índice* `];`<br /><br /> `property` *T* `default[` *índice* `];`|Declara que uma função de membro de classe ou objeto é acessada usando a mesma sintaxe usada para acessar um membro de dados ou elemento de matriz indexada.<br /><br /> Declara uma propriedade em uma função de membro de classe ou objeto.<br /><br /> Declara uma propriedade indexada em uma função de membro de objeto.<br /><br /> Declara uma propriedade indexada em uma função de membro de classe.|  
 |Tipos parametrizados|modelos|`generic <typename` *T* `> interface class` *identifier* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[tipo de retorno]* *delegate-identifier* `() {}`|Declara uma classe com de interface parametrizada.<br /><br /> Declara um delegado parametrizado.|  
 |Tipos de valor anuláveis|`boost::optional<T>`|[Platform:: ibox \<T >](../cppcx/platform-ibox-interface.md)|Permite que variáveis de tipos escalares e de estruturas de valor tenham um valor de `nullptr`.|  

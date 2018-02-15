@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stored procedures, syntax
 - OLE DB, stored procedures
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3aea2503fe08c5cd7e81afd0c185f48082d41e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f11994ea34e79d9a4d4d8ae5c13ad67529755e0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="defining-stored-procedures"></a>Definindo procedimentos armazenados
 Antes de chamar um procedimento armazenado, você deve primeiro definir, usando o [DEFINE_COMMAND](../../data/oledb/define-command.md) macro. Quando você define o comando, denota parâmetros com um ponto de interrogação (?) como o marcador de parâmetro:  
@@ -57,16 +59,17 @@ DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")
  Em seguida, declara a classe de comando:  
   
 ```  
-class CMySProc : public CCommand<CAccessor<CMySProcAccessor> >  
+class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>  
 ```  
   
  Finalmente, chame o procedimento armazenado `OpenRowset` da seguinte maneira:  
   
 ```  
 CSession m_session;  
+
 HRESULT OpenRowset()  
 {  
-   return CCommand<CAccessor<CMySProcAccessor> >::Open(m_session);  
+   return CCommand<CAccessor<CMySProcAccessor>>::Open(m_session);  
 }  
 ```  
   

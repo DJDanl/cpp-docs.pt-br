@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fdopen
 - _wfdopen
@@ -28,7 +29,8 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7108fdedb2698e6065c22ebe6905d897ee389ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -68,7 +71,7 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>Parâmetros
 
-*FD*  
+*fd*  
 Descritor de arquivo do arquivo aberto.
 
 *modo*  
@@ -82,7 +85,7 @@ Para obter mais informações sobre esses e outros códigos de erro, consulte [_
 
 ## <a name="remarks"></a>Comentários
 
-O `_fdopen` função associa um fluxo de e/s com o arquivo que é identificado pelo *fd*e, portanto, permite que um arquivo é aberto para e/s baixo nível ser armazenado em buffer e formatados. `_wfdopen`é uma versão de caractere largo de `_fdopen`; o *modo* argumento `_wfdopen` é uma cadeia de caracteres largos. Caso contrário, `_wfdopen` e `_fdopen` comportam-se de modo idêntico.
+O `_fdopen` função associa um fluxo de e/s com o arquivo que é identificado pelo *fd*e, portanto, permite que um arquivo é aberto para e/s baixo nível ser armazenado em buffer e formatados. `_wfdopen` é uma versão de caractere largo de `_fdopen`; o *modo* argumento `_wfdopen` é uma cadeia de caracteres largos. Caso contrário, `_wfdopen` e `_fdopen` comportam-se de modo idêntico.
 
 Arquivo descritores passados para `_fdopen` são de propriedade por retornado `FILE *` fluxo. Se `_fdopen` for bem-sucedida, não chame [ \_fechar](../../c-runtime-library/reference/close.md) no descritor de arquivo. Chamando [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) no `FILE *` também fecha o descritor de arquivo.
 
@@ -134,7 +137,7 @@ Se `t` ou `b` não é fornecido em *modo*, o modo de conversão padrão é defin
 
 Caracteres válidos para o *modo* cadeia de caracteres usada na `fopen` e `_fdopen` correspondem às *oflag* argumentos usados no [ \_abrir](../../c-runtime-library/reference/open-wopen.md) e [ \_sopen](../../c-runtime-library/reference/sopen-wsopen.md), conforme mostrado nesta tabela:
 
-|Caracteres de *modo* cadeia de caracteres|Equivalente *oflag* valor para `_open` e`_sopen`|
+|Caracteres de *modo* cadeia de caracteres|Equivalente *oflag* valor para `_open` e `_sopen`|
 |---------------------------------|---------------------------------------------------|
 |`a`|**\_O\_WRONLY &#124; \_O\_APPEND** (geralmente  **\_O\_WRONLY &#124; \_O\_CRI &#124; \_O\_APPEND**)|
 |`a+`|**\_O\_RDWR &#124; \_O\_APPEND** (geralmente  **\_O\_RDWR &#124; \_O\_ANEXAR &#124; \_O\_CREAT** )|
@@ -142,8 +145,8 @@ Caracteres válidos para o *modo* cadeia de caracteres usada na `fopen` e `_fdop
 |`r+`|**\_O\_RDWR**|
 |`w`|**\_O\_WRONLY** (geralmente  **\_O\_WRONLY &#124; \_O\_CRI &#124; \_O\_TRUNC**)|
 |`w+`|**\_O\_RDWR** (geralmente  **\_O\_RDWR &#124; \_O\_CRI &#124; \_O\_TRUNC**)|
-|`b`|**\_O\_BINÁRIO**|
-|`t`|**\_O\_TEXTO**|
+|`b`|**\_O\_BINARY**|
+|`t`|**\_O\_TEXT**|
 |`c`|Nenhum|
 |`n`|Nenhum|
 
@@ -209,8 +212,8 @@ Lines in file: 2
 ## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
-[\_DUP, \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
+[\_dup, \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
 [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
 [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
 [freopen, \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
-[\_Abrir, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+[\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)

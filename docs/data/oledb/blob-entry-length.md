@@ -4,44 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BLOB_ENTRY_LENGTH
-dev_langs: C++
-helpviewer_keywords: BLOB_ENTRY_LENGTH macro
+f1_keywords:
+- BLOB_ENTRY_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_ENTRY_LENGTH macro
 ms.assetid: 832d21ab-5fdd-49ad-af6e-4fca5722ec93
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 216e3b1882efcf479defde679c49337d21de732e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8fe67acf9e0f6217e090ecb77fa63846f506543
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="blobentrylength"></a>BLOB_ENTRY_LENGTH
 Usado com `BEGIN_COLUMN_MAP` e `END_COLUMN_MAP` para associar um objeto binário grande ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Semelhante ao [BLOB_ENTRY](../../data/oledb/blob-entry.md), exceto que essa macro também obtém o comprimento em bytes da coluna de BLOB.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-BLOB_ENTRY_LENGTH(  
-nOrdinal  
-,   
-IID  
-,   
-flags  
-,   
-data  
-,   
-length  
- )  
+```cpp
+BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)  
   
 ```  
   

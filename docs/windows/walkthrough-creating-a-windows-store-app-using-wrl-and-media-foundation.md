@@ -1,29 +1,31 @@
 ---
-title: 'Passo a passo: Criando um aplicativo da Windows Store usando WRL e Media Foundation | Microsoft Docs'
+title: 'Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>Instruções passo a passo: criando um aplicativo da Windows Store usando WRL e Media Foundation
-Saiba como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para criar um aplicativo de plataforma Universal do Windows que usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
+Saiba como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para criar um aplicativo do Windows UWP (plataforma Universal) que usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  Este exemplo cria uma transformação Media Foundation personalizada que se aplica a um efeito de escala de cinza para imagens que são capturadas de uma webcam. O aplicativo usa C++ para definir a transformação personalizada e c# para usar o componente para transformar as imagens capturadas.  
   
@@ -59,13 +61,13 @@ Saiba como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C
   
 -   Vincule a DLL do componente runtimeobject.lib. Também especifique [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) na linha de vinculador gerar metadados do Windows.  
   
--   Usar referências de projeto para tornar os componentes WRL acessível para aplicativos de plataforma Universal do Windows.  
+-   Usar referências de projeto para tornar os componentes WRL acessível para aplicativos UWP.  
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Para usar o WRL para criar a escala de cinza Media Foundation transformar o componente  
   
 1.  No Visual Studio, crie um **solução em branco** projeto. Nome do projeto, por exemplo, `MediaCapture`.  
   
-2.  Adicionar um **DLL (aplicativos da Windows Store)** projeto à solução. Nome do projeto, por exemplo, `GrayscaleTransform`.  
+2.  Adicionar um **DLL (Universal do Windows)** projeto à solução. Nome do projeto, por exemplo, `GrayscaleTransform`.  
   
 3.  Adicionar um **arquivo Midl (. idl)** arquivo ao projeto. Nomeie o arquivo, por exemplo, `GrayscaleTransform.idl`.  
   
