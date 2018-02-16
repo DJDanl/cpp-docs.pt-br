@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Como ativar e usar um componente de Windows Runtime  com WRL
 Este documento mostra como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para inicializar o tempo de execução do Windows e como ativar e usar um componente de tempo de execução do Windows.  
@@ -39,7 +41,7 @@ Este documento mostra como usar a biblioteca de modelo (WRL) do Windows em tempo
  As seguintes etapas usam o `Windows::Foundation::IUriRuntimeClass` interface para demonstrar como criar um alocador de ativação para um componente de tempo de execução do Windows, crie uma instância do componente e recuperar um valor de propriedade. Elas também mostram como inicializar o tempo de execução do Windows. O exemplo completo segue.  
   
 > [!IMPORTANT]
->  Embora você costumar usar a biblioteca de modelos de C++ de tempo de execução do Windows em um aplicativo de plataforma Universal do Windows, este exemplo usa um aplicativo de console para fins ilustrativos. Funções como `wprintf_s` não estão disponíveis de um aplicativo de plataforma Universal do Windows. Para obter mais informações sobre os tipos e funções que você pode usar em um aplicativo de plataforma Universal do Windows, consulte [funções CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) e [aplicativos Win32 e COM para a Windows Store](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Embora você costumar usar a biblioteca de modelos de C++ de tempo de execução do Windows em um aplicativo do Windows UWP (plataforma Universal), este exemplo usa um aplicativo de console para fins ilustrativos. Funções como `wprintf_s` não estão disponíveis em um aplicativo UWP. Para obter mais informações sobre os tipos e funções que você pode usar em um aplicativo UWP, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) e [Win32 e COM para aplicativos UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Para ativar e usar um componente de tempo de execução do Windows  
   
@@ -88,7 +90,7 @@ Este documento mostra como usar a biblioteca de modelo (WRL) do Windows em tempo
 ## <a name="compiling-the-code"></a>Compilando o código  
  Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `wrl-consume-component.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
   
- **cl.exe component.cpp consumir wrl runtimeobject.lib**  
+ **cl.exe wrl-consume-component.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Consulte também  
  [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md)

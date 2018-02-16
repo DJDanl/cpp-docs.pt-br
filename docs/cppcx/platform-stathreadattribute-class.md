@@ -6,26 +6,29 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Platform
 - COLLECTION/Platform::Platform::STAThreadAttribute constructor 1
 - COLLECTION/Platform::Platform::STAThreadAttribute::Equals
 - COLLECTION/Platform::Platform::STAThreadAttribute::GetHashCode
 - COLLECTION/Platform::Platform::STAThreadAttribute::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::STAThreadAttribute Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b1c2b8c38d672b6bd3ecd0fcafb54a9b6e723202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: db66ba0775ad3b38be1b43fd5781be611ca2f333
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstathreadattribute-class"></a>Classe Platform::STAThreadAttribute
 Indica que o modelo de threading para um aplicativo é STA (Single-Threaded Apartment).  
@@ -74,7 +77,7 @@ public:STAThreadAttribute()
   
 
 
-## <a name="equals"></a>STAThreadAttribute::Equals
+## <a name="equals"></a> STAThreadAttribute::Equals
 Determina se o objeto especificado é igual ao objeto atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -92,7 +95,7 @@ public:virtual override bool Equals(  Object^ obj)
   
 
 
-## <a name="gethashcode"></a>STAThreadAttribute::GetHashCode
+## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
 Retorna o código hash para essa instância.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -106,7 +109,7 @@ public:int GetHashCode()
   
 
 
-## <a name="tostring"></a>STAThreadAttribute::ToString
+## <a name="tostring"></a> STAThreadAttribute::ToString
 Retorna uma cadeia de caracteres que representa o objeto atual.  
   
 ### <a name="syntax"></a>Sintaxe  

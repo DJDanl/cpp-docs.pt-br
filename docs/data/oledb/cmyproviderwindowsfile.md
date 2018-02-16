@@ -4,32 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cmyproviderwindowsfile
-dev_langs: C++
+f1_keywords:
+- cmyproviderwindowsfile
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0ac247c418efa7800eeef469ecf54da75f5b15c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CMyProviderWindowsFile`. O código a seguir para `CMyProviderWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o **WIN32_FIND_DATA** estrutura. `CMyProviderWindowsFile`herda o **WIN32_FIND_DATA** estrutura:  
+O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CMyProviderWindowsFile`. O código a seguir para `CMyProviderWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o **WIN32_FIND_DATA** estrutura. `CMyProviderWindowsFile` herda o **WIN32_FIND_DATA** estrutura:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -47,11 +50,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile`é chamado de [classe de registro de usuário](../../data/oledb/user-record.md) porque ele contém também um mapa que descreve as colunas no conjunto de linhas do provedor. O mapa de coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros PROVIDER_COLUMN_ENTRY. As macros especificar nome de coluna ordinal e deslocamento para uma entrada de estrutura. As entradas de coluna do provedor no código acima contêm deslocamentos para a **WIN32_FIND_DATA** estrutura. Quando o consumidor chama **IRowset:: GetData**, os dados são transferidos em um buffer de contíguo. Em vez de fazer a fazer aritmética de ponteiro, o mapa permite que você especifique um membro de dados.  
+ `CMyProviderWindowsFile` é chamado de [classe de registro de usuário](../../data/oledb/user-record.md) porque ele contém também um mapa que descreve as colunas no conjunto de linhas do provedor. O mapa de coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros PROVIDER_COLUMN_ENTRY. As macros especificar nome de coluna ordinal e deslocamento para uma entrada de estrutura. As entradas de coluna do provedor no código acima contêm deslocamentos para a **WIN32_FIND_DATA** estrutura. Quando o consumidor chama **IRowset:: GetData**, os dados são transferidos em um buffer de contíguo. Em vez de fazer a fazer aritmética de ponteiro, o mapa permite que você especifique um membro de dados.  
   
- O `CMyProviderRowset` classe também contém o `Execute` método. `Execute`é o que realmente lê os dados da fonte de nativo. O código a seguir mostra o Assistente gerou `Execute` método. A função usa o Win32 **FindFirstFile** e `FindNextFile` APIs para recuperar informações sobre os arquivos no diretório e colocá-los em instâncias de `CMyProviderWindowsFile` classe.  
+ O `CMyProviderRowset` classe também contém o `Execute` método. `Execute` é o que realmente lê os dados da fonte de nativo. O código a seguir mostra o Assistente gerou `Execute` método. A função usa o Win32 **FindFirstFile** e `FindNextFile` APIs para recuperar informações sobre os arquivos no diretório e colocá-los em instâncias de `CMyProviderWindowsFile` classe.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   

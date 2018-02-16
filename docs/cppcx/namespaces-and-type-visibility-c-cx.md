@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces e visibilidade do tipo (C++/CX)
 Um namespace é uma construção C++ padrão para agrupamento de tipos que têm funcionalidade relacionada e para evitar colisões de nomes em bibliotecas. O sistema de tipos do tempo de execução do Windows requer que todos os tipos públicos de tempo de execução do Windows, incluindo aqueles em seu próprio código, devem ser declarados em um namespace no escopo do namespace. Os tipos públicos que são declarados no escopo global ou aninhados dentro de outra classe causarão um erro no tempo de compilação.  
@@ -41,7 +42,7 @@ Um namespace é uma construção C++ padrão para agrupamento de tipos que têm 
 |particulares|A acessibilidade padrão. Mesmo significado que em C++ padrão.|Não|  
 |protegidos|Mesmo significado que em C++ padrão, dentro do aplicativo ou componente e nos metadados.|Sim|  
 |públicos|Mesmo significado que em C++ padrão.|Sim|  
-|`public protected`- ou -`protected public`|Acessibilidade protegida nos metadados, público no aplicativo ou componente.|Sim|  
+|`public protected` - ou - `protected public`|Acessibilidade protegida nos metadados, público no aplicativo ou componente.|Sim|  
 |`protected private` ou `private protected`|Não visível nos metadados; acessibilidade protegida no aplicativo ou componente.||  
 |`internal` ou `private public`|O membro é público no aplicativo ou componente, mas não é visível nos metadados.|Não|  
   

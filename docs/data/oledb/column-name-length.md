@@ -4,40 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_LENGTH
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_LENGTH macro
+f1_keywords:
+- COLUMN_NAME_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_LENGTH macro
 ms.assetid: 3c4b6c94-d29d-4fba-a425-8186c9dc3f6a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c41d522af548128485051734b7cbb60c8271229b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46b4905b9f25081ee86eb49d2b6d701728a75c0d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnamelength"></a>COLUMN_NAME_LENGTH
 Representa uma associação no conjunto de linhas para a coluna específica no conjunto de linhas. Semelhante ao [COLUMN_NAME](../../data/oledb/column-name.md), exceto que essa macro também usa o comprimento da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-COLUMN_NAME_LENGTH(  
-pszName  
-,   
-data  
-,   
-length  
- )  
+```cpp
+COLUMN_NAME_LENGTH(pszName, data, length)  
   
 ```  
   
@@ -62,7 +59,7 @@ length
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
- [NOME DA COLUNA](../../data/oledb/column-name.md)   
+ [COLUMN_NAME](../../data/oledb/column-name.md)   
  [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   
  [COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)   
  [COLUMN_NAME_STATUS](../../data/oledb/column-name-status.md)   

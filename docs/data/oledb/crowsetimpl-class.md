@@ -4,42 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CRowsetImpl
 - ATL.CRowsetImpl
 - ATL::CRowsetImpl
-dev_langs: C++
-helpviewer_keywords: CRowsetImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c126c757ae4776d0b2a5d2bec352ee8d58c4f0d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetimpl-class"></a>Classe CRowsetImpl
 Fornece uma implementação padrão do conjunto de linhas OLE DB sem a necessidade de várias heranças de várias interfaces de implementação.  
   
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 template <  
    class T,  
    class Storage,  
    class CreatorClass,  
    class ArrayType = CAtlArray<Storage>,   
    class RowClass = CSimpleRow,   
-   class RowsetInterface = IRowsetImpl < T, IRowset >   
+   class RowsetInterface = IRowsetImpl <T, IRowset>   
 >  
 class CRowsetImpl :    
    public CComObjectRootEx<CreatorClass::_ThreadModel>,   
@@ -86,7 +89,7 @@ class CRowsetImpl :
 |[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|Contém o índice inicial do conjunto de linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- `CRowsetImpl`fornece substituições na forma de upcasts estáticos. Os métodos de controlam a maneira na qual um determinado conjunto de linhas será validado, o texto do comando. Você pode criar seus próprios `CRowsetImpl`-classe de estilo, fazendo com que as interfaces de implementação herdada vários. O único método para o qual você deve fornecer a implementação é **Execute**. Dependendo de qual tipo de conjunto de linhas que você está criando, os métodos creator esperará assinaturas diferentes para **Execute**. Por exemplo, se você estiver usando um `CRowsetImpl`-derivado da classe para implementar um conjunto de linhas de esquema, o **Execute** método terá a seguinte assinatura:  
+ `CRowsetImpl` fornece substituições na forma de upcasts estáticos. Os métodos de controlam a maneira na qual um determinado conjunto de linhas será validado, o texto do comando. Você pode criar seus próprios `CRowsetImpl`-classe de estilo, fazendo com que as interfaces de implementação herdada vários. O único método para o qual você deve fornecer a implementação é **Execute**. Dependendo de qual tipo de conjunto de linhas que você está criando, os métodos creator esperará assinaturas diferentes para **Execute**. Por exemplo, se você estiver usando um `CRowsetImpl`-derivado da classe para implementar um conjunto de linhas de esquema, o **Execute** método terá a seguinte assinatura:  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
   

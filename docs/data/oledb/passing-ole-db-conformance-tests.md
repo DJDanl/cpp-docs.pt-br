@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0df51ea0086104a45385673b310b5717bfa1c9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2c999692a2715301b68fd1a4bd7f719fde83
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Passando testes de conformidade de banco de dados OLE
 Para que os provedores de mais consistente, o SDK de acesso de dados fornece um conjunto de testes de conformidade do OLE DB. Os testes verificar todos os aspectos do seu provedor e fornecer garantia razoável que suas funções de provedor como esperadas. Você pode encontrar os testes de conformidade do OLE DB no SDK do Microsoft Data Access. Esta seção aborda as coisas que você deve fazer para os testes de conformidade. Para obter informações sobre como executar os testes de conformidade do OLE DB, consulte o SDK.  
@@ -41,7 +43,7 @@ Para que os provedores de mais consistente, o SDK de acesso de dados fornece um 
   
  O código a seguir é o **ValidateCommandID** rotina de validação:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 // Class: CMyProviderRowset   

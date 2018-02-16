@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b11350adfa70f38824744054df01d3d657e7474
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: ab099689af725c2b074f4caf4d2e9b13d16fbaf2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
 Quando você usar o Assistente de ATL OLE DB consumidor para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário para cada campo que você especificar em seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondentes ao seu respectivo campo.  
@@ -113,9 +115,10 @@ BEGIN_COLUMN_MAP(CProducts)
 END_COLUMN_MAP()  
 };  
   
-CTable<CAccessor<CProducts > > product;  
+CTable<CAccessor<CProducts >> product;  
   
 product.Open(session, "Product");  
+
 while (product.MoveNext() == S_OK)  
 {  
    // Check the product name isn't NULL before tracing it  

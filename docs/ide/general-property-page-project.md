@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - VC.Project.VCConfiguration.AppSupport
 - VC.Project.VCConfiguration.ToolFiles
 - VC.Project.VCConfiguration.useOfATL
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
@@ -35,12 +37,13 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bbe19414dbbe664f15ea2bbbc35a26827ac5b831
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="general-property-page-project"></a>Página de propriedade geral (projeto)
 
@@ -66,7 +69,7 @@ Para direcionar o Windows 7 ou Windows Vista, use o valor **8.1**, pois o SDK do
 
 Você pode instalar o conjunto de ferramentas de plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, consulte [configurando programas para o Windows XP](../build/configuring-programs-for-windows-xp.md). Para obter mais informações sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-**Min de plataforma de destino. Versão**  
+**Min de plataforma de destino. Versão  
 Especifica a versão mais antiga da plataforma que o projeto pode ser executada em. Essa propriedade será exibida somente se o tipo de projeto dá suporte a ele, como em projetos universais do Windows. Se seu aplicativo pode tirar proveito dos recursos em uma versão mais recente do SDK do Windows, mas ainda pode executar em versões anteriores sem esses recursos, talvez com alguma perda de funcionalidade, em seguida, o valor dessas propriedades pode ser diferente. Se assim, seu código deve verificar a versão da plataforma ele esteja em execução em tempo de execução e não tente usar os recursos que não estão disponíveis na versão mais antiga de plataforma.
 
 Observe que o Visual C++ não impõe essa opção. Ele está incluído para manter a consistência com outras linguagens, como c# e JavaScript e como um guia para qualquer pessoa que usa seu projeto. Visual C++ não irá gerar um erro se você usar um recurso que não está disponível na versão mínima.
@@ -149,7 +152,7 @@ Em projetos gerenciados, especifica a versão do .NET framework de destino.
 Especifica o [/GL](../build/reference/gl-whole-program-optimization.md) opção de compilador e [/LTCG](../build/reference/ltcg-link-time-code-generation.md) opção de vinculador. Por padrão, isso é desabilitado para configurações de depuração e habilitado para configurações de varejo.
 
 **Suporte de aplicativo da Windows Store**  
-Especifica se este projeto dá suporte a aplicativos da Windows Store. Para obter mais informações, consulte [/ZW (compilação de tempo de execução do Windows)](../build/reference/zw-windows-runtime-compilation.md)e o Centro de desenvolvedores do Windows.
+Especifica se este projeto dá suporte a aplicativos de Windows Runtime (plataforma Universal do Windows). Para obter mais informações, consulte [/ZW (compilação de tempo de execução do Windows)](../build/reference/zw-windows-runtime-compilation.md)e o Centro de desenvolvedores do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

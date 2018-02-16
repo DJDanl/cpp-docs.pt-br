@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>Automação
 Automação (anteriormente conhecida como automação OLE) possibilita que um aplicativo para manipular objetos implementados em outro aplicativo ou para expor os objetos para que eles podem ser manipulados.  
@@ -47,7 +50,7 @@ Automação (anteriormente conhecida como automação OLE) possibilita que um ap
   
 -   Automação (local).  
   
--   [Automação remota](../mfc/remote-automation.md) (em uma rede, usando COM distribuída ou DCOM).  
+-   Automação remota (em uma rede, usando COM distribuída ou DCOM).  
   
  Expondo objetos é benéfico quando os aplicativos fornecem funcionalidade útil para outros aplicativos. Por exemplo, um controle ActiveX é um tipo do servidor de automação. o aplicativo que hospeda o controle ActiveX é o cliente de automação do controle.  
   
@@ -57,7 +60,7 @@ Automação (anteriormente conhecida como automação OLE) possibilita que um ap
   
  Muitos aplicativos comerciais, como Microsoft Excel e o Microsoft Visual C++ permitem automatizar grande parte de sua funcionalidade. Por exemplo, no Visual C++, você pode escrever macros de VBScript para automatizar compilações, aspectos do código de edição ou tarefas de depuração.  
   
-##  <a name="_core_passing_parameters_in_automation"></a>Passando parâmetros de automação  
+##  <a name="_core_passing_parameters_in_automation"></a> Passando parâmetros de automação  
  Uma dificuldade durante a criação de métodos de automação está ajudando a fornecem um mecanismo de "seguro" uniforme para passar dados entre clientes e servidores de automação. Automação usa o **VARIANT** tipo para passar dados. O **VARIANT** tipo é uma união marcada. Ele tem um membro de dados para o valor (Esta é uma união anônima do C++) e um membro de dados que indica o tipo de informações armazenadas na União. O **VARIANT** tipo oferece suporte a vários tipos de dados padrão: inteiros de 2 e 4 bytes e valores booleanos, cadeias de caracteres e números de ponto flutuante de 4 e 8 bytes. Além disso, ele dá suporte a `HRESULT` (códigos de erro OLE), **moeda** (um ponto fixo tipo numérico), e **data** tipos (absoluta data e hora), bem como ponteiros para **IUnknown**  e `IDispatch` interfaces.  
   
  O **VARIANT** tipo é encapsulado no [COleVariant](../mfc/reference/colevariant-class.md) classe. O suporte **moeda** e **data** encapsuladas em classes de [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) classes.  
@@ -81,8 +84,6 @@ Automação (anteriormente conhecida como automação OLE) possibilita que um ap
 -   [Clientes de automação](../mfc/automation-clients.md)  
   
 -   [Servidores de automação](../mfc/automation-servers.md)  
-  
--   [Automação remota](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

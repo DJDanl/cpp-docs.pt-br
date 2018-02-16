@@ -1,10 +1,11 @@
 ---
-title: 'Cdynamicaccessor:: GetValue | Microsoft Docs'
+title: CDynamicAccessor::GetValue | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,58 +17,49 @@ f1_keywords:
 - ATL.CDynamicAccessor.GetValue
 - ATL::CDynamicAccessor::GetValue
 - ATL::CDynamicAccessor::GetValue<ctype>
-dev_langs: C++
-helpviewer_keywords: GetValue method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetValue method
 ms.assetid: 553f44af-68bc-4cb6-8774-e0940003fa90
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1599cd82347c4074863f2b649a2c67df894893e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1602b784db2f6eac0984ce1fca3fb8d1276b0666
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicaccessorgetvalue"></a>CDynamicAccessor::GetValue
 Recupera os dados de uma coluna especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-      void* GetValue(   
-   DBORDINAL nColumn    
-) const throw( );  
-void* GetValue(  
-   const CHAR* pColumnName   
-) const throw( );  
-void* GetValue(  
-   const WCHAR* pColumnName   
-) const throw( );  
+```cpp
+void* GetValue(DBORDINAL nColumn) const throw();  
+
+void* GetValue(const CHAR* pColumnName) const throw();  
+
+void* GetValue(const WCHAR* pColumnName) const throw();  
+
+template < class ctype >
+bool GetValue(DBORDINAL nColumn, ctype* pData) const throw();  
+
 template < class ctype >  
-bool GetValue(  
-   DBORDINAL nColumn,  
-   ctype* pData   
-) const throw( );  
+bool GetValue(const CHAR* pColumnName, ctype* pData) const throw();  
+
 template < class ctype >  
-bool GetValue(  
-   const CHAR* pColumnName,  
-   ctype* pData   
-) const throw( );  
-template < class ctype >  
-bool GetValue(  
-   const WCHAR* pColumnName,  
-   ctype* pData   
-) const throw( );  
+bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
  `ctype`  
- [in] Um parâmetro de modelo que lida com qualquer tipo de dados exceto tipos de cadeia de caracteres (**CHAR\***, **WCHAR\***), que requerem tratamento especial. `GetValue`usa o tipo de dados apropriado com base no que você especificar aqui.  
+ [in] Um parâmetro de modelo que lida com qualquer tipo de dados exceto tipos de cadeia de caracteres (**CHAR\***, **WCHAR\***), que requerem tratamento especial. `GetValue` usa o tipo de dados apropriado com base no que você especificar aqui.  
   
  `nColumn`  
  [in] O número da coluna. Coluna de números começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.  

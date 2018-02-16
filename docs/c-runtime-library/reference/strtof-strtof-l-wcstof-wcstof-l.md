@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtof_l
 - wcstof
@@ -36,7 +37,8 @@ f1_keywords:
 - wcstof
 - corecrt_wstdlib/_wcstof_l
 - _wcstof_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtof_l function
 - _tcstof function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fdfe3a202d18aa1634a2ef692088264ff8fe188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35ee9dd81cb2509e161846870d23b7a995ac5807
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 Converte cadeias de caracteres para um valor de ponto flutuante de precisão simples.  
@@ -93,7 +96,7 @@ float wcstof_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `strtof`Retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro, nesse caso, a função retorna + /-`HUGE_VALF`. O sinal de `HUGE_VALF` coincide com o sinal do valor que não pode ser representado. `strtof` retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.  
+ `strtof` Retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro, nesse caso, a função retorna + /-`HUGE_VALF`. O sinal de `HUGE_VALF` coincide com o sinal do valor que não pode ser representado. `strtof` retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.  
   
  `wcstof` retorna valores de maneira semelhante a `strtof`. Para ambas as funções, `errno` é definido como `ERANGE` se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
   

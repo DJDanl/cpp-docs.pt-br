@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetLocateImpl
-dev_langs: C++
+f1_keywords:
+- IRowsetLocateImpl
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, bookmarks
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a43df3d8732734ed79aae4c56a891bd20bbebe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>Classe IRowsetLocateImpl
 Implementa o OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface, que busca linhas arbitrárias de um conjunto de linhas.  
   
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,   
@@ -40,14 +43,12 @@ template <
    class MapClass = CAtlMap < RowClass::KeyType, RowClass* >,   
    class BookmarkKeyType = LONG,   
    class BookmarkType = LONG,   
-   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >  
->  
+   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >>  
 class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<  
-   T,   
-   RowsetInterface,   
-   RowClass,   
-   MapClass  
->  
+       T,   
+       RowsetInterface,   
+       RowClass,   
+       MapClass>  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -90,9 +91,9 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Uma matriz de indicadores.|  
   
 ## <a name="remarks"></a>Comentários  
- `IRowsetLocateImpl`é a implementação de modelos OLE DB do [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface. `IRowsetLocate`é usado para buscar linhas arbitrárias em um conjunto de linhas. Um conjunto de linhas que não implementa essa interface é um `sequential` conjunto de linhas. Quando `IRowsetLocate` está presente em um conjunto de linhas, a coluna 0 é o indicador para as linhas; ler esta coluna obterá um valor de indicador que pode ser usado para reposicionar na mesma linha.  
+ `IRowsetLocateImpl` é a implementação de modelos OLE DB do [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface. `IRowsetLocate` é usado para buscar linhas arbitrárias em um conjunto de linhas. Um conjunto de linhas que não implementa essa interface é um `sequential` conjunto de linhas. Quando `IRowsetLocate` está presente em um conjunto de linhas, a coluna 0 é o indicador para as linhas; ler esta coluna obterá um valor de indicador que pode ser usado para reposicionar na mesma linha.  
   
- `IRowsetLocateImpl`é usado para implementar o suporte a indicadores em provedores. Os indicadores são espaços reservados (índices de um conjunto de linhas) que permitem que o consumidor retornar rapidamente a uma linha, permitindo o acesso aos dados de alta velocidade. O provedor determina quais indicadores exclusivamente podem identificar uma linha. Usando `IRowsetLocateImpl` métodos, você pode comparar indicadores, linhas de busca por deslocarem busca linhas por indicador e retornam valores de hash de indicadores.  
+ `IRowsetLocateImpl` é usado para implementar o suporte a indicadores em provedores. Os indicadores são espaços reservados (índices de um conjunto de linhas) que permitem que o consumidor retornar rapidamente a uma linha, permitindo o acesso aos dados de alta velocidade. O provedor determina quais indicadores exclusivamente podem identificar uma linha. Usando `IRowsetLocateImpl` métodos, você pode comparar indicadores, linhas de busca por deslocarem busca linhas por indicador e retornam valores de hash de indicadores.  
   
  Para dar suporte a indicadores de OLE DB em um conjunto de linhas, verifique o conjunto de linhas herdar desta classe.  
   

@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::ArrayReference::ArrayReference
-dev_langs: C++
-helpviewer_keywords: Platform::ArrayReference Class
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::ArrayReference::ArrayReference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7d624422fd7dc1fcdb5e96f0995e8beef5fb8239
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0987511b6653bee85b6cc5c4c680331d12519450
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformarrayreference-class"></a>Classe Platform::ArrayReference
 `ArrayReference` é um tipo de otimização que você pode substituir por [Platform::Array^](../cppcx/platform-array-class.md) em parâmetros de entrada quando você deseja preencher uma matriz de estilo C com os dados de entrada.  
@@ -37,7 +41,7 @@ class ArrayReference
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Arrayreference:: Arrayreference](#ctor)|Inicializa uma nova instância da classe `ArrayReference`.|  
+|[ArrayReference::ArrayReference](#ctor)|Inicializa uma nova instância da classe `ArrayReference`.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -60,7 +64,7 @@ class ArrayReference
   
  **Cabeçalho:** vccorlib.h  
   
-## <a name="ctor"></a>Construtor arrayreference:: Arrayreference
+## <a name="ctor"></a>  Construtor arrayreference:: Arrayreference
 Inicializa uma nova instância do [arrayreference](../cppcx/platform-arrayreference-class.md) classe.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -85,7 +89,7 @@ ArrayReference(ArrayReference&& otherArg)
   
 
 
-## <a name="operator-assign"></a>Arrayreference:: Operator operador =
+## <a name="operator-assign"></a>  Arrayreference:: Operator operador =
 Atribui o objeto especificado ao atual [arrayreference](../cppcx/platform-arrayreference-class.md) objeto usando a semântica de animação.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -108,7 +112,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
   
 
 
-## <a name="operator-call"></a>Operador Arrayreference
+## <a name="operator-call"></a>  Operador Arrayreference
 Converte atual [arrayreference](../cppcx/platform-arrayreference-class.md) do objeto para um [Platform:: array](../cppcx/platform-array-class.md) classe.  
   
 ### <a name="syntax"></a>Sintaxe  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,19 +24,22 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs: C++
-helpviewer_keywords: Concurrency namespace
+dev_langs:
+- C++
+helpviewer_keywords:
+- Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86513e9196a3bdc8da2f414fcc792cbeb67b706d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-namespace"></a>Namespace Concurrency
 O namespace `Concurrency` oferece classes e funções que permitem que você acesse o Tempo de execução de simultaneidade, uma estrutura de programação simultânea para C++. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](../../../parallel/concrt/concurrency-runtime.md).  
@@ -137,7 +141,7 @@ namespace concurrency;
 |[Classe task (Tempo de Execução de Simultaneidade)](task-class.md)|A classe `task` da Biblioteca de Padrões Paralelos (PPL). O objeto `task` representa o trabalho que pode ser executado de forma assíncrona e simultaneamente com outras tarefas e o trabalho paralelo produzido por algoritmos paralelos no Tempo de execução de simultaneidade. Produz um resultado de tipo `_ResultType` após uma conclusão bem-sucedida. Tarefas do tipo `task<void>` não produzem resultados. Uma tarefa pode ser aguardada e cancelada independentemente de outras tarefas. Ela também pode ser composta por outras tarefas usando continuations(`then`) e os padrões join(`when_all`) e choice(`when_any`).|  
 |[Classe task_canceled](task-canceled-class.md)|Esta classe descreve uma exceção gerada pela camada de tarefas PPL para forçar a cancelamento da tarefa atual. Ele também é gerado pelo `get()` método [tarefa](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), para uma tarefa cancelada.|  
 |[Classe task_completion_event](task-completion-event-class.md)|A classe `task_completion_event` permite atrasar a execução de uma tarefa até que uma condição seja atendida, ou iniciar uma tarefa em resposta a um evento externo.|  
-|[Classe task_continuation_context](task-continuation-context-class.md)|A classe `task_continuation_context` permite que você especifique onde gostaria que uma continuação fosse executada. Isso é útil somente para o uso dessa classe por meio de um aplicativo da Windows Store. Para aplicativos que não são da Windows Store, o contexto de execução da continuação da tarefa é determinado pelo tempo de execução e não é configurável.|  
+|[Classe task_continuation_context](task-continuation-context-class.md)|A classe `task_continuation_context` permite que você especifique onde gostaria que uma continuação fosse executada. Isso é útil somente usar essa classe de um aplicativo UWP. Para aplicativos não - Windows Runtime, o contexto de execução de continuação de tarefas é determinado pelo tempo de execução e não é configurável.|  
 |[Classe task_group](task-group-class.md)|O `task_group` classe representa uma coleção de trabalho paralela que pode ser aguardado ou cancelada.|  
 |[Classe task_handle](task-handle-class.md)|O `task_handle` classe representa um item de trabalho paralelas individual. Ele encapsula as instruções e os dados necessários para executar um trabalho.|  
 |[Classe task_options (Tempo de Execução de Simultaneidade)](task-options-class-concurrency-runtime.md)|Representa as opções permitidas para criar uma tarefa|  
@@ -194,7 +198,7 @@ namespace concurrency;
 |[Função asend](concurrency-namespace-functions.md#asend)|Sobrecarregado. Uma operação de envio assíncrono que agenda uma tarefa para propagar os dados para o bloco de destino.|  
 |[Função cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Cancela a tarefa atualmente em execução. Essa função pode ser chamada de dentro do corpo de uma tarefa para interromper a execução da tarefa e fazer com que ela entre no estado `canceled`.<br /><br /> Não é um cenário com suporte para chamar essa função se você não estiver dentro do corpo de uma `task`. Isso resultará em um comportamento indefinido, tal como um travamento ou um desligamento em seu aplicativo.|  
 |[Função create_async](concurrency-namespace-functions.md#create_async)|Cria uma construção assíncrona de Tempo de execução do Windows com base em um objeto de função ou lambda fornecido pelo usuário. O tipo de retorno de `create_async` é `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` ou `IAsyncOperationWithProgress<TResult, TProgress>^` com base na assinatura do lambda passada para o método.|  
-|[Função create_task](concurrency-namespace-functions.md#create_task)|Sobrecarregado. Cria um PPL [tarefa](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) objeto. `create_task`pode ser usado em qualquer lugar você teria que usar um construtor de tarefa. Ele é fornecido principalmente para sua conveniência, pois permite o uso do `auto` palavra-chave durante a criação de tarefas.|  
+|[Função create_task](concurrency-namespace-functions.md#create_task)|Sobrecarregado. Cria um PPL [tarefa](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) objeto. `create_task` pode ser usado em qualquer lugar você teria que usar um construtor de tarefa. Ele é fornecido principalmente para sua conveniência, pois permite o uso do `auto` palavra-chave durante a criação de tarefas.|  
 |[Função CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Retorna uma interface que representa a instância singleton do Gerenciador de recursos do tempo de execução de simultaneidade. O Gerenciador de recursos é responsável pela atribuição de recursos a agendadores que deseja cooperam entre si.|  
 |[Função DisableTracing](concurrency-namespace-functions.md#disabletracing)|Desabilita o rastreamento em tempo de execução de simultaneidade. Essa função é preterida porque o rastreamento ETW é não registrado por padrão.|  
 |[Função EnableTracing](concurrency-namespace-functions.md#enabletracing)|Habilita o rastreamento em tempo de execução de simultaneidade. Essa função é preterida porque o rastreamento ETW está ativada por padrão.|  
@@ -212,11 +216,11 @@ namespace concurrency;
 |[Função make_join](concurrency-namespace-functions.md#make_join)|Sobrecarregado. Constrói um `non_greedy multitype_join` bloco de mensagens de um recurso opcional `Scheduler` ou `ScheduleGroup` e duas ou mais fontes de entrada.|  
 |[Função make_task](concurrency-namespace-functions.md#make_task)|Um método de fábrica para criar um `task_handle` objeto.|  
 |[Função parallel_buffered_sort](concurrency-namespace-functions.md#parallel_buffered_sort)|Sobrecarregado. Organiza os elementos em um intervalo especificado em uma ordem nondescending, ou de acordo com um critério de ordenação especificado por um predicado binário, em paralelo. Essa função é semanticamente similar a `std::sort` porque é uma classificação de comparação instável, baseada no local, exceto que ele precisa `O(n)` espaço adicional e requer inicialização padrão para os elementos que estão sendo classificados.|  
-|[Função parallel_for](concurrency-namespace-functions.md#parallel_for)|Sobrecarregado. `parallel_for`itera em um intervalo de índices e executa uma função fornecida pelo usuário em cada iteração em paralelo.|  
-|[Função parallel_for_each](concurrency-namespace-functions.md#parallel_for_each)|Sobrecarregado. `parallel_for_each`aplica-se uma função específica para cada elemento em um intervalo, em paralelo. É semanticamente equivalente ao `for_each` funcionar a `std` namespace, exceto a iteração sobre elementos é executada em paralelo, e a ordem de iteração é especificada. O argumento `_Func` deve oferecer suporte a um operador de chamada de função do formulário `operator()(T)` onde o parâmetro `T` é o tipo de item de contêiner que está sendo feita a iteração.|  
+|[Função parallel_for](concurrency-namespace-functions.md#parallel_for)|Sobrecarregado. `parallel_for` itera em um intervalo de índices e executa uma função fornecida pelo usuário em cada iteração em paralelo.|  
+|[Função parallel_for_each](concurrency-namespace-functions.md#parallel_for_each)|Sobrecarregado. `parallel_for_each` aplica-se uma função específica para cada elemento em um intervalo, em paralelo. É semanticamente equivalente ao `for_each` funcionar a `std` namespace, exceto a iteração sobre elementos é executada em paralelo, e a ordem de iteração é especificada. O argumento `_Func` deve oferecer suporte a um operador de chamada de função do formulário `operator()(T)` onde o parâmetro `T` é o tipo de item de contêiner que está sendo feita a iteração.|  
 |[Função parallel_invoke](concurrency-namespace-functions.md#parallel_invoke)|Sobrecarregado. Executa os objetos de função fornecidos como parâmetros em paralelo e bloqueia até que concluiu a execução. Cada objeto de função pode ser uma expressão lambda, um ponteiro para função, ou qualquer objeto que suporta o operador de chamada de função com a assinatura `void operator()()`.|  
 |[Função parallel_radixsort](concurrency-namespace-functions.md#parallel_radixsort)|Sobrecarregado. Organiza elementos em um intervalo especificado em uma ordem decrescente não usando um algoritmo de classificação de base. Essa é uma função de classificação estável que exige uma função de projeção que pode projetar elementos a serem classificados em chaves de tipo inteiro sem sinal. Inicialização padrão é necessária para os elementos que estão sendo classificados.|  
-|[Função parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Sobrecarregado. Calcula a soma de todos os elementos em um intervalo especificado Calculando somas parciais sucessivas ou calcula o resultado de sucessivos resultados parciais da mesma forma obtido usando uma operação binária especificada diferente de soma, em paralelo. `parallel_reduce`é semanticamente similar a `std::accumulate`, exceto que ele requer que a operação binária associativa e requer um valor de identidade em vez de um valor inicial.|  
+|[Função parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Sobrecarregado. Calcula a soma de todos os elementos em um intervalo especificado Calculando somas parciais sucessivas ou calcula o resultado de sucessivos resultados parciais da mesma forma obtido usando uma operação binária especificada diferente de soma, em paralelo. `parallel_reduce` é semanticamente similar a `std::accumulate`, exceto que ele requer que a operação binária associativa e requer um valor de identidade em vez de um valor inicial.|  
 |[Função parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Sobrecarregado. Organiza os elementos em um intervalo especificado em uma ordem nondescending, ou de acordo com um critério de ordenação especificado por um predicado binário, em paralelo. Essa função é semanticamente semelhante ao `std::sort` porque é uma classificação de comparação instável, baseada no local.|  
 |[Função parallel_transform](concurrency-namespace-functions.md#parallel_transform)|Sobrecarregado. Aplica-se a um objeto de função especificado para cada elemento em um intervalo de origem ou para um par de elementos de dois intervalos de origem e copia os valores de retorno do objeto de função em um intervalo de destino, em paralelo. Nesse funcional é semanticamente equivalente a `std::transform`.|  
 |[Função Receive](concurrency-namespace-functions.md#receive)|Sobrecarregado. Geral receber implementação, permitindo que um contexto aguardar a exatamente uma fonte de dados e filtrar os valores que são aceitos.|  
@@ -270,7 +274,7 @@ namespace concurrency;
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Uma categoria de GUID descrevendo eventos ETW acionado no tempo de execução de simultaneidade que estão diretamente relacionados aos processadores virtuais.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_ List.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks  
+ **Header:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência](reference-concurrency-runtime.md)

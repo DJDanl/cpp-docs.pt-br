@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,22 +16,25 @@ f1_keywords:
 - PPLTASKS/concurrency::task_continuation_context::use_current
 - PPLTASKS/concurrency::task_continuation_context::use_default
 - PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
-dev_langs: C++
-helpviewer_keywords: task_continuation_context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1b78688493bbb8d8bdad0696a7c8fcf467519000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="taskcontinuationcontext-class"></a>Classe task_continuation_context
-A classe `task_continuation_context` permite que você especifique onde gostaria que uma continuação fosse executada. Isso é útil somente para o uso dessa classe por meio de um aplicativo da Windows Store. Para aplicativos que não são da Windows Store, o contexto de execução da continuação da tarefa é determinado pelo tempo de execução e não é configurável.  
+A classe `task_continuation_context` permite que você especifique onde gostaria que uma continuação fosse executada. Isso é útil somente usar essa classe de um aplicativo de tempo de execução do Windows. Para aplicativos não - Windows Runtime, o contexto de execução de continuação de tarefas é determinado pelo tempo de execução e não é configurável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +64,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Namespace:** simultaneidade  
 
-## <a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a> get_current_winrt_context
  Retorna um objeto de contexto de continuação de tarefa que representa o contexto de thread atual do WinRT.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -80,7 +84,7 @@ static task_continuation_context get_current_winrt_context();
  Esse método é semelhante de `use_current` método, mas ele também está disponível para o código C++ nativo sem C + + suporte de extensão CX. Ele é destinado para uso por usuários avançados gravação C + + código da biblioteca não reconhece CX para nativo e chamadores de tempo de execução do Windows. A menos que você precisa dessa funcionalidade, recomendamos o `use_current` método, que só está disponível para o C + + clientes CX.  
   
   
-##  <a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a> use_arbitrary 
 
  Cria um contexto de continuação da tarefa que permite que o Tempo de execução escolha o contexto de execução para uma continuação.  
   
@@ -94,11 +98,11 @@ static task_continuation_context use_arbitrary();
 ### <a name="remarks"></a>Comentários  
  Quando é usado neste contexto de continuação a continuação serão executadas em um contexto que de tempo de execução escolhe mesmo se a tarefa antecedente com reconhecimento de compartimento.  
   
- `use_arbitrary`pode ser usado para desativar o comportamento padrão para uma continuação em uma tarefa com reconhecimento de compartimento criada em um STA.  
+ `use_arbitrary` pode ser usado para desativar o comportamento padrão para uma continuação em uma tarefa com reconhecimento de compartimento criada em um STA.  
   
- Esse método só está disponível para aplicativos da Windows Store.  
+ Esse método só está disponível para aplicativos de tempo de execução do Windows.  
   
-##  <a name="use_current"></a>use_current 
+##  <a name="use_current"></a> use_current 
 
  Retorna um objeto de contexto de continuação da tarefa que representa o contexto de execução atual.  
   
@@ -114,9 +118,9 @@ static task_continuation_context use_current();
   
  O valor retornado por `use_current` pode ser usado para indicar o tempo de execução que a continuação deve executadas no contexto capturado (STA vs MTA), independentemente ou não a tarefa antecedente com reconhecimento de compartimento. Um compartimento com reconhecimento de tarefa é uma tarefa que é desencapsulado um tempo de execução do Windows `IAsyncInfo` interface ou uma tarefa que é descendente de uma tarefa.  
   
- Esse método só está disponível para aplicativos da Windows Store.  
+ Esse método só está disponível para aplicativos de tempo de execução do Windows.  
   
-##  <a name="use_default"></a>use_default 
+##  <a name="use_default"></a> use_default 
 
  Cria o contexto de continuação da tarefa padrão.  
   
@@ -128,13 +132,13 @@ static task_continuation_context use_default();
  O contexto de continuação do padrão.  
   
 ### <a name="remarks"></a>Comentários  
- O contexto padrão será usado se você não especificar um contexto de continuação quando você chamar o `then` método. Aplicativos do Windows para Windows 7 e abaixo, bem como aplicativos de desktop no Windows 8 e superior, o tempo de execução determina onde continuações tarefa serão executada. No entanto, em um aplicativo da Windows Store, o contexto de continuação padrão para uma continuação em uma tarefa com reconhecimento de compartimento é o compartimento em que `then` é invocado.  
+ O contexto padrão será usado se você não especificar um contexto de continuação quando você chamar o `then` método. Aplicativos do Windows para Windows 7 e abaixo, bem como aplicativos de desktop no Windows 8 e superior, o tempo de execução determina onde continuações tarefa serão executada. No entanto, em um aplicativo de tempo de execução do Windows, o contexto de continuação padrão para uma continuação em uma tarefa com reconhecimento de compartimento é o compartimento em que `then` é invocado.  
   
  Um compartimento com reconhecimento de tarefa é uma tarefa que é desencapsulado um tempo de execução do Windows `IAsyncInfo` interface ou uma tarefa que é descendente de uma tarefa. Portanto, se você agendar uma continuação em uma tarefa com reconhecimento de compartimento em um STA de tempo de execução do Windows, a continuação serão executadas no que STA.  
   
  Uma continuação em uma tarefa com reconhecimento de compartimento não será executado em um contexto que de tempo de execução escolhe.  
 
-## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a> task_continuation_context::use_synchronous_execution  
 Retorna um objeto de contexto de continuação de tarefa que representa o contexto de execução síncrona.  
   
 ## <a name="syntax"></a>Sintaxe  

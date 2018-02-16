@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,19 +13,22 @@ f1_keywords:
 - PPLTASKS/concurrency::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::report
-dev_langs: C++
-helpviewer_keywords: progress_reporter class
+dev_langs:
+- C++
+helpviewer_keywords:
+- progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1dcdba2e5242dcd750eea42b61575ebea921d7b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aaac198ab17c33330cbc63d951bfbee97c1d4e94
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="progressreporter-class"></a>Classe progress_reporter
 A classe de relator de andamento permite criar relatórios de notificações de andamento de um tipo específico. Cada objeto progress_reporter está associado a uma determinada ação ou operação assíncrona.  
@@ -52,10 +56,10 @@ class progress_reporter;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[relatório](#report)|Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.|  
+|[report](#report)|Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse tipo só está disponível para aplicativos da Windows Store.  
+ Este tipo só está disponível para aplicativos de tempo de execução do Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `progress_reporter`  
@@ -65,13 +69,13 @@ class progress_reporter;
   
  **Namespace:** simultaneidade  
   
-##  <a name="ctor"></a>progress_reporter 
+##  <a name="ctor"></a> progress_reporter 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="report"></a>relatório 
+##  <a name="report"></a> Relatório 
 
  Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.  
   

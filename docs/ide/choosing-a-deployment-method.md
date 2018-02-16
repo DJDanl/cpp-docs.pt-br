@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Escolhendo uma método de implantação
 A menos que seu aplicativo do Visual C++ é independente e pode ser implantado por meio de um comando de cópia, recomendamos que você use o Windows Installer para implantação. O Windows Installer oferece suporte à instalação, ao reparo e à desinstalação, e também oferece suporte à atualização atômica dos arquivos de aplicativo, dependências e das entradas do Registro.  
@@ -45,7 +45,7 @@ A menos que seu aplicativo do Visual C++ é independente e pode ser implantado p
 ## <a name="redistributing-visual-c-libraries"></a>Redistribuindo bibliotecas do Visual C++  
  Em suas implantações, você pode redistribuir qualquer versão de uma biblioteca do Visual C++ que é licenciada para redistribuição. Estas são três maneiras de implantá-las:  
   
--   Implantação Central usando os pacotes redistribuíveis, que instala as bibliotecas do Visual C++ como DLLs compartilhadas em %windir%\system32\\. (A instalação nessa pasta exige direitos de administrador.) Você pode criar um script ou um programa de instalação que execute o pacote redistribuível antes de instalar seu aplicativo no computador de destino. Os pacotes redistribuíveis estão disponíveis para as plataformas x86, x64 e ARM (VCRedist_x86.exe, VCRedist_x64.exe ou VCRedist_arm.exe). O Visual Studio inclui esses pacotes em % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Você também pode baixá-los no [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (No Centro de Download, procure o "pacote redistribuível do Visual C++ *versão do Visual Studio e atualização*" que corresponde a seu aplicativo. Por exemplo, se você usou a atualização 4 do Visual Studio 2012 para compilar seu aplicativo, procure pela “atualização 4 do pacote redistribuível do Visual C++ 2012.) Para obter informações sobre como usar um pacote redistribuível, consulte [passo a passo: Implantando um Visual C++ aplicativo usando o pacote redistribuível do Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Implantação Central usando os pacotes redistribuíveis, que instala as bibliotecas do Visual C++ como DLLs compartilhadas em %windir%\system32\\. (A instalação nessa pasta exige direitos de administrador.) Você pode criar um script ou um programa de instalação que execute o pacote redistribuível antes de instalar seu aplicativo no computador de destino. Os pacotes redistribuíveis estão disponíveis para as plataformas x86, x64 e ARM (VCRedist_x86.exe, VCRedist_x64.exe ou VCRedist_arm.exe). O Visual Studio inclui esses pacotes em % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Você também pode baixá-los no [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Use a caixa de pesquisa no Centro de Download para procurar o "pacote redistribuível do Visual C++ *versão do Visual Studio e atualização*" que corresponde a seu aplicativo. Por exemplo, se você usou o Visual Studio 2015 atualização 3 para criar seu aplicativo, em seguida, procure "Visual C++ redistribuível pacote 2015 atualização 3".) Para obter informações sobre como usar um pacote redistribuível, consulte [passo a passo: Implantando um Visual C++ aplicativo usando o pacote redistribuível do Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Implantação Central usando módulos de mesclagem, cada um dos quais instala uma biblioteca específica do Visual C++ como uma DLL compartilhada em %windir%\system32\\. (A instalação nessa pasta exige direitos de administrador.) Os módulos de mesclagem se tornam parte do arquivo do instalador .msi de seu aplicativo. Módulos de mesclagem redistribuíveis do Visual C++ são incluídos no Visual Studio, em \Program arquivos (x86) \Common Files\Merge módulos\\. Para obter mais informações, consulte [redistribuição por usando Mesclar módulos](../ide/redistributing-components-by-using-merge-modules.md).  
   

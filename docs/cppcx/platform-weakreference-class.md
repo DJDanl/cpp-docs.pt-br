@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: Platform::WeakReference
+ms.topic: reference
+f1_keywords:
+- Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8666896b0e3414dca8f4cd1f8c4e2f34e9b98050
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 Representa uma referência fraca a uma instância de uma classe ref.  
@@ -37,13 +39,13 @@ class WeakReference
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[WeakReference:: WeakReference](#ctor)|Inicializa uma nova instância da classe WeakReference.|  
+|[WeakReference::WeakReference](#ctor)|Inicializa uma nova instância da classe WeakReference.|  
   
 ### <a name="methods"></a>Métodos  
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[WeakReference](#resolve)|Retorna um identificador à classe ref subjacente ou nullptr, caso o objeto não exista mais.|  
+|[WeakReference::Resolve](#resolve)|Retorna um identificador à classe ref subjacente ou nullptr, caso o objeto não exista mais.|  
   
 ### <a name="operators"></a>Operadores  
   
@@ -55,7 +57,7 @@ class WeakReference
 ### <a name="remarks"></a>Comentários  
  A própria classe WeakReference não é uma classe ref e, portanto, não herda de Platform::Object^ e não pode ser usada na assinatura de um método público.  
 
-## <a name="operator-assign"></a>WeakReference::operator =
+## <a name="operator-assign"></a> WeakReference::operator=
 Atribui um valor a WeakReference.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -70,7 +72,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ### <a name="remarks"></a>Comentários  
  A última sobrecarga na lista acima permite que você atribua uma classe ref a uma variável WeakReference. Nesse caso, a classe ref é rebaixada para [Platform](../cppcx/platform-object-class.md)^. Você restaura o tipo original posteriormente especificando-o como argumento para o parâmetro de tipo no [WeakReference\<T >](#resolve) função de membro.  
   
-## <a name="booltype"></a>WeakReference::operator BoolType
+## <a name="booltype"></a> WeakReference::operator BoolType
 Implementa o padrão de bool seguro para a classe WeakReference. Não deve ser chamada explicitamente em seu código.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -79,7 +81,7 @@ Implementa o padrão de bool seguro para a classe WeakReference. Não deve ser c
 BoolType BoolType()  
 ```  
 
-## <a name="resolve"></a>Método WeakReference:: resolve (namespace da plataforma)
+## <a name="resolve"></a> Método WeakReference:: resolve (namespace da plataforma)
 Retorna um identificador à classe ref original ou `nullptr`, caso o objeto não exista mais.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -113,7 +115,7 @@ if (bar != nullptr)
  Observe que o parâmetro de tipo é T, não T^.  
   
  
-## <a name="ctor"></a>Construtor WeakReference:: WeakReference
+## <a name="ctor"></a> Construtor WeakReference:: WeakReference
 Fornece várias maneiras de construir um WeakReference.  
   
 ### <a name="syntax"></a>Sintaxe  

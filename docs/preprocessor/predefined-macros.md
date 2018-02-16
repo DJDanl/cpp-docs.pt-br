@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -74,7 +75,8 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -149,16 +151,17 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 86905a879abe9b81302a8f196e200c1d0c227bb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 53acac18902e261eede565987d6b9c053a8f1707
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -286,7 +289,7 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
 
 - **&#95; CPPRTTI** definido como 1 se o [/GR (Habilitar informações de tipo em tempo de execução)](../build/reference/gr-enable-run-time-type-information.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95; CPPUNWIND** definido como 1 se um ou mais o [/GX (habilitar tratamento de exceção)](../build/reference/gx-enable-exception-handling.md), [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), ou [/EH (modelo de tratamento de exceção) ](../build/reference/eh-exception-handling-model.md) opções do compilador são definidas. Caso contrário, indefinido.
+- **&#95; CPPUNWIND** definido como 1 se um ou mais o [/GX (habilitar tratamento de exceção)](../build/reference/gx-enable-exception-handling.md), [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), ou [/EH (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md) opções do compilador são definidas. Caso contrário, indefinido.
 
 - **&#95; depuração** definido como 1 quando o [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/MDd](../build/reference/md-mt-ld-use-run-time-library.md), ou [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) opção de compilador está definida. Caso contrário, indefinido.
 
@@ -372,7 +375,7 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
 
 - **&#95; MSC &#95; VER** definido como um literal de inteiro que codifica os elementos principais e secundários número do número de versão do compilador. O número principal é o primeiro elemento do número de versão delimitada por ponto e o número secundário é o segundo elemento. Por exemplo, se o número de versão do compilador Visual C++ é 17.00.51106.1, o **&#95; MSC &#95; VER** macro é avaliada como 1700. Insira **cl /?** na linha de comando para exibir o número da versão do compilador. Essa macro é sempre definida.
 
-- **&#95; MSVC &#95; LANG** definido como um literal de inteiro que especifica o padrão de linguagem C++ direcionado pelo compilador. Quando compilado c++, a macro é o valor de literal de inteiro 201402 se o [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador, ou por padrão; é definido para 201703 se o [/std:c + + 17](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador; e ele é definido como um não especificado, maior valor quando o [/std:c + + mais recente](../build/reference/std-specify-language-standard-version.md). Caso contrário, a macro será indefinida. O **&#95; MSVC &#95; LANG** macro e [/std (especificar versão padrão do idioma)](../build/reference/std-specify-language-standard-version.md) opções do compilador são disponível a partir do Visual Studio 2015 atualização 3.
+- **&#95; MSVC &#95; LANG** definido como um literal de inteiro que especifica o padrão de linguagem C++ direcionado pelo compilador. Quando compilado c++, a macro é o valor de literal de inteiro 201402L se o [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador, ou por padrão; é definido para 201703 L se o [/std:c + + 17](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador; e ele é definido como um não especificado, maior valor quando o [/std:c + + mais recente](../build/reference/std-specify-language-standard-version.md). Caso contrário, a macro será indefinida. O **&#95; MSVC &#95; LANG** macro e [/std (especificar versão padrão do idioma)](../build/reference/std-specify-language-standard-version.md) opções do compilador são disponível a partir do Visual Studio 2015 atualização 3.
 
 - **&#95; &#95; MSVC &#95; Tempo de execução &#95; VERIFICA** definido como 1 quando uma da [/RTC](../build/reference/rtc-run-time-error-checks.md) opções do compilador é definido. Caso contrário, indefinido.
 

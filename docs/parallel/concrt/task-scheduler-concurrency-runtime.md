@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], oversubscription
@@ -23,22 +25,23 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Agendador de tarefas (Tempo de Execução de Simultaneidade)
 Os tópicos desta parte da documentação descrevem os recursos importantes do Agendador de tarefas de tempo de execução de simultaneidade. O Agendador de tarefas é útil quando você deseja ajustar o desempenho do seu código existente que usa o tempo de execução de simultaneidade.  
   
 > [!IMPORTANT]
->  O Agendador de tarefas não está disponível em um [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo. Para obter mais informações, consulte [Criando operações assíncronas em C++ para aplicativos da Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  O Agendador de tarefas não está disponível de um aplicativo do Windows UWP (plataforma Universal). Para obter mais informações, consulte [criando a operações assíncronas em C++ para aplicativos UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
 >   
 >  No Visual Studio 2015 e posteriores, o [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) classe e tipos relacionados no ppltasks usam ThreadPool Windows como seu Agendador. Este tópico não se aplica a tipos que são definidos em ppltasks. Algoritmos paralelos, como parallel_for continuam a usar o tempo de execução de simultaneidade como o agendador padrão.  
   

@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Como criar um componente COM clássico com WRL
-Você pode usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para criar componentes básicos do COM clássico para uso em aplicativos de área de trabalho, além disso, para usá-lo para [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] aplicativos. Para a criação de componentes COM, a biblioteca de modelos do Windows em tempo de execução C++ podem exigir menos código do que o ATL. Para obter informações sobre o subconjunto COM a biblioteca de modelos de C++ do Windows Runtime oferece suporte, consulte [biblioteca de modelo em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
+Você pode usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para criar componentes básicos do COM clássico para uso em aplicativos de área de trabalho, além de usá-lo para aplicativos do Windows UWP (plataforma Universal). Para a criação de componentes COM, a biblioteca de modelos do Windows em tempo de execução C++ podem exigir menos código do que o ATL. Para obter informações sobre o subconjunto COM a biblioteca de modelos de C++ do Windows Runtime oferece suporte, consulte [biblioteca de modelo em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
  Este documento mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente básico do COM. Embora você possa usar o mecanismo de implantação que melhor atenda às suas necessidades, este documento também mostra uma maneira simples de registrar e consumir o componente COM de um aplicativo de área de trabalho.  
   
@@ -39,7 +41,7 @@ Você pode usar a biblioteca de modelo (WRL) do Windows em tempo de execução C
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  No CalculatorComponent.cpp, defina o `CalculatorComponent` classe. O `CalculatorComponent` classe herda de [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) Especifica que a classe derivada de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) e não [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` está disponível somente para [!INCLUDE[win8_appstore_short](../windows/includes/win8_appstore_short_md.md)] componentes do aplicativo.) `CoCreatableClass` cria uma fábrica para a classe que pode ser usada com funções como [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
+5.  No CalculatorComponent.cpp, defina o `CalculatorComponent` classe. O `CalculatorComponent` classe herda de [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) Especifica que a classe derivada de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) e não [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` está disponível apenas para componentes de aplicativo do Windows Runtime.) `CoCreatableClass` cria uma fábrica para a classe que pode ser usada com funções como [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   

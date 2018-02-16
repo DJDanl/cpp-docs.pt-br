@@ -7,35 +7,34 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a64e1f35350968f16a24a46b8611820d68bf785
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="static-libraries-ccx"></a>Bibliotecas estáticas (C++/CX)
-Uma biblioteca estática que é usada em um aplicativo de plataforma Universal do Windows pode conter código C++ padrão ISO, incluindo tipos STL e também chamadas a APIs Win32 que não são excluídas da plataforma do aplicativo de plataforma Universal do Windows. Uma biblioteca estática consome componentes do tempo de execução do Windows e pode criar componentes do Windows Runtime com algumas restrições.  
+Uma biblioteca estática que é usada em um aplicativo do Windows UWP (plataforma Universal) pode conter código C++ padrão ISO, incluindo tipos STL e também chamadas a APIs Win32 que não são excluídas da plataforma do aplicativo de tempo de execução do Windows. Uma biblioteca estática consome componentes do tempo de execução do Windows e pode criar componentes do Windows Runtime com algumas restrições.  
   
 ## <a name="creating-static-libraries"></a>Criando bibliotecas estáticas  
   
-#### <a name="to-create-a-static-library-for-use-in-a-universal-windows-platform-app"></a>Para criar uma biblioteca estática para uso em um aplicativo de plataforma Universal do Windows  
+#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>Para criar uma biblioteca estática para uso em um aplicativo UWP  
   
-1.  Na barra de menus, escolha **arquivo** > **novo** > **projeto** > **biblioteca estática em branco** para Windows Universal aplicativos de plataforma.  
+1.  Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**. Em **Visual C++** > **Windows Universal** escolha **biblioteca estática (Universal do Windows)**.  
   
-2.  No **Gerenciador de Soluções**, abra o menu de atalho para o projeto e escolha **Propriedades**. No **propriedades** caixa de diálogo de **propriedades de configuração** > **geral** , defina o suporte de aplicativo da plataforma Universal do Windows  **Sim**.  
+2.  No **Gerenciador de Soluções**, abra o menu de atalho para o projeto e escolha **Propriedades**. No **propriedades** caixa de diálogo de **propriedades de configuração** > **C/C++** , defina **consumir extensão de tempo de execução do Windows** para **Sim (/ZW)**.  
   
-3.  Sobre o **propriedades de configuração** > **C/C++** , defina **consumir** tempo de execução do Windows **extensão** para **Sim (/ZW)**.  
+ Quando você compila uma nova biblioteca estática, se você fizer uma chamada para a API do Win32 que foi excluída para aplicativos UWP, o compilador gerará o erro c3861: "Identificador não encontrado". Para procurar um método alternativo que tem suporte para o tempo de execução do Windows, consulte [alternativas para APIs do Windows em aplicativos UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
- Quando você compila uma nova biblioteca estática, se você fizer uma chamada para a API do Win32 que foi excluída para aplicativos de plataforma Universal do Windows, o compilador gerará o erro c3861: "Identificador não encontrado". Para procurar um método alternativo que tem suporte para o tempo de execução do Windows, consulte [alternativas às APIs do Windows em aplicativos da Windows Store](http://msdn.microsoft.com/en-us/75568012-61e0-41cc-a4df-c698f54f21ec).  
-  
- Se você adicionar um projeto de biblioteca estática C++ a uma solução de aplicativo da plataforma Universal do Windows, você talvez precise atualizar as configurações de propriedade do projeto de biblioteca para que a propriedade de suporte de plataforma Universal do Windows é definida como **Sim**. Sem essa configuração, o código a seguir é compilado e vinculado, mas um erro ocorre quando você tenta verificar o aplicativo para o [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. A biblioteca estática deve ser compilada com as mesmas configurações do compilador do projeto que a consome.  
+ Se você adicionar um projeto de biblioteca estática C++ a uma solução de aplicativo UWP, você terá que atualizar as configurações de propriedade do projeto de biblioteca para que a propriedade de suporte UWP é definida como **Sim**. Sem essa configuração, o código compila e links, mas um erro ocorre quando você tenta verificar o aplicativo para o Microsoft Store. A biblioteca estática deve ser compilada com as mesmas configurações do compilador do projeto que a consome.  
   
  Se você consumir uma biblioteca estática que cria classes públicas `ref` , as classes de interface pública ou as classes de valor público, o vinculador gerará este aviso:  
   

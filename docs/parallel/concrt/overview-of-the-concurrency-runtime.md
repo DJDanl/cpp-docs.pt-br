@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Visão geral do Tempo de Execução de Simultaneidade
 Este documento fornece uma visão geral do tempo de execução de simultaneidade. Descreve os benefícios do tempo de execução de simultaneidade, quando usá-lo e como seus componentes interagem entre si e com o sistema operacional e aplicativos.  
@@ -31,7 +34,7 @@ Este documento fornece uma visão geral do tempo de execução de simultaneidade
 > [!IMPORTANT]
 >  No Visual Studio 2015 e posteriores, o Agendador de tarefas de tempo de execução de simultaneidade não é mais o Agendador para a classe de tarefa e tipos relacionados em ppltasks. Os tipos agora usam ThreadPool Windows para melhor desempenho e interoperabilidade com primitivos de sincronização do Windows. Algoritmos paralelos, como parallel_for continuam a usar o Agendador de tarefas de tempo de execução de simultaneidade.  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este documento contém as seguintes seções:  
   
 -   [Por que um tempo de execução de simultaneidade é importante](#runtime)  
@@ -42,14 +45,14 @@ Este documento fornece uma visão geral do tempo de execução de simultaneidade
   
 -   [Requisitos](#requirements)  
   
-##  <a name="runtime"></a>Por que um tempo de execução de simultaneidade é importante  
+##  <a name="runtime">Por que um tempo de execução de simultaneidade é importante</a>  
  Um tempo de execução de simultaneidade fornece uniformidade e previsibilidade a aplicativos e componentes de aplicativos que são executados simultaneamente. Dois exemplos dos benefícios do tempo de execução de simultaneidade são *agendamento de tarefas cooperativa* e *bloqueio cooperativo*.  
   
  O tempo de execução de simultaneidade usa um agendador de tarefas cooperativa que implementa um algoritmo de roubo de trabalho para distribuir o trabalho entre os recursos de computação com eficiência. Por exemplo, considere um aplicativo que tem dois threads que são gerenciados pelo tempo de execução do mesmo. Se um thread conclui sua tarefa agendada, ele pode descarregar trabalhar a partir de outro thread. Esse mecanismo equilibra a carga de trabalho geral do aplicativo.  
   
  O tempo de execução de simultaneidade também fornece os primitivos de sincronização que usam o bloqueio cooperativo para sincronizar o acesso aos recursos. Por exemplo, considere uma tarefa que deve ter acesso exclusivo a um recurso compartilhado. Bloqueando trabalhem de forma, o tempo de execução pode usar o quantum restante para executar outra tarefa, como a primeira tarefa aguarda o recurso. Esse mecanismo promove o uso máximo de recursos de computação.  
   
- [[Superior](#top)]  
+ [[Top](#top)]  
   
 ##  <a name="architecture"></a> Arquitetura  
  O tempo de execução de simultaneidade é dividido em quatro componentes: a biblioteca de padrões paralelos (PPL), a biblioteca de agentes assíncrona, o Agendador de tarefas e o Gerenciador de recursos. Esses componentes residam entre o sistema operacional e aplicativos. A ilustração a seguir mostra como os componentes de tempo de execução de simultaneidade interagem entre o sistema operacional e aplicativos:  
@@ -59,7 +62,7 @@ Este documento fornece uma visão geral do tempo de execução de simultaneidade
  ![A arquitetura de tempo de execução de simultaneidade](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  Os componentes de Agendador de tarefas e o Gerenciador de recursos não estão disponíveis de um [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo ou quando você usa a classe task ou outros tipos em ppltasks.  
+>  Os componentes de Agendador de tarefas e o Gerenciador de recursos não estão disponíveis de um aplicativo do Windows UWP (plataforma Universal) ou quando você usar a classe task ou outros tipos em ppltasks.  
   
  O tempo de execução de simultaneidade é altamente *Combinável*, ou seja, você pode combinar funções existentes para fazer muito mais. O tempo de execução de simultaneidade compõe muitos recursos, como os algoritmos paralelos, de componentes de nível inferior.  
   
@@ -93,9 +96,9 @@ Este documento fornece uma visão geral do tempo de execução de simultaneidade
   
  O Gerenciador de recursos serve como uma abstração sobre recursos de computação e principalmente interage com o Agendador de tarefas. Embora você pode usar o Gerenciador de recursos para ajustar o desempenho de bibliotecas e aplicativos, você normalmente usa a funcionalidade que é fornecida pela biblioteca padrões paralelos, a biblioteca de agentes e o Agendador de tarefas. Essas bibliotecas de usam o Gerenciador de recursos para reequilibrar dinamicamente recursos como alterar as cargas de trabalho.  
   
- [[Superior](#top)]  
+ [[Top](#top)]  
   
-##  <a name="lambda"></a>Expressões Lambda C++  
+##  <a name="lambda">Expressões Lambda C++</a>  
  Muitos dos tipos e algoritmos que são definidos pelo tempo de execução de simultaneidade são implementados como modelos do C++. Alguns desses tipos e algoritmos levam como um parâmetro de uma rotina que executa o trabalho. Esse parâmetro pode ser uma função lambda, um objeto de função ou um ponteiro de função. Essas entidades também são conhecidas como *funções de trabalho* ou *rotinas de trabalho*.  
   
  Expressões lambda são um recurso de linguagem Visual C++ novo importante porque eles oferecem uma maneira sucinta para definir funções de trabalho para processamento paralelo. Objetos de função e ponteiros de função permitem que você use o tempo de execução de simultaneidade com seu código existente. No entanto, é recomendável que você usar expressões lambda ao escrever novo código devido os benefícios de produtividade e segurança que eles fornecem.  
@@ -116,7 +119,7 @@ Este documento fornece uma visão geral do tempo de execução de simultaneidade
   
  Para obter mais informações sobre funções de lambda em C++, consulte [expressões Lambda](../../cpp/lambda-expressions-in-cpp.md).  
   
- [[Superior](#top)]  
+ [[Top](#top)]  
   
 ##  <a name="requirements"></a> Requisitos  
  A tabela a seguir mostra os arquivos de cabeçalho que estão associados a cada componente do tempo de execução de simultaneidade:  
@@ -124,7 +127,7 @@ Este documento fornece uma visão geral do tempo de execução de simultaneidade
 |Componente|Arquivos de cabeçalho|  
 |---------------|------------------|  
 |Biblioteca de padrões paralelos (PPL)|PPL.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|  
-|Biblioteca de Agentes Assíncronos|Agents.h|  
+|Biblioteca de Agentes Assíncronos|agents.h|  
 |Agendador de Tarefas|concrt.h|  
 |Gerenciador de Recursos|concrtrm.h|  
   
@@ -132,7 +135,7 @@ Este documento fornece uma visão geral do tempo de execução de simultaneidade
   
  O tempo de execução de simultaneidade é fornecido como parte da biblioteca de tempo de execução C (CRT). Para obter mais informações sobre como criar um aplicativo que usa o CRT, consulte [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
   
- [[Superior](#top)]
+ [[Top](#top)]
 
 
 

@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
 - COLLECTION/Platform::Collections::MapView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs: C++
-helpviewer_keywords: MapView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 Representa uma exibição somente leitura em um *mapa*, que é uma coleção de pares chave-valor.  
@@ -60,17 +63,17 @@ ref class MapView sealed;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Mapview:: Mapview](#ctor)|Inicializa uma nova instância da classe MapView.|  
+|[MapView::MapView](#ctor)|Inicializa uma nova instância da classe MapView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Mapview](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|  
-|[: Haskey](#haskey)|Determina se o MapView atual contém a chave especificada.|  
-|[Mapview](#lookup)|Recupera o elemento na chave especificada no objeto MapView atual.|  
-|[Mapview](#size)|Retorna o número de elementos no objeto MapView atual.|  
-|[Mapview](#split)|Divide um objeto MapView original em dois objetos MapView.|  
+|[MapView::First](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|  
+|[MapView::HasKey](#haskey)|Determina se o MapView atual contém a chave especificada.|  
+|[MapView::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto MapView atual.|  
+|[MapView::Size](#size)|Retorna o número de elementos no objeto MapView atual.|  
+|[MapView::Split](#split)|Divide um objeto MapView original em dois objetos MapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `MapView`  
@@ -81,7 +84,7 @@ ref class MapView sealed;
  **Namespace:** Platform::Collections  
 
 
-## <a name="first"></a>Método Mapview:
+## <a name="first"></a> Método Mapview:
 Retorna um iterador que especifica o primeiro elemento na exibição de mapa.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -99,7 +102,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>Método: Haskey
+## <a name="haskey"></a>  Método: Haskey
 Determina se o MapView atual contém a chave especificada.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -118,7 +121,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a>Método Mapview:
+##  <a name="lookup"></a> Método Mapview:
 Recupera o valor do tipo V que está associado à chave especificada do tipo K.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -136,7 +139,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a>Construtor mapview:: Mapview
+##  <a name="ctor"></a> Construtor mapview:: Mapview
 Inicializa uma nova instância da classe MapView.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -179,7 +182,7 @@ MapView(
 
 
 
-##  <a name="size"></a>Método Mapview:
+##  <a name="size"></a> Método Mapview:
 Retorna o número de elementos no objeto MapView atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -194,7 +197,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a>Método Mapview:
+##  <a name="split"></a> Método Mapview:
 Divide o objeto MapView atual em dois objetos MapView. Este método é não operacional.  
   
 ### <a name="syntax"></a>Sintaxe  

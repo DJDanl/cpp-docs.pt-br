@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
 - VCCORLIB/Platform::String::Begin
@@ -21,19 +21,22 @@ f1_keywords:
 - VCCORLIB/Platform::String::IsFastPass
 - VCCORLIB/Platform::String::Length
 - VCCORLIB/Platform::String::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::String
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 Representa uma coleção sequencial de caracteres Unicode que é usada para representar o texto. Para obter mais informações e exemplos, consulte [cadeias de caracteres](../cppcx/strings-c-cx.md).  
@@ -65,7 +68,7 @@ public ref class String sealed : Object,
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[String:: String](#ctor)|Inicializa uma nova instância da classe String.|  
+|[String::String](#ctor)|Inicializa uma nova instância da classe String.|  
   
  **Métodos**  
   
@@ -73,18 +76,18 @@ public ref class String sealed : Object,
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[String](#begin)|Retorna um ponteiro para o início da cadeia de caracteres atual.|  
-|[String:: CompareOrdinal](#compareordinal)|Compara dois objetos `String` avaliando os valores numéricos dos caracteres correspondentes nos dois valores de cadeias de caracteres representados pelos objetos.|  
-|[: Concat](#concat)|Concatena os valores de dois objetos String.|  
-|[String](#data)|Retorna um ponteiro para o início da cadeia de caracteres atual.|  
-|[: Dispose](#dispose)|Libera recursos.|  
-|[String](#end)|Retorna um ponteiro após o fim da cadeia de caracteres atual.|  
-|[: Equals](#equals)|indica se o objeto especificado é igual ao objeto atual.|  
-|[GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|  
-|[: IsEmpty](#isempty)|Indica se o objeto String atual está vazio.|  
-|[: Isfastpass](#isfastpass)|Indica se o objeto String atual está participando de uma operação de *passagem rápida* . Em uma operação de passagem rápida, a contagem de referência é suspensa.|  
-|[String](#length)|Recupera o comprimento do objeto String atual.|  
-|[ToString](#tostring)|Retorna um objeto String cujo valor é igual ao da cadeia de caracteres atual.|  
+|[String::Begin](#begin)|Retorna um ponteiro para o início da cadeia de caracteres atual.|  
+|[String::CompareOrdinal](#compareordinal)|Compara dois objetos `String` avaliando os valores numéricos dos caracteres correspondentes nos dois valores de cadeias de caracteres representados pelos objetos.|  
+|[String::Concat](#concat)|Concatena os valores de dois objetos String.|  
+|[String::Data](#data)|Retorna um ponteiro para o início da cadeia de caracteres atual.|  
+|[String::Dispose](#dispose)|Libera recursos.|  
+|[String::End](#end)|Retorna um ponteiro após o fim da cadeia de caracteres atual.|  
+|[String::Equals](#equals)|indica se o objeto especificado é igual ao objeto atual.|  
+|[String::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|  
+|[String::IsEmpty](#isempty)|Indica se o objeto String atual está vazio.|  
+|[String::IsFastPass](#isfastpass)|Indica se o objeto String atual está participando de uma operação de *passagem rápida* . Em uma operação de passagem rápida, a contagem de referência é suspensa.|  
+|[String::Length](#length)|Recupera o comprimento do objeto String atual.|  
+|[String::ToString](#tostring)|Retorna um objeto String cujo valor é igual ao da cadeia de caracteres atual.|  
   
  **Operadores**  
   
@@ -109,7 +112,7 @@ public ref class String sealed : Object,
  **Cabeçalho** vccorlib.h (incluído por padrão)  
 
  
-## <a name="begin"></a>Método String:
+## <a name="begin"></a>  Método String:
 Retorna um ponteiro para o início da cadeia de caracteres atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -122,7 +125,7 @@ char16* Begin()
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o início da cadeia de caracteres atual.  
   
-## <a name="compareordinal"></a>Método String:: CompareOrdinal
+## <a name="compareordinal"></a>  Método String:: CompareOrdinal
 Compara dois objetos `String` avaliando os valores numéricos dos caracteres correspondentes nos dois valores de cadeias de caracteres representados pelos objetos.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -153,7 +156,7 @@ int CompareOrdinal(
   
 
 
-## <a name="concat"></a>Método: concat
+## <a name="concat"></a>  Método: concat
 Concatena os valores de dois objetos String.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -176,7 +179,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>Método String:
+## <a name="data"></a>  Método String:
 Retorna um ponteiro para o início do buffer de dados do objeto como uma matriz de estilo C de elementos `char16` (`wchar_t`).  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -193,7 +196,7 @@ const char16* Data()
   
 
 
-## <a name="dispose"></a>Método: Dispose
+## <a name="dispose"></a>  Método: Dispose
 Libera recursos.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -203,7 +206,7 @@ Libera recursos.
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>Método String:
+## <a name="end"></a>  Método String:
 Retorna um ponteiro após o fim da cadeia de caracteres atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -221,7 +224,7 @@ char16* End()
   
 
 
-## <a name="equals"></a>Método: Equals
+## <a name="equals"></a>  Método: Equals
 Indica se a cadeia de caracteres especificada tem o mesmo valor que o objeto atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -246,7 +249,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>Método GetHashCode
+## <a name="gethashcode"></a>  Método GetHashCode
 Retorna o código hash para essa instância.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -261,7 +264,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>Método: IsEmpty
+## <a name="isempty"></a>  Método: IsEmpty
 Indica se o objeto String atual está vazio.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -275,7 +278,7 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>Método: isfastpass
+## <a name="isfastpass"></a>  String::IsFastPass Method
 Indica se o objeto String atual está participando de uma operação de *passagem rápida* . Em uma operação de passagem rápida, a contagem de referência é suspensa.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -292,7 +295,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>Método String:
+## <a name="length"></a>  Método String:
 Recupera o número de caracteres no objeto de cadeia de caracteres atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -316,7 +319,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>Operador String:: Operator +
+## <a name="operator-plus"></a>  Operador String:: Operator +
 Concatena duas [cadeia de caracteres](../cppcx/platform-string-class.md) objetos em uma nova [cadeia de caracteres](../cppcx/platform-string-class.md) objeto.
   
 ### <a name="syntax"></a>Sintaxe  
@@ -339,7 +342,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Comentários  
  O operador cria um objeto `String^` que contém os dados dos dois operandos. Use-o de acordo com sua conveniência quando o desempenho extremo não for crítico. Algumas chamadas para “`+`” em uma função provavelmente não serão visíveis, mas se você estiver manipulando objetos grandes ou dados de texto em um loop estreito, use os mecanismos e os tipos de C++ padrão.  
   
-##  <a name="operator-equality"></a>String:: Operator = = operador
+##  <a name="operator-equality">String:: Operator = = operador</a>
 Indica se dois objetos de cadeia de caracteres especificados têm o mesmo valor de texto.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -363,7 +366,7 @@ bool String::operator==( String^ str1, String^ str2)
   
 
 
-##  <a name="operator-greater-than"></a>String:: Operator&gt; 
+##  <a name="operator-greater-than"></a>  String::operator&gt; 
 Indica se o valor de um objeto String é maior que o valor de um segundo objeto String.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -387,7 +390,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a>String:: Operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
 Indica se o valor de um objeto String é maior ou igual ao valor de um segundo objeto String.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -408,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a>String:: Operator! = 
+## <a name="operator-inequality"></a> String::operator!= 
 Indica se dois objetos String especificados têm valores diferentes.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -428,7 +431,7 @@ bool String::operator!=( String^ str1, String^ str2)
  `true` se `str1` não for igual a `str2`; caso contrário, `false`.   
 
 
-## <a name="operator-less-than"></a>String:: Operator&lt; 
+## <a name="operator-less-than"></a> String::operator&lt; 
 Indica se o valor de um objeto String é menor que o valor de um segundo objeto String.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -447,7 +450,7 @@ bool String::operator<( String^ str1, String^ str2)
 ### <a name="return-value"></a>Valor de retorno  
  `true` se o valor de `str1` for menor que o valor de `str2`; caso contrário, `false`.  
   
-## <a name="ctor"></a>Construtor String:: String
+## <a name="ctor"></a> Construtor String:: String
 Inicializa uma nova instância da classe String com uma cópia dos dados de cadeia de caracteres de entrada.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -473,7 +476,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a>ToString
+## <a name="tostring"></a> String::ToString
 Retorna um objeto String cujo valor é igual ao da cadeia de caracteres atual.  
   
 ### <a name="syntax"></a>Sintaxe  

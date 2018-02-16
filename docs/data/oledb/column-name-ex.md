@@ -4,49 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_EX
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_EX macro
+f1_keywords:
+- COLUMN_NAME_EX
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_EX macro
 ms.assetid: 4f916a85-f6ae-464a-9cbe-0a56dbb274a6
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5658a2d0fb06f6bb9e9b8f2ab062f621b189cc75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c4e875172b3a649bb8c96a753a99404f272f536
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnameex"></a>COLUMN_NAME_EX
 Representa uma associação no conjunto de linhas para a coluna específica no conjunto de linhas. Semelhante ao [COLUMN_NAME](../../data/oledb/column-name.md), exceto que essa macro também usa o tipo de dados, tamanho, precisão, escala, comprimento de coluna e status da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-COLUMN_NAME_EX(  
-pszName  
-,   
-wType  
-,   
-nLength  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-length  
-,   
-status )  
+```cpp
+COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status )  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -85,7 +73,7 @@ status )
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
- [NOME DA COLUNA](../../data/oledb/column-name.md)   
+ [COLUMN_NAME](../../data/oledb/column-name.md)   
  [COLUMN_NAME_LENGTH](../../data/oledb/column-name-length.md)   
  [COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)   
  [COLUMN_NAME_STATUS](../../data/oledb/column-name-status.md)   

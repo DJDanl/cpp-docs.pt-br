@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 Usando a arquitetura de tempo de execução do Windows, você pode usar C + + CX, Visual Basic, Visual c# e JavaScript para escrever aplicativos e componentes que diretamente acessar a API do Windows e interoperem com outros componentes e aplicativos de tempo de execução do Windows. Aplicativos da plataforma Windows universais que são escritos em C++ são compilados para código nativo executado diretamente na CPU. Aplicativos da plataforma Windows universais que são escritos em c# ou Visual Basic compile para Microsoft intermediate language (MSIL) e execute no common language runtime (CLR). Aplicativos da plataforma Windows universais que são escritos em JavaScript são executados em um ambiente de tempo de execução. Os componentes do sistema operacional Windows Runtime são escritos em C++ e executados como código nativo. Todos esses componentes e aplicativos de plataforma Universal do Windows se comunicam diretamente por meio da interface de binária de aplicativo do Windows Runtime (ABI).  

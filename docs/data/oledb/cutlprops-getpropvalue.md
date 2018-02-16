@@ -1,44 +1,44 @@
 ---
-title: 'Cutlprops:: Getpropvalue | Microsoft Docs'
+title: CUtlProps::GetPropValue | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CUtlProps::GetPropValue
 - CUtlProps.GetPropValue
 - GetPropValue
-dev_langs: C++
-helpviewer_keywords: GetPropValue method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetPropValue method
 ms.assetid: 9a3fbadb-7814-48f7-96a4-b960fc4ecf2e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f6af9c8d909039927a7b4ad1f4840adac4353c97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4e9ea040c9ec458f100beb4c9cd2516ac167052
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cutlpropsgetpropvalue"></a>CUtlProps::GetPropValue
 Obtém uma propriedade de um conjunto de propriedades.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-      OUT_OF_LINE HRESULT GetPropValue(  
-   const GUID* pguidPropSet,  
+```cpp
+      OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,  
    DBPROPID dwPropId,  
-   VARIANT* pvValue   
-);  
+   VARIANT* pvValue);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -52,7 +52,7 @@ Obtém uma propriedade de um conjunto de propriedades.
  [out] Um ponteiro para um tipo variant que contém o novo valor da propriedade.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `Failure`em caso de falha e `S_OK` se for bem-sucedido.  
+ `Failure` em caso de falha e `S_OK` se for bem-sucedido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldb.h  

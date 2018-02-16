@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Dando suporte a conjuntos de linhas do esquema
 Conjuntos de linhas de esquema permitem que os consumidores obter informações sobre um repositório de dados sem conhecer sua estrutura subjacente ou esquema. Por exemplo, um repositório de dados pode ter tabelas organizadas em uma hierarquia definida pelo usuário, portanto, não haveria nenhuma maneira de garantir o conhecimento sobre o esquema, exceto por leitura. (Como outro exemplo, observe que os assistentes do Visual C++ usam conjuntos de linhas de esquema para gerar acessadores para o consumidor.) Para permitir que o consumidor fazer isso, o objeto de sessão do provedor expõe métodos no [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interface. Em aplicativos do Visual C++, você deve usar o [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe para implementar **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`dá suporte aos seguintes métodos:  
+ `IDBSchemaRowsetImpl` dá suporte aos seguintes métodos:  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) verifica a validade de restrições em relação a um conjunto de linhas de esquema.  
   
@@ -57,11 +59,11 @@ Conjuntos de linhas de esquema permitem que os consumidores obter informações 
   
 -   **C** *ShortName* **SessionColSchemaRowset** trata solicitações para obter informações de coluna (o **DBSCHEMA_COLUMNS** linhas de esquema). O assistente fornece exemplos de implementações para essas classes, que retornam informações de esquema para um provedor DOS.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** trata solicitações para obter informações de esquema sobre o tipo de provedor (o **DBSCHEMA_PROVIDER_TYPES** linhas de esquema). Retorna a implementação padrão fornecida pelo Assistente de `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** trata solicitações para obter informações de esquema sobre o tipo de provedor (o **DBSCHEMA_PROVIDER_TYPES** esquema conjunto de linhas). Retorna a implementação padrão fornecida pelo Assistente de `S_OK`.  
   
  Você pode personalizar essas classes para lidar com informações sobre o esquema apropriado para seu provedor:  
   
--   Em **C***ShortName***SessionTRSchemaRowset**, você deve preencher os campos de descrição de catálogo e tabela (**trData.m_szType**, **trData.m_szTable**, e **trData.m_szDesc**). O exemplo geradas pelo assistente usa apenas uma linha (tabela). Outros provedores podem retornar mais de uma tabela.  
+-   Em **C***ShortName***SessionTRSchemaRowset**, você deve preencher os campos de descrição de catálogo e tabela (**trData.m_szType**, **trData.m_szTable** , e **trData.m_szDesc**). O exemplo geradas pelo assistente usa apenas uma linha (tabela). Outros provedores podem retornar mais de uma tabela.  
   
 -   Em **C***ShortName***SessionColSchemaRowset**, passe o nome da tabela como um **DBID**.  
   
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

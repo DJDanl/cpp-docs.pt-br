@@ -4,39 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CDynamicStringAccessorA
-dev_langs: C++
-helpviewer_keywords: CDynamicStringAccessorA class
+f1_keywords:
+- CDynamicStringAccessorA
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25d53a92f24fa485e080f02c6c889263b3abe18f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0514dd3cd87788a6512b18d0aa3f2a5b7a842317
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicstringaccessora-class"></a>Classe CDynamicStringAccessorA
 Permite que você acesse uma fonte de dados quando você não possui conhecimento do esquema do banco de dados (estrutura subjacente).  
   
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  Ambos os solicitam que o provedor de buscar todos os dados acessados a partir do repositório de dados como dados de cadeia de caracteres, mas `CDynamicStringAccessor` dados de cadeia de caracteres ANSI de solicitações.  
   
- `CDynamicStringAccessorA`herda **GetString** e `SetString` de `CDynamicStringAccessor`. Quando você usa esses métodos em um `CDynamicStringAccessorA` objeto, ***BaseType*** é **CHAR**.  
+ `CDynamicStringAccessorA` herda **GetString** e `SetString` de `CDynamicStringAccessor`. Quando você usa esses métodos em um `CDynamicStringAccessorA` objeto, ***BaseType*** é **CHAR**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho**: atldbcli.h  

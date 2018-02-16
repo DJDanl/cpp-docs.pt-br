@@ -4,43 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BLOB_NAME_LENGTH
-dev_langs: C++
-helpviewer_keywords: BLOB_NAME_LENGTH macro
+f1_keywords:
+- BLOB_NAME_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_NAME_LENGTH macro
 ms.assetid: 38150260-a127-486d-a7ab-0d01b731b6fd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 66037fdb217585096a5251039205eb3e0b208faa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 437c5a355de0c4655fc6beac00d4497c14ea3f2d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="blobnamelength"></a>BLOB_NAME_LENGTH
 Usado com `BEGIN_COLUMN_MAP` e `END_COLUMN_MAP` para associar um objeto binário grande ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Semelhante ao [BLOB_NAME](../../data/oledb/blob-name.md), exceto que essa macro também obtém o comprimento em bytes da coluna de dados BLOB.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-BLOB_NAME_LENGTH(  
-pszName  
-,   
-IID  
-,   
-flags  
-,   
-data  
-,   
-length )  
+```cpp
+BLOB_NAME_LENGTH(pszName, IID, flags, data, length )  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  

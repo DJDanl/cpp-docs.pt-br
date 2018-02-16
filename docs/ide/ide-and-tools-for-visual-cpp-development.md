@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d4898b2d67de4b23d31227e572c0f270aa6f37
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE e ferramentas de desenvolvimento do Visual C++
 
@@ -115,7 +115,7 @@ Você pode depurar seu programa pressionando **F5** quando a configuração de p
 
 ## <a name="deploy-completed-applications"></a>Implantar aplicativos concluídos
 
-Implantar um aplicativo UWP aos clientes por meio da loja do Windows por meio de **projeto** > **repositório** opção de menu. Implantação do CRT é tratada automaticamente em segundo plano. Para obter mais informações, consulte [vender aplicativos](http://go.microsoft.com/fwlink/p/?LinkId=262280).
+Implantar um aplicativo UWP aos clientes por meio da Microsoft Store por meio de **projeto** > **repositório** opção de menu. Implantação do CRT é tratada automaticamente em segundo plano. Para obter mais informações, consulte [vender aplicativos](http://go.microsoft.com/fwlink/p/?LinkId=262280).
 
 Quando você implanta um aplicativo de área de trabalho C++ nativo para outro computador, você deve instalar o aplicativo em si e quaisquer arquivos de biblioteca que o aplicativo depende. Para implantar o tempo de execução C++ Universal (UCRT) com um aplicativo de três maneiras: implantação central, a implantação local ou a vinculação estática. Para obter mais informações, consulte [implantação de aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

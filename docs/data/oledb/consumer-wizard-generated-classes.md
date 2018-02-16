@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attribute-injected classes and methods
 - wizard-generated classes and methods
@@ -17,18 +19,18 @@ helpviewer_keywords:
 - consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ebd53b8b39fb94e4275f5052a74f77bf71bd790
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca753008e1a976daf2cda187c05607b718966c31
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes geradas pelo Assistente do Consumidor
 Quando você usa o ATL OLE DB consumidor Assistente para gerar um consumidor, você tem a opção de usar atributos de modelos OLE DB ou OLE DB. Em ambos os casos, o assistente gera uma classe de comando e uma classe de registro de usuário. A classe de comando contém código para abrir a fonte de dados e o conjunto de linhas que você especificou no assistente. A classe de registro de usuário contém um mapa de coluna para a tabela de banco de dados selecionado. No entanto, o código gerado é diferente em cada caso:  
@@ -149,7 +151,7 @@ SELECT \
  Por fim, o assistente gera uma declaração de classe, como o seguinte comando:  
   
 ```  
-class CProducts : public CCommand<CAccessor<CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
 ## <a name="attribute-injected-user-record-classes"></a>Classes de registro de usuário injetadas por atributos  
@@ -182,7 +184,7 @@ public:
  A declaração de classe do comando injetado tem esta aparência:  
   
 ```  
-class CProducts : public CCommand<CAccessor<_CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   
  A maioria do código injetado é igual ou semelhante para a versão de modelo. As principais diferenças estão nos métodos injetados, que são descritos em [Consumer Wizard-Generated métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
