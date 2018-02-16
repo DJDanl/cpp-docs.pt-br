@@ -2,7 +2,7 @@
 # [Visão geral do tempo de execução de simultaneidade](overview-of-the-concurrency-runtime.md)
 # [Tratamento de exceção no tempo de execução de simultaneidade](exception-handling-in-the-concurrency-runtime.md)
 # [Ferramenta de diagnóstico paralelo (tempo de execução de simultaneidade)](parallel-diagnostic-tools-concurrency-runtime.md)
-# [Criando operações assíncronas em C++ para aplicativos da Windows Store](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [Criando operações assíncronas em C++ para aplicativos UWP](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [Comparando o tempo de execução de simultaneidade com outros modelos de simultaneidade](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [Migrando do OpenMP para o tempo de execução de simultaneidade](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [Como converter um loop OpenMP paralelo para loop para usar o tempo de execução de simultaneidade](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)

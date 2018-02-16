@@ -287,7 +287,7 @@
 ### [Como manipular eventos usando a WRL](how-to-handle-events-using-wrl.md)
 ### [Modelo de projeto de biblioteca de classes da WRL](wrl-class-library-project-template.md)
 ### [Passo a passo: componente básico do Tempo de Execução do Windows usando a WRL](walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)
-### [Passo a passo: criando um aplicativo da Windows Store usando a WRL e o Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
+### [Passo a passo: criando um aplicativo UWP usando WRL e Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
 ### [Como criar um componente COM clássico usando a WRL](how-to-create-a-classic-com-component-using-wrl.md)
 ### [Como instanciar componentes da WRL diretamente](how-to-instantiate-wrl-components-directly.md)
 ### [Como usar winmdidl.exe e midlrt.exe para criar arquivos .h com metadados do Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)
