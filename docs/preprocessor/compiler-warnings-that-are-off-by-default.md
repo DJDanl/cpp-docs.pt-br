@@ -15,15 +15,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c447389de1accfe95674855645fe044e1d3df41
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos de compilador desativados por padrão
 
-O compilador inclui avisos que são desativados por padrão, pois a maioria dos usuários não deseja vê-los. No entanto, você pode habilitar esses avisos usando uma das opções a seguir.
+O compilador inclui advertências que são desativadas por padrão porque a maioria dos desenvolvedores não deseja vê-los. No entanto, você pode habilitar esses avisos usando uma das opções a seguir.
 
 **Aviso #pragma (padrão:** *warning_number* **)**  
 O aviso especificado (*warning_number*) está habilitado no nível padrão. A documentação para o aviso contém o nível padrão do aviso.

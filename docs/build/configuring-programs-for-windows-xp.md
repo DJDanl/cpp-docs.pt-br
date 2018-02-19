@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
 
 Como o Visual Studio oferece suporte a vários conjuntos de ferramentas de plataforma, você pode direcionar os sistemas operacionais e as bibliotecas de tempo de execução que não são suportadas pelo conjunto de ferramentas padrão. Por exemplo, alternando o conjunto de ferramentas de plataforma, você pode usar C++ 11, C++ 14 e aprimoramentos de C++ 17 idiomas suportados pelo compilador do Visual C++ no Visual Studio para criar aplicativos que visam [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Você pode também usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado binário compatível e ainda aproveitar os recursos mais recentes do IDE do Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instale o conjunto de ferramentas de plataforma do Windows XP
-
 Para obter o conjunto de ferramentas de plataforma e componentes de destino [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] no Visual Studio de 2017, execute o instalador do Visual Studio. Quando você instala inicialmente o Visual Studio ou quando você escolhe **modificar** para modificar uma instalação existente, verifique se o **desenvolvimento de área de trabalho com C++** cargas de trabalho está selecionada. Na lista de componentes opcionais para essa carga de trabalho, escolha **suporte do Windows XP para C++**e, em seguida, escolha **instalar** ou **modificar**.
 
 ## <a name="windows-xp-targeting-experience"></a>Direcionamento de experiência do Windows XP
@@ -65,7 +64,7 @@ Devido a diferenças no suporte de plataforma e de biblioteca, a experiência de
 
 - **Recursos da linguagem C++**
 
-   Apenas recursos da linguagem C++ implementados no Visual Studio 2012 têm suporte em aplicativos que usam o v110\_xp conjunto de ferramentas da plataforma. Apenas recursos da linguagem C++ implementados no Visual Studio 2013 têm suporte em aplicativos que usam o v120\_xp conjunto de ferramentas da plataforma. Apenas recursos da linguagem C++ implementados no Visual Studio 2012 têm suporte em aplicativos que usam o v140\_xp conjunto de ferramentas da plataforma. O Visual Studio usa o compilador correspondente quando ele cria usando os conjuntos de ferramentas de plataforma mais antigos. Use o conjunto de ferramentas plataforma mais recente do Windows XP para tirar proveito dos recursos de linguagem C++ adicionais implementado nessa versão do compilador.
+   Apenas recursos da linguagem C++ implementados no Visual Studio 2012 têm suporte em aplicativos que usam o v110\_xp conjunto de ferramentas da plataforma. Apenas recursos da linguagem C++ implementados no Visual Studio 2013 têm suporte em aplicativos que usam o v120\_xp conjunto de ferramentas da plataforma. Apenas recursos da linguagem C++ implementados no Visual Studio 2015 têm suporte em aplicativos que usam o v140\_xp conjunto de ferramentas da plataforma. O Visual Studio usa o compilador correspondente quando ele cria usando os conjuntos de ferramentas de plataforma mais antigos. Use o conjunto de ferramentas plataforma mais recente do Windows XP para tirar proveito dos recursos de linguagem C++ adicionais implementado nessa versão do compilador.
 
 - **Depuração remota**
 
