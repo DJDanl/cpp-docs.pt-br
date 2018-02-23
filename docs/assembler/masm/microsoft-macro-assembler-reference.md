@@ -22,11 +22,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3cb156d4fb8f50c12c2fce172c65dc2b313a24e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Referência do Microsoft Macro Assembler
 A Microsoft Macro Assembler (MASM) oferece várias vantagens em assembly embutido. MASM contém uma linguagem de macro com recursos como o processamento de cadeia de caracteres de um loop, aritmética e texto. MASM também oferece maior controle sobre o hardware porque ele oferece suporte os conjuntos de instruções do 386, 486 e Pentium. Usando MASM, você também pode reduzir sobrecarga de tempo e memória.  
@@ -54,7 +54,7 @@ A Microsoft Macro Assembler (MASM) oferece várias vantagens em assembly embutid
  Arquivos de informações sobre como criar a saída para [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
+ [Visual C++](../../visual-cpp-in-visual-studio.md)  
  Fornece links para diferentes áreas da documentação do Visual Studio e do Visual C++.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 Neste tópico, você pode encontrar informações sobre como portar código C++ existente para a plataforma de aplicativo do Windows 10, a Plataforma Universal do Windows. O termo *universal* significa que seu código pode ser executado em qualquer um dos dispositivos que executam o Windows 10, incluindo desktop, telefones, tablets e dispositivos futuros que executem o Windows 10. Você cria um único projeto e uma única interface do usuário baseada em XAML que funciona bem em qualquer dispositivo que executa Windows 10. Você pode usar recursos de layout dinâmico em XAML para permitir que a interface do usuário do aplicativo se adapte aos diferentes tamanhos de exibição.  
@@ -73,7 +76,7 @@ Neste tópico, você pode encontrar informações sobre como portar código C++ 
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
     ```  
   
-     Essas instruções se aplicam, respectivamente, a aplicativos da Windows Store, aplicativos da Loja do Windows Phone, ambos ou nenhum (somente área de trabalho Win32 clássica). Essas macros estão disponíveis apenas no SDK do Windows 8.1 e posterior, portanto, se seu código precisar ser compilado com versões anteriores do SDK do Windows ou para outras plataformas além do Windows, você também deverá considerar a possibilidade de que nenhuma delas esteja definida.  
+     Essas instruções aplicam-se, respectivamente, a aplicativos UWP e a aplicativos da Windows Phone Store, a ambos ou a nenhum (somente área de trabalho clássica do Win32). Essas macros estão disponíveis apenas no SDK do Windows 8.1 e posterior, portanto, se seu código precisar ser compilado com versões anteriores do SDK do Windows ou para outras plataformas além do Windows, você também deverá considerar a possibilidade de que nenhuma delas esteja definida.  
   
 11. Execute e depure o aplicativo em um emulador ou um dispositivo físico para cada tipo de dispositivo ao qual seu aplicativo dá suporte. Para executar um emulador, você precisa executar o Visual Studio em um computador físico, não em uma máquina virtual.  
   
@@ -91,7 +94,7 @@ Neste tópico, você pode encontrar informações sobre como portar código C++ 
 4.  Compile e resolva quaisquer erros devidos a alterações interruptivas entre versões diferentes do Windows SDK.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- Você pode encontrar vários erros durante o processo de portabilidade do código para a Plataforma Universal do Windows. Aqui estão alguns dos problemas possíveis que podem ser encontrados.  
+ É possível encontrar vários erros durante o processo de portabilidade do código para a UWP. Aqui estão alguns dos problemas possíveis que podem ser encontrados.  
   
  **Problemas de configuração do projeto**  
   
@@ -111,7 +114,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 <ApplicationTypeRevision>10.0</ApplicationTypeRevision>  
 ```  
   
- Se você tiver criado um novo projeto da Plataforma Universal do Windows usando o Visual Studio, você não deverá ver esse erro.  
+ Se você criar um novo projeto UWP usando o Visual Studio, esse erro não deverá aparecer.  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de portabilidade do Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   

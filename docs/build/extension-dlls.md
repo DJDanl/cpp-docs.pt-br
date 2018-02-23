@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>DLLs de extensão do MFC
 Uma extensão do MFC DLL é uma DLL que implementa normalmente reutilizáveis classes derivadas de classes existentes de biblioteca Microsoft Foundation Class.  
@@ -61,7 +65,7 @@ Uma extensão do MFC DLL é uma DLL que implementa normalmente reutilizáveis cl
   
  Antes da versão 4.0 do MFC, esse tipo de DLL foi chamado um AFXDLL. AFXDLL refere-se para o `_AFXDLL` símbolo do pré-processador que é definido durante a criação da DLL.  
   
- As bibliotecas de importação para a versão compartilhada do MFC são nomeadas de acordo com a convenção descrita no [convenções de nomenclatura para DLLs MFC](../build/naming-conventions-for-mfc-dlls.md). Visual C++ fornece versões pré-compilada as MFC DLLs, além de um número de DLLs não MFC que você pode usar e distribuir aos seus aplicativos. Essas situações são documentadas Redist, que é instalado na pasta Program Files\Microsoft Visual Studio.  
+ As bibliotecas de importação para a versão compartilhada do MFC são nomeadas de acordo com a convenção descrita no [convenções de nomenclatura para DLLs MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ fornece versões pré-compilada as MFC DLLs, além de um número de DLLs não MFC que você pode usar e distribuir aos seus aplicativos. Essas situações são documentadas Redist, que é instalado na pasta Program Files\Microsoft Visual Studio.  
   
  Se você estiver exportando usando um arquivo. def, coloque o seguinte código no início e no final do arquivo de cabeçalho:  
   
@@ -89,7 +93,7 @@ Uma extensão do MFC DLL é uma DLL que implementa normalmente reutilizáveis cl
 ## <a name="sharing-resources-and-classes"></a>Compartilhamento de recursos e Classes  
  Exportação de recursos é feita por meio de uma lista de recursos. Cada aplicativo contém uma lista individualmente vinculada de **CDynLinkLibrary** objetos. Ao procurar por um recurso, a maioria das implementações do MFC padrão que carregar recursos procuram primeira no módulo de recurso atual (`AfxGetResourceHandle`) e se o recurso não foi encontrado orientam a lista de **CDynLinkLibrary** objetos tentativa de carregar o recurso solicitado.  
   
- Percorra a lista tem as desvantagens que é um pouco mais lenta e requer o gerenciamento de intervalos de ID de recurso. Ele tem a vantagem de que um aplicativo cliente que contém links para várias DLLs de extensão do MFC pode usar qualquer recurso fornecido DLL sem ter que especificar o identificador de instância DLL. `AfxFindResourceHandle`uma API é usada para percorrer a lista de recursos para procurar uma correspondência determinada. Ele usa o nome e um tipo de recurso e retorna o identificador de recurso em que ele foi encontrado primeiro (ou nulo).  
+ Percorra a lista tem as desvantagens que é um pouco mais lenta e requer o gerenciamento de intervalos de ID de recurso. Ele tem a vantagem de que um aplicativo cliente que contém links para várias DLLs de extensão do MFC pode usar qualquer recurso fornecido DLL sem ter que especificar o identificador de instância DLL. `AfxFindResourceHandle` uma API é usada para percorrer a lista de recursos para procurar uma correspondência determinada. Ele usa o nome e um tipo de recurso e retorna o identificador de recurso em que ele foi encontrado primeiro (ou nulo).  
   
  Se você não quiser percorrer a lista e carregar somente os recursos de um local específico, use as funções `AfxGetResourceHandle` e `AfxSetResourceHandle` para salvar o identificador antigo e definir o novo identificador. Certifique-se de restaurar o identificador de recurso antigo antes de retornar ao aplicativo cliente. Para obter um exemplo de como usar essa abordagem para carregar explicitamente um menu, consulte cpp Testdll2 no exemplo do MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk).  
   

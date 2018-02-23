@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de avisos do compilador por meio de C5999
 
@@ -245,6 +243,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |C5035 de aviso do compilador|o uso de recurso '*recurso*' faz com que a função *função* a ser compilado como código do convidado|
 |Aviso do compilador (nível 1) C5036|conversão de ponteiro de função varargs ao compilar com /hybrid:x86arm64 '*type1*'para'*type2*'|
 |Aviso do compilador (erro) C5037|'*função de membro*': uma definição de fora de linha de um membro de um modelo de classe não pode ter argumentos padrão|
+|[C5038 de aviso do compilador](c5038.md)|membro de dados '*membro1*'serão inicializados após o membro de dados'*membro2*'|
 |C5039 de aviso do compilador|'*função*': ponteiro ou referência para gerar potencialmente função passado para função de extern do C em - EHc. Um comportamento indefinido pode ocorrer se essa função lança uma exceção.|
 |C5040 de aviso do compilador|especificações de exceções dinâmicas são válidas somente no C++ 14 e versões anteriores; Tratando como noexcept(false)|
 |C5041 de aviso do compilador|'*definição*': definição de fora de linha para o membro de dados estáticos constexpr não é necessário e está preterida no C++ 17|

@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Avisos de compilador desativados por padrão
+# <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador são desativados por padrão
 
-O compilador inclui advertências que são desativadas por padrão porque a maioria dos desenvolvedores não deseja vê-los. No entanto, você pode habilitar esses avisos usando uma das opções a seguir.
+O compilador inclui advertências que são desativadas por padrão, porque a maioria dos desenvolvedores não deseja vê-los. Em alguns casos, eles representam uma opção de estilo, ou são linguagens comuns no código anterior ou tirar proveito de uma extensão da Microsoft para o idioma. Em outros casos, elas indicam uma área onde os programadores muitas vezes fazem pressuposições incorretas, o que podem resultar em comportamento inesperado ou indefinido. Alguns destes avisos podem ser muito ruído em cabeçalhos de biblioteca.
 
-**Aviso #pragma (padrão:** *warning_number* **)**  
-O aviso especificado (*warning_number*) está habilitado no nível padrão. A documentação para o aviso contém o nível padrão do aviso.
+Você pode habilitar esses avisos, usando uma das seguintes opções:
 
-**Aviso de #pragma (** *warning_level* **:** *warning_number* **)**  
-O aviso especificado (*warning_number*) está habilitado no nível especificado (*warning_level*).
+- **Aviso #pragma (padrão:** *warning_number* **)**  
+   O aviso especificado (*warning_number*) está habilitado no nível padrão. A documentação para o aviso contém o nível padrão do aviso.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ Parede** habilita todos os avisos que são desativados por padrão.
+- **Aviso de #pragma (** *warning_level* **:** *warning_number* **)**  
+   O aviso especificado (*warning_number*) está habilitado no nível especificado (*warning_level*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ Parede** habilita todos os avisos que são desativados por padrão. Se você usar essa opção, você pode desativar avisos individuais usando o [/wd](../build/reference/compiler-option-warning-level.md) opção.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   Isso permite que o aviso  *nnnn*  no nível *l*.
 
 Os seguintes avisos são desativados por padrão.
 
@@ -131,6 +136,7 @@ Os seguintes avisos são desativados por padrão.
 |C5032 (nível 4)|detectado Warning (push) #pragma com nenhuma Warning (POP) #pragma correspondente|
 |C5035|o uso de recurso '*recurso*' faz com que a função *função* a ser compilado como código do convidado|
 |C5036 (nível 1)|conversão de ponteiro de função varargs ao compilar com /hybrid:x86arm64 '*type1*'para'*type2*'|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|membro de dados '*membro1*'serão inicializados após o membro de dados'*membro2*'|
 
 Esses avisos são desativados, a menos que o [/ permissivo-](../build/reference/permissive-standards-conformance.md) é definir a opção de compilador:
 

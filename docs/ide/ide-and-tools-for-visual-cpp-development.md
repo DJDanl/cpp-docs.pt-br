@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4b6ff3f709e5db16f06569ab3406cfef44cabf11
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE e ferramentas de desenvolvimento do Visual C++
 
@@ -109,7 +109,7 @@ Você também pode usar o compilador (cl.exe) e muitas outras ferramentas de aut
 
 O Visual Studio inclui uma estrutura de teste de unidade para C++ nativo e C + + CLI. Para obter mais informações, consulte [verificando o código usando testes de unidade](/visualstudio/test/unit-test-your-code) e [testes de unidade de gravação para C/C++ com o Microsoft Unit Testing Framework para C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
 
-## <a name="debug"></a>Depurar
+## <a name="debug"></a>Depuração
 
 Você pode depurar seu programa pressionando **F5** quando a configuração de projeto está definida para depuração. Enquanto a depuração, você pode definir pontos de interrupção, pressionando **F9**, percorrer código pressionando **F10**, exiba os valores de variáveis especificadas ou registros e até mesmo em alguns casos, fazer alterações no código e continuar depuração sem recompilação. Para obter mais informações, consulte [Depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
@@ -131,4 +131,4 @@ Para obter mais informações sobre como implantar um C + + programa da CLI, con
 |[Compilando programas do C/C++](../build/building-c-cpp-programs.md)|Descreve como criar projetos C++.|
 |[Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)|Fornece uma visão geral de implantação para aplicativos em C++ e links para outros artigos que descrevem a implantação em detalhes.|
 |[Guia de atualização e portabilidade do Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)|Informações detalhadas sobre como atualizar aplicativos C++ que foram criados em versões anteriores do Visual Studio e também como migrar aplicativos que foram criados usando ferramentas que não sejam o Visual Studio.|
-|[Visual C++](../top/visual-cpp-in-visual-studio.md)|Descreve os principais recursos do Visual C++ no Visual Studio e links para o restante da documentação do Visual C++.|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Descreve os principais recursos do Visual C++ no Visual Studio e links para o restante da documentação do Visual C++.|

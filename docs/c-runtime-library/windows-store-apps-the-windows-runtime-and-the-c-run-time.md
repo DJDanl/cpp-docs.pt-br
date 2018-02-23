@@ -1,59 +1,61 @@
 ---
-title: Aplicativos da Windows Store, Windows Runtime e C Run-Time | Microsoft Docs
+title: "Aplicativos UWP, o Windows Runtime e o tempo de execução do C | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c75d66fcbe9ef437980878e7789a82dc94b68573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicativos da Windows Store, Windows Runtime  e C Run-Time
-Os aplicativos [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] são programas executados no Windows Runtime que é executado no [!INCLUDE[win8](../build/reference/includes/win8_md.md)].  O Windows Runtime é um ambiente confiável que controla as funções, as variáveis e os recursos que estão disponíveis para um aplicativo [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]. No entanto, por design, há restrições do Windows Runtime que impedem o uso da maioria dos recursos de biblioteca em tempo de execução do C (CRT) nos aplicativos [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  
-  
- O Windows Runtime não tem suporte para os seguintes recursos de CRT:  
-  
--   A maioria das funções de CRT que estão relacionados à funcionalidade sem suporte.  
-  
-     Por exemplo, um aplicativo [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] não pode criar um processo usando as famílias de rotinas `exec` e `spawn`.  
-  
-     Quando uma função CRT não tem suporte em um aplicativo [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)], esse fato é observado em seu artigo de referência.  
-  
--   Maioria das funções de caracteres multibyte e cadeia de caracteres.  
-  
-     No entanto, há suporte para texto ANSI e Unicode.  
-  
--   Aplicativos de console e argumentos de linha de comando.  
-  
-     Entretanto, aplicativos de área de trabalho tradicionais ainda dão suporte ao console e a argumentos de linha de comando.  
-  
--   Variáveis de ambiente.  
-  
--   O conceito de um diretório de trabalho atual.  
-  
--   [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] aplicativos e DLLs estaticamente vinculados a CRT e criados usando as opções [/MT](../build/reference/md-mt-ld-use-run-time-library.md) ou `/MTd` do compilador.  
-  
-     Ou seja, um aplicativo que usa uma versão estática multithread do CRT.  
-  
--   Um aplicativo que é criado usando a opção do compilador [/MDd](../build/reference/md-mt-ld-use-run-time-library.md).  
-  
-     Ou seja, uma versão específica de depuração, multithread e DLL do CRT. Não há suporte para este aplicativo no [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)].  
-  
- Para obter uma lista completa das funções de CRT que não estão disponíveis em um aplicativo [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] e sugestões para funções alternativas, consulte [funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
-  
-## <a name="see-also"></a>Consulte também  
- [Compatibilidade](../c-runtime-library/compatibility.md)   
- [Funções CRT sem suporte no Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)   
- [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)
+# <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicativos UWP, o Windows Runtime e o tempo de execução do C
+
+Os aplicativos UWP (Plataforma Universal do Windows) são programas executados no Windows Runtime que é executado no [!INCLUDE[win8](../build/reference/includes/win8_md.md)]. O Windows Runtime é um ambiente confiável que controla as funções, as variáveis e os recursos disponíveis para um aplicativo UWP. No entanto, o design do Windows Runtime apresenta restrições que impedem o uso da maioria dos recursos da biblioteca em CRT (tempo de execução do C) nos aplicativos UWP.
+
+O Windows Runtime não tem suporte para os seguintes recursos de CRT:
+
+- A maioria das funções de CRT que estão relacionados à funcionalidade sem suporte.
+
+   Por exemplo, um aplicativo UWP não pode criar um processo usando as famílias de rotinas `exec` e `spawn`.
+
+   Quando uma função do CRT não é compatível com um aplicativo UWP, esse fato está anotado em seu artigo de referência.
+
+- Maioria das funções de caracteres multibyte e cadeia de caracteres.
+
+   No entanto, há suporte para texto ANSI e Unicode.
+
+- Aplicativos de console e argumentos de linha de comando.
+
+   Entretanto, aplicativos de área de trabalho tradicionais ainda dão suporte ao console e a argumentos de linha de comando.
+
+- Variáveis de ambiente.
+
+- O conceito de um diretório de trabalho atual.
+
+- Os aplicativos UWP e as DLLs que são vinculados estaticamente ao CRT e criados usando as opções do compilador [/MT](../build/reference/md-mt-ld-use-run-time-library.md) ou `/MTd`.
+
+   Ou seja, um aplicativo que usa uma versão estática multithread do CRT.
+
+- Um aplicativo que é criado usando a opção do compilador [/MDd](../build/reference/md-mt-ld-use-run-time-library.md).
+
+   Ou seja, uma versão específica de depuração, multithread e DLL do CRT. Esse tipo de aplicativo não é compatível com o Windows Runtime.
+
+Para obter uma lista completa das funções do CRT que não estão disponíveis em um aplicativo UWP e sugestões de funções alternativas, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="see-also"></a>Consulte também
+ [Compatibilidade](../c-runtime-library/compatibility.md) [Funções do CRT sem suporte no Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)

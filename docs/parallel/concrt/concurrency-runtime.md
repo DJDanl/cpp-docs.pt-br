@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>Tempo de Execução de Simultaneidade
 O tempo de execução de simultaneidade para C++ o ajudará a gravação robusta, escalável e responsivos aplicativos paralelos. Ele aumenta o nível de abstração para que você não precisa gerenciar os detalhes de infraestrutura que são relacionados a simultaneidade. Você também pode usar isso para especificar o agendamento políticas que atendem a qualidade das demandas de serviço de seus aplicativos. Use estes recursos para ajudá-lo a começar a trabalhar com o tempo de execução de simultaneidade.  
@@ -36,7 +39,7 @@ O tempo de execução de simultaneidade para C++ o ajudará a gravação robusta
   
 |||  
 |-|-|  
-|[Visão Geral](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|Ensina por que o tempo de execução de simultaneidade é importante e descreve seus principais recursos.|  
+|[Visão geral](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|Ensina por que o tempo de execução de simultaneidade é importante e descreve seus principais recursos.|  
 |[Comparando com outros modelos de simultaneidade](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Mostra como o tempo de execução de simultaneidade compara com outros modelos de simultaneidade, como as janelas de pool de threads e OpenMP, para que você possa usar o modelo de simultaneidade que melhor atende às suas necessidades de aplicativo.|  
 |[Migrando do OpenMP para o tempo de execução de simultaneidade](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|Compara OpenMP no tempo de execução de simultaneidade e fornece exemplos sobre como migrar código OpenMP existente para usar o tempo de execução de simultaneidade.|  
 |[PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Apresenta a PPL, que fornece contêineres paralelos, tarefas e loops paralelos.|  
@@ -67,13 +70,13 @@ O tempo de execução de simultaneidade para C++ o ajudará a gravação robusta
 |[Cancelamento no PPL](cancellation-in-the-ppl.md)|Descreve a função de cancelamento no PPL, incluindo como iniciar e responder a solicitações de cancelamento.|  
 |[Como usar cancelamento para interromper um loop paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Como usar tratamento de exceções para interromper um loop paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Demonstra duas maneiras de cancelar o trabalho de dados paralelo.|  
   
-## <a name="windows-store-apps"></a>Aplicativos da Windows Store  
+## <a name="universal-windows-platform-apps"></a>Windows universal aplicativos de plataforma  
   
 |||  
 |-|-|  
-|[Criando operações assíncronas em C++ para aplicativos da Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Descreve alguns dos principais pontos para ter em mente quando você usa o tempo de execução de simultaneidade para gerar operações assíncronas em um [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo.|  
-|[Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Mostra como combinar tarefas PPL com o `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfaces para enviar solicitações HTTP GET e POST para um serviço da web em um [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo.|  
-|[Exemplos de aplicativos da Windows Store](http://code.msdn.microsoft.com/windowsapps)|Contém exemplos de código para download e demonstração de aplicativos para [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]. Os exemplos de C++ usam recursos de tempo de execução de simultaneidade, como tarefas PPL para processar dados em segundo plano para manter o UX responsiva.|  
+|[Criando operações assíncronas em C++ para aplicativos UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Descreve alguns dos principais pontos para ter em mente quando você usa o tempo de execução de simultaneidade para gerar operações assíncronas em um aplicativo UWP.|  
+|[Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Mostra como combinar tarefas PPL com o `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfaces para enviar solicitações HTTP GET e POST para um serviço da web em um aplicativo UWP.|  
+|[Exemplos de aplicativos do Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contém exemplos de código para download e demonstração de aplicativos para Windows 8. x. Os exemplos de C++ usam recursos de tempo de execução de simultaneidade, como tarefas PPL para processar dados em segundo plano para manter o UX responsiva.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programação do Fluxo de Dados na Biblioteca de Agentes Assíncrona  
   
@@ -108,7 +111,7 @@ O tempo de execução de simultaneidade para C++ o ajudará a gravação robusta
   
 |||  
 |-|-|  
-|[Padrões de programação assíncrona e dicas em Hilo (aplicativos da Windows Store usando C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Saiba como usamos o tempo de execução de simultaneidade para implementar operações assíncronas em Hilo, um [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativo usando o C++ e XAML.|  
+|[Padrões de programação assíncrona e dicas em Hilo (aplicativos da Windows Store usando C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Saiba como usamos o tempo de execução de simultaneidade para implementar operações assíncronas em Hilo, um aplicativo de tempo de execução do Windows usando o C++ e XAML.|  
 |[Exemplos de código para o tempo de execução de simultaneidade e a biblioteca de padrões paralelos no Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornece exemplos de aplicativos e utilitários que demonstram o tempo de execução de simultaneidade.|  
 |[Programação paralela no blog de código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornece artigos de blog detalhes adicionais sobre a programação paralela em tempo de execução de simultaneidade.|  
 |[Computação paralela no Fórum do C++ e o código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Permite que você participe de discussões da comunidade sobre o tempo de execução de simultaneidade.|  

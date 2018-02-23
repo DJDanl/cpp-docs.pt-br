@@ -48,11 +48,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2b32b17ed65120aa98b19ed3b2cf599364fee0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 85cc0953b92df0b26583f9c9028498beb3e1271f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 Saídas, em uma porta, um byte (`_outp`), uma palavra (`_outpw`) ou uma palavra dupla (`_outpd`).  
@@ -61,7 +61,7 @@ Saídas, em uma porta, um byte (`_outp`), uma palavra (`_outpw`) ou uma palavra 
 >  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

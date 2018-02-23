@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compatibility"></a>Compatibilidade
 A biblioteca UCRT (Biblioteca Em Tempo de Execução do C Universal) dá suporte à maioria das bibliotecas padrão C necessárias para conformidade com C++. Ela implementa a biblioteca C99 (ISO/IEC 9899:1999), com as exceções das macros de tipo genérico definidas em \<tgmath.h> e a compatibilidade de tipo estrito em \<complex.h>. O UCRT também implementa um grande subconjunto da biblioteca C POSIX.1 (ISO/IEC 9945-1:1996, a Interface de Programa Aplicativo do Sistema POSIX), mas ela não está totalmente em conformidade com qualquer padrão POSIX.  Além disso, o UCRT implementa várias funções e macros específicas da Microsoft que não fazem parte de um padrão.  
@@ -44,7 +44,7 @@ A biblioteca UCRT (Biblioteca Em Tempo de Execução do C Universal) dá suporte
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Aplicativos da Windows Store, Windows Runtime e Tempo de Execução C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Descreve quando as rotinas UCRT não são compatíveis com aplicativos universais do Windows ou aplicativos da Windows Store.|  
+|[Os aplicativos UWP, o Windows Runtime e o tempo de execução C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Descreve quando as rotinas de UCRT não são compatíveis com aplicativos universais do Windows ou com aplicativos da Microsoft Store.|  
 |[Conformidade com ANSI C](../c-runtime-library/ansi-c-compliance.md)|Descreve a nomenclatura em conformidade com padrão no UCRT.|  
 |[UNIX](../c-runtime-library/unix.md)|Fornece diretrizes para portabilidade de programas em UNIX.|  
 |[Plataformas Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Lista os sistemas operacionais aos quais o CRT dá suporte.|  

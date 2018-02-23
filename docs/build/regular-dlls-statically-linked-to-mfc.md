@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - regular MFC DLLs [C++]
 - DLLs [C++], regular
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>DLLs MFC regular estatisticamente vinculadas a MFC
 Uma expressão de que dll MFC vinculado estaticamente ao MFC é uma DLL que usa MFC internamente e as funções exportadas na DLL podem ser chamadas por arquivos executáveis do MFC ou não MFC. Como o nome descreve, esse tipo de DLL é criado usando a versão da biblioteca de vínculo estático do MFC. Funções normalmente são exportadas de uma DLL do MFC usando a interface padrão do C regular. Para obter um exemplo de como gravar, criar e usar uma DLL MFC regular, consulte o exemplo [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  
@@ -72,7 +75,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
   
  Uma DLL que está estaticamente vinculada ao MFC também dinamicamente não é possível vincular as DLLs compartilhada do MFC. Uma DLL que está estaticamente vinculada ao MFC dinamicamente está associada a um aplicativo, assim como qualquer DLL; aplicativos vincular a ele, assim como qualquer outra DLL.  
   
- As bibliotecas de vínculo estático do MFC padrão são nomeadas de acordo com a convenção descrita no [convenções de nomenclatura para DLLs MFC](../build/naming-conventions-for-mfc-dlls.md). No entanto, com MFC versão 3.0 e posterior, não é necessário especificar manualmente para o vinculador a versão da biblioteca MFC que deseja vincular em. Em vez disso, os arquivos de cabeçalho MFC determinam automaticamente a versão correta da biblioteca MFC para link no pré-processador com base em define, como  **\_depurar** ou **Unicode**. Os arquivos de cabeçalho MFC adicionar diretivas /DEFAULTLIB instrui o vinculador para vincular em uma versão específica da biblioteca do MFC.  
+ As bibliotecas de vínculo estático do MFC padrão são nomeadas de acordo com a convenção descrita no [convenções de nomenclatura para DLLs MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). No entanto, com MFC versão 3.0 e posterior, não é necessário especificar manualmente para o vinculador a versão da biblioteca MFC que deseja vincular em. Em vez disso, os arquivos de cabeçalho MFC determinam automaticamente a versão correta da biblioteca MFC para link no pré-processador com base em define, como  **\_depurar** ou **Unicode**. Os arquivos de cabeçalho MFC adicionar diretivas /DEFAULTLIB instrui o vinculador para vincular em uma versão específica da biblioteca do MFC.  
   
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?  
   

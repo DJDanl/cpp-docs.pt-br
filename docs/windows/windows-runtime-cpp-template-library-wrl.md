@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de Modelos C++ do Windows Runtime  (WRL)
-A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblioteca de modelo que fornece uma maneira de baixo nível para criar e usar componentes de tempo de execução do Windows.  
+A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma biblioteca de modelos que fornece uma maneira de baixo nível para criar e usar componente do Windows Runtime.  
   
 ## <a name="benefits"></a>Benefícios  
  A biblioteca de modelos do Windows em tempo de execução C++ permite implementar mais facilmente e consumir componentes do modelo de objeto de componente (COM). Ele fornece técnicas de manutenção como contagem de referência gerenciar o tempo de vida de objetos e teste `HRESULT` valores para determinar se uma operação teve êxito ou falhou. Para poder usar a biblioteca de modelos do Windows em tempo de execução C++, você deve seguir atentamente essas regras e técnicas.  
@@ -45,7 +47,7 @@ A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblio
  Aqui estão alguns recursos que podem ajudá-lo a obter trabalhar com a biblioteca de modelos do Windows em tempo de execução C++ imediatamente.  
   
  [Biblioteca de tempo de execução do Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- Neste vídeo do Channel 9, saiba mais sobre como a biblioteca de modelos do Windows em tempo de execução C++ ajuda a que escrever aplicativos de plataforma Universal do Windows e como criar e consumir componentes de tempo de execução do Windows.  
+ Neste vídeo do Channel 9, saiba mais sobre como a biblioteca de modelos do Windows em tempo de execução C++ ajuda a que escrever aplicativos do Windows UWP (plataforma Universal) e como criar e consumir componentes de tempo de execução do Windows.  
   
  [Como: ativar e usar um componente de tempo de execução do Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para inicializar o tempo de execução do Windows e ativar e usar um componente de tempo de execução do Windows.  
@@ -57,10 +59,10 @@ A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblio
  Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para assinar e tratar os eventos de um objeto de tempo de execução do Windows.  
   
  [Passo a passo: Criando um componente de tempo de execução básico do Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente básico do tempo de execução do Windows que adiciona dois números. Também demonstra como gerar eventos e usa o componente de um aplicativo de plataforma Universal do Windows que usa JavaScript.  
+ Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente básico do tempo de execução do Windows que adiciona dois números. Também demonstra como gerar eventos e usa o componente de um aplicativo UWP que usa JavaScript.  
   
- [Passo a passo: criando um aplicativo da Windows Store usando a WRL e o Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Saiba como criar um aplicativo de plataforma Universal do Windows que usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+ [Passo a passo: criando um aplicativo UWP usando WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ Saiba como criar um aplicativo UWP usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Como: criar um componente COM clássico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente básico e uma maneira simples de registrar e consumir o componente COM de um aplicativo de área de trabalho.  
@@ -72,10 +74,10 @@ A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblio
  Mostra como consumir componentes personalizados de Windows Runtime de WRL criando um arquivo IDL dos metadados. winmd.  
   
  [Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Mostra como usar o [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces junto com as tarefas para enviar solicitações HTTP GET e POST para um serviço da web em um aplicativo de plataforma Universal do Windows.  
+ Mostra como usar o [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces junto com as tarefas para enviar solicitações HTTP GET e POST para um serviço da web em um aplicativo UWP.  
   
  [Exemplo do Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Usa o `HttpRequest` classe definida em [passo a passo: conectando usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) no contexto de um aplicativo de plataforma Universal do Windows completo.  
+ Usa o `HttpRequest` classe definida em [passo a passo: conectando usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) no contexto de um aplicativo UWP concluído.  
   
  [Criando um componente de DLL de tempo de execução do Windows com o exemplo de C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente DLL do processo e consumi-lo em C + + CX, JavaScript e c#.  
@@ -89,7 +91,7 @@ A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblio
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de modelos C++ do tempo de execução do Windows em comparação comparada ATL  
  Biblioteca de modelos C++ do Windows em tempo de execução é semelhante a biblioteca de modelo ativa (ATL) porque você pode usá-lo para criar pequena, rápidos objetos. Biblioteca de modelos C++ do Windows Runtime ATL compartilhar conceitos como a definição de objetos em módulos, registro explícito de interfaces e abra a criação de objetos usando fábricas. Você talvez esteja familiarizado com a biblioteca de modelos C++ do Windows Runtime se você estiver familiarizado com ATL.  
   
- Biblioteca de modelos C++ do Windows Runtime oferece suporte a funcionalidade COM que é necessária para aplicativos de plataforma Universal do Windows. Portanto, ele difere de ATL porque ele omite o suporte direto para os recursos de COM, como:  
+ Biblioteca de modelos C++ do Windows Runtime oferece suporte a funcionalidade COM que é necessária para aplicativos UWP. Portanto, ele difere de ATL porque ele omite o suporte direto para os recursos de COM, como:  
   
 -   Agregação  
   
@@ -113,7 +115,7 @@ A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblio
  Biblioteca de modelos C++ do Windows Runtime fornece tipos que representam alguns conceitos básicos. As seções a seguir descrevem esses tipos.  
   
 ### <a name="comptr"></a>ComPtr  
- [ComPtr](../windows/comptr-class.md) é um *ponteiro inteligente* tipo que representa a interface que é especificada pelo parâmetro de modelo. Use `ComPtr` para declarar uma variável que pode acessar os membros de um objeto que é derivado da interface. `ComPtr`automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.  
+ [ComPtr](../windows/comptr-class.md) é um *ponteiro inteligente* tipo que representa a interface que é especificada pelo parâmetro de modelo. Use `ComPtr` para declarar uma variável que pode acessar os membros de um objeto que é derivado da interface. `ComPtr` automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.  
   
 ### <a name="runtimeclass"></a>RuntimeClass  
  [RuntimeClass](../windows/runtimeclass-class.md) representa uma classe instanciada que herda de um conjunto de interfaces especificadas. Um `RuntimeClass` objeto puder fornecer uma combinação de suporte para uma ou mais interfaces COM tempo de execução do Windows ou uma referência fraca a um componente.  
@@ -131,7 +133,7 @@ A biblioteca de modelo (WRL) do Windows em tempo de execução C++ é uma biblio
  [AsyncBase](../windows/asyncbase-class.md) fornece métodos virtuais que representam o modelo de programação assíncrono do tempo de execução do Windows. Substitua os membros dessa classe para criar uma classe personalizada que podem iniciar, parar ou verificar o progresso de uma operação assíncrona.  
   
 ### <a name="ftmbase"></a>FtmBase  
- [FtmBase](../windows/ftmbase-class.md) representa um objeto de empacotamento de segmentação livre. `FtmBase`cria uma tabela de interface global (GIT) e ajuda a gerenciar objetos de proxy e de empacotamento.  
+ [FtmBase](../windows/ftmbase-class.md) representa um objeto de empacotamento de segmentação livre. `FtmBase` cria uma tabela de interface global (GIT) e ajuda a gerenciar objetos de proxy e de empacotamento.  
   
 ### <a name="weakref"></a>WeakRef  
  [WeakRef](../windows/weakref-class.md) é um tipo de ponteiro inteligente que representa um *referência fraca*, que faz referência a um objeto que pode ou não pode ser acessado. Um `WeakRef` objeto pode ser usado somente no tempo de execução do Windows e não por COM. clássico  

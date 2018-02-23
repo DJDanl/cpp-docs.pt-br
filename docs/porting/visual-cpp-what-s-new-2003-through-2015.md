@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -1545,16 +1545,16 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>Melhorias na PGO (Otimização Guiada por Perfil)
 
 - Melhorias de desempenho de uma redução no conjunto de trabalho de aplicativos otimizados usando PGO.
-- Novo PGO para desenvolvimento de aplicativos da Windows Store.
+- Nova PGO para desenvolvimento de aplicativos do Windows Runtime.
 
-### <a name="windows-store-app-development-support"></a>Suporte a desenvolvimento de aplicativos da Windows Store
+### <a name="windows-runtime-app-development-support"></a>Suporte ao desenvolvimento de aplicativos do Windows Runtime
 
-- **Suporte para tipos demarcados em estruturas de valor.** Agora você pode definir tipos de valor usando campos que podem ser nulos, por exemplo, IBox<int>^ em oposição a int. Isso significa que os campos podem ter um valor ou serem iguais a nullptr.
+- **Suporte para tipos demarcados em estruturas de valor.** Agora você pode definir tipos de valor usando campos que podem ser nulos, por exemplo, IBox\<int>^ ao contrário de int. Isso significa que os campos podem ter um valor ou serem iguais a nullptr.
 - **Informações de exceção mais completas.** C++/CX oferece suporte ao novo modelo de erros do Windows que habilita a captura e a propagação de informações completas de exceção através da ABI (interface binária de aplicativo); isso inclui pilhas de chamada e cadeias de caracteres de mensagens personalizadas.
 - **Object::ToString() agora é virtual.** Agora você pode substituir ToString em tipos de referência do Windows Runtime definidos pelo usuário.
 - **Suporte para APIs preteridas.** As APIs públicas do Tempo de Execução do Windows agora podem ser preteridas e apresentar uma mensagem personalizada que aparecerá como um aviso de compilação, além de poderem oferecer orientação sobre a migração.
 - **Melhorias no depurador.** Suporte para depuração de interoperação nativa/JavaScript, diagnóstico de exceção do Tempo de Execução do Windows e depuração de código assíncrono (Tempo de Execução do Windows e PPL).
-  - Observação: além dos recursos específicos do C++ e das melhorias descritas nesta seção, outras melhorias feitas no Visual Studio também podem ajudar você a escrever aplicativos da Windows Store ainda melhores.
+  - Observação: além das melhorias e dos recursos específicos do C++ descritos nesta seção, outras melhorias do Visual Studio também podem ajudá-lo a escrever aplicativos do Windows Runtime ainda melhores.
 
 ### <a name="diagnostics-enhancements"></a>Aprimoramentos no diagnóstico
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Suporte a desenvolvimento de aplicativos da Windows Store
+### <a name="windows-runtime-app-development-support"></a>Suporte ao desenvolvimento de aplicativos do Windows Runtime
 
-- **Modelo de interface do usuário baseada em XAML nativo**. Para aplicativos da Windows Store, use o novo modelo de interface do usuário baseada em XAML nativo.
-- **Extensões de componentes do Visual C++**. Essas extensões simplificam o consumo de objetos do Windows Runtime, que são uma parte necessária de aplicativos da Windows Store. Para obter mais informações, consulte o Roteiro para aplicativos da Windows Store usando a referência de linguagem do C++ e Visual C++ (C++/CX)
-- **Jogos do DirectX**. Você pode desenvolver jogos envolventes usando o novo suporte do DirectX para aplicativos da Windows Store.
-- **Interoperabilidade XAML/DirectX**. Aplicativos da Windows Store que usam XAML e DirectX agora interoperam com eficiência.
+- **Modelo de interface do usuário baseada em XAML nativo**. Para aplicativos do Windows Runtime, você pode usar o novo modelo de interface do usuário baseada em XAML nativo.
+- **Extensões de componentes do Visual C++**. Essas extensões simplificam o consumo de objetos do Windows Runtime, que são uma parte necessária dos aplicativos do Windows Runtime. Para obter mais informações, confira [Roadmap for Windows Runtime apps using C++](../windows/universal-windows-apps-cpp.md) (Roteiro para aplicativos do Windows Runtime usando C++) e [Referência de linguagem do Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Jogos do DirectX**. Você pode desenvolver jogos envolventes usando o novo suporte do DirectX para aplicativos do Windows Runtime.
+- **Interoperabilidade XAML/DirectX**. Os aplicativos do Windows Runtime que usam XAML e DirectX agora são interoperados com eficiência.
 - **Desenvolvimento de DLL do Componente do Tempo de Execução do Windows**. Desenvolvimento de DLL do componente torna o ambiente do Windows Runtime extensível.
 
 ### <a name="compiler-and-linker"></a>Compilador e vinculador
@@ -1941,7 +1941,7 @@ O compilador tem alterações significativas nesta versão.
 - Compiladores nativos e cruzados de 64 bits.
 - A opção do compilador /analyze (Análise de código da empresa) foi adicionada.
 - A opção do compilador /bigobj foi adicionada.
-- /clr:pure, /clr:safe e /clr:oldSyntax foram adicionados.
+- /clr:pure, /clr:safe e /clr:oldSyntax foram adicionados. (Preterido posteriormente no Visual Studio 2015.)
 - Opções de compilação preteridas: muitas opções de compilador foram preteridas nesta versão. Consulte Opções de compilador preteridas para obter mais informações.
 - A conversão dupla em código /clr foi reduzida. Consulte Conversão dupla (C++) para obter mais informações.
 - /EH (Modelo de Tratamento de Exceção) ou o /EHs não pode mais ser usado para capturar uma exceção gerada com algo diferente de um lançamento; Use /EHa.

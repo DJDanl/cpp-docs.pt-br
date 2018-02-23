@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFXPANEDIALOG/CPaneDialog::Create
 - AFXPANEDIALOG/CPaneDialog::HandleInitDialog
 - AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPaneDialog [MFC], Create
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4d292a8f3f8fafc88b23d9375d1894e47e1c0a90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e247d1d824d710cfa9588a01d73e1ca611d77ed
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 O `CPaneDialog` classe oferece suporte a uma caixa de diálogo sem janela restrita, acopláveis.  
@@ -48,7 +51,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::CPaneDialog`|Construtor padrão.|  
 |`CPaneDialog::~CPaneDialog`|Destruidor.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -64,7 +67,7 @@ class CPaneDialog : public CDockablePane
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Especifica o modelo para uma caixa de diálogo que é um contêiner de controle OLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Construir um `CPaneDialog` objeto em duas etapas. Primeiro, construa o objeto em seu código. Em seguida, chamar [CPaneDialog::Create](#create). Você deve especificar um nome ou o modelo de ID do modelo de recurso válido e transmitir um ponteiro para a janela pai. Caso contrário, o processo de criação falha. A caixa de diálogo deve especificar o estilo de estilo e WS_VISIBLE. É recomendável que você também pode especificar os estilos WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Para obter mais informações, consulte [estilos de janela](window-styles.md).  
+ Construir um `CPaneDialog` objeto em duas etapas. Primeiro, construa o objeto em seu código. Em seguida, chamar [CPaneDialog::Create](#create). Você deve especificar um nome ou o modelo de ID do modelo de recurso válido e transmitir um ponteiro para a janela pai. Caso contrário, o processo de criação falha. A caixa de diálogo deve especificar o estilo de estilo e WS_VISIBLE. É recomendável que você também pode especificar os estilos WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Para obter mais informações, consulte [estilos de janela](styles-used-by-mfc.md#window-styles).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,7 +87,7 @@ class CPaneDialog : public CDockablePane
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxpanedialog.h  
   
-##  <a name="create"></a>CPaneDialog::Create  
+##  <a name="create"></a>  CPaneDialog::Create  
  Cria uma caixa de diálogo de encaixe e anexa-o para um `CPaneDialog` objeto.  
   
 ```  
@@ -130,7 +133,7 @@ BOOL Create(
  Aponta para a janela pai.  
   
  [in] `bHasGripper`  
- `TRUE`para criar a caixa de diálogo de encaixe com uma legenda (garra); Caso contrário, `FALSE`.  
+ `TRUE` para criar a caixa de diálogo de encaixe com uma legenda (garra); Caso contrário, `FALSE`.  
   
  [in] `lpszTemplateName`  
  O nome do modelo de caixa de diálogo de recursos.  
@@ -161,7 +164,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
  Manipula o [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) mensagem.  
   
 ```  
@@ -178,12 +181,12 @@ afx_msg LRESULT HandleInitDialog(
  Especifica os dados de inicialização adicionais.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se esse método for bem-sucedida; Caso contrário, `FALSE`. Além disso, `TRUE` define o foco do teclado para o controle especificado pelo `wParam` parâmetro; `FALSE` impede que definir o foco do teclado padrão.  
+ `TRUE` Se esse método for bem-sucedida; Caso contrário, `FALSE`. Além disso, `TRUE` define o foco do teclado para o controle especificado pelo `wParam` parâmetro; `FALSE` impede que definir o foco do teclado padrão.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura usa esse método para inicializar a aparência de uma caixa de diálogo e controles. O framework chama esse método antes de exibir a caixa de diálogo.  
   
-##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+##  <a name="setoccdialoginfo"></a>  CPaneDialog::SetOccDialogInfo  
  Especifica o modelo para uma caixa de diálogo que é um contêiner de controle OLE.  
   
 ```  

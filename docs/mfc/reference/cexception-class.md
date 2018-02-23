@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFX/CException::CException
 - AFX/CException::Delete
 - AFX/CException::ReportError
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CException [MFC], CException
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cexception-class"></a>Classe CException
 A classe base para todas as exceções na biblioteca Microsoft Foundation Class.  
@@ -91,7 +94,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** AFX  
   
-##  <a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>  CException::CException  
  Essa função de membro constrói um `CException` objeto.  
   
 ```  
@@ -105,7 +108,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Comentários  
  Você normalmente não precisa chamar este construtor diretamente. Uma função que gera uma exceção deve criar uma instância de um `CException`-classe derivada e chamar seu construtor, ou ele deve usar um dos MFC acionar funções, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), para gerar um tipo predefinido. Esta documentação é fornecida somente para fins de integridade.  
   
-##  <a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>  CException::Delete  
  Essa função verifica se o **CException** objeto foi criado no heap e, nesse caso, ele chama o **excluir** operador no objeto.  
   
 ```  
@@ -169,7 +172,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>  CException::ReportError  
  Chame essa função de membro para texto de erro de relatório em uma caixa de mensagem para o usuário.  
   
 ```  
@@ -180,7 +183,7 @@ virtual int ReportError(
   
 ### <a name="parameters"></a>Parâmetros  
  `nType`  
- Especifica o estilo da caixa de mensagem. Aplique qualquer combinação da [estilos de caixa de mensagem](message-box-styles.md) à caixa. Se você não especificar esse parâmetro, o padrão é **MB_OK**.  
+ Especifica o estilo da caixa de mensagem. Aplique qualquer combinação da [estilos de caixa de mensagem](styles-used-by-mfc.md#message-box-styles) à caixa. Se você não especificar esse parâmetro, o padrão é **MB_OK**.  
   
  *nMessageID*  
  Especifica a ID de recurso (entrada de cadeia de caracteres) de uma mensagem a ser exibida se o objeto de exceção não tiver uma mensagem de erro. Se for 0, a mensagem "nenhuma mensagem de erro está disponível" é exibida.  

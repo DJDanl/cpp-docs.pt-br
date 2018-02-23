@@ -2,7 +2,6 @@
 title: 'Classe Platform:: box | Microsoft Docs'
 ms.custom: 
 ms.date: 12/30/2016
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +18,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813ba26333cb73212db966a0446d722eb4e0795d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 45c1d3090cd4f3fbe1c2c7a57ba6ebe671055fee
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="platformbox-class"></a>Classe Platform::Box
 Permite que um tipo de valor, como `Windows::Foundation::DateTime` , ou um tipo escalar, como `int` , seja armazenado em um tipo `Platform::Object` . Geralmente, não é necessário usar `Box` explicitamente, já que a conversão boxing é inerente ao converter um tipo de valor para `Object^`.  

@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -97,7 +97,7 @@ Ao fazer a atualização para uma nova versão do Visual Studio, você pode enco
   
 -   **new e delete** Nas versões anteriores da biblioteca, as funções new e delete do operador definido pela implementação foram exportadas da biblioteca de tempo de execução DLL (por exemplo, msvcr120.dll). Essas funções de operador agora estão sempre vinculadas estaticamente em seus binários, mesmo ao usar as bibliotecas de tempo de execução DLLs.  
   
-     Essa não é uma alteração significativa para o código nativo ou misto (/clr), no entanto, para o código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), isso pode causar falha ao compilar seu código. Se você compilar o código como /clr:pure, talvez seja necessário adicionar #include \<new> ou #include \<new.h> para contornar os erros de build devidos a essa alteração. Observe que /clr:pure foi preterido no Visual Studio 2015 e poderá ser removido em versões futuras.  
+     Essa não é uma alteração significativa para o código nativo ou misto (/clr), no entanto, para o código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), isso pode causar falha ao compilar seu código. Se você compilar o código como /clr:pure, talvez seja necessário adicionar #include \<new> ou #include \<new.h> para contornar os erros de build devidos a essa alteração. Observe que /clr:pure foi preterido no Visual Studio 2015 e poderá ser removido em versões futuras. Os códigos que precisarem ser "puros" deverão ser movidos para C#.  
   
 #### <a name="processh"></a>\<process.h>  
   

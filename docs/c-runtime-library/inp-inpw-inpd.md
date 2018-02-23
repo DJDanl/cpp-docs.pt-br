@@ -44,11 +44,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b5a950496c1148b62e248b9d5d5a4d03f40fea45
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 Entradas, de uma porta, um byte (`_inp`), uma palavra (`_inpw`) ou uma palavra dupla (`_inpd`).  
@@ -57,7 +57,7 @@ Entradas, de uma porta, um byte (`_inp`), uma palavra (`_inpw`) ou uma palavra d
 >  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

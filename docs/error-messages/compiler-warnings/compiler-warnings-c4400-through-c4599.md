@@ -1,7 +1,8 @@
 ---
 title: C4400 de avisos do compilador por meio de C4599 | Microsoft Docs
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -36,6 +37,10 @@ f1_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +48,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -98,6 +107,10 @@ helpviewer_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +118,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,17 +144,19 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de avisos do compilador por meio de C4599
 
@@ -165,7 +184,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*função*': assinatura de função contém tipo '*tipo*'; Objetos C++ são seguros para passar entre código puro e código misto ou nativo.|
 |C4413 de aviso do compilador|'classname::member': membro de referência é inicializado para um temporário que não persiste após o construtor encerrar|
 |[Aviso do compilador (nível 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*função*': salto short para função convertido para near|
-|Aviso do compilador (nível 1) C4415|duplicada declspec (code_seg ('*nome*'))|
+|Aviso do compilador (nível 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |Aviso do compilador (nível 1) C4416|__declspec(code_seg(...)) contém a cadeia de caracteres vazia: ignorado|
 |Aviso do compilador (nível 1) C4417|uma instanciação de modelo explícita não pode ter __declspec(code_seg(...)): ignorado|
 |Aviso do compilador (nível 1) C4418|__declspec(code_seg(...)) ignorada no enum|
@@ -214,7 +233,13 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de controle de ponto flutuante ignorados sob /clr|
 |[Aviso do compilador (nível 4) C4471](compiler-warning-level-4-c4471.md)|'*enumeração*': declaração de encaminhamento de uma enumeração sem escopo deve ter um tipo subjacente (int assumido)|
 |Aviso do compilador (nível 1) C4472|'*identificador*' é um enum nativo: adicionar um especificador de acesso (pública/privada) para declarar um ' WinRT &#124; gerenciado ' enum|
-|Compilador aviso C4480|extensão não padrão usada: especificação de tipo subjacente para enum '*enumeração*'|
+|[Aviso do compilador (nível 1) C4473](c4473.md)|'*função*': não há argumentos suficientes passado para a cadeia de caracteres de formato|
+|Aviso do compilador (nível 3) C4474|'*função*': muitos argumentos passados para a cadeia de caracteres de formato|
+|Aviso do compilador (nível 3) C4475|'*função*': modificador de comprimento '*modificador*'não pode ser usado com o caractere de campo do tipo'*caracteres*' especificador de formato|
+|Aviso do compilador (nível 3) C4476|'*função*': caractere de campo de tipo desconhecido '*caracteres*' especificador de formato|
+|[Aviso do compilador (nível 1) C4477](c4477.md)|'*função*': cadeia de caracteres de formato '*cadeia de caracteres*'exige um argumento do tipo'*tipo*', mas o argumento variadic *número* tem o tipo '*tipo*'|
+|Aviso do compilador (nível 1) C4478|'*função*': espaços reservados posicionais e não posicionais não podem ser misturados na mesma cadeia de caracteres de formato|
+|Compilador aviso C4480 (erro)|extensão não padrão usada: especificação de tipo subjacente para enum '*enumeração*'|
 |[Aviso do compilador (nível 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|extensão não padrão usada: especificador de substituição '*palavra-chave*'|
 |C4482 de aviso do compilador|extensão não padrão usada: enum '*enumeração*' usado no nome qualificado|
 |Aviso do compilador (nível 1, erro) C4483|Erro de sintaxe: esperada palavra-chave de C++|
@@ -229,6 +254,10 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1, erro) C4492|'*function1*': correspondências de método de ref class base '*function2*', mas não está marcado como 'override'|
 |Aviso do compilador (nível 3, erro) C4493|expressão de exclusão não surte efeito porque o destruidor de '*tipo*' não tem acessibilidade 'pública'|
 |Aviso do compilador (nível 1) C4494|'*função*': ignorando __declspec(allocator) porque o tipo de retorno de função não é um ponteiro ou referência|
+|C4495 de aviso do compilador|extensão não padrão super' utilizada: substitua pelo nome de classe base explícito|
+|C4496 de aviso do compilador|extensão não padrão 'for each' usada: substitua por instrução intervalo-para|
+|C4497 de aviso do compilador|extensão não padrão 'selada' usada: Substituir por 'final'|
+|C4498 de aviso do compilador|extensão não padrão usada: '*extensão*'|
 |Aviso do compilador (nível 4) C4499|"*função*': uma especialização explícita não pode ter uma classe de armazenamento (ignorada)"|
 |[Aviso do compilador (nível 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*especificação de vinculação*' requer o uso da palavra-chave 'extern' e deve preceder todos os outros especificadores|
 |[Aviso do compilador (nível 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*identificador*': decorado excedido, comprimento do nome nome foi truncado|
@@ -255,7 +284,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'continue': salto para fora do bloco Finally/finally' possui comportamento indefinido durante manipulação de encerramento|
 |[Aviso do compilador (nível 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|inicialização de '*variável*'é ignorada por'*rótulo goto*'|
 |[Aviso do compilador (nível 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|'*construtor*'não será um construtor padrão para 'classe/struct' '*identificador*' devido ao argumento padrão|
-|[Aviso do compilador (nível 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|chamada _set_se_translator() requer /EHa|
+|[Aviso do compilador (nível 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
 |[Aviso do compilador (nível 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'*typename*': nome de tipo excede o limite de metadados de '*character_limit*' caracteres|
 |[Aviso do compilador (nível 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'*objeto*': '.' aplicado a tipo não UDT|
 |[Aviso do compilador (nível 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'*tipo*': não há suporte para qualificadores const/volatile neste tipo|

@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0b14b45752559c80f4aafb60aa4ba23cb0d51b91
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>Modelos de classe
 Este tópico descreve as regras que são específicas para modelos de classe do C++.  
@@ -203,7 +206,7 @@ X<T>::Y<U>::~Y()
  As classes locais não podem ter modelos de membro.  
   
 ## <a name="template-friends"></a>Amigos de modelo  
- Modelos de classe podem ter [amigos](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Uma classe ou um modelo de classe, uma função ou um modelo de função podem ser amigas (friends) de uma classe de modelo. Friends também podem ser especializações de um modelo de classe ou modelo de função, mas não especializações parciais.  
+ Modelos de classe podem ter [amigos](friend-cpp.md). Uma classe ou um modelo de classe, uma função ou um modelo de função podem ser amigas (friends) de uma classe de modelo. Friends também podem ser especializações de um modelo de classe ou modelo de função, mas não especializações parciais.  
   
  No exemplo a seguir, uma função friend é definida como um modelo de função no modelo de classe. Esse código gera uma versão da função friend para cada instanciação do modelo. Essa construção é útil quando a função friend depende dos mesmos parâmetros de modelo que a classe.  
   
