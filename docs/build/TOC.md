@@ -96,7 +96,6 @@
 ### [Importando e exportado funções embutidas](importing-and-exporting-inline-functions.md)
 ## [Tecnologia ativa e DLLs](active-technology-and-dlls.md)
 ## [Automação em uma DLL](automation-in-a-dll.md)
-## [Convenções de nomenclatura para DLLs do MFC](naming-conventions-for-mfc-dlls.md)
 ## [Chamando funções DLL de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
 # [Intrínsecos do compilador e linguagem assembly](../intrinsics/TOC.md)
 # [Compilar código C/C++ na linha de comando](building-on-the-command-line.md)
@@ -170,4 +169,4 @@
 ### [Como integrar ferramentas personalizadas a propriedades de projeto](how-to-integrate-custom-tools-into-the-project-properties.md)
 ### [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](how-to-modify-the-target-framework-and-platform-toolset.md)
 # [Configurando programas para Windows XP](configuring-programs-for-windows-xp.md)
-# [Referência de compilação C/C++](reference/TOC.md)
+# [Referência de build C/C++](reference/TOC.md)
