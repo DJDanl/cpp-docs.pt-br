@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_LENGTH_STATUS
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60db583da4669428469bec803fe3e5dabe8cb76a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c159e575def5cba5766b526d51c815589aed600
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnentrylengthstatus"></a>COLUMN_ENTRY_LENGTH_STATUS
 Representa uma associação no conjunto de linhas para a coluna específica no banco de dados.  
@@ -47,7 +47,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
  `data`  
  [in] O membro de dados correspondente no registro do usuário.  
   
- *length*  
+ *Comprimento*  
  [in] A variável a ser associado para o comprimento da coluna.  
   
  *status*  
