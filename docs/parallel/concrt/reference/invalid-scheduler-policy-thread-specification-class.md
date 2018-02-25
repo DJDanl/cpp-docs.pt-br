@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: concrt/concurrency::invalid_scheduler_policy_thread_specification
-dev_langs: C++
-helpviewer_keywords: invalid_scheduler_policy_thread_specification class
+ms.topic: reference
+f1_keywords:
+- concrt/concurrency::invalid_scheduler_policy_thread_specification
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 82c53e760d09ecdcc39f50b30d68a6c0b5290c4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e73883cc3eb045d1bf12b85e76c122b4efd5788d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>Classe invalid_scheduler_policy_thread_specification
 Esta classe descreve uma exceção gerada quando é feita uma tentativa de definir os limites de simultaneidade de um `SchedulerPolicy` objeto, de modo que o valor da `MinConcurrency` chave é menor que o valor da `MaxConcurrency` chave.  
@@ -37,7 +42,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification] (inválido-Agendador-política-valor-class.md #ctor|Sobrecarregado. Constrói uma `invalid_scheduler_policy_value` objeto.|  
+|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Sobrecarregado. Constrói uma `invalid_scheduler_policy_value` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -48,7 +53,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  **Cabeçalho:** concrt.h  
   
  **Namespace:** simultaneidade  
-##  <a name="ctor"></a>invalid_scheduler_policy_thread_specification 
+##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification 
 
  Constrói uma `invalid_scheduler_policy_value` objeto.  
   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
 - CONCRT/concurrency::Concrt_TraceFlags
@@ -16,18 +16,20 @@ f1_keywords:
 - CONCRT/concurrency::WinRTInitializationType
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5092c61860b4d7308ef6d1762363ee905b56b10b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-enums"></a>enumerações de namespace de simultaneidade
 ||||  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>Enumeração agent_status  
+##  <a name="agent_status"></a>  agent_status Enumeration  
  Os estados válidos para um `agent`.  
   
 ```
@@ -60,7 +62,7 @@ enum agent_status;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h
 
-##  <a name="agents_eventtype"></a>Enumeração Agents_EventType  
+##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
  Os tipos de eventos que podem ser rastreados usando a funcionalidade de rastreamento oferecida pela biblioteca de agentes  
   
 ```
@@ -83,7 +85,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h
 
-##  <a name="concrt_eventtype"></a>Enumeração ConcRT_EventType  
+##  <a name="concrt_eventtype"></a>  ConcRT_EventType Enumeration  
  Os tipos de eventos que podem ser rastreados usando a funcionalidade de rastreamento oferecida pelo tempo de execução de simultaneidade.  
   
 ```
@@ -106,7 +108,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h **Namespace:** simultaneidade
 
-##  <a name="concrt_traceflags"></a>Enumeração Concrt_TraceFlags  
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
  Sinalizadores de rastreamento para os tipos de evento  
   
 ```
@@ -127,7 +129,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h
 
-##  <a name="criticalregiontype"></a>Enumeração CriticalRegionType  
+##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
  O tipo de um contexto está dentro de região crítica.  
   
 ```
@@ -144,7 +146,7 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrtrm.h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>Enumeração DynamicProgressFeedbackType  
+##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
  Usado pelo `DynamicProgressFeedback` com base em políticas para descrever se os recursos para o Agendador serão balanceados acordo com informações estatísticas coletadas do Agendador ou apenas em processadores virtuais entrando e saindo do estado ocioso por meio de chamadas para o `Activate` e `Deactivate` métodos no `IVirtualProcessorRoot` interface. Para obter mais informações sobre políticas de Agendador disponíveis, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -156,7 +158,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|O Agendador não coleta informações sobre o andamento. Rebalanceamento é feito com base apenas em nível de assinatura do thread hardware subjacente. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](IExecutionResource-structure.md).<br /><br /> Esse valor é reservado para uso pelo tempo de execução.|  
 |`ProgressFeedbackEnabled`|O Agendador reúne informações sobre o andamento e passa para o Gerenciador de recursos. O Gerenciador de recursos utilizará essas informações estatísticas para reequilibrar recursos em nome do Agendador além do nível de assinatura do thread hardware subjacente. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](IExecutionResource-structure.md).|  
-##  <a name="join_type"></a>Enumeração join_type  
+##  <a name="join_type"></a>  join_type Enumeration  
  O tipo de um `join` bloco de mensagens.  
   
 ```
@@ -172,7 +174,7 @@ enum join_type;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** agents.h  
 
-##  <a name="message_status"></a>Enumeração message_status  
+##  <a name="message_status"></a>  message_status Enumeration  
  As respostas válidas para uma oferta de uma `message` objeto para um bloco.  
   
 ```
@@ -190,7 +192,7 @@ enum message_status;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** agents.h  
 
-##  <a name="policyelementkey"></a>Enumeração PolicyElementKey  
+##  <a name="policyelementkey"></a>  PolicyElementKey Enumeration  
  Chaves de política que descreve aspectos do comportamento do Agendador. Cada elemento de política é descrito por um par chave-valor. Para obter mais informações sobre políticas de agendador e seu impacto em agendadores, consulte [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -200,22 +202,22 @@ enum PolicyElementKey;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`ContextPriority`|A prioridade de thread do sistema operacional de cada contexto com o Agendador. Se essa chave é definida como o valor `INHERIT_THREAD_PRIORITY` os contextos no Agendador do herdará a prioridade do thread que criou o Agendador.<br /><br /> Os valores válidos: qualquer um dos valores válidos para o Windows `SetThreadPriority` função e o valor especial`INHERIT_THREAD_PRIORITY`<br /><br /> Valor padrão:`THREAD_PRIORITY_NORMAL`|  
+|`ContextPriority`|A prioridade de thread do sistema operacional de cada contexto com o Agendador. Se essa chave é definida como o valor `INHERIT_THREAD_PRIORITY` os contextos no Agendador do herdará a prioridade do thread que criou o Agendador.<br /><br /> Os valores válidos: qualquer um dos valores válidos para o Windows `SetThreadPriority` função e o valor especial `INHERIT_THREAD_PRIORITY`<br /><br /> Valor padrão: `THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|O tamanho da pilha reservado de cada contexto com o Agendador em quilobytes.<br /><br /> Os valores válidos: inteiros positivos<br /><br /> Valor padrão: `0`, indicando que o valor padrão do processo para o tamanho da pilha será usado.|  
-|`DynamicProgressFeedback`|Determina se os recursos para o Agendador serão balanceados acordo com informações estatísticas coletadas do Agendador ou com base apenas no nível de assinatura dos threads de hardware subjacentes. Para obter mais informações, consulte [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Os valores válidos: membro de `DynamicProgressFeedbackType` enumeração, `ProgressFeedbackEnabled` ou`ProgressFeedbackDisabled`<br /><br /> Valor padrão:`ProgressFeedbackEnabled`|  
-|`LocalContextCacheSize`|Quando o `SchedulingProtocol` chave de política é definida como o valor `EnhanceScheduleGroupLocality`, especifica o número máximo de executáveis contextos podem ser armazenados em cache por filas locais do processador virtual. Nesses contextos, normalmente serão executado na ordem do último a entrar, primeiro a sair (UEPS) do processador virtual que fez com que eles se tornem executável. Observe que esta chave de política não terá nenhum que significa que quando o `SchedulingProtocol` chave é definida como o valor `EnhanceForwardProgress`.<br /><br /> Os valores válidos: inteiros não negativos<br /><br /> Valor padrão:`8`|  
-|`MaxConcurrency`|A simultaneidade máximo nível desejada pelo Agendador. O Gerenciador de recursos tentará alocar inicialmente este número de processadores virtuais. O valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que o nível desejado de simultaneidade é igual ao número de threads de hardware no computador. Se o valor especificado para `MinConcurrency` é maior que o número de threads de hardware no computador e `MaxConcurrency` é especificado como `MaxExecutionResources`, o valor de `MaxConcurrency` é gerado para coincidir com o que é definido para `MinConcurrency`.<br /><br /> Os valores válidos: inteiros positivos e o valor especial`MaxExecutionResources`<br /><br /> Valor padrão:`MaxExecutionResources`|  
+|`DynamicProgressFeedback`|Determina se os recursos para o Agendador serão balanceados acordo com informações estatísticas coletadas do Agendador ou com base apenas no nível de assinatura dos threads de hardware subjacentes. Para obter mais informações, consulte [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Os valores válidos: membro de `DynamicProgressFeedbackType` enumeração, `ProgressFeedbackEnabled` ou `ProgressFeedbackDisabled`<br /><br /> Valor padrão: `ProgressFeedbackEnabled`|  
+|`LocalContextCacheSize`|Quando o `SchedulingProtocol` chave de política é definida como o valor `EnhanceScheduleGroupLocality`, especifica o número máximo de executáveis contextos podem ser armazenados em cache por filas locais do processador virtual. Nesses contextos, normalmente serão executado na ordem do último a entrar, primeiro a sair (UEPS) do processador virtual que fez com que eles se tornem executável. Observe que esta chave de política não terá nenhum que significa que quando o `SchedulingProtocol` chave é definida como o valor `EnhanceForwardProgress`.<br /><br /> Os valores válidos: inteiros não negativos<br /><br /> Valor padrão: `8`|  
+|`MaxConcurrency`|A simultaneidade máximo nível desejada pelo Agendador. O Gerenciador de recursos tentará alocar inicialmente este número de processadores virtuais. O valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que o nível desejado de simultaneidade é igual ao número de threads de hardware no computador. Se o valor especificado para `MinConcurrency` é maior que o número de threads de hardware no computador e `MaxConcurrency` é especificado como `MaxExecutionResources`, o valor de `MaxConcurrency` é gerado para coincidir com o que é definido para `MinConcurrency`.<br /><br /> Os valores válidos: inteiros positivos e o valor especial `MaxExecutionResources`<br /><br /> Valor padrão: `MaxExecutionResources`|  
 |`MaxPolicyElementKey`|A chave de elemento de diretiva máximo. Não é uma chave de elemento válido.|  
-|`MinConcurrency`|O nível de simultaneidade mínimo que deve ser fornecido para o Agendador pelo Gerenciador de recursos. O número de processadores virtuais atribuídos a um agendador nunca ficará abaixo do mínimo. O valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que o nível de simultaneidade mínimo é igual ao número de threads de hardware no computador. Se o valor especificado para `MaxConcurrency` é menor que o número de threads de hardware no computador e `MinConcurrency` é especificado como `MaxExecutionResources`, o valor de `MinConcurrency` é reduzido para corresponder o que é definido para `MaxConcurrency`.<br /><br /> Os valores válidos: inteiros não negativos e o valor especial `MaxExecutionResources`. Observe que para políticas de Agendador usadas na construção de agendadores de tempo de execução de simultaneidade, o valor de `0` é inválido.<br /><br /> Valor padrão:`1`|  
-|`SchedulerKind`|O tipo de threads que utiliza o Agendador para contextos de execução subjacente. Para obter mais informações, consulte [SchedulerType](#schedulertype).<br /><br /> Os valores válidos: membro de `SchedulerType` enumeração, por exemplo,`ThreadScheduler`<br /><br /> Valor padrão: `ThreadScheduler`. Isso se traduz em threads de Win32 em todos os sistemas operacionais.|  
-|`SchedulingProtocol`|Descreve o algoritmo de programação será usado pelo Agendador. Para obter mais informações, consulte [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Os valores válidos: membro de `SchedulingProtocolType` enumeração, `EnhanceScheduleGroupLocality` ou`EnhanceForwardProgress`<br /><br /> Valor padrão:`EnhanceScheduleGroupLocality`|  
-|`TargetOversubscriptionFactor`|Número de tentativa de processadores virtuais por thread de hardware. O fator de excesso de assinatura de destino pode ser aumentado pelo Gerenciador de recursos, se necessário, para satisfazer `MaxConcurrency` com os threads de hardware no computador.<br /><br /> Os valores válidos: inteiros positivos<br /><br /> Valor padrão:`1`|  
+|`MinConcurrency`|O nível de simultaneidade mínimo que deve ser fornecido para o Agendador pelo Gerenciador de recursos. O número de processadores virtuais atribuídos a um agendador nunca ficará abaixo do mínimo. O valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que o nível de simultaneidade mínimo é igual ao número de threads de hardware no computador. Se o valor especificado para `MaxConcurrency` é menor que o número de threads de hardware no computador e `MinConcurrency` é especificado como `MaxExecutionResources`, o valor de `MinConcurrency` é reduzido para corresponder o que é definido para `MaxConcurrency`.<br /><br /> Os valores válidos: inteiros não negativos e o valor especial `MaxExecutionResources`. Observe que para políticas de Agendador usadas na construção de agendadores de tempo de execução de simultaneidade, o valor de `0` é inválido.<br /><br /> Valor padrão: `1`|  
+|`SchedulerKind`|O tipo de threads que utiliza o Agendador para contextos de execução subjacente. Para obter mais informações, consulte [SchedulerType](#schedulertype).<br /><br /> Os valores válidos: membro de `SchedulerType` enumeração, por exemplo, `ThreadScheduler`<br /><br /> Valor padrão: `ThreadScheduler`. Isso se traduz em threads de Win32 em todos os sistemas operacionais.|  
+|`SchedulingProtocol`|Descreve o algoritmo de programação será usado pelo Agendador. Para obter mais informações, consulte [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Os valores válidos: membro de `SchedulingProtocolType` enumeração, `EnhanceScheduleGroupLocality` ou `EnhanceForwardProgress`<br /><br /> Valor padrão: `EnhanceScheduleGroupLocality`|  
+|`TargetOversubscriptionFactor`|Número de tentativa de processadores virtuais por thread de hardware. O fator de excesso de assinatura de destino pode ser aumentado pelo Gerenciador de recursos, se necessário, para satisfazer `MaxConcurrency` com os threads de hardware no computador.<br /><br /> Os valores válidos: inteiros positivos<br /><br /> Valor padrão: `1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h  
 
-##  <a name="schedulertype"></a>Enumeração SchedulerType  
+##  <a name="schedulertype"></a>  Enumeração SchedulerType  
  Usado pelo `SchedulerKind` política para descrever o tipo de threads que o Agendador deve utilizar para contextos de execução subjacente. Para obter mais informações sobre políticas de Agendador disponíveis, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -232,7 +234,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>Enumeração SchedulingProtocolType  
+##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
  Usado pelo `SchedulingProtocol` política para descrever qual algoritmo agendamento será utilizado para o Agendador. Para obter mais informações sobre políticas de Agendador disponíveis, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -248,7 +250,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h  
  
-##  <a name="switchingproxystate"></a>Enumeração SwitchingProxyState  
+##  <a name="switchingproxystate"></a>  SwitchingProxyState Enumeration  
  Usado para indicar o estado de que um proxy de thread está no, quando ela está executando uma alternância de contexto cooperativo para proxy de um thread diferente.  
   
 ```
@@ -267,7 +269,7 @@ enum SwitchingProxyState;
   
  Para obter mais informações sobre como esse tipo é usado, consulte [: Switchto](ithreadproxy-structure.md#switchto).  
   
-##  <a name="task_group_status"></a>Enumeração task_group_status  
+##  <a name="task_group_status"></a>  task_group_status Enumeration  
  Descreve o status de execução de um `task_group` ou `structured_task_group` objeto. Um valor desse tipo é retornado por diversos métodos que esperar em tarefas agendadas para um grupo de tarefas para concluir.  
   
 ```
@@ -284,7 +286,7 @@ enum task_group_status;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>Enumeração WinRTInitializationType  
+##  <a name="winrtinitializationtype"></a>  WinRTInitializationType Enumeration  
  Usado pelo `WinRTInitialization` política para descrever se e como o tempo de execução do Windows será inicializado em threads de Agendador para um aplicativo que é executado em sistemas operacionais com a versão Windows 8 ou superior. Para obter mais informações sobre políticas de Agendador disponíveis, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```

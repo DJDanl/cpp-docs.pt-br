@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6db2c999692a2715301b68fd1a4bd7f719fde83
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 38f822496bd5b257a782e9e04047e164ac9681d8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Passando testes de conformidade de banco de dados OLE
 Para que os provedores de mais consistente, o SDK de acesso de dados fornece um conjunto de testes de conformidade do OLE DB. Os testes verificar todos os aspectos do seu provedor e fornecer garantia razoável que suas funções de provedor como esperadas. Você pode encontrar os testes de conformidade do OLE DB no SDK do Microsoft Data Access. Esta seção aborda as coisas que você deve fazer para os testes de conformidade. Para obter informações sobre como executar os testes de conformidade do OLE DB, consulte o SDK.  

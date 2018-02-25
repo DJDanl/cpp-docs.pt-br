@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <future>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <future>
+dev_langs:
+- C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f52f0e08d5612f5230f859c034825591af5ebd79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 Inclua o cabeçalho padrão \<future> para definir classes de modelos e modelos de suporte que simplificam a execução de uma função — possivelmente em um thread separado — e a recuperação de seu resultado. O resultado é o valor retornado pela função ou uma exceção que é emitida pela função, mas não é capturada na função.  
@@ -86,7 +90,7 @@ Inclua o cabeçalho padrão \<future> para definir classes de modelos e modelos 
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fornece nomes simbólicos para os erros relatados pela classe `future_error`.|  
 |[future_status](../standard-library/future-enums.md#future_status)|Fornece nomes simbólicos para os motivos que uma função de espera temporizada pode retornar.|  
-|[Iniciar](../standard-library/future-enums.md#launch)|Representa um tipo de bitmask que descreve os modos possíveis para a função de modelo `async`.|  
+|[launch](../standard-library/future-enums.md#launch)|Representa um tipo de bitmask que descreve os modos possíveis para a função de modelo `async`.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

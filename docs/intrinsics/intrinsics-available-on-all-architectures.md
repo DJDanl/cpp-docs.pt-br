@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: cl.exe compiler, intrinsics
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a97d2469fdec35c73e830d4a616a9e4487ffef86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c1cf9854229e6451a31f62b3df6e6d3babda011e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Intrínsecos disponíveis em todas as arquiteturas
 Os seguintes intrínsecos estão disponíveis com a arquiteturas x86, AMD64, e ARM:  
@@ -43,38 +47,38 @@ Os seguintes intrínsecos estão disponíveis com a arquiteturas x86, AMD64, e A
 |[_disable](../intrinsics/disable.md)|intrin.h|  
 |[_enable](../intrinsics/enable.md)|intrin.h|  
 |[__fastfail](../intrinsics/fastfail.md)|intrin.h|  
-|[Interlockedand](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
-|[Interlockedand16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
-|[Interlockedand64](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
-|[Interlockedand8](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
-|[interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|intrin.h|  
-|[interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedAnd64](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
+|[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|intrin.h|  
+|[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedCompareExchange64](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|  
-|[Interlockedcompareexchangepointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|intrin.h|  
-|[Interlockeddecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|  
-|[Interlockeddecrement64](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|  
-|[Interlockedexchange](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedDecrement64](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|  
-|[Interlockedexchange64](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedExchange64](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|  
-|[Interlockedexchangeadd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
-|[Interlockedexchangeadd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
-|[Interlockedexchangeadd64](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
-|[Interlockedexchangeadd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
-|[Interlockedexchangepointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|intrin.h|  
-|[Interlockedincrement](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|  
-|[Interlockedincrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|  
-|[Interlockedincrement64](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|  
-|[Interlockedor](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
-|[Interlockedor16](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
-|[Interlockedor64](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
-|[Interlockedor8](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
-|[Interlockedxor](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedExchangeAdd64](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedIncrement64](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedOr64](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|  
-|[Interlockedxor64](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|  
+|[_InterlockedXor64](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|  
 |[_mul128](../intrinsics/mul128.md)|intrin.h|  
 |[__mulh](../intrinsics/mulh.md)|intrin.h|  
@@ -125,7 +129,7 @@ Os seguintes intrínsecos estão disponíveis com a arquiteturas x86, AMD64, e A
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)|math.h|  
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|  
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|  
-|[sol](../c-runtime-library/reference/exp-expf.md)|math.h|  
+|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|  
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|  
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|  
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocale/std::ctype
 - xlocale/std::ctype::char_type
@@ -24,7 +25,8 @@ f1_keywords:
 - xlocale/std::ctype::tolower
 - xlocale/std::ctype::toupper
 - xlocale/std::ctype::widen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::ctype [C++]
 - std::ctype [C++], char_type
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 866ec8b37852f6c4fea6fdeeefa5eb9fdf21d819
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d0403dd297d726f0d0ef1ab7794d37b05c46967b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ctype-class"></a>Classe ctype
 Uma classe que fornece uma faceta usada para classificar caracteres, fazer conversões de letras maiúsculas e minúsculas, bem como fazer a conversão entre o conjunto de caracteres nativos e o conjunto usado pela localidade.  
@@ -152,7 +155,7 @@ explicit ctype(size_t _Refs = 0);
   
 -   1: o tempo de vida do objeto deve ser gerenciado manualmente.  
   
--   \>1: esses valores não são definidos.  
+-   \> 1: esses valores não são definidos.  
   
  Nenhum exemplo direto é possível, pois o destruidor está protegido.  
   

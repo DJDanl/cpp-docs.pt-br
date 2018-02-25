@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_extent
 - AMP/tiled_extent
@@ -18,18 +19,20 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 Um `tiled_extent` objeto é um `extent` objeto de um a três dimensões que subdivide o espaço de extensão em uma, duas ou blocos tridimensionais.  
@@ -80,8 +83,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.|  
-|[preenchimento](#pad)|Retorna um novo `tiled_extent` objeto com extensões ajustada a ser divisível por dimensões lado a lado.|  
-|[Truncar](#truncate)|Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.|  
+|[pad](#pad)|Retorna um novo `tiled_extent` objeto com extensões ajustada a ser divisível por dimensões lado a lado.|  
+|[truncate](#truncate)|Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -115,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Namespace:** Simultaneidade  
 
-## <a name="ctor"></a> tiled_extent construtor  
+## <a name="ctor">Construtor de tiled_extent</a>  
 Inicializa uma nova instância da classe `tiled_extent`.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -137,7 +140,7 @@ tiled_extent(
 
   
 
-## <a name="get_tile_extent"></a> get_tile_extent   
+## <a name="get_tile_extent"> </a>  get_tile_extent   
 Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -150,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Um `extent` que captura as dimensões desse objeto `tiled_extent` instância.  
   
 
-## <a name="pad"></a> preenchimento   
+## <a name="pad"> </a>  pad   
 Retorna um novo `tiled_extent` objeto com extensões ajustada a ser divisível por dimensões lado a lado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -161,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valor de retorno  
  O novo `tiled_extent` objeto, por valor. 
-## <a name="truncate"></a> truncar   
+## <a name="truncate"> </a>  Truncar   
 Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -173,7 +176,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.  
 
-## <a name="operator_eq"></a> operador =   
+## <a name="operator_eq"> </a>  operator=   
 Copia o conteúdo de especificado `tiled_index` deste objeto.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -190,7 +193,7 @@ tiled_extent&  operator= (
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `tiled_index` instância.  
 
-## <a name="tile_dim0"></a> tile_dim0   
+## <a name="tile_dim0"> </a>  tile_dim0   
 Armazena o comprimento da dimensão mais significativo.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -199,7 +202,7 @@ Armazena o comprimento da dimensão mais significativo.
 static const int tile_dim0 = _Dim0;  
 ```  
   
-## <a name="tile_dim1"></a> tile_dim1   
+## <a name="tile_dim1"> </a>  tile_dim1   
 Armazena o comprimento da dimensão próximo ao mais significativo.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -207,7 +210,7 @@ Armazena o comprimento da dimensão próximo ao mais significativo.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tile_dim2"></a> tile_dim2   
+## <a name="tile_dim2"> </a>  tile_dim2   
 Armazena o comprimento da dimensão menos significativo.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -215,7 +218,7 @@ Armazena o comprimento da dimensão menos significativo.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tile_extent"></a> tile_extent   
+## <a name="tile_extent"> </a>  tile_extent   
   Obtém um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ### <a name="syntax"></a>Sintaxe  

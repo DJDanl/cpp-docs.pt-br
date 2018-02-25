@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::set_x
 - amp_short_vectors/Concurrency::graphics::norm_2::set_xy
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c593121846c3eace21c16d00013af1bd46f54fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8a3cf125ab89c159f27fe212018780699926e79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm2-class"></a>Classe norm_2
 Representa um vetor curto de dois números normais.  
@@ -90,14 +93,14 @@ class norm_2;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|norm_2::Operator-||  
-|norm_2::Operator –||  
-|norm_2::Operator * =||  
-|norm_2::Operator / =||  
-|norm_2::Operator + +||  
-|+ norm_2::Operator =||  
-|norm_2::Operator =||  
-|norm_2::Operator =||  
+|norm_2::operator-||  
+|norm_2::operator--||  
+|norm_2::operator*=||  
+|norm_2::operator/=||  
+|norm_2::operator++||  
+|norm_2::operator+=||  
+|norm_2::operator=||  
+|norm_2::operator-=||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -110,13 +113,13 @@ class norm_2;
 |Nome|Descrição|  
 |----------|-----------------|  
 |norm_2::g||  
-|norm_2::GR||  
+|norm_2::gr||  
 |norm_2::r||  
-|norm_2::RG||  
+|norm_2::rg||  
 |norm_2::x||  
 |norm_2::xy||  
 |norm_2::y||  
-|norm_2::YX||  
+|norm_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `norm_2`  
@@ -126,7 +129,7 @@ class norm_2;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>norm_2 
+##  <a name="ctor"></a> norm_2 
 
  Padrão construtor inicializa todos os elementos com 0.  
   
@@ -206,7 +209,7 @@ explicit inline norm_2(
  `_Other`  
  O objeto usado para inicializar.  
   
-##  <a name="norm_2__size"></a>tamanho 
+##  <a name="norm_2__size"></a> Tamanho 
 
 ```  
 static const int size = 2;  

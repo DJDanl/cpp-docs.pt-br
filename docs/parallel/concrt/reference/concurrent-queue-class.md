@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_queue
 - CONCURRENT_QUEUE/concurrency::concurrent_queue
@@ -19,19 +20,22 @@ f1_keywords:
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
-dev_langs: C++
-helpviewer_keywords: concurrent_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentqueue-class"></a>Classe concurrent_queue
 O `concurrent_queue` classe é uma classe de contêiner de sequência permite primeiro a entrar, primeiro a sair acesso para seus elementos. Ele permite que um conjunto limitado de operações com segurança de simultaneidade, como `push` e `try_pop`.  
@@ -70,7 +74,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |Nome|Descrição|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|Sobrecarregado. Constrói uma fila simultânea.|  
-|[~ concurrent_queue destruidor](#dtor)|Destrói o simultâneos na fila.|  
+|[~concurrent_queue Destructor](#dtor)|Destrói o simultâneos na fila.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -96,7 +100,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **Namespace:** simultaneidade  
   
-##  <a name="clear"></a>Limpar 
+##  <a name="clear"></a> Limpar 
 
  Limpa a fila simultânea, destruição de qualquer elementos de fila no momento. Este método não é seguro de simultaneidade.  
   
@@ -104,7 +108,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_queue 
+##  <a name="ctor"></a> concurrent_queue 
 
  Constrói uma fila simultânea.  
   
@@ -152,7 +156,7 @@ concurrent_queue(_InputIterator _Begin,
   
  O quarto construtor especifica valores fornecidos pelo intervalo iterator [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a>~ concurrent_queue 
+##  <a name="dtor"></a> ~concurrent_queue 
 
  Destrói o simultâneos na fila.  
   
@@ -160,7 +164,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```  
   
-##  <a name="empty"></a>vazio 
+##  <a name="empty"></a> vazio 
 
  Testa se a fila simultânea está vazia no momento em que este método é chamado. Esse método é seguro de simultaneidade.  
   
@@ -169,12 +173,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se a fila simultânea estava vazia no momento em que vimos, `false` caso contrário.  
+ `true` Se a fila simultânea estava vazia no momento em que vimos, `false` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Embora esse método é seguro de simultaneidade em relação a chamadas para os métodos `push`, `try_pop`, e `empty`, o valor retornado pode estar incorreto no momento é inspecionado pelo thread de chamada.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Retorna uma cópia do alocador usado para construir o simultâneos na fila. Esse método é seguro de simultaneidade.  
   
@@ -185,7 +189,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma cópia do alocador usado para construir o simultâneos na fila.  
   
-##  <a name="push"></a>push 
+##  <a name="push"></a> Enviar por push 
 
  Enfileira um item no final da fila simultânea. Esse método é seguro de simultaneidade.  
   
@@ -200,9 +204,9 @@ void push(T&& _Src);
  O item a ser adicionado à fila.  
   
 ### <a name="remarks"></a>Comentários  
- `push`é seguro de simultaneidade em relação a chamadas para os métodos `push`, `try_pop`, e `empty`.  
+ `push` é seguro de simultaneidade em relação a chamadas para os métodos `push`, `try_pop`, e `empty`.  
   
-##  <a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a> try_pop 
 
  Remove da fila um item da fila se houver um disponível. Esse método é seguro de simultaneidade.  
   
@@ -215,14 +219,14 @@ bool try_pop(T& _Dest);
  Uma referência a um local para armazenar o item removidas da fila.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se um item com êxito removidas da fila, `false` caso contrário.  
+ `true` Se um item com êxito removidas da fila, `false` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Se um item com êxito removidas da fila, o parâmetro `_Dest` recebe o valor removidas da fila, o valor original mantido na fila é destruído e essa função retorna `true`. Se não havia nenhum item para remoção da fila, essa função retorna `false` sem bloqueio e o conteúdo do `_Dest` parâmetro são indefinidos.  
   
- `try_pop`é seguro de simultaneidade em relação a chamadas para os métodos `push`, `try_pop`, e `empty`.  
+ `try_pop` é seguro de simultaneidade em relação a chamadas para os métodos `push`, `try_pop`, e `empty`.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a> unsafe_begin 
 
  Retorna um iterador do tipo `iterator` ou `const_iterator` para o início da fila simultânea. Este método não é seguro de simultaneidade.  
   
@@ -238,7 +242,7 @@ const_iterator unsafe_begin() const;
 ### <a name="remarks"></a>Comentários  
  Os iteradores para o `concurrent_queue` classe são principalmente para depuração, como eles estão lentos e iteração não é segura para simultaneidade em relação a outras operações de fila.  
   
-##  <a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a> unsafe_end 
 
  Retorna um iterador do tipo `iterator` ou `const_iterator` ao final da fila simultânea. Este método não é seguro de simultaneidade.  
   
@@ -254,7 +258,7 @@ const_iterator unsafe_end() const;
 ### <a name="remarks"></a>Comentários  
  Os iteradores para o `concurrent_queue` classe são principalmente para depuração, como eles estão lentos e iteração não é segura para simultaneidade em relação a outras operações de fila.  
   
-##  <a name="unsafe_size"></a>unsafe_size 
+##  <a name="unsafe_size"></a> unsafe_size 
 
  Retorna o número de itens na fila. Este método não é seguro de simultaneidade.  
   
@@ -266,7 +270,7 @@ size_type unsafe_size() const;
  O tamanho da fila simultânea.  
   
 ### <a name="remarks"></a>Comentários  
- `unsafe_size`não é seguro de simultaneidade e pode produzir resultados incorretos se chamado simultaneamente com chamadas para os métodos `push`, `try_pop`, e `empty`.  
+ `unsafe_size` não é seguro de simultaneidade e pode produzir resultados incorretos se chamado simultaneamente com chamadas para os métodos `push`, `try_pop`, e `empty`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)

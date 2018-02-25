@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - DispatchState
 - CONCRTRM/concurrency::DispatchState
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
-dev_langs: C++
-helpviewer_keywords: DispatchState structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d58fc12aa31c9d6a72acac6287a425044d42777c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76deac0daa3a8bce2880b2cc9afda0faae263558
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dispatchstate-structure"></a>Estrutura DispatchState
 O `DispatchState` estrutura é usada para transferir o estado para o `IExecutionContext::Dispatch` método. Ele descreve as circunstâncias em que o `Dispatch` método é chamado em um `IExecutionContext` interface.  
@@ -43,15 +47,15 @@ struct DispatchState;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Dispatchstate:: Dispatchstate](#ctor)|Constrói um novo objeto `DispatchState`.|  
+|[DispatchState::DispatchState](#ctor)|Constrói um novo objeto `DispatchState`.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Dispatchstate:: M_dispatchstatesize](#m_dispatchstatesize)|Tamanho dessa estrutura, que é usado para controle de versão.|  
-|[Dispatchstate:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|Informa se esse contexto tiver inserido o `Dispatch` método porque o contexto anterior assincronamente bloqueada. Isso é usado somente no contexto de programação UMS e é definido como o valor `0` para todos os outros contextos de execução.|  
-|[Dispatchstate:: M_reserved](#m_reserved)|Bits reservados para informações futuras passando.|  
+|[DispatchState::m_dispatchStateSize](#m_dispatchstatesize)|Tamanho dessa estrutura, que é usado para controle de versão.|  
+|[DispatchState::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Informa se esse contexto tiver inserido o `Dispatch` método porque o contexto anterior assincronamente bloqueada. Isso é usado somente no contexto de programação UMS e é definido como o valor `0` para todos os outros contextos de execução.|  
+|[DispatchState::m_reserved](#m_reserved)|Bits reservados para informações futuras passando.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `DispatchState`  
@@ -61,28 +65,28 @@ struct DispatchState;
   
  **Namespace:** simultaneidade  
   
-##  <a name="ctor"></a>Construtor dispatchstate:: Dispatchstate  
+##  <a name="ctor"></a>  Construtor dispatchstate:: Dispatchstate  
  Constrói um novo objeto `DispatchState`.  
   
 ```
 DispatchState();
 ```  
   
-##  <a name="m_dispatchstatesize"></a>Membro de dados dispatchstate:: M_dispatchstatesize  
+##  <a name="m_dispatchstatesize"></a>  DispatchState::m_dispatchStateSize Data Member  
  Tamanho dessa estrutura, que é usado para controle de versão.  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>Membro de dados dispatchstate:: M_fispreviouscontextasynchronouslyblocked  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  DispatchState::m_fIsPreviousContextAsynchronouslyBlocked Data Member  
  Informa se esse contexto tiver inserido o `Dispatch` método porque o contexto anterior assincronamente bloqueada. Isso é usado somente no contexto de programação UMS e é definido como o valor `0` para todos os outros contextos de execução.  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="m_reserved"></a>Membro de dados dispatchstate:: M_reserved  
+##  <a name="m_reserved"></a>  DispatchState::m_reserved Data Member  
  Bits reservados para informações futuras passando.  
   
 ```

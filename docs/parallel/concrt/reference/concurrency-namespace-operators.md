@@ -5,22 +5,24 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9305f860fb393d2f5d3149300d8df4cfa9f6e5a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad453a764a87d0d7e54b914b935fd46f56cd4cac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-operators"></a>Operadores de namespace de simultaneidade
 ||||  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>operador &#124; &#124; Operador  
+##  <a name="operator_lor"></a>  operator&#124;&#124; Operator  
  Cria uma tarefa que será concluída com êxito quando qualquer uma das tarefas fornecidos como argumentos for concluído com êxito.  
   
 ```  
@@ -72,7 +74,7 @@ inline task<void> operator||(
 ### <a name="remarks"></a>Comentários  
  Se ambas as tarefas são canceladas ou lançam exceções, a tarefa retornada será concluída em estado cancelado e uma das exceções, se nenhum for encontrado, será gerada quando você chamar `get()` ou `wait()` nessa tarefa.  
   
-##  <a name="operator_amp_amp"></a>operador&amp; &amp; operador  
+##  <a name="operator_amp_amp"></a>  operador&amp; &amp; operador  
  Cria uma tarefa que será concluída com êxito quando ambas as tarefas fornecidas como argumentos forem concluídas com êxito.  
   
 ```  
@@ -121,7 +123,7 @@ inline task<void>  operator&&(
 ### <a name="remarks"></a>Comentários  
  Se uma das tarefas for cancelada ou gerar uma exceção, a tarefa retornada será concluída antecipadamente, no estado cancelado, e a exceção, se alguma for encontrada, será gerada se você chamar `get()` ou `wait()` nessa tarefa.  
   
-##  <a name="operator_eq_eq"></a>operador Operator = =  
+##  <a name="operator_eq_eq"></a>  operador Operator = =  
  Testa se o `concurrent_vector` objeto à esquerda do operador é igual de `concurrent_vector` objeto no lado direito.  
   
 ```  
@@ -148,14 +150,14 @@ inline bool operator== (
  Um objeto do tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o vetor simultâneo no lado esquerdo do operador é igual do vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
+ `true` Se o vetor simultâneo no lado esquerdo do operador é igual do vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  Dois vetores simultâneas são iguais se tiverem o mesmo número de elementos e seus respectivos elementos têm os mesmos valores. Caso contrário, são diferentes.  
   
  Este método não é seguro de simultaneidade em relação a outros métodos que podem modificar qualquer um dos vetores de simultâneas `_A` ou `_B`.  
   
-##  <a name="operator_neq"></a>operador! = operador  
+##  <a name="operator_neq"></a>  operador! = operador  
  Testa se o `concurrent_vector` objeto à esquerda do operador não é igual de `concurrent_vector` objeto no lado direito.  
   
 ```  
@@ -182,14 +184,14 @@ inline bool operator!= (
  Um objeto do tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se os vetores simultâneos não forem iguais; `false` se os vetores simultâneos são iguais.  
+ `true` Se os vetores simultâneos não forem iguais; `false` se os vetores simultâneos são iguais.  
   
 ### <a name="remarks"></a>Comentários  
  Dois vetores simultâneas são iguais se tiverem o mesmo número de elementos e seus respectivos elementos têm os mesmos valores. Caso contrário, são diferentes.  
   
  Este método não é seguro de simultaneidade em relação a outros métodos que podem modificar qualquer um dos vetores de simultâneas `_A` ou `_B`.  
   
-##  <a name="operator_lt"></a>operador&lt; operador  
+##  <a name="operator_lt"></a>  operador&lt; operador  
  Testa se o `concurrent_vector` objeto à esquerda do operador é menor do que o `concurrent_vector` objeto no lado direito.  
   
 ```  
@@ -216,14 +218,14 @@ inline bool operator<(
  Um objeto do tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o vetor simultâneo no lado esquerdo do operador é menor que o vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
+ `true` Se o vetor simultâneo no lado esquerdo do operador é menor que o vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  O comportamento deste operador é idêntico ao operador equivalente para o `vector` classe no `std` namespace.  
   
  Este método não é seguro de simultaneidade em relação a outros métodos que podem modificar qualquer um dos vetores de simultâneas `_A` ou `_B`.  
   
-##  <a name="operator_lt_eq"></a>operador&lt;operador =  
+##  <a name="operator_lt_eq"></a>  operador&lt;operador =  
  Testa se o `concurrent_vector` objeto à esquerda do operador é menor ou igual a `concurrent_vector` objeto no lado direito.  
   
 ```  
@@ -250,14 +252,14 @@ inline bool operator<= (
  Um objeto do tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o vetor simultâneo no lado esquerdo do operador é menor ou igual do vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
+ `true` Se o vetor simultâneo no lado esquerdo do operador é menor ou igual do vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  O comportamento deste operador é idêntico ao operador equivalente para o `vector` classe no `std` namespace.  
   
  Este método não é seguro de simultaneidade em relação a outros métodos que podem modificar qualquer um dos vetores de simultâneas `_A` ou `_B`.  
   
-##  <a name="operator_gt"></a>operador&gt; operador  
+##  <a name="operator_gt"></a>  operador&gt; operador  
  Testa se o `concurrent_vector` objeto à esquerda do operador é maior que o `concurrent_vector` objeto no lado direito.  
   
 ```  
@@ -284,14 +286,14 @@ inline bool operator>(
  Um objeto do tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o vetor simultâneo no lado esquerdo do operador é maior do que o vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
+ `true` Se o vetor simultâneo no lado esquerdo do operador é maior do que o vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  O comportamento deste operador é idêntico ao operador equivalente para o `vector` classe no `std` namespace.  
   
  Este método não é seguro de simultaneidade em relação a outros métodos que podem modificar qualquer um dos vetores de simultâneas `_A` ou `_B`.  
   
-##  <a name="operator_gt_eq"></a>operador&gt;operador =  
+##  <a name="operator_gt_eq"></a>  operador&gt;operador =  
  Testa se o `concurrent_vector` objeto à esquerda do operador é maior que ou igual a `concurrent_vector` objeto no lado direito.  
   
 ```  
@@ -318,7 +320,7 @@ inline bool operator>= (
  Um objeto do tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o vetor simultâneo no lado esquerdo do operador é maior que ou igual do vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
+ `true` Se o vetor simultâneo no lado esquerdo do operador é maior que ou igual do vetor simultâneo no lado direito do operador; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  O comportamento deste operador é idêntico ao operador equivalente para o `vector` classe no `std` namespace.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_vector
 - CONCURRENT_VECTOR/concurrency::concurrent_vector
@@ -36,19 +37,22 @@ f1_keywords:
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::shrink_to_fit
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::size
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::swap
-dev_langs: C++
-helpviewer_keywords: concurrent_vector class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1b765be1043ac69ed735eb91deaf9419bce7f017
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 O `concurrent_vector` classe é uma classe de contêiner de sequência que permite acesso aleatório para qualquer elemento. Habilita a simultaneidade-safe acrescentar, acesso de elemento, acesso de iterador e operações de passagem do iterador.  
@@ -129,7 +133,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador]](#operator_at)|Sobrecarregado. Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é seguro de simultaneidade para operações de leitura e também ao crescimento vetor, desde que o certificar-se de que o valor `_Index` é menor que o tamanho do vetor simultâneo.|  
+|[operator[]](#operator_at)|Sobrecarregado. Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é seguro de simultaneidade para operações de leitura e também ao crescimento vetor, desde que o certificar-se de que o valor `_Index` é menor que o tamanho do vetor simultâneo.|  
 |[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_vector` deste objeto. Este método não é seguro de simultaneidade.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -147,7 +151,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
  **Namespace:** simultaneidade  
   
-##  <a name="assign"></a>atribuir 
+##  <a name="assign"></a> atribuir 
 
  Apaga os elementos do vetor simultâneo e atribui a ele ou `_N` copia de `_Item`, ou valores especificados pelo intervalo iterator [ `_Begin`, `_End`). Este método não é seguro de simultaneidade.  
   
@@ -178,9 +182,9 @@ void assign(_InputIterator _Begin,
  Um iterador para após o último elemento de intervalo de origem.  
   
 ### <a name="remarks"></a>Comentários  
- `assign`não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método.  
+ `assign` não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método.  
   
-##  <a name="at"></a>em 
+##  <a name="at"></a> em 
 
  Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é seguro de simultaneidade para operações de leitura e também ao crescimento vetor, como certificar-se de que o valor `_Index` é menor que o tamanho do vetor simultâneo.  
   
@@ -202,7 +206,7 @@ const_reference at(size_type _Index) const;
   
  O método gera `out_of_range` se `_Index` é maior que ou igual ao tamanho do vetor simultâneo, e `range_error` se o índice for para uma parte danificada do vetor. Para obter detalhes sobre como um vetor pode ficar corrompido, consulte [objetos e contêineres paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
-##  <a name="back"></a>Voltar 
+##  <a name="back"></a> Voltar 
 
  Retorna uma referência ou uma `const` referência para o último elemento em vector simultâneo. Se o vetor simultâneo estiver vazio, o valor retornado é indefinido. Esse método é seguro de simultaneidade.  
   
@@ -215,7 +219,7 @@ const_reference back() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência ou uma `const` referência para o último elemento em vector simultâneo.  
   
-##  <a name="begin"></a>começar 
+##  <a name="begin"></a> Começar 
 
  Retorna um iterador do tipo `iterator` ou `const_iterator` para o início do vetor simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -228,7 +232,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `iterator` ou `const_iterator` para o início do vetor simultâneo.  
   
-##  <a name="capacity"></a>capacidade 
+##  <a name="capacity"></a> Capacidade 
 
  Retorna o tamanho máximo que o vetor simultâneo pode atingir sem precisar alocar mais memória. Esse método é seguro de simultaneidade.  
   
@@ -242,7 +246,7 @@ size_type capacity() const;
 ### <a name="remarks"></a>Comentários  
  Ao contrário de uma biblioteca padrão C++ `vector`, um `concurrent_vector` objeto não move os elementos existentes se aloca mais memória.  
   
-##  <a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a> cbegin 
 
  Retorna um iterador do tipo `const_iterator` para o início do vetor simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -253,7 +257,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `const_iterator` para o início do vetor simultâneo.  
   
-##  <a name="cend"></a>cend 
+##  <a name="cend"></a> cend 
 
  Retorna um iterador do tipo `const_iterator` ao final do vector simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -264,7 +268,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `const_iterator` ao final do vector simultâneo.  
   
-##  <a name="clear"></a>Limpar 
+##  <a name="clear"></a> Limpar 
 
  Apaga todos os elementos no vector simultâneo. Este método não é seguro de simultaneidade.  
   
@@ -273,9 +277,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `clear`não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método. `clear`não liberar matrizes internos. Para liberar matrizes internos, chame a função `shrink_to_fit` depois `clear`.  
+ `clear` não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método. `clear` não liberar matrizes internos. Para liberar matrizes internos, chame a função `shrink_to_fit` depois `clear`.  
   
-##  <a name="ctor"></a>concurrent_vector 
+##  <a name="ctor"></a> concurrent_vector 
 
  Constrói um vetor simultâneo.  
   
@@ -349,7 +353,7 @@ concurrent_vector(_InputIterator _Begin,
   
  O construtor de último especifica valores fornecidos pelo intervalo iterador [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a>~ concurrent_vector 
+##  <a name="dtor"></a> ~concurrent_vector 
 
  Apaga todos os elementos e destrói esse vetor simultânea.  
   
@@ -357,7 +361,7 @@ concurrent_vector(_InputIterator _Begin,
 ~concurrent_vector();
 ```  
   
-##  <a name="crbegin"></a>crbegin 
+##  <a name="crbegin"></a> crbegin 
 
  Retorna um iterador do tipo `const_reverse_iterator` para o início do vetor simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -368,7 +372,7 @@ const_reverse_iterator crbegin() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `const_reverse_iterator` para o início do vetor simultâneo.  
   
-##  <a name="crend"></a>crend 
+##  <a name="crend"></a> crend 
 
  Retorna um iterador do tipo `const_reverse_iterator` ao final do vector simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -379,7 +383,7 @@ const_reverse_iterator crend() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `const_reverse_iterator` ao final do vector simultâneo.  
   
-##  <a name="empty"></a>vazio 
+##  <a name="empty"></a> vazio 
 
  Testa se o vetor simultâneo está vazio no momento em que este método é chamado. Esse método é seguro de simultaneidade.  
   
@@ -388,9 +392,9 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o vetor estava vazio no momento em que a função foi chamada, `false` caso contrário.  
+ `true` Se o vetor estava vazio no momento em que a função foi chamada, `false` caso contrário.  
   
-##  <a name="end"></a>final 
+##  <a name="end"></a> Final 
 
  Retorna um iterador do tipo `iterator` ou `const_iterator` ao final do vector simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -403,7 +407,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `iterator` ou `const_iterator` ao final do vector simultâneo.  
   
-##  <a name="front"></a>frente 
+##  <a name="front"></a> Frente 
 
  Retorna uma referência ou uma `const` referência para o primeiro elemento no vector simultâneo. Se o vetor simultâneo estiver vazio, o valor retornado é indefinido. Esse método é seguro de simultaneidade.  
   
@@ -416,7 +420,7 @@ const_reference front() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência ou uma `const` referência para o primeiro elemento no vector simultâneo.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Retorna uma cópia do alocador usado para construir o vetor simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -427,7 +431,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma cópia do alocador usado para construir o `concurrent_vector` objeto.  
   
-##  <a name="grow_by"></a>grow_by 
+##  <a name="grow_by"></a> grow_by 
 
  Aumentar esse vetor simultânea por `_Delta` elementos. Esse método é seguro de simultaneidade.  
   
@@ -453,7 +457,7 @@ iterator grow_by(
 ### <a name="remarks"></a>Comentários  
  Se `_Item` não for especificado, os novos elementos são padrão construído.  
   
-##  <a name="grow_to_at_least"></a>grow_to_at_least 
+##  <a name="grow_to_at_least"></a> grow_to_at_least 
 
  Aumentar esse vetor simultânea até que tenha pelo menos `_N` elementos. Esse método é seguro de simultaneidade.  
   
@@ -468,7 +472,7 @@ iterator grow_to_at_least(size_type _N);
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador que aponta para o início da sequência anexado, ou para o elemento no índice `_N` se nenhum elemento foram acrescentado.  
   
-##  <a name="max_size"></a>max_size 
+##  <a name="max_size"></a> max_size 
 
  Retorna o número máximo de elementos de que vetor simultâneo pode conter. Esse método é seguro de simultaneidade.  
   
@@ -479,7 +483,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número máximo de elementos de `concurrent_vector` objeto pode conter.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Atribui o conteúdo de outro `concurrent_vector` deste objeto. Este método não é seguro de simultaneidade.  
   
@@ -505,7 +509,7 @@ concurrent_vector& operator= (
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `concurrent_vector` objeto.  
   
-##  <a name="operator_at"></a>operador] 
+##  <a name="operator_at"></a> operador] 
 
  Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é seguro de simultaneidade para operações de leitura e também ao crescimento vetor, desde que o certificar-se de que o valor `_Index` é menor que o tamanho do vetor simultâneo.  
   
@@ -527,7 +531,7 @@ const_reference operator[](size_type _index) const;
   
  Nenhuma verificação é executada para garantir que de limites `_Index` é um índice válido no vetor de simultâneas.  
   
-##  <a name="push_back"></a>push_back 
+##  <a name="push_back"></a> push_back 
 
  Anexa o item especificado ao final do vetor simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -544,7 +548,7 @@ iterator push_back(T&& _Item);
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador para item anexado.  
   
-##  <a name="rbegin"></a>rbegin 
+##  <a name="rbegin"></a> rbegin 
 
  Retorna um iterador do tipo `reverse_iterator` ou `const_reverse_iterator` para o início do vetor simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -557,7 +561,7 @@ const_reverse_iterator rbegin() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `reverse_iterator` ou `const_reverse_iterator` para o início do vetor simultâneo.  
   
-##  <a name="rend"></a>rend 
+##  <a name="rend"></a> rend 
 
  Retorna um iterador do tipo `reverse_iterator` ou `const_reverse_iterator` ao final do vector simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -570,7 +574,7 @@ const_reverse_iterator rend() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador do tipo `reverse_iterator` ou `const_reverse_iterator` ao final do vector simultâneo.  
   
-##  <a name="reserve"></a>reserva 
+##  <a name="reserve"></a> reserva 
 
  Aloca espaço suficiente para atingir o vetor simultâneo tamanho `_N` sem precisar alocar mais memória mais tarde. Este método não é seguro de simultaneidade.  
   
@@ -583,9 +587,9 @@ void reserve(size_type _N);
  O número de elementos para reservar espaço para.  
   
 ### <a name="remarks"></a>Comentários  
- `reserve`não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método. A capacidade do vetor simultânea depois que o método retorna pode ser maior do que a reserva solicitada.  
+ `reserve` não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método. A capacidade do vetor simultânea depois que o método retorna pode ser maior do que a reserva solicitada.  
   
-##  <a name="resize"></a>redimensionar 
+##  <a name="resize"></a> Redimensionar 
 
  Altera o tamanho do vetor simultâneo para o tamanho solicitado, exclusão ou adição de elementos conforme necessário. Este método não é seguro de simultaneidade.  
   
@@ -608,9 +612,9 @@ void resize(
 ### <a name="remarks"></a>Comentários  
  Se o tamanho do contêiner for menor que o tamanho solicitado, os elementos são adicionados ao vetor até atingir o tamanho solicitado. Se o tamanho do contêiner for maior do que o tamanho solicitado, os elementos mais próximos do fim do contêiner são excluídos até que o contêiner atinge o tamanho `_N`. Se o tamanho atual do contêiner for igual ao tamanho solicitado, nenhuma ação será realizada.  
   
- `resize`não é simultaneidade segura. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método.  
+ `resize` não é simultaneidade segura. Certifique-se de que nenhum outro thread está invocando métodos em vetor simultâneo quando você chamar esse método.  
   
-##  <a name="shrink_to_fit"></a>shrink_to_fit 
+##  <a name="shrink_to_fit"></a> shrink_to_fit 
 
  Compacta a representação interna do vetor simultâneo para reduzir a fragmentação e otimizar o uso de memória. Este método não é seguro de simultaneidade.  
   
@@ -619,9 +623,9 @@ void shrink_to_fit();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Esse método internamente novamente alocará elementos de movimentação de memória, invalidar todos os iteradores. `shrink_to_fit`não é seguro de simultaneidade. Certifique-se de que nenhum outro thread é invocar métodos em vetor simultâneo ao chamar essa função.  
+ Esse método internamente novamente alocará elementos de movimentação de memória, invalidar todos os iteradores. `shrink_to_fit` não é seguro de simultaneidade. Certifique-se de que nenhum outro thread é invocar métodos em vetor simultâneo ao chamar essa função.  
   
-##  <a name="size"></a>tamanho 
+##  <a name="size"></a> Tamanho 
 
  Retorna o número de elementos no vector simultâneo. Esse método é seguro de simultaneidade.  
   
@@ -635,7 +639,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho retornado é garantido para incluir todos os elementos adicionados por chamadas para a função `push_back`, ou aumentar as operações concluídas antes de chamar esse método. No entanto, ele também pode incluir elementos que estão alocados, mas ainda estão em construção por chamadas simultâneas para qualquer um dos métodos de crescimento.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> swap 
 
  Troca o conteúdo dos dois vetores simultâneas. Este método não é seguro de simultaneidade.  
   

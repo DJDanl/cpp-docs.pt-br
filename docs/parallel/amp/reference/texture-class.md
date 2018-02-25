@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture
 - AMP_GRAPHICS/texture
@@ -22,18 +23,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="texture-class"></a>Classe texture
 Uma textura é uma agregação de dados um `accelerator_view` no domínio de extensão. É uma coleção de variáveis para cada elemento em um domínio de extensão. Cada variável contém um valor que corresponde ao tipo primitivo do C++ ( `unsigned int`, `int`, `float`, `double`), um tipo escalar ( `norm`, ou `unorm`), ou um tipo vector curto.  
@@ -84,8 +87,8 @@ class texture;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operator)](#operator_call)|Retorna o valor do elemento que é especificado pelos parâmetros.|  
-|[operador]](#operator_at)|Retorna o elemento no índice especificado.|  
+|[operator()](#operator_call)|Retorna o valor do elemento que é especificado pelos parâmetros.|  
+|[operator[]](#operator_at)|Retorna o elemento no índice especificado.|  
 |[operator=](#operator_eq)|Copia especificado [textura](texture-class.md) deste objeto.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
@@ -112,7 +115,7 @@ class texture;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a>~ textura 
+##  <a name="dtor"></a> ~ textura 
 
  Destrói a `texture` objeto.  
   
@@ -120,7 +123,7 @@ class texture;
 ~texture() restrict(cpu);
 ```  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
  Obtém o [accelerator_view](accelerator-view-class.md) que é o destino preferencial para esse textura a ser copiado para.  
   
@@ -128,7 +131,7 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  Copia o `texture` objeto para o destino, fazendo uma cópia profunda.  
   
@@ -147,7 +150,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  O tipo dos elementos na textura.  
   
-##  <a name="data"></a>dados 
+##  <a name="data"></a> data 
 
  Retorna um ponteiro de CPU para os dados brutos desse textura.  
   
@@ -161,7 +164,7 @@ const void* data() const restrict(cpu);
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para os dados brutos da textura.  
   
-##  <a name="depth_pitch"></a>depth_pitch 
+##  <a name="depth_pitch"></a> depth_pitch 
 
  Obtém o número de bytes entre cada fatia de profundidade em uma textura 3D de preparo na CPU.  
   
@@ -169,7 +172,7 @@ const void* data() const restrict(cpu);
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
 ```  
   
-##  <a name="get"></a>Obter 
+##  <a name="get"></a> Obter 
 
  Retorna o valor do elemento no índice especificado.  
   
@@ -184,7 +187,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  O valor do elemento no índice especificado.  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  Retorna o que é o destino preferencial para esse textura a ser copiado para accelerator_view.  
   
@@ -195,7 +198,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 ### <a name="return-value"></a>Valor de retorno  
  O [accelerator_view](accelerator-view-class.md) que é o destino preferencial para esse textura a ser copiado para.  
   
-##  <a name="get_depth_pitch"></a>get_depth_pitch 
+##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
  Retorna o número de bytes entre cada fatia de profundidade em uma 3D preparo textura na CPU.  
   
@@ -206,7 +209,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O número de bytes entre cada fatia de profundidade em uma 3D preparo textura na CPU.  
   
-##  <a name="get_row_pitch"></a>get_row_pitch 
+##  <a name="get_row_pitch"></a> get_row_pitch 
 
  Retorna o número de bytes entre cada linha em uma textura de preparo 2-dimensional ou entre cada linha de uma fatia de profundidade em 3-dimensional textura de preparo.  
   
@@ -217,7 +220,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O número de bytes entre cada linha em uma textura de preparo 2-dimensional ou entre cada linha de uma fatia de profundidade em 3-dimensional textura de preparo.  
   
-##  <a name="operator_call"></a>Operator) 
+##  <a name="operator_call"></a> operator() 
 
  Retorna o valor do elemento que é especificado pelos parâmetros.  
   
@@ -260,7 +263,7 @@ const value_type operator() (
 ### <a name="return-value"></a>Valor de retorno  
  O valor do elemento que é especificado pelos parâmetros.  
   
-##  <a name="operator_at"></a>operador] 
+##  <a name="operator_at"></a> operador] 
 
  Retorna o elemento no índice especificado.  
   
@@ -281,7 +284,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  O elemento no índice especificado.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Copia especificado [textura](texture-class.md) deste objeto.  
   
@@ -301,7 +304,7 @@ texture& operator= (
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `texture` objeto.  
   
-##  <a name="rank"></a>classificação 
+##  <a name="rank"></a> Classificação 
 
  Obtém a classificação do `texture` objeto.  
   
@@ -309,7 +312,7 @@ texture& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="row_pitch"></a>row_pitch 
+##  <a name="row_pitch"></a> row_pitch 
 
  Obtém o número de bytes entre cada linha em um 2D ou 3D preparo textura na CPU.  
   
@@ -317,7 +320,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a>definir 
+##  <a name="set"></a> Definir 
 
  Define o valor do elemento no índice especificado.  
   
@@ -337,7 +340,7 @@ void set(
  `value`  
  O novo valor do elemento.  
   
-##  <a name="ctor"></a>textura 
+##  <a name="ctor"></a> textura 
 
  Inicializa uma nova instância da classe `texture`.  
   

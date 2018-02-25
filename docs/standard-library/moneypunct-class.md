@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmon/std::moneypunct
 - xlocmon/std::moneypunct::char_type
@@ -29,7 +30,8 @@ f1_keywords:
 - xlocmon/std::moneypunct::pos_format
 - xlocmon/std::moneypunct::positive_sign
 - xlocmon/std::moneypunct::thousands_sep
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::moneypunct [C++]
 - std::moneypunct [C++], char_type
@@ -53,16 +55,17 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 569aa946ac324c833e651e6b9b74b8cc402a4d04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8a9d1d621d9969d47976911bf52724c29888594d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 A classe de modelo que descreve um objeto que pode funcionar como uma faceta de localidade para descrever as sequências do tipo `CharType` usadas para representar um campo de entrada monetário ou um campo de saída monetário. Se o parâmetro de modelo `Intl` for `true`, as convenções internacionais serão observadas.  
@@ -497,7 +500,7 @@ explicit moneypunct(size_t _Refs = 0);
   
 -   1: o tempo de vida do objeto deve ser gerenciado manualmente.  
   
--   \>1: esses valores não são definidos.  
+-   \> 1: esses valores não são definidos.  
   
  Nenhum exemplo direto é possível, pois o destruidor está protegido.  
   

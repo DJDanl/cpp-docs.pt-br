@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
-dev_langs: C++
-helpviewer_keywords: IResourceManager structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0a88cfafe9bbfdc04776050a0a956bf9a8b6766e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iresourcemanager-structure"></a>Estrutura IResourceManager
 Uma interface para o Gerenciador de recursos do tempo de execução de simultaneidade. Essa é a interface pela qual os agendadores se comunicar com o Gerenciador de recursos.  
@@ -46,18 +50,18 @@ struct IResourceManager;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Iresourcemanager:: osversion](#osversion)|Um tipo enumerado que representa a versão do sistema operacional.|  
+|[IResourceManager::OSVersion](#osversion)|Um tipo enumerado que representa a versão do sistema operacional.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[: Createnodetopology](#createnodetopology)|Presente somente em depuração compilações do tempo de execução, esse método é um gancho de teste desenvolvido para facilitar o teste do Gerenciador de recursos em variáveis de topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.|  
-|[: Getavailablenodecount](#getavailablenodecount)|Retorna o número de nós disponíveis para o Gerenciador de recursos.|  
-|[: Getfirstnode](#getfirstnode)|Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.|  
-|[Iresourcemanager](#reference)|Incrementa a contagem de referência na instância do Gerenciador de recursos.|  
-|[: Registerscheduler](#registerscheduler)|Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface que é retornado.|  
-|[Iresourcemanager](#release)|Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência chegar a `0`.|  
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|Presente somente em depuração compilações do tempo de execução, esse método é um gancho de teste desenvolvido para facilitar o teste do Gerenciador de recursos em variáveis de topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.|  
+|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Retorna o número de nós disponíveis para o Gerenciador de recursos.|  
+|[IResourceManager::GetFirstNode](#getfirstnode)|Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.|  
+|[IResourceManager::Reference](#reference)|Incrementa a contagem de referência na instância do Gerenciador de recursos.|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface que é retornado.|  
+|[IResourceManager::Release](#release)|Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência chegar a `0`.|  
   
 ## <a name="remarks"></a>Comentários  
  Use o [CreateResourceManager](concurrency-namespace-functions.md) função para obter uma interface para a instância do Gerenciador de recursos de singleton. O método incrementa a contagem de referência no Gerenciador de recursos, e você deve chamar o [Iresourcemanager](#release) método para liberar a referência ao terminar com o Gerenciador de recursos. Normalmente, cada Agendador que você criar serão invocar esse método durante a criação e liberar a referência para o Gerenciador de recursos, depois que ela é desligada.  
@@ -70,7 +74,7 @@ struct IResourceManager;
   
  **Namespace:** simultaneidade  
   
-##  <a name="createnodetopology"></a>Método: Createnodetopology  
+##  <a name="createnodetopology"></a>  Método: Createnodetopology  
  Presente somente em depuração compilações do tempo de execução, esse método é um gancho de teste desenvolvido para facilitar o teste do Gerenciador de recursos em variáveis de topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.  
   
 ```
@@ -99,7 +103,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) é gerada se esse método é chamado, enquanto outros agendadores existem no processo.  
   
-##  <a name="getavailablenodecount"></a>Método: Getavailablenodecount  
+##  <a name="getavailablenodecount"></a>  IResourceManager::GetAvailableNodeCount Method  
  Retorna o número de nós disponíveis para o Gerenciador de recursos.  
   
 ```
@@ -109,7 +113,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O número de nós disponíveis para o Gerenciador de recursos.  
   
-##  <a name="getfirstnode"></a>Método: Getfirstnode  
+##  <a name="getfirstnode"></a>  Método: Getfirstnode  
  Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.  
   
 ```
@@ -119,14 +123,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.  
   
-##  <a name="iresourcemanager__osversion"></a>Enumeração iresourcemanager:: osversion  
+##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
  Um tipo enumerado que representa a versão do sistema operacional.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="reference"></a>Método Iresourcemanager::  
+##  <a name="reference"></a>  Método Iresourcemanager::  
  Incrementa a contagem de referência na instância do Gerenciador de recursos.  
   
 ```
@@ -136,7 +140,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  A contagem de referência resultante.  
   
-##  <a name="registerscheduler"></a>Método: Registerscheduler  
+##  <a name="registerscheduler"></a>  IResourceManager::RegisterScheduler Method  
  Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface que é retornado.  
   
 ```
@@ -160,7 +164,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  O método gera uma `invalid_argument` exceção se o parâmetro `pScheduler` tem o valor `NULL` ou se o parâmetro `version` não é uma versão válida para a interface de comunicação.  
   
-##  <a name="release"></a>Método Iresourcemanager:  
+##  <a name="release"></a>  Método Iresourcemanager:  
  Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência chegar a `0`.  
   
 ```

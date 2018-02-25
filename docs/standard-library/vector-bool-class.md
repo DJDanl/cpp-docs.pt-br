@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vector<bool>
 - vector/std::vector::const_pointer
@@ -14,7 +15,8 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8117c3ac56305637164886c6c27f7f20528d64a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eff3076c144bbd10a7c1a93315ab26ebb97bc0e3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 A classe `vector<bool>` é uma especialização parcial de [vector](../standard-library/vector-class.md) para elementos do tipo `bool`. Ela tem um alocador para o tipo subjacente que é usado pela especialização, que fornece otimização de espaço ao armazenar um valor `bool` por bit.  

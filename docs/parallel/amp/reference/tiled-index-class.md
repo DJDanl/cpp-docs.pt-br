@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -22,19 +23,22 @@ f1_keywords:
 - AMP/Concurrency::tiled_index::tile_dim2
 - AMP/Concurrency::tiled_index::tile_origin
 - AMP/Concurrency::tiled_index::tile_extent
-dev_langs: C++
-helpviewer_keywords: tiled_index class
+dev_langs:
+- C++
+helpviewer_keywords:
+- tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornece um índice em uma [tiled_extent](tiled-extent-class.md) objeto. Essa classe tem propriedades para acessar elementos relativo à origem do bloco local e relativo à origem global. Para obter mais informações sobre os espaços de lado a lado, consulte [usando blocos](../../../parallel/amp/using-tiles.md).  
@@ -94,7 +98,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[barreira constante](#tiled_index__barrier)|Armazena um [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no bloco atual de threads.|  
 |||  
-|[Constante global](#tiled_index__global)|Armazena um [índice](index-class.md) objeto do índice de classificação 1, 2 ou 3 que representa global em um [grade](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
+|[global Constant](#tiled_index__global)|Armazena um [índice](index-class.md) objeto do índice de classificação 1, 2 ou 3 que representa global em um [grade](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
 |[Constante local](#tiled_index__local)|Armazena um `index` o objeto de índice de classificação 1, 2 ou 3 que representa o relativo no bloco atual de um [tiled_extent](tiled-extent-class.md) objeto.|  
 |[Constante de classificação](#tiled_index__rank)|Armazena a classificação do `tiled_index` objeto.|  
 |[Constante Tile](#tiled_index__tile)|Armazena um `index` objeto de classificação 1, 2 ou 3 que representa as coordenadas do bloco atual de um `tiled_extent` objeto.|  
@@ -122,7 +126,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Namespace:** Simultaneidade  
 
 
-## <a name="tiled_index__ctor"></a>Construtor de tiled_index  
+## <a name="tiled_index__ctor">Construtor de tiled_index</a>  
 Inicializa uma nova instância da classe `tiled_index`.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -144,13 +148,13 @@ tiled_index(
  Global [índice](index-class.md) do construído `tiled_index`.  
   
  `_Local`  
- Local [índice](index-class.md) do construído`tiled_index`  
+ Local [índice](index-class.md) do construído `tiled_index`  
   
  `_Tile`  
- O bloco [índice](index-class.md) do construído`tiled_index`  
+ O bloco [índice](index-class.md) do construído `tiled_index`  
   
  `_Tile_origin`  
- A origem de bloco [índice](index-class.md) do construído`tiled_index`  
+ A origem de bloco [índice](index-class.md) do construído `tiled_index`  
   
  `_Barrier`  
  O [tile_barrier](tile-barrier-class.md) objeto o construído `tiled_index`.  
@@ -167,7 +171,7 @@ tiled_index(
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicializa uma nova instância do `tile_index` classe copiando especificado `tiled_index` objeto.|  
 
 
-## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
+## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
 Retorna um [extensão](extent-class.md) objeto que tem os valores de `tiled_index` argumentos de modelo `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -179,7 +183,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ## <a name="return-value"></a>Valor de retorno  
  Um `extent` objeto que tem os valores de `tiled_index` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
 
-## <a name="tiled_index__barrier"></a>barreira   
+## <a name="tiled_index__barrier"></a>  barrier   
 Armazena um [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no bloco atual de threads.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -188,7 +192,7 @@ Armazena um [tile_barrier](tile-barrier-class.md) objeto que representa uma barr
 const tile_barrier barrier;  
 ```  
 
-## <a name="tiled_index__global"></a>global   
+## <a name="tiled_index__global"></a>  global   
 Armazena um [índice](index-class.md) objeto de classificação 1, 2 ou 3, que representa o índice global de um objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -197,7 +201,7 @@ Armazena um [índice](index-class.md) objeto de classificação 1, 2 ou 3, que r
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>local   
+## <a name="tiled_index__local"></a>  local   
 Armazena um [índice](index-class.md) o objeto de índice de classificação 1, 2 ou 3 que representa o relativo no bloco atual de um [tiled_extent](tiled-extent-class.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -206,7 +210,7 @@ Armazena um [índice](index-class.md) o objeto de índice de classificação 1, 
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>classificação   
+## <a name="tiled_index__rank"></a>  rank   
 Armazena a classificação do `tiled_index` objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -215,7 +219,7 @@ Armazena a classificação do `tiled_index` objeto.
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>lado a lado   
+## <a name="tiled_index__tile"></a>  lado a lado   
 Armazena um [índice](index-class.md) objeto de classificação 1, 2 ou 3 que representa as coordenadas do bloco atual de um [tiled_extent](tiled-extent-class.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -224,7 +228,7 @@ Armazena um [índice](index-class.md) objeto de classificação 1, 2 ou 3 que re
 const index<rank> tile;  
 ```  
   
-## <a name="tiled_index__tile_dim0"></a>tile_dim0  
+## <a name="tiled_index__tile_dim0"></a>  tile_dim0  
 Armazena o comprimento da dimensão mais significativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -233,7 +237,7 @@ Armazena o comprimento da dimensão mais significativo.
 static const int tile_dim0 = _Dim0;  
 ```  
    
-## <a name="tiled_index__tile_dim1"></a>tile_dim1   
+## <a name="tiled_index__tile_dim1"></a>  tile_dim1   
 Armazena o comprimento da dimensão próximo ao mais significativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -241,7 +245,7 @@ Armazena o comprimento da dimensão próximo ao mais significativo.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tiled_index__tile_dim2"></a>tile_dim2   
+## <a name="tiled_index__tile_dim2"></a>  tile_dim2   
 Armazena o comprimento da dimensão menos significativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -249,7 +253,7 @@ Armazena o comprimento da dimensão menos significativo.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tiled_index__tile_origin"></a>tile_origin   
+## <a name="tiled_index__tile_origin"></a>  tile_origin   
 Armazena um [índice](index-class.md) objeto de coordenadas de classificação 1, 2 ou 3 que representa global da origem do bloco atual dentro de um [tiled_extent](tiled-extent-class.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -257,7 +261,7 @@ Armazena um [índice](index-class.md) objeto de coordenadas de classificação 1
 ```  
 const index<rank> tile_origin  
 ```  
-## <a name="tile_extent"></a>tile_extent
+## <a name="tile_extent"></a>  tile_extent
   Obtém um [extensão](extent-class.md) objeto que tem os valores a `tiled_index` argumentos de template `tiled_index` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ## <a name="syntax"></a>Sintaxe  

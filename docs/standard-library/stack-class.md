@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - stack/std::stack::container_type
 - stack/std::stack::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - stack/std::stack::push
 - stack/std::stack::size
 - stack/std::stack::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::stack [C++], container_type
 - std::stack [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 824ca5e9726146323639974f9506d4efbf454d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 876b4614438e92b3f90482a91f13f33b78e8266a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="stack-class"></a>Classe de pilha
 Uma classe do adaptador de contêiner de modelo que fornece uma restrição de funcionalidade que limita o acesso ao elemento mais recentemente adicionado a alguns tipos de contêiner subjacentes. A classe stack é usada quando é importante esclarecer que apenas as operações de pilha estão sendo executadas no contêiner.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message_processor
 - AGENTS/concurrency::message_processor
@@ -14,19 +15,22 @@ f1_keywords:
 - AGENTS/concurrency::message_processor::sync_send
 - AGENTS/concurrency::message_processor::wait
 - AGENTS/concurrency::message_processor::process_incoming_message
-dev_langs: C++
-helpviewer_keywords: message_processor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a7646020bd30b817957cea87dad8ec5c7f3aa8ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="messageprocessor-class"></a>Classe message_processor
 O `message_processor` classe é a classe base abstrata para processamento de `message` objetos. Não há nenhuma garantia sobre a ordem das mensagens.  
@@ -56,7 +60,7 @@ class message_processor;
 |----------|-----------------|  
 |[async_send](#async_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.|  
 |[sync_send](#sync_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.|  
-|[Aguarde](#wait)|Quando substituído em uma classe derivada, aguarda a todas as operações assíncronas concluir.|  
+|[wait](#wait)|Quando substituído em uma classe derivada, aguarda a todas as operações assíncronas concluir.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
@@ -72,7 +76,7 @@ class message_processor;
   
  **Namespace:** simultaneidade  
   
-##  <a name="async_send"></a>async_send 
+##  <a name="async_send"></a> async_send 
 
  Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.  
   
@@ -87,7 +91,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Comentários  
  Implementações de processador devem substituir este método.  
   
-##  <a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a> process_incoming_message 
 
  Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre é adicionada uma nova mensagem e a fila é encontrada em branco.  
   
@@ -98,7 +102,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>Comentários  
  Implementações de bloco de mensagens devem substituir este método.  
   
-##  <a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a> sync_send 
 
  Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.  
   
@@ -113,7 +117,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Comentários  
  Implementações de processador devem substituir este método.  
   
-##  <a name="wait"></a>Aguarde 
+##  <a name="wait"></a> Aguarde 
 
  Quando substituído em uma classe derivada, aguarda a todas as operações assíncronas concluir.  
   

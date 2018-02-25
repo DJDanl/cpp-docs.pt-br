@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_x
 - amp_short_vectors/Concurrency::graphics::int_3::operator-=
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 395d548e322ffcaed91536a781c7d5d821b6a446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d66a71701fb0806dbd93490587a9e0d8b3af46fe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="int3-class"></a>Classe int_3
 Representa um vetor curto de três inteiros.  
@@ -158,21 +161,21 @@ class int_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|int_3::Operator-||  
-|int_3::Operator –||  
-|int_3::Operator % =||  
-|int_3::Operator & =||  
-|int_3::Operator * =||  
-|int_3::Operator / =||  
-|int_3::Operator ^ =||  
-|int_3::Operator &#124; =||  
-|int_3::Operator ~||  
-|int_3::Operator + +||  
-|+ int_3::Operator =||  
-|int_3::Operator <\<=||  
-|int_3::Operator =||  
-|int_3::Operator =||  
-|int_3::Operator >> =||  
+|int_3::operator-||  
+|int_3::operator--||  
+|int_3::operator%=||  
+|int_3::operator&=||  
+|int_3::operator*=||  
+|int_3::operator/=||  
+|int_3::operator^=||  
+|int_3::operator&#124;=||  
+|int_3::operator~||  
+|int_3::operator++||  
+|int_3::operator+=||  
+|int_3::operator<\<=||  
+|int_3::operator=||  
+|int_3::operator-=||  
+|int_3::operator>>=||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -185,34 +188,34 @@ class int_3;
 |Nome|Descrição|  
 |----------|-----------------|  
 |int_3::b||  
-|int_3::BG||  
-|int_3::BGR||  
+|int_3::bg||  
+|int_3::bgr||  
 |int_3::br||  
 |int_3::brg||  
 |int_3::g||  
-|int_3::GB||  
-|int_3::GBR||  
-|int_3::GR||  
+|int_3::gb||  
+|int_3::gbr||  
+|int_3::gr||  
 |int_3::grb||  
 |int_3::r||  
-|int_3::RB||  
+|int_3::rb||  
 |int_3::rbg||  
-|int_3::RG||  
-|int_3::RGB||  
+|int_3::rg||  
+|int_3::rgb||  
 |int_3::x||  
 |int_3::xy||  
-|int_3::XYZ||  
-|int_3::XZ||  
+|int_3::xyz||  
+|int_3::xz||  
 |int_3::xzy||  
 |int_3::y||  
-|int_3::YX||  
+|int_3::yx||  
 |int_3::yxz||  
-|int_3::YZ||  
+|int_3::yz||  
 |int_3::yzx||  
 |int_3::z||  
-|int_3::ZX||  
+|int_3::zx||  
 |int_3::zxy||  
-|int_3::ZY||  
+|int_3::zy||  
 |int_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -223,7 +226,7 @@ class int_3;
   
  **Namespace:** Concurrency:: Graphics  
 
-## <a name="ctor"></a>int_3 
+## <a name="ctor"></a> int_3 
 
 Padrão construtor inicializa todos os elementos com 0.  
   
@@ -275,7 +278,7 @@ explicit inline int_3(
  `_Other`  
  O objeto usado para inicializar.  
   
-## <a name="size"></a>tamanho 
+## <a name="size"></a> Tamanho 
 
 ## <a name="syntax"></a>Sintaxe  
   

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f89abf97-67e3-4327-bc30-43f85b9533a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c0f009c26789fd771d55dab5fcfe5f342aa03b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 760e7d138ab71244419ff71960948d4d10f125eb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="openmp-libraries"></a>OpenMP Bibliotecas
 Discute os arquivos. lib que compõem as bibliotecas de tempo de execução de OpenMP no Visual C++.  
@@ -27,8 +30,8 @@ Discute os arquivos. lib que compõem as bibliotecas de tempo de execução de O
   
 |Biblioteca de tempo de execução OpenMP|Características|  
 |------------------------------|---------------------|  
-|VCOMP. LIB|Link dinâmico, multithread (biblioteca de importação para VCOMP. LIB).|  
-|VCOMPD. LIB|Link dinâmico, multithread (biblioteca de importação para VCOMPD. TAMPA) (depuração)|  
+|VCOMP.LIB|Link dinâmico, multithread (biblioteca de importação para VCOMP. LIB).|  
+|VCOMPD.LIB|Link dinâmico, multithread (biblioteca de importação para VCOMPD. TAMPA) (depuração)|  
   
  Se Debug está definido em uma compilação e `#include omp.h` está no código-fonte, VCOMPD. LIB será a biblioteca padrão. Caso contrário, VCOMP. LIB será usado.  
   

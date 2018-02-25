@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - queue/std::priority_queue::push
 - queue/std::priority_queue::size
 - queue/std::priority_queue::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::priority_queue [C++], container_type
 - std::priority_queue [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 Uma classe do adaptador de contêiner de modelo que fornece uma restrição de funcionalidade para limitar o acesso ao elemento superior de algum tipo de contêiner subjacente, que sempre é o maior ou a prioridade mais alta. Novos elementos podem ser adicionados ao priority_queue e o elemento superior do priority_queue pode ser inspecionado ou removido.  
@@ -56,7 +59,7 @@ class priority_queue
  O tipo do contêiner subjacente usado para implementar o priority_queue.  
   
  *Compare*  
- O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no priority_queue. Esse argumento é opcional e o predicado binário **less***\<***typename** *Container***::value_type***>* é o valor padrão.  
+ O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no priority_queue. Esse argumento é opcional e o predicado binário **menos***\<***typename** *contêiner***:: value_type*** >* é o valor padrão.  
   
 ## <a name="remarks"></a>Comentários  
  Os elementos da classe **Type** estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimo de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente **Container** estipulada pelo segundo parâmetro de modelo. O **Type** deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.  

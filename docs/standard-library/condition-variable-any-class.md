@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition_variable_any
 - condition_variable/std::condition_variable_any::condition_variable_any
@@ -15,9 +16,10 @@ f1_keywords:
 - condition_variable/std::condition_variable_any::wait
 - condition_variable/std::condition_variable_any::wait_for
 - condition_variable/std::condition_variable_any::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c3acad50f9dec8e3384d0b811045f95843f40b92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 26572eed562150baff68f124fea7255283d0c133
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conditionvariableany-class"></a>Classe condition_variable_any
 Use a classe `condition_variable_any` para aguardar um evento que tem qualquer tipo `mutex`.  
@@ -59,7 +62,7 @@ class condition_variable_any;
 |----------|-----------------|  
 |[notify_all](#notify_all)|Desbloqueia todos os threads que estão aguardando o objeto `condition_variable_any`.|  
 |[notify_one](#notify_one)|Desbloqueia um dos threads que estão aguardando o objeto `condition_variable_any`.|  
-|[Aguarde](#wait)|Bloqueia um thread.|  
+|[wait](#wait)|Bloqueia um thread.|  
 |[wait_for](#wait_for)|Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.|  
 |[wait_until](#wait_until)|Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.|  
   

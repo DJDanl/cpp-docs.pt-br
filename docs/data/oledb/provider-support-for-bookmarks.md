@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 39720b271834a585eff3ef3893154462bcdf7424
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>Suporte do provedor para indicadores
 O exemplo neste tópico adiciona o `IRowsetLocate` interface para o `CMyProviderRowset` classe. Em quase todos os casos, você começa adicionando uma interface para um objeto existente do COM. Você pode testá-lo com a adição de mais chamadas nos modelos de consumidor. O exemplo demonstra como:  

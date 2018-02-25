@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake projetos em Visual C++
 
@@ -161,7 +165,7 @@ Assim que você salvar o arquivo, a etapa de configuração for executado novame
 
    ![Erros de arquivo CMakeLists.txt](media/cmake-cmakelists-error.png "CMakeLists.txt erros de arquivo")
 
-## <a name="cmake_settings"></a>Configurações de CMake e configurações personalizadas
+## <a name="cmake_settings"></a> Configurações de CMake e configurações personalizadas
 
 Por padrão, o Visual Studio fornece seis CMake as configurações padrão ("depurar x86", "versão x86", "x64-Debug", "x64-versão", "Linux-Debug" e "Versão do Linux"). Essas configurações definem como CMake.exe é chamado para criar o cache de CMake para um determinado projeto. Para modificar essas configurações, ou criar uma nova configuração personalizada, escolha **CMake | Alterar as configurações de CMake**e, em seguida, escolha o arquivo de CMakeLists.txt que as configurações se aplicam a. O **alterar as configurações de CMake** comando também está disponível no menu de contexto do arquivo em **Gerenciador de soluções**. Este comando cria um arquivo CMakeSettings.json na pasta do projeto. Esse arquivo é usado para recriar o arquivo de cache CMake, por exemplo após um **limpar** operação. 
 
@@ -215,13 +219,13 @@ Para especificar um gerador de Visual Studio, abra o CMakeSettings.json no menu 
 CMakeSettings.json também oferece suporte a variáveis de ambiente consumo em qualquer uma das propriedades mencionadas acima. A sintaxe para usar é `${env.FOO}` para expandir o ambiente variável FOO %.
 Você também tem acesso para macros internas dentro desse arquivo:
 
-- `${workspaceRoot}`– fornece o caminho completo da pasta de espaço de trabalho
-- `${workspaceHash}`– hash do local do espaço de trabalho. útil para criar um identificador exclusivo para o espaço de trabalho atual (por exemplo, para usar em caminhos de pastas)
-- `${projectFile}`– o caminho completo do arquivo raiz CMakeLists.txt
-- `${projectDir}`– o caminho completo da pasta do arquivo raiz CMakeLists.txt
-- `${thisFile}`– o caminho completo do arquivo CMakeSettings.json
-- `${name}`– o nome da configuração
-- `${generator}`– o nome do gerador CMake usado nesta configuração de
+- `${workspaceRoot}` – fornece o caminho completo da pasta de espaço de trabalho
+- `${workspaceHash}` – hash do local do espaço de trabalho. útil para criar um identificador exclusivo para o espaço de trabalho atual (por exemplo, para usar em caminhos de pastas)
+- `${projectFile}` – o caminho completo do arquivo raiz CMakeLists.txt
+- `${projectDir}` – o caminho completo da pasta do arquivo raiz CMakeLists.txt
+- `${thisFile}` – o caminho completo do arquivo CMakeSettings.json
+- `${name}` – o nome da configuração
+- `${generator}` – o nome do gerador CMake usado nesta configuração de
 
 ### <a name="ninja-command-line-arguments"></a>Argumentos de linha de comando Ninja
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w sinalizador  | Ajustar avisos (avisos -w uma lista para uso)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Ambientes herdadas (Visual Studio de 2017 versão 15,5)
-
-CmakeSettings.json agora dá suporte a ambientes herdados. Esse recurso permite que você (1) herdam ambientes padrão e (2) criar variáveis de ambiente personalizadas que são passados para CMake.exe quando ele é executado.
+CMakeSettings.json agora dá suporte a ambientes herdados. Esse recurso permite que você (1) herdam ambientes padrão e (2) criar variáveis de ambiente personalizadas que são passados para CMake.exe quando ele é executado.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ A tabela a seguir mostra os valores padrão e seus equivalentes de linha de coma
 |msvc_arm64_x64|Compilar para ARM64 usando as ferramentas de 64 bits|
 
 ### <a name="custom-environment-variables"></a>Variáveis de ambiente personalizadas
-No CmakeSettings.json, você pode definir variáveis de ambiente personalizadas global ou por configuração no **ambientes** propriedade. O exemplo a seguir define uma variável global, **BuildDir**, que é herdado em configurações de depuração x86 e x64-Debug. Cada configuração usa a variável para especificar o valor para o **buildRoot** propriedade para essa configuração. Também observe como cada configuração usa o **inheritEnvironments** propriedade para especificar uma variável que só se aplica a essa configuração.
+No CMakeSettings.json, você pode definir variáveis de ambiente personalizadas global ou por configuração no **ambientes** propriedade. O exemplo a seguir define uma variável global, **BuildDir**, que é herdado em configurações de depuração x86 e x64-Debug. Cada configuração usa a variável para especificar o valor para o **buildRoot** propriedade para essa configuração. Também observe como cada configuração usa o **inheritEnvironments** propriedade para especificar uma variável que só se aplica a essa configuração.
 
 ```json
 {
@@ -290,8 +293,7 @@ No CmakeSettings.json, você pode definir variáveis de ambiente personalizadas 
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ No exemplo a seguir, a configuração de depuração x86 define seu próprio val
 }
 ```
 
-## <a name="cmake-configure-step"></a>Cmake configurar etapa
+## <a name="cmake-configure-step"></a>CMake configurar etapa
 
 Quando alterações significativas são feitas para o CMakeSettings.json ou CMakeLists.txt arquivos, o Visual Studio automaticamente executa novamente o CMake configurar etapa. Se a etapa de configuração concluída sem erros, as informações coletadas está disponíveis nos serviços de idioma e o C++ IntelliSense e também na compilação e operações de depuração.
 

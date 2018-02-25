@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_completion_event
 - PPLTASKS/concurrency::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs: C++
-helpviewer_keywords: task_completion_event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskcompletionevent-class"></a>Classe task_completion_event
 A classe `task_completion_event` permite atrasar a execução de uma tarefa até que uma condição seja atendida, ou iniciar uma tarefa em resposta a um evento externo.  
@@ -76,7 +80,7 @@ class task_completion_event<void>;
   
  **Namespace:** simultaneidade  
   
-##  <a name="set"></a>definir 
+##  <a name="set"></a> Definir 
 
  Define o evento de conclusão de tarefas.  
   
@@ -96,7 +100,7 @@ bool set() const ;
 ### <a name="remarks"></a>Comentários  
  Na presença de várias chamadas simultâneas para ou `set`, somente a primeira chamada será bem-sucedida e seu resultado (se houver) será armazenado no evento de conclusão de tarefas. Os conjuntos restantes são ignorados e o método retornará false. Quando você define um evento de conclusão de tarefas, todas as tarefas criada do que evento será concluída imediatamente, e seus continuações, se houver, serão agendadas. Tarefa de objetos de conclusão que têm um `_ResultType` diferente de `void` irá passar o valor para seus continuações.  
   
-##  <a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a> set_exception 
 
  Propaga uma exceção para todas as tarefas associadas a esse evento.  
   
@@ -114,7 +118,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a> task_completion_event 
 
  Constrói um objeto `task_completion_event`.  
   

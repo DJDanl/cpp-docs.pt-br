@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 49f86150afe9116909a137e97a0e04d5a7d54bac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="testing-the-read-only-provider"></a>Testando o provedor somente leitura simples
 Para testar um provedor, você precisa de um consumidor. Isso será útil se o consumidor pode corresponder a com o provedor. Os modelos de consumidor OLE DB são um wrapper fino em torno do OLE DB e correspondem com os objetos COM do provedor. Como a fonte é fornecida com os modelos de consumidor, é fácil depurar um provedor com eles. Os modelos de consumidor também são uma maneira muito menor e mais rápida para desenvolver aplicativos de consumidor.  

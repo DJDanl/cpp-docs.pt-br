@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_multimap
 - hash_map/stdext::hash_multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_map/stdext::hash_multimap::swap
 - hash_map/stdext::hash_multimap::upper_bound
 - hash_map/stdext::hash_multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_multimap
 - stdext::hash_multimap::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e5c64e90b2e75a7dc0879bbc871892d90d1a02c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d6474bd6cdbb8baa2819d80f122b5a17792251bc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmultimap-class"></a>Classe hash_multimap
 > [!NOTE]
@@ -475,7 +478,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Comentários  
  Um tipo de `const_iterator` não pode ser usado para modificar o valor de um elemento.  
   
- O `const_iterator` definido pelos pontos de hash_multimap para objetos de [value_type](#value_type), que são do tipo `pair`*\<***constKey, Tipo***>*. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.  
+ O `const_iterator` definido pelos pontos de hash_multimap para objetos de [value_type](#value_type), que são do tipo `pair`  *\< ***constKey, tipo*** >* . O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.  
   
  A referência a um `const_iterator` `cIter` apontando para um elemento em um hash_multimap, use o  **->**  operador.  
   
@@ -776,8 +779,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 ```  
   
 ### <a name="remarks"></a>Comentários  
- 
-          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` é geralmente usado para representar o número de elementos no intervalo *[ first, last)* entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.  
+ `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` é geralmente usado para representar o número de elementos no intervalo *[ first, last)* entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.  
   
  Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte pelos contêineres reversíveis, como conjunto, a subtração entre iteradores só tem suporte pelos iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como vetor.  
   
@@ -2534,7 +2536,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `value_type`é declarado como par\<const [key_type](#key_type), [mapped_type](#mapped_type)> e não emparelhados\<key_type, mapped_type > porque as chaves de um contêiner de associação não podem ser alteradas usando um iterador não constante ou uma referência.  
+ `value_type` é declarado como par\<const [key_type](#key_type), [mapped_type](#mapped_type)> e não emparelhados\<key_type, mapped_type > porque as chaves de um contêiner de associação não podem ser alteradas usando um iterador não constante ou uma referência.  
   
    
   

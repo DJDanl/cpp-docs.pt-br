@@ -1,28 +1,32 @@
 ---
-title: Writebarrier | Microsoft Docs
+title: _WriteBarrier | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _WriteBarrier
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- _WriteBarrier
+dev_langs:
+- C++
 helpviewer_keywords:
 - WriteBarrier intrinsic
 - _WriteBarrier intrinsic
 ms.assetid: a5ffdad9-0ca1-4eb7-b2f3-0f092c4bf4b5
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e619341e05d868b97d67fef068999c16fb2b4e60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fda8963e89086a2b1655b7dbe3d3b95aca24a7df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="writebarrier"></a>_WriteBarrier
 **Seção específica da Microsoft**  
@@ -52,7 +56,7 @@ void _WriteBarrier(void);
 **Fim da seção específica da Microsoft**  
   
 ## <a name="see-also"></a>Consulte também  
- [Readbarrier](../intrinsics/readbarrier.md)   
- [Readwritebarrier](../intrinsics/readwritebarrier.md)   
+ [_ReadBarrier](../intrinsics/readbarrier.md)   
+ [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)   
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
  [Palavras-chave](../cpp/keywords-cpp.md)

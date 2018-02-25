@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
 - amp/Concurrency::direct3d::countbits
@@ -24,31 +24,33 @@ f1_keywords:
 - amp/Concurrency::direct3d::smoothstep
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff24f75c27ee60a085a8f87256a96b65a57e523c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funções de namespace Concurrency:: Direct3D (AMP)
 ||||  
 |-|-|-|  
-|[abs](#abs)|[fixação](#clamp)|[countbits](#countbits)|
+|[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
-|[IMAX](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[MAD](#mad)|[make_array](#make_array)|[ruído](#noise)|  
-|[radianos](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
-|[saturar](#saturate)|[logon](#sign)|[smoothstep](#smoothstep)|  
-|[etapa](#step)|[UMAX](#umax)|[umin](#umin)|  
+|[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
+|[step](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>Requisitos
 **Cabeçalho:** amp.h **Namespace:** simultaneidade
@@ -67,7 +69,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor absoluto do argumento.  
   
-##  <a name="clamp"></a>fixação  
+##  <a name="clamp"></a>  clamp  
  Calcula o valor do primeiro argumento especificado fixado como um intervalo definido por segundo e terceiro argumentos especificados.  
   
 ```  
@@ -96,7 +98,7 @@ inline int clamp(
 ### <a name="return-value"></a>Valor de retorno  
  O valor fixado de `_X`.  
   
-##  <a name="countbits"></a>countbits  
+##  <a name="countbits"></a>  countbits  
  Conta o número de bits de conjunto em x  
   
 ```  
@@ -110,7 +112,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de bits de conjunto em x  
 
-## <a name="create_accelerator_view"></a>create_accelerator_view  
+## <a name="create_accelerator_view"></a> create_accelerator_view  
 Cria um [accelerator_view](accelerator-view-class.md) objeto de um ponteiro para uma interface de dispositivo Direct3D.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -150,7 +152,7 @@ accelerator_view create_accelerator_view(
  O tempo de execução C++ AMP fornece informações detalhadas do erro no modo de depuração usando a camada D3D depurar se você usar o `D3D11_CREATE_DEVICE_DEBUG` sinalizador.  
   
   
-##  <a name="d3d_access_lock"></a>d3d_access_lock  
+##  <a name="d3d_access_lock"></a>  d3d_access_lock  
  Adquira um bloqueio em um accelerator_view para fins de executar com segurança D3D operações nos recursos compartilhados com o accelerator_view. O accelerator_view e todos os recursos de C++ AMP associados a este accelerator_view internamente levar esse bloqueio ao executar operações e bloqueia enquanto outro thread retém o bloqueio de acesso do D3D. Esse bloqueio é não-recursivo: é um comportamento indefinido para chamar esta função de um thread que já retém o bloqueio. É um comportamento indefinido para executar operações de accelerator_view ou qualquer contêiner de dados associado a accelerator_view do thread que retém o bloqueio de acesso do D3D. Consulte também scoped_d3d_access_lock, uma classe de estilo RAII para um bloqueio de acesso com base em escopo D3D.  
   
 ```  
@@ -161,7 +163,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
  `_Av`  
  Accelerator_view para bloquear.  
   
-##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
+##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock  
  Tentativa de adquirir o bloqueio de acesso do D3D em um accelerator_view sem bloqueio.  
   
 ```  
@@ -175,7 +177,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="return-value"></a>Valor de retorno  
  True se o bloqueio foi adquirido, ou falso se ele é mantido atualmente por outro thread.  
   
-##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
+##  <a name="d3d_access_unlock"></a>  d3d_access_unlock  
  Libere o bloqueio de acesso D3D o accelerator_view determinado. Se o thread de chamada não mantém o bloqueio de accelerator_view os resultados serão indefinidos.  
   
 ```  
@@ -186,7 +188,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  O accelerator_view para o qual o bloqueio for lançada.  
   
-##  <a name="firstbithigh"></a>firstbithigh  
+##  <a name="firstbithigh"></a>  firstbithigh  
  Obtém o local do primeiro conjunto de bit em x, começando com o bit de ordem mais alta e migrando para o bit de ordem inferior.  
   
 ```  
@@ -200,7 +202,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  O local do primeiro conjunto de bit  
   
-##  <a name="firstbitlow"></a>firstbitlow  
+##  <a name="firstbitlow"></a>  firstbitlow  
  Obtém o local do primeiro conjunto de bit em x, começando com o bit de ordem inferior e trabalhando com os bits de ordem mais alta.  
   
 ```  
@@ -214,7 +216,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o local do primeiro conjunto de bits  
   
-##  <a name="get_buffer"></a>get_buffer  
+##  <a name="get_buffer"></a>  get_buffer  
  Obter a interface de buffer do Direct3D subjacente na matriz especificada.  
   
 ```  
@@ -239,7 +241,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Valor de retorno  
  O ponteiro de interface IUnknown correspondente para o buffer de Direct3D subjacente da matriz.  
   
-##  <a name="imax"></a>IMAX  
+##  <a name="imax"></a>  imax  
  Determinar o valor numérico máximo de argumentos  
   
 ```  
@@ -258,7 +260,7 @@ inline int imax(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor numérico máximo de argumentos  
   
-##  <a name="imin"></a>imin  
+##  <a name="imin"></a>  imin  
  Determine o valor numérico mínimo de argumentos  
   
 ```  
@@ -277,7 +279,7 @@ inline int imin(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor numérico mínimo de argumentos  
   
-##  <a name="is_timeout_disabled"></a>is_timeout_disabled  
+##  <a name="is_timeout_disabled"></a>  is_timeout_disabled  
  Retorna um sinalizador booliano que indica se o tempo limite está desabilitado para o accelerator_view especificado. Isso corresponde ao sinalizador D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT para a criação de dispositivo Direct3D.  
   
 ```  
@@ -291,7 +293,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>Valor de retorno  
  Um sinalizador booliano que indica se o tempo limite está desabilitado para o accelerator_view especificado.  
   
-##  <a name="mad"></a>MAD  
+##  <a name="mad"></a>  mad  
  Calcula o produto do primeiro e o segundo argumento especificado e, em seguida, adiciona o terceiro argumento especificado.  
   
 ```  
@@ -332,7 +334,7 @@ inline unsigned int mad(
 ### <a name="return-value"></a>Valor de retorno  
  O resultado de `_X`  *  `_Y`  +  `_Z`.  
   
-##  <a name="make_array"></a>make_array  
+##  <a name="make_array"></a>  make_array  
  Crie uma matriz de um ponteiro de interface de buffer do Direct3D.  
   
 ```  
@@ -365,7 +367,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Valor de retorno  
  Uma matriz criada com o buffer fornecido do Direct3D.  
   
-##  <a name="noise"></a>ruído  
+##  <a name="noise"></a>  noise  
  Gera um valor aleatório usando o algoritmo de ruído Perlin  
   
 ```  
@@ -379,7 +381,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de ruído de Perlin o dentro de um intervalo entre -1 e 1  
   
-##  <a name="radians"></a>radianos  
+##  <a name="radians"></a>  radians  
  Converte x de graus em radianos  
   
 ```  
@@ -393,7 +395,7 @@ inline float radians(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna x convertido de graus em radianos  
   
-##  <a name="rcp"></a>rcp  
+##  <a name="rcp"></a>  rcp  
  Calcula a recíproca do argumento especificado usando uma aproximação rápida.  
   
 ```  
@@ -410,7 +412,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  O recíproco do argumento especificado.  
   
-##  <a name="reversebits"></a>reversebits  
+##  <a name="reversebits"></a>  reversebits  
  Inverte a ordem dos bits em x  
   
 ```  
@@ -424,7 +426,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor com a ordem de bit revertida no x  
   
-##  <a name="saturate"></a>saturar  
+##  <a name="saturate"></a>  saturate  
  Coloca x dentro do intervalo de 0 a 1  
   
 ```  
@@ -438,7 +440,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna x fixado dentro do intervalo de 0 a 1  
   
-##  <a name="sign"></a>logon  
+##  <a name="sign"></a>  sign  
  Determina o sinal do argumento especificado.  
   
 ```  
@@ -452,7 +454,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  O sinal do argumento.  
   
-##  <a name="smoothstep"></a>smoothstep  
+##  <a name="smoothstep"></a>  smoothstep  
  Retorna uma interpolação Hermite suave entre 0 e 1, se x está no intervalo [ min, máx].  
   
 ```  
@@ -475,7 +477,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna 0 se x é menor que min; 1 se x for maior que máx; Caso contrário, um valor entre 0 e 1 se x está no intervalo [ min, máx]  
   
-##  <a name="step"></a>etapa  
+##  <a name="step"></a>  step  
  Compara dois valores, retornando 0 ou 1 com base em qual valor é maior  
   
 ```  
@@ -494,7 +496,7 @@ inline float step(
 ### <a name="return-value"></a>Valor de retorno  
  Retornará 1 se o x é maior que ou igual a y; Caso contrário, 0  
   
-##  <a name="umax"></a>UMAX  
+##  <a name="umax"></a>  umax  
  Determinar o valor numérico máximo de argumentos  
   
 ```  
@@ -513,7 +515,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor numérico máximo de argumentos  
   
-##  <a name="umin"></a>umin  
+##  <a name="umin"></a>  umin  
  Determine o valor numérico mínimo de argumentos  
   
 ```  

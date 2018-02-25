@@ -1,14 +1,17 @@
 ---
-title: '#<a name="import-directive-c--microsoft-docs"></a>Importar diretiva (C++) | Microsoft Docs'
+title: '#Importar diretiva (C++) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>Diretiva #import (C++)
 **Específicas do C++**  
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Comentários  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Ordem de pesquisa de nome de arquivo  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Ordem de pesquisa de nome de arquivo  
  *nome de arquivo* opcionalmente é precedida por uma especificação de diretório. O nome do arquivo deve nomear um arquivo existente. A diferença entre os dois formatos de sintaxe é a ordem em que o pré-processador procura os arquivos de biblioteca de tipos quando o caminho é especificado de forma incompleta.  
   
 |Formato de sintaxe|Ação|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Forma entre aspas|Instrui o pré-processador a procurar arquivos de biblioteca de tipos primeiro no diretório do arquivo que contém a instrução `#import` e depois nos diretórios de quaisquer arquivos que incluam (`#include`) esse arquivo. Em seguida, o pré-processador pesquisa ao longo dos caminhos mostrados abaixo.|  
 |Forma de colchete angular|Instrui o pré-processador a procurar arquivos de biblioteca de tipos ao longo dos seguintes caminhos:<br /><br /> 1.  O **caminho** lista de caminhos de variável de ambiente<br />2.  O **LIB** lista de caminhos de variável de ambiente<br />3.  O caminho especificado pelo /I (adicionais diretórios de inclusão) a opção de compilador, exceto o compilador está procurando em uma biblioteca de tipos referenciada de outra biblioteca de tipos com o [no_registry](../preprocessor/no-registry.md) atributo.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Especificando a ID de localização e o número de versão  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Especificando a ID de localização e o número de versão  
  Ao especificar um progid, você também pode especificar a ID de localização e o número de versão do progid. Por exemplo:  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Se você não especificar um número de versão, será usada a versão mais recente.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Arquivos de cabeçalho criados pela importação  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Arquivos de cabeçalho criados pela importação  
  `#import` cria dois arquivos de cabeçalho que reconstroem o conteúdo da biblioteca de tipos no código-fonte do C++. O arquivo de cabeçalho principal é semelhante ao produzido pelo compilador de MIDL (linguagem IDL da Microsoft), mas com código gerado pelo compilador e dados adicionais. O [arquivo de cabeçalho principal](#_predir_the_primary_type_library_header_file) tem o mesmo nome de base como a biblioteca de tipos, mais um. Extensão TLH. O arquivo de cabeçalho secundário tem o mesmo nome base que a biblioteca de tipos, com a extensão .TLI. Ele contém as implementações para funções de membro geradas pelo compilador e está incluído (`#include`) no arquivo de cabeçalho principal.  
   
  Se estiver importando uma propriedade dispinterface que usa parâmetros byref, #import não irá gerar declspec ([propriedade](../cpp/property-cpp.md)) declaração da função.  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  A política `#import` também participa da recompilação mínima e pode ser colocada em um arquivo de cabeçalho pré-compilado. Consulte [criando arquivos de cabeçalho pré-compilado](../build/reference/creating-precompiled-header-files.md) para obter mais informações.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>Arquivo de cabeçalho de biblioteca de tipo primário  
+###  <a name="_predir_the_primary_type_library_header_file"></a> Arquivo de cabeçalho de biblioteca de tipo primário  
  O arquivo de cabeçalho principal da biblioteca de tipos consiste em sete seções:  
   
 -   Texto clichê de título: inclui comentários, a instrução `#include` para COMDEF.H (que define algumas macros padrão usadas no cabeçalho) e outras informações de configuração.  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  Para obter mais informações, consulte o artigo da Base de Dados de Conhecimento sobre métodos wrapper de #import causando violação de acesso (Q242527) ou sobre erros de compilador ao usar #import com XML (Q269194). Você pode encontrar artigos da Base de dados de Conhecimento na mídia do MSDN Library ou no [Microsoft Support](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>atributos de #import  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> atributos de #import  
  `#import` pode incluir opcionalmente um ou mais atributos. Esses atributos instruem o compilador a modificar o conteúdo dos cabeçalhos de biblioteca de tipos. Uma barra invertida (**\\**) símbolo pode ser usado para incluir linhas adicionais em uma única `#import` instrução. Por exemplo:  
   
 ```  

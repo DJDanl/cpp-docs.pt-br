@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::future
 - future/std::future::future
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::future::wait
 - future/std::future::wait_for
 - future/std::future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 1de870da42504494e672cff4272fd230d1346114
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f54b265e98d8375b20ca5b7cf484290083d1d59c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="future-class"></a>Classe future
 Descreve um *objeto de retorno assíncrono*.  
@@ -64,9 +67,9 @@ class future;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[get](#get)|Recupera o resultado armazenado no estado assíncrono associado.|  
-|[Compartilhar](#share)|Converte o objeto em um `shared_future`.|  
-|[válido](#valid)|Especifica se o objeto não está vazio.|  
-|[Aguarde](#wait)|Bloqueia o thread atual até que o estado assíncrono associado esteja pronto.|  
+|[share](#share)|Converte o objeto em um `shared_future`.|  
+|[valid](#valid)|Especifica se o objeto não está vazio.|  
+|[wait](#wait)|Bloqueia o thread atual até que o estado assíncrono associado esteja pronto.|  
 |[wait_for](#wait_for)|Bloqueia até que o estado assíncrono associado esteja pronto ou até que o tempo especificado tenha decorrido.|  
 |[wait_until](#wait_until)|Bloqueia até que o estado assíncrono associado esteja pronto ou até um ponto no tempo especificado.|  
   

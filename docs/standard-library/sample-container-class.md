@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: container classes [C++]
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3666bf4ee03149a9c00ec93d9fc1dc536ce2d080
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d528f53747979da7b95d8d3298a43ea717007a5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sample-container-class"></a>Exemplo de Classe de Contêiner
 > [!NOTE]
@@ -33,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Se a expressão **~Ty** gerar uma exceção, o estado resultante do objeto contêiner é indefinido.  
   
--   Se o contêiner armazenar um objeto de alocador *al* e *al* gera uma exceção diferente como resultado de uma chamada para *al***.allocate**, o estado resultante do objeto do contêiner é indefinido.  
+-   Se o contêiner armazena um objeto de alocador *al*, e *al* lança uma exceção diferente como resultado de uma chamada para * al ***.allocate**, o estado resultante do contêiner objeto não está definido.  
   
 -   Se o contêiner armazenar um objeto de função *comp*, para determinar como ordenar a sequência controlada, *comp* gera uma exceção de qualquer tipo, o estado resultante do objeto de contêiner é indefinido.  
   

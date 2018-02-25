@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#pragma'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#pragma'
+dev_langs:
+- C++
 helpviewer_keywords:
 - '#pragma directives, C/C++'
 - __pragma keyword
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 845c2fab98d246ccee51aff721b1ceb011e3803c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ccc6ab8fe90b8b97dee213d65e19eb903249da6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Diretivas Pragma e a palavra-chave __Pragma
 As políticas de pragma especificam recursos de compilador específicos do computador ou da operação. A palavra-chave `__pragma`, que é específica do compilador da Microsoft, permite codificar políticas de pragma dentro de definições de macro.  
@@ -56,18 +60,18 @@ __pragma(token-string)
 |-|-|-|  
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|  
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|  
-|[componente](../preprocessor/component.md)|[está de acordo com](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
+|[componente](../preprocessor/component.md)|[conform](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
 |[data_seg](../preprocessor/data-seg.md)|[preterido](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|  
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|  
 |[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|  
-|[gerenciado](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||  
+|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||  
 |[omp](../preprocessor/omp.md)|[uma vez](../preprocessor/once.md)||  
 |[otimizar](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|  
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|  
 |[runtime_checks](../preprocessor/runtime-checks.md)|[seção](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|  
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[não gerenciado](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
 |[warning](../preprocessor/warning.md)|||  
   
  1. Com suporte apenas do compilador C++.  

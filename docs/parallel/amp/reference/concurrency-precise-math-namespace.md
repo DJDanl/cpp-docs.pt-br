@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
 - AMP_MATH/Concurrency::acosf
@@ -138,18 +139,20 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Namespace Concurrency::precise_math
 Funções no `precise_math` namespace são C99 compatíveis. Única precisão e versões de precisão dupla de cada função são incluídas. Por exemplo, `acos` é a versão de precisão dupla e `acosf` é a versão de precisão única. Essas funções, incluindo as funções de precisão simples, exigem suporte estendido de precisão dupla no acelerador. Você pode usar o [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) para determinar se você pode executar essas funções em um acelerador específico. 
@@ -258,7 +261,7 @@ namespace precise_math;
 |[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Arredonda o argumento para um valor inteiro no formato de ponto flutuante, usando a direção de arredondamento atual.|  
 |[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Sobrecarregado. Determinar o próximo valor representável, o tipo de função, após x na direção do y|  
 |[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Determinar o próximo valor representável, o tipo de função, após x na direção do y|  
-|[PHI](concurrency-precise-math-namespace-functions.md#phi)|Sobrecarregado. Retorna a função de distribuição cumulativa do argumento|  
+|[phi](concurrency-precise-math-namespace-functions.md#phi)|Sobrecarregado. Retorna a função de distribuição cumulativa do argumento|  
 |[phif](concurrency-precise-math-namespace-functions.md#phif)|Retorna a função de distribuição cumulativa do argumento|  
 |[pow](concurrency-precise-math-namespace-functions.md#pow)|Sobrecarregado. Calcula x elevado à potência de y|  
 |[powf](concurrency-precise-math-namespace-functions.md#powf)|Calcula x elevado à potência de y|  

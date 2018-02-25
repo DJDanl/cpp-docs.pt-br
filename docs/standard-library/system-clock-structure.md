@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::system_clock
 - chrono/std::chrono::system_clock::from_time_t
@@ -14,18 +15,20 @@ f1_keywords:
 - chrono/std::chrono::system_clock::to_time_t
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 603415b438578258e982f0934161d2de436e2a3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 757094f61d7f58de4f51da46b28dc90105968a99
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="systemclock-structure"></a>Estrutura system_clock
 Representa um *tipo de relógio* baseado no relógio em tempo real do sistema.  
@@ -61,7 +64,7 @@ struct system_clock;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[from_time_t](#from_time_t)|Estático. Retorna um `time_point` que mais se aproxima de um tempo especificado.|  
-|[Agora](#now)|Estático. Retorna a data atual.|  
+|[now](#now)|Estático. Retorna a data atual.|  
 |[to_time_t](#to_time_t)|Estático. Retorna um objeto `time_t` que mais se aproxima de um `time_point` especificado.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
@@ -76,7 +79,7 @@ struct system_clock;
   
  **Namespace:** std::chrono  
   
-##  <a name="from_time_t"></a>system_clock:: from_time_t
+##  <a name="from_time_t"></a>  system_clock::from_time_t
  Método estático que retorna um [time_point](../standard-library/time-point-class.md) que mais se aproxima do tempo representado por `Tm`.  
   
 ```  
@@ -113,7 +116,7 @@ static const bool is_steady = false;
 ### <a name="remarks"></a>Comentários  
  Um relógio será *estável* se ele for [monotônico](#is_monotonic_constant) e se o tempo entre os tiques do relógio for constante.  
   
-##  <a name="now"></a>system_clock:: Now
+##  <a name="now"></a>  system_clock::now
  Método estático que retorna a hora atual.  
   
 ```  
@@ -123,7 +126,7 @@ static time_point now() noexcept;
 ### <a name="return-value"></a>Valor de retorno  
  Um objeto [time_point](../standard-library/time-point-class.md) que representa a hora atual.  
   
-##  <a name="to_time_t"></a>system_clock:: to_time_t
+##  <a name="to_time_t"></a>  system_clock::to_time_t
  Método estático que retorna um [time_t](../c-runtime-library/standard-types.md) que mais se aproxima do tempo representado por `Time`.  
   
 ```  

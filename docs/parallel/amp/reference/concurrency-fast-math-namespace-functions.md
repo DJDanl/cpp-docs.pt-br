@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
 - amp_math/Concurrency::fast_math::asin
@@ -50,18 +50,20 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 406f92d4a13502ed784936398070f1b4a7b4eb95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Funções de namespace Concurrency:: fast_math
 ||||  
@@ -103,7 +105,7 @@ inline float acos(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de arco cosseno do argumento  
   
-##  <a name="acosf"></a>acosf  
+##  <a name="acosf"></a>  acosf  
  Calcula o arco cosseno do argumento  
   
 ```  
@@ -131,7 +133,7 @@ inline float asin(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor do seno do argumento  
   
-##  <a name="asinf"></a>asinf  
+##  <a name="asinf"></a>  asinf  
  Calcula o arco seno do argumento  
   
 ```  
@@ -178,7 +180,7 @@ inline float atan2(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de arco tangente de y/x  
   
-##  <a name="atan2f"></a>atan2f  
+##  <a name="atan2f"></a>  atan2f  
  Calcula o arco tangente de y/x  
   
 ```  
@@ -197,7 +199,7 @@ inline float atan2f(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de arco tangente de y/x  
   
-##  <a name="atanf"></a>atanf  
+##  <a name="atanf"></a>  atanf  
  Calcula o arco tangente do argumento  
   
 ```  
@@ -211,7 +213,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de arco tangente do argumento  
   
-##  <a name="ceil"></a>ceil  
+##  <a name="ceil"></a>  ceil  
  Calcula o teto do argumento  
   
 ```  
@@ -225,7 +227,7 @@ inline float ceil(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o teto do argumento  
   
-##  <a name="ceilf"></a>ceilf  
+##  <a name="ceilf"></a>  ceilf  
  Calcula o teto do argumento  
   
 ```  
@@ -239,7 +241,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o teto do argumento  
   
-##  <a name="cosf"></a>cosf  
+##  <a name="cosf"></a>  cosf  
  Calcula o cosseno do argumento  
   
 ```  
@@ -253,7 +255,7 @@ inline float cosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor cosseno do argumento  
   
-##  <a name="coshf"></a>coshf  
+##  <a name="coshf"></a>  coshf  
  Calcula o valor cosseno hiperbólico do argumento  
   
 ```  
@@ -309,7 +311,7 @@ inline float exp(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o exponencial do argumento de base-e  
   
-##  <a name="exp2"></a>exp2  
+##  <a name="exp2"></a>  exp2  
  Calcula o exponencial do argumento de base-2  
   
 ```  
@@ -323,7 +325,7 @@ inline float exp2(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o exponencial do argumento de base-2  
   
-##  <a name="exp2f"></a>exp2f  
+##  <a name="exp2f"></a>  exp2f  
  Calcula o exponencial do argumento de base-2  
   
 ```  
@@ -337,7 +339,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o exponencial do argumento de base-2  
   
-##  <a name="expf"></a>expf  
+##  <a name="expf"></a>  expf  
  Calcula o exponencial do argumento de base-e  
   
 ```  
@@ -351,7 +353,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o exponencial do argumento de base-e  
   
-##  <a name="fabs"></a>fabs  
+##  <a name="fabs"></a>  fabs  
  Retorna o valor absoluto do argumento  
   
 ```  
@@ -365,7 +367,7 @@ inline float fabs(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor absoluto do argumento  
   
-##  <a name="fabsf"></a>fabsf  
+##  <a name="fabsf"></a>  fabsf  
  Retorna o valor absoluto do argumento  
   
 ```  
@@ -379,7 +381,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor absoluto do argumento  
   
-##  <a name="floor"></a>Floor  
+##  <a name="floor"></a>  floor  
  Calcula a base do argumento  
   
 ```  
@@ -393,7 +395,7 @@ inline float floor(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a base do argumento  
   
-##  <a name="floorf"></a>floorf  
+##  <a name="floorf"></a>  floorf  
  Calcula a base do argumento  
   
 ```  
@@ -407,7 +409,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a base do argumento  
   
-##  <a name="fmax"></a>fmax  
+##  <a name="fmax"></a>  fmax  
  Determinar o valor numérico máximo de argumentos  
   
 ```  
@@ -426,7 +428,7 @@ inline float max(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor numérico máximo de argumentos  
   
-##  <a name="fmaxf"></a>fmaxf  
+##  <a name="fmaxf"></a>  fmaxf  
  Determinar o valor numérico máximo de argumentos  
   
 ```  
@@ -445,7 +447,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor numérico máximo de argumentos  
   
-##  <a name="fmin"></a>fmin  
+##  <a name="fmin"></a>  fmin  
  Determine o valor numérico mínimo de argumentos  
   
 ```  
@@ -464,7 +466,7 @@ inline float min(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor numérico mínimo de argumentos  
   
-##  <a name="fminf"></a>fminf  
+##  <a name="fminf"></a>  fminf  
  Determine o valor numérico mínimo de argumentos  
   
 ```  
@@ -483,7 +485,7 @@ inline float fminf(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor numérico mínimo de argumentos  
   
-##  <a name="fmod"></a>fmod  
+##  <a name="fmod"></a>  fmod  
  Calcula o restante de ponto flutuante de x/y  
   
 ```  
@@ -502,7 +504,7 @@ inline float fmod(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o resto de ponto flutuante de x/y  
   
-##  <a name="fmodf"></a>fmodf  
+##  <a name="fmodf"></a>  fmodf  
  Calcula o restante de ponto flutuante de x/y.  
   
 ```  
@@ -521,7 +523,7 @@ inline float fmodf(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o resto de ponto flutuante de x/y  
   
-##  <a name="frexp"></a>frexp  
+##  <a name="frexp"></a>  frexp  
  Obtém a mantissa e expoente de x  
   
 ```  
@@ -540,7 +542,7 @@ inline float frexp(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o x mantissa  
   
-##  <a name="frexpf"></a>frexpf  
+##  <a name="frexpf"></a>  frexpf  
  Obtém a mantissa e expoente de x  
   
 ```  
@@ -559,7 +561,7 @@ inline float frexpf(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o x mantissa  
   
-##  <a name="isfinite"></a>isfinite  
+##  <a name="isfinite"></a>  isfinite  
  Determina se o argumento tem um valor finito  
   
 ```  
@@ -573,7 +575,7 @@ inline int isfinite(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um valor diferente de zero se e somente se o argumento tem um valor finito  
   
-##  <a name="isinf"></a>isinf  
+##  <a name="isinf"></a>  isinf  
  Determina se o argumento é um infinito  
   
 ```  
@@ -587,7 +589,7 @@ inline int isinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um valor diferente de zero se e somente se o argumento tem um valor infinito  
   
-##  <a name="isnan"></a>isNaN  
+##  <a name="isnan"></a>  isnan  
  Determina se o argumento é uma NaN  
   
 ```  
@@ -601,7 +603,7 @@ inline int isnan(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um valor diferente de zero se e somente se o argumento tem um valor de NaN  
   
-##  <a name="ldexp"></a>ldexp  
+##  <a name="ldexp"></a>  ldexp  
  Calcula um número real da mantissa e expoente  
   
 ```  
@@ -620,7 +622,7 @@ inline float ldexp(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna x * 2 ^ _Exp  
   
-##  <a name="ldexpf"></a>ldexpf  
+##  <a name="ldexpf"></a>  ldexpf  
  Calcula um número real da mantissa e expoente  
   
 ```  
@@ -667,7 +669,7 @@ inline float log10(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o logaritmo de base 10 do argumento  
   
-##  <a name="log10f"></a>log10f  
+##  <a name="log10f"></a>  log10f  
  Calcula o logaritmo de base 10 do argumento  
   
 ```  
@@ -681,7 +683,7 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o logaritmo de base 10 do argumento  
   
-##  <a name="log2"></a>log2  
+##  <a name="log2"></a>  log2  
  Calcula o logaritmo de base 2 do argumento  
   
 ```  
@@ -695,7 +697,7 @@ inline float log2(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o logaritmo de base 2 do argumento  
   
-##  <a name="log2f"></a>log2f  
+##  <a name="log2f"></a>  log2f  
  Calcula o logaritmo de base 2 do argumento  
   
 ```  
@@ -709,7 +711,7 @@ inline float log2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o logaritmo de base 10 do argumento  
   
-##  <a name="logf"></a>logf  
+##  <a name="logf"></a>  logf  
  Calcula o logaritmo de base e do argumento  
   
 ```  
@@ -723,7 +725,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o logaritmo de base e do argumento  
   
-##  <a name="modf"></a>modf  
+##  <a name="modf"></a>  modf  
  Divide x em frações e partes de inteiro.  
   
 ```  
@@ -741,7 +743,7 @@ inline float modf(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a parte fracionária assinada de x  
   
-##  <a name="modff"></a>modff  
+##  <a name="modff"></a>  modff  
  Divide x em frações e partes de inteiro.  
   
 ```  
@@ -778,7 +780,7 @@ inline float pow(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de x elevado à potência de y  
   
-##  <a name="powf"></a>powf  
+##  <a name="powf"></a>  powf  
  Calcula x elevado à potência de y  
   
 ```  
@@ -796,7 +798,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="round"></a>Arredondar  
+##  <a name="round"></a>  Arredondar  
  Arredonda x para o inteiro mais próximo  
   
 ```  
@@ -810,7 +812,7 @@ inline float round(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o inteiro mais próximo de x  
   
-##  <a name="roundf"></a>roundf  
+##  <a name="roundf"></a>  roundf  
  Arredonda x para o inteiro mais próximo  
   
 ```  
@@ -824,7 +826,7 @@ inline float roundf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o inteiro mais próximo de x  
   
-##  <a name="rsqrt"></a>rsqrt  
+##  <a name="rsqrt"></a>  rsqrt  
  Retorna o recíproco da raiz quadrada do argumento  
   
 ```  
@@ -838,7 +840,7 @@ inline float rsqrt(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o recíproco da raiz quadrada do argumento  
   
-##  <a name="rsqrtf"></a>rsqrtf  
+##  <a name="rsqrtf"></a>  rsqrtf  
  Retorna o recíproco da raiz quadrada do argumento  
   
 ```  
@@ -852,7 +854,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o recíproco da raiz quadrada do argumento  
   
-##  <a name="signbit"></a>signbit  
+##  <a name="signbit"></a>  signbit  
  Determina se o sinal de x é negativo  
   
 ```  
@@ -866,7 +868,7 @@ inline int signbit(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um valor diferente de zero se e somente se o sinal de x for negativo  
   
-##  <a name="signbitf"></a>signbitf  
+##  <a name="signbitf"></a>  signbitf  
  Determina se o sinal de x é negativo  
   
 ```  
@@ -894,7 +896,7 @@ inline float sin(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor do seno do argumento  
   
-##  <a name="sinf"></a>sinf  
+##  <a name="sinf"></a>  sinf  
  Calcula o valor do seno do argumento  
   
 ```  
@@ -908,7 +910,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor do seno do argumento  
   
-##  <a name="sincos"></a>sincos  
+##  <a name="sincos"></a>  sincos  
  Calcula o seno e o cosseno o valor de x  
   
 ```  
@@ -928,7 +930,7 @@ inline void sincos(
  `_C`  
  Retorna o valor do x cosseno  
   
-##  <a name="sincosf"></a>sincosf  
+##  <a name="sincosf"></a>  sincosf  
  Calcula o seno e o cosseno o valor de x  
   
 ```  
@@ -962,7 +964,7 @@ inline float sinh(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor do seno hiperbólico do argumento  
   
-##  <a name="sinhf"></a>sinhf  
+##  <a name="sinhf"></a>  sinhf  
  Calcula o valor do seno hiperbólico do argumento  
   
 ```  
@@ -990,7 +992,7 @@ inline float sqrt(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a raiz de squre do argumento  
   
-##  <a name="sqrtf"></a>sqrtf  
+##  <a name="sqrtf"></a>  sqrtf  
  Calcula a raiz de squre do argumento  
   
 ```  
@@ -1018,7 +1020,7 @@ inline float tan(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor tangente do argumento  
   
-##  <a name="tanf"></a>tanf  
+##  <a name="tanf"></a>  tanf  
  Calcula o valor tangente do argumento  
   
 ```  
@@ -1046,7 +1048,7 @@ inline float tanh(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de tangente hiperbólico do argumento  
   
-##  <a name="tanhf"></a>tanhf  
+##  <a name="tanhf"></a>  tanhf  
  Calcula o valor tangente hiperbólico do argumento  
   
 ```  
@@ -1060,7 +1062,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de tangente hiperbólico do argumento  
   
-##  <a name="trunc"></a>trunc  
+##  <a name="trunc"></a>  trunc  
  Trunca o argumento para o componente de número inteiro  
   
 ```  
@@ -1074,7 +1076,7 @@ inline float trunc(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o componente inteiro do argumento  
   
-##  <a name="truncf"></a>truncf  
+##  <a name="truncf"></a>  truncf  
  Trunca o argumento para o componente de número inteiro  
   
 ```  

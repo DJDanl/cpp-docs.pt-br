@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -46,7 +47,8 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -87,16 +89,17 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2861f4b51b5d1deefd1d4959343d16c2979b67d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="forwardlist-class"></a>Classe forward_list
 Descreve um objeto que controla uma sequência de elementos de tamanho variado. A sequência é armazenada como uma lista de nós vinculada exclusivamente, com cada um contendo um membro do tipo `Type`.  
@@ -606,7 +609,7 @@ void merge(forward_list& right, Predicate comp);
 |`comp`|O objeto de função compare que é usado para classificar elementos.|  
   
 ### <a name="remarks"></a>Comentários  
- `forward_list::merge`Remove os elementos do `forward_list` `right`e as insere em isso `forward_list`. As duas sequências devem ser ordenadas pelo mesmo predicado, descrito abaixo. A sequência combinada também é ordenada por esse objeto de função de comparação.  
+ `forward_list::merge` Remove os elementos do `forward_list` `right`e as insere em isso `forward_list`. As duas sequências devem ser ordenadas pelo mesmo predicado, descrito abaixo. A sequência combinada também é ordenada por esse objeto de função de comparação.  
   
  Para os iteradores `Pi` e `Pj` que designam elementos nas posições `i` e `j`, a primeira função membro impõe a ordem `!(*Pj < *Pi)` sempre que `i < j`. (Os elementos são classificados na ordem `ascending`.) A segunda função membro impõe a ordem `! comp(*Pj, *Pi)` sempre que `i < j`.  
   

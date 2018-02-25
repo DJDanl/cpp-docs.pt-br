@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 Descreve um *objeto de retorno assíncrono*. Diferente de um objeto [future](../standard-library/future-class.md), um *provedor assíncrono* pode ser associado a qualquer quantidade de objetos `shared_future`.  
@@ -64,8 +67,8 @@ class shared_future;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[get](#get)|Recupera o resultado armazenado no *estado assíncrono associado*.|  
-|[válido](#valid)|Especifica se o objeto não está vazio.|  
-|[Aguarde](#wait)|Bloqueia o thread atual até que o estado assíncrono associado esteja pronto.|  
+|[valid](#valid)|Especifica se o objeto não está vazio.|  
+|[wait](#wait)|Bloqueia o thread atual até que o estado assíncrono associado esteja pronto.|  
 |[wait_for](#wait_for)|Bloqueia até que o estado assíncrono associado esteja pronto ou até que o tempo especificado tenha decorrido.|  
 |[wait_until](#wait_until)|Bloqueia até que o estado assíncrono associado esteja pronto ou até um ponto no tempo especificado.|  
   
@@ -80,7 +83,7 @@ class shared_future;
   
  **Namespace:** std  
   
-##  <a name="get"></a>shared_future:: Get
+##  <a name="get"></a>  shared_future::get
  Recupera o resultado armazenado no *estado assíncrono associado*.  
   
 ```
@@ -141,7 +144,7 @@ shared_future(const shared_future& Right);
   
  O quarto construtor cria um objeto `shared_future` que tem o mesmo estado assíncrono associado que `Right`.  
   
-##  <a name="valid"></a>shared_future:: valid
+##  <a name="valid"></a>  shared_future::valid
  Especifica se o objeto tem um *estado assíncrono associado*.  
   
 ```
@@ -151,7 +154,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>Valor de retorno  
  `true` se o objeto tiver um estado assíncrono associado; caso contrário, `false`.  
   
-##  <a name="wait"></a>shared_future:: wait
+##  <a name="wait"></a>  shared_future::wait
  Bloqueia o thread atual até que o *estado assíncrono associado* esteja *pronto*.  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>Comentários  
  Um estado assíncrono associado ficará pronto somente se seu provedor assíncrono tiver armazenado um valor retornado ou armazenado uma exceção.  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
+##  <a name="wait_for"></a>  shared_future::wait_for
  Bloqueia o thread atual até que o estado assíncrono associado seja *ready* ou até que o intervalo de tempo especificado tenha decorrido.  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>Comentários  
  Um estado assíncrono associado ficará *pronto* somente se seu provedor assíncrono tiver armazenado um valor retornado ou armazenado uma exceção.  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
+##  <a name="wait_until"></a>  shared_future::wait_until
  Bloqueia o thread atual até que o estado assíncrono associado esteja *pronto* ou após um determinado ponto no tempo.  
   
 ```

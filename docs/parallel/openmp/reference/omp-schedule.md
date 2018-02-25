@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: OMP_SCHEDULE
-dev_langs: C++
-helpviewer_keywords: OMP_SCHEDULE OpenMP environment variable
+ms.topic: reference
+f1_keywords:
+- OMP_SCHEDULE
+dev_langs:
+- C++
+helpviewer_keywords:
+- OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2295a801-e584-4d2f-826f-7ca4c88846a6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8aa1406b490128657da19f7c48c958d382850d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8ff09bf142fd1c8bbbd61d1e1d3bd76102f7d86b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 Modifica o comportamento do [agenda](../../../parallel/openmp/reference/schedule.md) cláusula quando `schedule(runtime)` é especificado em uma `for` ou `parallel for` diretiva.  
@@ -35,7 +40,7 @@ set OMP_SCHEDULE[=type[,size]]
  onde,  
   
  `size` (opcional)  
- Especifica o tamanho de iterações. `size`deve ser um inteiro positivo. O padrão é 1, exceto quando `type` é estático. Não é válida quando `type` é `runtime`.  
+ Especifica o tamanho de iterações. `size` Deve ser um inteiro positivo. O padrão é 1, exceto quando `type` é estático. Não é válida quando `type` é `runtime`.  
   
  `type`  
  O tipo de agendamento:  

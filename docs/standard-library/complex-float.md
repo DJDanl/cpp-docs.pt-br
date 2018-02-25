@@ -4,26 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: complex/std::complex<float>
-dev_langs: C++
-helpviewer_keywords: complex<float> function
+ms.topic: reference
+f1_keywords:
+- complex/std::complex<float>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1555812fb3607f3271ba87c88839767ce79f9ecc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 09bf551c6487631ea803e071ed4b4c11501cdb04
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
-Descreve um objeto que armazena um par ordenado de objetos do tipo **float***,* o primeiro representando a parte real de um número complexo e o segundo representando a parte imaginária.  
+Descreve um objeto que armazena um par ordenado de objetos do tipo **float ** o primeiro que representa a parte real de um número complexo e a segunda que representa a parte imaginária.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -15,7 +16,8 @@ f1_keywords:
 - iterator/std::reverse_iterator::reference
 - iterator/std::reverse_iterator::base
 - iterator/std::reverse_iterator::operator_star
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::reverse_iterator [C++]
 - std::reverse_iterator [C++], difference_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b72f9bc378c37eed6660091f04dfabc01bc5d4c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reverseiterator-class"></a>Classe reverse_iterator
 A classe de modelo é um adaptador de iterador que descreve um objeto de iterador inverso que se comporta como um iterador bidirecional ou de acesso aleatório, somente em sentido inverso. Ela permite a travessia regressiva de um intervalo.  
@@ -114,7 +117,7 @@ RandomIterator base() const;
 ### <a name="remarks"></a>Comentários  
  A identidade que relaciona a todos os iteradores inversos a seus iteradores subjacentes é:  
   
- &\*( `reverse_iterator` ( *,* )) = = &\*( *,* - 1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  Na prática, isso significa que, na sequência invertida, `reverse_iterator` fará referência ao elemento que está uma posição depois (à direita) do elemento ao qual o iterador se referiu na sequência original. Desse modo, se um iterador tratou o elemento 6 na sequência (2, 4, 6, 8), `reverse_iterator` tratará o elemento 4 na sequência inversa (8, 6, 4, 2).  
   
@@ -932,7 +935,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 ### <a name="remarks"></a>Comentários  
  A identidade que relaciona a todos os iteradores inversos a seus iteradores subjacentes é:  
   
- &\*( `reverse_iterator` ( *,* )) = = &\*( *,* - 1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  Na prática, isso significa que na sequência invertida, reverse_iterator fará referência ao elemento que está uma posição depois (à direita do) do elemento ao qual o iterador se referiu na sequência original. Desse modo, se um iterador tratou o elemento 6 na sequência (2, 4, 6, 8), `reverse_iterator` tratará o elemento 4 na sequência inversa (8, 6, 4, 2).  
   

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29e82458f56c9b1f321f7a82afeb6f041be27854
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50911440acbc7514b091a439d42bf73ee60353f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="receiving-notifications"></a>Recebendo notificações
 OLE DB fornece interfaces para receber notificações quando os eventos ocorrem. Elas são descritas nas [OLE DB objeto notificações](https://msdn.microsoft.com/en-us/library/ms725406.aspx) no *referência do programador de DB OLE*. A instalação desses eventos usa o mecanismo padrão de ponto de conexão de COM. Por exemplo, um objeto ATL que deseja recuperar eventos por meio de `IRowsetNotify` implementa o `IRowsetNotify` interface adicionando `IRowsetNotify` à lista de classe derivada e expô-lo por meio de um **COM_INTERFACE_ENTRY** macro.  

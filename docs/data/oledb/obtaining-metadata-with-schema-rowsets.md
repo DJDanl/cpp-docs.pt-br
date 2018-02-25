@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets, getting OLE DB provider metadata
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0035606b02a1281b09287f19ffe087c9e6b36f7f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1509bb4bd083331c36c3b699b4716945e4573d1d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtendo metadados com conjuntos de linhas de esquema
 Às vezes você precisa obter informações sobre o provedor, conjunto de linhas, tabela, colunas ou outras informações do banco de dados sem abrir o conjunto de linhas. Dados sobre a estrutura de banco de dados são chamados de metadados e podem ser recuperados por um número de métodos diferentes. Um método é usar conjuntos de linhas de esquema.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/03/2018
 SELECT * FROM authors where l_name = 'pivo'  
 ```  
   
- `l_name`é uma restrição. Este é um exemplo muito simple, com apenas uma restrição; as classes de conjunto de linhas de esquema oferecem suporte a várias restrições.  
+ `l_name` é uma restrição. Este é um exemplo muito simple, com apenas uma restrição; as classes de conjunto de linhas de esquema oferecem suporte a várias restrições.  
   
  O [classes de typedef de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) encapsular todas as linhas do esquema de banco de dados OLE para que você pode acessar um conjunto de linhas de esquema assim como qualquer outro conjunto de linhas, criando e abri-lo. Por exemplo, a classe typedef [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) é definido como:  
   

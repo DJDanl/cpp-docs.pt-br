@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unbounded_buffer
 - AGENTS/concurrency::unbounded_buffer
@@ -24,18 +25,20 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::resume_propagation
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9834a3ee67d49651de703a54660767604e067b25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 Um `unbounded_buffer` bloco de mensagens é um multi-destino de várias fontes, ordenada `propagator_block` capaz de armazenar um número ilimitado de mensagens.  
   
@@ -65,8 +68,8 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[remoção da fila](#dequeue)|Remove um item do `unbounded_buffer` bloco de mensagens.|  
-|[enfileirar](#enqueue)|Adiciona um item para o `unbounded_buffer` bloco de mensagens.|  
+|[dequeue](#dequeue)|Remove um item do `unbounded_buffer` bloco de mensagens.|  
+|[enqueue](#enqueue)|Adiciona um item para o `unbounded_buffer` bloco de mensagens.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
@@ -102,7 +105,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
  **Namespace:** simultaneidade  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Aceita uma mensagem que foi fornecida por esse `unbounded_buffer` bloco de mensagens, transferir a propriedade para o chamador.  
   
@@ -119,7 +122,7 @@ virtual message<_Type> * accept_message(
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o `message` que o chamador agora tem a propriedade do objeto.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Consome uma mensagem anteriormente oferecida pelo `unbounded_buffer` bloco de mensagens e reservado pelo destino, transferir a propriedade para o chamador.  
   
@@ -139,7 +142,7 @@ virtual message<_Type> * consume_message(
 ### <a name="remarks"></a>Comentários  
  Semelhante ao `accept`, mas sempre é precedido por uma chamada para `reserve`.  
   
-##  <a name="dequeue"></a>remoção da fila 
+##  <a name="dequeue"></a> dequeue 
 
  Remove um item do `unbounded_buffer` bloco de mensagens.  
   
@@ -150,7 +153,7 @@ _Type dequeue();
 ### <a name="return-value"></a>Valor de retorno  
  A carga da mensagem removida o `unbounded_buffer`.  
   
-##  <a name="enqueue"></a>enfileirar 
+##  <a name="enqueue"></a> Enfileirar 
 
  Adiciona um item para o `unbounded_buffer` bloco de mensagens.  
   
@@ -165,9 +168,9 @@ bool enqueue(
  O item a ser adicionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o item tiver sido aceita, `false` caso contrário.  
+ `true` Se o item tiver sido aceita, `false` caso contrário.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Um retorno de chamada que notifica que um novo destino foi vinculado a este `unbounded_buffer` bloco de mensagens.  
   
@@ -181,7 +184,7 @@ virtual void link_target_notification(
  `_PTarget`  
  Um ponteiro para o destino recentemente vinculado.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Assincronamente transmite uma mensagem de um `ISource` blocos a este `unbounded_buffer` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.  
   
@@ -202,7 +205,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valor de retorno  
  Um [message_status](concurrency-namespace-enums.md#message_status) indicação de que o destino decidiu fazer com a mensagem.  
   
-##  <a name="propagate_output_messages"></a>propagate_output_messages 
+##  <a name="propagate_output_messages"></a> propagate_output_messages 
 
  Locais de `message` `_PMessage` neste `unbounded_buffer` bloco de mensagens e tenta oferecê-lo para todos os destinos vinculados.  
   
@@ -213,7 +216,7 @@ virtual void propagate_output_messages();
 ### <a name="remarks"></a>Comentários  
  Se outra mensagem já está à frente la no `unbounded_buffer`, propagação para destinos vinculados não ocorrerá até que todas as mensagens anteriores foram aceitas ou consumidas. O primeiro vinculado destino com êxito `accept` ou `consume` apropria-se a mensagem, e nenhum outro destino, em seguida, pode receber a mensagem.  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  Locais de `message` `_PMessage` neste `unbounded_buffer` bloco de mensagens e tenta oferecê-lo para todos os destinos vinculados.  
   
@@ -226,7 +229,7 @@ virtual void process_input_messages(
 ### <a name="parameters"></a>Parâmetros  
  `_PMessage`  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Libera uma reserva de mensagem anterior.  
   
@@ -240,7 +243,7 @@ virtual void release_message(
  `_MsgId`  
  O `runtime_object_identity` do `message` do objeto que está sendo liberado.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Reserva uma mensagem anteriormente oferecida por este `unbounded_buffer` bloco de mensagens.  
   
@@ -255,12 +258,12 @@ virtual bool reserve_message(
  O `runtime_object_identity` do `message` do objeto que está sendo reservado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se a mensagem foi reservada com êxito, `false` caso contrário.  
+ `true` Se a mensagem foi reservada com êxito, `false` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Depois de `reserve` é chamado, se ele retorna `true`, `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Retoma a propagação depois de uma reserva foi liberada.  
   
@@ -268,7 +271,7 @@ virtual bool reserve_message(
 virtual void resume_propagation();  
 ```  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Modo síncrono transmite uma mensagem de um `ISource` blocos a este `unbounded_buffer` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.  
   
@@ -289,7 +292,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Valor de retorno  
  Um [message_status](concurrency-namespace-enums.md#message_status) indicação de que o destino decidiu fazer com a mensagem.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  Substitui o `supports_anonymous_source` método para indicar que este bloco pode aceitar mensagens oferecidas a ele por uma fonte que não está vinculada.  
   
@@ -298,9 +301,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`como o bloco não adiar oferecido mensagens.  
+ `true` como o bloco não adiar oferecido mensagens.  
   
-##  <a name="ctor"></a>unbounded_buffer 
+##  <a name="ctor"></a> unbounded_buffer 
 
  Constrói um `unbounded_buffer` bloco de mensagens.  
   
@@ -345,7 +348,7 @@ unbounded_buffer(
   
  O tipo `filter_method` é um functor com assinatura `bool (_Type const &)` que é invocado por este `unbounded_buffer` bloco de mensagens para determinar se ele deve aceitar uma mensagem oferecida.  
   
-##  <a name="dtor"></a>~ unbounded_buffer 
+##  <a name="dtor"></a> ~ unbounded_buffer 
 
  Destrói a `unbounded_buffer` bloco de mensagens.  
   

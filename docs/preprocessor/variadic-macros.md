@@ -1,33 +1,36 @@
 ---
-title: Macros Variadic | Microsoft Docs
+title: Variadic Macros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e3832ab334d31b50edbe0cc1fd5dccbffb61bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="variadic-macros"></a>Macros variadic
 Macros variadic são macros do tipo função que contêm um número variável de argumentos.  
   
 ## <a name="remarks"></a>Comentários  
- Para usar macros variadic, no botão de reticências pode ser especificado como o argumento formal final na definição da macro e o identificador de substituição `__VA_ARGS__` pode ser usado na definição de inserir os argumentos adicionais.  `__VA_ARGS__`é substituído por todos os argumentos que correspondem a reticências, incluindo vírgulas entre eles.  
+ Para usar macros variadic, no botão de reticências pode ser especificado como o argumento formal final na definição da macro e o identificador de substituição `__VA_ARGS__` pode ser usado na definição de inserir os argumentos adicionais.  `__VA_ARGS__` é substituído por todos os argumentos que correspondem a reticências, incluindo vírgulas entre eles.  
   
  O padrão C especifica que pelo menos um argumento deve ser passado às reticências, para assegurar que a macro não seja resolvida em uma expressão com uma vírgula à direita.  A implementação do Visual C++ suprimirá uma vírgula à direita se nenhum argumento for passado às reticências.  
   

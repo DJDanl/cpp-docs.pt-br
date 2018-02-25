@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
@@ -13,7 +13,7 @@ f1_keywords:
 - numeric/std::iota
 - numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 9b1c992930fb6b35498f04357e783d01db3a229c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: b0437225718e402ac2c8b9a22af5b4825128cbd6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnumericgt-functions"></a>Funções &lt;numeric&gt;
 ||||  
@@ -313,13 +313,13 @@ Type inner_product(
 ### <a name="return-value"></a>Valor de retorno  
  A primeira função membro retorna a soma dos produtos em relação ao elemento e adiciona a ela o valor inicial especificado. Então, para intervalos de valores *a*i e *b*i, ela retornará:  
   
- `val`+ ( *um*1 \* *b*1) + ( *um*2 \* *b*2) +... + ( *um* n  \* *b*n) 
+ `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
  substituindo iterativamente `val` com `val` + ( *um*, \* *b*i).  
   
  A segunda função membro retorna:  
   
- `val`*binary_op1* ( *um*1 *binary_op2* *b*1) *binary_op1* ( *um*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *um*n *binary_op2* *b*n)  
+ `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
   
  substituindo iterativamente `val` com `val` *binary_op1* ( *um*, *binary_op2* *b*i).  
   

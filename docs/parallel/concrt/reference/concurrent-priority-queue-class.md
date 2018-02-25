@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
@@ -18,19 +19,22 @@ f1_keywords:
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
-dev_langs: C++
-helpviewer_keywords: concurrent_priority_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 O `concurrent_priority_queue` classe é um contêiner que permite que vários threads para itens simultaneamente por push e pop. Itens são disparados em ordem de prioridade, onde a prioridade é determinada por um functor fornecido como um argumento de modelo.  
@@ -102,7 +106,7 @@ template <typename T,
   
  **Namespace:** simultaneidade  
   
-##  <a name="clear"></a>Limpar 
+##  <a name="clear"></a> Limpar 
 
  Apaga todos os elementos na prioridade de simultâneas. Este método não é seguro de simultaneidade.  
   
@@ -111,9 +115,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `clear`não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está chamando métodos na fila de prioridade simultâneas quando você chamar esse método. `clear`não liberar memória.  
+ `clear` não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está chamando métodos na fila de prioridade simultâneas quando você chamar esse método. `clear` não liberar memória.  
   
-##  <a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a> concurrent_priority_queue 
 
  Constrói uma fila de prioridade simultâneas.  
   
@@ -177,7 +181,7 @@ concurrent_priority_queue(
   
  Os sexto e o sétimo construtores especificam um movimento da fila de prioridade `_Src`.  
   
-##  <a name="empty"></a>vazio 
+##  <a name="empty"></a> vazio 
 
  Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é seguro de simultaneidade.  
   
@@ -186,9 +190,9 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se a fila de prioridade estava vazia no momento em que a função foi chamada, `false` caso contrário.  
+ `true` Se a fila de prioridade estava vazia no momento em que a função foi chamada, `false` caso contrário.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é seguro de simultaneidade.  
   
@@ -199,7 +203,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma cópia do alocador usado para construir o `concurrent_priority_queue` objeto.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Atribui o conteúdo de outro `concurrent_priority_queue` deste objeto. Este método não é seguro de simultaneidade.  
   
@@ -216,7 +220,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `concurrent_priority_queue` objeto.  
   
-##  <a name="push"></a>push 
+##  <a name="push"></a> Enviar por push 
 
  Adiciona um elemento para a fila de prioridade simultâneas. Esse método é seguro de simultaneidade.  
   
@@ -230,7 +234,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  O elemento a ser adicionado à fila de prioridade simultâneas.  
   
-##  <a name="size"></a>tamanho 
+##  <a name="size"></a> Tamanho 
 
  Retorna o número de elementos na fila de prioridade simultâneas. Esse método é seguro de simultaneidade.  
   
@@ -244,7 +248,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho retornado é garantido para incluir todos os elementos adicionados por chamadas para a função `push`. No entanto, ele pode não refletir resultados de operações simultâneas pendentes.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> swap 
 
  Alterna o conteúdo de duas filas simultâneas de prioridade. Este método não é seguro de simultaneidade.  
   
@@ -256,7 +260,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  O objeto `concurrent_priority_queue` com o qual trocar conteúdo.  
   
-##  <a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a> try_pop 
 
  Remove e retorna o elemento mais alto de prioridade da fila se a fila não está vazio. Esse método é seguro de simultaneidade.  
   
@@ -269,7 +273,7 @@ bool try_pop(reference _Elem);
  Uma referência a uma variável que será preenchida com o elemento de prioridade mais alto, se a fila não está vazio.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se um valor foi exibido, `false` caso contrário.  
+ `true` Se um valor foi exibido, `false` caso contrário.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

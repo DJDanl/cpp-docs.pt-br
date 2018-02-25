@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ctype<char>
 - locale/std::ctype<char>
-dev_langs: C++
-helpviewer_keywords: ctype<char> class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7e1fdc3a37abec334cccfe5a62954210e6e4a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c18f5a98ae7e6ff0f71e669380cb29e9904b6815
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ctypeltchargt-class"></a>Classe ctype&lt;char&gt;
 Uma classe que é uma especialização explícita da classe de modelo **ctype\<CharType**> para o tipo `char`, que descreve um objeto que pode servir como uma faceta de localidade para caracterizar várias propriedades de um caractere do tipo `char`.  

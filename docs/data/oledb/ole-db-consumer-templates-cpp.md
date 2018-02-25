@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - databases [C++], OLE DB templates
 - OLE DB consumers [C++], data access
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 953711a6fd026c0b5409392393d854917c650cbf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelos de consumidor de banco de dados OLE (C++)
 O OLE DB modelos de consumidor suporte à especificação de versão 2.6 do OLE DB. (Os modelos de consumidor de banco de dados OLE são testados em relação a 2.6 do OLE DB, mas não oferecem suporte a todas as interfaces na especificação.) Os modelos de consumidor minimizar a quantidade de código que você deve escrever para implementar um consumidor OLE DB. Os modelos fornecem:  
@@ -61,7 +63,7 @@ O OLE DB modelos de consumidor suporte à especificação de versão 2.6 do OLE 
   
  Um conceito importante ao trabalhar com os consumidores é que você declare duas classes em um consumidor: o [classe comando (ou tabela)](../../data/oledb/commands-and-tables.md) e [classe de registro de usuário](../../data/oledb/user-records.md). Você pode acessar o conjunto de linhas por meio da classe de comando (ou tabela), que herda de uma classe de acessador e uma classe de conjunto de linhas. A classe de registro de usuário contém o mapa de associação do conjunto de linhas descrito anteriormente.  
   
- Para mais informações, consulte os seguintes tópicos:  
+ Para obter mais informações, consulte os seguintes tópicos:  
   
 -   [Criando um consumidor do OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
   

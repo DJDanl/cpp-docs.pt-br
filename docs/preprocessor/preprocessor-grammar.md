@@ -4,59 +4,62 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor-grammar"></a>Gramática do pré-processador
-**#define***identificador* *cadeia de caracteres de token*aceitar    
+**#define**  *identifier* *token-string*opt  
   
- *#***definir***identificador*[**(** *identificador*aceitação**,** *...*  **,** *identificador*aceitação **)**] *cadeia de caracteres de token*aceitar    
+ *#* **define**  *identifier*[**(** *identifier*opt**,** *...* **,** *identifier*opt **)**] *token-string*opt  
   
- **definido (***identificador* **)**   
+ **defined(**  *identifier* **)**  
   
- **definido***identificador*   
+ **defined**  *identifier*  
   
- `#include`**"***especificação de caminho***"**  
+ `#include` **"***path-spec***"**  
   
- `#include` **\<**  *especificação de caminho***>**  
+ `#include` **\<***path-spec***>**  
   
- **#line***sequência de dígitos***"** *filename* **"**aceitar      
+ **#line**  *digit-sequence*  **"** *filename* **"**opt  
   
- *#***undef***identificador*   
+ *#* **undef**  *identifier*  
   
- **#error***cadeia de caracteres de token*   
+ **#error**  *token-string*  
   
- **#pragma***cadeia de caracteres de token*   
+ **#pragma**  *token-string*  
   
  *condicional* :  
  *Se partes elif partes*aceitar*parte else*aceitar*linha endif*  
   
  *Se partes* :  
- *Se linetext*  
+ *if-linetext*  
   
  *Se-linha* :  
- **#if***expressão constante*   
+ **#if**  *constant-expression*  
   
- **#ifdef***identificador*   
+ **#ifdef**  *identifier*  
   
- **#ifndef***identificador*   
+ **#ifndef**  *identifier*  
   
  *partes elif* :  
  *texto da linha de elif*  
@@ -64,10 +67,10 @@ ms.lasthandoff: 12/21/2017
  *texto da linha de elif partes elif*  
   
  *linha elif* :  
- **#elif***expressão constante*   
+ **#elif**  *constant-expression*  
   
  *parte Else* :  
- *linetext Else*  
+ *else-linetext*  
   
  *outra linha* :  
  `#else`  
@@ -75,7 +78,7 @@ ms.lasthandoff: 12/21/2017
  *linha endif* :  
  `#endif`  
   
- *sequência de dígitos* :  
+ *digit-sequence* :  
  *digit*  
   
  *digit-sequence digit*  
@@ -100,10 +103,10 @@ ms.lasthandoff: 12/21/2017
  *nome de arquivo* :  
  Nome de arquivo válido do sistema operacional  
   
- *especificação de caminho* :  
+ *path-spec* :  
  Caminho de arquivo válido  
   
- *texto* :  
+ *text* :  
  Qualquer sequência de texto  
   
 > [!NOTE]

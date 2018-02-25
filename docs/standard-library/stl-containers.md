@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a69230b190671fe768cdf4473b24d0c942743943
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="c-standard-library-containers"></a>Contêineres da biblioteca padrão C++
 A biblioteca padrão fornece vários contêineres fortemente tipados para armazenar coleções de objetos relacionados. Os contêineres são modelos de classe; Quando você declara uma variável de contêiner, você pode especificar o tipo dos elementos que esse contêiner armazenará. Contêineres podem ser criados com listas de inicializadores. Elas têm funções membro para adição e remoção de elementos e execução de outras operações.  

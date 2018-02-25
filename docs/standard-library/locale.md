@@ -1,29 +1,33 @@
 ---
-title: '&lt;localidade&gt; | Microsoft Docs'
+title: '&lt;locale&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 Define funções e classes de modelo que os programas C++ podem usar para encapsular e manipular as diferentes convenções culturais em relação à representação e formatação de dados numéricos, monetários e de calendário, incluindo suporte à internacionalização para classificação de caracteres e agrupamento de cadeias de caracteres.  
@@ -65,7 +69,7 @@ Define funções e classes de modelo que os programas C++ podem usar para encaps
 |[collate](../standard-library/collate-class.md)|Uma classe de modelo de agrupamento que fornece uma faceta que trata convenções de classificação de cadeia de caracteres.|  
 |[collate_byname](../standard-library/collate-byname-class.md)|Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta de agrupamento de uma determinada localidade, permitindo a recuperação de informações específicas a uma área cultural no que diz respeito a convenções de classificação de cadeia de caracteres.|  
 |[ctype](../standard-library/ctype-class.md)|Uma classe de modelo que fornece uma faceta usada para classificar caracteres, fazer conversões de letras maiúsculas e minúsculas, bem como entre o conjunto de caracteres nativos e o conjunto usado pela localidade.|  
-|[CType\<char >](../standard-library/ctype-char-class.md)|Uma classe que é uma especialização explícita da classe de modelo **ctype\<CharType**> para o tipo `char`, que descreve um objeto que pode servir como uma faceta de localidade para caracterizar a várias propriedades de um caractere de tipo `char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Uma classe que é uma especialização explícita da classe de modelo **ctype\<CharType**> para o tipo `char`, que descreve um objeto que pode servir como uma faceta de localidade para caracterizar a várias propriedades de um caractere de tipo `char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|Uma classe base da classe ctype que é usada para definir tipos de enumeração usados para classificar ou testar caracteres individualmente ou dentro de intervalos inteiros.|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta ctype de uma determinada localidade, permitindo a classificação de caracteres e a conversão de caracteres entre letras maiúsculas e minúsculas, assim como entre conjuntos de caracteres especificados de localidade e nativos.|  
 |[locale](../standard-library/locale-class.md)|Uma classe que descreve um objeto de localidade que encapsula informações específicas à cultura como um conjunto de facetas que definem coletivamente um ambiente localizado específico.|  

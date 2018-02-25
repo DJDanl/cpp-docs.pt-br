@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::set
 - set/std::set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::set::swap
 - set/std::set::upper_bound
 - set/std::set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::set [C++]
 - std::set [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c2eba982b48181dee284bed63d3bab978d624fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-class"></a>Classe set
 O conjunto de classes de contêiner da biblioteca padrão C++ é usado para o armazenamento e a recuperação de dados de uma coleção na qual os valores dos elementos contidos são exclusivos e funcionam como os valores de chave, de acordo com os quais os dados são automaticamente ordenados. O valor de um elemento em um conjunto não pode ser alterado diretamente. Em vez disso, você deve excluir valores antigos e inserir elementos com novos valores.  
@@ -126,7 +129,7 @@ class set
  No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do conjunto da memória. Esse argumento é opcional e o valor padrão é **allocator***\<Key>.*  
+ O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do conjunto da memória. Esse argumento é opcional e o valor padrão é **alocador *\<chave >.*  
   
 ## <a name="remarks"></a>Comentários  
  A Biblioteca Padrão C++ é:  

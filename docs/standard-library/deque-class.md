@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deque-class"></a>Classe deque
 Organiza os elementos de determinado tipo em uma organização linear e, como um vetor, permite o acesso aleatório rápido a qualquer elemento e uma inserção e exclusão eficientes na parte posterior do contêiner. No entanto, ao contrário de um vetor, a classe `deque` também dá suporte à inserção e exclusão eficientes na frente do contêiner.  
@@ -121,7 +124,7 @@ class deque
  O tipo de dados do elemento a ser armazenado no deque.  
   
  `Allocator`  
- O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória do deque. Esse argumento é opcional e o valor padrão é **allocator\<Type>***.*  
+ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória do deque. Esse argumento é opcional e o valor padrão é **alocador\<tipo > * * *.*  
   
 ## <a name="remarks"></a>Comentários  
  A escolha do tipo de contêiner deve se basear, de modo geral, no tipo de pesquisa e inserção exigido pelo aplicativo. [Vetores](../standard-library/vector-class.md) devem ser o contêiner preferencial para gerenciar uma sequência quando o acesso aleatório a qualquer elemento é alto e inserções e exclusões de elementos apenas são necessárias no fim de uma sequência. O desempenho do contêiner de lista é superior quando inserções e exclusões eficientes (em tempo constante) em qualquer local na sequência são altas. Essas operações no meio da sequência exigem cópias de elemento e atribuições proporcionais ao número de elementos na sequência (tempo linear).  

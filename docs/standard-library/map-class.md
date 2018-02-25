@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="map-class"></a>Classe map
 Usado para o armazenamento e a recuperação de dados de uma coleção em que cada elemento é um par que contém um valor de dados e uma chave de classificação. O valor da chave é exclusivo e usado para classificar os dados automaticamente.  
@@ -1505,7 +1508,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O **iterador** definido pelos pontos do mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair`*\<***constKey**, **Type***>*, cujo primeiro membro é a chave para o elemento e o segundo membro é a referência mapeada mantida pelo elemento.  
+ O **iterador** definido pelos pontos de mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair` * \< * **constKey** , **Tipo * >*, cujo primeiro membro é a chave para o elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.  
   
  Para desreferenciar um **iterador**`Iter` que aponta para um elemento em um mapa, use o operador **->**.  
   
@@ -2311,7 +2314,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Comentários  
  Um tipo de `reverse_iterator` não pode modificar o valor de um elemento e é usado para iterar o mapa em ordem inversa.  
   
- O `reverse_iterator` definido pelos pontos do mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair`*\<***constKey**, **Type***>*, cujo primeiro membro é a chave do elemento e o segundo membro é a referência mapeada mantida pelo elemento.  
+ O `reverse_iterator` definido pelos pontos de mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair` * \< * **constKey**, * *Tipo * >*, cujo primeiro membro é a chave para o elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.  
   
  A referência a um `reverse_iterator` `rIter` apontando para um elemento em um mapa, use o  **->**  operador.  
   
@@ -2520,7 +2523,7 @@ value_compare value_comp() const;
 ### <a name="remarks"></a>Comentários  
  Para um mapa *m*, se dois elementos *e*1( *k*1, *d*1) e *e*2( *k*2, `d`2) forem objetos do tipo `value_type`, nos quais *k*1 e *k*2 forem suas chaves do tipo `key_type` e `d`1 e `d`2 forem seus dados do tipo `mapped_type`, então *m.*`value_comp`( *e*1, *e*2) será equivalente a *m.*`key_comp`*(k*1, *k*2). Um objeto armazenado define a função de membro  
   
- **operador bool**( **value_type &**`left`, **value_type &**`right`);  
+ **bool operator**( **value_type&**`left`, **value_type&**`right`);  
   
  que retornará **true** se o valor de chave `left` preceder e for diferente do valor de chave de `right` na ordem de classificação.  
   

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1786b376ca437c749448511cf8e8fcef02240206
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f31f2f3ec58ea7b557cc04718cf52219d0f4d9e9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substituindo um acessador dinâmico
 Quando você usa um acessador dinâmico como `CDynamicAccessor`, o comando **abrir** método cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto. Você pode substituir o acessador dinâmico para controlar exatamente como as colunas associadas.  

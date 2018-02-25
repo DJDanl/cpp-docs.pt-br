@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - BLOB_NAME_LENGTH
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 437c5a355de0c4655fc6beac00d4497c14ea3f2d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 38b6a2c048461521bfd4b7a1881e3410e80e7bac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="blobnamelength"></a>BLOB_NAME_LENGTH
 Usado com `BEGIN_COLUMN_MAP` e `END_COLUMN_MAP` para associar um objeto binário grande ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Semelhante ao [BLOB_NAME](../../data/oledb/blob-name.md), exceto que essa macro também obtém o comprimento em bytes da coluna de dados BLOB.  
@@ -50,7 +50,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
  `data`  
  [in] O membro de dados correspondente no registro do usuário.  
   
- *length*  
+ *Comprimento*  
  [out] O comprimento (real) em bytes da coluna de BLOB.  
   
 ## <a name="requirements"></a>Requisitos  

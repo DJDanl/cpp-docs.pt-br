@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b4dc655710c9c9cc4bb9a2549136f772b192f739
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Dando suporte a conjuntos de linhas do esquema
 Conjuntos de linhas de esquema permitem que os consumidores obter informações sobre um repositório de dados sem conhecer sua estrutura subjacente ou esquema. Por exemplo, um repositório de dados pode ter tabelas organizadas em uma hierarquia definida pelo usuário, portanto, não haveria nenhuma maneira de garantir o conhecimento sobre o esquema, exceto por leitura. (Como outro exemplo, observe que os assistentes do Visual C++ usam conjuntos de linhas de esquema para gerar acessadores para o consumidor.) Para permitir que o consumidor fazer isso, o objeto de sessão do provedor expõe métodos no [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interface. Em aplicativos do Visual C++, você deve usar o [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe para implementar **IDBSchemaRowset**.  

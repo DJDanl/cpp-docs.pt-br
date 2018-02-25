@@ -1,14 +1,17 @@
 ---
-title: '#<a name="define-directive-cc--microsoft-docs"></a>definir a diretiva (C/C++) | Microsoft Docs'
+title: '#definir a diretiva (C/C++) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#define'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#define'
+dev_langs:
+- C++
 helpviewer_keywords:
 - define directive (#define), syntax
 - preprocessor, directives
@@ -16,24 +19,25 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-directive-cc"></a>Diretiva #define (C/C++)
 O `#define` cria um *macro*, que é a associação de um identificador ou identificador com parâmetros com uma cadeia de caracteres de token. Após a definição da macro, o compilador pode substituir a cadeia de caracteres de token para cada ocorrência do identificador no arquivo de origem.  
   
 ## <a name="syntax"></a>Sintaxe  
- `#define`*identificador* *cadeia de caracteres de token*aceitar  
+ `#define` *identifier* *token-string*opt  
   
- `#define`*identificador* `(` *identificador*aceitação`,`*...*  `,` *identificador*aceitação`)`*cadeia de caracteres de token*aceitar  
+ `#define` *identifier* `(` *identifier*opt`,`*...*`,`*identifier*opt`)`*token-string*opt  
   
 ## <a name="remarks"></a>Comentários  
  O `#define` diretiva faz com que o compilador substituir *cadeia de caracteres de token* para cada ocorrência do *identificador* no arquivo de origem. O *identificador* é substituído somente quando constitui um token. Ou seja, *identificador* não será substituído se ele for exibido em um comentário em uma cadeia de caracteres ou como parte de um identificador de mais tempo. Para obter mais informações, consulte [Tokens](../cpp/tokens-cpp.md).  
@@ -73,7 +77,7 @@ O `#define` cria um *macro*, que é a associação de um identificador ou identi
   
  O Microsoft C/C++ permite que você redefina uma macro se a nova definição for sintaticamente idêntica à definição original. Ou seja, as duas definições podem ter nomes de parâmetro diferentes. Esse comportamento difere do [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C, que requer que as duas definições sejam lexicalmente idênticas.  
   
- Por exemplo, as duas macros a seguir são idênticas, exceto os nomes de parâmetro. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]C não suporta tal uma redefinição, mas a Microsoft C/C++ compila sem erro.  
+ Por exemplo, as duas macros a seguir são idênticas, exceto os nomes de parâmetro. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C não suporta tal uma redefinição, mas a Microsoft C/C++ compila sem erro.  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  

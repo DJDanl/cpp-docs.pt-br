@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: filesystem/std::experimental::filesystem::path
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- filesystem/std::experimental::filesystem::path
+dev_langs:
+- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 05acbc14af8daec265cf705ac4605e9606cb0696
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9e91ee287b1403b49f7a70ab3d96686650d6b2f0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="path-class"></a>Classe path
 A classe **path** armazena um objeto do tipo string\_type, chamado myname aqui para fins de explicação, adequada para uso como um nome de caminho. string\_type é um sinônimo de basic\_string\<value_type>, em que value\_type é um sinônimo para char em Windows ou wchar_t em Posix.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>Classe combinable
 O `combinable<T>` objeto destina-se a fornecer thread privada cópias de dados, para executar cálculos de subgrupos de local de thread livre de bloqueios durante os algoritmos paralelos. No final da operação em paralelo, os cálculos sub particular de thread, em seguida, podem ser mesclados em um resultado final. Esta classe pode ser usado em vez de uma variável compartilhada e pode resultar em uma melhoria de desempenho se caso contrário, haverá muita contenção nessa variável compartilhada.  
@@ -49,7 +53,7 @@ class combinable;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[podem ser combinadas](#ctor)|Sobrecarregado. Constrói um novo objeto `combinable`.|  
+|[combinable](#ctor)|Sobrecarregado. Constrói um novo objeto `combinable`.|  
 |[~ Destruidor combinable](#dtor)|Destrói um objeto `combinable`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -78,7 +82,7 @@ class combinable;
   
  **Namespace:** simultaneidade  
   
-##  <a name="clear"></a>Limpar 
+##  <a name="clear"></a> Limpar 
 
  Limpa os resultados intermediários computacionais um uso anterior.  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>podem ser combinadas 
+##  <a name="ctor"></a> podem ser combinadas 
 
  Constrói um novo objeto `combinable`.  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  O construtor de terceiro é o construtor de cópia.  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~ combinable 
 
  Destrói um objeto `combinable`.  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>combinar 
+##  <a name="combine"></a> combinar 
 
  Calcula um valor final do conjunto de cálculos de subgrupos de local de thread chamando o functor combinar fornecido.  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Valor de retorno  
  O resultado final da combinação de todos os cálculos de sub particular de thread.  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  Calcula um valor final do conjunto de cálculos de subgrupos de local de thread chamando o functor fornecido combinar uma vez por computação sub local de thread. O resultado final é acumulado pelo objeto de função.  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Functor que é usada para combinar uma computação sub. A assinatura é `void (T)` ou `void (const T&)`e deve ser associativas e comutativas.  
   
-##  <a name="local"></a>local 
+##  <a name="local"></a> local 
 
  Retorna uma referência para a computação sub particular de thread.  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência para a computação sub particular de thread.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Atribui a um `combinable` objeto de outro `combinable` objeto.  
   

@@ -5,19 +5,21 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cb0682a246cc2cd2acd8f22228fd25c99755f1cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 308c09af9989aa998a7e1f7d748f52a2d8dca391
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores de namespace de simultaneidade (AMP)
 ||||  
@@ -50,7 +52,7 @@ bool operator== (
  Uma das tuplas a ser comparado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se as tuplas forem iguais; Caso contrário, `false`.  
+ `true` Se as tuplas forem iguais; Caso contrário, `false`.  
   
 ##  <a name="operator_neq"></a>  operator!=   
  Determina se os argumentos especificados não são iguais.  
@@ -76,7 +78,7 @@ bool operator!= (
  Uma das tuplas a ser comparado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se as tuplas não forem iguais; Caso contrário, `false`.  
+ `true` Se as tuplas não forem iguais; Caso contrário, `false`.  
   
 ##  <a name="operator_add"></a>  operator+   
 
@@ -277,4 +279,4 @@ _Tuple_type<_Rank>   operator%(
  O resultado do módulo do argumento especificado primeiro o segundo argumento especificado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de simultaneidade](concurrency-namespace-cpp-amp.md)
+ [Namespace de simultaneidade ](concurrency-namespace-cpp-amp.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::packaged_task
 - future/std::packaged_task::packaged_task
@@ -17,9 +18,10 @@ f1_keywords:
 - future/std::packaged_task::valid
 - future/std::packaged_task::operator()
 - future/std::packaged_task::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.workload: cplusplus
-ms.openlocfilehash: e060a7d9a73cd275810541fc57ad34a2c62c4097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ce3db6f4685d8448efd88bf2203d541cc864abd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="packagedtask-class"></a>Classe packaged_task
 Descreve um *provedor assíncrono* que é um wrapper de chamada e cuja assinatura de chamada é `Ty(ArgTypes...)`. O *estado assíncrono associado* mantém uma cópia de seu objeto que pode ser chamado, bem como o possível resultado.  
@@ -65,7 +68,7 @@ class packaged_task;
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Chama o objeto callable que é armazenado no estado assíncrono associado e armazena atomicamente o valor retornado.|  
 |[reset](#reset)|Substitui o estado assíncrono associado.|  
 |[swap](#swap)|Troca o estado assíncrono associado por aquele de um objeto especificado.|  
-|[válido](#valid)|Especifica se o objeto tem um estado assíncrono associado.|  
+|[valid](#valid)|Especifica se o objeto tem um estado assíncrono associado.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   

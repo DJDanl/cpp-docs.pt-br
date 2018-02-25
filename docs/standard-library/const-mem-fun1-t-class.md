@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xfunctional/std::const_mem_fun1_t
-dev_langs: C++
-helpviewer_keywords: const_mem_fun1_t class
+ms.topic: reference
+f1_keywords:
+- xfunctional/std::const_mem_fun1_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 788f49d3aa4cefd46e5ea97517a02a35a9747403
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 187d564f83e63f712ad2aed88679607c212deafe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="constmemfun1t-class"></a>Classe const_mem_fun1_t
 Uma classe de adaptador que permite que uma função de membro **const** que usa um único argumento seja chamada como um objeto de função binário quando inicializada com um argumento de ponteiro.  
@@ -51,7 +56,7 @@ class const_mem_fun1_t
  Uma função binária adaptável.  
   
 ## <a name="remarks"></a>Comentários  
- A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função de membro `operator()` como de retorno ( **_Pleft**->\* *Pm)(***Right**) **const**.  
+ A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Define a função de membro `operator()` como retornando ( **_Pleft** -> \* * Pm) (***direita**) **const**.  
   
 ## <a name="example"></a>Exemplo  
  Normalmente, o construtor de `const_mem_fun1_t` não é usado diretamente; a função auxiliar `mem_fun` é usada para adaptar funções membro. Consulte [mem_fun](../standard-library/functional-functions.md#mem_fun) para obter um exemplo de como usar adaptadores de função membro.  

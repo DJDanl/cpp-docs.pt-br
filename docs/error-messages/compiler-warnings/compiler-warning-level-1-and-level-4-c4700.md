@@ -1,51 +1,75 @@
 ---
 title: "Compilador (nível 1 e nível 4) de aviso C4700 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/21/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4700
-dev_langs: C++
-helpviewer_keywords: C4700
+f1_keywords:
+- C4700
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14882157fd745c05f38943fae589636a486fd94d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00b871d6199338cc3040d6bddedb85f8732dfccd
+ms.sourcegitcommit: 4e416049665819ac62f5300ddf86e94adede4ba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>Aviso C4700 (compilador) (nível 1 e nível 4)
-variável local não inicializado 'name' usado  
-  
- Você usou a variável local *nome* sem primeiro atribuindo um valor, que pode levar a resultados imprevisíveis.  
-  
- O exemplo a seguir gera C4700:  
-  
-```  
-// C4700.cpp  
-// compile with: /W1  
-int main() {  
-   int i;  
-   return i;   // C4700  
-}  
-```  
-  
- Em [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) este é um aviso de nível 4.  O exemplo a seguir gera C4700:  
-  
-```  
-// C4700b.cpp  
-// compile with: /W4 /clr:safe /c  
-using namespace System;  
-int main() {  
-   Int32^ bi;  
-   return *bi;   // C4700  
-}  
+
+> variável local não inicializado '*nome*' usado
+
+A variável local *nome* foi *usado*, ou seja, leitura, antes que ele tenha sido atribuído um valor. Em C e C++, variáveis locais não inicializadas por padrão. Variáveis não inicializadas podem conter qualquer valor, e seu uso leva a um comportamento indefinido. Aviso C4700 quase sempre indica um bug que pode causar resultados inesperados ou falhas em seu programa.
+
+Para corrigir esse problema, você pode inicializar variáveis locais quando eles são declarados ou atribuir um valor a eles antes de serem usadas. Uma função pode ser usada para inicializar uma variável que é passado como um parâmetro de referência, ou quando o seu endereço é passado como um parâmetro de ponteiro.
+
+## <a name="example"></a>Exemplo
+
+Este exemplo gera C4700 quando variáveis t, u e v são usadas antes que eles são inicializados e mostra o tipo de valor de lixo que pode resultar. Variáveis de x, y e z não fazer com que o aviso, porque eles são inicializados antes de usar:
+
+```cpp
+// c4700.cpp
+// compile by using: cl /EHsc /W4 c4700.cpp
+#include <iostream>
+
+// function takes an int reference to initialize
+void initialize(int& i)
+{
+    i = 21;
+}
+
+int main()
+{
+    int s, t, u, v;   // Danger, uninitialized variables
+
+    s = t + u + v;    // C4700: t, u, v used before initialization
+    std::cout << "Value in s: " << s << std::endl;
+
+    int w, x;         // Danger, uninitialized variables
+    initialize(x);    // fix: call function to init x before use
+    int y{10};        // fix: initialize y, z when declared
+    int z{11};        // This C++11 syntax is recommended over int z = 11;
+
+    w = x + y + z;    // Okay, all values initialized before use
+    std::cout << "Value in w: " << w << std::endl;
+}
+```
+
+Quando esse código é executado, t, u e v é inicializados e a saída para s é imprevisível:
+
+```Output
+Value in s: 37816963
+Value in w: 42
 ```

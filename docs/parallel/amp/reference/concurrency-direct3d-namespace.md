@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
 - amprt/Concurrency::direct3d
 - amp_short_vectors/Concurrency::direct3d
 - amp_graphics/Concurrency::direct3d
 - amp_math/Concurrency::direct3d
-dev_langs: C++
-helpviewer_keywords: direct3d namespace
+dev_langs:
+- C++
+helpviewer_keywords:
+- direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Namespace Concurrency::direct3d
 O `direct3d` namespace fornece funções que oferecem suporte à interoperabilidade D3D. Ele permite o uso contínuo do D3D recursos de computação no código de AMP, bem como permitir o uso de recursos criados em AMP D3D código, sem criar cópias redundantes de intermediárias. Pode acelerar as seções de computação intensiva de seus aplicativos DirectX usando C++ AMP e usar a API do D3D dados produzidos de cálculos AMP incrementalmente.  
@@ -55,7 +59,7 @@ namespace direct3d;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Retorna o valor absoluto do argumento|  
-|[fixação](concurrency-direct3d-namespace-functions-amp.md#clamp)|Sobrecarregado. Coloca x para o intervalo especificado de min e máx|  
+|[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Sobrecarregado. Coloca x para o intervalo especificado de min e máx|  
 |[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Conta o número de bits de conjunto em x|  
 |[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Cria um [accelerator_view classe](accelerator-view-class.md) de um ponteiro para uma interface de dispositivo Direct3D|  
 |[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Adquire um bloqueio em um accelerator_view para fins de executar com segurança D3D operações nos recursos compartilhados com o accelerator_view|  
@@ -64,20 +68,20 @@ namespace direct3d;
 |[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Obtém o local do primeiro conjunto de bit em x, começando a partir do bit de ordem mais alto e trabalhando para baixo|  
 |[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Obtém o local do primeiro conjunto de bit em x, começando a partir do bit de ordem mais baixo e trabalhando para cima|  
 |[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Obter a interface de buffer D3D subjacente de uma matriz.|  
-|[IMAX](concurrency-direct3d-namespace-functions-amp.md#imax)|Compara dois valores, retornando o valor que for maior.|  
+|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Compara dois valores, retornando o valor que for maior.|  
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Compara dois valores, retornando o valor que é menor.|  
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Retorna um sinalizador booliano que indica se o tempo limite está desabilitado para o accelerator_view especificado.|  
-|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Sobrecarregado. Executa uma operação aritmética multiplicar ou adicionar em três argumentos: x * y + z|  
+|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Sobrecarregado. Executa uma operação aritmética multiplicar ou adicionar em três argumentos: x * y + z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crie uma matriz de um ponteiro de interface de buffer D3D.|  
-|[ruído](concurrency-direct3d-namespace-functions-amp.md#noise)|Gera um valor aleatório usando o algoritmo de ruído Perlin|  
-|[radianos](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x de graus em radianos|  
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Gera um valor aleatório usando o algoritmo de ruído Perlin|  
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x de graus em radianos|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcula um recíproco rápido, aproximado do argumento|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte a ordem dos bits em x|  
-|[saturar](concurrency-direct3d-namespace-functions-amp.md#saturate)|Coloca x dentro do intervalo de 0 a 1|  
-|[logon](concurrency-direct3d-namespace-functions-amp.md#sign)|Sobrecarregado. Retorna o sinal do argumento|  
+|[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Coloca x dentro do intervalo de 0 a 1|  
+|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Sobrecarregado. Retorna o sinal do argumento|  
 |[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Retorna uma interpolação Hermite suave entre 0 e 1, se x está no intervalo [ min, máx].|  
-|[etapa](concurrency-direct3d-namespace-functions-amp.md#step)|Compara dois valores, retornando 0 ou 1 com base em qual valor é maior|  
-|[UMAX](concurrency-direct3d-namespace-functions-amp.md#umax)|Compara dois valores não assinados, retornando o valor que for maior.|  
+|[step](concurrency-direct3d-namespace-functions-amp.md#step)|Compara dois valores, retornando 0 ou 1 com base em qual valor é maior|  
+|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Compara dois valores não assinados, retornando o valor que for maior.|  
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Compara dois valores não assinados, retornando o valor que é menor.|  
 
 ## <a name="requirements"></a>Requisitos  

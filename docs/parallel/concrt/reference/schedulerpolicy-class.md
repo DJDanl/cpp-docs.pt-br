@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
@@ -14,19 +15,22 @@ f1_keywords:
 - concrt/concurrency::SchedulerPolicy::GetPolicyValue
 - concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
 - concrt/concurrency::SchedulerPolicy::SetPolicyValue
-dev_langs: C++
-helpviewer_keywords: SchedulerPolicy class
+dev_langs:
+- C++
+helpviewer_keywords:
+- SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ce629f81d952a274a86aafba71da126c65946f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerpolicy-class"></a>Classe SchedulerPolicy
 O `SchedulerPolicy` classe contém um conjunto de pares chave/valor, um para cada elemento de diretiva que controlam o comportamento de uma instância do Agendador.  
@@ -44,7 +48,7 @@ class SchedulerPolicy;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[SchedulerPolicy](#ctor)|Sobrecarregado. Constrói uma nova política de agendador e o preenche com os valores para [chaves política](concurrency-namespace-enums.md) agendadores de tempo de execução de simultaneidade e o Gerenciador de recursos de suporte.|  
-|[~ Destruidor SchedulerPolicy](#dtor)|Destrói a uma política do Agendador.|  
+|[~SchedulerPolicy Destructor](#dtor)|Destrói a uma política do Agendador.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -71,7 +75,7 @@ class SchedulerPolicy;
   
  **Namespace:** simultaneidade  
   
-##  <a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a> GetPolicyValue 
 
  Recupera o valor da chave de política fornecido como o `key` parâmetro.  
   
@@ -89,7 +93,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Comentários  
  O método lançará [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para uma chave de política inválido.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Atribui a política do Agendador de outra política do Agendador.  
   
@@ -107,7 +111,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Comentários  
  Normalmente, a maneira mais conveniente de definir uma nova política de Agendador é copiar uma política existente e modificá-lo usando o `SetPolicyValue` ou `SetConcurrencyLimits` métodos.  
   
-##  <a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a> SchedulerPolicy 
 
  Constrói uma nova política de agendador e o preenche com os valores para [chaves política](concurrency-namespace-enums.md) agendadores de tempo de execução de simultaneidade e o Gerenciador de recursos de suporte.  
   
@@ -136,7 +140,7 @@ SchedulerPolicy(
   
  O construtor de terceiro é um construtor de cópia. Normalmente, a maneira mais conveniente de definir uma nova política de Agendador é copiar uma política existente e modificá-lo usando o `SetPolicyValue` ou `SetConcurrencyLimits` métodos.  
   
-##  <a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a> ~SchedulerPolicy 
 
  Destrói a uma política do Agendador.  
   
@@ -144,7 +148,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits 
 
  Define simultaneamente a `MinConcurrency` e `MaxConcurrency` políticas no `SchedulerPolicy` objeto.  
   
@@ -166,7 +170,7 @@ void SetConcurrencyLimits(
   
  O método também pode lançar [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) para outros valores inválidos.  
   
-##  <a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a> SetPolicyValue 
 
  Define o valor da chave de política fornecido como o `key` parâmetro e retorna o valor antigo.  
   
