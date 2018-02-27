@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture_view
 - AMP_GRAPHICS/texture_view
@@ -19,21 +20,23 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="textureview-class"></a>Classe texture_view
-Fornece acesso de leitura e gravação com uma textura. `texture_view`só pode ser usado para ler texturas cujo tipo de valor é `int`, `unsigned int`, ou `float` com bpse de 32 bits do padrão. Para ler os outros formatos de textura, use `texture_view<const value_type, _Rank>`.  
+Fornece acesso de leitura e gravação com uma textura. `texture_view` só pode ser usado para ler texturas cujo tipo de valor é `int`, `unsigned int`, ou `float` com bpse de 32 bits do padrão. Para ler os outros formatos de textura, use `texture_view<const value_type, _Rank>`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,15 +86,15 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|Sobrecarregado. Exemplos de textura em coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de verde (y) das quatro texels de amostras.|  
 |[gather_red](#gather_red)|Sobrecarregado. Exemplos de textura em coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes vermelho (x) das quatro texels de amostras.|  
 |[get](#get)|Sobrecarregado. Obtém o valor do elemento por índice.|  
-|[exemplo](#sample)|Sobrecarregado. Exemplos de textura em nível de detalhe de coordenadas especificadas e com a configuração de amostragem especificada.|  
+|[sample](#sample)|Sobrecarregado. Exemplos de textura em nível de detalhe de coordenadas especificadas e com a configuração de amostragem especificada.|  
 |[set](#set)|Define o valor de um elemento por índice.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operator)](#operator_call)|Sobrecarregado. Obtém o valor do elemento por índice.|  
-|[operador]](#operator_at)|Sobrecarregado. Obtém o valor do elemento por índice.|  
+|[operator()](#operator_call)|Sobrecarregado. Obtém o valor do elemento por índice.|  
+|[operator[]](#operator_at)|Sobrecarregado. Obtém o valor do elemento por índice.|  
 |[operator=](#operator_eq)|Sobrecarregado. Operador de atribuição.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
@@ -110,7 +113,7 @@ class texture_view<const value_type, _Rank>
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a>~ texture_view 
+##  <a name="dtor"></a> ~ texture_view 
 
  Destrói a `texture_view` instância.  
   
@@ -118,7 +121,7 @@ class texture_view<const value_type, _Rank>
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="ctor"></a>texture_view 
+##  <a name="ctor"></a> texture_view 
 
  Constrói um `texture_view` instância.  
   
@@ -180,7 +183,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  O número de níveis de mipmap acessíveis por meio de `texture_view`.  
   
-##  <a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a> gather_red 
 
  Exemplos de textura em coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes vermelho (x) das quatro texels de amostras.  
   
@@ -210,7 +213,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>Valor de retorno  
  Um vetor de classificação 4 curto que contém o componente vermelho (x) do 4 valores texel de amostra.  
   
-##  <a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a> gather_green 
 
  Exemplos de textura em coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de verde (y) das quatro texels de amostras.  
   
@@ -240,7 +243,7 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>Valor de retorno  
  Um vetor de classificação 4 curto que contém o componente verde (y) do 4 valores texel de amostra.  
   
-##  <a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a> gather_blue 
 
  Exemplos de textura em coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de azul (z) das quatro texels de amostras.  
   
@@ -270,7 +273,7 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>Valor de retorno  
  Um vetor de classificação 4 curto que contém o componente vermelho (x) do 4 valores texel de amostra.  
   
-##  <a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a> gather_alpha 
 
  Exemplos de textura em coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de alfa (w) das quatro texels de amostras.  
   
@@ -300,7 +303,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>Valor de retorno  
  Uma classificação 4 curto vetor que contém a alfa (w) valores texel de amostra de componente do 4.  
   
-##  <a name="get"></a>Obter 
+##  <a name="get"></a> Obter 
 
  Obtém o valor do elemento no índice especificado.  
   
@@ -324,7 +327,7 @@ value_type get(
 ### <a name="return-value"></a>Valor de retorno  
  O valor do elemento.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Atribui uma exibição da textura mesmo conforme o especificado `texture_view` a este `texture_view` instância.  
   
@@ -352,7 +355,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `texture_view` instância.  
   
-##  <a name="operator_at"></a>operador] 
+##  <a name="operator_at"></a> operador] 
 
  Retorna o valor do elemento de índice.  
   
@@ -379,7 +382,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  O valor do elemento indexado por `_Index`.  
   
-##  <a name="operator_call"></a>Operator) 
+##  <a name="operator_call"></a> operator() 
 
  Retorna o valor do elemento de índice.  
   
@@ -437,7 +440,7 @@ value_type operator() (
 ### <a name="return-value"></a>Valor de retorno  
  O valor do elemento indexado por `_Index`.  
   
-##  <a name="sample"></a>exemplo 
+##  <a name="sample"></a> Exemplo 
 
  Exemplos de textura em nível de detalhe de coordenadas especificadas e com a configuração de amostragem especificada.  
   
@@ -476,7 +479,7 @@ value_type sample(
 ### <a name="return-value"></a>Valor de retorno  
  O valor da amostra interpolada.  
   
-##  <a name="set"></a>definir 
+##  <a name="set"></a> Definir 
 
  Define o valor do elemento no índice especificado para o valor especificado.  
   
@@ -493,7 +496,7 @@ void set(
  `value`  
  O valor para definir o elemento.  
   
-##  <a name="value_type"></a>value_type 
+##  <a name="value_type"></a> value_type 
 
  O tipo de valor dos elementos do texture_view.  
   

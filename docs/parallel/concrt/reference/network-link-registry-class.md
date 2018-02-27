@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
 O `network_link_registry` gerencia a classe base abstrata os links entre blocos de origem e destino.  
@@ -60,7 +64,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|Quando substituído em uma classe derivada, adiciona um link para o `network_link_registry` objeto.|  
 |[begin](#begin)|Quando substituído em uma classe derivada, retorna um iterador para o primeiro elemento no `network_link_registry` objeto.|  
-|[contém](#contains)|Quando substituído em uma classe derivada, procura o `network_link_registry` objeto para um bloco especificado.|  
+|[contains](#contains)|Quando substituído em uma classe derivada, procura o `network_link_registry` objeto para um bloco especificado.|  
 |[count](#count)|Quando substituído em uma classe derivada, retorna o número de itens de `network_link_registry` objeto.|  
 |[remove](#remove)|Quando substituído em uma classe derivada, remove um bloco especificado a partir de `network_link_registry` objeto.|  
   
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **Namespace:** simultaneidade  
   
-##  <a name="add"></a>Adicionar 
+##  <a name="add"></a> Adicionar 
 
  Quando substituído em uma classe derivada, adiciona um link para o `network_link_registry` objeto.  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Um ponteiro para um bloco a ser adicionado.  
   
-##  <a name="begin"></a>começar 
+##  <a name="begin"></a> Começar 
 
  Quando substituído em uma classe derivada, retorna um iterador para o primeiro elemento no `network_link_registry` objeto.  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Comentários  
  O estado final do iterador é indicado por um `NULL` link.  
   
-##  <a name="contains"></a>contém 
+##  <a name="contains"></a> Contém 
 
  Quando substituído em uma classe derivada, procura o `network_link_registry` objeto para um bloco especificado.  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  Um ponteiro para um bloco que está sendo procurado no `network_link_registry` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o bloco foi encontrado, `false` caso contrário.  
+ `true` Se o bloco foi encontrado, `false` caso contrário.  
   
-##  <a name="count"></a>Contagem 
+##  <a name="count"></a> Contagem 
 
  Quando substituído em uma classe derivada, retorna o número de itens de `network_link_registry` objeto.  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O número de itens no objeto `network_link_registry`.  
   
-##  <a name="remove"></a>Remover 
+##  <a name="remove"></a> Remover 
 
  Quando substituído em uma classe derivada, remove um bloco especificado a partir de `network_link_registry` objeto.  
   
@@ -140,7 +144,7 @@ virtual bool remove(_EType _Link) = 0;
  Um ponteiro para um bloco a ser removido, se encontrado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se o link foi encontrado e removido, `false` caso contrário.  
+ `true` Se o link foi encontrado e removido, `false` caso contrário.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

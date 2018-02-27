@@ -1,14 +1,17 @@
 ---
-title: COM MFC | Microsoft Docs
+title: MFC COM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 Um subconjunto de MFC foi projetado para suporte de COM, enquanto a maioria de biblioteca de modelo ativa (ATL) foi projetado para programação COM. Esta seção de tópicos descreve o suporte do MFC para COM.  
@@ -53,7 +57,7 @@ Um subconjunto de MFC foi projetado para suporte de COM, enquanto a maioria de b
   
 -   [Automação](../mfc/automation.md) (anteriormente conhecido como automação OLE) permite que um aplicativo para manipular objetos implementados em outro aplicativo ou "exponha" objetos de forma podem ser manipulados.  
   
-     O objeto automatizado pode ser local ou [remoto](../mfc/remote-automation.md) (em outro computador acessível em uma rede). Automação está disponível para objetos COM e OLE.  
+     O objeto automatizado pode ser local ou remoto (em outro computador acessível em uma rede). Automação está disponível para objetos COM e OLE.  
   
 -   Esta seção também fornece informações sobre como escrever componentes COM usando MFC, por exemplo, em [pontos de Conexão](../mfc/connection-points.md).  
   
@@ -65,8 +69,6 @@ Um subconjunto de MFC foi projetado para suporte de COM, enquanto a maioria de b
  [Contenção de documentos ativos](../mfc/active-document-containment.md)  
   
  [Automação](../mfc/automation.md)  
-  
- [Automação remota](../mfc/remote-automation.md)  
   
  [Pontos de conexão](../mfc/connection-points.md)  
   

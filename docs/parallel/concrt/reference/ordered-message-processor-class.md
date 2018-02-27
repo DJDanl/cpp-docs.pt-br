@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ordered_message_processor
 - AGENTS/concurrency::ordered_message_processor
@@ -17,19 +18,22 @@ f1_keywords:
 - AGENTS/concurrency::ordered_message_processor::sync_send
 - AGENTS/concurrency::ordered_message_processor::wait
 - AGENTS/concurrency::ordered_message_processor::process_incoming_message
-dev_langs: C++
-helpviewer_keywords: ordered_message_processor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5b97d0003469acbe307b75b3278c8821628e333d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 83f3181d797b0146cc7e57950da6b5e9569b2ab1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="orderedmessageprocessor-class"></a>Classe ordered_message_processor
 Um `ordered_message_processor` é um `message_processor` que permite que os blocos de mensagens processar mensagens na ordem em que foram recebidas.  
@@ -65,10 +69,10 @@ class ordered_message_processor : public message_processor<T>;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[async_send](#async_send)|Filas de mensagens e inicia uma tarefa de processamento, se isso não já foi feito de forma assíncrona. (Substitui [message_processor:: async_send](message-processor-class.md#async_send).)|  
-|[inicializar](#initialize)|Inicializa o `ordered_message_processor` objeto com o grupo de função, o Agendador e o agendamento de retorno de chamada apropriados.|  
+|[initialize](#initialize)|Inicializa o `ordered_message_processor` objeto com o grupo de função, o Agendador e o agendamento de retorno de chamada apropriados.|  
 |[initialize_batched_processing](#initialize_batched_processing)|Inicializar o processamento em lotes de mensagens|  
 |[sync_send](#sync_send)|Modo síncrono Enfileira mensagens e inicia uma tarefa de processamento, se isso não já foi feito. (Substitui [message_processor:: sync_send](message-processor-class.md#sync_send).)|  
-|[Aguarde](#wait)|Uma espera de rotação específicos de processador usada em destruidores de blocos de mensagens para certificar-se de que todas as tarefas de processamento assíncrono tem tempo para concluir antes de destruir o bloco. (Substitui [message_processor:: wait](message-processor-class.md#wait).)|  
+|[wait](#wait)|Uma espera de rotação específicos de processador usada em destruidores de blocos de mensagens para certificar-se de que todas as tarefas de processamento assíncrono tem tempo para concluir antes de destruir o bloco. (Substitui [message_processor:: wait](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
@@ -86,7 +90,7 @@ class ordered_message_processor : public message_processor<T>;
   
  **Namespace:** simultaneidade  
   
-##  <a name="async_send"></a>async_send 
+##  <a name="async_send"></a> async_send 
 
  Filas de mensagens e inicia uma tarefa de processamento, se isso não já foi feito de forma assíncrona.  
   
@@ -98,7 +102,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  Um ponteiro para uma mensagem.  
   
-##  <a name="initialize"></a>inicializar 
+##  <a name="initialize"></a> inicializar 
 
  Inicializa o `ordered_message_processor` objeto com o grupo de função, o Agendador e o agendamento de retorno de chamada apropriados.  
   
@@ -119,7 +123,7 @@ void initialize(
  `_Handler`  
  O functor manipulador invocado durante o retorno de chamada.  
   
-##  <a name="initialize_batched_processing"></a>initialize_batched_processing 
+##  <a name="initialize_batched_processing"></a> initialize_batched_processing 
 
  Inicializar o processamento em lotes de mensagens  
   
@@ -136,7 +140,7 @@ virtual void initialize_batched_processing(
  `_Propagator`  
  O functor propagador invocado durante o retorno de chamada.  
   
-##  <a name="ctor"></a>ordered_message_processor 
+##  <a name="ctor"></a> ordered_message_processor 
 
  Constrói uma `ordered_message_processor` objeto.  
   
@@ -147,7 +151,7 @@ ordered_message_processor();
 ### <a name="remarks"></a>Comentários  
  Isso `ordered_message_processor` não agende manipuladores assíncronos ou síncronos até que o `initialize` função é chamada.  
   
-##  <a name="dtor"></a>~ ordered_message_processor 
+##  <a name="dtor"></a> ~ ordered_message_processor 
 
  Destrói a `ordered_message_processor` objeto.  
   
@@ -158,7 +162,7 @@ virtual ~ordered_message_processor();
 ### <a name="remarks"></a>Comentários  
  Espera que todas as operações assíncronas pendentes antes de destruir o processador.  
   
-##  <a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a> process_incoming_message 
 
  A função de processamento que é chamada de forma assíncrona. Ele remove da fila de mensagens e começa a processá-las.  
   
@@ -166,7 +170,7 @@ virtual ~ordered_message_processor();
 virtual void process_incoming_message();
 ```  
   
-##  <a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a> sync_send 
 
  Modo síncrono Enfileira mensagens e inicia uma tarefa de processamento, se isso não já foi feito.  
   
@@ -178,7 +182,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  Um ponteiro para uma mensagem.  
   
-##  <a name="wait"></a>Aguarde 
+##  <a name="wait"></a> Aguarde 
 
  Uma espera de rotação específicos de processador usada em destruidores de blocos de mensagens para certificar-se de que todas as tarefas de processamento assíncrono tem tempo para concluir antes de destruir o bloco.  
   
