@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e36360279adf22857cfdb5b2f79ffdd7486ca008
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="exceptions-ccx"></a>Exceções (C++/CX)
 
@@ -27,7 +28,7 @@ Tratamento de erros em C + + CX se baseia em exceções. O nível mais fundament
 
 No seu programa C++, você pode gerar e capturar uma exceção proveniente de uma operação de tempo de execução do Windows, uma exceção que é derivada de `std::exception`, ou um tipo definido pelo usuário. Você tem que gerar uma exceção de tempo de execução do Windows somente quando ele for passar dos limites ABI (interface binária) do aplicativo, por exemplo, quando o código que captura sua exceção está escrito em JavaScript. Quando uma exceção do Windows em tempo de execução C++ alcança os limites de ABI, a exceção é convertida em um `Platform::FailureException` exceção, que representa um E_FAIL HRESULT. Para obter mais informações sobre a ABI, consulte [Criando componentes do tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Você pode declarar uma [Platform::Exception](platform-exception-class.md) usando um dos dois construtores que usam um parâmetro HRESULT, ou um parâmetro HRESULT e um parâmetro [Platform::String](platform-string-class.md)^ que possa ser passado pela ABI para qualquer aplicativo da Windows Store que o manipule. Ou pode declarar uma exceção usando uma de duas sobrecargas do [](platform-exception-class.md#createexception) método Exception::CreateException que adotam um parâmetro HRESULT, ou um parâmetro HRESULT e um parâmetro `Platform::String^` .
+Você pode declarar uma [Platform:: Exception](platform-exception-class.md) usando um dos dois construtores que usam um parâmetro HRESULT ou um parâmetro HRESULT e um [Platform:: string](platform-string-class.md)^ parâmetro que pode ser passado pelo ABI para qualquer aplicativo de tempo de execução do Windows que o manipule. Ou pode declarar uma exceção usando uma de duas sobrecargas do [método Exception::CreateException](platform-exception-class.md#createexception) que adotam um parâmetro HRESULT, ou um parâmetro HRESULT e um parâmetro `Platform::String^` .
 
 ## <a name="standard-exceptions"></a>Exceções padrão
 
