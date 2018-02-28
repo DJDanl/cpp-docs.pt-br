@@ -34,11 +34,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6e3de89c5336cda98960b67b80932df8f67d183
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
+ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (depurar formato de informações)
 
@@ -50,7 +50,7 @@ Especifica o tipo de informação de depuração criado para o programa e se ess
 
 ## <a name="remarks"></a>Comentários
 
-As opções de formato de informações de depuração são descritas nas seções a seguir.  
+Quando o código é compilado e compilado no modo de depuração, o compilador gera nomes de símbolos para funções e variáveis, informações de tipo e locais de número de linha para uso pelo depurador. Essas informações de depuração simbólicas podem ser incluídas nos arquivos (arquivos. obj) do objeto produzidos pelo compilador, ou em um arquivo PDB separado (um arquivo. PDB) para o executável.  As opções de formato de informações de depuração são descritas nas seções a seguir.  
   
 ### <a name="none"></a>Nenhum
 
@@ -58,25 +58,28 @@ Por padrão, se nenhuma opção de formato de informações de depuração for e
   
 ### <a name="z7"></a>/Z7
 
-O **/Z7** opção produz uma *arquivo de objeto*, um arquivo que tem uma extensão. obj, que contém informações de depuração simbólicas completas para uso com o depurador. As informações de depuração simbólicas incluem os nomes e tipos de variáveis, bem como funções e os números de linha. Não *arquivo PDB*, um arquivo com uma extensão. PDB, é produzido.
+O **/Z7** opção produz arquivos de objeto que também contêm informações de depuração simbólicas completas para uso com o depurador. Esses arquivos de objeto e o executável criado podem ser significativamente maiores do que arquivos com nenhuma informação de depuração. As informações de depuração simbólicas incluem os nomes e tipos de variáveis, bem como funções e os números de linha. Nenhum arquivo PDB é produzido.
 
-Para distribuidores de bibliotecas de terceiros, há uma vantagem de não ter um arquivo PDB. No entanto, os arquivos de objeto para os cabeçalhos pré-compilados são necessários durante a fase de link e para depuração. Se houver apenas digite informações (e nenhum código) nos arquivos de objeto. pch, você também deve usar o [/Yl (injetar referência PCH para biblioteca de depuração)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opção, que é habilitada por padrão.
+Para distribuidores de versões de depuração das bibliotecas de terceiros, há uma vantagem de não ter um arquivo PDB. No entanto, os arquivos de objeto para todos os cabeçalhos pré-compilados são necessários durante a fase de link da biblioteca e de depuração. Se houver apenas digite informações (e nenhum código) no arquivo de objeto. pch, você também deve usar o [/Yl (injetar referência PCH para biblioteca de depuração)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opção, que é habilitada por padrão, quando você cria a biblioteca.
+
+O [/GM (habilitar mínimo recriar) de manual](../../build/reference/gm-enable-minimal-rebuild.md) opção não está disponível quando **/Z7** for especificado.
 
 ### <a name="zi"></a>/Zi
 
-O **/Zi** opção produz um arquivo PDB que contém informações de tipo e informações simbólicas de depuração para uso com o depurador. As informações de depuração simbólicas incluem os nomes e tipos de variáveis, bem como funções e os números de linha.
+O **/Zi** opção produz um arquivo PDB separado que contém todas as informações de depuração simbólicas para uso com o depurador. As informações de depuração não estão incluídas nos arquivos de objeto ou executável, que os torna muito menor.
 
 O uso de **/Zi** não afeta otimizações. No entanto, **/Zi** implicam **/Debug**; consulte [/DEBUG (gerar informações de depuração)](../../build/reference/debug-generate-debug-info.md) para obter mais informações.
 
-Quando **/Zi** for especificado, as informações de tipo são colocadas no arquivo PDB e não no arquivo de objeto.
 
-Você pode usar [/GM (habilitar mínimo recriar) de manual](../../build/reference/gm-enable-minimal-rebuild.md) junto com **/Zi**, mas **/GM manual** não está disponível quando **/Z7** for especificado.
+Quando você especifica ambos **/Zi** e **/clr**, o <xref:System.Diagnostics.DebuggableAttribute> atributo não é colocado nos metadados do assembly. Se desejar, você deve especificar isto no código-fonte. Esse atributo pode afetar o desempenho de tempo de execução do aplicativo. Para obter mais informações sobre como o **Debuggable** atributo afeta o desempenho e como você pode modificar o impacto no desempenho, consulte [facilitando uma imagem para depuração](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
-Quando você especifica ambos **/Zi** e **/clr**, o <xref:System.Diagnostics.DebuggableAttribute> atributo não é colocado nos metadados do assembly. Se desejar, especifique-o no código-fonte. Esse atributo pode afetar o desempenho de tempo de execução do aplicativo. Para obter mais informações sobre como o **Debuggable** atributo afeta o desempenho e como você pode modificar o impacto no desempenho, consulte [facilitando uma imagem para depuração](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
+O compilador nomeia o arquivo PDB *projeto*. PDB. Se você compilar um arquivo fora de um projeto, o compilador cria um arquivo PDB chamado VC*x*. PDB, onde *x* é uma concatenação do número de versão principal e secundária da versão do compilador em uso. O compilador incorpora o nome do PDB e uma assinatura de marca de identificação em cada arquivo de objeto criado usando essa opção, que aponta o depurador para o local das informações simbólicos e número da linha. O nome e assinatura no arquivo PDB devem corresponder o executável de símbolos ser carregado no depurador. O depurador WinDBG pode carregar símbolos incompatíveis com o uso de `.symopt+0x40` comando. O Visual Studio não tem uma opção similar ao carregar os símbolos não correspondentes.
+
+Se você criar uma biblioteca de objetos que foram compilados usando **/Zi**, o arquivo. PDB associado deve estar disponível quando a biblioteca está vinculada a um programa. Portanto, se você distribuir a biblioteca, você também deve distribuir o arquivo PDB. Para criar uma biblioteca que contém informações de depuração sem o uso de arquivos PDB, você deve selecionar o **/Z7** opção. Se você usar as opções de cabeçalhos pré-compilados, as informações de cabeçalho pré-compilado e o restante do código-fonte de depuração é colocada no arquivo PDB.
 
 ### <a name="zi"></a>/ZI
 
-O **/ZI** opção produz um arquivo PDB em um formato que oferece suporte a [editar e continuar](/visualstudio/debugger/edit-and-continue-visual-cpp) recurso. Se você quiser usar Editar e continuar a depuração, você deve usar essa opção. O recurso Editar e continuar, é útil para a produtividade do desenvolvedor, mas pode causar problemas de conformidade do compilador, o tamanho do código e o desempenho. Como a maioria das otimizações são incompatíveis com editar e continuar, usando **/ZI** desativa qualquer `#pragma optimize` no seu código. O **/ZI** opção também é incompatível com o uso da [&#95; &#95; LINHA &#95; &#95; macro predefinida](../../preprocessor/predefined-macros.md). O código compilado com **/ZI** não é possível usar **&#95; &#95; LINHA &#95; &#95;**  como um argumento de modelo sem tipo, embora **&#95; &#95; LINHA &#95; &#95;**  podem ser usadas em expansões de macro.
+O **/ZI** opção é semelhante a **/Zi**, mas ele produz um arquivo PDB em um formato que oferece suporte a [editar e continuar](/visualstudio/debugger/edit-and-continue-visual-cpp) recurso. Para usar Editar e continuar a depuração de recursos, você deve usar essa opção. O recurso Editar e continuar, é útil para a produtividade do desenvolvedor, mas pode causar problemas de conformidade de tamanho, o desempenho e o compilador de código. Como a maioria das otimizações são incompatíveis com editar e continuar, usando **/ZI** desativa qualquer `#pragma optimize` no seu código. O **/ZI** opção também é incompatível com o uso da [&#95; &#95; LINHA &#95; &#95; macro predefinida](../../preprocessor/predefined-macros.md); o código compilado com **/ZI** não é possível usar **&#95; &#95; LINHA &#95; &#95;**  como um argumento de modelo sem tipo, embora **&#95; &#95; LINHA &#95; &#95;**  pode ser usado em expansões de macro.
 
 O **/ZI** opção força ambos o [/Gy (habilitar vinculação do nível de função)](../../build/reference/gy-enable-function-level-linking.md) e [/FC (completo caminho do arquivo de código fonte no diagnóstico)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) opções a serem usadas na sua compilação.
 
@@ -84,12 +87,6 @@ O **/ZI** opção força ambos o [/Gy (habilitar vinculação do nível de funç
 
 > [!NOTE]
 > O **/ZI** opção só está disponível nos compiladores direcionamento processadores x86 e x64; essa opção de compilador não está disponível nos compiladores direcionamento processadores ARM.
-
-O compilador nomeia o arquivo PDB *projeto*. PDB. Se você compilar um arquivo fora de um projeto, o compilador cria um arquivo PDB chamado VC*x*0.pdb, onde *x* é o número de versão principal da versão do Visual Studio em uso. O compilador incorpora o nome do PDB em cada arquivo. obj criado usando essa opção, apontando o depurador para o local das informações simbólicos e número da linha. Quando você usar essa opção, os arquivos. obj são menores, porque as informações de depuração é armazenada no arquivo. PDB em vez de em arquivos. obj.
-
-Se você criar uma biblioteca de objetos que foram compilados usando essa opção, o arquivo. PDB associado deve estar disponível quando a biblioteca está vinculada a um programa. Portanto, se você distribuir a biblioteca, você deve distribuir o PDB.
-
-Para criar uma biblioteca que contém informações de depuração sem o uso de arquivos. PDB, você deve selecionar C do compilador compatível com 7.0 (**/Z7**) opção. Se você usar as opções de cabeçalhos pré-compilados, as informações de cabeçalho pré-compilado e o restante do código-fonte de depuração é colocada no arquivo PDB. O **/Yd** opção é ignorada quando a opção de banco de dados do programa é especificada.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
