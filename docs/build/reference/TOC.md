@@ -148,6 +148,7 @@
 ##### [/Zc:throwingNew (Pressupor novos acionamentos de operador)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (substituição de trígrafos)](zc-trigraphs-trigraphs-substitution.md)
 ##### [/Zc:wchar_t (wchar_t é de tipo nativo)](zc-wchar-t-wchar-t-is-native-type.md)
+#### [/Zf (gerar PDB mais rápido)](zf.md)
 #### [/Zg (gerar protótipos de função)](zg-generate-function-prototypes.md)
 #### [/Zl (omitir nome da biblioteca padrão)](zl-omit-default-library-name.md)
 #### [/Zm (especificar limite de alocação da memória de cabeçalho pré-compilado)](zm-specify-precompiled-header-memory-allocation-limit.md)
