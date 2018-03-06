@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
+- using_CPP
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,11 +26,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
 Um namespace é uma região declarativa que fornece um escopo para os identificadores (os nomes de tipos, funções, variáveis, etc) dentro dele. Namespaces são usados para organizar o código em grupos lógicos e para evitar colisões de nome que podem ocorrer especialmente quando sua base de código inclui várias bibliotecas. Todos os identificadores no escopo do namespace são visíveis para um outro sem qualificação. Identificadores fora o namespace podem acessar os membros usando o nome totalmente qualificado para cada identificador, por exemplo `std::vector<std::string> vec;`, ou se encontram em um [usando declaração](../cpp/using-declaration.md) para um único identificador (`using std::string`), ou um [usando diretiva](../cpp/namespaces-cpp.md#using_directives) para todos os identificadores no namespace (`using namespace std;`). Código em arquivos de cabeçalho sempre deve usar o nome totalmente qualificado de namespace.  
@@ -76,7 +77,7 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a>usando diretivas  
+## <a id="using_directives"></a> usando diretivas  
  O `using` diretiva permite que todos os nomes em um **namespace** a ser usado sem o *nome do namespace* como um qualificador explícito. Usam uma diretiva em um arquivo de implementação (ou seja, *.cpp), se você estiver usando vários identificadores diferentes em um namespace; Se estiver usando apenas um ou dois identificadores, em seguida, utilize uma declaração para colocar somente os identificadores no escopo e nem todos os identificadores no namespace. Se uma variável local tiver o mesmo nome de uma variável de namespace, a variável de namespace será oculta. É um erro ter uma variável de namespace com o mesmo nome de uma variável global.  
   
 > [!NOTE]
@@ -258,7 +259,7 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a>Alias de Namespace  
+## <a id="namespace_aliases"></a> Alias de Namespace  
  Nomes de Namespace precisam ser exclusivo, o que significa que geralmente não devem ser muito curtas. Se o comprimento do nome de um código difíceis de ler, ou é entediante para o tipo em um arquivo de cabeçalho onde usando diretivas não pode ser usado, em seguida, você pode fazer um alias de namespace que serve como uma abreviação para o nome real. Por exemplo:  
   
 ```cpp  
