@@ -19,14 +19,14 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="aggregates-and-unions"></a>Agregações e uniões
-Outros tipos, como matrizes, estruturas e uniões têm requisitos de alinhamento mais rígidos que garantem consistente union e agregar armazenamento e recuperação de dados. Aqui estão as definições de matriz, a estrutura e união:  
+Outros tipos, como matrizes, estruturas e uniões, têm requisitos de alinhamento mais rígidos que garantem consistente union e agregar armazenamento e recuperação de dados. Aqui estão as definições de matriz, a estrutura e união:  
   
  Matriz  
  Contém um grupo ordenado de objetos de dados adjacentes. Cada objeto é chamado de um elemento. Todos os elementos em uma matriz tem o mesmo tamanho e tipo de dados.  
@@ -53,8 +53,8 @@ Outros tipos, como matrizes, estruturas e uniões têm requisitos de alinhamento
 |**FP32 (único precisão)**|**float**|Doubleword|  
 |**FP64 (dupla precisão)**|**double**|Quadword|  
 |**PONTEIRO**|**\***|Quadword|  
-|`__m64`|**struct m64**|Quadword|  
-|`__m128`|**struct m128**|Octaword|  
+|`__m64`|**struct __m64**|Quadword|  
+|`__m128`|**struct __m128**|Octaword|  
   
  As seguintes regras de alinhamento de agregação se aplicam:  
   

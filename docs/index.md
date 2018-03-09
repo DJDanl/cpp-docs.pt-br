@@ -1,12 +1,13 @@
 ---
 layout: HubPage
+ms.topic: hub-page
 title: "Documentação do Visual C++ | Microsoft Docs"
 description: "Saiba como usar C++ para desenvolver aplicativos, serviços e ferramentas para seus dispositivos e plataformas."
-ms.openlocfilehash: d74ee013980d77131f6513063ad3d16ee55cc891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -307,7 +308,7 @@ ms.lasthandoff: 10/24/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Melhorar o desempenho</h3>
-                                                    <p>Identifique os afunilamentos e otimize o desempenho do código usando ferramentas de diagnóstico.</p>
+                                                    <p>Identifique os gargalos e otimize o desempenho do código usando ferramentas de diagnóstico.</p>
                                                 </div>
                                             </div>
                                         </div>
