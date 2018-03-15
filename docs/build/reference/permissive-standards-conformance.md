@@ -21,11 +21,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ permissivo-(conformidade com os padrões)
 
@@ -37,7 +37,7 @@ Especifique o modo de conformidade de padrões para o compilador. Use esta opç�
 
 ## <a name="remarks"></a>Comentários
 
-Você pode usar o **/ permissivo-** opção de compilador para especificar o comportamento do compilador em conformidade com padrões. Esta opção desabilita permissivas comportamentos e configura o [/Zc](../../build/reference/zc-conformance.md) opções do compilador para compatibilidade total. No IDE, essa opção também torna o código IntelliSense mecanismo sublinhado não conforme. 
+Você pode usar o **/ permissivo-** opção de compilador para especificar o comportamento do compilador em conformidade com padrões. Esta opção desabilita permissivas comportamentos e configura o [/Zc](../../build/reference/zc-conformance.md) opções do compilador para compatibilidade total. No IDE, essa opção também torna o código IntelliSense mecanismo sublinhado não conforme.
 
 Por padrão, o **/ permissivo-** opção é definida em novos projetos criados por versão do Visual Studio de 2017 15,5 e versões posteriores. Ele não está definido por padrão em versões anteriores. Quando a opção for definida, o compilador gera o diagnósticos erros ou avisos quando construções de linguagem não padrão forem detectados em seu código, incluindo alguns erros comuns no pré-código C++ 11.
 
@@ -416,7 +416,7 @@ Nas versões anteriores do Visual Studio 2017 versão 15,5, use este procediment
 
 1. Abra seu projeto **páginas de propriedade** caixa de diálogo.
 
-1. Em **propriedades de configuração**, expanda o **C/C++** pasta e escolha o **linha de comando** página de propriedades.
+1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
 1. Insira o **/ permissivo-** opção de compilador no **opções adicionais** caixa. Escolha **Okey** ou **aplicar** para salvar suas alterações.
 
