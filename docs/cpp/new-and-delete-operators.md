@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
@@ -38,7 +38,7 @@ C++ dá suporte à alocação dinâmica e a desalocação de objetos usando o [n
   
  Para obter uma lista dos arquivos de biblioteca que compõem a biblioteca de tempo de execução do C e a biblioteca padrão C++, consulte [recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md).  
   
-##  <a id="new_operator"></a> o novo operador  
+##  <a id="new_operator"> </a> O novo operador  
  Quando uma instrução como a seguinte é encontrada em um programa, ela converte-se em uma chamada para a função `operator new`:  
   
 ```cpp  
@@ -144,7 +144,7 @@ int main() {
   
  Há outras maneiras de tratar as solicitações de alocação de memória com falha: escrever uma rotina de recuperação personalizada para tratar essa falha, em seguida, registrar a função chamando o [set_new_handler](../c-runtime-library/reference/set-new-handler.md) função do tempo de execução.  
   
-##  <a id="delete_operator"></a> o operador delete  
+##  <a id="delete_operator"> </a> O operador delete  
  Memória alocada dinamicamente usando a **novo** operador pode ser liberado usando a **excluir** operador. As chamadas de operador delete a **operador delete** função, o que libera memória para o pool disponível. Usando o **excluir** operador também faz com que o destruidor de classe (se houver) a ser chamado.  
   
  Há global e escopo de classe **operador delete** funções. Apenas uma **operador delete** função pode ser definida para uma determinada classe; se definido, ele oculta global **operador delete** função. Global **operador delete** função sempre é chamada para matrizes de qualquer tipo.  

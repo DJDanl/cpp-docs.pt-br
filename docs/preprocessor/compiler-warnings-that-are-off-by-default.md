@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador são desativados por padrão
 
@@ -37,7 +37,7 @@ Você pode habilitar esses avisos, usando uma das seguintes opções:
    **/ Parede** habilita todos os avisos que são desativados por padrão. Se você usar essa opção, você pode desativar avisos individuais usando o [/wd](../build/reference/compiler-option-warning-level.md) opção.
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   Isso permite que o aviso  *nnnn*  no nível *l*.
+   Isso permite que o aviso *nnnn* no nível *l*.
 
 Os seguintes avisos são desativados por padrão.
 
@@ -69,7 +69,7 @@ Os seguintes avisos são desativados por padrão.
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (nível 4)|'*class1*': layout de objeto em /vd2 será alterado devido à base virtual '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (nível 4)|dynamic_cast da base virtual '*class1*'para'*class2*' pode falhar em alguns contextos|
 |C4444 (nível 3)|top level '__unaligned' não é implementado nesse contexto|
-|C4464 (nível 4)|caminho de inclusão relativo contém '... '|
+|[C4464](../error-messages/compiler-warnings/c4464.md) (nível 4)|caminho de inclusão relativo contém '... '|
 |C4472 (nível 1)|'*identificador*' é um enum nativo: adicionar um especificador de acesso (pública/privada) para declarar um enum gerenciado|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (nível 4)|'*função*': função inline não referenciada foi removida|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (nível 4)|nome do tipo: nome de tipo excede o limite de metadados de '*limite*' caracteres|
@@ -103,7 +103,7 @@ Os seguintes avisos são desativados por padrão.
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (nível 1)|'*função*': assinatura de membro não private contém tipo nativo private de assembly '*native_type*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (nível 4)|'*função*': função não embutida|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (nível 3)|armazenando o resultado float de 32 bits na memória, possível perda de desempenho|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|acesso volátil de '*expressão*' está sujeito a /volatile:\<iso &#124; ms > Configuração; considere o uso de funções intrínsecas iso_volatile_load/store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|acesso volátil de '*expressão*' está sujeito a /volatile:\<iso&#124;ms > Configuração; considere o uso de funções intrínsecas iso_volatile_load/store|
 |C4749 (nível 4)|condicionalmente com suporte: offsetof aplicado a tipo de layout não standard '*tipo*'|
 |C4767 (nível 4)|nome da seção '*símbolo*' tem mais de 8 caracteres e será truncado pelo vinculador|
 |C4768 (nível 3)|atributos de declspec antes de especificação de vinculação são ignorados|

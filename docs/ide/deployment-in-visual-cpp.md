@@ -1,12 +1,9 @@
 ---
 title: "Implantação em Visual C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Implantação no Visual C++
 
@@ -49,6 +45,8 @@ Como a implantação central usando um pacote redistribuível ou módulos de mes
 ## <a name="local-deployment"></a>Implantação local
 
 Implantação local, arquivos de biblioteca são instalados na pasta de seu aplicativo junto com o arquivo executável. Versões diferentes de bibliotecas do Visual C++ redistribuíveis podem ser instaladas na mesma pasta porque o nome do arquivo de cada versão inclui seu número de versão. Por exemplo, a versão 12 da biblioteca de tempo de execução C++ é msvcp120.dll e a versão 14 é msvcp140.dll.
+
+Uma biblioteca pode ser disseminada por vários DLLs adicionais, conhecidas como *ponto bibliotecas*. Por exemplo, algumas funcionalidades na biblioteca padrão lançada no Visual Studio 2017 versão 15.6 foi adicionada em msvcp140_1.dll, para preverve a compatibilidade ABI msvcp140.dll. Se você usar a versão do Visual Studio de 2017 15,6 (conjunto de ferramentas 14.13) ou um conjunto de ferramentas mais recente do Visual Studio de 2017, você precisará implantar localmente essas bibliotecas de ponto, bem como a biblioteca principal. Essas bibliotecas ponto separadas são roladas para a próxima versão principal da biblioteca de base, quando altera a ABI.
 
 Como a Microsoft não é automaticamente localmente Atualização implantada bibliotecas do Visual C++, não recomendamos a implantação local dessas bibliotecas. Se você decidir usar a implantação local de bibliotecas redistribuíveis, recomendamos implementar seu próprio método de atualização automática das bibliotecas localmente implantadas.
 

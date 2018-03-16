@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 As declarações dos ponteiros para os membros são casos especiais de declarações do ponteiro.  Elas são declaradas usando a seguinte sequência:  

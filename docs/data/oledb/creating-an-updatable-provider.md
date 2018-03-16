@@ -23,10 +23,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 Atualizável ou provedores que podem ser atualizada pela linguagem Visual C++ (gravar) no repositório de dados. Este tópico discute como criar provedores atualizáveis usando modelos OLE DB.  

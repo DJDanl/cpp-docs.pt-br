@@ -105,10 +105,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 de avisos do compilador por meio de C4199
 
@@ -263,7 +263,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 3) C4191|' operador/operação': conversão não segura de 'type_of_expression' para 'type_required' \nCalling esta função através do ponteiro resultante pode causar falha no programa|
 |[Aviso do compilador (nível 3) C4192](../../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)|excluindo automaticamente 'Identificador' durante a importação de biblioteca de tipos 'library'|
 |Aviso do compilador (nível 3) C4193|Warning (POP) #pragma: nenhuma correspondência '#pragma Warning (push)'|
-|Aviso do compilador (nível 1) C4194|#pragma start_map_region não podem ser aninhados; ignorado|
+|Aviso do compilador (nível 1) C4194|#pragma start_map_region cannot be nested; ignored|
 |Aviso do compilador (nível 1) C4195|#pragma stop_map_region usado sem correspondência start_map_region de #pragma; ignorado|
 |Aviso do compilador (nível 1) C4196|esperado '%$L L'ou '%$L l'; encontrado '%$L'|
 |[Aviso do compilador (nível 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'type': volatile de alto nível em conversão é ignorado|

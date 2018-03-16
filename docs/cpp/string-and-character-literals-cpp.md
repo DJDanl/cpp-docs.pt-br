@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
 C++ dá suporte a vários tipos de cadeia de caracteres e caracteres e fornece modos para expressar valores literais de cada um desses tipos. No seu código-fonte, você expressar o conteúdo de seu literais de caracteres e cadeia de caracteres usando um conjunto de caracteres. Nomes de caractere universal e caracteres de escape permitem expressar qualquer cadeia de caracteres usando apenas o conjunto de caracteres de origem básico. Um literal de cadeia bruto permite que você evite usar caracteres de escape e pode ser usado para expressar todos os tipos de literais de cadeia de caracteres. Você também pode criar literais std::string sem ter que executar etapas de conversão ou construção extra.  
@@ -88,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>Literais de caracteres  
  Um *literal de caractere* é composto de um caractere de constante. Ele é representado pelo caractere entre aspas simples. Há cinco tipos de literais de caracteres:  
   
--   Literais de caracteres comum do tipo `char`, por exemplo`'a'`  
+-   Literais de caracteres comum do tipo `char`, por exemplo `'a'`  
   
--   Literais de caracteres UTF-8 do tipo `char`, por exemplo`u8'a'`  
+-   Literais de caracteres UTF-8 do tipo `char`, por exemplo `u8'a'`  
   
 -   Literais de caractere largo do tipo `wchar_t`, por exemplo `L'a'`  
   
--   Literais de caracteres UTF-16 do tipo `char16_t`, por exemplo`u'a'`  
+-   Literais de caracteres UTF-16 do tipo `char16_t`, por exemplo `u'a'`  
   
--   Literais de caracteres UTF-32 do tipo `char32_t`, por exemplo`U'a'`  
+-   Literais de caracteres UTF-32 do tipo `char32_t`, por exemplo `U'a'`  
   
  O caractere usado para um literal de caractere pode ser qualquer caractere, exceto caracteres reservados uma barra invertida ('\\'), aspas simples (') ou nova linha. Caracteres reservados podem ser especificados usando uma sequência de escape. Caracteres podem ser especificados usando nomes de caractere universal, desde que o tipo é grande o suficiente para conter o caractere.  
   
@@ -113,7 +113,7 @@ int main()
   
 -   Um literal de caractere que começa com o prefixo de U é um literal de caractere UTF-32. Sequência de escape que contém um único caractere, o valor de um literal de caractere UTF-32 ou nome de caractere universal tem um valor igual a seu valor de ponto de código ISO 10646. Um literal que contém mais de um caractere, sequência de escape ou nome de caractere universal de caracteres UTF-8 está mal formado.  
   
-###  <a name="bkmk_Escape"></a>Sequências de escape  
+###  <a name="bkmk_Escape"></a> Sequências de escape  
  Há três tipos de sequências de escape: simples, octa e hexadecimal. As sequências de escape podem ser qualquer uma das seguintes:  
   
 |Valor|Sequência de escape|Valor|Sequência de escape|  
@@ -195,7 +195,7 @@ wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
   
  O caractere de barra invertida (\\) é um caractere de continuação de linha quando ele é colocado no final de uma linha. Se desejar que um caractere de barra invertida seja exibido como uma literal de caractere, você deve digitar duas barras invertidas em uma linha (`\\`). Para obter mais informações sobre o caractere de continuação de linha, consulte [fases de tradução](../preprocessor/phases-of-translation.md).  
   
-###  <a name="bkmk_UCN"></a>Nomes de caractere universais  
+###  <a name="bkmk_UCN"></a> Nomes de caractere universais  
  Em literais de caracteres e literais de cadeia de caracteres nativo (não processados), qualquer caractere pode ser representado por um nome de caractere universal.  Nomes de caractere universal são formados por um prefixo que \u seguido por um ponto de código Unicode oito dígitos, ou por um \u prefixo seguido por um ponto de código Unicode de quatro dígitos. Todos os quatro ou oito dígitos, respectivamente, devem estar presentes para tornar um nome de caractere universal bem formado.  
   
 ```cpp  

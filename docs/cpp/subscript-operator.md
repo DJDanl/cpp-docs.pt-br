@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="subscript-operator"></a>Operador Subscript:
 ## <a name="syntax"></a>Sintaxe  
@@ -51,9 +51,9 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- No exemplo acima, a expressão `nArray[2]` é idêntica a `2[nArray]`. O motivo é que o resultado de uma expressão de subscrito *e1***[** *e2* **]** é determinado pelo:  
+ No exemplo acima, a expressão `nArray[2]` é idêntica a `2[nArray]`. O motivo é que o resultado de uma expressão de subscrito *e1 * [** *e2* **]** é determinado pelo:  
   
- **\*((** *e2* **)**  *+*  **(***e1***))**  
+ **\*( (** *e2* **)** *+* **(***e1***) )**  
   
  O endereço produzido pela expressão não é *e2* bytes do endereço *e1*. Em vez disso, o endereço é dimensionado para gerar o próximo objeto na matriz *e2*. Por exemplo:  
   
@@ -67,7 +67,7 @@ double aDbl[2];
   
  *Expression1* **[***expression2***] [***expression3***]**...  
   
- As expressões subscritas são associadas da esquerda para a direita. A expressão subscrita mais à esquerda, *expression1***[***expression2***]**, é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (**\***) é aplicada após a última expressão de subscrito é avaliada, a menos que o valor do ponteiro final endereços de um tipo de matriz.  
+ As expressões subscritas são associadas da esquerda para a direita. A expressão de subscrito mais à esquerda, * expression1***[***expression2 ***]**, é avaliado primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (**\***) é aplicada após a última expressão de subscrito é avaliada, a menos que o valor do ponteiro final endereços de um tipo de matriz.  
   
  As expressões com vários subscritos referem-se aos elementos de matrizes multidimensionais. Uma matriz multidimensional é uma matriz cujos elementos são matrizes. Por exemplo, o primeiro elemento de uma matriz tridimensional é uma matriz com duas dimensões. O exemplo a seguir declara e inicializa uma matriz bidimensional simples de caracteres:  
   

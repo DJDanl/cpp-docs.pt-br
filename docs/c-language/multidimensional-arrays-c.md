@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multidimensional-arrays-c"></a>Matrizes multidimensionais (C)
 Uma expressão subscrita também pode ter vários subscritos, como segue:  
@@ -40,7 +40,7 @@ expression3
 ]...  
 ```  
   
- As expressões subscritas são associadas da esquerda para a direita. A expressão subscrita mais à esquerda, *expression1***[***expression2***]**, é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (**\***) é aplicado depois que a última expressão subscrita é avaliada, a menos que o valor do ponteiro final trate de um tipo de matriz (veja os exemplos abaixo).  
+ As expressões subscritas são associadas da esquerda para a direita. A expressão de subscrito mais à esquerda, * expression1***[***expression2 ***]**, é avaliado primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (**\***) é aplicado depois que a última expressão subscrita é avaliada, a menos que o valor do ponteiro final trate de um tipo de matriz (veja os exemplos abaixo).  
   
  As expressões com vários subscritos referem-se aos elementos de "matrizes multidimensionais". Uma matriz multidimensional é uma matriz cujos elementos são matrizes. Por exemplo, o primeiro elemento de uma matriz tridimensional é uma matriz com duas dimensões.  
   

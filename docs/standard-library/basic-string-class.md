@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 As sequências controladas por um objeto da classe de modelo `basic_string` são a classe de cadeia de caracteres do C++ Padrão e, geralmente, são chamadas de cadeias de caracteres, mas não devem ser confundidas com as cadeias de caracteres do estilo C terminadas em nulo, usadas em toda a Biblioteca Padrão C++. A cadeia de caracteres do C++ Padrão é um contêiner que permite o uso de cadeias de caracteres como tipos normais, como operações de comparação e concatenação, iteradores, algoritmos da Biblioteca Padrão C++, além de cópia e atribuição com memória gerenciada pela classe de alocador. Se você precisar converter uma cadeia de caracteres do C++ Padrão em uma cadeia de caracteres do estilo C terminada em nulo, use o membro [basic_string::c_str](#c_str).  
@@ -607,7 +607,7 @@ reference at(size_type _Off);
  Uma referência ao caractere da cadeia de caracteres na posição especificada pelo índice de parâmetro.  
   
 ### <a name="remarks"></a>Comentários  
- O primeiro elemento da cadeia de caracteres tem um índice de zero e os seguintes elementos são indexados consecutivamente por números inteiros positivos, para que uma cadeia de caracteres de comprimento  *n*  tem um  *n* th elemento indexado pelo número *n -* 1.  
+ O primeiro elemento da cadeia de caracteres tem um índice de zero e os seguintes elementos são indexados consecutivamente por números inteiros positivos, para que uma cadeia de caracteres de comprimento *n* tem um *n*elemento th indexado pelo número *n -* 1.  
   
  O membro [operator&#91;&#93;](#op_at) é mais rápido que a função membro **at** para fornecer acesso de leitura e gravação aos elementos de uma cadeia de caracteres.  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  Uma referência ao caractere da cadeia de caracteres na posição especificada pelo índice de parâmetro.  
   
 ### <a name="remarks"></a>Comentários  
- O primeiro elemento da cadeia de caracteres tem um índice de zero, e os seguintes elementos são indexados consecutivamente por números inteiros positivos, para que uma cadeia de caracteres de comprimento  *n*  tem um  *n*  elemento th indexado pelo número  *n*  - 1.  
+ O primeiro elemento da cadeia de caracteres tem um índice igual a zero e os elementos seguintes são indexados consecutivamente por inteiros positivos, para que uma cadeia de caracteres de comprimento *n* tenha um *n*º elemento indexado pelo número *n* - 1.  
   
  `operator[]` é mais rápido que a função membro [at](#at) para fornecer acesso de leitura e gravação aos elementos de uma cadeia de caracteres.  
   

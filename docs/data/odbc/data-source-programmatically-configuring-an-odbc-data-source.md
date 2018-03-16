@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Fonte de dados: configurando programaticamente uma fonte de dados ODBC
 Este tópico explica como você pode configurar nomes de fonte de dados de conectividade de banco de dados aberto (ODBC) por meio de programação. Isso fornece flexibilidade para acessar dados sem forçar o usuário usar explicitamente o administrador ODBC ou outros programas para especificar os nomes de fontes de dados.  
@@ -40,7 +40,7 @@ Este tópico explica como você pode configurar nomes de fonte de dados de conec
   
  No entanto, muitos DBMSs permitem que a criação da fonte de dados através de programação. Algumas fontes de dados mantêm uma especificação de diretório para bancos de dados. Ou seja, um diretório é a fonte de dados e cada tabela na fonte de dados é armazenada em um arquivo separado (no caso do dBASE, cada tabela é um arquivo. dbf). Drivers para outros bancos de dados ODBC, como Microsoft Access e o SQL Server, exigem que alguns critérios específicos ser atendidas antes de uma fonte de dados pode ser estabelecida. Por exemplo, ao usar o driver ODBC do SQL Server, você precisa estabelecer um computador SQL Server.  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>Exemplo SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_example"></a> Exemplo SQLConfigDataSource  
  O exemplo a seguir usa o **:: SQLConfigDataSource** nova fonte de dados do Excel de chamada de função da API do ODBC para criar uma nova fonte de dados do Excel:  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  Embora essas informações podem ser gravadas diretamente para o registro sem usar **:: SQLConfigDataSource**, qualquer aplicativo que faz isso requer que a técnica atual que usa o Gerenciador de Driver para manter seus dados. Se uma revisão posterior ao Gerenciador de Driver ODBC implementa registro mantendo sobre fontes de dados de maneira diferente, qualquer aplicativo que usa essa técnica será interrompido. É aconselhável geralmente usa uma função de API quando é fornecida. Por exemplo, seu código é portátil de 16 bits para 32 bits se você usar o **:: SQLConfigDataSource** funcionar, pois a função grava corretamente o arquivo Odbc.ini ou no registro.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>Parâmetros de SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters  
  A seguir explica os parâmetros de **:: SQLConfigDataSource** função. Muitas das informações é retirada da API do ODBC *referência do programador* fornecido com o Visual C++ versão 1.5 e posteriores.  
   
-###  <a name="_core_function_prototype"></a>Protótipo de função  
+###  <a name="_core_function_prototype"></a> Protótipo de função  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>Comentários  
   
-####  <a name="_core_parameters_and_usage"></a>Parâmetros e uso  
+####  <a name="_core_parameters_and_usage"></a> Parâmetros e uso  
  *hwndParent*  
  A janela especificada como o proprietário de todas as caixas de diálogo que o Gerenciador de Driver ODBC ou o driver ODBC específico cria para obter informações adicionais do usuário sobre a nova fonte de dados. Se o `lpszAttributes` parâmetro não fornecer informações suficientes, uma caixa de diálogo é exibida. O *hwndParent* parâmetro pode ser **nulo**.  
   

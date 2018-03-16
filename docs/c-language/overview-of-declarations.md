@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>Visão geral das declarações
 Uma "declaração" especifica a interpretação e os atributos de um conjunto de identificadores. Uma declaração que também causa a reserva do armazenamento para o objeto ou a função nomeada pelo identificador é chamada de uma "definição". As declarações de C para variáveis, funções e tipos têm esta sintaxe:  

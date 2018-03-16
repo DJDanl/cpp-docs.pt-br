@@ -18,16 +18,16 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 684067eae668398e71ca4ace0cc136e3210e0dbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
 Essa cláusula executa uma redução nas variáveis escalares que aparecem em *lista variável*, com o operador *op*. A sintaxe de `reduction` cláusula é o seguinte:
 
-> redução (*op*: *lista variável*)
+> reduction(*op*: *variable-list*)
 
 Uma redução geralmente é especificada para uma instrução com uma das seguintes formas:
 
@@ -44,17 +44,17 @@ em que:
 *x*  
 Uma das variáveis de redução especificadas no `list`.
 
-*lista de variável*  
+*variable-list*  
 Uma lista separada por vírgulas de variáveis de redução de escalar.
 
 *expr*  
 Uma expressão com um tipo escalar que não faz referência a *x*.
 
-*operações*  
-Não é um operador sobrecarregado, mas um dos +, &#42; -, &amp;, ^, &#124; &amp; &amp;, ou &#124; &#124;.
+*op*  
+Não é um operador sobrecarregado, mas um dos +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, ou &#124; &#124;.
 
 *binop*  
-Não é um operador sobrecarregado, mas um dos +, &#42; -, &amp;, ^, ou &#124;.
+Não é um operador sobrecarregado, mas um dos +, &#42;, -, &amp;, ^, ou &#124;.
 
 A seguir está um exemplo de como o `reduction` cláusula:  
   

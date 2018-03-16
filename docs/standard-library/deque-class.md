@@ -104,10 +104,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deque-class"></a>Classe deque
 Organiza os elementos de determinado tipo em uma organização linear e, como um vetor, permite o acesso aleatório rápido a qualquer elemento e uma inserção e exclusão eficientes na parte posterior do contêiner. No entanto, ao contrário de um vetor, a classe `deque` também dá suporte à inserção e exclusão eficientes na frente do contêiner.  

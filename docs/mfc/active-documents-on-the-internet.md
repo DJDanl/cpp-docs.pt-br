@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="active-documents-on-the-internet"></a>Documentos ativos na Internet
 Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os documentos ativos podem ser várias páginas e são exibidos em toda a área cliente. Eles não negociação de menu tradicionais e podem ser editados no local, bem como em uma janela aberta no aplicativo do servidor. Em vez de exibir como um pequeno retângulo circundado por uma borda tracejada, documentos ativos são quadro completo e ativo sempre no local.  
@@ -59,7 +59,7 @@ Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os
 |-------------------------|---------------------------------|  
 |Usa composta arquivos como seu mecanismo de armazenamento.|`IPersistStorage`.|  
 |Suporta os recursos básicos de incorporação de documentos ativos, incluindo criar do arquivo.|`IPersistFile`, `IOleObject` e `IDataObject`.|  
-|Dá suporte à ativação no local.|`IOleInPlaceObject`e `IOleInPlaceActiveObject` (usando o contêiner `IOleInPlaceSite` e **IOleInPlaceFrame** interfaces).|  
+|Dá suporte à ativação no local.|`IOleInPlaceObject` e `IOleInPlaceActiveObject` (usando o contêiner `IOleInPlaceSite` e **IOleInPlaceFrame** interfaces).|  
 |Oferece suporte as extensões de documento ativo que envolvem essas novas interfaces. Algumas interfaces são opcionais.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` e `IPrint`.|  
   
  MFC fornece suporte para estender o suporte de servidor inserido existente para documentos ativos.  
@@ -67,7 +67,7 @@ Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os
 ## <a name="add-active-document-support-to-a-new-application"></a>Adicionar suporte para o documento ativo para um novo aplicativo  
  Para criar um novo aplicativo com suporte do documento ativo: no Assistente de aplicativo MFC, no **suporte a documentos compostos** em "suporte a documentos compostos selecione" Escolha **servidor completo** ou  **Contêiner/servidor completo**e em "Selecionadas opções adicionais", marque a caixa de seleção **server documento ativo**.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a>Converter um servidor em processo de MFC existente em um servidor de documento ativo  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Converter um servidor em processo de MFC existente em um servidor de documento ativo  
  Se seu aplicativo foi criado com uma versão do Visual C++ anteriores à versão 4.2 e já é um servidor em processo, você pode adicionar suporte de documento ativo por meio de alterações para as classes a seguir:  
   
 |Tipo de classe|Derivado anteriormente|Alteração de derivar de|  

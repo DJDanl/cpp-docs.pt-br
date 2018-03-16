@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++
 > [!NOTE]
@@ -104,7 +104,7 @@ RESOURCE.H     AFXRES.H
   
  Você pode exibir essas várias relações de arquivo usando o comando inclui o arquivo do Visual C++/Set.  
   
- MYAPP. RC  
+ MYAPP.RC  
  O arquivo de recurso do aplicativo que você editar usando o Visual C++.  
   
  RECURSO. H é o arquivo de cabeçalho específico do aplicativo. Ele é sempre chamado recurso. H por AppWizard, consistente com o padrão do Visual C++ de nomenclatura de arquivo de cabeçalho. O #include para esse arquivo de cabeçalho é a primeira instrução no arquivo de recurso (MYAPP. RC):  
@@ -115,7 +115,7 @@ RESOURCE.H     AFXRES.H
 #include "resource.h"  
 ```  
   
- RES\MYAPP. RC2  
+ RES\MYAPP.RC2  
  Contém recursos que não serão editados pelo Visual C++, mas serão incluídos no final compilado. Arquivo EXE. AppWizard não cria nenhum tais recursos por padrão, como Visual C++ pode editar todos os recursos padrão, incluindo o recurso de versão (um novo recurso nesta versão). Um arquivo vazio é gerado pelo AppWizard caso você deseja adicionar seus próprios recursos de formatação personalizados para este arquivo.  
   
  Se você usar recursos formatados personalizados, você pode adicioná-los para RES\MYAPP. RC2 e editá-los usando o editor de texto do Visual C++.  
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES. H define símbolos padrão, como `ID_FILE_NEW`, usada pelo framework e usado especificamente em AFXRES. RC. AFXRES. H também # do include WINRES. H, que contém um subconjunto do WINDOWS. H que são necessárias para gerado pelo Visual C++. Arquivos RC, bem como AFXRES. RC. Os símbolos definidos no AFXRES. H estão disponíveis como editar o arquivo de recurso do aplicativo (MYAPP. RC). Por exemplo, `ID_FILE_NEW` é usado para o arquivo novo item de menu no MYAPP. Recurso de menu do RC. Você não pode alterar ou excluir esses símbolos definidos pelo framework.  
   
-## <a name="_mfcnotes_tn035_including"></a>Incluindo arquivos de cabeçalho adicionais  
+## <a name="_mfcnotes_tn035_including"></a> Incluindo arquivos de cabeçalho adicionais  
   
  O aplicativo criado AppWizard inclui apenas dois arquivos de cabeçalho: recurso. H e AFXRES. H. Somente os recursos. H é específica do aplicativo. Talvez seja necessário incluir arquivos de cabeçalho adicionais de somente leitura nos seguintes casos:  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ sempre adiciona o //{{NO_DEPENDENCIES}} comentário de linha para um. Arquivo RC quando ele salva o arquivo. Em alguns casos, desvio de dependência de compilação no recurso. H pode resultar em erros de tempo de execução sem serem detectados em tempo de link. Por exemplo, se você usar o navegador de símbolo para alterar o valor numérico atribuído a um símbolo de um recurso, o recurso de não ser corretamente localizado e carregado no caso de tempo de execução do aplicativo do. Arquivo CPP referindo-se ao recurso não é recompilado. Nesses casos, você deve recompilar qualquer explicitamente. Arquivos CPP que você sabe que são afetados pelas alterações de símbolo no recurso. H ou selecione **recriar todos os**. Se você tiver a necessidade de alterações frequentes valores de símbolo para um determinado grupo de recursos, você provavelmente achará mais conveniente e segura quebrar esses símbolos em um arquivo de cabeçalho separado de somente leitura, conforme descrito na seção acima [incluindo Arquivos de cabeçalho adicionais](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>Como o Visual C++ gerencia conjunto inclui informações * *  
+## <a name="_mfcnotes_tn035_set_includes"></a> Como o Visual C++ gerencia conjunto inclui informações * *  
   
  Como discutido acima, no menu Arquivo inclui definir comando lhe permite especificar três tipos de informações:  
   

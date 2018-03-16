@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>Manipuladores para intervalos de mapa da mensagem
 Este artigo explica como mapear um intervalo de mensagens para uma função de manipulador de mensagem única (em vez de mapeamento de uma mensagem para apenas uma função).  
@@ -66,7 +66,7 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
 -   [Exemplo de um intervalo de IDs de controle](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>Gravar a entrada de mapa de mensagem  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Gravar a entrada de mapa de mensagem  
  No. CPP de arquivo, adicione a entrada de mapa de mensagem, conforme mostrado no exemplo a seguir:  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
      A macro de terceira, `ON_CONTROL_RANGE`, aceita um parâmetro primeiro adicional: uma notificação de controle de mensagens, como **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a>Declarar a função de manipulador  
+##  <a name="_core_declaring_the_handler_function"></a> Declarar a função de manipulador  
  Adicione a declaração de função de manipulador em de. Arquivo de H. O código a seguir mostra como isso pode parecer, conforme mostrado abaixo:  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
  Para obter mais informações sobre requisitos de parâmetros para funções de manipulador de atualização, consulte [para um intervalo de IDs de comando de exemplo](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>Exemplo para as IDs de um intervalo de comando  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Exemplo para as IDs de um intervalo de comando  
  Quando você pode usar intervalos é um exemplo de tratamento de comandos, como o comando Zoom no exemplo do MFC [HIERSVR](../visual-cpp-samples.md). Este comando amplia o modo de exibição, dimensioná-lo entre 25% e 300% de seu tamanho normal. Classe de exibição do HIERSVR usa um intervalo para lidar com os comandos de Zoom com uma entrada de mapa de mensagem semelhante a isso:  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
  Atualizar funções de manipulador de comandos único normalmente têm um único parâmetro, `pCmdUI`, do tipo **CCmdUI\***. Diferente das funções de manipulador, funções de manipulador de atualização para intervalos de mapas de mensagem não exigem um parâmetro extra, `nID`, do tipo **UINT**. A ID de comando, que é necessário para especificar quais comandos que o usuário realmente escolhido, foi encontrada no `CCmdUI` objeto.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>Exemplo de um controle de intervalo de IDs  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Exemplo de um controle de intervalo de IDs  
  Outro caso interessante está mapeando mensagens de notificação de controle para um intervalo de IDs de controle para um único manipulador. Suponha que o usuário pode clicar em qualquer um dos botões de 10. Para mapear todos os botões de 10 para um manipulador, sua entrada de mapa de mensagem teria esta aparência:  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  

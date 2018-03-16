@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceções: alterações feitas em macros de exceção na versão 3.0
 Este é um tópico avançado.  
@@ -39,7 +39,7 @@ Este é um tópico avançado.
   
 -   [Lançar exceções](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>Tipos de exceção e a Macro CATCH  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Tipos de exceção e a Macro CATCH  
  Em versões anteriores do MFC, o **CATCH** macro usada informações de tipo de tempo de execução do MFC para determinar o tipo da exceção; tipo da exceção é determinado, em outras palavras, no local de catch. Com as exceções do C++, no entanto, tipo da exceção é sempre determinado no site throw pelo tipo de objeto de exceção que é lançado. Isso fará com que a incompatibilidades em casos raros em que o tipo de ponteiro para o objeto lançado difere do tipo do objeto descartado.  
   
  O exemplo a seguir ilustra a consequência desta diferença entre MFC versão 3.0 e versões anteriores:  
@@ -60,7 +60,7 @@ Este é um tópico avançado.
   
  Para contornar esse problema, mova a expressão throw da função para o código de chamada e lançar uma exceção do tipo real conhecido para o compilador no momento em que a exceção é gerada.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>Lançar exceções  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Lançar exceções  
  Um bloco catch não pode gerar o mesmo ponteiro de exceção capturado por ele.  
   
  Por exemplo, este código foi válido em versões anteriores, mas terá resultados inesperados com versão 3.0:  

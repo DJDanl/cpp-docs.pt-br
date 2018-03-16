@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de avisos do compilador por meio de C4599
 
@@ -177,7 +175,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'*identificador*': identificador é palavra reservada|
 |[Aviso do compilador (nível 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|operando em diretiva ignorado|
 |[Aviso do compilador (nível 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|conversão entre diferente ponteiro para representações de membro, compilador pode gerar código incorreto|
-|[Aviso do compilador (nível 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anônimo 'struct &#124; união' não declarou nenhum membro de dados|
+|[Aviso do compilador (nível 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anônimo ' struct&#124;union' não declarou nenhum membro de dados|
 |[Aviso do compilador (nível 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|tamanho de instrução inválida|
 |[Aviso do compilador (nível 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|tamanho inválido para operando|
 |[Aviso do compilador (nível 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'*identificador*': símbolo resolve para registro de deslocamento|
@@ -210,7 +208,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4442|terminador nulo inserido em argumento de Annotation.  Valor será truncado.|
 |Aviso do compilador (nível 1) C4443|parâmetro pragma esperado como '0', '1' ou '2'|
 |Aviso do compilador (nível 3) C4444|'*identificador*': unaligned' de nível superior não está implementado neste contexto|
-|[Aviso do compilador (nível 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*função*': em um ' WinRT &#124; gerenciado ' tipo de um método virtual não pode ser particular|
+|[Aviso do compilador (nível 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*função*': em um ' WinRT&#124;gerenciado ' tipo de um método virtual não pode ser particular|
 |Aviso do compilador (nível 1) C4446|'*tipo*': não é possível mapear o membro '*name1*' para este tipo devido a conflito com o nome do tipo. O método foi renomeado para '*name2*'|
 |Aviso do compilador (nível 1) C4447|assinatura 'main' encontrada sem modelo de threading. Considere o uso de ' int principal (Platform:: array\<Platform:: String ^ > ^ args)'.|
 |C4448 de aviso do compilador|'*tipo*1' não tem uma interface padrão especificada nos metadados. Separação: '*type2*', que podem falhar em tempo de execução.|
@@ -225,14 +223,14 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 4) C4457](compiler-warning-level-4-c4457.md)|declaração de '*identificador*' oculta um parâmetro de função|
 |[Aviso do compilador (nível 4) C4458](compiler-warning-level-4-c4458.md)|declaração de '*identificador*' oculta o membro da classe|
 |[Aviso do compilador (nível 4) C4459](compiler-warning-level-4-c4459.md)|declaração de '*identificador*' oculta uma declaração global|
-|[Aviso do compilador (nível 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; gerenciado ' operador '*operador*', tem o parâmetro passado por referência. ' WinRT &#124; gerenciado ' operador '*operador*'tem semânticas diferentes do operador de C++'*cpp_operator*', você pretendia passar por valor?|
+|[Aviso do compilador (nível 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;gerenciado ' operador '*operador*', tem o parâmetro passado por referência. ' WinRT&#124;gerenciado ' operador '*operador*'tem semânticas diferentes do operador de C++'*cpp_operator*', você pretendia passar por valor?|
 |[Aviso do compilador (nível 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': esta classe possui um finalizador '! *finalizador*', mas nenhum destruidor ' ~*dtor*'|
 |[Compilador aviso (nível 1, erro) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*tipo*': não é possível determinar o GUID do tipo. O programa poderá falhar no tempo de execução.|
 |[Aviso do compilador (nível 4) C4463](compiler-warning-level-4-c4463.md)|estouro; atribuindo '*valor*'para o campo de bits que pode conter apenas valores de'*min_value*'para'*max_value*'|
-|Aviso do compilador (nível 4) C4464|caminho de inclusão relativo contém '... '|
+|[Aviso do compilador (nível 4) C4464](../../error-messages/compiler-warnings/c4464.md)|caminho de inclusão relativo contém '... '|
 |[Aviso do compilador (nível 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de controle de ponto flutuante ignorados sob /clr|
 |[Aviso do compilador (nível 4) C4471](compiler-warning-level-4-c4471.md)|'*enumeração*': declaração de encaminhamento de uma enumeração sem escopo deve ter um tipo subjacente (int assumido)|
-|Aviso do compilador (nível 1) C4472|'*identificador*' é um enum nativo: adicionar um especificador de acesso (pública/privada) para declarar um ' WinRT &#124; gerenciado ' enum|
+|Aviso do compilador (nível 1) C4472|'*identificador*' é um enum nativo: adicionar um especificador de acesso (pública/privada) para declarar um ' WinRT&#124;gerenciado ' enum|
 |[Aviso do compilador (nível 1) C4473](c4473.md)|'*função*': não há argumentos suficientes passado para a cadeia de caracteres de formato|
 |Aviso do compilador (nível 3) C4474|'*função*': muitos argumentos passados para a cadeia de caracteres de formato|
 |Aviso do compilador (nível 3) C4475|'*função*': modificador de comprimento '*modificador*'não pode ser usado com o caractere de campo do tipo'*caracteres*' especificador de formato|

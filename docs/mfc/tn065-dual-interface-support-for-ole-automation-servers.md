@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: suporte para interface dupla para servidores de automação OLE
 > [!NOTE]
@@ -262,7 +262,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>Ponteiros de Interface dupla de passagem  
- Passar o ponteiro de interface dupla não é simples, especialmente se você precisar chamar `CCmdTarget::FromIDispatch`. `FromIDispatch`funciona apenas em MFC `IDispatch` ponteiros. Uma maneira de resolver esse problema é a consulta para o original `IDispatch` ponteiro conjunto backup pelo MFC e passar esse ponteiro para funções que precisam dela. Por exemplo:  
+ Passar o ponteiro de interface dupla não é simples, especialmente se você precisar chamar `CCmdTarget::FromIDispatch`. `FromIDispatch` funciona apenas em MFC `IDispatch` ponteiros. Uma maneira de resolver esse problema é a consulta para o original `IDispatch` ponteiro conjunto backup pelo MFC e passar esse ponteiro para funções que precisam dela. Por exemplo:  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -306,10 +306,10 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   Em seu aplicativo `InitInstance` funcionar, localize a chamada para `COleObjectFactory::UpdateRegistryAll`. Seguindo essa chamada, adicione uma chamada para `AfxOleRegisterTypeLib`, especificando o **LIBID** correspondente à sua biblioteca de tipos, juntamente com o nome da sua biblioteca de tipo:  
   
  ' ' * / / Quando um aplicativo de servidor é iniciado autônomo, é uma boa ideia * / / para atualizar o registro do sistema, caso ele tenha sido danificado.  
-    m_server. UpdateRegistry(OAT_DISPATCH_OBJECT);
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll(); * / / DUAL_SUPPORT_START * / / certificar-se de que a biblioteca de tipos foi registrada ou interface dupla não funcionará.  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); * / / DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -350,12 +350,12 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
 {  
-    METHOD_PROLOGUE (CAutoClickDoc, DualAClick)  
+    METHOD_PROLOGUE(CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC converte automaticamente de Unicode BSTR para * / / CString Ansi, se necessário...  
-    pEsse -> m_str = TextoNovo;  
+    pThis->m_str = newText;  
     Retorna NOERROR;  
  }  
-    CATCH_ALL_DUAL}  
+    CATCH_ALL_DUAL }  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e -> m_wCode + 0x200));
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -388,27 +388,27 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  The following example implements a class defined to support **ISupportErrorInfo**. `CAutoClickDoc` is the name of your automation class and `IID_IDualAClick` is the **IID** for the interface that is the source of errors reported through the OLE Automation error object:  
   
 ```  
-STDMETHODIMP_(ULong) CAutoClickDoc::XSupportErrorInfo::AddRef()   
+STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     retorno pEsse -> ExternalAddRef();
 
 }   
-STDMETHODIMP_(ULong) CAutoClickDoc::XSupportErrorInfo::Release()   
+STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     retorno pEsse -> ExternalRelease();
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (iid REFIID, LPVOID * ppvObj)   
 {   
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     retorno pEsse -> ExternalQueryInterface (& iid, ppvObj);
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo REFIID iid)   
 {   
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     retornar (iid = = IID_IDualAClick) S_OK: S_FALSE;   
 }  
 ```  

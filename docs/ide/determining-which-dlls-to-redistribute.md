@@ -1,7 +1,7 @@
 ---
 title: "Determinando quais DLLs devem ser redistribuídas | Microsoft Docs"
 ms.custom: 
-ms.date: 09/21/2017
+ms.date: 03/13/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinando quais DLLs devem ser redistribuídas
 
@@ -53,18 +53,18 @@ A tabela a seguir descreve algumas das DLLs Visual C++ que pode depender de seu 
 
 |Biblioteca do Visual C++|Descrição|Aplica-se a|
 |--------------------------|-----------------|----------------|
-|vcruntime*versão*. dll|Biblioteca de tempo de execução de código nativo.|Aplicativos que usam os normal C e C++ language inicialização e encerramento serviços.|
-|vccorlib*versão*. dll|Biblioteca de tempo de execução de código gerenciado.|Aplicativos que usam os serviços de linguagem C++ para código gerenciado.|
-|msvcp*versão*. dll|Biblioteca padrão C++ para código nativo.|Aplicativos que usam o [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md).|
-|concrt*versão*. dll|Biblioteca de tempo de execução de simultaneidade para código nativo.|Aplicativos que usam o [tempo de execução de simultaneidade](../parallel/concrt/concurrency-runtime.md).|
-|MFC*versão*. dll|Microsoft Foundation Classes (MFC) de biblioteca.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md).|
+|vcruntime*version*.dll|Biblioteca de tempo de execução de código nativo.|Aplicativos que usam os normal C e C++ language inicialização e encerramento serviços.|
+|vccorlib*version*.dll|Biblioteca de tempo de execução de código gerenciado.|Aplicativos que usam os serviços de linguagem C++ para código gerenciado.|
+|msvcp*versão*. dll e msvcp*versão*_*dotnumber*. dll|Biblioteca padrão C++ para código nativo.|Aplicativos que usam o [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md).|
+|concrt*version*.dll|Biblioteca de tempo de execução de simultaneidade para código nativo.|Aplicativos que usam o [tempo de execução de simultaneidade](../parallel/concrt/concurrency-runtime.md).|
+|mfc*version*.dll|Microsoft Foundation Classes (MFC) de biblioteca.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md).|
 |MFC*versão* *idioma*. dll|Microsoft Foundation Classes (MFC) recursos de biblioteca.|Aplicativos que usam recursos de idioma específico para MFC.|
-|MFC*versão*u.dll|Biblioteca do MFC com suporte a Unicode.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) necessita de suporte de Unicode.|
+|mfc*version*u.dll|Biblioteca do MFC com suporte a Unicode.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) necessita de suporte de Unicode.|
 |mfcmifc80.dll|Biblioteca do MFC Interfaces gerenciadas.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index).|
-|mfcm*versão*. dll|Biblioteca gerenciada do MFC.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index).|
-|mfcm*versão*u.dll|Biblioteca gerenciada MFC com suporte a Unicode.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index) necessita de suporte de Unicode.|
-|vcamp*versão*. dll|Biblioteca de AMP para código nativo.|Aplicativos que usam o [biblioteca C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) código.|
-|vcomp*versão*. dll|Biblioteca de OpenMP para código nativo.|Aplicativos que usam o [biblioteca C++ OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) código.|
+|mfcm*version*.dll|Biblioteca gerenciada do MFC.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index).|
+|mfcm*version*u.dll|Biblioteca gerenciada MFC com suporte a Unicode.|Aplicativos que usam o [biblioteca MFC](../mfc/mfc-desktop-applications.md) com [controles dos Windows Forms](/dotnet/framework/winforms/controls/index) necessita de suporte de Unicode.|
+|vcamp*version*.dll|Biblioteca de AMP para código nativo.|Aplicativos que usam o [biblioteca C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) código.|
+|vcomp*version*.dll|Biblioteca de OpenMP para código nativo.|Aplicativos que usam o [biblioteca C++ OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) código.|
 
 > [!NOTE]
 > Você não precisa redistribuir o Active Template Library como uma DLL separada. Sua funcionalidade foi movida para cabeçalhos e uma biblioteca estática.

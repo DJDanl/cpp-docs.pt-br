@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>Semântica de expressões
 As expressões são avaliadas de acordo com a precedência e o agrupamento dos respectivos operadores. ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md) na [convenções lexicais](../cpp/lexical-conventions.md), mostra as relações do C++ impõem operadores em expressões.)  
@@ -80,10 +80,10 @@ Ordem de avaliação da expressão com parênteses
   
 |Tipo esperado|Tipos permitidos|  
 |-------------------|-------------------|  
-|*type*|`const`*tipo*<br /> `volatile`*tipo*<br /> *tipo de*&<br /> `const`*tipo*&<br /> `volatile`*tipo*&<br /> `volatile const`*tipo*<br /> `volatile const`*tipo*&|  
-|*tipo de*\*|*tipo de*\*<br /> `const`*tipo*\*<br /> `volatile`*tipo*\*<br /> `volatile const`*tipo*\*|  
-|`const`*tipo*|*type*<br /> `const`*tipo*<br />`const`*tipo*&|  
-|`volatile`*tipo*|*type*<br /> `volatile`*tipo*<br /> `volatile`*tipo*&|  
+|*type*|`const` *tipo de*<br /> `volatile` *tipo de*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *tipo de*<br /> `volatile const` *type*&|  
+|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
+|`const` *tipo de*|*type*<br /> `const` *tipo de*<br />`const` *type*&|  
+|`volatile` *tipo de*|*type*<br /> `volatile` *tipo de*<br /> `volatile` *type*&|  
   
  Como as regras acima podem sempre ser usadas em conjunto, um ponteiro const para um objeto volatile pode ser fornecido onde um ponteiro é esperado.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   Operando esquerdo do operador AND lógico (&&). O operando esquerdo do operador AND lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador AND lógico será avaliado.  
   
--   Operando da esquerda do operador OR lógico (&#124; &#124;). O operando esquerdo do operador OR lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador OR lógico será avaliado.  
+-   À esquerda do operador lógico OR (&#124;&#124;). O operando esquerdo do operador OR lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador OR lógico será avaliado.  
   
 -   Operando esquerdo do operador vírgula O operando esquerdo do operador vírgula é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Os dois operandos do operador vírgula são sempre avaliados.  
   

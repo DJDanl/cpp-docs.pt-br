@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 Essa classe implementa **IUnknown** para um objeto agregado.  
@@ -54,7 +54,7 @@ class CComObject : public Base
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|O construtor.|  
-|[CComObject:: ~ CComObject](#dtor)|O destruidor.|  
+|[CComObject::~CComObject](#dtor)|O destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -66,7 +66,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Diminui a contagem de referência no objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComObject`implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para um objeto agregado. No entanto, chamadas para `QueryInterface`, `AddRef`, e **versão** são delegadas a `CComObjectRootEx`.  
+ `CComObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para um objeto agregado. No entanto, chamadas para `QueryInterface`, `AddRef`, e **versão** são delegadas a `CComObjectRootEx`.  
   
  Para obter mais informações sobre como usar `CComObject`, consulte o artigo [Fundamentals de ATL COM objetos](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -78,7 +78,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>  CComObject::AddRef  
  Incrementa a contagem de referência no objeto.  
   
 ```
@@ -88,7 +88,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valor de retorno  
  Esta função retorna a nova contagem de referência incrementado no objeto. Esse valor pode ser útil para teste ou de diagnóstico.  
   
-##  <a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>  CComObject::CComObject  
  O construtor incrementa a contagem de bloqueios do módulo.  
   
 ```
@@ -97,14 +97,14 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Parâmetros  
  **void\***  
- [in] Esse parâmetro sem nome não é usado. Ela existe para simetria com outros **CCom***XXX*`Object`*XXX* construtores.  
+ [in] Esse parâmetro sem nome não é usado. Ela existe para simetria com outros **CCom * XXX*`Object`*XXX* construtores.  
   
 ### <a name="remarks"></a>Comentários  
  Decrementa o destruidor-lo.  
   
  Se um `CComObject`-objeto derivado é criada com êxito usando o **novo** operador, a contagem de referência inicial é 0. Para definir a contagem de referência para o valor adequado (1), fazer uma chamada para o [AddRef](#addref) função.  
   
-##  <a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>  CComObject::~CComObject  
  O destruidor.  
   
 ```
@@ -115,7 +115,7 @@ CComObject();
  Libera todos os recursos alocados, chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease), e diminui a módulo contagem de bloqueio.  
 
   
-##  <a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>  CComObject::CreateInstance  
  Função estática permite que você crie um novo **CComObject <** `Base`  **>**  objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComObject::QueryInterface  
  Recupera um ponteiro para a interface solicitada.  
   
 ```
@@ -161,7 +161,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
-##  <a name="release"></a>CComObject::Release  
+##  <a name="release"></a>  CComObject::Release  
  Diminui a contagem de referência no objeto.  
   
 ```

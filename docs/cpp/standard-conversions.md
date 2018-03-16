@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 A linguagem C++ define conversões entre seus tipos básicos. Ela também define conversões para o ponteiro, referência e tipos derivados de ponteiro ao membro. Essas conversões são chamadas de “conversões padrão”. (Para obter mais informações sobre tipos, os tipos padrão e tipos derivados, consulte [tipos](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  As promoções de preservação de valores e as promoções que preservam o signedness normalmente geram os mesmos resultados. Porém, elas poderão gerar resultados diferentes se o objeto promovido for um dos seguintes:  
   
--   Um operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , ou**>=**  
+-   Um operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , ou **>=**  
   
      Esses operadores dependem do sinal para determinar o resultado. Portanto, as promoções de preservação de valores e de sinais geram resultados diferentes quando aplicadas a esses operandos.  
   
--   O operando esquerdo da  **>>**  ou**>>=**  
+-   O operando esquerdo da  **>>**  ou **>>=**  
   
      Esses operadores tratam quantidades assinadas e não assinadas de maneiras diferentes ao executar uma operação de alternância. Para quantidades assinadas, alternar uma quantidade para a direita faz com que o bit de sinal seja propagado para posições de bits vagas. Para quantidades não assinadas, as posições de bit vagas são preenchidas com zeros.  
   
@@ -199,7 +199,7 @@ int main() {
   
  O acesso a uma classe base depende do tipo de herança usado na derivação. Considere a herança lustrada na figura a seguir.  
   
- ![Base de exibição de gráfico de herança &#45; acessibilidade de classe](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![Gráfico de herança mostrando base&#45;acessibilidade de classe](../cpp/media/vc38xa1.gif "vc38XA1")  
 Gráfico de herança para ilustração de acessibilidade a classe base  
   
  A tabela a seguir mostra a acessibilidade da classe base para a situação ilustrada na figura.  

@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 ||||  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- Partições de um intervalo de elementos, localizando corretamente o  *n* elemento th da sequência do intervalo para que todos os elementos na frente dele sejam menor ou igual a ele e todos os elementos que se seguem na sequência de um Re maior que ou igual a ele.  
+ Particiona um intervalo de elementos, localizando corretamente o *n*º elemento da sequência no intervalo, para que todos os elementos anteriores sejam menores ou iguais a ele e todos os elementos posteriores, na sequência, sejam maiores ou iguais a ele.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>Comentários  
  O intervalo referenciado deve ser válido; todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível desde a primeira por incrementação.  
   
- O `nth_element` algoritmo não garante que elementos nos intervalos sub ou do lado do  *n* elemento th são classificados. Portanto, ele dá menos garantias do que `partial_sort`, que ordena os elementos no intervalo abaixo de algum elemento escolhido e pode ser usado como uma alternativa mais rápida que `partial_sort` quando a ordenação do intervalo inferior não é necessária.  
+ O algoritmo `nth_element` não assegura que os elementos nos subintervalos dos dois lados do elemento *n*º sejam classificados. Portanto, ele dá menos garantias do que `partial_sort`, que ordena os elementos no intervalo abaixo de algum elemento escolhido e pode ser usado como uma alternativa mais rápida que `partial_sort` quando a ordenação do intervalo inferior não é necessária.  
   
  Os elementos são equivalentes, mas não necessariamente iguais, quando nenhum é menor que o outro.  
   

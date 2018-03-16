@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>Sobrecarga de função
 O C++ permite a especificação de mais de uma função do mesmo nome no mesmo escopo. Esses são chamados de *sobrecarregado* funções. Funções sobrecarregadas permitem que você fornecer semânticas diferentes para uma função, dependendo dos tipos e o número de argumentos. 
@@ -44,7 +44,7 @@ Você pode sobrecarregar funções de membro e funções não membro. A tabela a
 |Presença ou ausência de reticências|Sim|  
 |Uso de nomes `typedef`|Não|  
 |Limites de matriz não especificados|Não|  
-|**Const** ou`volatile`|Sim, quando aplicado a função inteira|
+|**Const** ou `volatile`|Sim, quando aplicado a função inteira|
 |[ref-qualifier](#ref-qualifier)|Sim|  
   
 ## <a name="example"></a>Exemplo  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  Observe que a interseção entre esses dois conjuntos está vazia. Em virtude disso, o compilador gera uma mensagem de erro.  
   
- Para o argumento correspondente a uma função com  *n*  argumentos padrão é tratado como  *n* funções separadas + 1, cada um com um número diferente de argumentos.  
+ Para o argumento correspondente a uma função com *n* argumentos padrão é tratado como *n*funções separadas + 1, cada um com um número diferente de argumentos.  
   
  As reticências (...) atuam como um curinga; elas correspondem a qualquer argumento real. Isso pode resultar em muitos conjuntos ambíguos, se você não criar seus conjuntos de função sobrecarregada com extremo cuidado.  
   
@@ -301,7 +301,7 @@ Gráfico ilustrando as conversões preferidas
   
  A regra anterior só se aplica ao longo de um caminho específico de derivação. Considere o gráfico mostrado na figura a seguir.  
   
- ![Vários &#45; herança que mostra as conversões preferenciais](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Várias&#45;herança que mostra as conversões preferenciais](../cpp/media/vc391t2.gif "vc391T2")  
 Gráfico de herança múltipla que ilustra as conversões preferidas  
   
  A conversão do tipo `C*` no tipo `B*` é preferível à conversão do tipo `C*` no tipo `A*`. A razão é que eles estão no mesmo caminho, e `B*` é mais próximo. No entanto, a conversão do tipo `C*` no tipo `D*` não é preferível à conversão no tipo `A*`; não há preferência porque as conversões seguem caminhos diferentes.  
@@ -407,7 +407,7 @@ obj.name
   
  O operando esquerdo do `->*` e `.*` operadores (ponteiro para membro) são tratados da mesma forma que o `.` e `->` operadores (seleção de membro) em relação à correspondência de argumento.  
 
-## <a name="ref-qualifiers"></a>Qualificadores de referência em funções de membro  
+## <a name="ref-qualifiers"></a> Qualificadores de referência em funções de membro  
 Qualificadores de ref tornam possível sobrecarregar uma função de membro com base em se o objeto apontado pela `this` é um rvalue ou um lvalue.  Esse recurso pode ser usado para evitar operações de cópia desnecessário em cenários em que você optar por não fornecer acesso de ponteiro para os dados. Por exemplo, suponha que a classe **C** inicializa alguns dados em seu construtor e retorna uma cópia dos dados na função de membro **get_data()**. Se um objeto do tipo **C** é um rvalue que está prestes a ser destruído, em seguida, o compilador escolherá o **get_data() & &** sobrecarga, que move os dados em vez de copiá-lo. 
 
 ```cpp
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     As duas funções anteriores têm listas de argumento idênticas. `PSTR`é um sinônimo de tipo **char \*** . No escopo do membro, esse código gera um erro.  
+     As duas funções anteriores têm listas de argumento idênticas. `PSTR` é um sinônimo de tipo **char \*** . No escopo do membro, esse código gera um erro.  
   
 -   Os tipos enumerados são tipos distintos e podem ser usados para distinguir as funções sobrecarregadas.  
   

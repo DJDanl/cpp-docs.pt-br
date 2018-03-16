@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 572ef5ca7199fab5b9ffda686425cdd53547a60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="template-specialization-c"></a>Especialização de modelo (C++)
 
@@ -84,7 +84,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Exemplo
 
- Se você tem uma classe de coleção do modelo que usa qualquer tipo **T**, você pode criar uma especialização parcial que usa qualquer tipo de ponteiro **T***. O código a seguir demonstra um modelo de classe de coleção `Bag` e uma especialização parcial para os tipos de ponteiro nos quais a coleção diferencia os tipos de ponteiro antes de copiá-los na matriz. Então, a coleção armazena os valores que forem apontados. Com o modelo original, somente os próprios ponteiros seriam armazenados na coleção, deixando os dados vulneráveis a exclusão ou a alteração. Nesta versão especial do ponteiro da coleção, o código para verificar se há um ponteiro nulo no método `add` é adicionado.  
+ Se você tem uma classe de coleção do modelo que usa qualquer tipo **T**, você pode criar uma especialização parcial que usa qualquer tipo de ponteiro * * T *. O código a seguir demonstra um modelo de classe de coleção `Bag` e uma especialização parcial para os tipos de ponteiro nos quais a coleção diferencia os tipos de ponteiro antes de copiá-los na matriz. Então, a coleção armazena os valores que forem apontados. Com o modelo original, somente os próprios ponteiros seriam armazenados na coleção, deixando os dados vulneráveis a exclusão ou a alteração. Nesta versão especial do ponteiro da coleção, o código para verificar se há um ponteiro nulo no método `add` é adicionado.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  

@@ -102,10 +102,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 78fb4998754bc7a4b30a63de166973909d21b68f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="hashmultiset-class"></a>Classe hash_multiset
 > [!NOTE]
@@ -721,7 +721,8 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.  
+ 
+          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.  
   
  Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, o que inclui a classe de iteradores bidirecionais com suporte de contêineres reversíveis, como conjuntos. a subtração entre iteradores tem suporte apenas de iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório como vetor ou deque.  
   
