@@ -205,7 +205,7 @@ virtual BOOL FindFile(
   
 ### <a name="parameters"></a>Parâmetros  
  `pstrName`  
- Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo a ser localizado. Se você passar **nulo** para `pstrName`, **FindFile** um caractere curinga (*.\*) a pesquisa.  
+ Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo a ser localizado. Se você passar **nulo** para `pstrName`, **FindFile** um caractere curinga (\*.\*) a pesquisa.  
   
  *dwUnused*  
  Reservado para tornar **FindFile** polimórfico com classes derivadas. Deve ser 0.  
