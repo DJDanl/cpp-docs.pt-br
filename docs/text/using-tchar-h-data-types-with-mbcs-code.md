@@ -36,7 +36,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Usando tipos de dados TCHAR.H com código _MBCS
 Quando o manifesto constante **MBCS** é definida, uma rotina de texto genérico determinada mapeado para um dos seguintes tipos de rotinas de:  
   
--   Uma rotina SBCS que lida com bytes, caracteres e cadeias de caracteres multibyte. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo **char\***. Por exemplo, `_tprintf` mapeia para `printf`; os argumentos de cadeia de caracteres para `printf` são do tipo **char\***. Se você usar o **TCHAR** tipos de tipo de dados de texto genérico para a cadeia de caracteres, os tipos de parâmetro formal e real para `printf` corresponder porque **TCHAR** \* mapeia para **char \***.  
+-   Uma rotina SBCS que lida com bytes, caracteres e cadeias de caracteres multibyte. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo **char\***. Por exemplo, `_tprintf` mapeia para `printf`; os argumentos de cadeia de caracteres para `printf` são do tipo **char\***. Se você usar o **TCHAR** tipos de tipo de dados de texto genérico para a cadeia de caracteres, os tipos de parâmetro formal e real para `printf` corresponder porque **TCHAR**\* mapeia para **char\***.  
   
 -   Uma rotina específica do MBCS. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo `unsigned` **char\***. Por exemplo, `_tcsrev` mapeia para `_mbsrev`, que espera e retorna uma cadeia de caracteres do tipo `unsigned` **char\***. Se você usar o **TCHAR** tipo de dados de texto genérico para seus tipos de cadeia de caracteres, não há um possível conflito de tipo porque **TCHAR** mapeia para o tipo `char`.  
   
