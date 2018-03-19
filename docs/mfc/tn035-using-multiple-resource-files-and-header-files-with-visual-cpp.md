@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ sempre adiciona o //{{NO_DEPENDENCIES}} comentário de linha para um. Arquivo RC quando ele salva o arquivo. Em alguns casos, desvio de dependência de compilação no recurso. H pode resultar em erros de tempo de execução sem serem detectados em tempo de link. Por exemplo, se você usar o navegador de símbolo para alterar o valor numérico atribuído a um símbolo de um recurso, o recurso de não ser corretamente localizado e carregado no caso de tempo de execução do aplicativo do. Arquivo CPP referindo-se ao recurso não é recompilado. Nesses casos, você deve recompilar qualquer explicitamente. Arquivos CPP que você sabe que são afetados pelas alterações de símbolo no recurso. H ou selecione **recriar todos os**. Se você tiver a necessidade de alterações frequentes valores de símbolo para um determinado grupo de recursos, você provavelmente achará mais conveniente e segura quebrar esses símbolos em um arquivo de cabeçalho separado de somente leitura, conforme descrito na seção acima [incluindo Arquivos de cabeçalho adicionais](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a> Como o Visual C++ gerencia conjunto inclui informações * *  
+## <a name="_mfcnotes_tn035_set_includes"></a> Como o Visual C++ gerencia conjunto inclui informações**  
   
  Como discutido acima, no menu Arquivo inclui definir comando lhe permite especificar três tipos de informações:  
   
