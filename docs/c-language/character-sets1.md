@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de caracteres1 | Microsoft Docs
+title: Conjuntos de caracteres | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,31 +17,33 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fca697d5a3d8d825bdac7637e87ef78aed134b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac2abf233908c438c778dc6ac720d58483ec9bdf
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="character-sets"></a>Conjuntos de caracteres
-**ANSI 3.1.3.4** O mapeamento dos membros do conjunto de caracteres de origem  
-  
- O conjunto de caracteres de origem e o conjunto de caracteres de execução incluem os caracteres ASCII listados na tabela a seguir. As sequências de escape também são mostradas na tabela.  
-  
-### <a name="escape-sequences"></a>Sequências de Escape  
-  
-|Sequência de escape|Caractere|Valor de ASCII|  
-|---------------------|---------------|-----------------|  
-|\a|Alerta/sino|7|  
-|\b|Backspace|8|  
-|\f|Avanço de página|12|  
-|\n|Nova linha|10|  
-|\r|Retorno de carro|13|  
-|\t|Tabulação horizontal|9|  
-|\v|Tabulação vertical|11|  
-|\\"|Aspas duplas|34|  
-|\\'|Aspas simples|39|  
-|\\\|Barra invertida|92|  
-  
-## <a name="see-also"></a>Consulte também  
- [Caracteres](../c-language/characters.md)
+
+**ANSI 3.1.3.4** O mapeamento dos membros do conjunto de caracteres de origem
+
+O conjunto de caracteres de origem e o conjunto de caracteres de execução incluem os caracteres ASCII listados na tabela a seguir. As sequências de escape também são mostradas na tabela.
+
+## <a name="escape-sequences"></a>Sequências de Escape
+
+|Sequência de escape|Caractere|Valor de ASCII|
+|---------------------|---------------|-----------------|
+|&#92;a|Alerta/sino|7|
+|&#92;b|Backspace|8|
+|&#92;f|Avanço de página|12|
+|&#92;n|Nova linha|10|
+|&#92;r|Retorno de carro|13|
+|&#92;t|Tabulação horizontal|9|
+|&#92;v|Tabulação vertical|11|
+|&#92;"|Aspas duplas|34|
+|&#92;'|Aspas simples|39|
+|&#92;&#92;|Barra invertida|92|
+
+## <a name="see-also"></a>Consulte também
+
+[Caracteres](../c-language/characters.md)<br/>

@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Visão geral de possíveis problemas de atualização (Visual C++)
 
@@ -37,9 +37,11 @@ Os formatos de arquivo .obj e .lib são bem definidos e raramente mudam. Às vez
 
 O C++ não tem uma ABI (interface binária de aplicativo) estável. O Visual Studio mantém um ABI C++ estável para todas as versões secundárias de uma versão. Por exemplo, o Visual Studio 2017 e todas as atualizações são compatíveis em relação ao binário. Mas o ABI não é necessariamente compatível entre as versões principais do Visual Studio (exceto 2015 e 2017, que _são_ compatíveis em relação ao binário). Ou seja, podemos fazer alterações significativas no layout de tipo do C++, na decoração de nome, no tratamento de exceções e outras partes da ABI do C++. Portanto, se você tiver um arquivo-objeto que tenha símbolos externos com vinculação C++, esse arquivo-objeto poderá não vincular corretamente com arquivos-objeto produzidos com uma versão principal diferente do conjunto de ferramentas. Observe que aqui, "pode não funcionar" tem muitos resultados possíveis: o link pode falhar totalmente (por exemplo, se a decoração de nome foi alterada), o link pode ter êxito e as coisas podem não funcionar em tempo de execução (por exemplo, se o layout do tipo foi alterado) ou as coisas podem funcionar em muitos casos e não haverá nada errado. Observe também que embora a ABI do C++ não seja estável, a ABI do C e o subconjunto da ABI do C++ necessárias para COM são estáveis.
 
+Se você vincular a uma biblioteca de importação, qualquer versão mais recente das bibliotecas redistribuíveis do Visual Studio que preservar a compatibilidade com ABI poderá ser usada em tempo de execução. Por exemplo, se seu aplicativo é compilado e vinculado usando o conjunto de ferramentas do Visual Studio 2015 Atualização 3, você pode usar qualquer redistribuível do Visual Studio 2017 porque as bibliotecas do 2015 e 2017 mantiveram a compatibilidade binária entre as versões. O contrário não é válido; você não pode usar um redistribuível para uma versão do conjunto de ferramentas anterior à que você usou para compilar seu código, mesmo se elas têm uma ABI compatível.
+
 ### <a name="libraries"></a>Libraries
 
-Se você compilar um arquivo de origem usando uma versão específica de arquivos de cabeçalho de bibliotecas do Visual Studio C++ (#incluindo os cabeçalhos), o arquivo-objeto resultante deverá ser vinculado à mesma versão das bibliotecas. Portanto, por exemplo, se seu arquivo de origem for compilado com o Visual Studio de 2017 \<immintrin.h>, você deverá vincular com a biblioteca vcruntime do Visual Studio 2017. Da mesma forma, se seu arquivo de origem for compilado com o Visual Studio de 2017 \<iostream>, você deverá vincular à biblioteca C++ padrão do Visual Studio 2017, msvcprt. Não há suporte para a mistura e combinação.
+Se você compilar um arquivo de origem usando uma versão específica de arquivos de cabeçalho de bibliotecas do Visual Studio C++ (#incluindo os cabeçalhos), o arquivo-objeto resultante deverá ser vinculado à mesma versão das bibliotecas. Portanto, por exemplo, se seu arquivo de origem for compilado com o Visual Studio 2015 Atualização 3 \<immintrin.h>, você deverá vincular com a biblioteca vcruntime do Visual Studio 2015 Atualização 3. Da mesma forma, se seu arquivo de origem for compilado com o Visual Studio 2017 versão 15.5 \<iostream>, você deverá vincular à biblioteca C++ padrão do Visual Studio 2017 versão 15.5, msvcprt. Não há suporte para a mistura e combinação.
 
 Para a Biblioteca Padrão C++, a mistura e combinação foi explicitamente proibida por meio do uso de `#pragma detect_mismatch` nos cabeçalhos padrão desde o Visual Studio 2010. Se você tentar vincular os arquivos-objeto incompatíveis ou tentar vincular com a biblioteca de padrão incorreta, o link falhará.
 
