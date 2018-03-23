@@ -1,12 +1,12 @@
 ---
-title: "Método Runtimeclassbaset: | Microsoft Docs"
-ms.custom: 
+title: 'Método Runtimeclassbaset: | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - AsIID method
 ms.assetid: 90d7df8a-cf9e-4eef-8837-bc1a25f3fa1a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 482edbcabf368f68a720910717650be78ac11c62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17d67ee58e9ecc3b0ef463d6af132fec3a1c0a2f
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="runtimeclassbasetasiid-method"></a>Método RuntimeClassBaseT::AsIID
 Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
@@ -34,9 +34,7 @@ Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente 
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 __forceinline static HRESULT AsIID(  
    _In_ T* implements,  
    REFIID riid,  

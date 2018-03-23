@@ -1,31 +1,36 @@
 ---
 title: Biblioteca de modelos C++ do Windows Runtime (WRL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de Modelos C++ do Windows Runtime  (WRL)
-A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma biblioteca de modelos que fornece uma maneira de baixo nível para criar e usar componente do Windows Runtime.  
+A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma biblioteca de modelos que fornece uma maneira de baixo nível para criar e usar componente do Windows Runtime.
+
+> [!NOTE]
+> WRL agora é substituída pelo C + + WinRT, uma padrão C++ 17 idiomas projeção para APIs do Windows Runtime. C + + WinRT está disponível no SDK do Windows 10 versão 1803 em diante. C + + WinRT é implementada inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe para a API do Windows modernos.
+
+> Com C + + WinRT, você pode consumir e criar APIs de tempo de execução do Windows usando qualquer compilador de 17 compatível com os padrões C + +. C + + WinRT geralmente é melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C + + CX e WRL, mas altamente recomendável que os novos aplicativos usar C + + WinRT. Para obter mais informações, consulte [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Benefícios  
  A biblioteca de modelos do Windows em tempo de execução C++ permite implementar mais facilmente e consumir componentes do modelo de objeto de componente (COM). Ele fornece técnicas de manutenção como contagem de referência gerenciar o tempo de vida de objetos e teste `HRESULT` valores para determinar se uma operação teve êxito ou falhou. Para poder usar a biblioteca de modelos do Windows em tempo de execução C++, você deve seguir atentamente essas regras e técnicas.  
@@ -57,9 +62,6 @@ A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma bibli
   
  [Como: manipular eventos](../windows/how-to-handle-events-using-wrl.md)  
  Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para assinar e tratar os eventos de um objeto de tempo de execução do Windows.  
-  
- [Passo a passo: Criando um componente de tempo de execução básico do Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente básico do tempo de execução do Windows que adiciona dois números. Também demonstra como gerar eventos e usa o componente de um aplicativo UWP que usa JavaScript.  
   
  [Passo a passo: criando um aplicativo UWP usando WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Saiba como criar um aplicativo UWP usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -144,7 +146,6 @@ A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma bibli
   
 |||  
 |-|-|  
-|[Modelo de projeto de biblioteca de classe](../windows/wrl-class-library-project-template.md)|Descreve como acessar o modelo de projeto de biblioteca de classes WRL. Este modelo o ajuda a simplificar a tarefa de usar o Visual Studio para criar componentes de tempo de execução do Windows.|  
 |[APIs de chave por categoria](../windows/key-wrl-apis-by-category.md)|Realça principal biblioteca de modelos C++ do Windows Runtime tipos, funções e macros.|  
 |[Referência](../windows/wrl-reference.md)|Contém informações de referência para a biblioteca de modelos do Windows em tempo de execução C++.|  
 |[Referência rápida (tempo de execução do Windows e do Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Descreve brevemente C + + recursos CX que oferecem suporte à execução do Windows.|  

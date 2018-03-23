@@ -1,12 +1,12 @@
 ---
-title: "Método Weakref: | Microsoft Docs"
-ms.custom: 
+title: 'Método Weakref: | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef::As
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - As method
 ms.assetid: 7173da62-b3fe-44d6-aea4-1aa97e69b221
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e18ebeb8c50a4bae35c53fc82f059642a88cef07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 034664c91af422aed26f27b924827238b26a9134
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="weakrefas-method"></a>Método WeakRef::As
 Define o parâmetro de ponteiro ComPtr especificado para representar a interface especificada.  
@@ -35,16 +35,12 @@ Define o parâmetro de ponteiro ComPtr especificado para representar a interface
   
 ```  
   
-template<  
-   typename U  
->  
+template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
 );  
   
-template<  
-   typename U  
->  
+template<typename U>  
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> ptr  
 );  
@@ -75,7 +71,7 @@ HRESULT As(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe WeakRef](../windows/weakref-class.md)
