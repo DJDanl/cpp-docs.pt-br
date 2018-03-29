@@ -1,27 +1,27 @@
 ---
 title: Adicionando um controle (ATL Tutorial, parte 2) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Adicionando um controle (Tutorial ATL, parte 2)
 Nesta etapa, você adicionar um controle ao seu projeto, compilá-lo e testá-lo em uma página da Web.  
@@ -32,9 +32,9 @@ Nesta etapa, você adicionar um controle ao seu projeto, compilá-lo e testá-lo
   
 1.  No modo de exibição de classe, clique com botão direito no projeto de polígono.  
   
-2.  Aponte para **adicionar** no menu de atalho e clique em **classe** no submenu.  
+2.  Aponte para **adicionar** no menu de atalho e clique em **Novo Item** no submenu.  
   
-     O **Adicionar classe** caixa de diálogo é exibida. As categorias de outro objeto são listadas na estrutura de árvore à esquerda.  
+     A caixa de diálogo **Adicionar Novo Item** é exibida. As categorias de outro objeto são listadas na estrutura de árvore à esquerda.  
   
 3.  Clique o **ATL** pasta.  
   
@@ -113,7 +113,7 @@ Nesta etapa, você adicionar um controle ao seu projeto, compilá-lo e testá-lo
   
  Em seguida, você irá adicionar uma propriedade personalizada para o controle.  
   
- [Para a etapa 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Na etapa 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [Para a etapa 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [na etapa 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)

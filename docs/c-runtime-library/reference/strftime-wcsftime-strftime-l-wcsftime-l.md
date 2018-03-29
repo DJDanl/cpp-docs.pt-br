@@ -1,12 +1,9 @@
 ---
 title: strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/22/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - strftime
@@ -30,6 +27,8 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
+- _strftime_l
+- _wcsftime_l
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,187 +40,169 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 990dab2b4cedbdb464a2e546a4c83758cb46c89a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc71dc09b6634e01b1ba78621344dfb5c589c8d5
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
-Formate uma cadeia de caracteres de hora.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-size_t strftime(  
-   char *strDest,  
-   size_t maxsize,  
-   const char *format,  
-   const struct tm *timeptr   
-);  
-size_t _strftime_l(  
-   char *strDest,  
-   size_t maxsize,  
-   const char *format,  
-   const struct tm *timeptr,  
-   _locale_t locale  
-);  
-size_t wcsftime(  
-   wchar_t *strDest,  
-   size_t maxsize,  
-   const wchar_t *format,  
-   const struct tm *timeptr   
-);  
-size_t _wcsftime_l(  
-   wchar_t *strDest,  
-   size_t maxsize,  
-   const wchar_t *format,  
-   const struct tm *timeptr,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `strDest`  
- Cadeia de caracteres de saída.  
-  
- `maxsize`  
- Tamanho do `strDest` buffer, medido em caracteres (`char` ou `wchart_t`).  
-  
- `format`  
- Cadeia de caracteres de controle de formato.  
-  
- `timeptr`  
- estrutura de dados `tm`.  
-  
- `locale`  
- A localidade a ser usada.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `strftime` retorna o número de caracteres colocados em `strDest` e `wcsftime` retorna o número correspondente de caracteres largos.  
-  
- Se o número total de caracteres, incluindo a terminação nula, é mais de `maxsize`, ambos `strftime` e `wcsftime` retornam 0 e os conteúdos de `strDest` serão indeterminados.  
-  
- O número de caracteres em `strDest` é igual ao número de caracteres literais em `format`, bem como quaisquer caracteres que possam ser adicionados ao `format` por meio de códigos de formatação. A terminação nula de uma cadeia de caracteres não será contada no valor retornado.  
-  
-## <a name="remarks"></a>Comentários  
- O `strftime` e `wcsftime` formato de funções de `tm` tempo valor em `timeptr` conforme fornecido `format` argumento e o resultado no buffer de armazenamento `strDest`. No máximo, caracteres `maxsize` são colocados na cadeia de caracteres. Para obter uma descrição dos campos na estrutura `timeptr`, consulte [asctime](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` é o equivalente de caractere largo de `strftime`; seu argumento de cadeia de caracteres aponta para uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
-  
+
+Formate uma cadeia de caracteres de hora.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+size_t strftime(
+   char *strDest,
+   size_t maxsize,
+   const char *format,
+   const struct tm *timeptr
+);
+size_t _strftime_l(
+   char *strDest,
+   size_t maxsize,
+   const char *format,
+   const struct tm *timeptr,
+   _locale_t locale
+);
+size_t wcsftime(
+   wchar_t *strDest,
+   size_t maxsize,
+   const wchar_t *format,
+   const struct tm *timeptr
+);
+size_t _wcsftime_l(
+   wchar_t *strDest,
+   size_t maxsize,
+   const wchar_t *format,
+   const struct tm *timeptr,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*strDest*<br/>
+Cadeia de caracteres de saída.
+
+*maxsize*<br/>
+Tamanho do *strDest* buffer, medido em caracteres (**char** ou **wchar_t**).
+
+*format*<br/>
+Cadeia de caracteres de controle de formato.
+
+*timeptr*<br/>
+**TM** estrutura de dados.
+
+*locale*<br/>
+A localidade a ser usada.
+
+## <a name="return-value"></a>Valor de retorno
+
+`strftime` Retorna o número de caracteres colocada na *strDest* e `wcsftime` retorna o número correspondente de caracteres largos.
+
+Se o número total de caracteres, incluindo o terminação null, é mais de *maxsize*, ambos `strftime` e `wcsftime` retornar 0 e o conteúdo de *strDest* serão indeterminados.
+
+O número de caracteres em *strDest* é igual ao número de caracteres literal *formato* , bem como quaisquer caracteres que podem ser adicionados ao *formato* por meio de códigos de formatação. A terminação nula de uma cadeia de caracteres não será contada no valor retornado.
+
+## <a name="remarks"></a>Comentários
+
+O `strftime` e `wcsftime` formato de funções de **tm** tempo valor em *timeptr* conforme fornecido *formato* argumento e armazenar o resultado no buffer *strDest*. No máximo, *maxsize* caracteres são colocados na cadeia de caracteres. Para obter uma descrição dos campos de *timeptr* estrutura, consulte [asctime](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` é o equivalente de caractere largo de `strftime`; seu argumento de cadeia de caracteres aponta para uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+
 > [!NOTE]
->  Nas versões anteriores do Visual C++ 2005, a documentação descrevia o parâmetro `format` de `wcsftime` como tendo o tipo de dados `const wchar_t *`, mas a implementação real do tipo de dados de `format` foi de `const char *`. A implementação de `format` tipo de dados foi atualizado para refletir a documentação atual e anterior, ou seja, `const wchar_t *`.  
-  
- Essa função valida seus parâmetros. Se `strDest`, `format`, ou `timeptr` é um ponteiro nulo, ou se o `tm` estrutura de dados endereçados por `timeptr` é inválido (por exemplo, se ele contém valores fora do intervalo para a hora ou data), ou se o `format` cadeia de caracteres contém um código de formatação inválido, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará 0 e definirá `errno` como `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
-  
- O `format` argumento consiste de um ou mais códigos, como em `printf`, os códigos de formatação são precedidos por um sinal de porcentagem (`%`). Caracteres que não começam com `%` são copiados inalterada para `strDest`. A categoria `LC_TIME` da localidade atual afeta a formatação de saída de `strftime`. (Para obter mais informações sobre `LC_TIME`, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).) As funções sem o sufixo `_l` usam a localidade definida atualmente. As versões dessas funções com o sufixo `_l` são idênticas, exceto que usam a localidade como parâmetro e a usam em vez da localidade definida atualmente. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
- Os códigos de formatação do `strftime` estão listados abaixo:  
-  
- `%a`  
- Nome abreviado do dia  
-  
- `%A`  
- Nomes dos dias da semana por extenso  
-  
- `%b`  
- Nome abreviado do mês  
-  
- `%B`  
- Nome completo do mês  
-  
- `%c`  
- Representação de data e hora apropriada para a localidade  
-  
- `%d`  
- Dia do mês como um número decimal (01-31)  
-  
- `%H`  
- Hora no formato de 24 horas (00 - 23)  
-  
- `%I`  
- Hora no formato de 12 horas (01-12)  
-  
- `%j`  
- Dia do ano como um número decimal (001-366)  
-  
- `%m`  
- Mês como um número decimal (01-12)  
-  
- `%M`  
- Minuto como um número decimal (00 - 59)  
-  
- `%p`  
- AM/PM da localidade atual. Indicador para relógio de 12 horas  
-  
- `%S`  
- Segundo como um número decimal (00 - 59)  
-  
- `%U`  
- Semana do ano como um número decimal, considerando o domingo como o primeiro dia da semana (00 - 53)  
-  
- `%w`  
- Dia da semana como um número decimal (0 - 6; Domingo é 0)  
-  
- `%W`  
- Semana do ano como um número decimal, considerando o domingo como o primeiro dia da semana (00 - 53)  
-  
- `%x`  
- Representação de data para a localidade atual  
-  
- `%X`  
- Representação de hora para a localidade atual  
-  
- `%y`  
- Ano sem século, como número decimal (00 - 99)  
-  
- `%Y`  
- Ano com século, como o número decimal  
-  
- `%z, %Z`  
- O nome do fuso horário ou abreviação de fuso horário, dependendo das configurações do Registro; Nenhum caractere se o fuso horário é desconhecido  
-  
- `%%`  
- Símbolo de porcentagem  
-  
- Como na função `printf`, o `#` sinalizador pode ser prefixo em qualquer código de formatação. Nesse caso, o significado do código de formatação é alterado da seguinte maneira.  
-  
-|Código de formatação|Significado|  
-|-----------------|-------------|  
-|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|`#` sinalizador é ignorado.|  
-|`%#c`|Representação longa de data e hora, apropriada para a localidade atual. Por exemplo: "Terça-feira, 14 de março de 1995, 12:41:29".|  
-|`%#x`|Representação longa de data, apropriada para a localidade atual. Por exemplo: "Terça-feira, 14 de março de 1995".|  
-|`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|Remova os zeros à esquerda (se houver).|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`strftime`|\<time.h>|  
-|`wcsftime`|\<time.h> ou \<wchar.h>|  
-|`_strftime_l`|\<time.h>|  
-|`_wcsftime_l`|\<time.h> ou \<wchar.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo de [time](../../c-runtime-library/reference/time-time32-time64.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Localidade](../../c-runtime-library/locale.md)   
- [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   
- [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [Funções strcoll](../../c-runtime-library/strcoll-functions.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+>  Nas versões anteriores do Visual C++ 2005, a documentação descrito o *formato* parâmetro de `wcsftime` como tendo dados tipo `const wchar_t *`, mas a implementação real do *formato* dados tipo era `const char *`. A implementação de *formato* tipo de dados foi atualizado para refletir a documentação atual e anterior, ou seja, `const wchar_t *`.
+
+Essa função valida seus parâmetros. Se *strDest*, *formato*, ou *timeptr* é um ponteiro nulo, ou se o **tm** estrutura de dados endereçados por *timeptr* é inválido (por exemplo, se ele contém valores fora do intervalo para a hora ou data), ou se o *formato* cadeia de caracteres contém um código de formatação inválido, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna 0 e conjuntos de **errno** para **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|`_tcsftime`|`strftime`|`strftime`|`wcsftime`|
+
+O *formato* argumento consiste de um ou mais códigos; como em `printf`, os códigos de formatação são precedidos por um sinal de porcentagem (**%**). Caracteres que não começam com **%** são copiados inalterada para `strDest`. O **LC_TIME** categoria da localidade atual afetará a formatação de saída do `strftime`. (Para obter mais informações sobre **LC_TIME**, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).) O `strftime` e `wcsftime` funções usam atualmente definida localidade. O `_strftime_l` e `_wcsftime_l` versões dessas funções são idênticas, exceto que eles levar a localidade como um parâmetro e usá-lo em vez de atualmente definida localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+O `strftime` funções oferecem suporte a esses códigos de formatação:
+
+|||
+|-|-|
+|Código|Cadeia de caracteres de substituição|
+|`%a`|Nome abreviado do dia na localidade|
+|`%A`|Nome completo do dia da semana na localidade|
+|`%b`|Nome do mês abreviado no idioma|
+|`%B`|Nome completo do mês na localidade|
+|`%c`|Representação de data e hora apropriada para a localidade|
+|`%C`|O ano dividido por 100 e truncado para um inteiro, como um número decimal (00−99)|
+|`%d`|Dia do mês como um número decimal (01-31)|
+|`%D`|Equivalente a `%m/%d/%y`|
+|`%e`|Dia do mês como um número decimal (1-31), onde um único dígitos são precedidos por um espaço|
+|`%F`|Equivalente a `%Y-%m-%d`|
+|`%g`|Os 2 últimos dígitos do ano ISO 8601 com base em semana como um número decimal (00 - 99)|
+|`%G`|O ISO 8601 semana com base no ano como um número decimal|
+|`%h`|Nome do mês abreviado (equivalente a `%b`)|
+|`%H`|Hora no formato de 24 horas (00 - 23)|
+|`%I`|Hora no formato de 12 horas (01-12)|
+|`%j`|Dia do ano como um número decimal (001-366)|
+|`%m`|Mês como um número decimal (01-12)|
+|`%M`|Minuto como um número decimal (00 - 59)|
+|`%n`|Um caractere de nova linha (**\n**)|
+|`%p`|AM/PM da localidade. Indicador para relógio de 12 horas|
+|`%r`|Hora do relógio de 12 horas da localidade|
+|`%R`|Equivalente a `%H:%M`|
+|`%S`|Segundo como um número decimal (00 - 59)|
+|`%t`|Um caractere de tabulação horizontal (**\t**)|
+|`%T`|Equivalente a `%H:%M:%S`, o formato de hora ISO 8601|
+|`%u`|Dia da semana ISO 8601 como um número decimal (1-7; Segunda-feira é 1)|
+|`%U`|Número da semana do ano como um número decimal (00 - 53), em que o primeiro domingo é o primeiro dia da semana 1|
+|`%V`|Número da semana ISO 8601 como um número decimal (00 - 53)|
+|`%w`|Dia da semana como um número decimal (0 - 6; Domingo é 0)|
+|`%W`|Número da semana do ano como um número decimal (00 - 53), em que a primeira segunda-feira é o primeiro dia da semana 1|
+|`%x`|Representação de data para a localidade|
+|`%X`|Representação de hora para a localidade|
+|`%y`|Ano sem século, como número decimal (00 - 99)|
+|`%Y`|Ano com século, como o número decimal|
+|`%z`|O deslocamento do UTC no formato ISO 8601. Nenhum caractere se o fuso horário é desconhecido|
+|`%Z`|Nome do fuso horário a localidade ou a abreviação de fuso horário, dependendo das configurações do registro; Nenhum caractere se o fuso horário é desconhecido|
+|`%%`|Símbolo de porcentagem|
+
+Como na função `printf`, o `#` sinalizador pode ser prefixo em qualquer código de formatação. Nesse caso, o significado do código de formatação é alterado da seguinte maneira.
+
+|Código de formatação|Significado|
+|-----------------|-------------|
+|`%#a`, `%#A`, `%#b`, `%#B`, `%#g`, `%#G`, `%#h`, `%#n`, `%#p`, `%#t`, `%#u`, `%#w`, `%#X`, `%#z`, `%#Z`, `%#%`|`#` sinalizador é ignorado.|
+|`%#c`|Tempo data e hora da representação, apropriada para a localidade. Por exemplo: "Terça-feira, 14 de março de 1995, 12:41:29".|
+|`%#x`|Representação de data por extenso, apropriada para a localidade. Por exemplo: "Terça-feira, 14 de março de 1995".|
+|`%#d`, `%#D`, `%#e`, `%#F`, `%#H`, `%#I`, `%#j`, `%#m`, `%#M`, `%#r`, `%#R`, `%#S`, `%#T`, `%#U`, `%#V`, `%#W`, `%#y`, `%#Y`|Remova os zeros à esquerda ou espaços (se houver).|
+
+A semana com base no ano e semana ISO 8601 produzido por `%V`, `%g`, e `%G`, usa uma semana em que começa na segunda-feira, onde semana 1 é a que contém 4 de janeiro, que é a primeira semana que inclui pelo menos quatro dias do ano. Se a primeira segunda-feira do ano é o 2º, 3 ou 4, os dias anteriores são parte da última semana do ano anterior. Durante esse período, `%V` é substituído por 53 e ambos os `%g` e `%G` são substituídos por dígitos do ano anterior.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|`strftime`|\<time.h>|
+|`wcsftime`|\<time.h> ou \<wchar.h>|
+|`_strftime_l`|\<time.h>|
+|`_wcsftime_l`|\<time.h> ou \<wchar.h>|
+
+O `_strftime_l` e `_wcsftime_l` funções são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo de [time](../../c-runtime-library/reference/time-time32-time64.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Localidade](../../c-runtime-library/locale.md) <br/>
+[Gerenciamento de Tempo](../../c-runtime-library/time-management.md) <br/>
+[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md) <br/>
+[localeconv](../../c-runtime-library/reference/localeconv.md) <br/>
+[setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) <br/>
+[Funções strcoll](../../c-runtime-library/strcoll-functions.md) <br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

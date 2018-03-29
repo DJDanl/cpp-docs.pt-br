@@ -1,12 +1,12 @@
 ---
 title: gets_s, _getws_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getws_s
@@ -40,17 +40,17 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1cc1437d826584b89c7c4d9bb513f99af122ca0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1596c7598565fe098313ab0fc65a2a3f3982afd2
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 Obtém uma linha do fluxo `stdin`. Estas versões de [gets, _getws](../../c-runtime-library/gets-getws.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,7 +91,7 @@ wchar_t *_getws_s(
   
  Se o primeiro caractere lido for o caractere de fim de arquivo, um caractere nulo será armazenado no início de `buffer` e `NULL` será retornado.  
   
- `_getws` é uma versão de caractere largo de `gets_s`; seu argumento e o valor retornado são cadeias de caracteres largos.  
+ `_getws_s` é uma versão de caractere largo de `gets_s`; seu argumento e o valor retornado são cadeias de caracteres largos.  
   
  Se `buffer` for `NULL` ou `sizeInCharacters` for menor ou igual a zero ou se o buffer for muito pequeno para conter a linha de entrada e o terminador nulo, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `NULL` e definirão errno como `ERANGE`.  
   
@@ -101,14 +101,14 @@ wchar_t *_getws_s(
   
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_getts`|`gets_s`|`gets_s`|`_getws`|  
+|`_getts_s`|`gets_s`|`gets_s`|`_getws_s`|  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
 |-------------|---------------------|  
 |`gets_s`|\<stdio.h>|  
-|`_getws`|\<stdio.h> ou \<wchar.h>|  
+|`_getws_s`|\<stdio.h> ou \<wchar.h>|  
   
 Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, `stdin`, `stdout`, e `stderr`, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
   
