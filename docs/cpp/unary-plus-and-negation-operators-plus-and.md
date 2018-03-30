@@ -1,12 +1,12 @@
 ---
-title: "Adição unária e operadores de negação: + e - | Microsoft Docs"
-ms.custom: 
+title: 'Adição unária e operadores de negação: + e - | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12aba6e13f10d05c8559439427d2d28bcdad089d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8211cf9ebef808ad428e4c94ba97c6bcd22897ea
+ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operadores unários de adição e de negação: + e -
 ## <a name="syntax"></a>Sintaxe  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  A promoção de integral é executada em operandos integrais, e o tipo resultante é o tipo para o qual o operando é promovido. Consulte [conversões padrão](standard-conversions.md) para obter mais informações sobre como a promoção é executada.  
   
 ## <a name="microsoft-specific"></a>específica da Microsoft  
- A negação unária de quantidades não assinadas é executada subtraindo o valor do operando de 2^n, onde n é o número de bits em um objeto de um determinado tipo sem assinatura. (O Microsoft C++ é executado em processadores que utilizam aritmética de complementos de dois. Em outros processadores, o algoritmo para o operador pode ser diferente.)  
+ A negação unária de quantidades não assinadas é executada subtraindo o valor do operando de 2^n, onde n é o número de bits em um objeto de um determinado tipo sem assinatura.
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)   
