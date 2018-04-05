@@ -1,6 +1,6 @@
 ---
-title: "/ZF (geração de PDB mais rápido) | Microsoft Docs"
-ms.date: 02/22/2018
+title: /ZF (geração de PDB mais rápido) | Microsoft Docs
+ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (geração de PDB mais rápido)
 
@@ -34,7 +34,7 @@ O **/Zf** opção habilita o suporte de compilador para a geração mais rápida
 
 Porque o **/Zf** opção só se aplica a geração de PDB, ele requer o [/Zi](z7-zi-zi-debug-information-format.md) ou [/ZI](z7-zi-zi-debug-information-format.md) opção.
 
-O **/Zf** opção está disponível a partir no Visual Studio 2017 versão 15.1 e está desativado por padrão.
+O **/Zf** opção está disponível a partir no Visual Studio 2017 versão 15.1, onde ele está desativado por padrão. A partir do Visual Studio 2017 versão 15,7 Preview 3, essa opção é ativada por padrão quando o **/Zi** ou **/ZI** opção é habilitada.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
@@ -46,5 +46,5 @@ O **/Zf** opção está disponível a partir no Visual Studio 2017 versão 15.1 
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador Listadas em Ordem Alfabética](compiler-options-listed-alphabetically.md)  
-[/MP (compilar com vários processos)](mp-build-with-multiple-processes.md)  
+[Opções do Compilador Listadas em Ordem Alfabética](compiler-options-listed-alphabetically.md)<br/>
+[/MP (compilar com vários processos)](mp-build-with-multiple-processes.md)<br/>

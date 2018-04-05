@@ -1,28 +1,28 @@
 ---
 title: Aplicativos de desktop (Visual C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicativos de desktop (Visual C++)
 Um *aplicativo de desktop* em C++ é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e o executa em uma janela ou no console do sistema. Aplicativos de área de trabalho em C++ podem ser executados no Windows XP por meio do Windows 10 (embora oficialmente não há suporte para o Windows XP e há muitas APIs do Windows que foram introduzidos desde então).   Um aplicativo de área de trabalho é diferente de um aplicativo do Windows UWP (plataforma Universal), que pode ser executado em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolha sua tecnologia](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -54,7 +54,7 @@ Um *aplicativo de desktop* em C++ é um aplicativo nativo que pode acessar o con
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Desenvolvimento em Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Contém informações sobre a API do Windows e COM. (Algumas APIs do Windows e DLLs de terceiros são implementadas como objetos COM.)|  
-|[Hilo: Desenvolvendo aplicativos do C++ para Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Descreve como criar um aplicativo de desktop Windows cliente avançado que usa Windows animação e Direct2D para criar uma interface de usuário baseada em carrossel.  Este tutorial não foi atualizado desde o Windows 7, mas ainda fornece uma introdução throough à programação do Win32.|  
+|[Hilo: Desenvolvendo aplicativos do C++ para Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Descreve como criar um aplicativo de desktop Windows cliente avançado que usa Windows animação e Direct2D para criar uma interface de usuário baseada em carrossel.  Este tutorial não foi atualizado desde o Windows 7, mas ainda fornece uma introdução detalhada à programação do Win32.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Descreve os principais recursos do Visual C++ no Visual Studio e links para o restante da documentação do Visual C++.|  
   
 ## <a name="see-also"></a>Consulte também  
