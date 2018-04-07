@@ -1,12 +1,12 @@
 ---
 title: 'Operador address-of: &amp; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&'
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dcc5d08f75839f428b981136e4aed0402cd72868
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="address-of-operator-amp"></a>Operador address-of:&amp;
+# <a name="address-of-operator-amp"></a>Operador address-of: &amp;
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
@@ -37,11 +37,11 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O operador unário de endereço (**&**) usa o endereço do seu operando. O operando do operador endereço de pode ser um designador de função ou um valor l que designa um objeto que não é um campo de bits e não é declarado com o especificador de classe de armazenamento **register**.  
+ O operador unário de endereço (**&**) usa o endereço do seu operando. O operando do operador de endereço pode ser um designador de função ou um l-value que designa um objeto que não é um campo de bits.  
   
  O operador address-of pode ser aplicado somente a variáveis com tipos fundamentais, de estrutura, classe ou união que são declarados no nível de escopo do arquivo, ou a referências de matriz subscrita. Nessas expressões, uma expressão constante que não inclui o operador address-of pode ser adicionada ou subtraída da expressão address-of.  
   
- Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo `char`, o resultado da expressão será do tipo de ponteiro para `char`. O operador address-of, aplicado a **const** ou `volatile` objetos, que é avaliada como **const** `type`  **\***  ou `volatile` `type`  **\*** , onde `type` é o tipo do objeto original.  
+ Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo `char`, o resultado da expressão será do tipo de ponteiro para `char`. O operador address-of, aplicado a **const** ou `volatile` objetos, que é avaliada como **const** `type` **\*** ou `volatile` `type` **\***, onde `type` é o tipo do objeto original.  
   
  Quando o operador address-of é aplicado a um [nome qualificado](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), o resultado depende se o *nome qualificado* Especifica um membro estático. Nesse caso, o resultado é um ponteiro para o tipo especificado na declaração do membro. Se o membro não é estático, o resultado é um ponteiro para o membro *nome* da classe indicada pelo *nome qualificado de classe*. (Consulte [expressões primárias](../cpp/primary-expressions.md) para saber mais sobre *nome qualificado de classe*.) O seguinte fragmento de código mostra como o resultado difere, dependendo se o membro for estática:  
   
