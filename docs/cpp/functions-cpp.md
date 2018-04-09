@@ -23,11 +23,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a78f3bf043c08586916a1776806b0a759beb827
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="functions-c"></a>Funções (C++)
 
@@ -310,6 +310,35 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
+<<<<<<< CABEÇALHO
+4. Além de usar o valor de retorno, você pode "return" valores definindo qualquer número de parâmetros para usar passagem por referência, para que a função possa modificar ou inicializar valores de objetos que fornece o chamador. Para obter mais informações, consulte [argumentos de função de tipo de referência](reference-type-function-arguments.md).  
+  
+## <a name="function-pointers"></a>Ponteiros de função  
+ C++ dá suporte a ponteiros de função da mesma maneira como a linguagem C. No entanto uma alternativa mais segura de tipo é geralmente usam um objeto de função.  
+  
+ É recomendável que `typedef` seja usado para declarar um alias para o tipo de ponteiro de função se for declarar uma função que retorna um tipo de ponteiro de função.  Por exemplo  
+  
+```  
+typedef int (*fp)(int);  
+fp myFunction(char* s); // function returning function pointer  
+```  
+  
+ Se isso não for feito, a sintaxe adequada para a declaração de função pode ser deduzida da sintaxe do declarador para o ponteiro de função substituindo o identificador (`fp` no exemplo acima) pelo nome das funções e a lista de argumentos, como segue:  
+  
+```  
+int (*myFunction(char* s))(int);  
+```  
+  
+ A declaração anterior é equivalente à declaração que usa typedef acima.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Sobrecarga de função](../cpp/function-overloading.md)   
+ [Funções com listas de argumentos variáveis](../cpp/functions-with-variable-argument-lists-cpp.md)   
+ [Funções explicitamente definido como padrão e excluídas](../cpp/explicitly-defaulted-and-deleted-functions.md)   
+ [Pesquisa de nome dependente do argumento (Koenig) em funções](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
+ [Argumentos padrão](../cpp/default-arguments.md)   
+ [Funções embutidas](../cpp/inline-functions-cpp.md)
+=======
 ## <a name="returning-multiple-values-from-a-function"></a>Retornar vários valores de uma função
 
 Há várias maneiras para retornar mais de um valor de uma função:
@@ -446,3 +475,4 @@ A declaração anterior é equivalente à declaração que usa typedef acima.
 - [Pesquisa de nome dependente de argumento (Koenig) em funções](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [Argumentos padrão](../cpp/default-arguments.md)
 - [Funções Embutidas](../cpp/inline-functions-cpp.md)
+>>>>>>> master

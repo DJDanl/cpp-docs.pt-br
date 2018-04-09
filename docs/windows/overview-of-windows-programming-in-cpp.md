@@ -1,40 +1,45 @@
 ---
-title: "Visão geral da programação do Windows em C++ | Microsoft Docs"
-ms.custom: 
-ms.date: 11/27/2017
-ms.reviewer: 
-ms.suite: 
+title: Visão geral da programação do Windows em C++ | Microsoft Docs
+ms.custom: ''
+ms.date: 04/06/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e00159c828a87eba58920f90b6cd73d1b216232
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
-Você pode usar o Visual C++ para escrever uma ampla variedade de programas que são executados em um PC Windows (x86, x64 ou ARM), em um servidor Windows, na nuvem ou no Xbox. Os programas do C++ bem escritos são rápidos, eficientes, econômicos em consumo de energia, além de serem capazes de aproveitar todas as vantagens de dispositivos com vários e muitos núcleos, GPGPU (computação geral na unidade de processamento gráfico) e outros avanços recentes em hardware.
+Você pode usar o Visual C++ para gravar muitos tipos de programas que são executados em um computador Windows (x 86, x64 ou ARM), em um servidor do Windows, na nuvem ou Xbox. Programas bem escritos em C++ têm essas qualidades:
+- requisitos de memória eficiente
+- econômico no consumo de energia 
+- capaz de aproveitar ao máximo de dispositivos com vários núcleos e vários núcleos
+- capaz de executar a computação geral na unidade de processamento de gráficos (GPGPU)   
+- é possível tirar proveito das outros recentes avanços de hardware.
 
-Há várias categorias de aplicativos do Windows que você pode desenvolver com o Visual C++. Essas categorias tem modelos de programação diferentes ou modelos de aplicativo, o que significa que eles usam bibliotecas diferentes e APIs que fornecem acesso à plataforma e fornecem a interface do usuário.
+Há várias categorias de aplicativos do Windows que você pode desenvolver com o Visual C++. Essas categorias tem modelos de programação diferentes ou modelos de aplicativo, que foram introduzidos ao longo dos anos. Cada modelo usa APIs e bibliotecas diferentes para fornecer acesso à plataforma e criar interfaces de usuário como janelas e caixas de diálogo. Biblioteca padrão C++, bem como bibliotecas de terceiros podem ser usadas em qualquer uma dessas categorias, com algumas restrições para UWP.
 
 - [Aplicativos universais do Windows](#BK_WindowsUniversal). A terceira categoria de aplicativos do Windows foi introduzida com o Windows 8 e continua o suporte para essa categoria de aplicativos no Windows 10. Esses aplicativos são geralmente chamados de apenas como "aplicativos do Windows" e incluem aplicativos de desktop e portáteis que uma variedade de dispositivos de destino. Você pode escrever esses aplicativos em C + + CX, um dialeto do C++ que inclui suporte para o desenvolvimento de tempo de execução do Windows ou em C++ padrão com usando a biblioteca de tempo de execução do Windows (WRL). Esses aplicativos foram originalmente projetados para ser executado em tela inteira, embora no Windows 10, os usuários têm a opção de executá-los em uma janela de área de trabalho. Esses aplicativos são orientados para toque, mas é fácil de usar o mouse para funcionar se você preferir ou se não houver uma tela sensível ao toque. Esses aplicativos são distribuídos da Microsoft Store, um fato que levou a eles que está sendo chamado "Store" aplicativos.
 
-- [Área de trabalho, servidor e aplicativos de nuvem e jogos](#BK_Native). Essa categoria inclui aplicativos de área de trabalho do Windows, às vezes chamados de aplicativos Win32 desde que esses aplicativos estavam usando a API do Win32 no antes do Windows 8, todos os aplicativos do Windows foram nessa categoria. Aplicativos nesta categoria podem usar MFC para uma interface de usuário e ATL para interagir com componentes do Windows, que geralmente são objetos COM.
+Aplicativos UWP são capazes de executar em todos os dispositivos Windows 10, como tablets e celulares, bem como na área de trabalho. Na área de trabalho, eles sejam capazes de executar como uma janela de área de trabalho, em vez de sempre em execução em tela inteira. Esses aplicativos também podem executar o Xbox e em dispositivos futuras.  Aplicativos UWP executados em Windows Runtime, que fornece uma interface para os dispositivos de hardware diferentes que têm suporte no Windows, serviços e elementos de interface do usuário.  
 
-   Aplicativos, componentes ou bibliotecas escritas com C++ padrão também se encaixam nesta categoria.
+Você pode escrever aplicativos UWP em C + + CX, um dialeto do C++, você pode usar o [C + + biblioteca WinRT](https://moderncpp.com/)para alguns cenários. Aplicativos UWP compilados para código nativo e têm uma interface de usuário XAML ou usam o DirectX. Componentes de tempo de execução do Windows que são escritos em código nativo que UWP aplicativos escritos em outras linguagens podem consumir. Para obter mais informações, consulte [criar um aplicativo de plataforma Universal do Windows em C++](http://go.microsoft.com/fwlink/?LinkID=534976), [criar seu primeiro jogo UWP usando DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), e [componentes de criação de tempo de execução do Windows em C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
    Essa categoria inclui também usar C++ para componentes principais e computacional código no contexto do servidor e a programação de nuvem. Às vezes, o código de alto desempenho no núcleo de um aplicativo em nuvem ou o servidor está escrito em C++ para maximizar o desempenho. Você pode compilar esse código em uma DLL e usá-lo de c# ou Visual Basic.
 
@@ -51,33 +56,23 @@ Para obter exemplos de plataforma Universal do Windows, consulte [exemplos Unive
 
 Se você tiver um projeto do Windows 8.1 existentes e não queira a porta para o Windows 10, consulte [portando para a plataforma Universal do Windows](../porting/porting-to-the-universal-windows-platform-cpp.md). Se você tiver bibliotecas da área de trabalho de Win32 clássicas existentes e de código que você deseja integrar um aplicativo UWP, consulte [como: uso de código C++ existente em um aplicativo de plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-Você também pode escrever componentes, jogos e aplicativos Universal do Windows sem usar C + + CX; em vez disso, você pode usar a biblioteca de modelos do C++ do Windows Runtime (biblioteca de modelos do C++ de tempo de execução do Windows). Para obter mais informações, consulte [biblioteca de modelo em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
-
-Com [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], você pode desenvolver aplicativos universais do Windows que executam o Windows 10 desktop e dispositivos móveis. Você também pode desenvolver aplicativos do Windows 8.1 e Windows Phone 8.1 no [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], mas para fazer isso, você deve primeiro instalar o Visual Studio 2013 no mesmo computador e, em seguida, configurar seu projeto para usar o **Visual Studio 2013 (v120)** conjunto de ferramentas . Para configurar essa configuração em seu projeto, abra as propriedades do projeto e, no **geral** seção, defina o **conjunto de ferramentas de plataforma** para **Visual Studio 2013 (v120)**.
-
-Se você instalar as ferramentas de Phone 8.0 na instalação do Visual Studio, você também pode direcionar o Windows Phone 8.0.
-
-Um novo conceito introduzido no Windows 10 chamadas API contratos substitui a antiga prática de destinados a versões específicas do Windows. Em vez disso, você pode escolher quais contratos de API do seu aplicativo necessidades e, em seguida, serão executado em qualquer dispositivo do Windows que oferece suporte a esses contratos. Um contrato de API é um conjunto de APIs estáveis que fornecem acesso aos recursos de plataforma ou dispositivo. Contratos de API pode ser incluídos como referência no sistema de projeto. Em um projeto do Visual Studio, se você adicionar uma referência a um SDK de extensão específica, o Visual Studio adiciona os contratos de API apropriada.
+Para obter mais informações sobre UWP em geral, consulte [o que é um aplicativo do Windows UWP (plataforma Universal)?](/windows/uwp/get-started/whats-a-uwp).
 
 Para obter mais informações sobre todos esses conceitos, consulte [guia para aplicativos universais do Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
-##  <a name="BK_Native"></a> Área de trabalho, servidor e aplicativos de nuvem e jogos
-
-Na nuvem, você pode escrever assemblies de código nativo do Azure em C++ e chamá-los funções da Web que são criados em c#. Para obter mais informações, consulte [SDK do Azure](http://go.microsoft.com/fwlink/p/?LinkId=256416).
+##  <a name="BK_Native"></a> Aplicativos de desktop e servidor
 
 Para saber as Noções básicas de criação de aplicativos de cliente do Windows para a área de trabalho, consulte [o desenvolvimento de aplicativos do Windows em C++](http://msdn.microsoft.com/vstudio//hh304489) e [Introdução à programação do Windows em C++](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
 
-No Windows 10, você pode usar o Visual C++ para criar vários tipos de programas:
+No Windows 10, você pode usar o Visual C++ para criar vários tipos de programas de área de trabalho:
 
 - Aplicativos e utilitários de linha de comando. Para obter mais informações, consulte [aplicativos de Console](../windows/console-applications-in-visual-cpp.md).
 
-- Jogos do DirectX que são executados no PC ou Xbox. Para obter mais informações, consulte [DirectX Developer Center](http://go.microsoft.com/fwlink/p/?LinkId=256418).
-
 - Aplicativos de consumidor que têm interfaces de usuário gráficas sofisticadas. Para obter mais informações, consulte [Hilo: desenvolvendo aplicativos do C++ para Windows](http://go.microsoft.com/fwlink/p/?LinkId=256417)
 
-- Aplicativos empresariais e de linha de negócios que são executados no .NET Framework, ou servem como uma ponte entre os aplicativos do .NET Framework e aplicativos ou componentes que são escritos em código nativo. Para obter mais informações, consulte [programação .NET com C + + CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+- Aplicativos de empresa e a linha de negócios que são executados no .NET Framework. A maioria dos aplicativos do .NET Framework são gravados em c# ou Visual Basic. Você pode usar C + + CLI para criar camadas de interoperabilidade que permitem que o código .NET consumir bibliotecas nativas C++. Para obter mais informações, consulte [programação .NET com C + + CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-- Clientes do banco de dados SQL que são executados em código nativo. Para obter mais informações, consulte [SQL Server Native Client](http://go.microsoft.com/fwlink/p/?LinkId=256419).
+- Clientes do banco de dados SQL que são executados em código nativo. Para obter mais informações, consulte [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc).
 
 - Suplementos para aplicativos Microsoft Office. Para obter mais informações, consulte [criando um Add-in do C++ para o Outlook 2010](http://go.microsoft.com/fwlink/p/?LinkId=256420)
 
@@ -87,9 +82,17 @@ No Windows 10, você pode usar o Visual C++ para criar vários tipos de programa
 
 Você pode usar o Visual C++ para empacotar quase todos os tipos de funcionalidade personalizada de alto desempenho nas DLLs do Win32 ou DLLs COM que podem ser consumidas pelos aplicativos do C++ ou pelos aplicativos que são escritos em outras linguagens, por exemplo, C# ou Visual Basic. Para obter mais informações sobre as DLLs do WIn32, consulte [DLLs no Visual C++](../build/dlls-in-visual-cpp.md). Para obter mais informações sobre o desenvolvimento COM, consulte [modelo COM (Component Object)](https://msdn.microsoft.com/library/windows/desktop/ms680573).
 
-## <a name="sdks-and-header-files"></a>SDKs e arquivos de cabeçalho
+## <a name="games"></a>Jogos
 
-Visual C++ inclui a biblioteca de tempo de execução do C (CRT), a biblioteca padrão C++ e outras bibliotecas específicas da Microsoft. Incluir pastas que contêm arquivos de cabeçalho para essas bibliotecas são localizado no diretório de instalação do Visual Studio na pasta \VC\ ou, no caso de CRT, pasta de instalação do SDK do Windows, por exemplo, Windows Kits\10 nos arquivos de programa pasta para o SDK do Windows 10.  As bibliotecas Microsoft incluem:
+Jogos do DirectX podem executar no computador ou Xbox. Para obter mais informações, consulte [DirectX Developer Center](http://go.microsoft.com/fwlink/p/?LinkId=256418).
+
+## <a name="sdks-libraries-and-header-files"></a>SDKs, bibliotecas e arquivos de cabeçalho
+
+Visual C++ inclui a biblioteca de tempo de execução do C (CRT), a biblioteca padrão C++ e outras bibliotecas específicas da Microsoft. Incluir pastas que contêm arquivos de cabeçalho para essas bibliotecas estão localizadas no diretório de instalação do Visual Studio na pasta \VC\ ou, no caso de CRT, na pasta de instalação do SDK do Windows.   
+
+Você pode usar o [Gerenciador de pacote Vcpkg](../vcpkg.md) convenientemente instalar centenas de bibliotecas de código-fonte aberto de terceiros para Windows.
+
+As bibliotecas Microsoft incluem:
 
 - Microsoft Foundation Classes (MFC): uma estrutura orientada por objeto para criação de programas tradicionais do Windows (especialmente aplicativos empresariais) que têm interfaces de usuário avançadas que apresentam botões, caixas de listagem, modos de exibição de árvore e outros controles. Para obter mais informações, consulte [aplicativos de Desktop do MFC](../mfc/mfc-desktop-applications.md).
 
@@ -99,7 +102,9 @@ Visual C++ inclui a biblioteca de tempo de execução do C (CRT), a biblioteca p
 
 - Tempo de Execução de Simultaneidade: uma biblioteca que simplifica o trabalho da programação paralela e assíncrona para dispositivos de vários e muitos núcleos. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](../parallel/concrt/concurrency-runtime.md).
 
-Muitos cenários de programação do Windows também exigem o Windows SDK, que inclui os arquivos de cabeçalho que permitem acesso aos componentes do sistema operacional Windows. Por padrão, o Visual Studio instala o SDK do Windows, que permite o desenvolvimento de aplicativos Universal do Windows. Para desenvolver aplicativos universais do Windows para Windows 10, é necessário ter a versão do Windows 10 do SDK do Windows. Para obter informações sobre o SDK do Windows 10, consulte [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obter mais informações sobre os SDKs do Windows para versões anteriores do Windows, consulte o [arquivamento do SDK do Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)).
+Muitos cenários de programação do Windows também exigem o Windows SDK, que inclui os arquivos de cabeçalho que permitem acesso aos componentes do sistema operacional Windows. Por padrão, o Visual Studio instala o SDK do Windows como um componente da carga de trabalho de área de trabalho do C++ que permite o desenvolvimento de aplicativos Universal do Windows. Para desenvolver aplicativos UWP, é necessário ter a versão do Windows 10 do SDK do Windows. Para obter informações, consulte [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obter mais informações sobre os SDKs do Windows para versões anteriores do Windows, consulte o [arquivamento do SDK do Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+
+**Programa arquivos (x86) \Windows Kits** é o local padrão para todas as versões do SDK do Windows que você instalou.
 
 Outras plataformas, como Xbox e Azure têm seus próprios SDKs que talvez você precise instalar. Para obter mais informações, consulte Centro de desenvolvedores do DirectX e o Centro de desenvolvedores do Azure.
 
