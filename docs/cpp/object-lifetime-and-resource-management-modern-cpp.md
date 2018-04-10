@@ -1,17 +1,17 @@
 ---
 title: Objeto de tempo de vida e gerenciamento de recursos (C++ moderno) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-caps.latest.revision: 
+caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen

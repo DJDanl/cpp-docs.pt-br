@@ -1,12 +1,12 @@
 ---
 title: C2382 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C2382
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2382
 ms.assetid: 4d4436f9-d0d6-4bd0-b8ec-767b89adfb2f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen

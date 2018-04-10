@@ -1,12 +1,12 @@
 ---
 title: C2246 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C2246
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2246
 ms.assetid: 4f3e4f83-21f3-4256-af96-43e0bb060311
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen

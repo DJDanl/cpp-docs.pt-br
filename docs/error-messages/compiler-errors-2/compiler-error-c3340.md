@@ -1,12 +1,12 @@
 ---
 title: C3340 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C3340
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C3340
 ms.assetid: 23b12298-b92a-4717-8380-f165c998cb8a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
