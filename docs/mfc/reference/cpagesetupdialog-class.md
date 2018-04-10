@@ -1,12 +1,12 @@
 ---
 title: Classe CPageSetupDialog | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
@@ -39,17 +39,17 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cpagesetupdialog-class"></a>Classe CPageSetupDialog
 Encapsula os serviços fornecidos pela caixa de diálogo de configuração de página OLE comuns do Windows com suporte adicional para configuração e modificar as margens de impressão.  
@@ -94,7 +94,7 @@ class CPageSetupDialog : public CCommonDialog
   
  Para usar um `CPageSetupDialog` de objeto, primeiro crie o objeto usando o `CPageSetupDialog` construtor. Depois que a caixa de diálogo foi construída, você pode definir ou modificar valores no `m_psd` membro de dados para inicializar os valores de controles da caixa de diálogo. O [m_psd](#m_psd) estrutura é do tipo **PAGESETUPDLG**.  
   
- Depois de inicializar os controles de caixa de diálogo, chamar o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecionar opções de impressão. `DoModal`Retorna se o usuário selecionou o Okey ( **IDOK**) ou Cancelar ( **IDCANCEL**) botão.  
+ Depois de inicializar os controles de caixa de diálogo, chamar o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecionar opções de impressão. `DoModal` Retorna se o usuário selecionou o Okey ( **IDOK**) ou Cancelar ( **IDCANCEL**) botão.  
   
  Se `DoModal` retorna **IDOK**, você pode usar vários `CPageSetupDialog`de funções de membro, ou acesso a `m_psd` membro de dados, para recuperar a entrada de informações pelo usuário.  
   
@@ -117,7 +117,7 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdlgs.h  
   
-##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
+##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
  Chamar essa função para construir um `CPageSetupDialog` objeto.  
   
 ```  
@@ -175,7 +175,7 @@ CPageSetupDialog(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
  Cria um contexto de dispositivo de impressora do [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) e [DEVNAMES](../../mfc/reference/devnames-structure.md) estruturas.  
   
 ```  
@@ -185,7 +185,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>Valor de retorno  
  Identificador para o contexto de dispositivo de impressora recém-criado (DC).  
   
-##  <a name="domodal"></a>CPageSetupDialog::DoModal  
+##  <a name="domodal"></a>  CPageSetupDialog::DoModal  
  Chame essa função para exibir a caixa de diálogo de configuração de página OLE comuns do Windows e permitir que o usuário selecionar várias opções de configuração de impressão, como as margens de impressão, o tamanho e a orientação do papel e impressora de destino.  
   
 ```  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
+##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName  
  Chamar essa função após `DoModal` para recuperar o nome da impressora selecionada no momento.  
   
 ```  
@@ -219,7 +219,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>Valor de retorno  
  O nome do dispositivo usado pelo **CPageSetupDialog** objeto.  
   
-##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
+##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Chamar essa função depois de chamar `DoModal` para recuperar informações sobre o contexto de dispositivo de impressora a `CPageSetupDialog` objeto.  
   
 ```  
@@ -229,7 +229,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Valor de retorno  
  O [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) estrutura de dados, que contém informações sobre a inicialização do dispositivo e o ambiente de um driver de impressão. Você deve desbloquear a memória usada por esta estrutura com o Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) função, que é descrita no SDK do Windows.  
   
-##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  Chamar essa função depois de chamar [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) para recuperar o nome do driver de dispositivo de impressora definidas pelo sistema.  
   
 ```  
@@ -242,7 +242,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>Comentários  
  Usar um ponteiro para o `CString` objeto retornado por `GetDriverName` como o valor de `lpszDriverName` em uma chamada para [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
+##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins  
  Chamar essa função após uma chamada para `DoModal` para recuperar as margens do driver de dispositivo de impressora.  
   
 ```  
@@ -258,7 +258,7 @@ void GetMargins(
  *lpRectMinMargins*  
  Ponteiro para um `RECT` estrutura ou `CRect` objeto que descreve (em polegadas de 1/1000 ou 1/100 mm) as margens de impressão mínimas para a impressora selecionada no momento. Passar **nulo** para esse parâmetro, se você não estiver interessado nesse retângulo.  
   
-##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
+##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize  
  Chame essa função para recuperar o tamanho do papel selecionado para impressão.  
   
 ```  
@@ -268,7 +268,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contém o tamanho do papel (em polegadas de 1/1000 ou 1/100 mm) selecionado para impressão.  
   
-##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
+##  <a name="getportname"></a>  CPageSetupDialog::GetPortName  
  Chamar essa função depois de chamar `DoModal` para recuperar o nome da porta da impressora selecionada no momento.  
   
 ```  
@@ -278,7 +278,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Valor de retorno  
  O nome da porta da impressora selecionada no momento.  
   
-##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
+##  <a name="m_psd"></a>  CPageSetupDialog::m_psd  
  Uma estrutura de tipo **PAGESETUPDLG**, cujos membros armazenam as características do objeto de caixa de diálogo.  
   
 ```  
@@ -294,7 +294,7 @@ PAGESETUPDLG m_psd;
   
  Consulte o exemplo para [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
+##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage  
  Chamado pelo framework para desenhar uma imagem de tela de uma página impressa.  
   
 ```  
@@ -338,7 +338,7 @@ virtual UINT OnDrawPage(
   
  Observe que você não precisa lidar com todos os casos de `nMessage`. Você pode escolher lidar com um componente de imagem, vários componentes de imagem ou toda a área.  
   
-##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
+##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Chamado pelo framework antes do desenho de imagem de tela de uma página impressa.  
   
 ```  

@@ -1,10 +1,10 @@
 ---
-title: "Funções de namespace Concurrency:: fast_math | Microsoft Docs"
-ms.custom: 
+title: 'Funções de namespace Concurrency:: fast_math | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
@@ -53,17 +53,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Funções de namespace Concurrency:: fast_math
 ||||  
@@ -620,7 +620,7 @@ inline float ldexp(
  Expoente de inteiro  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna x * 2 ^ _Exp  
+ Returns _X * 2^_Exp  
   
 ##  <a name="ldexpf"></a>  ldexpf  
  Calcula um número real da mantissa e expoente  
@@ -639,7 +639,7 @@ inline float ldexpf(
  Expoente de inteiro  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna x * 2 ^ _Exp  
+ Returns _X * 2^_Exp  
   
 ##  <a name="log"></a>  log  
  Calcula o logaritmo de base e do argumento  
@@ -798,7 +798,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="round"></a>  Arredondar  
+##  <a name="round"></a>  round  
  Arredonda x para o inteiro mais próximo  
   
 ```  

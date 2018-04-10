@@ -1,12 +1,12 @@
 ---
 title: Classe completion_future | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>Classe completion_future
 Representa um futuro correspondente a uma operação assíncrona do C++ AMP.  
@@ -68,7 +68,7 @@ class completion_future;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador std::shared_future\<void >](#operator_shared_future)|Converte implicitamente a `completion_future` o objeto para um `std::shared_future` objeto.|  
+|[operator std::shared_future\<void>](#operator_shared_future)|Converte implicitamente a `completion_future` o objeto para um `std::shared_future` objeto.|  
 |[operator=](#operator_eq)|Copia o conteúdo de especificado `completion_future` deste objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -108,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Inicializa uma nova instância do `completion_future` classe copiando um construtor.|  
 |`completion_future(completion_future&& _Other);`|Inicializa uma nova instância do `completion_future` classe movendo um construtor.|  
   
-## <a name="get"></a> Obter 
+## <a name="get"></a> get 
 
 Aguarda até que a operação assíncrona associada seja concluída. Lança a exceção armazenada um foi encontrado durante a operação assíncrona.  
   
@@ -118,7 +118,7 @@ Aguarda até que a operação assíncrona associada seja concluída. Lança a ex
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a> operador std::shared_future<void> 
+## <a name="operator_shared_future"></a> operator std::shared_future<void> 
 
 Converte implicitamente a `completion_future` o objeto para um `std::shared_future` objeto.  
   
@@ -131,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um objeto `std::shared_future`.  
   
-## <a name="operator_eq"></a> operador = 
+## <a name="operator_eq"></a> operator= 
 
 Copia o conteúdo de especificado `completion_future` deste objeto.  
   
@@ -278,7 +278,7 @@ std::future_status::future_status wait_until(
   
 3.  `std::future_status::timeout` Se o período de tempo especificado tiver decorrido.  
   
-## <a name="dtor"></a> ~ completion_future 
+## <a name="dtor"></a> ~completion_future 
 
 Destrói a `completion_future` objeto.  
   

@@ -1,27 +1,27 @@
 ---
 title: 2.3 construto parallel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 Construto parallel
 A seguinte diretiva define uma região parallel, que é uma região do programa a ser executado por vários threads em paralelo. Isso é a construção fundamental que inicia a execução paralela.  
@@ -32,21 +32,21 @@ A seguinte diretiva define uma região parallel, que é uma região do programa 
   
  O *cláusula* é um dos seguintes:  
   
- **Se (** *expressão escalar* **)**  
+ **if(** *scalar-expression* **)**  
   
- **privada (** *lista variável* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *lista variável* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **padrão (compartilhado &#124; nenhum)**  
+ **default(shared &#124; none)**  
   
- **compartilhado (** *lista variável* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *lista variável* **)**  
+ **copyin(** *variable-list* **)**  
   
- **redução (** *operador* **:***lista variável* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
- **num_threads (** *expressão de inteiro* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Quando um thread encontra uma construção paralela, uma equipe de threads é criada se uma das seguintes situações for verdadeira:  
   

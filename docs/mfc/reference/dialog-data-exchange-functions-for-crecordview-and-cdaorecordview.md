@@ -1,12 +1,12 @@
 ---
-title: "Funções de troca de dados de caixa de diálogo para CRecordView e CDaoRecordView | Microsoft Docs"
-ms.custom: 
+title: Funções de troca de dados de caixa de diálogo para CRecordView e CDaoRecordView | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - AFXDAO/DDX_FieldCBIndex
@@ -29,17 +29,17 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funções da troca de dados da caixa de diálogo para CRecordView e CDaoRecordView
 Este tópico lista as funções DDX_Field usadas para trocar dados entre um [CRecordset](../../mfc/reference/crecordset-class.md) e um [CRecordView](../../mfc/reference/crecordview-class.md) formulário ou uma [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) e um [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formulário.  
@@ -63,7 +63,7 @@ Este tópico lista as funções DDX_Field usadas para trocar dados entre um [CRe
 |[DDX_FieldSlider](#ddx_fieldslider)|Sincroniza a posição de miniatura de um controle deslizante em uma exibição de registro e um `int` membro de dados do campo de um conjunto de registros. |
 |[DDX_FieldText](#ddx_fieldtext)|Versões sobrecarregadas estão disponíveis para transferir `int`, **UINT**, **longo**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **duplo**, **curto**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), e [COleCurrency](../../mfc/reference/colecurrency-class.md) dados entre um membro de dados de campo do conjunto de registros e uma edição caixa um `CRecordView` ou `CDaoRecordView`.|  
   
-##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
  O `DDX_FieldCBIndex` função sincroniza o índice do item selecionado na lista de controle de caixa de um controle de caixa de combinação em uma exibição de registro e um `int` membro de dados do campo de um conjunto de registros associado à exibição de registro.  
   
 ```  
@@ -87,7 +87,7 @@ void AFXAPI DDX_FieldCBIndex(
  `nIDC`  
  A ID de um controle no [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
- *índice*  
+ *index*  
  Uma referência a um membro de dados do campo associada `CRecordset` ou `CDaoRecordset` objeto.  
   
  `pRecordset`  
@@ -106,7 +106,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
  O `DDX_FieldCBString` função gerencia a transferência de [CString](../../atl-mfc-shared/reference/cstringt-class.md) dados entre o controle de edição de um controle de caixa de combinação em uma exibição de registro e um `CString` membro de dados do campo de um conjunto de registros associado à exibição de registro.  
   
 ```  
@@ -149,7 +149,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
  O `DDX_FieldCBStringExact` função gerencia a transferência de [CString](../../atl-mfc-shared/reference/cstringt-class.md) dados entre o controle de edição de um controle de caixa de combinação em uma exibição de registro e um `CString` membro de dados do campo de um conjunto de registros associado à exibição de registro.  
   
 ```  
@@ -192,7 +192,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
  O `DDX_FieldCheck` função gerencia a transferência de `int` dados entre um controle de caixa de seleção em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -230,7 +230,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
  O `DDX_FieldLBIndex` função sincroniza o índice do item selecionado em um controle de caixa de lista em uma exibição de registro e um `int` membro de dados do campo de um conjunto de registros associado à exibição de registro.  
   
 ```  
@@ -254,7 +254,7 @@ void AFXAPI DDX_FieldLBIndex(
  `nIDC`  
  A ID de um controle no [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
- *índice*  
+ *index*  
  Uma referência a um membro de dados do campo associada `CRecordset` ou `CDaoRecordset` objeto.  
   
  `pRecordset`  
@@ -273,7 +273,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
+##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
  O `DDX_FieldLBString` copia a seleção atual de um controle de caixa de lista em uma exibição de registro para um [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro de dados do campo de um conjunto de registros associado à exibição de registro.  
   
 ```  
@@ -316,7 +316,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
+##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
  O `DDX_FieldLBStringExact` função copia a seleção atual de um controle de caixa de lista em uma exibição de registro para um [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro de dados do campo de um conjunto de registros associado à exibição de registro.  
   
 ```  
@@ -359,7 +359,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
  O `DDX_FieldRadio` função associa um com base em zero `int` variável de membro do conjunto de registros da exibição de um registro com o botão de opção selecionado no momento em um grupo de botões de opção na exibição do registro.  
   
 ```  
@@ -402,7 +402,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
  O `DDX_FieldScroll` função sincroniza a posição de rolagem de um controle de barra de rolagem em uma exibição de registro e um `int` membro de dados do campo de um conjunto de registros associado com a exibição de registro (ou com qualquer variável de inteiro que você escolher para mapeá-la para).  
   
 ```  
@@ -445,7 +445,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>Name = "ddx_fieldslider" ></a> DDX_FieldSlider
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
 O `DDX_FieldSlider` função sincroniza a posição de miniatura de um controle deslizante em uma exibição de registro e um `int` membro de dados do campo de um conjunto de registros associado com a exibição de registro (ou com qualquer variável de inteiro que você escolher para mapeá-la para).  
    
 ### <a name="syntax"></a>Sintaxe  
@@ -478,7 +478,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="remarks"></a>Comentários  
  Ao mover dados do conjunto de registros para o controle deslizante, essa função define a posição do controle deslizante para o valor especificado em *valor*. Em uma transferência de conjunto de registros para o controle, se o campo de conjunto de registros é Null, posição do controle deslizante está definida como 0. Em uma transferência de controle para o conjunto de registros, se o controle estiver vazio, o valor do campo de conjunto de registros é 0.  
   
- `DDX_FieldSlider`não trocam informações de intervalo com controles deslizantes capazes de configurar um intervalo, em vez de simplesmente uma posição.  
+ `DDX_FieldSlider` não trocam informações de intervalo com controles deslizantes capazes de configurar um intervalo, em vez de simplesmente uma posição.  
   
  Se você estiver trabalhando com as classes com base em ODBC, use a primeira substituição da função. Use a substituição de segundo com as classes com base em DAO.  
   
@@ -493,7 +493,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="see-also"></a>Consulte também  
  [Macros e globais](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
  O `DDX_FieldText` função gerencia a transferência de `int`, **curto**, **longo**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **duplo**, **BOOL**, ou **bytes** dados entre um controle de caixa de edição e os membros de um conjunto de registros de dados de campo.  
   
 ```  

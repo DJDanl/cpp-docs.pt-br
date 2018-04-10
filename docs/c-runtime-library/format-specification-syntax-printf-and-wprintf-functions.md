@@ -1,12 +1,12 @@
 ---
-title: "Sintaxe de especificação de formato: funções printf e wprintf (CTR) | Microsoft Docs"
-ms.custom: 
+title: 'Sintaxe de especificação de formato: funções printf e wprintf (CTR) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
 
@@ -85,7 +85,7 @@ Tipos de inteiro como `short`, `int`, `long`, `long long` e suas variações `un
 |**G**|Ponto flutuante|Idêntico ao formato **g**, com a exceção de que **E** em vez de **e** apresenta o expoente (quando apropriado).|
 |**a**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0x*h.hhhh*__p±__*dd*, no qual *h.hhhh* são os dígitos hexadecimais (usando letras minúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|
 |**A**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0X*h.hhhh*__P±__*dd*, em que *h.hhhh* são os dígitos hexadecimais (usando letras maiúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|
-|**n**|Ponteiro para o inteiro|Número de caracteres gravados com êxito até o momento no fluxo ou no buffer. Esse valor é armazenado no inteiro cujo endereço é fornecido como o argumento. O tamanho do número inteiro apontado pode ser controlado por um prefixo de especificação de tamanho de argumento. O especificador **n** está desabilitado por padrão. Para saber mais, confira a observação de segurança importante.|
+|**n**|Ponteiro para o inteiro|Número de caracteres gravados com êxito até o momento no fluxo ou no buffer. Esse valor é armazenado no inteiro cujo endereço é fornecido como o argumento. O tamanho do número inteiro apontado pode ser controlado por um prefixo de especificação de tamanho de argumento. O especificador **n** é desabilitado por padrão; para obter mais informações, consulte a observação de segurança importante.|
 |**p**|Tipo ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|
 |**s**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres largos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
 |**S**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres largos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
@@ -134,7 +134,7 @@ O primeiro campo opcional em uma especificação de conversão contém *diretiva
 |----------|-------------|-------------|
 |**-**|Alinhar à esquerda o resultado dentro da largura de campo determinada.|Alinhar à direita.|
 |**+**|Use um sinal (+ ou -) como prefixo no valor de saída se for de um tipo com sinal.|O sinal será exibido somente para valores assinados negativos (-).|
-|**0**|Se a *largura* tiver **0** como prefixo, zeros à esquerda serão adicionados até que a largura mínima seja atingida. Se **0** e  **-**  aparecerem, o **0** será ignorado. Se **0** for especificado como um formato inteiro (**i**, **u**, **x**, **X**, **o**, **d**) e uma especificação de precisão também estiver presente (por exemplo, `%04.d`), o **0** será ignorado. Se **0** for especificado para o formato de ponto flutuante **a** ou **A**, zeros à esquerda serão pré-anexados à mantissa, após o prefixo `0x` ou `0X`.|Nenhum preenchimento.|
+|**0**|Se a *largura* tiver **0** como prefixo, zeros à esquerda serão adicionados até que a largura mínima seja atingida. Se **0** e **-** aparecerem, o **0** será ignorado. Se **0** for especificado como um formato inteiro (**i**, **u**, **x**, **X**, **o**, **d**) e uma especificação de precisão também estiver presente (por exemplo, `%04.d`), o **0** será ignorado. Se **0** for especificado para o formato de ponto flutuante **a** ou **A**, zeros à esquerda serão pré-anexados à mantissa, após o prefixo `0x` ou `0X`.|Nenhum preenchimento.|
 |**blank** (' ')|Use um espaço em branco como prefixo do valor de saída se tiver um sinal e for positivo. O espaço em branco será ignorado se o espaço em branco e os sinalizadores + forem exibidos.|Nenhum espaço em branco é exibido.|
 |**#**|Quando ele for usado com o formato **o**, **x** ou **X**, o sinalizador **#** usará 0, 0x ou 0X, respectivamente, para o prefixo de qualquer valor de saída diferente de zero.|Nenhum espaço em branco é exibido.|
 ||Quando ele for usado com o formato **e**, **E**, **f**, **F**, **a** ou **A**, o sinalizador **#** obrigará o valor de saída a conter um ponto decimal.|O ponto decimal será exibido somente se os dígitos o seguirem.|

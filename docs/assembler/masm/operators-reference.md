@@ -1,12 +1,12 @@
 ---
-title: "Referência de operadores (MASM) | Microsoft Docs"
-ms.custom: 
+title: Referência de operadores (MASM) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 67659cd17d95135e2697cd8707142ce1b5c94ef1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="masm-operators-reference"></a>Referência de operadores (MASM)
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[AND](../../assembler/masm/operator-and.md)|[NOT](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
+|[E](../../assembler/masm/operator-and.md)|[NÃO](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
 |[SHL](../../assembler/masm/operator-shl.md)|[SHR](../../assembler/masm/operator-shr.md)|[XOR](../../assembler/masm/operator-xor.md)|  
   
 ## <a name="macro"></a>Macro  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/14/2018
   
 |||  
 |-|-|  
-|[MASK](../../assembler/masm/operator-mask.md)|[WIDTH](../../assembler/masm/operator-width.md)|  
+|[MASK](../../assembler/masm/operator-mask.md)|[LARGURA](../../assembler/masm/operator-width.md)|  
   
 ## <a name="relational"></a>Relacional  
   
@@ -94,10 +94,10 @@ ms.lasthandoff: 02/14/2018
 ||||  
 |-|-|-|  
 |[HIGH](../../assembler/masm/operator-high.md)|[HIGH32](../../assembler/masm/operator-high32.md)|[HIGHWORD](../../assembler/masm/operator-highword.md)|  
-|[LENGTH](../../assembler/masm/operator-length.md)|[LENGTHOF](../../assembler/masm/operator-lengthof.md)|[LOW](../../assembler/masm/operator-low.md)|  
+|[LENGTH](../../assembler/masm/operator-length.md)|[LENGTHOF](../../assembler/masm/operator-lengthof.md)|[BAIXA](../../assembler/masm/operator-low.md)|  
 |[LOW32](../../assembler/masm/operator-low32.md)|[LOWWORD](../../assembler/masm/operator-lowword.md)|[OPATTR](../../assembler/masm/operator-opattr.md)|  
 |[PTR](../../assembler/masm/operator-ptr.md)|[SHORT](../../assembler/masm/operator-short.md)|[SIZE](../../assembler/masm/operator-size.md)|  
-|[SIZEOF](../../assembler/masm/operator-sizeof.md)|[THIS](../../assembler/masm/operator-this.md)|[TYPE](../../assembler/masm/operator-type.md)|  
+|[SIZEOF](../../assembler/masm/operator-sizeof.md)|[ISSO](../../assembler/masm/operator-this.md)|[TYPE](../../assembler/masm/operator-type.md)|  
   
 ## <a name="see-also"></a>Consulte também  
 

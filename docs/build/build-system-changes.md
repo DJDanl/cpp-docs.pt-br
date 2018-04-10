@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>Alterações no sistema de build
 O sistema MSBuild é usado para criar projetos do Visual C++. No entanto, no Visual Studio 2008 e versões anteriores, o sistema VCBuild foi usado. Determinados tipos de arquivo e conceitos que dependiam VCBuild não existem ou estão representados de maneira diferente no sistema atual. Este documento aborda as diferenças no sistema de compilação atual.  
@@ -59,16 +59,16 @@ O sistema MSBuild é usado para criar projetos do Visual C++. No entanto, no Vis
   
  Na versão atual, há suporte a herança, especificando o valor de uma propriedade como a concatenação de um ou mais valores literais e macros de propriedade. O **Inherit** e **noInherit** macros não têm suporte.  
   
- No exemplo a seguir, uma lista separada por ponto-e-vírgula é atribuída a uma propriedade em uma página de propriedades. A lista é composta de concatenação do  *\<valor >* literal e o valor da `MyProperty` propriedade, o que pode é acessada usando a notação de macro, **$(**  *MyProperty***)**.  
+ No exemplo a seguir, uma lista separada por ponto-e-vírgula é atribuída a uma propriedade em uma página de propriedades. A lista é composta de concatenação do  *\<valor >* literal e o valor da `MyProperty` propriedade, o que pode é acessada usando a notação de macro, **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>. vcxproj.user arquivos  
+## <a name="vcxprojuser-files"></a>.vcxproj.user Files  
  Um arquivo de usuário (. vcxproj.user) armazena as propriedades específicas do usuário, as configurações de exemplo, depuração e implantação. O arquivo vcxproj.user se aplica a todos os projetos para um usuário específico.  
   
-## <a name="vcxprojfilters-file"></a>. vcxproj.filters arquivo  
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
  Quando **Solution Explorer** é usado para adicionar um arquivo a um projeto, o arquivo de filtros (. vcxproj.filters) define onde no **Solution Explorer** com base em sua extensão de nome de arquivo for adicionado, exibição de árvore.  
   
 ## <a name="vc-directories-settings"></a>Configurações de diretórios do VC + +  

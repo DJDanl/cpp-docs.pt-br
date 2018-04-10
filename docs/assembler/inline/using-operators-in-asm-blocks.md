@@ -1,12 +1,12 @@
 ---
 title: Usando operadores em blocos ASM | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ca8ac739793c81ef18f8657cbf53c9cb018b3e38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-operators-in-asm-blocks"></a>Usando operadores em blocos __asm
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- Um `__asm` bloco não é possível usar operadores de C ou C++ específicos, como o  **<<**  operador. No entanto, operadores compartilhados por C e MASM, como o \* operador, são interpretados como operadores de linguagem de assembly. Por exemplo, fora de um `__asm` bloquear colchetes (**[]**) são interpretados como subscritos de matriz, que C dimensiona automaticamente para o tamanho de um elemento na matriz de circunscrição. Dentro de um `__asm` bloco, que são vistos como o operador de índice (MASM), que gera um deslocamento de byte fora de escala de qualquer objeto de dados ou um rótulo (não apenas uma matriz). O código a seguir ilustra a diferença:  
+ Um `__asm` bloco não é possível usar operadores de C ou C++ específicos, como o **<<** operador. No entanto, operadores compartilhados por C e MASM, como o \* operador, são interpretados como operadores de linguagem de assembly. Por exemplo, fora de um `__asm` bloquear colchetes (**[]**) são interpretados como subscritos de matriz, que C dimensiona automaticamente para o tamanho de um elemento na matriz de circunscrição. Dentro de um `__asm` bloco, que são vistos como o operador de índice (MASM), que gera um deslocamento de byte fora de escala de qualquer objeto de dados ou um rótulo (não apenas uma matriz). O código a seguir ilustra a diferença:  
   
 ```  
 int array[10];  

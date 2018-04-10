@@ -1,10 +1,10 @@
 ---
-title: "funções de namespace de simultaneidade | Microsoft Docs"
-ms.custom: 
+title: funções de namespace de simultaneidade | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,22 +40,22 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions"></a>funções de namespace de simultaneidade
 ||||  
 |-|-|-|  
-|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
+|[Alocação](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
 |[EnableTracing](#enabletracing)|[Livre](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|  
@@ -222,7 +222,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  Em um aplicativo UWP, se `_Param` é do tipo Windows::Foundation::IAsyncOperation\<T > ^ ou Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, ou um functor que retorna qualquer um desses tipos, a tarefa criada será de tipo `task<T>`. Se `_Param` é do tipo Windows::Foundation::IAsyncAction ^ ou Windows::Foundation::IAsyncActionWithProgress\<P > ^, ou um functor que retorna qualquer um desses tipos, a tarefa criada tem digitará `task<void>`.  
   
-##  <a name="disabletracing">DisableTracing</a>  
+##  <a name="disabletracing"></a>  DisableTracing  
  Desabilita o rastreamento em tempo de execução de simultaneidade. Essa função é preterida porque o rastreamento ETW é não registrado por padrão.  
   
 ```
@@ -242,7 +242,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>Valor de retorno  
  Se o rastreamento foi iniciado corretamente, `S_OK` retornado; caso contrário, `E_NOT_STARTED` será retornado.  
   
-##  <a name="free"></a>  Free  
+##  <a name="free"></a>  Livre  
  Libera um bloco de memória alocada anteriormente pelo `Alloc` método Suballocator de cache de tempo de execução a simultaneidade.  
   
 ```

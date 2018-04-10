@@ -29,6 +29,7 @@
 ## [Manipulação de buffer](buffer-manipulation.md)
 ## [Classificação de byte](byte-classification.md)
 ## [Classificação de caracteres](character-classification.md)
+## [Suporte a cálculos complexos](complex-math-support.md)
 ## [Alinhamento de dados](data-alignment.md)
 ## [Conversão de Dados](data-conversion.md)
 ## [Rotinas de depuração](debug-routines.md)

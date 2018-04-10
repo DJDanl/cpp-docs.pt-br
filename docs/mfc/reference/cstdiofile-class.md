@@ -1,12 +1,12 @@
 ---
 title: Classe CStdioFile | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>Classe CStdioFile
 Representa um arquivo de fluxo de tempo de execução C como abertos pela função de tempo de execução [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -92,7 +92,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** AFX  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  Constrói e inicializa um objeto `CStdioFile`.  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  O `m_pStream` membro de dados é o ponteiro para um arquivo aberto, conforme retornado pela função de tempo de execução C `fopen`.  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>Comentários  
  É **nulo** se o arquivo nunca foi aberto ou foi fechado.  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  Sobrecarregado. Abrir é projetado para uso com o padrão `CStdioFile` construtor.  
   
 ```  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  Lê dados de texto em um buffer, até o limite de `nMax`caracteres -1, do arquivo associado a `CStdioFile` objeto.  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  Reposiciona o ponteiro em um arquivo aberto anteriormente.  
   
 ```  
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  Grava dados de um buffer para o arquivo associado a `CStdioFile` objeto.  
   
 ```  
