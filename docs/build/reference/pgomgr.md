@@ -45,7 +45,7 @@ As opções a seguir podem ser especificadas para **pgomgr**:
 
 - **/Unique** quando usado com **resumo**, causas decorado nomes de função para exibir. O padrão, quando **/Unique** não for usado, para exibir os nomes de função não decorados.
 
-- **/ mesclagem**[**: * n*] faz com que os dados no arquivo. PGC ou arquivos a ser adicionado ao arquivo. PGD. O parâmetro opcional, *n*, permite que você especifique que os dados devem ser adicionados *n* vezes. Por exemplo, se um cenário normalmente seria feitas seis vezes refletir a frequência na qual é feito pelos clientes, você pode fazer isso vez em uma execução de teste e adicioná-lo para o arquivo. PGD seis vezes com **pgomgr /merge:6**.
+- **/merge**[**:***n*] faz com que os dados no arquivo. PGC ou arquivos a ser adicionado ao arquivo. PGD. O parâmetro opcional, *n*, permite que você especifique que os dados devem ser adicionados *n* vezes. Por exemplo, se um cenário normalmente seria feitas seis vezes refletir a frequência na qual é feito pelos clientes, você pode fazer isso vez em uma execução de teste e adicioná-lo para o arquivo. PGD seis vezes com **pgomgr /merge:6**.
 
 *pgcfiles*<br/>
 . PGC um ou mais arquivos cujos dados de perfil que você deseja mesclar o arquivo. PGD. Você pode especificar um arquivo. PGC único ou vários arquivos. PGC. Se você não especificar os arquivos. PGC, **pgomgr** mescla todos os arquivos. PGC cujos nomes de arquivo são o mesmo que o arquivo. PGD.
