@@ -1,7 +1,7 @@
 ---
-title: Caractere Sets2 | Microsoft Docs
+title: Conjuntos de caracteres | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 04/12/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db505809c1fbc2c49e116b9c2f850f6e14dfbdf6
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 81b1046ea7588a6cc5eb3274473f4e4bee9daccd
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="character-sets"></a>Conjuntos de caracteres
 O texto de um programa C++ é armazenado em arquivos de origem que usam uma codificação de caracteres em particular. O padrão do C++ especifica um caractere de origem básicas definidas para arquivos de origem e um caractere de execução básico definidas para arquivos compilados. Visual C++ permite que um conjunto adicional de caracteres específicas da localidade a ser usado nos arquivos de origem e arquivos compilados.  

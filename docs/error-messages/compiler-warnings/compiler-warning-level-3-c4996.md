@@ -1,12 +1,12 @@
 ---
-title: "Compilador (nível 3) do aviso C4996 | Microsoft Docs"
-ms.custom: 
+title: Compilador (nível 3) do aviso C4996 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilador C4996 de aviso (nível 3)
 
@@ -37,13 +37,13 @@ Essas são algumas mensagens C4996 comuns geradas pela biblioteca de tempo de ex
 
 - [Esta função ou variável pode não ser seguro. Considere o uso de *safe_version* em vez disso. Para desabilitar a substituição, use \_CRT\_seguro\_não\_avisos.  Consulte a ajuda online para obter detalhes.](#unsafe-crt-library-functions)
 
-- [' std::*function_name*::\_desmarcado\_iteradores::\_Deprecate' chamada para std::*function_name*com parâmetros que podem não ser seguros - esta chamada depende do chamador para verificar se os valores passados estão corretos. Para desabilitar esse aviso, use -D_SCL_SECURE_NO_WARNINGS. Consulte a documentação sobre como usar o Visual C++ 'Iteradores verificados'](#unsafe-standard-library-functions)
+- [' std::*function_name*::\_desmarcado\_iteradores::\_Deprecate' chamada para std::*function_name*com parâmetros que podem não ser seguros - esta chamada depende o chamador para verificar se os valores passados estão corretos. Para desabilitar esse aviso, use -D_SCL_SECURE_NO_WARNINGS. Consulte a documentação sobre como usar o Visual C++ 'Iteradores verificados'](#unsafe-standard-library-functions)
 
 - [Esta função ou variável foi substituído por funcionalidade de biblioteca ou o sistema operacional mais recente. Considere o uso de *new_item* em vez disso. Consulte a ajuda online para obter detalhes.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>Causa
 
-C4996 ocorre quando o compilador encontra uma função ou variável que está marcado como [preterido](../../cpp/deprecated-cpp.md) usando um `__declspec(deprecated)` modificador, ou quando você tenta acessar uma função, membro de classe ou um typedef com C++ 14 [ \[ \[preterido\] \] ](../../cpp/attributes2.md) atributo. Você pode usar o `__declspec(deprecated)` modificador ou `[[deprecated]]` atributo por conta própria em suas bibliotecas ou arquivos de cabeçalho para avisar os clientes sobre preteridas funções, variáveis, membros ou definições de tipo.
+C4996 ocorre quando o compilador encontra uma função ou variável que está marcado como [preterido](../../cpp/deprecated-cpp.md) usando um `__declspec(deprecated)` modificador, ou quando você tenta acessar uma função, membro de classe ou um typedef com C++ 14 [ \[ \[preterido\] \] ](../../cpp/attributes.md) atributo. Você pode usar o `__declspec(deprecated)` modificador ou `[[deprecated]]` atributo por conta própria em suas bibliotecas ou arquivos de cabeçalho para avisar os clientes sobre preteridas funções, variáveis, membros ou definições de tipo.
 
 ## <a name="remarks"></a>Comentários
 

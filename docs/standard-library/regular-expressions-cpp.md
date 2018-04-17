@@ -1,12 +1,12 @@
 ---
-title: "Expressões Regulares (C++) |Microsoft Docs"
-ms.custom: 
+title: Expressões Regulares (C++) |Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>Expressões regulares (C++)
 Biblioteca padrão C++ dá suporte a vários gramáticas de expressão regular. Este tópico discute as variações de gramática disponíveis ao usar expressões regulares.  
@@ -93,7 +93,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
  Em `ECMAScript`, um elemento também pode ser um dos seguintes itens:  
   
--   Um *grupo de não é de captura* no formato "(: *subexpressão* )". Corresponde à sequência de caracteres na sequência de destino que é correspondida pelo padrão entre os delimitadores.  
+-   Um *grupo de captura não* do formulário "(?: *subexpressão* )". Corresponde à sequência de caracteres na sequência de destino que é correspondida pelo padrão entre os delimitadores.  
   
 -   Um *escape de formatação de arquivo* no formato "\f", "\n", "\r", "\t" ou "\v". Isso corresponde a um avanço de página, uma nova linha, um retorno de carro, uma guia horizontal e uma guia vertical, respectivamente, na sequência de destino.  
   
@@ -115,7 +115,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
  Exemplos:  
   
--   "(:a)" corresponde à sequência de destino "a", mas "(:a)\1" é inválido porque não há nenhum grupo de captura 1.  
+-   "(?:a)" corresponde à sequência de destino "a", mas "(?:a)\1" é inválido porque não há grupo de captura 1.  
   
 -   "(=a)a" corresponde à sequência de destino "a". A declaração positiva corresponde à sequência inicial "a" na sequência de destino e "a" final na expressão regular corresponde à sequência inicial "a" na sequência de destino.  
   
@@ -162,7 +162,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
   
 -   "a+" corresponde à sequência de destino "a", à sequência de destino "aa", e assim por diante, mas não à sequência de destino "".  
   
- Em `ECMAScript`, todas as formas de contagem de repetição podem ser seguidas pelo caractere '', que designa uma *repetição não Greedy*.  
+ Em `ECMAScript`, todas as formas de contagem de repetição podem ser seguidas pelo caractere '?', que designa um *repetição não greedy*.  
   
 ### <a name="concatenation"></a>Concatenação  
  Os elementos de expressão regular, com ou sem *contagens de repetição*, podem ser concatenados para formar expressões regulares mais longas. A expressão resultante corresponde a uma sequência de destino que é uma concatenação das sequências que são correspondidas pelos elementos individuais. Por exemplo, "a{2,3}b" corresponde à sequência de destino "aab" e à sequência de destino "aaab", mas não à sequência de destino "ab" ou à sequência de destino "aaaab".  
@@ -365,7 +365,7 @@ Zero ou mais sinalizadores podem ser combinadas com a gramática para especifica
  Uma asserção do limite de palavra negativa corresponderá se a posição atual na cadeia de caracteres de destino não vier logo após um *limite de palavra*.  
   
 ### <a name="non-capture-group"></a>Grupo de não captura  
- Um grupo de não captura marca seu conteúdo como uma unidade única na gramática da expressão regular, mas não rotula o texto de destino. Por exemplo, "(a)(:b)\*(c)" corresponde ao texto de destino "abbc" e associa o grupo de captura de 1 a subsequência "um"e capture o grupo 2 com a subsequência "c".  
+ Um grupo de não captura marca seu conteúdo como uma unidade única na gramática da expressão regular, mas não rotula o texto de destino. Por exemplo, "(a)(?:b)\*(c)" corresponde ao texto de destino "abbc" e associa o grupo de captura de 1 a subsequência "um"e capture o grupo 2 com a subsequência "c".  
   
 ### <a name="non-greedy-repetition"></a>Repetição não greedy  
  Uma repetição não greedy consome a subsequência mais curta da sequência de destino que corresponde ao padrão. Uma repetição greedy consome a mais longa. Por exemplo, "(a+) (um\*b)" corresponde a "aaab" da sequência de destino. Quando uma repetição não greedy é usada, ela associa o grupo de captura 1 à subsequência "a" no início da sequência de destino e o grupo de captura 2 à subsequência "aab" no fim da sequência de destino. Quando uma correspondência greedy é usada, ela associa o grupo de captura 1 à subsequência "aaa" e o grupo de captura 2 à subsequência "b".  

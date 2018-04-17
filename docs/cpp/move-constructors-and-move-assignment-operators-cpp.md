@@ -1,32 +1,32 @@
 ---
-title: "Construtores de movimento e operadores de atribuição de movimento (C++) | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Como: definir construtores de movimento e operadores de atribuição de movimento (C++) | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- move constructor
+- move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69280eff199b9c04b51bf9b7aa298a67bf31bd89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
-Este tópico descreve como escrever um *mover construtor* e um operador de atribuição de movimentação de uma classe do C++. Um construtor de movimentação permite que você implemente a semântica de movimentação, que pode melhorar significativamente o desempenho de seus aplicativos. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+Este tópico descreve como escrever um *mover construtor* e um operador de atribuição de movimentação de uma classe do C++. Um construtor de movimento permite que os recursos pertencentes a um objeto rvalue a ser movido para um lvalue sem copiar. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  Este tópico baseia-se na seguinte classe do C++, `MemoryBlock`, que gerencia um buffer de memória.  
   
@@ -135,7 +135,7 @@ private:
     ```  
   
 ### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Para criar um operador de atribuição de movimentação para a classe C++  
-  
+
 1.  Defina um operador de atribuição vazio que pegue uma referência rvalue para o tipo de classe como seu parâmetro e retorne uma referência para o tipo de classe, como demonstrado no exemplo a seguir:  
   
     ```cpp  
@@ -230,7 +230,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. No Visual C++ 2010, o `vector` usa classe move semântica para executar a operação de inserção com eficiência ao mover os elementos de vetor em vez de copiá-los.  
+ O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. O `vector` usa classe move semântica para executar a operação de inserção com eficiência ao mover os elementos de vetor em vez de copiá-los.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -275,7 +275,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Antes de Visual C++ 2010, este exemplo produz a seguinte saída:  
+ Antes do Visual Studio 2010, este exemplo gerou a seguinte saída:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  

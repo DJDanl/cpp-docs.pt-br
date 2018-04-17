@@ -1,12 +1,12 @@
 ---
 title: obsoleto (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-Este tópico é sobre específicos do Microsoft preterido declspec declaração. Para obter informações sobre o C++ 14 `[[deprecated]]` atributo e orientações sobre quando usar esse atributo versus o declspec específicas da Microsoft ou pragma, consulte [atributos padrão do C++](attributes2.md).
+Este tópico é sobre específicos do Microsoft preterido declspec declaração. Para obter informações sobre o C++ 14 `[[deprecated]]` atributo e orientações sobre quando usar esse atributo versus o declspec específicas da Microsoft ou pragma, consulte [atributos padrão do C++](attributes.md).
 
  Com as exceções indicadas abaixo, o **preterido** declaração oferece a mesma funcionalidade que o [preterido](../preprocessor/deprecated-c-cpp.md) pragma:  
   
@@ -39,7 +39,7 @@ Este tópico é sobre específicos do Microsoft preterido declspec declaração.
   
 -   Macros só podem ser marcadas como preteridos com o **preterido** pragma.  
   
- Se o compilador encontra o uso de um identificador preterido ou o padrão [ `[[deprecated]]` ](attributes2.md) atributo, um [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) aviso é gerado.  
+ Se o compilador encontra o uso de um identificador preterido ou o padrão [ `[[deprecated]]` ](attributes.md) atributo, um [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) aviso é gerado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como marcar funções como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a função preterida for usada.  
@@ -82,5 +82,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [declspec](../cpp/declspec.md)   
+ [__declspec](../cpp/declspec.md)   
  [Palavras-chave](../cpp/keywords-cpp.md)

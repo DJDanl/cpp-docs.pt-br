@@ -1,12 +1,12 @@
 ---
-title: "-OPT (otimizações) | Microsoft Docs"
-ms.custom: 
+title: -OPT (otimizações) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
@@ -26,17 +26,17 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86427dbf1ac6c3404daa36d2e02786aa80ed6453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Otimizações)
 Controla as otimizações que o LINK executa durante uma compilação.  
@@ -50,10 +50,10 @@ Controla as otimizações que o LINK executa durante uma compilação.
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **REF** &#124; **NOREF**  
+ **REF** &AMP;#124; **NOREF**  
  **/OPT: REF** elimina funções e os dados que nunca são referenciados; **/OPT: NOREF** mantém funções e os dados que nunca são consultados.  
   
- Quando /OFT:REF é habilitado, o LINK remove as funções e os dados empacotados não referenciados. Um objeto contém funções empacotadas e os dados (COMDATs) se ele foi compilado usando o [/Gy](../../build/reference/gy-enable-function-level-linking.md) opção. Essa otimização é conhecida como eliminação COMDAT transitiva. Por padrão, **/OPT: REF** está habilitado em compilações de depuração não. Para substituir esse padrão e manter COMDATs não referenciadas no programa, especifique **/OPT: NOREF**. Você pode usar o [/incluem](../../build/reference/include-force-symbol-references.md) opção para substituir a remoção de um símbolo específico.  
+ Quando /OPT: ref estiver habilitado, o LINK remove dados e funções empacotadas não referenciadas. Um objeto contém funções empacotadas e os dados (COMDATs) se ele foi compilado usando o [/Gy](../../build/reference/gy-enable-function-level-linking.md) opção. Essa otimização é conhecida como eliminação COMDAT transitiva. Por padrão, **/OPT: REF** está habilitado em compilações de depuração não. Para substituir esse padrão e manter COMDATs não referenciadas no programa, especifique **/OPT: NOREF**. Você pode usar o [/incluem](../../build/reference/include-force-symbol-references.md) opção para substituir a remoção de um símbolo específico.  
   
  Quando **/OPT: REF** está habilitado ou explicitamente por padrão, uma forma limitada de **/OPT: ICF** está habilitado que dobra somente funções idênticas. Se você quiser **/OPT: REF** mas não **/OPT: ICF**, você deve especificar **/OPT: REF, NOICF** ou **NOICF**.  
   
@@ -63,7 +63,7 @@ Controla as otimizações que o LINK executa durante uma compilação.
   
  Especificando **/OPT: ICF** não habilita o **/OPT: REF** opção.  
   
- **ICF [=** `iterations` **] &#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**   
  Use **/OPT: ICF [=**`iterations`**]** para realizar dobra COMDAT idêntica. COMDATs redundantes podem ser removido da saída do vinculador. O parâmetro opcional `iterations` especifica o número de vezes a percorrer os símbolos em busca de duplicatas. O número de iterações padrão é dois. As iterações adicionais podem encontrar mais duplicatas que são descobertas com a dobra na iteração anterior.  
   
  O vinculador tem um comportamento diferente quando **/OPT: REF** especificado — e **ICF** está em vigor por padrão — do que quando **/OPT: REF, ICF** sejam especificadas explicitamente. A forma de **ICF** habilitado com **/OPT: REF** sozinho não dobra dados somente leitura – isso inclui RDATA. pData e .xdata. Portanto, menos funções são dobradas quando as imagens são geradas para o [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], pois as funções nesses módulos são mais dependentes de dados somente leitura, por exemplo, .pdata e .xdata. Para obter completo **ICF** dobra o comportamento, especifique explicitamente **/OPT: ICF**.  
@@ -75,7 +75,7 @@ Controla as otimizações que o LINK executa durante uma compilação.
 > [!NOTE]
 >  Porque **/OPT: ICF** pode fazer com que o mesmo endereço a ser atribuído a diferentes funções ou os membros de dados somente leitura (`const` variáveis compilados usando **/Gy**), ele pode interromper um programa que depende de endereços exclusivos para funções ou membros de dados somente leitura. Para obter mais informações, consulte [/Gy (habilitar vinculação em nível de função)](../../build/reference/gy-enable-function-level-linking.md).  
   
- **LBR** &#124; **NOLBR**  
+ **LBR** &AMP;#124; **NOLBR**  
  O **/OPT:LBR** e **/OPT:NOLBR** opções se aplicam somente a binários ARM. Como certas instruções de ramificação do processador ARM têm um intervalo limitado, se o vinculador detectar um salto para um endereço fora do intervalo, ele substituirá o endereço de destino da instrução de ramificação pelo endereço de uma “ilha” de códigos que contém uma instrução de ramificação que tem como alvo o destino real. Você pode usar **/OPT:LBR** para otimizar a detecção de instruções de branch longa e o posicionamento das Ilhas código intermediário para minimizar o tamanho geral do código. **/OPT:NOLBR** instrui o vinculador para gerar ilhas de código para obter instruções de ramificação longa conforme forem encontrados, sem a otimização.  
   
  Por padrão, o **/OPT:LBR** opção é definida ao vínculo incremental não está habilitado. Se você quiser um link não incremental, mas não as otimizações de ramificação longa, especifique **/OPT:NOLBR**. O **/OPT:LBR** opção desabilita o vínculo incremental.  

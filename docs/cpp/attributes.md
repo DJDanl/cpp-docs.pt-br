@@ -1,19 +1,19 @@
 ---
-title: "Atributos de C++ padrão | Microsoft Docs"
-ms.custom: 
+title: Atributos de C++ padrão | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attributes-in-c"></a>Atributos em C++
 
@@ -39,17 +39,17 @@ No C++ 11, atributos fornecem uma maneira padronizada para anotar construções 
 void Foo(int);
 ```
 
-Atributos que representam uma alternativa padronizada para extensões específicas do fornecedor como #pragma diretivas, atribuir (Visual C++), ou &#95; &#95; atributo #95; &#95; (GNU). No entanto, você ainda precisará usar as construções específicas do fornecedor para a maioria das finalidades. Atualmente, o padrão especifica os seguintes atributos que um compilador com conformidade deve reconhecer:
+Atributos que representam uma alternativa padronizada para extensões específicas do fornecedor como #pragma diretivas, atribuir (Visual C++), ou &#95; &#95;atributo&#95; &#95; (GNU). No entanto, você ainda precisará usar as construções específicas do fornecedor para a maioria das finalidades. Atualmente, o padrão especifica os seguintes atributos que um compilador com conformidade deve reconhecer:
 
-- `[[noreturn]]`Especifica que uma função nunca retorna; em outras palavras, ele sempre gerará uma exceção. O compilador pode ajustar suas regras de compilação para `[[noreturn]]` entidades.
+- `[[noreturn]]` Especifica que uma função nunca retorna; em outras palavras, ele sempre gerará uma exceção. O compilador pode ajustar suas regras de compilação para `[[noreturn]]` entidades.
 
-- `[[carries_dependency]]`Especifica que a função propaga ordenação em relação à sincronização de threads de dependência de dados. O atributo pode ser aplicado a um ou mais parâmetros para especificar que o argumento transmitido apresenta uma dependência no corpo da função. O atributo pode ser aplicado à função em si, para especificar o valor de retorno executa uma dependência sairá da função. O compilador pode usar essas informações para gerar um código mais eficiente.
+- `[[carries_dependency]]` Especifica que a função propaga ordenação em relação à sincronização de threads de dependência de dados. O atributo pode ser aplicado a um ou mais parâmetros para especificar que o argumento transmitido apresenta uma dependência no corpo da função. O atributo pode ser aplicado à função em si, para especificar o valor de retorno executa uma dependência sairá da função. O compilador pode usar essas informações para gerar um código mais eficiente.
 
-- `[[deprecated]]`**Visual Studio 2015 e posterior:** Especifica que uma função não se destina a ser usada e pode não existir em versões futuras de uma interface de biblioteca. O compilador pode usar isso para gerar uma mensagem informativa ao código do cliente tenta chamar a função. Pode ser aplicado a declaração de uma classe, um nome de typedef, uma variável, um membro de dados não estático, uma função, um namespace, uma enumeração, um enumerador ou uma especialização de modelo.  
+- `[[deprecated]]` **Visual Studio 2015 e posterior:** Especifica que uma função não se destina a ser usada e pode não existir em versões futuras de uma interface de biblioteca. O compilador pode usar isso para gerar uma mensagem informativa ao código do cliente tenta chamar a função. Pode ser aplicado a declaração de uma classe, um nome de typedef, uma variável, um membro de dados não estático, uma função, um namespace, uma enumeração, um enumerador ou uma especialização de modelo.  
 
-- `[[fallthrough]]`**Visual Studio 2017 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) o `[[fallthrough]]` atributo pode ser usado no contexto de [alternar](switch-statement-cpp.md) instruções como uma dica para o compilador (ou qualquer pessoa que ler o código) que se destina o comportamento de fallthrough. O compilador do Visual C++ no momento não avisa sobre o comportamento de fallthrough para que este atributo não tem nenhum comportamento de compilador efeito.
+- `[[fallthrough]]` **Visual Studio 2017 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) o `[[fallthrough]]` atributo pode ser usado no contexto de [alternar](switch-statement-cpp.md) instruções como uma dica para o compilador (ou qualquer pessoa que ler o código) que se destina o comportamento de fallthrough. O compilador do Visual C++ no momento não avisa sobre o comportamento de fallthrough para que este atributo não tem nenhum comportamento de compilador efeito.
 
-- `[[nodiscard]]`**Visual Studio 2017 versão 15,3 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) Especifica que o valor de retorno da função não é destinado a ser descartado. Gerar aviso C4834, conforme mostrado neste exemplo:
+- `[[nodiscard]]` **Visual Studio 2017 versão 15,3 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) Especifica que o valor de retorno da função não é destinado a ser descartado. Gerar aviso C4834, conforme mostrado neste exemplo:
 
    ```cpp
    [[nodiscard]]
@@ -62,11 +62,11 @@ Atributos que representam uma alternativa padronizada para extensões específic
    }
    ```
 
-- `[[maybe_unused]]`**Visual Studio 2017 versão 15,3 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) Especifica que uma variável, função, classe typedef, especialização de modelo, enum ou membro de dados não estático pode intencionalmente não usado. O compilador não avisa quando uma entidade marcado `[[maybe_unused]]` não é usado. Uma entidade que está declarada sem o atributo mais tarde pode ser redeclarada com o atributo e vice-versa. Uma entidade é considerada marcadas após sua primeira declaração marcado é analisada e para o restante da conversão da unidade de tradução atual.
+- `[[maybe_unused]]` **Visual Studio 2017 versão 15,3 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) Especifica que uma variável, função, classe, typedef, membro de dados não estático, enum ou especialização de modelo intencionalmente não pode ser usada. O compilador não avisa quando uma entidade marcado `[[maybe_unused]]` não é usado. Uma entidade que está declarada sem o atributo mais tarde pode ser redeclarada com o atributo e vice-versa. Uma entidade é considerada marcadas após sua primeira declaração marcado é analisada e para o restante da conversão da unidade de tradução atual.
 
 ## <a name="microsoft-specific-attributes"></a>Atributos específicos da Microsoft
 
-- `[[gsl::suppress(rules)]]`Este atributo específico da Microsoft é usado para suprimir avisos de verificadores que impõem [biblioteca de suporte de diretrizes (GSL)](https://github.com/Microsoft/GSL) regras no código. Por exemplo, considere este trecho de código:
+- `[[gsl::suppress(rules)]]` Este atributo específico da Microsoft é usado para suprimir avisos de verificadores que impõem [biblioteca de suporte de diretrizes (GSL)](https://github.com/Microsoft/GSL) regras no código. Por exemplo, considere este trecho de código:
 
     ```cpp
     void main()

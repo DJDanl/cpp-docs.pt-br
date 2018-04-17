@@ -1,37 +1,35 @@
 ---
-title: "Operadores de atribuição | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Operadores de atribuição | Microsoft Docs
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Os operadores de atribuição armazenam um valor no objeto designado pelo operando à esquerda. Há dois tipos de operações de atribuição: atribuição simples, na qual o valor do segundo operando é armazenado no objeto especificado pelo primeiro operando, e atribuição composta, na qual uma operação aritmética, de troca, ou bit a bit é executadas antes de armazenar o resultado. Todos os operadores de atribuição na tabela a seguir, exceto o operador =, são operadores de atribuição composta.  
+ Os operadores de atribuição armazenam um valor no objeto designado pelo operando à esquerda. Há três tipos de operações de atribuição: 
+
+1. atribuição simples, no qual o valor do segundo operando é armazenado no objeto especificado pelo primeiro operando. 1. atribuição composta na qual uma operação bit a bit, shift ou aritmética é executada antes de armazenar o resultado.
+1. quais recursos são transferidos sem copiar mova atribuição (para tipos de classe).
+
+
+Todos os operadores de atribuição na tabela a seguir, exceto o = e & & = operadores são operadores de atribuição composta.  
   
 ### <a name="assignment-operators"></a>Operadores de atribuição  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|Alterna o valor do primeiro operando à direita do número de bits especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |**&=**|Obtém o bit a bit AND do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |`^=`|Obtém o bit a bit exclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
-|`&#124;=`|Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
+|`&#124;=`|Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
+|**&&=**| Mova o operador de atribuição (para tipos de classe somente). Se o segundo operando é um rvalue mover seus recursos para o primeiro operando (sem copiá-los). Consulte [construtores de mover e mova operadores de atribuição](move-constructors-and-move-assignment-operators-cpp.md) para obter mais informações.|
   
  **Palavras-chave do operador**  
   

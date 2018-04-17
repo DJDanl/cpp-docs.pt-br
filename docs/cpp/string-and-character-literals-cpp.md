@@ -1,12 +1,12 @@
 ---
 title: Cadeia de caracteres e literais de caracteres (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
 C++ dá suporte a vários tipos de cadeia de caracteres e caracteres e fornece modos para expressar valores literais de cada um desses tipos. No seu código-fonte, você expressar o conteúdo de seu literais de caracteres e cadeia de caracteres usando um conjunto de caracteres. Nomes de caractere universal e caracteres de escape permitem expressar qualquer cadeia de caracteres usando apenas o conjunto de caracteres de origem básico. Um literal de cadeia bruto permite que você evite usar caracteres de escape e pode ser usado para expressar todos os tipos de literais de cadeia de caracteres. Você também pode criar literais std::string sem ter que executar etapas de conversão ou construção extra.  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- Literais de cadeia de caracteres não podem ter nenhum prefixo, ou `u8`, `L`, `u`, e `U` prefixos para denotar restringir caractere (byte único ou vários byte), caracteres UTF-8, ampla (UCS-2 ou UTF-16), UTF-16 e UTF-32 codificações, respectivamente. Um literal de cadeia bruto pode ter `R`, `u8R`, `LR`, `uR` e `UR` prefixos para os equivalentes de versão bruto essas codificações.  Para criar valores std::string temporário ou estática, você pode usar literais de cadeia de caracteres ou literais de cadeia de caracteres com um `s` sufixo. Para obter mais informações, consulte a seção de literais de cadeia de caracteres abaixo. Para obter mais informações sobre o caractere de origem básico definir nomes de caractere universal e usar caracteres de páginas de código estendidas em seu código-fonte, consulte [conjuntos de caracteres](../cpp/character-sets2.md).  
+ Literais de cadeia de caracteres não podem ter nenhum prefixo, ou `u8`, `L`, `u`, e `U` prefixos para denotar restringir caractere (byte único ou vários byte), caracteres UTF-8, ampla (UCS-2 ou UTF-16), UTF-16 e UTF-32 codificações, respectivamente. Um literal de cadeia bruto pode ter `R`, `u8R`, `LR`, `uR` e `UR` prefixos para os equivalentes de versão bruto essas codificações.  Para criar valores std::string temporário ou estática, você pode usar literais de cadeia de caracteres ou literais de cadeia de caracteres com um `s` sufixo. Para obter mais informações, consulte a seção de literais de cadeia de caracteres abaixo. Para obter mais informações sobre o caractere de origem básico definir nomes de caractere universal e usar caracteres de páginas de código estendidas em seu código-fonte, consulte [conjuntos de caracteres](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Literais de caracteres  
  Um *literal de caractere* é composto de um caractere de constante. Ele é representado pelo caractere entre aspas simples. Há cinco tipos de literais de caracteres:  
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Nomes de caractere universal não é possível codificar valores no intervalo de ponto de código substituto DFFF D800. Para pares substitutos de Unicode, especifique o nome de caractere universal usando `\UNNNNNNNN`, onde NNNNNNNN é o ponto de código de oito dígitos do caractere. O compilador gera um par alternativo, se necessário.  
   
- Em C + + 03, a linguagem somente permitido um subconjunto de caracteres a ser representado por seus nomes de caractere universal e permitidos alguns nomes de caractere universal que realmente não representam caracteres Unicode válidos. Isso foi corrigido no C++ 11 padrão. No C++ 11, identificadores e literais de caracteres e cadeia de caracteres podem usar nomes de caractere universal.  Para obter mais informações sobre nomes de caractere universal, consulte [conjuntos de caracteres](../cpp/character-sets2.md). Para obter mais informações sobre Unicode, consulte [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ Em C + + 03, a linguagem somente permitido um subconjunto de caracteres a ser representado por seus nomes de caractere universal e permitidos alguns nomes de caractere universal que realmente não representam caracteres Unicode válidos. Isso foi corrigido no C++ 11 padrão. No C++ 11, identificadores e literais de caracteres e cadeia de caracteres podem usar nomes de caractere universal.  Para obter mais informações sobre nomes de caractere universal, consulte [conjuntos de caracteres](../cpp/character-sets.md). Para obter mais informações sobre Unicode, consulte [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
   
 ## <a name="string-literals"></a>Literais de cadeia de caracteres  
  Uma literal de cadeia de caracteres representa uma sequência de caracteres que, juntos, formam uma cadeia de caracteres terminada em nulo. Os caracteres devem ser incluídos entre aspas duplas. Existem os seguintes tipos de literais de cadeias de caracteres:  
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjuntos de caracteres](../cpp/character-sets2.md)   
+ [Conjuntos de caracteres](../cpp/character-sets.md)   
  [Numérico, booleano e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md)
