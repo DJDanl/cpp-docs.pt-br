@@ -1,12 +1,12 @@
 ---
 title: _tempnam_dbg, _wtempnam_dbg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wtempnam_dbg
@@ -39,82 +39,87 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef1427937ce4f263c81c55100045b30d24a3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 28b917ce2f50d9b766fd305f3320664d11e93da2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
-Versões da função [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) que usam a versão de depuração `malloc, _malloc_dbg`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-char *_tempnam_dbg(  
-   const char *dir,  
-   const char *prefix,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-wchar_t *_wtempnam_dbg(  
-   const wchar_t *dir,  
-   const wchar_t *prefix,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `dir`  
- O caminho usado no nome de arquivo, se não houver variável de ambiente TMP ou se TMP não for um diretório válido.  
-  
- `prefix`  
- A cadeia de caracteres que será pré-anexada a nomes retornados pelo `_tempnam`.  
-  
- `blockType`  
- Tipo solicitado de bloco de memória: `_CLIENT_BLOCK` ou `_NORMAL_BLOCK`.  
-  
- `filename`  
- Nome do ponteiro do arquivo de origem que solicitou a operação de alocação ou `NULL`.  
-  
- `linenumber`  
- Número da linha no arquivo de origem em que a operação de alocação foi solicitada ou `NULL`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Cada função retorna um ponteiro para o nome gerado ou `NULL`, caso tenha ocorrido uma falha. Pode ocorrer uma falha se houver um nome de diretório inválido especificado na variável de ambiente TMP e no parâmetro `dir`.  
-  
+
+Função versões do [tempnam, wtempnam, tmpnam, wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) que usam a versão de depuração **malloc**, **malloc_dbg**.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+char *_tempnam_dbg(
+   const char *dir,
+   const char *prefix,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+wchar_t *_wtempnam_dbg(
+   const wchar_t *dir,
+   const wchar_t *prefix,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*dir*<br/>
+O caminho usado no nome de arquivo, se não houver variável de ambiente TMP ou se TMP não for um diretório válido.
+
+*prefix*<br/>
+A cadeia de caracteres que será anexado aos nomes retornado por **tempnam**.
+
+*blockType*<br/>
+Tipo de bloco de memória solicitado: **client_block** ou **normal_block**.
+
+*filename*<br/>
+Ponteiro para o nome do arquivo de origem que a operação de alocação solicitada ou **nulo**.
+
+*linenumber*<br/>
+Linha número no arquivo de origem em que a operação de alocação foi solicitada ou **nulo**.
+
+## <a name="return-value"></a>Valor de retorno
+
+Cada função retorna um ponteiro para o nome gerado ou **nulo** se houver uma falha. Falha pode ocorrer se houver um nome de diretório inválido especificado na variável de ambiente TMP e no *dir* parâmetro.
+
 > [!NOTE]
->  `free` (ou `free_dbg`) não precisa ser chamado para ponteiros alocados por `_tempnam_dbg` e `_wtempnam_dbg`.  
-  
-## <a name="remarks"></a>Comentários  
- O `_tempnam_dbg` e `_wtempnam_dbg` funções são idênticas aos `_tempnam` e `_wtempnam` exceto que, quando `_DEBUG` é definida, essas funções usam a versão de depuração `malloc` e `_malloc_dbg`para alocar memória se `NULL` é passado como o primeiro parâmetro. Para obter mais informações, consulte [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
-  
- Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, defina o sinalizador `_CRTDBG_MAP_ALLOC`. Quando `_CRTDBG_MAP_ALLOC` é definido, as chamadas a `_tempnam` e `_wtempnam` são remapeadas para `_tempnam_dbg` e `_wtempnam_dbg`, respectivamente, com o `blockType` definido como `_NORMAL_BLOCK`. Assim, não é necessário chamar essas funções explicitamente, a menos que você queira marcar os blocos de heap como `_CLIENT_BLOCK`. Para obter mais informações, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ttempnam_dbg`|`_tempnam_dbg`|`_tempnam_dbg`|`_wtempnam_dbg`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
- [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [Versões de depuração de funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)
+> **livre** (ou **free_dbg**) precisa ser chamado para ponteiros alocados por **tempnam_dbg** e **wtempnam_dbg**.
+
+## <a name="remarks"></a>Comentários
+
+O **tempnam_dbg** e **wtempnam_dbg** funções são idênticas aos **tempnam** e **wtempnam** exceto que, quando **Debug** é definida, essas funções usam a versão de depuração **malloc** e **malloc_dbg**para alocar memória se **nulo** é passado como o primeiro parâmetro. Para obter mais informações, consulte [_malloc_dbg](malloc-dbg.md).
+
+Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir o sinalizador **crtdbg_map_alloc**. Quando **crtdbg_map_alloc** é definida, chamadas para **tempnam** e **wtempnam** são remapeados para **tempnam_dbg** e **_ wtempnam_dbg**, respectivamente, com o *blockType* definida como **normal_block**. Assim, você não precisa chamar essas funções explicitamente, a menos que você deseja marcar os blocos de heap como **client_block**. Para obter mais informações, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ttempnam_dbg**|**_tempnam_dbg**|**_tempnam_dbg**|**_wtempnam_dbg**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**tempnam_dbg**, **wtempnam_dbg**|\<crtdbg.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>
+[E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
+[Versões de depuração de funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

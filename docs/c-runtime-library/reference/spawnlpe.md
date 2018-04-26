@@ -1,12 +1,12 @@
 ---
 title: spawnlpe | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - spawnlpe
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - spawnlpe function
 ms.assetid: 379143a7-f3d0-41de-83cc-2b4321146390
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bd3f5f3901ee36d6bb71145b3d1cde5a9b19fd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 84b9114ca6259204ce01af8fcabd3f2b7723acd9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="spawnlpe"></a>spawnlpe
-Essa função POSIX foi preterida. Em vez disso, use [_spawnlpe](../../c-runtime-library/reference/spawnlpe-wspawnlpe.md) compatível com ISO C++.  
-  
+
+Essa função POSIX foi preterida. Em vez disso, use [_spawnlpe](spawnlpe-wspawnlpe.md) compatível com ISO C++.
+
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

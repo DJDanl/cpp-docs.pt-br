@@ -1,12 +1,12 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _toupper_l
@@ -50,91 +50,97 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da016750a125c6645a878b3fee04a09c3e76e26
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2e5ee092690f257950acd84e1af69ca4c4f3e4c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
-Converta caractere em maiúscula.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int toupper(  
-   int c   
-);  
-int _toupper(  
-   int c   
-);  
-int towupper(  
-   wint_t c   
-);  
-int _toupper_l(  
-   int c ,  
-   _locale_t locale  
-);  
-int _towupper_l(  
-   wint_t c ,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `c`  
- Caractere a ser convertido.  
-  
- `locale`  
- Localidade a usar.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Todas essas rotinas convertem uma cópia do `c`, se possível e retornam o resultado.  
-  
- Se `c` for um caractere largo para o qual `iswlower` é diferente de zero e houver um caractere largo correspondente para o qual `iswupper` é diferente de zero, `towupper` retornará o caractere largo correspondente; caso contrário, `towupper` retornará `c` sem alterações.  
-  
- Não há valor retornado reservado para indicar um erro.  
-  
- Para que `toupper` forneça os resultados esperados, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) e [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md) devem retornar um valor diferente de zero.  
-  
-## <a name="remarks"></a>Comentários  
- Cada uma dessas rotinas converte determinada letra minúscula em maiúscula, se for possível e relevante. A conversão de maiúsculas e minúsculas de `towupper` é específica da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o sufixo `_l` usam a localidade definida atualmente. As versões dessas funções com o sufixo `_l` usam a localidade como parâmetro e a usam em vez da localidade definida atualmente. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
- Para que `toupper` forneça os resultados esperados, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) e [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) devem retornar um valor diferente de zero.  
-  
- [Rotinas de conversão de dados](../../c-runtime-library/data-conversion.md)  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_totupper`|`toupper`|`_mbctoupper`|`towupper`|  
-|`_totupper_l`|`_toupper_l`|`_mbctoupper_l`|`_towupper_l`|  
-  
+
+Converta caractere em maiúscula.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int toupper(
+   int c
+);
+int _toupper(
+   int c
+);
+int towupper(
+   wint_t c
+);
+int _toupper_l(
+   int c ,
+   _locale_t locale
+);
+int _towupper_l(
+   wint_t c ,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*c*<br/>
+Caractere a ser convertido.
+
+*locale*<br/>
+Localidade a usar.
+
+## <a name="return-value"></a>Valor de retorno
+
+Cada uma dessas rotinas converte uma cópia do *c*, se possível e retorna o resultado.
+
+Se *c* é um caractere largo para o qual **iswlower** é diferente de zero e não há um caractere largo correspondente para o qual [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) é diferente de zero, **towupper** retorna o caractere largo correspondente; Caso contrário, **towupper** retorna *c* inalterado.
+
+Não há valor retornado reservado para indicar um erro.
+
+Para que **toupper** para fornecer os resultados esperados, [isascii](isascii-isascii-iswascii.md) e [islower](islower-iswlower-islower-l-iswlower-l.md) devem ambos retornam diferente de zero.
+
+## <a name="remarks"></a>Comentários
+
+Cada uma dessas rotinas converte determinada letra minúscula em maiúscula, se for possível e relevante. A conversão de maiusculas e minúsculas de **towupper** é específico da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o **_l** sufixo usar atualmente definida localidade. As versões dessas funções com o **_l** sufixo levar a localidade como um parâmetro e use-o em vez de atualmente definida localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Para que **toupper** para fornecer os resultados esperados, [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devem ambos retornam diferente de zero.
+
+[Rotinas de conversão de dados](../../c-runtime-library/data-conversion.md)
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
+
 > [!NOTE]
->  `_toupper_l` e `_towupper_l` não têm dependência de localidade e não se destinam a serem chamados diretamente. Eles são fornecidos para uso interno por `_totupper_l`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`toupper`|\<ctype.h>|  
-|`_toupper`|\<ctype.h>|  
-|`towupper`|\<ctype.h> ou \<wchar.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
- Consulte o exemplo em [Funções to](../../c-runtime-library/to-functions.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)   
- [Funções to](../../c-runtime-library/to-functions.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+> **toupper_l** e **towupper_l** não ter nenhuma dependência de localidade e não deve ser chamado diretamente. Eles são fornecidos para uso interno por **_totupper_l**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**toupper**|\<ctype.h>|
+|**_toupper**|\<ctype.h>|
+|**towupper**|\<ctype.h> ou \<wchar.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Consulte o exemplo em [Funções to](../../c-runtime-library/to-functions.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Funções to](../../c-runtime-library/to-functions.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

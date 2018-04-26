@@ -1,12 +1,12 @@
 ---
 title: _filelength, _filelengthi64 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _filelengthi64
@@ -38,56 +38,61 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf35d33958157a424bf78950c3b4cf23f33708e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2cba9688bbcd3b6e6a373a8929d933eaa3da5171
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
-Obtém o tamanho de um arquivo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-long _filelength(   
-   int fd   
-);  
-__int64 _filelengthi64(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `fd`  
- Direciona o descritor do arquivo.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_filelength` e `_filelengthi64` retornam o tamanho do arquivo, em bytes, do arquivo de destino associado a `fd`. Se `fd` for um descritor de arquivo inválido, essa função invocará o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as duas funções retornam L-1 para indicar um erro e definir `errno` para `EBADF`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Função|Cabeçalho necessário|  
-|--------------|---------------------|  
-|`_filelength`|\<io.h>|  
-|`_filelengthi64`|\<io.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
- Consulte o exemplo de [_chsize](../../c-runtime-library/reference/chsize.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_fileno](../../c-runtime-library/reference/fileno.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [Funções _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)   
- [Funções _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)
+
+Obtém o tamanho de um arquivo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+long _filelength(
+   int fd
+);
+__int64 _filelengthi64(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*fd*<br/>
+Direciona o descritor do arquivo.
+
+## <a name="return-value"></a>Valor de retorno
+
+Ambos **filelength** e **filelengthi64** retorna o comprimento do arquivo, em bytes, do arquivo de destino associado *fd*. Se *fd* é um descritor de arquivo inválido, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as duas funções retornam L-1 para indicar um erro e definir **errno** para **EBADF**.
+
+## <a name="requirements"></a>Requisitos
+
+|Função|Cabeçalho necessário|
+|--------------|---------------------|
+|**_filelength**|\<io.h>|
+|**_filelengthi64**|\<io.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Consulte o exemplo de [_chsize](chsize.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[_chsize](chsize.md)<br/>
+[_fileno](fileno.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[Funções _stat, _wstat](stat-functions.md)<br/>
+[Funções _stat, _wstat](stat-functions.md)<br/>

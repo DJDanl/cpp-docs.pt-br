@@ -1,12 +1,12 @@
 ---
 title: _spawnlp, _wspawnlp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wspawnlp
@@ -39,101 +39,100 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc388df8f1705c88b5510471b230c278665e70d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5f63f21c5ee1d2c34dbdf176b43f63c29c03a323
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
-Cria e executa um novo processo.  
-  
+
+Cria e executa um novo processo.
+
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-intptr_t _spawnlp(  
-   int mode,  
-   const char *cmdname,  
-   const char *arg0,  
-   const char *arg1,  
-   ... const char *argn,  
-   NULL   
-);  
-intptr_t _wspawnlp(  
-   int mode,  
-   const wchar_t *cmdname,  
-   const wchar_t *arg0,  
-   const wchar_t *arg1,  
-   ... const wchar_t *argn,  
-   NULL   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `mode`  
- Modo de execução do processo de chamada.  
-  
- `cmdname`  
- Caminho do arquivo a ser executado.  
-  
- `arg0, arg1, ... argn`  
- Lista de ponteiros para os argumentos. O argumento `arg0` costuma ser um ponteiro para `cmdname`. Os argumentos de `arg1` a `argn` são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. Após `argn`, deve haver um ponteiro `NULL` para marcar o fim da lista de argumentos.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O valor retornado de uma `_spawnlp` ou `_wspawnlp` síncrona (`_P_WAIT` especificado para `mode`) é o status de saída do novo processo. O valor retornado de uma `_spawnlp` ou `_wspawnlp` assíncrona (`_P_NOWAIT` ou `_P_NOWAITO` especificado para `mode`) é o identificador do processo. O status de saída é 0 se o processo foi encerrado normalmente. Você poderá definir o status de saída para um valor diferente de zero se o processo gerado chamar especificamente a rotina `exit` com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de -1 indica um erro (o novo processo não é iniciado). Nesse caso, o parâmetro `errno` é definido com um dos valores a seguir.  
-  
- `E2BIG`  
- A lista de argumentos ultrapassa 1.024 bytes.  
-  
- `EINVAL`  
- O argumento `mode` é inválido.  
-  
- `ENOENT`  
- Arquivo ou caminho não encontrado.  
-  
- `ENOEXEC`  
- O arquivo especificado não é executável ou tem um formato de arquivo executável inválido.  
-  
- `ENOMEM`  
- Não há memória suficiente disponível para executar o novo processo.  
-  
- Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentários  
- Cada uma dessas funções cria e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado e usando a variável de ambiente `PATH` para localizar o arquivo a ser executado.  
-  
- Essas funções validam seus parâmetros. Se `cmdname` ou `arg0` for uma cadeia de caracteres vazia ou um ponteiro nulo, essas funções gerarão uma exceção de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão -1. Nenhum processo novo é gerado.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_spawnlp`|\<process.h>|  
-|`_wspawnlp`|\<stdio.h> ou \<wchar.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+intptr_t _spawnlp(
+   int mode,
+   const char *cmdname,
+   const char *arg0,
+   const char *arg1,
+   ... const char *argn,
+   NULL
+);
+intptr_t _wspawnlp(
+   int mode,
+   const wchar_t *cmdname,
+   const wchar_t *arg0,
+   const wchar_t *arg1,
+   ... const wchar_t *argn,
+   NULL
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*modo*<br/>
+Modo de execução do processo de chamada.
+
+*cmdname*<br/>
+Caminho do arquivo a ser executado.
+
+*arg0*, *arg1*,... *argn*<br/>
+Lista de ponteiros para os argumentos. O *arg0* argumento geralmente é um ponteiro para *cmdname*. Os argumentos *arg1* por meio de *argn* são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. A seguir *argn*, deve haver uma **nulo** ponteiro para marcar o fim da lista de argumentos.
+
+## <a name="return-value"></a>Valor de retorno
+
+O valor de retorno de um síncrono **spawnlp** ou **wspawnlp** (**p_wait** especificado para *modo*) é o status de saída do processo de novo . O valor de retorno de assíncrona **spawnlp** ou **wspawnlp** (**p_nowait** ou **p_nowaito** especificado para  *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída para um valor diferente de zero se o processo gerado especificamente chama o **sair** rotina com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de -1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
+
+|||
+|-|-|
+**E2BIG**|A lista de argumentos ultrapassa 1.024 bytes.
+**EINVAL**|*modo* argumento é inválido.
+**ENOENT**|Arquivo ou caminho não encontrado.
+**ENOEXEC**|O arquivo especificado não é executável ou tem um formato de arquivo executável inválido.
+**ENOMEM**|Não há memória suficiente disponível para executar o novo processo.
+
+Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentários
+
+Cada uma dessas funções cria e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado e usando o **caminho** variável de ambiente para localizar o arquivo para executar.
+
+Essas funções validam seus parâmetros. Se qualquer um dos *cmdname* ou *arg0* é uma cadeia de caracteres vazia ou um ponteiro nulo, essas funções para gerar uma exceção de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL**e retorna -1. Nenhum processo novo é gerado.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_spawnlp**|\<process.h>|
+|**_wspawnlp**|\<stdio.h> ou \<wchar.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_flushall](flushall.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[_setmbcp](setmbcp.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

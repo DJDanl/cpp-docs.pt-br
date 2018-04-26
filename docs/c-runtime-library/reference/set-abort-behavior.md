@@ -1,12 +1,12 @@
 ---
 title: _set_abort_behavior | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_abort_behavior
@@ -37,18 +37,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b7ee65b603997a0be4fe9e937299eab9520c6f5b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Especifica a ação a ser tomada quando um programa é terminado de maneira anormal.
 
 > [!NOTE]
-> Não use o `abort` função para desligar um aplicativo da Microsoft Store, exceto em teste ou cenários de depuração. Modos de interface do usuário ou por programação para fechar um aplicativo de repositório não são permitidos de acordo com o [políticas do Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Não use o [anular](abort.md) função para desligar um aplicativo da Microsoft Store, exceto em teste ou cenários de depuração. Modos de interface do usuário ou por programação para fechar um aplicativo de repositório não são permitidos de acordo com o [políticas do Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,11 +61,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] _sinalizadores_  
-Novo valor dos sinalizadores `abort`.
+*flags*<br/>
+Novo valor da [anular](abort.md) sinalizadores.
 
-[in] _máscara_  
-Máscara para os bits dos sinalizadores `abort` a definir.
+*Máscara*<br/>
+Máscara para o [anular](abort.md) sinalizadores de bits para definir.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -73,13 +73,13 @@ O valor antigo dos sinalizadores.
 
 ## <a name="remarks"></a>Comentários
 
-Há dois sinalizadores `abort`: `_WRITE_ABORT_MSG` e `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` determina se uma mensagem de texto útil é impressa quando um programa é encerrado de maneira anormal. A mensagem informa que o aplicativo tiver chamou a função `abort`. O comportamento padrão é imprimir a mensagem. `_CALL_REPORTFAULT`, se definido, especifica que um despejo de memória do Watson é gerado e relatado quando `abort` é chamada. Por padrão, o relatório do despejo de memória está habilitado em builds que não são do tipo DEBUG.
+Há dois [anular](abort.md) sinalizadores: **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se uma mensagem de texto útil é impresso quando um programa é terminado de maneira anormal. A mensagem informa que o aplicativo tiver chamado o [anular](abort.md) função. O comportamento padrão é imprimir a mensagem. **_CALL_REPORTFAULT**, se definido, especifica que um despejo de Dr Watson é gerado e relatado quando [anular](abort.md) é chamado. Por padrão, o relatório do despejo de memória está habilitado em builds que não são do tipo DEBUG.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h>|
+|**_set_abort_behavior**|\<stdlib.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -106,4 +106,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Consulte também
 
-[abort](../../c-runtime-library/reference/abort.md)  
+[abort](abort.md)<br/>

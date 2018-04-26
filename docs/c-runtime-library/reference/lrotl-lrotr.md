@@ -1,12 +1,9 @@
 ---
 title: _lrotl, _lrotr | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/04/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _lrotl
@@ -40,86 +37,77 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e6bec7340cf26f98d5843693a24ba6c7673c55d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 502007add5b0c7cb0d2e10cd64803c7c52f34afd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
-Gira bits para a esquerda (`_lrotl`) ou para a direita (`_lrotr`).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-      unsigned long _lrotl(  
-   unsigned long value,  
-   int shift   
-);  
-unsigned long _lrotr(  
-   unsigned long value,  
-   int shift   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *value*  
- O valor a ser girado.  
-  
- `shift`  
- O número de bits para deslocar *value*.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Ambas as funções retornam o valor girado. Nenhum erro é retornado.  
-  
-## <a name="remarks"></a>Comentários  
- As funções `_lrotl` e `_lrotr` giram *value* por bits `shift`. `_lrotl` gira o valor para a esquerda. `_lrotr` gira o valor para a direita. Ambas as funções encapsulam bits girados de uma extremidade do *value* para a outra.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_lrotl`|\<stdlib.h>|  
-|`_lrotr`|\<stdlib.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="libraries"></a>Libraries  
- Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_lrot.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   unsigned long val = 0x0fac35791;  
-  
-   printf( "0x%8.8lx rotated left eight times is 0x%8.8lx\n",   
-            val, _lrotl( val, 8 ) );  
-   printf( "0x%8.8lx rotated right four times is 0x%8.8lx\n",   
-            val, _lrotr( val, 4 ) );  
-}  
-```  
-  
-## <a name="output"></a>Saída  
-  
-```  
-0xfac35791 rotated left eight times is 0xc35791fa  
-0xfac35791 rotated right four times is 0x1fac3579  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [_rotl, _rotl64, _rotr, _rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)
+
+Gira o bits para a esquerda (**lrotl**) ou para a direita (**lrotr**).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+unsigned long _lrotl( unsigned long value, int shift );
+unsigned long _lrotr( unsigned long value, int shift );
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*value*<br/>
+O valor a ser girado.
+
+*shift*<br/>
+O número de bits para deslocar *value*.
+
+## <a name="return-value"></a>Valor de retorno
+
+Ambas as funções retornam o valor girado. Nenhum erro é retornado.
+
+## <a name="remarks"></a>Comentários
+
+O **lrotl** e **lrotr** funções girar *valor* por *shift* bits. **lrotl** gira o valor à esquerda, em direção de bits mais significativos. **lrotr** gira à direita do valor, na direção bits menos significativos. Ambas as funções encapsulam bits girados de uma extremidade do *value* para a outra.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**lrotl**, **lrotr**|\<stdlib.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_lrot.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   unsigned long val = 0x0fac35791;
+
+   printf( "0x%8.8lx rotated left eight bits is 0x%8.8lx\n",
+            val, _lrotl( val, 8 ) );
+   printf( "0x%8.8lx rotated right four bits is 0x%8.8lx\n",
+            val, _lrotr( val, 4 ) );
+}
+```
+
+```Output
+0xfac35791 rotated left eight bits is 0xc35791fa
+0xfac35791 rotated right four bits is 0x1fac3579
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[_rotl, _rotl64, _rotr, _rotr64](rotl-rotl64-rotr-rotr64.md)<br/>

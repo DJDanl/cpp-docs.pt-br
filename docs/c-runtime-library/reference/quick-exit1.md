@@ -1,13 +1,13 @@
 ---
 title: quick_exit1 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - quick_exit
@@ -33,57 +33,62 @@ dev_langs:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30c8ae3290ac4b15247b88b0b2201634e42b560b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fde06fc83b27b8bba43e3fa929cc8b97bb68dd06
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="quickexit"></a>quick_exit
-Causa o término normal do programa.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-__declspec(noreturn) void quick_exit(  
-    int status  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- status  
- O código de status para retornar para o ambiente de host.  
-  
-## <a name="return-value"></a>Valor de retorno  
- A função `quick_exit` não pode retornar para seu chamador.  
-  
-## <a name="remarks"></a>Comentários  
- A função `quick_exit` causa o término normal do programa. Ela não chama nenhuma função registrada por `atexit`, `_onexit` nem manipuladores de sinal registrados pela função `signal`. O comportamento será indefinido se `quick_exit` for chamado mais de uma vez ou se a função `exit` também for chamada.  
-  
- A função `quick_exit` chama, na ordem UEPS (último a entrar, primeiro a sair), as funções registradas pelo `at_quick_exit`, exceto para aquelas funções já chamadas quando a função foi registrada.  O comportamento será indefinido se uma chamada [longjmp](../../c-runtime-library/reference/longjmp.md) for realizada durante uma chamada para uma função registrada que terminaria a chamada para a função.  
-  
- Depois que as funções registradas foram chamadas, `quick_exit` invoca `_Exit` usando o valor `status` para retornar o controle para o ambiente de host.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`quick_exit`|\<process.h> ou \<stdlib.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+Causa o término normal do programa.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+__declspec(noreturn) void quick_exit(
+    int status
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*status*<br/>
+O código de status para retornar para o ambiente de host.
+
+## <a name="return-value"></a>Valor de retorno
+
+O **quick_exit** função não pode retornar ao chamador.
+
+## <a name="remarks"></a>Comentários
+
+O **quick_exit** função causa o encerramento normal do programa. Ele chama nenhuma função registradas por **atexit**, **OnExit** ou sinalizar manipuladores registrados pelo **sinal** função. Comportamento será indefinido se **quick_exit** é chamado mais de uma vez, ou se o **sair** também é chamada de função.
+
+O **quick_exit** chamadas de função, no último a entrar, primeiro a sair (UEPS) ordem, as funções registradas por **at_quick_exit**, exceto para essas funções já chamadas quando a função foi registrada.  O comportamento será indefinido se uma chamada [longjmp](longjmp.md) for realizada durante uma chamada para uma função registrada que terminaria a chamada para a função.
+
+Depois de tem sido chamadas de funções registradas, **quick_exit** invoca **exit** usando o *status* valor para retornar o controle para o ambiente de host.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**quick_exit**|\<process.h> ou \<stdlib.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

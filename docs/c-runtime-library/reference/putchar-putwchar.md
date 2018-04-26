@@ -1,12 +1,12 @@
 ---
 title: putchar, putwchar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - putchar
@@ -37,96 +37,101 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 687cacfbf59f2d905de8f14bcebb6e7bbf68fb53
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 722ef228203afa85728b57549c9eeb69c3745723
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
-Grava um caractere em **stdout**.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-      int putchar(  
-   int c   
-);  
-wint_t putwchar(  
-   wchar_t c   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `c`  
- O caractere a ser gravado.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna o caractere gravado. Para indicar um erro ou uma condição de fim de arquivo, `putc` e `putchar` retornam `EOF`; `putwc` e `putwchar` retornam **WEOF**. Para todas as quatro rotinas, use [ferror](../../c-runtime-library/reference/ferror.md) ou [feof](../../c-runtime-library/reference/feof.md) para verificar se há um erro ou o fim do arquivo. Se um ponteiro nulo tiver sido passado para `stream`, essas funções gerarão uma exceção de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, retornarão `EOF` ou **WEOF** e definirão `errno` como `EINVAL`.  
-  
- Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.  
-  
-## <a name="remarks"></a>Comentários  
- A rotina `putc` grava o único caractere `c` para a saída `stream` na posição atual. Qualquer inteiro pode ser passado para `putc`, mas somente os 8 bits inferiores são gravados. A rotina `putchar` é idêntica ao **putc(** `c`**, stdout )**. Para cada rotina, se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. `putc` e `putchar` são semelhantes a `fputc` e `_fputchar`, respectivamente, mas são implementados como funções e como macros (consulte [Escolhendo entre funções e macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` e `putwchar` são as versões de caractere largo de `putc` e `putchar`, respectivamente.  
-  
- As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_puttchar`|`putchar`|`putchar`|**putwchar**|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`putchar`|\<stdio.h>|  
-|`putwchar`|\<stdio.h> ou \<wchar.h>|  
-  
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, `stdin`, `stdout`, e `stderr`, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
-  
-## <a name="libraries"></a>Libraries  
- Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_putchar.c  
-/* This program uses putc to write buffer  
- * to a stream. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = putchar( *p );  
-}  
-```  
-  
-## <a name="output"></a>Saída  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Grava um caractere em **stdout**.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int putchar(
+   int c
+);
+wint_t putwchar(
+   wchar_t c
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*c*<br/>
+O caractere a ser gravado.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna o caractere gravado. Para indicar um erro ou condição de fim de arquivo, **putc** e **putchar** retornar * * EOF`; **putwc` e **putwchar** retornar **WEOF**. Para todas as quatro rotinas, use [ferror](ferror.md) ou [feof](feof.md) para verificar se há um erro ou o fim do arquivo. Se passado um ponteiro nulo para *fluxo*, essas funções para gerar uma exceção de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retorne **EOF** ou **WEOF** e defina **errno** para **EINVAL**.
+
+Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
+
+## <a name="remarks"></a>Comentários
+
+O **putc** rotina grava o único caractere *c* para a saída *fluxo* na posição atual. Qualquer inteiro pode ser passado para **putc**, mas somente os 8 bits inferiores são gravados. O **putchar** rotina é idêntica ao **putc (** * c ***, stdout)**. Para cada rotina, se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. **putc** e **putchar** são semelhantes às **fputc** e **fputchar**, respectivamente, mas são implementados como funções e macros (consulte [ Escolher entre funções e Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** são versões de caractere largo de **putc** e **putchar**, respectivamente.
+
+As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**puttchar**|**putchar**|**putchar**|**putwchar**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**putchar**|\<stdio.h>|
+|**putwchar**|\<stdio.h> ou \<wchar.h>|
+
+Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Libraries
+
+Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_putchar.c
+/* This program uses putc to write buffer
+* to a stream. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = putchar( *p );
+}
+```
+
+### <a name="output"></a>Saída
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

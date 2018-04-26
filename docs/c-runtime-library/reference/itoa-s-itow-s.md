@@ -86,15 +86,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 1f4d00b7938c9fce4e96cd900e460721d9ebe662
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Converte um inteiro em uma cadeia de caracteres. Essas são as versões do [itoa, itow funções](../../c-runtime-library/reference/itoa-itow.md) com aprimoramentos de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converte um inteiro em uma cadeia de caracteres. Essas são as versões do [itoa, itow funções](itoa-itow.md) com aprimoramentos de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -161,22 +161,22 @@ Zero se for bem-sucedido; um código de erro em caso de falha. Se qualquer uma d
 
 |Valor |buffer|size|radix|Valor de|
 |-----------|------------|----------------------|-----------|------------|
-|qualquer|`NULL`|qualquer|qualquer|`EINVAL`|
-|qualquer|qualquer|<=0|qualquer|`EINVAL`|
-|qualquer|qualquer|<= tamanho da cadeia de caracteres resultante necessário|qualquer|`EINVAL`|
-|qualquer|qualquer|qualquer|*base* < 2 ou *base* > 36|`EINVAL`|
+|qualquer|**NULL**|qualquer|qualquer|**EINVAL**|
+|qualquer|qualquer|<=0|qualquer|**EINVAL**|
+|qualquer|qualquer|<= tamanho da cadeia de caracteres resultante necessário|qualquer|**EINVAL**|
+|qualquer|qualquer|qualquer|*base* < 2 ou *base* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemas de segurança
 
-Essas funções podem gerar uma violação de acesso se *buffer* não aponta para memória válido e não é `NULL`, ou se o comprimento do buffer não é grande o suficiente para manter a cadeia de caracteres de resultado.
+Essas funções podem gerar uma violação de acesso se *buffer* não aponta para memória válido e não é **nulo**, ou se o comprimento do buffer não é grande o suficiente para manter a cadeia de caracteres de resultado.
 
 ## <a name="remarks"></a>Comentários
 
-Exceto para os parâmetros e o valor de retorno, o `_itoa_s` e `_itow_s` famílias de função tem o mesmo comportamento que o menos seguro correspondente `_itoa` e `_itow` versões.
+Exceto para os parâmetros e o valor de retorno, o **itoa_s** e **itow_s** famílias de função tem o mesmo comportamento que o menos seguro correspondente **itoa** e **itow** versões.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 CRT inclui macros convenientes para definir o tamanho do buffer necessário para converter o maior valor possível de cada tipo de inteiro, incluindo o terminador nulo e entre caracteres para várias bases comuns. Para obter informações, consulte [macros de contagem de conversão máximo](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,18 +184,18 @@ CRT inclui macros convenientes para definir o tamanho do buffer necessário para
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h> ou \<wchar.h>|
+|**itoa_s**, **ltoa_s**, **ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**itow_s**, **ltow_s**, **ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> ou \<wchar.h>|
 
 Essas funções são específicas da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -272,4 +272,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[itoa, funções itow](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[itoa, funções itow](itoa-itow.md)<br/>

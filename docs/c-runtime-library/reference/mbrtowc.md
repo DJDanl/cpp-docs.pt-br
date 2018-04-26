@@ -1,12 +1,12 @@
 ---
 title: mbrtowc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - mbrtowc
@@ -30,196 +30,198 @@ dev_langs:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f3446132532fbf212294c0176b697359572b235
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3b567fdbf4cca315efb41e8f331fc2d67830503
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbrtowc"></a>mbrtowc
-Converta um caractere multibyte na localidade atual no caractere largo equivalente, com a capacidade de reiniciar no meio de um caractere multibyte.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-size_t mbrtowc(  
-   wchar_t *wchar,  
-   const char *mbchar,  
-   size_t count,  
-   mbstate_t *mbstate  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `wchar`  
- Endereço de um caractere largo para receber a cadeia de caracteres largos convertida (tipo `wchar_t`). Esse valor poderá ser um ponteiro nulo se não for necessário nenhum caractere largo de retorno.  
-  
- `mbchar`  
- Endereço de uma sequência de bytes (um caractere multibyte).  
-  
- `count`  
- O número de bytes a serem verificados.  
-  
- `mbstate`  
- O ponteiro para um objeto do estado da conversão. Se esse valor for um ponteiro nulo, a função usará um objeto de estado de conversão interna estática. Como o objeto `mbstate_t` interno não é thread-safe, é recomendável que você sempre passe seu próprio argumento `mbstate`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Um dos seguintes valores:  
-  
- 0  
- Os próximos `count` ou menos bytes completam o caractere multibyte que representa o caractere largo nulo, que será armazenado em `wchar`, se `wchar` não for um ponteiro nulo.  
-  
- 1 para `count`, inclusive  
- Os próximos `count` ou menos bytes completam um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte. O caractere largo equivalente será armazenado em `wchar`, se `wchar` não for um ponteiro nulo.  
-  
- (size_t)(-1)  
- Erro de codificação. Os próximos `count` ou menos bytes não contribuem para um caractere multibyte completo e válido. Nesse caso, `errno` é definido como EILSEQ e o estado de deslocamento da conversão em `mbstate` não é especificado.  
-  
- (size_t)(-2)  
- Os próximos `count` bytes contribuem para um caractere multibyte incompleto, mas potencialmente válido e todos os `count` bytes foram processados. Nenhum valor é armazenado em `wchar`, mas `mbstate` é atualizado para reiniciar a função.  
-  
-## <a name="remarks"></a>Comentários  
- Se `mbchar` for um ponteiro nulo, a função será equivalente à chamada:  
-  
- `mbrtowc(NULL, "", 1, &mbstate)`  
-  
- Nesse caso, o valor dos argumentos `wchar` e `count` são ignorados.  
-  
- Se `mbchar` não é um ponteiro nulo, a função examina `count` bytes de `mbchar` para determinar o número de bytes necessários para completar o próximo caractere multibyte. Se o próximo caractere for válido, o caractere multibyte correspondente será armazenado em `wchar` se não for um ponteiro nulo. Se o caractere for o caractere nulo largo correspondente, o estado resultante de `mbstate` será o estado de conversão inicial.  
-  
- A função `mbrtowc` difere da [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md) por sua capacidade de reinicialização. O estado da conversão é armazenado em `mbstate` para chamadas posteriores às mesmas funções ou a outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo deverá usar `wcsrlen` em vez de `wcslen` se uma chamada subsequente para `wcsrtombs` for usada em vez de `wcstombs`.  
-  
-## <a name="example"></a>Exemplo  
- Converte um caractere multibyte em seu caractere largo equivalente.  
-  
-```  
-// crt_mbrtowc.cpp  
-  
-#include <stdio.h>  
-#include <mbctype.h>  
-#include <string.h>  
-#include <locale.h>  
-#include <wchar.h>  
-  
-#define BUF_SIZE 100  
-  
-int Sample(char* szIn, wchar_t* wcOut, int nMax)  
-{  
-    mbstate_t   state = {0}; // Initial state  
-    size_t      nConvResult,   
-                nmbLen = 0,  
-                nwcLen = 0;  
-    wchar_t*    wcCur = wcOut;  
-    wchar_t*    wcEnd = wcCur + nMax;  
-    const char* mbCur = szIn;  
-    const char* mbEnd = mbCur + strlen(mbCur) + 1;  
-    char*       szLocal;  
-  
-    // Sets all locale to French_Canada.1252  
-    szLocal = setlocale(LC_ALL, "French_Canada.1252");  
-    if (!szLocal)  
-    {  
-        printf("The fuction setlocale(LC_ALL, \"French_Canada.1252\") failed!\n");  
-        return 1;  
-    }  
-  
-    printf("Locale set to: \"%s\"\n", szLocal);  
-  
-    // Sets the code page associated current locale's code page  
-    // from a previous call to setlocale.  
-    if (_setmbcp(_MB_CP_SBCS) == -1)  
-    {  
-        printf("The fuction _setmbcp(_MB_CP_SBCS) failed!");  
-        return 1;  
-    }  
-  
-    while ((mbCur < mbEnd) && (wcCur < wcEnd))  
-    {  
-        //  
-        nConvResult = mbrtowc(wcCur, mbCur, 1, &state);  
-        switch (nConvResult)  
-        {  
-            case 0:  
-            {  // done  
-                printf("Conversion succeeded!\nMultibyte String: ");  
-                printf(szIn);  
-                printf("\nWC String: ");  
-                wprintf(wcOut);  
-                printf("\n");  
-                mbCur = mbEnd;  
-                break;  
-            }  
-  
-            case -1:  
-            {  // encoding error  
-                printf("The call to mbrtowc has detected an encoding error.\n");  
-                mbCur = mbEnd;  
-                break;  
-            }  
-  
-            case -2:  
-            {  // incomplete character  
-                if   (!mbsinit(&state))  
-                {  
-                    printf("Currently in middle of mb conversion, state = %x\n", state);  
-                    // state will contain data regarding lead byte of mb character  
-                }  
-  
-                ++nmbLen;  
-                ++mbCur;  
-                break;  
-            }  
-  
-            default:  
-            {  
-                if   (nConvResult > 2) // The multibyte should never be larger than 2  
-                {  
-                    printf("Error: The size of the converted multibyte is %d.\n", nConvResult);  
-                }  
-  
-                ++nmbLen;  
-                ++nwcLen;  
-                ++wcCur;  
-                ++mbCur;  
-            break;  
-            }  
-        }  
-    }  
-  
-   return 0;  
-}  
-  
-int main(int argc, char* argv[])  
-{  
-    char    mbBuf[BUF_SIZE] = "AaBbCc\x9A\x8B\xE0\xEF\xF0xXyYzZ";  
-    wchar_t wcBuf[BUF_SIZE] = {L''};  
-  
-    return Sample(mbBuf, wcBuf, BUF_SIZE);  
-}  
-```  
-  
-## <a name="sample-output"></a>Saída de Exemplo  
-  
-```  
-Locale set to: "French_Canada.1252"  
-Conversion succeeded!  
-Multibyte String: AaBbCcÜïα∩≡xXyYzZ  
-WC String: AaBbCcÜïα∩≡xXyYzZ  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`mbrtowc`|\<wchar.h>|  
-  
-## <a name="see-also"></a>Consulte também  
- [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+
+Converta um caractere multibyte na localidade atual no caractere largo equivalente, com a capacidade de reiniciar no meio de um caractere multibyte.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+size_t mbrtowc(
+   wchar_t *wchar,
+   const char *mbchar,
+   size_t count,
+   mbstate_t *mbstate
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*wchar*<br/>
+Endereço de um caractere largo para receber a cadeia de caracteres largos convertido (tipo **wchar_t**). Esse valor poderá ser um ponteiro nulo se não for necessário nenhum caractere largo de retorno.
+
+*mbchar*<br/>
+Endereço de uma sequência de bytes (um caractere multibyte).
+
+*count*<br/>
+O número de bytes a serem verificados.
+
+*mbstate*<br/>
+O ponteiro para um objeto do estado da conversão. Se esse valor for um ponteiro nulo, a função usará um objeto de estado de conversão interna estática. Porque o interno **mbstate_t** objeto não é thread-safe, recomendamos que você sempre passa seu próprio *mbstate* argumento.
+
+## <a name="return-value"></a>Valor de retorno
+
+Um dos seguintes valores:
+
+0 a próxima *contagem* ou menos bytes concluir os caracteres multibyte que representa o caractere largo nulo, que é armazenado em *wchar*, se *wchar* não é um ponteiro nulo.
+
+1 para *contagem*, inclusive o próximo *contagem* ou menos bytes concluir um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte. O caractere largo equivalente é armazenado em *wchar*, se *wchar* não é um ponteiro nulo.
+
+(size_t) (-1) Ocorreu um erro de codificação. O próximo *contagem* ou menos bytes não contribuem para um caractere multibyte completo e válido. Nesse caso, **errno** está definida como EILSEQ e o estado de shift conversão em *mbstate* não está especificado.
+
+(size_t) -(2) O próximo *contagem* bytes contribuem para um caractere multibyte incompleto, mas potencialmente válido e todos os *contagem* bytes foram processados. Nenhum valor é armazenado em *wchar*, mas *mbstate* é atualizado para reiniciar a função.
+
+## <a name="remarks"></a>Comentários
+
+Se *mbchar* é um ponteiro nulo, a função é equivalente à chamada de:
+
+`mbrtowc(NULL, "", 1, &mbstate)`
+
+Nesse caso, o valor dos argumentos *wchar* e *contagem* são ignorados.
+
+Se *mbchar* não é um ponteiro nulo, a função examina *contagem* bytes do *mbchar* para determinar o número de bytes que são necessárias para concluir a próxima necessário caracteres multibyte. Se o próximo caractere for válido, o caractere de multibyte correspondente é armazenado em *wchar* se não for um ponteiro nulo. Se o caractere for correspondente nulo todo caractere, o estado resultante do *mbstate* é o estado inicial de conversão.
+
+O **mbrtowc** função difere da [mbtowc, mbtowc_l](mbtowc-mbtowc-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para o mesmo ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo deve usar **wcsrlen** em vez de **wcslen** se uma chamada subsequente para **wcsrtombs** é usado em vez de **wcstombs**.
+
+## <a name="example"></a>Exemplo
+
+Converte um caractere multibyte em seu caractere largo equivalente.
+
+```cpp
+// crt_mbrtowc.cpp
+
+#include <stdio.h>
+#include <mbctype.h>
+#include <string.h>
+#include <locale.h>
+#include <wchar.h>
+
+#define BUF_SIZE 100
+
+int Sample(char* szIn, wchar_t* wcOut, int nMax)
+{
+    mbstate_t   state = {0}; // Initial state
+    size_t      nConvResult,
+                nmbLen = 0,
+                nwcLen = 0;
+    wchar_t*    wcCur = wcOut;
+    wchar_t*    wcEnd = wcCur + nMax;
+    const char* mbCur = szIn;
+    const char* mbEnd = mbCur + strlen(mbCur) + 1;
+    char*       szLocal;
+
+    // Sets all locale to French_Canada.1252
+    szLocal = setlocale(LC_ALL, "French_Canada.1252");
+    if (!szLocal)
+    {
+        printf("The fuction setlocale(LC_ALL, \"French_Canada.1252\") failed!\n");
+        return 1;
+    }
+
+    printf("Locale set to: \"%s\"\n", szLocal);
+
+    // Sets the code page associated current locale's code page
+    // from a previous call to setlocale.
+    if (_setmbcp(_MB_CP_SBCS) == -1)
+    {
+        printf("The fuction _setmbcp(_MB_CP_SBCS) failed!");
+        return 1;
+    }
+
+    while ((mbCur < mbEnd) && (wcCur < wcEnd))
+    {
+        //
+        nConvResult = mbrtowc(wcCur, mbCur, 1, &state);
+        switch (nConvResult)
+        {
+            case 0:
+            {  // done
+                printf("Conversion succeeded!\nMultibyte String: ");
+                printf(szIn);
+                printf("\nWC String: ");
+                wprintf(wcOut);
+                printf("\n");
+                mbCur = mbEnd;
+                break;
+            }
+
+            case -1:
+            {  // encoding error
+                printf("The call to mbrtowc has detected an encoding error.\n");
+                mbCur = mbEnd;
+                break;
+            }
+
+            case -2:
+            {  // incomplete character
+                if   (!mbsinit(&state))
+                {
+                    printf("Currently in middle of mb conversion, state = %x\n", state);
+                    // state will contain data regarding lead byte of mb character
+                }
+
+                ++nmbLen;
+                ++mbCur;
+                break;
+            }
+
+            default:
+            {
+                if   (nConvResult > 2) // The multibyte should never be larger than 2
+                {
+                    printf("Error: The size of the converted multibyte is %d.\n", nConvResult);
+                }
+
+                ++nmbLen;
+                ++nwcLen;
+                ++wcCur;
+                ++mbCur;
+            break;
+            }
+        }
+    }
+
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+    char    mbBuf[BUF_SIZE] = "AaBbCc\x9A\x8B\xE0\xEF\xF0xXyYzZ";
+    wchar_t wcBuf[BUF_SIZE] = {L''};
+
+    return Sample(mbBuf, wcBuf, BUF_SIZE);
+}
+```
+
+### <a name="sample-output"></a>Saída de Exemplo
+
+```Output
+Locale set to: "French_Canada.1252"
+Conversion succeeded!
+Multibyte String: AaBbCcÜïα∩≡xXyYzZ
+WC String: AaBbCcÜïα∩≡xXyYzZ
+```
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**mbrtowc**|\<wchar.h>|
+
+## <a name="see-also"></a>Consulte também
+
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

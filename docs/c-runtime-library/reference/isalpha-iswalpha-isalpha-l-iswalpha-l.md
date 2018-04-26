@@ -1,12 +1,12 @@
 ---
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iswalpha
@@ -47,73 +47,77 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b71e7ca28f1835e1940a780f66d76924dee9e6c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
-Determina se um inteiro representa um caractere alfabético.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int isalpha(   
-   int c   
-);  
-int iswalpha(   
-   wint_t c   
-);  
-int _isalpha_l(   
-   int c,  
-   _locale_t locale   
-);  
-int _iswalpha_l(   
-   wint_t c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `c`  
- Inteiro a ser testado.  
-  
- `locale`  
- A localidade a ser usada em vez da localidade atual.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere alfabético. `isalpha` Retorna um valor diferente de zero se `c` está dentro dos intervalos de A - Z ou a - z. `iswalpha` retorna um valor diferente de zero somente para caracteres largos para os quais `iswupper` ou `iswlower` é diferente de zero; ou seja, para qualquer caractere largo que for parte de um conjunto definido pela implementação para o qual nenhum `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
-  
- As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
- O comportamento de `isalpha` e `_isalpha_l` será indefinido se `c` não for EOF ou não estiver no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e `c` não é um desses valores, as funções geram uma asserção.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istalpha`|`isalpha`|`_ismbcalpha`|`iswalpha`|  
-|`_istalpha_l`|`_isalpha_l`|`_ismbcalpha_l`|`_iswalpha_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`isalpha`|\<ctype.h>|  
-|`iswalpha`|\<ctype.h> ou \<wchar.h>|  
-|`_isalpha_l`|\<ctype.h>|  
-|`_iswalpha_l`|\<ctype.h> ou \<wchar.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Classificação de caracteres](../../c-runtime-library/character-classification.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)
+
+Determina se um inteiro representa um caractere alfabético.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int isalpha(
+   int c
+);
+int iswalpha(
+   wint_t c
+);
+int _isalpha_l(
+   int c,
+   _locale_t locale
+);
+int _iswalpha_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*c*<br/>
+Inteiro a ser testado.
+
+*locale*<br/>
+A localidade a ser usada em vez da localidade atual.
+
+## <a name="return-value"></a>Valor de retorno
+
+Cada essas rotinas retornará zero se *c* é uma representação específica de um caractere alfabético. **isalpha** retorna um valor diferente de zero se *c* está dentro dos intervalos de A - Z ou a - z. **iswalpha** retorna um valor diferente de zero somente para caracteres largos para o qual [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** é diferente de zero; isto é, para toda a qualquer caractere que é parte de um conjunto definido pela implementação para qual nenhum dos **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+
+As versões dessas funções que têm o **_l** sufixo use o parâmetro de localidade que é passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+O comportamento de **isalpha** e **isalpha_l** será indefinido se *c* não é EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* não é uma desses valores, o aumento de funções uma asserção.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
+|**istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**isalpha**|\<ctype.h>|
+|**iswalpha**|\<ctype.h> ou \<wchar.h>|
+|**_isalpha_l**|\<ctype.h>|
+|**_iswalpha_l**|\<ctype.h> ou \<wchar.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

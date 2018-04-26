@@ -1,12 +1,12 @@
 ---
 title: _aligned_offset_recalloc_dbg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_offset_recalloc_dbg
@@ -31,74 +31,79 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a492ec61090d20bb54fd0d90751cc41a1e7e2fb7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b4d371b5317db508b9669aba7304ee15c528cb3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
-Altera o tamanho de um bloco de memória que foi alocado com [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) e inicializa a memória como 0 (somente versão de depuração).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void * _aligned_offset_recalloc_dbg(  
-   void *memblock,   
-   size_t num,   
-   size_t size,   
-   size_t alignment,  
-   size_t offset,  
-   const char *filename,  
-   int linenumber  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [in] `memblock`  
- O ponteiro do bloco de memória atual.  
-  
- [in] `num`  
- Número de elementos.  
-  
- [in] `size`  
- O comprimento, em bytes, de cada elemento.  
-  
- [in] `alignment`  
- O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.  
-  
- [in] `offset`  
- O deslocamento na alocação de memória para forçar o alinhamento.  
-  
- [in] `filename`  
- Ponteiro para o nome do arquivo de origem que solicitou a operação `realloc` ou NULL.  
-  
- [in] `linenumber`  
- Número da linha do arquivo de origem em que a operação `realloc` foi solicitada ou NULL.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_aligned_offset_recalloc_dbg` retorna um ponteiro nulo para o bloco de memória realocado (e possivelmente migrado). O valor retornado é `NULL` se o tamanho for zero e o argumento do buffer não for `NULL`, ou se não houver memória suficiente para expandir o bloco para o tamanho determinado. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.  
-  
-## <a name="remarks"></a>Comentários  
- `_aligned_offset_realloc_dbg` é uma versão de depuração da função [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md). Quando [_DEBUG](../../c-runtime-library/debug.md) não está definido, cada chamada para `_aligned_offset_recalloc_dbg` é reduzida a uma chamada para `_aligned_offset_recalloc`. `_aligned_offset_recalloc` e `_aligned_offset_recalloc_dbg` realocam um bloco de memória no heap de base, mas `_aligned_offset_recalloc_dbg` acomoda diversos recursos de depuração: buffers nos dois lados da parte do usuário do bloco para testar se há perdas, um parâmetro de tipo de bloco para rastrear tipos de alocação específicos e informações de `filename`/`linenumber` para determinar a origem das solicitações de alocação.  
-  
- `_aligned_offset_realloc_dbg` realoca o bloco de memória especificado com um pouco mais de espaço que o `newSize` solicitado. `newSize` pode ser maior ou menor que o espaço do bloco de memória alocado originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. Se o bloco de memória for movido, o conteúdo do bloco original será substituído.  
-  
- Essa função definirá `errno` como `ENOMEM` se a alocação de memória falhar ou se o tamanho solicitado (`num` * `size`) for maior que `_HEAP_MAXREQ`. Para obter mais informações sobre `errno`, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, `_aligned_offset_recalloc_dbg` valida seus parâmetros. Se `alignment` não for um número elevado à segunda potência ou se `offset` for maior ou igual ao tamanho solicitado e diferente de zero, essa função invocará o manipulador de parâmetro inválido, conforme a descrição em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará `NULL` e definirá `errno` como `EINVAL`.  
-  
- Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_aligned_offset_recalloc_dbg`|\<malloc.h>|  
-  
-## <a name="see-also"></a>Consulte também  
- [Alinhamento de dados](../../c-runtime-library/data-alignment.md)
+
+Altera o tamanho de um bloco de memória que foi alocado com [_aligned_malloc](aligned-malloc.md) ou [_aligned_offset_malloc](aligned-offset-malloc.md) e inicializa a memória como 0 (somente versão de depuração).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void * _aligned_offset_recalloc_dbg(
+   void *memblock,
+   size_t num,
+   size_t size,
+   size_t alignment,
+   size_t offset,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*memblock*<br/>
+O ponteiro do bloco de memória atual.
+
+*Número*<br/>
+Número de elementos.
+
+*size*<br/>
+O comprimento, em bytes, de cada elemento.
+
+*alignment*<br/>
+O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.
+
+*deslocamento*<br/>
+O deslocamento na alocação de memória para forçar o alinhamento.
+
+*filename*<br/>
+Ponteiro para o nome do arquivo de origem que solicitou a operação de realloc ou NULL.
+
+*linenumber*<br/>
+Número no arquivo de origem em que a operação de realloc foi solicitada de linhas ou NULL.
+
+## <a name="return-value"></a>Valor de retorno
+
+**aligned_offset_recalloc_dbg** retorna um ponteiro nulo para o bloco de memória realocada (e possivelmente movido). O valor de retorno é **nulo** se o tamanho é zero e o argumento de buffer não é **nulo**, ou se não houver memória suficiente disponível para expandir o bloco para determinado tamanho. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.
+
+## <a name="remarks"></a>Comentários
+
+**aligned_offset_realloc_dbg** é uma versão de depuração de [aligned_offset_recalloc](aligned-offset-recalloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **aligned_offset_recalloc_dbg** é reduzido para uma chamada para **aligned_offset_recalloc**. Ambos **aligned_offset_recalloc** e **aligned_offset_recalloc_dbg** realocar um bloco de memória no heap de base, mas **aligned_offset_recalloc_dbg** acomoda vários recursos de depuração: buffers em ambos os lados da parte do usuário do bloco para testar vazamentos, um parâmetro de tipo de bloco para rastrear tipos específicos de alocação, e *filename*/*linenumber*  informações para determinar a origem de solicitações de alocação.
+
+**aligned_offset_realloc_dbg** realoca o bloco de memória especificado com um pouco mais espaço do que o solicitado *newSize*. *newSize* pode ser maior ou menor que o tamanho do bloco de memória alocada originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. Se o bloco de memória for movido, o conteúdo do bloco original será substituído.
+
+Esta função define **errno** para **ENOMEM** se a alocação de memória falhou ou se o tamanho solicitado (*número* * *tamanho* ) era maior que **heap_maxreq**. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_offset_recalloc_dbg** valida seus parâmetros. Se *alinhamento* não é uma potência de 2 ou se *deslocamento* é maior que ou igual ao tamanho solicitado e diferente de zero, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
+
+Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_aligned_offset_recalloc_dbg**|\<malloc.h>|
+
+## <a name="see-also"></a>Consulte também
+
+[Alinhamento de dados](../../c-runtime-library/data-alignment.md)<br/>

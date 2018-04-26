@@ -1,12 +1,12 @@
 ---
 title: _cabs | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _cabs
@@ -37,73 +37,78 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff48005643d5880e557dbbdcfc9f6f1c30fe68eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 345130fe72b7dd1ee416209c5702d877a036561c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cabs"></a>_cabs
-Calcula o valor absoluto de um número complexo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-double _cabs(   
-   struct _complex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `z`  
- Número complexo.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_cabs` retornará o valor absoluto do seu argumento se for bem-sucedido. No estouro, `_cabs` retorna `HUGE_VAL` e define `errno` como `ERANGE`. Você pode alterar o tratamento de erro com [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Comentários  
- A função `_cabs` calcula o valor absoluto de um número complexo, que deve ser uma estrutura do tipo [_complex](../../c-runtime-library/standard-types.md). A estrutura `z` é composta por um componente real `x` e um componente imaginário `y`. Uma chamada para `_cabs` produz um valor equivalente a que a expressão `sqrt( z.x * z.x + z.y * z.y )`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_cabs`|\<math.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_cabs.c  
-/* Using _cabs, this program calculates  
- * the absolute value of a complex number.  
- */  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   struct _complex number = { 3.0, 4.0 };  
-   double d;  
-  
-   d = _cabs( number );  
-   printf( "The absolute value of %f + %fi is %f\n",  
-           number.x, number.y, d );  
-}  
-```  
-  
-```Output  
-The absolute value of 3.000000 + 4.000000i is 5.000000  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+
+Calcula o valor absoluto de um número complexo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+double _cabs(
+   struct _complex z
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*z*<br/>
+Número complexo.
+
+## <a name="return-value"></a>Valor de retorno
+
+**CABs** retorna o valor absoluto do argumento se for bem-sucedido. No estouro, **CABs** retorna **HUGE_VAL** e define **errno** para **ERANGE**. Você pode alterar o tratamento de erro com [_matherr](matherr.md).
+
+## <a name="remarks"></a>Comentários
+
+O **CABs** função calcula o valor absoluto de um número complexo, que deve ser uma estrutura de tipo [Complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composto de um componente real *x* e um componente imaginário *y*. Uma chamada para **CABs** produz um valor equivalente a que a expressão `sqrt( z.x * z.x + z.y * z.y )`.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_cabs**|\<math.h>|
+
+Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_cabs.c
+// Using _cabs, this program calculates
+// the absolute value of a complex number.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   struct _complex number = { 3.0, 4.0 };
+   double d;
+
+   d = _cabs( number );
+   printf( "The absolute value of %f + %fi is %f\n",
+           number.x, number.y, d );
+}
+```
+
+```Output
+The absolute value of 3.000000 + 4.000000i is 5.000000
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   

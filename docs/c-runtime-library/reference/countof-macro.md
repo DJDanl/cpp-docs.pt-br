@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>Macro _countof
 
@@ -58,15 +58,15 @@ O número de elementos na matriz, expressada como um **size_t**.
 
 ## <a name="remarks"></a>Comentários
 
-`_countof` é implementado como uma macro de pré-processador do tipo função. A versão de C++ tem máquinas de modelo extra para detectar no tempo de compilação se um ponteiro é passado em vez de uma matriz declarada estaticamente.
+**countof** é implementado como uma macro de pré-processador do tipo função. A versão de C++ tem máquinas de modelo extra para detectar no tempo de compilação se um ponteiro é passado em vez de uma matriz declarada estaticamente.
 
-Certifique-se de que *matriz* é realmente uma matriz, e não um ponteiro. Em C, `_countof` produz resultados incorretos se *matriz* é um ponteiro. No C++, `_countof` não compila se *matriz* é um ponteiro.  Uma matriz passado como um parâmetro para uma função *decai para um ponteiro*, que significa que, dentro da função, você não pode usar `_countof` para determinar a extensão da matriz.
+Certifique-se de que *matriz* é realmente uma matriz, e não um ponteiro. Em C, **countof** produz resultados incorretos se *matriz* é um ponteiro. No C++, **countof** não compila se *matriz* é um ponteiro.  Uma matriz passado como um parâmetro para uma função *decai para um ponteiro*, que significa que, dentro da função, você não pode usar **countof** para determinar a extensão da matriz.
 
 ## <a name="requirements"></a>Requisitos
 
 |Macro|Cabeçalho necessário|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>Exemplo
 

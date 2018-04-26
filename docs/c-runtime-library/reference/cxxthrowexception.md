@@ -1,12 +1,12 @@
 ---
 title: _CxxThrowException | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CxxThrowException
@@ -31,42 +31,45 @@ helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb59e3e81a9e92d3a692e91c9c25a92fd09603cd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 70746446ec2b943913604d5940d468373c018aa4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
-Cria o registro de exceção e chama o ambiente de tempo de execução para iniciar o processamento da exceção.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-extern "C" void __stdcall _CxxThrowException(  
-   void* pExceptionObject  
-   _ThrowInfo* pThrowInfo  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [in] `pExceptionObject`  
- O objeto que gerou a exceção.  
-  
- [in] `pThrowInfo`  
- As informações necessárias para processar a exceção.  
-  
-## <a name="remarks"></a>Comentários  
- Esse método é incluído em um arquivo somente de compilador que o compilador usa para processar exceções. Não chame o método diretamente do código.  
-  
-## <a name="requirements"></a>Requisitos  
- **Fonte:** Throw.cpp  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Cria o registro de exceção e chama o ambiente de tempo de execução para iniciar o processamento da exceção.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+extern "C" void __stdcall _CxxThrowException(
+   void* pExceptionObject
+   _ThrowInfo* pThrowInfo
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pExceptionObject* o objeto que gerou a exceção.
+
+*pThrowInfo* as informações necessárias para processar a exceção.
+
+## <a name="remarks"></a>Comentários
+
+Esse método é incluído em um arquivo somente de compilador que o compilador usa para processar exceções. Não chame o método diretamente do código.
+
+## <a name="requirements"></a>Requisitos
+
+**Fonte:** Throw.cpp
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>

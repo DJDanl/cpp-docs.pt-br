@@ -1,12 +1,12 @@
 ---
 title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswcsym_l
@@ -71,17 +71,17 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c650efa09bb093da65be874c890c77282d3fa3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 225a5ab6dd00619b825be5b7e5220de70aafc3ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -124,32 +124,32 @@ int _iswcsymf_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*  
+*c*<br/>
 Inteiro a ser testado. *c* deve estar no intervalo de 0 a 255 para a versão de caractere estreito da função.
 
-*locale*  
+*locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Ambos `__iscsym` e `__iswcsym` retornar um valor diferente de zero se *c* é uma letra, um sublinhado ou um dígito. Ambos `__iscsymf` e `__iswcsymf` retornar um valor diferente de zero se *c* é uma letra ou um sublinhado. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste. As versões dessas funções com o `_l` sufixo são idênticas, exceto que eles usam o *localidade* passado em vez da localidade atual para o seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Ambos **iscsym** e **iswcsym** retornar um valor diferente de zero se *c* é uma letra, um sublinhado ou um dígito. Ambos **iscsymf** e **iswcsymf** retornar um valor diferente de zero se *c* é uma letra ou um sublinhado. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste. As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o *localidade* passado em vez da localidade atual para o seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Comentários
 
 Essas rotinas são definidas como macros, a menos que a macro do pré-processador _CTYPE_DISABLE_MACROS seja definida. Quando você usa as versões de macro dessas rotinas, os argumentos podem ser avaliados mais de uma vez. Tenha cuidado ao usar expressões que têm efeitos colaterais na lista de argumentos.
 
-Para compatibilidade com versões anteriores, `iscsym` e `iscsymf` são definidos como macros somente quando [&#95; &#95; STDC #95; &#95; ](../../preprocessor/predefined-macros.md) não está definido ou está definido como 0; caso contrário, eles são indefinidos.
+Para compatibilidade com versões anteriores, **iscsym** e **iscsymf** são definidos como macros somente quando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) não está definido ou está definido como 0; Caso contrário, eles são indefinidos.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, `_iswcsymf_l`|C: \<ctype.h><br /><br /> C++: \<cctype> ou \<ctype.h>|
+|**iscsym**, **iscsymf**, **iscsym**, **iswcsym**, **iscsymf**, **iswcsymf**, **iscsym_l**, **iswcsym_l**, **iscsymf_l**, **iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> ou \<ctype.h>|
 
-As rotinas `iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l` e `_iswcsymf_l` são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+O **iscsym**, **iscsymf**, **iscsym**, **iswcsym**, **iscsymf**, **_ iswcsymf**, **iscsym_l**, **iswcsym_l**, **iscsymf_l**, e **iswcsymf_l** são rotinas Específico da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Classificação de caracteres](../../c-runtime-library/character-classification.md)   
-[Localidade](../../c-runtime-library/locale.md)   
-[Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)
+[Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

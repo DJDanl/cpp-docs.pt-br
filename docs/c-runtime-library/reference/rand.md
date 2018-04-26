@@ -1,12 +1,12 @@
 ---
 title: rand | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand
@@ -39,15 +39,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fecd9079de1ae846d83847eb299890d62c29d17
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b5d60cdedf69d03871be4c408241660ea726b5c5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rand"></a>rand
 
-Gera um número pseudoaleatórios usando um algoritmo bem conhecido e totalmente reproduzíveis. Uma versão mais programaticamente segura dessa função está disponível. consulte [rand_s](../../c-runtime-library/reference/rand-s.md). Os números gerados pelo `rand` não são seguras criptograficamente. Para ver mais proteger geração de números aleatórios criptograficamente, use `rand_s` ou as funções declaradas na biblioteca padrão C++ em [ \<aleatória >](../../standard-library/random.md).
+Gera um número pseudoaleatórios usando um algoritmo bem conhecido e totalmente reproduzíveis. Uma versão mais programaticamente segura dessa função está disponível. consulte [rand_s](rand-s.md). Os números gerados por **rand** não são seguras criptograficamente. Para ver mais proteger geração de números aleatórios criptograficamente, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca padrão C++ em [ \<aleatória >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -57,21 +57,21 @@ int rand( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-`rand` retorna um número pseudoaleatório, como descrito acima. Nenhum erro é retornado.
+**RAND** retorna um número pseudorrandômico, conforme descrito acima. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-A função `rand` retorna um inteiro pseudoaleatório no intervalo de 0 a `RAND_MAX` (32767). Use a função [srand](../../c-runtime-library/reference/srand.md) para propagar a semente do gerador de números pseudoaleatórios antes de chamar `rand`.
+O **rand** função retorna um inteiro pseudoaleatórios no intervalo de 0 a **RAND_MAX** (32767). Use o [srand](srand.md) função para propagar o gerador de número pseudorrandômico antes de chamar **rand**.
 
-O `rand` função gera uma sequência conhecida e não é apropriada para uso como uma função criptográfica. Para ver mais proteger geração de números aleatórios criptograficamente, use `rand_s` ou as funções declaradas na biblioteca padrão C++ em [ \<aleatória >](../../standard-library/random.md). Para obter informações sobre o que há de errado com o `rand()` e como o `<random>` lida com esses imprevistos, veja [este vídeo](http://go.microsoft.com/fwlink/?LinkId=397615).
+O **rand** função gera uma sequência conhecida e não é apropriada para uso como uma função criptográfica. Para ver mais proteger geração de números aleatórios criptograficamente, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca padrão C++ em [ \<aleatória >](../../standard-library/random.md). Para obter informações sobre o que há de errado com **rand** e como \<aleatória > aborda essas limitações, consulte [este vídeo](http://go.microsoft.com/fwlink/?LinkId=397615).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|`rand`|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
-Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -125,7 +125,7 @@ int main( void )
 11651
 27464
 18093
- 3284
+3284
 11785
 14686
 11447
@@ -145,6 +145,6 @@ int main( void )
 
 ## <a name="see-also"></a>Consulte também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
-[rand_s](../../c-runtime-library/reference/rand-s.md)  
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[srand](srand.md)<br/>
+[rand_s](rand-s.md)<br/>

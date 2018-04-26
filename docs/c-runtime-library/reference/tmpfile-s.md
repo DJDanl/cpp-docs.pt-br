@@ -1,12 +1,12 @@
 ---
 title: tmpfile_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tmpfile_s
@@ -32,102 +32,107 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9ac079ce833f65a4a2add57bbc0be93c97902e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 57c230dedd3415a272e168b586a16ccb03f5d29a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tmpfiles"></a>tmpfile_s
-Cria um arquivo temporário. Trata-se de uma versão de [tmpfile](../../c-runtime-library/reference/tmpfile.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-errno_t tmpfile_s(  
-   FILE** pFilePtr  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [out] `pFilePtr`  
- O endereço de um ponteiro para armazenar o endereço do ponteiro gerado em um fluxo.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retornará 0 se for bem-sucedido; um código de erro em caso de falha.  
-  
-### <a name="error-conditions"></a>Condições de Erro  
-  
-|`pFilePtr`|**Valor retornado**|**Conteúdo de**  `pFilePtr`|  
-|----------------|----------------------|---------------------------------|  
-|`NULL`|`EINVAL`|não alterado|  
-  
- Se ocorrer o erro de validação de parâmetro acima, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e o valor retornado será `EINVAL`.  
-  
-## <a name="remarks"></a>Comentários  
- A função `tmpfile_s` cria um arquivo temporário e coloca um ponteiro nesse fluxo no argumento `pFilePtr`. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md) ou [tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
-  
- Se não for possível abrir o arquivo, `tmpfile_s` gravará `NULL` no parâmetro `pFilePtr`. O arquivo temporário é excluído automaticamente quando o arquivo é fechado, quando o programa é encerrado normalmente ou quando `_rmtmp` é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no modo `w+b` (leitura/gravação binária).  
-  
- Poderá ocorrer uma falha se você tentar mais de `TMP_MAX_S` chamadas (consulte STDIO.H) com `tmpfile_s.`  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`tmpfile_s`|\<stdio.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
-  
+
+Cria um arquivo temporário. Trata-se de uma versão de [tmpfile](tmpfile.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+errno_t tmpfile_s(
+   FILE** pFilePtr
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pFilePtr*<br/>
+O endereço de um ponteiro para armazenar o endereço do ponteiro gerado em um fluxo.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
+
+### <a name="error-conditions"></a>Condições de Erro
+
+|*pFilePtr*|**Valor retornado**|**Conteúdo de***pFilePtr* |
+|----------------|----------------------|---------------------------------|
+|**NULL**|**EINVAL**|não alterado|
+
+Se ocorrer o erro de validação de parâmetro acima, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e o valor de retorno é **EINVAL**.
+
+## <a name="remarks"></a>Comentários
+
+O **tmpfile_s** função cria um arquivo temporário e coloca um ponteiro de fluxo no *pFilePtr* argumento. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](fopen-wfopen.md).
+
+Se o arquivo não pode ser aberto, **tmpfile_s** grava **nulo** para o *pFilePtr* parâmetro. O arquivo temporário é excluído automaticamente quando o arquivo é fechado, o programa será encerrado normalmente ou quando **rmtmp** é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no **w + b** modo (binário de leitura/gravação).
+
+Falha pode ocorrer se você tentar mais de **TMP_MAX_S** (consulte STDIO. H) chamadas com **tmpfile_s**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**tmpfile_s**|\<stdio.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
 > [!NOTE]
->  Esse exemplo exige privilégios administrativos para ser executado no Windows Vista.  
-  
-```  
-// crt_tmpfile_s.c  
-// This program uses tmpfile_s to create a  
-// temporary file, then deletes this file with _rmtmp.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char tempstring[] = "String to be written";  
-   int  i;  
-   errno_t err;  
-  
-   // Create temporary files.  
-   for( i = 1; i <= 3; i++ )  
-   {  
-      err = tmpfile_s(&stream);  
-      if( err )  
-         perror( "Could not open new temporary file\n" );  
-      else  
-         printf( "Temporary file %d was created\n", i );  
-   }  
-  
-   // Remove temporary files.  
-   printf( "%d temporary files deleted\n", _rmtmp() );  
-}  
-```  
-  
-```Output  
-Temporary file 1 was created  
-Temporary file 2 was created  
-Temporary file 3 was created  
-3 temporary files deleted  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [_rmtmp](../../c-runtime-library/reference/rmtmp.md)   
- [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+> Este exemplo pode exigir privilégios administrativos para executar no Windows.
+
+```C
+// crt_tmpfile_s.c
+// This program uses tmpfile_s to create a
+// temporary file, then deletes this file with _rmtmp.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char tempstring[] = "String to be written";
+   int  i;
+   errno_t err;
+
+   // Create temporary files.
+   for( i = 1; i <= 3; i++ )
+   {
+      err = tmpfile_s(&stream);
+      if( err )
+         perror( "Could not open new temporary file\n" );
+      else
+         printf( "Temporary file %d was created\n", i );
+   }
+
+   // Remove temporary files.
+   printf( "%d temporary files deleted\n", _rmtmp() );
+}
+```
+
+```Output
+Temporary file 1 was created
+Temporary file 2 was created
+Temporary file 3 was created
+3 temporary files deleted
+```
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
+[_rmtmp](rmtmp.md)<br/>
+[_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

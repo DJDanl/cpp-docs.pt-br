@@ -1,12 +1,12 @@
 ---
 title: atexit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - atexit
@@ -30,96 +30,102 @@ helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf87637fee2040bb5d1db05dd76e7e73728e375c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3a5dbe5e8bf71c268783893665e8e95bb587891a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atexit"></a>atexit
-Processa a função especificada na saída.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int atexit(  
-   void (__cdecl *func )( void )  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `func`  
- Função a ser chamada.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `atexit` retorna 0 se for bem-sucedido ou um valor diferente de zero se ocorrer um erro.  
-  
-## <a name="remarks"></a>Comentários  
- A função `atexit` é passada para o endereço de uma função (`func`) a ser chamada quando o programa terminar normalmente. Chamadas sucessivas para `atexit` criam um registro das funções que são executadas na ordem UEPS (último a entrar, primeiro a sair). As funções passadas para `atexit` não podem ter parâmetros. `atexit` e `_onexit` usam o heap para conter o registro das funções. Assim, o número de funções que podem ser registradas é limitado apenas pela memória de heap.  
-  
- O código na função `atexit` não deve conter nenhuma dependência de nenhuma DLL que possa já ter sido descarregada quando a função `atexit` é chamada.  
-  
- Para gerar um aplicativo em conformidade com ANSI, use a função `atexit` do padrão ANSI (em vez da função `_onexit` semelhante).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`atexit`|\<stdlib.h>|  
-  
-## <a name="example"></a>Exemplo  
- Esse programa envia quatro funções para a pilha de funções a serem executadas quando `atexit` é chamado. Quando o programa é encerrado, esses programas são executados no esquema último a entrar, primeiro a sair.  
-  
-```  
-// crt_atexit.c  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-void fn1( void ), fn2( void ), fn3( void ), fn4( void );  
-  
-int main( void )  
-{  
-   atexit( fn1 );  
-   atexit( fn2 );  
-   atexit( fn3 );  
-   atexit( fn4 );  
-   printf( "This is executed first.\n" );  
-}  
-  
-void fn1()  
-{  
-   printf( "next.\n" );  
-}  
-  
-void fn2()  
-{  
-   printf( "executed " );  
-}  
-  
-void fn3()  
-{  
-   printf( "is " );  
-}  
-  
-void fn4()  
-{  
-   printf( "This " );  
-}  
-```  
-  
-```Output  
-This is executed first.  
-This is executed next.  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)
+
+Processa a função especificada na saída.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int atexit(
+   void (__cdecl *func )( void )
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*func*<br/>
+Função a ser chamada.
+
+## <a name="return-value"></a>Valor de retorno
+
+**atexit** retorna 0 se for bem-sucedido, ou um valor diferente de zero, se ocorrer um erro.
+
+## <a name="remarks"></a>Comentários
+
+O **atexit** função é passada para o endereço de uma função *func* a ser chamado quando o programa será encerrado normalmente. As chamadas sucessivas para **atexit** criar um registro de funções que são executados em último a entrar, primeiro a sair (UEPS) ordem. As funções são passados para **atexit** não pode receber parâmetros. **atexit** e **OnExit** usam o heap para armazenar o registro de funções. Assim, o número de funções que podem ser registradas é limitado apenas pela memória de heap.
+
+O código de **atexit** função não deve conter qualquer dependência em qualquer DLL que pode ter sido descarregado quando a **atexit** função é chamada.
+
+Para gerar um aplicativo compatível com ANSI, use o padrão ANSI **atexit** função (em vez de semelhante **OnExit** função).
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**atexit**|\<stdlib.h>|
+
+## <a name="example"></a>Exemplo
+
+Este programa envios quatro funções na pilha de funções para ser executado quando **atexit** é chamado. Quando o programa é encerrado, esses programas são executados no esquema último a entrar, primeiro a sair.
+
+```C
+// crt_atexit.c
+#include <stdlib.h>
+#include <stdio.h>
+
+void fn1( void ), fn2( void ), fn3( void ), fn4( void );
+
+int main( void )
+{
+   atexit( fn1 );
+   atexit( fn2 );
+   atexit( fn3 );
+   atexit( fn4 );
+   printf( "This is executed first.\n" );
+}
+
+void fn1()
+{
+   printf( "next.\n" );
+}
+
+void fn2()
+{
+   printf( "executed " );
+}
+
+void fn3()
+{
+   printf( "is " );
+}
+
+void fn4()
+{
+   printf( "This " );
+}
+```
+
+```Output
+This is executed first.
+This is executed next.
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>

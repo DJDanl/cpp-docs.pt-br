@@ -1,12 +1,12 @@
 ---
 title: _putenv_s, _wputenv_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wputenv_s
@@ -39,89 +39,95 @@ helpviewer_keywords:
 - environment variables, creating
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 035afd354bd41ce3c9dc0c6bed44a25b03a09e6f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0b1baab00d535581f753e512797308cecbc10373
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
-Cria, modifica ou remove as variáveis de ambiente. Essas são versões de [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md), mas têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+
+Cria, modifica ou remove as variáveis de ambiente. Essas são versões de [_putenv, _wputenv](putenv-wputenv.md), mas têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-errno_t _putenv_s(  
-   const char *name,  
-   const char *value   
-);  
-errno_t _wputenv_s(  
-   const wchar_t *name,  
-   const wchar_t *value  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `name`  
- O nome da variável de ambiente.  
-  
- `value`  
- O valor a ser definido para a variável de ambiente.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna 0 se for bem-sucedido ou um código de erro.  
-  
-### <a name="error-conditions"></a>Condições de Erro  
-  
-|`name`|`value`|Valor retornado|  
-|------------|-------------|------------------|  
-|`NULL`|qualquer|`EINVAL`|  
-|qualquer|`NULL`|`EINVAL`|  
-  
- Se uma das condições de erro ocorrer, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `EINVAL` e definirão `errno` para `EINVAL`.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_putenv_s` adiciona novas variáveis de ambiente ou modifica os valores de variáveis de ambiente existentes. Variáveis de ambiente definem o ambiente no qual um processo é executado (por exemplo, o caminho de pesquisa padrão para bibliotecas a ser vinculado a um programa). A função `_wputenv_s` é uma versão de caractere largo da função `_putenv_s`; o argumento `envstring` para `_wputenv_s` é uma cadeia de caracteres larga.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tputenv_s`|`_putenv_s`|`_putenv_s`|`_wputenv_s`|  
-  
- `name` é o nome da variável de ambiente a ser adicionada ou modificada e `value` é o valor da variável. Se `name` já fizer parte do ambiente, seu valor será substituído por `value`; caso contrário, a nova variável `name` e seu `value` são adicionadas ao ambiente. Você pode remover uma variável do ambiente especificando uma cadeia de caracteres vazia (isto é, "") para `value`.  
-  
- `_putenv_s` e `_wputenv_s` afetam apenas o ambiente local para o processo atual; você não pode usá-las para modificar o ambiente no nível de comando. Essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no “segmento” de ambiente que o sistema operacional cria para um processo. Quando o processo atual termina, o ambiente será revertido para o nível do processo de chamada, que, na maioria dos casos, é o nível do sistema operacional. No entanto, o ambiente modificado pode ser passado para novos processos criados por `_spawn`, `_exec` ou `system` e esses novos processos obtém os novos itens que são adicionados por `_putenv_s` e `_wputenv_s`.  
-  
- Não altere uma entrada de ambiente diretamente. Em vez disso, use `_putenv_s` ou `_wputenv_s` para alterá-la. Em especial, liberar elementos da matriz global `_environ[]` diretamente pode fazer com que a memória inválida seja resolvida.  
-  
- `getenv` e `_putenv_s` usam a variável global `_environ` para acessar a tabela de ambiente; `_wgetenv` e `_wputenv_s` usam `_wenviron`. `_putenv_s` e `_wputenv_s` podem alterar o valor de `_environ` e `_wenviron`, invalidando, portanto, o argumento `envp` para `main` e o argumento `_wenvp` para `wmain`. Portanto, é mais seguro usar `_environ` ou `_wenviron` para acessar as informações de ambiente. Para obter mais informações sobre a relação de `_putenv_s` e `_wputenv_s` com as variáveis globais, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
-  
+> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+errno_t _putenv_s(
+   const char *varname,
+   const char *value_string
+);
+errno_t _wputenv_s(
+   const wchar_t *varname,
+   const wchar_t *value_string
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*varname*<br/>
+O nome da variável de ambiente.
+
+*sequência_dovalor*<br/>
+O valor a ser definido para a variável de ambiente.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna 0 se for bem-sucedido ou um código de erro.
+
+### <a name="error-conditions"></a>Condições de Erro
+
+|*varname*|*sequência_dovalor*|Valor retornado|
+|------------|-------------|------------------|
+|**NULL**|qualquer|**EINVAL**|
+|qualquer|**NULL**|**EINVAL**|
+
+Se uma das condições de erro ocorrer, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EINVAL** e defina **errno** para **EINVAL**.
+
+## <a name="remarks"></a>Comentários
+
+O **putenv_s** função adiciona novas variáveis de ambiente ou modifica os valores das variáveis de ambiente existente. Variáveis de ambiente definem o ambiente no qual um processo é executado (por exemplo, o caminho de pesquisa padrão para bibliotecas a ser vinculado a um programa). **wputenv_s** é uma versão de caractere largo de **putenv_s**; o *cadeiacaracenv* argumento **wputenv_s** é uma cadeia de caracteres largos.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
+
+*varname* é o nome da variável de ambiente a ser adicionado ou modificado e *sequência_dovalor* é o valor da variável. Se *varname* já faz parte do ambiente, seu valor é substituído por *sequência_dovalor*; caso contrário, o novo *varname* variável e seu *sequência_dovalor*  são adicionadas ao ambiente. Você pode remover uma variável de ambiente especificando uma cadeia de caracteres vazia (isto é, "") para *sequência_dovalor*.
+
+**putenv_s** e **wputenv_s** afetam apenas o ambiente local para o processo atual; você não pode usá-los para modificar o ambiente de nível de comando. Essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no “segmento” de ambiente que o sistema operacional cria para um processo. Quando o processo atual termina, o ambiente será revertido para o nível do processo de chamada, que, na maioria dos casos, é o nível do sistema operacional. No entanto, o ambiente modificado pode ser passado para novos processos que são criados por **spawn**, **EXEC**, ou **sistema**, e esses novos processos de obtém os itens novos são adicionado por **putenv_s** e **wputenv_s**.
+
+Não altere uma entrada de ambiente diretamente. em vez disso, use **putenv_s** ou **wputenv_s** alterá-lo. Em particular, liberando diretamente elementos do **[ Environ]** matriz global pode causar a memória inválido ser resolvido.
+
+**GETENV** e **putenv_s** usar a variável global **Environ** para acessar a tabela do ambiente. **wgetenv** e **wputenv_s** usar **wenviron**. **putenv_s** e **wputenv_s** pode alterar o valor de **Environ** e **wenviron**e assim invalidar o *envp*argumento **principal** e **_wenvp** argumento **wmain**. Portanto, é mais seguro usar **Environ** ou **wenviron** para acessar as informações de ambiente. Para obter mais informações sobre a relação de **putenv_s** e **wputenv_s** variáveis globais, consulte [Environ, wenviron](../../c-runtime-library/environ-wenviron.md).
+
 > [!NOTE]
->  As famílias de funções `_putenv_s` e `_getenv_s` não são thread-safe. `_getenv_s` poderia retornar um ponteiro de cadeia de caracteres enquanto `_putenv_s` está modificando a cadeia de caracteres e, portanto, causar falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_putenv_s`|\<stdlib.h>|  
-|`_wputenv_s`|\<stdlib.h> ou \<wchar.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
- Para ver uma amostra que mostra como usar `_putenv_s`, consulte [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)
+> O **putenv_s** e **_getenv_s** famílias de funções não são thread-safe. **_getenv_s** poderia retornar um ponteiro de cadeia de caracteres ao **putenv_s** está modificando a cadeia de caracteres e, assim, causar falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_putenv_s**|\<stdlib.h>|
+|**_wputenv_s**|\<stdlib.h> ou \<wchar.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Para obter um exemplo que mostra como usar **putenv_s**, consulte [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[getenv, _wgetenv](getenv-wgetenv.md)<br/>
+[_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>

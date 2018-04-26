@@ -1,12 +1,12 @@
 ---
 title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcsset
@@ -68,129 +68,134 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec05f650789581065357aa4ce90cfde121d99e7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ae2ac6953264461e48984110fb7b402477044dc3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
-Define os caracteres de uma cadeia de caracteres para um determinado caractere. Versões mais seguras dessas funções estão disponíveis; consulte [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](../../c-runtime-library/reference/strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).  
-  
+
+Define os caracteres de uma cadeia de caracteres para um determinado caractere. Versões mais seguras dessas funções estão disponíveis; consulte [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).
+
 > [!IMPORTANT]
->  `_mbsset` e `_mbsset_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-char *_strset(  
-   char *str,  
-   int c   
-);  
-char *_strset_l(  
-   char *str,  
-   int c,  
-   locale_t locale  
-);  
-wchar_t *_wcsset(  
-   wchar_t *str,  
-   wchar_t c   
-);  
-wchar_t *_wcsset_l(  
-   wchar_t *str,  
-   wchar_t c,  
-   locale_t locale  
-);  
-unsigned char *_mbsset(  
-   unsigned char *str,  
-   unsigned int c   
-);  
-unsigned char *_mbsset_l(  
-   unsigned char *str,  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `str`  
- Cadeia de caracteres terminada em nulo a ser definida.  
-  
- `c`  
- Configuração de caractere.  
-  
- `locale`  
- Localidade a usar.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro para a cadeia de caracteres alterada.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_strset` define todos os caracteres (exceto o caractere nulo de terminação) de `str` para `c`, convertido para `char`. `_wcsset` e `_mbsset_l` são versões de caractere largo e caracteres multibyte de `_strset` e os tipos de dados dos argumentos e valores de retorno variam de acordo. Caso contrário, essas funções se comportam de forma idêntica.  
-  
- `_mbsset` valida seus parâmetros. Se `str` for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_mbsset` retornará `NULL` e definirá `errno` como `EINVAL`. `_strset` e `_wcsset` não validam seus parâmetros.  
-  
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade. Consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o sufixo `_l` usam a localidade atual e as com um sufixo `_l` usam o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
+> **mbsset** e **mbsset_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+char *_strset(
+   char *str,
+   int c
+);
+char *_strset_l(
+   char *str,
+   int c,
+   locale_t locale
+);
+wchar_t *_wcsset(
+   wchar_t *str,
+   wchar_t c
+);
+wchar_t *_wcsset_l(
+   wchar_t *str,
+   wchar_t c,
+   locale_t locale
+);
+unsigned char *_mbsset(
+   unsigned char *str,
+   unsigned int c
+);
+unsigned char *_mbsset_l(
+   unsigned char *str,
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*str*<br/>
+Cadeia de caracteres terminada em nulo a ser definida.
+
+*c*<br/>
+Configuração de caractere.
+
+*locale*<br/>
+Localidade a usar.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna um ponteiro para a cadeia de caracteres alterada.
+
+## <a name="remarks"></a>Comentários
+
+O **strset** função define todos os caracteres (exceto o caractere null de terminação) de *str* para *c*, convertido em **char**. **wcsset** e **mbsset_l** são versões de caracteres largos e caracteres multibyte **strset**, e os tipos de dados dos argumentos e valores de retorno variam de acordo. Caso contrário, essas funções se comportam de forma idêntica.
+
+**mbsset** valida seus parâmetros. Se *str* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **mbsset** retorna **nulo** e define **errno** para **EINVAL**. **strset** e **wcsset** não validar seus parâmetros.
+
+O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que os que não têm o **_l** sufixo usam a localidade atual e aqueles que têm o **_l** sufixo em vez disso, use o parâmetro de localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
 > [!IMPORTANT]
->  Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsset`|`_strset`|`_mbsset`|`_wcsset`|  
-|`_tcsset_l`|`_strset_l`|`_mbsset_l`|`_wcsset_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_strset`|\<string.h>|  
-|`_strset_l`|\<tchar.h>|  
-|`_wcsset`|\<string.h> ou \<wchar.h>|  
-|`_wcsset_l`|\<tchar.h>|  
-|`_mbsset`, `_mbsset_l`|\<mbstring.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_strset.c  
-// compile with: /W3  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char string[] = "Fill the string with something.";  
-   printf( "Before: %s\n", string );  
-   _strset( string, '*' ); // C4996  
-   // Note: _strset is deprecated; consider using _strset_s instead  
-   printf( "After:  %s\n", string );  
-}  
-```  
-  
-```Output  
-Before: Fill the string with something.  
-After:  *******************************  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
- [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
+> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tcsset**|**_strset**|**_mbsset**|**_wcsset**|
+|**tcsset_l**|**_strset_l**|**_mbsset_l**|**_wcsset_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_strset**|\<string.h>|
+|**_strset_l**|\<tchar.h>|
+|**_wcsset**|\<string.h> ou \<wchar.h>|
+|**_wcsset_l**|\<tchar.h>|
+|**mbsset**, **mbsset_l**|\<mbstring.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_strset.c
+// compile with: /W3
+
+#include <string.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char string[] = "Fill the string with something.";
+   printf( "Before: %s\n", string );
+   _strset( string, '*' ); // C4996
+   // Note: _strset is deprecated; consider using _strset_s instead
+   printf( "After:  %s\n", string );
+}
+```
+
+```Output
+Before: Fill the string with something.
+After:  *******************************
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>

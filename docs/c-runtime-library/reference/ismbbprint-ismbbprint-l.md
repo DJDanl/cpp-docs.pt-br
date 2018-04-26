@@ -1,12 +1,12 @@
 ---
 title: _ismbbprint, _ismbbprint_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbprint_l
@@ -37,58 +37,60 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2499e48ffd87171df50d46bd58327dc8c7cac47a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bdb07a6abaed7f45ce799ae33fcaf406f8cec40b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
-Determina se um caractere multibyte especificado é um caractere de impressão.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _ismbbprint(  
-   unsigned int c   
-);  
-int _ismbbprint_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `c`  
- Inteiro a ser testado.  
-  
- `locale`  
- Localidade a usar.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_ismbbprint` retornará um valor diferente de zero se a expressão:  
-  
-```  
-isprint || _ismbbkprint  
-```  
-  
- for diferente de zero para `c` ou 0 se não for. `_ismbbprint` usa a localidade atual para qualquer comportamento que dependa da localidade. `_ismbbprint_l` é idêntico, exceto pelo fato de usar a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_ismbbprint`|\<mbctype.h>|  
-|`_ismbbprint_l`|\<mbctype.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Classificação de byte](../../c-runtime-library/byte-classification.md)   
- [Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)
+
+Determina se um caractere multibyte especificado é um caractere de impressão.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _ismbbprint(
+   unsigned int c
+);
+int _ismbbprint_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*c*<br/>
+Inteiro a ser testado.
+
+*locale*<br/>
+Localidade a usar.
+
+## <a name="return-value"></a>Valor de retorno
+
+**ismbbprint** retorna um valor diferente de zero se a expressão:
+
+`isprint(c) || _ismbbkprint(c)`
+
+é diferente de zero para *c*, ou 0 se não for. **ismbbprint** usa a localidade atual para qualquer comportamento dependente de localidade. **ismbbprint_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_ismbbprint**|\<mbctype.h>|
+|**_ismbbprint_l**|\<mbctype.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
+[Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

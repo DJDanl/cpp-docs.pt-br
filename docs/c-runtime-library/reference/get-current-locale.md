@@ -1,12 +1,12 @@
 ---
 title: _get_current_locale | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_current_locale
@@ -35,44 +35,48 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7199cb6cf4f0451f4607c7b9cd8a670a4d5afe2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c6f20e69ca3ace4214915cd22f00fe2c9e8c9ffd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getcurrentlocale"></a>_get_current_locale
-Obtém um objeto de localidade que representa a localidade atual.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-_locale_t _get_current_locale(void);  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Um objeto de localidade que representa a localidade atual.  
-  
-## <a name="remarks"></a>Comentários  
- O `_get_current_locale` função obtém atualmente definida localidade do thread e retorna um objeto de localidade que representa essa localidade.  
-  
- O nome anterior dessa função, `__get_current_locale` (com dois sublinhados à esquerda), foi preterido.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_get_current_locale`|\<locale.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../../c-runtime-library/reference/free-locale.md)
+
+Obtém um objeto de localidade que representa a localidade atual.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+_locale_t _get_current_locale(void);
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Um objeto de localidade que representa a localidade atual.
+
+## <a name="remarks"></a>Comentários
+
+O **get_current_locale** função obtém atualmente definida localidade do thread e retorna um objeto de localidade que representa essa localidade.
+
+O nome anterior desta função **get_current_locale** (com dois sublinhados) foi preterido.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_get_current_locale**|\<locale.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
+[_free_locale](free-locale.md)<br/>

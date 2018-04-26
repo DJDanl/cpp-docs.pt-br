@@ -46,64 +46,62 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f745ed0daf608126b30b9f5c8a02bdebd35cf21f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b1a0e6f5090c9c885559852c855ff31de7041a63
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
-Recupera o arco tangente de um número complexo com cortes de ramificação fora do intervalo [-1; + 1] no eixo imaginário.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-_Dcomplex catan(   
-   _Dcomplex z   
-);  
-_Fcomplex catan(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex catan(   
-  _Lcomplex z   
-);  // C++ only  
-_Fcomplex catanf(   
-   _Fcomplex z   
-);  
-_Lcomplex catanl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `z`  
- Um número complexo que representa um ângulo, em radianos.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O arco tangente de `z`, em radianos. O resultado é não vinculado ao longo do eixo imaginário e no intervalo [-π/2; + π/2] ao longo do eixo real.  
-  
-## <a name="remarks"></a>Comentários  
- Como C++ permite sobrecargas, é possível chamar sobrecargas de `catan` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `catan` sempre usa e retorna um valor `_Dcomplex`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho C|Cabeçalho C++|  
-|-------------|--------------|------------------|  
-|`catan`,               `catanf`, `catanl`|\<complex.h>|\<ccomplex>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Recupera o arco tangente de um número complexo com cortes de ramificação fora do intervalo [-1; + 1] no eixo imaginário.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+_Dcomplex catan( _Dcomplex z );
+_Fcomplex catanf( _Fcomplex z );
+_Lcomplex catanl( _Lcomplex z );
+```
+
+```cpp
+_Fcomplex catan( _Fcomplex z );  // C++ only
+_Lcomplex catan( _Lcomplex z );  // C++ only
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*z*<br/>
+Um número complexo que representa um ângulo, em radianos.
+
+## <a name="return-value"></a>Valor de retorno
+
+O arco tangente de *z*, em radianos. O resultado é não vinculado ao longo do eixo imaginário e no intervalo [-π/2; + π/2] ao longo do eixo real.
+
+## <a name="remarks"></a>Comentários
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **catan** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **catan** sempre usa e retorna um **_Dcomplex** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho C|Cabeçalho C++|
+|-------------|--------------|------------------|
+|**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

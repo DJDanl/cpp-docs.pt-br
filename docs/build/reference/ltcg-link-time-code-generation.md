@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (geração de código do tempo de vinculação)
 
@@ -47,11 +47,11 @@ Essas opções são preteridas a partir do Visual Studio 2015:
 **INCREMENTAL** (opcional)<br/>
 Especifica que o vinculador só se aplica todo o programa otimização ou link-time geração de código (/ltcg) para o conjunto de arquivos afetados por uma edição, em vez de todo o projeto. Por padrão, esse sinalizador não é definido quando **/LTCG** for especificado, e o projeto inteiro é vinculado por meio da otimização de programa inteiro.
 
-**NOSTATUS** &#124; **STATUS** (optional)<br/>
+**NOSTATUS** &#124; **STATUS** (opcional)<br/>
 Especifica se o vinculador exibe um indicador de progresso que mostra a porcentagem do link for concluída. Por padrão, essas informações de status não são exibidas.
 
 **DESATIVAR** (opcional)<br/>
-Desabilita a geração de código para link-time. Esse comportamento é igual a quando /LTCG não for especificado na linha de comando.
+Desabilita a geração de código para link-time. Esse comportamento é o mesmo que quando **/LTCG** não for especificado na linha de comando.
 
 **PGINSTRUMENT** (opcional)<br/>
 Essa opção é substituída no Visual Studio 2015. Em vez disso, use **/LTCG** e [/GENPROFILE ou /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) para gerar uma compilação instrumentada para Otimização Guiada por perfil. Os dados que são coletados de execuções instrumentadas são usados para criar uma imagem otimizada. Para obter mais informações, consulte [Otimização Guiada por perfil](profile-guided-optimizations.md). A forma curta dessa opção é **/LTCG:PGI**.
@@ -80,7 +80,7 @@ Com as seguintes exceções, você não pode adicionar opções de vinculador à
 
 - [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)
 
-- [/OUT](../../build/reference/out-output-file-name.md)
+- [/ ENTRADA SAÍDA](../../build/reference/out-output-file-name.md)
 
 - [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)
 
@@ -156,7 +156,7 @@ Os módulos que são compilados usando [/GL](../../build/reference/gl-whole-prog
 
 Você também pode aplicar **/LTCG** para compilações específicas, escolhendo **criar** > **Otimização Guiada por perfil** na barra de menus ou escolhendo um perfil Opções de otimização guiadas no menu de atalho para o projeto.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 

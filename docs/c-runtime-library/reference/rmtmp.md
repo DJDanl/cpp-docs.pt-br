@@ -1,12 +1,12 @@
 ---
 title: _rmtmp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _rmtmp
@@ -36,50 +36,56 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 689c501743702ae208024fcf6126a02719a33bc8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 01585e2767806533ffaf99f2ca7795d26264958f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rmtmp"></a>_rmtmp
-Exclui arquivos temporários.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-int _rmtmp( void );  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_rmtmp` retorna o número de arquivos temporários fechados e excluídos.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_rmtmp` limpa todos os arquivos temporários no diretório atual. A função remove somente os arquivos criados pelo `tmpfile`; use-o apenas no mesmo diretório em que os arquivos temporários foram criados.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_rmtmp`|\<stdio.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="libraries"></a>Libraries  
- Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo a seguir para [tmpfile](../../c-runtime-library/reference/tmpfile.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [tmpfile](../../c-runtime-library/reference/tmpfile.md)   
- [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+
+Exclui arquivos temporários.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+
+int _rmtmp( void );
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+**rmtmp** retorna o número de arquivos temporários fechado e excluído.
+
+## <a name="remarks"></a>Comentários
+
+O **rmtmp** função limpa todos os arquivos temporários no diretório atual. A função remove somente os arquivos criados por **tmpfile**; usá-lo somente no mesmo diretório em que os arquivos temporários são criados.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_rmtmp**|\<stdio.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Libraries
+
+Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo a seguir para [tmpfile](tmpfile.md).
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
+[_flushall](flushall.md)<br/>
+[tmpfile](tmpfile.md)<br/>
+[_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

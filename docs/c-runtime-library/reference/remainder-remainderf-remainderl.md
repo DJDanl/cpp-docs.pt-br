@@ -1,12 +1,12 @@
 ---
 title: remainder, remainderf, remainderl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - remainderl
@@ -36,95 +36,87 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7a5d55fd079f03338a6860755a783ba4d82b76
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 52abbfef2e20bebd531ef2d6c7a414f8345d996b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
-Calcula o restante do quociente de dois valores de ponto flutuantes, arredondados para o valor integral mais próximo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-double remainder(   
-   double numer,  
-   double denom  
-);  
-float remainder(   
-   float numer,  
-   float denom  
-); /* C++ only */  
-long double remainder(   
-   long double numer,  
-   long double denom  
-); /* C++ only */  
-float remainderf(   
-   float numer,  
-   float denom  
-);  
-long double remainderl(   
-   long double numer,  
-   long double denom  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `numer`  
- O numerador.  
-  
- `denom`  
- O denominador.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O restante do ponto flutuante de `x` / `y`. Se o valor de `y` for 0,0, `remainder` retornará um NaN silencioso. Para obter informações sobre representação de um NaN silencioso pela família `printf`, consulte [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
-## <a name="remarks"></a>Comentários  
- A função `remainder` calcula o restante do ponto flutuante `r` de `x` / `y` que `x` = `n` * `y` + `r`, em que `n` é o inteiro mais próximo em valor a `x` / `y` e `n` é o mesmo sempre que &#124; `n` - `x` / `y` &#124; = 1/2. Quando `r` = 0, `r` tem o mesmo sinal que `x`.  
-  
- Como C++ permite sobrecargas, é possível chamar sobrecargas de `remainder` e que utilizam e retornam valores de `float` ou `long double`. Em um programa C, `remainder` sempre usa dois duplos e retorna um duplo.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Função|Cabeçalho necessário|  
-|--------------|---------------------|  
-|`remainder`, `remainderf`, `remainderl`|\<math.h>|  
-  
- Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```C  
-// crt_remainder.c  
-// This program displays a floating-point remainder.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double w = -10.0, x = 3.0, z;  
-  
-   z = remainder(w, x);  
-   printf("The remainder of %.2f / %.2f is %f\n", w, x, z);  
-}  
-```  
-  
-```Output  
-The remainder of -10.00 / 3.00 is -1.000000  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
- [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   
- [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
- [remquo, remquof, remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)
+
+Calcula o restante do quociente de dois valores de ponto flutuantes, arredondados para o valor integral mais próximo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+double remainder( double x, double y );
+float remainderf( float x, float y );
+long double remainderl( long double x, long double y );
+```
+
+```cpp
+float remainder( float x, float y ); /* C++ only */
+long double remainder( long double x, long double y ); /* C++ only */
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*x*<br/>
+O numerador.
+
+*y*<br/>
+O denominador.
+
+## <a name="return-value"></a>Valor de retorno
+
+O restante de ponto flutuante de *x* / *y*. Se o valor de *y* é 0.0, **restante** retorna um NaN silenciosa. Para obter informações sobre a representação de um NaN silenciosa, o **printf** família, consulte [printf, printf_l, and wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+
+## <a name="remarks"></a>Comentários
+
+O **restante** funções calculam o restante de ponto flutuante *r* de *x* / *y* , de modo que *x*   =  *n* * *y* + *r*, onde *n*é o número inteiro mais próximo valor para *x* / *y* e *n*é o mesmo sempre que &#124; *n*  -  *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal *x*.
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **restante** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **restante** sempre leva dois **duplo** argumentos e retorna um **duplo**.
+
+## <a name="requirements"></a>Requisitos
+
+|Função|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
+|--------------|---------------------|-|
+|**restante**, **remainderf**, **remainderl**|\<math.h>|\<cmath> ou \<math.h>|
+
+Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_remainder.c
+// This program displays a floating-point remainder.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double w = -10.0, x = 3.0, z;
+
+   z = remainder(w, x);
+   printf("The remainder of %.2f / %.2f is %f\n", w, x, z);
+}
+```
+
+```Output
+The remainder of -10.00 / 3.00 is -1.000000
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[imaxdiv](imaxdiv.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
+[remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>

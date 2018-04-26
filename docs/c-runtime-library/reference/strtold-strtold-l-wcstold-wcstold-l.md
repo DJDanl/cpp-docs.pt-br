@@ -1,12 +1,12 @@
 ---
 title: strtold, _strtold_l, wcstold, _wcstold_l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcstold
@@ -36,132 +36,137 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e21329d29bcf65362d837697f2adfe00e27ce3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d73a554066ed5a5e25fd0d46d948b01af0c621c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
-Converte cadeias de caracteres em um valor de ponto flutuante de precisão dupla longo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-long double strtold(  
-   const char *nptr,  
-   char **endptr   
-);  
-long double _strtold_l(  
-   const char *nptr,  
-   char **endptr,  
-   _locale_t locale  
-);  
-long double wcstold(  
-   const wchar_t *nptr,  
-   wchar_t **endptr   
-);  
-long double wcstold_l(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `nptr`  
- Cadeia de caracteres terminada em nulo a ser convertida.  
-  
- `endptr`  
- Ponteiro para o caractere que interrompe o exame.  
-  
- `locale`  
- A localidade a ser usada.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `strtold` Retorna o valor do número de ponto flutuante como um `long double`, exceto quando a representação causaria um estouro — nesse caso, a função retorna + /-`HUGE_VALL`. O sinal de `HUGE_VALL` coincide com o sinal do valor que não pode ser representado. `strtold` retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.  
-  
- `wcstold` retorna valores de maneira semelhante a `strtold`. Para ambas as funções, `errno` é definido como `ERANGE` se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
-  
- Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentários  
- Cada função converte a cadeia de caracteres de entrada `nptr` para um `long double`. A função `strtold` converte `nptr` para um valor de precisão duplo e longo. `strtold` interrompe a leitura da cadeia de caracteres `nptr` no primeiro caractere que ele não reconhece como parte de um número. Este pode ser o caractere nulo de terminação. A versão de caractere largo de `strtold` é `wcstold`; seu argumento `nptr` é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcstold`|`strtold`|`strtold`|`wcstold`|  
-|`_tcstold_l`|`_strtold_l`|`_strtold_l`|`_wcstold_l`|  
-  
- A configuração `LC_NUMERIC` de categoria da localidade atual determina o reconhecimento do caractere fracionário `nptr`. Para obter mais informações, consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As funções sem o `_l` sufixo usam a localidade atual; `_strtold_l` e `_wcstold_l` são idênticos aos `_strtold` e `_wcstold`, exceto que usam a localidade que é informada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
- Se `endptr` não for `NULL`, um ponteiro para o caractere que interrompeu o exame será armazenado no local apontado por `endptr`. Se nenhuma conversão puder ser executada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor `nptr` será armazenado no local apontado por `endptr`.  
-  
- `strtold` espera que `nptr` aponte para uma cadeia de caracteres do seguinte formato:  
-  
- [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`d` &#124; `D` &#124; `e` &#124; `E`}[`sign`]`digits`]  
-  
- Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de mais (`+`) ou menos (`-`); e `digits` é composto por um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (`d`, `D`, `e` ou `E`) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`strtold`, `_strtold_l`|\<stdlib.h>|  
-|`wcstold`, `_wcstold_l`|\<stdlib.h> ou \<wchar.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_strtold.c  
-// Build with: cl /W4 /Tc crt_strtold.c  
-// This program uses strtold to convert a  
-// string to a long double-precision value.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char *string;  
-   char *stopstring;  
-   long double x;  
-  
-   string = "3.1415926535898This stopped it";  
-   x = strtold(string, &stopstring);  
-   printf("string = %s\n", string);  
-   printf("   strtold = %.13Lf\n", x);  
-   printf("   Stopped scan at: %s\n\n", stopstring);  
-}  
-```  
-  
-```Output  
-string = 3.1415926535898This stopped it  
-   strtold = 3.1415926535898  
-   Stopped scan at: This stopped it  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Funções de valor de cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
- [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../../c-runtime-library/reference/free-locale.md)
+
+Converte cadeias de caracteres em um valor de ponto flutuante de precisão dupla longo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+long double strtold(
+   const char *strSource,
+   char **endptr
+);
+long double _strtold_l(
+   const char *strSource,
+   char **endptr,
+   _locale_t locale
+);
+long double wcstold(
+   const wchar_t *strSource,
+   wchar_t **endptr
+);
+long double wcstold_l(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*strSource*<br/>
+Cadeia de caracteres terminada em nulo a ser convertida.
+
+*endptr*<br/>
+Ponteiro para o caractere que interrompe o exame.
+
+*locale*<br/>
+A localidade a ser usada.
+
+## <a name="return-value"></a>Valor de retorno
+
+**strtold** retorna o valor do número de ponto flutuante como um **longo** **duplo**, exceto quando a representação causaria um estouro — nesse caso, a função retorna + /-**HUGE_VALL**. O sinal de **HUGE_VALL** coincide com o sinal do valor que não pode ser representado. **strtold** retorna 0 se nenhuma conversão pode ser executada ou ocorrerá um estouro negativo.
+
+**wcstold** retorna valores de maneira semelhante para **strtold**. Para ambas as funções, **errno** é definido como **ERANGE** se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+
+Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentários
+
+Cada função converte a cadeia de caracteres de entrada *strSource* para um **longo** **duplo**. O **strtold** função deixa de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhece como parte de um número. Este pode ser o caractere nulo de terminação. A versão de caractere largo de **strtold** é **wcstold**; seu *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcstold**|**strtold**|**strtold**|**wcstold**|
+|**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
+
+O **LC_NUMERIC** definição de categoria da localidade atual determina o reconhecimento do caractere base *strSource*. Para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As funções sem o **_l** sufixo usam a localidade atual; **_strtold_l** e **_wcstold_l** são idênticos aos **_strtold** e **_wcstold** exceto que eles em vez disso, usam a localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Se *endptr* não é **nulo**, um ponteiro para o caractere que interrompeu a verificação é armazenado no local que é apontado pelo *endptr*. Se nenhuma conversão pode ser executada (sem dígitos válidos foram encontrados ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local que é apontado pelo *endptr*.
+
+**strtold** espera *strSource* para apontar para uma cadeia de caracteres da seguinte forma:
+
+[*espaço em branco*] [*sinal*] [*dígitos*] [. *dígitos*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*sinal* ]*dígitos*]
+
+Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, que são ignorados; *sinal* é plus (**+**) ou sinal de subtração (**-**); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**strtold**, **_strtold_l**|\<stdlib.h>|
+|**wcstold**, **_wcstold_l**|\<stdlib.h> ou \<wchar.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_strtold.c
+// Build with: cl /W4 /Tc crt_strtold.c
+// This program uses strtold to convert a
+// string to a long double-precision value.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char *string;
+   char *stopstring;
+   long double x;
+
+   string = "3.1415926535898This stopped it";
+   x = strtold(string, &stopstring);
+   printf("string = %s\n", string);
+   printf("   strtold = %.13Lf\n", x);
+   printf("   Stopped scan at: %s\n\n", stopstring);
+}
+```
+
+```Output
+string = 3.1415926535898This stopped it
+   strtold = 3.1415926535898
+   Stopped scan at: This stopped it
+
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Funções de valor de cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
+[strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
+[_free_locale](free-locale.md)<br/>

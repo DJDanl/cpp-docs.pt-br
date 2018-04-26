@@ -1,12 +1,12 @@
 ---
 title: _close | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _close
@@ -32,58 +32,64 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9532d8fb98786f35dfa888b5bf8bef5e3e8b2583
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e49906a1ea0bf66400a6ac753c5d4041bc47217c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="close"></a>_close
-Fecha um arquivo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _close(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `fd`  
- Descritor de arquivo que se refere ao arquivo aberto.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_close` retornará 0 se o arquivo tiver sido fechado com êxito. Um valor de retorno de -1 indica um erro.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_close` fecha o arquivo associado a `fd`.  
-  
- O descritor de arquivo e o identificador de arquivo do sistema operacional subjacente são fechados. Portanto, não será necessário chamar `CloseHandle` se o arquivo tiver sido aberto originalmente usando a função Win32 `CreateFile` e convertido em um descritor de arquivo usando `_open_osfhandle`.  
-  
- Essa função valida seus parâmetros. Se `fd` for um descritor do arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará -1 e `errno` será definido como `EBADF`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|-------------|---------------------|---------------------|  
-|`_close`|\<io.h>|\<errno.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo de [_open](../../c-runtime-library/reference/open-wopen.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Fecha um arquivo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _close(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*fd*<br/>
+Descritor de arquivo que se refere ao arquivo aberto.
+
+## <a name="return-value"></a>Valor de retorno
+
+**Fechar** retornará 0 se o arquivo foi fechado com êxito. Um valor de retorno de -1 indica um erro.
+
+## <a name="remarks"></a>Comentários
+
+O **echar** função fecha o arquivo associado *fd*.
+
+O descritor de arquivo e o identificador de arquivo do sistema operacional subjacente são fechados. Portanto, não é necessário chamar **CloseHandle** se o arquivo foi aberto originalmente usando a função Win32 **CreateFile** e convertido em um descritor de arquivo usando **open_osfhandle**.
+
+Essa função valida seus parâmetros. Se *fd* é um descritor de arquivo inválido, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as funções retornará -1 e **errno** é definido como **EBADF**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|Cabeçalho opcional|
+|-------------|---------------------|---------------------|
+|**_close**|\<io.h>|\<errno.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo de [_open](open-wopen.md).
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chsize](chsize.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

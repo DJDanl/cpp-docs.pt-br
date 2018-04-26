@@ -1,12 +1,12 @@
 ---
 title: wcsrtombs | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcsrtombs
@@ -32,127 +32,133 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45dd47ed3c6136c4aff860efd51de18e120803ec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ea3544c9d6d84ab4671e505f7389f72dbb25095a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
-Converte uma cadeia de caracteres largos em sua representação de cadeia de caracteres multibyte. Uma versão mais segura dessa função está disponível; consulte [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-size_t wcsrtombs(  
-   char *mbstr,  
-   const wchar_t **wcstr,  
-   sizeof count,  
-   mbstate_t *mbstate  
-);  
-template <size_t size>  
-size_t wcsrtombs(  
-   char (&mbstr)[size],  
-   const wchar_t **wcstr,  
-   sizeof count,  
-   mbstate_t *mbstate  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [out] `mbstr`  
- O local do endereço da cadeia de caracteres multibyte convertida resultante.  
-  
- [in] `wcstr`  
- Aponta indiretamente para o local da cadeia de caracteres largos a ser convertida.  
-  
- [in] `count`  
- O número de caracteres a ser convertido.  
-  
- [in] `mbstate`  
- Um ponteiro para um objeto do estado da conversão `mbstate_t`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna o número de bytes convertidos com êxito, não incluindo o byte nulo de terminação nula (se houver), caso contrário, retorna –1 em caso de erro.  
-  
-## <a name="remarks"></a>Comentários  
- A função `wcsrtombs` converte uma cadeia de caracteres largos que começa no estado da conversão especificado contido em `mbstate`, com base nos valores indiretos apontados em `wcstr`, no endereço de `mbstr`. A conversão continuará para cada caractere até: um caractere largo de terminação nula ser encontrado, um caractere não correspondente ser encontrado ou o próximo caractere exceder o limite contido em `count`. Se `wcsrtombs` encontrar o caractere nulo de caractere largo (L'\0') antes ou quando `count` ocorrer, ele o converterá em um 0 de 8 bits e será interrompido.  
-  
- Dessa forma, a cadeia de caracteres multibyte em `mbstr` será terminada em nulo somente se `wcsrtombs` encontrar um caractere nulo de caractere largo durante a conversão. Se as sequências apontadas por `wcstr` e por `mbstr` se sobrepuserem, o comportamento de `wcsrtombs` será indefinido. `wcsrtombs` é afetado pela categoria LC_TYPE da localidade atual.  
-  
- A função `wcsrtombs` difere de [wcstombs, wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) por sua capacidade de reinicialização. O estado da conversão é armazenado em `mbstate` para chamadas posteriores às mesmas funções ou a outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo usaria `wcsrlen` em vez de `wcsnlen` se uma chamada subsequente a `wcsrtombs` fosse usada em vez de `wcstombs`.  
-  
- Se o argumento `mbstr` for `NULL`, `wcsrtombs` retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se `mbstate` for nulo, o estado da conversão `mbstate_t` interno será usado. Se a sequência de caracteres `wchar` não tiver nenhuma representação de caracteres multibyte correspondente, –1 será retornado e `errno` será definido como `EILSEQ`.  
-  
- Em C++, essa função tem uma sobrecarga de modelo que invoca o equivalente mais recente e seguro dessa função. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
-  
-## <a name="exceptions"></a>Exceções  
- A função `wcsrtombs` será multithread-safe contanto que nenhuma função no thread atual chame `setlocale` enquanto essa função estiver em execução e o `mbstate` não for nulo.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_wcsrtombs.cpp  
-// compile with: /W3  
-// This code example converts a wide  
-// character string into a multibyte  
-// character string.  
-  
-#include <stdio.h>  
-#include <memory.h>  
-#include <wchar.h>  
-#include <errno.h>  
-  
-#define MB_BUFFER_SIZE 100  
-  
-int main()  
-{  
-    const wchar_t   wcString[] =   
-                    {L"Every good boy does fine."};  
-    const wchar_t   *wcsIndirectString = wcString;  
-    char            mbString[MB_BUFFER_SIZE];  
-    size_t          countConverted;  
-    mbstate_t       mbstate;  
-  
-    // Reset to initial shift state  
-    ::memset((void*)&mbstate, 0, sizeof(mbstate));  
-  
-    countConverted = wcsrtombs(mbString, &wcsIndirectString,  
-                               MB_BUFFER_SIZE, &mbstate); // C4996  
-    // Note: wcsrtombs is deprecated; consider using wcsrtombs_s  
-    if (errno == EILSEQ)  
-    {  
-        printf( "An encoding error was detected in the string.\n" );  
-    }  
-    else   
-    {  
-        printf( "The string was successfuly converted.\n" );  
-    }  
-}  
-```  
-  
-```Output  
-The string was successfuly converted.  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`wcsrtombs`|\<wchar.h>|  
-  
-## <a name="see-also"></a>Consulte também  
- [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [mbsinit](../../c-runtime-library/reference/mbsinit.md)
+
+Converte uma cadeia de caracteres largos em sua representação de cadeia de caracteres multibyte. Uma versão mais segura dessa função está disponível; consulte [wcsrtombs_s](wcsrtombs-s.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+size_t wcsrtombs(
+   char *mbstr,
+   const wchar_t **wcstr,
+   sizeof count,
+   mbstate_t *mbstate
+);
+template <size_t size>
+size_t wcsrtombs(
+   char (&mbstr)[size],
+   const wchar_t **wcstr,
+   sizeof count,
+   mbstate_t *mbstate
+); // C++ only
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*mbstr*<br/>
+O local do endereço da cadeia de caracteres multibyte convertida resultante.
+
+*wcstr*<br/>
+Aponta indiretamente para o local da cadeia de caracteres largos a ser convertida.
+
+*count*<br/>
+O número de caracteres a ser convertido.
+
+*mbstate*<br/>
+Um ponteiro para um **mbstate_t** objeto de estado de conversão.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna o número de bytes convertidos com êxito, não incluindo o byte nulo de terminação nula (se houver), caso contrário, retorna –1 em caso de erro.
+
+## <a name="remarks"></a>Comentários
+
+O **wcsrtombs** função converte uma cadeia de caracteres largos, a partir do estado de conversão especificado contido no *mbstate*, dos valores indiretos apontados no *wcstr*, no endereço de *mbstr*. A conversão será oferecido por cada caractere até: depois que um nulo encerrando caractere largo for encontrado, quando um caractere correspondente não é encontrado ou quando o próximo caractere excederia o limite contido em *contagem*. Se **wcsrtombs** encontra o caractere null de caractere largo (L '\0') antes ou quando *contagem* ocorrer, ele converte em um 0 de 8 bits e paradas.
+
+Assim, a cadeia de caracteres multibyte em *mbstr* é terminada em nulo apenas se **wcsrtombs** encontra um caractere null de caractere largo durante a conversão. Se as sequências apontada pelo *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcsrtombs** é indefinido. **wcsrtombs** é afetado pela categoria do LC_TYPE da localidade atual.
+
+O **wcsrtombs** função difere da [wcstombs, wcstombs_l](wcstombs-wcstombs-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para o mesmo ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcsnlen**, se uma chamada subsequente para **wcsrtombs** foram usadas em vez de **wcstombs**.
+
+Se o *mbstr* argumento é **nulo**, **wcsrtombs** retorna o tamanho necessário em bytes da cadeia de caracteres de destino. Se *mbstate* for nulo, o interno **mbstate_t** conversão estado é usado. Se a sequência de caracteres *wchar* não tem um multibyte correspondente representação de caractere, -1 será retornado e a **errno** é definido como **EILSEQ**.
+
+Em C++, essa função tem uma sobrecarga de modelo que invoca o equivalente mais recente e seguro dessa função. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+## <a name="exceptions"></a>Exceções
+
+O **wcsrtombs** função é safe multithread desde que nenhuma função no thread atual chama **setlocale** enquanto essa função está em execução e o *mbstate* não é nulo.
+
+## <a name="example"></a>Exemplo
+
+```cpp
+// crt_wcsrtombs.cpp
+// compile with: /W3
+// This code example converts a wide
+// character string into a multibyte
+// character string.
+
+#include <stdio.h>
+#include <memory.h>
+#include <wchar.h>
+#include <errno.h>
+
+#define MB_BUFFER_SIZE 100
+
+int main()
+{
+    const wchar_t   wcString[] =
+                    {L"Every good boy does fine."};
+    const wchar_t   *wcsIndirectString = wcString;
+    char            mbString[MB_BUFFER_SIZE];
+    size_t          countConverted;
+    mbstate_t       mbstate;
+
+    // Reset to initial shift state
+    ::memset((void*)&mbstate, 0, sizeof(mbstate));
+
+    countConverted = wcsrtombs(mbString, &wcsIndirectString,
+                               MB_BUFFER_SIZE, &mbstate); // C4996
+    // Note: wcsrtombs is deprecated; consider using wcsrtombs_s
+    if (errno == EILSEQ)
+    {
+        printf( "An encoding error was detected in the string.\n" );
+    }
+    else
+    {
+        printf( "The string was successfuly converted.\n" );
+    }
+}
+```
+
+```Output
+The string was successfuly converted.
+```
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**wcsrtombs**|\<wchar.h>|
+
+## <a name="see-also"></a>Consulte também
+
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[wcrtomb](wcrtomb.md)<br/>
+[wcrtomb_s](wcrtomb-s.md)<br/>
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
+[mbsinit](mbsinit.md)<br/>

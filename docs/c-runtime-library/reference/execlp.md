@@ -1,12 +1,12 @@
 ---
 title: execlp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - execlp
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - execlp function
 ms.assetid: 68b19143-e7b1-49c6-89b5-084d0d66de9c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dc84a485136c0cfe13a87164fee920f518815df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d49a338f3da5349ed6bdf191c91922e51d67f862
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="execlp"></a>execlp
-Essa função POSIX foi preterida. Em vez disso, use [_execlp](../../c-runtime-library/reference/execlp-wexeclp.md) compatível com ISO C++.  
-  
+
+Essa função POSIX foi preterida. Em vez disso, use [_execlp](execlp-wexeclp.md) compatível com ISO C++.
+
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

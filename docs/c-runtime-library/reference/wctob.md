@@ -1,12 +1,12 @@
 ---
 title: wctob | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wctob
@@ -32,88 +32,94 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2534eb98c39be91ed753fdc0ff286a9a5c5ce707
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6bb45aec4b337a7b0aed1a51c50903ad76d2f916
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctob"></a>wctob
-Determina se um caractere largo corresponde a um caractere multibyte e retorna sua representação de caracteres multibyte.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int wctob(  
-   wint_t wchar  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `wchar`  
- A valor a ser movido.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Se `wctob` converter com êxito um caractere largo, ele retornará sua representação de caracteres multibyte somente se o tamanho do caractere multibyte for exatamente um byte. Se `wctob` encontra um caractere largo não pode converter um caractere multibyte ou os caracteres multibyte não é exatamente um byte longo, ele retorna -1.  
-  
-## <a name="remarks"></a>Comentários  
- A função `wctob` converterá um caractere largo contido em `wchar` no caractere multibyte correspondente passado pelo valor retornado `int` se o tamanho do caractere multibyte for exatamente um byte.  
-  
- Se `wctob` não for bem-sucedido e nenhum caractere multibyte correspondente for encontrado, a função definirá `errno` como `EILSEQ` e retornará –1.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`wctob`|\<wchar.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
- Este programa ilustra o comportamento da função `wcstombs`.  
-  
-```  
-// crt_wctob.c  
-#include <stdio.h>  
-#include <wchar.h>  
-  
-int main( void )  
-{  
-    int     bChar = 0;  
-    wint_t  wChar = 0;  
-  
-    // Set the corresponding wide character to exactly one byte.  
-    wChar = (wint_t)'A';  
-  
-    bChar = wctob( wChar );  
-    if (bChar == WEOF)  
-    {  
-        printf( "No corresponding multibyte character was found.\n");  
-    }  
-    else  
-    {  
-        printf( "Determined the corresponding multibyte character to"  
-                " be \"%c\".\n", bChar);  
-    }  
-}  
-  
-```  
-  
-```Output  
-Determined the corresponding multibyte character to be "A".  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+
+Determina se um caractere largo corresponde a um caractere multibyte e retorna sua representação de caracteres multibyte.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int wctob(
+   wint_t wchar
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*wchar*<br/>
+A valor a ser movido.
+
+## <a name="return-value"></a>Valor de retorno
+
+Se **wctob** converte com êxito um caractere largo, ele retorna sua representação de caracteres multibyte, apenas se o caractere de multibyte é exatamente um byte. Se **wctob** encontra um caractere largo não pode converter um caractere multibyte ou os caracteres multibyte não é exatamente um byte longo, ele retorna -1.
+
+## <a name="remarks"></a>Comentários
+
+O **wctob** função converte um caractere largo contido em *wchar* como o caractere de multibyte correspondente transmitido pelo retorno **int** valor, se o multibyte caractere é exatamente um byte.
+
+Se **wctob** não foi bem-sucedida e nenhum caractere de multibyte correspondente foi encontrado, a função define **errno** para **EILSEQ** e retorna -1.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**wctob**|\<wchar.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Este programa ilustra o comportamento do **wcstombs** função.
+
+```C
+// crt_wctob.c
+#include <stdio.h>
+#include <wchar.h>
+
+int main( void )
+{
+    int     bChar = 0;
+    wint_t  wChar = 0;
+
+    // Set the corresponding wide character to exactly one byte.
+    wChar = (wint_t)'A';
+
+    bChar = wctob( wChar );
+    if (bChar == WEOF)
+    {
+        printf( "No corresponding multibyte character was found.\n");
+    }
+    else
+    {
+        printf( "Determined the corresponding multibyte character to"
+                " be \"%c\".\n", bChar);
+    }
+}
+
+```
+
+```Output
+Determined the corresponding multibyte character to be "A".
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>

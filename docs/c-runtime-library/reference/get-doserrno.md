@@ -1,12 +1,12 @@
 ---
 title: _get_doserrno | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_doserrno
@@ -32,51 +32,56 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccda58f0de7a22a5fe54e70e512cb4ae88d063e0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba68356f13ed416a33f0bde54426ec2182e8e166
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdoserrno"></a>_get_doserrno
-Obtém o valor do erro retornado pelo sistema operacional antes de ele ser convertido para um valor `errno`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-errno_t _get_doserrno(   
-   int * pValue   
-);   
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [out] `pValue`  
- Um ponteiro para um inteiro que deve ser preenchido com o valor atual da macro global `_doserrno`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Se `_get_doserrno` tiver êxito, o valor retornado é zero. Em caso de falha, o valor retornado é um código de erro. Se `pValue` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `EINVAL`.  
-  
-## <a name="remarks"></a>Comentários  
- A macro global `_doserrno` é definida como zero durante a inicialização do CRT (tempo de execução C), antes do início do processo de execução. Ela é definida para o valor de erro do sistema operacional retornado por qualquer chamada de função de nível do sistema que retorne um erro de sistema operacional. Ela nunca é redefinida para zero durante a execução. Ao escrever o código para verificar o valor de erro retornado por uma função, sempre limpe `_doserrno` usando [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md) antes da chamada de função. Como outra chamada de função pode substituir `_doserrno`, verifique o valor usando `_get_doserrno` logo após a chamada de função.  
-  
- Recomendamos que você use [_get_errno](../../c-runtime-library/reference/get-errno.md) em vez de `_get_doserrno` para códigos de erro portáteis.  
-  
- Os valores possíveis de `_doserrno` são definidos em \<errno.h>.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|-------------|---------------------|---------------------|  
-|`_get_doserrno`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|  
-  
- `_get_doserrno` é uma extensão da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md)   
- [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+
+Obtém o valor de erro retornado pelo sistema operacional antes de ele é convertido em um **errno** valor.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+errno_t _get_doserrno( 
+   int * pValue 
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pValue*<br/>
+Um ponteiro para um inteiro a ser preenchida com o valor atual de **doserrno** macro global.
+
+## <a name="return-value"></a>Valor de retorno
+
+Se **get_doserrno** for bem-sucedida, ela retorna zero; caso contrário, ele retorna um código de erro. Se *pValue* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+
+## <a name="remarks"></a>Comentários
+
+O **doserrno** macro global é definida como zero durante a inicialização do CRT, antes do processo de execução começa. Ela é definida para o valor de erro do sistema operacional retornado por qualquer chamada de função de nível do sistema que retorne um erro de sistema operacional. Ela nunca é redefinida para zero durante a execução. Ao escrever código para verificar se o valor de erro retornado por uma função, sempre criptografada **doserrno** usando [set_doserrno](set-doserrno.md) antes da chamada de função. Porque outra chamada de função pode substituir **doserrno**, verifique se o valor usando **get_doserrno** imediatamente após a chamada de função.
+
+É recomendável [get_errno](get-errno.md) em vez de **get_doserrno** para códigos de erro portátil.
+
+Os valores possíveis de **doserrno** são definidos no \<errno >.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|Cabeçalho opcional|
+|-------------|---------------------|---------------------|
+|**_get_doserrno**|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
+
+**get_doserrno** é uma extensão da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[_set_doserrno](set-doserrno.md)<br/>
+[errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

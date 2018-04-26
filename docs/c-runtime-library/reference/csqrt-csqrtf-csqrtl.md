@@ -1,13 +1,13 @@
 ---
 title: csqrt, csqrtf, csqrtl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - csqrt
@@ -40,75 +40,80 @@ helpviewer_keywords:
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65c295031e2b7d4119c988e4253f34dd7897d30c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ad6424497abc6f45eaf8369aabca4ad966881f4c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
-Recupera a raiz quadrada de um número complexo, com uma ramificação recortada ao longo do eixo real negativo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-_Dcomplex csqrt(   
-   _Dcomplex z   
-);  
-_Fcomplex csqrt(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex csqrt(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex csqrtf(   
-   _Fcomplex z   
-);  
-_Lcomplex csqrtl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `z`  
- Um número complexo.  
-  
-## <a name="return-value"></a>Valor de retorno  
- A raiz quadrada de `z`. O resultado é mostrado no meio plano direito.  
-  
-|Entrada|Exceção SEH|Exceção `_matherr`|  
-|-----------|-------------------|--------------------------|  
-|± QNAN, IND|nenhum|_DOMAIN|  
-|- ∞|nenhum|_DOMAIN|  
-  
-## <a name="remarks"></a>Comentários  
- Como C++ permite sobrecargas, é possível chamar sobrecargas de `csqrt` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `csqrt` sempre usa e retorna um valor `_Dcomplex`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho C|Cabeçalho C++|  
-|-------------|--------------|------------------|  
-|`csqrt`,               `csqrtf`, `csqrtl`|\<complex.h>|\<ccomplex>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)
+
+Recupera a raiz quadrada de um número complexo, com uma ramificação recortada ao longo do eixo real negativo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+_Dcomplex csqrt(
+   _Dcomplex z
+);
+_Fcomplex csqrt(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex csqrt(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex csqrtf(
+   _Fcomplex z
+);
+_Lcomplex csqrtl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*z*<br/>
+Um número complexo.
+
+## <a name="return-value"></a>Valor de retorno
+
+A raiz quadrada de *z*. O resultado é mostrado no meio plano direito.
+
+|Entrada|Exceção SEH|**matherr** exceção|
+|-----------|-------------------|--------------------------|
+|± QNAN, IND|nenhum|_DOMAIN|
+|- ∞|nenhum|_DOMAIN|
+
+## <a name="remarks"></a>Comentários
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **csqrt** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **csqrt** sempre usa e retorna um **_Dcomplex** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho C|Cabeçalho C++|
+|-------------|--------------|------------------|
+|**csqrt**, **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>

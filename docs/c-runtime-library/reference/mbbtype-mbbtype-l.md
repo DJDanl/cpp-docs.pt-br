@@ -1,12 +1,12 @@
 ---
 title: _mbbtype, _mbbtype_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbbtype
@@ -37,76 +37,81 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beaa8e11b8593205dd192547097e6f7228625410
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc67c09d1196308df89d70a02cf2cea4c713b0d2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
-Retorna o tipo de byte, com base no byte anterior.  
-  
+
+Retorna o tipo de byte, com base no byte anterior.
+
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _mbbtype(  
-   unsigned char c,  
-   int type   
-);  
-int _mbbtype_l(  
-   unsigned char c,  
-   int type,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `c`  
- O caractere a ser testado.  
-  
- `type`  
- O tipo de byte para o qual testar.  
-  
- `locale`  
- A localidade a ser usada.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O `_mbbtype` retorna o tipo de byte em uma cadeia de caracteres. Essa decisão é contextual, conforme especificado pelo valor de `type`, que fornece a condição de teste do controle. `type` é o tipo do byte anterior na cadeia de caracteres. As constantes de manifesto na tabela a seguir são definidas em Mbctype.h.  
-  
-|Valor de `type`|O `_mbbtype` testa para|Valor retornado|`c`|  
-|---------------------|--------------------------|------------------|---------|  
-|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_SINGLE` (0)|Byte único (0x20 - 0x7E, 0xA1 - 0xDF)|  
-|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_LEAD` (1)|Levar bytes de caracteres multibyte (0x81 - 0x9F, 0xE0 - 0xFC)|  
-|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_ILLEGAL`<br /><br /> ( -1)|Caractere inválido (qualquer valor exceto 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|  
-|1|Byte final válido|`_MBC_TRAIL` (2)|À direita de bytes de caracteres multibyte (0x40 - 0x7E, 0x80 - 0xFC)|  
-|1|Byte final válido|`_MBC_ILLEGAL`<br /><br /> ( -1)|Caractere inválido (qualquer valor exceto 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|  
-  
-## <a name="remarks"></a>Comentários  
- A função `_mbbtype` determina o tipo de um byte em um caractere multibyte. Se o valor de `type` for qualquer valor exceto 1, `_mbbtype` testará para um byte único ou byte inicial de um caractere multibyte. Se o valor de `type` for 1, `_mbbtype` testará para um byte final válido de um caractere multibyte.  
-  
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade. Consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. A versão `_mbbtype` dessa função usa a localidade atual desse comportamento dependente da localidade. A versão `_mbbtype_l` é idêntica, exceto por usar o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
- Em versões anteriores, `_mbbtype` era chamado `chkctype`. Para códigos novos, use `_mbbtype`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|-------------|---------------------|---------------------|  
-|`_mbbtype`|\<mbstring.h>|\<mbctype.h>*|  
-|`_mbbtype_l`|\<mbstring.h>|\<mbctype.h>*|  
-  
- \* Para obter definições de constantes de manifesto que são usadas como valores retornados.  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Classificação de byte](../../c-runtime-library/byte-classification.md)
+> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _mbbtype(
+   unsigned char c,
+   int type
+);
+int _mbbtype_l(
+   unsigned char c,
+   int type,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*c*<br/>
+O caractere a ser testado.
+
+*type*<br/>
+O tipo de byte para o qual testar.
+
+*locale*<br/>
+A localidade a ser usada.
+
+## <a name="return-value"></a>Valor de retorno
+
+**mbbtype** retorna o tipo de bytes em uma cadeia de caracteres. Essa decisão é contextual, conforme especificado pelo valor de *tipo*, que fornece a condição de teste de controle. *tipo* é o tipo do byte anterior na cadeia de caracteres. As constantes de manifesto na tabela a seguir são definidas em Mbctype.h.
+
+|O valor de *tipo*|**mbbtype** testes para|Valor retornado|*c*|
+|---------------------|--------------------------|------------------|---------|
+|Qualquer valor exceto 1|Byte único ou byte inicial válido|**_MBC_SINGLE** (0)|Byte único (0x20 - 0x7E, 0xA1 - 0xDF)|
+|Qualquer valor exceto 1|Byte único ou byte inicial válido|**_MBC_LEAD** (1)|Levar bytes de caracteres multibyte (0x81 - 0x9F, 0xE0 - 0xFC)|
+|Qualquer valor exceto 1|Byte único ou byte inicial válido|**_MBC_ILLEGAL**<br /><br /> ( -1)|Caractere inválido (qualquer valor exceto 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+|1|Byte final válido|**_MBC_TRAIL** (2)|À direita de bytes de caracteres multibyte (0x40 - 0x7E, 0x80 - 0xFC)|
+|1|Byte final válido|**_MBC_ILLEGAL**<br /><br /> ( -1)|Caractere inválido (qualquer valor exceto 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+
+## <a name="remarks"></a>Comentários
+
+O **mbbtype** função determina o tipo de um byte em um caractere multibyte. Se o valor de *tipo* for qualquer valor exceto 1, **mbbtype** testes para um byte de byte único ou levar válido de um caractere multibyte. Se o valor de *tipo* é 1, **mbbtype** testes para um byte final válido de um caractere multibyte.
+
+O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbbtype** versão dessa função usa a localidade atual para este comportamento dependente de localidade; a **mbbtype_l** versão é idêntica, exceto que ele use o parâmetro de localidade que é passado em . Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Em versões anteriores, **mbbtype** foi nomeado **chkctype**. Para o novo código, use **mbbtype** em vez disso.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|Cabeçalho opcional|
+|-------------|---------------------|---------------------|
+|**_mbbtype**|\<mbstring.h>|\<mbctype.h>*|
+|**_mbbtype_l**|\<mbstring.h>|\<mbctype.h>*|
+
+\* Para obter definições de constantes de manifesto que são usadas como valores retornados.
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>

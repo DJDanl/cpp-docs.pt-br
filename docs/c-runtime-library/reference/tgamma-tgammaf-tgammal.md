@@ -1,13 +1,13 @@
 ---
 title: tgamma, tgammaf, tgammal | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tgamma
@@ -40,82 +40,87 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7525da71d114179d40b937816f9ebe08d5a892a9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 951e5635ae1e2b8ee22af7cb26902bd309d62b40
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
-Determina a função gama do valor especificado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-double tgamma(  
-   double x  
-);  
-  
-float tgamma(  
-   float x  
-); //C++ only  
-  
-long double tgamma(  
-   long double x  
-); //C++ only  
-  
-float tgammaf(  
-   float x  
-);  
-  
-long double tgammal(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [in] `x`  
- O valor do qual o gama será encontrado.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Se tiver êxito, retornará o gama de `x`.  
-  
- Poderá ocorrer um erro de intervalo se a magnitude de `x` for muito grande ou muito pequena para o tipo de dados. Um erro de domínio ou de intervalo poderá ocorrer se `x` <=0.  
-  
-|Problema|Valor de|  
-|-----------|------------|  
-|x = ±0|±INFINITY|  
-|x = inteiro negativo|NaN|  
-|x =  -INFINITY|NaN|  
-|x = +INFINITY|+INFINITY|  
-|x = NaN|NaN|  
-|erro de domínio|NaN|  
-|erro de polo|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|  
-|erro de intervalo de estouro|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|  
-|erro de intervalo de estouro negativo|o valor correto, após o arredondamento.|  
-  
- Os erros são relatados conforme especificado em [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Comentários  
- Como o C++ permite sobrecarga, é possível chamar sobrecargas de tgamma que usam e retornam tipos duplos flutuantes e longos. Em um programa C, tgamma sempre usa e retorna um duplo.  
-  
- Se x for um número natural, essa função retornará o fatorial de (x-1).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Função|Cabeçalho C|Cabeçalho C++|  
-|--------------|--------------|------------------|  
-|`tgamma`,                `tgammaf`,  `tgammal`|\<math.h>|\<cmath>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [lgamma, lgammaf, lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)
+
+Determina a função gama do valor especificado.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+double tgamma(
+   double x
+);
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
+
+float tgammaf(
+   float x
+);
+
+long double tgammal(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*x*<br/>
+O valor do qual o gama será encontrado.
+
+## <a name="return-value"></a>Valor de retorno
+
+Se for bem-sucedido, retorna a gama de *x*.
+
+Um erro de intervalo pode ocorrer se a magnitude do *x* é muito grande ou muito pequeno para o tipo de dados. Um erro de domínio ou intervalo pode ocorrer se *x* < = 0.
+
+|Problema|Valor de|
+|-----------|------------|
+|x = ±0|±INFINITY|
+|x = inteiro negativo|NaN|
+|x = - infinito|NaN|
+|x = +INFINITY|+INFINITY|
+|x = NaN|NaN|
+|erro de domínio|NaN|
+|erro de polo|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
+|erro de intervalo de estouro|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
+|erro de intervalo de estouro negativo|o valor correto, após o arredondamento.|
+
+Os erros são relatados conforme especificado em [_matherr](matherr.md).
+
+## <a name="remarks"></a>Comentários
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **tgamma** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **tgamma** sempre usa e retorna um **duplo**.
+
+Se x for um número natural, essa função retornará o fatorial de (x-1).
+
+## <a name="requirements"></a>Requisitos
+
+|Função|Cabeçalho C|Cabeçalho C++|
+|--------------|--------------|------------------|
+|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

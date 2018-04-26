@@ -1,12 +1,12 @@
 ---
 title: _getdcwd, _wgetdcwd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getdcwd
@@ -42,90 +42,96 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b74cc20c6f96381d445740db9d41828f28d5a53a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e3572f629a6ca9df44fb4c571e2712894d89b257
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
-Obtém o caminho completo do diretório de trabalho atual na unidade especificada.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-char *_getdcwd(   
-   int drive,  
-   char *buffer,  
-   int maxlen   
-);  
-wchar_t *_wgetdcwd(   
-   int drive,  
-   wchar_t *buffer,  
-   int maxlen   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `drive`  
- Um inteiro não negativo que especifica a unidade (0 = unidade padrão, 1 = A, 2 = B e assim por diante).  
-  
- Se a unidade especificada não estiver disponível ou o tipo da unidade (por exemplo, removível, fixo, CD-ROM, disco RAM ou unidade de rede) não puder ser determinado, o manipulador de parâmetro inválido, que é descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md), é invocado.  
-  
- `buffer`  
- Local de armazenamento para o caminho ou **NULL**.  
-  
- Se **NULL** for especificado, esta função alocará um buffer de pelo menos `maxlen` usando **malloc** e o valor retornado de `_getdcwd` será um ponteiro para o buffer alocado. O buffer pode ser liberado chamando `free` e passando o ponteiro para ele.  
-  
- `maxlen`  
- Um inteiro positivo diferente de zero que especifica o tamanho máximo do caminho em caracteres: `char` para `_getdcwd` e `wchar_t` para `_wgetdcwd`.  
-  
- Se `maxlen` não for maior que zero, o manipulador de parâmetro inválido, que é descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md), será invocado.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Ponteiro para uma cadeia de caracteres que representa o caminho completo do diretório de trabalho atual na unidade especificada ou `NULL`, que indica um erro.  
-  
- Se `buffer` for especificado como `NULL` e não houver memória suficiente para alocar caracteres `maxlen`, ocorrerá um erro e `errno` será definido como `ENOMEM`. Se o tamanho do caminho, que inclui o caractere nulo de terminação, ultrapassar `maxlen`, ocorrerá um erro e `errno` será definido como `ERANGE`. Para obter mais informações sobre esses códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentários  
- A função `_getdcwd` obtém o caminho completo do diretório de trabalho atual na unidade especificada e o armazena em `buffer`. Se o diretório de trabalho atual estiver definido como o raiz, a cadeia de caracteres terminará com uma barra invertida (\\). Se o diretório de trabalho atual estiver definido como um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.  
-  
- `_wgetdcwd` é uma versão de caractere largo de `_getdcwd`; seu parâmetro `buffer` e o valor retornado são cadeias de caracteres largos. Caso contrário, `_wgetdcwd` e `_getdcwd` comportam-se de modo idêntico.  
-  
- Essa função é thread-safe, embora dependa de **GetFullPathName**, que não thread-safe. No entanto, você pode violar o acesso thread-safe se seu aplicativo multi-threaded chamar essa função e **GetFullPathName**. Para obter mais informações, vá até a [Biblioteca MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) e pesquise por **GetFullPathName**.  
-  
- A versão dessa função que tem o sufixo `_nolock` se comporta de forma idêntica a essa função, exceto pelo fato de não ser thread-safe e não estar protegida contra interferência de outros threads. Para obter mais informações, consulte [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md).  
-  
- Quando `_DEBUG` e `_CRTDBG_MAP_ALLOC` são definidos, chamadas para `_getdcwd` e `_wgetdcwd` são substituídos por chamadas para `_getdcwd_dbg` e `_wgetdcwd_dbg`, para que você possa depurar alocações de memória. Para obter mais informações, consulte [_getdcwd_dbg, _wgetdcwd_dbg](../../c-runtime-library/reference/getdcwd-dbg-wgetdcwd-dbg.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tgetdcwd`|`_getdcwd`|`_getdcwd`|`_wgetdcwd`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_getdcwd`|\<direct.h>|  
-|`_wgetdcwd`|\<direct.h> ou \<wchar.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo em [_getdrive](../../c-runtime-library/reference/getdrive.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de diretório](../../c-runtime-library/directory-control.md)   
- [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [_getdrive](../../c-runtime-library/reference/getdrive.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)
+
+Obtém o caminho completo do diretório de trabalho atual na unidade especificada.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+char *_getdcwd(
+   int drive,
+   char *buffer,
+   int maxlen
+);
+wchar_t *_wgetdcwd(
+   int drive,
+   wchar_t *buffer,
+   int maxlen
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Dirigir*<br/>
+Um inteiro não negativo que especifica a unidade (0 = unidade padrão, 1 = A, 2 = B e assim por diante).
+
+Se a unidade especificada não estiver disponível ou o tipo da unidade (por exemplo, removível, fixo, CD-ROM, disco RAM ou unidade de rede) não puder ser determinado, o manipulador de parâmetro inválido, que é descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md), é invocado.
+
+*buffer*<br/>
+Local de armazenamento para o caminho ou **NULL**.
+
+Se **nulo** for especificado, essa função aloca um buffer de, pelo menos, *maxlen* tamanho usando **malloc**e o valor de retorno **getdcwd**é um ponteiro para o buffer alocado. O buffer pode ser liberado chamando **livre** e passando o ponteiro.
+
+*MaxLen*<br/>
+Um inteiro positivo diferente de zero que especifica o comprimento máximo do caminho, em caracteres: **char** para **getdcwd** e **wchar_t** para **wgetdcwd**.
+
+Se *maxlen* não é maior que zero, o manipulador de parâmetro inválido, que é descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md), é invocado.
+
+## <a name="return-value"></a>Valor de retorno
+
+Ponteiro para uma cadeia de caracteres que representa o caminho completo do diretório de trabalho atual na unidade especificada, ou **nulo**, que indica um erro.
+
+Se *buffer* é especificado como **nulo** e não há memória suficiente para alocar *maxlen* caracteres, ocorrerá um erro e **errno** é definido como **ENOMEM**. Se exceder o comprimento do caminho, que inclui o caractere null de terminação, *maxlen*, ocorrerá um erro e **errno** é definido como **ERANGE**. Para obter mais informações sobre esses códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentários
+
+O **getdcwd** função obtém o caminho completo do diretório de trabalho atual na unidade especificada e a armazena em *buffer*. Se o diretório de trabalho atual estiver definido como o raiz, a cadeia de caracteres terminará com uma barra invertida (\\). Se o diretório de trabalho atual estiver definido como um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
+
+**wgetdcwd** é uma versão de caractere largo de **getdcwd**e sua *buffer* parâmetro e valor de retorno são cadeias de caracteres do caractere largo. Caso contrário, **wgetdcwd** e **getdcwd** se comportam de forma idêntica.
+
+Essa função é thread-safe, embora dependa de **GetFullPathName**, que não thread-safe. No entanto, você pode violar o acesso thread-safe se seu aplicativo multi-threaded chamar essa função e **GetFullPathName**. Para obter mais informações, vá até a [Biblioteca MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) e pesquise por **GetFullPathName**.
+
+A versão desta função que tem o **NOLOCK** sufixo se comporta de forma idêntica para esta função exceto que ele não é thread-safe e não é protegido contra interferência por outros threads. Para obter mais informações, consulte [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+
+Quando **Debug** e **crtdbg_map_alloc** são definidos, chamadas para **getdcwd** e **wgetdcwd** são substituídos por chamadas para **getdcwd_dbg** e **wgetdcwd_dbg** para que você pode depurar as alocações de memória. Para obter mais informações, consulte [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tgetdcwd**|**_getdcwd**|**_getdcwd**|**_wgetdcwd**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_getdcwd**|\<direct.h>|
+|**_wgetdcwd**|\<direct.h> ou \<wchar.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo em [_getdrive](getdrive.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de diretório](../../c-runtime-library/directory-control.md)<br/>
+[_chdir, _wchdir](chdir-wchdir.md)<br/>
+[_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
+[_getdrive](getdrive.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
+[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>

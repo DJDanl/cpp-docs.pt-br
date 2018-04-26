@@ -1,12 +1,12 @@
 ---
 title: _free_locale | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _free_locale
@@ -35,46 +35,49 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1baa1458d3e799d2370092b7d8f96ee9fe4a359e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e1333d7649b6d1ce24ee1bb7840e0389edb908
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freelocale"></a>_free_locale
-Libera um objeto de localidade.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void _free_locale(  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `locale`  
- Objeto de localidade a ser liberado.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_free_locale` é usada para liberar o objeto de localidade obtido com uma chamada para `_get_current_locale` ou `_create_locale`.  
-  
- O nome anterior dessa função, `__free_locale` (com dois sublinhados à esquerda), foi preterido.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|`Routine`|Cabeçalho necessário|  
-|---------------|---------------------|  
-|`_free_locale`|\<locale.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [_get_current_locale](../../c-runtime-library/reference/get-current-locale.md)   
- [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)
+
+Libera um objeto de localidade.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void _free_locale(
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*localidade* objeto de localidade para liberar.
+
+## <a name="remarks"></a>Comentários
+
+O **free_locale** função é usada para liberar o objeto de localidade obtido de uma chamada para **get_current_locale** ou **create_locale**.
+
+O nome anterior desta função **free_locale** (com dois sublinhados) foi preterido.
+
+## <a name="requirements"></a>Requisitos
+
+|**Rotina**|Cabeçalho necessário|
+|---------------|---------------------|
+|**_free_locale**|\<locale.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[_get_current_locale](get-current-locale.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>

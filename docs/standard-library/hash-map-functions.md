@@ -1,76 +1,75 @@
 ---
-title: "Funções &lt;hash_map&gt; | Microsoft Docs"
-ms.custom: 
+title: Funções &lt;hash_map&gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-caps.latest.revision: 
+caps.latest.revision: 9
 manager: ghogen
-ms.openlocfilehash: 4240316aadf964b972c46a00c6ee4a09cc4626d6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d54cf0181a80ccb763cfe76f8eb89ade5a56b7d4
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt-functions"></a>Funções &lt;hash_map&gt;
-|||  
-|-|-|  
-|[swap](#swap)|[swap (hash_map)](#swap_hash_map)|  
-  
-##  <a name="swap_hash_map"></a>  swap (hash_map)  
-  
+
+|||
+|-|-|
+|[swap](#swap)|[swap (hash_map)](#swap_hash_map)|
+
+## <a name="swap_hash_map"></a>  swap (hash_map)
+
 > [!NOTE]
->  Esta API está obsoleta. A alternativa é a [Classe unordered_map](../standard-library/unordered-map-class.md).  
-  
- Troca os elementos de dois hash_maps.  
-  
-```
+> Esta API está obsoleta. A alternativa é a [Classe unordered_map](../standard-library/unordered-map-class.md).
+
+Troca os elementos de dois hash_maps.
+
+```cpp
 void swap(
     hash_map <Key, Type, Traits, Alloctor>& left,
     hash_map <Key, Type, Traits, Allocator>& right);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- `right`  
- O hash_map cujos elementos serão trocados por aqueles do `left` do mapa.  
-  
- `left`  
- O hash_map cujos elementos serão trocados por aqueles do `right` do mapa.  
-  
-### <a name="remarks"></a>Comentários  
- A função de modelo é um algoritmo especializado na classe de contêiner hash_map para executar a função membro `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template \<class T> void swap(T&, T&)**, no arquivo de cabeçalho do algoritmo funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.  
-  
-##  <a name="swap"></a>  swap  
-  
-> [!NOTE]
->  Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).  
-  
- Troca os elementos de dois hash_multimaps.  
-  
 ```
+
+### <a name="parameters"></a>Parâmetros
+
+`right` O hash_map cujos elementos são sejam trocadas com aquelas do mapa `left`.
+
+`left` O hash_map cujos elementos são sejam trocadas com aquelas do mapa `right`.
+
+### <a name="remarks"></a>Comentários
+
+A função de modelo é um algoritmo especializado na classe de contêiner hash_map para executar a função membro `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template \<class T> void swap(T&, T&)**, no arquivo de cabeçalho do algoritmo funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.
+
+## <a name="swap"></a>  swap
+
+> [!NOTE]
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
+
+Troca os elementos de dois hash_multimaps.
+
+```cpp
 void swap(
     hash_multimap <Key, Type, Traits, Alloctor>& left,
     hash_multimap <Key, Type, Traits, Allocator>& right);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- `right`  
- O hash_multimap cujos elementos serão trocados por aqueles do `left` do mapa.  
-  
- `left`  
- O hash_multimap cujos elementos serão trocados por aqueles do `right` do mapa.  
-  
-### <a name="remarks"></a>Comentários  
- A função de modelo é um algoritmo especializado na classe de contêiner hash_multimap para executar a função de membro `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template \<class T> void swap(T&, T&)**, no arquivo de cabeçalho do algoritmo funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.  
-  
-## <a name="see-also"></a>Consulte também  
- [<hash_map>](../standard-library/hash-map.md)
+```
 
+### <a name="parameters"></a>Parâmetros
 
+`right` O hash_multimap cujos elementos são sejam trocadas com aquelas do mapa `left`.
 
+`left` O hash_multimap cujos elementos são sejam trocadas com aquelas do mapa `right`.
+
+### <a name="remarks"></a>Comentários
+
+A função de modelo é um algoritmo especializado na classe de contêiner hash_multimap para executar a função de membro `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template \<class T> void swap(T&, T&)**, no arquivo de cabeçalho do algoritmo funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.
+
+## <a name="see-also"></a>Consulte também
+
+[<hash_map>](../standard-library/hash-map.md)<br/>

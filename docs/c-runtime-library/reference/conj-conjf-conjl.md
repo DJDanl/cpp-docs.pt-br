@@ -1,13 +1,13 @@
 ---
 title: conj, conjf, conjl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - conj
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b994d8c6afe416cd399c04d91fae422b217cf2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01feb4b30305f915a91d104d9134018c3d5b24e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
-Recupera o conjugado complexo de um número complexo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-_Dcomplex conj(   
-   _Dcomplex z   
-);  
-_Fcomplex conj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex conj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex conjf(   
-   _Fcomplex z   
-);  
-_Lcomplex conjl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `z`  
- Um número complexo.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O conjugado complexo de `z`.  O resultado tem a mesma parte real e imaginária que `z`, mas com o sinal oposto.  
-  
-## <a name="remarks"></a>Comentários  
- Como C++ permite sobrecargas, é possível chamar sobrecargas de `conj` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `conj` sempre usa e retorna um valor `_Dcomplex`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho C|Cabeçalho C++|  
-|-------------|--------------|------------------|  
-|`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Recupera o conjugado complexo de um número complexo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+_Dcomplex conj(
+   _Dcomplex z
+);
+_Fcomplex conj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex conj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex conjf(
+   _Fcomplex z
+);
+_Lcomplex conjl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*z*<br/>
+Um número complexo.
+
+## <a name="return-value"></a>Valor de retorno
+
+O conjugado complexo de *z*.  O resultado tem a mesma parte real e imaginária como *z*, mas com o sinal oposto.
+
+## <a name="remarks"></a>Comentários
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **conj** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **conj** sempre usa e retorna um **_Dcomplex** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho C|Cabeçalho C++|
+|-------------|--------------|------------------|
+|**Conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

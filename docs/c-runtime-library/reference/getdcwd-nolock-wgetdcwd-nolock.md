@@ -1,12 +1,12 @@
 ---
 title: _getdcwd_nolock, _wgetdcwd_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
@@ -43,74 +43,79 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1d9f4c57ef942f11f5e5dee79356a3e2d7f47a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 53f050868e84c102c0d84dd22e03e27cf733ea5f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
-Obtém o caminho completo do diretório de trabalho atual na unidade especificada.  
-  
+
+Obtém o caminho completo do diretório de trabalho atual na unidade especificada.
+
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-char *_getdcwd_nolock(   
-   int drive,  
-   char *buffer,  
-   int maxlen   
-);  
-wchar_t *_wgetdcwd_nolock(   
-   int drive,  
-   wchar_t *buffer,  
-   int maxlen   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `drive`  
- Unidade de disco.  
-  
- `buffer`  
- Local de armazenamento para o caminho.  
-  
- `maxlen`  
- Tamanho máximo do caminho em caracteres: `char` para `_getdcwd` e `wchar_t` para `_wgetdcwd`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Consulte [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md).  
-  
-## <a name="remarks"></a>Comentários  
- `_getdcwd_nolock` e `_wgetdcwd_nolock` são idênticas a `_getdcwd` e `_wgetdcwd`, respectivamente, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tgetdcwd_nolock`|`_getdcwd_nolock`|`_getdcwd_nolock`|`_wgetdcwd_nolock`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_getdcwd_nolock`|\<direct.h>|  
-|`_wgetdcwd_nolock`|\<direct.h> ou \<wchar.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de diretório](../../c-runtime-library/directory-control.md)   
- [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [_getdrive](../../c-runtime-library/reference/getdrive.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)
+> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+char *_getdcwd_nolock(
+   int drive,
+   char *buffer,
+   int maxlen
+);
+wchar_t *_wgetdcwd_nolock(
+   int drive,
+   wchar_t *buffer,
+   int maxlen
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Dirigir*<br/>
+Unidade de disco.
+
+*buffer*<br/>
+Local de armazenamento para o caminho.
+
+*MaxLen*<br/>
+Comprimento máximo de caminho em caracteres: **char** para **getdcwd** e **wchar_t** para **wgetdcwd**.
+
+## <a name="return-value"></a>Valor de retorno
+
+Consulte [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
+
+## <a name="remarks"></a>Comentários
+
+**getdcwd_nolock** e **wgetdcwd_nolock** são idênticos aos **getdcwd** e **wgetdcwd**, respectivamente, exceto que eles não são protegidos contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_getdcwd_nolock**|\<direct.h>|
+|**_wgetdcwd_nolock**|\<direct.h> ou \<wchar.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de diretório](../../c-runtime-library/directory-control.md)<br/>
+[_chdir, _wchdir](chdir-wchdir.md)<br/>
+[_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
+[_getdrive](getdrive.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
+[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _setmaxstdio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _setmaxstdio
@@ -34,60 +34,66 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5317437202cef423759ac850aab2360892521746
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0c0f54f43b0abb5fff2d13233847b45acdb5f0be
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
-Define o máximo para o número de arquivos abertos simultaneamente no nível `stdio`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _setmaxstdio(  
-   int newmax   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `newmax`  
- Novo máximo para o número de arquivos abertos simultaneamente no nível `stdio`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna `newmax` se bem-sucedido; caso contrário, de -1.  
-  
- Se `newmax` é menor que `_IOB_ENTRIES` ou superior ao número máximo de identificadores disponíveis no sistema operacional, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor –1 e definirá `errno` como `EINVAL`.  
-  
- Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentários  
- A função `_setmaxstdio` altera o valor máximo para o número de arquivos que podem ser abertos simultaneamente no nível `stdio`.  
-  
- A E/S em tempo de execução de C agora dá suporte a muito mais arquivos abertos em plataformas Win32 do que nas versões anteriores. Até 2.048 arquivos podem ser abertos simultaneamente no [nível lowio](../../c-runtime-library/low-level-i-o.md) (ou seja, abertos e acessados por meio das famílias de funções de E/S `_open`, `_read`, `_write` e assim por diante). Até 512 arquivos podem ser abertos simultaneamente no [nível stdio](../../c-runtime-library/stream-i-o.md) (ou seja, abertos e acessados por meio das famílias de funções `fopen`, `fgetc`, `fputc` e assim por diante). O limite de 512 arquivos abertos no nível `stdio` pode ser elevado para um máximo de 2.048 por meio da função `_setmaxstdio`.  
-  
- Devido ao fato das funções no nível `stdio` como `fopen` serem compiladas sobre as funções `lowio`, o número máximo de 2.048 é um limite superior rígido para o número de arquivos abertos simultaneamente acessados por meio da biblioteca em tempo de execução de C.  
-  
+
+Define o máximo para o número de arquivos abertos simultaneamente no **stdio** nível.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _setmaxstdio(
+   int newmax
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*newmax*<br/>
+Novo valor máximo para o número de arquivos abertos simultaneamente no **stdio** nível.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna *newmax* se bem-sucedido; caso contrário, de -1.
+
+Se *newmax* é menor que **_IOB_ENTRIES** ou maior, em seguida, o número máximo de identificadores disponíveis no sistema operacional, o manipulador de parâmetro inválido é invocado, conforme descrito em [ Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função retornará -1 e conjuntos de **errno** para **EINVAL**.
+
+Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentários
+
+O **setmaxstdio** função altera o valor máximo para o número de arquivos que podem ser abertas simultaneamente no **stdio** nível.
+
+A E/S em tempo de execução de C agora dá suporte a muito mais arquivos abertos em plataformas Win32 do que nas versões anteriores. Até 2.048 arquivos pode ser aberto simultaneamente ao [lowio nível](../../c-runtime-library/low-level-i-o.md) (ou seja, aberto e acessado por meio do **abrir**, **Read**, **Write**, e assim por diante família de funções de e/s). Até 512 arquivos pode ser aberto simultaneamente ao [stdio nível](../../c-runtime-library/stream-i-o.md) (ou seja, aberto e acessado por meio do **fopen**, **fgetc**, **fputc** e assim por diante família de funções). O limite de 512 arquivos abertos no **stdio** nível pode ser aumentado para um máximo de 2.048 por meio do **setmaxstdio** função.
+
+Porque **stdio**-nível de funções, como **fopen**, são criados sobre o **lowio** funções, o número máximo de 2.048 é um disco rígido limite superior para o número de simultaneamente Abra arquivos acessados por meio da biblioteca de tempo de execução C.
+
 > [!NOTE]
->  Esse limite pode estar além do que tem suporte por uma determinada plataforma Win32 e sua respectiva configuração.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_setmaxstdio`|\<stdio.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
- Consulte [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md) para obter um exemplo de como usar `_setmaxstdio`.  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de fluxo](../../c-runtime-library/stream-i-o.md)
+> Esse limite pode estar além do que tem suporte por uma determinada plataforma Win32 e sua respectiva configuração.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_setmaxstdio**|\<stdio.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Consulte [getmaxstdio](getmaxstdio.md) para obter um exemplo do uso de **setmaxstdio**.
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>

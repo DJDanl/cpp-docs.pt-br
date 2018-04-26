@@ -1,12 +1,12 @@
 ---
 title: _lsearch | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _lsearch
@@ -37,111 +37,116 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4cb64b9287de11a894a8ca7c7cdd4490fcc446
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5f38dd8a23cce652b93794f62c775962482fe159
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lsearch"></a>_lsearch
-Executa uma pesquisa linear para um valor e o adicionará ao final da lista se ele não for encontrado. Uma versão mais segura dessa função está disponível; consulte [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void *_lsearch(  
-   const void *key,  
-   void *base,  
-   unsigned int *num,  
-   unsigned int width,  
-   int (__cdecl *compare)(const void *, const void *)   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `key`  
- O objeto a ser pesquisado.  
-  
- `base`  
- Ponteiro para a base da matriz a ser pesquisada.  
-  
- `num`  
- Número de elementos.  
-  
- `width`  
- Largura de cada elemento da matriz.  
-  
- `compare`  
- Ponteiro para a rotina de comparação. O primeiro parâmetro é um ponteiro para a chave de pesquisa. O segundo parâmetro é um ponteiro para um elemento de matriz a ser comparado com a chave.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Se a chave for encontrada, `_lsearch` retornará um ponteiro para o elemento da matriz em `base` que corresponde a `key`. Se a chave não for encontrada, `_lsearch` retornará um ponteiro para o novo item adicionado ao final da matriz.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_lsearch` executa uma pesquisa linear para o valor `key` em uma matriz de `num` elementos, cada uma de `width` bytes. Ao contrário de `bsearch`, `_lsearch` não exige que a matriz seja classificada. Se `key` não for encontrado, `_lsearch` o adicionará ao final da matriz e incrementará `num`.  
-  
- O argumento `compare` é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento. `_lsearch` chama a rotina `compare` uma ou mais vezes durante a pesquisa, passando ponteiros para dois elementos da matriz em cada chamada. `compare` deve comparar os elementos e retornar um valor diferente de zero (ou seja, os elementos são diferentes) ou 0 (isto é, os elementos são idênticos).  
-  
- Essa função valida seus parâmetros. Se `compare`, `key` ou `num` for `NULL` ou se `base` for NULO e *`num` for diferente de zero ou ainda se `width` for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e a função retornará `NULL`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_lsearch`|\<search.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_lsearch.c  
-#include <search.h>  
-#include <string.h>  
-#include <stdio.h>  
-  
-int compare( const void *arg1, const void *arg2 );  
-  
-int main(void)  
-{  
-   char * wordlist[4] = { "hello", "thanks", "bye" };  
-                            // leave room to grow...  
-   int n = 3;  
-   char **result;  
-   char *key = "extra";  
-   int i;  
-  
-   printf( "wordlist before _lsearch:" );  
-   for( i=0; i<n; ++i ) printf( " %s", wordlist[i] );  
-   printf( "\n" );  
-  
-   result = (char **)_lsearch( &key, wordlist,   
-                      &n, sizeof(char *), compare );  
-  
-   printf( "wordlist after _lsearch:" );  
-   for( i=0; i<n; ++i ) printf( " %s", wordlist[i] );  
-   printf( "\n" );  
-}  
-  
-int compare(const void *arg1, const void *arg2 )  
-{  
-   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );  
-}  
-```  
-  
-```Output  
-wordlist before _lsearch: hello thanks bye  
-wordlist after _lsearch: hello thanks bye extra  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [_lfind](../../c-runtime-library/reference/lfind.md)   
- [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)
+
+Executa uma pesquisa linear para um valor e o adicionará ao final da lista se ele não for encontrado. Uma versão mais segura dessa função está disponível; consulte [_lsearch_s](lsearch-s.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void *_lsearch(
+   const void *key,
+   void *base,
+   unsigned int *num,
+   unsigned int width,
+   int (__cdecl *compare)(const void *, const void *)
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*key*<br/>
+O objeto a ser pesquisado.
+
+*base*<br/>
+Ponteiro para a base da matriz a ser pesquisada.
+
+*Número*<br/>
+Número de elementos.
+
+*width*<br/>
+Largura de cada elemento da matriz.
+
+*compare*<br/>
+Ponteiro para a rotina de comparação. O primeiro parâmetro é um ponteiro para a chave de pesquisa. O segundo parâmetro é um ponteiro para um elemento de matriz a ser comparado com a chave.
+
+## <a name="return-value"></a>Valor de retorno
+
+Se a chave for encontrada, **lsearch** retorna um ponteiro para o elemento da matriz em *base* que corresponda *chave*. Se a chave não for encontrada, **lsearch** retorna um ponteiro para o novo item no final da matriz.
+
+## <a name="remarks"></a>Comentários
+
+O **lsearch** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Ao contrário de **bsearch**, **lsearch** não exige que a matriz a ser classificada. Se *chave* não for encontrado, **lsearch** adiciona ao final da matriz e incrementos *número*.
+
+O *comparar* argumento é um ponteiro para uma rotina fornecido pelo usuário que compara dois elementos de matriz e retorna um valor que especifica sua relação. **lsearch** chama o *comparar* rotina um ou mais vezes durante a pesquisa, passando os ponteiros para os dois elementos de matriz em cada chamada. *Comparar* deve comparar os elementos e retornar um diferente de zero (ou seja, os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
+
+Essa função valida seus parâmetros. Se *comparar*, *chave* ou *número* é **nulo**, ou se *base* é NULL e **número*  é diferente de zero, ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_lsearch**|\<search.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_lsearch.c
+#include <search.h>
+#include <string.h>
+#include <stdio.h>
+
+int compare( const void *arg1, const void *arg2 );
+
+int main(void)
+{
+   char * wordlist[4] = { "hello", "thanks", "bye" };
+                            // leave room to grow...
+   int n = 3;
+   char **result;
+   char *key = "extra";
+   int i;
+
+   printf( "wordlist before _lsearch:" );
+   for( i=0; i<n; ++i ) printf( " %s", wordlist[i] );
+   printf( "\n" );
+
+   result = (char **)_lsearch( &key, wordlist,
+                      &n, sizeof(char *), compare );
+
+   printf( "wordlist after _lsearch:" );
+   for( i=0; i<n; ++i ) printf( " %s", wordlist[i] );
+   printf( "\n" );
+}
+
+int compare(const void *arg1, const void *arg2 )
+{
+   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );
+}
+```
+
+```Output
+wordlist before _lsearch: hello thanks bye
+wordlist after _lsearch: hello thanks bye extra
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)<br/>
+[bsearch](bsearch.md)<br/>
+[_lfind](lfind.md)<br/>
+[_lsearch_s](lsearch-s.md)<br/>

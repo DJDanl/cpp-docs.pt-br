@@ -1,12 +1,12 @@
 ---
 title: _aligned_recalloc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_recalloc
@@ -32,62 +32,67 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715c3da97f92007cfda39b8219795ad09d527601
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ae20d71dc3a6e23b29c76166e1a09fab8afaf6f9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
-Altera o tamanho de um bloco de memória que foi alocado com [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) e inicializa a memória como 0.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void * _aligned_recalloc(  
-   void *memblock,   
-   size_t num,  
-   size_t size,   
-   size_t alignment  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [in] `memblock`  
- O ponteiro do bloco de memória atual.  
-  
- [in] `num`  
- O número de elementos.  
-  
- [in] `size`  
- O tamanho, em bytes, de cada elemento.  
-  
- [in] `alignment`  
- O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_aligned_recalloc` retorna um ponteiro nulo para o bloco de memória realocado (e possivelmente migrado). O valor retornado é `NULL` se o tamanho for zero e o argumento do buffer não for `NULL`, ou se não houver memória suficiente para expandir o bloco para o tamanho determinado. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.  
-  
- Realocar a memória e alterar o alinhamento de um bloco é um erro.  
-  
-## <a name="remarks"></a>Comentários  
- `_aligned_recalloc` baseia-se em `malloc`. Para obter mais informações sobre como usar `_aligned_offset_malloc`, consulte [malloc](../../c-runtime-library/reference/malloc.md).  
-  
- Essa função define `errno` como `ENOMEM` se a alocação da memória tiver falhado ou se o tamanho solicitado for maior que `_HEAP_MAXREQ`. Para obter mais informações sobre `errno`, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, `_aligned_recalloc` valida seus parâmetros. Se `alignment` não for um número elevado à segunda potência, essa função invocará o manipulador de parâmetro inválido, conforme a descrição em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará `NULL` e definirá `errno` como `EINVAL`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_aligned_recalloc`|\<malloc.h>|  
-  
-## <a name="see-also"></a>Consulte também  
- [Alinhamento de dados](../../c-runtime-library/data-alignment.md)   
- [_recalloc](../../c-runtime-library/reference/recalloc.md)   
- [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)
+
+Altera o tamanho de um bloco de memória que foi alocado com [_aligned_malloc](aligned-malloc.md) ou [_aligned_offset_malloc](aligned-offset-malloc.md) e inicializa a memória como 0.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void * _aligned_recalloc(
+   void *memblock,
+   size_t num,
+   size_t size,
+   size_t alignment
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*memblock*<br/>
+O ponteiro do bloco de memória atual.
+
+*Número*<br/>
+O número de elementos.
+
+*size*<br/>
+O tamanho, em bytes, de cada elemento.
+
+*alignment*<br/>
+O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.
+
+## <a name="return-value"></a>Valor de retorno
+
+**aligned_recalloc** retorna um ponteiro nulo para o bloco de memória realocada (e possivelmente movido). O valor de retorno é **nulo** se o tamanho é zero e o argumento de buffer não é **nulo**, ou se não houver memória suficiente disponível para expandir o bloco para determinado tamanho. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.
+
+Realocar a memória e alterar o alinhamento de um bloco é um erro.
+
+## <a name="remarks"></a>Comentários
+
+**aligned_recalloc** baseia-se em **malloc**. Para obter mais informações sobre como usar **aligned_offset_malloc**, consulte [malloc](malloc.md).
+
+Esta função define **errno** para **ENOMEM** se a alocação de memória falhou ou se o tamanho solicitado é maior que **heap_maxreq**. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_recalloc** valida seus parâmetros. Se *alinhamento* não é uma potência de 2, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_aligned_recalloc**|\<malloc.h>|
+
+## <a name="see-also"></a>Consulte também
+
+[Alinhamento de dados](../../c-runtime-library/data-alignment.md)<br/>
+[_recalloc](recalloc.md)<br/>
+[_aligned_offset_recalloc](aligned-offset-recalloc.md)<br/>

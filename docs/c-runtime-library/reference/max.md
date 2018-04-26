@@ -1,12 +1,12 @@
 ---
 title: __max | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __max
@@ -32,52 +32,54 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1868106e4224e05d661aba5bfb0ed4dca31f508a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5bc89f74bb98b8fb51dc652ab57c57d37a46d5a0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="max"></a>__max
-Retorna o maior de dois valores.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-type __max(  
-   type a,  
-   type b   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `type`  
- Qualquer tipo de dados numérico.  
-  
- `a, b`  
- Valores de qualquer tipo numérico a serem comparados.  
-  
-## <a name="return-value"></a>Valor de retorno  
- `__max` retorna o maior dos seus argumentos.  
-  
-## <a name="remarks"></a>Comentários  
- A macro `__max` compara dois valores e retorna o valor do maior. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`__max`|\<stdlib.h>|  
-  
-## <a name="example"></a>Exemplo  
- Para obter mais informações, consulte o exemplo para [__min](../../c-runtime-library/reference/min.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [__min](../../c-runtime-library/reference/min.md)
+
+Uma macro de pré-processador que retorna o maior dos dois valores.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+#define __max(a,b) (((a) > (b)) ? (a) : (b))
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*um*, *b*<br/>
+Valores de qualquer tipo numérico a serem comparados.
+
+## <a name="return-value"></a>Valor de retorno
+
+**Max** retorna o maior dos seus argumentos.
+
+## <a name="remarks"></a>Comentários
+
+O **max** macro compara dois valores e retorna o valor de um maior. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.
+
+O argumento retornado é avaliado duas vezes pela macro. Isso pode levar a resultados inesperados se o argumento é uma expressão que altera seu valor quando ele é avaliado, como `*p++`.
+
+## <a name="requirements"></a>Requisitos
+
+|Macro|Cabeçalho necessário|
+|-------------|---------------------|
+|**__max**|\<stdlib.h>|
+
+## <a name="example"></a>Exemplo
+
+Para obter mais informações, consulte o exemplo para [__min](min.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[__min](min.md)<br/>

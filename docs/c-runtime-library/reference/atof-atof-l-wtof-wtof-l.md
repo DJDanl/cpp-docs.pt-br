@@ -1,12 +1,12 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wtof_l
@@ -55,94 +55,99 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89644b1ff00bda2db5aa1a8c007668fc895a3b6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1897cc64c79a8593ade221ba24ecad6c037d3586
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
-Converta uma cadeia de caracteres em duplo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-double atof(  
-   const char *str   
-);  
-double _atof_l(  
-   const char *str,  
-   _locale_t locale  
-);  
-double _wtof(  
-   const wchar_t *str   
-);  
-double _wtof_l(  
-   const wchar_t *str,  
-   _locale_t locale  
-);  
-```  
-  
-## <a name="parameters"></a>Parâmetros  
- `str`  
- Cadeia de caracteres a ser convertida.  
-  
- `locale`  
- Localidade a usar.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Cada função retorna o valor `double` produzido interpretando os caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.  
-  
- Em todos os casos fora do intervalo, errno é definido como `ERANGE`. Se o parâmetro passado for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão 0.  
-  
-## <a name="remarks"></a>Comentários  
- Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuante de precisão dupla.  
-  
- A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.  
-  
- O argumento `str` para `atof` e `_wtof` tem a seguinte forma:  
-  
- [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E` }[`sign`]`digits`]  
-  
- Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de adição (+) ou menos (-); e `digits` são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma carta de apresentação (`e` ou `E`) e um inteiro decimal opcionalmente com sinal.  
- 
- As versões UCRT dessas funções não dão suporte para a conversão do estilo Fortran (`d` ou `D`) letras de expoente. Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.  
-  
- As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de que usam o parâmetro de localidade passado em vez da localidade atual.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tstof`|`atof`|`atof`|`_wtof`|  
-|`_ttof`|`atof`|`atof`|`_wtof`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina(s)|Cabeçalho necessário|  
-|------------------|---------------------|  
-|`atof`, `_atof_l`|C: \<math.h> ou \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> ou \<math.h>|  
-|`_wtof`, `_wtof_l`|C: \<stdlib.h> ou \<wchar.h> C++: \<cstdlib>, \<stdlib.h> ou \<wchar.h>|  
-  
-## <a name="example"></a>Exemplo  
- Esse programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando as funções `atof` e `_atof_l`.  
-  
-```C  
-// crt_atof.c  
-//  
-// This program shows how numbers stored as   
-// strings can be converted to numeric  
-// values using the atof and _atof_l functions.  
 
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <locale.h>  
+Converta uma cadeia de caracteres em duplo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+double atof(
+   const char *str
+);
+double _atof_l(
+   const char *str,
+   _locale_t locale
+);
+double _wtof(
+   const wchar_t *str
+);
+double _wtof_l(
+   const wchar_t *str,
+   _locale_t locale
+);
+```
+
+## <a name="parameters"></a>Parâmetros
+
+*str*<br/>
+Cadeia de caracteres a ser convertida.
+
+*locale*<br/>
+Localidade a usar.
+
+## <a name="return-value"></a>Valor de retorno
+
+Cada função retorna o **duplo** valor produzido por interpretar os caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
+
+Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar 0.
+
+## <a name="remarks"></a>Comentários
+
+Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuante de precisão dupla.
+
+A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.
+
+O *str* argumento **atof** e **wtof** tem a seguinte forma:
+
+[*espaço em branco*] [*sinal*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **E** } [*sinal*]*dígitos*]
+
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de adição (+) ou menos (-); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma carta de apresentação (**e**, ou **E**) e um inteiro decimal opcionalmente assinado.
+
+As versões UCRT dessas funções não dão suporte à conversão de estilo Fortran (**d** ou **D**) letras expoente. Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
+
+As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o *localidade* parâmetro passado em vez da localidade atual.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tstof**|**atof**|**atof**|**_wtof**|
+|**ttof**|**atof**|**atof**|**_wtof**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina(s)|Cabeçalho necessário|
+|------------------|---------------------|
+|**atof**, **atof_l**|C: \<math.h> ou \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> ou \<math.h>|
+|**wtof**, **wtof_l**|C: \<stdlib.h> ou \<wchar.h> C++: \<cstdlib>, \<stdlib.h> ou \<wchar.h>|
+
+## <a name="example"></a>Exemplo
+
+Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando a **atof** e **atof_l** funções.
+
+```C
+// crt_atof.c
+//
+// This program shows how numbers stored as
+// strings can be converted to numeric
+// values using the atof and _atof_l functions.
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <locale.h>
 
 int main(void)
 {
@@ -150,42 +155,43 @@ int main(void)
     double value = 0;
     _locale_t fr = _create_locale(LC_NUMERIC, "fr-FR");
 
-    // An example of the atof function  
-    // using leading and training spaces.  
+    // An example of the atof function
+    // using leading and training spaces.
     str = "  3336402735171707160320 ";
     value = atof(str);
     printf("Function: atof(\"%s\") = %e\n", str, value);
 
-    // Another example of the atof function  
-    // using the 'E' exponential formatting keyword.  
+    // Another example of the atof function
+    // using the 'E' exponential formatting keyword.
     str = "3.1412764583E210";
     value = atof(str);
     printf("Function: atof(\"%s\") = %e\n", str, value);
 
-    // An example of the atof and _atof_l functions  
-    // using the 'e' exponential formatting keyword  
-    // and showing different decimal point interpretations.  
+    // An example of the atof and _atof_l functions
+    // using the 'e' exponential formatting keyword
+    // and showing different decimal point interpretations.
     str = "  -2,309e-25";
     value = atof(str);
     printf("Function: atof(\"%s\") = %e\n", str, value);
     value = _atof_l(str, fr);
     printf("Function: _atof_l(\"%s\", fr)) = %e\n", str, value);
-}  
-```  
-  
-```Output  
+}
+```
+
+```Output
 Function: atof("  3336402735171707160320 ") = 3.336403e+21
 Function: atof("3.1412764583E210") = 3.141276e+210
 Function: atof("  -2,309e-25") = -2.000000e+00
-Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[_ecvt](ecvt.md)<br/>
+[_fcvt](fcvt.md)<br/>
+[_gcvt](gcvt.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

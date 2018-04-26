@@ -1,12 +1,12 @@
 ---
 title: mbsrtowcs_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - mbsrtowcs_s
@@ -30,117 +30,123 @@ dev_langs:
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0b422fdc809d979fa64cf49e96e8991c4df0f6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc125521b7db7537ecbbf3fe3c42ec6b8b8e1ada
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
-Converte uma cadeia de caracteres multibyte na localidade atual para sua representação de cadeia de caracteres largos. Uma versão de [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-errno_t mbsrtowcs_s(  
-   size_t * pReturnValue,  
-   wchar_t * wcstr,  
-   size_t sizeInWords,  
-   const char ** mbstr,  
-   size_t count,  
-   mbstate_t * mbstate  
-);  
-template <size_t size>  
-errno_t mbsrtowcs_s(  
-   size_t * pReturnValue,  
-   wchar_t (&wcstr)[size],  
-   const char ** mbstr,  
-   size_t count,  
-   mbstate_t * mbstate  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [out] `pReturnValue`  
- O número de caracteres convertidos.  
-  
- [out] `wcstr`  
- Endereço do buffer para armazenar a cadeia de caracteres largos convertida resultante.  
-  
- [out] `sizeInWords`  
- O tamanho do `wcstr` em palavras (caracteres largos).  
-  
- [in, out] `mbstr`  
- O ponteiro indireto para o local da cadeia de caracteres multibyte a ser convertida.  
-  
- [in] `count`  
- O número máximo de caracteres largos a serem armazenados no buffer `wcstr`, não incluindo o caractere nulo de terminação ou [_TRUNCATE](../../c-runtime-library/truncate.md).  
-  
- [in, out] `mbstate`  
- Um ponteiro para um objeto do estado da conversão `mbstate_t`. Se esse valor for um ponteiro nulo, um objeto de estado de conversão interno estático será usado. Como o objeto `mbstate_t` interno não é thread-safe, é recomendável que você sempre passe seu próprio parâmetro `mbstate`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Zero se a conversão for bem-sucedida ou um código de erro em caso de falha.  
-  
-|Condição de erro|Valor retornado e `errno`|  
-|---------------------|------------------------------|  
-|`wcstr` é um ponteiro nulo e `sizeInWords` > 0|`EINVAL`|  
-|`mbstr` é um ponteiro nulo|`EINVAL`|  
-|A cadeia de caracteres indiretamente apontada por `mbstr` contém uma sequência multibyte que não é válida para a localidade atual.|`EILSEQ`|  
-|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que `count` seja `_TRUNCATE`, para obter mais informações, consulte Comentários abaixo)|`ERANGE`|  
-  
- Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará um código de erro e definirá `errno` conforme indicado na tabela.  
-  
-## <a name="remarks"></a>Comentários  
- A função `mbsrtowcs_s` converte uma cadeia de caracteres multibyte apontada indiretamente por `mbstr` em caracteres largos armazenados no buffer apontado por `wcstr` usando o estado de conversão contido em `mbstate`. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:  
-  
--   Um caractere nulo multibyte é encontrado  
-  
--   Um caractere multibyte inválido é encontrado  
-  
--   O número de caracteres largos armazenados no buffer `wcstr` é igual a `count`.  
-  
- A cadeia de caracteres de destino `wcstr` sempre é terminada em nulo, mesmo no caso de um erro, a menos que `wcstr` seja um ponteiro nulo.  
-  
- Se `count` for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), `mbsrtowcs_s` converterá o máximo da cadeia de caracteres que caberá no buffer de destino ainda deixando espaço para um terminador nulo.  
-  
- Se `mbsrtowcs_s` converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em caracteres largos da cadeia de caracteres convertidas e o terminador nulo em `*pReturnValue`, desde que `pReturnValue` não seja um ponteiro nulo. Isso ocorrerá mesmo se o argumento `wcstr` for um ponteiro nulo e permitirá que você determine o tamanho do buffer. Observe que se `wcstr` for um ponteiro nulo, `count` será ignorado.  
-  
- Se `wcstr` não for um ponteiro nulo, será atribuído um ponteiro nulo ao objeto de ponteiro apontado por `mbstr` se a conversão tiver parado porque um caractere nulo de terminação foi atingido. Caso contrário, será atribuído o endereço logo depois do último caractere multibyte convertido, se houver. Isso permite que uma chamada de função subsequente reinicie a conversão em que essa chamada é interrompida.  
-  
- Se `mbstate` for um ponteiro nulo, um objeto estático de estado de conversão `mbstate_t` interno da biblioteca será usado. Como o objeto estático interno não é thread-safe, é recomendável que você sempre passe seu próprio valor `mbstate`.  
-  
- Se `mbsrtowcs_s` encontrar um caractere multibyte que não é válido na localidade atual, ele colocará -1 em `*pReturnValue`, definirá o buffer de destino `wcstr` para uma cadeia de caracteres vazia, definirá `errno` como `EILSEQ` e retornará `EILSEQ`.  
-  
- Se as sequências apontadas por `mbstr` e por `wcstr` se sobrepuserem, o comportamento de `mbsrtowcs_s` será indefinido. `mbsrtowcs_s` é afetado pela categoria LC_TYPE da localidade atual.  
-  
+
+Converte uma cadeia de caracteres multibyte na localidade atual para sua representação de cadeia de caracteres largos. Uma versão de [mbsrtowcs](mbsrtowcs.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+errno_t mbsrtowcs_s(
+   size_t * pReturnValue,
+   wchar_t * wcstr,
+   size_t sizeInWords,
+   const char ** mbstr,
+   size_t count,
+   mbstate_t * mbstate
+);
+template <size_t size>
+errno_t mbsrtowcs_s(
+   size_t * pReturnValue,
+   wchar_t (&wcstr)[size],
+   const char ** mbstr,
+   size_t count,
+   mbstate_t * mbstate
+); // C++ only
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pReturnValue*<br/>
+O número de caracteres convertidos.
+
+*wcstr*<br/>
+Endereço do buffer para armazenar a cadeia de caracteres largos convertida resultante.
+
+*sizeInWords*<br/>
+O tamanho de *wcstr* palavras (caracteres largos).
+
+*mbstr*<br/>
+O ponteiro indireto para o local da cadeia de caracteres multibyte a ser convertida.
+
+*count*<br/>
+O número máximo de caracteres largos para armazenar no *wcstr* buffer, não incluindo o terminação null, ou [TRUNCATE](../../c-runtime-library/truncate.md).
+
+*mbstate*<br/>
+Um ponteiro para um **mbstate_t** objeto de estado de conversão. Se esse valor for um ponteiro nulo, um objeto de estado de conversão interno estático será usado. Porque o interno **mbstate_t** objeto não é thread-safe, recomendamos que você sempre passa seu próprio *mbstate* parâmetro.
+
+## <a name="return-value"></a>Valor de retorno
+
+Zero se a conversão for bem-sucedida ou um código de erro em caso de falha.
+
+|Condição de erro|Valor de retorno e **errno**|
+|---------------------|------------------------------|
+|*wcstr* é um ponteiro nulo e *sizeInWords* > 0|**EINVAL**|
+|*mbstr* é um ponteiro nulo|**EINVAL**|
+|A cadeia de caracteres apontada indiretamente por *mbstr* contém uma sequência de multibyte não é válida para a localidade atual.|**EILSEQ**|
+|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que *contagem* é **TRUNCATE**; para obter mais informações, consulte comentários)|**ERANGE**|
+
+Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retornará um código de erro e define **errno** conforme indicado na tabela.
+
+## <a name="remarks"></a>Comentários
+
+O **mbsrtowcs_s** função converte uma cadeia de caracteres multibyte indiretamente apontada pelo *mbstr* em caracteres largos armazenados no buffer apontado pelo *wcstr*, por usando o estado de conversão contido em *mbstate*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
+
+- Um caractere nulo multibyte é encontrado
+
+- Um caractere multibyte inválido é encontrado
+
+- O número de caracteres largos armazenados no *wcstr* buffer é igual a *contagem*.
+
+A cadeia de caracteres de destino *wcstr* sempre é terminada em nulo, mesmo no caso de um erro, a menos que *wcstr* é um ponteiro nulo.
+
+Se *contagem* é o valor especial [TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s** converte máximo da cadeia de caracteres como será se ajustar no buffer de destino, enquanto ainda deixa espaço para um valor nulo terminador.
+
+Se **mbsrtowcs_s** com êxito converte a cadeia de caracteres de origem, ele coloca o tamanho em caracteres largos de cadeia de caracteres convertida e o terminador nulo em  *&#42;pReturnValue*, fornecido  *pReturnValue* não é um ponteiro nulo. Isso ocorre mesmo se o *wcstr* argumento é um ponteiro nulo e permite que você determine o tamanho do buffer necessário. Observe que, se *wcstr* é um ponteiro nulo, *contagem* será ignorado.
+
+Se *wcstr* não é um ponteiro nulo, o objeto de ponteiro apontada pelo *mbstr* é atribuído um ponteiro nulo se a conversão foi interrompida porque foi atingido um caractere null de terminação. Caso contrário, será atribuído o endereço logo depois do último caractere multibyte convertido, se houver. Isso permite que uma chamada de função subsequente reinicie a conversão em que essa chamada é interrompida.
+
+Se *mbstate* é um ponteiro nulo, a biblioteca interna **mbstate_t** objeto estático do estado de conversão é usado. Como esse objeto estático interno não é thread-safe, recomendamos que você passa sua própria *mbstate* valor.
+
+Se **mbsrtowcs_s** encontrar um caractere de multibyte não é válido na localidade atual, ele coloca -1  *&#42;pReturnValue*, define o buffer de destino *wcstr* uma cadeia de caracteres vazia, define **errno** para **EILSEQ**e retorna **EILSEQ**.
+
+Se as sequências apontada pelo *mbstr* e *wcstr* se sobrepõem, o comportamento de **mbsrtowcs_s** é indefinido. **mbsrtowcs_s** é afetado pela categoria do LC_TYPE da localidade atual.
+
 > [!IMPORTANT]
->  Verifique se `wcstr` e `mbstr` não se sobrepõem e se `count` reflete corretamente o número de caracteres multibyte a ser convertido.  
-  
- A função `mbsrtowcs_s` difere da [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md) por sua capacidade de reinicialização. O estado da conversão é armazenado em `mbstate` para chamadas posteriores às mesmas funções ou a outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo deverá usar `mbsrlen` em vez de `mbslen` se uma chamada subsequente para `mbsrtowcs_s` for usada em vez de `mbstowcs_s.`  
-  
- Em C++, o uso dessa função é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando o requisito de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras usando suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
-  
-## <a name="exceptions"></a>Exceções  
- A função `mbsrtowcs_s` será multithread-safe se nenhuma função no thread atual chamar `setlocale` enquanto essa função estiver em execução e o argumento `mbstate` não for um ponteiro nulo.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`mbsrtowcs_s`|\<wchar.h>|  
-  
-## <a name="see-also"></a>Consulte também  
- [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
- [mbsinit](../../c-runtime-library/reference/mbsinit.md)
+> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem e que *contagem* corretamente reflete o número de caracteres multibyte para converter.
+
+O **mbsrtowcs_s** função difere da [mbstowcs_s, mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para o mesmo ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo deve usar **mbsrlen** em vez de **mbslen**, se uma chamada subsequente para **mbsrtowcs_s** é usado em vez de **mbstowcs_s**.
+
+Em C++, o uso dessa função é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando o requisito de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras usando suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+## <a name="exceptions"></a>Exceções
+
+O **mbsrtowcs_s** função é safe multithread se nenhuma função nas chamadas thread atual **setlocale** desde que essa função está em execução e o *mbstate* argumento não é um ponteiro nulo.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**mbsrtowcs_s**|\<wchar.h>|
+
+## <a name="see-also"></a>Consulte também
+
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[mbrtowc](mbrtowc.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)<br/>
+[mbsinit](mbsinit.md)<br/>

@@ -1,13 +1,13 @@
 ---
 title: cproj, cprojf, cprojl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cproj
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6afc69e136f6b84b5c6c60681e7670584e32f2d8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cb631eb7f5ce18b8ca824fc8a15e9dd5d6b584f1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
-Recupera a projeção de um número complexo na esfera de Reimann.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-_Dcomplex cproj(   
-   _Dcomplex z   
-);  
-_Fcomplex cproj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex cproj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex cprojf(   
-   _Fcomplex z   
-);  
-_Lcomplex cprojl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `z`  
- Um número complexo.  
-  
-## <a name="return-value"></a>Valor de retorno  
- A projeção de `z` na esfera de Reimann.  
-  
-## <a name="remarks"></a>Comentários  
- Como C++ permite sobrecargas, é possível chamar sobrecargas de `cproj` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `cproj` sempre usa e retorna um valor `_Dcomplex`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho C|Cabeçalho C++|  
-|-------------|--------------|------------------|  
-|`cproj`,               `cprojf`, `cprojl`|\<complex.h>|\<ccomplex>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Recupera a projeção de um número complexo na esfera de Reimann.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+_Dcomplex cproj(
+   _Dcomplex z
+);
+_Fcomplex cproj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex cproj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex cprojf(
+   _Fcomplex z
+);
+_Lcomplex cprojl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*z*<br/>
+Um número complexo.
+
+## <a name="return-value"></a>Valor de retorno
+
+A projeção de *z* na esfera de Reimann.
+
+## <a name="remarks"></a>Comentários
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cproj** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **cproj** sempre usa e retorna um **_Dcomplex** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho C|Cabeçalho C++|
+|-------------|--------------|------------------|
+|**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

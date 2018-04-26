@@ -1,12 +1,12 @@
 ---
 title: _swab | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _swab
@@ -35,81 +35,85 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01f23047436b7ff8cee16b42cc6ae0d8c2a9fd78
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1ab841400bd002595508806797a9a204415b5f15
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="swab"></a>_swab
-Troca bytes.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void _swab(  
-   char *src,  
-   char *dest,  
-   int n   
-);  
-```  
-  
-## <a name="parameters"></a>Parâmetros  
- `src`  
- Dados a serem copiados e trocados.  
-  
- `dest`  
- Local de armazenamento para os dados trocados.  
-  
- `n`  
- Número de bytes a serem copiados e trocados.  
-  
+
+Troca bytes.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void _swab(
+   char *src,
+   char *dest,
+   int n
+);
+```
+
+## <a name="parameters"></a>Parâmetros
+
+*src* dados a serem copiados e trocadas.
+
+*dest* local de armazenamento para os dados trocados.
+
+*n* número de bytes a ser copiado e trocadas.
+
 ## <a name="return-value"></a>Valor retornado
- A função `swab` não retorna um valor. A função definirá `errno` como `EINVAL` se o ponteiro `src` ou `dest` for nulo ou se `n` for menor que zero e o manipulador de parâmetro inválido for invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md).  
-  
- Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
- 
-## <a name="remarks"></a>Comentários  
- Se `n` for par, a função `_swab` copiará `n` bytes de `src`, trocará cada par de bytes adjacentes e armazenará o resultado em `dest`. Se `n` for ímpar, `_swab` copiará e trocará os primeiros `n-1` bytes de `src` e o byte final não será copiado. A função `_swab` geralmente é usada para preparar dados binários para transferência para um computador que usa uma ordem de byte diferente.  
-  
-## <a name="requirements"></a>Requisitos  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_swab`|C: \<stdlib.h> C++: \<cstdlib> ou \<stdlib.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
-```C 
-// crt_swab.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";  
-char to[] =   "...........................";  
-  
-int main()  
-{  
-    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);  
-    _swab(from, to, sizeof(from));  
-    printf("After:  %s\n        %s\n\n", from, to);  
-}  
-```  
-  
-```Output  
-Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes  
-        ...........................  
-  
-After:  BADCFEHGJILKNMPORQTSVUXWZY  
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)
+
+O **swab** função não retorna um valor. Os conjuntos de função **errno** para **EINVAL** se o *src* ou *dest* ponteiro é nulo ou *n* é menor que zero e o parâmetro inválido manipulador é chamado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+
+Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
+
+## <a name="remarks"></a>Comentários
+
+Se *n* for par, o **swab** função cópias *n* bytes do *src*troca cada par de bytes adjacentes e armazena o resultado em *dest*. Se *n* for ímpar, **swab** copia e alterna o primeiro *n*-1 bytes de *src*, e o byte final não é copiado. O **swab** função geralmente é usada para preparar os dados binários de transferência para um computador que usa uma ordem de byte diferentes.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_swab**|C: \<stdlib.h> C++: \<cstdlib> ou \<stdlib.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_swab.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";
+char to[] =   "...........................";
+
+int main()
+{
+    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);
+    _swab(from, to, sizeof(from));
+    printf("After:  %s\n        %s\n\n", from, to);
+}
+```
+
+```Output
+Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes
+        ...........................
+
+After:  BADCFEHGJILKNMPORQTSVUXWZY
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ.
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)<br/>

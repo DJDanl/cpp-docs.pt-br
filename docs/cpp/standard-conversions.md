@@ -1,12 +1,12 @@
 ---
-title: "Conversões padrão | Microsoft Docs"
-ms.custom: 
+title: Conversões padrão | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 A linguagem C++ define conversões entre seus tipos básicos. Ela também define conversões para o ponteiro, referência e tipos derivados de ponteiro ao membro. Essas conversões são chamadas de “conversões padrão”. (Para obter mais informações sobre tipos, os tipos padrão e tipos derivados, consulte [tipos](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  As promoções de preservação de valores e as promoções que preservam o signedness normalmente geram os mesmos resultados. Porém, elas poderão gerar resultados diferentes se o objeto promovido for um dos seguintes:  
   
--   Um operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , ou **>=**  
+-   Um operando de **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, ou **>=**  
   
      Esses operadores dependem do sinal para determinar o resultado. Portanto, as promoções de preservação de valores e de sinais geram resultados diferentes quando aplicadas a esses operandos.  
   
--   O operando esquerdo da  **>>**  ou **>>=**  
+-   O operando esquerdo da **>>** ou **>>=**  
   
      Esses operadores tratam quantidades assinadas e não assinadas de maneiras diferentes ao executar uma operação de alternância. Para quantidades assinadas, alternar uma quantidade para a direita faz com que o bit de sinal seja propagado para posições de bits vagas. Para quantidades não assinadas, as posições de bit vagas são preenchidas com zeros.  
   
@@ -120,8 +120,7 @@ int main()
   
  Os objetos de tipos integrais sem sinal podem ser convertidos nos tipos com sinal correspondentes. No entanto, essa conversão poderá causar a interpretação errônea dos dados se o valor do objeto sem sinal estiver fora do intervalo representável pelo tipo com sinal, como é demonstrado no seguinte exemplo:  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  Um objeto de um tipo flutuante também poderá ser convertido em um tipo menos preciso, se estiver em um intervalo que possa ser representado por esse tipo. (Consulte [limites flutuantes](../cpp/floating-limits.md) para os intervalos de tipos de flutuante.) Se o valor original não puder ser representado com precisão, poderá ser convertido no próximo valor representável superior ou inferior. Se tal valor não existir, o resultado será indefinido. Considere o exemplo a seguir:  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- O valor máximo representável por tipo **float** é 3.402823466E38 — um número menor que 1E300. Portanto, o número é convertido em infinito, e o resultado é 1.#INF.  
+ O valor máximo representável por tipo **float** é 3.402823466E38 — um número menor que 1E300. Portanto, o número é convertido para o infinito, e o resultado é "inf".  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Conversões entre tipos de ponto flutuante e integral  
  Algumas expressões podem fazer com que os objetos de tipo flutuante sejam convertidos em tipos integrais, ou vice-versa. Quando um objeto do tipo integral é convertido em um tipo flutuante e o valor não pode ser representado exatamente, o resultado será o próximo valor maior ou menor representável.  

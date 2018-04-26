@@ -1,12 +1,12 @@
 ---
 title: _flushall | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _flushall
@@ -33,72 +33,76 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25e8a0045758d22a9b519cd1ffe4cc675a7674c2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 936a0c4c18b36c490f0edfeefa651e21c017e1fc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="flushall"></a>_flushall
-Libera todos os fluxos, limpa todos os buffers.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _flushall( void );  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- `_flushall` retorna o número de fluxos abertos (entrada e saída). Nenhum erro é retornado.  
-  
-## <a name="remarks"></a>Comentários  
- Por padrão, a função `_flushall` grava nos arquivos adequados o conteúdo de todos os buffers associados a fluxos de saída abertos. Todos os buffers associados a fluxos de entrada abertos são limpos do seu conteúdo atual. (Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos.)  
-  
- Se uma leitura seguir uma chamada para `_flushall`, novos dados serão lidos dos arquivos de entrada nos buffers. Todos os fluxos permanecerão abertos após a chamada para `_flushall`.  
-  
- O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com Commode.obj. No arquivo executável resultante, chamadas para `_flushall` gravam o conteúdo de todos os buffers no disco. Somente `_flushall` e `fflush` são afetados por Commode.obj.  
-  
- Para obter informações sobre como controlar o recurso de confirmação em disco, consulte [E/S de fluxo](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) e [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Função|Cabeçalho necessário|  
-|--------------|---------------------|  
-|`_flushall`|\<stdio.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_flushall.c  
-// This program uses _flushall  
-// to flush all open buffers.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int numflushed;  
-  
-   numflushed = _flushall();  
-   printf( "There were %d streams flushed\n", numflushed );  
-}  
-```  
-  
-```Output  
-There were 3 streams flushed  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [_commit](../../c-runtime-library/reference/commit.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../../c-runtime-library/reference/fflush.md)   
- [setvbuf](../../c-runtime-library/reference/setvbuf.md)
+
+Libera todos os fluxos, limpa todos os buffers.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _flushall( void );
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+**flushall** retorna o número de fluxos abertos (entrada e saída). Nenhum erro é retornado.
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o **flushall** função grava o conteúdo de todos os buffers associados com fluxos de saída abertas de arquivos apropriados. Todos os buffers associados a fluxos de entrada abertos são limpos do seu conteúdo atual. (Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos.)
+
+Se uma leitura segue uma chamada para **flushall**, novos dados são lidos no arquivo de entrada nos buffers. Todos os fluxos permanecerão abertos após a chamada a **flushall**.
+
+O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com Commode.obj. No arquivo executável resultante, chamadas para **flushall** gravar o conteúdo de todos os buffers para o disco. Somente **flushall** e [fflush](fflush.md) são afetados por Commode.obj.
+
+Para obter informações sobre como controlar o recurso de confirmação em disco, consulte [E/S de fluxo](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
+
+## <a name="requirements"></a>Requisitos
+
+|Função|Cabeçalho necessário|
+|--------------|---------------------|
+|**_flushall**|\<stdio.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_flushall.c
+// This program uses _flushall
+// to flush all open buffers.
+
+#include <stdio.h>
+
+int main( void )
+{
+   int numflushed;
+
+   numflushed = _flushall();
+   printf( "There were %d streams flushed\n", numflushed );
+}
+```
+
+```Output
+There were 3 streams flushed
+```
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
+[_commit](commit.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[fflush](fflush.md)<br/>
+[setvbuf](setvbuf.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _mbsnbset_s, _mbsnbset_s_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbset_s_l
@@ -41,129 +41,134 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0fb1219bbe7343ad3644f64f8f3d017b45d1b51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d37c7bf59e35a33247ecab3b02c0545f88921ec8
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
-Define os primeiros `n` bytes de uma cadeia de caracteres multibyte para um caractere especificado. Essas versões de [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+
+Define o primeiro **n** bytes de uma cadeia de caracteres multibyte em um caractere especificado. Essas versões de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-errno_t _mbsnbset_s(  
-   unsigned char *str,  
-   size_t size,  
-   unsigned int c,  
-   size_t count   
-);  
-errno_t _mbsnbset_s_l(  
-   unsigned char *str,  
-   size_t size,  
-   unsigned int c,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-errno_t _mbsnbset_s(  
-   unsigned char (&str)[size],  
-   unsigned int c,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-errno_t _mbsnbset_s_l(  
-   unsigned char (&str)[size],  
-   unsigned int c,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `str`  
- Cadeia de caracteres a ser alterada.  
-  
- `size`  
- O tamanho do buffer da cadeia de caracteres.  
-  
- `c`  
- Configuração de caractere multibyte ou de byte único.  
-  
- `count`  
- Número de bytes a serem definidos.  
-  
- `locale`  
- Localidade a usar.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Zero se for bem-sucedido, caso contrário, um código de erro.  
-  
-## <a name="remarks"></a>Comentários  
- As funções `_mbsnbset_s` e `_mbsnbset_s_l` definem, no máximo, os primeiros `count` bytes de `str` para `c`. Se `count` for maior que o comprimento de `str`, o comprimento de `str` será usado ao invés de `count`. Se `c` é um caractere multibyte e não pode ser definido inteiramente para o último byte especificado por `count`, o último byte é preenchido com um caractere em branco. `_mbsnbset_s` e `_mbsnbset_s_l` não colocam um nulo de terminação no final de `str`.  
-  
- `_mbsnbset_s` e `_mbsnbset_s_l` lembram `_mbsnset`, exceto que elas configuram `count` bytes em vez de `count` caracteres de `c`.  
-  
- Se `str` for `NULL` ou se `count` for zero, essa função gerará uma exceção de parâmetro inválido, como descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e a função retornará `NULL`. Além disso, se `c` não for um caractere multibyte válido, `errno` será definido como `EINVAL` e um espaço será usado em vez disso.  
-  
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade. Consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. A versão `_mbsnbset_s` dessa função usa a localidade atual desse comportamento dependente da localidade. A versão `_mbsnbset_s_l` é idêntica, exceto por usar o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
- No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
-  
- As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsnset_s`|`_strnset_s`|`_mbsnbset_s`|`_wcsnset_s`|  
-|`_tcsnset_s_l`|`_strnset_s _l`|`_mbsnbset_s_l`|`_wcsnset_s_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_mbsnbset_s`|\<mbstring.h>|  
-|`_mbsnbset_s_l`|\<mbstring.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_mbsnbset_s.c  
-#include <mbstring.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char string[15] = "This is a test";  
-   /* Set not more than 4 bytes of string to be *'s */  
-   printf( "Before: %s\n", string );  
-   _mbsnbset_s( string, sizeof(string), '*', 4 );  
-   printf( "After:  %s\n", string );  
-}  
-```  
-  
-## <a name="output"></a>Saída  
-  
-```Output  
-Before: This is a test  
-After:  **** is a test  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+errno_t _mbsnbset_s(
+   unsigned char *str,
+   size_t size,
+   unsigned int c,
+   size_t count
+);
+errno_t _mbsnbset_s_l(
+   unsigned char *str,
+   size_t size,
+   unsigned int c,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+errno_t _mbsnbset_s(
+   unsigned char (&str)[size],
+   unsigned int c,
+   size_t count
+); // C++ only
+template <size_t size>
+errno_t _mbsnbset_s_l(
+   unsigned char (&str)[size],
+   unsigned int c,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*str*<br/>
+Cadeia de caracteres a ser alterada.
+
+*size*<br/>
+O tamanho do buffer da cadeia de caracteres.
+
+*c*<br/>
+Configuração de caractere multibyte ou de byte único.
+
+*count*<br/>
+Número de bytes a serem definidos.
+
+*locale*<br/>
+Localidade a usar.
+
+## <a name="return-value"></a>Valor de retorno
+
+Zero se for bem-sucedido, caso contrário, um código de erro.
+
+## <a name="remarks"></a>Comentários
+
+O **mbsnbset_s** e **mbsnbset_s_l** funções definir, no máximo, a primeira *contagem* bytes de *str* para *c*. Se *contagem* é maior que o comprimento de *str*, o comprimento de *str* é usado em vez de *contagem*. Se *c* é um caractere multibyte e não pode ser definida totalmente para o último byte especificado por *contagem*, o último byte é preenchido com um caractere em branco. **mbsnbset_s** e **mbsnbset_s_l** não colocar uma terminação nula no final da *str*.
+
+**mbsnbset_s** e **mbsnbset_s_l** lembram **mbsnset**, exceto que eles configuram *contagem* bytes em vez de *contagem* caracteres de *c*.
+
+Se *str* é **nulo** ou *contagem* for zero, esta função gera uma exceção de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**. Além disso, se *c* não é um caractere de multibyte válido, **errno** é definido como **EINVAL** e um espaço é usado em vez disso.
+
+O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbset_s** versão dessa função usa a localidade atual para este comportamento dependente de localidade; a **mbsnbset_s_l** versão é idêntica, exceto que ele em vez disso, usa o parâmetro de localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
+|**tcsnset_s_l**|`_strnset_s _l`|**_mbsnbset_s_l**|**_wcsnset_s_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_mbsnbset_s**|\<mbstring.h>|
+|**_mbsnbset_s_l**|\<mbstring.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_mbsnbset_s.c
+#include <mbstring.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char string[15] = "This is a test";
+   /* Set not more than 4 bytes of string to be *'s */
+   printf( "Before: %s\n", string );
+   _mbsnbset_s( string, sizeof(string), '*', 4 );
+   printf( "After:  %s\n", string );
+}
+```
+
+## <a name="output"></a>Saída
+
+```Output
+Before: This is a test
+After:  **** is a test
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

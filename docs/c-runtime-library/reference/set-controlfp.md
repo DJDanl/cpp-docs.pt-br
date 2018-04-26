@@ -1,12 +1,12 @@
 ---
 title: _set_controlfp | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_controlfp
@@ -33,54 +33,59 @@ helpviewer_keywords:
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b095fe13e8ecf20769ab833ace574d740fd185b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f45b852884596db243e306ee2dff01127998a14f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
-Define a palavra de controle de ponto flutuante.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __cdecl _set_controlfp(  
-    unsigned int newControl,  
-    unsigned int mask  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `newControl`  
- Novos valores de bit da palavra de controle.  
-  
- `mask`  
- Máscara para novos bits da palavra de controle a ser definida.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Nenhum.  
-  
-## <a name="remarks"></a>Comentários  
- O `_set_controlfp` é semelhante ao `_control87`, mas ele apenas define a palavra de controle de ponto flutuante como `newControl`. Os bits nos valores indicam o estado do controle de ponto flutuante. O estado do controle de ponto flutuante permite que o programa altere os modos de precisão, arredondamento e infinito no pacote de matemática de ponto flutuante. Também é possível usar `_set_controlfp` para mascarar ou remover a máscara das exceções de ponto flutuante. Para obter mais informações, consulte [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md).  
-  
- Esta função é substituída durante a compilação com [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque o common language runtime suporta apenas a precisão de ponto flutuante padrão.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|Compatibilidade|  
-|-------------|---------------------|-------------------|  
-|`_set_controlfp`|\<float.h>|Somente processador x86|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [_clear87, _clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
- [_status87, _statusfp, _statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)
+
+Define a palavra de controle de ponto flutuante.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void __cdecl _set_controlfp(
+    unsigned int newControl,
+    unsigned int mask
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*newControl*<br/>
+Novos valores de bit da palavra de controle.
+
+*Máscara*<br/>
+Máscara para novos bits da palavra de controle a ser definida.
+
+## <a name="return-value"></a>Valor de retorno
+
+Nenhum.
+
+## <a name="remarks"></a>Comentários
+
+O **set_controlfp** função é semelhante a **control87**, mas apenas define a palavra de controle de ponto flutuante *newControl*. Os bits nos valores indicam o estado do controle de ponto flutuante. O estado do controle de ponto flutuante permite que o programa altere os modos de precisão, arredondamento e infinito no pacote de matemática de ponto flutuante. Também pode mascarar ou Retirar máscara exceções de ponto flutuante usando **set_controlfp**. Para obter mais informações, consulte [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+
+Esta função é substituída durante a compilação com [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque o common language runtime suporta apenas a precisão de ponto flutuante padrão.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|Compatibilidade|
+|-------------|---------------------|-------------------|
+|**_set_controlfp**|\<float.h>|Somente processador x86|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[_clear87, _clearfp](clear87-clearfp.md)<br/>
+[_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

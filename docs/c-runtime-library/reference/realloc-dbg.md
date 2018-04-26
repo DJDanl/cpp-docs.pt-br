@@ -1,12 +1,12 @@
 ---
 title: _realloc_dbg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _realloc_dbg
@@ -34,77 +34,84 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6953a0cd9cd7c4636c8bc0a41235e854f6d9a51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dffe9ab2f63e39953749586341e1977126ca70d8
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
-Realoca um bloco de memória especificado no heap movendo e/ou redimensionando o bloco (somente a versão de depuração).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void *_realloc_dbg(  
-   void *userData,  
-   size_t newSize,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `userData`  
- Ponteiro para o bloco de memória alocado anteriormente.  
-  
- `newSize`  
- Tamanho solicitado do bloco realocado (bytes).  
-  
- `blockType`  
- Tipo solicitado do bloco realocado: `_CLIENT_BLOCK` ou `_NORMAL_BLOCK`.  
-  
- `filename`  
- Ponteiro para o nome do arquivo de origem que solicitou a operação `realloc` ou NULL.  
-  
- `linenumber`  
- Número da linha do arquivo de origem em que a operação `realloc` foi solicitada ou NULL.  
-  
- Os parâmetros `filename` e `linenumber` estarão disponíveis apenas quando `_realloc_dbg` tiver sido chamado explicitamente ou quando a constante do pré-processador [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) tiver sido definida.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Após a conclusão bem-sucedida, essa função retorna um ponteiro para a parte do usuário do bloco de memória realocado, chama a nova função do manipulador ou retorna NULL. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [realloc](../../c-runtime-library/reference/realloc.md).  
-  
-## <a name="remarks"></a>Comentários  
- `_realloc_dbg` é uma versão de depuração da função [realloc](../../c-runtime-library/reference/realloc.md). Quando [_DEBUG](../../c-runtime-library/debug.md) não está definido, cada chamada para `_realloc_dbg` é reduzida a uma chamada para `realloc`. `realloc` e `_realloc_dbg` realocam um bloco de memória no heap de base, mas `_realloc_dbg` acomoda diversos recursos de depuração: buffers nos dois lados da parte do usuário do bloco para testar se há perdas, um parâmetro de tipo de bloco para rastrear tipos de alocação específicos e informações de `filename`/`linenumber` para determinar a origem das solicitações de alocação.  
-  
- `_realloc_dbg` realoca o bloco de memória especificado com um pouco mais de espaço que o `newSize` solicitado. `newSize` pode ser maior ou menor que o espaço do bloco de memória alocado originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. Se o bloco de memória for movido, o conteúdo do bloco original será substituído.  
-  
- `_realloc_dbg` define `errno` para `ENOMEM` se uma alocação de memória falhar ou se a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) exceder `_HEAP_MAXREQ`. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_realloc_dbg`|\<crtdbg.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="libraries"></a>Libraries  
- Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo no tópico [_msize_dbg](../../c-runtime-library/reference/msize-dbg.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Rotinas de depuração](../../c-runtime-library/debug-routines.md)   
- [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+
+Realoca um bloco de memória especificado no heap movendo e/ou redimensionando o bloco (somente a versão de depuração).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void *_realloc_dbg(
+   void *userData,
+   size_t newSize,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Dados do usuário*<br/>
+Ponteiro para o bloco de memória alocado anteriormente.
+
+*newSize*<br/>
+Tamanho solicitado do bloco realocado (bytes).
+
+*blockType*<br/>
+Tipo para o bloco realocado solicitado: **client_block** ou **normal_block**.
+
+*filename*<br/>
+Ponteiro para o nome do arquivo de origem que solicitou o **realloc** operação ou NULL.
+
+*linenumber*<br/>
+Número no arquivo de origem da linha onde o **realloc** operação foi solicitado ou nulo.
+
+O *filename* e *linenumber* parâmetros estão disponíveis somente quando **realloc_dbg** foi chamado explicitamente ou [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md) constante de pré-processador foi definido.
+
+## <a name="return-value"></a>Valor de retorno
+
+Após a conclusão bem-sucedida, essa função retorna um ponteiro para a parte do usuário do bloco de memória realocado, chama a nova função do manipulador ou retorna NULL. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [realloc](realloc.md).
+
+## <a name="remarks"></a>Comentários
+
+**realloc_dbg** é uma versão de depuração de [realloc](realloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **realloc_dbg** é reduzido para uma chamada para **realloc**. Ambos **realloc** e **realloc_dbg** realocar um bloco de memória no heap de base, mas **realloc_dbg** acomoda a vários recursos de depuração: buffers em cada lado das parte do usuário do bloco para testar vazamentos, um parâmetro de tipo de bloco para rastrear tipos específicos de alocação, e *filename*/*linenumber* informações para determinar a origem do solicitações de alocação.
+
+**realloc_dbg** realoca o bloco de memória especificado com um pouco mais espaço do que o solicitado *newSize*. *newSize* pode ser maior ou menor que o tamanho do bloco de memória alocada originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. Se o bloco de memória for movido, o conteúdo do bloco original será substituído.
+
+**realloc_dbg** define **errno** para **ENOMEM** se a falha de alocação de memória ou se excede a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) **_HEAP_ MAXREQ**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_realloc_dbg**|\<crtdbg.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Libraries
+
+Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo no tópico [_msize_dbg](msize-dbg.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Rotinas de depuração](../../c-runtime-library/debug-routines.md)<br/>
+[_malloc_dbg](malloc-dbg.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _findclose | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _findclose
@@ -32,44 +32,48 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1f79ea7e5c39c4de7ba25699729864688ababf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 89c1f515bb072c649a93b77e49b500ea4636e423
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="findclose"></a>_findclose
-Fecha o identificador de pesquisa especificado e libera os recursos associados.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _findclose(   
-   intptr_t handle   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `handle`  
- Identificador de pesquisa retornado por uma chamada anterior a `_findfirst`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Se tiver êxito, `_findclose` retornará 0. Caso contrário, retornará -1 e define `errno` para `ENOENT`, que indica se a correspondência não mais arquivos pôde ser encontrado.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Função|Cabeçalho necessário|  
-|--------------|---------------------|  
-|`_findclose`|\<io.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Chamadas do sistema](../../c-runtime-library/system-calls.md)   
- [Funções de pesquisa de nome de arquivo](../../c-runtime-library/filename-search-functions.md)
+
+Fecha o identificador de pesquisa especificado e libera os recursos associados.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _findclose(
+   intptr_t handle
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Identificador*<br/>
+Identificador de pesquisa retornado por uma chamada anterior a **FindFirst**.
+
+## <a name="return-value"></a>Valor de retorno
+
+Se for bem-sucedido, **FindClose** retornará 0. Caso contrário, retornará -1 e define **errno** para **ENOENT**, indicando que a correspondência não mais arquivos pôde ser encontrado.
+
+## <a name="requirements"></a>Requisitos
+
+|Função|Cabeçalho necessário|
+|--------------|---------------------|
+|**_findclose**|\<io.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Chamadas do sistema](../../c-runtime-library/system-calls.md)<br/>
+[Funções de pesquisa de nome de arquivo](../../c-runtime-library/filename-search-functions.md)<br/>

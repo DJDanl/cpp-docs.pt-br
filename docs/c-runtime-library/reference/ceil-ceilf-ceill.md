@@ -1,12 +1,12 @@
 ---
 title: ceil, ceilf, ceill | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ceilf
@@ -38,70 +38,76 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcc33dd5fc9c00b537345d613cd47452a425a00e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9fb24817dd4f23e1dac44f49fcf7dbec34a358c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
-Calcula o limite máximo de um valor.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-double ceil(   
-   double x   
-);  
-float ceil(  
-   float x  
-);  // C++ only  
-long double ceil(  
-   long double x  
-);  // C++ only  
-float ceilf(  
-   float x  
-);  
-long double ceill(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `x`  
- Valor de ponto flutuante.  
-  
-## <a name="return-value"></a>Valor de retorno  
- As funções `ceil` retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a `x`. Nenhum erro é retornado.  
-  
-|Entrada|Exceção SEH|Exceção Matherr|  
-|-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|nenhum|`_DOMAIN`|  
-  
- `ceil` tem uma implementação que usa SSE2 (Extensões SIMD de Streaming 2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
-  
-## <a name="remarks"></a>Comentários  
- Uma vez que C++ permite sobrecargas, é possível chamar sobrecargas de `ceil`. Em um programa C, `ceil` sempre usa e retorna um duplo.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`ceil`, `ceilf`, `ceill`|\<math.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo de [floor](../../c-runtime-library/reference/floor-floorf-floorl.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
- [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)
+
+Calcula o limite máximo de um valor.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+double ceil(
+   double x
+);
+float ceil(
+   float x
+);  // C++ only
+long double ceil(
+   long double x
+);  // C++ only
+float ceilf(
+   float x
+);
+long double ceill(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*x*<br/>
+Valor de ponto flutuante.
+
+## <a name="return-value"></a>Valor de retorno
+
+O **ceil** funções retornam um valor de ponto flutuante que representa o menor inteiro maior ou igual a *x*. Nenhum erro é retornado.
+
+|Entrada|Exceção SEH|Exceção Matherr|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|nenhum|**DOMAIN**|
+
+**ceil** tem uma implementação que usa extensões Streaming SIMD 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+
+## <a name="remarks"></a>Comentários
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ceil** que usam **float** ou **longo** **duplo** tipos. Em um programa C, **ceil** sempre usa e retorna um **duplo**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**ceil**, **ceilf**, **ceill**|\<math.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo de [floor](floor-floorf-floorl.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
+[round, roundf, roundl](round-roundf-roundl.md)<br/>

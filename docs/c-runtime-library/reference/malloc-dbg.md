@@ -1,12 +1,12 @@
 ---
 title: malloc_dbg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _malloc_dbg
@@ -32,75 +32,82 @@ helpviewer_keywords:
 - memory allocation
 - _malloc_dbg function
 ms.assetid: c97eca51-140b-4461-8bd2-28965b49ecdb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 616fd3b71cd97e6abffb7c8a06d30a0f69146408
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 080bd3813fe14187df7f6b6184a0cfe21e9c5243
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
-Aloca um bloco de memória no heap com espaço adicional para um cabeçalho de depuração e buffers de substituição (apenas versão de depuração).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void *_malloc_dbg(  
-   size_t size,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `size`  
- Tamanho solicitado do bloco de memória (em bytes).  
-  
- `blockType`  
- Tipo de bloco de memória solicitado: `_CLIENT_BLOCK` ou `_NORMAL_BLOCK`.  
-  
- `filename`  
- Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou NULL.  
-  
- `linenumber`  
- Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou NULL.  
-  
- Os parâmetros `filename` e `linenumber` estarão disponíveis apenas quando `_malloc_dbg` tiver sido chamado explicitamente ou quando a constante do pré-processador [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) tiver sido definida.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Mediante a conclusão bem-sucedida, essa função retorna um ponteiro para a parte do usuário do bloco de memória alocado, chama a nova função do manipulador ou retorna NULL. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [malloc](../../c-runtime-library/reference/malloc.md).  
-  
-## <a name="remarks"></a>Comentários  
- `_malloc_dbg` é uma versão de depuração da função [malloc](../../c-runtime-library/reference/malloc.md). Quando [_DEBUG](../../c-runtime-library/debug.md) não está definido, cada chamada para `_malloc_dbg` é reduzida a uma chamada para `malloc`. Tanto o `malloc` quanto o `_malloc_dbg` alocam um bloco de memória no heap de base, mas o `_malloc_dbg` oferece vários recursos de depuração: buffers em qualquer um dos lados da parte do usuário do bloco para testar se há vazamentos, um parâmetro de tipo do bloco para rastrear tipos de alocação específicos e as informações de `filename`/`linenumber` para determinar a origem das solicitações de alocação.  
-  
- `_malloc_dbg` aloca o bloco de memória com um pouco mais de espaço que o `size` solicitado. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. Quando um bloco é alocado, a parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição é preenchido com 0xFD.  
-  
- `_malloc_dbg` define `errno` para `ENOMEM` se uma alocação de memória falhar ou se a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) exceder `_HEAP_MAXREQ`. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_malloc_dbg`|\<crtdbg.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="libraries"></a>Libraries  
- Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemplo  
- Para obter uma amostra de como usar `_malloc_dbg`, consulte [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).  
-  
-## <a name="see-also"></a>Consulte também  
- [Rotinas de depuração](../../c-runtime-library/debug-routines.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [_calloc_dbg](../../c-runtime-library/reference/calloc-dbg.md)   
- [_calloc_dbg](../../c-runtime-library/reference/calloc-dbg.md)
+
+Aloca um bloco de memória no heap com espaço adicional para um cabeçalho de depuração e buffers de substituição (apenas versão de depuração).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void *_malloc_dbg(
+   size_t size,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*size*<br/>
+Tamanho solicitado do bloco de memória (em bytes).
+
+*blockType*<br/>
+Tipo de bloco de memória solicitado: **client_block** ou **normal_block**.
+
+*filename*<br/>
+Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou NULL.
+
+*linenumber*<br/>
+Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou NULL.
+
+O *filename* e *linenumber* parâmetros estão disponíveis somente quando **malloc_dbg** foi chamado explicitamente ou [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md)constante de pré-processador foi definido.
+
+## <a name="return-value"></a>Valor de retorno
+
+Mediante a conclusão bem-sucedida, essa função retorna um ponteiro para a parte do usuário do bloco de memória alocado, chama a nova função do manipulador ou retorna NULL. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [malloc](malloc.md).
+
+## <a name="remarks"></a>Comentários
+
+**malloc_dbg** é uma versão de depuração de [malloc](malloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **malloc_dbg** é reduzido para uma chamada para **malloc**. Ambos **malloc** e **malloc_dbg** alocar um bloco de memória no heap de base, mas **malloc_dbg** oferece vários recursos de depuração: buffers em ambos os lados do usuário parte do bloco para testar vazamentos, um parâmetro de tipo de bloco para rastrear tipos específicos de alocação, e *filename*/*linenumber* informações para determinar a origem do solicitações de alocação.
+
+**malloc_dbg** aloca o bloco de memória com um pouco mais espaço do que o solicitado *tamanho*. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. Quando um bloco é alocado, a parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição é preenchido com 0xFD.
+
+**malloc_dbg** define **errno** para **ENOMEM** se a falha de alocação de memória ou se excede a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) **_HEAP_ MAXREQ**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_malloc_dbg**|\<crtdbg.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Libraries
+
+Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemplo
+
+Para obter um exemplo de como usar **malloc_dbg**, consulte [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+
+## <a name="see-also"></a>Consulte também
+
+[Rotinas de depuração](../../c-runtime-library/debug-routines.md)<br/>
+[malloc](malloc.md)<br/>
+[_calloc_dbg](calloc-dbg.md)<br/>
+[_calloc_dbg](calloc-dbg.md)<br/>

@@ -1,13 +1,13 @@
 ---
 title: carg, cargf, cargl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - carg
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9341fd3e480fd27f91ccd1ebb1158a7a300f0ead
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7fc42abad045e8a57ad19c555c0cd94f1a24879a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
-Recupera o argumento de um número complexo, com uma ramificação cortada ao longo do eixo real negativo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-double carg(   
-   _Dcomplex z   
-);  
-float carg(   
-   _Fcomplex z   
-);  // C++ only  
-long double carg(   
-   _Lcomplex z   
-);  // C++ only  
-float cargf(   
-   _Fcomplex z   
-);  
-long double cargl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `z`  
- Um número complexo.  
-  
-## <a name="return-value"></a>Valor retornado  
- O argumento (também conhecido como a fase) de `z`. O resultado está no intervalo [-π, + π].  
-  
-## <a name="remarks"></a>Comentários  
- Como o C++ permite sobrecargas, é possível chamar sobrecargas de `carg` e que usam valores `_Fcomplex` ou `_Lcomplex` e retornam valores `float` ou `long double`. Em um programa do C, `carg` sempre usa um valor `_Dcomplex` e retorna um valor `double`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho C|Cabeçalho C++|  
-|-------------|--------------|------------------|  
-|`carg`,               `cargf`, `cargl`|\<complex.h>|\<ccomplex>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Recupera o argumento de um número complexo, com uma ramificação cortada ao longo do eixo real negativo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+double carg(
+   _Dcomplex z
+);
+float carg(
+   _Fcomplex z
+);  // C++ only
+long double carg(
+   _Lcomplex z
+);  // C++ only
+float cargf(
+   _Fcomplex z
+);
+long double cargl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*z*<br/>
+Um número complexo.
+
+## <a name="return-value"></a>Valor de retorno
+
+O argumento (também conhecido como a fase) de *z*. O resultado está no intervalo [-π, + π].
+
+## <a name="remarks"></a>Comentários
+
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **carg** que usam **_Fcomplex** ou **_Lcomplex** valores e retornar **float** ou **longo** **duplo** valores. Em um programa C, **carg** sempre leva um **_Dcomplex** valor e retorna um **duplo** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho C|Cabeçalho C++|
+|-------------|--------------|------------------|
+|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

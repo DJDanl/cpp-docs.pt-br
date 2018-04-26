@@ -1,12 +1,12 @@
 ---
 title: _getmbcp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getmbcp
@@ -33,37 +33,40 @@ helpviewer_keywords:
 - _getmbcp function
 - getmbcp function
 ms.assetid: 2db202d4-5c3d-4871-a0b8-ceb0b79ee7bb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cfb2ee9e84d8a586d14cb95558d7d59967eeecc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3a8d20b510a94ee5cd773dca66a82b4cb553e7b5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getmbcp"></a>_getmbcp
-Recupera a página de código atual.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _getmbcp( void );  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna a página de código multibyte atual. Um valor retornado igual a 0 indica que uma página de código de byte único está sendo usada.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_getmbcp`|\<mbctype.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)
+
+Recupera a página de código atual.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _getmbcp( void );
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna a página de código multibyte atual. Um valor retornado igual a 0 indica que uma página de código de byte único está sendo usada.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_getmbcp**|\<mbctype.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[_setmbcp](setmbcp.md)<br/>

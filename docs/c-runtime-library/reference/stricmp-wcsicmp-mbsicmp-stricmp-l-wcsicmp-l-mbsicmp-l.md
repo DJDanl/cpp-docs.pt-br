@@ -1,12 +1,12 @@
 ---
 title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _stricmp_l
@@ -65,185 +65,190 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: 
+caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a716e229aa5ca7bb45fdcbd6cba9e3a85301df96
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00678f8efc2a5c3b34fb3ba3f3d745f42174fd1d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
-Executa uma comparação que não diferencia maiúsculas de minúsculas na cadeia de caracteres.  
-  
+
+Executa uma comparação que não diferencia maiúsculas de minúsculas na cadeia de caracteres.
+
 > [!IMPORTANT]
->  `_mbsicmp` e `_mbsicmp_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _stricmp(  
-   const char *string1,  
-   const char *string2   
-);  
-int _wcsicmp(  
-   const wchar_t *string1,  
-   const wchar_t *string2   
-);  
-int _mbsicmp(  
-   const unsigned char *string1,  
-   const unsigned char *string2   
-);  
-int _stricmp_l(  
-   const char *string1,  
-   const char *string2,  
-   _locale_t locale  
-);  
-int _wcsicmp_l(  
-   const wchar_t *string1,  
-   const wchar_t *string2,  
-   _locale_t locale  
-);  
-int _mbsicmp_l(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `string1, string2`  
- Cadeias de caracteres com terminação nula.  
-  
- `locale`  
- Localidade a usar.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O valor retornado indica a relação de `string1` para `string2` da seguinte maneira.  
-  
-|Valor retornado|Descrição|  
-|------------------|-----------------|  
-|< 0|`string1` é menor que `string2`|  
-|0|`string1` é idêntica a `string2`|  
-|> 0|`string1` é maior que `string2`|  
-  
- Em um erro, `_mbsicmp` retorna `_NLSCMPERROR`, que é definido em \<string.h> e \<mbstring.h>.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_stricmp` ordinalmente compara `string1` e `string2` após converter cada caractere em minúscula e retorna um valor indicando seu relacionamento. `_stricmp` é diferente de `_stricoll` que a comparação com `_stricmp` será afetada somente por `LC_CTYPE`, que determina quais caracteres são letras maiúsculas e minúsculas. A função `_stricoll` compara cadeias de caracteres de acordo com ambas as categorias `LC_CTYPE` e `LC_COLLATE` de localidade, que inclui o caso e a ordem de agrupamento. Para obter mais informações sobre a categoria `LC_COLLATE`, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) e [categorias de localidade](../../c-runtime-library/locale-categories.md). As versões dessas funções sem o sufixo `_l` usam a localidade atual para o comportamento que depende da localidade. As versões com o sufixo são idênticas, com exceção de que usam a localidade passada, em vez da localidade atual. Se a localidade não tiver sido definida, a localidade C será usada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
+> **mbsicmp** e **mbsicmp_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _stricmp(
+   const char *string1,
+   const char *string2
+);
+int _wcsicmp(
+   const wchar_t *string1,
+   const wchar_t *string2
+);
+int _mbsicmp(
+   const unsigned char *string1,
+   const unsigned char *string2
+);
+int _stricmp_l(
+   const char *string1,
+   const char *string2,
+   _locale_t locale
+);
+int _wcsicmp_l(
+   const wchar_t *string1,
+   const wchar_t *string2,
+   _locale_t locale
+);
+int _mbsicmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*string1*, *string2*<br/>
+Cadeias de caracteres com terminação nula.
+
+*locale*<br/>
+Localidade a usar.
+
+## <a name="return-value"></a>Valor de retorno
+
+O valor de retorno indica a relação de *string1* para *string2* da seguinte maneira.
+
+|Valor retornado|Descrição|
+|------------------|-----------------|
+|< 0|*string1* menor *string2*|
+|0|*string1* idêntico ao *string2*|
+|> 0|*string1* maior *string2*|
+
+Em um erro, **mbsicmp** retorna **_NLSCMPERROR**, que é definido em \<string.h > e \<mbstring.h >.
+
+## <a name="remarks"></a>Comentários
+
+O **stricmp** ordinalmente função compara *string1* e *string2* depois de converter cada caractere em minúsculas e retorna um valor que indica sua relação. **stricmp** difere **stricoll** em que o **stricmp** comparação será afetada somente por **LC_CTYPE**, que determina quais caracteres são superiores e letras minúsculas. O **stricoll** função compara cadeias de caracteres de acordo com ambos os **LC_CTYPE** e **LC_COLLATE** categorias de localidade, que inclui o caso e o agrupamento ordem. Para obter mais informações sobre o **LC_COLLATE** categoria, consulte [setlocale](setlocale-wsetlocale.md) e [categorias de localidade](../../c-runtime-library/locale-categories.md). As versões dessas funções sem o **_l** sufixo usam a localidade atual para o comportamento dependente de localidade. As versões com o sufixo são idênticas, com exceção de que usam a localidade passada, em vez da localidade atual. Se a localidade não tiver sido definida, a localidade C será usada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
 > [!NOTE]
->  `_stricmp` equivale a `_strcmpi`. Podem ser usadas alternadamente, mas `_stricmp` é o padrão preferencial.  
-  
- A função `_strcmpi` é equivalente a `_stricmp` e é fornecido para fins de compatibilidade com versões anteriores.  
-  
- Como `_stricmp` realiza comparações de minúsculas, pode resultar em comportamento inesperado.  
-  
- Para ilustrar quando a conversão de caso por `_stricmp` afeta o resultado de uma comparação, suponha que você tenha duas cadeias de caracteres JOHNSTON e JOHN_HENRY. A cadeia de caracteres JOHN_HENRY será considerada inferior a JOHNSTON porque "_" tem um valor de ASCII menor que um S minúsculo. Na verdade, qualquer caractere que tenha um valor de ASCII entre 91 e 96 será considerado menor do que qualquer letra.  
-  
- Se a função [strcmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) é usada em vez de `_stricmp`, JOHN_HENRY será maior que JOHNSTON.  
-  
- `_wcsicmp` e `_mbsicmp` são versões de caracteres largos e de caracteres multibyte de `_stricmp`. Os argumentos e o valor retornado de `_wcsicmp` são cadeias de caracteres largos; aqueles de `_mbsicmp` são cadeias de caracteres multibyte. `_mbsicmp` reconhece sequências de caracteres multibyte de acordo com a página de código multibyte atual e retorna `_NLSCMPERROR` em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica.  
-  
- `_wcsicmp` e `wcscmp` se comportam de maneira idêntica, exceto que `wcscmp` não converte seus argumentos para minúsculas antes de compará-los. `_mbsicmp` e `_mbscmp` se comportam de maneira idêntica, exceto que `_mbscmp` não converte seus argumentos para minúsculas antes de compará-los.  
-  
- Você precisará chamar [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para `_wcsicmp` funcionar com caracteres Latino 1. A localidade C está em vigor por padrão, portanto, por exemplo, ä não será comparado como igual a Ä. Chamar `setlocale` com qualquer localidade que não seja a localidade C antes da chamada para `_wcsicmp`. A amostra a seguir demonstra como `_wcsicmp` é sensível à localidade:  
-  
-```  
-// crt_stricmp_locale.c  
-#include <string.h>  
-#include <stdio.h>  
-#include <locale.h>  
-  
-int main() {  
-   setlocale(LC_ALL,"C");   // in effect by default  
-   printf("\n%d",_wcsicmp(L"ä", L"Ä"));   // compare fails  
-   setlocale(LC_ALL,"");  
-   printf("\n%d",_wcsicmp(L"ä", L"Ä"));   // compare succeeds  
-}  
-```  
-  
- Uma alternativa é chamar [create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md) e passar o objeto de localidade retornado como um parâmetro para `_wcsicmp_l`.  
-  
- Todas essas funções validam seus parâmetros. Se `string1` ou `string2` são ponteiros nulos, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `_NLSCMPERROR` e definirão `errno` para `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsicmp`|`_stricmp`|`_mbsicmp`|`_wcsicmp`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_stricmp`, `_stricmp_l`|\<string.h>|  
-|`_wcsicmp`, `_wcsicmp_l`|\<string.h> ou \<wchar.h>|  
-|`_mbsicmp`, `_mbsicmp_l`|\<mbstring.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_stricmp.c  
-  
-#include <string.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-char string1[] = "The quick brown dog jumps over the lazy fox";  
-char string2[] = "The QUICK brown dog jumps over the lazy fox";  
-  
-int main( void )  
-{  
-   char tmp[20];  
-   int result;  
-  
-   // Case sensitive  
-   printf( "Compare strings:\n   %s\n   %s\n\n", string1, string2 );  
-   result = strcmp( string1, string2 );  
-   if( result > 0 )  
-      strcpy_s( tmp, _countof(tmp), "greater than" );  
-   else if( result < 0 )  
-      strcpy_s( tmp, _countof(tmp), "less than" );  
-   else  
-      strcpy_s( tmp, _countof(tmp), "equal to" );  
-   printf( "   strcmp:   String 1 is %s string 2\n", tmp );  
-  
-   // Case insensitive (could use equivalent _stricmp)  
-   result = _stricmp( string1, string2 );  
-   if( result > 0 )  
-      strcpy_s( tmp, _countof(tmp), "greater than" );  
-   else if( result < 0 )  
-      strcpy_s( tmp, _countof(tmp), "less than" );  
-   else  
-      strcpy_s( tmp, _countof(tmp), "equal to" );  
-   printf( "   _stricmp:  String 1 is %s string 2\n", tmp );  
-}  
-```  
-  
-```Output  
-Compare strings:  
-   The quick brown dog jumps over the lazy fox  
-   The QUICK brown dog jumps over the lazy fox  
-  
-   strcmp:   String 1 is greater than string 2  
-   _stricmp:  String 1 is equal to string 2  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
- [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [_memicmp, _memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [Funções strcoll](../../c-runtime-library/strcoll-functions.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **stricmp** é equivalente a **strcmpi**. Eles podem ser usados alternadamente mas **stricmp** é o padrão preferencial.
+
+O **strcmpi** função é equivalente a **stricmp** e é fornecida para compatibilidade com versões anteriores apenas.
+
+Porque **stricmp** minúsculas comparações, isso pode resultar em comportamento inesperado.
+
+Para ilustrar quando caso a conversão por **stricmp** afeta o resultado de uma comparação, suponha que você tenha duas cadeias de caracteres JOHNSTON e JOHN_HENRY. A cadeia de caracteres JOHN_HENRY será considerada inferior a JOHNSTON porque "_" tem um valor de ASCII menor que um S minúsculo. Na verdade, qualquer caractere que tenha um valor de ASCII entre 91 e 96 será considerado menor do que qualquer letra.
+
+Se o [strcmp](strcmp-wcscmp-mbscmp.md) função é usada em vez de **stricmp**, JOHN_HENRY será maior JOHNSTON.
+
+**wcsicmp** e **mbsicmp** são versões de caracteres largos e caracteres multibyte **stricmp**. O valor de retorno e argumentos **wcsicmp** são caracteres largos cadeias de caracteres; desses **mbsicmp** são cadeias de caracteres multibyte. **mbsicmp** reconhece sequências de caracteres multibyte de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica.
+
+**wcsicmp** e **wcscmp** tenham comportamento idêntico, exceto que **wcscmp** não converte os argumentos em minúsculas antes de compará-los. **mbsicmp** e **mbscmp** tenham comportamento idêntico, exceto que **mbscmp** não converte os argumentos em minúsculas antes de compará-los.
+
+Você precisará chamar [setlocale](setlocale-wsetlocale.md) para **wcsicmp** para funcionar com caracteres Latin 1. A localidade C está em vigor por padrão, portanto, por exemplo, ä não será comparado como igual a Ä. Chamar **setlocale** com qualquer localidade que não seja a localidade C antes da chamada para **wcsicmp**. O exemplo a seguir demonstra como **wcsicmp** é sensível a localidade:
+
+```C
+// crt_stricmp_locale.c
+#include <string.h>
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+   setlocale(LC_ALL,"C");   // in effect by default
+   printf("\n%d",_wcsicmp(L"ä", L"Ä"));   // compare fails
+   setlocale(LC_ALL,"");
+   printf("\n%d",_wcsicmp(L"ä", L"Ä"));   // compare succeeds
+}
+```
+
+Uma alternativa é chamar [create_locale, _wcreate_locale](create-locale-wcreate-locale.md) e passe o objeto de localidade retornado como um parâmetro para **wcsicmp_l**.
+
+Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* são ponteiros nulos, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, essas funções retornam **_NLSCMPERROR** e defina **errno** para **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tcsicmp**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**stricmp**, **stricmp_l**|\<string.h>|
+|**wcsicmp**, **wcsicmp_l**|\<string.h> ou \<wchar.h>|
+|**mbsicmp**, **mbsicmp_l**|\<mbstring.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_stricmp.c
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+char string1[] = "The quick brown dog jumps over the lazy fox";
+char string2[] = "The QUICK brown dog jumps over the lazy fox";
+
+int main( void )
+{
+   char tmp[20];
+   int result;
+
+   // Case sensitive
+   printf( "Compare strings:\n   %s\n   %s\n\n", string1, string2 );
+   result = strcmp( string1, string2 );
+   if( result > 0 )
+      strcpy_s( tmp, _countof(tmp), "greater than" );
+   else if( result < 0 )
+      strcpy_s( tmp, _countof(tmp), "less than" );
+   else
+      strcpy_s( tmp, _countof(tmp), "equal to" );
+   printf( "   strcmp:   String 1 is %s string 2\n", tmp );
+
+   // Case insensitive (could use equivalent _stricmp)
+   result = _stricmp( string1, string2 );
+   if( result > 0 )
+      strcpy_s( tmp, _countof(tmp), "greater than" );
+   else if( result < 0 )
+      strcpy_s( tmp, _countof(tmp), "less than" );
+   else
+      strcpy_s( tmp, _countof(tmp), "equal to" );
+   printf( "   _stricmp:  String 1 is %s string 2\n", tmp );
+}
+```
+
+```Output
+Compare strings:
+   The quick brown dog jumps over the lazy fox
+   The QUICK brown dog jumps over the lazy fox
+
+   strcmp:   String 1 is greater than string 2
+   _stricmp:  String 1 is equal to string 2
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
+[_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[Funções strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

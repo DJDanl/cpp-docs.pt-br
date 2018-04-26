@@ -1,12 +1,12 @@
 ---
 title: _scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _scwprintf_p
@@ -52,88 +52,93 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 732b299eabffcea2b505921cf55fb23916063058
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2d8f15036cc7e4ffeb2cd29388bff2c7e615bb59
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
-Retorna o número de caracteres na cadeia de caracteres formatada, com a capacidade de especificar a ordem na qual os parâmetros são usados na cadeia de caracteres de formato.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _scprintf_p(  
-   const char *format [,  
-   argument] ...   
-);  
-int _scprintf_p_l(  
-   const char *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-int _scwprintf_p (  
-   const wchar_t *format [,  
-   argument] ...   
-);  
-int _scwprintf_p _l(  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `format`  
- Cadeia de caracteres de controle de formato.  
-  
- `argument`  
- Argumentos opcionais.  
-  
- `locale`  
- A localidade a ser usada.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna o número de caracteres que será gerado se a cadeia de caracteres for impressa ou enviada para um arquivo ou o buffer usando os códigos de formatação especificados. O valor retornado não inclui o caractere nulo de terminação. `_scwprintf_p` executa a mesma função para caracteres largos.  
-  
- A diferença entre `_scprintf_p` e `_scprintf` é que `_scprintf_p` dá suporte a parâmetros posicionais, o que permite especificar a ordem em que os argumentos são usados na cadeia de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
-  
- Se `format` for um ponteiro `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL`.  
-  
- Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentários  
- Cada `argument` (se houver) é convertido de acordo com a especificação de formato correspondente em `format`. O formato consiste em caracteres comuns e tem o mesmo formato e função que o argumento `format` para [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
- As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de usarem o parâmetro de localidade passado, em vez da localidade do thread atual.  
-  
+
+Retorna o número de caracteres na cadeia de caracteres formatada, com a capacidade de especificar a ordem na qual os parâmetros são usados na cadeia de caracteres de formato.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _scprintf_p(
+   const char *format [,
+   argument] ...
+);
+int _scprintf_p_l(
+   const char *format,
+   locale_t locale [,
+   argument] ...
+);
+int _scwprintf_p (
+   const wchar_t *format [,
+   argument] ...
+);
+int _scwprintf_p _l(
+   const wchar_t *format,
+   locale_t locale [,
+   argument] ...
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*format*<br/>
+Cadeia de caracteres de controle de formato.
+
+*argument*<br/>
+Argumentos opcionais.
+
+*locale*<br/>
+A localidade a ser usada.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna o número de caracteres que será gerado se a cadeia de caracteres for impressa ou enviada para um arquivo ou o buffer usando os códigos de formatação especificados. O valor retornado não inclui o caractere nulo de terminação. **scwprintf_p** executa a mesma função para caracteres largos.
+
+A diferença entre **scprintf_p** e **scprintf** é que **scprintf_p** oferece suporte a parâmetros de posição, que permite especificar a ordem em que os argumentos são usados na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+
+Se *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+
+Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentários
+
+Cada *argumento* (se houver) é convertido de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres simples e tem o mesmo formulário e funcionar como o *formato* argumento [printf](printf-printf-l-wprintf-wprintf-l.md).
+
+As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+
 > [!IMPORTANT]
->  Verifique se `format` não é uma cadeia de caracteres definida pelo usuário.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_sctprintf_p`|`_scprintf_p`|`_scprintf_p`|`_scwprintf_p`|  
-|`_sctprintf_p_l`|`_scprintf_p_l`|`_scprintf_p_l`|`_scwprintf_p_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_scprintf_p`, `_scprintf_p_l`|\<stdio.h>|  
-|`_scwprintf_p`, `_scwprintf_p_l`|\<stdio.h> ou \<wchar.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [_scprintf, _scprintf_l, _scwprintf, _scwprintf_l](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md)   
- [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**sctprintf_p**|**_scprintf_p**|**_scprintf_p**|**_scwprintf_p**|
+|**sctprintf_p_l**|**_scprintf_p_l**|**_scprintf_p_l**|**_scwprintf_p_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**scprintf_p**, **scprintf_p_l**|\<stdio.h>|
+|**scwprintf_p**, **scwprintf_p_l**|\<stdio.h> ou \<wchar.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
+[_scprintf, _scprintf_l, _scwprintf, _scwprintf_l](scprintf-scprintf-l-scwprintf-scwprintf-l.md)<br/>
+[_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>

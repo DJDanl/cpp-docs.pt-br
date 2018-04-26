@@ -1,12 +1,12 @@
 ---
 title: _cexit, _c_exit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _c_exit
@@ -38,59 +38,62 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825ed933d5a164fd6a07f13319d30fdf97a928e1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b4310ac5c0bac6853da23f7f491a757a7014ebe
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
-Executa operações de limpeza e retorna sem encerrar o processo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void _cexit( void );  
-void _c_exit( void );  
-```  
-  
-## <a name="remarks"></a>Comentários  
- A função `_cexit` chama, na ordem UEPS (último a entrar, primeiro a sair), as funções registradas por `atexit` e `_onexit`. Em seguida, `_cexit` libera todos os buffers de E/S e fecha todos os fluxos abertos antes de retornar. `_c_exit` é o mesmo que `_exit`, mas retorna para o processo de chamada sem processar `atexit` ou `_onexit` ou liberar buffers de fluxo. O comportamento de `exit`, `_exit`, `_cexit` e `_c_exit` é mostrado na tabela a seguir.  
-  
-|Função|Comportamento|  
-|--------------|--------------|  
-|`exit`|Executa procedimentos completos de encerramento de biblioteca C, encerra o processo e sai com código de status fornecido.|  
-|`_exit`|Executa procedimentos rápidos de encerramento de biblioteca C, encerra o processo e sai com código de status fornecido.|  
-|`_cexit`|Executa procedimentos completos de encerramento de biblioteca C e retorna ao chamador, mas não encerra o processo.|  
-|`_c_exit`|Executa procedimentos rápidos de encerramento de biblioteca C e retorna ao chamador, mas não encerra o processo.|  
-  
- Quando você chama a função `_cexit` ou `_c_exit`, os destruidores de quaisquer objetos temporários ou automáticos que existem no momento da chamada não são chamados. Um objeto automático é um objeto definido em uma função na qual o objeto não é declarado como estático. Um objeto temporário é um objeto criado pelo compilador. Para destruir um objeto automático antes de chamar `_cexit` ou `_c_exit`, chame explicitamente o destruidor do objeto da seguinte maneira:  
-  
-```  
-myObject.myClass::~myClass( );  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_cexit`|\<process.h>|  
-|`_c_exit`|\<process.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+Executa operações de limpeza e retorna sem encerrar o processo.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void _cexit( void );
+void _c_exit( void );
+```
+
+## <a name="remarks"></a>Comentários
+
+O **cexit** chamadas de função, no último a entrar, primeiro a sair (UEPS) ordem, as funções registradas por **atexit** e **OnExit**. Em seguida, **cexit** libera todos os buffers de e/s e fecha todos os fluxos abertos antes de retornar. **c_exit** é o mesmo que **exit** , mas retorna para o processo de chamada sem processamento **atexit** ou **OnExit** ou eliminação de buffers de fluxo. O comportamento de **sair**, **exit**, **cexit**, e **c_exit** é mostrado na tabela a seguir.
+
+|Função|Comportamento|
+|--------------|--------------|
+|**exit**|Executa procedimentos completos de encerramento de biblioteca C, encerra o processo e sai com código de status fornecido.|
+|**_exit**|Executa procedimentos rápidos de encerramento de biblioteca C, encerra o processo e sai com código de status fornecido.|
+|**_cexit**|Executa procedimentos completos de encerramento de biblioteca C e retorna ao chamador, mas não encerra o processo.|
+|**_c_exit**|Executa procedimentos rápidos de encerramento de biblioteca C e retorna ao chamador, mas não encerra o processo.|
+
+Quando você chama o **cexit** ou **c_exit** funções, não são chamados de destruidores para objetos temporários ou automática que existem no momento da chamada. Um objeto automático é um objeto definido em uma função na qual o objeto não é declarado como estático. Um objeto temporário é um objeto criado pelo compilador. Para destruir um objeto automático antes de chamar **cexit** ou **c_exit**, explicitamente chamar o destruidor para o objeto, da seguinte maneira:
+
+```cpp
+myObject.myClass::~myClass( );
+```
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_cexit**|\<process.h>|
+|**_c_exit**|\<process.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

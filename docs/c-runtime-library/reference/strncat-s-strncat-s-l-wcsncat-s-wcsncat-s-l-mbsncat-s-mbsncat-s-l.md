@@ -1,12 +1,12 @@
 ---
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcsncat_s_l
@@ -56,336 +56,345 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-caps.latest.revision: 
+caps.latest.revision: 42
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41acafc03f11cd306696bcf27dd1eed60ee11287
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 285b0be5414e3cf8916cdbf688a1bb6ceec38908
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
-Acrescenta caracteres a uma cadeia de caracteres. Essas versões de [strncat, _strncat_l, wcsncat, _wcsncat_l, mbsncat, mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+
+Acrescenta caracteres a uma cadeia de caracteres. Essas versões de [strncat, _strncat_l, wcsncat, _wcsncat_l, mbsncat, mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  `_mbsncat_s` e `_mbsncat_s_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-errno_t strncat_s(  
-   char *strDest,  
-   size_t numberOfElements,  
-   const char *strSource,  
-   size_t count  
-);  
-errno_t _strncat_s_l(  
-   char *strDest,  
-   size_t numberOfElements,  
-   const char *strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-errno_t wcsncat_s(  
-   wchar_t *strDest,  
-   size_t numberOfElements,  
-   const wchar_t *strSource,  
-   size_t count   
-);  
-errno_t _wcsncat_s_l(  
-   wchar_t *strDest,  
-   size_t numberOfElements,  
-   const wchar_t *strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-errno_t _mbsncat_s(  
-   unsigned char *strDest,  
-   size_t numberOfElements,  
-   const unsigned char *strSource,  
-   size_t count  
-);  
-errno_t _mbsncat_s_l(  
-   unsigned char *strDest,  
-   size_t numberOfElements,  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-errno_t strncat_s(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count  
-); // C++ only  
-template <size_t size>  
-errno_t _strncat_s_l(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-template <size_t size>  
-errno_t wcsncat_s(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-errno_t _wcsncat_s_l(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-template <size_t size>  
-errno_t _mbsncat_s(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count  
-); // C++ only  
-template <size_t size>  
-errno_t _mbsncat_s_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [out] `strDest`  
- Cadeia de caracteres de destino terminada em nulo.  
-  
- [in]`numberOfElements`  
- Tamanho do buffer de destino.  
-  
- [in]`strSource`  
- Cadeia de caracteres de origem com terminação nula.  
-  
- [in]`count`  
- O número de caracteres a serem acrescentados ou [_TRUNCATE](../../c-runtime-library/truncate.md).  
-  
- [in] `locale`  
- Localidade a usar.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retornará 0 se for bem-sucedido; um código de erro em caso de falha.  
-  
-### <a name="error-conditions"></a>Condições de Erro  
-  
-|`strDestination`|`numberOfElements`|`strSource`|Valor retornado|Conteúdo de `strDestination`|  
-|----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` ou não finalizado|qualquer|qualquer|`EINVAL`|não modificado|  
-|qualquer|qualquer|`NULL`|`EINVAL`|não modificado|  
-|qualquer|0 ou muito pequeno|qualquer|`ERANGE`|não modificado|  
-  
-## <a name="remarks"></a>Comentários  
- Essas funções tentam anexar os primeiros `D` caracteres de `strSource` ao final do `strDest`, em que `D` é inferior a `count` e o comprimento de `strSource`. Se acrescentar os `D` caracteres caiba dentro `strDest` (cujo tamanho é determinado como `numberOfElements`) e ainda deixar espaço para um terminador nulo, em seguida, esses caracteres são acrescentados, começando em original terminação nula de `strDest` e uma novo terminação nula é anexado; caso contrário, `strDest`[0] é definido para o caractere nulo e o parâmetro inválido manipulador é chamado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).  
-  
- Há uma exceção para o parágrafo acima. Se `count` é [TRUNCATE](../../c-runtime-library/truncate.md), em seguida, a maioria de `strSource` que se ajustará será acrescentada a `strDest` enquanto ainda deixa espaço para acrescentar uma terminação nula.  
-  
- Por exemplo,  
-  
- `char dst[5];`  
-  
- `strncpy_s(dst, _countof(dst), "12", 2);`  
-  
- `strncat_s(dst, _countof(dst), "34567", 3);`  
-  
- significa que, pedimos para `strncat_s` anexar três caracteres em dois caracteres em um buffer de cinco caracteres longos; não deixando nenhum espaço para o terminador nulo, portanto, `strncat_s` zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.  
-  
- Se for necessário o comportamento de truncamento, use `_TRUNCATE` ou ajuste o parâmetro `size` adequadamente:  
-  
- `strncat_s(dst, _countof(dst), "34567", _TRUNCATE);`  
-  
- ou  
-  
- `strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);`  
-  
- Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
-  
- Se `strSource` ou `strDest` é `NULL` ou é `numberOfElements` for zero, um manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará `EINVAL` sem modificar seus parâmetros.  
-  
- `wcsncat_s` e `_mbsncat_s` são versões de caracteres largos e de caracteres multibyte de `strncat_s`. Os argumentos de cadeia de caracteres e o valor retornado de `wcsncat_s` são cadeias de caracteres largos; desses de `_mbsncat_s` são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.  
-  
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo `_l` usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo `_l` são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
-  
- Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
-  
- As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
-  
-|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsncat_s`|`strncat_s`|`_mbsnbcat_s`|`wcsncat_s`|  
-|`_tcsncat_s_l`|`_strncat_s_l`|`_mbsnbcat_s_l`|`_wcsncat_s_l`|  
-  
- `_strncat_s_l` e `_wcsncat_s_l` não ter nenhuma dependência de localidade; eles são fornecidos somente para `_tcsncat_s_l`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`strncat_s`|\<string.h>|  
-|`wcsncat_s`|\<string.h> ou \<wchar.h>|  
-|`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_strncat_s.cpp  
-// compile with: /MTd  
-  
-// These #defines enable secure template overloads  
-// (see last part of Examples() below)  
-#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1   
-#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT 1  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <string.h>  
-#include <crtdbg.h>  // For _CrtSetReportMode  
-#include <errno.h>  
-  
-// This example uses a 10-byte destination buffer.  
-  
-errno_t strncat_s_tester( const char * initialDest,  
-                          const char * src,  
-                          int count )  
-{  
-   char dest[10];  
-   strcpy_s( dest, _countof(dest), initialDest );  
-  
-   printf_s( "\n" );  
-  
-   if ( count == _TRUNCATE )  
-      printf_s( "Appending '%s' to %d-byte buffer dest with truncation semantics\n",  
-               src, _countof(dest) );  
-   else  
-      printf_s( "Appending %d chars of '%s' to %d-byte buffer dest\n",  
-              count, src, _countof(dest) );  
-  
-   printf_s( "    old contents of dest: '%s'\n", dest );  
-  
-   errno_t err = strncat_s( dest, _countof(dest), src, count );  
-  
-   printf_s( "    new contents of dest: '%s'\n", dest );  
-  
-   return err;  
-}  
-  
-void Examples()  
-{  
-   strncat_s_tester( "hi ", "there", 4 );  
-   strncat_s_tester( "hi ", "there", 5 );  
-   strncat_s_tester( "hi ", "there", 6 );  
-  
-   printf_s( "\nDestination buffer too small:\n" );  
-   strncat_s_tester( "hello ", "there", 4 );  
-  
-   printf_s( "\nTruncation examples:\n" );  
-  
-   errno_t err = strncat_s_tester( "hello ", "there", _TRUNCATE );  
-   printf_s( "    truncation %s occur\n", err == STRUNCATE ? "did"  
-                                                       : "did not" );  
-  
-   err = strncat_s_tester( "hello ", "!", _TRUNCATE );  
-   printf_s( "    truncation %s occur\n", err == STRUNCATE ? "did"  
-                                                       : "did not" );  
-  
-   printf_s( "\nSecure template overload example:\n" );  
-  
-   char dest[10] = "cats and ";  
-   strncat( dest, "dachshunds", 15 );  
-   // With secure template overloads enabled (see #define  
-   // at top of file), the preceding line is replaced by  
-   //    strncat_s( dest, _countof(dest), "dachshunds", 15 );  
-   // Instead of causing a buffer overrun, strncat_s invokes  
-   // the invalid parameter handler.  
-   // If secure template overloads were disabled, strncat would  
-   // append "dachshunds" and overrun the dest buffer.  
-   printf_s( "    new contents of dest: '%s'\n", dest );  
-}  
-  
-void myInvalidParameterHandler(  
-   const wchar_t* expression,  
-   const wchar_t* function,   
-   const wchar_t* file,   
-   unsigned int line,   
-   uintptr_t pReserved)  
-{  
-   wprintf_s(L"Invalid parameter handler invoked: %s\n", expression);  
-}  
-  
-int main( void )  
-{  
-   _invalid_parameter_handler oldHandler, newHandler;  
-  
-   newHandler = myInvalidParameterHandler;  
-   oldHandler = _set_invalid_parameter_handler(newHandler);  
-   // Disable the message box for assertions.  
-   _CrtSetReportMode(_CRT_ASSERT, 0);  
-  
-   Examples();  
-}  
-```  
-  
-```Output  
-Appending 4 chars of 'there' to 10-byte buffer dest  
-    old contents of dest: 'hi '  
-    new contents of dest: 'hi ther'  
-  
-Appending 5 chars of 'there' to 10-byte buffer dest  
-    old contents of dest: 'hi '  
-    new contents of dest: 'hi there'  
-  
-Appending 6 chars of 'there' to 10-byte buffer dest  
-    old contents of dest: 'hi '  
-    new contents of dest: 'hi there'  
-  
-Destination buffer too small:  
-  
-Appending 4 chars of 'there' to 10-byte buffer dest  
-    old contents of dest: 'hello '  
-Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
-    new contents of dest: ''  
-  
-Truncation examples:  
-  
-Appending 'there' to 10-byte buffer dest with truncation semantics  
-    old contents of dest: 'hello '  
-    new contents of dest: 'hello the'  
-    truncation did occur  
-  
-Appending '!' to 10-byte buffer dest with truncation semantics  
-    old contents of dest: 'hello '  
-    new contents of dest: 'hello !'  
-    truncation did not occur  
-  
-Secure template overload example:  
-Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
-    new contents of dest: ''  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **mbsncat_s** e **mbsncat_s_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+errno_t strncat_s(
+   char *strDest,
+   size_t numberOfElements,
+   const char *strSource,
+   size_t count
+);
+errno_t _strncat_s_l(
+   char *strDest,
+   size_t numberOfElements,
+   const char *strSource,
+   size_t count,
+   _locale_t locale
+);
+errno_t wcsncat_s(
+   wchar_t *strDest,
+   size_t numberOfElements,
+   const wchar_t *strSource,
+   size_t count
+);
+errno_t _wcsncat_s_l(
+   wchar_t *strDest,
+   size_t numberOfElements,
+   const wchar_t *strSource,
+   size_t count,
+   _locale_t locale
+);
+errno_t _mbsncat_s(
+   unsigned char *strDest,
+   size_t numberOfElements,
+   const unsigned char *strSource,
+   size_t count
+);
+errno_t _mbsncat_s_l(
+   unsigned char *strDest,
+   size_t numberOfElements,
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+errno_t strncat_s(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+errno_t _strncat_s_l(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+template <size_t size>
+errno_t wcsncat_s(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+errno_t _wcsncat_s_l(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+template <size_t size>
+errno_t _mbsncat_s(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+errno_t _mbsncat_s_l(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*strDest*<br/>
+Cadeia de caracteres de destino terminada em nulo.
+
+*numberOfElements*<br/>
+Tamanho do buffer de destino.
+
+*strSource*<br/>
+Cadeia de caracteres de origem com terminação nula.
+
+*count*<br/>
+O número de caracteres a serem acrescentados ou [_TRUNCATE](../../c-runtime-library/truncate.md).
+
+*locale*<br/>
+Localidade a usar.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
+
+### <a name="error-conditions"></a>Condições de Erro
+
+|*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
+|----------------------|------------------------|-----------------|------------------|----------------------------------|
+|**NULO** ou não finalizada|qualquer|qualquer|**EINVAL**|não modificado|
+|qualquer|qualquer|**NULL**|**EINVAL**|não modificado|
+|qualquer|0 ou muito pequeno|qualquer|**ERANGE**|não modificado|
+
+## <a name="remarks"></a>Comentários
+
+Essas funções tentarem anexar o primeiro *D* caracteres de *strSource* ao final da *strDest*, onde *D* menor *contagem* e o comprimento de *strSource*. Se acrescentar os *D* caracteres se ajustarem *strDest* (cujo tamanho é determinado como *numberOfElements*) e ainda deixar espaço para um terminador nulo e, em seguida, esses caracteres são anexados, começando em original terminação nula de *strDest*, e um novo nulo de terminação é anexado; caso contrário, *strDest*[0] é definido como o caractere nulo e o parâmetro inválido manipulador é chamado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+
+Há uma exceção para o parágrafo acima. Se *contagem* é [TRUNCATE](../../c-runtime-library/truncate.md) , em seguida, o que *strSource* como será o ajuste é acrescentado ao *strDest* enquanto ainda deixa espaço para acrescentar um terminação nula.
+
+Por exemplo,
+
+```C
+char dst[5];
+strncpy_s(dst, _countof(dst), "12", 2);
+strncat_s(dst, _countof(dst), "34567", 3);
+```
+
+significa que estamos pedindo **strncat_s** acrescentar três caracteres de dois caracteres em um buffer de cinco caracteres longos; não deixando nenhum espaço para o terminador nulo, portanto, **strncat_s** zeros fora a cadeia de caracteres e chama o manipulador de parâmetro inválido.
+
+Se for necessário o comportamento de truncamento, use **TRUNCATE** ou ajustar o *tamanho* parâmetro adequadamente:
+
+```C
+strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
+```
+
+ou
+
+```C
+strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
+```
+
+Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+
+Se *strSource* ou *strDest* é **nulo**, ou *numberOfElements* for zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, a função retorna **EINVAL** sem modificar seus parâmetros.
+
+**wcsncat_s** e **mbsncat_s** são versões de caracteres largos e caracteres multibyte **strncat_s**. O valor de retorno e argumentos de cadeia de caracteres **wcsncat_s** são caracteres largos cadeias de caracteres; desses **mbsncat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+
+O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
+|**tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
+
+**_strncat_s_l** e **_wcsncat_s_l** não ter nenhuma dependência de localidade, que são fornecidas apenas para **tcsncat_s_l**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**strncat_s**|\<string.h>|
+|**wcsncat_s**|\<string.h> ou \<wchar.h>|
+|**mbsncat_s**, **mbsncat_s_l**|\<mbstring.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```cpp
+// crt_strncat_s.cpp
+// compile with: /MTd
+
+// These #defines enable secure template overloads
+// (see last part of Examples() below)
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT 1
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <crtdbg.h>  // For _CrtSetReportMode
+#include <errno.h>
+
+// This example uses a 10-byte destination buffer.
+
+errno_t strncat_s_tester( const char * initialDest,
+                          const char * src,
+                          int count )
+{
+   char dest[10];
+   strcpy_s( dest, _countof(dest), initialDest );
+
+   printf_s( "\n" );
+
+   if ( count == _TRUNCATE )
+      printf_s( "Appending '%s' to %d-byte buffer dest with truncation semantics\n",
+               src, _countof(dest) );
+   else
+      printf_s( "Appending %d chars of '%s' to %d-byte buffer dest\n",
+              count, src, _countof(dest) );
+
+   printf_s( "    old contents of dest: '%s'\n", dest );
+
+   errno_t err = strncat_s( dest, _countof(dest), src, count );
+
+   printf_s( "    new contents of dest: '%s'\n", dest );
+
+   return err;
+}
+
+void Examples()
+{
+   strncat_s_tester( "hi ", "there", 4 );
+   strncat_s_tester( "hi ", "there", 5 );
+   strncat_s_tester( "hi ", "there", 6 );
+
+   printf_s( "\nDestination buffer too small:\n" );
+   strncat_s_tester( "hello ", "there", 4 );
+
+   printf_s( "\nTruncation examples:\n" );
+
+   errno_t err = strncat_s_tester( "hello ", "there", _TRUNCATE );
+   printf_s( "    truncation %s occur\n", err == STRUNCATE ? "did"
+                                                       : "did not" );
+
+   err = strncat_s_tester( "hello ", "!", _TRUNCATE );
+   printf_s( "    truncation %s occur\n", err == STRUNCATE ? "did"
+                                                       : "did not" );
+
+   printf_s( "\nSecure template overload example:\n" );
+
+   char dest[10] = "cats and ";
+   strncat( dest, "dachshunds", 15 );
+   // With secure template overloads enabled (see #define
+   // at top of file), the preceding line is replaced by
+   //    strncat_s( dest, _countof(dest), "dachshunds", 15 );
+   // Instead of causing a buffer overrun, strncat_s invokes
+   // the invalid parameter handler.
+   // If secure template overloads were disabled, strncat would
+   // append "dachshunds" and overrun the dest buffer.
+   printf_s( "    new contents of dest: '%s'\n", dest );
+}
+
+void myInvalidParameterHandler(
+   const wchar_t* expression,
+   const wchar_t* function,
+   const wchar_t* file,
+   unsigned int line,
+   uintptr_t pReserved)
+{
+   wprintf_s(L"Invalid parameter handler invoked: %s\n", expression);
+}
+
+int main( void )
+{
+   _invalid_parameter_handler oldHandler, newHandler;
+
+   newHandler = myInvalidParameterHandler;
+   oldHandler = _set_invalid_parameter_handler(newHandler);
+   // Disable the message box for assertions.
+   _CrtSetReportMode(_CRT_ASSERT, 0);
+
+   Examples();
+}
+```
+
+```Output
+Appending 4 chars of 'there' to 10-byte buffer dest
+    old contents of dest: 'hi '
+    new contents of dest: 'hi ther'
+
+Appending 5 chars of 'there' to 10-byte buffer dest
+    old contents of dest: 'hi '
+    new contents of dest: 'hi there'
+
+Appending 6 chars of 'there' to 10-byte buffer dest
+    old contents of dest: 'hi '
+    new contents of dest: 'hi there'
+
+Destination buffer too small:
+
+Appending 4 chars of 'there' to 10-byte buffer dest
+    old contents of dest: 'hello '
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)
+    new contents of dest: ''
+
+Truncation examples:
+
+Appending 'there' to 10-byte buffer dest with truncation semantics
+    old contents of dest: 'hello '
+    new contents of dest: 'hello the'
+    truncation did occur
+
+Appending '!' to 10-byte buffer dest with truncation semantics
+    old contents of dest: 'hello '
+    new contents of dest: 'hello !'
+    truncation did not occur
+
+Secure template overload example:
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)
+    new contents of dest: ''
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

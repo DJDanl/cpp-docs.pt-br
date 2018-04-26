@@ -1,12 +1,9 @@
 ---
 title: __min | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - __min
@@ -34,72 +31,72 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4f282331caaef9b56d1ca0b52ebf7c5e63ab6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e984dcfe6d4cf135a41a95a314c144d13b8db8e7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="min"></a>__min
-Retorna o menor de dois valores.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-type __min(  
-   type a,  
-   type b   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `type`  
- Qualquer tipo de dados numérico.  
-  
- `a, b`  
- Valores de qualquer tipo numérico a serem comparados.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O menor dos dois argumentos.  
-  
-## <a name="remarks"></a>Comentários  
- A macro `__min` compara dois valores e retorna o valor do menor. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`__min`|\<stdlib.h>|  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_minmax.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int a = 10;  
-   int b = 21;  
-  
-   printf( "The larger of %d and %d is %d\n",  a, b, __max( a, b ) );  
-   printf( "The smaller of %d and %d is %d\n", a, b, __min( a, b ) );  
-}  
-```  
-  
-```Output  
-The larger of 10 and 21 is 21  
-The smaller of 10 and 21 is 10  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [__max](../../c-runtime-library/reference/max.md)
+
+Uma macro de pré-processador que retorna o menor dos dois valores.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+#define __min(a,b) (((a) < (b)) ? (a) : (b))
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*um*, *b*<br/>
+Valores de qualquer tipo que o **<** operador funciona em.
+
+## <a name="return-value"></a>Valor de retorno
+
+O menor dos dois argumentos.
+
+## <a name="remarks"></a>Comentários
+
+O **min** macro compara dois valores e retorna o valor de um menor. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.
+
+O argumento retornado é avaliado duas vezes pela macro. Isso pode levar a resultados inesperados se o argumento é uma expressão que altera seu valor quando ele é avaliado, como `*p++`.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**__min**|\<stdlib.h>|
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_minmax.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   int a = 10;
+   int b = 21;
+
+   printf( "The larger of %d and %d is %d\n",  a, b, __max( a, b ) );
+   printf( "The smaller of %d and %d is %d\n", a, b, __min( a, b ) );
+}
+```
+
+```Output
+The larger of 10 and 21 is 21
+The smaller of 10 and 21 is 10
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[__max](max.md)<br/>

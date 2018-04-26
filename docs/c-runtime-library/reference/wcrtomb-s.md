@@ -1,12 +1,12 @@
 ---
 title: wcrtomb_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcrtomb_s
@@ -33,123 +33,129 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb7ae5e3246d020844bdd31f970f9678fede78c2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3dddfa0d39f41b4763ec8b636fded99b78f0c296
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
-Converta um caractere largo em sua representação de caracteres multibyte. Uma versão de [wcrtomb](../../c-runtime-library/reference/wcrtomb.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-errno_t wcrtomb_s(  
-   size_t *pReturnValue,  
-   char *mbchar,  
-   size_t sizeOfmbchar,  
-   wchar_t *wchar,  
-   mbstate_t *mbstate  
-);  
-template <size_t size>  
-errno_t wcrtomb_s(  
-   size_t *pReturnValue,  
-   char (&mbchar)[size],  
-   wchar_t *wchar,  
-   mbstate_t *mbstate  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [out] `pReturnValue`  
- Retorna o número de bytes gravados ou –1 em caso de erro.  
-  
- [out] `mbchar`  
- O caractere multibyte convertido resultante.  
-  
- [in] `sizeOfmbchar`  
- O tamanho da variável `mbchar` em bytes.  
-  
- [in] `wchar`  
- Um caractere largo a ser convertido.  
-  
- [in] `mbstate`  
- Um ponteiro para um objeto `mbstate_t`.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna zero ou um valor `errno` em caso de erro.  
-  
-## <a name="remarks"></a>Comentários  
- A função `wcrtomb_s` converte um caractere largo que começa no estado da conversão especificado contido em `mbstate`, com base no valor contido em `wchar`, no endereço representado por `mbchar`. O valor `pReturnValue` será o número de bytes convertidos, mas não mais de `MB_CUR_MAX` bytes ou –1 em caso de erro.  
-  
- Se `mbstate` for nulo, o estado da conversão `mbstate_t` interno será usado. Se o caractere contido em `wchar` não tiver nenhum caractere multibyte correspondente, o valor de `pReturnValue` será –1 e a função retornará o valor `errno` de `EILSEQ`.  
-  
- A função `wcrtomb_s` difere de [wctomb_s, wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md) por sua capacidade de reinicialização. O estado da conversão é armazenado em `mbstate` para chamadas posteriores às mesmas funções ou a outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria `wcsrlen` em vez de `wcslen` se uma chamada subsequente a `wcsrtombs_s` fosse usada em vez de `wcstombs_s.`  
-  
- Em C++, o uso dessa função é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
-  
-## <a name="exceptions"></a>Exceções  
- A função `wcrtomb_s` será multithread-safe contanto que nenhuma função no thread atual chame `setlocale` enquanto essa função estiver em execução e o `mbstate` for nulo.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_wcrtomb_s.c  
-// This program converts a wide character  
-// to its corresponding multibyte character.  
-//  
-  
-#include <string.h>  
-#include <stdio.h>  
-#include <wchar.h>  
-  
-int main( void )  
-{  
-    errno_t     returnValue;  
-    size_t      pReturnValue;  
-    mbstate_t   mbstate;  
-    size_t      sizeOfmbStr = 1;  
-    char        mbchar = 0;  
-    wchar_t*    wchar = L"Q\0";  
-  
-    // Reset to initial conversion state  
-    memset(&mbstate, 0, sizeof(mbstate));  
-  
-    returnValue = wcrtomb_s(&pReturnValue, &mbchar, sizeof(char),  
-                            *wchar, &mbstate);  
-    if (returnValue == 0) {  
-        printf("The corresponding wide character \"");  
-        wprintf(L"%s\"", wchar);  
-        printf(" was converted to a the \"%c\" ", mbchar);  
-        printf("multibyte character.\n");  
-    }  
-    else  
-    {  
-        printf("No corresponding multibyte character "  
-               "was found.\n");  
-    }  
-}  
-```  
-  
-```Output  
-The corresponding wide character "Q" was converted to a the "Q" multibyte character.  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`wcrtomb_s`|\<wchar.h>|  
-  
-## <a name="see-also"></a>Consulte também  
- [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
- [Localidade](../../c-runtime-library/locale.md)   
- [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbsinit](../../c-runtime-library/reference/mbsinit.md)
+
+Converta um caractere largo em sua representação de caracteres multibyte. Uma versão de [wcrtomb](wcrtomb.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+errno_t wcrtomb_s(
+   size_t *pReturnValue,
+   char *mbchar,
+   size_t sizeOfmbchar,
+   wchar_t *wchar,
+   mbstate_t *mbstate
+);
+template <size_t size>
+errno_t wcrtomb_s(
+   size_t *pReturnValue,
+   char (&mbchar)[size],
+   wchar_t *wchar,
+   mbstate_t *mbstate
+); // C++ only
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pReturnValue*<br/>
+Retorna o número de bytes gravados ou –1 em caso de erro.
+
+*mbchar*<br/>
+O caractere multibyte convertido resultante.
+
+*sizeOfmbchar*<br/>
+O tamanho do *mbchar* variável em bytes.
+
+*wchar*<br/>
+Um caractere largo a ser convertido.
+
+*mbstate*<br/>
+Um ponteiro para um **mbstate_t** objeto.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna zero ou um **errno** valor se ocorrer um erro.
+
+## <a name="remarks"></a>Comentários
+
+O **wcrtomb_s** função converte um caractere largo, a partir do estado de conversão especificado contido no *mbstate*, do valor contido na *wchar*, para o endereço representado por *mbchar*. O *pReturnValue* valor será o número de bytes convertidos, mas não mais de **MB_CUR_MAX** bytes, ou um -1 se ocorreu um erro.
+
+Se *mbstate* for nulo, o interno **mbstate_t** conversão estado é usado. Se o caractere contido no *wchar* não tem um caractere multibyte correspondente, o valor de *pReturnValue* será -1 e a função retornará o **errno** valor de **EILSEQ**.
+
+O **wcrtomb_s** função difere da [wctomb_s, wctomb_s_l](wctomb-s-wctomb-s-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para o mesmo ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcslen**, se uma chamada subsequente para **wcsrtombs_s** foram usadas em vez de **wcstombs_s**.
+
+Em C++, o uso dessa função é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+## <a name="exceptions"></a>Exceções
+
+O **wcrtomb_s** função é safe multithread desde que nenhuma função no thread atual chama **setlocale** enquanto essa função está em execução e o *mbstate* é nulo.
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_wcrtomb_s.c
+// This program converts a wide character
+// to its corresponding multibyte character.
+//
+
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+
+int main( void )
+{
+    errno_t     returnValue;
+    size_t      pReturnValue;
+    mbstate_t   mbstate;
+    size_t      sizeOfmbStr = 1;
+    char        mbchar = 0;
+    wchar_t*    wchar = L"Q\0";
+
+    // Reset to initial conversion state
+    memset(&mbstate, 0, sizeof(mbstate));
+
+    returnValue = wcrtomb_s(&pReturnValue, &mbchar, sizeof(char),
+                            *wchar, &mbstate);
+    if (returnValue == 0) {
+        printf("The corresponding wide character \"");
+        wprintf(L"%s\"", wchar);
+        printf(" was converted to a the \"%c\" ", mbchar);
+        printf("multibyte character.\n");
+    }
+    else
+    {
+        printf("No corresponding multibyte character "
+               "was found.\n");
+    }
+}
+```
+
+```Output
+The corresponding wide character "Q" was converted to a the "Q" multibyte character.
+```
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**wcrtomb_s**|\<wchar.h>|
+
+## <a name="see-also"></a>Consulte também
+
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[mbsinit](mbsinit.md)<br/>

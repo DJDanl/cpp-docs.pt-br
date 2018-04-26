@@ -1,12 +1,12 @@
 ---
 title: strdup, wcsdup | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcsdup
@@ -32,17 +32,18 @@ helpviewer_keywords:
 - wcsdup function
 - strdup function
 ms.assetid: c9ac0935-b525-4e95-8a64-396fc7e34ee9
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cc3f48b2c8ff3d22f8333ac75b6a23994d9cc98
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 62c07e5bc557e857e8b3abc8a6a3ef1cc3203ccb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strdup-wcsdup"></a>strdup, wcsdup
-Essas funções POSIX foram preteridas. Use [strdup, wcsdup, mbsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md) compatíveis com ISO C++ em vez disso.
+
+Essas funções POSIX foram preteridas. Use [strdup, wcsdup, mbsdup](strdup-wcsdup-mbsdup.md) compatíveis com ISO C++ em vez disso.

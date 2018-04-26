@@ -1,12 +1,12 @@
 ---
 title: _setmbcp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _setmbcp
@@ -33,69 +33,74 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42d2d43726ea533ab689a61c5211317c8dc033c4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2e879d4cf6ebc7cb7f61199b3bb52f1a5e3f5389
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setmbcp"></a>_setmbcp
-Define uma nova página de código multibyte.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int _setmbcp(  
-   int codepage   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `codepage`  
- Nova configuração de página de código para rotinas multibyte independentes da localidade.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna 0 se a página de código é definida com êxito. Se um valor de página de código inválido é fornecido para `codepage`, retorna -1 e a configuração de página de código é alterada. Define `errno` para `EINVAL` se ocorre uma falha de alocação de memória.  
-  
-## <a name="remarks"></a>Comentários  
- A função `_setmbcp` especifica uma nova página de código multibyte. Por padrão, o sistema de tempo de execução define automaticamente a página de código multibyte para a página de código ANSI padrão do sistema. A configuração de página de código multibyte afeta todas as rotinas multibyte que não são dependentes da localidade. No entanto, é possível instruir o `_setmbcp` para usar a página de código definida para a localidade atual (consulte a lista de constantes de manifesto e resultados de comportamento associados a seguir). Para obter uma lista das rotinas de multibyte que dependem da página de código de localidade em vez da página de código multibyte, consulte [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).  
-  
- A página de código multibyte também afeta o processamento de caracteres multibyte pelas rotinas de biblioteca em tempo de execução a seguir:  
-  
-||||  
-|-|-|-|  
-|[Funções _exec](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md)|[_stat](../../c-runtime-library/reference/stat-functions.md)|  
-|[_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[Funções _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-|[_makepath](../../c-runtime-library/reference/makepath-wmakepath.md)|[_splitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)|[tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-  
- Além disso, todas as rotinas da biblioteca em tempo de execução que recebem argumentos de programa `argv` ou `envp` de caracteres multibyte como parâmetros (assim como as famílias `_exec` e `_spawn`) processam essas cadeias de caracteres de acordo com a página de código multibyte. Portanto, essas rotinas também são afetadas por uma chamada para `_setmbcp` que altera a página de código multibyte.  
-  
- O argumento `codepage` pode ser definido como qualquer um dos seguintes valores:  
-  
--   `_MB_CP_ANSI` Use a página de código ANSI obtida do sistema operacional na inicialização do programa.  
-  
--   `_MB_CP_LOCALE` Use a página de código da localidade atual obtida de uma chamada anterior a [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
-  
--   `_MB_CP_OEM` Use a página de código OEM obtida do sistema operacional na inicialização do programa.  
-  
--   `_MB_CP_SBCS` Use a página de código de byte único. Quando a página de código está definida como `_MB_CP_SBCS`, uma rotina como [_ismbblead](../../c-runtime-library/reference/ismbblead-ismbblead-l.md) sempre retorna false.  
-  
--   Qualquer outro valor de página de código válido, independentemente de ser um valor ANSI, OEM ou outra página de código com suporte pelo sistema operacional (exceto UTF-7 e UTF-8, que não têm suporte).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|`_setmbcp`|\<mbctype.h>|  
-  
- Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="see-also"></a>Consulte também  
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+Define uma nova página de código multibyte.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+int _setmbcp(
+   int codepage
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Página de código*<br/>
+Nova configuração de página de código para rotinas multibyte independentes da localidade.
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna 0 se a página de código é definida com êxito. Se um valor de página de código inválido é fornecido para *codepage*, retorna -1 e a configuração de página de código é alterada. Conjuntos de **errno** para **EINVAL** se ocorrer uma falha de alocação de memória.
+
+## <a name="remarks"></a>Comentários
+
+O **setmbcp** função especifica uma nova página de código multibyte. Por padrão, o sistema de tempo de execução define automaticamente a página de código multibyte para a página de código ANSI padrão do sistema. A configuração de página de código multibyte afeta todas as rotinas multibyte que não são dependentes da localidade. No entanto, é possível instruir o **setmbcp** para usar a página de código definida para a localidade atual (consulte a seguinte lista de constantes de manifesto e associados a resultados de comportamento). Para obter uma lista das rotinas de multibyte que dependem da página de código de localidade em vez da página de código multibyte, consulte [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+
+A página de código multibyte também afeta o processamento de caracteres multibyte pelas rotinas de biblioteca em tempo de execução a seguir:
+
+||||
+|-|-|-|
+|[Funções _exec](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
+|[_fullpath](fullpath-wfullpath.md)|[Funções _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+
+Além disso, todas as rotinas de biblioteca de tempo de execução que recebem caracteres multibyte *argv* ou *envp* argumentos como parâmetros de programa (como o **EXEC** e **spawn** famílias) processar essas cadeias de caracteres de acordo com a página de código multibyte. Portanto, essas rotinas também serão afetadas por uma chamada para **setmbcp** que altera a página de código multibyte.
+
+O *codepage* argumento pode ser definido para qualquer um dos seguintes valores:
+
+- **_MB_CP_ANSI** obtido de página de código ANSI do uso do sistema operacional na inicialização do programa.
+
+- **_MB_CP_LOCALE** use a página de código da localidade atual, obtida de uma chamada anterior para [setlocale](setlocale-wsetlocale.md).
+
+- **_MB_CP_OEM** obtido de página de código OEM do uso do sistema operacional na inicialização do programa.
+
+- **_MB_CP_SBCS** use a página de código de byte único. Quando a página de código é definida como **_MB_CP_SBCS**, uma rotina, como [ismbblead](ismbblead-ismbblead-l.md) sempre retorna false.
+
+- Qualquer outro valor de página de código válido, independentemente de ser um valor ANSI, OEM ou outra página de código com suporte pelo sistema operacional (exceto UTF-7 e UTF-8, que não têm suporte).
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|**_setmbcp**|\<mbctype.h>|
+
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Consulte também
+
+[_getmbcp](getmbcp.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
