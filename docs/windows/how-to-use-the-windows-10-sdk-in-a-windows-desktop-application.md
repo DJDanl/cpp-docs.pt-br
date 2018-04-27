@@ -1,28 +1,28 @@
 ---
-title: "Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows | Microsoft Docs'
+ms.custom: ''
+ms.date: 04/19/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows
 Quando você cria um projeto de área de trabalho clássico do Windows no Visual Studio de 2017, ela é configurada por padrão para compilar com a versão do SDK do Windows 10 foi instalado quando a carga de trabalho de área de trabalho do C++ foi instalada ou atualizado pela última vez. Esta versão do SDK do Windows é compatível com todas as versões recentes do Windows. Se você deseja direcionar uma versão anterior do SDK, você pode abrir o projeto | Propriedades e escolha entre as outras versões do SDK disponíveis na lista suspensa de versão de SDK do Windows.  
@@ -31,7 +31,8 @@ Quando você cria um projeto de área de trabalho clássico do Windows no Visual
   
 ### <a name="to-target-the-windows-10-sdk"></a>Para direcionar o SDK do Windows 10  
   
-1.  Verifique se que o SDK do Windows 10 está instalado. O SDK do Windows 10 é instalado como parte do [ferramentas para Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
+1.  Verifique se que o SDK do Windows 10 está instalado. O SDK do Windows 10 é instalado como parte do **desenvolvimento de área de trabalho com C++** carga de trabalho. Uma versão autônoma está disponível em [Downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads).
+
   
 2.  Abra o menu de atalho para o nó do projeto e escolha **redirecionar SDK versão**.  
   

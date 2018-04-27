@@ -1,12 +1,12 @@
 ---
 title: _SCL_SECURE_NO_WARNINGS | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
@@ -17,54 +17,52 @@ helpviewer_keywords:
 - _SCL_SECURE_NO_DEPRECATE
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 285e54a2eab4d116df81c3e10c597c6dbb6dd9cb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5dec19d4c7d6f1def451f7f11588f303961cc5c0
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
-Chamar qualquer um dos métodos potencialmente não seguros na biblioteca padrão C++ resultará no [Aviso do compilador C4996 (nível 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Para desabilitar esse aviso, defina a macro **_SCL_SECURE_NO_WARNINGS** no seu código:  
-  
-```  
-#define _SCL_SECURE_NO_WARNINGS  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Outras maneiras de desabilitar o aviso C4996 incluem:  
-  
--   Usando a opção do compilador [/D (definições de pré-processador)](../build/reference/d-preprocessor-definitions.md):  
-  
- ```  
-    cl /D_SCL_SECURE_NO_WARNINGS [other compiler options] myfile.cpp  
-```  
-  
--   Usando a opção do compilador [/w](../build/reference/compiler-option-warning-level.md):  
-  
- ```  
-    cl /wd4996 [other compiler options] myfile.cpp  
-```  
-  
--   Usando a diretiva [#pragma warning](../preprocessor/warning.md):  
-  
- ```  
- #pragma warning(disable:4996)  
-```  
-  
- Além disso, você pode alterar manualmente o nível de aviso C4996 com o **/w\<l >\< n>**  opção de compilador. Por exemplo, para definir o aviso C4996 como nível 4:  
-  
-```  
-cl /w44996 [other compiler options] myfile.cpp  
-```  
-  
- Para obter mais informações, consulte [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Nível de Aviso)](../build/reference/compiler-option-warning-level.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Bibliotecas seguras: Biblioteca Padrão C++](../standard-library/safe-libraries-cpp-standard-library.md)
 
+Chamar qualquer um dos métodos potencialmente não seguros na biblioteca padrão C++ resulta em [C4996 de aviso do compilador (nível 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Para desabilitar esse aviso, defina a macro **_SCL_SECURE_NO_WARNINGS** no seu código:
+
+```cpp
+#define _SCL_SECURE_NO_WARNINGS
+```
+
+Se você usar cabeçalhos pré-compilados, colocar esta diretiva no seu arquivo de cabeçalho pré-compilado antes de você incluir qualquer biblioteca de tempo de execução do C ou cabeçalhos de biblioteca padrão. Se você colocá-lo em um arquivo de código de origem individuais antes de incluir o arquivo de cabeçalho pré-compilado, ele será ignorado pelo compilador.
+
+## <a name="remarks"></a>Comentários
+
+Outras maneiras de desabilitar o aviso C4996 incluem:
+
+- Usando a opção do compilador [/D (definições de pré-processador)](../build/reference/d-preprocessor-definitions.md):
+
+   > Cl /D_SCL_SECURE_NO_WARNINGS [outras opções do compilador] cpp
+
+- Usando a opção do compilador [/w](../build/reference/compiler-option-warning-level.md):
+
+   > Cl /wd4996 [outras opções do compilador] cpp
+
+- Usando a diretiva [#pragma warning](../preprocessor/warning.md):
+
+   ```cpp
+   #pragma warning(disable:4996)
+   ```
+
+Além disso, você pode alterar manualmente o nível de aviso C4996 com a opção do compilador **/w\<l>\<n>**. Por exemplo, para definir o aviso C4996 como nível 4:
+
+> Cl /w44996 [outras opções do compilador] cpp
+
+Para obter mais informações, consulte [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Nível de Aviso)](../build/reference/compiler-option-warning-level.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Bibliotecas seguras: Biblioteca Padrão C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

@@ -1,158 +1,153 @@
 ---
-title: "Funções &lt;unordered_set&gt; | Microsoft Docs"
-ms.custom: 
+title: Funções &lt;unordered_set&gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-caps.latest.revision: 
+caps.latest.revision: 10
 manager: ghogen
-ms.openlocfilehash: f59431293fa738a332a09e2751b0087caabd460e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d4aa4d81233cd7a12028320cf8541cdb3616a653
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltunorderedsetgt-functions"></a>Funções &lt;unordered_set&gt;
-|||  
-|-|-|  
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|  
-  
-##  <a name="swap"></a>  swap (unordered_set)  
- Alterna o conteúdo de dois contêineres.  
-  
-```  
- 
-template <class Key, class Hash, class Pred, class Alloc>  
+
+|||
+|-|-|
+|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
+
+## <a name="swap"></a>  swap (unordered_set)
+
+Alterna o conteúdo de dois contêineres.
+
+```
+
+template <class Key, class Hash, class Pred, class Alloc>
 void swap(
-   unordered_set <Key, Hash, Pred, Alloc>& left,  
+   unordered_set <Key, Hash, Pred, Alloc>& left,
    unordered_set <Key, Hash, Pred, Alloc>& right);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- `Key`  
- O tipo principal.  
-  
- `Hash`  
- O tipo de objeto da função de hash.  
-  
- `Pred`  
- O tipo de objeto da função de comparação de igualdade.  
-  
- `Alloc`  
- A classe do alocador.  
-  
- `left`  
- O primeiro contêiner para alternância.  
-  
- `right`  
- O segundo contêiner para alternância.  
-  
-### <a name="remarks"></a>Comentários  
- A função de modelo executa `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.  
-  
-### <a name="example"></a>Exemplo  
-  
-```cpp  
-#include <unordered_set>  
-#include <iostream>  
-  
-typedef std::unordered_set<char> Myset;  
-int main()  
-{  
-Myset c1;  
-  
-c1.insert('a');  
-c1.insert('b');  
-c1.insert('c');  
-  
-// display contents " [c] [b] [a]"  
-for (Myset::const_iterator it = c1.begin();  
-it != c1.end(); ++it)  
-std::cout << " [" << *it << "]";  
-std::cout << std::endl;  
-  
-Myset c2;  
-  
-c2.insert('d');  
-c2.insert('e');  
-c2.insert('f');  
-  
-c1.swap(c2);  
-  
-// display contents " [f] [e] [d]"  
-for (Myset::const_iterator it = c1.begin();  
-it != c1.end(); ++it)  
-std::cout << " [" << *it << "]";  
-std::cout << std::endl;  
-  
-swap(c1, c2);  
-  
-// display contents " [c] [b] [a]"  
-for (Myset::const_iterator it = c1.begin();  
-it != c1.end(); ++it)  
-std::cout << " [" << *it << "]";  
-std::cout << std::endl;  
-  
-return (0);  
-}  
-  
-```  
-  
-```Output  
-  
-[c] [b] [a]  
-[f] [e] [d]  
-[c] [b] [a]  
-  
-```  
-  
-##  <a name="swap_unordered_multiset"></a>  swap (unordered_multiset) 
- Alterna o conteúdo de dois contêineres.  
-  
-```  
- 
-template <class Key, class Hash, class Pred, class Alloc>  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+`Key` o tipo de chave.
+
+`Hash` O tipo de objeto de função de hash.
+
+`Pred` O tipo de objeto de função de comparação de igualdade.
+
+`Alloc` A classe de alocador.
+
+`left` O primeiro contêiner de troca.
+
+`right` O contêiner de segundo para troca.
+
+### <a name="remarks"></a>Comentários
+
+A função de modelo executa `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+#include <unordered_set>
+#include <iostream>
+
+typedef std::unordered_set<char> Myset;
+int main()
+{
+Myset c1;
+
+c1.insert('a');
+c1.insert('b');
+c1.insert('c');
+
+// display contents " [c] [b] [a]"
+for (Myset::const_iterator it = c1.begin();
+it != c1.end(); ++it)
+std::cout << " [" << *it << "]";
+std::cout << std::endl;
+
+Myset c2;
+
+c2.insert('d');
+c2.insert('e');
+c2.insert('f');
+
+c1.swap(c2);
+
+// display contents " [f] [e] [d]"
+for (Myset::const_iterator it = c1.begin();
+it != c1.end(); ++it)
+std::cout << " [" << *it << "]";
+std::cout << std::endl;
+
+swap(c1, c2);
+
+// display contents " [c] [b] [a]"
+for (Myset::const_iterator it = c1.begin();
+it != c1.end(); ++it)
+std::cout << " [" << *it << "]";
+std::cout << std::endl;
+
+return (0);
+}
+
+```
+
+```Output
+
+[c] [b] [a]
+[f] [e] [d]
+[c] [b] [a]
+
+```
+
+## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+
+Alterna o conteúdo de dois contêineres.
+
+```
+
+template <class Key, class Hash, class Pred, class Alloc>
 void swap(
-   unordered_multiset <Key, Hash, Pred, Alloc>& left,  
+   unordered_multiset <Key, Hash, Pred, Alloc>& left,
    unordered_multiset <Key, Hash, Pred, Alloc>& right);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- `Key`  
- O tipo principal.  
-  
- `Hash`  
- O tipo de objeto da função de hash.  
-  
- `Pred`  
- O tipo de objeto da função de comparação de igualdade.  
-  
- `Alloc`  
- A classe do alocador.  
-  
- `left`  
- O primeiro contêiner para alternância.  
-  
- `right`  
- O segundo contêiner para alternância.  
-  
-### <a name="remarks"></a>Comentários  
- A função de modelo executa `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.  
-  
-### <a name="example"></a>Exemplo  
-  
-```cpp  
-// std__unordered_set__u_ms_swap.cpp  
-// compile with: /EHsc  
-#include <unordered_set>  
-#include <iostream>  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+`Key` o tipo de chave.
+
+`Hash` O tipo de objeto de função de hash.
+
+`Pred` O tipo de objeto de função de comparação de igualdade.
+
+`Alloc` A classe de alocador.
+
+`left` O primeiro contêiner de troca.
+
+`right` O contêiner de segundo para troca.
+
+### <a name="remarks"></a>Comentários
+
+A função de modelo executa `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+// std__unordered_set__u_ms_swap.cpp
+// compile with: /EHsc
+#include <unordered_set>
+#include <iostream>
+
 typedef std::unordered_multiset<char> Myset;
 int main()
 {
@@ -162,7 +157,7 @@ int main()
     c1.insert('b');
     c1.insert('c');
 
-    // display contents " [c] [b] [a]"  
+    // display contents " [c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
         std::cout << " [" << *it << "]";
@@ -176,7 +171,7 @@ int main()
 
     c1.swap(c2);
 
-    // display contents " [f] [e] [d]"  
+    // display contents " [f] [e] [d]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
         std::cout << " [" << *it << "]";
@@ -184,7 +179,7 @@ int main()
 
     swap(c1, c2);
 
-    // display contents " [c] [b] [a]"  
+    // display contents " [c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
         std::cout << " [" << *it << "]";
@@ -192,17 +187,17 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-  
-[c] [b] [a]  
-[f] [e] [d]  
-[c] [b] [a]  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [<unordered_set>](../standard-library/unordered-set.md)
 
+```
+
+```Output
+
+[c] [b] [a]
+[f] [e] [d]
+[c] [b] [a]
+
+```
+
+## <a name="see-also"></a>Consulte também
+
+[<unordered_set>](../standard-library/unordered-set.md)<br/>

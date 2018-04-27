@@ -1,12 +1,12 @@
 ---
 title: '&lt;hash_map&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -52,7 +52,7 @@ Define as classes de modelo do contêiner hash_map e hash_multimap e seus modelo
 
 ### <a name="classes"></a>Classes
 
-|||
+|Classe|Descrição|
 |-|-|
 |[Classe hash_compare](hash-compare-class.md)|Descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um objeto de parâmetro **Traits** padrão para ordenar e fazer o hash dos elementos que eles contêm.|
 |[Classe value_compare](value-compare-class.md)|Fornece um objeto de função que pode comparar os elementos de um hash_map comparando os valores de suas chaves para determinar sua ordem relativa no hash_map.|
@@ -67,6 +67,6 @@ Define as classes de modelo do contêiner hash_map e hash_multimap e seus modelo
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](cpp-standard-library-header-files.md)  
-[Acesso Thread-Safe na Biblioteca Padrão C++](thread-safety-in-the-cpp-standard-library.md)  
-[Referência da biblioteca padrão C++](cpp-standard-library-reference.md)  
+[Referência de arquivos de cabeçalho](cpp-standard-library-header-files.md)
+[segurança de threads na biblioteca padrão C++](thread-safety-in-the-cpp-standard-library.md)
+[referência da biblioteca padrão C++](cpp-standard-library-reference.md)

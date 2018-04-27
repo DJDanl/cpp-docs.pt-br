@@ -1,12 +1,12 @@
 ---
 title: floor, floorf, floorl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - floorf
@@ -38,102 +38,107 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58979e8825c21a0e8023dec7ca3bf76964ff527
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2a0440377bb93445dbcf815a89e1479932051e42
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
-Calcula a base de um valor.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-double floor(  
-   double x  
-);  
-float floor(  
-   float x   
-); // C++ only  
-long double floor(  
-   long double x  
-); // C++ only  
-float floorf(  
-   float x  
-);  
-long double floorl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `x`  
- Valor de ponto flutuante.  
-  
-## <a name="return-value"></a>Valor de retorno  
- As funções `floor` retornam um valor de ponto flutuante que representa o maior inteiro menor ou igual a `x`. Nenhum erro é retornado.  
-  
-|Entrada|Exceção SEH|Exceção Matherr|  
-|-----------|-------------------|-----------------------|  
-|± QNAN,IND|nenhum|_DOMAIN|  
-  
- `floor` tem uma implementação que usa SSE2 (Extensões SIMD de Streaming 2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
-  
-## <a name="remarks"></a>Comentários  
- O C++ permite sobrecargas, de modo que é possível chamar sobrecargas de `floor` que usam e retornam valores de `float` e `long double`. Em um programa C, `floor` sempre toma e retorna um `double`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Função|Cabeçalho necessário|  
-|--------------|---------------------|  
-|`floor`, `floorf`, `floorl`|\<math.h>|  
-  
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// crt_floor.c  
-// This example displays the largest integers  
-// less than or equal to the floating-point values 2.8  
-// and -2.8. It then shows the smallest integers greater  
-// than or equal to 2.8 and -2.8.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double y;  
-  
-   y = floor( 2.8 );  
-   printf( "The floor of 2.8 is %f\n", y );  
-   y = floor( -2.8 );  
-   printf( "The floor of -2.8 is %f\n", y );  
-  
-   y = ceil( 2.8 );  
-   printf( "The ceil of 2.8 is %f\n", y );  
-   y = ceil( -2.8 );  
-   printf( "The ceil of -2.8 is %f\n", y );  
-}  
-```  
-  
-```Output  
-The floor of 2.8 is 2.000000  
-The floor of -2.8 is -3.000000  
-The ceil of 2.8 is 3.000000  
-The ceil of -2.8 is -2.000000  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)   
- [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)
+
+Calcula a base de um valor.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+double floor(
+   double x
+);
+float floor(
+   float x
+); // C++ only
+long double floor(
+   long double x
+); // C++ only
+float floorf(
+   float x
+);
+long double floorl(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*x*<br/>
+Valor de ponto flutuante.
+
+## <a name="return-value"></a>Valor de retorno
+
+O **andar** funções retornam um valor de ponto flutuante que representa o maior inteiro menor ou igual a *x*. Nenhum erro é retornado.
+
+|Entrada|Exceção SEH|Exceção Matherr|
+|-----------|-------------------|-----------------------|
+|± QNAN,IND|nenhum|_DOMAIN|
+
+**Floor** tem uma implementação que usa extensões Streaming SIMD 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+
+## <a name="remarks"></a>Comentários
+
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **andar** que levar e retornar **float** e **longo** **duplo** valores. Em um programa C, **andar** sempre usa e retorna um **duplo**.
+
+## <a name="requirements"></a>Requisitos
+
+|Função|Cabeçalho necessário|
+|--------------|---------------------|
+|**Floor**, **floorf**, **floorl**|\<math.h>|
+
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemplo
+
+```C
+// crt_floor.c
+// This example displays the largest integers
+// less than or equal to the floating-point values 2.8
+// and -2.8. It then shows the smallest integers greater
+// than or equal to 2.8 and -2.8.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double y;
+
+   y = floor( 2.8 );
+   printf( "The floor of 2.8 is %f\n", y );
+   y = floor( -2.8 );
+   printf( "The floor of -2.8 is %f\n", y );
+
+   y = ceil( 2.8 );
+   printf( "The ceil of 2.8 is %f\n", y );
+   y = ceil( -2.8 );
+   printf( "The ceil of -2.8 is %f\n", y );
+}
+```
+
+```Output
+The floor of 2.8 is 2.000000
+The floor of -2.8 is -3.000000
+The ceil of 2.8 is 3.000000
+The ceil of -2.8 is -2.000000
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
+[round, roundf, roundl](round-roundf-roundl.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>

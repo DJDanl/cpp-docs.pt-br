@@ -1,12 +1,12 @@
 ---
 title: codecvt_utf16 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - codecvt/std::codecvt_utf16
@@ -15,37 +15,39 @@ dev_langs:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d999ffc40241169dab6847e882b1994beccc1b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d66595eeeba3f7d9b5fc75d5c493a92ea35c5fcd
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
+
 Representa uma faceta de [localidade](../standard-library/locale-class.md) convertida entre caracteres largos codificados como UCS-2 ou UCS-4 e um fluxo de bytes codificado como UTF-16LE ou UTF-16BE.
 
-```
+```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 ```
+
 ## <a name="parameters"></a>Parâmetros
-`Elem`  
-O tipo de elemento de caractere largo.  
-`Maxcode`  
-O número máximo de caracteres da faceta de localidade.  
-`Mode`  
-Informações de configuração para a faceta de localidade.  
+
+`Elem` O tipo de elemento de caractere largo.
+`Maxcode` O número máximo de caracteres para a faceta de localidade.
+`Mode` Informações de configuração para a faceta de localidade.
 
 ## <a name="remarks"></a>Comentários
+
 Essa classe de modelo é convertida entre caracteres largos codificados como UCS-2 ou UCS-4 e um fluxo de bytes codificado como UTF-16LE, se o modo & little_endian ou UTF-16BE caso contrário.
 
 O fluxo de bytes deve ser gravado em um arquivo binário. Ele pode ser corrompido se gravado em um arquivo de texto.
 
 ## <a name="requirements"></a>Requisitos
+
 Cabeçalho: \<codecvt> Namespace: std

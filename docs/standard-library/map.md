@@ -1,12 +1,12 @@
 ---
 title: '&lt;mapa&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <map>
@@ -15,59 +15,58 @@ dev_langs:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91e321573782a4173033d586b2211870dc05f33
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5b595cb8b212455634f9a44275333063914a5048
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
-Define o mapa e o multimapa das classes de modelo do contêiner e seus modelos de suporte.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-#include <map>  
-  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="operators"></a>Operadores  
-  
-|Versão do mapa|Versão do multimapa|Descrição|  
-|-----------------|----------------------|-----------------|  
-|[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é diferente do objeto do mapa ou multimapa à direita.|  
-|[operator< (mapa)](../standard-library/map-operators.md#op_eq_eq)|[operator< (multimapa)](../standard-library/map-operators.md#op_eq_eq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor que o objeto de mapa ou multimapa à direita.|  
-|[operator<= (mapa)](../standard-library/map-operators.md#op_lt)|[operator\<= (multimapa)](../standard-library/map-operators.md#op_lt)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor ou igual ao objeto do mapa ou multimapa à direita.|  
-|[operator== (mapa)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimapa)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é igual ao objeto do mapa ou multimapa à direita.|  
-|[operator> (mapa)](../standard-library/map-operators.md#op_gt)|[operator> (multimapa)](../standard-library/map-operators.md#op_gt_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior que o objeto do mapa ou multimapa à direita.|  
-|[operator>= (mapa)](../standard-library/map-operators.md#op_gt_eq)|[operator>= (multimapa)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior ou igual ao objeto do mapa ou multimapa à direita.|  
-  
-### <a name="specialized-template-functions"></a>Funções de Modelo Especializadas  
-  
-|Versão do mapa|Versão do multimapa|Descrição|  
-|-----------------|----------------------|-----------------|  
-|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Troca os elementos de dois mapas ou multimapas.|  
-  
-### <a name="classes"></a>Classes  
-  
-|||  
-|-|-|  
-|[Classe value_compare](../standard-library/value-compare-class-map.md)|Fornece um objeto de função que pode comparar os elementos de um mapa ao comparar os valores de suas chaves para determinar sua ordem relativa no mapa.|  
-|[Classe map](../standard-library/map-class.md)|Usada para o armazenamento e recuperação de dados de uma coleção em que cada um dos elementos tem uma chave exclusiva, com a qual os dados são automaticamente ordenados.|  
-|[Classe multimap](../standard-library/multimap-class.md)|Usada para o armazenamento e recuperação de dados de uma coleção em que cada um dos elementos tem uma chave, com a qual os dados são automaticamente ordenados e as chaves não precisam ter valores exclusivos.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
 
+Define o mapa e o multimapa das classes de modelo do contêiner e seus modelos de suporte.
 
+## <a name="syntax"></a>Sintaxe
 
+```cpp
+#include <map>
+
+```
+
+## <a name="members"></a>Membros
+
+### <a name="operators"></a>Operadores
+
+|Versão do mapa|Versão do multimapa|Descrição|
+|-----------------|----------------------|-----------------|
+|[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é diferente do objeto do mapa ou multimapa à direita.|
+|[operator< (mapa)](../standard-library/map-operators.md#op_eq_eq)|[operator< (multimapa)](../standard-library/map-operators.md#op_eq_eq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor que o objeto de mapa ou multimapa à direita.|
+|[operator<= (mapa)](../standard-library/map-operators.md#op_lt)|[operator\<= (multimapa)](../standard-library/map-operators.md#op_lt)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor ou igual ao objeto do mapa ou multimapa à direita.|
+|[operator== (mapa)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimapa)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é igual ao objeto do mapa ou multimapa à direita.|
+|[operator> (mapa)](../standard-library/map-operators.md#op_gt)|[operator> (multimapa)](../standard-library/map-operators.md#op_gt_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior que o objeto do mapa ou multimapa à direita.|
+|[operator>= (mapa)](../standard-library/map-operators.md#op_gt_eq)|[operator>= (multimapa)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior ou igual ao objeto do mapa ou multimapa à direita.|
+
+### <a name="specialized-template-functions"></a>Funções de Modelo Especializadas
+
+|Versão do mapa|Versão do multimapa|Descrição|
+|-----------------|----------------------|-----------------|
+|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Troca os elementos de dois mapas ou multimapas.|
+
+### <a name="classes"></a>Classes
+
+|Classe|Descrição|
+|-|-|
+|[Classe value_compare](../standard-library/value-compare-class-map.md)|Fornece um objeto de função que pode comparar os elementos de um mapa ao comparar os valores de suas chaves para determinar sua ordem relativa no mapa.|
+|[Classe map](../standard-library/map-class.md)|Usada para o armazenamento e recuperação de dados de uma coleção em que cada um dos elementos tem uma chave exclusiva, com a qual os dados são automaticamente ordenados.|
+|[Classe multimap](../standard-library/multimap-class.md)|Usada para o armazenamento e recuperação de dados de uma coleção em que cada um dos elementos tem uma chave, com a qual os dados são automaticamente ordenados e as chaves não precisam ter valores exclusivos.|
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
