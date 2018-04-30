@@ -1,33 +1,28 @@
 ---
 title: Diretivas do Assembler ARM | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9f5ab97fb9ccdff19206b829383c622efd3f7921
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-directives"></a>Diretivas do assembler ARM
 A maior parte do tempo, o assembler ARM Microsoft usa a linguagem de assembly do ARM, que está documentada no capítulo 7 da [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102). No entanto, as implementações Microsoft algumas diretivas de assembly diferem as diretivas de assembly do ARM. Este artigo explica as diferenças.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft implementações das diretivas de Assembly do ARM  
- AREA  
+ ÁREA  
  O assembler ARM Microsoft dá suporte a esses atributos de área: ALINHAR, código, CODEALIGN, dados, NOINIT, READONLY, READWRITE, THUMB, ARM.  
   
  Todos exceto THUMB e ARM funcionam conforme documentado no [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102).  
@@ -40,7 +35,7 @@ A maior parte do tempo, o assembler ARM Microsoft usa a linguagem de assembly do
  CODE16  
  Não tem suporte porque isso implica pre-UAL Thumb a sintaxe, que o assembler ARM Microsoft não permite.  Use a diretiva de digital em vez disso, juntamente com a sintaxe do UAL.  
   
- COMMON  
+ COMUNS  
  Não há suporte para a especificação de um alinhamento para a região comum.  
   
  DCDO  
@@ -95,13 +90,13 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  NOFP  
  Sem suporte.  
   
- OPT, TTL, SUBT  
+ ACEITAR, TTL, SUBT  
  Não tem suporte porque o assembler ARM Microsoft não produzir listagens.  
   
  PRESERVE8  
  Sem suporte.  
   
- RELOC  
+ REALOCAÇÃO  
  `RELOC n` só pode seguir uma instrução ou uma diretiva de definição de dados. Não há nenhum "símbolo anônimo" que pode ser realocado.  
   
  EXIGIR  

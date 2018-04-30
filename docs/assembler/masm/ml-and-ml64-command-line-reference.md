@@ -1,12 +1,9 @@
 ---
-title: "Referência de linha de comando ML e ML64 | Microsoft Docs"
-ms.custom: 
+title: Referência de linha de comando ML e ML64 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - ML
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb7f0c19e9517b1bcefcc2400542f910a73c8f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3fb143aeaaf6fa8cf31c45b31707fa01bf6898
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referência de linha de comando ML e ML64
 Monta e vincula um ou mais arquivos de origem de linguagem de assembly. As opções de linha de comando diferenciam maiusculas de minúsculas.  
@@ -98,7 +93,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/AT**|Habilita o suporte do modelo de memória pequenos. Permite que mensagens de erro para construções de código que violam os requisitos para arquivos de formato. com. Observe que isso não é equivalente a [. MODELO](../../assembler/masm/dot-model.md) **minúscula** diretiva.<br /><br /> Não disponível em ml64.exe.|  
 |**/Bl** `filename`|Seleciona um vinculador alternativo.|  
 |**/c**|Monta somente. Não vincular.|  
-|**/coff**|Gera o tipo de formato COFF comum do objeto arquivo de módulo de objeto. Geralmente são necessárias para desenvolvimento de linguagem de assembly do Win32.<br /><br /> Não disponível em ml64.exe.|  
+|**/COFF**|Gera o tipo de formato COFF comum do objeto arquivo de módulo de objeto. Geralmente são necessárias para desenvolvimento de linguagem de assembly do Win32.<br /><br /> Não disponível em ml64.exe.|  
 |**/Cp**|Preserva o caso de todos os identificadores de usuário.|  
 |**/Cu**|Mapeia todos os identificadores para letras maiusculas (padrão).<br /><br /> Não disponível em ml64.exe.|  
 |**/Cx**|Preserva o caso de símbolos públicos e externo.|  
@@ -109,7 +104,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Fe** `filename`|Nomeia o arquivo executável.|  
 |**/Fl**[[`filename`]]|Gera uma listagem de código montado. Consulte **/Sf**.|  
 |**/Fm**[[`filename`]]|Cria um arquivo de mapa do vinculador.|  
-|**/Fo** `filename`|Nomes de um arquivo de objeto. Consulte a seção comentários para obter mais informações.|  
+|**/FO** `filename`|Nomes de um arquivo de objeto. Consulte a seção comentários para obter mais informações.|  
 |**/FPi**|Gera as correções do emulador para aritmética de ponto flutuante (somente no idioma misto).<br /><br /> Não disponível em ml64.exe.|  
 |**/Fr**[[`filename`]]|Gera um arquivo. SBR do navegador de fonte.|  
 |**/FR**[[`filename`]]|Gera uma forma estendida de um navegador. SBR do arquivo de origem.|  

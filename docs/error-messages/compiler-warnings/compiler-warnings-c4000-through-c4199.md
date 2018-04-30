@@ -1,12 +1,12 @@
 ---
 title: C4000 de avisos do compilador por meio de C4199 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +98,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 de avisos do compilador por meio de C4199
 
@@ -159,6 +159,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4051|conversão de tipo; possível perda de dados|
 |Aviso do compilador (nível 4) C4052|declarações de função diferentes; uma contém argumentos variáveis|
 |Aviso do compilador (nível 4) C4053|um operando void para '?:'|
+|[Aviso do compilador (nível 1) C4055](compiler-warning-level-1-c4055.md)|'conversão de ': de ponteiro de dados '*type1*'para o ponteiro de função'*type2*'|
 |[Aviso do compilador (nível 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|Estouro em aritmética de constante de ponto flutuante|
 |Aviso do compilador (nível 4) C4057|'operator': 'identifier1' difere em indireção para tipos base ligeiramente diferentes de 'identifier2'|
 |C4060 de aviso do compilador|instrução switch não contém nenhum rótulo 'case' ou 'default'|
@@ -263,7 +264,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 3) C4191|' operador/operação': conversão não segura de 'type_of_expression' para 'type_required' \nCalling esta função através do ponteiro resultante pode causar falha no programa|
 |[Aviso do compilador (nível 3) C4192](../../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)|excluindo automaticamente 'Identificador' durante a importação de biblioteca de tipos 'library'|
 |Aviso do compilador (nível 3) C4193|Warning (POP) #pragma: nenhuma correspondência '#pragma Warning (push)'|
-|Aviso do compilador (nível 1) C4194|#pragma start_map_region cannot be nested; ignored|
+|Aviso do compilador (nível 1) C4194|#pragma start_map_region não podem ser aninhados; ignorado|
 |Aviso do compilador (nível 1) C4195|#pragma stop_map_region usado sem correspondência start_map_region de #pragma; ignorado|
 |Aviso do compilador (nível 1) C4196|esperado '%$L L'ou '%$L l'; encontrado '%$L'|
 |[Aviso do compilador (nível 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'type': volatile de alto nível em conversão é ignorado|

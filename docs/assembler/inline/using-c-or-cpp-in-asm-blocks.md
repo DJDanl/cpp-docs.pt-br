@@ -1,13 +1,10 @@
 ---
 title: Usando C ou C++ em blocos ASM | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e9451a0b665e5377c2acaf871154ec78a38c8b5
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Usando C ou C++ em blocos __asm
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   Macros e diretivas de pré-processador  
   
--   Comentários (ambos  **/ \* \* /**  e  **//**  )  
+-   Comentários (ambos **/ \* \* /** e **//** )  
   
 -   Digite nomes (onde um tipo MASM seria legal)  
   
--   `typedef`nomes, geralmente usados com operadores, como **PTR** e **tipo** ou para especificar membros de estrutura ou união  
+-   `typedef` nomes, geralmente usados com operadores, como **PTR** e **tipo** ou para especificar membros de estrutura ou união  
   
  Dentro de um `__asm` bloco, você pode especificar constantes inteiras com notação C ou notação de base do assembler (0x100 e 100 h são equivalentes, por exemplo). Isso permite que você defina (usando `#define`) uma constante em C e, em seguida, usá-lo em C ou C++ e assembly partes do programa. Você também pode especificar constantes em octal, precedendo-as com um 0. Por exemplo, 0777 Especifica uma constante octal.  
   
