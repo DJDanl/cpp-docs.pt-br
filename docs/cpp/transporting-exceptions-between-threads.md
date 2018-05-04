@@ -1,12 +1,9 @@
 ---
-title: "Transportando exceções entre Threads | Microsoft Docs"
-ms.custom: 
+title: Transportando exceções entre Threads | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61847500e9e4fbcfc0912e51afe599ed31601ec2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportando exceções entre threads
 Visual C++ dá suporte a *transportar uma exceção* de um thread para outro. O transporte de exceções permite que você capture uma exceção em um thread e faça parecer que ela tenha sido lançada em outro thread. Você pode usar esse recurso, por exemplo, para gravar um aplicativo multi-threaded em que o thread primário trata todas as exceções lançadas por seus threads secundários. O transporte de exceções é útil para a maioria dos desenvolvedores que cria bibliotecas ou sistemas de programação paralela. Para implementar transportar exceções, Visual C++ fornece o [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo e o [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), e [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funções.  
@@ -259,4 +254,4 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="see-also"></a>Consulte também  
  [Tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH (modelo de tratamento de exceções)](../build/reference/eh-exception-handling-model.md)   
- [/CLR (common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (compilação do Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
