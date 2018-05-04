@@ -1,13 +1,10 @@
 ---
 title: Tipos de DLLs | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>Tipos de DLLs
 Este tópico fornece informações para ajudá-lo a determinar o tipo da DLL para compilar.  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Diferentes tipos de DLLs disponíveis  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Diferentes tipos de DLLs disponíveis  
  Usando o Visual C++, você pode criar DLLs Win32 em C ou C++ que não usam a biblioteca Microsoft Foundation Class (MFC). Você pode criar um projeto de DLL não - MFC com o Assistente de aplicativo Win32.  
   
  A biblioteca do MFC está disponível, em qualquer bibliotecas de link estático ou em um número de DLLs, com o Assistente de DLL do MFC. Se a DLL está usando MFC, Visual C++ dá suporte a três cenários de desenvolvimento de DLL diferentes:  
@@ -53,7 +48,7 @@ Este tópico fornece informações para ajudá-lo a determinar o tipo da DLL par
   
 -   [Que tipo de DLL para usar](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>O tipo de DLL para uso  
+##  <a name="_core_which_kind_of_dll_to_use"></a> O tipo de DLL para uso  
  Se a DLL não usar MFC, use o Visual C++ para criar uma não - MFC Win32 DLL. Vinculando a DLL para MFC (estática ou dinâmica) ocupa muito espaço em disco e de memória. Você não deve vincular a MFC, a menos que a DLL realmente usa MFC.  
   
  Se sua DLL usará MFC e será usado por aplicativos MFC ou não MFC, você deve criar uma DLL MFC regular vinculada dinamicamente a MFC ou uma DLL MFC regular que se vincula estaticamente ao MFC. Na maioria dos casos, você provavelmente desejará usar uma DLL MFC regular vinculada dinamicamente a MFC, porque o tamanho do arquivo da DLL será muito menor e a economia na memória usa a versão compartilhada do MFC pode ser significativa. Se você vincular estaticamente ao MFC, o tamanho do arquivo de sua DLL será maior e potencialmente ocupam memória extra porque ele carrega sua própria cópia do código de biblioteca do MFC.  

@@ -1,12 +1,9 @@
 ---
 title: classe com_ptr_t | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrt-class"></a>Classe _com_ptr_t
 **Seção específica da Microsoft**  
@@ -66,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |||  
 |-|-|  
 |[operador =](../cpp/com-ptr-t-operator-equal.md)|Atribui um novo valor a um objeto `_com_ptr_t` existente.|  
-|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Compare o objeto de ponteiro inteligente para outro ponteiro inteligente, o ponteiro de interface bruto, ou **nulo**.|  
+|[operadores = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Compare o objeto de ponteiro inteligente para outro ponteiro inteligente, o ponteiro de interface bruto, ou **nulo**.|  
 |[Extratores](../cpp/com-ptr-t-extractors.md)|Extrai o ponteiro de interface COM encapsulado.|  
   
 **Fim da seção específica da Microsoft**  

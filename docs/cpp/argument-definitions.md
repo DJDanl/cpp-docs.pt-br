@@ -2,11 +2,8 @@
 title: Definições de argumento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30dd0c58cd4967065ee3e3c3c4df9538ea194a0
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argument-definitions"></a>Definições de argumento
 Os argumentos do protótipo  
@@ -46,14 +41,14 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  `argv`  
  Uma matriz de cadeias de caracteres terminadas em nulo que representam argumentos de linha de comando inseridos pelo usuário do programa. Por convenção, `argv` **[0]** é o comando com a qual o programa é chamado, `argv` **[1]** é o primeiro argumento de linha de comando e assim por diante, até `argv`  **[**`argc`**]**, que é sempre **nulo**. Consulte [personalizando processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de linha de comando.  
   
- O primeiro argumento de linha de comando é sempre `argv` **[1]** e a última é `argv` **[** `argc` - 1**]**.  
+ O primeiro argumento de linha de comando é sempre `argv` **[1]** e a última é `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
 >  Por convenção, `argv`**[0]** é o comando com que o programa é invocado.  No entanto, é possível gerar um processo usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e se você usar ambos os argumentos de primeiro e segundo (`lpApplicationName` e `lpCommandLine`), `argv` **[0]** não pode ser o nome do executável; Use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar o nome do executável e o caminho totalmente qualificado.  
   
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  `envp`  
- A matriz `envp`, uma extensão comum em muitos sistemas UNIX, é usada no Microsoft C++. Trata-se de uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Esta matriz é terminada por um **nulo** entrada. Ela pode ser declarada como uma matriz de ponteiros para **char (char** \*[envp]**)** ou como um ponteiro para ponteiros para **char (char** \* \* envp**)**. Se seu programa usa **wmain** em vez de **principal**, use o `wchar_t` de tipo de dados em vez de `char`. O bloco de ambiente passado para **principal** e **wmain** é uma cópia "congelada" do ambiente atual. Se você alterar posteriormente o ambiente por meio de uma chamada para **putenv** ou `_wputenv`, o ambiente atual (como retornado por `getenv` / `_wgetenv` e `_environ` /  `_wenviron` variável) será alteração, mas o bloco apontada pelo envp não será alterado. Consulte [personalizando processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de ambiente. Esse argumento é compatível com ANSI em C, mas não em C++.  
+ A matriz `envp`, uma extensão comum em muitos sistemas UNIX, é usada no Microsoft C++. Trata-se de uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Esta matriz é terminada por um **nulo** entrada. Ela pode ser declarada como uma matriz de ponteiros para **char (char** \*[envp]**)** ou como um ponteiro para ponteiros para **char (char** \* \* envp **)**. Se seu programa usa **wmain** em vez de **principal**, use o `wchar_t` de tipo de dados em vez de `char`. O bloco de ambiente passado para **principal** e **wmain** é uma cópia "congelada" do ambiente atual. Se você alterar posteriormente o ambiente por meio de uma chamada para **putenv** ou `_wputenv`, o ambiente atual (como retornado por `getenv` / `_wgetenv` e `_environ` /  `_wenviron` variável) será alteração, mas o bloco apontada pelo envp não será alterado. Consulte [personalizando processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de ambiente. Esse argumento é compatível com ANSI em C, mas não em C++.  
   
 **Fim da seção específica da Microsoft**  
   

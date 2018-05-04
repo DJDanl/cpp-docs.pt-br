@@ -1,13 +1,10 @@
 ---
 title: Palavras-chave (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keywords-c"></a>Palavras-chave (C++)
 Palavras-chave são identificadores reservados pré-definidos que têm significados especiais. Não podem ser usados como identificadores em seu programa. As palavras-chave a seguir são reservadas para o Microsoft C++. Os nomes com sublinhados principais são extensões da Microsoft.  
@@ -62,11 +57,11 @@ Palavras-chave são identificadores reservados pré-definidos que têm significa
 |[Enum struct](../windows/enum-class-cpp-component-extensions.md)|[event](../windows/event-cpp-component-extensions.md)|[explicit](../cpp/user-defined-type-conversions-cpp.md)|  
 |[extern](../cpp/using-extern-to-specify-linkage.md)|[false](../cpp/false-cpp.md)|[finally](../dotnet/finally.md)|  
 |[float](../cpp/fundamental-types-cpp.md)|[for](../cpp/for-statement-cpp.md)|[for each, in](../dotnet/for-each-in.md)|  
-|[Friend](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|[genérico](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
-|[InitOnly](../dotnet/initonly-cpp-cli.md)|[embutido](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
+|[friend](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|[Genérico](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
+|[InitOnly](../dotnet/initonly-cpp-cli.md)|[Embutido](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
 |[classe de interface](../windows/interface-class-cpp-component-extensions.md)|[estrutura de interface](../windows/interface-class-cpp-component-extensions.md)|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|  
-|[literal](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[mutável](../cpp/mutable-data-members-cpp.md)|  
+|[Literal](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[Mutável](../cpp/mutable-data-members-cpp.md)|  
 |[naked](../cpp/naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
 |[new](../cpp/new-operator-cpp.md)|[noinline](../cpp/noinline.md) <sup>1</sup>|[noreturn](../cpp/noreturn.md) <sup>1</sup>|  
 |[nothrow](../cpp/nothrow-cpp.md) <sup>1</sup>|[novtable](../cpp/novtable.md) <sup>1</sup>|[nullptr](../cpp/nullptr.md)|  
@@ -77,7 +72,7 @@ Palavras-chave são identificadores reservados pré-definidos que têm significa
 |[sealed](../windows/sealed-cpp-component-extensions.md)|[selectany](../cpp/selectany.md) <sup>1</sup>|[short](../cpp/fundamental-types-cpp.md)|  
 |[signed](../cpp/fundamental-types-cpp.md)|[sizeof](../cpp/sizeof-operator.md)|[static](storage-classes-cpp.md)|  
 |[static_assert](../cpp/static-assert.md)|[static_cast](../cpp/static-cast-operator.md)|[struct](../cpp/struct-cpp.md)|  
-|[switch](../cpp/switch-statement-cpp.md)|[modelo](templates-cpp.md)|[this](../cpp/this-pointer.md)|  
+|[switch](../cpp/switch-statement-cpp.md)|[Modelo](templates-cpp.md)|[this](../cpp/this-pointer.md)|  
 |[thread](../cpp/thread.md) <sup>1</sup>|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|[true](../cpp/true-cpp.md)|  
 |[try](../cpp/try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[TypeId](../cpp/typeid-operator.md)|  
 |[TypeId](../windows/typeid-cpp-component-extensions.md)|[typename](../cpp/typename.md)|[union](../cpp/unions.md)|  

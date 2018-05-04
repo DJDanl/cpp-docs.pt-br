@@ -1,29 +1,24 @@
 ---
-title: "Escrevendo um filtro de exceção | Microsoft Docs"
-ms.custom: 
+title: Escrevendo um filtro de exceção | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>Escrevendo um filtro de exceção
 Você pode lidar com uma exceção indo diretamente ao nível do manipulador de exceção ou continuando a execução. Em vez de usar o código de manipulador de exceção para lidar com a exceção e caindo por meio de, você pode usar *filtro* limpar o problema e, em seguida, retornando -1, retomar o fluxo normal sem limpar a pilha.  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  É recomendável usar uma chamada de função no *filtro* expressão sempre que *filtro* precisa fazer nada complexas. Avaliar a expressão causa a execução da função, nesse caso, `Eval_Exception`.  
   
- Observe o uso de [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) para determinar a exceção. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception`não é possível chamar **GetExceptionCode**, mas ele deve ter o código de exceção passado para ele.  
+ Observe o uso de [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) para determinar a exceção. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception` não é possível chamar **GetExceptionCode**, mas ele deve ter o código de exceção passado para ele.  
   
  Esse manipulador passa o controle para outro manipulador, a menos que a exceção seja um inteiro ou um estouro de ponto flutuante. Se for o caso, o manipulador chamará uma função (`ResetVars` é apenas um exemplo, não uma função de API) para redefinir alguns variáveis globais. *Instrução de bloco de 2*, que neste exemplo está vazio, pode nunca ser executado porque `Eval_Exception` nunca retorna EXCEPTION_EXECUTE_HANDLER (1).  
   

@@ -1,12 +1,9 @@
 ---
-title: _com_raise_error | Microsoft Docs
-ms.custom: 
+title: com_raise_error | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_raise_error
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a4be4ebf6029d0573aee71d74bf9faa241319f
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 4e7b28c9d48704eede883cbcd387d9e77798647f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Seção específica da Microsoft**  

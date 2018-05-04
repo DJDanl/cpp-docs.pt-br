@@ -2,28 +2,23 @@
 title: 'Como: definir construtores de movimento e operadores de atribuição de movimento (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
 Este tópico descreve como escrever um *mover construtor* e um operador de atribuição de movimentação de uma classe do C++. Um construtor de movimento permite que os recursos pertencentes a um objeto rvalue a ser movido para um lvalue sem copiar. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  

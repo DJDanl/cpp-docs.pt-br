@@ -2,26 +2,21 @@
 title: Uso de pilha | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e3aa8d01dcc85b6c37684ccccaf82c84d8dfb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6f711636089a6f2966002002220aac88cebe17a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-usage"></a>Uso da pilha
 Toda a memória além do endereço atual do RSP é considerada volátil: O sistema operacional ou um depurador pode substituir essa memória durante uma sessão de depuração de usuário ou um manipulador de interrupção. Assim, RSP sempre deve ser definido antes de tentar ler ou gravar valores para um quadro de pilha.  

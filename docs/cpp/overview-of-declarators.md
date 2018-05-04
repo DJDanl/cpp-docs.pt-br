@@ -1,29 +1,24 @@
 ---
-title: "Visão geral dos declaradores | Microsoft Docs"
-ms.custom: 
+title: Visão geral dos declaradores | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarators"></a>Visão geral dos declaradores
 Declaradores são os componentes de uma declaração que especificam nomes de objetos ou funções. Os declaradores também especificam se o objeto nomeado é ou não um objeto, um ponteiro, uma referência ou uma matriz.  Quando os declaradores não especificam o tipo de base, eles modificam as informações de tipo no tipo básico para especificar tipos derivados, como ponteiros, referências e matrizes.  Aplicado a funções, o declarador trabalha com o especificador de tipo para especificar completamente o tipo de retorno de uma função para ser um objeto, ponteiro ou referência. (Especificadores, discutidos em [declarações e definições](declarations-and-definitions-cpp.md), transmitir propriedades como classe de tipo e armazenamento. Modificadores, discutidas nesta seção e em [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md), modificar declaradores.) A figura a seguir mostra uma declaração completa de `MyFunction`, e chama os componentes da declaração.  
@@ -57,7 +52,7 @@ const char *pch, ch;
   
  **Declaradores de ponteiros, referências e matrizes**  
   
- Os operadores de ponteiro inseridos na frente do nome fazem com que o objeto seja um ponteiro ou uma referência.  O  **\***  operador declara o nome como um ponteiro; o  **&**  operador declara como referência.  
+ Os operadores de ponteiro inseridos na frente do nome fazem com que o objeto seja um ponteiro ou uma referência.  O **\*** operador declara o nome como um ponteiro; o **&** operador declara como referência.  
   
 ```  
 int *i; // declarator is *i  

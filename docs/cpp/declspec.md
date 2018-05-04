@@ -1,12 +1,9 @@
 ---
 title: __declspec | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
@@ -45,7 +41,7 @@ A sintaxe de atributo estendido para especificar informações de classe de arma
 &nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**  
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**deprecated**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Preterido**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
@@ -55,14 +51,14 @@ A sintaxe de atributo estendido para especificar informações de classe de arma
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**processo**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Processo**  
 &nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Restringir**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**  
-&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**  
 
 O espaço em branco separa a sequência modificadora de declaração. Os exemplos aparecem nas seções posteriores.
 

@@ -1,12 +1,9 @@
 ---
-title: "Acionando exceções de Software | Microsoft Docs"
-ms.custom: 
+title: Acionando exceções de Software | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb616945a831502077066bdf306bef306f543eb
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 9fa925a01633d72f43b165b87c27e5203a143d1e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="raising-software-exceptions"></a>Acionando exceções de software
 Algumas das origens mais comuns de erros do programa não são sinalizadas como exceções pelo sistema. Por exemplo, se você tenta alocar um bloco de memória, mas não há memória suficiente, o tempo de execução ou a função de API não geram uma exceção, mas retornam um código de erro.  

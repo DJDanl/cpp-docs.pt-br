@@ -1,12 +1,9 @@
 ---
 title: Modelos (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>Modelos (C++)
 Modelos são a base para programação genérica em C++. Como uma linguagem fortemente tipada, C++ requer que todas as variáveis com um tipo específico, explicitamente declarado pelo programador ou deduzido pelo compilador. No entanto, muitos algoritmos e estruturas de dados terá a mesma aparência, independentemente do tipo que estejam operando em. Habilitar modelos definem as operações de uma classe ou função e permitir que o usuário especifique quais concreto tipos essas operações deve funcionar no.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- O código acima descreve um modelo para uma função genérica com um parâmetro de tipo único `T`, cujo valor de retorno e chamar parâmetros (lhs e rhs) são desse tipo. Você pode nomear um parâmetro de tipo que é semelhante, mas por convenção único letras maiusculas do alfabeto é mais comumente usados. `T`é um parâmetro de modelo; o `typename` palavra-chave diz que este parâmetro é um espaço reservado para um tipo. Quando a função é chamada, o compilador substitui todas as instâncias de `T` com o argumento de tipo concreto que é especificado pelo usuário ou deduzido pelo compilador. O processo no qual o compilador gera uma classe ou função de um modelo é conhecida como *instanciação de modelo*;   `minimum<int>` é uma instanciação do modelo `minimum<T>`.  
+ O código acima descreve um modelo para uma função genérica com um parâmetro de tipo único `T`, cujo valor de retorno e chamar parâmetros (lhs e rhs) são desse tipo. Você pode nomear um parâmetro de tipo que é semelhante, mas por convenção único letras maiusculas do alfabeto é mais comumente usados. `T` é um parâmetro de modelo; o `typename` palavra-chave diz que este parâmetro é um espaço reservado para um tipo. Quando a função é chamada, o compilador substitui todas as instâncias de `T` com o argumento de tipo concreto que é especificado pelo usuário ou deduzido pelo compilador. O processo no qual o compilador gera uma classe ou função de um modelo é conhecida como *instanciação de modelo*;   `minimum<int>` é uma instanciação do modelo `minimum<T>`.  
   
  Em outro local, um usuário pode declarar uma instância do modelo que é especializada para int. Suponha que get_a() e get_b() são funções que retornam um inteiro:  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  As regras de como o compilador executa dedução de tipo em modelos de função são com base nas regras de funções comuns. Para obter mais informações, consulte [sobrecarga de resolução do modelo de chamadas de função](../cpp/overload-resolution-of-function-template-calls.md).  
   
-## <a id="type_parameters"></a>Parâmetros de tipo  
+## <a id="type_parameters"></a> Parâmetros de tipo  
  No `minimum` modelo acima, observe que o parâmetro de tipo `T` não está qualificado de qualquer maneira, até que ele é usado em parâmetros de chamada de função, em que a constante e qualificadores de referência são adicionados.  
   
  Não há nenhum limite prático para o número de parâmetros de tipo. Separe vários parâmetros por vírgulas:  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  Outros tipos de valores, incluindo referências a ponteiros e podem ser passados como parâmetros de tipo não. Por exemplo, você pode passar um ponteiro para uma função ou um objeto de função para personalizar alguma operação dentro do código de modelo.  
   
-## <a id="template_parameters"></a>Modelos como parâmetros de modelo  
+## <a id="template_parameters"></a> Modelos como parâmetros de modelo  
  Um modelo pode ser um parâmetro de modelo. Neste exemplo, MyClass2 tem dois parâmetros de modelo: um parâmetro typename `T` e um parâmetro de modelo `Arr`:  
   
 ```cpp  

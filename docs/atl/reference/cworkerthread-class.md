@@ -1,12 +1,9 @@
 ---
 title: Classe CWorkerThread | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWorkerThread
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 Essa classe cria um thread de trabalho ou usa um existente, espera um ou mais identificadores de objeto kernel e executa uma função de cliente especificado quando uma das alças é sinalizada.  
@@ -103,7 +98,7 @@ class CWorkerThread
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlutil.h  
   
-##  <a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
  Chame este método para adicionar o identificador de um objeto de espera à lista mantida pelo thread de trabalho.  
   
 ```
@@ -129,7 +124,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>Comentários  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) será chamado por meio de `pClient` quando o identificador de `hObject`, é sinalizado.  
   
-##  <a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
  Chame esse método para adicionar um temporizador de espera periódico à lista mantida pelo thread de trabalho.  
   
 ```
@@ -161,14 +156,14 @@ HRESULT AddTimer(
   
  Passar o identificador de timer de `phTimer` para [CWorkerThread::RemoveHandle](#removehandle) para fechar o timer.  
   
-##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  O construtor.  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread  
  O destruidor.  
   
 ```
@@ -178,7 +173,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>Comentários  
  Chamadas [CWorkerThread::Shutdown](#shutdown).  
   
-##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
  Chame este método para obter o identificador de thread do thread de trabalho.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o identificador de thread ou NULL se o thread de trabalho não foi inicializado.  
   
-##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
  Chame este método para obter a ID do thread do thread de trabalho.  
   
 ```
@@ -198,7 +193,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a ID do thread ou nulo se o thread de trabalho não foi inicializado.  
   
-##  <a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>  CWorkerThread::Initialize  
  Chame este método para inicializar o thread de trabalho.  
   
 ```
@@ -221,7 +216,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  Consulte [CWorkerThread::Shutdown](#shutdown) para obter informações sobre como o comportamento desse método muda quando inicializada usando um ponteiro para um objeto existente.  
   
-##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  Chame esse método para remover um identificador da lista de objetos de espera.  
   
 ```
@@ -238,7 +233,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>Comentários  
  Quando o identificador é removido [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) será chamado no objeto associado foi passado para [AddHandle](#addhandle). Se essa chamada falhar, `CWorkerThread` chamará o Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) função no identificador.  
   
-##  <a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Chame este método para desligar o thread de trabalho.  
   
 ```

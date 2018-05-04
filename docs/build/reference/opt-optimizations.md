@@ -2,12 +2,9 @@
 title: -OPT (otimizações) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Otimizações)
 Controla as otimizações que o LINK executa durante uma compilação.  
@@ -63,7 +58,7 @@ Controla as otimizações que o LINK executa durante uma compilação.
   
  Especificando **/OPT: ICF** não habilita o **/OPT: REF** opção.  
   
- **ICF [=** `iterations` **] &AMP;#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**  
  Use **/OPT: ICF [=**`iterations`**]** para realizar dobra COMDAT idêntica. COMDATs redundantes podem ser removido da saída do vinculador. O parâmetro opcional `iterations` especifica o número de vezes a percorrer os símbolos em busca de duplicatas. O número de iterações padrão é dois. As iterações adicionais podem encontrar mais duplicatas que são descobertas com a dobra na iteração anterior.  
   
  O vinculador tem um comportamento diferente quando **/OPT: REF** especificado — e **ICF** está em vigor por padrão — do que quando **/OPT: REF, ICF** sejam especificadas explicitamente. A forma de **ICF** habilitado com **/OPT: REF** sozinho não dobra dados somente leitura – isso inclui RDATA. pData e .xdata. Portanto, menos funções são dobradas quando as imagens são geradas para o [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], pois as funções nesses módulos são mais dependentes de dados somente leitura, por exemplo, .pdata e .xdata. Para obter completo **ICF** dobra o comportamento, especifique explicitamente **/OPT: ICF**.  

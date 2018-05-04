@@ -1,13 +1,10 @@
 ---
-title: "Recursos localizados em aplicativos MFC: DLLs satélites | Microsoft Docs"
-ms.custom: 
+title: 'Recursos localizados em aplicativos MFC: DLLs satélites | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc97e73998c581a40ed7d344b1ade5ca90b94ac2
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 0740f567f17c8d44069211274ab1a4c66da311c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Recursos localizados em aplicativos MFC: DLLs satélites
 Versão MFC 7.0 e posterior oferece suporte avançado para satélite DLLs, um recurso que ajuda na criação de aplicativos localizados em vários idiomas. Uma DLL de satélite um [somente de recurso DLL](../build/creating-a-resource-only-dll.md) que contém os recursos do aplicativo localizados para um idioma específico. Quando o aplicativo começa a executar, MFC carrega automaticamente o recurso localizado mais apropriado para o ambiente. Por exemplo, você pode ter um aplicativo com recursos de idioma inglês com duas satélite DLLs, uma que contém uma tradução francesa de seus recursos e outra que contém uma tradução para o alemão. Quando o aplicativo é executado em um sistema de idioma inglês, ele usa os recursos em inglês. Se executado em um sistema em francês, ele usa os recursos em francês; Se executado em um sistema em alemão, ele usa os recursos em alemão.  

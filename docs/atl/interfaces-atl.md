@@ -1,12 +1,9 @@
 ---
 title: Interfaces (ATL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95dce7d707cfb29c8f33f94504c26b5b24ef4c4f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0db5a79f187cb0fe320bf67aace751a5d4c537d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interfaces-atl"></a>Interfaces (ATL)
 Uma interface é a maneira na qual um objeto expõe sua funcionalidade com o mundo exterior. COM, uma interface é uma tabela de ponteiros (como uma vtable C++) para funções implementadas pelo objeto. A tabela representa a interface e as funções que ele aponta são os métodos da interface. Um objeto pode expor interfaces tantos conforme ele escolhe.  

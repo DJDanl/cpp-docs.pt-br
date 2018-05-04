@@ -1,25 +1,23 @@
 ---
-title: "Opções do compilador listadas em ordem alfabética | Microsoft Docs"
-ms.custom: 
+title: Opções do compilador listadas em ordem alfabética | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -30,7 +28,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[@](at-specify-a-compiler-response-file.md)|Especifica um arquivo de resposta.|
 |[/?](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[/AI](ai-specify-metadata-directories.md)|Especifica um diretório a pesquisar para resolver as referências do arquivo passado para o [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva.|
-|[/analyze](analyze-code-analysis.md)|Habilita a análise de código.|
+|[/ANALYZE](analyze-code-analysis.md)|Habilita a análise de código.|
 |[/arch](arch-minimum-cpu-architecture.md)|Especifica a arquitetura da geração de código.|
 |[/await](await-enable-coroutine-support.md)|Habilite extensões co-rotinas (funções retomáveis).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta o número de seções endereçáveis em um arquivo .obj.|
@@ -107,7 +105,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/Od](od-disable-debug.md)|Desabilita a otimização.|
 |[/Og](og-global-optimizations.md)|Preterido. Usa otimizações globais.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Gera funções intrínsecas.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Permite [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
+|[/OpenMP](openmp-enable-openmp-2-0-support.md)|Permite [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece código pequeno.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece código rápido.|
 |[/Ox](ox-full-optimization.md)|Usa a otimização máxima (/Ob2gity /Gs).|

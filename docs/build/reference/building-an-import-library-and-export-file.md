@@ -1,13 +1,10 @@
 ---
-title: "Compilando uma biblioteca de importação e exportação de arquivo | Microsoft Docs"
-ms.custom: 
+title: Compilando uma biblioteca de importação e exportação de arquivo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e052147f058e6c46a1c10b1dd89cfd36ee362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilando uma biblioteca de importação e um arquivo de exportação
 Para criar uma biblioteca de importação e exportação de arquivo, use a seguinte sintaxe:  
@@ -59,7 +54,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
 2.  Uma especificação de /EXPORT:*nome* na linha de comando LIB  
   
-3.  Uma definição em um **exportações** instrução em um`deffile`  
+3.  Uma definição em um **exportações** instrução em um `deffile`  
   
  Esses são os mesmos métodos que você usar para especificar exportações ao vincular um programa de exportação. Um programa pode usar mais de um método. Você pode especificar partes do comando LIB (como vários *objfiles* ou /EXPORT especificações) em um arquivo de comando no comando LIB, assim como você pode em um comando LINK.  
   
@@ -73,7 +68,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
  O *Nome_da_entrada* é o nome do item de dados ou função como ele será usado pelo programa de chamada. Opcionalmente, você pode especificar o *internalname* como a função conhecida no programa de definição; por padrão, *internalname* é o mesmo que *Nome_da_entrada*. O `ordinal` Especifica um índice para a tabela de exportação no intervalo de 1 a 65.535; se você não especificar `ordinal`, LIB atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem um *Nome_da_entrada*. O **dados** palavra-chave é usado para exportar objetos de dados.  
   
- / INCLUEM:`symbol`  
+ / INCLUEM: `symbol`  
  Adiciona o símbolo especificado para a tabela de símbolos. Essa opção é útil para forçar o uso de um objeto de biblioteca que, caso contrário, não são incluído.  
   
  Observe que se você criar sua biblioteca de importação em uma etapa preliminar, antes de criar o. dll, você deve passar o mesmo conjunto de arquivos de objeto ao criar o arquivo. dll, conforme passado ao criar a biblioteca de importação.  

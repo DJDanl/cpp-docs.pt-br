@@ -1,12 +1,9 @@
 ---
 title: Classe CComObject | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObject
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 Essa classe implementa **IUnknown** para um objeto agregado.  
@@ -104,7 +99,7 @@ CComObject(void* = NULL);
   
  Se um `CComObject`-objeto derivado é criada com êxito usando o **novo** operador, a contagem de referência inicial é 0. Para definir a contagem de referência para o valor adequado (1), fazer uma chamada para o [AddRef](#addref) função.  
   
-##  <a name="dtor"></a>  CComObject::~CComObject  
+##  <a name="dtor"></a>  CComObject:: ~ CComObject  
  O destruidor.  
   
 ```
@@ -116,7 +111,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- Função estática permite que você crie um novo **CComObject <** `Base`  **>**  objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Função estática permite que você crie um novo **CComObject <** `Base` **>** objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -124,7 +119,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Parâmetros  
  `pp`  
- [out] Um ponteiro para um **CComObject <** `Base`  **>**  ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
+ [out] Um ponteiro para um **CComObject <** `Base` **>** ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  

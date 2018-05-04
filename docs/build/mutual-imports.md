@@ -1,13 +1,10 @@
 ---
-title: "Importações mútuas | Microsoft Docs"
-ms.custom: 
+title: Importações mútuas | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Importações mútuas
 Exportar ou importar para outro arquivo executável apresenta complicações quando as Importações mútuas (ou circular). Por exemplo, duas DLLs importar símbolos umas das outras, como funções mutuamente recursivas.  
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- Quando é compilado. dll, que é compilado com `/D A_IMPL` e quando o b. dll é criado, ele é compilado com `/D B_IMPL`. Usando símbolos separados para cada DLL `CExampleB` é exportado e `CExampleA` é importado durante a criação de b. dll. `CExampleA`é exportada ao compilar. dll e importada quando usado por b. dll (ou outro cliente).  
+ Quando é compilado. dll, que é compilado com `/D A_IMPL` e quando o b. dll é criado, ele é compilado com `/D B_IMPL`. Usando símbolos separados para cada DLL `CExampleB` é exportado e `CExampleA` é importado durante a criação de b. dll. `CExampleA` é exportada ao compilar. dll e importada quando usado por b. dll (ou outro cliente).  
   
  Esse tipo de camada não pode ser feito ao usar o interno **AFX_EXT_CLASS** e `_AFXEXT` símbolos de pré-processamento. A técnica descrita acima resolve esse problema de maneira diferente não que o mecanismo MFC em si usa ao criar seu ativas tecnologias, banco de dados e DLLs de extensão do MFC de rede.  
   

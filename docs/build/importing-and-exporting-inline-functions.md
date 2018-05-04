@@ -1,13 +1,10 @@
 ---
-title: "Importando e exportando funções embutidas | Microsoft Docs"
-ms.custom: 
+title: Importando e exportando funções embutidas | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f8d159a1537cdfee02d45805632ba9ad4afa7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b666d450766a5a285f02517d92d5eb4dc3f29c68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importando e exportado funções embutidas
 Funções importadas podem ser definidas como embutidos. O efeito é aproximadamente o mesmo que definir um padrão de função embutida; chamadas para a função são expandidas em código embutido, assim como uma macro. Isso é útil principalmente como uma maneira de dar suporte a C++ classes em uma DLL que embutido pode alguns de seus membros funções para maior eficiência.  

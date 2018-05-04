@@ -1,12 +1,9 @@
 ---
 title: Tipos fundamentais (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>Tipos fundamentais (C++)
 Tipos fundamentais em C++ são divididos em três categorias: integral, ponto, flutuante e void. Os tipos integrais são capazes de manipular números inteiros. Tipos de ponto flutuante são capazes de especificar os valores que podem ter partes fracionários.  
@@ -83,11 +78,11 @@ Tipos fundamentais em C++ são divididos em três categorias: integral, ponto, f
 |--------------|----------|--------------|  
 |Integral|`char`|Tipo `char` é um tipo integral que geralmente contém membros do conjunto de caracteres de execução básico — por padrão, isso é ASCII em C++ da Microsoft.<br /><br /> O compilador do C++ trata variáveis do tipo `char`, `signed` `char`, e `unsigned` `char` têm tipos diferentes. Variáveis do tipo `char` são promovidos para `int` como se fossem tipo `signed` `char` por padrão, a menos que a opção de compilação /J é usada. Nesse caso, eles são tratados como tipo `unsigned` `char` e são promovidos para `int` sem extensão de entrada.|  
 ||`bool`|Tipo `bool` é um tipo integral que pode ter um dos dois valores `true` ou `false`. Seu tamanho não é especificado.|  
-||`short`|Tipo `short` `int` (ou simplesmente `short`) é um tipo integral que seja maior ou igual ao tamanho do tipo `char`e menor que ou igual ao tamanho do tipo `int`.<br /><br /> Objetos do tipo `short` podem ser declarados como `signed` `short` ou `unsigned short`. `Signed short`é um sinônimo para `short`.|  
-||`int`|Tipo `int` é um tipo integral que seja maior ou igual ao tamanho do tipo `short` `int`e menor que ou igual ao tamanho do tipo `long`.<br /><br /> Objetos do tipo `int` podem ser declarados como `signed` `int` ou `unsigned` `int`. `Signed``int` é um sinônimo para `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|Inteiros dimensionados `__int n`, onde `n` é o tamanho, em bits, da variável de inteiro. `__int8`, `__int16`, `__int32` e `__int64` são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. `(__int128`Não há suporte.)|  
-||`long`|Tipo `long` (ou `long` `int`) é um tipo integral que seja maior ou igual ao tamanho do tipo `int`.<br /><br /> Objetos do tipo `long` podem ser declarados como `signed` `long` ou `unsigned` `long`. `Signed``long` é um sinônimo para `long`.|  
-||`long` `long`|Maior do que sem um sinal `long`.<br /><br /> Objetos do tipo `long long` podem ser declarados como `signed` `long long` ou `unsigned` `long long`. `signed``long long` é um sinônimo para `long long`.|  
+||`short`|Tipo `short` `int` (ou simplesmente `short`) é um tipo integral que seja maior ou igual ao tamanho do tipo `char`e menor que ou igual ao tamanho do tipo `int`.<br /><br /> Objetos do tipo `short` podem ser declarados como `signed` `short` ou `unsigned short`. `Signed short` é um sinônimo para `short`.|  
+||`int`|Tipo `int` é um tipo integral que seja maior ou igual ao tamanho do tipo `short` `int`e menor que ou igual ao tamanho do tipo `long`.<br /><br /> Objetos do tipo `int` podem ser declarados como `signed` `int` ou `unsigned` `int`. `Signed` `int` é um sinônimo para `int`.|  
+||`__int8`, `__int16`, `__int32`, `__int64`|Inteiros dimensionados `__int n`, onde `n` é o tamanho, em bits, da variável de inteiro. `__int8`, `__int16`, `__int32` e `__int64` são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. `(__int128` Não há suporte.)|  
+||`long`|Tipo `long` (ou `long` `int`) é um tipo integral que seja maior ou igual ao tamanho do tipo `int`.<br /><br /> Objetos do tipo `long` podem ser declarados como `signed` `long` ou `unsigned` `long`. `Signed` `long` é um sinônimo para `long`.|  
+||`long` `long`|Maior do que sem um sinal `long`.<br /><br /> Objetos do tipo `long long` podem ser declarados como `signed` `long long` ou `unsigned` `long long`. `signed` `long long` é um sinônimo para `long long`.|  
 ||`wchar_t`, `__wchar_t`|Uma variável do tipo `wchar_t` designa um tipo de caracteres multibyte ou de caractere largo. Por padrão, `wchar_t` é um tipo nativo, mas você pode usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) fazer `wchar_t` um typedef para `unsigned short`. O `__wchar_t` tipo é um sinônimo específicas da Microsoft para o nativo `wchar_t` tipo.<br /><br /> Use o prefixo L antes de um caractere ou uma cadeia de caracteres literal para designar o tipo de caractere largo.|  
 |Ponto flutuante|`float`|Tipo `float` é flutuante menor tipo de ponto.|  
 ||`double`|Tipo `double` é um tipo de ponto que é maior que ou igual ao tipo flutuante `float`, mas menor que ou igual ao tamanho do tipo `long` `double`.<br /><br /> Específico da Microsoft: A representação de `long double` e `double` é idêntica. No entanto, `long double` e `double` são tipos separados.|  

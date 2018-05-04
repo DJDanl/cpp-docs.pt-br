@@ -1,12 +1,9 @@
 ---
-title: "Expressões lambda em C++ | Microsoft Docs"
-ms.custom: 
+title: Expressões lambda em C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 035fe5c222f6de5b3f0d71c0ce9133c1101f2993
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1cfcb210d3de7ce818d39ecf1703299defedc5d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lambda-expressions-in-c"></a>Expressões lambda em C++
 No C++ 11 e posterior, uma expressão lambda — geralmente chamada uma *lambda*— é uma maneira conveniente de definir um objeto de função anônima (um *fechamento*) à direita no local onde ele é chamado ou passado como um argumento para uma função. Normalmente lambdas são usados para encapsular algumas linhas de código que são passadas para algoritmos ou métodos assíncronos. Este artigo define o que são as lambdas, as compara a outras técnicas de programação, descreve suas vantagens e fornece um exemplo básico.  

@@ -1,13 +1,10 @@
 ---
-title: "-volátil (interpretação da palavra-chave volatile) | Microsoft Docs"
-ms.custom: 
+title: -volátil (interpretação da palavra-chave volatile) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /volatile:iso
 - /volatile:ms
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4528d53da01ae83f179f07ba52b2c86c335e883c
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ccd36c5edaaab8577e5f278b25b51ce69e0633f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (Interpretação da palavra-chave volatile)
 

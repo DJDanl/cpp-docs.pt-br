@@ -2,26 +2,21 @@
 title: Passagem de parâmetro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e838ee5f-c2fe-40b0-9a23-8023c949c820
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ec0c5b6fe00430c8b08fefdd8781b677004085e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-passing"></a>Passagem de parâmetro
 Os argumentos de inteiro de quatro primeiro são passados em registros. Valores inteiros são passados (na ordem da esquerda para a direita) em RCX, RDX, R8 e R9. Argumentos de 5 e superior são passados na pilha. Todos os argumentos forem justificado à direita nos registros. Isso é feito para o receptor pode ignorar os bits superiores do registro se necessário e pode acessar apenas a parte do Registro necessários.  

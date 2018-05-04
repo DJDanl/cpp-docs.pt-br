@@ -1,13 +1,10 @@
 ---
 title: Nomes decorados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ad7fc8e6d9b7fa261d7811086ef02738c77e49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 794e7583158379f84c5ee20408fb784aca213669
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decorated-names"></a>Nomes decorados
 Funções, dados e objetos em programas C e C++ são representados internamente por seus nomes decorados. Um *decorado nome* é uma cadeia de caracteres codificada criada pelo compilador durante a compilação de uma definição de função, de dados ou de objeto. Registra as convenções de chamada, tipos, parâmetros de função e outras informações junto com o nome. Este decoração do nome, também conhecida como *desconfiguração do nome*, ajuda o vinculador a encontrar as funções corretas e os objetos ao vincular um executável.  
@@ -44,14 +39,14 @@ Funções, dados e objetos em programas C e C++ são representados internamente 
   
 -   [Nomes de exibição não decorado](#Undecorated)  
   
-##  <a name="Using"></a>Usando nomes decorados  
+##  <a name="Using"></a> Usando nomes decorados  
  Normalmente, você não precisa saber o nome decorado escrever código que compila e links com êxito. Nomes decorados são um detalhe de implementação interno para o compilador e vinculador. As ferramentas geralmente podem lidar com o nome em sua forma não decorado. No entanto, um nome decorado, às vezes, é necessário quando você especificar um nome de função para o vinculador e outras ferramentas. Por exemplo, de acordo com funções sobrecarregadas do C++, membros de namespaces, construtores de classe, destruidores e funções de membro especial, você deve especificar o nome decorado. Para obter detalhes sobre os sinalizadores de opção e outras situações que exijam nomes decorados, consulte a documentação para as ferramentas e opções que você está usando.  
   
  Se você alterar o nome da função, classe, convenção de chamada, tipo de retorno ou qualquer parâmetro, o nome decorado também será alterado. Nesse caso, você deverá obter o novo nome decorado e usá-lo em qualquer lugar que do nome decorado for especificado.  
   
  Decoração do nome também é importante ao vincular ao código escrito em outras linguagens de programação ou usando outros compiladores. Compiladores diferentes usam convenções de decoração de nome diferente. Quando o executável vincula ao código escrito em outra linguagem, deve ter especial cuidado para corresponder aos nomes exportados e importados e convenções de chamada. Código de linguagem assembly deve usar os nomes de Visual C++ decorado e convenções de chamada para vincular ao código-fonte gravado com Visual C++.  
   
-##  <a name="Format"></a>Formato de C++ de decorado nome  
+##  <a name="Format"></a> Formato de C++ de decorado nome  
  Um nome decorado para uma função C++ contém as seguintes informações:  
   
 -   O nome da função.  
@@ -73,7 +68,7 @@ Funções, dados e objetos em programas C e C++ são representados internamente 
 |`int a(char){int i=3;return i;};`|`?a@@YAHD@Z`|  
 |`void __stdcall b::c(float){};`|`?c@b@@AAGXM@Z`|  
   
-##  <a name="FormatC"></a>Formato de um C decorado nome  
+##  <a name="FormatC"></a> Formato de um C decorado nome  
  O formulário de decoração para uma função C depende a convenção de chamada usada na sua declaração, conforme mostrado na tabela a seguir. Isso também é o formato de decoração que é usado quando o código C++ é declarado para ter `extern "C"` vinculação. A convenção de chamada padrão é `__cdecl`. Observe que em um ambiente de 64 bits, funções não são decoradas.  
   
 |Convenção de chamada|Decoração|  
@@ -83,7 +78,7 @@ Funções, dados e objetos em programas C e C++ são representados internamente 
 |`__fastcall`|À esquerda e à direita sinais de arroba (@) seguido por um número decimal que representa o número de bytes na lista de parâmetros|  
 |`__vectorcall`|Direita dois sinais de @ (@) seguido por um número decimal de bytes na lista de parâmetros|  
   
-##  <a name="Viewing"></a>Nomes de exibição decorado  
+##  <a name="Viewing"></a> Nomes de exibição decorado  
  Você pode obter o formulário decorado de um nome de símbolo depois que você compilar o arquivo de origem que contém os dados, o objeto, ou a definição de função ou o protótipo. Para examinar nomes decorados em seu programa, você pode usar um dos seguintes métodos:  
   
 -   #### <a name="to-use-a-listing-to-view-decorated-names"></a>Para usar uma lista para exibir nomes decorados  
@@ -98,9 +93,9 @@ Funções, dados e objetos em programas C e C++ são representados internamente 
   
     1.  Para ver os símbolos exportados em um arquivo. obj ou. lib, digite `dumpbin /symbols` `objfile` em um prompt de comando do desenvolvedor.  
   
-    2.  Para localizar o formulário decorado do símbolo, procure o nome não decorado entre parênteses. O nome decorado está na mesma linha, depois de um pipe (&#124;) de caractere e antes do nome não decorado.  
+    2.  Para localizar o formulário decorado do símbolo, procure o nome não decorado entre parênteses. O nome decorado está na mesma linha, depois de um pipe (&#124;) e de caractere antes do nome não decorado.  
   
-##  <a name="Undecorated"></a>Nomes de exibição não decorado  
+##  <a name="Undecorated"></a> Nomes de exibição não decorado  
  Você pode usar undname.exe para converter um nome decorado em sua forma não decorada. Este exemplo mostra como isso funciona:  
   
 ```  

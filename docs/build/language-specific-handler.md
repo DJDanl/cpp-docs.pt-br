@@ -1,27 +1,22 @@
 ---
-title: "Identificador específico da linguagem | Microsoft Docs"
-ms.custom: 
+title: Identificador específico da linguagem | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc15e730666a643dfaa028fe7bc6166144897308
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6cbfbe6a9b98828a63fb4a092717bfab583e9a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-specific-handler"></a>Identificador específico da linguagem
 O endereço relativo do manipulador específico de idioma está presente no UNWIND_INFO sempre que UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER estão definidos. Conforme descrito na seção anterior, o identificador específico da linguagem é chamado como parte da pesquisa para um manipulador de exceção ou como parte de uma liberação. Ele tem o seguinte protótipo:  

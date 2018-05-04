@@ -1,29 +1,24 @@
 ---
-title: "-Qpar (Paralelizador automático) | Microsoft Docs"
-ms.custom: 
+title: -Qpar (Paralelizador automático) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 dev_langs:
 - C++
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073c906e7ecdfcf933e4b91cbcf8d6a77324df76
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 430bf1ebc79008d97435ecbcb3b15cf19dda5f8d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (paralelizador automático)
 Permite que o [Paralelizador automático](../../parallel/auto-parallelization-and-auto-vectorization.md) recurso do compilador automaticamente paralelizar loops em seu código.  

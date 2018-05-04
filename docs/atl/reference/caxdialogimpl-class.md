@@ -2,11 +2,8 @@
 title: Classe CAxDialogImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3e1b7d4f88428060f4aa4d01180bce1e970b650
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxdialogimpl-class"></a>Classe CAxDialogImpl
 Essa classe implementa uma caixa de diálogo (modal ou sem janela restrita) que hospeda os controles ActiveX.  
@@ -80,9 +75,9 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 |[CAxDialogImpl::m_bModal](#m_bmodal)|Uma variável que existe apenas na depuração compila e é definido como true se a caixa de diálogo modal.|  
   
 ## <a name="remarks"></a>Comentários  
- `CAxDialogImpl`permite que você crie uma caixa de diálogo modal ou sem janela restrita. `CAxDialogImpl`fornece o procedimento de caixa de diálogo, que usa o mapa da mensagem padrão para direcionar as mensagens para os manipuladores apropriados.  
+ `CAxDialogImpl` permite que você crie uma caixa de diálogo modal ou sem janela restrita. `CAxDialogImpl` fornece o procedimento de caixa de diálogo, que usa o mapa da mensagem padrão para direcionar as mensagens para os manipuladores apropriados.  
   
- `CAxDialogImpl`deriva `CDialogImplBaseT`, que por sua vez é derivada de *TBase* (por padrão, `CWindow`) e `CMessageMap`.  
+ `CAxDialogImpl` deriva `CDialogImplBaseT`, que por sua vez é derivada de *TBase* (por padrão, `CWindow`) e `CMessageMap`.  
   
  A classe deve definir um membro IDD que especifica a ID de recurso de modelo de caixa de diálogo. Por exemplo, adicionando um objeto de caixa de diálogo do ATL usando o **Adicionar classe** caixa de diálogo adiciona automaticamente a linha a seguir à sua classe:  
   
@@ -110,7 +105,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
   
-##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap  
  Chame esse método para informar ou unadvise todas as entradas no mapa do objeto coletor de eventos de mapa.  
   
 ```
@@ -124,7 +119,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
-##  <a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>  CAxDialogImpl::Create  
  Chame este método para criar uma caixa de diálogo sem janela restrita.  
   
 ```
@@ -139,7 +134,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
  `dwInitParam`  
  [in] Especifica o valor para passar para a caixa de diálogo o `lParam` parâmetro o **WM_INITDIALOG** mensagem.  
   
- **RECT &**  
+ **RECT &AMP;**  
  Este parâmetro não é usado. Esse parâmetro é passado `CComControl`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -150,7 +145,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  A substituição de segundo é fornecida somente para caixas de diálogo podem ser usadas com [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow  
  Chame este método para destruir uma caixa de diálogo sem janela restrita.  
   
 ```
@@ -163,7 +158,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Comentários  
  Não chame `DestroyWindow` destruir uma caixa de diálogo modal. Chamar [EndDialog](#enddialog) em vez disso.  
   
-##  <a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>  CAxDialogImpl::DoModal  
  Chame este método para criar uma caixa de diálogo modal.  
   
 ```
@@ -187,7 +182,7 @@ INT_PTR DoModal(
   
  Para criar uma caixa de diálogo sem janela restrita, chame [criar](#create).  
   
-##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog  
  Chame este método para destruir uma caixa de diálogo modal.  
   
 ```
@@ -202,12 +197,12 @@ BOOL EndDialog(int nRetCode);
  TRUE se a caixa de diálogo é destruída; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- `EndDialog`deve ser chamado por meio do procedimento de caixa de diálogo. Depois que a caixa de diálogo é destruída, o Windows usará o valor de `nRetCode` como o valor de retorno para `DoModal`, que criou a caixa de diálogo.  
+ `EndDialog` deve ser chamado por meio do procedimento de caixa de diálogo. Depois que a caixa de diálogo é destruída, o Windows usará o valor de `nRetCode` como o valor de retorno para `DoModal`, que criou a caixa de diálogo.  
   
 > [!NOTE]
 >  Não chame `EndDialog` destruir uma caixa de diálogo sem janela restrita. Chamar [DestroyWindow](#destroywindow) em vez disso.  
   
-##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc  
  Chame esse método para obter um ponteiro para o `DialogProc` função de retorno de chamada.  
   
 ```
@@ -220,7 +215,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>Comentários  
  O `DialogProc` função é uma função de retorno de chamada definido pelo aplicativo.  
   
-##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>  CAxDialogImpl::GetIDD  
  Chame esse método para obter a ID de recurso de modelo de caixa de diálogo.  
   
 ```
@@ -230,7 +225,7 @@ int GetIDD();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a ID de recurso de modelo de caixa de diálogo.  
   
-##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage  
  Chame esse método para determinar se uma mensagem é destinada a essa caixa de diálogo e, se for, processar a mensagem.  
   
 ```
@@ -247,7 +242,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>Comentários  
  Este método destina-se a ser chamado de dentro de um loop de mensagem.  
   
-##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal  
  Uma variável que existe apenas na depuração compila e é definido como true se a caixa de diálogo modal.  
   
 ```

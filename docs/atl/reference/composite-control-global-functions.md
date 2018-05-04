@@ -2,11 +2,8 @@
 title: Funções globais do controle composto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-global-functions"></a>Funções globais do controle composto
 Essas funções fornecem suporte para a criação de caixas de diálogo e para a criação, hospedagem e licenciando controles ActiveX.  
@@ -103,7 +98,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Para obter mais informações sobre como editar scripts de recurso, consulte [como: abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros comuns de controle](http://msdn.microsoft.com/library/windows/desktop/aa380902) no SDK do Windows*: ferramentas SDK*.  
+ Para obter mais informações sobre como editar scripts de recurso, consulte [como: abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros comuns de controle](http://msdn.microsoft.com/library/windows/desktop/aa380902) no SDK do Windows *: ferramentas SDK*.  
   
  Para obter mais informações sobre caixas de diálogo, em geral, consulte [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) e [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) no SDK do Windows.  
   

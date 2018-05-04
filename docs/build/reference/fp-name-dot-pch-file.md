@@ -1,13 +1,10 @@
 ---
 title: -Fp (nome. O arquivo pch) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-name-pch-file"></a>/Fp (nomear arquivo .Pch)
 Fornece um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão.  
@@ -44,7 +39,7 @@ Fornece um nome de caminho para um cabeçalho pré-compilado em vez de usar o no
 > **/FP**_pathname_  
   
 ## <a name="remarks"></a>Comentários  
- Use essa opção com [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) ou [/Yu (usar pré-compilado arquivo de cabeçalho)](../../build/reference/yu-use-precompiled-header-file.md) para fornecer um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão. Você também pode usar **/Fp** com **/Yc** para especificar o uso de um arquivo de cabeçalho pré-compilado que difere do **/Yc***filename* argumento e do nome base do arquivo de origem.  
+ Use essa opção com [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) ou [/Yu (usar pré-compilado arquivo de cabeçalho)](../../build/reference/yu-use-precompiled-header-file.md) para fornecer um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão. Você também pode usar **/Fp** com **/Yc** para especificar o uso de um arquivo de cabeçalho pré-compilado que difere do **/Yc * filename* argumento e o nome base do arquivo de origem.  
   
  Se você não especificar uma extensão como parte do nome do caminho, uma extensão de. pch será assumida. Se você especificar um diretório sem um nome de arquivo, o nome de arquivo padrão é VC*x*0.pch, onde *x* é a versão principal do Visual C++ em uso.  
   

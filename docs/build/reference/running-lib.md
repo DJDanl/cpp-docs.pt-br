@@ -1,13 +1,10 @@
 ---
 title: Executando lb | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a487bb6f6ffd740f6479916c5115bf95d568655
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c306ba58bfef11f92d7e861272aad2aa605c8fde
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-lib"></a>Executando LIB
 Várias opções de linha de comando podem ser usado para controlar LIB.  
@@ -74,7 +69,7 @@ LIB @commandfile
   
  As opções a seguir se aplicam a todos os modos de LIB:  
   
- /ERRORREPORT [NENHUM &#124; PROMPT &#124; FILA &#124; ENVIO]  
+ /ERRORREPORT [NONE &AMP;#124; PROMPT &AMP;#124; FILA &AMP;#124; ENVIAR]  
  Se lib.exe falhar em tempo de execução, você pode usar /ERRORREPORT para enviar à Microsoft informações sobre esses erros internos.  
   
  Para obter mais informações sobre /ERRORREPORT, consulte [/errorReport (relatório de erros do compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).  

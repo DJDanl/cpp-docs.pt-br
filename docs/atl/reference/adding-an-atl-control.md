@@ -1,12 +1,9 @@
 ---
 title: Adicionar um controle ATL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3200ea0fc8241007c1c97c1ab296166eb7889734
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-control"></a>Adicionar um controle ATL
 Use este assistente para adicionar um objeto de interface de usuário a um projeto que oferece suporte a interfaces para todos os contêineres potenciais. Para dar suporte a essas interfaces, o projeto deve ter sido criado como um aplicativo ATL ou como um aplicativo MFC que contém suporte ATL. Você pode usar o [Assistente de projeto de ATL](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, ou [adicionar um objeto ATL ao seu aplicativo do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte ATL para um aplicativo do MFC.  

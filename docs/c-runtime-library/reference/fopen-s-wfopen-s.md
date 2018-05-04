@@ -2,11 +2,8 @@
 title: fopen_s, _wfopen_s | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfopen_s
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-caps.latest.revision: 41
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6883fc46d10ebb577a41039f4eda2083b187ad31
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: bef5587188cebe4ed7e91cbd95eb46cca7f05044
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -167,7 +162,7 @@ Além dos valores acima, os seguintes caracteres podem ser incluídos em *modo* 
 
 No modo de texto (traduzido), CTRL + Z é interpretado como um caractere de final de arquivo na entrada. Em arquivos abertos para leitura/gravação com **"+"**, **fopen_s** verifica um CTRL + Z no final do arquivo e remove-lo, se possível. Isso é feito porque usando [fseek](fseek-fseeki64.md) e **ftell** mover dentro de um arquivo que termina com um CTRL + Z, podem causar [fseek](fseek-fseeki64.md) se comporte incorretamente no final do arquivo.
 
-Além disso, no modo de texto, combinações de avanço de linha de retorno de carro são convertidas em alimentações de linha únicas na entrada e caracteres de alimentação de linha são convertidos para combinações de avanço de linha de retorno de carro na saída. Quando uma função de E/S de fluxo Unicode opera no modo de texto (o padrão), presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de fluxo de entrada Unicode convertem caracteres multibyte para caracteres largos (como se a uma chamada para o **mbtowc** função). Pelo mesmo motivo, as funções de fluxo de saída de Unicode convertem caracteres largos em caracteres multibyte (como se a uma chamada para o **wctomb** função).
+Além disso, no modo de texto, combinações de avanço de linha de retorno de carro são convertidas em alimentações de linha únicas na entrada e caracteres de alimentação de linha são convertidos para combinações de avanço de linha de retorno de carro na saída. Quando uma função de E/S de fluxo Unicode opera no modo de texto (o padrão), presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo Unicode convertem caracteres multibyte em caracteres largos (como por uma chamada à função **mbtowc**). Pelo mesmo motivo, as funções de saída de fluxo Unicode convertem caracteres largos em caracteres multibyte (como por uma chamada à função **wctomb**).
 
 Se **t** ou **b** não é fornecido em *modo*, o modo de conversão padrão é definido pela variável global [fmode](../../c-runtime-library/fmode.md). Se **t** ou **b** é o prefixo para o argumento, a função falhará e retornará **nulo**.
 

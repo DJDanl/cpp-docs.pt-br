@@ -1,13 +1,10 @@
 ---
-title: "Visão geral da classe ATL | Microsoft Docs"
-ms.custom: 
+title: Visão geral da classe ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - vc.atl.classes
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef95bb108f6d38f6196b324360b60635b1a9b64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-class-overview"></a>Visão geral da classe ATL
 Classes na biblioteca de modelo ativa (ATL) podem ser categorizados da seguinte maneira:  
@@ -60,5 +55,5 @@ Classes na biblioteca de modelo ativa (ATL) podem ser categorizados da seguinte 
  [Variáveis globais](../atl/reference/atl-global-variables.md)   
  [Macros](../atl/reference/atl-macros.md)   
  [Estruturas](../atl/reference/atl-structures.md)   
- [Definições de tipo](../atl/reference/atl-typedefs.md)
+ [Typedefs](../atl/reference/atl-typedefs.md)
 

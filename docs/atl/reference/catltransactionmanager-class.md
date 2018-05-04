@@ -2,11 +2,8 @@
 title: Classe CAtlTransactionManager | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Classe CAtlTransactionManager
 Classe CAtlTransactionManager fornece um wrapper para funções do Gerenciador KTM (Kernel Transaction).  
@@ -92,7 +87,7 @@ class CAtlTransactionManager;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`Se o fallback é suportado; `FALSE` caso contrário.|  
+|[m_bFallback](#m_bfallback)|`TRUE` Se o fallback é suportado; `FALSE` caso contrário.|  
 |[m_hTransaction](#m_htransaction)|O identificador de transação.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>  ~ CAtlTransactionManager  
  Destruidor CAtlTransactionManager.  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Comentários  
  No processamento normal, a transação é confirmada automaticamente e fechada. Se o destruidor é chamado durante um desenrolamento da exceção, a transação é revertida e fechada.  
   
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager  
  Construtor CAtlTransactionManager.  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>Parâmetros  
  `bFallback`  
- `TRUE`indica suporte fallback. Se transacionado função falhar, a classe automaticamente chama a função "transacionado". `FALSE`não indica que nenhuma chamada "fallback".  
+ `TRUE` indica suporte fallback. Se transacionado função falhar, a classe automaticamente chama a função "transacionado". `FALSE` não indica que nenhuma chamada "fallback".  
   
  `bAutoCreateTransaction`  
- `TRUE`indica que o manipulador de transações é criado automaticamente no construtor. `FALSE`indica que não é.  
+ `TRUE` indica que o manipulador de transações é criado automaticamente no construtor. `FALSE` indica que não é.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="close"></a>Fechar  
+##  <a name="close"></a>  Fechar  
  Fecha o identificador de transação.  
   
 ```
@@ -142,7 +137,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `CloseHandle` função. O método é chamado automaticamente no destruidor.  
   
-##  <a name="commit"></a>Confirmação  
+##  <a name="commit"></a>  Confirmação  
  Solicitações que a transação ser confirmada.  
   
 ```
@@ -155,7 +150,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `CommitTransaction` função. O método é chamado automaticamente no destruidor.  
   
-##  <a name="create"></a>Criar  
+##  <a name="create"></a>  Criar  
  Cria o identificador de transação.  
   
 ```
@@ -168,7 +163,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `CreateTransaction` função. Verifique a existência de  
   
-##  <a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>  CreateFile  
  Cria ou abre um arquivo, o fluxo de arquivos ou o diretório como uma operação transacionada.  
   
 ```
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `CreateFileTransacted` função.  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  Exclui um arquivo existente como uma operação transacionada.  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `DeleteFileTransacted` função.  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  Pesquisa um diretório para um arquivo ou subdiretório como uma operação transacionada.  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `FindFirstFileTransacted` função.  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  Recupera os atributos de sistema de arquivo para um arquivo ou diretório especificado como uma operação transacionada.  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `GetFileAttributesTransacted` função.  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  Recupera os atributos de sistema de arquivo para um arquivo ou diretório especificado como uma operação transacionada.  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `GetFileAttributesTransacted` função.  
   
-##  <a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>  GetHandle  
  Retorna o identificador de transação.  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  Determina se as chamadas de fallbacks estão habilitadas.  
   
 ```
@@ -303,12 +298,12 @@ BOOL IsFallback() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `TRUE` é a classe oferece suporte a chamadas de fallbacks. `FALSE`Caso contrário.  
+ Retorna `TRUE` é a classe oferece suporte a chamadas de fallbacks. `FALSE` Caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`Se o fallback é suportado; `FALSE` caso contrário.  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` Se o fallback é suportado; `FALSE` caso contrário.  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  O identificador de transação.  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  Move um arquivo existente ou um diretório, incluindo seus filhos, como uma operação transacionada.  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `MoveFileTransacted` função.  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  Cria a chave do Registro especificada e a associa uma transação. Se a chave já existir, a função é aberta.  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `RegCreateKeyTransacted` função.  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  Exclui uma subchave e seus valores do modo de exibição específico de plataforma especificado do registro como uma operação transacionada.  
   
 ```
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `RegDeleteKeyTransacted` função.  
   
-##  <a name="regopenkeyex"></a>RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>  RegOpenKeyEx  
  Abre a chave do Registro especificada e a associa uma transação.  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `RegOpenKeyTransacted` função.  
   
-##  <a name="rollback"></a>Reversão  
+##  <a name="rollback"></a>  Reversão  
  Solicitações que a transação ser revertida.  
   
 ```
@@ -459,7 +454,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>Comentários  
  Esse wrapper chama o `RollbackTransaction` função.  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  Define os atributos de um arquivo ou diretório como uma operação transacionada.  
   
 ```

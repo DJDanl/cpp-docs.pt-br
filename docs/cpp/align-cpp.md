@@ -1,12 +1,9 @@
 ---
 title: align (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - align_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c83ebb195cf4ee75c7be15b4d2ab9607f46743
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -44,7 +39,7 @@ Use `__declspec(align(#))` para controlar precisamente o alinhamento dos dados d
 
 Criar aplicativos que usam as instruções mais recentes do processador acarreta algumas restrições e problemas novos. Em particular, muitas instruções novas exigem que os dados sejam alinhados a limites de 16 bytes. Além disso, ao alinhar os dados usados com frequência ao tamanho da linha de cache de um processador específico, você melhora o desempenho do cache. Por exemplo, se você definir uma estrutura cujo tamanho seja menor de 32 bytes, alinhe-a para 32 bytes a fim de garantir que os objetos desse tipo de estrutura sejam armazenados em cache com eficiência.
 
-\#é o valor de alinhamento. As entradas válidas são potências inteiras de dois de 1 a 8192 (bytes), como 2, 4, 8, 16, 32 ou 64. `declarator` são os dados que você está declarando como alinhados.
+\# é o valor de alinhamento. As entradas válidas são potências inteiras de dois de 1 a 8192 (bytes), como 2, 4, 8, 16, 32 ou 64. `declarator` são os dados que você está declarando como alinhados.
 
 Para obter informações sobre como retornar um valor do tipo `size_t` que é o requisito de alinhamento do tipo, consulte [alignof](../cpp/alignof-operator.md). Para obter informações sobre como declarar ponteiros não alinhados ao direcionar a processadores de 64 bits, consulte [unaligned](../cpp/unaligned.md).
 
@@ -94,7 +89,7 @@ Para obter mais informações, consulte:
 
 - [Exemplos de alinhamento da estrutura](../build/examples-of-structure-alignment.md) (específico para x64)
 
-##  <a name="vclrfalignexamples"></a>Alinhar exemplos
+##  <a name="vclrfalignexamples"></a> Alinhar exemplos
 
 Os exemplos a seguir mostram como `__declspec(align(#))` afeta o tamanho e o alinhamento de estruturas de dados. Os exemplos assumem as seguintes definições:
 
@@ -185,7 +180,7 @@ void fn() {
 
 O alinhamento, se a memória tiver sido alocada no heap, depende de qual função de alocação é chamada.  Por exemplo, se você usar `malloc`, o resultado dependerá do tamanho do operando. Se *arg* > = 8, a memória retornado é alinhado em 8 bytes. Se *arg* < 8, o alinhamento da memória retornado é a primeira potência de 2 menor *arg*. Por exemplo, se você usar malloc (7), o alinhamento será de 4 bytes.
 
-##  <a name="vclrf_declspecaligntypedef"></a>Definindo novos tipos de __declspec(align(#))
+##  <a name="vclrf_declspecaligntypedef"></a> Definindo novos tipos de __declspec(align(#))
 
 Você pode definir um tipo com uma característica de alinhamento.
 
@@ -198,7 +193,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Agora, `aType` e `bType` são o mesmo tamanho (8 bytes), mas variáveis do tipo `bType` são alinhados 32 bytes.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a>Alinhando dados no armazenamento Local de Thread
+##  <a name="vclrfthreadlocalstorageallocation"></a> Alinhando dados no armazenamento Local de Thread
 
 O armazenamento local de thread estático (TLS ) criado com o atributo `__declspec(thread)` e colocado na seção TLS na imagem funciona para o alinhamento exatamente como dados estáticos normais. Para criar dados TLS, o sistema operacional aloca memória do tamanho da seção do TLS e respeita o atributo de alinhamento da seção do TLS.
 
@@ -221,7 +216,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a>Como alinhar funciona com o empacotamento de dados
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Como alinhar funciona com o empacotamento de dados
 
 O **/Zp** opção de compilador e o `pack` pragma têm o efeito de dados para membros de união e estrutura de remessa. Este exemplo mostra como **/Zp** e `__declspec(align(#))` trabalham juntos:
 

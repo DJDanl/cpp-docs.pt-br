@@ -1,12 +1,9 @@
 ---
 title: Classe CHeapPtrElementTraits | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtrElementTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb646e6f6d2358018c38439e5bea4c651e9d994
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa4b29f5893a0b1536a087b0c516e6340eca8449
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptrelementtraits-class"></a>Classe CHeapPtrElementTraits
 Essa classe fornece métodos, funções estáticas e typedefs útil ao criar coleções de ponteiros de pilha.  
@@ -79,14 +74,14 @@ class CHeapPtrElementTraits :
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  
   
-##  <a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE  
  O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE  
  O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.  
   
 ```

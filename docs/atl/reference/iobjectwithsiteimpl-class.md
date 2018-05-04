@@ -1,12 +1,9 @@
 ---
 title: Classe IObjectWithSiteImpl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Classe IObjectWithSiteImpl
 Essa classe fornece métodos que permitem a um objeto para se comunicar com seu site.  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>Comentários  
  O [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interface permite que um objeto para se comunicar com seu site. Classe `IObjectWithSiteImpl` fornece uma implementação padrão dessa interface e implementa **IUnknown** enviando informações para o despejo compilações dispositivo na depuração.  
   
- `IObjectWithSiteImpl`Especifica os dois métodos. O cliente primeiro chama `SetSite`, passando o site **IUnknown** ponteiro. Esse ponteiro é armazenado no objeto e posterior podem ser recuperado por meio de uma chamada para `GetSite`.  
+ `IObjectWithSiteImpl` Especifica os dois métodos. O cliente primeiro chama `SetSite`, passando o site **IUnknown** ponteiro. Esse ponteiro é armazenado no objeto e posterior podem ser recuperado por meio de uma chamada para `GetSite`.  
   
  Normalmente, você deriva a classe de `IObjectWithSiteImpl` quando você estiver criando um objeto que não é um controle. Para controles, derive a classe de [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), que também fornece um ponteiro de site. Não derivam sua classe `IObjectWithSiteImpl` e `IOleObjectImpl`.  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  Consulta o site para um ponteiro para a interface identificado por `riid`.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  Consulte [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) no SDK do Windows.  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Gerencia o site **IUnknown** ponteiro.  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `m_spUnkSite`inicialmente recebe esse ponteiro por meio de uma chamada para [SetSite](#setsite).  
+ `m_spUnkSite` inicialmente recebe esse ponteiro por meio de uma chamada para [SetSite](#setsite).  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  Fornece o objeto com o site **IUnknown** ponteiro.  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna `S_OK`.  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  Fornece o objeto com o site **IUnknown** ponteiro.  
   
 ```

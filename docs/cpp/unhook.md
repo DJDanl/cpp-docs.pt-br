@@ -1,12 +1,9 @@
 ---
 title: unhook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unhook"></a>__unhook
 Dissocia um método de manipulador de um evento.  
@@ -52,7 +47,7 @@ long  __unhook(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Um ponteiro para o método de evento do qual você desengancha o método do manipulador de eventos:  
   
 -   Eventos nativos do C++: *SourceClass* é a classe de origem do evento e *EventMethod* é o evento.  
@@ -64,7 +59,7 @@ long  __unhook(
  `interface`  
  O nome da interface que está sendo desligado de `receiver`, apenas para receptores de evento COM no qual o *layout_dependent* parâmetro o [event_receiver](../windows/event-receiver.md) atributo é **true**.  
   
- *código-fonte*  
+ *Código-fonte*  
  Um ponteiro para uma instância da origem do evento. Dependendo do código `type` especificado em **event_receiver**, *fonte* pode ser um dos seguintes:  
   
 -   Um ponteiro nativo do objeto de origem do evento.  
@@ -73,7 +68,7 @@ long  __unhook(
   
 -   Um ponteiro gerenciado do objeto (para eventos gerenciados).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Um ponteiro para o método do manipulador de eventos a ser desenganchado de um evento. O manipulador é especificado como um método de uma classe ou uma referência a ela. Se você não especificar o nome da classe, `__unhook` assumirá a classe como sendo a chamada.  
   
 -   Eventos nativos do C++: *ReceiverClass* é a classe do receptor de evento e `HandlerMethod` é o manipulador.  

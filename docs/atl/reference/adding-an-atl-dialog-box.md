@@ -1,12 +1,9 @@
 ---
-title: "Adicionar uma caixa de diálogo do ATL | Microsoft Docs"
-ms.custom: 
+title: Adicionar uma caixa de diálogo do ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c9969f4747c6c3fa2a39b7b0452f6ac54c9d58
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0883b87ce991b08a96b1d10b4acedf8562022a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-dialog-box"></a>Adicionar uma caixa de diálogo do ATL
 Para adicionar uma caixa de diálogo ATL ao seu projeto, o projeto deve ser um projeto de ATL ou um projeto MFC que inclui suporte ATL. Você pode usar o [Assistente de projeto de ATL](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, ou [adicionar um objeto ATL ao seu aplicativo do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte ATL para um aplicativo do MFC.  
@@ -33,7 +28,7 @@ Para adicionar uma caixa de diálogo ATL ao seu projeto, o projeto deve ser um p
  Por padrão, o Assistente de caixa de diálogo do ATL implementa uma caixa de diálogo derivada [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Essa classe inclui suporte para hospedagem de controles ActiveX e Windows. Se você não quiser que a sobrecarga de suporte de controle ActiveX, depois que o Assistente gerou seu código, substitua todas as instâncias de `CAxDialogImpl` com um [CSimpleDialog](../../atl/reference/csimpledialog-class.md) ou [CDialogImpl](../../atl/reference/cdialogimpl-class.md) como sua classe base .  
   
 > [!NOTE]
->  `CSimpleDialog`cria somente as caixas de diálogo modal que oferecem suporte a somente os controles comuns do Windows. `CDialogImpl`cria ou caixas de diálogo modal ou sem janela restrita.  
+>  `CSimpleDialog` cria somente as caixas de diálogo modal que oferecem suporte a somente os controles comuns do Windows. `CDialogImpl` cria ou caixas de diálogo modal ou sem janela restrita.  
   
 ### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Para adicionar um recurso de caixa de diálogo ATL ao seu projeto  
   

@@ -2,12 +2,9 @@
 title: -D (definições de pré-processador) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definições de pré-processador)
 Define um símbolo de pré-processamento para um arquivo de código-fonte.  
@@ -50,7 +45,7 @@ Define um símbolo de pré-processamento para um arquivo de código-fonte.
   
  Por padrão, o valor associado a um símbolo é 1. Por exemplo, **/D** `name` é equivalente a **/D**`name`**= 1**. O exemplo no final deste artigo, a definição de **teste** é mostrado para imprimir `1`.  
   
- Compilando usando **/D** `name`  **=**  faz com que o símbolo de não têm nenhum valor associado. Embora o símbolo ainda possa ser usado para compilar o código condicionalmente, em outros casos, sua avaliação não resulta em nada. No exemplo, se você compila usando **/DTEST =**, ocorrerá um erro. Esse comportamento é semelhante ao uso de `#define` com ou sem um valor.  
+ Compilando usando **/D** `name` **=** faz com que o símbolo de não têm nenhum valor associado. Embora o símbolo ainda possa ser usado para compilar o código condicionalmente, em outros casos, sua avaliação não resulta em nada. No exemplo, se você compila usando **/DTEST =**, ocorrerá um erro. Esse comportamento é semelhante ao uso de `#define` com ou sem um valor.  
   
  Este comando define o símbolo DEBUG em TEST.c:  
   

@@ -1,13 +1,10 @@
 ---
-title: "Diretivas de pré-processamento de makefile | Microsoft Docs"
-ms.custom: 
+title: Diretivas de pré-processamento de makefile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
@@ -48,23 +45,21 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bc73a86b0772b13731aaf7ac4e2ef0760caa8a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-directives"></a>Diretivas de pré-processamento de makefile
 Diretivas de pré-processamento não diferenciam maiusculas de minúsculas. O ponto de exclamação (!) inicial deve aparecer no começo da linha. Zero ou mais espaços ou guias podem aparecer após o ponto de exclamação, para fins de recuo.  
   
  **! CMDSWITCHES**  
- {**+**&#124;  **-** }*opção*... Transforma cada *opção* listados ativado ou desativado. Tabulações ou espaços devem aparecer antes do + ou - operador; Nenhum pode aparecer entre o operador e o [opção letras](../build/nmake-options.md). Letras não diferenciam maiusculas de minúsculas e estão especificadas sem uma barra (/). Para algumas opções e outras pessoas de fora, use separadas especificações de **! CMDSWITCHES**.  
+ {**+** &#124; **-**}*opção*... Transforma cada *opção* listados ativado ou desativado. Tabulações ou espaços devem aparecer antes do + ou - operador; Nenhum pode aparecer entre o operador e o [opção letras](../build/nmake-options.md). Letras não diferenciam maiusculas de minúsculas e estão especificadas sem uma barra (/). Para algumas opções e outras pessoas de fora, use separadas especificações de **! CMDSWITCHES**.  
   
  Somente /D, I, /N e /S pode ser usada em um makefile. Tools.ini, todas as opções são permitidas exceto /F, /HELP, /NOLOGO, /x, e /?. As alterações especificadas em um bloco de descrição não entram em vigor até o próximo bloco de descrição. Essa diretiva atualiza **MAKEFLAGS**; as alterações são herdadas durante recursão se **MAKEFLAGS** for especificado.  
   
@@ -74,7 +69,7 @@ Diretivas de pré-processamento não diferenciam maiusculas de minúsculas. O po
  **! MENSAGEM***texto*   
  Exibe *texto* para a saída padrão. Espaços ou guias antes *texto* são ignorados.  
   
- **! INCLUIR**[  **\<** ] *filename*[  **>** ]  
+ **! INCLUIR**[ **\<**] *filename*[ **>**]  
  Lê *filename* como um makefile, em seguida, continua com o makefile atual. NMAKE procura *filename* primeiro no diretório atual ou especificado, em seguida, recursivamente por meio de diretórios de qualquer pai makefiles, em seguida, se *filename* é colocado entre colchetes angulares (\<>), nos diretórios especificados pelo **incluir** macro, que é inicialmente definida como a variável de ambiente INCLUDE. Útil para passar **. SUFIXOS** configurações, **. PRECIOSOS**e as regras de inferência em makefiles recursiva.  
   
  **! SE**  `constantexpression`  
@@ -86,7 +81,7 @@ Diretivas de pré-processamento não diferenciam maiusculas de minúsculas. O po
  **! IFNDEF***nomedamacro*   
  Processa as instruções entre **! IFNDEF** e a próxima **! ELSE** ou `!ENDIF` se *nomedamacro* não está definido.  
   
- **! ELSE**[**se** *constantexpression* &#124; **IFDEF** *nomedamacro*&#124; **IFNDEF** *nomedamacro*]  
+ **! ELSE**[**se** *constantexpression* &#124; **IFDEF** *nomedamacro* &#124; **IFNDEF**  *nomedamacro*]  
  Processa as instruções entre **! ELSE** e o próximo `!ENDIF` se anterior **! Se**, `!IFDEF`, ou **! IFNDEF** instrução é avaliada como zero. As palavras-chave opcional oferecem mais controle de pré-processamento.  
   
  **! ELSEIF**  

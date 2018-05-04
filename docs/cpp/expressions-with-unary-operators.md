@@ -1,12 +1,9 @@
 ---
-title: "Expressões com operadores unários | Microsoft Docs"
-ms.custom: 
+title: Expressões com operadores unários | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>Expressões com operadores unários
 Os operadores unários atuam somente em um operando em uma expressão. Os operadores unários são os seguintes:  
@@ -54,7 +49,7 @@ Os operadores unários atuam somente em um operando em uma expressão. Os operad
   
 -   [operador alignof](../cpp/alignof-operator.md)  
   
--   [novo operador](../cpp/new-operator-cpp.md)  
+-   [Novo operador](../cpp/new-operator-cpp.md)  
   
 -   [operador Delete](../cpp/delete-operator-cpp.md)  
   
@@ -64,17 +59,17 @@ Os operadores unários atuam somente em um operando em uma expressão. Os operad
   
 -   *postfix-expression*  
   
--   `++`*expressão unária*  
+-   `++` *expressão unária*  
   
--   `--`*expressão unária*  
+-   `--` *expressão unária*  
   
 -   *operador unário* *expressão de conversão*  
   
--   `sizeof`*expressão unária*  
+-   `sizeof` *expressão unária*  
   
--   `sizeof(`*nome do tipo*`)`  
+-   `sizeof(` *nome do tipo* `)`  
   
--   `decltype(`*expressão*`)`  
+-   `decltype(` *expressão* `)`  
   
 -   *expressão de alocação*  
   
@@ -82,7 +77,7 @@ Os operadores unários atuam somente em um operando em uma expressão. Os operad
   
  Qualquer *sufixo expressão* é considerado um *expressão unária*, e porque qualquer expressão primário é considerado um *sufixo expressão*, é qualquer expressões primárias considerado um *expressão unária* também. Para obter mais informações, consulte [expressões de sufixo](../cpp/postfix-expressions.md) e [expressões primárias](../cpp/primary-expressions.md).  
   
- Um *operador unário* consiste em um ou mais dos seguintes símbolos:`* & + - ! ~`  
+ Um *operador unário* consiste em um ou mais dos seguintes símbolos: `* & + - ! ~`  
   
  O *expressão de conversão* é uma expressão unária com uma conversão opcional para alterar o tipo. Para obter mais informações, consulte [operador Cast: ()](../cpp/cast-operator-parens.md).  
   

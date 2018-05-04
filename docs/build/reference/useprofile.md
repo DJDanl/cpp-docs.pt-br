@@ -11,14 +11,13 @@ f1_keywords:
 - USEPROFILE
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c2e63d5e65d2528f77852d9466d4161d7cc6a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 156a571eaa3db31b8c5345f1550346503651665d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (PGO executar no modo de segurança de thread)
 
@@ -33,7 +32,7 @@ Essa opção de vinculador junto com [/LTCG (geração de código Link-time](ltc
 **AGGRESSIVE**<br/>
 Esse argumento opcional especifica que as otimizações de velocidade agressiva devem ser usadas durante a geração de código otimizado.
 
-**PGD**=*filename*<br/>
+**PGD**=*nome de arquivo*<br/>
 Especifica um nome de arquivo de base para o arquivo. PGD. Por padrão, o vinculador usa o nome do arquivo executável base com uma extensão. PGD.
 
 ## <a name="remarks"></a>Comentários

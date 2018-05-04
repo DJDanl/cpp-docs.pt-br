@@ -1,12 +1,9 @@
 ---
 title: Classe CDebugReportHook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDebugReportHook
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df098ee80bcd8fa81b5503cc21b08ded86945a72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d84b2da8a347833513e0725695bb9d2bacd2951d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 Use esta classe para enviar relatórios de depuração para um pipe nomeado.  
@@ -72,7 +67,7 @@ class CDebugReportHook
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlutil.h  
   
-##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook  
  Chamadas [SetPipeName](#setpipename), [SetTimeout](#settimeout), e [SetHook](#sethook).  
   
 ```
@@ -92,14 +87,14 @@ CDebugReportHook(
  `dwTimeout`  
  O tempo em milissegundos que esta classe aguardará o pipe nomeado para se tornar disponível.  
   
-##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook  
  Chamadas [CDebugReportHook::RemoveHook](#removehook).  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc  
  A função de relatório personalizada que está conectada ao tempo de execução do C depurar o processo de geração de relatórios.  
   
 ```
@@ -116,7 +111,7 @@ static int __cdecl CDebugReportHookProc(
  `message`  
  A cadeia de caracteres da mensagem.  
   
- *returnValue*  
+ *ReturnValue*  
  O valor deve ser retornado por [crtdbgreport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -127,7 +122,7 @@ static int __cdecl CDebugReportHookProc(
   
  O código nessa função for executado no contexto de segurança subjacente no thread de chamada, ou seja, a representação está desabilitada para a duração dessa função.  
   
-##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>  CDebugReportHook::RemoveHook  
  Chame esse método para parar de enviar relatórios de depuração para o pipe nomeado e restaure o gancho de relatório anterior.  
   
 ```
@@ -137,7 +132,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>Comentários  
  Chamadas [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) para restaurar o gancho de relatório anterior.  
   
-##  <a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>  CDebugReportHook::SetHook  
  Chame esse método para começar a enviar relatórios de depuração para o pipe nomeado.  
   
 ```
@@ -147,7 +142,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>Comentários  
  Chamadas [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) roteada por meio de relatórios de depuração [CDebugReportHookProc](#cdebugreporthookproc) ao pipe nomeado. Essa classe mantém controle sobre o gancho de relatório anterior para que ele possa ser restaurado quando [RemoveHook](#removehook) é chamado.  
   
-##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName  
  Chame este método para definir o computador e o nome do pipe para que os relatórios de depuração serão enviados.  
   
 ```
@@ -166,7 +161,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
-##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout  
  Chame esse método para definir o tempo em milissegundos que esta classe aguardará o pipe nomeado para se tornar disponível.  
   
 ```

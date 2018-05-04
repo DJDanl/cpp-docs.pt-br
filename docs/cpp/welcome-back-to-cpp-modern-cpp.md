@@ -1,27 +1,22 @@
 ---
 title: Bem-vindo de volta ao C++ (C++ moderno) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bem-vindo ao C++ (C++ moderno)
 A C++ é uma das linguagens de programação mais usadas do mundo e os programas bem escritos que a utilizam são rápidos e eficientes. Essa linguagem é mais flexível que as demais porque é possível usá-la para criar diversos aplicativos, desde jogos divertidos e envolventes a softwares científicos de alto desempenho, drivers de dispositivos, programas incorporados e aplicativos clientes do Windows. Há mais de 20 anos, C++ é usada para solucionar problemas como esses e de muitos outros tipos. Mas talvez você ainda não saiba que cada vez mais programadores C++ estão deixando a programação C para trás e usando a moderna linguagem C++ em seu lugar.  
@@ -36,7 +31,7 @@ A C++ é uma das linguagens de programação mais usadas do mundo e os programas
   
 -   Ponteiros inteligentes, em vez de ponteiros duplos.  
   
--   `std::string`e `std::wstring` tipos (consulte [ \<cadeia de caracteres >](../standard-library/string.md)) em vez de bruto `char[]` matrizes.  
+-   `std::string` e `std::wstring` tipos (consulte [ \<cadeia de caracteres >](../standard-library/string.md)) em vez de bruto `char[]` matrizes.  
   
 -   [Biblioteca padrão C++](../standard-library/cpp-standard-library-header-files.md) como contêineres `vector`, `list`, e `map` em vez de matrizes brutos ou contêineres personalizados. Consulte [ \<vetor >](../standard-library/vector.md), [ \<lista >](../standard-library/list.md), e [ \<mapa >](../standard-library/map.md).  
   

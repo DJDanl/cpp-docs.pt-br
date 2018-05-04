@@ -2,29 +2,24 @@
 title: Programando com o CComBSTR (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CComBSTR class, programming with
 - Unicode, using CComBSTR [ATL]
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8f496dd73c2d15f8f78ddbdc205f31a8520c674
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b957cca4ff1af93d3f62ab0bf667462c91b81bba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programando com o CComBSTR (ATL)
 A classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fornece um wrapper em torno de `BSTR` tipo de dados. Enquanto `CComBSTR` é uma ferramenta útil, há várias situações que exigem atenção.  
@@ -39,7 +34,7 @@ A classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fornece um wrapper e
   
 -   [Problemas de vazamento de memória](#programmingwithccombstr_memoryleaks)  
   
-##  <a name="programmingwithccombstr_conversionissues"></a>Problemas de conversão  
+##  <a name="programmingwithccombstr_conversionissues"></a> Problemas de conversão  
  Embora várias `CComBSTR` métodos converterá automaticamente um argumento de cadeia de caracteres ANSI em Unicode, os métodos sempre retornará cadeias de caracteres de formato Unicode. Para converter a cadeia de caracteres de saída para ANSI, use uma classe de conversão de ATL. Para obter mais informações sobre as classes de conversão de ATL, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](reference/string-conversion-macros.md).  
   
 ### <a name="example"></a>Exemplo  
@@ -50,25 +45,25 @@ A classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fornece um wrapper e
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
   
-##  <a name="programmingwithccombstr_scopeissues"></a>Problemas de escopo  
+##  <a name="programmingwithccombstr_scopeissues"></a> Problemas de escopo  
  Assim como acontece com qualquer classe com bom comportamento, `CComBSTR` irá liberar seus recursos quando ele sai do escopo. Se uma função retorna um ponteiro para o `CComBSTR` cadeia de caracteres, isso pode causar problemas, como o ponteiro fará referência a memória já foi liberada. Nesses casos, use o **cópia** método, conforme mostrado abaixo.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
   
-##  <a name="programmingwithccombstr_explicitlyfreeing"></a>Liberando explicitamente o objeto CComBSTR  
+##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Liberando explicitamente o objeto CComBSTR  
  É possível liberar explicitamente a cadeia de caracteres dentro de `CComBSTR` antes do objeto sai do escopo do objeto. Se a cadeia de caracteres é liberada, o `CComBSTR` o objeto é inválido.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
   
-##  <a name="programmingwithccombstr_usingloops"></a>Usando CComBSTR objetos em Loops  
+##  <a name="programmingwithccombstr_usingloops"></a> Usando CComBSTR objetos em Loops  
  Como o `CComBSTR` classe aloca um buffer para executar determinadas operações, como o `+=` operador ou **Append** método, não é recomendável que você executar a manipulação de cadeia de caracteres dentro de um loop estreito. Nessas situações, `CStringT` oferece um melhor desempenho.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
   
-##  <a name="programmingwithccombstr_memoryleaks"></a>Problemas de vazamento de memória  
+##  <a name="programmingwithccombstr_memoryleaks"></a> Problemas de vazamento de memória  
  Passe o endereço de uma inicializado `CComBSTR` para uma função como um **[out]** parâmetro faz com que um vazamento de memória.  
   
  No exemplo a seguir, a cadeia de caracteres alocada para armazenar a cadeia de caracteres `"Initialized"` vazou quando a função `MyGoodFunction` substitui a cadeia de caracteres.  
