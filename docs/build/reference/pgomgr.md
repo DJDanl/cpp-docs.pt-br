@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 743665bbe0ee9c3df08d197d203e95d08542f613
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -28,11 +27,11 @@ Adiciona dados de perfil de um ou mais arquivos. PGC para o arquivo. PGD.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **pgomgr** [*options*] *pgcfiles* *pgdfile*
+> **pgomgr** [*opções*] *pgcfiles* *pgdfile*
 
 ### <a name="parameters"></a>Parâmetros
 
-*options*<br/>
+*Opções*<br/>
 As opções a seguir podem ser especificadas para **pgomgr**:
 
 - **/Help** ou **/?** Exibe disponível **pgomgr** opções.

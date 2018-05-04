@@ -2,28 +2,23 @@
 title: Visão geral do MSBuild (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>Visão geral de MSBuild (Visual C++)  
   
@@ -84,9 +79,9 @@ Por padrão, os arquivos de suporte do Visual C++ primários estão localizados 
   
 |Diretório|Descrição|  
 |---------------|-----------------|  
-|*unidade*: \Program Files *(x86)*\Microsoft Visual Studio\\*ano*\\*edição*\Common7\IDE\VC\VCTargets\ <br /><br />*unidade*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*versão*\ |Contém os arquivos de destino principal (. targets) e arquivos de propriedade (.props) que são usados pelos destinos. Por padrão, a macro $(VCTargetsPath) faz referência a esse diretório.|  
-|*unidade*: \Program Files *(x86)*\Microsoft Visual Studio\\*ano*\\*edição*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\ <br /><br />*unidade*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*versão*\Platforms\\*plataforma*\ |Contém os arquivos de destino e a propriedade específica de plataforma que substituem os destinos e as propriedades na sua pasta pai. Este diretório contém também uma DLL que define as tarefas que são usadas por destinos neste diretório.<br /><br /> O *plataforma* espaço reservado representa o ARM, Win32 ou x64 subdiretório.|  
-|*unidade*: \Program Files *(x86)*\Microsoft Visual Studio\\*ano*\\*edição*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ <br /><br />*unidade*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*versão*\Platforms\\*plataforma*\ PlatformToolsets\\*conjunto de ferramentas*\ <br /><br />*unidade*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ |Contém os diretórios que permitem a compilação gerar aplicativos Visual C++ usando especificado *toolset*.<br /><br /> O *ano* e *edição* espaços reservados são usados pelo Visual Studio de 2017 e edições posteriores. O *versão* espaço reservado é V110 para Visual Studio 2012, V120 para Visual Studio 2013 ou V140 para Visual Studio 2015. O *plataforma* espaço reservado representa o ARM, Win32 ou x64 subdiretório. O *toolset* espaço reservado representa o subdiretório do conjunto de ferramentas, por exemplo, v140 para a criação de aplicativos do Windows usando o conjunto de ferramentas do Visual Studio 2015, v120_xp para criar para o Windows XP usando o conjunto de ferramentas do Visual Studio 2013 ou v110_wp80 para Crie aplicativos do Windows Phone 8.0, usando o conjunto de ferramentas do Visual Studio 2012.<br /><br />O caminho que contém os diretórios que permitem a compilação gerar aplicativos Visual C++ 2008 ou Visual C++ 2010 não inclui o *versão*e o *plataforma* espaço reservado representa o Itanium, Win32 ou x64 subdiretório. O *toolset* espaço reservado representa o subdiretório v90 ou v100 do conjunto de ferramentas.|  
+|*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edição*\Common7\IDE\VC\VCTargets\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*versão*\ |Contém os arquivos de destino principal (. targets) e arquivos de propriedade (.props) que são usados pelos destinos. Por padrão, a macro $(VCTargetsPath) faz referência a esse diretório.|  
+|*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edição*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versão*\Platforms\\*plataforma*\ |Contém os arquivos de destino e a propriedade específica de plataforma que substituem os destinos e as propriedades na sua pasta pai. Este diretório contém também uma DLL que define as tarefas que são usadas por destinos neste diretório.<br /><br /> O *plataforma* espaço reservado representa o ARM, Win32 ou x64 subdiretório.|  
+|*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edição*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versão*\Platforms\\*plataforma*\ PlatformToolsets\\*conjunto de ferramentas*\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ |Contém os diretórios que permitem a compilação gerar aplicativos Visual C++ usando especificado *toolset*.<br /><br /> O *ano* e *edição* espaços reservados são usados pelo Visual Studio de 2017 e edições posteriores. O *versão* espaço reservado é V110 para Visual Studio 2012, V120 para Visual Studio 2013 ou V140 para Visual Studio 2015. O *plataforma* espaço reservado representa o ARM, Win32 ou x64 subdiretório. O *toolset* espaço reservado representa o subdiretório do conjunto de ferramentas, por exemplo, v140 para a criação de aplicativos do Windows usando o conjunto de ferramentas do Visual Studio 2015, v120_xp para criar para o Windows XP usando o conjunto de ferramentas do Visual Studio 2013 ou v110_wp80 para Crie aplicativos do Windows Phone 8.0, usando o conjunto de ferramentas do Visual Studio 2012.<br /><br />O caminho que contém os diretórios que permitem a compilação gerar aplicativos Visual C++ 2008 ou Visual C++ 2010 não inclui o *versão*e o *plataforma* espaço reservado representa o Itanium, Win32 ou x64 subdiretório. O *toolset* espaço reservado representa o subdiretório v90 ou v100 do conjunto de ferramentas.|  
   
 ### <a name="support-files"></a>Arquivos de suporte  
   

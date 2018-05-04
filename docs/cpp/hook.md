@@ -1,12 +1,9 @@
 ---
 title: hook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hook"></a>__hook
 Associa um método de manipulador a um evento.  
@@ -48,7 +43,7 @@ long __hook(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Um ponteiro para o método de evento ao qual você engancha o método do manipulador de eventos:  
   
 -   Eventos nativos do C++: *SourceClass* é a classe de origem do evento e *EventMethod* é o evento.  
@@ -60,7 +55,7 @@ long __hook(
  `interface`  
  O nome da interface que está sendo vinculado para `receiver`, apenas para receptores de evento COM no qual o *layout_dependent* parâmetro do [event_receiver](../windows/event-receiver.md) atributo é **true**.  
   
- *código-fonte*  
+ *Código-fonte*  
  Um ponteiro para uma instância da origem do evento. Dependendo do código `type` especificado em **event_receiver**, *fonte* pode ser um dos seguintes:  
   
 -   Um ponteiro nativo do objeto de origem do evento.  
@@ -69,7 +64,7 @@ long __hook(
   
 -   Um ponteiro gerenciado do objeto (para eventos gerenciados).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Um ponteiro para o método do manipulador de eventos a ser enganchado a um evento. O manipulador é especificado como um método de uma classe ou uma referência a ela. Se você não especificar o nome da classe, `__hook` assumirá a classe como sendo a chamada.  
   
 -   Eventos nativos do C++: *ReceiverClass* é a classe do receptor de evento e `HandlerMethod` é o manipulador.  
@@ -89,7 +84,7 @@ long __hook(
   
  Há duas formas de `__hook`. Você pode usar o primeiro formulário (quatro argumento) na maioria dos casos, especificamente, para receptores de evento COM no qual o *layout_dependent* parâmetro o [event_receiver](../windows/event-receiver.md) atributo é **false** .  
   
- Nesses casos você não precisa enganchar todos os métodos em uma interface antes de acionar um evento em um dos métodos; somente a manipulação de método do evento precisa ser enganchado. Você pode usar a segunda forma de (dois argumentos) de `__hook` somente para um receptor de evento COM no qual *layout_dependent***= true**.  
+ Nesses casos você não precisa enganchar todos os métodos em uma interface antes de acionar um evento em um dos métodos; somente a manipulação de método do evento precisa ser enganchado. Você pode usar a segunda forma de (dois argumentos) de `__hook` somente para um receptor de evento COM no qual * layout_dependent ***= true**.  
   
  `__hook` retorna um valor longo. Um valor de retorno diferente de zero indica que ocorreu um erro (eventos gerenciados lançam uma exceção).  
   

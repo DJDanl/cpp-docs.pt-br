@@ -1,13 +1,10 @@
 ---
 title: -fp (Especificar comportamento de ponto flutuante) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af796b7143b3600130e9405782d618a5960d22fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (especificar comportamento de ponto flutuante)
 Especifica o comportamento de ponto flutuante em um arquivo de código-fonte.  
@@ -42,7 +37,7 @@ Especifica o comportamento de ponto flutuante em um arquivo de código-fonte.
 ```  
   
 ## <a name="flags"></a>Sinalizadores  
- **preciso**  
+ **Preciso**  
  O padrão.  
   
  Melhora a consistência dos testes de ponto flutuante em termos de igualdade e desigualdade desabilitando as otimizações que poderiam alterar a precisão dos cálculos de ponto flutuante. (É necessário manter a precisão específica para a total compatibilidade com ANSI.) Por padrão, no código para arquiteturas x86, o compilador usa os registros de 80 bits do coprocessador para armazenar os resultados intermediários dos cálculos de ponto flutuante. Isso aumenta a velocidade do programa e reduz o tamanho do programa. No entanto, como o cálculo envolve tipos de dados de ponto flutuante que são representados na memória por menos de 80 bits, transportar os bits extras de bits de precisão – 80 bits menos o número de bits em um tipo de ponto flutuante menor – por um cálculo longo pode gerar resultados inconsistentes.  
@@ -67,7 +62,7 @@ Especifica o comportamento de ponto flutuante em um arquivo de código-fonte.
   
  **/FP: preciso** substitui o **/Op** opção de compilador.  
   
- **rápida**  
+ **Rápida**  
  Cria o código mais rápido na maioria dos casos flexibilizando as regras para otimizar operações de ponto flutuante. Isso permite que o compilador otimize o código de ponto flutuante para velocidade às custas da precisão e da exatidão. Quando **Fast** for especificado, o compilador não arredondará corretamente em instruções de atribuição, typecasts, ou chamadas de função e não pode executar arredondamento de expressões intermediárias. O compilador pode reordenar operações ou executar transformações algébricas – por exemplo, seguindo regras associativas e distributivas – sem considerar o efeito nos resultados finitos de precisão. O compilador pode alterar operações e operandos para precisão única em vez de seguir as regras da promoção de tipo C++. Otimizações específicas de ponto flutuante contração estão sempre habilitadas ([fp_contract](../../preprocessor/fp-contract.md) está ativado). Exceções de ponto flutuante e o acesso ao ambiente FPU estão desativados (**/fp: exceto-** está implícita e [fenv_access](../../preprocessor/fenv-access.md) é OFF).  
   
  **Fast** não pode ser usado com **/fp: strict** ou **/fp: preciso**. A última opção especificada na linha de comando é usada. Especificar ambos **Fast** e **/fp: exceto** gera um erro do compilador.  
@@ -77,7 +72,7 @@ Especifica o comportamento de ponto flutuante em um arquivo de código-fonte.
  **exceto [-]**  
  Modelo de exceção de ponto flutuante confiável. As exceções são geradas imediatamente depois que são disparadas. Por padrão, essa opção é desativada. Adicionar um sinal de menos à opção a desabilita explicitamente.  
   
- **estrito**  
+ **Estrito**  
  O modelo de ponto flutuante mais estrito. **/FP: strict** faz com que [fp_contract](../../preprocessor/fp-contract.md) fique OFF e [fenv_access](../../preprocessor/fenv-access.md) esteja ativado. **/FP: exceto** está implícita e pode ser desabilitado especificando explicitamente **/fp: exceto-**. Quando usado com **/fp: exceto-**, **/fp: strict** impõe a semântica estrita de ponto flutuante, mas sem respeito a eventos excepcionais.  
   
 ## <a name="remarks"></a>Comentários  

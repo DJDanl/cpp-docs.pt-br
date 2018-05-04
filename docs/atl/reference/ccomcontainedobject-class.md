@@ -1,12 +1,9 @@
 ---
 title: Classe CComContainedObject | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComContainedObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3579d4080b4dba130b58592fa47efd636805ed1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontainedobject-class"></a>Classe CComContainedObject
 Essa classe implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegando para o objeto de proprietário **IUnknown**.  
@@ -71,7 +66,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|Diminui a contagem de referência no objeto do proprietário.|  
   
 ## <a name="remarks"></a>Comentários  
- ATL usa `CComContainedObject` em classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), e [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegando para o objeto de proprietário **IUnknown**. (O proprietário é o objeto externo de uma agregação ou o objeto para o qual uma interface destacável está sendo criada.) `CComContainedObject` chamadas `CComObjectRootEx`do `OuterQueryInterface`, `OuterAddRef`, e `OuterRelease`, todas as herdadas por meio de `Base`.  
+ ATL usa `CComContainedObject` em classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), e [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegando para o objeto de proprietário **IUnknown**. (O proprietário é o objeto externo de uma agregação ou o objeto para o qual uma interface destacável está sendo criada.) `CComContainedObject` chamadas `CComObjectRootEx`do `OuterQueryInterface`, `OuterAddRef`, e `OuterRelease`, todas as herdadas por meio de `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `Base`  
@@ -81,7 +76,7 @@ class CComContainedObject : public Base
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="addref"></a>CComContainedObject::AddRef  
+##  <a name="addref"></a>  CComContainedObject::AddRef  
  Incrementa a contagem de referência no objeto do proprietário.  
   
 ```
@@ -91,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valor de retorno  
  Um valor que pode ser útil para um diagnóstico ou teste.  
   
-##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
+##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  O construtor.  
   
 ```
@@ -105,7 +100,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Comentários  
  Conjuntos de `m_pOuterUnknown` ponteiro de membro (herdada pelo `Base` classe) para `pv`.  
   
-##  <a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
+##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  O destruidor.  
   
 ```
@@ -115,7 +110,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Comentários  
  Libera todos os recursos alocados.  
   
-##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
+##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
  Retorna o `m_pOuterUnknown` ponteiro de membro (herdada por meio de *Base* classe) que contém o objeto de proprietário **IUnknown**.  
   
 ```
@@ -128,7 +123,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="remarks"></a>Comentários  
  Esse método pode ser virtual se `Base` declarou o [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) macro.  
   
-##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
  Recupera um ponteiro para a interface solicitada no objeto do proprietário.  
   
 ```
@@ -150,7 +145,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
-##  <a name="release"></a>CComContainedObject::Release  
+##  <a name="release"></a>  CComContainedObject::Release  
  Diminui a contagem de referência no objeto do proprietário.  
   
 ```

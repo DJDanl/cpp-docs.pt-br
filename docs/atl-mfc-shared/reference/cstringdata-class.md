@@ -1,12 +1,9 @@
 ---
 title: Classe CStringData | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringData
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7523ca52c0ded8ec9b3cf02dd6798beca8be5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187892b74536de47079324d90bb21b2569e00498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 Essa classe representa os dados de um objeto de cadeia de caracteres.  
@@ -59,9 +54,9 @@ struct CStringData
 |[data](#data)|Recupera os dados de caractere de um objeto de cadeia de caracteres.|  
 |[IsLocked](#islocked)|Determina se o buffer do objeto de cadeia de caracteres associada está bloqueado.|  
 |[IsShared](#isshared)|Determina se o buffer do objeto de cadeia de caracteres associada é compartilhado no momento.|  
-|[Bloqueio](#lock)|Bloqueia o buffer do objeto de cadeia de caracteres associada.|  
+|[bloqueio](#lock)|Bloqueia o buffer do objeto de cadeia de caracteres associada.|  
 |[Versão](#release)|Libera o objeto de cadeia de caracteres especificada.|  
-|[Desbloquear](#unlock)|Libera o buffer do objeto de cadeia de caracteres associada.|  
+|[desbloquear](#unlock)|Libera o buffer do objeto de cadeia de caracteres associada.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
@@ -98,7 +93,7 @@ struct CStringData
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsimpstr.h  
   
-##  <a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>  CStringData::AddRef  
  Incrementa a contagem de referência do objeto de cadeia de caracteres.  
   
 ```
@@ -111,7 +106,7 @@ void AddRef() throw();
 > [!NOTE]
 >  Chame este método em uma cadeia de caracteres com uma contagem de referência negativo, pois uma contagem negativa indica que o buffer de cadeia de caracteres está bloqueado.  
   
-##  <a name="data"></a>CStringData::data  
+##  <a name="data"></a>  CStringData::data  
  Retorna um ponteiro para o buffer de caracteres de um objeto de cadeia de caracteres.  
   
 ```
@@ -127,7 +122,7 @@ void* data() throw();
 > [!NOTE]
 >  Esse buffer não está alocado pelo `CStringData` objeto mas pelo Gerenciador de cadeia de caracteres quando necessário. Quando alocados, o buffer é anexado ao objeto de dados de cadeia de caracteres.  
   
-##  <a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>  CStringData::IsLocked  
  Determina se o buffer de caracteres está bloqueado.  
   
 ```
@@ -140,7 +135,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Comentários  
  Chame essa função para determinar se o buffer de caracteres de um objeto de cadeia de caracteres está bloqueado no momento.  
   
-##  <a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>  CStringData::IsShared  
  Determina se o buffer de caractere é compartilhado.  
   
 ```
@@ -153,7 +148,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Comentários  
  Chame essa função para determinar se o buffer de caracteres de um objeto de dados de cadeia de caracteres no momento é compartilhado entre vários objetos de cadeia de caracteres.  
   
-##  <a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>  CStringData::Lock  
  Bloqueia o buffer de caracteres do objeto de cadeia de caracteres associada.  
   
 ```
@@ -166,7 +161,7 @@ void Lock() throw();
 > [!NOTE]
 >  Um buffer de caracteres só pode ser bloqueado se o buffer não é compartilhado entre os objetos de cadeia de caracteres mais alto.  
   
-##  <a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>  CStringData::nAllocLength  
  Comprimento do buffer alocado de caractere.  
   
 ```
@@ -176,7 +171,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Comentários  
  Armazena o comprimento do buffer de dados alocados em `XCHAR`s (não incluindo terminação nula).  
   
-##  <a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>  CStringData::nDataLength  
  Tamanho atual do objeto de cadeia de caracteres.  
   
 ```
@@ -186,7 +181,7 @@ int nDataLength;
 ### <a name="remarks"></a>Comentários  
  Armazena o comprimento dos dados atualmente em uso no `XCHAR`s (não incluindo terminação nula).  
   
-##  <a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>  CStringData::nRefs  
  Contagem de referência do objeto de dados de cadeia de caracteres.  
   
 ```
@@ -196,7 +191,7 @@ long nRefs;
 ### <a name="remarks"></a>Comentários  
  Armazena a contagem de referência do objeto de dados de cadeia de caracteres. Essa contagem indica o número de objetos de cadeia de caracteres maior que estão associados ao objeto de dados de cadeia de caracteres. Um valor negativo indica que o objeto de dados de cadeia de caracteres está bloqueado no momento.  
   
-##  <a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>  CStringData::pStringMgr  
  O Gerenciador de memória do objeto de cadeia de caracteres associada.  
   
 ```
@@ -206,7 +201,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Comentários  
  Armazena o Gerenciador de memória para o objeto de cadeia de caracteres associada. Para obter mais informações sobre gerenciadores de memória e cadeias de caracteres, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="release"></a>CStringData::Release  
+##  <a name="release"></a>  CStringData::Release  
  Diminui a contagem de referência do objeto de dados de cadeia de caracteres.  
   
 ```
@@ -220,7 +215,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>  CStringData::Unlock  
  Desbloqueia o buffer de caracteres do objeto de cadeia de caracteres associada.  
   
 ```

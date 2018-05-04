@@ -1,12 +1,9 @@
 ---
-title: "Funções globais de conversão de pixel HIMETRIC | Microsoft Docs"
-ms.custom: 
+title: Funções globais de conversão de pixel HIMETRIC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d670d667345c233fc499cda42194dfafa185dfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Funções de conversão de pixel/HIMETRIC Global
 Essas funções fornecem suporte para converter para e de pixel e DÉCIMOS de milímetros.  
@@ -37,7 +32,7 @@ Essas funções fornecem suporte para converter para e de pixel e DÉCIMOS de mi
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|Converte DÉCIMOS de milímetros (cada unidade é milímetro 0,01) em pixels.|  
 |[AtlPixelToHiMetric](#atlpixeltohimetric)|Converte pixels em DÉCIMOS de milímetros (cada unidade é milímetro 0,01).|  
   
-##  <a name="atlhimetrictopixel"></a>AtlHiMetricToPixel  
+##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
  Converte o tamanho de um objeto em unidades HIMETRIC (cada unidade corresponde a 0,01 milímetro) em um tamanho em pixels no dispositivo da tela.  
   
  
@@ -60,7 +55,7 @@ extern void AtlHiMetricToPixel(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
   
-##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
+##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric  
  Converte o tamanho de um objeto em pixels no dispositivo da tela em um tamanho em unidades HIMETRIC (cada unidade corresponde a 0,01 milímetro).  
   
 ```

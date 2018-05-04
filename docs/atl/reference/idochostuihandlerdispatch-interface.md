@@ -2,11 +2,8 @@
 title: Interface IDocHostUIHandlerDispatch | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDocHostUIHandlerDispatch
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbd91deb1d80c49dd403e8e08cc50f5fd8c8ec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07d6d861bfa4a41d7d9ee6697dd72cba0da2ceda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interface IDocHostUIHandlerDispatch
 Uma interface para a análise de HTML da Microsoft e o mecanismo de renderização.  
@@ -45,7 +40,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Métodos públicos  
   
 > [!NOTE]
->  Os links na tabela a seguir são para os tópicos de referência para os membros do SDK INet o [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interface. `IDocHostUIHandlerDispatch`tem a mesma funcionalidade que **IDocUIHostHandler**, com a diferença é que `IDocHostUIHandlerDispatch` é um dispinterface enquanto **IDocUIHostHandler** é uma interface personalizada.  
+>  Os links na tabela a seguir são para os tópicos de referência para os membros do SDK INet o [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interface. `IDocHostUIHandlerDispatch` tem a mesma funcionalidade que **IDocUIHostHandler**, com a diferença é que `IDocHostUIHandlerDispatch` é um dispinterface enquanto **IDocUIHostHandler** é uma interface personalizada.  
   
 |||  
 |-|-|  

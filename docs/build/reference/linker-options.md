@@ -1,13 +1,10 @@
 ---
-title: "Opções do vinculador | Microsoft Docs"
-ms.custom: 
+title: Opções do vinculador | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64f9bb94f6809ecfa189cd012dd0494506a3ca4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-options"></a>Opções do vinculador
 
@@ -59,7 +54,7 @@ Você pode usar o [comentário](../../preprocessor/comment-c-cpp.md) pragma espe
 |[/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)|Cria um link a um recurso gerenciado.|
 |[/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)|Especifica que um módulo MSIL (Microsoft Intermediate Language) deve ser importado para o assembly.|
 |[/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)|Insere um arquivo de recurso gerenciado em um assembly.|
-|[BASE](../../build/reference/base-base-address.md)|Define um endereço básico para o programa.|
+|[/BASE](../../build/reference/base-base-address.md)|Define um endereço básico para o programa.|
 |[/CGTHREADS](../../build/reference/cgthreads-compiler-threads.md)|Define o número de threads cl.exe a serem usados na otimização e na geração do código quando a geração do código de tempo de vinculação é especificada.|
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Define o tipo (IJW, puro ou seguro) de uma imagem do CLR.|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Preserva o código de erro mais recente de funções chamadas por meio do mecanismo P/Invoke.|
@@ -77,14 +72,14 @@ Você pode usar o [comentário](../../preprocessor/comment-c-cpp.md) pragma espe
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Especifica se é necessário gerar uma imagem executável que possa ter rebase aleatória no momento do carregamento usando o recurso ASLR (Address Space Layout Randomization).|
 |[/ ENTRADA](../../build/reference/entry-entry-point-symbol.md)|Define o endereço inicial.|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|Relata erros internos do vinculador para a Microsoft.|
-|[/ EXPORTAÇÃO](../../build/reference/export-exports-a-function.md)|Exporta uma função.|
+|[/EXPORT](../../build/reference/export-exports-a-function.md)|Exporta uma função.|
 |[/ /FILEALIGN](../../build/reference/filealign.md)|Alinha as seções dentro do arquivo de saída em múltiplos de um valor especificado.|
-|[/ FIXED](../../build/reference/fixed-fixed-base-address.md)|Cria um programa que só pode ser carregado em seu endereço básico preferido.|
+|[/FIXED](../../build/reference/fixed-fixed-base-address.md)|Cria um programa que só pode ser carregado em seu endereço básico preferido.|
 |[/FORCE](../../build/reference/force-force-file-output.md)|Força a conclusão de um link mesmo com símbolos não resolvidos ou símbolos definidos mais de uma vez.|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|Cria uma imagem que pode receber um hotpatch.|
 |[/GENPROFILE, /FASTGENPROFILE](../../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Ambas as opções especificam geração de um arquivo. PGD pelo vinculador para dar suporte a Otimização Guiada por perfil (PGO). /GENPROFILE e /FASTGENPROFILE usam parâmetros padrão diferente.|
 |[/ PROTETOR DE](../../build/reference/guard-enable-guard-checks.md)|Habilita a proteção do controle de fluxo.|
-|[/ PILHA](../../build/reference/heap-set-heap-size.md)|Define o tamanho do heap, em bytes.|
+|[/HEAP](../../build/reference/heap-set-heap-size.md)|Define o tamanho do heap, em bytes.|
 |[/HIGHENTROPYVA](../../build/reference/highentropyva-support-64-bit-aslr.md)|Especifica o suporte para ASLR (Address Space Layout Randomization) de 64 bits de alta entropia.|
 |[/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)|Especifica o nome do arquivo .idl e outros arquivos de saída MIDL.|
 |[/ IGNORAR](../../build/reference/ignore-ignore-specific-warnings.md)|Suprime a saída de avisos do vinculador especificado.|
@@ -104,9 +99,9 @@ Você pode usar o [comentário](../../preprocessor/comment-c-cpp.md) pragma espe
 |[/MANIFESTFILE](../../build/reference/manifestfile-name-manifest-file.md)|Altera o nome padrão do arquivo de manifesto.|
 |[/MANIFESTINPUT](../../build/reference/manifestinput-specify-manifest-input.md)|Especifica um arquivo de entrada do manifesto para o vinculador processar e inserir no binário. É possível usar essa opção várias vezes para especificar mais de um arquivo de entrada do manifesto.|
 |[/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)|Especifica se as informações do UAC (Controle de Conta de Usuário) estão inseridas no manifesto do programa.|
-|[/ MAPA](../../build/reference/map-generate-mapfile.md)|Cria um arquivo de mapa.|
-|[/ MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Inclui as informações especificadas no arquivo de mapa.|
-|[/ MESCLAGEM](../../build/reference/merge-combine-sections.md)|Combina seções.|
+|[/MAP](../../build/reference/map-generate-mapfile.md)|Cria um arquivo de mapa.|
+|[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Inclui as informações especificadas no arquivo de mapa.|
+|[/MERGE](../../build/reference/merge-combine-sections.md)|Combina seções.|
 |[/ MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|Especifica opções de linha de comando MIDL.|
 |[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Adiciona os visualizadores do depurador de um arquivo Natvis para o PDB.|
 |[/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|Suprime a criação de um assembly do .NET Framework.|
@@ -117,23 +112,23 @@ Você pode usar o [comentário](../../preprocessor/comment-c-cpp.md) pragma espe
 |[/OPT](../../build/reference/opt-optimizations.md)|Controla otimizações de LINK.|
 |[/ ORDEM](../../build/reference/order-put-functions-in-order.md)|Coloca COMDATs na imagem em uma ordem predeterminada.|
 |[/ ENTRADA SAÍDA](../../build/reference/out-output-file-name.md)|Especifica o nome do arquivo de saída.|
-|[/ PDB](../../build/reference/pdb-use-program-database.md)|Cria um arquivo de PDB (banco de dados do programa).|
+|[/PDB](../../build/reference/pdb-use-program-database.md)|Cria um arquivo de PDB (banco de dados do programa).|
 |[/ PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Usa um local alternativo para salvar um arquivo PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Cria um arquivo de PDB (banco de dados do programa) sem símbolos particulares.|
-|[/ PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Especifica um arquivo .pgd para otimizações guiadas por perfil.|
+|[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Especifica um arquivo .pgd para otimizações guiadas por perfil.|
 |[OU O PERFIL](../../build/reference/profile-performance-tools-profiler.md)|Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferramentas de desempenho.|
-|[/ VERSÃO](../../build/reference/release-set-the-checksum.md)|Define a soma de verificação no cabeçalho .exe.|
+|[/RELEASE](../../build/reference/release-set-the-checksum.md)|Define a soma de verificação no cabeçalho .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Especifica que a imagem conterá uma tabela de manipuladores de exceção segura.|
 |[/ SEÇÃO](../../build/reference/section-specify-section-attributes.md)|Substitui os atributos de uma seção.|
-|[/ PILHA](../../build/reference/stack-stack-allocations.md)|Define o tamanho da pilha, em bytes.|
-|[/ STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Anexa um programa stub MS-DOS a um programa Win32.|
-|[/ O SUBSISTEMA](../../build/reference/subsystem-specify-subsystem.md)|Informa ao sistema operacional como executar o arquivo .exe.|
-|[/ SWAPRUN](../../build/reference/swaprun-load-linker-output-to-swap-file.md)|Pede para o sistema operacional copiar a saída do vinculador em um arquivo de permuta antes de ser executado.|
+|[/STACK](../../build/reference/stack-stack-allocations.md)|Define o tamanho da pilha, em bytes.|
+|[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Anexa um programa stub MS-DOS a um programa Win32.|
+|[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Informa ao sistema operacional como executar o arquivo .exe.|
+|[/SWAPRUN](../../build/reference/swaprun-load-linker-output-to-swap-file.md)|Pede para o sistema operacional copiar a saída do vinculador em um arquivo de permuta antes de ser executado.|
 |[/ TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Especifica a ID de recurso da biblioteca de tipos gerada pelo vinculador.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Especifica o nome do arquivo .tlb e outros arquivos de saída MIDL.|
-|[/ TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Cria um aplicativo projetado especialmente para ser executado no Terminal Server.|
+|[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Cria um aplicativo projetado especialmente para ser executado no Terminal Server.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Imprime mensagens de andamento do vinculador.|
-|[/ VERSÃO](../../build/reference/version-version-information.md)|Atribui um número de versão.|
+|[/VERSION](../../build/reference/version-version-information.md)|Atribui um número de versão.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Inclui todos os arquivos de objeto de bibliotecas estáticas especificados.|
 |[/ WINMD](../../build/reference/winmd-generate-windows-metadata.md)|Habilita a geração de um arquivo de Metadados do Tempo de Execução do Windows.|
 |[/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md)|Especifica o nome de arquivo para o arquivo de saída de metadados de tempo de execução do Windows (winmd) que é gerado pelo [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) opção de vinculador.|

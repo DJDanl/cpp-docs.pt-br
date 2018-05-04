@@ -1,12 +1,12 @@
 ---
 title: 'Passo a passo: Adicionando um CTaskDialog a um aplicativo | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Instruções passo a passo: adicionando um CTaskDialog a um aplicativo
 Este passo a passo apresenta a [CTaskDialog classe](../mfc/reference/ctaskdialog-class.md) e mostra como adicionar um ao seu aplicativo.  
   
- O `CTaskDialog` que substitui a caixa de mensagem do Windows na caixa de diálogo tarefa [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. O `CTaskDialog` melhora a caixa de mensagem original e adiciona a funcionalidade. Ainda há suporte para a caixa de mensagem do Windows em [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+ O `CTaskDialog` é uma caixa de diálogo de tarefa que substitui a caixa de mensagem do Windows no Windows Vista ou posterior. O `CTaskDialog` melhora a caixa de mensagem original e adiciona a funcionalidade. Ainda há suporte para a caixa de mensagem do Windows no Visual Studio.  
   
 > [!NOTE]
->  Versões do Windows anteriores ao [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] não dão suporte a `CTaskDialog`. Se você quiser mostrar uma mensagem para um usuário que executa o aplicativo em uma versão anterior do Windows, você deve programar uma opção da caixa de diálogo alternativo. Você pode usar o método estático [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) para determinar o tempo de execução se o computador de um usuário pode exibir um `CTaskDialog`. Além disso, o `CTaskDialog` só está disponível quando o aplicativo é compilado com a biblioteca de Unicode.  
+> Versões do Windows anteriores ao Windows Vista não dão suporte a `CTaskDialog`. Se você quiser mostrar uma mensagem para um usuário que executa o aplicativo em uma versão anterior do Windows, você deve programar uma opção da caixa de diálogo alternativo. Você pode usar o método estático [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) para determinar o tempo de execução se o computador de um usuário pode exibir um `CTaskDialog`. Além disso, o `CTaskDialog` só está disponível quando o aplicativo é compilado com a biblioteca de Unicode.  
   
  O `CTaskDialog` oferece suporte a vários elementos opcionais para coletar e exibir informações. Por exemplo, um `CTaskDialog` pode exibir os links de comando, botões personalizados, ícones personalizados e um rodapé. O `CTaskDialog` também tem vários métodos que permitem que você consultar o estado da caixa de diálogo de tarefas para determinar quais elementos opcionais o usuário selecionado.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 ou posterior  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista ou posterior  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Substituindo uma caixa de mensagem do Windows com um CTaskDialog  
  O procedimento a seguir demonstra o uso mais básico de `CTaskDialog`, que é substituir a caixa de mensagem do Windows. Este exemplo também altera o ícone associado a caixa de diálogo. Alterar o ícone torna o `CTaskDialog` são idênticos a caixa de mensagem do Windows.  

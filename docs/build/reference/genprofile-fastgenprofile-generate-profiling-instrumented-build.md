@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (gerar compilação instrumentada de criação de perfil)
 
@@ -44,7 +43,7 @@ Use **COUNTER32** para especificar o uso de contadores de teste de 32 bits, e **
 **EXACT** &#124; **NOEXACT**<br/>
 Use **exato** para especificar incrementos interlocked para testes de thread-safe. **NOEXACT** Especifica as operações de incremento desprotegido para testes. O padrão é **NOEXACT**.
 
-**MEMMAX**=*value*, **MEMMIN**=*value*<br/>
+**MEMMAX**=*valor*, **MEMMIN**=*valor*<br/>
 Use **MEMMAX** e **MEMMIN** para especificar os tamanhos de reserva máximo e mínimo para dados de treinamento na memória. O valor é a quantidade de memória para reservar em bytes. Por padrão, esses valores são determinados por uma heurística interna.
 
 **PATH**  &#124; **NOPATH** <br/>
@@ -53,7 +52,7 @@ Use **caminho** para especificar um conjunto separado de contadores PGO para cad
 **TRACKEH**  &#124; **NOTRACKEH** <br/>
 Especifica se deve usar os contadores extras para manter uma contagem precisa quando as exceções são geradas durante o treinamento. Use **TRACKEH** para especificar contadores extras para uma contagem exata. Use **NOTRACKEH** para especificar contadores único para o código que não usam a exceção manipulação ou que não encontrar exceções em seus cenários de treinamento.  Quando você especifica **/GENPROFILE**, o padrão é **TRACKEH** . Quando você especifica **/FASTGENPROFILE**, o padrão é **NOTRACKEH** .
 
-**PGD**=*filename*<br/>
+**PGD**=*nome de arquivo*<br/>
 Especifica um nome de arquivo de base para o arquivo. PGD. Por padrão, o vinculador usa o nome do arquivo de imagem executável base com uma extensão. PGD.
 
 ## <a name="remarks"></a>Comentários

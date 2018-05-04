@@ -1,13 +1,10 @@
 ---
-title: "-GX (habilitar tratamento de exceções) | Microsoft Docs"
-ms.custom: 
+title: -GX (habilitar tratamento de exceções) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /gx
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3013b4233621e63de0230e088dfc10ff65a5705d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee2d3d31a9f091e6aa3fbed39f702471047a01dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (habilitar tratamento de exceções)
 Preterido. Permite a manipulação de exceção síncrona usando a suposição de que as funções declarada usando `extern "C"` nunca lançam uma exceção.  

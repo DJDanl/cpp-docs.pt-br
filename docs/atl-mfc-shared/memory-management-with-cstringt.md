@@ -1,12 +1,9 @@
 ---
-title: "Gerenciamento de memória com CStringT | Microsoft Docs"
-ms.custom: 
+title: Gerenciamento de memória com CStringT | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringT
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbf623344ec52abce28a08670e7f3cd09140563b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b65efd934fecdab36bfa1c0c882de1dd8862c81f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memory-management-with-cstringt"></a>Gerenciamento de memória com CStringT
 Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) é uma classe de modelo usada para manipular cadeias de caracteres de comprimento variável. A memória para manter essas cadeias de caracteres é alocada e lançada por meio de um objeto do Gerenciador de cadeia de caracteres, associado a cada instância de `CStringT`. MFC e ATL fornecem instanciações de padrão de `CStringT`, chamado `CString`, `CStringA`, e `CStringW`, que manipular cadeias de caracteres de tipos de caracteres diferentes. Esses tipos de caractere são do tipo **TCHAR**, `char`, e `wchar_t`, respectivamente. Esses tipos de cadeia de caracteres padrão usam um Gerenciador de cadeia de caracteres que aloca a memória de heap de processo (em ATL) ou o heap de CRT (em MFC). Em aplicativos típicos, esse esquema de alocação de memória é suficiente. No entanto, fazer uso intensivo de código de uso de cadeias de caracteres (ou código multi-threaded) os gerenciadores de memória padrão não podem executar de forma ideal. Este tópico descreve como substituir o comportamento de gerenciamento de memória padrão de `CStringT`, criar alocadores especificamente otimizado para a tarefa em questão.  

@@ -1,13 +1,10 @@
 ---
-title: "Usando parâmetros substituíveis (registrador da ATL) | Microsoft Docs"
-ms.custom: 
+title: Usando parâmetros substituíveis (registrador da ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AddReplacement
 - ClearReplacements
@@ -16,22 +13,20 @@ dev_langs:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usando parâmetros substituíveis (o registrador &#39; s pré-processador)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usando parâmetros substituíveis (o registrador&#39;s pré-processador)
 Parâmetros substituíveis permitem que o cliente do registrador especificar dados de tempo de execução. Para fazer isso, o registrador mantém um mapa de substituição em que ele insere os valores associados com os parâmetros substituíveis em seu script. O registrador torna essas entradas de tempo de execução.  
   
-##  <a name="_atl_using_.25.module.25"></a>Usando o módulo %  
+##  <a name="_atl_using_.25.module.25"></a> Usando o módulo %  
  O [Assistente de controle ATL](../atl/reference/atl-control-wizard.md) gera automaticamente um script que usa `%MODULE%`. ATL usa esse parâmetro substituível para o local real do seu servidor DLL ou EXE.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Concatenando os dados de tempo de execução com dados de Script  

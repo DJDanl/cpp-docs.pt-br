@@ -1,13 +1,10 @@
 ---
 title: LoadLibrary e AfxLoadLibrary | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - LoadLibrary
 dev_langs:
@@ -19,26 +16,24 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: bc4e211259e6c0a483f73094c442c034cd649616
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 Processa chamada [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (ou [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) para vincular explicitamente para uma DLL. Se a função tiver êxito, a DLL especificada é mapeado no espaço de endereço do processo de chamada e retorna um identificador para a DLL que pode ser usada com outras funções na vinculação explícita — por exemplo, `GetProcAddress` e `FreeLibrary`.  
   
- `LoadLibrary`tenta localizar a DLL usando a mesma sequência de pesquisa que é usada para vinculação implícita. Se o sistema não pode localizar a DLL ou se a função de ponto de entrada retorna FALSE, `LoadLibrary` retorna NULL. Se a chamada para `LoadLibrary` Especifica um módulo DLL que já está mapeado no espaço de endereço do processo de chamada, a função retorna um identificador de DLL e incrementa a contagem de referência do módulo.  
+ `LoadLibrary` tenta localizar a DLL usando a mesma sequência de pesquisa que é usada para vinculação implícita. Se o sistema não pode localizar a DLL ou se a função de ponto de entrada retorna FALSE, `LoadLibrary` retorna NULL. Se a chamada para `LoadLibrary` Especifica um módulo DLL que já está mapeado no espaço de endereço do processo de chamada, a função retorna um identificador de DLL e incrementa a contagem de referência do módulo.  
   
  Se a DLL tem uma função de ponto de entrada, o sistema operacional chamará a função no contexto do thread que chamou `LoadLibrary`. A função de ponto de entrada não é chamada se a DLL já está anexada ao processo devido a uma chamada anterior a `LoadLibrary` com nenhuma chamada correspondente para o `FreeLibrary` função.  
   
- Para aplicativos MFC que carregar DLLs de extensão do MFC, recomendamos que você use `AfxLoadLibrary` em vez de `LoadLibrary`. `AfxLoadLibrary`identificadores de sincronização de thread antes de chamar `LoadLibrary`. A interface (protótipo de função) `AfxLoadLibrary` é o mesmo que `LoadLibrary`.  
+ Para aplicativos MFC que carregar DLLs de extensão do MFC, recomendamos que você use `AfxLoadLibrary` em vez de `LoadLibrary`. `AfxLoadLibrary` identificadores de sincronização de thread antes de chamar `LoadLibrary`. A interface (protótipo de função) `AfxLoadLibrary` é o mesmo que `LoadLibrary`.  
   
  Se o Windows não pode carregar a DLL, o processo pode tentar recuperar do erro. Por exemplo, o processo pode notificar o usuário sobre o erro e peça ao usuário para especificar outro caminho para a DLL.  
   

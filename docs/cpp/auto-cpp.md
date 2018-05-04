@@ -1,12 +1,9 @@
 ---
-title: auto (C++) | Microsoft Docs
-ms.custom: 
+title: Auto (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: 14ad8e7cb81df62156d35809853e1060107d7c90
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-c"></a>Auto (C++)
 Deduz o tipo de uma variável declarada da expressão de inicialização.  
@@ -231,7 +226,7 @@ int main()
  [Palavras-chave](../cpp/keywords-cpp.md)   
  [/ZC: auto (deduzir tipo variável)](../build/reference/zc-auto-deduce-variable-type.md)   
  [Operador sizeof](../cpp/sizeof-operator.md)   
- [typeid](../windows/typeid-cpp-component-extensions.md)   
+ [TypeId](../windows/typeid-cpp-component-extensions.md)   
  [operador novo](new-operator-cpp.md)   
  [Declarações e definições](declarations-and-definitions-cpp.md)   
  [Exemplos de expressões Lambda](../cpp/examples-of-lambda-expressions.md)   

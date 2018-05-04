@@ -2,12 +2,9 @@
 title: Campos de Bit C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5ecac0263f1e8ebbfe41f654f2ef2e03b2395f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Campos de bit C++
 As classes e as estruturas podem conter membros que ocupam menos armazenamento do que um tipo integral. Esses membros são especificados como campos de bits. A sintaxe para o campo de bits *Declarador de membro* especificação segue:  
@@ -85,7 +80,7 @@ struct Date {
   
  o layout de memória fica conforme ilustrado na figura a seguir.  
   
- ![Layout de objeto de data com zero &#45; o campo de bits de comprimento](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![Layout de objeto de data com zero&#45;campo de bits de comprimento](../cpp/media/vc38uq2.png "vc38UQ2")  
 Layout do objeto Date com campo de bits de comprimento zero  
   
  O tipo subjacente de um campo de bits deve ser um tipo integral, conforme descrito em [tipos fundamentais](../cpp/fundamental-types-cpp.md).  

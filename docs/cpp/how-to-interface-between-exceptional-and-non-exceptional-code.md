@@ -1,32 +1,27 @@
 ---
-title: "Como: Interface entre códigos excepcional e não excepcional | Microsoft Docs"
-ms.custom: 
+title: 'Como: Interface entre códigos excepcional e não excepcional | Microsoft Docs'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Como realizar a interface entre códigos excepcional e não excepcional
 Este artigo descreve como implementar o tratamento de exceção consistente em um módulo de C++ e também como converter essas exceções em códigos de erro em limites de exceção.  
   
- Às vezes, um módulo de C++ tem a interface com o código que não use exceções (código não excepcional). Tal interface é conhecido como um *limite de exceção*. Por exemplo, você talvez queira chamar a função Win32 `CreateFile` no seu programa C++. `CreateFile`não gerar exceções; em vez disso, ele define os códigos de erro que podem ser recuperados pelo `GetLastError` função. Se seu programa C++ não trivial, em seguida, nele provavelmente preferir tem uma política de tratamento de erros com base em exceção consistente. E você provavelmente não deseja abandonar exceções apenas porque a interface com código não excepcional e não deseja mesclar políticas com base em exceção e não no exceção Erro em seu módulo C++.  
+ Às vezes, um módulo de C++ tem a interface com o código que não use exceções (código não excepcional). Tal interface é conhecido como um *limite de exceção*. Por exemplo, você talvez queira chamar a função Win32 `CreateFile` no seu programa C++. `CreateFile` não gerar exceções; em vez disso, ele define os códigos de erro que podem ser recuperados pelo `GetLastError` função. Se seu programa C++ não trivial, em seguida, nele provavelmente preferir tem uma política de tratamento de erros com base em exceção consistente. E você provavelmente não deseja abandonar exceções apenas porque a interface com código não excepcional e não deseja mesclar políticas com base em exceção e não no exceção Erro em seu módulo C++.  
   
 ## <a name="calling-non-exceptional-functions-from-c"></a>Chamando funções não excepcional de C++  
  Quando você chama uma função não excepcional de C++, a ideia é encapsular essa função em uma função C++ que detecta erros e, em seguida, possivelmente lançará uma exceção. Quando você cria uma função de wrapper, primeiro decida que tipo de garantia de exceção para fornecer: não-throw, forte ou básica. Em seguida, crie a função para que todos os recursos, por exemplo, os identificadores de arquivos, são lançados corretamente se uma exceção for lançada. Normalmente, isso significa que você use ponteiros inteligentes ou gerenciadores de recursos semelhantes possua os recursos. Para obter mais informações sobre considerações de design, consulte [como: Design para segurança de exceção](../cpp/how-to-design-for-exception-safety.md).  

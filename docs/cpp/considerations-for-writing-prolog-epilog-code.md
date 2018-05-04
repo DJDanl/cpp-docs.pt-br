@@ -1,12 +1,9 @@
 ---
-title: "Considerações para escrever o código de prólogo epílogo | Microsoft Docs"
-ms.custom: 
+title: Considerações para escrever o código de prólogo epílogo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9578e106c536f14059be95724ac1c2c9af92f3cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerações para escrever o código de prólogo/epílogo
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  Antes de escrever suas próprias sequências de código de prólogo e epílogo, é importante entender como o registro de ativação é apresentado. Também é útil saber como usar o **local_size** símbolo.  
   
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Layout de quadro de pilha  
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Layout de quadro de pilha  
  Este exemplo mostra o código padrão do prólogo que pode aparecer em uma função de 32 bits:  
   
 ```  
@@ -54,7 +49,7 @@ ret                       ; Return from function
   
  A pilha sempre vai para baixo (dos endereços de memória mais altos para os mais baixos). O ponteiro de base (`ebp`) aponta para o valor enviados por push de `ebp`. A área de locais começa em `ebp-4`. Para acessar variáveis locais, calcule um deslocamento de `ebp` subtraindo o valor apropriado de `ebp`.  
   
-##  <a name="_pluslang___local_size"></a>LOCAL_SIZE  
+##  <a name="_pluslang___local_size"></a> LOCAL_SIZE  
  O compilador fornecerá um símbolo, **local_size**, para uso no bloco assembler embutido de código de prólogo da função. Esse símbolo é usado para alocar espaço para as variáveis locais no quadro da pilha no código personalizado de prólogo.  
   
  O compilador determina o valor de **__LOCAL_SIZE**. Seu valor é o número total de bytes de todas as variáveis locais definidas pelo usuário e variáveis temporárias geradas pelo compilador. **__LOCAL_SIZE** pode ser usada apenas como um operando imediato; não pode ser usada em uma expressão. Você não deve alterar ou redefinir o valor desse símbolo. Por exemplo:  

@@ -1,13 +1,10 @@
 ---
-title: "-EP (pré-processar para stdout sem diretivas de #line) | Microsoft Docs"
-ms.custom: 
+title: '-EP (pré-processar para stdout sem diretivas de #line) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ep
 - VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - EP compiler option [C++]
 - /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d7b2a64ec8fa7565d17ab04683fec07c48aea3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38047fecbbd1bbaa87db3766b046efa8b446d93a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (pré-processar para stdout sem diretivas #line)
 Pré-processa arquivos de origem C e C++ e copia os arquivos pré-processado para o dispositivo de saída padrão.  

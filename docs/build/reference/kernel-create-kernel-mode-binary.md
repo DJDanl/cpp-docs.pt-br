@@ -1,30 +1,25 @@
 ---
-title: "-kernel (criar Kernel modo binário) | Microsoft Docs"
-ms.custom: 
+title: -kernel (criar Kernel modo binário) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /kernel
 - /kernel-
 dev_langs:
 - C++
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbae275e751287464e4bf1637ee21aff77fb697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (criar binário do modo kernel)
 Cria um binário que pode ser executado no kernel do Windows.  
@@ -76,7 +71,7 @@ class NONPAGESECTION MyNonPagedClass
   
  Alguns seguintes combinações de arquitetura de destino e o **/arch** opção produzirá um erro quando eles são usados com **/kernel**:  
   
--   **/arch: {SSE &#124; SSE2 &#124; AVX}** não têm suporte em x86. Somente **/arch:IA32** é compatível com **/kernel** em x86.  
+-   **/arch: {SSE&#124;SSE2&#124;AVX}** não têm suporte em x86. Somente **/arch:IA32** é compatível com **/kernel** em x86.  
   
 -   **/arch: avx** não é compatível com **/kernel** em x64.  
   
@@ -91,7 +86,7 @@ class NONPAGESECTION MyNonPagedClass
     ||**/kernel** obj|**/kernel-** obj, MASM obj, ou cvtresed|Uma combinação de **/kernel** e **/kernel-** objs|  
     |-|----------------------|-----------------------------------------------|-------------------------------------------------|  
     |**link /kernel**|Sim|Sim|Sim, com o aviso LNK4257|  
-    |**link**|Sim|Sim|Sim|  
+    |**Link**|Sim|Sim|Sim|  
   
      **Objeto de vinculação LNK4257 não compilado com /KERNEL; imagem não pode ser executada**  
   

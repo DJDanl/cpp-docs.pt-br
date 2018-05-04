@@ -1,13 +1,10 @@
 ---
-title: "-Ox (habilitar a maioria das otimizações de velocidade) | Microsoft Docs"
-ms.custom: 
+title: -Ox (habilitar a maioria das otimizações de velocidade) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /ox
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/OX (habilitar otimizações de velocidade mais)
 
@@ -61,7 +56,7 @@ O **/Ox** opção de compilador é o mesmo que usar as seguintes opções em com
 
 - [/ O2 (maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (desabilitar (Depurar))](../../build/reference/od-disable-debug.md)
+- [/Od (desabilitar [depuração])](../../build/reference/od-disable-debug.md)
 
 Você pode cancelar a diferença em direção a velocidade do **/Ox** opção de compilador se você especificar **/Oxs**, que combina o **/Ox** opção de compilador com [/Os (favorecer pequeno Código)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). As opções combinadas favorecerem tamanho menor de código.
 
@@ -81,6 +76,6 @@ Para aplicar todas as otimizações de nível de arquivo disponíveis para compi
 
 ## <a name="see-also"></a>Consulte também
 
-[/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)  
+[Opções /O (otimizar código)](../../build/reference/o-options-optimize-code.md)  
 [Opções do Compilador](../../build/reference/compiler-options.md)  
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -1,12 +1,9 @@
 ---
-title: "Tente-exceto instrução | Microsoft Docs"
-ms.custom: 
+title: Tente-exceto instrução | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _abnormal_termination_cpp
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement"></a>Instrução try-except
 
@@ -105,7 +100,7 @@ Um `goto` instrução também pode ir na seção protegidos, e ela não prejudic
 
 Tratamento estruturado de exceções fornece duas funções intrínsecas que estão disponíveis para uso com o **tente-exceto** instrução: `GetExceptionCode` e `GetExceptionInformation`.
 
-`GetExceptionCode`Retorna o código (um inteiro de 32 bits) da exceção.
+`GetExceptionCode` Retorna o código (um inteiro de 32 bits) da exceção.
 
 A função intrínseca `GetExceptionInformation` retorna um ponteiro para uma estrutura que contém informações adicionais sobre a exceção. Por esse ponteiro, você pode acessar qual era o estado do computador no momento em que ocorreu uma exceção de hardware. A estrutura é a seguinte:
 

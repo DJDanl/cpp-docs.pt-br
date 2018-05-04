@@ -2,12 +2,9 @@
 title: Classes de módulo ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b254edfe75cfcdaee7ab15351f7c05c3d163e301
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 777d81fbe1de48289863fda00591a5328b40cf4c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-module-classes"></a>Classes de módulo ATL
 Este tópico discute as classes de módulo que eram novas no ATL 7.0.  
@@ -49,7 +44,7 @@ Este tópico discute as classes de módulo que eram novas no ATL 7.0.
   
     -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) oferece suporte à criação do Windows NT e serviços do Windows 2000.  
   
- `CComModule`ainda está disponível para compatibilidade com versões anteriores.  
+ `CComModule` ainda está disponível para compatibilidade com versões anteriores.  
   
 ## <a name="reasons-for-distributing-ccommodule-functionality"></a>Motivos para a distribuição de funcionalidade CComModule  
  A funcionalidade de `CComModule` distribuído em várias classes novas pelos seguintes motivos:  

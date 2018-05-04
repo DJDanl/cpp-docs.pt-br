@@ -1,6 +1,6 @@
 ---
-title: "-/Z7, - Zi, - ZI (formato de informações de depuração) | Microsoft Docs"
-ms.custom: 
+title: -/Z7, - Zi, - ZI (formato de informações de depuração) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -31,14 +31,13 @@ helpviewer_keywords:
 - -Z7 compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
-ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
+ms.openlocfilehash: a86605b8fd47c0febedfc9ab022dfc2c2728822a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (depurar formato de informações)
 
@@ -79,7 +78,7 @@ Se você criar uma biblioteca de objetos que foram compilados usando **/Zi**, o 
 
 ### <a name="zi"></a>/ZI
 
-O **/ZI** opção é semelhante a **/Zi**, mas ele produz um arquivo PDB em um formato que oferece suporte a [editar e continuar](/visualstudio/debugger/edit-and-continue-visual-cpp) recurso. Para usar Editar e continuar a depuração de recursos, você deve usar essa opção. O recurso Editar e continuar, é útil para a produtividade do desenvolvedor, mas pode causar problemas de conformidade de tamanho, o desempenho e o compilador de código. Como a maioria das otimizações são incompatíveis com editar e continuar, usando **/ZI** desativa qualquer `#pragma optimize` no seu código. O **/ZI** opção também é incompatível com o uso da [&#95; &#95; LINHA &#95; &#95; macro predefinida](../../preprocessor/predefined-macros.md); o código compilado com **/ZI** não é possível usar **&#95; &#95; LINHA &#95; &#95;**  como um argumento de modelo sem tipo, embora **&#95; &#95; LINHA &#95; &#95;**  pode ser usado em expansões de macro.
+O **/ZI** opção é semelhante a **/Zi**, mas ele produz um arquivo PDB em um formato que oferece suporte a [editar e continuar](/visualstudio/debugger/edit-and-continue-visual-cpp) recurso. Para usar Editar e continuar a depuração de recursos, você deve usar essa opção. O recurso Editar e continuar, é útil para a produtividade do desenvolvedor, mas pode causar problemas de conformidade de tamanho, o desempenho e o compilador de código. Como a maioria das otimizações são incompatíveis com editar e continuar, usando **/ZI** desativa qualquer `#pragma optimize` no seu código. O **/ZI** opção também é incompatível com o uso do [ &#95; &#95;linha&#95; &#95; macro predefinida](../../preprocessor/predefined-macros.md); o código compilado com **/ZI** não é possível usar **&#95; &#95;Linha&#95; &#95;** como um argumento de modelo sem tipo, embora **&#95; &#95;linha&#95; &#95;** podem ser usados em expansões de macro.
 
 O **/ZI** opção força ambos o [/Gy (habilitar vinculação do nível de função)](../../build/reference/gy-enable-function-level-linking.md) e [/FC (completo caminho do arquivo de código fonte no diagnóstico)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) opções a serem usadas na sua compilação.
 

@@ -1,13 +1,10 @@
 ---
-title: "Representação de ponto flutuante IEEE | Microsoft Docs"
-ms.custom: 
+title: Representação de ponto flutuante IEEE | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d209d1c2a7429515383f8ebe80c621d6f2b15890
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ieee-floating-point-representation"></a>Representação de ponto flutuante IEEE
 Microsoft Visual C++ é consistente com os padrões de IEEE numéricos. Há três tipos internos de números reais. Real\*4 e real\*8 são usados no Visual C++. Real\*4 é declarado usando a palavra **float**. Real\*8 é declarado usando a palavra **duplo**. Na programação do Windows de 32 bits, o `long double` tipo de dados mapeia para **duplo**. No entanto, há suporte de linguagem de assembly para cálculos usando o real * o tipo de dados de 10.  
@@ -39,8 +34,8 @@ Microsoft Visual C++ é consistente com os padrões de IEEE numéricos. Há trê
   
 |Valor|Armazenados como|  
 |-----------|---------------|  
-|real*4|assinar bit, expoente de 8 bits, 23 bits mantissa|  
-|real*8|assinar bit, 11 bits expoente, mantissa 52 bits|  
+|real * 4|assinar bit, expoente de 8 bits, 23 bits mantissa|  
+|real * 8|assinar bit, 11 bits expoente, mantissa 52 bits|  
 |real*10|assinar bit, expoente 15 bits, 64 bits mantissa|  
   
  Em real * 4 e real\*8 formatos, há uma assumida 1 à esquerda em mantissa que não é armazenado na memória, portanto os mantissas são, na verdade, 24 ou 53 bits, mesmo que apenas 23 ou 52 bits são armazenadas. O real\*formato 10 realmente armazena esse bit.  
@@ -63,8 +58,8 @@ Microsoft Visual C++ é consistente com os padrões de IEEE numéricos. Há trê
   
 |Formatar|BYTES 1|BYTE 2|BYTES 3|BYTES 4|...|N bytes|  
 |------------|------------|------------|------------|------------|---------|------------|  
-|real*4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
-|real*8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
+|real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
 |real*10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
  `S` representa o bit de sinal de `X`do são os expoente bits e o `M`do são os bits de mantissa. Observe que o bit mais à esquerda é considerado real * 4 e real\*8 formatos, mas está presente como "1" em 3 bytes do real\*formato 10.  

@@ -1,13 +1,10 @@
 ---
 title: Ponteiros const e volatile | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68089c80528265a4375767d9f0a744cb95cb970b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4e76348a4559d68c0c7dacd91d21c39c5b0d8a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="const-and-volatile-pointers"></a>Ponteiros const e volatile
 O [const](../cpp/const-cpp.md) e [volátil](../cpp/volatile-cpp.md) palavras-chave alterar como os ponteiros são tratados. O **const** palavra-chave especifica que o ponteiro não pode ser modificado após a inicialização; o ponteiro está protegido contra modificações posteriormente.  
@@ -100,7 +95,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  A instrução anterior declara uma função, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), onde duas os três argumentos são de ponteiro de tipo para `char`. Como os argumentos são passados por referência e não por valor, a função seria livre para modificar as `strDestination` e `strSource` se `strSource` não foi declarado como **const**. A declaração de `strSource` como **const** garante que o chamador `strSource` não pode ser alterado pela função chamada.  
   
 > [!NOTE]
->  Porque há uma conversão padrão de *typename*  **\***  para **const** *typename*  **\*** , é permitido passar um argumento de tipo **char \***  para [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). No entanto, o contrário não é true; Nenhuma conversão implícita existe para remover o **const** atributo de um objeto ou ponteiro.  
+>  Porque há uma conversão padrão de *typename* **\*** para **const** *typename* **\***, é permitido passar um argumento de tipo **char \***  para [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). No entanto, o contrário não é true; Nenhuma conversão implícita existe para remover o **const** atributo de um objeto ou ponteiro.  
   
  Um **const** ponteiro de um determinado tipo pode ser atribuído a um ponteiro do mesmo tipo. No entanto, um ponteiro que não é **const** não pode ser atribuído a um **const** ponteiro. O código a seguir mostra atribuições corretas e incorretas:  
   

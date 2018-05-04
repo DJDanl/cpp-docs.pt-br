@@ -1,13 +1,10 @@
 ---
-title: "Classes de política de cópia ATL | Microsoft Docs"
-ms.custom: 
+title: Classes de política de cópia ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34b9ed5dca45633a5ab980d38b8a7cda151f5dc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-copy-policy-classes"></a>Classes de política de cópia do ATL
 Classes de política de cópia são [classes de utilitário](../atl/utility-classes.md) usado para inicializar, copiar e excluir dados. Classes de política de cópia permitem para definir semânticas de cópia para qualquer tipo de dados e define as conversões entre tipos de dados diferentes.  
@@ -75,14 +70,14 @@ Classes de política de cópia são [classes de utilitário](../atl/utility-clas
  Normalmente, você precisará definir suas próprias classes de política de cópia para copiar heterogêneas (ou seja, a conversão entre tipos de dados). Para obter alguns exemplos de classes de política personalizada de cópia, examine os arquivos VCUE_Copy.h e VCUE_CopyString.h no [ATLCollections](../visual-cpp-samples.md) exemplo. Esses arquivos contêm duas classes de política de cópia de modelo, `GenericCopy` e `MapCopy`, mais um número de especializações de `GenericCopy` para diferentes tipos de dados.  
   
 ### <a name="genericcopy"></a>GenericCopy  
- `GenericCopy`permite que você especifique o *SourceType* e `DestinationType` como argumentos de modelo. Aqui está a forma mais geral do `GenericCopy` classe de VCUE_Copy.h:  
+ `GenericCopy` permite que você especifique o *SourceType* e `DestinationType` como argumentos de modelo. Aqui está a forma mais geral do `GenericCopy` classe de VCUE_Copy.h:  
   
  [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
  VCUE_Copy.h também contém as seguintes especializações desta classe: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h contém especializações copiar de **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, e `GenericCopy<BSTR, std::string>`. É possível aperfeiçoar `GenericCopy` fornecendo mais especializações de sua preferência.  
   
 ### <a name="mapcopy"></a>MapCopy  
- `MapCopy`pressupõe-se de que os dados que estão sendo copiados são armazenados em um mapa de estilo de biblioteca C++ padrão, permite que você especifique o tipo de mapa na qual os dados são armazenados e o tipo de destino. A implementação da classe usa apenas as definições de tipo fornecidas pelo *MapType* classe para determinar o tipo da fonte de dados e chamar o `GenericCopy` classe. Nenhum especializações dessa classe são necessários.  
+ `MapCopy` pressupõe-se de que os dados que estão sendo copiados são armazenados em um mapa de estilo de biblioteca C++ padrão, permite que você especifique o tipo de mapa na qual os dados são armazenados e o tipo de destino. A implementação da classe usa apenas as definições de tipo fornecidas pelo *MapType* classe para determinar o tipo da fonte de dados e chamar o `GenericCopy` classe. Nenhum especializações dessa classe são necessários.  
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   

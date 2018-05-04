@@ -1,12 +1,9 @@
 ---
-title: "Macros de fábrica de classe e agregação | Microsoft Docs"
-ms.custom: 
+title: Macros de fábrica de classe e agregação | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_AGGREGATABLE
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d18afdfe08a97a7a685b373b1f8951799836ab1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8569d4ecbbd74a6d2d37701a4ec22e56cbe9f100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Macros de fábrica de classe e de agregação
 Essas macros fornecem maneiras de controlar a agregação e da declaração de fábricas de classe.  
@@ -59,7 +54,7 @@ Essas macros fornecem maneiras de controlar a agregação e da declaração de f
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
    
-##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
+##  <a name="declare_aggregatable"></a>  DECLARE_AGGREGATABLE  
  Especifica se o objeto pode ser agregado.  
   
 ```
@@ -76,7 +71,7 @@ DECLARE_AGGREGATABLE( x )
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="declare_classfactory"></a>DECLARE_CLASSFACTORY  
+##  <a name="declare_classfactory"></a>  DECLARE_CLASSFACTORY  
  Declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) para a classe de fábrica.  
   
 ```
@@ -89,7 +84,7 @@ DECLARE_CLASSFACTORY()
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
-##  <a name="ccomclassfactory_class"></a>Classe CComClassFactory  
+##  <a name="ccomclassfactory_class"></a>  Classe CComClassFactory  
  Essa classe implementa o [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface.  
   
 ```
@@ -98,7 +93,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `CComClassFactory`implementa o [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface, que contém métodos para criação de um objeto de um determinado CLSID, bem como bloqueio a fábrica de classes na memória para permitir que novos objetos a ser criada mais rapidamente. **IClassFactory** deve ser implementado para cada classe que você registre-se no registro do sistema e que você atribuir um CLSID.  
+ `CComClassFactory` implementa o [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface, que contém métodos para criação de um objeto de um determinado CLSID, bem como bloqueio a fábrica de classes na memória para permitir que novos objetos a ser criada mais rapidamente. **IClassFactory** deve ser implementado para cada classe que você registre-se no registro do sistema e que você atribuir um CLSID.  
   
  Objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](#declare_classfactory), que declara `CComClassFactory` como a fábrica de classe padrão. Para substituir esse padrão, especifique uma da `DECLARE_CLASSFACTORY` *XXX* macros em sua definição de classe. Por exemplo, o [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) macro usa a classe especificada para a fábrica de classe:  
   
@@ -114,7 +109,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
   
 - [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) usa [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), que constrói uma única [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) objeto.  
   
-##  <a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX  
+##  <a name="declare_classfactory_ex"></a>  DECLARE_CLASSFACTORY_EX  
  Declara `cf` para a classe de fábrica.  
   
 ```
@@ -133,7 +128,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]  
   
-##  <a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2  
+##  <a name="declare_classfactory2"></a>  DECLARE_CLASSFACTORY2  
  Declara [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) para a classe de fábrica.  
   
 ```
@@ -150,7 +145,7 @@ DECLARE_CLASSFACTORY2( lic )
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
-##  <a name="ccomclassfactory2_class"></a>Classe CComClassFactory2  
+##  <a name="ccomclassfactory2_class"></a>  Classe CComClassFactory2  
  Essa classe implementa o [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface.  
   
 ```
@@ -161,7 +156,7 @@ class  CComClassFactory2 : public IClassFactory2,
 ```    
   
 ### <a name="parameters"></a>Parâmetros  
- *licença*  
+ *Licença*  
  Uma classe que implementa as seguintes funções estáticas:  
   
 - **VerifyLicenseKey de BOOL estático (BSTR** `bstr` **);**  
@@ -171,7 +166,7 @@ class  CComClassFactory2 : public IClassFactory2,
 - **estático (de IsLicenseValid BOOL);**  
   
 ### <a name="remarks"></a>Comentários  
- `CComClassFactory2`implementa o [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, que é uma extensão de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** controles criação por meio de uma licença do objeto. Uma execução de fábrica de classe em uma máquina licenciada pode fornecer uma chave de licença de tempo de execução. Essa chave de licença permite que um aplicativo de instanciar objetos quando não existe uma licença completa do computador.  
+ `CComClassFactory2` implementa o [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, que é uma extensão de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** controles criação por meio de uma licença do objeto. Uma execução de fábrica de classe em uma máquina licenciada pode fornecer uma chave de licença de tempo de execução. Essa chave de licença permite que um aplicativo de instanciar objetos quando não existe uma licença completa do computador.  
   
  Objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como a fábrica de classe padrão. Para usar `CComClassFactory2`, especifique o [DECLARE_CLASSFACTORY2](#declare_classfactory2) macro na definição de classe do objeto. Por exemplo:  
   
@@ -181,9 +176,9 @@ class  CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]  
   
- `CComClassFactory2`deriva de ambos **CComClassFactory2Base** e *licença*. **CComClassFactory2Base**, por sua vez, deriva **IClassFactory2** e **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2` deriva de ambos **CComClassFactory2Base** e *licença*. **CComClassFactory2Base**, por sua vez, deriva **IClassFactory2** e **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
-##  <a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD  
+##  <a name="declare_classfactory_auto_thread"></a>  DECLARE_CLASSFACTORY_AUTO_THREAD  
  Declara [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) para a classe de fábrica.  
   
 ```
@@ -198,7 +193,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="ccomclassfactoryautothread_class"></a>Classe CComClassFactoryAutoThread  
+##  <a name="ccomclassfactoryautothread_class"></a>  Classe CComClassFactoryAutoThread  
  Essa classe implementa o [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) de interface e permite que os objetos a serem criados em vários apartments.  
   
 > [!IMPORTANT]
@@ -210,13 +205,13 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `CComClassFactoryAutoThread`é semelhante a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), mas permite que os objetos a serem criados em vários apartments. Para aproveitar esse suporte, derivam o seu módulo EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ `CComClassFactoryAutoThread` é semelhante a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), mas permite que os objetos a serem criados em vários apartments. Para aproveitar esse suporte, derivam o seu módulo EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
  Objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como a fábrica de classe padrão. Para usar `CComClassFactoryAutoThread`, especifique o [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) macro na definição de classe do objeto. Por exemplo:  
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON  
+##  <a name="declare_classfactory_singleton"></a>  DECLARE_CLASSFACTORY_SINGLETON  
  Declara [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) para a classe de fábrica.  
   
 ```
@@ -233,7 +228,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="ccomclassfactorysingleton_class"></a>Classe CComClassFactorySingleton  
+##  <a name="ccomclassfactorysingleton_class"></a>  Classe CComClassFactorySingleton  
  Essa classe é derivada de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto.  
   
 > [!IMPORTANT]
@@ -248,14 +243,14 @@ class CComClassFactorySingleton : public CComClassFactory
  `T`  
  Sua classe.  
   
- `CComClassFactorySingleton`deriva [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto. Cada chamada para o `CreateInstance` método simplesmente consulta este objeto para um ponteiro de interface.  
+ `CComClassFactorySingleton` deriva [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto. Cada chamada para o `CreateInstance` método simplesmente consulta este objeto para um ponteiro de interface.  
   
 ### <a name="remarks"></a>Comentários  
  Objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](#declare_classfactory), que declara `CComClassFactory` como a fábrica de classe padrão. Para usar `CComClassFactorySingleton`, especifique o [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) macro na definição de classe do objeto. Por exemplo:  
   
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN  
+##  <a name="declare_get_controlling_unknown"></a>  DECLARE_GET_CONTROLLING_UNKNOWN  
  Declara uma função virtual `GetControllingUnknown`.  
   
 ```
@@ -265,7 +260,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 ### <a name="remarks"></a>Comentários  
  Adicionar esta macro para seu objeto, se você receber a mensagem de erro do compilador que `GetControllingUnknown` é indefinido (por exemplo, em **CComAggregateCreator**).  
   
-##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
+##  <a name="declare_not_aggregatable"></a>  DECLARE_NOT_AGGREGATABLE  
  Especifica que o objeto não pode ser agregado.  
   
 ```
@@ -277,14 +272,14 @@ DECLARE_NOT_AGGREGATABLE( x )
  [in] O nome do objeto de classe que você está definindo como não agregável.  
   
 ### <a name="remarks"></a>Comentários  
- `DECLARE_NOT_AGGREGATABLE`faz com que `CreateInstance` para retornar um erro ( **CLASS_E_NOAGGREGATION**) se for feita uma tentativa para agregação em seu objeto.  
+ `DECLARE_NOT_AGGREGATABLE` faz com que `CreateInstance` para retornar um erro ( **CLASS_E_NOAGGREGATION**) se for feita uma tentativa para agregação em seu objeto.  
   
  Por padrão, [CComCoClass](../../atl/reference/ccomcoclass-class.md) contém o [DECLARE_AGGREGATABLE](#declare_aggregatable) macro, que especifica se o objeto pode ser agregado. Para substituir esse comportamento padrão, inclua `DECLARE_NOT_AGGREGATABLE` em sua definição de classe.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE  
+##  <a name="declare_only_aggregatable"></a>  DECLARE_ONLY_AGGREGATABLE  
  Especifica que o objeto deve ser agregado.  
   
 ```
@@ -296,15 +291,15 @@ DECLARE_ONLY_AGGREGATABLE( x )
  [in] O nome do objeto de classe que você está definindo como somente agregável.  
   
 ### <a name="remarks"></a>Comentários  
- `DECLARE_ONLY_AGGREGATABLE`causa um erro ( **E_FAIL**) se for feita uma tentativa de **CoCreate** seu objeto como objeto agregado.  
+ `DECLARE_ONLY_AGGREGATABLE` causa um erro ( **E_FAIL**) se for feita uma tentativa de **CoCreate** seu objeto como objeto agregado.  
   
  Por padrão, [CComCoClass](../../atl/reference/ccomcoclass-class.md) contém o [DECLARE_AGGREGATABLE](#declare_aggregatable) macro, que especifica se o objeto pode ser agregado. Para substituir esse comportamento padrão, inclua `DECLARE_ONLY_AGGREGATABLE` em sua definição de classe.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#125](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]  
   
-##  <a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE  
- Especifica que uma instância de **CComPolyObject \<**  *x*  **>**  é criado quando o objeto é criado.  
+##  <a name="declare_poly_aggregatable"></a>  DECLARE_POLY_AGGREGATABLE  
+ Especifica que uma instância de **CComPolyObject \<**  *x* **>** é criado quando o objeto é criado.  
   
 ```
 DECLARE_POLY_AGGREGATABLE( x )
@@ -321,7 +316,7 @@ DECLARE_POLY_AGGREGATABLE( x )
   
  O `DECLARE_POLY_AGGREGATABLE` macro automaticamente é declarada em seu objeto, se você usar o Assistente de controle ATL para criar um controle total.  
   
-##  <a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT  
+##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT  
 
  Impede que o objeto que está sendo excluído se (durante [FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) o objeto agregado interno incrementa a contagem de referência, em seguida, diminui a contagem para 0.  
   
@@ -329,7 +324,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```  
   
-##  <a name="declare_view_status"></a>DECLARE_VIEW_STATUS  
+##  <a name="declare_view_status"></a>  DECLARE_VIEW_STATUS  
  Colocar essa macro na classe de controle de um controle ActiveX ATL para especificar o **VIEWSTATUS** sinalizadores para o contêiner.  
   
 ```

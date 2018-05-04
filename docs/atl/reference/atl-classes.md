@@ -1,12 +1,9 @@
 ---
 title: Classes ATL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,26 +11,24 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-classes"></a>Classes da ATL
 A biblioteca de modelo ativa (ATL) inclui as classes a seguir. Para localizar uma classe específica por categoria, consulte o [visão geral da classe ATL](../../atl/atl-class-overview.md).  
   
 |Classe|Descrição|Arquivo de cabeçalho|  
 |-----------|-----------------|-----------------|  
-|[CA2AEX](../../atl/reference/ca2aex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX` e `CT2AEX`e o typedef **CA2A**.|atlconv.h|  
-|[CA2CAEX](../../atl/reference/ca2caex-class.md)|Essa classe é usada por macros de conversão de cadeia de caracteres `CA2CTEX` e `CT2CAEX`e o typedef **CA2CA**.|atlconv.h|  
-|[CA2WEX](../../atl/reference/ca2wex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e o typedef **CA2W**.|atlconv.h|  
+|[CA2AEX](../../atl/reference/ca2aex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX` e `CT2AEX`e o typedef **CA2A**.|Atlconv.h|  
+|[CA2CAEX](../../atl/reference/ca2caex-class.md)|Essa classe é usada por macros de conversão de cadeia de caracteres `CA2CTEX` e `CT2CAEX`e o typedef **CA2CA**.|Atlconv.h|  
+|[CA2WEX](../../atl/reference/ca2wex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e o typedef **CA2W**.|Atlconv.h|  
 |[CAccessToken](../../atl/reference/caccesstoken-class.md)|Essa classe é um wrapper para um token de acesso.|atlsecurity.h|  
 |[CAcl](../../atl/reference/cacl-class.md)|Essa classe é um wrapper para um **ACL** estrutura (lista de controle de acesso).|atlsecurity.h|  
 |[CAdapt](../../atl/reference/cadapt-class.md)|Este modelo é usado para incluir classes que redefinem o operador address-of para retornar algo diferente do endereço do objeto.|atlcomcli.h|  
@@ -172,9 +167,9 @@ A biblioteca de modelo ativa (ATL) inclui as classes a seguir. Para localizar um
 |[CTokenGroups](../../atl/reference/ctokengroups-class.md)|Essa classe é um wrapper para o **TOKEN_GROUPS** estrutura.|atlsecurity.h|  
 |[CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md)|Essa classe é um wrapper para o **TOKEN_PRIVILEGES** estrutura.|atlsecurity.h|  
 |[Classe CUrl](../../atl/reference/curl-class.md)|Essa classe representa uma URL. Ele permite que você manipule cada elemento da URL, independentemente de outras pessoas se uma URL existente de análise de cadeia de caracteres ou criando uma cadeia de caracteres a partir do zero.|atlutil.h|  
-|[CW2AEX](../../atl/reference/cw2aex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CT2AEX`, `CW2TEX`, `CW2CTEX`, e `CT2CAEX`e o typedef **CW2A**.|atlconv.h|  
-|[CW2CWEX](../../atl/reference/cw2cwex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CW2CTEX` e `CT2CWEX`e o typedef **CW2CW**.|atlconv.h|  
-|[CW2WEX](../../atl/reference/cw2wex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CW2TEX` e `CT2WEX`e o typedef `CW2W`.|atlconv.h|  
+|[CW2AEX](../../atl/reference/cw2aex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CT2AEX`, `CW2TEX`, `CW2CTEX`, e `CT2CAEX`e o typedef **CW2A**.|Atlconv.h|  
+|[CW2CWEX](../../atl/reference/cw2cwex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CW2CTEX` e `CT2CWEX`e o typedef **CW2CW**.|Atlconv.h|  
+|[CW2WEX](../../atl/reference/cw2wex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CW2TEX` e `CT2WEX`e o typedef `CW2W`.|Atlconv.h|  
 |[CWin32Heap](../../atl/reference/cwin32heap-class.md)|Essa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando as funções de alocação de heap de Win32.|atlmem.h|  
 |[CWindow](../../atl/reference/cwindow-class.md)|Essa classe fornece métodos para manipular uma janela.|atlwin.h|  
 |[CWindowImpl](../../atl/reference/cwindowimpl-class.md)|Essa classe fornece métodos para criar ou subclasses de uma janela.|atlwin.h|  
@@ -184,10 +179,10 @@ A biblioteca de modelo ativa (ATL) inclui as classes a seguir. Para localizar um
 |[Classe CWorkerThread](../../atl/reference/cworkerthread-class.md)|Essa classe cria um thread de trabalho ou usa um existente, espera um ou mais identificadores de objeto kernel e executa uma função de cliente especificado quando uma das alças é sinalizada.|atlutil.h|  
 |[IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)|Essa classe representa uma interface para um `CreateInstance` método.|atlbase.h|  
 |[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)|Essa classe representa a interface para um Gerenciador de memória.|atlmem.h|  
-|[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|Essa interface fornece métodos para especificar as características do controle hospedado ou contêiner.|atlbase.h, ATLIFace.h|  
-|[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)|Essa interface implementa propriedades de ambiente complementares para um controle hospedado.|atlbase.h, ATLIFace.h|  
-|[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Essa interface fornece métodos para manipular um controle e seu objeto de host.|atlbase.h, ATLIFace.h|  
-|[IAxWinHostWindowLic](../../atl/reference/iaxwinhostwindowlic-interface.md)|Essa interface fornece métodos para manipular um controle licenciado e seu objeto de host.|atlbase.h, ATLIFace.h|  
+|[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|Essa interface fornece métodos para especificar as características do controle hospedado ou contêiner.|atlbase, atliface|  
+|[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)|Essa interface implementa propriedades de ambiente complementares para um controle hospedado.|atlbase, atliface|  
+|[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Essa interface fornece métodos para manipular um controle e seu objeto de host.|atlbase, atliface|  
+|[IAxWinHostWindowLic](../../atl/reference/iaxwinhostwindowlic-interface.md)|Essa interface fornece métodos para manipular um controle licenciado e seu objeto de host.|atlbase, atliface|  
 |[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)|Essa classe fornece métodos usados por uma classe de coleção.|atlcom.h|  
 |[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)|Essa classe implementa um contêiner de ponto de conexão para gerenciar uma coleção de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objetos.|atlcom.h|  
 |[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)|Essa classe implementa um ponto de conexão.|atlcom.h|  
@@ -195,7 +190,7 @@ A biblioteca de modelo ativa (ATL) inclui as classes a seguir. Para localizar um
 |[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)|Essa classe fornece uma implementação padrão para o `IDispatch` parte de uma interface dupla.|atlcom.h|  
 |[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)|Essa classe fornece implementações do `IDispatch` métodos.|atlcom.h|  
 |[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)|Essa classe fornece implementações do `IDispatch` métodos sem obter informações sobre o tipo de uma biblioteca de tipos.|atlcom.h|  
-|[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|Uma interface para a análise de HTML da Microsoft e o mecanismo de renderização.|atlbase.h, ATLIFace.h|  
+|[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|Uma interface para a análise de HTML da Microsoft e o mecanismo de renderização.|atlbase, atliface|  
 |[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)|Essa classe define uma interface de enumerador com base em uma coleção de biblioteca padrão C++.|atlcom.h|  
 |[IObjectSafetyImpl](../../atl/reference/iobjectsafetyimpl-class.md)|Essa classe fornece uma implementação padrão da `IObjectSafety` interface para permitir que um cliente recuperar e definir níveis de segurança de um objeto.|atlctl.h|  
 |[IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md)|Essa classe fornece métodos que permitem a um objeto para se comunicar com seu site.|atlcom.h|  

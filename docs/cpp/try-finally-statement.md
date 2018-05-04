@@ -2,11 +2,8 @@
 title: Instrução try-finally | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
 **Seção específica da Microsoft**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Gramática  
  *try-finally-statement*:  
- `__try`*instrução compostas*  
+ `__try` *instruções compostas*  
   
- `__finally`*instrução compostas*  
+ `__finally` *instruções compostas*  
   
  A instrução `try-finally` é uma extensão da Microsoft para as linguagens C e C++ que permite que aplicativos de destino garantam a execução do código de limpeza quando a execução de um bloco de códigos é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. A instrução `try-finally` é especialmente útil para rotinas que têm vários locais onde uma verificação é feita para um erro que pode causar o retorno prematuro da rotina.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na A, os manipuladores de encerramento são chamados nessa ordem à medida que o sistema desenrola a pilha: D, C, B.  
   
- ![Ordem de encerramento &#45; a execução do manipulador](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Ordem de encerramento&#45;execução do manipulador](../cpp/media/vc38cx1.gif "vc38CX1")  
 Ordem de execução do manipulador de encerramento  
   
 > [!NOTE]

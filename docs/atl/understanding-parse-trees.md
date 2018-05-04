@@ -2,28 +2,23 @@
 title: Registrador da ATL e árvores de análise | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8ce648a541f6e0e2d4fac2e6ee19226e41f20ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb5b132e5e55ab5336254acaf4d2d3ae25440697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-parse-trees"></a>Noções básicas sobre árvores de análise
 Você pode definir uma ou mais árvores de análise no seu script de registrador, onde cada árvore de análise tem a seguinte forma:  
@@ -52,7 +47,7 @@ Você pode definir uma ou mais árvores de análise no seu script de registrador
 ```  
   
 > [!NOTE]
-> `HKEY_CLASSES_ROOT`e `HKCR` forem equivalentes; `HKEY_CURRENT_USER` e `HKCU` são equivalentes; e assim por diante.  
+> `HKEY_CLASSES_ROOT` e `HKCR` forem equivalentes; `HKEY_CURRENT_USER` e `HKCU` são equivalentes; e assim por diante.  
   
  Uma árvore de análise pode adicionar várias chaves e subchaves para a \<chave raiz >. Dessa forma, ele mantém identificador da subchave aberto até que o analisador concluiu a análise de todas as suas subchaves. Essa abordagem é mais eficiente do que a operação em uma única chave ao mesmo tempo, como mostrado no exemplo a seguir:  
   

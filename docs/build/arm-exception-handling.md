@@ -1,27 +1,22 @@
 ---
-title: "Tratamento de exceção ARM | Microsoft Docs"
-ms.custom: 
+title: Tratamento de exceção ARM | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb8990dacc9503d5f329db9e7ddd9b8208efd13a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 O Windows baseado em ARM usa o mesmo mecanismo de tratamento de exceção estruturado para exceções geradas por hardware assíncronas e exceções geradas por software síncronas. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve o tratamento de exceção no Windows baseado em ARM e os auxiliares da linguagem usados pelo código que é gerado por MASM e o compilador do Visual C++.  
@@ -304,9 +299,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
   
  O código 0xFD é um código especial para o final da sequência que significa que o epílogo é uma instrução de 16 bits maior do que o prólogo. Isso torna possível o compartilhamento de códigos de desenrolamento maiores.  
   
- No exemplo, se ocorrer uma exceção enquanto o corpo da função entre o prólogo e o epílogo estiver em execução, o desenrolamento iniciará o caso do epílogo, no deslocamento 0 dentro do código de epílogo. Isso corresponde ao deslocamento 0x140 no exemplo. O desenrolador executa a sequência de desenrolamento completa, pois nenhuma limpeza foi feita. Se em vez da exceção, ocorrer uma instrução após o início do código de epílogo, o desenrolador poderá desenrolar com êxito, ignorando o primeiro código de desenrolamento. Dado um mapeamento entre opcodes e desenrolar códigos, se o desenrolamento da instrução  *n*  no epílogo, o unwinder deve ignorar a primeira  *n*  desenrolar códigos.  
+ No exemplo, se ocorrer uma exceção enquanto o corpo da função entre o prólogo e o epílogo estiver em execução, o desenrolamento iniciará o caso do epílogo, no deslocamento 0 dentro do código de epílogo. Isso corresponde ao deslocamento 0x140 no exemplo. O desenrolador executa a sequência de desenrolamento completa, pois nenhuma limpeza foi feita. Se em vez da exceção, ocorrer uma instrução após o início do código de epílogo, o desenrolador poderá desenrolar com êxito, ignorando o primeiro código de desenrolamento. Dado um mapeamento entre opcodes e desenrolar códigos, se o desenrolamento da instrução *n* no epílogo, o unwinder deve ignorar a primeira *n* desenrolar códigos.  
   
- A lógica semelhante funciona na ordem inversa para o prólogo. Se estiver desenrolando a partir do deslocamento 0 no prólogo, nada será executado. Se estiver desenrolando de uma instrução em diante, a sequência de desenrolamento deverá iniciar um código de desenrolamento a partir do final, pois os códigos de desenrolamento do prólogo são armazenados na ordem inversa. Em geral, se o desenrolamento da instrução  *n*  no prólogo, desenrolamento deve iniciar a execução em  *n*  desenrolar códigos do final da lista de códigos.  
+ A lógica semelhante funciona na ordem inversa para o prólogo. Se estiver desenrolando a partir do deslocamento 0 no prólogo, nada será executado. Se estiver desenrolando de uma instrução em diante, a sequência de desenrolamento deverá iniciar um código de desenrolamento a partir do final, pois os códigos de desenrolamento do prólogo são armazenados na ordem inversa. Em geral, se o desenrolamento da instrução *n* no prólogo, desenrolamento deve iniciar a execução em *n* desenrolar códigos do final da lista de códigos.  
   
  Os códigos de desenrolamento do prólogo e do epílogo nem sempre correspondem exatamente. Nesse caso, a matriz do código de desenrolamento pode precisar conter várias sequências de códigos. Para determinar o deslocamento para começar o processamento dos códigos, use esta lógica:  
   

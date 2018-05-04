@@ -1,12 +1,9 @@
 ---
 title: Assistente para ATL COM+ 1.0 componente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19151ca659f7bc3235f84eefb39b640c4856fa43
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistente para ATL COM+ 1.0 do componente
 Use este assistente para adicionar um objeto ao seu projeto que suporte serviços COM+ 1.0, incluindo as transações.  
@@ -67,7 +62,7 @@ Use este assistente para adicionar um objeto ao seu projeto que suporte serviço
 ### <a name="com"></a>COM  
  Fornece informações sobre a funcionalidade de COM para o objeto.  
   
- **Coclass**  
+ **coclass**  
  Define o nome da classe de componente que contém uma lista de interfaces suportadas pelo objeto.  
   
 > [!NOTE]

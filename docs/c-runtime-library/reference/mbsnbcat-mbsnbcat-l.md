@@ -2,11 +2,8 @@
 title: _mbsnbcat, _mbsnbcat_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcat_l
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f7fb633d4e0c259403a5d48e1bb05618c75ddc
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -111,7 +106,7 @@ Localidade a usar.
 
 O **mbsnbcat** função acrescenta, no máximo, o primeiro *contagem* bytes de *src* para *dest*. Se o byte imediatamente antes do caractere nulo no *dest* é um byte o byte inicial de *src* substitui esse byte inicial. Caso contrário, o byte inicial de *src* substitui o caractere null de terminação de *dest*. Se aparecer um byte nulo na *src* antes de *contagem* bytes são anexados, **mbsnbcat** anexa todos os bytes de *src*, até o caractere nulo. Se *contagem* é maior que o comprimento de *src*, o comprimento de *src* é usado no lugar de *contagem*. A cadeia de caracteres resultante é terminada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbcat** versão da função usa a localidade atual para este comportamento dependente de localidade; a **mbsnbcat_l** versão é idêntica, exceto que eles usam o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbcat** versão da função usa a localidade atual para este comportamento dependente de localidade; a **mbsnbcat_l** versão é idêntica, exceto que eles usam o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 **Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. A cadeia de caracteres terminada em nulo não deve exceder o tamanho do buffer de destino. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
 

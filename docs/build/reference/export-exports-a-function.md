@@ -2,12 +2,9 @@
 title: -EXPORT (exporta uma função) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (exporta uma função)
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Comentários  
  Com essa opção, você pode exportar uma função em seu programa para que outros programas podem chamar a função. Você também pode exportar dados. Exportações geralmente são definidas em uma DLL.  
   
- O *Nome_da_entrada* é o nome do item de dados ou função como ele será usado pelo programa de chamada. `ordinal`Especifica um índice na tabela de exportações no intervalo de 1 a 65.535; Se você não especificar `ordinal`, LINK atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem um *Nome_da_entrada*.  
+ O *Nome_da_entrada* é o nome do item de dados ou função como ele será usado pelo programa de chamada. `ordinal` Especifica um índice na tabela de exportações no intervalo de 1 a 65.535; Se você não especificar `ordinal`, LINK atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem um *Nome_da_entrada*.  
   
  O **dados** palavra-chave especifica que o item exportado é um item de dados. O item de dados do programa cliente deve ser declarado usando **__declspec(dllimport) extern**.  
   

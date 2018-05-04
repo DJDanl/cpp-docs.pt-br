@@ -1,29 +1,24 @@
 ---
-title: "Noções básicas sobre geração de manifesto para programas do C/C++ | Microsoft Docs"
-ms.custom: 
+title: Noções básicas sobre geração de manifesto para programas do C/C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848b4b449fa2c9c8930a616b70a5b61cb28d8fbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb6a65c718b88e4072c0ddad19411bb8ea4ddcff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Noções básicas sobre geração de manifesto para programas do C/C++
 Um [manifesto](http://msdn.microsoft.com/library/aa375365) é um documento XML que pode ser um arquivo XML externo ou um recurso incorporado dentro de um aplicativo ou um assembly. O manifesto de um [aplicativo isolado](http://msdn.microsoft.com/library/aa375190) é usado para gerenciar os nomes e as versões de assemblies lado a lado compartilhados para que o aplicativo deve associar em tempo de execução. O manifesto de um assembly lado a lado especifica suas dependências em outros assemblies, versões, recursos e nomes.  

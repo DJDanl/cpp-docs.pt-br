@@ -1,12 +1,9 @@
 ---
 title: Classe CAutoPtr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoPtr
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b8ded7bbf4dbe4e4f2ada7054cebab996934316
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edf1baff50541dd5f16c27205f300558558d6f92
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautoptr-class"></a>Classe CAutoPtr
 Essa classe representa um objeto de ponteiro inteligente.  
@@ -86,7 +81,7 @@ class CAutoPtr
   
  Além disso, `CAutoPtr`do construtor de cópia e a propriedade de transferência de operador de atribuição do ponteiro, copiando o ponteiro de origem para o ponteiro de destino e definir o ponteiro de origem como NULL. Portanto, é impossível ter dois `CAutoPtr` objetos cada armazenar o mesmo ponteiro, e isso reduz a possibilidade de excluir o mesmo ponteiro duas vezes.  
   
- `CAutoPtr`também simplifica a criação de conjuntos de indicadores. Em vez de derivando uma classe de coleção e substituindo o destruidor, é mais simples de fazer uma coleção de `CAutoPtr` objetos. Quando a coleção é excluída, o `CAutoPtr` objetos serão estar fora do escopo e excluir automaticamente a próprio.  
+ `CAutoPtr` também simplifica a criação de conjuntos de indicadores. Em vez de derivando uma classe de coleção e substituindo o destruidor, é mais simples de fazer uma coleção de `CAutoPtr` objetos. Quando a coleção é excluída, o `CAutoPtr` objetos serão estar fora do escopo e excluir automaticamente a próprio.  
   
  [CHeapPtr](../../atl/reference/cheapptr-class.md) e variantes funcionam da mesma maneira como `CAutoPtr`, exceto que eles alocam e liberar memória usando funções diferentes de heap em vez do C++ **novo** e **excluir** operadores. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) é semelhante a `CAutoPtr`, a única diferença é que ele usa **vector [novo]** e **[] de exclusão de vetor** para alocar e liberar memória.  
   
@@ -98,7 +93,7 @@ class CAutoPtr
 ## <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
-##  <a name="attach"></a>CAutoPtr::Attach  
+##  <a name="attach"></a>  CAutoPtr::Attach  
  Chame esse método para assumir a propriedade de um ponteiro existente.  
   
 ```
@@ -117,7 +112,7 @@ void Attach(T* p) throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="cautoptr"></a>CAutoPtr::CAutoPtr  
+##  <a name="cautoptr"></a>  CAutoPtr::CAutoPtr  
  O construtor.  
   
 ```
@@ -144,7 +139,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
+##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr  
  O destruidor.  
   
 ```
@@ -154,7 +149,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="remarks"></a>Comentários  
  Libera todos os recursos alocados. Chamadas [CAutoPtr::Free](#free).  
   
-##  <a name="detach"></a>CAutoPtr::Detach  
+##  <a name="detach"></a>  CAutoPtr::Detach  
  Chame este método para liberar a propriedade de um ponteiro.  
   
 ```
@@ -170,7 +165,7 @@ T* Detach() throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="free"></a>CAutoPtr::Free  
+##  <a name="free"></a>  CAutoPtr::Free  
  Chame esse método para excluir um objeto que aponta para um `CAutoPtr`.  
   
 ```
@@ -180,7 +175,7 @@ void Free() throw();
 ### <a name="remarks"></a>Comentários  
  O objeto apontado pelo `CAutoPtr` é liberado e o [CAutoPtr::m_p](#m_p) variável de membro de dados é definido como NULL.  
   
-##  <a name="m_p"></a>CAutoPtr::m_p  
+##  <a name="m_p"></a>  CAutoPtr::m_p  
  A variável de membro de dados de ponteiro.  
   
 ```
@@ -190,7 +185,7 @@ T* m_p;
 ### <a name="remarks"></a>Comentários  
  Essa variável de membro contém as informações do ponteiro.  
   
-##  <a name="operator_eq"></a>CAutoPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoPtr::operator =  
  O operador de atribuição.  
   
 ```
@@ -217,7 +212,7 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
+##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;  
  O operador de ponteiro-para-membro.  
   
 ```
@@ -233,7 +228,7 @@ T* operator->() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="operator_t_star"></a>CAutoPtr::operator T *  
+##  <a name="operator_t_star"></a>  CAutoPtr::operator T *  
  O operador cast.  
   
 ```  

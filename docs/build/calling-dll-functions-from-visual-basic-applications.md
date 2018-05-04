@@ -2,12 +2,9 @@
 title: Chamando funções DLL a partir de aplicativos do Visual Basic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Chamando funções DLL a partir de aplicativos Visual Basic
 Para aplicativos do Visual Basic (ou aplicativos em outras linguagens, como Pascal ou Fortran) chamar funções em uma DLL do C/C++, as funções devem ser exportadas usando a convenção de chamada correta sem qualquer decoração de nome feita pelo compilador.  
   
- `__stdcall`cria a convenção de chamada correta para a função (a função chamada limpa a pilha e os parâmetros são passados da direita para esquerda), mas decora o nome da função de forma diferente. Portanto, quando **dllexport** é usado em uma função exportada em uma DLL, o nome decorado é exportado.  
+ `__stdcall` cria a convenção de chamada correta para a função (a função chamada limpa a pilha e os parâmetros são passados da direita para esquerda), mas decora o nome da função de forma diferente. Portanto, quando **dllexport** é usado em uma função exportada em uma DLL, o nome decorado é exportado.  
   
  O `__stdcall` decoração do nome define o nome do símbolo com um sublinhado (_) e anexa o símbolo com um sinal de arroba (@) caractere seguido pelo número de bytes na lista de argumentos (o espaço de pilha necessário). Como resultado, a função quando declarado como:  
   

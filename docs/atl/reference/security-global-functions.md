@@ -1,12 +1,9 @@
 ---
-title: "Funções de segurança globais | Microsoft Docs"
-ms.custom: 
+title: Funções de segurança globais | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-global-functions"></a>Funções de segurança Global
 Essas funções fornecem suporte para modificar objetos ACL e SID.  
@@ -58,7 +53,7 @@ Essas funções fornecem suporte para modificar objetos ACL e SID.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>  AtlGetDacl  
  Chame essa função para recuperar as informações da DACL (lista de controle de acesso discricionário) de um objeto especificado.  
   
 > [!IMPORTANT]
@@ -87,7 +82,7 @@ inline bool AtlGetDacl(
 ### <a name="remarks"></a>Comentários  
  Em compilações de depuração, um erro de asserção ocorrerá se `hObject` ou `pDacl` é inválido.  
   
-##  <a name="atlsetdacl"></a>AtlSetDacl  
+##  <a name="atlsetdacl"></a>  AtlSetDacl  
  Chame essa função para definir as informações da DACL (lista de controle de acesso discricionário) de um objeto especificado.  
   
 > [!IMPORTANT]
@@ -122,7 +117,7 @@ inline bool AtlSetDacl(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid  
  Chame essa função para recuperar o SID (identificador de segurança) do grupo de um objeto.  
   
 > [!IMPORTANT]
@@ -151,7 +146,7 @@ inline bool AtlGetGroupSid(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid  
  Chame essa função para definir o SID (identificador de segurança) do grupo de um objeto.  
   
 > [!IMPORTANT]
@@ -180,7 +175,7 @@ inline bool AtlSetGroupSid(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>  AtlGetOwnerSid  
  Chame essa função para recuperar o SID (identificador de segurança) do proprietário de um objeto.  
   
 > [!IMPORTANT]
@@ -209,7 +204,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>  AtlSetOwnerSid  
  Chame essa função para definir o SID (identificador de segurança) do proprietário de um objeto.  
   
 > [!IMPORTANT]
@@ -238,7 +233,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>  AtlGetSacl  
  Chame essa função para recuperar as informações da SACL (lista de controle de acesso do sistema) de um objeto especificado.  
   
 > [!IMPORTANT]
@@ -274,7 +269,7 @@ inline bool AtlGetSacl(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>  AtlSetSacl  
  Chame essa função para definir as informações da SACL (lista de controle de acesso do sistema) de um objeto especificado.  
   
 > [!IMPORTANT]
@@ -316,7 +311,7 @@ inline bool AtlSetSacl(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity.h 
 
-##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor  
  Chame essa função para recuperar o descritor de segurança de determinado objeto.  
   
 > [!IMPORTANT]

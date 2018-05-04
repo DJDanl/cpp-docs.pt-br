@@ -1,12 +1,9 @@
 ---
 title: 'Operadores aditivos: + e - | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>Operadores aditivos: + e -
 ## <a name="syntax"></a>Sintaxe  
@@ -58,7 +53,7 @@ expression - expression
   
 |Tipo|Significado|  
 |----------|-------------|  
-|*arithmetic*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|  
+|*Aritmética*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|  
 |*integral*|Os tipos char e int de todos os tamanhos (curto, longo) e enumerações são os tipos “integrais”.|  
 |*scalar*|Os operandos escalares são operandos aritméticos ou de ponteiro.|  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Subtração de ponteiro  
  Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gerará um resultado de inteiro assinado de tipo ptrdiff_t (definidos no arquivo de inclusão padrão \<stddef.h >).  
   
- Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor de subtração é um ponteiro para o (*n* - *i*) elemento de matriz th, onde *n* é o elemento apontado por o ponteiro original e *i* é o valor integral do segundo operando.  
+ Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor de subtração é um ponteiro para o (*n* - *,*) elemento de matriz th, onde *n* é o elemento apontado pelo ponteiro original e *,* é o valor integral do segundo operando.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   

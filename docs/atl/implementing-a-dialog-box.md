@@ -1,13 +1,10 @@
 ---
-title: "Implementando uma caixa de diálogo | Microsoft Docs"
-ms.custom: 
+title: Implementando uma caixa de diálogo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>Implementando uma caixa de diálogo
 Há duas maneiras de adicionar uma caixa de diálogo ao seu projeto ATL: usar o Assistente de caixa de diálogo do ATL ou adicioná-lo manualmente.  
@@ -45,7 +40,7 @@ Há duas maneiras de adicionar uma caixa de diálogo ao seu projeto ATL: usar o 
 > [!NOTE]
 >  Quando você cria uma caixa de diálogo usando o Assistente de caixa de diálogo da ATL, o assistente adicionará automaticamente o `IDD` membro como um `enum` tipo.  
   
- `CDialogImpl`permite que você implemente um modal ou uma caixa de diálogo sem janela restrita que hospeda os controles do Windows. `CAxDialogImpl`permite que você implemente um modal ou uma caixa de diálogo sem janela restrita que hospeda os controles ActiveX e o Windows.  
+ `CDialogImpl` permite que você implemente um modal ou uma caixa de diálogo sem janela restrita que hospeda os controles do Windows. `CAxDialogImpl` permite que você implemente um modal ou uma caixa de diálogo sem janela restrita que hospeda os controles ActiveX e o Windows.  
   
  Para criar uma caixa de diálogo modal, crie uma instância do seu `CDialogImpl`-derivados (ou `CAxDialogImpl`-derivado) de classe e, em seguida, chame o [DoModal](../atl/reference/cdialogimpl-class.md#domodal) método. Para fechar a caixa de diálogo modal, chame o [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) método de um manipulador de mensagens. Para criar uma caixa de diálogo sem janela restrita, chame o [criar](../atl/reference/cdialogimpl-class.md#create) método em vez de `DoModal`. Para destruir uma caixa de diálogo sem janela restrita, chame [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   

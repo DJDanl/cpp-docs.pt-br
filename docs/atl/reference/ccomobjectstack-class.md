@@ -1,12 +1,9 @@
 ---
 title: Classe CComObjectStack | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectStack
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectstack-class"></a>Classe CComObjectStack
 Essa classe cria um objeto COM temporário e fornece uma implementação esqueleto de **IUnknown**.  
@@ -72,7 +67,7 @@ class CComObjectStack
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contém o **HRESULT** retornado durante a construção do `CComObjectStack` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComObjectStack`é usado para criar um objeto COM temporário e fornecer o objeto de uma implementação esqueleto de **IUnknown**. Normalmente, o objeto é usado como uma variável local dentro de uma função (isto é, inserida na pilha). Desde que o objeto é destruído quando a função for concluído, a contagem de referência não é executada para aumentar a eficiência.  
+ `CComObjectStack` é usado para criar um objeto COM temporário e fornecer o objeto de uma implementação esqueleto de **IUnknown**. Normalmente, o objeto é usado como uma variável local dentro de uma função (isto é, inserida na pilha). Desde que o objeto é destruído quando a função for concluído, a contagem de referência não é executada para aumentar a eficiência.  
   
  O exemplo a seguir mostra como criar um objeto COM usado dentro de uma função:  
   
@@ -88,7 +83,7 @@ class CComObjectStack
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectStack::AddRef  
+##  <a name="addref"></a>  CComObjectStack::AddRef  
  Retorna zero.  
   
 ```
@@ -101,7 +96,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Comentários  
  No modo de depuração, chamadas `_ASSERTE`.  
   
-##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
+##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack  
  O construtor.  
   
 ```
@@ -111,7 +106,7 @@ CComObjectStack(void* = NULL);
 ### <a name="remarks"></a>Comentários  
  Chamadas `FinalConstruct` e, em seguida, define [m_hResFinalConstruct](#m_hresfinalconstruct) para o `HRESULT` retornado por `FinalConstruct`. Se você não tiver derivado sua classe base da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), você deve fornecer seu próprio `FinalConstruct` método. O destruidor chama `FinalRelease`.  
   
-##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
+##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  O destruidor.  
   
 ```
@@ -121,14 +116,14 @@ CComObjectStack();
 ### <a name="remarks"></a>Comentários  
  Libera todos os recursos alocados e chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
  Contém o `HRESULT` retornado ao chamar `FinalConstruct` durante a construção do `CComObjectStack` objeto.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectStack::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
  Retorna **E_NOINTERFACE**.  
   
 ```
@@ -142,7 +137,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ### <a name="remarks"></a>Comentários  
  No modo de depuração, chamadas `_ASSERTE`.  
   
-##  <a name="release"></a>CComObjectStack::Release  
+##  <a name="release"></a>  CComObjectStack::Release  
  Retorna zero.  
   
 ```

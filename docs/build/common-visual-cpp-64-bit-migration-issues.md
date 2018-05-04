@@ -1,13 +1,10 @@
 ---
-title: "Problemas comuns de migração de 64 bits do Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Problemas comuns de migração de 64 bits do Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea3690e04106f0836d236eefee4acd9dda3a82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemas de migração de 64 bits do Visual C++comuns
 
@@ -41,7 +36,7 @@ Quando você usar o Visual C++ para criar aplicativos executados em um sistema d
   
 -   `size_t`, `time_t`, e `ptrdiff_t` são valores de 64 bits em sistemas de operacionais do Windows de 64 bits.  
   
--   `time_t`é um valor de 32 bits em sistemas de operacionais de Windows de 32 bits em versões do Visual C++ antes de Visual C++ 2005. `time_t`Agora é um inteiro de 64 bits por padrão. Para obter mais informações, consulte [gerenciamento de tempo](../c-runtime-library/time-management.md).  
+-   `time_t` é um valor de 32 bits em sistemas de operacionais de Windows de 32 bits em versões do Visual C++ antes de Visual C++ 2005. `time_t` Agora é um inteiro de 64 bits por padrão. Para obter mais informações, consulte [gerenciamento de tempo](../c-runtime-library/time-management.md).  
   
      Você deve estar ciente de onde seu código usa um `int` valor e processa-o como um `size_t` ou `time_t` valor. É possível que o número pode aumentar para ser maior do que um número de 32 bits e os dados serão truncados quando ele é passado de volta para o `int` armazenamento.  
   

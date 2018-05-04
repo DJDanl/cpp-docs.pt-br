@@ -1,12 +1,9 @@
 ---
 title: Classe CFixedStringT | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f66749272649fe230b31e770a175e0b94441b90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-class"></a>Classe CFixedStringT
 Essa classe representa um objeto de cadeia de caracteres com um buffer de caracteres fixa.  
@@ -68,7 +63,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 -   O buffer de caracteres para um `CFixedStringT` objeto é sempre o mesmo tamanho ( *t_nChars*). Não há nenhuma limitação no tamanho do buffer de `CStringT` objetos.  
   
--   O Gerenciador de memória para `CFixedStringT` é personalizado para o compartilhamento de um [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objeto entre dois ou mais `CFixedStringT` objectsis não permitido. `CStringT`objetos não têm essa limitação.  
+-   O Gerenciador de memória para `CFixedStringT` é personalizado para o compartilhamento de um [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objeto entre dois ou mais `CFixedStringT` objectsis não permitido. `CStringT` objetos não têm essa limitação.  
   
  Para obter mais informações sobre a personalização de `CFixedStringT` e gerenciamento de memória para objetos de cadeia de caracteres em geral, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
@@ -84,7 +79,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** cstringt.h  
   
-##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT  
  Constrói um objeto `CFixedStringT`.  
   
 ```
@@ -110,7 +105,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>Comentários  
  Porque os construtores copiar os dados de entrada para o novo armazenamento alocado, você deve estar ciente que as exceções podem resultar de memória. Observe que alguns desses construtores atuam como funções de conversão.  
   
-##  <a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>  CFixedStringT::operator =  
  Reinicializa um existente `CFixedStringT` objeto com novos dados.  
   
 ```

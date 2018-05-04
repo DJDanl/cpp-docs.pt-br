@@ -1,29 +1,24 @@
 ---
-title: "Alterar o código de desenho (Tutorial ATL, parte 4) | Microsoft Docs"
-ms.custom: 
+title: Alterar o código de desenho (Tutorial ATL, parte 4) | Microsoft Docs
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccbf7dab7d39a80efa2b0b0b88b615c55cd9e56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c077aca8c3276fac963eda8cdd2c413a9d6d5f5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Alteração do código de desenho (Tutorial ATL, parte 4)
 Por padrão, o código de desenho do controle exibe um quadrado e o texto **PolyCtl**. Nesta etapa, você irá alterar o código para exibir algo mais interessante. As seguintes tarefas envolvidas:  
@@ -125,7 +120,7 @@ Por padrão, o código de desenho do controle exibe um quadrado e o texto **Poly
   
  A próxima etapa, você adicionará um evento.  
   
- [Para a etapa 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [Na etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
+ [Para a etapa 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [na etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)   

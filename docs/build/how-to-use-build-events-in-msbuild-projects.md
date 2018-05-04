@@ -2,12 +2,9 @@
 title: 'Como: usar eventos de Build em projetos de MSBuild | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Como usar eventos de build em projetos de MSBuild
 Um evento de compilação é um comando que [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] executa em uma fase específica no processo de compilação. O *pré-compilação* evento ocorre antes do início da compilação; o *pré-vínculo* evento ocorre antes do início da etapa link; e o *pós-compilação* evento ocorre após a compilação termina com êxito. Um evento de compilação ocorre somente se a etapa de compilação associado ocorre. Por exemplo, o evento de pré-vínculo não ocorre se a etapa de link não é executado.  
   
  Cada um dos eventos de três build é representada por um elemento de comando em um grupo de definição de item (`<Command>`) que é executado e um elemento de mensagem (`<Message>`) que é exibido quando **MSBuild** executa o evento de compilação. Cada elemento é opcional e, se você especificar o mesmo elemento várias vezes, a última ocorrência terá precedência.  
   
- Um recurso opcional *uso na compilação* elemento (`<`*evento de compilação***UseInBuild**`>`) pode ser especificado em um grupo de propriedades para indicar se a evento de compilação é executado. O valor do conteúdo de um *uso na compilação* elemento seja `true` ou `false`. Por padrão, um evento de compilação é executado, a menos que seu correspondente *uso na compilação* é definido como `false`.  
+ Um recurso opcional *uso na compilação* elemento (`<`* build-evento ***UseInBuild**`>`) pode ser especificado em um grupo de propriedades para indicar se o evento de compilação é executado. O valor do conteúdo de um *uso na compilação* elemento seja `true` ou `false`. Por padrão, um evento de compilação é executado, a menos que seu correspondente *uso na compilação* é definido como `false`.  
   
  A tabela a seguir lista cada elemento XML do evento de compilação:  
   

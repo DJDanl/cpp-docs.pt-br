@@ -2,11 +2,8 @@
 title: Classe CAtlMap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlMap
@@ -46,17 +43,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9166e8f7804a3138d3e891fbe15b54cb0e270811
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c0a90ad7ce9d515331f817ef9ef5ee40d2d25b2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 Essa classe fornece métodos para criar e gerenciar um objeto de mapa.  
@@ -152,11 +147,11 @@ class CAtlMap
 
   
 ## <a name="remarks"></a>Comentários  
- `CAtlMap`fornece suporte para uma matriz de mapeamento de qualquer tipo determinado, gerenciando uma matriz não ordenada de elementos chave e seus valores associados. Elementos (consistindo de uma chave e um valor) são armazenados usando um algoritmo de hash, permitindo que uma grande quantidade de dados a ser armazenada e recuperada com eficiência.  
+ `CAtlMap` fornece suporte para uma matriz de mapeamento de qualquer tipo determinado, gerenciando uma matriz não ordenada de elementos chave e seus valores associados. Elementos (consistindo de uma chave e um valor) são armazenados usando um algoritmo de hash, permitindo que uma grande quantidade de dados a ser armazenada e recuperada com eficiência.  
   
  O `KTraits` e `VTraits` são classes de características que contêm qualquer código complementar necessário para copiar ou mover os elementos de parâmetros.  
   
- Uma alternativa para `CAtlMap` é oferecida pelo [CRBMap](../../atl/reference/crbmap-class.md) classe. `CRBMap`também armazena os pares chave/valor, mas apresenta diferentes características de desempenho. O tempo necessário para inserir um item, pesquisar uma chave, ou exclua uma chave de um `CRBMap` objeto é de ordem *log(n)*, onde  *n*  é o número de elementos. Para `CAtlMap`, todas essas operações geralmente levam tempo constante, embora os cenários mais desfavoráveis possam ser ordem  *n* . Portanto, em um caso típico, `CAtlMap` é mais rápido.  
+ Uma alternativa para `CAtlMap` é oferecida pelo [CRBMap](../../atl/reference/crbmap-class.md) classe. `CRBMap` também armazena os pares chave/valor, mas apresenta diferentes características de desempenho. O tempo necessário para inserir um item, pesquisar uma chave, ou exclua uma chave de um `CRBMap` objeto é de ordem *log(n)*, onde *n* é o número de elementos. Para `CAtlMap`, todas essas operações geralmente levam tempo constante, embora os cenários mais desfavoráveis possam ser ordem *n*. Portanto, em um caso típico, `CAtlMap` é mais rápido.  
   
  Outra diferença entre `CRBMap` e `CAtlMap` se torna aparente quando se itera por meio de elementos armazenados. Em um `CRBMap`, os elementos são acessados em uma ordem classificada. Em um `CAtlMap`, os elementos não são classificados e ordem não pode ser inferida.  
   
@@ -167,7 +162,7 @@ class CAtlMap
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  
   
-##  <a name="assertvalid"></a>CAtlMap::AssertValid  
+##  <a name="assertvalid"></a>  CAtlMap::AssertValid  
  Chame este método para fazer com que uma declaração se o `CAtlMap` objeto não é válido.  
   
 ```
@@ -180,7 +175,7 @@ void AssertValid() const;
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="catlmap"></a>CAtlMap::CAtlMap  
+##  <a name="catlmap"></a>  CAtlMap::CAtlMap  
  O construtor.  
   
 ```
@@ -209,7 +204,7 @@ CAtlMap(
  O tamanho do bloco.  
   
 ### <a name="remarks"></a>Comentários  
- `CAtlMap`todos os seus elementos armazenados faz referência ao primeiro criar um índice usando um algoritmo de hash na chave. Esse índice faz referência a um "bin" que contém um ponteiro para os elementos armazenados. Se o agrupamento já está em uso, uma lista vinculada é criada para acessar os elementos subsequentes. Como percorrer uma lista é mais lenta que acessar diretamente o elemento correto, e portanto, a estrutura do mapa precisa equilibrar os requisitos de armazenamento em relação ao desempenho. Os parâmetros padrão foram escolhidos para oferecer bons resultados na maioria dos casos.  
+ `CAtlMap` todos os seus elementos armazenados faz referência ao primeiro criar um índice usando um algoritmo de hash na chave. Esse índice faz referência a um "bin" que contém um ponteiro para os elementos armazenados. Se o agrupamento já está em uso, uma lista vinculada é criada para acessar os elementos subsequentes. Como percorrer uma lista é mais lenta que acessar diretamente o elemento correto, e portanto, a estrutura do mapa precisa equilibrar os requisitos de armazenamento em relação ao desempenho. Os parâmetros padrão foram escolhidos para oferecer bons resultados na maioria dos casos.  
   
  A taxa de carga é a taxa do número de compartimentos para o número de elementos armazenado no objeto de mapa. Quando a estrutura do mapa é recalculada, o *fOptimalLoad* o valor do parâmetro será usado para calcular o número de gavetas necessário. Esse valor pode ser alterado usando o [CAtlMap::SetOptimalLoad](#setoptimalload) método.  
   
@@ -226,7 +221,7 @@ CAtlMap(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlMap:: ~ CAtlMap  
+##  <a name="dtor"></a>  CAtlMap:: ~ CAtlMap  
  O destruidor.  
   
 ```
@@ -236,7 +231,7 @@ CAtlMap(
 ### <a name="remarks"></a>Comentários  
  Libera todos os recursos alocados.  
   
-##  <a name="cpair_class"></a>Classe CAtlMap::CPair  
+##  <a name="cpair_class"></a>  Classe CAtlMap::CPair  
  Uma classe que contém os elementos de chave e valor.  
   
 ```
@@ -246,7 +241,7 @@ class CPair : public __POSITION
 ### <a name="remarks"></a>Comentários  
  Essa classe é usada pelos métodos [CAtlMap::GetNext](#getnext) e [CAtlMap::Lookup](#lookup) para acessar os elementos de chave e o valor armazenados na estrutura de mapeamento.  
   
-##  <a name="disableautorehash"></a>CAtlMap::DisableAutoRehash  
+##  <a name="disableautorehash"></a>  CAtlMap::DisableAutoRehash  
  Chame esse método para desabilitar automática refazendo o hash do `CAtlMap` objeto.  
   
 ```
@@ -256,9 +251,9 @@ void DisableAutoRehash() throw();
 ### <a name="remarks"></a>Comentários  
  Quando refazendo o hash automático está habilitado (que é o padrão), o número de compartimentos na tabela de hash automaticamente será recalculado se o valor de carga (a taxa do número de compartimentos para o número de elementos armazenados na matriz) excede o valor máximo ou mínimo especificado no momento em que o mapa foi criado.  
   
- `DisableAutoRehash`é mais útil quando um grande número de elementos será adicionado ao mapa de uma vez. Em vez de disparar o processo de rehashing toda vez que os limites são excedidos, é mais eficiente chamar `DisableAutoRehash`, adicione os elementos e, finalmente, chame [CAtlMap::EnableAutoRehash](#enableautorehash).  
+ `DisableAutoRehash` é mais útil quando um grande número de elementos será adicionado ao mapa de uma vez. Em vez de disparar o processo de rehashing toda vez que os limites são excedidos, é mais eficiente chamar `DisableAutoRehash`, adicione os elementos e, finalmente, chame [CAtlMap::EnableAutoRehash](#enableautorehash).  
   
-##  <a name="enableautorehash"></a>CAtlMap::EnableAutoRehash  
+##  <a name="enableautorehash"></a>  CAtlMap::EnableAutoRehash  
  Chame esse método para habilitar automática refazendo o hash do `CAtlMap` objeto.  
   
 ```
@@ -270,7 +265,7 @@ void EnableAutoRehash() throw();
   
  **EnableAutoRefresh** é mais frequentemente usado após uma chamada para [CAtlMap::DisableAutoRehash](#disableautorehash).  
   
-##  <a name="getat"></a>CAtlMap::GetAt  
+##  <a name="getat"></a>  CAtlMap::GetAt  
  Chame este método para retornar o elemento em uma posição especificada no mapa.  
   
 ```
@@ -298,7 +293,7 @@ CPair* GetAt(POSITION& pos) throw();
 ### <a name="remarks"></a>Comentários  
  Em compilações de depuração, um erro de asserção ocorrerá se `pos` é igual a NULL.  
   
-##  <a name="getcount"></a>CAtlMap::GetCount  
+##  <a name="getcount"></a>  CAtlMap::GetCount  
  Chame esse método para recuperar o número de elementos no mapa.  
   
 ```
@@ -311,7 +306,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="gethashtablesize"></a>CAtlMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>  CAtlMap::GetHashTableSize  
  Chame este método para determinar o número de compartimentos na tabela de hash do mapa.  
   
 ```
@@ -321,7 +316,7 @@ UINT GetHashTableSize() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de compartimentos na tabela de hash. Consulte [CAtlMap::CAtlMap](#catlmap) para obter uma explicação.  
   
-##  <a name="getkeyat"></a>CAtlMap::GetKeyAt  
+##  <a name="getkeyat"></a>  CAtlMap::GetKeyAt  
  Chame esse método para recuperar a chave armazenada na posição fornecida no `CAtlMap` objeto.  
   
 ```
@@ -338,7 +333,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="getnext"></a>CAtlMap::GetNext  
+##  <a name="getnext"></a>  CAtlMap::GetNext  
  Chame esse método para obter um ponteiro para o próximo elemento par armazenado na `CAtlMap` objeto.  
   
 ```
@@ -353,7 +348,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um ponteiro para o próximo par de elementos de chave/valor armazenados em map. O `pos` posição é atualizado após cada chamada. Se o elemento recuperado é o último no mapa, `pos` é definido como NULL.  
   
-##  <a name="getnextassoc"></a>CAtlMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CAtlMap::GetNextAssoc  
  Obtém o próximo elemento de iteração.  
   
 ```
@@ -376,7 +371,7 @@ void GetNextAssoc(
 ### <a name="remarks"></a>Comentários  
  O `pos` posição é atualizado após cada chamada. Se o elemento recuperado é o último no mapa, `pos` é definido como NULL.  
   
-##  <a name="getnextkey"></a>CAtlMap::GetNextKey  
+##  <a name="getnextkey"></a>  CAtlMap::GetNextKey  
  Chame esse método para recuperar a próxima chave do `CAtlMap` objeto.  
   
 ```
@@ -393,7 +388,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 ### <a name="remarks"></a>Comentários  
  Atualiza o contador de posição atual, `pos`. Se não existem mais entradas no mapa, o contador de posição é definido como NULL.  
   
-##  <a name="getnextvalue"></a>CAtlMap::GetNextValue  
+##  <a name="getnextvalue"></a>  CAtlMap::GetNextValue  
  Chame esse método para obter o próximo valor da `CAtlMap` objeto.  
   
 ```
@@ -414,7 +409,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="getstartposition"></a>CAtlMap::GetStartPosition  
+##  <a name="getstartposition"></a>  CAtlMap::GetStartPosition  
  Chame este método para iniciar uma iteração de mapa.  
   
 ```
@@ -433,7 +428,7 @@ POSITION GetStartPosition() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="getvalueat"></a>CAtlMap::GetValueAt  
+##  <a name="getvalueat"></a>  CAtlMap::GetValueAt  
  Chame esse método para recuperar o valor armazenado em uma posição determinada a `CAtlMap` objeto.  
   
 ```
@@ -448,7 +443,7 @@ const V& GetValueAt(POSITION pos) const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna uma referência para o valor armazenado na posição fornecida no `CAtlMap` objeto.  
   
-##  <a name="inithashtable"></a>CAtlMap::InitHashTable  
+##  <a name="inithashtable"></a>  CAtlMap::InitHashTable  
  Chame este método para inicializar a tabela de hash.  
   
 ```
@@ -468,14 +463,14 @@ bool InitHashTable(
  Retorna **true** na inicialização bem-sucedida, **false** em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- `InitHashTable`deve ser chamado antes de todos os elementos são armazenados na tabela de hash.  Se esse método não for chamado explicitamente, ele será chamado automaticamente na primeira vez que um elemento é adicionado usando a contagem de bin especificada pelo **CAtlMap** construtor.  Caso contrário, o mapa será inicializado usando a nova contagem de bin especificada pelo `nBins` parâmetro.  
+ `InitHashTable` deve ser chamado antes de todos os elementos são armazenados na tabela de hash.  Se esse método não for chamado explicitamente, ele será chamado automaticamente na primeira vez que um elemento é adicionado usando a contagem de bin especificada pelo **CAtlMap** construtor.  Caso contrário, o mapa será inicializado usando a nova contagem de bin especificada pelo `nBins` parâmetro.  
   
  Se o `bAllocNow` parâmetro for false, a memória necessária para a tabela de hash não será alocada até que o primeiro é necessário. Isso pode ser útil se estiver incerto se o mapa será usado.  
   
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="isempty"></a>CAtlMap::IsEmpty  
+##  <a name="isempty"></a>  CAtlMap::IsEmpty  
  Chame este método para testar um objeto de mapa vazio.  
   
 ```
@@ -485,21 +480,21 @@ bool IsEmpty() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna **true** se o mapa estiver vazio, **false** caso contrário.  
   
-##  <a name="kinargtype"></a>CAtlMap::KINARGTYPE  
+##  <a name="kinargtype"></a>  CAtlMap::KINARGTYPE  
  Tipo usado quando uma chave é passada como um argumento de entrada.  
   
 ```
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```  
   
-##  <a name="koutargtype"></a>CAtlMap::KOUTARGTYPE  
+##  <a name="koutargtype"></a>  CAtlMap::KOUTARGTYPE  
  Tipo usado quando uma chave é retornada como um argumento de saída.  
   
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```  
   
-##  <a name="lookup"></a>CAtlMap::Lookup  
+##  <a name="lookup"></a>  CAtlMap::Lookup  
  Chame este método para pesquisar chaves ou valores de `CAtlMap` objeto.  
   
 ```
@@ -519,9 +514,9 @@ CPair* Lookup(KINARGTYPE key) throw();
  O primeiro formulário do método retornará true se a chave for encontrada, caso contrário, false. Os formulários de segundo e terceiro retornam um ponteiro para um [CPair](#cpair_class) que pode ser usado como uma posição para chamadas para [CAtlMap::GetNext](#getnext) e assim por diante.  
   
 ### <a name="remarks"></a>Comentários  
- `Lookup`usa um algoritmo de hash para localizar rapidamente o elemento do mapa que contém uma chave que coincide com o parâmetro de chave especificado.  
+ `Lookup` usa um algoritmo de hash para localizar rapidamente o elemento do mapa que contém uma chave que coincide com o parâmetro de chave especificado.  
   
-##  <a name="operator_at"></a>CAtlMap::operator\[\]  
+##  <a name="operator_at"></a>  CAtlMap::operator \[\]  
  Substitui ou adiciona um novo elemento para o `CAtlMap`.  
   
 ```
@@ -538,7 +533,7 @@ V& operator[](kinargtype key) throw();
 ### <a name="example"></a>Exemplo  
  Se a chave já existir, o elemento é substituído. Se a chave não existir, um novo elemento será adicionado. Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="rehash"></a>CAtlMap::Rehash  
+##  <a name="rehash"></a>  CAtlMap::Rehash  
  Chame este método para rehash o `CAtlMap` objeto.  
   
 ```
@@ -552,7 +547,7 @@ void Rehash(UINT nBins = 0);
 ### <a name="remarks"></a>Comentários  
  Se `nBins` é 0, `CAtlMap` calcula um número razoável com base no número de elementos do mapa e a configuração ideal de carga. Normalmente, o processo de rehashing é automático, mas se [CAtlMap::DisableAutoRehash](#disableautorehash) foi chamado, esse método executará o redimensionamento necessário.  
   
-##  <a name="removeall"></a>CAtlMap::RemoveAll  
+##  <a name="removeall"></a>  CAtlMap::RemoveAll  
  Chame esse método para remover todos os elementos do `CAtlMap` objeto.  
   
 ```
@@ -562,7 +557,7 @@ void RemoveAll() throw();
 ### <a name="remarks"></a>Comentários  
  Limpa o `CAtlMap` objeto, liberando a memória usada para armazenar os elementos.  
   
-##  <a name="removeatpos"></a>CAtlMap::RemoveAtPos  
+##  <a name="removeatpos"></a>  CAtlMap::RemoveAtPos  
  Chame esse método para remover o elemento na posição fornecida no `CAtlMap` objeto.  
   
 ```
@@ -576,7 +571,7 @@ void RemoveAtPos(POSITION pos) throw();
 ### <a name="remarks"></a>Comentários  
  Remove o par chave/valor armazenado na posição especificada. A memória usada para armazenar o elemento é liberada. A posição referenciada por `pos` se torna inválido e enquanto a posição de todos os outros elementos no mapa permanece válida, preencham não necessariamente mantêm a mesma ordem.  
   
-##  <a name="removekey"></a>CAtlMap::RemoveKey  
+##  <a name="removekey"></a>  CAtlMap::RemoveKey  
  Chame esse método para remover um elemento de `CAtlMap` objeto, de acordo com a chave.  
   
 ```
@@ -593,7 +588,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CAtlMap::CAtlMap](#catlmap).  
   
-##  <a name="setat"></a>CAtlMap::SetAt  
+##  <a name="setat"></a>  CAtlMap::SetAt  
  Chame este método para inserir um par de elemento no mapa.  
   
 ```
@@ -613,9 +608,9 @@ POSITION SetAt(
  Retorna a posição do par chave/valor de elemento no `CAtlMap` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- `SetAt`substitui um elemento existente se for encontrada uma chave correspondente. Se a chave não for encontrada, é criado um novo par de chave/valor.  
+ `SetAt` substitui um elemento existente se for encontrada uma chave correspondente. Se a chave não for encontrada, é criado um novo par de chave/valor.  
   
-##  <a name="setoptimalload"></a>CAtlMap::SetOptimalLoad  
+##  <a name="setoptimalload"></a>  CAtlMap::SetOptimalLoad  
  Chame este método para definir a carga ideal do `CAtlMap` objeto.  
   
 ```
@@ -642,7 +637,7 @@ void SetOptimalLoad(
 ### <a name="remarks"></a>Comentários  
  Este método redefine o valor de carga ideal para o `CAtlMap` objeto. Consulte [CAtlMap::CAtlMap](#catlmap) para uma discussão sobre os vários parâmetros. Se `bRehashNow` for true e o número de elementos é fora os valores mínimo e máximo, a tabela de hash é recalculada.  
   
-##  <a name="setvalueat"></a>CAtlMap::SetValueAt  
+##  <a name="setvalueat"></a>  CAtlMap::SetValueAt  
  Chame esse método para alterar o valor armazenado em uma posição determinada a `CAtlMap` objeto.  
   
 ```
@@ -661,21 +656,21 @@ void SetValueAt(
 ### <a name="remarks"></a>Comentários  
  Altera o elemento de valor armazenado na posição fornecida no `CAtlMap` objeto.  
   
-##  <a name="vinargtype"></a>CAtlMap::VINARGTYPE  
+##  <a name="vinargtype"></a>  CAtlMap::VINARGTYPE  
  Tipo usado quando um valor é passado como um argumento de entrada.  
   
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```  
   
-##  <a name="voutargtype"></a>CAtlMap::VOUTARGTYPE  
+##  <a name="voutargtype"></a>  CAtlMap::VOUTARGTYPE  
  Tipo usado quando um valor é passado como um argumento de saída.  
   
 ```
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```  
   
-##  <a name="m_key"></a>CAtlMap::CPair::m_key  
+##  <a name="m_key"></a>  CAtlMap::CPair::m_key  
  O membro de dados armazenando o elemento chave.  
   
 ```
@@ -686,7 +681,7 @@ const K m_key;
  `K`  
  O tipo de elemento de chave.  
   
-##  <a name="m_value"></a>CAtlMap::CPair::m_value  
+##  <a name="m_value"></a>  CAtlMap::CPair::m_value  
  O membro de dados armazenando o elemento de valor.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "Expressões pós-fixadas | Microsoft Docs"
-ms.custom: 
+title: Expressões pós-fixadas | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a116e4f1c937a1656f337396a8b10206e0776c0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-expressions"></a>Expressões pós-fixadas
 As expressões pós-fixadas consistem em expressões primárias ou expressões nas quais operadores pós-fixados seguem uma expressão primária. Os operadores pós-fixados estão listados na tabela a seguir.  
@@ -37,7 +32,7 @@ As expressões pós-fixadas consistem em expressões primárias ou expressões n
 |[Operador Subscript](../cpp/subscript-operator.md)|**[ ]**|  
 |[Operador de chamada de função](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operador de conversão de tipo explícito](../cpp/explicit-type-conversion-operator-parens.md)|*nome do tipo* **)**|  
-|[Operador de acesso de membro](../cpp/member-access-operators-dot-and.md)|**.** ou**->**|  
+|[Operador de acesso de membro](../cpp/member-access-operators-dot-and.md)|**.** Ou **->**|  
 |[Operador de incremento de sufixo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
 |[Operador de decremento de sufixo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   

@@ -1,5 +1,5 @@
 ---
-title: Rotinas de tempo de execução por categoria | Microsoft Docs
+title: Rotinas de tempo de execução C universais por categoria | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01bdb786c003894b4ab1bf6418aa9c492e909602
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="run-time-routines-by-category"></a>Rotinas de tempo de execução por categoria
+# <a name="universal-c-runtime-routines-by-category"></a>Rotinas de tempo de execução C universais por categoria
 
-Esta seção lista e descreve rotinas de biblioteca em tempo de execução da Microsoft por categoria. Para comodidade de referência, algumas rotinas são listadas em mais de uma categoria. As rotinas de caracteres multibyte e as rotinas de caracteres largos são agrupadas com as contrapartes de caracteres de byte único, onde elas existem.
+Esta seção lista e descreve rotinas da biblioteca em UCRT (tempo de execução C universal) por categoria. Para comodidade de referência, algumas rotinas são listadas em mais de uma categoria. As rotinas de caracteres multibyte e as rotinas de caracteres largos são agrupadas com as contrapartes de caracteres de byte único, onde elas existem.
 
-## <a name="routine-categories"></a>Categorias de rotina
+## <a name="ucrt-library-routine-categories"></a>Categorias de rotina de biblioteca em UCRT
+
+As principais categorias de rotinas de biblioteca em UCRT são:
 
 |||
 |-|-|

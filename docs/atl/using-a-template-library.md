@@ -1,29 +1,24 @@
 ---
 title: Usando uma biblioteca de modelos (ATL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - template libraries
 ms.assetid: 5e80ec6e-a61c-41ce-b34b-9a6252c46265
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5232d2169ae9442a945b48ba141a609003611a90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48d7a8838097c862e3d4c16e15ec951441b72794
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-template-library"></a>Usando uma biblioteca de modelos
 Um modelo é um pouco como uma macro. Assim como acontece com uma macro, invocar um modelo faz com que ele expandir (com a substituição de parâmetro apropriado) ao código escrito. No entanto, um modelo vai além do que isso para permitir a criação de novas classes com base nos tipos que você passa como parâmetros. Essas novas classes implementam fortemente tipado maneiras de executar a operação expressada em seu código de modelo.  

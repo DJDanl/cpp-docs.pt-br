@@ -1,30 +1,25 @@
 ---
-title: "Práticas recomendadas de otimização | Microsoft Docs"
-ms.custom: 
+title: Práticas recomendadas de otimização | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e869a12635117f37f32fad3dcfdd38ed45d401e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimization-best-practices"></a>Práticas recomendadas de otimização
 Este documento descreve algumas práticas recomendadas para otimização em Visual C++. Os seguintes tópicos são abordados:  
@@ -80,7 +75,7 @@ Este documento descreve algumas práticas recomendadas para otimização em Visu
 ## <a name="optimization-declspecs"></a>Otimização Declspecs  
  Nesta seção examinaremos duas declspecs que pode ser usados em programas para ajudar no desempenho: `__declspec(restrict)` e `__declspec(noalias)`.  
   
- O `restrict` declspec só pode ser aplicado a declarações de função que retornam um ponteiro, como`__declspec(restrict) void *malloc(size_t size);`  
+ O `restrict` declspec só pode ser aplicado a declarações de função que retornam um ponteiro, como `__declspec(restrict) void *malloc(size_t size);`  
   
  O `restrict` declspec é usada em funções que retornam ponteiros sem alias. Esta palavra-chave é usada para a implementação de biblioteca de tempo de execução C de `malloc` desde que ele nunca retornarão um valor de ponteiro que já está em uso no programa atual (a menos que você esteja fazendo algo ilegal, como o uso de memória após ele ter sido liberado).  
   
@@ -113,24 +108,24 @@ int myFunc() {...}
   
  Inlining é uma das mais importantes otimizações que o compilador executa e aqui falarmos sobre os pragmas que ajudam a modificar esse comportamento.  
   
- `#pragma inline_recursion`é útil para especificar se deseja ou não que o aplicativo para poder embutido uma chamada recursiva. Por padrão, ele está desativado. Para a recursão superficial de pequenas funções talvez você precise ative esta opção. Para obter mais informações, consulte [inline_recursion](../../preprocessor/inline-recursion.md).  
+ `#pragma inline_recursion` é útil para especificar se deseja ou não que o aplicativo para poder embutido uma chamada recursiva. Por padrão, ele está desativado. Para a recursão superficial de pequenas funções talvez você precise ative esta opção. Para obter mais informações, consulte [inline_recursion](../../preprocessor/inline-recursion.md).  
   
  Outro pragma útil para limitar a profundidade de inlining é `#pragma inline_depth`. Isso é normalmente útil em situações em que você está tentando limitar o tamanho de um programa ou a função. Para obter mais informações, consulte [inline_depth](../../preprocessor/inline-depth.md).  
   
 ## <a name="restrict-and-assume"></a>Restrict e \__assume  
  Há algumas das palavras-chave no Visual C++ que pode ajudar no desempenho: [Restrict](../../cpp/extension-restrict.md) e [__assume](../../intrinsics/assume.md).  
   
- Primeiro, deve-se observar que `__restrict` e `__declspec(restrict)` são duas coisas diferentes. Enquanto eles estiverem ligeiramente relacionados, sua semântica é diferente. `__restrict`é um qualificador de tipo, como `const` ou `volatile`, mas apenas para tipos de ponteiro.  
+ Primeiro, deve-se observar que `__restrict` e `__declspec(restrict)` são duas coisas diferentes. Enquanto eles estiverem ligeiramente relacionados, sua semântica é diferente. `__restrict` é um qualificador de tipo, como `const` ou `volatile`, mas apenas para tipos de ponteiro.  
   
  Um ponteiro que é modificado com `__restrict` é conhecido como um *Restrict ponteiro*. Um ponteiro de __restrict é um ponteiro que só pode ser acessado por meio de \_ponteiro restrito. Em outras palavras, o outro ponteiro não pode ser usado para acessar os dados que aponta para o \_ponteiro restrito.  
   
- `__restrict`pode ser uma ferramenta poderosa para o otimizador do Visual C++, mas usá-lo com muito cuidado. Se usado incorretamente, o otimizador pode realizar uma otimização que interrompe o aplicativo.  
+ `__restrict` pode ser uma ferramenta poderosa para o otimizador do Visual C++, mas usá-lo com muito cuidado. Se usado incorretamente, o otimizador pode realizar uma otimização que interrompe o aplicativo.  
   
  O `__restrict` palavra-chave substitui o **/Oa** alternar de versões anteriores.  
   
  Com `__assume`, um desenvolvedor pode informar ao compilador para fazer suposições sobre o valor da variável de alguns.  
   
- Por exemplo `__assume(a < 5);` informa que o otimizador na linha de código a variável `a` é menor que 5. Novamente, essa é uma promessa para o compilador. Se `a` for realmente 6 neste ponto no programa, o comportamento do programa depois otimizou o compilador não pode ser o que você esperaria. `__assume`é mais útil antes de instruções switch e/ou expressões condicionais.  
+ Por exemplo `__assume(a < 5);` informa que o otimizador na linha de código a variável `a` é menor que 5. Novamente, essa é uma promessa para o compilador. Se `a` for realmente 6 neste ponto no programa, o comportamento do programa depois otimizou o compilador não pode ser o que você esperaria. `__assume` é mais útil antes de instruções switch e/ou expressões condicionais.  
   
  Existem algumas limitações para `__assume`. Primeiro, como `__restrict`, é apenas uma sugestão, portanto, o compilador é livre para ignorá-lo. Além disso, `__assume` atualmente só funciona com variável desigualdades em constantes. Ele não se propaga desigualdades simbólicas, por exemplo, assume(a < b).  
   

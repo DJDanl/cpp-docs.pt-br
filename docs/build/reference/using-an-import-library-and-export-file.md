@@ -2,12 +2,9 @@
 title: Usando uma biblioteca de importação e exportação de arquivo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d77fdc4df7d2e7239b8bba652d8cf8f4bbc997
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 946ef702d17762e6771bad206d0bfa682a61055e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-an-import-library-and-export-file"></a>Usando uma biblioteca de importação e um arquivo de exportação
 Quando um programa (um arquivo executável ou uma DLL) exporta para outro programa que ele também importa de, ou se mais de dois programas exportam para e importar entre si, os comandos para vincular esses programas devem acomodar exportações circulares.  

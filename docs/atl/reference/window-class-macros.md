@@ -1,12 +1,9 @@
 ---
 title: Macros de classe de janela | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::DECLARE_WND_CLASS
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bba4b6743477ae3c3d345a20f1c2e672e73261e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0490eedb412e43f2ae99c4034648880be5f32a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="window-class-macros"></a>Macros de classe de janela
 Essas macros definem utilitários de classe de janela.  
@@ -40,7 +35,7 @@ Essas macros definem utilitários de classe de janela.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
    
-##  <a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
+##  <a name="declare_wnd_class"></a>  DECLARE_WND_CLASS  
  Permite que você especifique o nome de uma nova classe de janela. Coloque esta macro na classe de controle de um controle ActiveX ATL.  
   
 ```
@@ -54,11 +49,11 @@ DECLARE_WND_CLASS( WndClassName )
 ### <a name="remarks"></a>Comentários  
  Se você estiver usando a opção /permissive-compiler, DECLARE_WND_CLASS causará um erro do compilador; Use DECLARE_WND_CLASS2.
  
- DECLARE_WND_CLASS permite que você especifique o nome de uma nova classe de janela cujas informações serão gerenciadas por [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS`Define a nova classe de janela Implementando a seguinte função estática:  
+ DECLARE_WND_CLASS permite que você especifique o nome de uma nova classe de janela cujas informações serão gerenciadas por [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS` Define a nova classe de janela Implementando a seguinte função estática:  
   
  [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
   
- `DECLARE_WND_CLASS`Especifica os seguintes estilos para a nova janela:  
+ `DECLARE_WND_CLASS` Especifica os seguintes estilos para a nova janela:  
   
 -   CS_HREDRAW  
   
@@ -66,14 +61,14 @@ DECLARE_WND_CLASS( WndClassName )
   
 -   CS_DBLCLKS  
   
- `DECLARE_WND_CLASS`também especifica a cor do plano de fundo da janela padrão. Use o [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) macro para fornecer seus próprios estilos e cores de plano de fundo.  
+ `DECLARE_WND_CLASS` também especifica a cor do plano de fundo da janela padrão. Use o [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) macro para fornecer seus próprios estilos e cores de plano de fundo.  
   
  [CWindowImpl](cwindowimpl-class.md) usa o `DECLARE_WND_CLASS` macro ao criar uma janela com base em uma nova classe de janela. Para substituir esse comportamento, use o [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) macro, ou fornecer sua própria implementação de [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) função.  
 
   
  Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).  
 
-##  <a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2  
+##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2  
  (2017 do visual Studio) Semelhante ao DECLARE_WND_CLASS, mas com um parâmetro extra que evita a um erro de nome dependente ao compilar com o /permissive-option.
   
 ```
@@ -91,7 +86,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 Se você estiver usando o /permissive-option, DECLARE_WND_CLASS causará um erro de compilação porque ela contém um nome dependente. DECLARE_WND_CLASS2 exige que você nomear explicitamente a classe que essa macro é usada em e não causa o erro sob o /permissive-flag.
 Caso contrário, essa macro é idêntica ao [DECLARE_WND_CLASS](#declare_wnd_class).
    
-##  <a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
+##  <a name="declare_wnd_superclass"></a>  DECLARE_WND_SUPERCLASS  
  Permite que você especifique os parâmetros de uma classe. Coloque esta macro na classe de controle de um controle ActiveX ATL.  
   
 ```
@@ -108,7 +103,7 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 ### <a name="remarks"></a>Comentários  
  Esta macro permite que você especifique o nome de uma classe de janela que será a superclasse uma classe de janela existente. [CWndClassInfo](cwndclassinfo-class.md) gerencia as informações de superclasse.  
   
- `DECLARE_WND_SUPERCLASS`implementa a seguinte função estática:  
+ `DECLARE_WND_SUPERCLASS` implementa a seguinte função estática:  
   
  [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
   
@@ -119,7 +114,7 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
   
  Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).  
   
-##  <a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
+##  <a name="declare_wnd_class_ex"></a>  DECLARE_WND_CLASS_EX  
  Permite que você especifique o nome de uma classe de janela existente no qual uma nova classe de janela será baseada. Coloque esta macro na classe de controle de um controle ActiveX ATL.  
   
 ```
@@ -137,7 +132,7 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
  [in] A cor de plano de fundo da janela.  
   
 ### <a name="remarks"></a>Comentários  
- Esta macro permite que você especifique os parâmetros de classe de uma nova classe de janela, cujas informações serão gerenciadas por [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS_EX`Define a nova classe de janela Implementando a seguinte função estática:  
+ Esta macro permite que você especifique os parâmetros de classe de uma nova classe de janela, cujas informações serão gerenciadas por [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS_EX` Define a nova classe de janela Implementando a seguinte função estática:  
   
  [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
   

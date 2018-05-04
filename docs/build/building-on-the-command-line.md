@@ -1,10 +1,10 @@
 ---
 title: Compilar o código C/C++ na linha de comando | Microsoft Docs
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4ec1034d4d77542df4a4241ad3ba5c087602ae
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilar o código C/C++ na linha de comando
 
@@ -91,12 +90,12 @@ Arquivos de comando adicionais estão disponíveis para configurar a arquitetura
 
 ### <a name="vcvarsall-syntax"></a>sintaxe de vcvarsall
 
-> **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
+> **vcvarsall.bat** [*arquitetura*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver =** _vcversion_]
 
-*architecture*<br/>
+*Arquitetura*<br/>
 Esse argumento opcional especifica a arquitetura de host e de destino a ser usado. Se *arquitetura* não for especificado, o ambiente de compilação padrão será usado. Há suporte para estes argumentos:
 
-|*architecture*|Compilador|Arquitetura do computador host|Criar a arquitetura de saída (destino)|
+|*Arquitetura*|Compilador|Arquitetura do computador host|Criar a arquitetura de saída (destino)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|Nativa de 32 bits x86|x86, x64|x86|
 |**x86\_amd64** ou **x86\_x64**|cross x64 x86|x86, x64|X64|

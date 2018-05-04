@@ -1,12 +1,9 @@
 ---
 title: Classe CCRTAllocator | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84c8f800e0b68e23fe33ca0a7e1c1d977bcc344e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f92ae3f4041b143a8cc4d58b1060c7d5b9a7bb4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccrtallocator-class"></a>Classe CCRTAllocator
 Essa classe fornece métodos para o gerenciamento de memória usando as rotinas de memória do CRT.  
@@ -56,7 +51,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
   
-##  <a name="allocate"></a>CCRTAllocator::Allocate  
+##  <a name="allocate"></a>  CCRTAllocator::Allocate  
  Chame a função estática para alocar memória.  
   
 ```
@@ -73,7 +68,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Comentários  
  Aloca memória. Consulte [malloc](../../c-runtime-library/reference/malloc.md) para obter mais detalhes.  
   
-##  <a name="free"></a>CCRTAllocator::Free  
+##  <a name="free"></a>  CCRTAllocator::Free  
  Chame a função estática para liberar memória.  
   
 ```
@@ -87,7 +82,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Comentários  
  Libera a memória alocada. Consulte [livre](../../c-runtime-library/reference/free.md) para obter mais detalhes.  
   
-##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
+##  <a name="reallocate"></a>  CCRTAllocator::Reallocate  
  Chame a função estática para realocar a memória.  
   
 ```

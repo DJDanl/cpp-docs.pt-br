@@ -1,29 +1,24 @@
 ---
-title: "Impedimento de contenção de Heap | Microsoft Docs"
-ms.custom: 
+title: Impedimento de contenção de Heap | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 731fcb2328f789e5c487dc56510bbd6f7ec049ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="avoidance-of-heap-contention"></a>Impedimento de contenção de Heap
 Os gerenciadores de cadeia de caracteres padrão fornecidos pelo MFC e ATL são wrappers simples sobre um heap global. Esta pilha global é totalmente thread-safe, que significa que vários threads podem alocar e liberar memória dele simultaneamente, sem a corrupção de heap. Para ajudar a fornecer acesso thread-safe, o heap tem que serializar o acesso a mesmo. Isso geralmente é feito com uma seção crítica ou mecanismo de bloqueio semelhante. Sempre que dois threads tentarem acessar simultaneamente o heap, um thread está bloqueado até que a solicitação do outro thread é concluída. Para muitos aplicativos, essa situação ocorre raramente e o impacto no desempenho do mecanismo de bloqueio do heap é insignificante. No entanto, para aplicativos que acessam com frequência o heap de vários threads de contenção de bloqueio da pilha pode causar o aplicativo seja executado mais lentamente do que se fosse single-threaded (mesmo em computadores com várias CPUs).  

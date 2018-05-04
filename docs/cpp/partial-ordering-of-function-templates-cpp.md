@@ -1,29 +1,24 @@
 ---
-title: "Ordenação parcial de modelos de função (C++) | Microsoft Docs"
-ms.custom: 
+title: Ordenação parcial de modelos de função (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordenação parcial de modelos de função (C++)
 
@@ -49,7 +44,7 @@ Use o seguinte processo para determinar se um candidato a modelo de função é 
 
      2. Um modelo de colocar somente __T\*__  é mais especializadas que fazer uma __T__, porque o tipo de um hipotético __X\*__  é um argumento válido para um __T__ argumento de modelo, mas __X__ não é um argumento válido para uma __T\*__  argumento de modelo.
 
-     3. __Const T__ é mais especializadas que __T__, pois __X const__ é um argumento válido para uma __T__ argumento de modelo, mas __X__ não é um argumento válido para uma __const T__ argumento de modelo.
+     3. __Const T__ é mais especializadas que __T__, pois __X const__ é um argumento válido para uma __T__ argumento de modelo, mas __X__ é não é um argumento válido para uma __const T__ argumento de modelo.
 
      4. __Const T\*__  é mais especializadas que __T\*__, pois __X const\*__  é um argumento válido para uma __T\*__  argumento de modelo, mas __X\*__  não é um argumento válido para uma __const T\*__  argumento de modelo.
 

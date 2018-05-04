@@ -1,13 +1,10 @@
 ---
 title: GetProcAddress | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-Vinculando explicitamente para uma chamada DLL de processos [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) para obter o endereço de uma função exportada na DLL. Você pode usar o ponteiro de função retornado para chamar a função DLL. **GetProcAddress** usa como parâmetros a alça do módulo DLL (retornado pelo **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) e usa o nome da função você deseja chamada ou exportação de função ordinal.  
+Vinculando explicitamente para uma chamada DLL de processos [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) para obter o endereço de uma função exportada na DLL. Você pode usar o ponteiro de função retornado para chamar a função DLL. **GetProcAddress** usa como parâmetros a alça do módulo DLL (retornado pelo **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) e usa o nome da função que você deseja a chamada ou ordinal de exportação da função.  
   
  Como você está chamando a função DLL por meio de um ponteiro e não há nenhuma verificação de tipo de tempo de compilação, certifique-se de que os parâmetros para a função estão corretos para que você não overstep a memória alocada na pilha e causar uma violação de acesso. Uma maneira para ajudar a fornecer a segurança de tipo é examinar os protótipos de função das funções exportadas e criar definições de tipo correspondentes para os ponteiros de função. Por exemplo:  
   

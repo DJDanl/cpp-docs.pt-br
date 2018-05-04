@@ -1,12 +1,9 @@
 ---
-title: "Semântica de expressões | Microsoft Docs"
-ms.custom: 
+title: Semântica de expressões | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="semantics-of-expressions"></a>Semântica de expressões
 As expressões são avaliadas de acordo com a precedência e o agrupamento dos respectivos operadores. ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md) na [convenções lexicais](../cpp/lexical-conventions.md), mostra as relações do C++ impõem operadores em expressões.)  
@@ -80,10 +75,10 @@ Ordem de avaliação da expressão com parênteses
   
 |Tipo esperado|Tipos permitidos|  
 |-------------------|-------------------|  
-|*type*|`const` *tipo de*<br /> `volatile` *tipo de*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *tipo de*<br /> `volatile const` *type*&|  
-|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
-|`const` *tipo de*|*type*<br /> `const` *tipo de*<br />`const` *type*&|  
-|`volatile` *tipo de*|*type*<br /> `volatile` *tipo de*<br /> `volatile` *type*&|  
+|*type*|`const` *tipo de*<br /> `volatile` *tipo de*<br /> *tipo de*&<br /> `const` *tipo de*&<br /> `volatile` *tipo de*&<br /> `volatile const` *tipo de*<br /> `volatile const` *tipo de*&|  
+|*tipo de*\*|*tipo de*\*<br /> `const` *tipo de*\*<br /> `volatile` *tipo de*\*<br /> `volatile const` *tipo de*\*|  
+|`const` *tipo de*|*type*<br /> `const` *tipo de*<br />`const` *tipo de*&|  
+|`volatile` *tipo de*|*type*<br /> `volatile` *tipo de*<br /> `volatile` *tipo de*&|  
   
  Como as regras acima podem sempre ser usadas em conjunto, um ponteiro const para um objeto volatile pode ser fornecido onde um ponteiro é esperado.  
   

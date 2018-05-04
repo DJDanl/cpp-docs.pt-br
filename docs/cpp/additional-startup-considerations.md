@@ -1,12 +1,9 @@
 ---
-title: "Considerações de inicialização adicionais | Microsoft Docs"
-ms.custom: 
+title: Considerações de inicialização adicionais | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - startup code
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57b1de8fbbdb3d969dca8e84e57e18b81749d944
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c05ce0fa1a80de8f5ab8b9335bbab22628f3f158
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additional-startup-considerations"></a>Considerações de inicialização adicionais
 Em C++, a construção e destruição do objeto podem envolver a execução do código do usuário. Portanto, é importante entender quais inicializações acontecem antes de entrada para **principal** e quais destruidores são chamados após a saída do **principal**. (Para obter informações detalhadas sobre a construção e destruição de objetos, consulte [construtores](../cpp/constructors-cpp.md) e [destruidores](../cpp/destructors-cpp.md).)  
@@ -45,4 +40,4 @@ Em C++, a construção e destruição do objeto podem envolver a execução do c
  Os objetos globais estáticos que são mutuamente interdependentes, mas em diferentes unidades de conversão, podem provocar comportamento incorreto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Início e término](../cpp/startup-and-termination-cpp.md)
+ [Inicialização e término](../cpp/startup-and-termination-cpp.md)

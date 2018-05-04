@@ -2,11 +2,8 @@
 title: (C/C++) de manipulação de exceção estruturada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Tratamento de exceções estruturado (C/C++)
 Ainda que o Windows e Visual C++ suportem o tratamento de exceções (SEH), recomendamos o uso do tratamento de exceções do padrão ISO C++, pois ele torna o código mais portável e flexível. Entretanto, no código existente ou em tipos específicos de programas, você ainda pode precisar do SEH.  
@@ -38,9 +33,9 @@ Ainda que o Windows e Visual C++ suportem o tratamento de exceções (SEH), reco
 ## <a name="grammar"></a>Gramática  
  *exceto instrução Try* :  
   
- `__try`*instrução compostas*  
+ `__try` *instruções compostas*  
   
- `__except`( `expression` ) *compostas de instrução*  
+ `__except` ( `expression` ) *compostas de instrução*  
   
 ## <a name="remarks"></a>Comentários  
  Com o SEH, é possível garantir que os recursos, como blocos e arquivos de memória, estejam corretos se a execução for finalizada inesperadamente. Você também pode controlar problemas específicos como, por exemplo, memória insuficiente, usando um código estruturado e conciso que não confia em instruções `goto` ou em testes elaborados de códigos de retorno.  

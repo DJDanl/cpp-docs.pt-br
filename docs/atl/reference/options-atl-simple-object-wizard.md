@@ -1,12 +1,9 @@
 ---
-title: "Opções, o Assistente de objeto simples de ATL | Microsoft Docs"
-ms.custom: 
+title: Opções, o Assistente de objeto simples de ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ffc38f5359b68b90f91a2643e1fbaa743a94e559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opções de Assistente de objeto simples de ATL
 Use esta página do Assistente de objeto simples de ATL para maior eficiência e suporte de erro para o objeto de design.  
@@ -59,7 +54,7 @@ Use esta página do Assistente de objeto simples de ATL para maior eficiência e
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**Dual**|Especifica que o objeto oferece suporte a uma interface dupla (seu vtable tem associação tardia além de funções de interface personalizada `IDispatch` métodos). Permite que ambos os clientes COM e [controladores de automação](../../mfc/automation-clients.md) para acessar o objeto. O padrão.|  
+|**Duplo**|Especifica que o objeto oferece suporte a uma interface dupla (seu vtable tem associação tardia além de funções de interface personalizada `IDispatch` métodos). Permite que ambos os clientes COM e [controladores de automação](../../mfc/automation-clients.md) para acessar o objeto. O padrão.|  
 |**Personalizado**|Especifica que o objeto oferece suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente em limites de processo.<br /><br /> -   **Automação compatível** controladores de automação permite acessar um objeto que tem o suporte de interface personalizada.|  
   
  **Suporte**  

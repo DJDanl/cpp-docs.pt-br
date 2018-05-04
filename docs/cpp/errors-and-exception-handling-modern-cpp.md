@@ -1,27 +1,22 @@
 ---
-title: "Erros e tratamento de exceções (C++ moderno) | Microsoft Docs"
-ms.custom: 
+title: Erros e tratamento de exceções (C++ moderno) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Erros e tratamento de exceções (C++ moderno)
 No C++ moderna, na maioria dos cenários, a melhor maneira de relatório e tratar erros de lógica e erros de tempo de execução é usar exceções. Isso é especialmente verdadeiro quando a pilha pode conter várias chamadas de função entre a função que detecta o erro e a função que tem o contexto para saber como lidar com ele. Exceções fornecem uma maneira formal e bem definida para o código que detecta erros para passar as informações de pilha de chamadas.  

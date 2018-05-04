@@ -1,12 +1,9 @@
 ---
 title: Unicode e Multibyte Character Set (MBCS) suporte | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,14 +18,13 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Suporte a Unicode e Multibyte Character Set (MBCS)
 
@@ -48,7 +44,7 @@ Esses biblioteca, depurador e arquivos DLL são usados para oferecer suporte a U
 
 |||||
 |-|-|-|-|
-|UAFXCW. LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
+|UAFXCW.LIB|UAFXCW. PDB|UAFXCWD.LIB|UAFXCWD. PDB|
 |MFC*versão*U.LIB|MFC*versão*U.PDB|MFC*versão*U.DLL|MFC*versão*UD. LIB|
 |MFC*versão*UD. PDB|MFC*versão*UD. DLL|MFCS*versão*U.LIB|MFCS*versão*U.PDB|
 |MFCS*versão*UD. LIB|MFCS*versão*UD. PDB|MFCM*versão*U.LIB|MFCM*versão*U.PDB|
@@ -56,7 +52,7 @@ Esses biblioteca, depurador e arquivos DLL são usados para oferecer suporte a U
 
 (*versão* representa o número de versão do arquivo; por exemplo, '140' significa versão 14.0.)
 
-`CString`se baseia o `TCHAR` tipo de dados. Se o símbolo `_UNICODE` está definido para uma compilação do seu programa, `TCHAR` é definido como tipo `wchar_t`, um tipo de codificação de caracteres de 16 bits. Caso contrário, `TCHAR` é definido como `char`, a codificação de caracteres de 8 bits normal. Portanto, em Unicode, um `CString` é composto de caracteres de 16 bits. Sem Unicode, ele é composto de caracteres do tipo `char`.
+`CString` se baseia o `TCHAR` tipo de dados. Se o símbolo `_UNICODE` está definido para uma compilação do seu programa, `TCHAR` é definido como tipo `wchar_t`, um tipo de codificação de caracteres de 16 bits. Caso contrário, `TCHAR` é definido como `char`, a codificação de caracteres de 8 bits normal. Portanto, em Unicode, um `CString` é composto de caracteres de 16 bits. Sem Unicode, ele é composto de caracteres do tipo `char`.
 
 A programação Unicode completa do seu aplicativo, você também deve:
 
@@ -72,9 +68,9 @@ A programação Unicode completa do seu aplicativo, você também deve:
 
    - Use `LPTSTR` onde você usaria `char*`.
 
-   - Use `LPCTSTR` onde você usaria `const char*`. `CString`fornece o operador `LPCTSTR` para converter entre `CString` e `LPCTSTR`.
+   - Use `LPCTSTR` onde você usaria `const char*`. `CString` fornece o operador `LPCTSTR` para converter entre `CString` e `LPCTSTR`.
 
-`CString`também fornece construtores com reconhecimento de Unicode, operadores de atribuição e operadores de comparação.
+`CString` também fornece construtores com reconhecimento de Unicode, operadores de atribuição e operadores de comparação.
 
 O [referência da biblioteca de tempo de execução](../c-runtime-library/c-run-time-library-reference.md) define versões portátil de todas as suas funções de manipulação de cadeia de caracteres. Para obter mais informações, consulte a categoria [internacionalização](../c-runtime-library/internationalization.md).
 
@@ -91,12 +87,12 @@ Em DBCS, uma determinada cadeia de caracteres pode conter todos os caracteres de
 > [!NOTE]
 > Serialização de cadeia de caracteres Unicode em MFC pode ler cadeias de caracteres Unicode e MBCS, independentemente de qual versão do aplicativo que você está executando. Os arquivos de dados são portáveis entre versões Unicode e MBCS do seu programa.
 
-`CString`funções de membro usam versões especiais "texto genérico" as tempo de execução de funções de C que eles chamam, ou usam funções de reconhecimento de Unicode. Portanto, por exemplo, se um `CString` normalmente seria chamada de função `strcmp`, ele chama a função de texto genérico correspondente `_tcscmp` em vez disso. Dependendo de como os símbolos `_MBCS` e `_UNICODE` são definidos, `_tcscmp` mapeia da seguinte maneira:
+`CString` funções de membro usam versões especiais "texto genérico" as tempo de execução de funções de C que eles chamam, ou usam funções de reconhecimento de Unicode. Portanto, por exemplo, se um `CString` normalmente seria chamada de função `strcmp`, ele chama a função de texto genérico correspondente `_tcscmp` em vez disso. Dependendo de como os símbolos `_MBCS` e `_UNICODE` são definidos, `_tcscmp` mapeia da seguinte maneira:
 
 |||
 |-|-|
-|`_MBCS`definido|`_mbscmp`|
-|`_UNICODE`definido|`wcscmp`|
+|`_MBCS` definido|`_mbscmp`|
+|`_UNICODE` definido|`wcscmp`|
 |Nenhum símbolo definido|`strcmp`|
 
 > [!NOTE]

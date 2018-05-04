@@ -1,12 +1,9 @@
 ---
 title: Inicializadores | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>Inicializadores
 Um inicializador especifica o valor inicial de uma variável. Você pode inicializar variáveis nestes contextos:  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>Inicialização padrão  
+### <a name="default_initialization"></a> Inicialização padrão  
  Inicialização padrão para classes, estruturas e uniões é inicialização com um construtor padrão. O construtor padrão pode ser chamado sem expressão de inicialização ou com o `new` palavra-chave:  
   
 ```cpp  
@@ -285,7 +280,7 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   uma variável é inicializada com o `new` palavra-chave além de chaves não vazio ou parênteses  
   
--   uma variável é inicializada com`static_cast`  
+-   uma variável é inicializada com `static_cast`  
   
 -   em um construtor de classes base e membros não estáticos são inicializados com uma lista de inicializadores  
   
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>Inicialização de agregação  
+### <a name="agginit"></a> Inicialização de agregação  
  A inicialização de agregação é uma forma da inicialização de lista para tipos de classe ou matrizes (muitas vezes, uniões ou estruturas) que não tenham:  
   
 -   Não há membros particulares ou protegidos  
@@ -419,7 +414,7 @@ int main() {
 }  
 ```  
   
- Você verá a seguinte saída:  
+ Você deverá ver a seguinte saída:  
   
 ```  
 agg1: c: 1  
@@ -531,7 +526,7 @@ int main()
  ![Gráfico de decisão para inicialização de tipos de ref](../cpp/media/vc38s71.gif "vc38S71")  
 Gráfico de decisão para a inicialização de tipos de referência  
   
- As referências a `volatile` tipos (declarado como `volatile` *typename*  **&**  *identificador*) pode ser inicializado com `volatile` objetos do mesmo tipo ou com objetos que não foi declarados como `volatile`. Eles não é possível, no entanto, ser inicializado com **const** objetos desse tipo. Da mesma forma, as referências a **const** tipos (declarado como **const** *typename*  **&**  *identificador* ) pode ser inicializado com **const** objetos do mesmo tipo (ou qualquer coisa que tenha uma conversão de tipo ou com objetos que não foi declarados como **const**). No entanto, eles não podem ser inicializados com objetos `volatile` desse tipo.  
+ As referências a `volatile` tipos (declarado como `volatile` *typename * &** *identificador*) pode ser inicializado com `volatile` objetos do mesmo tipo ou com objetos que não foi declarados como `volatile`. Eles não é possível, no entanto, ser inicializado com **const** objetos desse tipo. Da mesma forma, as referências a **const** tipos (declarado como **const** *typename * &** *identificador*) pode ser inicializado com **const** objetos do mesmo tipo (ou qualquer coisa que tenha uma conversão de tipo ou com objetos que não foi declarados como **const**). No entanto, eles não podem ser inicializados com objetos `volatile` desse tipo.  
   
  As referências que não são qualificadas com o **const** ou `volatile` palavra-chave pode ser inicializado somente com objetos declarados como nenhuma **const** nem `volatile`.  
   

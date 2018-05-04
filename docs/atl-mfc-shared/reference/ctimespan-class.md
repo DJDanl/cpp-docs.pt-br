@@ -1,12 +1,9 @@
 ---
 title: Classe CTimeSpan | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTimeSpan
@@ -32,17 +29,15 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cedf05bd8f5af198569891b4d6d59610d5098eb6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd95d26dd2df41f16091379c892f67319c218cc4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctimespan-class"></a>Classe CTimeSpan
 Um valor de tempo, que é armazenado internamente como o número de segundos em que o período de tempo.  
@@ -85,9 +80,9 @@ class CTimeSpan
 |[operador = = < etc.](#ctimespan_comparison_operators)|Compara dois valores de tempo relativo.|  
   
 ## <a name="remarks"></a>Comentários  
- `CTimeSpan`não tem uma classe base.  
+ `CTimeSpan` não tem uma classe base.  
   
- `CTimeSpan`funções convertem segundos para várias combinações de dias, horas, minutos e segundos.  
+ `CTimeSpan` funções convertem segundos para várias combinações de dias, horas, minutos e segundos.  
   
  O `CTimeSpan` objeto é armazenado em um **__time64_t** estrutura, que é de 8 bytes.  
   
@@ -100,7 +95,7 @@ class CTimeSpan
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atltime.h  
   
-##  <a name="ctimespan_comparison_operators"></a>Operadores de comparação de CTimeSpan  
+##  <a name="ctimespan_comparison_operators"></a>  Operadores de comparação de CTimeSpan  
  Operadores de comparação.  
   
 ```
@@ -123,7 +118,7 @@ bool operator>=(CTimeSpan span) const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#169](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_1.cpp)]  
   
-##  <a name="ctimespan"></a>CTimeSpan::CTimeSpan  
+##  <a name="ctimespan"></a>  CTimeSpan::CTimeSpan  
  Constrói `CTimeSpan` objetos de várias maneiras.  
   
 ```
@@ -170,7 +165,7 @@ CTimeSpan(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#162](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_2.cpp)]  
   
-##  <a name="format"></a>CTimeSpan::Format  
+##  <a name="format"></a>  CTimeSpan::Format  
  Gera uma cadeia de caracteres formatada que corresponde a este `CTimeSpan`.  
   
 ```
@@ -183,7 +178,7 @@ CString Format(UINT nID) const;
  `pFormat`, `pszFormat`  
  Uma formatação de cadeia de caracteres semelhante de `printf` cadeia de caracteres de formatação. Códigos de formatação, precedidos por uma porcentagem ( `%`) entre, são substituídos por correspondente `CTimeSpan` componente. Outros caracteres na cadeia de formatação são copiados inalterada para cadeia de caracteres retornada. O valor e o significado dos códigos de formatação para **formato** estão listadas abaixo:  
   
-- **%D** total de dias em que isso`CTimeSpan`  
+- **%D** total de dias em que isso `CTimeSpan`  
   
 - **%H** horas do dia atual  
   
@@ -191,7 +186,7 @@ CString Format(UINT nID) const;
   
 - **%S** segundos, o minuto atual  
   
-- **%%**Sinal de porcentagem  
+- **%%** Sinal de porcentagem  
   
  `nID`  
  A ID da cadeia de caracteres que identifica esse formato.  
@@ -205,7 +200,7 @@ CString Format(UINT nID) const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#163](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_3.cpp)]  
   
-##  <a name="getdays"></a>CTimeSpan::GetDays  
+##  <a name="getdays"></a>  CTimeSpan::GetDays  
  Retorna um valor que representa o número de dias concluídos neste `CTimeSpan`.  
   
 ```
@@ -221,7 +216,7 @@ LONGLONG GetDays() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#164](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_4.cpp)]  
   
-##  <a name="gethours"></a>CTimeSpan::GetHours  
+##  <a name="gethours"></a>  CTimeSpan::GetHours  
  Retorna um valor que representa o número de horas do dia atual (-23 a 23).  
   
 ```
@@ -234,7 +229,7 @@ LONG GetHours() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#165](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_5.cpp)]  
   
-##  <a name="getminutes"></a>CTimeSpan::GetMinutes  
+##  <a name="getminutes"></a>  CTimeSpan::GetMinutes  
  Retorna um valor que representa o número de minutos na hora atual (-59 por 59).  
   
 ```
@@ -247,7 +242,7 @@ LONG GetMinutes() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [GetHours](#gethours).  
   
-##  <a name="getseconds"></a>CTimeSpan::GetSeconds  
+##  <a name="getseconds"></a>  CTimeSpan::GetSeconds  
  Retorna um valor que representa o número de segundos, o minuto atual (-59 por 59).  
   
 ```
@@ -260,7 +255,7 @@ LONG GetSeconds() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [GetHours](#gethours).  
   
-##  <a name="gettimespan"></a>CTimeSpan::GetTimeSpan  
+##  <a name="gettimespan"></a>  CTimeSpan::GetTimeSpan  
  Retorna o valor da `CTimeSpan` objeto.  
   
 ```
@@ -270,7 +265,7 @@ __ time64_t GetTimeSpan() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor atual de `CTimeSpan` objeto.  
   
-##  <a name="gettotalhours"></a>CTimeSpan::GetTotalHours  
+##  <a name="gettotalhours"></a>  CTimeSpan::GetTotalHours  
  Retorna um valor que representa o número total de horas concluídas neste `CTimeSpan`.  
   
 ```
@@ -283,7 +278,7 @@ LONGLONG GetTotalHours() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#166](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_6.cpp)]  
   
-##  <a name="gettotalminutes"></a>CTimeSpan::GetTotalMinutes  
+##  <a name="gettotalminutes"></a>  CTimeSpan::GetTotalMinutes  
  Retorna um valor que representa o número total de minutos concluídos neste `CTimeSpan`.  
   
 ```
@@ -296,7 +291,7 @@ LONGLONG GetTotalMinutes() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [GetTotalHours](#gettotalhours).  
   
-##  <a name="gettotalseconds"></a>CTimeSpan::GetTotalSeconds  
+##  <a name="gettotalseconds"></a>  CTimeSpan::GetTotalSeconds  
  Retorna um valor que representa o número total de segundos concluídos neste `CTimeSpan`.  
   
 ```
@@ -309,7 +304,7 @@ LONGLONG GetTotalSeconds() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [GetTotalHours](#gettotalhours).  
   
-##  <a name="operator_add_-"></a>CTimeSpan::operator +, -  
+##  <a name="operator_add_-"></a>  CTimeSpan::operator +, -  
  Adiciona e subtrai `CTimeSpan` objetos.  
   
 ```
@@ -330,7 +325,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>+ = De CTimeSpan::operator-=  
+##  <a name="operator_add_eq_-_eq"></a>  + = De CTimeSpan::operator-=  
  Adiciona e subtrai um `CTimeSpan` objeto neste `CTimeSpan`.  
   
 ```
@@ -351,7 +346,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#168](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_8.cpp)]  
   
-##  <a name="serialize64"></a>CTimeSpan::Serialize64  
+##  <a name="serialize64"></a>  CTimeSpan::Serialize64  
   
 > [!NOTE]
 >  Este método só está disponível nos projetos MFC.  

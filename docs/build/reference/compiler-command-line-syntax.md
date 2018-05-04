@@ -1,30 +1,25 @@
 ---
 title: Sintaxe de linha de comando do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - syntax, CL compiler command line
 - cl.exe compiler, command-line syntax
 ms.assetid: acba2c1c-0803-4a3a-af25-63e849b930a2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb89aca1990d44d7ef62ea76788b38e8ffa1d6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 825121a111d47de6b012aad444907363ad8c2a36
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-command-line-syntax"></a>Sintaxe da linha de comando do compilador
 A linha de comando CL usa a seguinte sintaxe:  
@@ -37,7 +32,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
   
 |Entrada|Significado|  
 |-----------|-------------|  
-|*opção*|Um ou mais [opções CL](../../build/reference/compiler-options.md). Observe que todas as opções se aplicam a todos os arquivos de origem especificado. Opções são especificadas por uma barra invertida (/) ou um traço (-). Se uma opção tem um argumento, documentos de descrição da opção se um espaço é permitido entre a opção e os argumentos. Os nomes de opções (exceto para a opção /HELP) diferenciam maiusculas de minúsculas. Consulte [ordem de opções CL](../../build/reference/order-of-cl-options.md) para obter mais informações.|  
+|*Opção*|Um ou mais [opções CL](../../build/reference/compiler-options.md). Observe que todas as opções se aplicam a todos os arquivos de origem especificado. Opções são especificadas por uma barra invertida (/) ou um traço (-). Se uma opção tem um argumento, documentos de descrição da opção se um espaço é permitido entre a opção e os argumentos. Os nomes de opções (exceto para a opção /HELP) diferenciam maiusculas de minúsculas. Consulte [ordem de opções CL](../../build/reference/order-of-cl-options.md) para obter mais informações.|  
 |`file`|O nome de um ou mais arquivos de origem, arquivos. obj ou bibliotecas. CL compila arquivos de origem e passa os nomes dos arquivos. obj e bibliotecas para o vinculador. Consulte [sintaxe de nome de arquivo CL](../../build/reference/cl-filename-syntax.md) para obter mais informações.|  
 |*lib*|Um ou mais nomes de biblioteca. CL passa esses nomes para o vinculador.|  
 |*arquivo de comando*|Um arquivo que contém várias opções e os nomes de arquivos. Consulte [arquivos de comando CL](../../build/reference/cl-command-files.md) para obter mais informações.|  

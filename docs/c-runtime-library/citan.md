@@ -1,13 +1,10 @@
 ---
 title: _CItan | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/11/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CItan
 apilocation:
@@ -28,35 +25,38 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42bf2d2f7d38779dbed78414fcd94dc33ab82480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f67c7303bd20b4b9b6088b9107e1a60ffd19f2b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="citan"></a>_CItan
-Calcula a tangente do valor superior na pilha.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __cdecl _CItan();  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Esta versão da função `tan` tem uma convenção de chamada especializada que o compilador compreende. A função acelera a execução porque evita a geração de cópias e ajuda na alocação de registro.  
-  
- O valor resultante é colocado na parte superior da pilha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataforma:** x86  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [tan, tanf, tanl, tanh, tanhf, tanhl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+Calcula a tangente do valor superior na pilha de ponto flutuante.
+
+## <a name="syntax"></a>Sintaxe
+
+```C
+void __cdecl _CItan();
+```
+
+## <a name="remarks"></a>Comentários
+
+Esta versão da função [tan](../c-runtime-library/reference/tan-tanf-tanl.md) tem uma convenção de chamada especializada que o compilador compreende. A função acelera a execução porque evita a geração de cópias e ajuda na alocação de registro.
+
+O valor resultante é colocado na parte superior da pilha de ponto flutuante.
+
+## <a name="requirements"></a>Requisitos
+
+**Plataforma:** x86
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)<br/>

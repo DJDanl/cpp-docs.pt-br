@@ -1,13 +1,10 @@
 ---
 title: -openmp (Habilitar suporte a OpenMP 2.0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8217a901f071f50dbd2d7dfcbffccf4014a9444
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: fe64011f48255a18aa8f8ccab7571533540a598a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (habilitar suporte a OpenMP 2.0)
 Faz com que o compilador a processar `#pragma` [omp](../../preprocessor/omp.md).  
@@ -39,7 +34,7 @@ Faz com que o compilador a processar `#pragma` [omp](../../preprocessor/omp.md).
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `#pragma omp`é usado para especificar [diretivas](../../parallel/openmp/reference/openmp-directives.md) e [cláusulas](../../parallel/openmp/reference/openmp-clauses.md). Se **/openmp** não for especificado em uma compilação, o compilador ignora diretivas e cláusulas OpenMP. [Função OpenMP](../../parallel/openmp/reference/openmp-functions.md) chamadas são processadas pelo mesmo-se compilador **/openmp** não for especificado.  
+ `#pragma omp` é usado para especificar [diretivas](../../parallel/openmp/reference/openmp-directives.md) e [cláusulas](../../parallel/openmp/reference/openmp-clauses.md). Se **/openmp** não for especificado em uma compilação, o compilador ignora diretivas e cláusulas OpenMP. [Função OpenMP](../../parallel/openmp/reference/openmp-functions.md) chamadas são processadas pelo mesmo-se compilador **/openmp** não for especificado.  
   
  Os aplicativos compilados com **/openmp** e **/clr** só pode ser executado em um processo de domínio de aplicativo único; não há suporte para vários domínios de aplicativo. Ou seja, quando o construtor de módulo (. cctor) é executado, ele detectará o processo é compilado com **/openmp** e se o aplicativo está sendo carregado em um tempo de execução não padrão. Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md), [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md), e [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md).  
   

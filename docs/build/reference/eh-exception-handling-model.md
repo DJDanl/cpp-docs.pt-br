@@ -1,13 +1,10 @@
 ---
-title: "-EH (modelo de tratamento de exceções) | Microsoft Docs"
-ms.custom: 
+title: -EH (modelo de tratamento de exceções) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (modelo de tratamento de exceções)
 Especifica o tipo de tratamento de exceção usado pelo compilador, ao otimizar exceção ausente verifica e se deseja destruir os objetos C++ que ultrapassarem o escopo devido a uma exceção. Se **/EH** não for especificado, o compilador captura estruturado de exceções assíncronas e exceções do C++, mas não destrói C++ os objetos fora do escopo devido a uma exceção assíncrona.  
@@ -105,7 +100,7 @@ int main() {
   
  Para obter informações sobre restrições em de tratamento de exceção **/clr**, consulte [set_se_translator](../../c-runtime-library/reference/set-se-translator.md).  
   
- A opção pode ser apagada usando o símbolo  **-** . Por exemplo, **/EHsc-** é interpretado como **/EHs /EHc-** e é equivalente a **/EHs**.  
+ A opção pode ser apagada usando o símbolo **-**. Por exemplo, **/EHsc-** é interpretado como **/EHs /EHc-** e é equivalente a **/EHs**.  
   
  O **/EHr** opção de compilador força verificações de término do tempo de execução de todas as funções que têm um `noexcept` atributo. Por padrão, verificações de tempo de execução podem ser removidas se o back-end do compilador determina que só chama uma função *não gerar* funções. Funções geradoras de não são todas as funções que têm um atributo que especifica que nenhuma exceção pode ser lançada. Isso inclui funções assinaladas como `noexcept`, `throw()`, `__declspec(nothrow)`e, quando **/EHc** for especificado, `extern "C"` funções. Funções geradoras de não também pode incluir qualquer uma que o compilador determinou são não lançamento por inspeção. Você pode definir explicitamente o padrão usando **/EHr-**.  
   

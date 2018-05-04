@@ -1,30 +1,25 @@
 ---
 title: Definindo uma regra | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NMAKE program, inference rules
 - defining inference rules
 ms.assetid: 071cd092-3f2e-4065-b0fb-36a9d393cfa8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d6ca616e3685db36d6d24b339a860eab4c6150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a8ff7c58033ac5f7e42764d185c45c206bf406f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-a-rule"></a>Definindo uma regra
 O *fromext* representa a extensão de um arquivo dependente, e *toext* representa a extensão de um arquivo de destino.  

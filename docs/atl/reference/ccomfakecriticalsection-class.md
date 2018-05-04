@@ -1,12 +1,9 @@
 ---
 title: Classe CComFakeCriticalSection | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComFakeCriticalSection
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f7b3b56193100d21ef7aebaba0ab6d9ecfd5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a042e52439579cfb1b4145b1691f5a00128754c9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomfakecriticalsection-class"></a>Classe CComFakeCriticalSection
 Essa classe fornece os mesmos métodos que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , mas não fornece uma seção crítica.  
@@ -53,14 +48,14 @@ class CComFakeCriticalSection
 |[CComFakeCriticalSection::Unlock](#unlock)|Não faz nada porque não há nenhuma seção crítica.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComFakeCriticalSection`espelha os métodos encontrados em [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). No entanto, `CComFakeCriticalSection` não fornece uma seção crítica; portanto, seus métodos não fazem nada.  
+ `CComFakeCriticalSection` espelha os métodos encontrados em [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). No entanto, `CComFakeCriticalSection` não fornece uma seção crítica; portanto, seus métodos não fazem nada.  
   
  Normalmente, você usa `CComFakeCriticalSection` por meio de um `typedef` nomear, como `AutoCriticalSection` ou `CriticalSection`. Ao usar [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ambos `typedef` nomes de referência `CComFakeCriticalSection`. Ao usar [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), eles fazem referência [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) e `CComCriticalSection`, respectivamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
   
-##  <a name="init"></a>CComFakeCriticalSection::Init  
+##  <a name="init"></a>  CComFakeCriticalSection::Init  
  Não faz nada porque não há nenhuma seção crítica.  
   
 ```
@@ -70,7 +65,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK.  
   
-##  <a name="lock"></a>CComFakeCriticalSection::Lock  
+##  <a name="lock"></a>  CComFakeCriticalSection::Lock  
  Não faz nada porque não há nenhuma seção crítica.  
   
 ```
@@ -80,7 +75,7 @@ HRESULT Lock() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK.  
   
-##  <a name="term"></a>CComFakeCriticalSection::Term  
+##  <a name="term"></a>  CComFakeCriticalSection::Term  
  Não faz nada porque não há nenhuma seção crítica.  
   
 ```
@@ -90,7 +85,7 @@ HRESULT Term() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK.  
   
-##  <a name="unlock"></a>CComFakeCriticalSection::Unlock  
+##  <a name="unlock"></a>  CComFakeCriticalSection::Unlock  
  Não faz nada porque não há nenhuma seção crítica.  
   
 ```

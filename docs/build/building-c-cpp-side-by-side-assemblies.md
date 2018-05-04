@@ -1,29 +1,24 @@
 ---
 title: Compilando Assemblies de C/C++-lado a lado | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a45062af5648c7b3565d959fd1d2dce13aeca4b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilando assemblies lado a lado do C/C++
 Um [assembly lado a lado](http://msdn.microsoft.com/library/windows/desktop/ff951640) é uma coleção de recursos — um grupo de DLLs, classes de windows, servidores COM, bibliotecas de tipo ou interfaces — disponível para um aplicativo para usar em tempo de execução. A principal vantagem de remontagem DLLs em assemblies é que várias versões de módulos (assemblies) podem ser usadas por aplicativos ao mesmo tempo e é possível assemblies de serviço instalado atualmente no caso de uma versão de atualização.  

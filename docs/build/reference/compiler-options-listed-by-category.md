@@ -1,29 +1,24 @@
 ---
-title: "Opções do compilador listadas por categoria | Microsoft Docs"
-ms.custom: 
+title: Opções do compilador listadas por categoria | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87eb79e7932d18ac5aae47a39ec207fec326d58e
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções do compilador listadas por categoria
 
@@ -124,7 +119,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |Opção|Finalidade|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Avaliação de constexpr de controle em tempo de compilação.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Permite [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
+|[/OpenMP](openmp-enable-openmp-2-0-support.md)|Permite [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
 |[/vd](vd-disable-construction-displacements.md)|Suprime ou habilita membros da classe `vtordisp` ocultos.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa a melhor base de ponteiros para membros.|
 |[/vmg](vmb-vmg-representation-method.md)|Usa a generalidade completa de ponteiros para membros.|
@@ -139,7 +134,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclui informações de depuração em um banco de dados do programa compatível com Editar e Continuar. (apenas x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Gera informações completas de depuração.|
 |[/Zl](zl-omit-default-library-name.md)|Remove o nome da biblioteca padrão do arquivo .obj.|
-|[/Zp](zp-struct-member-alignment.md) *n*|Empacota membros da estrutura.|
+|[/ZP](zp-struct-member-alignment.md) *n*|Empacota membros da estrutura.|
 |[/Zs](zs-syntax-check-only.md)|Verifica apenas a sintaxe.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produz um arquivo de saída para ser executado no tempo de execução do Windows.|
 
@@ -163,7 +158,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[@](at-specify-a-compiler-response-file.md)|Especifica um arquivo de resposta.|
-|[/analyze](analyze-code-analysis.md)|Habilita a análise de código.|
+|[/ANALYZE](analyze-code-analysis.md)|Habilita a análise de código.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta o número de seções endereçáveis em um arquivo .obj.|
 |[/c](c-compile-without-linking.md)|Compila sem vinculação.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Especifica o número de threads cl.exe a serem usados na otimização e na geração de código.|

@@ -1,13 +1,10 @@
 ---
 title: CL invoca o vinculador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc9c5c4815dc83b37d0b7971d5fd0f31db51e39e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-invokes-the-linker"></a>O CL invoca o vinculador
 Automaticamente o CL invoca o vinculador após a compilação, a menos que a opção /c é usada. CL passa para o vinculador os nomes dos arquivos. obj criados durante a compilação e os nomes de todos os outros arquivos especificados na linha de comando. O vinculador usa as opções listadas na variável de ambiente LINK. Você pode usar a opção /link para especificar opções de vinculador na linha de comando CL. Opções que se seguem a opção /link substituem aquelas na variável de ambiente LINK. As opções na tabela a seguir suprimir a vinculação.  

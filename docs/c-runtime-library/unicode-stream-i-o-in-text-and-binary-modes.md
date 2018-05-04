@@ -1,12 +1,12 @@
 ---
-title: "E/S de fluxo Unicode em modos de texto e binários | Microsoft Docs"
-ms.custom: 
+title: E/S de fluxo Unicode em modos de texto e binários | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - c.io
@@ -18,27 +18,29 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76e739ae95788448cc655ca18d32aaf1f8a5c90a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3b2a4d82a07a719bdbd0308727a4fd3b26a867e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>E/S de fluxo Unicode em modos de texto e binários
-Quando a rotina E/S de fluxo Unicode (como `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws` ou `fputws`) opera em um arquivo que está aberto no modo de texto (o padrão), duas conversões de tipos de caractere ocorrem:  
-  
--   Conversão de Unicode em MBCS ou MBCS para Unicode. Quando uma função de E/S de fluxo Unicode opera no modo de texto, presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo do Unicode convertem caracteres multibyte para caracteres largos (como por uma chamada à função `mbtowc`). Pelo mesmo motivo, as funções de saída de fluxo do Unicode convertem caracteres largos para caracteres multibyte (como por uma chamada à função `wctomb`).  
-  
--   Retorno de carro – Conversão de linha (CR-LF). Essa conversão ocorre antes do MBCS – conversão Unicode (para funções de entrada de fluxo Unicode) e depois da conversão de Unicode – MBCS (para funções de saída de fluxo Unicode). Durante a entrada, cada combinação de retorno de carro – linha é convertida em um caractere de avanço de linha único. Durante a saída, cada caractere de avanço de linha é convertido em uma combinação de retorno de carro – avanço de linha.  
-  
- No entanto, quando uma função de E/S de fluxo Unicode opera no modo binário, o arquivo é considerado como Unicode e nenhuma conversão de CR-LF ou conversão de caractere ocorre durante a entrada ou saída. Use _setmode( _fileno( stdin ), _O_BINARY ); instruções para usar corretamente o wcin em um arquivo de texto UNICODE.  
-  
-## <a name="see-also"></a>Consulte também  
- [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)   
- [Entrada e saída](../c-runtime-library/input-and-output.md)
+
+Quando a rotina de E/S de fluxo Unicode (como **fwprintf**, **fwscanf**, **fgetwc**, **fputwc**, **fgetws** ou **fputws**) opera em um arquivo que está aberto no modo de texto (o padrão), dois tipos de conversões de caractere ocorrem:
+
+- Conversão de Unicode em MBCS ou MBCS para Unicode. Quando uma função de E/S de fluxo Unicode opera no modo de texto, presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo Unicode convertem caracteres multibyte em caracteres largos (como por uma chamada à função **mbtowc**). Pelo mesmo motivo, as funções de saída de fluxo Unicode convertem caracteres largos em caracteres multibyte (como por uma chamada à função **wctomb**).
+
+- Retorno de carro – Conversão de linha (CR-LF). Essa conversão ocorre antes do MBCS – conversão Unicode (para funções de entrada de fluxo Unicode) e depois da conversão de Unicode – MBCS (para funções de saída de fluxo Unicode). Durante a entrada, cada combinação de retorno de carro – linha é convertida em um caractere de avanço de linha único. Durante a saída, cada caractere de avanço de linha é convertido em uma combinação de retorno de carro – avanço de linha.
+
+No entanto, quando uma função de E/S de fluxo Unicode opera no modo binário, o arquivo é considerado como Unicode e nenhuma conversão de CR-LF ou conversão de caractere ocorre durante a entrada ou saída. Use _setmode( _fileno( stdin ), _O_BINARY ); instruções para usar corretamente o wcin em um arquivo de texto UNICODE.
+
+## <a name="see-also"></a>Consulte também
+
+[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Entrada e saída](../c-runtime-library/input-and-output.md)<br/>

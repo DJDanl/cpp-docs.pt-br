@@ -1,12 +1,9 @@
 ---
-title: "Assistente de componente de página Active Server ATL | Microsoft Docs"
-ms.custom: 
+title: Assistente de componente de página Active Server ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d717eefe9c9ee353692d343b88c57469eeb6892
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistente de componente de página Active Server ATL
 Este assistente insere o projeto de um componente Active Server Pages (ASP). O Microsoft Internet Information Services (IIS) usa componentes ASP como parte de sua arquitetura de desenvolvimento aprimorada página da Web.  
@@ -72,7 +67,7 @@ Este assistente insere o projeto de um componente Active Server Pages (ASP). O M
 ### <a name="com"></a>COM  
  Fornece informações sobre a funcionalidade de COM para o objeto.  
   
- **Coclass**  
+ **coclass**  
  Define o nome da classe de componente que contém uma lista de interfaces suportadas pelo objeto. Se seu projeto ou esse objeto usa atributos, você não pode alterar essa opção como ATL não inclui o **coclass** atributo.  
   
  **Tipo**  

@@ -2,11 +2,8 @@
 title: Classe CSnapInItemImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 Essa classe fornece métodos para a implementação de um objeto de nó do snap-in.  
@@ -103,7 +98,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|O Windows **SCOPEDATAITEM** estrutura usada pelo `CSnapInItemImpl` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CSnapInItemImpl`Fornece uma implementação básica para um objeto de snap-in de nó, como adicionar barras de ferramentas e itens de menu e comandos para o nó de snap-in para a função de manipulador adequado de encaminhamento. Esses recursos são implementados usando várias interfaces diferentes e mapeiam os tipos. A implementação padrão manipula notificações enviadas para o objeto de nó determinando a instância correta da classe derivada e, em seguida, a mensagem para a instância correta de encaminhamento.  
+ `CSnapInItemImpl` Fornece uma implementação básica para um objeto de snap-in de nó, como adicionar barras de ferramentas e itens de menu e comandos para o nó de snap-in para a função de manipulador adequado de encaminhamento. Esses recursos são implementados usando várias interfaces diferentes e mapeiam os tipos. A implementação padrão manipula notificações enviadas para o objeto de nó determinando a instância correta da classe derivada e, em seguida, a mensagem para a instância correta de encaminhamento.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CSnapInItem`  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  Esse método implementa a função Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** o objeto de dados tem um tipo inválido.  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  Esse método implementa a função Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** o objeto de dados tem um tipo inválido.  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  Esse método implementa a função Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** o objeto de dados tem um tipo inválido.  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  Constrói um objeto `CSnapInItemImpl`.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  Essa função é chamada para recuperar informações sobre o item.  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Comentários  
  Para implementar corretamente essa função, copie as informações corretas para o fluxo ( `pStream`), dependendo do formato de área de transferência indicado pelo `cf`.  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  Chame essa função para recuperar o tipo de exibição para o painel de resultados do snap-in do objeto.  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 permite as opções de exibição padrão.  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  Chamar essa função para recuperar o **SCOPEDATAITEM** estrutura do snap-in.  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Um ponteiro para o **SCOPEDATAITEM** estrutura do `CSnapInItemImpl` objeto.  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  Chamar essa função para recuperar o **RESULTDATAITEM** estrutura do snap-in.  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Um ponteiro para o **RESULTDATAITEM** estrutura do `CSnapInItemImpl` objeto.  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  Contém a cadeia de caracteres exibida para o item de nó.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  O `SCOPEDATAITEM` estrutura o snap-in do objeto de dados.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  O [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) estrutura o snap-in do objeto de dados.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  Chamado quando o objeto de snap-in é tratado pelo usuário.  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** o objeto de dados tem um tipo inválido.  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  Chamado para ver se o nó de snap-in oferece suporte à páginas de propriedade.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  Chamar essa função para modificar os sinalizadores de inserção de menu, especificados pelo `pInsertionAllowed`, para o objeto de snap-in.  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  Você não deve tentar definir os bits em `pInsertionAllowed` que foram originalmente limpo. Versões futuras do MMC podem usar o bits não está atualmente definidos para que você não deve alterar o bits não estão definidos.  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  Chame essa função para modificar quaisquer estilos de botão de barra de ferramentas, do objeto snap-in, antes que a barra de ferramentas é criada.  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in] Os sinalizadores de estado do botão. Pode ser um ou mais dos seguintes:  
   
-- `TBSTATE_CHECKED`O botão tem o **TBSTYLE_CHECKED** de estilo e está sendo pressionada.  
+- `TBSTATE_CHECKED` O botão tem o **TBSTYLE_CHECKED** de estilo e está sendo pressionada.  
   
-- `TBSTATE_ENABLED`O botão aceita entrada do usuário. Um botão que não têm esse estado não aceita entrada de usuário e ficará indisponível.  
+- `TBSTATE_ENABLED` O botão aceita entrada do usuário. Um botão que não têm esse estado não aceita entrada de usuário e ficará indisponível.  
   
-- `TBSTATE_HIDDEN`O botão não estiver visível e não pode receber entrada do usuário.  
+- `TBSTATE_HIDDEN` O botão não estiver visível e não pode receber entrada do usuário.  
   
-- `TBSTATE_INDETERMINATE`O botão ficará indisponível.  
+- `TBSTATE_INDETERMINATE` O botão ficará indisponível.  
   
-- `TBSTATE_PRESSED`O botão está sendo pressionado.  
+- `TBSTATE_PRESSED` O botão está sendo pressionado.  
   
-- `TBSTATE_WRAP`Uma quebra de linha segue o botão. O botão também deve ter o `TBSTATE_ENABLED`.  
+- `TBSTATE_WRAP` Uma quebra de linha segue o botão. O botão também deve ter o `TBSTATE_ENABLED`.  
   
  *fsType*  
  [in] Os sinalizadores de estado do botão. Pode ser um ou mais dos seguintes:  
   
-- `TBSTYLE_BUTTON`Cria um botão de ação padrão.  
+- `TBSTYLE_BUTTON` Cria um botão de ação padrão.  
   
-- `TBSTYLE_CHECK`Cria um botão que alterna entre os estados pressionados e não-pressionado cada vez que o usuário clica neles. O botão tem uma cor de plano de fundo diferente quando ele estiver no estado pressionado.  
+- `TBSTYLE_CHECK` Cria um botão que alterna entre os estados pressionados e não-pressionado cada vez que o usuário clica neles. O botão tem uma cor de plano de fundo diferente quando ele estiver no estado pressionado.  
   
-- `TBSTYLE_CHECKGROUP`Cria um botão de seleção permanece pressionado até que o outro no grupo é pressionado.  
+- `TBSTYLE_CHECKGROUP` Cria um botão de seleção permanece pressionado até que o outro no grupo é pressionado.  
   
-- `TBSTYLE_GROUP`Cria um botão que permanece pressionado até que o outro no grupo é pressionado.  
+- `TBSTYLE_GROUP` Cria um botão que permanece pressionado até que o outro no grupo é pressionado.  
   
-- `TBSTYLE_SEP`Cria um separador, fornecendo um pequeno intervalo entre grupos de botões. Um botão que possui este estilo não recebe entrada do usuário.  
+- `TBSTYLE_SEP` Cria um separador, fornecendo um pequeno intervalo entre grupos de botões. Um botão que possui este estilo não recebe entrada do usuário.  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  Chame essa função para modificar um item de menu antes que ele é inserido no menu de contexto do objeto snap-in.  
   
 ```
@@ -466,7 +461,7 @@ void UpdateMenuState(
   
 - **MF_DISABLED** desabilita o item de menu para que ele não pode ser selecionado, mas o sinalizador não cinza.  
   
-- `MF_ENABLED`Permite que o item de menu para que ele possa ser selecionado, a restauração do estado esmaecido.  
+- `MF_ENABLED` Permite que o item de menu para que ele possa ser selecionado, a restauração do estado esmaecido.  
   
 - **MF_GRAYED** desabilita o item de menu, tornando a cinza para que ela não pode ser selecionada.  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** e **MF_UNCHECKED**.  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  Chame essa função para modificar um botão de barra de ferramentas, do objeto snap-in, antes de ser exibido.  
   
 ```

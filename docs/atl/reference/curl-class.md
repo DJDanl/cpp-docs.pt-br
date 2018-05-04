@@ -1,12 +1,9 @@
 ---
 title: Classe do cUrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CUrl
@@ -44,17 +41,15 @@ dev_langs:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb60fcef5fdfd30b4121f5c2277667829772dcd6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb0f7abc079d699cfcf682356b88b9cc8aa2bb9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="curl-class"></a>Classe de rotação
 Essa classe representa uma URL. Ele permite que você manipule cada elemento da URL, independentemente de outras pessoas se uma URL existente de análise de cadeia de caracteres ou criando uma cadeia de caracteres a partir do zero.  
@@ -116,7 +111,7 @@ class CUrl
 |[CUrl::operator =](#operator_eq)|Atribui especificado `CUrl` objeto atual `CUrl` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CUrl`permite que você manipule os campos de uma URL, como o número de porta ou caminho. `CUrl`Entenda as URLs da seguinte forma:  
+ `CUrl` permite que você manipule os campos de uma URL, como o número de porta ou caminho. `CUrl` Entenda as URLs da seguinte forma:  
   
  \<Esquema > ://\<nome de usuário >:\<senha > @\<HostName >:\<PortNumber > /\<UrlPath >\<ExtraInfo >  
   
@@ -145,7 +140,7 @@ class CUrl
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlutil.h  
   
-##  <a name="canonicalize"></a>CUrl::Canonicalize  
+##  <a name="canonicalize"></a>  CUrl::Canonicalize  
  Chame este método para converter a cadeia de caracteres de URL em forma canônica.  
   
 ```
@@ -154,7 +149,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
   
 ### <a name="parameters"></a>Parâmetros  
  `dwFlags`  
- Os sinalizadores que controlam a conversão em formato canônico. Se nenhum sinalizador for especificado ( `dwFlags` = 0), o método converte todos os caracteres não seguros e sequências de metadados (como \\., \..., e \\...) escapar sequências. `dwFlags`pode ser um dos seguintes valores:  
+ Os sinalizadores que controlam a conversão em formato canônico. Se nenhum sinalizador for especificado ( `dwFlags` = 0), o método converte todos os caracteres não seguros e sequências de metadados (como \\., \..., e \\...) escapar sequências. `dwFlags` Pode ser um dos seguintes valores:  
   
 -   ATL_URL_BROWSER_MODE: Não codificar ou decodificar caracteres depois de "#" ou "" e não remova o espaço em branco à direita após "". Se esse valor não for especificado, a URL inteira é codificada e espaço em branco à direita é removido.  
   
@@ -174,14 +169,14 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 ### <a name="remarks"></a>Comentários  
  Conversão em formato canônico envolve a conversão de caracteres inseguros e espaços para sequências de escape.  
   
-##  <a name="clear"></a>CUrl::Clear  
+##  <a name="clear"></a>  CUrl::Clear  
  Chame este método para limpar todos os campos de URL.  
   
 ```
 inline void Clear() throw();
 ```  
   
-##  <a name="crackurl"></a>CUrl::CrackUrl  
+##  <a name="crackurl"></a>  CUrl::CrackUrl  
  Chame esse método para decodificar e analisar a URL.  
   
 ```
@@ -198,7 +193,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
-##  <a name="createurl"></a>CUrl::CreateUrl  
+##  <a name="createurl"></a>  CUrl::CreateUrl  
  Esse método constrói uma cadeia de caracteres de URL de campos de componente de um objeto rotação.  
   
 ```
@@ -233,7 +228,7 @@ inline BOOL CreateUrl(
   
  [!code-cpp[NVC_ATL_Utilities#133](../../atl/codesnippet/cpp/curl-class_1.cpp)]  
   
-##  <a name="curl"></a>CUrl::CUrl  
+##  <a name="curl"></a>  CUrl::CUrl  
  O construtor.  
   
 ```
@@ -245,14 +240,14 @@ CUrl(const CUrl& urlThat) throw();
  `urlThat`  
  O `CUrl` objeto a ser copiado para criar a URL.  
   
-##  <a name="dtor"></a>CUrl:: ~ CUrl  
+##  <a name="dtor"></a>  CUrl:: ~ CUrl  
  O destruidor.  
   
 ```
 ~CUrl() throw();
 ```  
   
-##  <a name="getextrainfo"></a>CUrl::GetExtraInfo  
+##  <a name="getextrainfo"></a>  CUrl::GetExtraInfo  
  Chame esse método para obter informações adicionais (como *texto* ou # *texto*) da URL.  
   
 ```
@@ -262,7 +257,7 @@ inline LPCTSTR GetExtraInfo() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna uma cadeia de caracteres que contém as informações adicionais.  
   
-##  <a name="getextrainfolength"></a>CUrl::GetExtraInfoLength  
+##  <a name="getextrainfolength"></a>  CUrl::GetExtraInfoLength  
  Chame esse método para obter o comprimento das informações adicionais (como *texto* ou # *texto*) para recuperar da URL.  
   
 ```
@@ -272,7 +267,7 @@ inline DWORD GetExtraInfoLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o comprimento da cadeia de caracteres que contém as informações adicionais.  
   
-##  <a name="gethostname"></a>CUrl::GetHostName  
+##  <a name="gethostname"></a>  CUrl::GetHostName  
  Chame este método para obter o nome do host da URL.  
   
 ```
@@ -282,7 +277,7 @@ inline LPCTSTR GetHostName() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o nome do host.  
   
-##  <a name="gethostnamelength"></a>CUrl::GetHostNameLength  
+##  <a name="gethostnamelength"></a>  CUrl::GetHostNameLength  
  Chame esse método para obter o comprimento do nome do host.  
   
 ```
@@ -292,7 +287,7 @@ inline DWORD GetHostNameLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o host do comprimento do nome.  
   
-##  <a name="getpassword"></a>CUrl::GetPassword  
+##  <a name="getpassword"></a>  CUrl::GetPassword  
  Chame este método para obter a senha da URL.  
   
 ```
@@ -302,7 +297,7 @@ inline LPCTSTR GetPassword() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a senha.  
   
-##  <a name="getpasswordlength"></a>CUrl::GetPasswordLength  
+##  <a name="getpasswordlength"></a>  CUrl::GetPasswordLength  
  Chame esse método para obter o comprimento da senha.  
   
 ```
@@ -312,7 +307,7 @@ inline DWORD GetPasswordLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o comprimento da senha.  
   
-##  <a name="getportnumber"></a>CUrl::GetPortNumber  
+##  <a name="getportnumber"></a>  CUrl::GetPortNumber  
  Chame este método para obter o número da porta.  
   
 ```
@@ -322,7 +317,7 @@ inline ATL_URL_PORT GetPortNumber() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número da porta.  
   
-##  <a name="getscheme"></a>CUrl::GetScheme  
+##  <a name="getscheme"></a>  CUrl::GetScheme  
  Chame este método para obter o esquema de URL.  
   
 ```
@@ -332,7 +327,7 @@ inline ATL_URL_SCHEME GetScheme() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o [ATL_URL_SCHEME](atl-url-scheme-enum.md) valor que descreve o esquema da URL.  
   
-##  <a name="getschemename"></a>CUrl::GetSchemeName  
+##  <a name="getschemename"></a>  CUrl::GetSchemeName  
  Chame este método para obter o nome do esquema de URL.  
   
 ```
@@ -342,7 +337,7 @@ inline LPCTSTR GetSchemeName() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o nome do esquema de URL (por exemplo, "http" ou "ftp").  
   
-##  <a name="getschemenamelength"></a>CUrl::GetSchemeNameLength  
+##  <a name="getschemenamelength"></a>  CUrl::GetSchemeNameLength  
  Chame esse método para obter o comprimento do nome do esquema de URL.  
   
 ```
@@ -352,7 +347,7 @@ inline DWORD GetSchemeNameLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o comprimento de nome de esquema de URL.  
   
-##  <a name="geturllength"></a>CUrl::GetUrlLength  
+##  <a name="geturllength"></a>  CUrl::GetUrlLength  
  Chame este método para obter o comprimento da URL.  
   
 ```
@@ -362,7 +357,7 @@ inline DWORD GetUrlLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o comprimento da URL.  
   
-##  <a name="geturlpath"></a>CUrl::GetUrlPath  
+##  <a name="geturlpath"></a>  CUrl::GetUrlPath  
  Chame este método para obter o caminho da URL.  
   
 ```
@@ -372,7 +367,7 @@ inline LPCTSTR GetUrlPath() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o caminho da URL.  
   
-##  <a name="geturlpathlength"></a>CUrl::GetUrlPathLength  
+##  <a name="geturlpathlength"></a>  CUrl::GetUrlPathLength  
  Chame esse método para obter o comprimento de caminho de URL.  
   
 ```
@@ -382,7 +377,7 @@ inline DWORD GetUrlPathLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o comprimento do caminho de URL.  
   
-##  <a name="getusername"></a>CUrl::GetUserName  
+##  <a name="getusername"></a>  CUrl::GetUserName  
  Chame este método para obter o nome de usuário da URL.  
   
 ```
@@ -392,7 +387,7 @@ inline LPCTSTR GetUserName() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o nome de usuário.  
   
-##  <a name="getusernamelength"></a>CUrl::GetUserNameLength  
+##  <a name="getusernamelength"></a>  CUrl::GetUserNameLength  
  Chame esse método para obter o comprimento do nome de usuário.  
   
 ```
@@ -402,7 +397,7 @@ inline DWORD GetUserNameLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o comprimento do nome de usuário.  
   
-##  <a name="operator_eq"></a>CUrl::operator =  
+##  <a name="operator_eq"></a>  CUrl::operator =  
  Atribui especificado `CUrl` objeto atual `CUrl` objeto.  
   
 ```
@@ -416,7 +411,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna uma referência ao objeto atual.  
   
-##  <a name="setextrainfo"></a>CUrl::SetExtraInfo  
+##  <a name="setextrainfo"></a>  CUrl::SetExtraInfo  
  Chame este método para definir as informações adicionais (como *texto* ou # *texto*) da URL.  
   
 ```
@@ -430,7 +425,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
-##  <a name="sethostname"></a>CUrl::SetHostName  
+##  <a name="sethostname"></a>  CUrl::SetHostName  
  Chame este método para definir o nome do host.  
   
 ```
@@ -444,7 +439,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
-##  <a name="setpassword"></a>CUrl::SetPassword  
+##  <a name="setpassword"></a>  CUrl::SetPassword  
  Chame este método para definir a senha.  
   
 ```
@@ -458,7 +453,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
-##  <a name="setportnumber"></a>CUrl::SetPortNumber  
+##  <a name="setportnumber"></a>  CUrl::SetPortNumber  
  Chame este método para definir o número de porta.  
   
 ```
@@ -472,7 +467,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
-##  <a name="setscheme"></a>CUrl::SetScheme  
+##  <a name="setscheme"></a>  CUrl::SetScheme  
  Chame este método para definir o esquema de URL.  
   
 ```
@@ -489,7 +484,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 ### <a name="remarks"></a>Comentários  
  Você também pode definir o esquema por nome (consulte [CUrl::SetSchemeName](#setschemename)).  
   
-##  <a name="setschemename"></a>CUrl::SetSchemeName  
+##  <a name="setschemename"></a>  CUrl::SetSchemeName  
  Chame este método para definir o nome do esquema de URL.  
   
 ```
@@ -506,7 +501,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 ### <a name="remarks"></a>Comentários  
  Você também pode definir o esquema usando um [ATL_URL_SCHEME](atl-url-scheme-enum.md) constante (consulte [CUrl::SetScheme](#setscheme)).  
   
-##  <a name="seturlpath"></a>CUrl::SetUrlPath  
+##  <a name="seturlpath"></a>  CUrl::SetUrlPath  
  Chame este método para definir o caminho da URL.  
   
 ```
@@ -520,7 +515,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
-##  <a name="setusername"></a>CUrl::SetUserName  
+##  <a name="setusername"></a>  CUrl::SetUserName  
  Chame este método para definir o nome de usuário.  
   
 ```

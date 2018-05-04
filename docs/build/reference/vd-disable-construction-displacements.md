@@ -1,13 +1,10 @@
 ---
-title: "-vd (desabilitar deslocamentos de construção) | Microsoft Docs"
-ms.custom: 
+title: -vd (desabilitar deslocamentos de construção) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (desabilitar deslocamentos de construção)
 ## <a name="syntax"></a>Sintaxe  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Comentários  
  Estas opções se aplicam somente ao código do C++ que usa bases virtual.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]implementa o suporte de deslocamento de construção de C++ em situações em que a herança virtual é usada. Deslocamentos de construção resolve o problema criado quando uma função virtual, declarado em uma base virtual e substituído em uma classe derivada, é chamado de um construtor durante a construção de uma classe derivada adicional.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementa o suporte de deslocamento de construção de C++ em situações em que a herança virtual é usada. Deslocamentos de construção resolve o problema criado quando uma função virtual, declarado em uma base virtual e substituído em uma classe derivada, é chamado de um construtor durante a construção de uma classe derivada adicional.  
   
  O problema é que a função virtual pode ser passada incorreta `this` ponteiro como resultado de discrepâncias entre os deslocamentos de virtual bases de uma classe e os deslocamentos de suas classes derivadas. A solução fornece um ajuste de deslocamento de construção único, chamado de campo de vtordisp, para cada base virtual de uma classe.  
   

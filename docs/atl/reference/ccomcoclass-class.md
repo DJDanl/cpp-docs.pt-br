@@ -1,12 +1,9 @@
 ---
 title: Classe de CComCoClass | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCoClass
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969370294ed3d5d2ca2fdff5f4a106b72ed77a17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 738d7e937acf2d3299be97b4f091c698582911d5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcoclass-class"></a>Classe de CComCoClass
 Essa classe fornece métodos para criar instâncias de uma classe e obter suas propriedades.  
@@ -62,9 +57,9 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Estático) Substituição para retornar a descrição do objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComCoClass`fornece métodos para recuperar o CLSID de um objeto, as informações de erro de configuração e criar instâncias da classe. Nenhuma classe registrada no [mapa de objeto](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f) deve ser derivado de `CComCoClass`.  
+ `CComCoClass` fornece métodos para recuperar o CLSID de um objeto, as informações de erro de configuração e criar instâncias da classe. Nenhuma classe registrada no [mapa de objeto](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f) deve ser derivado de `CComCoClass`.  
   
- `CComCoClass`também define o modelo padrão de fábrica e agregação de classe para seu objeto. `CComCoClass`usa as seguintes duas macros:  
+ `CComCoClass` também define o modelo padrão de fábrica e agregação de classe para seu objeto. `CComCoClass` usa as seguintes duas macros:  
   
 - [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) declara a fábrica de classe para ser [CComClassFactory](../../atl/reference/ccomclassfactory-class.md).  
   
@@ -77,7 +72,7 @@ class CComCoClass
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>  CComCoClass::CreateInstance  
  Use essas `CreateInstance` funções para criar uma instância de uma COM object e recuperar um ponteiro de interface sem usar a API de COM.  
   
 ```
@@ -111,11 +106,11 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Observe que a interface `Q` deve ter um IID associado a ele que pode ser recuperado usando o [uuidof](../../cpp/uuidof-operator.md) operador.  
   
 ### <a name="example"></a>Exemplo  
- No exemplo a seguir, `CDocument` é gerado pelo assistente ATL classe derivada de `CComCoClass` que implementa o **IDocument** interface. A classe é registrada no mapa do objeto com o `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` para que os clientes não é possível criar instâncias de documento usando [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication`é uma CoClass que fornece um método em uma de suas próprias interfaces COM para criar instâncias da classe do documento. O código a seguir mostra como é fácil criar instâncias da classe de documento usando o `CreateInstance` membro herdado da `CComCoClass` classe base.  
+ No exemplo a seguir, `CDocument` é gerado pelo assistente ATL classe derivada de `CComCoClass` que implementa o **IDocument** interface. A classe é registrada no mapa do objeto com o `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` para que os clientes não é possível criar instâncias de documento usando [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` é uma CoClass que fornece um método em uma de suas próprias interfaces COM para criar instâncias da classe do documento. O código a seguir mostra como é fácil criar instâncias da classe de documento usando o `CreateInstance` membro herdado da `CComCoClass` classe base.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>  CComCoClass::Error  
  Essa função estática configura o `IErrorInfo` interface para fornecer informações de erro para o cliente.  
   
 ```
@@ -188,7 +183,7 @@ static HRESULT Error(
   
  Se o `hRes` parâmetro é diferente de zero, em seguida, `Error` retorna o valor de `hRes`. Se `hRes` for zero, então as primeiras quatro versões do `Error` retornar `DISP_E_EXCEPTION`. As duas últimas versões retornam o resultado da macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
   
-##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>  CComCoClass::GetObjectCLSID  
  Fornece uma maneira consistente de recuperar o CLSID do objeto.  
   
 ```
@@ -198,7 +193,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>Valor de retorno  
  Identificador de classe do objeto.  
   
-##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>  CComCoClass::GetObjectDescription  
  Função estática recupera a descrição de texto para seu objeto de classe.  
   
 ```
@@ -213,7 +208,7 @@ static LPCTSTR WINAPI GetObjectDescription();
   
  [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
   
- `GetObjectDescription`é chamado pelo **IComponentRegistrar::GetComponents**. **IComponentRegistrar** é uma interface de automação que permite registrar e cancelar o registro de componentes individuais em uma DLL. Quando você cria um objeto do registrador de componente com o Assistente de projeto de ATL, o assistente automaticamente implementará o **IComponentRegistrar** interface. **IComponentRegistrar** normalmente é usado pelo Microsoft Transaction Server.  
+ `GetObjectDescription` é chamado pelo **IComponentRegistrar::GetComponents**. **IComponentRegistrar** é uma interface de automação que permite registrar e cancelar o registro de componentes individuais em uma DLL. Quando você cria um objeto do registrador de componente com o Assistente de projeto de ATL, o assistente automaticamente implementará o **IComponentRegistrar** interface. **IComponentRegistrar** normalmente é usado pelo Microsoft Transaction Server.  
   
  Para obter mais informações sobre o Assistente de projeto de ATL, consulte o artigo [criando um projeto de ATL](../../atl/reference/creating-an-atl-project.md).  
   

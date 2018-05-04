@@ -1,13 +1,10 @@
 ---
-title: "Regras para instruções de definição de módulo | Microsoft Docs"
-ms.custom: 
+title: Regras para instruções de definição de módulo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - .def
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eb4875b195871aff8d274667e005d63424a110
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f8de42480dae9be203a132561d722c18d6952c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-for-module-definition-statements"></a>Regras para instruções de definição do módulo
 As regras de sintaxe a seguir se aplicam a todas as instruções em um arquivo. def. Outras regras que se aplicam a instruções específicas são descritas com cada instrução.  

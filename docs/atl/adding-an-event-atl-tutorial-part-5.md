@@ -1,27 +1,22 @@
 ---
 title: Adicionando um evento (ATL Tutorial, parte 5) | Microsoft Docs
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a118cf29546ac8dae2e882d5658b07e3b5e085f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Adicionando um evento (Tutorial ATL, parte 5)
 Nesta etapa, você adicionará um `ClickIn` e um `ClickOut` eventos para o controle ATL. Você será acionado a `ClickIn` evento se o usuário clica dentro do polígono e acionar `ClickOut` se o usuário clica fora. As tarefas para adicionar um evento são da seguinte maneira:  
@@ -134,7 +129,7 @@ Nesta etapa, você adicionará um `ClickIn` e um `ClickOut` eventos para o contr
   
  Em seguida, você adicionará uma página de propriedades.  
   
- [Para a etapa 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [Na etapa 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+ [Para a etapa 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [na etapa 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)

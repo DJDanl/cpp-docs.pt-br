@@ -1,12 +1,9 @@
 ---
 title: Classe de CSid | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>Classe de CSid
 Essa classe é um wrapper para um `SID` estrutura (identificador de segurança).  
@@ -67,7 +62,7 @@ class CSid
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|O construtor.|  
-|[CSid::~CSid](#dtor)|O destruidor.|  
+|[CSid:: ~ CSid](#dtor)|O destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -97,11 +92,11 @@ class CSid
   
 |||  
 |-|-|  
-|[operator ==](#operator_eq_eq)|Testa dois objetos de descritor de segurança para fins de igualdade|  
-|[operator !=](#operator_neq)|Testa dois objetos de descritor de segurança para desigualdade|  
-|[operador\<](#operator_lt_)|Compara o valor relativo de dois objetos de descritor de segurança.|  
+|[operador = =](#operator_eq_eq)|Testa dois objetos de descritor de segurança para fins de igualdade|  
+|[operador! =](#operator_neq)|Testa dois objetos de descritor de segurança para desigualdade|  
+|[Operador \<](#operator_lt_)|Compara o valor relativo de dois objetos de descritor de segurança.|  
 |[operador >](#operator_gt_)|Compara o valor relativo de dois objetos de descritor de segurança.|  
-|[operador\<=](#operator_lt__eq)|Compara o valor relativo de dois objetos de descritor de segurança.|  
+|[Operador \<=](#operator_lt__eq)|Compara o valor relativo de dois objetos de descritor de segurança.|  
 |[operador > =](#operator_gt__eq)|Compara o valor relativo de dois objetos de descritor de segurança.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -342,9 +337,9 @@ bool LoadAccount(
  Retorna **true** em caso de sucesso, **false** em caso de falha. Para obter outras informações sobre o erro, chame `GetLastError`.  
   
 ### <a name="remarks"></a>Comentários  
- `LoadAccount`tenta localizar um identificador de segurança para o nome especificado. Consulte [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) para obter mais detalhes.  
+ `LoadAccount` tenta localizar um identificador de segurança para o nome especificado. Consulte [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) para obter mais detalhes.  
   
-##  <a name="operator_eq"></a>CSid::operator =  
+##  <a name="operator_eq"></a>  CSid::operator =  
  Operador de atribuição.  
   
 ```
@@ -359,7 +354,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna uma referência para a atualização `CSid` objeto.  
   
-##  <a name="operator_eq_eq"></a>  CSid::operator ==  
+##  <a name="operator_eq_eq"></a>  CSid::operator = =  
  Testa dois objetos de descritor de segurança para igualdade.  
   
 ```
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>Valor de retorno  
  **True** se os descritores de segurança forem iguais; caso contrário, **false**.  
   
-##  <a name="operator_neq"></a>  CSid::operator !=  
+##  <a name="operator_neq"></a>  CSid::operator! =  
  Testa dois objetos de descritor de segurança para fins de desigualdade.  
   
 ```
@@ -397,7 +392,7 @@ bool operator!=(
 ### <a name="return-value"></a>Valor de retorno  
  **True** se os descritores de segurança não forem iguais, caso contrário, **false**.  
   
-##  <a name="operator_lt"></a>CSid::operator&lt;  
+##  <a name="operator_lt"></a>  CSid::operator &lt;  
  Compara o valor relativo de dois objetos de descritor de segurança.  
   
 ```
@@ -416,7 +411,7 @@ bool operator<(
 ### <a name="return-value"></a>Valor de retorno  
  **True** se `lhs` é menor que `rhs`, caso contrário, **false**.  
   
-##  <a name="operator_lt__eq"></a>CSid::operator&lt;=  
+##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=  
  Compara o valor relativo de dois objetos de descritor de segurança.  
   
 ```
@@ -435,7 +430,7 @@ bool operator<=(
 ### <a name="return-value"></a>Valor de retorno  
  **True** se `lhs` é menor que ou igual a `rhs`, caso contrário, **false**.  
   
-##  <a name="operator_gt"></a>CSid::operator&gt;  
+##  <a name="operator_gt"></a>  CSid::operator &gt;  
  Compara o valor relativo de dois objetos de descritor de segurança.  
   
 ```
@@ -454,7 +449,7 @@ bool operator>(
 ### <a name="return-value"></a>Valor de retorno  
  **True** se `lhs` é maior do que `rhs`, caso contrário, **false**.  
   
-##  <a name="operator_gt__eq"></a>CSid::operator&gt;=  
+##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=  
  Compara o valor relativo de dois objetos de descritor de segurança.  
   
 ```
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>Valor de retorno  
  **True** se `lhs` é maior que ou igual a `rhs`, caso contrário, **false**.  
   
-##  <a name="operator_const_sid__star"></a>SID const CSid::operator *  
+##  <a name="operator_const_sid__star"></a>  SID const CSid::operator *  
  Conversões de um `CSid` objeto para um ponteiro para um `SID` estrutura (identificador de segurança).  
   
 ```  
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|Indica um `SID` para um computador.|  
   
 ### <a name="remarks"></a>Comentários  
- Chamar [CSid::LoadAccount](#loadaccount) para atualizar o `CSid` objeto antes de chamar `SidNameUse` para retornar a seu estado. `SidNameUse`não alterar o estado do objeto (por chamada para **LookupAccountName** ou **LookupAccountSid**), mas só retorna o estado atual.  
+ Chamar [CSid::LoadAccount](#loadaccount) para atualizar o `CSid` objeto antes de chamar `SidNameUse` para retornar a seu estado. `SidNameUse` não alterar o estado do objeto (por chamada para **LookupAccountName** ou **LookupAccountSid**), mas só retorna o estado atual.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de segurança](../../visual-cpp-samples.md)   

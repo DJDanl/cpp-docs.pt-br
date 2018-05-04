@@ -2,12 +2,9 @@
 title: Referência de build do C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d26f729f660b3e51677303bb91b99e665a1a950
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cc-building-reference"></a>Referência de build C/C++
 Visual C++ fornece duas maneiras de criar um programa C/C++. A maneira mais fácil (e mais comum) é [de compilação no ambiente de desenvolvimento do Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). A outra maneira é [de compilação em um prompt de comando usando as ferramentas de linha de comando](../../build/building-on-the-command-line.md). Em ambos os casos, você pode criar arquivos de origem usando o editor de código-fonte do Visual C++ ou um editor de terceiros de sua escolha.  

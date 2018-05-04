@@ -2,11 +2,8 @@
 title: Classe CWinTraitsOR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWinTraitsOR
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3df5081d8584d821737350176740b6fd067ac78f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwintraitsor-class"></a>Classe CWinTraitsOR
 Essa classe fornece um método para padronizar os estilos usados ao criar um objeto de janela.  
@@ -72,7 +67,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
   
-##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
  Chamar essa função para recuperar uma combinação (usando o operador lógico OR) dos estilos de padrão de `CWinTraits` objeto e os estilos padrão especificados pelo `t_dwStyle`.  
   
 ```
@@ -86,7 +81,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>Valor de retorno  
  Uma combinação de estilos que são transmitidos `dwStyle` e o padrão que aqueles especificados por `t_dwStyle`, usando o operador lógico OR.  
   
-##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
  Chamar essa função para recuperar uma combinação (usando o operador lógico OR) dos estilos estendidos do `CWinTraits` objeto e os estilos padrão especificados pelo `t_dwStyle`.  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: + = _bstr_t::Operator, + | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t::operator+
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - += operator [C++], appending strings
 - + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ceeec1461b05b25d4bb0b42321cb9b3988ce4b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Seção específica da Microsoft**  
@@ -67,13 +62,13 @@ friend _bstr_t operator+(
 ## <a name="remarks"></a>Comentários  
  Esses operadores executam a concatenação de cadeias de caracteres:  
   
--   **+ operador = (***s1***)** acrescenta os caracteres a encapsulada `BSTR` de *s1* ao final da encapsuladadesseobjeto`BSTR`.  
+-   **+ operador = (***s1***)** acrescenta os caracteres a encapsulada `BSTR` de *s1* ao final da encapsuladadesseobjeto`BSTR`.      
   
--   **operador + (***s1***)** retorna o novo `_bstr_t` que é formado pela concatenação do objeto `BSTR` da *s1*.  
+-   **operador + (***s1***)** retorna o novo `_bstr_t` que é formado pela concatenação do objeto `BSTR` da *s1*.      
   
--   **operador + (***s2***&#124;** *s1***)** retorna um novo `_bstr_t` que é formado pela concatenação de uma cadeia de caracteres multibyte *s2*, convertido em Unicode, com o `BSTR` encapsulada na *s1*.  
+-   **operador + (***s2***&#124;***s1***)** retorna um novo `_bstr_t` que é formado pela concatenação um cadeia de caracteres multibyte *s2*, convertido em Unicode, com o `BSTR` encapsulada na *s1*.          
   
--   **operador + (** `s3` **,***s1***)** retorna um novo `_bstr_t` que é formado pela concatenação de uma cadeia de caracteres Unicode `s3` com o `BSTR` encapsulada na *s1*.  
+-   **operador + (** `s3` **,***s1***)** retorna um novo `_bstr_t` que é formado pela concatenação de uma cadeia de caracteres Unicode `s3` com o `BSTR` encapsulada na *s1*.        
   
  **Fim da seção específica da Microsoft**  
   

@@ -1,32 +1,27 @@
 ---
-title: "Implementação um Gerenciador de personalizado cadeia de caracteres (método básico) | Microsoft Docs"
-ms.custom: 
+title: Implementação um Gerenciador de personalizado cadeia de caracteres (método básico) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 259f9533747b266f0be0a782cdc94c98f167d2d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementação um Gerenciador de personalizado cadeia de caracteres (método básico)
-A maneira mais fácil para personalizar o esquema de alocação de memória para dados de cadeia de caracteres usar o ATL fornecido **CAtlStringMgr** classe mas fornecer sua própria memória rotinas de alocação. O construtor para **CAtlStringMgr** usa um único parâmetro: um ponteiro para um `IAtlMemMgr` objeto. `IAtlMemMgr`é uma classe base abstrata que fornece uma interface genérica para um heap. Usando o `IAtlMemMgr` interface, o **CAtlStringMgr** aloca realoca e libera a memória usada para armazenar dados de cadeia de caracteres. Você pode ou implementar o `IAtlMemMgr` interface por conta própria, ou usar uma das classes de Gerenciador de memória fornecida ATL cinco. Os gerenciadores de memória fornecida ATL simplesmente encapsular recursos existentes de alocação de memória:  
+A maneira mais fácil para personalizar o esquema de alocação de memória para dados de cadeia de caracteres usar o ATL fornecido **CAtlStringMgr** classe mas fornecer sua própria memória rotinas de alocação. O construtor para **CAtlStringMgr** usa um único parâmetro: um ponteiro para um `IAtlMemMgr` objeto. `IAtlMemMgr` é uma classe base abstrata que fornece uma interface genérica para um heap. Usando o `IAtlMemMgr` interface, o **CAtlStringMgr** aloca realoca e libera a memória usada para armazenar dados de cadeia de caracteres. Você pode ou implementar o `IAtlMemMgr` interface por conta própria, ou usar uma das classes de Gerenciador de memória fornecida ATL cinco. Os gerenciadores de memória fornecida ATL simplesmente encapsular recursos existentes de alocação de memória:  
   
 -   [CCRTHeap](../atl/reference/ccrtheap-class.md) encapsula as funções de heap padrão do CRT ([malloc](../c-runtime-library/reference/malloc.md), [livre](../c-runtime-library/reference/free.md), e [realloc](../c-runtime-library/reference/realloc.md))  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe CTokenPrivileges | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenPrivileges
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 Essa classe é um wrapper para o **TOKEN_PRIVILEGES** estrutura.  
@@ -276,7 +271,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o atributo for recuperada com sucesso, false caso contrário.  
   
-##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>  CTokenPrivileges::operator =  
  Operador de atribuição.  
   
 ```
@@ -294,7 +289,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a atualização `CTokenPrivileges` objeto.  
   
-##  <a name="operator_const_token_privileges__star"></a>TOKEN_PRIVILEGES const CTokenPrivileges::operator *  
+##  <a name="operator_const_token_privileges__star"></a>  TOKEN_PRIVILEGES const CTokenPrivileges::operator *  
  Converte um valor para um ponteiro para o **TOKEN_PRIVILEGES** estrutura.  
   
 ```  

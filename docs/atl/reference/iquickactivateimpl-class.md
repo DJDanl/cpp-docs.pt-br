@@ -2,11 +2,8 @@
 title: Classe IQuickActivateImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IQuickActivateImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6f5bc1798bc8ec40fb6f6d9d22f48c06b19745
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b87427408483a60cf33b46a1a670095d211b3d80
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iquickactivateimpl-class"></a>Classe IQuickActivateImpl
 Essa classe combina a inicialização dos contêineres de controle em uma única chamada.  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlctl.h  
   
-##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent  
  Recupera o tamanho de exibição atual para um controle em execução.  
   
 ```
@@ -86,7 +81,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
   
  Consulte [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) no SDK do Windows.  
   
-##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
  Executa a inicialização rápida de controles que está sendo carregado.  
   
 ```
@@ -100,7 +95,7 @@ STDMETHOD(QuickActivate)(
   
  Consulte [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) no SDK do Windows.  
   
-##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
  Informa o controle a quantidade de espaço de exibição o contêiner foi atribuído a ele.  
   
 ```

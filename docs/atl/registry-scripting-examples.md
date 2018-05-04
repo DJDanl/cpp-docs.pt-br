@@ -1,13 +1,10 @@
 ---
 title: Exemplos de script de registro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>Exemplos de script do registro
 Os script exemplos neste tópico demonstram como adicionar uma chave ao registro do sistema, registrar o servidor COM registrador e especificar várias árvores de análise.  
@@ -59,7 +54,7 @@ HKCU
   
  Agora, o script adiciona uma subchave `HasASubkey`, `MyVeryOwnKey`. Para essa subchave, ele adiciona ambos o `PrettyCool` subchave (com um padrão `DWORD` valor 55) e o `ANameValue` valor nomeado (com um valor de cadeia de caracteres de `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>Registrar o servidor do registrador COM  
+##  <a name="_atl_register_the_registrar_com_server"></a> Registrar o servidor do registrador COM  
  O script a seguir registra o próprio servidor de registro COM.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   Adiciona `ATL Registrar Class` como o valor de cadeia de caracteres padrão para `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- A árvore de análise agora adiciona duas novas subchaves para `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. A primeira chave, `ProgID`, obtém um valor de cadeia de caracteres padrão que é o ProgID. A segunda chave, `InprocServer32`, obtém um valor de cadeia de caracteres padrão, `%MODULE%`, que é um valor de pré-processador explicado na seção, [usando parâmetros substituíveis (do registrador pré-processador)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), deste artigo. `InprocServer32`também obtém um valor nomeado, `ThreadingModel`, com um valor de cadeia de caracteres de `Apartment`.  
+ A árvore de análise agora adiciona duas novas subchaves para `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. A primeira chave, `ProgID`, obtém um valor de cadeia de caracteres padrão que é o ProgID. A segunda chave, `InprocServer32`, obtém um valor de cadeia de caracteres padrão, `%MODULE%`, que é um valor de pré-processador explicado na seção, [usando parâmetros substituíveis (do registrador pré-processador)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), deste artigo. `InprocServer32` também obtém um valor nomeado, `ThreadingModel`, com um valor de cadeia de caracteres de `Apartment`.  
   
 ## <a name="specify-multiple-parse-trees"></a>Especifique várias árvores de análise  
  Para especificar mais de uma árvore de análise em um script, basta coloca uma árvore no final do outro. Por exemplo, o script a seguir adiciona a chave `MyVeryOwnKey`, as árvores de análise para ambos `HKEY_CLASSES_ROOT` e `HKEY_CURRENT_USER`:  

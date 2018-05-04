@@ -1,12 +1,9 @@
 ---
 title: Classe CAccessToken | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAccessToken
@@ -61,17 +58,15 @@ dev_langs:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 407652cc5a5e300a2e5eb9d6a5a07dd29209ffef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caccesstoken-class"></a>Classe CAccessToken
 Essa classe é um wrapper para um token de acesso.  
@@ -222,7 +217,7 @@ bool CreateImpersonationToken(
  Retorna true em caso de êxito, false em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- `CreateImpersonationToken`chamadas [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) para criar um novo token de representação.  
+ `CreateImpersonationToken` chamadas [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) para criar um novo token de representação.  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  Chame este método para criar um novo token primário.  
@@ -248,7 +243,7 @@ bool CreatePrimaryToken(
  Retorna true em caso de êxito, false em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- `CreatePrimaryToken`chamadas [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) para criar um novo token primário.  
+ `CreatePrimaryToken` chamadas [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) para criar um novo token primário.  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Chame esse método para criar um novo processo em execução no contexto de segurança do usuário representado pelo `CAccessToken` objeto.  
@@ -334,7 +329,7 @@ bool CreateRestrictedToken(
  Retorna true em caso de êxito, false em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- `CreateRestrictedToken`usa o [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) função Win32 para criar um novo `CAccessToken` objeto, com restrições.  
+ `CreateRestrictedToken` usa o [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) função Win32 para criar um novo `CAccessToken` objeto, com restrições.  
   
 > [!IMPORTANT]
 >  Ao usar `CreateRestrictedToken`, verifique o seguinte: o token existente é válido (e não inserido pelo usuário) e `SidsToDisable` e `PrivilegesToDelete` são válidas (e não inserido pelo usuário). Se o método retornará false, nega funcionalidade.  
@@ -942,7 +937,7 @@ bool OpenThreadToken(
  Retorna true em caso de êxito, false em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- `OpenThreadToken`é semelhante a [CAccessToken::GetThreadToken](#getthreadtoken), mas define o nível de representação antes de inicializar o `CAccessToken` do token de acesso do thread.  
+ `OpenThreadToken` é semelhante a [CAccessToken::GetThreadToken](#getthreadtoken), mas define o nível de representação antes de inicializar o `CAccessToken` do token de acesso do thread.  
   
  O [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md) pode ser usado para reverter automaticamente tokens de acesso representado criados definindo o `bImpersonate` sinalizador como *true*.  
   

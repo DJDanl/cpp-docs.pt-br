@@ -1,12 +1,9 @@
 ---
 title: Classe CSecurityDesc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityDesc
@@ -43,17 +40,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: a6963c04e3bd0ba06f8cc2beb9cb77447e2acd81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 Essa classe é um wrapper para o **SECURITY_DESCRIPTOR** estrutura.  
@@ -475,7 +470,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a atualização `CSecurityDesc` objeto.  
   
-##  <a name="operator_const_security_descriptor__star"></a>SECURITY_DESCRIPTOR const CSecurityDesc::operator *  
+##  <a name="operator_const_security_descriptor__star"></a>  SECURITY_DESCRIPTOR const CSecurityDesc::operator *  
  Converte um valor para um ponteiro para o **SECURITY_DESCRIPTOR** estrutura.  
   
 ```  
@@ -518,7 +513,7 @@ inline void SetDacl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *Dacl*  
+ *DACL*  
  Referência a um `CDacl` objeto especificando a DACL para o descritor de segurança. Esse parâmetro não deve ser NULL. Para definir uma DACL NULL no descritor de segurança, o primeiro formulário do método deve ser usado com `bPresent` definido como false.  
   
  `bPresent`  
@@ -575,7 +570,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *Sacl*  
+ *SACL*  
  Ponteiro para uma `CSacl` objeto especificando a SACL para o descritor de segurança. Esse parâmetro não deve ser NULL e deve ser um objeto CSacl. Ao contrário de DACLs, não há nenhuma diferença entre NULL e uma SACL vazia, como objetos SACL não especificar os direitos de acesso, apenas informações de auditoria.  
   
  `bDefaulted`  

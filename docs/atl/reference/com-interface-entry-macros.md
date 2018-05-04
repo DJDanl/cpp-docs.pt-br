@@ -1,12 +1,9 @@
 ---
 title: Macros de entrada da Interface COM | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::COM_INTERFACE_ENTRY
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76352cf2015661bc970b2987b9794f3bf023cc15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c3ba41a05813c4112c1e5dd51bfe447d2c8debf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
  Essas macros inserirem interfaces de um objeto em seu mapa de COM para que eles possam ser acessados por `QueryInterface`. A ordem das entradas no mapa COM é que as interfaces de ordem serão verificadas para encontrar uma correspondência **IID** durante `QueryInterface`.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Requisitos
 **Cabeçalho:** atlcom.h
 
-## <a name="com_interface_entry"></a>COM_INTERFACE_ENTRY
+## <a name="com_interface_entry"></a> COM_INTERFACE_ENTRY
 Insere interfaces no mapa de interface COM.
 
 ### <a name="syntax"></a>Sintaxe
@@ -89,7 +84,7 @@ END_COM_MAP()
 ### <a name="requirements"></a>Requisitos
 **Cabeçalho:** atlcom.h
   
-##  <a name="com_interface_entry2"></a>COM_INTERFACE_ENTRY2  
+##  <a name="com_interface_entry2"></a>  COM_INTERFACE_ENTRY2  
  Use esta macro para resolver a ambiguidade duas ramificações de herança.  
   
 ```
@@ -110,7 +105,7 @@ COM_INTERFACE_ENTRY2(x, x2)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
   
-##  <a name="com_interface_entry_iid"></a>COM_INTERFACE_ENTRY_IID  
+##  <a name="com_interface_entry_iid"></a>  COM_INTERFACE_ENTRY_IID  
  Use esta macro para inserir a interface para o mapa COM e especifique seu IID.  
   
 ```
@@ -128,7 +123,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
   
-##  <a name="com_interface_entry2_iid"></a>COM_INTERFACE_ENTRY2_IID  
+##  <a name="com_interface_entry2_iid"></a>  COM_INTERFACE_ENTRY2_IID  
  Mesmo que [COM_INTERFACE_ENTRY2](#com_interface_entry2), exceto que você pode especificar um IID diferente.  
   
 ```
@@ -145,7 +140,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
  `x2`  
  [in] O nome de uma segunda interface que seu objeto de classe deriva diretamente.  
   
-##  <a name="com_interface_entry_aggregate"></a>COM_INTERFACE_ENTRY_AGGREGATE  
+##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE  
  Quando a interface é identificado por `iid` é consultada, `COM_INTERFACE_ENTRY_AGGREGATE` encaminha para `punk`.  
   
 ```
@@ -167,7 +162,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
   
-##  <a name="com_interface_entry_aggregate_blind"></a>COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
+##  <a name="com_interface_entry_aggregate_blind"></a>  COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
  Mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exceto que consultar qualquer IID resulta em encaminhamento a consulta `punk`.  
   
 ```
@@ -187,7 +182,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
  [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
   
 
-##  <a name="com_interface_entry_autoaggregate"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE  
+##  <a name="com_interface_entry_autoaggregate"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE  
  Mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exceto se `punk` é **nulo**, ele cria automaticamente a agregação descrita pelo `clsid`.  
   
 ```
@@ -210,7 +205,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
   
-##  <a name="com_interface_entry_autoaggregate_blind"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
+##  <a name="com_interface_entry_autoaggregate_blind"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
  Mesmo que [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), exceto que consultar qualquer IID resulta em encaminhamento a consulta `punk`e se `punk` é **nulo**, criar automaticamente a agregação descrito pelo `clsid`.  
   
 ```
@@ -232,7 +227,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
-##  <a name="com_interface_entry_break"></a>COM_INTERFACE_ENTRY_BREAK  
+##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
  Faz com que o programa chamar [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) quando a interface especificada é consultada para.  
   
 ```
@@ -248,7 +243,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
   
   
   
-##  <a name="com_interface_entry_cached_tear_off"></a>COM_INTERFACE_ENTRY_CACHED_TEAR_OFF  
+##  <a name="com_interface_entry_cached_tear_off"></a>  COM_INTERFACE_ENTRY_CACHED_TEAR_OFF  
  Salva os dados específicos à interface para cada instância.  
   
 ```
@@ -273,7 +268,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
   
-##  <a name="com_interface_entry_tear_off"></a>COM_INTERFACE_ENTRY_TEAR_OFF  
+##  <a name="com_interface_entry_tear_off"></a>  COM_INTERFACE_ENTRY_TEAR_OFF  
  Expõe as interfaces destacável.  
   
 ```
@@ -295,7 +290,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
-##  <a name="com_interface_entry_chain"></a>COM_INTERFACE_ENTRY_CHAIN  
+##  <a name="com_interface_entry_chain"></a>  COM_INTERFACE_ENTRY_CHAIN  
  Processa o mapa COM da classe base quando o processamento atinge essa entrada no mapa de COM.  
   
 ```
@@ -317,7 +312,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
   
   
   
-##  <a name="com_interface_entry_func"></a>COM_INTERFACE_ENTRY_FUNC  
+##  <a name="com_interface_entry_func"></a>  COM_INTERFACE_ENTRY_FUNC  
  Um mecanismo geral para a conexão do ATL `QueryInterface` lógica.  
   
 ```
@@ -343,7 +338,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
   
   
   
-##  <a name="com_interface_entry_func_blind"></a>COM_INTERFACE_ENTRY_FUNC_BLIND  
+##  <a name="com_interface_entry_func_blind"></a>  COM_INTERFACE_ENTRY_FUNC_BLIND  
  Mesmo que [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), exceto que consultar qualquer IID resulta em uma chamada para `func`.  
   
 ```
@@ -361,7 +356,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
  Qualquer falha fará com que o processamento continue no mapa de COM. Se a função retorna um ponteiro de interface, ele deverá retornar `S_OK`.  
   
   
-##  <a name="com_interface_entry_nointerface"></a>COM_INTERFACE_ENTRY_NOINTERFACE  
+##  <a name="com_interface_entry_nointerface"></a>  COM_INTERFACE_ENTRY_NOINTERFACE  
  Retorna **E_NOINTERFACE** e termina COM o mapa processamento quando a interface especificada é consultada para.  
   
 ```

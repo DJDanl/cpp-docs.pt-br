@@ -1,13 +1,10 @@
 ---
-title: "Opções EDITBIN | Microsoft Docs"
-ms.custom: 
+title: Opções EDITBIN | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>Opções EDITBIN
 Você pode usar EDITBIN para modificar arquivos de objeto, arquivos executáveis e bibliotecas de vínculo dinâmico (DLLs). Opções especificam as alterações que EDITBIN faz.  
@@ -50,7 +45,7 @@ Você pode usar EDITBIN para modificar arquivos de objeto, arquivos executáveis
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Especifica se a imagem executável é compatível com Windows Data Execution Prevention.|  
 |[/REBASE](../../build/reference/rebase.md)|Define os endereços de base para os objetos especificados.|  
 |[/RELEASE](../../build/reference/release.md)|Define a soma de verificação no cabeçalho.|  
-|[/SECTION](../../build/reference/section-editbin.md)|Substitui os atributos de uma seção.|  
+|[/ SEÇÃO](../../build/reference/section-editbin.md)|Substitui os atributos de uma seção.|  
 |[/STACK](../../build/reference/stack.md)|Define o tamanho da pilha da imagem executável em bytes.|  
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|Especifica o ambiente de execução.|  
 |[/SWAPRUN](../../build/reference/swaprun.md)|Especifica que a imagem executável deve ser copiada para o arquivo de permuta e, em seguida, execute a partir daí.|  

@@ -2,11 +2,8 @@
 title: decltype (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype (C++)
 O especificador de tipo `decltype` produz o tipo de uma expressão especificada. O `decltype` digite especificador, junto com o [palavra-chave auto](../cpp/auto-cpp.md), é útil principalmente para desenvolvedores que escrevem as bibliotecas de modelo. Use `auto` e `decltype` para declarar uma função de modelo cujo tipo de retorno dependa dos tipos dos argumentos de modelo. Ou então, use `auto` e `decltype` para declarar uma função de modelo que encapsule uma chamada para outra função e depois retorne o tipo de retorno da função encapsulada.  
@@ -49,7 +44,7 @@ decltype( expression )
  O tipo do parâmetro `expression`.  
   
 ## <a name="remarks"></a>Comentários  
- O especificador de tipo `decltype` tem suporte no Visual C++ 2010 e em versões posteriores, e pode ser usado com código nativo ou gerenciado. `decltype(auto)`(C + + 14) tem suporte no Visual Studio 2015 e posterior.  
+ O especificador de tipo `decltype` tem suporte no Visual C++ 2010 e em versões posteriores, e pode ser usado com código nativo ou gerenciado. `decltype(auto)` (C + + 14) tem suporte no Visual Studio 2015 e posterior.  
   
  O compilador usa as regras a seguir para determinar o tipo do parâmetro `expression`.  
   
@@ -91,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  O protótipo a seguir ilustra a sintaxe de uma declaração de função alternativa. Observe que o `const` e `volatile` qualificadores e o `throw` [especificação de exceção](../cpp/exception-specifications-throw-cpp.md) são opcionais. O *function_body* espaço reservado representa uma instrução composta que especifica que a função faz. Como uma melhor prática, de codificação de *expressão* espaço reservado no `decltype` instrução deve corresponder a expressão especificada pelo `return` instrução, se houver, no *function_body*.  
   
- **auto** *function_name* **(** *parâmetros*<sub>aceitação</sub> **)**  **Const**<sub>aceitação</sub> **volátil**<sub>aceitação</sub>  **->**  **decltype (** *expressão* **)** **gerar**<sub>aceitação</sub> **{** *function_body* **};**  
+ **auto** *function_name* **(** *parâmetros*<sub>aceitação</sub> **)**  **Const**<sub>aceitação</sub> **volátil**<sub>aceitação</sub> **->** **decltype (** *expressão* **)** **gerar**<sub>aceitação</sub> **{** *function_body* **};**  
   
  No exemplo de código a seguir, o tipo de retorno com especificação tardia da função de modelo `myFunc` é determinado pelos tipos dos argumentos de modelo `t` e `u`. Como uma melhor prática de codificação, o exemplo de código também usa referências a rvalue e `forward` template de função, que oferece suporte a *perfeita encaminhamento*. Para obter mais informações, consulte [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
@@ -213,5 +208,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>Requisitos  
  Visual C++ 2010 ou versões posteriores.  
   
- `decltype(auto)`requer o Visual Studio 2015 ou posterior.  
+ `decltype(auto)` requer o Visual Studio 2015 ou posterior.  
   

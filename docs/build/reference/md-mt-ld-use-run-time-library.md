@@ -2,12 +2,9 @@
 title: -MD, -MT, -LD (usar biblioteca de tempo de execução) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Usar biblioteca de tempo de execução)
 Indica se um módulo com multithread é uma DLL e especifica versões comerciais ou de depuração da biblioteca em tempo de execução.  
@@ -76,7 +71,7 @@ Indica se um módulo com multithread é uma DLL e especifica versões comerciais
 |**/MT**|Faz com que o aplicativo use a versão estática de multithread da biblioteca em tempo de execução. Define `_MT` e faz com que o compilador coloque o nome da biblioteca LIBCMT.lib no arquivo .obj para que o vinculador use LIBCMT.lib para resolver símbolos externos.|  
 |**/MTd**|Define `_DEBUG` e `_MT`. Essa opção também faz com que o compilador coloque o nome da biblioteca LIBCMTD.lib no arquivo .obj para que o vinculador use LIBCMTD.lib para resolver símbolos externos.|  
 |**/LD**|Cria uma DLL.<br /><br /> Passa o **/DLL** opção de vinculador. O vinculador procura, mas não requer, uma função `DllMain`. Se você não grava uma função `DllMain`, o vinculador insere uma função `DllMain` que retorna TRUE.<br /><br /> Vincula o código de inicialização da DLL.<br /><br /> Cria uma biblioteca da importação (.lib), se um arquivo de exportação (.exp) não é especificado na linha de comando. Você vinculará a biblioteca de importação aos aplicativos que chamam a DLL.<br /><br /> Interpreta [/Fe (nomear o arquivo EXE)](../../build/reference/fe-name-exe-file.md) como uma DLL em vez de um arquivo de .exe de nomenclatura. Por padrão, o nome do programa se torna *nome base*. dll em vez de *nome base*.exe.<br /><br /> Implica **/MT** , a menos que você especifique explicitamente **/MD**.|  
-|**/Ldd**|Cria uma DLL de depuração. Define `_MT` e `_DEBUG`.|  
+|**/LDd**|Cria uma DLL de depuração. Define `_MT` e `_DEBUG`.|  
   
  Para obter mais informações sobre bibliotecas de tempo de execução do C e quais bibliotecas são usadas quando você compilar com [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md), consulte [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
   

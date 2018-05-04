@@ -1,12 +1,9 @@
 ---
-title: "Macros de relatórios de erros e depuração | Microsoft Docs"
-ms.custom: 
+title: Macros de relatórios de erros e depuração | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de relatórios de erros e de depuração
 Essas macros fornecem recursos úteis de depuração e rastreamento.  
@@ -45,7 +40,7 @@ Essas macros fornecem recursos úteis de depuração e rastreamento.
 |[ATLTRACE](#alttrace)|Avisos de relatórios para um dispositivo de saída, como a janela de depurador, de acordo com os sinalizadores indicados e os níveis. Incluído para compatibilidade com versões anteriores.|  
 |[ATLTRACE2](#atltrace2)|Avisos de relatórios para um dispositivo de saída, como a janela de depurador, de acordo com os sinalizadores indicados e os níveis.|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  Defina esta macro antes de incluir os arquivos de cabeçalho do ATL para rastrear todos os `AddRef` e **versão** chama em interfaces de seus componentes para a janela de saída.  
   
 ```
@@ -72,9 +67,9 @@ Essas macros fornecem recursos úteis de depuração e rastreamento.
  As informações aqui fornecidas mapeia diretamente para as informações fornecidas nas instruções de rastreamento anteriores, para que você possa examinar as contagens de referência durante o tempo de vida inteiro de uma conversão de interface. Além disso, você obtém uma indicação de que a contagem de referência máximo nessa conversão de interface.  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`pode ser usado em compilações para venda.  
+> `_ATL_DEBUG_INTERFACES` pode ser usado em compilações para venda.  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  Grava todas as chamadas para `QueryInterface` a janela de saída.  
   
 ```
@@ -86,7 +81,7 @@ Essas macros fornecem recursos úteis de depuração e rastreamento.
   
  *nome da interface* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  O `ATLASSERT` macro executa a mesma funcionalidade que o [asserte](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) macro encontrada na biblioteca de tempo de execução do C.  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  Essa macro é usada para validar os parâmetros passados para uma função.  
   
 ```
@@ -135,7 +130,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** AFX  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  Em compilações de depuração da ATL, envia a cadeia de caracteres " `funcname` não implementado" para o dispositivo de despejo e o retorna **E_NOTIMPL**.  
   
 ```
@@ -155,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  Avisos de relatórios para um dispositivo de saída, como a janela de depurador, de acordo com os sinalizadores indicados e os níveis. Incluído para compatibilidade com versões anteriores.  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>Comentários  
  Consulte [ATLTRACE2](#atltrace2) para obter uma descrição de **ATLTRACE**. **ATLTRACE** e `ATLTRACE2` têm o mesmo comportamento, **ATLTRACE** é incluído para compatibilidade com versões anteriores.  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  Avisos de relatórios para um dispositivo de saída, como a janela de depurador, de acordo com os sinalizadores indicados e os níveis.  
   
 ```
@@ -264,7 +259,7 @@ ATLTRACE2(
   
  Nas compilações de lançamento, `ATLTRACE2` é compilado em `(void) 0`.  
   
- `ATLTRACE2`limita o conteúdo da cadeia de caracteres a ser enviada para o dispositivo de despejo para não mais de 1.023 caracteres, após a formatação.  
+ `ATLTRACE2` limita o conteúdo da cadeia de caracteres a ser enviada para o dispositivo de despejo para não mais de 1.023 caracteres, após a formatação.  
   
  **ATLTRACE** e `ATLTRACE2` têm o mesmo comportamento, **ATLTRACE** é incluído para compatibilidade com versões anteriores.  
   

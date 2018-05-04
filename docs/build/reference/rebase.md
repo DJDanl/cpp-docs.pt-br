@@ -1,13 +1,10 @@
 ---
 title: -REBASE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rebase
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 |Modificador|Ação|  
 |--------------|------------|  
-|Base de dados de**=***endereço*|Fornece um endereço de início para reatribuir endereços base para os arquivos. Especifique *endereço* em decimal ou notação de linguagem C. Se a BASE não for especificada, o padrão de endereço de base inicial é 0x400000. Deve ser especificado se é usada, BASE, e *endereço* define o final do intervalo de endereços base.|  
+|BASE **= * endereço*|Fornece um endereço de início para reatribuir endereços base para os arquivos. Especifique *endereço* em decimal ou notação de linguagem C. Se a BASE não for especificada, o padrão de endereço de base inicial é 0x400000. Deve ser especificado se é usada, BASE, e *endereço* define o final do intervalo de endereços base.|  
 |BASEFILE|Cria um arquivo chamado COFFBASE. TXT, que é um arquivo de texto no formato esperado pelo LINK/opção de BASE.|  
 |PARA BAIXO|Informa EDITBIN reatribuir endereços base para baixo de um endereço final. Os arquivos são reatribuídos na ordem especificada, com o primeiro arquivo localizado no endereço mais alto possível ao final do intervalo de endereços. BASE deve ser usada com baixo para garantir o espaço de endereço suficiente para basear os arquivos. Para determinar o espaço de endereço necessário para os arquivos especificados, executar EDITBIN com /REBASE em arquivos e adicionar 64 KB para o tamanho total exibido.|  
   

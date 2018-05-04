@@ -1,30 +1,25 @@
 ---
-title: "Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++) | Microsoft Docs'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++)
 
@@ -89,7 +84,7 @@ Este conjunto de tarefas, criar um projeto para a DLL, adicione código e compil
 >
 >1. Na barra de menus, escolha **Projeto**, **Propriedades**.
 >
->1. No painel esquerdo do **páginas de propriedade** caixa de diálogo, selecione **pré-processador** em **propriedades de configuração**, **C/C++**. Verifique o conteúdo do **definições de pré-processador** propriedade.<br/><br/>![Verifique a propriedade de definições de pré-processador](media/mathlibrary-153bug-preprocessor-definitions-check.png "Verifique a propriedade de definições de pré-processador")<br/><br/>Se você vir **MATHLIBRARY &#95; Exportações** no **definições de pré-processador** lista, você não precisa alterar nada. Se você vir **MathLibrary &#95; Exportações** continuar em vez disso, em seguida, siga estas etapas.
+>1. No painel esquerdo do **páginas de propriedade** caixa de diálogo, selecione **pré-processador** em **propriedades de configuração**, **C/C++**. Verifique o conteúdo do **definições de pré-processador** propriedade.<br/><br/>![Verifique a propriedade de definições de pré-processador](media/mathlibrary-153bug-preprocessor-definitions-check.png "Verifique a propriedade de definições de pré-processador")<br/><br/>Se você vir **MATHLIBRARY&#95;exportações** no **definições de pré-processador** lista, você não precisa alterar nada. Se você vir **MathLibrary&#95;exportações** continuar em vez disso, em seguida, siga estas etapas.
 >
 >1. Na parte superior do **páginas de propriedade** caixa de diálogo, altere o **configuração** lista suspensa para **todas as configurações de**.
 >
@@ -103,7 +98,7 @@ Este conjunto de tarefas, criar um projeto para a DLL, adicione código e compil
 
 1. Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.
 
-1. No painel esquerdo do **novo projeto** caixa de diálogo caixa, expanda **instalado**, **modelos**e selecione **Visual C++**e, em seguida, no Centro painel, selecione **aplicativo do Console Win32**. Digite `MathLibrary` no **nome** Editar caixa para especificar um nome para o projeto.
+1. No painel esquerdo do **novo projeto** caixa de diálogo caixa, expanda **instalado**, **modelos**e selecione **Visual C++** e, em seguida, no Centro painel, selecione **aplicativo do Console Win32**. Digite `MathLibrary` no **nome** Editar caixa para especificar um nome para o projeto.
 
    ![Nomeie o projeto MathLibrary](media/mathlibrary-project-name.png "Nomeie o projeto MathLibrary")
 
@@ -176,9 +171,9 @@ Direita agora, essa DLL não faz muito. Em seguida, você pode criar um arquivo 
 
 Esse arquivo de cabeçalho declara algumas funções para produzir uma sequência Fibonacci generalizada, determinados dois valores iniciais. Uma chamada para `fibonacci_init(1, 1)` gera a sequência de número de Fibonacci familiar.
 
-Observe as instruções de pré-processador na parte superior do arquivo. Por padrão, o modelo de novo projeto para uma DLL adiciona  ***PROJECTNAME*&#95; Exportações** para as macros de pré-processador definidas para o projeto DLL. Neste exemplo, o Visual Studio define **MATHLIBRARY &#95; Exportações** quando seu projeto de DLL MathLibrary for compilado. (O assistente no Visual Studio 2017 versão 15,3 não força essa definição de símbolo para letras maiusculas. Se você nomear o projeto "MathLibrary", em seguida, o símbolo definido é MathLibrary &#95; EXPORTAÇÕES em vez de MATHLIBRARY &#95; EXPORTA. That's por que não há etapas adicionais acima para adicionar este símbolo.)
+Observe as instruções de pré-processador na parte superior do arquivo. Por padrão, o modelo de novo projeto para uma DLL adiciona ***PROJECTNAME *&#95;exportações** para as macros de pré-processador definidas para o projeto DLL. Neste exemplo, o Visual Studio define **MATHLIBRARY&#95;exportações** quando seu projeto de DLL MathLibrary for compilado. (O assistente no Visual Studio 2017 versão 15,3 não força essa definição de símbolo para letras maiusculas. Se você nomear o projeto "MathLibrary", o símbolo definido é MathLibrary&#95;exportações em vez de MATHLIBRARY&#95;exportações. That's por que não há etapas adicionais acima para adicionar este símbolo.)
 
-Quando o **MATHLIBRARY &#95; Exportações** macro for definida, o **MATHLIBRARY &#95; API** macro define o `__declspec(dllexport)` modificador em declarações de função. Esse modificador informa ao compilador e vinculador para exportar uma função ou variável de DLL, para que ele pode ser usado por outros aplicativos. Quando **MATHLIBRARY &#95; Exportações** é indefinido, por exemplo, quando o arquivo de cabeçalho está incluído por um aplicativo cliente, **MATHLIBRARY &#95; API** se aplica a `__declspec(dllimport)` modificador para as declarações. Esse modificador otimiza a importação de função ou variável em um aplicativo. Para obter mais informações, consulte [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Quando o **MATHLIBRARY&#95;exportações** macro for definida, o **MATHLIBRARY&#95;API** macro define o `__declspec(dllexport)` modificador em declarações de função. Esse modificador informa ao compilador e vinculador para exportar uma função ou variável de DLL, para que ele pode ser usado por outros aplicativos. Quando **MATHLIBRARY&#95;exportações** é indefinido, por exemplo, quando o arquivo de cabeçalho está incluído por um aplicativo cliente, **MATHLIBRARY&#95;API** se aplica a `__declspec(dllimport)` modificador para o declarações. Esse modificador otimiza a importação de função ou variável em um aplicativo. Para obter mais informações, consulte [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Para adicionar uma implementação para a DLL
 

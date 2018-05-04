@@ -2,26 +2,21 @@
 title: Conversões e segurança de tipos (C++ moderno) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13dabba7b7cfc769d91471c2dfc6f92f1b414996
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversões e segurança de tipo (C++ moderno)
 Este documento identifica problemas de conversão de tipo comuns e descreve como evitá-los em seu código C++.  
@@ -38,7 +33,7 @@ Este documento identifica problemas de conversão de tipo comuns e descreve como
   
 |De|Para|  
 |----------|--------|  
-|Qualquer assinados ou não assinados tipo integral exceto `long long` ou`__int64`|`double`|  
+|Qualquer assinados ou não assinados tipo integral exceto `long long` ou `__int64`|`double`|  
 |`bool` ou `char`|Qualquer outro tipo interno|  
 |`short` ou `wchar_t`|`int`, `long`, `long long`|  
 |`int`, `long`|`long long`|  
@@ -113,7 +108,7 @@ int(x); // old-style cast, functional syntax
   
  O operador de conversão C-style é idêntico para o operador de chamada () e, portanto, discreta no código e fácil de ignorar. Ambos são inválidas porque é difícil reconhecer em um relance ou pesquisar, e eles são diferentes para invocar qualquer combinação de `static`, `const`, e `reinterpret_cast`. Descobrir o que uma conversão de estilo antigo realmente faz pode ser difícil e propenso a erros. Por esses motivos, quando uma conversão é necessária, recomendamos que você use um dos seguintes operadores cast C++, que, em alguns casos são significativamente mais fortemente tipado, e muito mais explicitamente expresso a intenção de programação:  
   
--   `static_cast`, para conversões que são verificadas durante a compilação de tempo somente. `static_cast`Retorna um erro se o compilador detecta que você está tentando converter entre tipos que não são totalmente compatíveis. Você também pode usar isso para converter entre ponteiro-para-base e o ponteiro para derivado, mas o compilador não pode sempre informar se tais conversões sejam seguros em tempo de execução.  
+-   `static_cast`, para conversões que são verificadas durante a compilação de tempo somente. `static_cast` Retorna um erro se o compilador detecta que você está tentando converter entre tipos que não são totalmente compatíveis. Você também pode usar isso para converter entre ponteiro-para-base e o ponteiro para derivado, mas o compilador não pode sempre informar se tais conversões sejam seguros em tempo de execução.  
   
     ```cpp  
     double d = 1.58947;  

@@ -1,12 +1,9 @@
 ---
 title: Macros de controle composto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b609801a1716e47b208644be02d4746abf8c288a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61335d25b0d9b97fe1c7e9915aa9c3d8583eb854
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-macros"></a>Macros de controle composto
 Essas macros definem mapas de coleta de eventos e entradas.  
@@ -45,7 +40,7 @@ Essas macros definem mapas de coleta de eventos e entradas.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
 
-##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP  
  Declara o início do mapa de coletor de eventos para o controle composto.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>Comentários  
  Implementação de CE ATL de ActiveX evento coletores somente dá suporte a valores de retorno do tipo HRESULT ou void de métodos de manipuladores de eventos; Não há suporte para qualquer outro valor de retorno e seu comportamento é indefinido.  
   
-##  <a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>  END_SINK_MAP  
  Declara o fim do mapa de coletor de eventos para o controle composto.  
   
 ```
@@ -75,7 +70,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>Comentários  
  Implementação de CE ATL de ActiveX evento coletores somente dá suporte a valores de retorno do tipo HRESULT ou void de métodos de manipuladores de eventos; Não há suporte para qualquer outro valor de retorno e seu comportamento é indefinido.  
   
-##  <a name="sink_entry"></a>SINK_ENTRY  
+##  <a name="sink_entry"></a>  SINK_ENTRY  
  Declara a função de manipulador ( `fn`) para o evento especificado ( `dispid`), do controle identificado por `id`.  
   
 ```
@@ -98,7 +93,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>Comentários  
  Implementação de CE ATL de ActiveX evento coletores somente dá suporte a valores de retorno do tipo HRESULT ou void de métodos de manipuladores de eventos; Não há suporte para qualquer outro valor de retorno e seu comportamento é indefinido.  
   
-##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX e SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX e SINK_ENTRY_EX_P
  Declara a função de manipulador ( `fn`) para o evento especificado ( `dispid`), da interface de expedição ( *iid)*, para o controle identificado pela `id`.  
   
 ```
@@ -128,7 +123,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>Comentários  
  Implementação de CE ATL de ActiveX evento coletores somente dá suporte a valores de retorno do tipo HRESULT ou void de métodos de manipuladores de eventos; Não há suporte para qualquer outro valor de retorno e seu comportamento é indefinido.  
   
-##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO e SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO e SINK_ENTRY_INFO_P  
  Use o `SINK_ENTRY_INFO` macro dentro de um mapa de coletor de eventos para fornecer as informações necessárias para [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) para eventos de rota para a função de manipulador relevante.  
   
 ```
@@ -153,7 +148,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
  [in] Nome da função de manipulador de eventos. Essa função deve usar o **stdcall** convenção de chamada e ter a assinatura de estilo de dispinterface apropriado.  
   
  `info`  
- [in] Digite informações para a função de manipulador de eventos. Essas informações de tipo são fornecidas na forma de um ponteiro para um `_ATL_FUNC_INFO` estrutura. `CC_CDECL`é a única opção com suporte no Windows CE para o `CALLCONV` campo o `_ATL_FUNC_INFO` estrutura. Não há suporte para qualquer outro valor, portanto, seu comportamento indefinido.  
+ [in] Digite informações para a função de manipulador de eventos. Essas informações de tipo são fornecidas na forma de um ponteiro para um `_ATL_FUNC_INFO` estrutura. `CC_CDECL` é a única opção com suporte no Windows CE para o `CALLCONV` campo o `_ATL_FUNC_INFO` estrutura. Não há suporte para qualquer outro valor, portanto, seu comportamento indefinido.  
   
 ### <a name="remarks"></a>Comentários  
  Os parâmetros de quatro primeiros macro são os mesmos para o [SINK_ENTRY_EX](#sink_entry_ex) macro. O parâmetro final fornece informações de tipo para o evento. Implementação de CE ATL de ActiveX evento coletores somente dá suporte a valores de retorno do tipo HRESULT ou void de métodos de manipuladores de eventos; Não há suporte para qualquer outro valor de retorno e seu comportamento é indefinido.  

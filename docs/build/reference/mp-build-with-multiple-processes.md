@@ -1,6 +1,6 @@
 ---
-title: "/MP (compilar com vários processos) | Microsoft Docs"
-ms.custom: 
+title: /MP (compilar com vários processos) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (compilar com vários processos)
 
@@ -143,4 +142,4 @@ Por padrão, um projeto de compilação permite que o **/GM manual** a opção d
 
 [#import diretiva](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Referência de linha de comando](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/ZF (geração de PDB mais rápido)](zf.md)<br/>
+[/Zf (gerar PDB mais rápido)](zf.md)<br/>

@@ -2,12 +2,9 @@
 title: Visão geral de LIB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>Visão geral de LIB
 LIB cria bibliotecas padrão, bibliotecas de importação e exportar arquivos que você pode usar com [LINK](../../build/reference/linker-options.md) durante a criação de um programa. LIB é executado em um prompt de comando.  
@@ -48,12 +43,12 @@ LIB cria bibliotecas padrão, bibliotecas de importação e exportar arquivos qu
   
  Para obter mais informações, consulte [Compilando uma biblioteca de importação e exportação de arquivo](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **/ ERRORREPORT**  
+ **/ERRORREPORT**  
  Envie informações à Microsoft sobre erros internos com lib.exe.  
   
  Para obter mais informações, consulte [executando LIB](../../build/reference/running-lib.md).  
   
- **/ EXPORTAÇÃO**  
+ **/EXPORT**  
  Exporta uma função em seu programa.  
   
  Para obter mais informações, consulte [Compilando uma biblioteca de importação e exportação de arquivo](../../build/reference/building-an-import-library-and-export-file.md).  
@@ -113,7 +108,7 @@ LIB cria bibliotecas padrão, bibliotecas de importação e exportar arquivos qu
   
  Para obter mais informações, consulte [Gerenciando uma biblioteca](../../build/reference/managing-a-library.md).  
   
- **/ O SUBSISTEMA**  
+ **/SUBSYSTEM**  
  Informa o sistema operacional como executar um programa criado por meio da vinculação para a biblioteca de saída.  
   
  Para obter mais informações, consulte [Gerenciando uma biblioteca](../../build/reference/managing-a-library.md).  

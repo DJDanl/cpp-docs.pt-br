@@ -1,27 +1,22 @@
 ---
 title: Adicionando uma página de propriedades (ATL Tutorial, parte 6) | Microsoft Docs
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Adicionando uma página de propriedades (Tutorial ATL, parte 6)
 Páginas de propriedades são implementadas como objetos separados COM, que permitem que eles deve ser compartilhado, se necessário. Nesta etapa, você fará as seguintes tarefas para adicionar uma página de propriedades para o controle:  
@@ -104,7 +99,7 @@ Páginas de propriedades são implementadas como objetos separados COM, que perm
   
  O código agora verifica a configuração de `Sides` propriedade funcionou. Se ele falhar, o código exibe uma caixa de mensagem exibindo detalhes do erro do **IErrorInfo** interface. Normalmente, um contêiner solicita um objeto para o **ISupportErrorInfo** interface e chamadas `InterfaceSupportsErrorInfo` primeiro para determinar se o objeto oferece suporte a informações de erro de configuração. Você pode ignorar esta tarefa.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) ajuda a manipulando automaticamente a contagem de referência, portanto você não precisa chamar `Release` na interface. `CComBSTR`ajuda você com `BSTR` processamento, você não precisará executar o último `SysFreeString` chamar. Você também usar uma das várias classes de conversão de cadeia de caracteres, para que você pode converter o `BSTR` se necessário (Isso ocorre porque o `USES_CONVERSION` macro é o início da função).  
+ [CComPtr](../atl/reference/ccomptr-class.md) ajuda a manipulando automaticamente a contagem de referência, portanto você não precisa chamar `Release` na interface. `CComBSTR` ajuda você com `BSTR` processamento, você não precisará executar o último `SysFreeString` chamar. Você também usar uma das várias classes de conversão de cadeia de caracteres, para que você pode converter o `BSTR` se necessário (Isso ocorre porque o `USES_CONVERSION` macro é o início da função).  
   
  Você também precisa definir o sinalizador da página de propriedades para indicar que o **aplicar** botão deve ser habilitado. Isso ocorre quando o usuário altera o valor de **lados** caixa de edição.  
   
@@ -126,7 +121,7 @@ Páginas de propriedades são implementadas como objetos separados COM, que perm
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`será chamado quando um **WM_COMMAND** mensagem é enviada com o **EN_CHANGE** notificação para o `IDC_SIDES` controle. `OnEnChangeSides`em seguida, chama `SetDirty` e passa `TRUE` página agora foi alterada para indicar a propriedade e o **aplicar** botão deve ser habilitado.  
+ `OnEnChangeSides` será chamado quando um **WM_COMMAND** mensagem é enviada com o **EN_CHANGE** notificação para o `IDC_SIDES` controle. `OnEnChangeSides` em seguida, chama `SetDirty` e passa `TRUE` página agora foi alterada para indicar a propriedade e o **aplicar** botão deve ser habilitado.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Adicionando a página de propriedades para o controle  
  O Assistente para Adicionar classe do ATL e o Assistente de página de propriedades ATL não adicionam a página de propriedades para o controle para você automaticamente, porque pode haver vários controles em seu projeto. Você precisará adicionar uma entrada para mapa de propriedade do controle.  
@@ -152,7 +147,7 @@ Páginas de propriedades são implementadas como objetos separados COM, que perm
   
  Em seguida, você colocará o controle em uma página da Web.  
   
- [Para a etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Na etapa 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Para a etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [na etapa 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)

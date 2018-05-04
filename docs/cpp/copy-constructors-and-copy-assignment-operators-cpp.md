@@ -1,12 +1,9 @@
 ---
-title: "Construtores de cópia e operadores de atribuição de cópia (C++) | Microsoft Docs"
-ms.custom: 
+title: Construtores de cópia e operadores de atribuição de cópia (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Operadores de construtores de cópia e de atribuição de cópia (C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  Se você não declarar um construtor de cópia, o compilador gera um construtor de cópia member-wise para você.  Se você não declarar um operador de atribuição de cópia, o compilador gerará um operador de atribuição de cópia member-wise para você. A declaração de um construtor de cópia não suprime o operador de atribuição de cópia gerado pelo compilador, e vice-versa. Se você implementar um deles, recomendamos que você também implemente o outro para que o significado do código seja claro.  
    
- O construtor de cópia recebe um argumento de tipo *nome de classe***&**, onde *nome de classe* é o nome da classe para a qual o construtor é definido. Por exemplo:  
+ O construtor de cópia recebe um argumento do tipo * classe-name ***&**, onde *nome de classe* é o nome da classe para a qual o construtor é definido. Por exemplo:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Verifique o tipo de argumento do construtor de cópia *nome de classe const*  **&**  sempre que possível. Isso evita que o construtor de cópia altere acidentalmente o objeto que está copiando. Ele também permite que a cópia de **const** objetos.  
+>  Verifique o tipo de argumento do construtor de cópia *classe const-name * &** sempre que possível. Isso evita que o construtor de cópia altere acidentalmente o objeto que está copiando. Ele também permite que a cópia de **const** objetos.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Construtores de cópia gerado pelo compilador  
- Construtores de cópia gerada pelo compilador, como construtores de cópia definido pelo usuário, ter um único argumento do tipo "referência a *nome da classe*." Uma exceção é quando todas as classes base e membro tem construtores de cópia declarados como colocar um único argumento de tipo **const** *nome de classe***&**. Nesse caso, o argumento do construtor de cópia gerada pelo compilador também é **const**.  
+ Construtores de cópia gerada pelo compilador, como construtores de cópia definido pelo usuário, ter um único argumento do tipo "referência a *nome da classe*." Uma exceção é quando todas as classes base e membro tem construtores de cópia declarados como colocar um único argumento de tipo **const** * classe-name ***&**. Nesse caso, o argumento do construtor de cópia gerada pelo compilador também é **const**.  
   
  Quando o tipo de argumento para o construtor de cópia não é **const**, inicialização copiando um **const** objeto gera um erro. O oposto não é possível: se o argumento for **const**, você pode inicializar copiando um objeto que não seja **const**.  
   
- Operadores de atribuição gerado pelo compilador seguem o mesmo padrão em relação ao **const.** Eles entram em um único argumento de tipo *nome de classe*  **&**  , a menos que os operadores de atribuição em todas as classes base e membro usam argumentos de tipo **const** *nome de classe &.* Nesse caso, a classe gerada do leva de operador de atribuição um **const** argumento.  
+ Operadores de atribuição gerado pelo compilador seguem o mesmo padrão em relação ao **const.** Eles entram em um único argumento de tipo *classe-name * &**, a menos que os operadores de atribuição em todas as classes base e membro usam argumentos de tipo **const** *nome de classe &.* Nesse caso, a classe gerada do leva de operador de atribuição um **const** argumento.  
   
 > [!NOTE]
 >  Quando classes básicas virtuais são inicializadas por construtores de cópia, geradas pelo compilador ou definidas pelo usuário, elas são inicializadas somente uma vez: no ponto em que são construídas.  

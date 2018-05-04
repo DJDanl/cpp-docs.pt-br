@@ -1,12 +1,9 @@
 ---
 title: Classe CContainedWindowT | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CContainedWindowT
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f3f90e23eed3bd1eba80bbf90fe73de45eb7cfa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 Essa classe implementa uma janela contida dentro de outro objeto.  
@@ -97,11 +92,11 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::m_pObject](#m_pobject)|Aponta para o objeto contido.|  
   
 ## <a name="remarks"></a>Comentários  
- `CContainedWindowT`implementa uma janela contida dentro de outro objeto. `CContainedWindowT`'s usa do procedimento de janela mapear uma mensagem no objeto que contém mensagens direto para os manipuladores apropriados. Ao construir um `CContainedWindowT` do objeto, você especificar quais mapa da mensagem deve ser usado.  
+ `CContainedWindowT` implementa uma janela contida dentro de outro objeto. `CContainedWindowT`'s usa do procedimento de janela mapear uma mensagem no objeto que contém mensagens direto para os manipuladores apropriados. Ao construir um `CContainedWindowT` do objeto, você especificar quais mapa da mensagem deve ser usado.  
   
- `CContainedWindowT`permite que você crie uma nova janela superclassing uma classe de janela existente. O **criar** método registra pela primeira vez uma classe de janela que é baseada em uma classe existente, mas usa `CContainedWindowT::WindowProc`. **Criar** , em seguida, cria uma janela com base nessa nova classe de janela. Cada instância de `CContainedWindowT` pode superclasse uma classe de janela diferentes.  
+ `CContainedWindowT` permite que você crie uma nova janela superclassing uma classe de janela existente. O **criar** método registra pela primeira vez uma classe de janela que é baseada em uma classe existente, mas usa `CContainedWindowT::WindowProc`. **Criar** , em seguida, cria uma janela com base nessa nova classe de janela. Cada instância de `CContainedWindowT` pode superclasse uma classe de janela diferentes.  
   
- `CContainedWindowT`também suporta subclassificação de janela. O `SubclassWindow` método anexa uma janela existente para o `CContainedWindowT` de objeto e altera o procedimento de janela para `CContainedWindowT::WindowProc`. Cada instância de `CContainedWindowT` pode subclasse uma janela diferente.  
+ `CContainedWindowT` também suporta subclassificação de janela. O `SubclassWindow` método anexa uma janela existente para o `CContainedWindowT` de objeto e altera o procedimento de janela para `CContainedWindowT::WindowProc`. Cada instância de `CContainedWindowT` pode subclasse uma janela diferente.  
   
 > [!NOTE]
 >  Para qualquer dado `CContainedWindowT` de objeto, chame o **criar** ou `SubclassWindow`. Você não deve chamar os dois métodos no mesmo objeto.  
@@ -129,7 +124,7 @@ class CContainedWindowT : public TBase
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
   
-##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
+##  <a name="ccontainedwindowt"></a>  CContainedWindowT::CContainedWindowT  
  O construtor inicializa membros de dados.  
   
 ```
@@ -167,7 +162,7 @@ CContainedWindowT(
   
  Se você subclasse uma janela existente por meio de [SubclassWindow](#subclasswindow), o `lpszClassName` valor não será usado; portanto, você pode passar **nulo** para esse parâmetro.  
   
-##  <a name="create"></a>CContainedWindowT::Create  
+##  <a name="create"></a>  CContainedWindowT::Create  
  Chamadas [RegisterWndSuperclass](#registerwndsuperclass) para registrar uma classe de janela que é baseada em uma classe existente, mas usa [CContainedWindowT::WindowProc](#windowproc).  
   
 ```
@@ -247,7 +242,7 @@ HWND Create(
 > [!NOTE]
 >  Se 0 for usado como o valor para o `MenuOrID` parâmetro, ele deve ser especificado como 0U (o valor padrão) para evitar um erro do compilador.  
   
-##  <a name="defwindowproc"></a>CContainedWindowT::DefWindowProc  
+##  <a name="defwindowproc"></a>  CContainedWindowT::DefWindowProc  
  Chamado pelo [WindowProc](#windowproc) para processar mensagens não lida com o mapa de mensagens.  
   
 ```
@@ -274,7 +269,7 @@ LRESULT DefWindowProc(
 ### <a name="remarks"></a>Comentários  
  Por padrão, `DefWindowProc` chama o [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) função Win32 para enviar as informações de mensagem para o procedimento de janela especificado em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
-##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Retorna a mensagem atual ( **m_pCurrentMsg**).  
   
 ```
@@ -284,7 +279,7 @@ const _ATL_MSG* GetCurrentMessage();
 ### <a name="return-value"></a>Valor de retorno  
  A mensagem atual, empacotada no `MSG` estrutura.  
   
-##  <a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID  
+##  <a name="m_dwmsgmapid"></a>  CContainedWindowT::m_dwMsgMapID  
  Contém o identificador do mapa de mensagem usado atualmente para a janela independente.  
   
 ```
@@ -296,9 +291,9 @@ DWORD m_dwMsgMapID;
   
  O mapa de mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), sempre é identificado por zero. Um mapa de mensagem alternativo, declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), é identificado pelo `msgMapID`.  
   
- `m_dwMsgMapID`primeiro é inicializada pelo construtor e pode ser alterada chamando [SwitchMessageMap](#switchmessagemap). Para obter um exemplo, consulte o [visão geral de CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md).  
+ `m_dwMsgMapID` primeiro é inicializada pelo construtor e pode ser alterada chamando [SwitchMessageMap](#switchmessagemap). Para obter um exemplo, consulte o [visão geral de CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md).  
   
-##  <a name="m_lpszclassname"></a>CContainedWindowT::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName  
  Especifica o nome de uma classe de janela existente.  
   
 ```
@@ -308,9 +303,9 @@ LPTSTR m_lpszClassName;
 ### <a name="remarks"></a>Comentários  
  Quando você cria uma janela [criar](#create) registra uma nova classe de janela que se baseia a essa classe existente, mas usa [CContainedWindowT::WindowProc](#windowproc).  
   
- `m_lpszClassName`é inicializada pelo construtor. Para obter um exemplo, consulte o [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) visão geral.  
+ `m_lpszClassName` é inicializada pelo construtor. Para obter um exemplo, consulte o [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) visão geral.  
   
-##  <a name="m_pfnsuperwindowproc"></a>CContainedWindowT::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>  CContainedWindowT::m_pfnSuperWindowProc  
  Se a janela contida em uma subclasse, `m_pfnSuperWindowProc` aponta para o procedimento de janela original da classe de janela.  
   
 ```
@@ -322,7 +317,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  O [DefWindowProc](#defwindowproc) método envia informações de mensagem para o procedimento de janela salvado em `m_pfnSuperWindowProc`.  
   
-##  <a name="m_pobject"></a>CContainedWindowT::m_pObject  
+##  <a name="m_pobject"></a>  CContainedWindowT::m_pObject  
  Aponta para o objeto que contém o `CContainedWindowT` objeto.  
   
 ```
@@ -332,9 +327,9 @@ CMessageMap* m_pObject;
 ### <a name="remarks"></a>Comentários  
  Esse contêiner, cuja classe deve derivar de [CMessageMap](../../atl/reference/cmessagemap-class.md), declara o mapa de mensagem usado pela janela independente.  
   
- `m_pObject`é inicializada pelo construtor. Para obter um exemplo, consulte o [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) visão geral.  
+ `m_pObject` é inicializada pelo construtor. Para obter um exemplo, consulte o [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) visão geral.  
   
-##  <a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass  
+##  <a name="registerwndsuperclass"></a>  CContainedWindowT::RegisterWndSuperclass  
  Chamado pelo [criar](#create) para registrar a classe de janela da janela contida.  
   
 ```
@@ -347,7 +342,7 @@ ATOM RegisterWndSuperClass();
 ### <a name="remarks"></a>Comentários  
  Essa classe de janela é baseado em uma classe existente, mas usa [CContainedWindowT::WindowProc](#windowproc). Procedimento de janela e de nome da classe de janela existente são salvas em [m_lpszClassName](#m_lpszclassname) e [m_pfnSuperWindowProc](#m_pfnsuperwindowproc), respectivamente.  
   
-##  <a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
+##  <a name="subclasswindow"></a>  CContainedWindowT::SubclassWindow  
  Subclasses de janela identificada por `hWnd` e anexa-o para o `CContainedWindowT` objeto.  
   
 ```
@@ -367,7 +362,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  Não chame `SubclassWindow` se você já tiver sido chamado [criar](#create).  
   
-##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
+##  <a name="switchmessagemap"></a>  CContainedWindowT::SwitchMessageMap  
  Altera o mapa de mensagem será usado para processar mensagens da janela contido.  
   
 ```
@@ -383,7 +378,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
   
  Inicialmente, você especificar o identificador de mapa de mensagem no construtor.  
   
-##  <a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CContainedWindowT::UnsubclassWindow  
  Desanexa a subclasse na janela de `CContainedWindowT` de objeto e restaura o procedimento de janela original, salvado em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
@@ -400,7 +395,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="remarks"></a>Comentários  
  Use esse método somente se você deseja restaurar o procedimento de janela original antes de janela é destruída. Caso contrário, [WindowProc](#windowproc) faz isso automaticamente quando a janela é destruída.  
   
-##  <a name="windowproc"></a>CContainedWindowT::WindowProc  
+##  <a name="windowproc"></a>  CContainedWindowT::WindowProc  
  Esse método estático implementa o procedimento de janela.  
   
 ```
@@ -428,7 +423,7 @@ static LRESULT CALLBACK WindowProc(
  O resultado do processamento da mensagem.  
   
 ### <a name="remarks"></a>Comentários  
- `WindowProc`direciona as mensagens para o mapa de mensagem identificado por [m_dwMsgMapID](#m_dwmsgmapid). Se necessário, `WindowProc` chamadas [DefWindowProc](#defwindowproc) para processamento de mensagens adicionais.  
+ `WindowProc` direciona as mensagens para o mapa de mensagem identificado por [m_dwMsgMapID](#m_dwmsgmapid). Se necessário, `WindowProc` chamadas [DefWindowProc](#defwindowproc) para processamento de mensagens adicionais.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CWindow](../../atl/reference/cwindow-class.md)   

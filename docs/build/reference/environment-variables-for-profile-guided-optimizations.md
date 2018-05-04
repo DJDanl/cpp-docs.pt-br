@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701f0292d9960801139abc698946122718247645
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Variáveis de ambiente para otimizações orientadas a perfil
 
@@ -57,7 +56,7 @@ Essa variável de ambiente é preterida. Use o **MEMMIN** e **MEMMAX** argumento
 
 Modificar o **VCPROFILE_ALLOC_SCALE** variável de ambiente para alterar a quantidade de memória alocada para armazenar os dados do perfil. Em casos raros, não haja memória suficiente dar suporte a coleta de dados de perfil durante a execução de cenários de teste. Nesses casos, você pode aumentar a quantidade de memória, definindo **VCPROFILE_ALLOC_SCALE**. Se você receber uma mensagem de erro durante uma execução de teste que indica que você tenha memória suficiente, atribua um valor maior para **VCPROFILE_ALLOC_SCALE**, até que a execução do teste concluída sem erros de falta de memória.
 
-### <a name="vcprofileallocscale-syntax"></a>VCPROFILE_ALLOC_SCALE syntax
+### <a name="vcprofileallocscale-syntax"></a>Sintaxe VCPROFILE_ALLOC_SCALE
 
 > **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
 

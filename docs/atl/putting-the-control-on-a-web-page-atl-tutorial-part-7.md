@@ -1,27 +1,22 @@
 ---
-title: "Colocando o controle em uma página da Web (ATL Tutorial, parte 7) | Microsoft Docs"
-ms.custom: 
+title: Colocando o controle em uma página da Web (ATL Tutorial, parte 7) | Microsoft Docs
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cd4076ac34af6ee4b19687f401376265bf0e872
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Colocando o controle em uma página da Web (Tutorial ATL, parte 7)
 O controle está concluído. Para ver o controle de trabalho em uma situação real, coloque-o em uma página da Web. Um arquivo HTML que contém o controle foi criado quando você definiu seu controle. Abra o arquivo PolyCtl.htm **Solution Explorer**, e você pode ver o controle em uma página da Web.  

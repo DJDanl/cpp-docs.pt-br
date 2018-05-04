@@ -1,12 +1,9 @@
 ---
 title: Classe CImage | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>Classe CImage
-`CImage`fornece suporte de bitmap aprimorada, incluindo a capacidade de carregar e salvar imagens em formatos JPEG, GIF, BMP e elementos gráficos PNG (Portable Network).  
+`CImage` Fornece suporte de bitmap aprimorada, incluindo a capacidade de carregar e salvar imagens em formatos JPEG, GIF, BMP e elementos gráficos PNG (Portable Network).  
   
 > [!IMPORTANT]
 >  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
@@ -146,7 +141,7 @@ class CImage
 |[CImage::operator HBITMAP](#operator_hbitmap)|Retorna o identificador anexado para o `CImage` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CImage`leva bitmaps que são ambos seções independente de dispositivo DIB (bitmap) ou não; No entanto, você pode usar [criar](#create) ou [CImage::Load](#load) com apenas as seções DIB. Você pode anexar um bitmap de seção não DIB para um `CImage` objeto usando [Attach](#attach), mas, em seguida, você não pode usar o seguinte `CImage` métodos que oferecem suporte a somente os bitmaps de seção DIB:  
+ `CImage` leva bitmaps que são ambos seções independente de dispositivo DIB (bitmap) ou não; No entanto, você pode usar [criar](#create) ou [CImage::Load](#load) com apenas as seções DIB. Você pode anexar um bitmap de seção não DIB para um `CImage` objeto usando [Attach](#attach), mas, em seguida, você não pode usar o seguinte `CImage` métodos que oferecem suporte a somente os bitmaps de seção DIB:  
   
 - [GetBits](#getbits)  
   
@@ -170,7 +165,7 @@ class CImage
 > [!NOTE]
 >  Usando global `CImage` objetos em uma DLL não é recomendado. Se você precisar usar global `CImage` objeto em uma DLL, chamada [CImage::ReleaseGDIPlus](#releasegdiplus) explicitamente liberar recursos usados pelo GDI+.  
   
- `CImage`não é possível selecionar em uma nova [CDC](../../mfc/reference/cdc-class.md). `CImage`cria seu próprio **HDC** para a imagem. Porque um `HBITMAP` só pode ser selecionado em uma **HDC** ao mesmo tempo, o `HBITMAP` associados a `CImage` não pode ser selecionada para outra **HDC**. Se você precisar de um `CDC`, recuperar o **HDC** do `CImage` e dê a ele [CDC::FromHandle] (... /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.  
+ `CImage` não é possível selecionar em uma nova [CDC](../../mfc/reference/cdc-class.md). `CImage` cria seu próprio **HDC** para a imagem. Porque um `HBITMAP` só pode ser selecionado em uma **HDC** ao mesmo tempo, o `HBITMAP` associados a `CImage` não pode ser selecionada para outra **HDC**. Se você precisar de um `CDC`, recuperar o **HDC** do `CImage` e dê a ele [CDC::FromHandle] (... /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.  
   
 ## <a name="example"></a>Exemplo  
 ```cpp  
@@ -732,13 +727,13 @@ CImage::GetExporterFilterString(
   
  O parâmetro *strExporter* tem o formato:  
   
- arquivo description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*. ext1 &#124;... descrição do arquivo  *n* &#124;\*. ext  *n* &#124; &#124;  
+ arquivo description0&#124;\*.ext0&#124;filedescription1&#124;\*. ext1&#124;... descrição do arquivo *n*&#124;\*. ext *n*&#124;&#124;  
   
- onde ' &#124;' é o caractere separador especificado pelo `chSeparator`. Por exemplo:  
+ onde '&#124;' é o caractere separador especificado pelo `chSeparator`. Por exemplo:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Use o separador padrão ' &#124;' se você passar essa cadeia de caracteres para um MFC `CFileDialog` objeto. Use o separador nulo '\0' se você passar essa cadeia de caracteres para uma caixa de diálogo Salvar arquivo comuns.  
+ Use o separador padrão '&#124;' se você passar essa cadeia de caracteres para um MFC `CFileDialog` objeto. Use o separador nulo '\0' se você passar essa cadeia de caracteres para uma caixa de diálogo Salvar arquivo comuns.  
   
 ##  <a name="getheight"></a>  CImage::GetHeight  
  Recupera a altura, em pixels, de uma imagem.  
@@ -818,13 +813,13 @@ CImage::GetImporterFilterString(
   
  O parâmetro *strImporter* tem o formato:  
   
- arquivo description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*. ext1 &#124;... descrição do arquivo  *n* &#124;\*. ext  *n* &#124; &#124;  
+ arquivo description0&#124;\*.ext0&#124;filedescription1&#124;\*. ext1&#124;... descrição do arquivo *n*&#124;\*. ext *n*&#124;&#124;  
   
- onde ' &#124;' é o caractere separador especificado pelo `chSeparator`. Por exemplo:  
+ onde '&#124;' é o caractere separador especificado pelo `chSeparator`. Por exemplo:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Use o separador padrão ' &#124;' se você passar essa cadeia de caracteres para um MFC `CFileDialog` objeto. Use o separador de nulo '\0' se você passar essa cadeia de caracteres para um comum **abrir arquivo** caixa de diálogo.  
+ Use o separador padrão '&#124;' se você passar essa cadeia de caracteres para um MFC `CFileDialog` objeto. Use o separador de nulo '\0' se você passar essa cadeia de caracteres para um comum **abrir arquivo** caixa de diálogo.  
   
 ##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  Recupera o número máximo de entradas na tabela de cores.  
@@ -1123,7 +1118,7 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>Comentários  
  Esse método se aplica ao Windows NT, as versões 4.0 e posterior somente.  
   
-##  <a name="operator_hbitmap"></a>CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP  
  Use este operador para obter o identificador de Windows GDI anexado do `CImage` objeto. Esse operador é um operador de conversão, que dá suporte ao uso direto de um `HBITMAP` objeto.  
   
 ##  <a name="plgblt"></a>  CImage::PlgBlt  
@@ -1515,7 +1510,7 @@ BOOL TransparentBlt(
  **TRUE** se for bem-sucedido, caso contrário, **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- `TransparentBlt`há suporte para os bitmaps de origem de 4 bits por pixel e 8 bits por pixel. Use [CImage::AlphaBlend](#alphablend) para especificar os bitmaps de 32 bits por pixel com transparência.  
+ `TransparentBlt` há suporte para os bitmaps de origem de 4 bits por pixel e 8 bits por pixel. Use [CImage::AlphaBlend](#alphablend) para especificar os bitmaps de 32 bits por pixel com transparência.  
   
   
 ### <a name="example"></a>Exemplo  

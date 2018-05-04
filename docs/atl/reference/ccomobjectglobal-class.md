@@ -2,11 +2,8 @@
 title: Classe CComObjectGlobal | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d5264a2ab8e1bbc4c3f4eac4d83d096d91e8846
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3614962d3bebada0c63b7fe804b52efaa965c6a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
 Essa classe gerencia uma contagem de referência no módulo que contém o `Base` objeto.  
@@ -71,7 +66,7 @@ class CComObjectGlobal : public Base
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Contém o **HRESULT** retornado durante a construção do `CComObjectGlobal` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComObjectGlobal`gerencia uma contagem de referência no módulo que contém o `Base` objeto. `CComObjectGlobal`garante que o objeto não será excluído desde que o módulo não está liberado. O objeto será removido apenas quando a contagem de referência em todo o módulo chega a zero.  
+ `CComObjectGlobal` gerencia uma contagem de referência no módulo que contém o `Base` objeto. `CComObjectGlobal` garante que o objeto não será excluído desde que o módulo não está liberado. O objeto será removido apenas quando a contagem de referência em todo o módulo chega a zero.  
   
  Por exemplo, usando `CComObjectGlobal`, uma fábrica de classes pode conter um objeto global comum que é compartilhado por todos os seus clientes.  
   
@@ -83,7 +78,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>  CComObjectGlobal::AddRef  
  Incrementa a contagem de referência do objeto em 1.  
   
 ```
@@ -96,7 +91,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Comentários  
  Por padrão, `AddRef` chamadas **_Module::Lock**, onde **_Module** é a instância global do [CComModule](../../atl/reference/ccommodule-class.md) ou uma classe derivada.  
   
-##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal  
  O construtor. Chamadas `FinalConstruct` e, em seguida, define [m_hResFinalConstruct](#m_hresfinalconstruct) para o `HRESULT` retornado por `FinalConstruct`.  
   
 ```
@@ -106,7 +101,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>Comentários  
  Se você não tiver derivado sua classe base da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), você deve fornecer seu próprio `FinalConstruct` método. O destruidor chama `FinalRelease`.  
   
-##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal  
  O destruidor.  
   
 ```
@@ -116,14 +111,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>Comentários  
  Libera todos os recursos alocados e chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct  
  Contém o `HRESULT` chamar `FinalConstruct` durante a construção do `CComObjectGlobal` objeto.  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface  
  Recupera um ponteiro para o ponteiro de interface solicitada.  
   
 ```
@@ -143,7 +138,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>Comentários  
  `QueryInterface` somente lida com interfaces na tabela de mapa COM.  
   
-##  <a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>  CComObjectGlobal::Release  
  Diminui a contagem de referência do objeto por 1.  
   
 ```

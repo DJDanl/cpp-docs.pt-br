@@ -2,10 +2,7 @@
 title: -std (especificar a versão padrão do idioma) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /std
 - -std
@@ -13,17 +10,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb248f4c7ce1d9520bc328ed59b75ff081659996
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fed80f0f9763b7e988c40a9d9f38f4e0f18eeb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar a versão de idioma padrão)
 
@@ -51,7 +46,7 @@ O padrão **/std:c + + 14** opção permite que o conjunto de funcionalidades C+
 
 Para obter informações adicionais sobre quais C + + 14 e C++ 17 recursos estão habilitados quando **/std:c + + 14** é especificado, consulte as observações [conformidade de linguagem do Visual C++](../../visual-cpp-language-conformance.md).
   
-O **/std:c + + 17** opção permite que o conjunto completo de 17 funcionalidades C++ implementado pelo compilador do Visual C++. Esta opção desabilita o compilador e o suporte da biblioteca padrão para recursos que são alterados ou novas versões das atualizações do rascunho de trabalho e defeito do C++ padrão após C++ 17.  
+O **/std:c + + 17** opção permite que o conjunto completo de 17 funcionalidades C++ implementado pelo compilador do Visual C++. Essa opção desabilita o suporte ao compilador e à biblioteca padrão para funcionalidades alteradas ou novas nas versões das atualizações de defeito e de rascunho de trabalho do C++ Standard após o C++17.  
   
 O **/std:c + + mais recente** opção permite que o conjunto de recursos de idioma e a biblioteca do C++ implementada pelo Visual C++ para controlar a maioria dos C + + 20 rascunho de trabalho e defeito atualizações recentes do C++ padrão que não estão incluídas no C++ 17. Use esta opção para obter o post-recursos de linguagem C++ 17 compatíveis com o compilador e a biblioteca padrão. Para obter uma lista de idiomas com suporte e recursos de biblioteca, consulte [novidades do Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). O **/std:c + + mais recente** opção não habilita recursos protegidos pelo **/ experimental** alternar.  
   

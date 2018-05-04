@@ -1,13 +1,10 @@
 ---
-title: "Saída LINK | Microsoft Docs"
-ms.custom: 
+title: Saída LINK | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -26,22 +23,20 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a87ab5cb4badd5f32423b8fb3067b21c46e9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae68de707ece35825a32a404ce14032d4bbd3141
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-output"></a>Saída LINK
 Saída link inclui arquivos .exe, DLLs, arquivos de mapa e mensagens.  
   
-##  <a name="_core_output_files"></a>Arquivos de saída  
+##  <a name="_core_output_files"></a> Arquivos de saída  
  O arquivo de saída padrão do LINK é um arquivo de .exe. Se o [/DLL](../../build/reference/dll-build-a-dll.md) opção for especificada, o LINK cria um arquivo. dll. Você pode controlar o nome do arquivo de saída com o [nome de arquivo de saída (/out)](../../build/reference/out-output-file-name.md) opção.  
   
  No modo incremental, LINK cria um arquivo. ilk para armazenar informações de status para posteriores compilações incrementais do programa. Para obter detalhes sobre os arquivos. ilk, consulte [arquivos. ilk](../../build/reference/dot-ilk-files-as-linker-input.md). Para obter mais informações sobre a vinculação incremental, consulte o [Link incremental (/incremental)](../../build/reference/incremental-link-incrementally.md) opção.  
@@ -52,7 +47,7 @@ Saída link inclui arquivos .exe, DLLs, arquivos de mapa e mensagens.
   
  Se o [gerar informações de depuração (/debug)](../../build/reference/debug-generate-debug-info.md) opção for especificada, o LINK cria um PDB para conter as informações de depuração para o programa.  
   
-##  <a name="_core_other_output"></a>Outra saída  
+##  <a name="_core_other_output"></a> Outra saída  
  Quando você digita `link` sem qualquer outra entrada de linha de comando, o LINK exibirá uma instrução de uso que resume as opções.  
   
  LINK exibirá uma mensagem de direitos autorais e a versão e exibe o arquivo de comando de entrada, a menos que o [Suprimir faixa de inicialização (/ /NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) opção é usada.  

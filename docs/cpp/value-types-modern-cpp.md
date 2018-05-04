@@ -1,27 +1,22 @@
 ---
 title: Valor de tipos (C++ moderno) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d84888236b81fe862c6a22793e926ebf7df55c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7e49c97bca86b8d2debde2f5b132f7dde16998e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-types-modern-c"></a>Tipos de valor (C++ moderno)
 Classes C++ são tipos de valor padrão. Este tópico fornece uma visão geral introdutória de tipos de valor e problemas relacionados ao seu uso.  

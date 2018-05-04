@@ -1,13 +1,10 @@
 ---
 title: Exportando a partir de uma DLL usando dllexport | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportando a partir de uma DLL usando __declspec(dllexport)
 Microsoft introduzida **__export** na versão de 16 bits de compilador do Visual C++ para permitir que o compilador gerar os nomes de exportação automaticamente e colocá-los em um arquivo. lib. Esse arquivo. lib, em seguida, pode ser usado como um. lib estático para vincular a uma DLL.  
@@ -54,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```  
   
 > [!NOTE]
->  `__declspec(dllexport)`não pode ser aplicado a uma função com o `__clrcall` convenção de chamada.  
+>  `__declspec(dllexport)` não pode ser aplicado a uma função com o `__clrcall` convenção de chamada.  
   
  Ao criar a DLL, você normalmente cria um arquivo de cabeçalho que contém os protótipos de função e/ou classes que você está exportando e adicionar **dllexport** às declarações no arquivo de cabeçalho. Para tornar seu código mais legível, definir uma macro para **dllexport** e usar a macro com cada símbolo que você está exportando:  
   

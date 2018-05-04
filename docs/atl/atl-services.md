@@ -1,13 +1,10 @@
 ---
-title: "Serviços ATL | Microsoft Docs"
-ms.custom: 
+title: Serviços ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CServiceModule
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - services, ATL
 - ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13eebbe96ba57c82e3bf1c360b0cb471a6bd975
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db13b443e605168389f0a9bc767ba29a75d4234d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-services"></a>Serviços ATL
 Para criar o objeto COM do ATL para que ele seja executado em um serviço, basta selecione o serviço (EXE) da lista de opções de servidor no Assistente de projeto de ATL. O assistente irá criar uma classe derivada de `CAtlServiceModuleT` para implementar o serviço.  

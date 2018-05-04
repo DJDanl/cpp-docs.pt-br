@@ -1,27 +1,22 @@
 ---
-title: "Como: Design de exceção de segurança | Microsoft Docs"
-ms.custom: 
+title: 'Como: Design de exceção de segurança | Microsoft Docs'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-design-for-exception-safety"></a>Como projetar tendo em vista a segurança da exceção
 Uma das vantagens do mecanismo de exceção é que a execução, junto com dados sobre a exceção, catch de saltos diretamente da instrução que gera a exceção para a primeira instrução que o manipule. O manipulador pode ser qualquer número de níveis para cima na pilha de chamadas. Funções que são chamadas entre a instrução try e a instrução throw deve não sabe nada sobre a exceção que é lançada.  No entanto, eles precisam ser criados de forma que eles podem ir fora do escopo "inesperadamente" em qualquer ponto onde podem se propagar até abaixo de uma exceção e portanto sem deixando objetos criados parcialmente, vazamento memória ou estruturas de dados que esteja em estado inutilizável.  

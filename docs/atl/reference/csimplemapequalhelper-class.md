@@ -1,12 +1,9 @@
 ---
 title: Classe CSimpleMapEqualHelper | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecc32dc8e6e9b249b0b8b334ec3d08bf26cbd1ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4bfef99d12ae724c2ca6e70375f08a8dc1fb15b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemapequalhelper-class"></a>Classe CSimpleMapEqualHelper
 Essa classe é um auxiliar de [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
@@ -62,7 +57,7 @@ class CSimpleMapEqualHelper
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsimpcoll.h  
   
-##  <a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey  
  Testa as duas chaves para igualdade.  
   
 ```
@@ -79,7 +74,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se as chaves forem iguais; caso contrário, false.  
   
-##  <a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
  Testa dois valores para igualdade.  
   
 ```
@@ -87,10 +82,10 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *v1*  
+ *V1*  
  O primeiro valor.  
   
- *v2*  
+ *V2*  
  O segundo valor.  
   
 ### <a name="return-value"></a>Valor de retorno  

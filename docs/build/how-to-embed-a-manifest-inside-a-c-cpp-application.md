@@ -1,13 +1,10 @@
 ---
 title: 'Como: inserir um manifesto dentro de um aplicativo C/C++ | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Como inserir um manifesto em um aplicativo do C/C++
 É recomendável que um aplicativo C/C++ (ou biblioteca) tem seu manifesto inserido no binário final porque isso garante que o comportamento de tempo de execução corretos na maioria dos cenários. Por padrão, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tenta inserir o manifesto quando ele cria um projeto de arquivos de origem; consulte [geração de manifesto no Visual Studio](../build/manifest-generation-in-visual-studio.md) para obter mais informações. No entanto se um aplicativo criado usando nmake, algumas alterações no makefile existente são necessárias. Esta seção demonstra como alterar makefiles existentes para inserir automaticamente o manifesto no binário final.  

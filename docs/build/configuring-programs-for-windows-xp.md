@@ -1,34 +1,29 @@
 ---
 title: Configurando programas para Windows XP | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
+ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
 
 Como o Visual Studio oferece suporte a vários conjuntos de ferramentas de plataforma, você pode direcionar os sistemas operacionais e as bibliotecas de tempo de execução que não são suportadas pelo conjunto de ferramentas padrão. Por exemplo, alternando o conjunto de ferramentas de plataforma, você pode usar C++ 11, C++ 14 e aprimoramentos de C++ 17 idiomas suportados pelo compilador do Visual C++ no Visual Studio para criar aplicativos que visam [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Você pode também usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado binário compatível e ainda aproveitar os recursos mais recentes do IDE do Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instale o conjunto de ferramentas de plataforma do Windows XP
-Para obter o conjunto de ferramentas de plataforma e componentes de destino [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] no Visual Studio de 2017, execute o instalador do Visual Studio. Quando você instala inicialmente o Visual Studio ou quando você escolhe **modificar** para modificar uma instalação existente, verifique se o **desenvolvimento de área de trabalho com C++** cargas de trabalho está selecionada. Na lista de componentes opcionais para essa carga de trabalho, escolha **suporte do Windows XP para C++**e, em seguida, escolha **instalar** ou **modificar**.
+Para obter o conjunto de ferramentas de plataforma e componentes de destino [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] no Visual Studio de 2017, execute o instalador do Visual Studio. Quando você instala inicialmente o Visual Studio ou quando você escolhe **modificar** para modificar uma instalação existente, verifique se o **desenvolvimento de área de trabalho com C++** cargas de trabalho está selecionada. Na lista de componentes opcionais para essa carga de trabalho, escolha **suporte do Windows XP para C++** e, em seguida, escolha **instalar** ou **modificar**.
 
 ## <a name="windows-xp-targeting-experience"></a>Direcionamento de experiência do Windows XP
 

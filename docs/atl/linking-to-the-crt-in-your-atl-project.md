@@ -1,13 +1,10 @@
 ---
 title: Vinculando a CRT em seu projeto ATL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - DllMainCRTStartup
 - wWinMainCRTStartup
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 631426fece3960303d67d8929e99c404beaab998
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0d93f8770ebbd893491c0e8b8eed239396e00a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Vinculando a CRT em seu projeto ATL
 O [bibliotecas em tempo de execução C](../c-runtime-library/crt-library-features.md) (CRT) fornece muitas funções úteis que podem facilitar programação muito durante o desenvolvimento de ATL. Todos os projetos ATL vincule à biblioteca CRT. Você pode ver as vantagens e desvantagens de vinculação de método em [benefícios e as vantagens e desvantagens do método usado para vincular CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  

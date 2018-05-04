@@ -1,12 +1,9 @@
 ---
 title: Escopo (Visual C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>Escopo (Visual C++)
 Os nomes de C++ podem ser usados apenas em determinadas regiões de um programa. Essa área é chamada de "escopo" do nome. O escopo determina o "tempo de vida" de um nome que não denota um objeto de extensão estática. O escopo também determina a visibilidade de um nome quando os construtores e os destruidores de classe são chamados e quando as variáveis locais para o escopo são inicializadas. (Para obter mais informações, consulte [construtores](../cpp/constructors-cpp.md) e [destruidores](../cpp/destructors-cpp.md).) Há cinco tipos de escopo:  
@@ -50,7 +45,7 @@ Os nomes de C++ podem ser usados apenas em determinadas regiões de um programa.
   
      Em C++, o escopo do arquivo também é conhecido como escopo do namespace.  
   
--   **Escopo de classe** nomes de membros de classe têm o escopo de classe. Funções de membro de classe podem ser acessadas usando os operadores de seleção de membro (**.** ou  **->** ) ou operadores de ponteiro para membro (**.\***  ou  **-> \*** ) em um objeto ou um ponteiro para um objeto de classe; dados de membro de classe não estático são considerados locais para o objeto de classe. Considere a seguinte declaração de classe:  
+-   **Escopo de classe** nomes de membros de classe têm o escopo de classe. Funções de membro de classe podem ser acessadas usando os operadores de seleção de membro (**.** ou **->**) ou operadores de ponteiro para membro (**.\***  ou **-> \***) em um objeto ou um ponteiro para um objeto de classe; dados de membro de classe não estático são considerados locais para o objeto de classe. Considere a seguinte declaração de classe:  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ Os nomes de C++ podem ser usados apenas em determinadas regiões de um programa.
 ## <a name="hiding-names"></a>Ocultando nomes  
  Você pode ocultar um nome declarando-o em um bloco fechado. Na figura a seguir, `i` é redeclarado dentro do bloco interno, ocultando assim a variável associada a `i` no escopo do bloco externo.  
   
- ![Bloco &#45; ocultação de nome de escopo](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![Bloco&#45;ocultação de nome de escopo](../cpp/media/vc38sf1.png "vc38SF1")  
 Ocultamento do nome e escopo do bloco  
   
  O resultado do programa mostrado na figura é:  

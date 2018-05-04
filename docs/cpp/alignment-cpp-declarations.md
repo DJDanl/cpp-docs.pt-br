@@ -2,26 +2,21 @@
 title: Alinhamento (declarações C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment-c-declarations"></a>Alinhamento (declarações C++)
 Um dos recursos de nível inferior do C++ é a capacidade de especificar o alinhamento preciso de objetos na memória para tirar o máximo proveito de uma arquitetura de hardware específico. Por padrão, o compilador alinha os membros de classe e struct em seu valor de tamanho: bool e char está alinhados um limites de um byte, short em dois bytes, int em quatro bytes, long longos, double, long double oito bytes. Na maioria dos cenários, você nunca precisa se preocupar com alinhamento porque o alinhamento padrão já é ideal. Em alguns casos, no entanto, você pode obter melhorias significativas de desempenho ou economia de memória, especificando um alinhamento personalizado para suas estruturas de dados. Antes do Visual Studio 2015, você pode usar o alignof de palavras-chave específicas da Microsoft e declspec(alignas) para especificar um alinhamento maior do que o padrão. Iniciando no Visual Studio 2015, você deve usar as C++ 11 palavras-chave padrão [alignof e alignas](../cpp/alignof-and-alignas-cpp.md) para a portabilidade de código máximo. As novas palavras-chave se comportam da mesma forma nos bastidores, como as extensões específicas da Microsoft e a documentação para as extensões também se aplica às novas palavras-chave. Consulte [alignof operador](../cpp/alignof-operator.md) e [alinhar](../cpp/align-cpp.md) para obter mais informações. O padrão C++ não especificar o comportamento de empacotamento de alinhamento em limites de menores do que o padrão do compilador para a plataforma de destino, para que você ainda precisa usar o Microsoft #pragma [pacote](../preprocessor/pack.md) nesse caso.  

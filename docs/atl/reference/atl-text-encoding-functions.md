@@ -1,10 +1,7 @@
 ---
-title: "Funções de codificação de texto ATL | Microsoft Docs"
-ms.custom: 
+title: Funções de codificação de texto ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>Funções de codificação de texto ATL
 Essas funções oferecem suporte a codificação e decodificação de texto.
@@ -69,7 +65,7 @@ Essas funções oferecem suporte a codificação e decodificação de texto.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 Chame essa função para obter o valor numérico de um dígito hexadecimal.  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>Valor de retorno  
  O valor numérico do caractere de entrada é interpretado como um dígito hexadecimal. Por exemplo, uma entrada de '0' Retorna um valor de 0 e uma entrada de 'A' Retorna um valor de 10. Se o caractere de entrada não é um dígito hexadecimal, essa função retornará -1.  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 Chame essa função para obter a versão da biblioteca de ATL que você está usando.  
   
 ```  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlbase  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 Decodifica uma cadeia de caracteres de dados que tem sido codificados como texto hexadecimal, como por uma chamada anterior a [AtlHexEncode](#atlhexencode).  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna **TRUE** em caso de sucesso, **FALSE** em caso de falha.  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 Chame essa função para obter o tamanho em bytes de um buffer que pode conter os dados decodificados de uma cadeia de caracteres com codificação hexadecimal do comprimento especificado.  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Valor de retorno  
  O número de bytes necessários para um buffer que pode conter uma cadeia de caracteres decodificada `nSrcLen` caracteres.  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 Chame essa função para codificar alguns dados como uma cadeia de caracteres de texto hexadecimal.  
   
 ```  
@@ -176,7 +172,7 @@ int * pnDestLen) throw();
 ### <a name="remarks"></a>Comentários  
  Cada byte de dados de origem é codificado como 2 caracteres hexadecimais.  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 Chame essa função para obter o tamanho em caracteres de um buffer que pode conter de uma cadeia de caracteres codificada dos dados do tamanho especificado.  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Valor de retorno  
  O número de caracteres necessários para um buffer que pode conter dados codificados de `nSrcLen` bytes.  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 Chame essa função para obter o valor numérico de um dígito hexadecimal.  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>Valor de retorno  
  O valor numérico do caractere de entrada é interpretado como um dígito hexadecimal. Por exemplo, uma entrada de '0' Retorna um valor de 0 e uma entrada de 'A' Retorna um valor de 10. Se o caractere de entrada não é um dígito hexadecimal, essa função retornará -1.  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 Chame essa função para converter uma cadeia de caracteres Unicode em UTF-8.  
   
 ```  
@@ -234,7 +230,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="remarks"></a>Comentários  
  Para determinar o tamanho do buffer necessário para a cadeia de caracteres convertida, chamar esta função passagem 0 `szDest` e `nDest`.  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 Chame essa função para converter alguns dados usando a codificação “B”.  
   
 ```  
@@ -268,7 +264,7 @@ inline BOOL BEncode(
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação de "B" é descrito no RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 Chame essa função para obter o tamanho em caracteres de um buffer que pode conter de uma cadeia de caracteres codificada dos dados do tamanho especificado.  
   
 ```  
@@ -288,7 +284,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação de "B" é descrito no RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 Chame essa função para converter os caracteres que não são seguros para uso em XML em seus equivalentes seguros.  
   
 ```  
@@ -316,8 +312,8 @@ inline int EscapeXML(
  `dwFlags`  
  Sinalizadores de ATL_ESC que descrevem como a conversão a ser executada. 
 
-- `ATL_ESC_FLAG_NONE`Comportamento padrão. Aspas marcas e apóstrofos não são convertidos.
-- `ATL_ESC_FLAG_ATTR`Aspas marcas e apóstrofos são convertidos em `&quot;` e `&apos;` respectivamente.
+- `ATL_ESC_FLAG_NONE` Comportamento padrão. Aspas marcas e apóstrofos não são convertidos.
+- `ATL_ESC_FLAG_ATTR` Aspas marcas e apóstrofos são convertidos em `&quot;` e `&apos;` respectivamente.
 
 
   
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 Chame essa função para obter o número de caracteres estendidos em uma cadeia de caracteres.  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de caracteres estendidos encontrado na cadeia de caracteres, conforme determinado pela [IsExtendedChar](#isextendedchar).  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 Chame essa função para descobrir se um caractere fornecido é um caractere estendido (menor que 32, maior que 126, e não uma guia, um avanço de linha ou retorno de carro)  
   
 ```  
@@ -360,13 +356,13 @@ inline int IsExtendedChar(char ch) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *CH*  
+ *ch*  
  O caractere a ser testada  
   
 ### <a name="return-value"></a>Valor de retorno  
  **TRUE** se o caractere estendido, **FALSE** caso contrário.  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 Chame essa função para converter alguns dados usando a codificação “Q”.  
   
 ```  
@@ -404,7 +400,7 @@ inline BOOL QEncode(
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação "P" é descrito no RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 Chame essa função para obter o tamanho em caracteres de um buffer que pode conter de uma cadeia de caracteres codificada dos dados do tamanho especificado.  
   
 ```  
@@ -424,7 +420,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação "P" é descrito no RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 Decodifica uma cadeia de caracteres de dados que tem sido codificados no formato imprimíveis entre aspas, como por uma chamada anterior a [QPEncode](#qpencode).  
   
 ```  
@@ -458,7 +454,7 @@ inline BOOL QPDecode(
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação entre aspas imprimíveis é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 Chame essa função para obter o tamanho em bytes de um buffer que pode conter os dados decodificados de uma cadeia de caracteres com codificação entre aspas imprimível do comprimento especificado.  
   
 ```  
@@ -475,7 +471,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação entre aspas imprimíveis é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 Chame essa função para codificar alguns dados no formato entre aspas imprimível.  
   
 ```  
@@ -502,8 +498,8 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  Sinalizadores ATLSMTP_QPENCODE que descrevem como a conversão a ser executada. 
-- `ATLSMTP_QPENCODE_DOT`Se um período aparece no início de uma linha, ela é adicionada à saída, bem como codificada.
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`Acrescenta `=\r\n` para a cadeia de caracteres codificada.
+- `ATLSMTP_QPENCODE_DOT` Se um período aparece no início de uma linha, ela é adicionada à saída, bem como codificada.
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` Acrescenta `=\r\n` para a cadeia de caracteres codificada.
 
 O esquema de codificação entre aspas imprimíveis é descrito em [2045 RFC](http://www.ietf.org/rfc/rfc2045.txt).
   
@@ -513,7 +509,7 @@ O esquema de codificação entre aspas imprimíveis é descrito em [2045 RFC](ht
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação entre aspas imprimíveis é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 Chame essa função para obter o tamanho em caracteres de um buffer que pode conter de uma cadeia de caracteres codificada dos dados do tamanho especificado.  
   
 ```  
@@ -530,7 +526,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Comentários  
  O esquema de codificação entre aspas imprimíveis é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 Decodifica uma cadeia de caracteres de dados que tem sido uuencoded como por uma chamada anterior a [UUEncode](#uuencode).  
   
 ```  
@@ -560,7 +556,7 @@ inline BOOL UUDecode(
 ### <a name="remarks"></a>Comentários  
  Essa implementação uuencoding segue a especificação de P1003.2b/D11 POSIX.  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 Chame essa função para obter o tamanho em bytes de um buffer que pode conter os dados decodificados de uma cadeia de caracteres com codificação UU do comprimento especificado.  
   
 ```  
@@ -577,7 +573,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Comentários  
  Essa implementação uuencoding segue a especificação de P1003.2b/D11 POSIX.  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 Chame essa função para codificar alguns dados em UU.  
   
 ```  
@@ -608,9 +604,9 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  Sinalizadores de controlar o comportamento dessa função. 
-- `ATLSMTP_UUENCODE_HEADE`O cabeçalho será codificado.
-- `ATLSMTP_UUENCODE_END`Final será codificado.
-- `ATLSMTP_UUENCODE_DOT`Capacidade interna de dados será executada.  
+- `ATLSMTP_UUENCODE_HEADE` O cabeçalho será codificado.
+- `ATLSMTP_UUENCODE_END` Final será codificado.
+- `ATLSMTP_UUENCODE_DOT` Capacidade interna de dados será executada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna **TRUE** em caso de sucesso, **FALSE** em caso de falha.  
@@ -618,7 +614,7 @@ inline BOOL UUEncode(
 ### <a name="remarks"></a>Comentários  
  Essa implementação uuencoding segue a especificação de P1003.2b/D11 POSIX.  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 Chame essa função para obter o tamanho em caracteres de um buffer que pode conter de uma cadeia de caracteres codificada dos dados do tamanho especificado.  
   
 ```  

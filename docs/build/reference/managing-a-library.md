@@ -2,12 +2,9 @@
 title: Gerenciando uma biblioteca | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-library"></a>Gerenciando uma biblioteca
 É o modo padrão para LIB criar ou modificar uma biblioteca de objetos COFF. LIB é executado nesse modo, quando você não especificar /EXTRACT (para copiar um objeto para um arquivo) ou /DEF (para criar uma biblioteca de importação).  
@@ -76,7 +71,7 @@ LIB [options...] files...
   
  As opções a seguir se aplicam a criação e modificação de uma biblioteca:  
   
- /LIBPATH:`dir`  
+ /LIBPATH: `dir`  
  Substitui o caminho da biblioteca de ambiente. Para obter detalhes, consulte a descrição do LINK [/LIBPATH](../../build/reference/libpath-additional-libpath.md) opção.  
   
  / LISTA  
@@ -94,7 +89,7 @@ LIB [options...] files...
  Ou remover: *objeto*  
  Omite especificado *objeto* da biblioteca de saída. LIB cria uma biblioteca de saída combinando todos os objetos (seja em arquivos de objeto ou bibliotecas) e, em seguida, excluindo qualquer objeto especificado com /remove.  
   
- /SUBSYSTEM: {CONSOLE &#124; EFI_APPLICATION &#124; EFI_BOOT_SERVICE_DRIVER &#124; EFI_ROM &#124; EFI_RUNTIME_DRIVER &#124; NATIVO &#124; POSIX &#124; WINDOWS &#124; WINDOWSCE} [, N º [. # #]]  
+ /SUBSYSTEM: {CONSOLE &AMP;#124; EFI_APPLICATION &AMP;#124; EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER &AMP;#124; NATIVO &AMP;#124; POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [, N º [. # #]]  
  Informa o sistema operacional como executar um programa criado por meio da vinculação para a biblioteca de saída. Para obter mais informações, consulte a descrição do LINK [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) opção.  
   
  Opções de LIB especificadas na linha de comando não diferenciam maiusculas de minúsculas.  

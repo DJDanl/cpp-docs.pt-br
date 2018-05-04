@@ -1,12 +1,9 @@
 ---
-title: "Sobrecarga de função | Microsoft Docs"
-ms.custom: 
+title: Sobrecarga de função | Microsoft Docs
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>Sobrecarga de função
 O C++ permite a especificação de mais de uma função do mesmo nome no mesmo escopo. Esses são chamados de *sobrecarregado* funções. Funções sobrecarregadas permitem que você fornecer semânticas diferentes para uma função, dependendo dos tipos e o número de argumentos. 
@@ -264,9 +259,9 @@ volatile Over&
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
 |*type-name* **[ ]**|*type-name\**|  
-|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name* **(** *argument-list* **)**|**(**  *\*nome do tipo* **) (** *lista de argumentos* **)**|  
 |*type-name*|**const** *type-name*|  
-|*type-name*|`volatile` *type-name*|  
+|*type-name*|`volatile` *nome do tipo*|  
 |*type-name\**|**const** *type-name\**|  
 |*type-name\**|`volatile` *type-name\**|  
   
@@ -274,13 +269,13 @@ volatile Over&
   
 1.  Correspondência exata. Uma correspondência exata entre os tipos com que a função é chamada e os tipos declarados no protótipo da função sempre é a melhor correspondência. As sequências de conversões triviais são classificadas como correspondências exatas. No entanto, as sequências que não fazem qualquer uma dessas conversões são consideradas melhor do que as sequências que convertem:  
   
-    -   De ponteiro para ponteiro para **const** (`type`  **\***  para **const** `type`  **\***  ).  
+    -   De ponteiro para ponteiro para **const** (`type` **\*** para **const** `type` **\*** ).  
   
-    -   De ponteiro para ponteiro para `volatile` (`type`  **\***  para `volatile` `type`  **\*** ).  
+    -   De ponteiro para ponteiro para `volatile` (`type` **\*** para `volatile` `type` **\***).  
   
-    -   De referência, a referência a **const** (`type`  **&**  para **const** `type`  **&** ).  
+    -   De referência, a referência a **const** (`type` **&** para **const** `type` **&**).  
   
-    -   De referência, a referência a `volatile` (`type`  **&**  para `volatile` `type`  **&** ).  
+    -   De referência, a referência a `volatile` (`type` **&** para `volatile` `type` **&**).  
   
 2.  Correspondência usando promoções. Qualquer sequência não classificada como uma correspondência exata que contém somente promoções integrais, conversões de **float** para **duplo**, e conversões triviais é classificado como uma correspondência usando promoções. Embora não seja tão boa quanto a correspondência exata, a correspondência usando promoções é melhor do que a correspondência usando conversões padrão.  
   

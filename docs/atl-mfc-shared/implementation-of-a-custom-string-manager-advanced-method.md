@@ -1,29 +1,24 @@
 ---
-title: "Implementação do Manager uma cadeia de caracteres personalizada (Avançado método) | Microsoft Docs"
-ms.custom: 
+title: Implementação do Manager uma cadeia de caracteres personalizada (Avançado método) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementação um Gerenciador de personalizado cadeia de caracteres (método avançado)
 Em situações especiais, você talvez queira implementar um Gerenciador de cadeia de caracteres personalizada que mais do que apenas alterar quais heap é usada para alocar memória. Nessa situação, você deve implementar manualmente a [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface como Gerenciador de cadeia de caracteres personalizada.  
@@ -34,7 +29,7 @@ Em situações especiais, você talvez queira implementar um Gerenciador de cade
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) esse campo aponta para o `IAtlStringMgr` interface usada para gerenciar esses dados de cadeia de caracteres. Quando `CStringT` precisa ser realocados ou liberar o buffer de cadeia de caracteres, ele chama a realocação ou métodos livres desta interface, passando o `CStringData` estrutura como um parâmetro. Ao alocar um `CStringData` estrutura seu gerente de cadeia de caracteres, você deve definir esse campo para apontar para o gerente de cadeia de caracteres personalizada.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) esse campo contém o comprimento lógico atual da cadeia de caracteres armazenado no buffer, exceto o nulo de terminação. `CStringT`atualiza esse campo quando o comprimento da cadeia de caracteres é alterado. Ao alocar um `CStringData` estrutura, o gerente de cadeia de caracteres deve definir este campo como zero. Ao realocar um `CStringData` estrutura, o gerente de cadeia de caracteres personalizada deve deixar esse campo inalterado.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) esse campo contém o comprimento lógico atual da cadeia de caracteres armazenado no buffer, exceto o nulo de terminação. `CStringT` atualiza esse campo quando o comprimento da cadeia de caracteres é alterado. Ao alocar um `CStringData` estrutura, o gerente de cadeia de caracteres deve definir este campo como zero. Ao realocar um `CStringData` estrutura, o gerente de cadeia de caracteres personalizada deve deixar esse campo inalterado.  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) este campo contém o número máximo de caracteres (exceto a terminação nula) que podem ser armazenados nesse buffer de cadeia de caracteres sem realocando-lo. Sempre que `CStringT` precisa aumentar o tamanho lógico de cadeia de caracteres, ele primeiro verifica esse campo para verificar se há espaço suficiente no buffer. Se a verificação falhar, `CStringT` chama o Gerenciador de cadeia de caracteres personalizada para realocar o buffer. Ao alocar ou realocar um `CStringData` estrutura, você deve definir esse campo para o número de caracteres solicitada em pelo menos o **nChars** parâmetro para [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) ou [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Se houver mais espaço no buffer do solicitado, você pode definir esse valor para refletir a quantidade de espaço disponível real. Isso permite que `CStringT` aumentar a cadeia de caracteres para preencher todo o espaço alocado antes de chamar novamente no Gerenciador de cadeia de caracteres para realocar o buffer.  
   

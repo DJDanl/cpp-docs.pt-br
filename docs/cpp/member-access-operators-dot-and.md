@@ -1,12 +1,9 @@
 ---
-title: Operadores de acesso de membro:. and -&gt; | Microsoft Docs
-ms.custom: 
+title: Operadores de acesso de membro:. e -&gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-operators--and--gt"></a>Operadores de acesso de membro:. e -&gt;
 ## <a name="syntax"></a>Sintaxe  
@@ -44,13 +39,13 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Os operadores de acesso de membro **.** e  **->**  são usadas para se referir a membros de classes, estruturas e uniões. As expressões de acesso do membro têm o valor e o tipo do membro selecionado.  
+ Os operadores de acesso de membro **.** e **->** são usadas para se referir a membros de classes, estruturas e uniões. As expressões de acesso do membro têm o valor e o tipo do membro selecionado.  
   
  Há duas formas de expressões de acesso do membro:  
   
 1.  No primeiro formulário, *sufixo expressão* representa um valor de estrutura, classe ou tipo de união e *nome* nomes de membro a estrutura especificada, união ou classe. O valor da operação é de *nome* e é um l-value se *sufixo expressão* é um l-value.  
   
-2.  No segundo formulário, *sufixo expressão* representa um ponteiro para uma, união, classe ou estrutura, e *nome* nomes de membro a estrutura especificada, união ou classe. O valor é de *nome* e é um l-value. O  **->**  operador cancelará o ponteiro. Portanto, as expressões * e * **->**  `member` e **(\****e***)**.`member` (onde *e* representa um ponteiro) geram resultados idênticos (exceto quando os operadores  **->**  ou  **\***  estão sobrecarregados).  
+2.  No segundo formulário, *sufixo expressão* representa um ponteiro para uma, união, classe ou estrutura, e *nome* nomes de membro a estrutura especificada, união ou classe. O valor é de *nome* e é um l-value. O **->** operador cancelará o ponteiro. Portanto, as expressões * e ***->** `member` e **(\****e***)**.`member` (onde *e* representa um ponteiro) geram resultados idênticos (exceto quando os operadores **->** ou **\*** estão sobrecarregados).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra as duas formas de operador de acesso do membro.  
