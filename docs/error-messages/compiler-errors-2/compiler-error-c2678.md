@@ -1,12 +1,9 @@
 ---
 title: C2678 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2678
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b28f29f1f0f509200cabe8dad46a9ad7f0b2da1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8fb294e567f759225a2899d39f2adaa7211d8d93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2678"></a>C2678 de erro do compilador
 binário 'operator': Nenhum operador definido que receba um operando esquerdo do tipo 'type' (ou não há nenhuma conversão aceitável)  

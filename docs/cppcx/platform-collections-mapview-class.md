@@ -1,11 +1,8 @@
 ---
 title: Classe Platform::Collections::MapView | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 Representa uma exibição somente leitura em um *mapa*, que é uma coleção de pares chave-valor.  
@@ -63,7 +58,7 @@ ref class MapView sealed;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[MapView::MapView](#ctor)|Inicializa uma nova instância da classe MapView.|  
+|[Mapview:: Mapview](#ctor)|Inicializa uma nova instância da classe MapView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -71,8 +66,8 @@ ref class MapView sealed;
 |----------|-----------------|  
 |[MapView::First](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|  
 |[MapView::HasKey](#haskey)|Determina se o MapView atual contém a chave especificada.|  
-|[MapView::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto MapView atual.|  
-|[MapView::Size](#size)|Retorna o número de elementos no objeto MapView atual.|  
+|[Mapview](#lookup)|Recupera o elemento na chave especificada no objeto MapView atual.|  
+|[Mapview](#size)|Retorna o número de elementos no objeto MapView atual.|  
 |[MapView::Split](#split)|Divide um objeto MapView original em dois objetos MapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  

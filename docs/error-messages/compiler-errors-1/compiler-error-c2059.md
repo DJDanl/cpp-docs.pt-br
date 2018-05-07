@@ -1,12 +1,9 @@
 ---
 title: C2059 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2059
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87f9c3dbb1405463804b7abd5c94abe04a42845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69182e4b27b474cafe60b71b02594a244f65a09b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2059"></a>C2059 de erro do compilador
 Erro de sintaxe: 'token'  
@@ -46,7 +41,7 @@ Erro de sintaxe: 'token'
   
  Se a mensagem de erro ocorre em um símbolo que segue imediatamente um `typedef` variável, certifique-se de que a variável é definida no código-fonte.  
   
- Você pode obter C2059 se um símbolo for avaliada como nothing, pois pode ocorrer quando **/D** `symbol`  **=**  é usada para compilar.  
+ Você pode obter C2059 se um símbolo for avaliada como nothing, pois pode ocorrer quando **/D** `symbol` **=** é usada para compilar.  
   
 ```  
 // C2059a.cpp  

@@ -1,13 +1,10 @@
 ---
-title: "Código puro e verificável (C + + CLI) | Microsoft Docs"
-ms.custom: 
+title: Código puro e verificável (C + + CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ba218772bdedf772e995bb9289b18452d599e6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c4f4b9bd590ad873d0b241d2c095be53ad1dacb4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Código puro e verificável (C++/CLI)
 Para a programação do .NET, o Visual C++ no Visual Studio de 2017 suporta a criação de assemblies mistos usando o [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador. O **/clr: pure** e **: safe** opções foram preteridas a partir do Visual Studio 2015 e serão removidas em uma versão futura do compilador. Se seu código precisa ser verificado, é recomendável que você a porta para c#.
