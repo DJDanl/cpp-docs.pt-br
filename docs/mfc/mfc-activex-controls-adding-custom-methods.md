@@ -1,37 +1,32 @@
 ---
-title: "Controles ActiveX MFC: Adicionando métodos personalizados | Microsoft Docs"
-ms.custom: 
+title: 'Controles ActiveX MFC: Adicionando métodos personalizados | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Controles ActiveX MFC: adicionando métodos personalizados
 Métodos personalizados são diferentes de métodos de estoque que eles já não são implementados por `COleControl`. Você deve fornecer a implementação para cada método personalizado que você adicionar ao seu controle.  
   
  Um usuário de controle ActiveX pode chamar um método personalizado a qualquer momento para executar ações específicas para o controle. A entrada de mapa de expedição de métodos personalizados é da forma `DISP_FUNCTION`.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>Adicionando um método personalizado com o Assistente para o método adicionar  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Adicionando um método personalizado com o Assistente para o método adicionar  
  O procedimento a seguir demonstra como adicionar o método personalizado PtInCircle ao código de esqueleto de um controle ActiveX. PtInCircle determina se as coordenadas passadas para o controle dentro ou fora do círculo. Este mesmo procedimento também pode ser usado para adicionar outros métodos personalizados. Substitua o nome do método personalizado e seus parâmetros para o nome do método PtInCircle e parâmetros.  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ Métodos personalizados são diferentes de métodos de estoque que eles já não
   
 10. Clique em **Finalizar**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>Adicionar Assistente altera o método para métodos personalizados  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Adicionar Assistente altera o método para métodos personalizados  
  Quando você adiciona um método personalizado, o Assistente para adicionar método faz com que algumas alterações para o cabeçalho de classe de controle (. H) e implementação (. Arquivos CPP). A seguinte linha é adicionada à declaração de mapa de expedição no cabeçalho de classe de controle (. H) arquivo:  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  

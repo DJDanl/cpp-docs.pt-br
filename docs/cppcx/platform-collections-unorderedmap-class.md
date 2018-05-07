@@ -1,26 +1,21 @@
 ---
 title: Classe Platform::Collections::UnorderedMap | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -85,7 +80,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 |[UnorderedMap::Insert](#insert)|Adiciona os pares chave-valor especificados ao objeto Map atual.|
 |[UnorderedMap::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto Map atual.|
 |[UnorderedMap::Remove](#remove)|Exclui os pares chave-valor especificados do objeto Map atual.|
-|[UnorderedMap::Size](#size)|Retorna o número de elementos no objeto Map atual.|
+|[Unorderedmap](#size)|Retorna o número de elementos no objeto Map atual.|
 
 ### <a name="events"></a>Eventos
 
@@ -148,7 +143,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Um objeto `UnorderedMapView`.
 
-## <a name="haskey"></a>  UnorderedMap::HasKey Method
+## <a name="haskey"></a>  Método Unorderedmap:
 
 Determina se o UnorderedMap atual contém a chave especificada.
 

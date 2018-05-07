@@ -2,12 +2,9 @@
 title: Funções de retorno de chamada usadas pelo MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funções de Retorno de Chamada Usadas pelo MFC
 Três funções de retorno de chamada aparecem na biblioteca Microsoft Foundation Class. Essas funções de retorno de chamada são passadas para [CDC:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Observe que todas as funções de retorno de chamada devem interceptar exceções MFC antes de retornar ao Windows, desde que as exceções não podem ser lançadas em limites de retorno de chamada. Para obter mais informações sobre exceções, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).  
@@ -42,7 +37,7 @@ Três funções de retorno de chamada aparecem na biblioteca Microsoft Foundatio
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h 
 
-## <a name="enum_objects"></a>Função de retorno de chamada para CDC:: enumobjects
+## <a name="enum_objects"></a> Função de retorno de chamada para CDC:: enumobjects
 O *ObjectFunc* nome é um espaço reservado para o nome da função fornecida pelo aplicativo.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>Comentários  
  O nome real deve ser exportado.  
   
-## <a name="graystring"></a>Função de retorno de chamada para CDC:: graystring
+## <a name="graystring"></a>  Função de retorno de chamada para CDC:: graystring
 *OutputFunc* é um espaço reservado para o nome da função de retorno de chamada fornecida pelo aplicativo.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>Comentários  
  A função de retorno de chamada (*OutputFunc*) deve desenhar uma imagem em relação as coordenadas (0,0) em vez de (*x*, *y*).  
 
-## <a name="setabortproc"></a>Função de retorno de chamada para CDC:: SetAbortProc
+## <a name="setabortproc"></a>  Função de retorno de chamada para CDC:: SetAbortProc
 O nome *AbortFunc* é um espaço reservado para o nome da função fornecida pelo aplicativo.  
   
 ### <a name="syntax"></a>Sintaxe  

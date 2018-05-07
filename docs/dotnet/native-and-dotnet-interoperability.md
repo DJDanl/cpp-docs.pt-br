@@ -1,13 +1,10 @@
 ---
 title: Nativo e interoperabilidade .NET | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6206ddf3802078c49bfc1a83e952ed79afe1ff00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cabd21f400b7c0c21faefdf2004dee9ae2cc64ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="native-and-net-interoperability"></a>Nativo e interoperabilidade .NET
 Visual C++ dá suporte a recursos de interoperabilidade que permitem gerenciadas e construções coexistir e interoperar dentro do mesmo assembly e até mesmo no mesmo arquivo. Um pequeno subconjunto dessa funcionalidade, como P/Invoke, há suporte para outras linguagens .NET, mas a maioria do suporte de interoperabilidade fornecida pelo Visual C++ não está disponível em outros idiomas.  

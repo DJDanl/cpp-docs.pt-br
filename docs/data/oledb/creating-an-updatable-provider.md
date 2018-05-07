@@ -1,12 +1,9 @@
 ---
-title: "Criando um provedor atualizável | Microsoft Docs"
-ms.custom: 
+title: Criando um provedor atualizável | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 317ccd043b3a69489f9cbd2737ad7741389863c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 Atualizável ou provedores que podem ser atualizada pela linguagem Visual C++ (gravar) no repositório de dados. Este tópico discute como criar provedores atualizáveis usando modelos OLE DB.  
@@ -414,7 +409,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Sinalizadores de coluna  
- Se você der suporte a valores padrão em colunas, você precisa configurá-lo usando os metadados no  **\< ***classe de provedor***> Conjunto_de_linhas_de_esquema** classe. Set *m_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Se você der suporte a valores padrão em colunas, você precisa configurá-lo usando os metadados no  **\< ***classe de provedor***> Conjunto_de_linhas_de_esquema** classe. Definir *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  Você também tem a responsabilidade de definir os sinalizadores de coluna, que são especificados usando o **DBCOLUMNFLAGS** tipo enumerado. Os sinalizadores de coluna descrevem as características da coluna.  
   

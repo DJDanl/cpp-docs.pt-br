@@ -1,12 +1,9 @@
 ---
 title: C3839 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3839
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3839
 ms.assetid: 0957faff-1e9f-439b-876b-85bd8d2c578d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36aa2146c142e66e61a8d1171cd4ba3acbb7bc96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbb5541e07d168df36bae83f81b7b8a8a7273665
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3839"></a>C3839 de erro do compilador
 não é possível alterar alinhamento em gerenciada ou tipo de WinRT  

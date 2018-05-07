@@ -1,12 +1,9 @@
 ---
-title: "OLE DB pool de recursos e serviços | Microsoft Docs"
-ms.custom: 
+title: OLE DB pool de recursos e serviços | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f97bde5c2922af3d6a5da5ca77fd270867ff21
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ab8c5e5a3e219da7204ef1a1b4942dc70b2f2ad2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Pooling de recursos e serviços de banco de dados OLE
 Para funcionar bem com o pool de OLE DB, ou com qualquer serviço do OLE DB, o provedor deve oferecer suporte a agregação de todos os objetos. Este é um requisito de OLE DB 1.5 ou posterior provedor. É essencial que aproveita os serviços. Provedores que não oferecem suporte a agregação não podem ser colocado em pool e sem serviços adicionais são fornecidos.  

@@ -1,12 +1,9 @@
 ---
 title: COLUMN_NAME_PS_LENGTH | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME_PS_LENGTH
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME_PS_LENGTH macro
 ms.assetid: 415a154b-cb7c-4072-9e7d-8cfa32a15d6e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ecb3e1b3936b1fd0c875967eb661a483831bf6ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9ab975f011aaeed036c615d1b66836478ba9c472
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnnamepslength"></a>COLUMN_NAME_PS_LENGTH
 Representa uma associação no conjunto de linhas para a coluna específica no conjunto de linhas. Semelhante ao [COLUMN_NAME](../../data/oledb/column-name.md), exceto que essa macro também usa o comprimento de precisão, escala e coluna.  
@@ -50,7 +45,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
  `data`  
  [in] O membro de dados correspondente no registro do usuário.  
   
- *Comprimento*  
+ *length*  
  [in] A variável a ser associado para o comprimento da coluna.  
   
 ## <a name="remarks"></a>Comentários  

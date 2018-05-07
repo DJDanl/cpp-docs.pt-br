@@ -1,12 +1,9 @@
 ---
 title: ptr::operator! | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::operator!
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::operator!
 ms.assetid: 7f4101dc-2045-42e7-abb1-6a30e17147f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d3ef67f9ef6128560d8bb6fef9d0d6fd75d08aca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b4dfb28d246e708c248b4d094a8e2ae127c60b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptroperator"></a>ptr::operator!
 Operador para determinar se o objeto COM propriedade é inválido.  
@@ -41,7 +36,7 @@ bool operator!();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true`Se o objeto COM propriedade é inválido; `false` caso contrário.  
+ `true` Se o objeto COM propriedade é inválido; `false` caso contrário.  
   
 ## <a name="remarks"></a>Comentários  
  O objeto COM propriedade é válido se não for `nullptr`.  

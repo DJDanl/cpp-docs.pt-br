@@ -1,12 +1,9 @@
 ---
 title: C2084 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2084
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9e0888e0f959d77198efe036c0234c985ea365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ce1510dd6e78b8774d3cc433f583c16cdbb8d06
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2084"></a>C2084 de erro do compilador
 função '*função*' já tem um corpo  
@@ -36,7 +31,7 @@ função '*função*' já tem um corpo
   
 -   O compilador aceite vários especializações de modelo que é resolvido para o mesmo tipo real, embora as definições adicionais nunca estarão disponíveis. Agora, o compilador detecta essas várias definições.  
   
--   `__int32`e `int` são tratadas como tipos separados. O compilador agora trata `__int32` como um sinônimo para `int`. Isso significa que o compilador detecta várias definições se uma função está sobrecarregada no `__int32` e `int` e retorna um erro.  
+-   `__int32` e `int` são tratadas como tipos separados. O compilador agora trata `__int32` como um sinônimo para `int`. Isso significa que o compilador detecta várias definições se uma função está sobrecarregada no `__int32` e `int` e retorna um erro.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2084:  

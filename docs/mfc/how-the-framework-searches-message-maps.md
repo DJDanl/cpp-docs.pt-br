@@ -1,29 +1,24 @@
 ---
 title: Como o Framework pesquisa mapas de mensagem | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message maps [MFC], searching
 ms.assetid: fd1df878-5601-45d7-bd1f-b8f8e65b9a17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bea3e2a0b79e8e38fbdb61c851f5a1ab72f01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fc80573b110c3eacc790082b837a87815283f55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Como o Framework pesquisa mapas de mensagem
 A estrutura de procura na tabela de mapa de mensagem para correspondências com mensagens de entrada. Quando você escreve uma entrada de mapa de mensagem para cada mensagem que você deseja que uma classe para manipular e escrever os manipuladores correspondentes, o framework chama automaticamente seus manipuladores. Os tópicos a seguir explicam a pesquisa de mapa de mensagem:  

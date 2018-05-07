@@ -1,12 +1,9 @@
 ---
 title: Mensagens do vetorizador e Paralelizador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C5011
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b5ae296c468ce132b4ddcebe8a8894c1ba53e751
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensagens do vetorizador e do paralelizador
 Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir o [paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) para códigos de motivo de saída e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.  
@@ -48,7 +43,7 @@ Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="BKMK_InformationalMessages"></a>Mensagens informativas  
+##  <a name="BKMK_InformationalMessages"></a> Mensagens informativas  
  Dependendo do nível de relatório especificado, uma das mensagens informativas a seguir é exibida para cada loop.  
   
  Para obter informações sobre códigos de motivos, consulte a próxima parte deste artigo.  
@@ -64,7 +59,7 @@ Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/
 ## <a name="reason-codes"></a>Códigos de motivos  
  As seções a seguir listam os códigos de motivos possíveis para o autoparalelizador e o autovetorizador.  
   
-###  <a name="BKMK_ReasonCode50x"></a>5xx  
+###  <a name="BKMK_ReasonCode50x"></a> 5xx  
  Os 5*xx* códigos de motivo aplicam o paralelizador automático e o vetorizador automático.  
   
 |Código de motivo|Explicação|  
@@ -227,7 +222,7 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="BKMK_ReasonCode100x"></a>10xx  
+###  <a name="BKMK_ReasonCode100x"></a> 10xx  
  O 10*xx* aplicam códigos de motivo para o paralelizador automático.  
   
 |Código de motivo|Explicação|  
@@ -436,7 +431,7 @@ void code_1010()
   
 ```  
   
-###  <a name="BKMK_ReasonCode110x"></a>11xx  
+###  <a name="BKMK_ReasonCode110x"></a> 11xx  
  O 11*xx* aplicam códigos de motivo para o vetorizador automático.  
   
 |Código de motivo|Explicação|  
@@ -584,7 +579,7 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode120x"></a>12xx  
+###  <a name="BKMK_ReasonCode120x"></a> 12xx  
  Os 12*xx* aplicam códigos de motivo para o vetorizador automático.  
   
 |Código de motivo|Explicação|  
@@ -659,7 +654,7 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode130x"></a>13xx  
+###  <a name="BKMK_ReasonCode130x"></a> 13xx  
  O 13*xx* aplicam códigos de motivo para o vetorizador automático.  
   
 |Código de motivo|Explicação|  
@@ -791,7 +786,7 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="BKMK_ReasonCode140x"></a>14xx  
+###  <a name="BKMK_ReasonCode140x"></a> 14xx  
  14*xx* motivo códigos ocorrerem quando alguma opção que é incompatível com vetorização automática é especificada.  
   
 |Código de motivo|Explicação|  
@@ -863,7 +858,7 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode150x"></a>15xx  
+###  <a name="BKMK_ReasonCode150x"></a> 15xx  
  O bloco de 15*xx* códigos de motivo se aplicam ao alias. O alias ocorre quando um local na memória pode ser acessado por dois nomes diferentes.  
   
 |Código de motivo|Explicação|  
@@ -997,4 +992,4 @@ void code_1505(int *A, int *B)
  [#pragma loop()](../../preprocessor/loop.md)   
  [/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)   
  [/Qpar-Report (nível de Paralelizador automático relatórios)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [/Qvec-Report (nível de Vetorizador automático relatórios)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+ [/Qvec-report (nível de relatórios do vetorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

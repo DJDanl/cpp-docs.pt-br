@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Arquitetura (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 169d371327137cf4f51ed10429eb5e9708a0e088
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5be3ec16ec01a6c6db2e24b1b6a6260f3a44bfec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-architecture-odbc"></a>Conjunto de registros: arquitetura (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -49,7 +44,7 @@ Este tópico se aplica às classes MFC ODBC.
 > [!NOTE]
 >  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se a busca de linhas em massa é implementada, a arquitetura é semelhante. Para entender as diferenças, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_a_sample_class"></a>Exemplo de classe  
+##  <a name="_core_a_sample_class"></a> Exemplo de classe  
  Quando você usa o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar classe** derivado do Assistente para declarar uma classe de conjunto de registros `CRecordset`, a classe resultante tem a estrutura geral mostrada a seguir simple classe:  
   
 ```  
@@ -66,14 +61,14 @@ public:
   
  No início da classe, o assistente grava um conjunto de [membros de dados de campo](#_core_field_data_members). Quando você cria a classe, você deve especificar um ou mais membros de dados de campo. Se a classe for parametrizada, como o exemplo de classe é (com o membro de dados `m_strIDParam`), você deve adicionar manualmente [membros de dados do parâmetro](#_core_parameter_data_members). O assistente não oferece suporte para adicionar parâmetros a uma classe.  
   
-##  <a name="_core_field_data_members"></a>Membros de dados de campo  
+##  <a name="_core_field_data_members"></a> Membros de dados de campo  
  Os membros mais importantes da classe do conjunto de registros são os membros de dados do campo. Para cada coluna selecionada da fonte de dados, a classe contém um membro de dados do tipo de dados apropriado para essa coluna. Por exemplo, o [exemplo classe](#_core_a_sample_class) mostrado no início deste tópico tem dois membros de dados de campo, do tipo `CString`, chamado `m_strCourseID` e `m_strCourseTitle`.  
   
  Quando o conjunto de registros seleciona um conjunto de registros, a estrutura automaticamente associa as colunas do registro atual (após o **abrir** chamada, o primeiro registro é atual) para os membros de dados de campo do objeto. Ou seja, a estrutura usa o membro de dados de campo apropriado como um buffer para armazenar o conteúdo de uma coluna de registro.  
   
  Conforme o usuário rola para um novo registro, a estrutura usa os membros de dados de campo para representar o registro atual. A estrutura atualiza os membros de dados do campo, substituindo os valores do registro anterior. Os membros de dados do campo também são usados para atualizar o registro atual e para adicionar novos registros. Como parte do processo de atualização de um registro, você pode especificar os valores de atualização, atribuindo valores diretamente para os membros de dados de campo apropriado ou membros.  
   
-##  <a name="_core_parameter_data_members"></a>Membros de dados de parâmetro  
+##  <a name="_core_parameter_data_members"></a> Membros de dados de parâmetro  
  Se a classe for parametrizada, ele tem um ou mais membros de dados de parâmetro. Uma classe com parâmetros permite que uma consulta de conjunto de registros de base nas informações obtidas ou calculados em tempo de execução.  
   
  Normalmente, o parâmetro ajuda a restringir a seleção, como no exemplo a seguir. Com base no [exemplo classe](#_core_a_sample_class) no início deste tópico, o objeto de conjunto de registros pode executar a seguinte instrução SQL:  
@@ -96,7 +91,7 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 > [!NOTE]
 >  A ordem dos parâmetros é importante. Para obter informações sobre isso e obter mais informações sobre parâmetros, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-##  <a name="_core_using_m_nfields_and_m_nparams"></a>Usando m_nFields e m_nParams  
+##  <a name="_core_using_m_nfields_and_m_nparams"></a> Usando m_nFields e m_nParams  
 
  Quando um assistente grava um construtor para sua classe, também inicia o [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membro de dados, que especifica o número de [membros de dados de campo](#_core_field_data_members) na classe. Se você adicionar qualquer [parâmetros](#_core_parameter_data_members) à sua classe, você também deverá adicionar a inicialização para o [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) membro de dados, que especifica o número de membros de dados do parâmetro. A estrutura usa esses valores para trabalhar com os membros de dados.  
   

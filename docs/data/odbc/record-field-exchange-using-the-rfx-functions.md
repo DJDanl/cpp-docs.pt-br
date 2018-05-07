@@ -1,13 +1,10 @@
 ---
-title: "Registrar troca de campos: Usando as funções RFX | Microsoft Docs"
-ms.custom: 
+title: 'Registrar troca de campos: Usando as funções RFX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a270b26fc0fd9be721ee0656f9f0d14ab579b477
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f834f9f52c8d01dbd7eb3ff54b794afc11630ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Registrar troca de campos: usando as funções RFX
 Este tópico explica como usar as chamadas de função RFX que compõem o corpo do seu `DoFieldExchange` substituir.  
@@ -40,7 +35,7 @@ Este tópico explica como usar as chamadas de função RFX que compõem o corpo 
   
  As funções globais RFX trocam dados entre as colunas em que os dados de origem e campo membros de dados de registros. Você escreve chama a função RFX em seu conjunto de registros [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) função de membro. Este tópico descreve as funções brevemente e mostra os tipos de dados para o qual RFX funções estão disponíveis. [43 de observação técnica](../../mfc/tn043-rfx-routines.md) descreve como escrever suas próprias funções RFX para tipos de dados adicionais.  
   
-##  <a name="_core_rfx_function_syntax"></a>Sintaxe de função RFX  
+##  <a name="_core_rfx_function_syntax"></a> Sintaxe de função RFX  
  Cada função RFX usa três parâmetros (e alguns têm um parâmetro opcional do quarto ou quinto):  
   
 -   Um ponteiro para um [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objeto. Você simplesmente passa o `pFX` ponteiro foi passado para `DoFieldExchange`.  
@@ -55,7 +50,7 @@ Este tópico explica como usar as chamadas de função RFX que compõem o corpo 
   
  Para obter mais informações, consulte as funções RFX em [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md) no *referência da biblioteca de classe*. Para obter um exemplo de quando você pode tornar especial usar parâmetros, consulte [conjunto de registros: Obtendo somas e outros agregar resultados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
   
-##  <a name="_core_rfx_data_types"></a>Tipos de dados RFX  
+##  <a name="_core_rfx_data_types"></a> Tipos de dados RFX  
  A biblioteca de classes fornece funções RFX para transferir vários tipos de dados diferentes entre a fonte de dados e conjuntos de registros. A lista a seguir resume as funções RFX pelo tipo de dados. Em casos em que você deve escrever suas próprias chamadas de função RFX, selecione essas funções pelo tipo de dados.  
   
 |Função|Tipo de dados|  

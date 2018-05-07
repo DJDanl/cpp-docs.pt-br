@@ -1,13 +1,10 @@
 ---
-title: "Objetos de dados e fontes de dados: manipulação | Microsoft Docs"
-ms.custom: 
+title: 'Objetos de dados e fontes de dados: manipulação | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objetos e origens de dados: manipulação
 Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode executar várias operações comuns nos dados, como inserção e remoção de dados, enumerando os formatos de que dados se encontra e muito mais. Este artigo descreve as técnicas necessárias para concluir as operações mais comuns. Os tópicos incluem:  
@@ -42,7 +37,7 @@ Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode ex
   
 -   [Recuperando dados de um objeto de dados](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Inserindo dados em uma fonte de dados  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Inserindo dados em uma fonte de dados  
  Como os dados são inseridos em uma fonte de dados depende se os dados são fornecidos imediatamente ou sob demanda e em qual médio é fornecido. As possibilidades são da seguinte maneira.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Fornecendo dados imediatamente (renderização imediata)  
@@ -62,7 +57,7 @@ Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode ex
   
 -   Se você usar um `CFile` objeto para fornecer os dados, chame `COleDataSource::DelayRenderFileData` em vez de `COleDataSource::DelayRenderData` na opção anterior. Quando os dados são solicitados, a estrutura chamará `COleDataSource::OnRenderFileData`, que você deve substituir.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Determinando os formatos disponíveis em um objeto de dados  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Determinando os formatos disponíveis em um objeto de dados  
  Antes de um aplicativo permite que o usuário colar dados ele, ele precisa saber se há formatos na área de transferência que pode manipular. Para fazer isso, seu aplicativo deve fazer o seguinte:  
   
 1.  Criar um `COleDataObject` objeto e um **FORMATETC** estrutura.  
@@ -79,7 +74,7 @@ Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode ex
   
  Se você estiver usando `ON_UPDATE_COMMAND_UI`, agora você pode habilitar a colar e, possivelmente, itens de colar especial no menu Editar. Para fazer isso, chame `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Para obter mais informações sobre o contêiner aplicativos devem fazer com itens de menu e quando, consulte [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Recuperando dados de um objeto de dados  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Recuperando dados de um objeto de dados  
  Depois de ter decidido em um formato de dados, tudo o que resta é recuperar os dados do objeto de dados. Para fazer isso, o usuário decidir onde colocar os dados e o aplicativo chama a função apropriada. Os dados estarão disponíveis em um dos meios a seguir:  
   
 |Médio|Função a ser chamada|  

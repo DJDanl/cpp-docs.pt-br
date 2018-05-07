@@ -2,12 +2,9 @@
 title: Troca de dados para exibições de registro (acesso a dados MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1db5adaab66fec2b587f7a15005caa3a9374ff12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58bda2d9a712e38951b8201c08e5bbbe369537eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Troca de dados para exibições de registro (Acesso a dados MFC)
 Quando você usa [Adicionar classe](../mfc/reference/adding-an-mfc-odbc-consumer.md) para mapear os controles no recurso de modelo de caixa de diálogo da exibição de um registro para os campos de um conjunto de registros, a estrutura gerencia a troca de dados em ambas as direções — do conjunto de registros para controles e de controles para o conjunto de registros. O uso do mecanismo DDX significa que você não precisa escrever o código para transferir os dados de um para outro lado por conta própria.  
@@ -37,7 +32,7 @@ Quando você usa [Adicionar classe](../mfc/reference/adding-an-mfc-odbc-consumer
   
  A figura a seguir mostra a relação entre DDX e RFX para exibições de registro.  
   
- ![Caixa de diálogo &#45; troca de dados e registro &#45; troca de campos](../data/media/vc37xt1.gif "vc37xt1")  
+ ![Caixa de diálogo&#45;troca de dados e o registro&#45;a troca de campos](../data/media/vc37xt1.gif "vc37xt1")  
 Troca de dados de diálogo e troca de campos de registro  
   
  Para obter mais informações sobre DDX, consulte [troca de dados de caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md). Para obter mais informações sobre RFX, consulte [troca de campos de registro (RFX)](../data/odbc/record-field-exchange-rfx.md).  

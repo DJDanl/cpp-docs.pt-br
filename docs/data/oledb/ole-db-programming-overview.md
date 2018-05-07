@@ -1,12 +1,9 @@
 ---
-title: "Visão geral da programação OLE DB | Microsoft Docs"
-ms.custom: 
+title: Visão geral da programação OLE DB | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 338f6f3d83e6df67e151e0fd85019fb14c8b4087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-programming-overview"></a>Visão geral da programação de banco de dados OLE
 OLE DB é uma tecnologia de banco de dados de alto desempenho, COM base em com. Ele fornece uma maneira comum para acessar dados, independentemente do formato no qual ela está armazenada. Em uma situação de típicos de negócios, uma grande quantidade de informações é armazenada fora de bancos de dados corporativos. Essas informações se encontra em sistemas de arquivos (como FAT ou NTFS), arquivos indexados sequencial, bancos de dados pessoais (como acesso), planilhas (como o Excel), aplicativos de planejamento de projeto (como o projeto) e email (como o Outlook). OLE DB permite que você acesse qualquer tipo de repositório de dados da mesma maneira, como o repositório de dados tem um provedor OLE DB.

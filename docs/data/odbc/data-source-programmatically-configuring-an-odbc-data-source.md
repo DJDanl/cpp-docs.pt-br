@@ -1,13 +1,10 @@
 ---
 title: 'Fonte de dados: Configurando programaticamente uma fonte de dados ODBC | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e1f46ad566874d80b45593e7aecfeee2d5d88841
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Fonte de dados: configurando programaticamente uma fonte de dados ODBC
 Este tópico explica como você pode configurar nomes de fonte de dados de conectividade de banco de dados aberto (ODBC) por meio de programação. Isso fornece flexibilidade para acessar dados sem forçar o usuário usar explicitamente o administrador ODBC ou outros programas para especificar os nomes de fontes de dados.  
@@ -64,7 +59,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  Embora essas informações podem ser gravadas diretamente para o registro sem usar **:: SQLConfigDataSource**, qualquer aplicativo que faz isso requer que a técnica atual que usa o Gerenciador de Driver para manter seus dados. Se uma revisão posterior ao Gerenciador de Driver ODBC implementa registro mantendo sobre fontes de dados de maneira diferente, qualquer aplicativo que usa essa técnica será interrompido. É aconselhável geralmente usa uma função de API quando é fornecida. Por exemplo, seu código é portátil de 16 bits para 32 bits se você usar o **:: SQLConfigDataSource** funcionar, pois a função grava corretamente o arquivo Odbc.ini ou no registro.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> Parâmetros de SQLConfigDataSource  
  A seguir explica os parâmetros de **:: SQLConfigDataSource** função. Muitas das informações é retirada da API do ODBC *referência do programador* fornecido com o Visual C++ versão 1.5 e posteriores.  
   
 ###  <a name="_core_function_prototype"></a> Protótipo de função  
@@ -105,7 +100,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
     -   Para 32 bits, localizar a chave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Fontes de dados INI\ODBC** no painel esquerdo.  
   
-         O painel direito lista as entradas do formulário: "pub: REG_SZ:*<data source name>*", onde  *<data source name>*  é uma fonte de dados que já foi configurada com as configurações desejadas para o driver que você pretende Para usar. Selecione a fonte de dados, por exemplo, o SQL Server. Os itens a seguir a cadeia de caracteres "pub:" são, na ordem, o keyname e o valor para usar em seu `lpszAttributes` parâmetro.  
+         O painel direito lista as entradas do formulário: "pub: REG_SZ:*<data source name>*", onde *<data source name>* é uma fonte de dados que já foi configurada com as configurações desejadas para o driver que você pretende Para usar. Selecione a fonte de dados, por exemplo, o SQL Server. Os itens a seguir a cadeia de caracteres "pub:" são, na ordem, o keyname e o valor para usar em seu `lpszAttributes` parâmetro.  
   
     -   Para 16 bits, localize a seção no arquivo Odbc.ini marcado por [*\<nome da fonte de dados >*].  
   

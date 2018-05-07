@@ -1,12 +1,9 @@
 ---
 title: 'Cdatasource:: Open | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b21add1180343070fb85da113309e0a31f86aeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3196aa89426e895dd6b73b28ce197e8f271a0262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 Abre uma conexão a uma fonte de dados usando um **CLSID**, **ProgID**, ou `CEnumerator` moniker ou solicita ao usuário uma caixa de diálogo do localizador.  
@@ -114,7 +109,7 @@ HRESULT Open(LPCSTR szProgID,
  Um padrão `HRESULT`.  
   
 ## <a name="remarks"></a>Comentários  
- A sobrecarga do método que usa o `hWnd` parâmetro abre um objeto de fonte de dados com os componentes de serviço no Oledb32; essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, inscrição de transação automática, e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB do programador em [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ A sobrecarga do método que usa o `hWnd` parâmetro abre um objeto de fonte de dados com os componentes de serviço no Oledb32; essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, inscrição de transação automática, e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB do programador em [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  As sobrecargas de método que não usam o `hWnd` parâmetro abrir um objeto de fonte de dados sem usar os componentes de serviço no Oledb32. Um [CDataSource](../../data/oledb/cdatasource-class.md) objeto aberto com essas sobrecargas de função, será possível usar qualquer funcionalidade de componentes de serviço.  
   

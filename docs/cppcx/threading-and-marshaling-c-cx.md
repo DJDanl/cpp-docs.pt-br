@@ -1,11 +1,8 @@
 ---
 title: Threading e Marshaling (C + + CX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - C4451
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1544f18d0d5206e178cf42705d9567fad2423c
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 60d96b46caea15b46e0d6300733efddb98a1b4da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshaling (C++/CX)
 Na grande maioria dos casos, as instâncias de classes de tempo de execução do Windows, como os objetos C++ padrão, podem ser acessadas de qualquer thread. Essas classes são chamadas de "agile". No entanto, um pequeno número de classes de tempo de execução do Windows que acompanham o Windows não é Agile e deve ser mais consumido como objetos COM que os objetos C++ padrão. Não é necessário ser um especialista em COM para usar classes não agile, mas é preciso levar em consideração o modelo de threading da classe e seu comportamento de marshaling. Este artigo fornece informações básicas e orientação para os cenários raros em que é necessário consumir uma instância de uma classe não agile.  
@@ -32,7 +27,7 @@ Na grande maioria dos casos, as instâncias de classes de tempo de execução do
 ## <a name="threading-model-and-marshaling-behavior"></a>Modelo de threading e comportamento de marshaling  
  Uma classe de tempo de execução do Windows pode dar suporte a acesso de thread simultâneo de várias maneiras, conforme indicado pelos dois atributos aplicados a ela:  
   
--   O atributo `ThreadingModel` pode ter um dos valores —STA, MTA ou Both, conforme definido pela enumeração `ThreadingModel`.  
+-   O atributo`ThreadingModel` pode ter um dos valores —STA, MTA ou Both, conforme definido pela enumeração `ThreadingModel` .  
   
 -   O atributo`MarshallingBehavior` pode ter um dos valores — Agile, None ou Standard, conforme definido pela enumeração `MarshallingType` .  
   
@@ -108,7 +103,7 @@ ref class MyOptions
   
  Você pode modificar o modelo de threading e o comportamento de marshaling de uma classe ref. No entanto, se você fizer alterações que tornem a classe não agile, deverá entender as implicações associadas a essas alterações.  
   
- O exemplo a seguir mostra como aplicar `MarshalingBehavior` e `ThreadingModel` atributos a uma classe de tempo de execução em uma biblioteca de classes de tempo de execução do Windows. Quando um aplicativo usa a DLL e a palavra-chave `ref new` para ativar um objeto de classe `MySTAClass`, o objeto é ativado em um single-threaded apartment e não oferece suporte para marshaling.  
+ O exemplo a seguir mostra como aplicar `MarshalingBehavior` e `ThreadingModel` atributos a uma classe de tempo de execução em uma biblioteca de classes de tempo de execução do Windows. Quando um aplicativo usa a DLL e a palavra-chave `ref new` para ativar um objeto de classe `MySTAClass` , o objeto é ativado em um single-threaded apartment e não oferece suporte para marshaling.  
   
 ```  
 using namespace Windows::Foundation::Metadata;  

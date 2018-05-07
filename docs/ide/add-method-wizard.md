@@ -1,13 +1,10 @@
 ---
-title: "Adicionar Assistente de método | Microsoft Docs"
-ms.custom: 
+title: Adicionar Assistente de método | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>Assistente de Adição de Método
 Use este assistente para adicionar um método para uma interface. Dependendo do tipo de projeto ou o tipo de interface à qual você está adicionando um método, o assistente exibe opções diferentes.  
   
 ## <a name="names"></a>Nomes  
  **Tipo de retorno**  
- O tipo de dados retornado pelo método. `HRESULT`é recomendado para todos os tipos de interface, porque ele fornece uma maneira padrão para retornar erros.  
+ O tipo de dados retornado pelo método. `HRESULT` é recomendado para todos os tipos de interface, porque ele fornece uma maneira padrão para retornar erros.  
   
 |Tipo de interface|Descrição|  
 |--------------------|-----------------|  
@@ -78,7 +73,7 @@ Use este assistente para adicionar um método para uma interface. Dependendo do 
 |-------------------------|-----------------|--------------------------|  
 |**In**|Indica que o parâmetro é transmitido do procedimento de chamada para o procedimento chamado.|**em** apenas<br /><br /> **em** e **-out**|  
 |**Saída**|Indica que o parâmetro de ponteiro é retornado do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|**limite** apenas<br /><br /> **em** e **-out**<br /><br /> **out** e **retval**|  
-|**Retval**|Indica que o parâmetro recebe o valor de retorno do membro.|**retval** e out|  
+|**retval**|Indica que o parâmetro recebe o valor de retorno do membro.|**retval** e out|  
   
  **Tipo de parâmetro**  
  Define o tipo de dados do parâmetro. Selecione o tipo da lista.  

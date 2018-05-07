@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Rolando (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>Conjunto de registros: rolando (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -44,7 +39,7 @@ Este tópico se aplica às classes MFC ODBC.
   
 -   [Sob quais circunstâncias rolagem é e não há suporte para](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>Rolagem de um registro para outro  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> Rolagem de um registro para outro  
  Classe `CRecordset` fornece o **mover** funções de membro para rolar dentro de um conjunto de registros. Essas funções mover o registro atual por conjuntos de linhas. Se você tiver implementado em busca de linhas em massa, um **mover** operação reposiciona o conjunto de registros pelo tamanho do conjunto de linhas. Se você não tiver implementado linhas em massa buscar, uma chamada para um **mover** função reposiciona o conjunto de registros por um registro de cada vez. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`Retorna um valor diferente de zero se o conjunto de registros é posicionado após o último registro. `IsBOF`Retorna um valor diferente de zero se o conjunto de registros é posicionado antes do primeiro registro (antes de todos os registros). Em ambos os casos, não há nenhum registro atual para operar. Se você chamar `MovePrev` quando `IsBOF` já está **TRUE** ou chamar `MoveNext` quando `IsEOF` já **TRUE**, o framework lança uma `CDBException`. Você também pode usar `IsBOF` e `IsEOF` para verificar se há um conjunto de registros vazio.  
+ `IsEOF` Retorna um valor diferente de zero se o conjunto de registros é posicionado após o último registro. `IsBOF` Retorna um valor diferente de zero se o conjunto de registros é posicionado antes do primeiro registro (antes de todos os registros). Em ambos os casos, não há nenhum registro atual para operar. Se você chamar `MovePrev` quando `IsBOF` já está **TRUE** ou chamar `MoveNext` quando `IsEOF` já **TRUE**, o framework lança uma `CDBException`. Você também pode usar `IsBOF` e `IsEOF` para verificar se há um conjunto de registros vazio.  
   
  Para obter mais informações sobre a navegação do conjunto de registros, consulte [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a>Quando a rolagem é suportado  
+##  <a name="_core_when_scrolling_is_supported"></a> Quando a rolagem é suportado  
  Como criado originalmente SQL fornecida roll-forward apenas, mas ODBC estende os recursos de rolagem. O nível de suporte para rolagem disponível depende de seu aplicativo funcione com nível de conformidade de ODBC API do driver, drivers de ODBC e se a biblioteca de cursores ODBC é carregada na memória. Para obter mais informações, consulte [ODBC](../../data/odbc/odbc-basics.md) e [ODBC: A biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]

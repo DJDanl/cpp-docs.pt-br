@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Parametrizando um conjunto de registros (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: parametrizando um conjunto de registros (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -44,7 +39,7 @@ Este tópico se aplica às classes MFC ODBC.
   
 -   [Como passar informações de parâmetro para um objeto de conjunto de registros em tempo de execução](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Conjuntos de registros com parâmetros  
+##  <a name="_core_parameterized_recordsets"></a> Conjuntos de registros com parâmetros  
  Um conjunto de registros com parâmetros permite passar informações de parâmetro em tempo de execução. Isso tem dois efeitos importante:  
   
 -   Isso pode resultar em maior velocidade de execução.  
@@ -53,7 +48,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  Quando você chama **abrir** para executar a consulta, o conjunto de registros usa as informações de parâmetro para concluir sua **SQL SELECT** instrução. Você pode parametrizar qualquer conjunto de registros.  
   
-##  <a name="_core_when_to_use_parameters"></a>Quando usar parâmetros  
+##  <a name="_core_when_to_use_parameters"></a> Quando usar parâmetros  
  Usos típicos para parâmetros incluem:  
   
 -   Passando argumentos de tempo de execução para uma consulta predefinida.  
@@ -97,7 +92,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  Para obter mais informações sobre filtros, consulte [conjunto de registros: filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Parametrizando sua classe de conjunto de registros  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrizando sua classe de conjunto de registros  
   
 > [!NOTE]
 >  Esta seção se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se você estiver usando a linha em massa busca, Implementando parâmetros é um processo semelhante. Para obter mais informações, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ Este tópico se aplica às classes MFC ODBC.
 
 >  A cadeia de caracteres mais provável para trabalhar com é a cadeia de caracteres que você especificar (se houver) para a classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membro de dados, mas alguns drivers ODBC podem permitir que parâmetros em outras cláusulas SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Passando valores de parâmetro em tempo de execução  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Passando valores de parâmetro em tempo de execução  
  Você deve especificar valores de parâmetro antes de chamar **abrir** (para um novo objeto de conjunto de registros) ou **Requery** (por um já existente).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Para passar valores de parâmetro para um objeto de conjunto de registros em tempo de execução  

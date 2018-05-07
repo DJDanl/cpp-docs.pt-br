@@ -1,13 +1,10 @@
 ---
 title: Preenchendo uma caixa de listagem de um segundo conjunto de registros (MFC acesso a dados) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e411ebcf40099a2236048dd8f151b438fe5b947
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Preenchendo uma caixa de listagem de um segundo conjunto de registros (Acesso a dados MFC)
 Por padrão, uma exibição do registro está associada a objeto de um conjunto de registros único, cujos campos são mapeados para os controles de exibição do registro. Às vezes, convém colocar um controle de caixa de listagem ou caixa de combinação na exibição do registro e preenchê-lo com valores de um segundo objeto do conjunto de registros. O usuário pode usar a caixa de listagem para selecionar uma nova categoria de informações a serem exibidas na exibição do registro. Este tópico explica como e quando fazer isso.  

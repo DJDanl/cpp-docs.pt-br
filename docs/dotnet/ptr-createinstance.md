@@ -2,11 +2,8 @@
 title: PTR::CreateInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.CreateInstance
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::CreateInstance
 ms.assetid: 9e8e4c4c-1651-4839-8829-5857d74470fe
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d764d18f3148dba663e1e6796c44a0add6aa8109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 Cria uma instância de um objeto COM em um `com::ptr`.  
@@ -86,7 +81,7 @@ void CreateInstance(
  Contexto no qual o código que gerencia o objeto recém-criado será executado. Os valores são tirados de `CLSCTX` enumeração. Se `cls_context` não for especificado, o valor CLSCTX_ALL é usado.  
   
  `rclsid`  
- `CLSID`associado a dados e o código que será usado para criar o objeto.  
+ `CLSID` associado a dados e o código que será usado para criar o objeto.  
   
 ## <a name="exceptions"></a>Exceções  
  Se o `com::ptr` já possui uma referência a um objeto COM, `CreateInstance` lança <xref:System.InvalidOperationException>.  
@@ -94,7 +89,7 @@ void CreateInstance(
  Esta função chama `CoCreateInstance` e usa <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> para converter qualquer erro `HRESULT` para uma exceção apropriada.  
   
 ## <a name="remarks"></a>Comentários  
- `CreateInstance`usa `CoCreateInstance` para criar uma nova instância do objeto especificado, identificado um ProgID ou CLSID. O `com::ptr` faz referência ao objeto recém-criado e liberará automaticamente todos os proprietários referências após a destruição.  
+ `CreateInstance` usa `CoCreateInstance` para criar uma nova instância do objeto especificado, identificado um ProgID ou CLSID. O `com::ptr` faz referência ao objeto recém-criado e liberará automaticamente todos os proprietários referências após a destruição.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto. Os construtores de classe usam duas formas diferentes de `CreateInstance` para criar o objeto de documento a partir de ProgID ou CLSID mais um CLSCTX.  

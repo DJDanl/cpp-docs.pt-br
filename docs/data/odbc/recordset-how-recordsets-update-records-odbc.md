@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Conjunto de registros: como conjuntos de registros atualizam registros (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -51,7 +46,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  [Conjunto de registros: Mais sobre atualizações (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) conclui a história de atualização de conjunto de registros, explicando como transações afetam atualizações, como rolagem ou um conjunto de registros de fechamento afeta as atualizações em andamento e como as atualizações interagem com as atualizações de outros usuários.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>Sua função na atualização do conjunto de registros  
+##  <a name="_core_your_role_in_recordset_updating"></a> Sua função na atualização do conjunto de registros  
  A tabela a seguir mostra a função usando conjuntos de registros para adicionar, editar ou excluir registros, juntamente com a estrutura que se faz para você.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>Atualizando o conjunto de registros: Você e o Framework  
@@ -66,7 +61,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  Para obter mais informações sobre transações, consulte [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a>O Buffer de edição  
+##  <a name="_core_the_edit_buffer"></a> O Buffer de edição  
  Feito coletivamente, os membros de um conjunto de registros de dados de campo servem como um buffer de edição que contém um registro, o registro atual. Operações de atualização usam esse buffer para operar no registro atual.  
   
 -   Quando você adiciona um registro, o buffer de edição é usado para criar um novo registro. Quando terminar de adicionar o registro, o registro que foi anteriormente atual se torna atual novamente.  
@@ -78,7 +73,7 @@ Este tópico se aplica às classes MFC ODBC.
 > [!NOTE]
 >  O buffer de edição não desempenha nenhuma função na exclusão do registro. Quando você excluir o registro atual, o registro é marcado como excluído, e o conjunto de registros é "não está em um registro" até que você rolar para um registro diferente.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>Instantâneos e dynasets  
+##  <a name="_core_dynasets_and_snapshots"></a> Instantâneos e dynasets  
  [Dynasets](../../data/odbc/dynaset.md) enquanto você rola para o registro de atualização de conteúdo do registro. [Instantâneos](../../data/odbc/snapshot.md) são representações estáticas de registros, para que o conteúdo do registro não é atualizado, a menos que você chame [Requery](../../mfc/reference/crecordset-class.md#requery). Para usar toda a funcionalidade do dynasets, você deve estar trabalhando com um driver ODBC que está de acordo com o nível correto de suporte à API de ODBC. Para obter mais informações, consulte [ODBC](../../data/odbc/odbc-basics.md) e [Dynaset](../../data/odbc/dynaset.md).  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,11 +1,8 @@
 ---
 title: 'Classe Platform:: String | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 Representa uma coleção sequencial de caracteres Unicode que é usada para representar o texto. Para obter mais informações e exemplos, consulte [cadeias de caracteres](../cppcx/strings-c-cx.md).  
@@ -278,7 +273,7 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>  String::IsFastPass Method
+## <a name="isfastpass"></a>  Método: isfastpass
 Indica se o objeto String atual está participando de uma operação de *passagem rápida* . Em uma operação de passagem rápida, a contagem de referência é suspensa.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Comentários  
  O operador cria um objeto `String^` que contém os dados dos dois operandos. Use-o de acordo com sua conveniência quando o desempenho extremo não for crítico. Algumas chamadas para “`+`” em uma função provavelmente não serão visíveis, mas se você estiver manipulando objetos grandes ou dados de texto em um loop estreito, use os mecanismos e os tipos de C++ padrão.  
   
-##  <a name="operator-equality">String:: Operator = = operador</a>
+##  <a name="operator-equality"></a> String:: Operator = = operador
 Indica se dois objetos de cadeia de caracteres especificados têm o mesmo valor de texto.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -411,7 +406,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a> String::operator!= 
+## <a name="operator-inequality"></a> String:: Operator! = 
 Indica se dois objetos String especificados têm valores diferentes.  
   
 ### <a name="syntax"></a>Sintaxe  

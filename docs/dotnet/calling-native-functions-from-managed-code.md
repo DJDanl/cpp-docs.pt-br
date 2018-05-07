@@ -1,13 +1,10 @@
 ---
-title: "Chamando funções nativas do código gerenciado | Microsoft Docs"
-ms.custom: 
+title: Chamando funções nativas do código gerenciado | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chamando funções nativas a partir do código gerenciado
 O common language runtime fornece serviços de invocação de plataforma, ou PInvoke, que permite código gerenciado para chamar funções de estilo C em nativo bibliotecas de vínculo dinâmico (DLLs). Os mesmos dados de empacotamento são usados para interoperabilidade COM o tempo de execução e para o mecanismo de "Simplesmente funciona" ou IJW.  
@@ -40,9 +35,9 @@ O common language runtime fornece serviços de invocação de plataforma, ou PIn
   
 -   [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Invocação de plataforma examinar mais detalhadamente](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [Um olhar detalhado sobre invocação de plataforma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- Os exemplos nesta seção ilustram apenas como `PInvoke` pode ser usado. `PInvoke`pode simplificar o marshaling de dados personalizados, porque você fornecer informações de marshaling declarativamente em atributos em vez de gravar o código de marshaling de procedimento.  
+ Os exemplos nesta seção ilustram apenas como `PInvoke` pode ser usado. `PInvoke` pode simplificar o marshaling de dados personalizados, porque você fornecer informações de marshaling declarativamente em atributos em vez de gravar o código de marshaling de procedimento.  
   
 > [!NOTE]
 >  A biblioteca de marshaling fornece uma maneira alternativa de realizar marshaling de dados entre ambientes nativos e gerenciados de forma otimizada. Consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md) para obter mais informações sobre a biblioteca de marshaling. A biblioteca de marshaling é usada somente para dados e não para funções.  

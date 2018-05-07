@@ -1,13 +1,10 @@
 ---
-title: "Notação de conversão e introdução de safe_cast&lt; &gt; | Microsoft Docs"
-ms.custom: 
+title: Notação de conversão e introdução de safe_cast&lt; &gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Notação de conversão e introdução de safe_cast&lt;&gt;
 A notação de conversão foi alterado de extensões gerenciadas para C++ para Visual C++.  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  Para que a proposta foi tirada de volta para mais considerações e várias notações alternativas foram consideradas e aquela trazidas de volta para o comitê estava no formato (`?type`), que indicado indeterminado - ou seja, a natureza dinâmica. Isso fornecia ao usuário a capacidade de alternar entre as duas formas - estáticas ou dinâmicas - mas não era muito satisfeito com ele. Por isso, foi volta para o quadro de desenho. A notação de terceira e bem-sucedida é o agora padrão `dynamic_cast<type>`, que foi generalizado para um conjunto de quatro notações de conversão de novo estilo.  
   
- No ISO C++, `dynamic_cast` retorna `0` quando aplicado a um tipo de ponteiro inadequado e lança um `std::bad_cast` exceção quando aplicado a um tipo de referência. Em extensões gerenciadas para C++, aplicando `dynamic_cast` para um tipo de referência gerenciada (por causa de sua representação de ponteiro) sempre retornado `0`. `__try_cast<type>`foi introduzido como um analógico à exceção lançando a variante do `dynamic_cast`, exceto que ele lança `System::InvalidCastException` se a conversão falhar.  
+ No ISO C++, `dynamic_cast` retorna `0` quando aplicado a um tipo de ponteiro inadequado e lança um `std::bad_cast` exceção quando aplicado a um tipo de referência. Em extensões gerenciadas para C++, aplicando `dynamic_cast` para um tipo de referência gerenciada (por causa de sua representação de ponteiro) sempre retornado `0`. `__try_cast<type>` foi introduzido como um analógico à exceção lançando a variante do `dynamic_cast`, exceto que ele lança `System::InvalidCastException` se a conversão falhar.  
   
 ```  
 public __gc class ItemVerb;  

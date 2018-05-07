@@ -2,7 +2,7 @@
 title: C4400 de avisos do compilador por meio de C4599 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de avisos do compilador por meio de C4599
 
@@ -282,7 +281,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'continue': salto para fora do bloco Finally/finally' possui comportamento indefinido durante manipulação de encerramento|
 |[Aviso do compilador (nível 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|inicialização de '*variável*'é ignorada por'*rótulo goto*'|
 |[Aviso do compilador (nível 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|'*construtor*'não será um construtor padrão para 'classe/struct' '*identificador*' devido ao argumento padrão|
-|[Aviso do compilador (nível 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
+|[Aviso do compilador (nível 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|chamada _set_se_translator() requer /EHa|
 |[Aviso do compilador (nível 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'*typename*': nome de tipo excede o limite de metadados de '*character_limit*' caracteres|
 |[Aviso do compilador (nível 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'*objeto*': '.' aplicado a tipo não UDT|
 |[Aviso do compilador (nível 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'*tipo*': não há suporte para qualificadores const/volatile neste tipo|

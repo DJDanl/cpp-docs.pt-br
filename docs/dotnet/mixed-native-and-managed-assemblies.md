@@ -1,13 +1,10 @@
 ---
 title: Misto (gerenciados e nativos) Assemblies | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac18841d5050bc8fb849ac542dc298ce89c964f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assemblies mistos (nativos e gerenciados)
 Assemblies mistos são capazes de conter instruções de máquina não gerenciada e instruções da MSIL. Isso permite que eles chamar e ser chamado pelos componentes do .NET, enquanto mantém a compatibilidade com os componentes que não são totalmente gerenciados. Usando assemblies mistos, os desenvolvedores poderão criar aplicativos que usam uma combinação de recursos gerenciados e não gerenciados. Isso torna assemblies mistos ideal para migrar aplicativos existentes do Visual C++ para a plataforma .NET.  
@@ -69,7 +64,7 @@ Assemblies mistos são capazes de conter instruções de máquina não gerenciad
  [Como criar um aplicativo parcialmente confiável removendo a dependência da DLL da biblioteca CRT](../dotnet/create-a-partially-trusted-application.md)  
  Discute como criar um aplicativo de Common Language Runtime parcialmente confiável usando o Visual C++, removendo a dependência no msvcm90.dll.  
   
- Para obter mais informações sobre diretrizes de codificação para assemblies mistos, consulte o artigo do MSDN "Uma visão geral de gerenciado/não gerenciado interoperabilidade de código" em [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
+ Para obter mais informações sobre diretrizes de codificação para assemblies mistos, consulte o artigo do MSDN "Uma visão geral de gerenciado/não gerenciado interoperabilidade de código" em [ http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp ](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>Consulte também  
  [Interoperabilidade entre .NET e nativo](../dotnet/native-and-dotnet-interoperability.md)

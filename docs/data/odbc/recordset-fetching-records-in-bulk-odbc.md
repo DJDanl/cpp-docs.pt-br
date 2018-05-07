@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Recuperando registros em massa (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Conjunto de registros: recuperando registros em massa (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -49,7 +44,7 @@ Este tópico se aplica às classes MFC ODBC.
   
 -   [Como implementar a troca de campos de registro em massa](#_core_how_to_implement_bulk_record_field_exchange).  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Como CRecordset oferece suporte à busca de linhas em massa  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Como CRecordset oferece suporte à busca de linhas em massa  
  Antes de abrir o objeto de conjunto de registros, você pode definir um tamanho de conjunto de linhas com o `SetRowsetSize` função de membro. O tamanho do conjunto de linhas Especifica quantos registros devem ser recuperados durante uma única busca. Quando a busca de linhas em massa é implementada, o tamanho do conjunto de linhas padrão é 25. Se não for implementado busca de linhas em massa, o tamanho do conjunto de linhas permanece fixado em 1.  
   
  Depois que inicializou o tamanho do conjunto de linhas, chame o [abrir](../../mfc/reference/crecordset-class.md#open) função de membro. É necessário especificar o `CRecordset::useMultiRowFetch` opção do **dwOptions** parâmetro para implementar a busca de linhas em massa. Além disso, você pode definir o **CRecordset::userAllocMultiRowBuffers** opção. O mecanismo de troca de campos de registro em massa usa matrizes para armazenar várias linhas de dados recuperados durante uma busca. Esses buffers de armazenamento podem ser alocados automaticamente pelo framework ou alocá-los manualmente. Especificando o **CRecordset::userAllocMultiRowBuffers** opção significa que você faça a alocação.  
@@ -67,7 +62,7 @@ Este tópico se aplica às classes MFC ODBC.
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Move o cursor para uma linha específica em um conjunto de linhas.|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Função virtual que altera a configuração para o tamanho do conjunto de linhas para o valor especificado.|  
   
-##  <a name="_core_special_considerations"></a>Considerações especiais  
+##  <a name="_core_special_considerations"></a> Considerações especiais  
  Embora a busca de linhas em massa é um ganho de desempenho, certos recursos operam de forma diferente. Antes de decidir implementar a busca de linhas em massa, considere o seguinte:  
   
 -   O framework chama automaticamente o `DoBulkFieldExchange` a função de membro para transferir dados da fonte de dados para o objeto de conjunto de registros. No entanto, dados não são transferidos do conjunto de volta para a fonte de dados. Chamando o `AddNew`, **editar**, **excluir**, ou **atualização** resultados de funções de membro em uma declaração com falha. Embora `CRecordset` atualmente não fornece um mecanismo para atualizar linhas em massa de dados, você pode escrever suas próprias funções usando a função de API ODBC **SQLSetPos**. Para obter mais informações sobre **SQLSetPos**, consulte o *referência do programador de ODBC SDK* na documentação do MSDN.  
@@ -78,7 +73,7 @@ Este tópico se aplica às classes MFC ODBC.
   
 -   Ao contrário de troca de campos de registro, os assistentes não dão suporte a troca de campos de registro em massa. Isso significa que você deve declarar manualmente os membros de dados de campo e substituir manualmente `DoBulkFieldExchange` escrevendo chamadas para as funções RFX em massa. Para obter mais informações, consulte [funções de troca de campos do registro](../../mfc/reference/record-field-exchange-functions.md) no *referência da biblioteca de classe*.  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>Como implementar a troca de campos de registro em massa  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> Como implementar a troca de campos de registro em massa  
  Troca de campos de registro em massa transfere um conjunto de linhas de dados da fonte de dados para o objeto de conjunto de registros. As funções RFX em massa usarem matrizes para armazenar esses dados, bem como matrizes para armazenar o comprimento de cada item de dados no conjunto de linhas. Em sua definição de classe, você deve definir os membros de dados do campo como ponteiros para acessar os conjuntos de dados. Além disso, você deve definir um conjunto de ponteiros para acessar as matrizes de comprimento. Quaisquer membros de dados do parâmetro não devem ser declarados como ponteiros; declarar membros de dados de parâmetro ao usar a troca de campos de registro em massa é o mesmo que declará-los ao usar a troca de campos de registro. O código a seguir mostra um exemplo simples:  
   
 ```  
