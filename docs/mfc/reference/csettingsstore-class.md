@@ -1,12 +1,9 @@
 ---
 title: Classe CSettingsStore | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>Classe CSettingsStore
 Encapsula as funções de API do Windows, fornecendo uma interface orientada a objeto que você usa para acessar o registro.  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  Fecha a chave do Registro aberta.  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método é chamado do destruidor do [CSettingsStore classe](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  Abre uma chave do registro ou cria se ele não existe.  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  0 se for bem-sucedido; Caso contrário, um valor diferente de zero.  
   
 ### <a name="remarks"></a>Comentários  
- `CreateKey`usa `m_hKey` como a raiz de consultas de registro. Ele procura `pszPath` como uma subchave de `m_hKey`. Se a chave não existir, `CreateKey` cria. Caso contrário, ele abre a chave. `CreateKey`em seguida, define `m_hKey` para a chave criada ou aberta.  
+ `CreateKey` usa `m_hKey` como a raiz de consultas de registro. Ele procura `pszPath` como uma subchave de `m_hKey`. Se a chave não existir, `CreateKey` cria. Caso contrário, ele abre a chave. `CreateKey` em seguida, define `m_hKey` para a chave criada ou aberta.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Cria um objeto `CSettngsStore`.  
   
 ```  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  O destruidor de `CSettingsStore` libera `m_hKey` automaticamente.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  Exclui todos os seus filhos e uma chave do registro.  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  Se o parâmetro `bAdmin` for zero, `DeleteKey` procura a chave a ser excluída em `HKEY_CURRENT_USER`. Se `bAdmin` é diferente de zero, `DeleteKey` procura a chave a ser excluída em `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Exclui um valor de `m_hKey`.  
   
 ```  
@@ -176,7 +171,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  Abre uma chave do registro.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Comentários  
  Depois que este método abre com êxito a chave especificada, ele define `m_hKey` no identificador dessa chave.  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  Lê um valor de uma chave do registro.  
   
 ```  
@@ -321,9 +316,9 @@ virtual BOOL Read(
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- `Read`verifica se há `pszKey` como uma subchave de `m_hKey`.  
+ `Read` verifica se há `pszKey` como uma subchave de `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  Grava um valor do registro na chave aberta.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: 'Servidores: Itens do servidor | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe196eb561c336e45402de6c390146a0d77bea4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-server-items"></a>Servidores: itens de servidor
 Quando um contêiner inicia um servidor para que um usuário pode editar um item OLE incorporado ou vinculado, o aplicativo de servidor cria um "item de servidor". O item do servidor, que é um objeto de uma classe derivada de `COleServerItem`, fornece uma interface entre o documento do servidor e o aplicativo de contêiner.  
@@ -36,7 +31,7 @@ Quando um contêiner inicia um servidor para que um usuário pode editar um item
   
  No [HIERSVR](../visual-cpp-samples.md) de exemplo, por exemplo, a classe de item de servidor, **CServerItem**, tem um membro que é um ponteiro para um objeto da classe **CServerNode**. O **CServerNode** objeto for um nó de documento do aplicativo HIERSVR, que é uma árvore. Quando o **CServerNode** objeto é o nó raiz, o **CServerItem** objeto representa o documento inteiro. Quando o **CServerNode** objeto é um nó filho, o **CServerItem** objeto representa uma parte do documento. Consulte o exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md) para obter um exemplo dessa interação.  
   
-##  <a name="_core_implementing_server_items"></a>Implementação de itens do servidor  
+##  <a name="_core_implementing_server_items"></a> Implementação de itens do servidor  
  Se você usar o Assistente de aplicativo para gerar o código de "início" para seu aplicativo, você precisa fazer para incluir itens de servidor no seu código inicial é escolher uma das opções de servidor da página de opções OLE. Se você estiver adicionando itens do servidor para um aplicativo existente, execute as seguintes etapas:  
   
 #### <a name="to-implement-a-server-item"></a>Para implementar um item de servidor  
@@ -51,7 +46,7 @@ Quando um contêiner inicia um servidor para que um usuário pode editar um item
   
 4.  Implementar sua classe de item de servidor `OnGetExtent` função de membro. O framework chama esta função para recuperar o tamanho do item. A implementação padrão não fará nada.  
   
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a>Uma dica para arquitetura de Item do servidor  
+##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> Uma dica para arquitetura de Item do servidor  
  Conforme observado na [itens do servidor implementando](#_core_implementing_server_items), aplicativos de servidor devem ser capazes de processar os itens no modo de exibição do servidor e em um meta-arquivo usado pelo aplicativo de contêiner. No arquitetura do aplicativo da biblioteca Microsoft Foundation Class, a classe de exibição `OnDraw` função membro renderiza o item quando ele está sendo editado (consulte [CView::OnDraw](../mfc/reference/cview-class.md#ondraw) no *referência da biblioteca de classe* ). O item do servidor `OnDraw` renderiza o item em um meta-arquivo em todos os outros casos (consulte [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
  Você pode evitar a duplicação de código escrevendo funções auxiliares em sua classe de documento do servidor e chamando-as do `OnDraw` funções em suas classes de exibição e o item do servidor. O exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md) usa essa estratégia: as funções **CServerView::OnDraw** e **CServerItem::OnDraw** chamam **CServerDoc::DrawTree**  para renderizar o item.  

@@ -1,12 +1,9 @@
 ---
 title: C2893 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2893
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a926b6cf935d1910681b77d95f60847205bc05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db3b71a05ece6b79672d47699dc68e0eb5bb1f60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2893"></a>C2893 de erro do compilador
 Falha ao especializar template de função 'nome do modelo'  

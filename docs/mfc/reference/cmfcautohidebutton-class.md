@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCAutoHideButton | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideButton
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f40b7ab03e79d38d36a1b25a4cd973a5077468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebutton-class"></a>Classe CMFCAutoHideButton
 Um botão que exibe ou oculta um [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) que está configurado para ocultar.  
@@ -128,7 +123,7 @@ class CMFCAutoHideButton : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxautohidebutton.h  
   
-##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  
 
   
 ```  
@@ -137,7 +132,7 @@ void BringToTop();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="create"></a>CMFCAutoHideButton::Create  
+##  <a name="create"></a>  CMFCAutoHideButton::Create  
  Cria e inicializa um botão Ocultar automaticamente.  
   
 ```  
@@ -173,7 +168,7 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
+##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
  Recupera o alinhamento do botão Ocultar automaticamente.  
   
 ```  
@@ -194,7 +189,7 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
+##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
  Retorna o [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto associado com o botão Ocultar automaticamente.  
   
 ```  
@@ -207,7 +202,7 @@ CDockablePane* GetAutoHideWindow() const;
 ### <a name="remarks"></a>Comentários  
  Para associar um botão Ocultar automaticamente com um `CDockablePane`, passar o `CDockablePane` como um parâmetro para o [CMFCAutoHideButton::Create](#create) método.  
   
-##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
   
 ```  
@@ -218,7 +213,7 @@ CMFCAutoHideBar* GetParentToolBar();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect  
 
   
 ```  
@@ -229,7 +224,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
+##  <a name="getsize"></a>  CMFCAutoHideButton::GetSize  
  Determina o tamanho do botão Ocultar automaticamente.  
   
 ```  
@@ -242,7 +237,7 @@ CSize GetSize() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho calculado inclui o tamanho da borda do botão Ocultar automaticamente.  
   
-##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
+##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize  
  Retorna o tamanho do rótulo do texto do botão Ocultar automaticamente.  
   
 ```  
@@ -252,7 +247,7 @@ virtual CSize GetTextSize() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contém o tamanho do texto do botão Ocultar automaticamente.  
   
-##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
+##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
  Indica se o botão Ocultar automaticamente está ativo.  
   
 ```  
@@ -260,12 +255,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o botão Ocultar automaticamente estiver ativo; `FALSE` caso contrário.  
+ `TRUE` Se o botão Ocultar automaticamente estiver ativo; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Um botão Ocultar automaticamente estiver ativo quando associado [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) janela é exibida.  
   
-##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
+##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
  Determina se o botão Ocultar automaticamente é horizontal ou vertical.  
   
 ```  
@@ -278,7 +273,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Comentários  
  A estrutura define a orientação de um [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objeto quando você criá-lo.  Você pode controlar a orientação usando o `dwAlignment` parâmetro o [CMFCAutoHideButton::Create](#create) método.  
   
-##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
   
 ```  
@@ -289,7 +284,7 @@ BOOL IsTop() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
+##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible  
  Indica se o botão Ocultar automaticamente está visível.  
   
 ```  
@@ -297,9 +292,9 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o botão estiver visível; `FALSE` caso contrário.  
+ `TRUE` Se o botão estiver visível; `FALSE` caso contrário.  
   
-##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
  O framework chama este método quando ele se baseia no botão Ocultar automaticamente.  
   
 ```  
@@ -313,7 +308,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Comentários  
  Se você deseja personalizar a aparência dos botões de ocultar automaticamente em seu aplicativo, crie uma nova classe derivada de `CMFCAutoHideButton`. Em sua classe derivada, substitua este método.  
   
-##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
  O framework chama este método quando ele desenha a borda de um botão Ocultar automaticamente.  
   
 ```  
@@ -336,7 +331,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Comentários  
  Se você quiser personalizar a borda de cada botão Ocultar automaticamente em seu aplicativo, crie uma nova classe que deriva de `CMFCAutoHideButton`. Em sua classe derivada, substitua este método.  
   
-##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
  O framework chama este método quando ele preenche o plano de fundo de um botão Ocultar automaticamente.  
   
 ```  
@@ -355,7 +350,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>Comentários  
  Se você deseja personalizar o plano de fundo botões de ocultar automaticamente em seu aplicativo, crie uma nova classe que deriva de `CMFCAutoHideButton`. Em sua classe derivada, substitua este método.  
   
-##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
+##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
  Mostra ou oculta associado [CDockablePane classe](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -366,7 +361,7 @@ void ShowAttachedWindow(BOOL bShow);
  [in] `bShow`  
  Um valor booleano que especifica se esse método mostra o anexo `CDockablePane`.  
   
-##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
+##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Mostra ou oculta o botão Ocultar automaticamente.  
   
 ```  
@@ -377,7 +372,7 @@ virtual void ShowButton(BOOL bShow);
  [in] `bShow`  
  Um valor booleano que especifica se deve mostrar o botão Ocultar automaticamente.  
   
-##  <a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
   
 ```  
@@ -389,7 +384,7 @@ void Move(int nOffset);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane  
 
   
 ```  
@@ -401,7 +396,7 @@ void ReplacePane(CDockablePane* pNewBar);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideButton::UnSetAutoHideMode  
  Desabilite o modo de ocultar automaticamente.  
   
 ```  
@@ -414,7 +409,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
+##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton  
  Realça o botão Ocultar automaticamente.  
   
 ```  
@@ -423,11 +418,11 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="parameters"></a>Parâmetros  
  `bHighlight`  
- Especifica o novo AutoOcultar estado do botão. `TRUE`indica que o botão é realçado, `FALSE` indica que o botão não esteja realçado.  
+ Especifica o novo AutoOcultar estado do botão. `TRUE` indica que o botão é realçado, `FALSE` indica que o botão não esteja realçado.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted  
  Retorna o estado de realce do botão Ocultar automaticamente.  
   
 ```  

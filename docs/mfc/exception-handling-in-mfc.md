@@ -1,13 +1,10 @@
 ---
-title: "Tratamento de exceção no MFC | Microsoft Docs"
-ms.custom: 
+title: Tratamento de exceção no MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>Tratamento de exceções em MFC
 Este artigo explica os mecanismos de tratamento de exceção disponíveis no MFC. Existem dois mecanismos:  
@@ -78,7 +73,7 @@ Este artigo explica os mecanismos de tratamento de exceção disponíveis no MFC
   
 -   [Ler mais sobre as exceções](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>Quando usar exceções  
+##  <a name="_core_when_to_use_exceptions"></a> Quando usar exceções  
  Três categorias de resultados podem ocorrer quando uma função é chamada durante a execução do programa: execução normal, execução incorreta ou execução anormal. Cada categoria é descrita abaixo.  
   
 -   Execução normal  
@@ -95,7 +90,7 @@ Este artigo explica os mecanismos de tratamento de exceção disponíveis no MFC
   
  Usando exceções é especialmente apropriada para execução anormal.  
   
-##  <a name="_core_mfc_exception_support"></a>Suporte de exceção MFC  
+##  <a name="_core_mfc_exception_support"></a> Suporte de exceção MFC  
  Se você usar as exceções de C++ diretamente ou usar as macros de exceção MFC, você usará [classe CException](../mfc/reference/cexception-class.md) ou `CException`-derivado de objetos que podem ser gerados pelo framework ou pelo seu aplicativo.  
   
  A tabela a seguir mostra as exceções predefinidas fornecidas pelo MFC.  
@@ -116,7 +111,7 @@ Este artigo explica os mecanismos de tratamento de exceção disponíveis no MFC
 > [!NOTE]
 >  MFC oferece suporte a exceções C++ e as macros de exceção MFC. MFC não oferece suporte direto manipuladores de exceção do Windows NT estruturado (SEH), conforme discutido em [tratamento de exceção estruturada](http://msdn.microsoft.com/library/windows/desktop/ms680657).  
   
-##  <a name="_core_further_reading_about_exceptions"></a>Leitura adicional sobre exceções  
+##  <a name="_core_further_reading_about_exceptions"></a> Leitura adicional sobre exceções  
  Os artigos a seguir explicam usando a biblioteca do MFC para tratamento de exceção:  
   
 -   [Exceções: obtendo e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md)  

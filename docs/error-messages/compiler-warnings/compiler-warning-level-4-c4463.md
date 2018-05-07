@@ -1,12 +1,9 @@
 ---
-title: "Compilador (nível 4) de aviso C4463 | Microsoft Docs"
-ms.custom: 
+title: Compilador (nível 4) de aviso C4463 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Compilador C4463 de aviso (nível 4)  
   
 > estouro; atribuindo *valor* para o campo de bits que pode conter apenas valores de *low_value* para *high_value*  
   
-Atribuída *valor* está fora do intervalo de valores que o campo de bits pode conter. Tipos de campo de bits assinados usam a ordem de alto bit de entrada, portanto, se  *n*  é o tamanho de campo de bits, o intervalo para campos de bits assinados -2<sup>n-1</sup> 2<sup>n-1</sup>-1, enquanto campos de bits sem sinal tem um intervalo de 0 a 2<sup>n</sup>-1.  
+Atribuída *valor* está fora do intervalo de valores que o campo de bits pode conter. Tipos de campo de bits assinados usam a ordem de alto bit de entrada, portanto, se *n* é o tamanho de campo de bits, o intervalo para campos de bits assinados -2<sup>n-1</sup> 2<sup>n-1</sup>-1, embora não assinado os campos de bits têm um intervalo de 0 a 2<sup>n</sup>-1.  
   
 ## <a name="example"></a>Exemplo  
   

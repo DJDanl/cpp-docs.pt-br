@@ -1,13 +1,10 @@
 ---
-title: "Escolhendo um método de implantação | Microsoft Docs"
-ms.custom: 
+title: Escolhendo um método de implantação | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bdf024f75f03b55465ccd15670c47d3c761e56e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Escolhendo uma método de implantação
 A menos que seu aplicativo do Visual C++ é independente e pode ser implantado por meio de um comando de cópia, recomendamos que você use o Windows Installer para implantação. O Windows Installer oferece suporte à instalação, ao reparo e à desinstalação, e também oferece suporte à atualização atômica dos arquivos de aplicativo, dependências e das entradas do Registro.  

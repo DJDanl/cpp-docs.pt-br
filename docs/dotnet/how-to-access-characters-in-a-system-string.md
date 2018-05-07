@@ -1,13 +1,10 @@
 ---
 title: 'Como: acessar caracteres em um System:: String | Microsoft Docs'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Como acessar caracteres em um System::String
 Você pode acessar caracteres de um <xref:System.String> objeto para chamadas de alto desempenho gerenciado para funções que usam `wchar_t*` cadeias de caracteres. O método gera um ponteiro interior para o primeiro caractere do <xref:System.String> objeto. Esse ponteiro pode ser manipulado diretamente ou fixado e transmitido para uma função esperando um comum `wchar_t` cadeia de caracteres.  
   
 ## <a name="example"></a>Exemplo  
- `PtrToStringChars`Retorna um <xref:System.Char>, que é um ponteiro interior (também conhecido como um `byref`). Como tal, está sujeito a coleta de lixo. Você não precisa Fixar este ponteiro, a menos que você vai passá-lo para uma função nativa.  
+ `PtrToStringChars` Retorna um <xref:System.Char>, que é um ponteiro interior (também conhecido como um `byref`). Como tal, está sujeito a coleta de lixo. Você não precisa Fixar este ponteiro, a menos que você vai passá-lo para uma função nativa.  
   
  Considere o código a seguir.  Fixando não é necessária porque `ppchar` é um ponteiro interior, e se o coletor de lixo move aponta para a cadeia de caracteres, ele também atualizará `ppchar`. Sem um [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md), o código irá funcionar e não ter o impacto potencial no desempenho causado por fixar.  
   

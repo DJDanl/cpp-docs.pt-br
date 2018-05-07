@@ -1,13 +1,10 @@
 ---
-title: "Servidores de automação: Problemas de vida útil do objeto | Microsoft Docs"
-ms.custom: 
+title: 'Servidores de automação: Problemas de vida útil do objeto | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9fab7af74dee482c5e8dffb327da9c037796fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e27812c20a64f5472c29a66298bcdec30bf4ef2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Servidores de automação: problemas de tempo de vida do objeto
 Quando um cliente de automação cria ou um item OLE é ativado, o servidor passa o cliente um ponteiro para o objeto. O cliente estabelece uma referência ao objeto por meio de uma chamada para a função OLE [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Essa referência está em vigor até que o cliente chama [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Os aplicativos cliente escritos com classes OLE da biblioteca Microsoft Foundation Class não precisam fazer essas chamadas; a estrutura faz isso). O sistema OLE e o próprio servidor podem estabelecer referências ao objeto. Um servidor não deve destruir um objeto como referências externas ao objeto permanecem em vigor.  

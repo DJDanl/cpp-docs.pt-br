@@ -1,13 +1,10 @@
 ---
 title: 'TN043: Rotinas RFX | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RFX
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19bb44653c03505d954318a01a6e34c1a297dba7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn043-rfx-routines"></a>TN043: rotinas RFX
 > [!NOTE]
@@ -99,15 +94,15 @@ RFX_Custom(pFX, "Col2",
   
 - **Valor** — Append "" seguido pelo separador, como ',' ou ' '  
   
-- `SetFieldDirty`— Defina o campo (ou seja, alterada) do status bit sujo  
+- `SetFieldDirty` — Defina o campo (ou seja, alterada) do status bit sujo  
   
-- `SetFieldNull`– Configure os bits de status que indica o valor nulo para o campo  
+- `SetFieldNull` – Configure os bits de status que indica o valor nulo para o campo  
   
-- `IsFieldDirty`— Retornar o valor de bit sujo de status  
+- `IsFieldDirty` — Retornar o valor de bit sujo de status  
   
-- `IsFieldNull`— Retornar o valor de bits de status nulo  
+- `IsFieldNull` — Retornar o valor de bits de status nulo  
   
-- `IsFieldNullable`— Retorna VERDADEIRO se o campo pode conter valores nulos  
+- `IsFieldNullable` — Retorna VERDADEIRO se o campo pode conter valores nulos  
   
 - **StoreField** — arquivar o valor do campo  
   

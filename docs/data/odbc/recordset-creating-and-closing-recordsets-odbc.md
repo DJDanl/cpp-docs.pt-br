@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Criando e fechando conjuntos de registros (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: criando e fechando conjuntos de registros (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -44,7 +39,7 @@ Este tópico se aplica às classes MFC ODBC.
   
 -   [Quando e como fechar um objeto de conjunto de registros](#_core_closing_a_recordset).  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>Criando conjuntos de registros em tempo de execução  
+##  <a name="_core_creating_recordsets_at_run_time"></a> Criando conjuntos de registros em tempo de execução  
  Antes de criar objetos de conjunto de registros em seu programa, você normalmente escrever classes de conjunto de registros específicos do aplicativo. Para obter mais informações sobre esta etapa preliminar, consulte [adicionando um consumidor de ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
  Abra um objeto dynaset ou instantâneo quando você precisa selecionar os registros de uma fonte de dados. O tipo de objeto para criar depende do que você precisa fazer com os dados em seu aplicativo e em que o driver ODBC oferece suporte. Para obter mais informações, consulte [Dynaset](../../data/odbc/dynaset.md) e [instantâneo](../../data/odbc/snapshot.md).  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  A cadeia de conexão, que você pode usar durante o desenvolvimento pode não ser a mesma cadeia de conexão que os usuários eventual precisam. Para obter ideias sobre generalizar seu aplicativo em relação a isso, consulte [fonte de dados: Gerenciando conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).  
   
-##  <a name="_core_setting_recordset_options"></a>Definindo opções de conjunto de registros  
+##  <a name="_core_setting_recordset_options"></a> Definindo opções de conjunto de registros  
  Depois de construir o objeto de conjunto de registros, mas antes de chamar **abrir** para selecionar registros, talvez você queira definir algumas opções para controlar o comportamento do conjunto de registros. Para todos os conjuntos de registros, você pode:  
   
 -   Especifique um [filtro](../../data/odbc/recordset-filtering-records-odbc.md) para restringir a seleção de registros.  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  Para afetar a seleção de registro, você deve definir essas opções antes de chamar o **abrir** função de membro.  
   
-##  <a name="_core_closing_a_recordset"></a>Fechar um conjunto de registros  
+##  <a name="_core_closing_a_recordset"></a> Fechar um conjunto de registros  
  Quando você concluir o conjunto de registros, você deve utilizadas e desalocar sua memória.  
   
 #### <a name="to-close-a-recordset"></a>Para fechar um conjunto de registros  

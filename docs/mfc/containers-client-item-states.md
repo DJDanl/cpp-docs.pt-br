@@ -1,13 +1,10 @@
 ---
-title: "Contêineres: Estados de Item do cliente | Microsoft Docs"
-ms.custom: 
+title: 'Contêineres: Estados de Item do cliente | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-client-item-states"></a>Contêineres: estados de item do cliente
 Este artigo explica os diferentes estados em que um item do cliente passa em seu tempo de vida.  
@@ -45,7 +40,7 @@ Este artigo explica os diferentes estados em que um item do cliente passa em seu
   
  No estado vazio, um item do cliente ainda não está completamente um item. Memória foi alocada para ele, mas ainda não foi inicializado com dados do item OLE. Este é o estado de um item do cliente está em quando ela foi criada por uma chamada a **novo** , mas ainda não tiver sofrido a segunda etapa da criação de duas etapas típicas.  
   
- Na segunda etapa, realizada por meio de uma chamada para `COleClientItem::CreateFromFile` ou outro **CreateFrom***xxxx* função, o item é criado completamente. Os dados OLE (de um arquivo ou de outra fonte, como a área de transferência) foi associados a `COleClientItem`-objeto derivado. Agora o item está no estado carregado.  
+ Na segunda etapa, realizada por meio de uma chamada para `COleClientItem::CreateFromFile` ou outro **CreateFrom * xxxx* função, o item é criado completamente. Os dados OLE (de um arquivo ou de outra fonte, como a área de transferência) foi associados a `COleClientItem`-objeto derivado. Agora o item está no estado carregado.  
   
  Quando um item foi aberto na janela do servidor mas não foi aberto no local de documento do contêiner, ele está no estado abrir (ou totalmente abrir). Nesse estado, uma cruz-hachura geralmente é desenhada sobre a representação do item na janela do contêiner para indicar que o item está ativo em outro lugar.  
   
@@ -53,7 +48,7 @@ Este artigo explica os diferentes estados em que um item do cliente passa em seu
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres](../mfc/containers.md)   
- [Ativação](../mfc/activation-cpp.md)   
+ [ativação](../mfc/activation-cpp.md)   
  [Contêineres: Notificações de Item do cliente](../mfc/containers-client-item-notifications.md)   
  [Controladores](../mfc/trackers.md)   
  [Classe CRectTracker](../mfc/reference/crecttracker-class.md)

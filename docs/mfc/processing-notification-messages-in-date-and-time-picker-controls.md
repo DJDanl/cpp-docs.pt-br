@@ -1,13 +1,10 @@
 ---
-title: "Processando mensagens de notificação no seletor de data e hora controles | Microsoft Docs"
-ms.custom: 
+title: Processando mensagens de notificação no seletor de data e hora controles | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DTN_CLOSEUP
 - DTN_DATETIMECHANGE
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 836714f7a7ca17d759d0d71a7cbb30d63fdfaf95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53c45f664dec2a553210187514b28f1ba3c2ed9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Processando mensagens de notificação em controles de seletor de data e hora
 Como os usuários interagem com a data e o controle de seletor de tempo, o controle (`CDateTimeCtrl`) envia mensagens de notificação para sua janela pai, geralmente um objeto de exibição ou a caixa de diálogo. Se você quiser fazer algo em resposta, lidar com essas mensagens. Por exemplo, quando o usuário abre o seletor de data e hora para exibir o controle de calendário mensal inserido, o **DTN_DROPDOWN** notificação é enviada.  

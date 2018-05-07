@@ -1,12 +1,9 @@
 ---
 title: Ferramentas de vinculador LNK1104 erro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>Erro das Ferramentas de Vinculador LNK1104
 
@@ -101,4 +96,4 @@ Esse erro pode ocorrer se você tiver permissões de arquivo suficientes para ac
 
 O erro pode ocorrer quando não há espaço em disco suficiente. O vinculador usa arquivos temporários em vários casos. Mesmo se você tiver espaço suficiente em disco, um link muito grande pode depauperam ou fragmento de espaço em disco disponível. Considere o uso de [/OPÇ (otimizações)](../../build/reference/opt-optimizations.md) opção; fazendo leituras de eliminação de COMDAT transitivas todos os arquivos de objeto várias vezes.
 
-Se o *filename* chamado LNK*nnn*, que é um nome de arquivo gerado pelo vinculador para um arquivo temporário, o diretório especificado na variável de ambiente TMP pode não existir, ou mais de um diretório pode ser especificado para a variável de ambiente TMP. Apenas um caminho deve ser especificado para a variável de ambiente TMP.
+Se o *filename* chamado LNK*nnn*, que é um nome de arquivo gerado pelo vinculador para um arquivo temporário, o diretório especificado na variável de ambiente TMP pode não existir ou pode ser mais de um diretório especificado para a variável de ambiente TMP. Apenas um caminho deve ser especificado para a variável de ambiente TMP.

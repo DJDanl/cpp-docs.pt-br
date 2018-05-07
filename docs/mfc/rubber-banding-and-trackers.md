@@ -1,13 +1,10 @@
 ---
-title: "Elásticos e controladores | Microsoft Docs"
-ms.custom: 
+title: Elásticos e controladores | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - rubber banding [MFC]
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd9da00d2d6ea0110562f523a0adc53c1a476c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rubber-banding-and-trackers"></a>Elásticos e controladores
 Outro recurso fornecido com controladores é a seleção de "elástica", que permite que um usuário selecione vários itens OLE arrastando um retângulo de dimensionamento em redor dos itens a ser selecionado. Quando o usuário libera o botão esquerdo do mouse, itens dentro da região selecionada pelo usuário são selecionados e podem ser manipulados pelo usuário. Por exemplo, o usuário pode arrastar a seleção em outro aplicativo de contêiner.  

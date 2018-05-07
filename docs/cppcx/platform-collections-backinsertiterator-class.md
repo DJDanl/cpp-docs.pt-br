@@ -1,11 +1,8 @@
 ---
 title: Classe Platform::Collections::BackInsertIterator | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d0be32b550cd0e19facb127ca6a052b03ef1eaf5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Classe Platform::Collections::BackInsertIterator
 Representa um iterador que insere, em vez de substituir, os elementos no back-end de uma coleção sequencial.  
@@ -87,7 +82,7 @@ explicit BackInsertIterator(
 ### <a name="remarks"></a>Comentários  
  Um `BackInsertIterator` insere elementos depois do último elemento do objeto especificado pelo parâmetro `v`.  
  
-## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
+## <a name="operator-assign"></a>  Backinsertiterator:: Operator operador =
 Anexa o objeto especificado ao final da coleção sequencial atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -103,7 +98,7 @@ BackInsertIterator& operator=( const T& t);
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência ao BackInsertIterator atual.  
 
-## <a name="operator-dereference"></a>  BackInsertIterator::operator* Operator
+## <a name="operator-dereference"></a>  Operador backinsertiterator:: Operator *
 Recupera uma referência ao BackInsertIterator atual.  
   
 ## <a name="syntax"></a>Sintaxe  

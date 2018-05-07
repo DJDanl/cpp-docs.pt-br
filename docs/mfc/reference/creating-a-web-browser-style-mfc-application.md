@@ -1,13 +1,10 @@
 ---
 title: Criando um aplicativo MFC no estilo de navegador da Web | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Criando um aplicativo MFC no estilo de navegador da Web
 Um aplicativo de estilo de navegador da Web pode acessar informações da Internet (como HTML ou documentos ativos) ou uma intranet, como também pastas no sistema de arquivos local e em uma rede. Derivando a classe de exibição do aplicativo de [CHtmlView](../../mfc/reference/chtmlview-class.md), tornar o aplicativo um navegador da Web, fornecendo a exibição com o controle WebBrowser.  
@@ -52,7 +47,7 @@ Um aplicativo de estilo de navegador da Web pode acessar informações da Intern
   
  Porque `CHtmlView` simplesmente implementa o controle de navegador da Web Microsoft, o suporte para impressão não é semelhante a outros [CView](../../mfc/reference/cview-class.md)-classes derivadas. Em vez disso, o controle WebBrowser implementa a interface de usuário de impressora e impressão. Como resultado, `CHtmlView` does não dá suporte a visualização de impressão, e não fornece a estrutura para outras funções de suporte de impressão: por exemplo, [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), e [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), que estão disponíveis em outros aplicativos MFC.  
   
- `CHtmlView`atua como um wrapper para o controle de navegador da Web, que fornece uma exibição em uma Web ou uma página HTML de seu aplicativo. O assistente cria uma substituição para o [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) função na classe de exibição, fornecendo um link de navegação para o site do Microsoft Visual C++:  
+ `CHtmlView` atua como um wrapper para o controle de navegador da Web, que fornece uma exibição em uma Web ou uma página HTML de seu aplicativo. O assistente cria uma substituição para o [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) função na classe de exibição, fornecendo um link de navegação para o site do Microsoft Visual C++:  
   
 ```  
 void CWebView::OnInitialUpdate()  

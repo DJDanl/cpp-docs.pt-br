@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonLabel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
 Implementa um rótulo de texto não clicável para uma faixa de opções.  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Cria e inicializa um [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que exibe a cadeia de caracteres de texto especificado.  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  O texto a ser exibido no rótulo.  
   
  [in] `bIsMultiLine`  
- `TRUE`para especificar que o rótulo é um rótulo de várias linha; Caso contrário, `FALSE`.  
+ `TRUE` para especificar que o rótulo é um rótulo de várias linha; Caso contrário, `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Determina os dados de acessibilidade para o elemento de rótulo de faixa de opções atual.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade do rótulo da faixa de opções atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o `data` parâmetro estava com êxito preenchida com os dados de acessibilidade do rótulo da faixa de opções atual; caso contrário, `FALSE`.  
+ `TRUE` Se o `data` parâmetro estava com êxito preenchida com os dados de acessibilidade do rótulo da faixa de opções atual; caso contrário, `FALSE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

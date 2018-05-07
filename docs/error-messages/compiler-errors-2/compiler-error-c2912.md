@@ -1,12 +1,9 @@
 ---
 title: Compilador erro C2912 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2912
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2912
 ms.assetid: bd55cecd-ab1a-4636-ab8a-a00393fe7b3d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88533f00ebf926823d6493aa1027013638694a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b165e868f4a2055d692d768c7e5c0164dd34002
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2912"></a>C2912 de erro do compilador
 especialização explícita 'declaration' não é uma especialização de um modelo de função  

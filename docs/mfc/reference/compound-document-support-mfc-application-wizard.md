@@ -1,29 +1,24 @@
 ---
 title: Suporte a documento, Assistente de aplicativo MFC composto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 dev_langs:
 - C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Suporte a documento composto, Assistente de Aplicativo MFC
 Nesta página do Assistente de aplicativo MFC, indica o nível de seu aplicativo fornece suporte a documentos compostos e ativo. O aplicativo deve oferecer suporte a arquitetura de documento/exibição para dar suporte a documentos compostos e modelos de documento.  
@@ -40,7 +35,7 @@ Nesta página do Assistente de aplicativo MFC, indica o nível de seu aplicativo
 |Opção|Descrição|  
 |------------|-----------------|  
 |**Nenhum**|Indica que não há suporte para vinculação e incorporação (OLE). Por padrão, o Assistente de aplicativo cria um aplicativo sem suporte do ActiveX.|  
-|**Contêiner**|Contém os objetos vinculados e incorporados.|  
+|**contêiner**|Contém os objetos vinculados e incorporados.|  
 |**Servidor Mini**|Indica que o aplicativo pode criar e gerenciar objetos de documento composto. Observe que não é possível executar a miniservidores autônomo e oferecem suporte apenas a itens incorporados.|  
 |**Servidor completo**|Indica que o aplicativo pode criar e gerenciar objetos de documento composto. Servidores completos são capazes de executar autônomo e suporte a ambos vinculam e inseridos itens.|  
 |**Servidor de contêiner/completo**|Indica que o aplicativo pode ser um contêiner e um servidor. Um contêiner é um aplicativo que pode incorporar itens incorporados ou vinculados em seus próprios documentos. Um servidor é um aplicativo que pode criar itens de automação para uso por aplicativos de contêiner.|  

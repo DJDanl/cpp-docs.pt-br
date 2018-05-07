@@ -1,12 +1,9 @@
 ---
 title: Classe CDynamicAccessor | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1f07ceae02c9c243f59f37ea49e77ef3113b5a54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2a4006afa9ebdfcf95a01103d1fd97643a6b749f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
 Permite que você acesse uma fonte de dados quando você não possui conhecimento do esquema do banco de dados (estrutura do banco de dados).  
@@ -55,7 +50,7 @@ class CDynamicAccessor : public CAccessorBase
 |[GetColumnFlags](../../data/oledb/cdynamicaccessor-getcolumnflags.md)|Recupera as características da coluna.|  
 |[GetColumnInfo](../../data/oledb/cdynamicaccessor-getcolumninfo.md)|Recupera os metadados da coluna.|  
 |[GetColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|Recupera o nome de uma coluna especificada.|  
-|[GetColumnType](../../data/oledb/cdynamicaccessor-getcolumntype.md)|Recupera o tipo de dados de uma coluna especificada.|  
+|[getColumnType](../../data/oledb/cdynamicaccessor-getcolumntype.md)|Recupera o tipo de dados de uma coluna especificada.|  
 |[GetLength](../../data/oledb/cdynamicaccessor-getlength.md)|Recupera o comprimento máximo possível de uma coluna em bytes.|  
 |[GetOrdinal](../../data/oledb/cdynamicaccessor-getordinal.md)|Recupera o índice da coluna recebe um nome de coluna.|  
 |[GetStatus](../../data/oledb/cdynamicaccessor-getstatus.md)|Recupera o status de uma coluna especificada.|  

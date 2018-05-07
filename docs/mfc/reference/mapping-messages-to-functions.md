@@ -1,13 +1,10 @@
 ---
-title: "Mapeando mensagens para funções | Microsoft Docs"
-ms.custom: 
+title: Mapeando mensagens para funções | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.mapping.msg.function
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad36b249e601e15e25f32ef1ef7e6d5a28874cf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3388cd8e9a52ef9aacb427d66b027d793b08ca75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-messages-to-functions"></a>Mapeando mensagens para funções
 A janela Propriedades permite vincular manipuladores de mensagens (funções de membro de classes de interface do usuário do MFC) para as mensagens geradas por recursos de seu aplicativo. Eles usam [mapas de mensagem MFC](../../mfc/messages-and-commands-in-the-framework.md) para criar uma associação.  

@@ -1,13 +1,10 @@
 ---
 title: Usando as Classes para escrever aplicativos para Windows | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a8edcabee2f835bd3a3acd0ff3789690764c397
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa126f2772e1672a1484453fdffdd487b6c45959
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Usando as classes para escrever aplicativos para Windows
 As classes da biblioteca Microsoft Foundation Class (MFC) juntos, compõem uma "estrutura de aplicativo", em que você criar um aplicativo para o sistema operacional Windows. Em um nível muito geral, a estrutura define o esqueleto de um aplicativo e fornece implementações de interface do usuário padrão que podem ser colocadas no esqueleto. Seu trabalho como programador é preencha o restante do esqueleto, que são as coisas que são específicas para seu aplicativo. Você pode obter uma vantagem inicial usando o Assistente de aplicativo MFC para criar os arquivos para um aplicativo de início bem completo. Você pode usar os Microsoft Visual C++ editores de recursos para criar os elementos de interface do usuário visualmente, os comandos de exibição de classe para se conectar a esses elementos de código e a biblioteca de classes para implementar a lógica específica do aplicativo.  

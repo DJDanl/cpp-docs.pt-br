@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Soquetes de fluxo | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc112bd3cfbf1194a2898afecb513edcbc456747
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5499395e517f056ffb224c22c888a3cc0382133
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: soquetes de fluxo
 Este artigo descreve os soquetes de fluxo, um dos dois tipos de Windows Socket disponível. (O outro tipo é o [soquete de datagrama](../mfc/windows-sockets-datagram-sockets.md).)  

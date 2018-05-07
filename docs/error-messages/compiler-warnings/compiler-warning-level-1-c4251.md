@@ -1,12 +1,9 @@
 ---
-title: "Compilador (nível 1) de aviso C4251 | Microsoft Docs"
-ms.custom: 
+title: Compilador (nível 1) de aviso C4251 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4251
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b220913d97755547a9cb35fe326f9fb9a06e40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 366d66a38685e75e47d8921f9ebd525b334ced7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Compilador C4251 de aviso (nível 1)
 'Identificador': classe 'type' precisa ter dll-interface a ser usada por clientes da classe 'type2'  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  Você pode evitar exportando classes definindo uma DLL que define uma classe com funções virtuais e funções que você pode chamar para instanciar e excluir objetos do tipo.  Em seguida, você pode chamar apenas funções virtuais no tipo.  
   
- Para obter mais informações sobre como exportar modelos, consulte [http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
+ Para obter mais informações sobre como exportar modelos, consulte [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
   
  C4251 pode ser ignorada se você estiver derivando de um tipo de biblioteca padrão C++, Compilando uma versão de depuração (**/MTd**) e onde a mensagem de erro do compilador se refere à _Container_base.  
   

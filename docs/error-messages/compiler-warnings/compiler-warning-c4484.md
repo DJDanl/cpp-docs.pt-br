@@ -1,12 +1,9 @@
 ---
 title: C4484 de aviso do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4484
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa5f209dd3a77bcc4ec3c21d589fb8ba1ed3faf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75531c207f0136f16109b4d69d689b883998aae2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-c4484"></a>C4484 de aviso do compilador
 'override_function': corresponde ao método de classe ref base 'base_class_function', mas não está marcado como 'virtual', 'new' ou 'override'; 'new' (e não 'virtual') é assumido  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  Para obter mais informações, consulte:  
   
--   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/clr (compilação do Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [override](../../windows/override-cpp-component-extensions.md)  
   

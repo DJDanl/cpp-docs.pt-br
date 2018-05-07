@@ -1,13 +1,10 @@
 ---
 title: Usando CToolTipCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolTipCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82785d29d57fcdbd64addbe69dcc90ed3d2c9829
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b08f2dfcff0c4df17def326e3a047507bb2a3c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctooltipctrl"></a>Usando CToolTipCtrl
 O [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe encapsula a funcionalidade de um controle de dica de ferramenta, uma pequena janela pop-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo. Uma dica de ferramenta está oculto na maioria das vezes, que aparecem somente quando o usuário coloca o cursor em uma ferramenta e deixa-lo para aproximadamente metade de segundo. A dica de ferramenta é exibida próximo ao cursor e desaparece quando o usuário clica em um botão do mouse ou move o cursor fora a ferramenta.  

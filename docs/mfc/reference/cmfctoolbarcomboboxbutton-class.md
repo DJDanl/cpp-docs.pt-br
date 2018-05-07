@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCToolBarComboBoxButton | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarComboBoxButton
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7732d58c8e37683f670f6f13bb4df5f49e4ef24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 Um botão de barra de ferramentas que contém um controle de caixa de combinação ( [classe CComboBox](../../mfc/reference/ccombobox-class.md)).  
@@ -162,7 +157,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxtoolbarcomboboxbutton.h  
   
-##  <a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
+##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem  
  Acrescenta um item exclusivo para a caixa de listagem.  
   
 ```  
@@ -186,7 +181,7 @@ virtual INT_PTR AddItem(
   
  Se o texto do item já está na caixa de listagem, os novos dados são armazenados com o item existente. A pesquisa para o item diferencia maiusculas de minúsculas.  
   
-##  <a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
+##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem  
  Adiciona um item à caixa de listagem na ordem em que é definido pelo [comparar](#compare) método.  
   
 ```  
@@ -208,7 +203,7 @@ virtual INT_PTR AddSortedItem(
 ### <a name="remarks"></a>Comentários  
  Use esta função para adicionar itens à caixa de listagem em uma ordem específica.  
   
-##  <a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCToolBarComboBoxButton::CanBeStretched  
  Indica se o tamanho de botão da caixa de combinação pode mudar.  
   
 ```  
@@ -218,7 +213,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="return-value"></a>Valor de retorno  
  Retorna `TRUE`.  
   
-##  <a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
+##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  Constrói um [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto.  
   
 ```  
@@ -247,7 +242,7 @@ CMFCToolBarComboBoxButton(
   
  Para obter uma lista de estilos de botão da barra de ferramentas, consulte [estilos de controle de barra de ferramentas](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
+##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData  
  Exclui os dados definidos pelo usuário.  
   
 ```  
@@ -257,7 +252,7 @@ virtual void ClearData();
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada. Substitua este método em uma classe derivada, se você quiser excluir quaisquer dados definidos pelo usuário.  
   
-##  <a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
+##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare  
  Compara duas cadeias de caracteres.  
   
 ```  
@@ -289,7 +284,7 @@ virtual int Compare(
   
  Este método é chamado somente a partir de [AddSortedItem](#addsorteditem) método.  
   
-##  <a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom  
  Copia o estado do `CMFCToolBarComboBoxButton` ao objeto atual.  
   
 ```  
@@ -300,7 +295,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  [in] `src`  
  A fonte `CMFCToolBarComboBoxButton` objeto.  
   
-##  <a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
+##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
  Cria uma nova caixa de combinação do botão da caixa de combinação.  
   
 ```  
@@ -319,7 +314,7 @@ virtual CComboBox* CreateCombo(
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a nova caixa de combinação se o método teve êxito; Caso contrário, `NULL`.  
   
-##  <a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
+##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
  Cria uma nova caixa de edição para o botão da caixa de combinação.  
   
 ```  
@@ -345,7 +340,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ### <a name="remarks"></a>Comentários  
  O framework chama este método quando ele cria uma nova caixa de edição para um botão da caixa de combinação. Substitua este método para alterar como [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) é criado.  
   
-##  <a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
+##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
  Exclui um item especificado na caixa de listagem.  
   
 ```  
@@ -365,11 +360,11 @@ BOOL DeleteItem(DWORD_PTR dwData);
  O texto do item a ser excluído. Se houver vários itens com o mesmo texto, o primeiro item é excluído.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o item foi localizado e excluído com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o item foi localizado e excluído com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
+##  <a name="duplicatedata"></a>  CMFCToolBarComboBoxButton::DuplicateData  
  Dados definidos pelo usuário duplicatas.  
   
 ```  
@@ -379,7 +374,7 @@ virtual void DuplicateData();
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada. Substitua este método em uma classe derivada, se você quiser copiar quaisquer dados definidos pelo usuário.  
   
-##  <a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
+##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow  
  Habilita ou desabilita as caixas de combinação e edição.  
   
 ```  
@@ -388,12 +383,12 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para habilitar as caixas de combinação e edição; `FALSE` para desabilitar as caixas de combinação e edição.  
+ `TRUE` Para habilitar as caixas de combinação e edição; `FALSE` para desabilitar as caixas de combinação e edição.  
   
 ### <a name="remarks"></a>Comentários  
  Quando desabilitado, os controles não podem se tornar ativos e não podem aceitar a entrada do usuário.  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
  Uma cadeia de caracteres da tabela de cadeia de caracteres de aplicativo para o menu especificado usando o comando de botão de caixa de combinação de cópias de ID.  
   
 ```  
@@ -407,7 +402,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="return-value"></a>Valor de retorno  
  Sempre `TRUE`.  
   
-##  <a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
+##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
  Retorna o índice do primeiro item na caixa de listagem que contém uma cadeia de caracteres especificada.  
   
 ```  
@@ -423,7 +418,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
+##  <a name="getbycmd"></a>  CMFCToolBarComboBoxButton::GetByCmd  
  Obtém um ponteiro para o botão de caixa de combinação que tem uma ID de comando especificado.  
   
 ```  
@@ -437,14 +432,14 @@ static CMFCToolBarComboBoxButton* GetByCmd(
  A ID de comando de um botão da caixa de combinação.  
   
  [in] `bIsFocus`  
- `TRUE`para pesquisar somente focalizado botões; `FALSE` para pesquisar todos os botões.  
+ `TRUE` para pesquisar somente focalizado botões; `FALSE` para pesquisar todos os botões.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um botão de caixa de combinação. ou `NULL` se o botão não encontrado.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
+##  <a name="getcombobox"></a>  CMFCToolBarComboBoxButton::GetComboBox  
  Retorna um ponteiro para a caixa de combinação na caixa de combinação de botão da caixa.  
   
 ```  
@@ -456,7 +451,7 @@ CComboBox* GetComboBox() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
+##  <a name="getcontextmenuid"></a>  CMFCToolBarComboBoxButton::GetContextMenuID  
  Obtém a ID de recurso de menu de atalho para o botão da caixa de combinação.  
   
 ```  
@@ -466,7 +461,7 @@ UINT GetContextMenuID();
 ### <a name="return-value"></a>Valor de retorno  
  A ID de recurso de menu de atalho.  
   
-##  <a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
+##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount  
  Retorna o número de itens na caixa de listagem.  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
+##  <a name="getcountall"></a>  CMFCToolBarComboBoxButton::GetCountAll  
  Obtém o número de itens na caixa de listagem de um botão de caixa de combinação que tem uma ID de comando especificado.  
   
 ```  
@@ -494,7 +489,7 @@ static int GetCountAll(UINT uiCmd);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
+##  <a name="getcursel"></a>  CMFCToolBarComboBoxButton::GetCurSel  
  Obtém o índice do item atualmente selecionado na caixa de listagem.  
   
 ```  
@@ -507,7 +502,7 @@ int GetCurSel() const;
 ### <a name="remarks"></a>Comentários  
  O índice de caixa de lista é baseada em zero.  
   
-##  <a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
+##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
  Retorna o índice do item atualmente selecionado na caixa de listagem de uma caixa de combinação botão caixa que tenha uma ID de comando especificado.  
   
 ```  
@@ -524,7 +519,7 @@ static int GetCurSelAll(UINT uiCmd);
 ### <a name="remarks"></a>Comentários  
  O índice de caixa de lista é baseada em zero.  
   
-##  <a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CMFCToolBarComboBoxButton::GetEditCtrl  
  Retorna um ponteiro para a caixa de edição na caixa de combinação de botão da caixa.  
   
 ```  
@@ -536,7 +531,7 @@ virtual CEdit* GetEditCtrl();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
+##  <a name="gethwnd"></a>  CMFCToolBarComboBoxButton::GetHwnd  
  Retorna o identificador de janela da caixa de combinação.  
   
 ```  
@@ -546,7 +541,7 @@ virtual HWND GetHwnd();
 ### <a name="return-value"></a>Valor de retorno  
  O identificador de janela, ou `NULL` se a caixa de combinação não está associada um objeto de janela.  
   
-##  <a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
+##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
  Retorna a cadeia de caracteres associada a um item em um índice especificado na caixa de listagem.  
   
 ```  
@@ -563,7 +558,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ### <a name="remarks"></a>Comentários  
  Um parâmetro de índice-1 retorna a cadeia de caracteres do item selecionado no momento.  
   
-##  <a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
+##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll  
  Retorna a cadeia de caracteres associada a um item em um índice especificado na caixa de listagem de um botão de caixa de combinação que tem uma ID de comando especificado.  
   
 ```  
@@ -585,7 +580,7 @@ static LPCTSTR GetItemAll(
 ### <a name="remarks"></a>Comentários  
  Um valor de índice-1 retorna a cadeia de caracteres do item selecionado no momento.  
   
-##  <a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
+##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
  Retorna os dados associados a um item em um índice específico na caixa de listagem.  
   
 ```  
@@ -602,7 +597,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ### <a name="remarks"></a>Comentários  
  Um parâmetro de índice-1 retorna os dados associados ao item selecionado no momento.  
   
-##  <a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
+##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
  Retorna os dados associados a um item em um índice específico na caixa de listagem de um botão de caixa de combinação que tem uma ID de comando específico.  
   
 ```  
@@ -624,7 +619,7 @@ static DWORD_PTR GetItemDataAll(
 ### <a name="remarks"></a>Comentários  
  Um parâmetro de índice-1 retorna os dados associados ao item selecionado no momento.  
   
-##  <a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
+##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
  Retorna os dados associados a um item em um índice específico na caixa de listagem de um botão de caixa de combinação que tem uma ID de comando específico. Esses dados são retornados como um ponteiro.  
   
 ```  
@@ -645,7 +640,7 @@ static void* GetItemDataPtrAll(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
+##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt  
  Retorna a cadeia de caracteres de prompt para a caixa de combinação botão da caixa.  
   
 ```  
@@ -658,7 +653,7 @@ virtual CString GetPrompt() const;
 ### <a name="remarks"></a>Comentários  
  Este método não está implementado atualmente.  
   
-##  <a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
+##  <a name="gettext"></a>  CMFCToolBarComboBoxButton::GetText  
  Obtém o texto na caixa de edição.  
   
 ```  
@@ -670,7 +665,7 @@ LPCTSTR GetText() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
+##  <a name="gettextall"></a>  CMFCToolBarComboBoxButton::GetTextAll  
  Obtém o texto na caixa de edição de um botão de caixa de combinação que tem uma ID de comando especificado.  
   
 ```  
@@ -686,7 +681,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
+##  <a name="hasfocus"></a>  CMFCToolBarComboBoxButton::HasFocus  
  Indica se a caixa de combinação atualmente tem o foco.  
   
 ```  
@@ -694,12 +689,12 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a caixa de combinação atualmente tem foco. Caso contrário, `FALSE`.  
+ `TRUE` Se a caixa de combinação atualmente tem foco. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método também retorna `TRUE` se qualquer janela filho da caixa de combinação tem o foco no momento.  
   
-##  <a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
+##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
  Retorna a posição vertical dos botões da caixa de combinação no aplicativo.  
   
 ```  
@@ -707,11 +702,11 @@ static BOOL IsCenterVert();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se os botões são centralizados; `FALSE` se os botões são alinhados na parte superior.  
+ `TRUE` Se os botões são centralizados; `FALSE` se os botões são alinhados na parte superior.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
+##  <a name="isflatmode"></a>  CMFCToolBarComboBoxButton::IsFlatMode  
  Retorna a aparência de estilo plano dos botões da caixa de combinação no aplicativo.  
   
 ```  
@@ -719,12 +714,12 @@ static BOOL IsFlatMode();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se os botões têm um estilo simples; Caso contrário, `FALSE`.  
+ `TRUE` Se os botões têm um estilo simples; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- O estilo de padrão simples para os botões da caixa de combinação é`FALSE.`  
+ O estilo de padrão simples para os botões da caixa de combinação é `FALSE.`  
   
-##  <a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
+##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
  Indica se o identificador especificado está associado com o botão da caixa de combinação ou um de seus filhos.  
   
 ```  
@@ -736,9 +731,9 @@ virtual BOOL IsOwnerOf(HWND hwnd);
  Um identificador de janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o identificador é associado com o botão da caixa de combinação ou um de seus filhos; Caso contrário, `FALSE`.  
+ `TRUE` Se o identificador é associado com o botão da caixa de combinação ou um de seus filhos; Caso contrário, `FALSE`.  
   
-##  <a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
+##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
  Indica se o botão da caixa de combinação reside em um painel de faixa de opções.  
   
 ```  
@@ -751,7 +746,7 @@ BOOL IsRibbonButton() const;
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método sempre retorna `FALSE`, que significa que a caixa de combinação botão caixa nunca é exibido em um painel de faixa de opções.  
   
-##  <a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
+##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
  Retorna o estado de visibilidade da caixa de combinação de botão da caixa.  
   
 ```  
@@ -761,7 +756,7 @@ virtual BOOL IsWindowVisible();
 ### <a name="return-value"></a>Valor de retorno  
  O estado de visibilidade do botão da caixa de combinação.  
   
-##  <a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCToolBarComboBoxButton::NotifyCommand  
  Indica se o botão da caixa de combinação processa a mensagem.  
   
 ```  
@@ -775,14 +770,14 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ### <a name="return-value"></a>Valor de retorno  
  Se o botão da caixa de combinação processa a mensagem.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage  
  Chamado pelo framework quando o botão é adicionado para o **personalizar** caixa de diálogo.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCToolBarComboBoxButton::OnCalculateSize  
  Chamado pelo framework para calcular o tamanho do botão.  
   
 ```  
@@ -800,12 +795,12 @@ virtual SIZE OnCalculateSize(
  O tamanho padrão do botão da caixa de combinação.  
   
  [in] `bHorz`  
- O estado de encaixe da barra de ferramentas do pai. `TRUE`Quando a barra de ferramentas estiver encaixada horizontalmente e `FALSE` quando a barra de ferramentas está encaixada verticalmente.  
+ O estado de encaixe da barra de ferramentas do pai. `TRUE` Quando a barra de ferramentas estiver encaixada horizontalmente e `FALSE` quando a barra de ferramentas está encaixada verticalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `SIZE` estrutura que contém as dimensões do botão da caixa de combinação, em pixels.  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd  
  Chamado pelo framework quando o botão da caixa de combinação é inserido em uma nova barra de ferramentas.  
   
 ```  
@@ -816,7 +811,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
  [in] `pWndParent`  
  Ponteiro para a nova barra de ferramentas do pai.  
   
-##  <a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
  Chamado pelo framework quando o usuário clica no botão da caixa de combinação.  
   
 ```  
@@ -833,9 +828,9 @@ virtual BOOL OnClick(
  Reservado para uso em uma classe derivada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método manipula o evento; Caso contrário, `FALSE`.  
+ `TRUE` Se o método manipula o evento; Caso contrário, `FALSE`.  
   
-##  <a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
+##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
  Chamado pelo framework quando o usuário altera a cor de barra de ferramentas do pai para definir a caixa de combinação de cor do botão de caixa.  
   
 ```  
@@ -857,7 +852,7 @@ virtual HBRUSH OnCtlColor(
 ### <a name="remarks"></a>Comentários  
  Esse método também define a cor de texto do botão de caixa de combinação.  
   
-##  <a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw  
  Chamado pelo framework para desenhar o botão da caixa de combinação usando as opções e estilos especificados.  
   
 ```  
@@ -883,7 +878,7 @@ virtual void OnDraw(
  A coleção de imagens que está associada com o botão.  
   
  [in] `bHorz`  
- O estado de encaixe da barra de ferramentas do pai. `TRUE`Quando a barra de ferramentas estiver encaixada horizontalmente e `FALSE` quando a barra de ferramentas está encaixada verticalmente.  
+ O estado de encaixe da barra de ferramentas do pai. `TRUE` Quando a barra de ferramentas estiver encaixada horizontalmente e `FALSE` quando a barra de ferramentas está encaixada verticalmente.  
   
  [in] `bCustomizeMode`  
  Se o aplicativo está no modo de personalização.  
@@ -895,9 +890,9 @@ virtual void OnDraw(
  Se desenhar o botão de caixa de combinação com uma borda.  
   
  [in] `bGrayDisabledButtons`  
- `TRUE`Para desenhar sombreada botões desabilitado; `FALSE` usar o desabilitado as imagens de coleção.  
+ `TRUE` Para desenhar sombreada botões desabilitado; `FALSE` usar o desabilitado as imagens de coleção.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  Chamado pelo framework para desenhar o botão de caixa de combinação no **comandos** painel do **personalizar** caixa de diálogo.  
   
 ```  
@@ -915,26 +910,26 @@ virtual int OnDrawOnCustomizeList(
  O retângulo delimitador do botão da caixa de combinação.  
   
  [in] `bSelected`  
- `TRUE`Se o botão de caixa de combinação é selecionada. Caso contrário, `FALSE`.  
+ `TRUE` Se o botão de caixa de combinação é selecionada. Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A largura, em pixels, do botão da caixa de combinação.  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
  Chamado pelo framework para definir a caixa de combinação de fonte de botão de caixa quando altera a fonte do aplicativo.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-##  <a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
+##  <a name="onmove"></a>  CMFCToolBarComboBoxButton::OnMove  
  Chamado pelo framework para alterar o local do botão da caixa de combinação quando move a barra de ferramentas do pai.  
   
 ```  
 virtual void OnMove();
 ```  
   
-##  <a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
+##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
  Chamado pelo framework quando o botão da caixa de combinação é oculto ou exibido.  
   
 ```  
@@ -945,7 +940,7 @@ virtual void OnShow(BOOL bShow);
  [in] `bShow`  
  Se deseja ocultar ou exibir o botão de caixa de combinação.  
   
-##  <a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
+##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
  Chamado pelo framework para alterar o tamanho do botão da caixa de combinação quando a barra de ferramentas do pai altera o tamanho.  
   
 ```  
@@ -956,7 +951,7 @@ virtual void OnSize(int iSize);
  [in] `iSize`  
  A nova largura do botão da caixa de combinação.  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  Chamado pelo framework quando o usuário altera a dica de ferramenta do botão da caixa de combinação.  
   
 ```  
@@ -981,9 +976,9 @@ virtual BOOL OnUpdateToolTip(
  O texto da dica de ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método manipula o evento; Caso contrário, `FALSE`.  
+ `TRUE` Se o método manipula o evento; Caso contrário, `FALSE`.  
   
-##  <a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
  Exclui todos os itens de caixas de lista e editar.  
   
 ```  
@@ -993,7 +988,7 @@ void RemoveAllItems();
 ### <a name="remarks"></a>Comentários  
  Remove todos os itens da lista de caixa e controle de uma caixa de combinação de edição.  
   
-##  <a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
+##  <a name="selectitem"></a>  CMFCToolBarComboBoxButton::SelectItem  
  Seleciona um item na caixa de listagem.  
   
 ```  
@@ -1010,7 +1005,7 @@ BOOL SelectItem(LPCTSTR lpszText);
  O índice de base zero de um item na caixa de listagem.  
   
  [in] `bNotify`  
- `TRUE`para notificar o botão da caixa de combinação de seleção; Caso contrário, `FALSE`.  
+ `TRUE` para notificar o botão da caixa de combinação de seleção; Caso contrário, `FALSE`.  
   
  [in] `dwData`  
  Os dados associados a um item na caixa de listagem.  
@@ -1019,11 +1014,11 @@ BOOL SelectItem(LPCTSTR lpszText);
  O texto de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método teve êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o método teve êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
+##  <a name="selectitemall"></a>  CMFCToolBarComboBoxButton::SelectItemAll  
  Seleciona um item na caixa de listagem de um botão de caixa de combinação que tem uma ID de comando especificado.  
   
 ```  
@@ -1056,11 +1051,11 @@ static BOOL SelectItemAll(
  O texto de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método teve êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o método teve êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
+##  <a name="serialize"></a>  CMFCToolBarComboBoxButton::Serialize  
  Lê esse objeto de um arquivo ou grava em um arquivo morto.  
   
 ```  
@@ -1074,7 +1069,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>Comentários  
  Configurações de `CArchive` objeto determinar se esse método lê ou grava o arquivo morto.  
   
-##  <a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
+##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData  
  Popula especificado `CAccessibilityData` objeto usando dados de acessibilidade do botão de caixa de combinação.  
   
 ```  
@@ -1091,9 +1086,9 @@ virtual BOOL SetACCData(
  Um `CAccessibilityData` objeto que recebe os dados de acessibilidade do botão de caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método teve êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o método teve êxito; Caso contrário, `FALSE`.  
   
-##  <a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
+##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
  Define a posição vertical dos botões da caixa de combinação no aplicativo.  
   
 ```  
@@ -1102,12 +1097,12 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bCenterVert`  
- `TRUE`para o centro do botão da caixa de combinação na barra de ferramentas. `FALSE` para alinhar o botão da caixa de combinação para a parte superior da barra de ferramentas.  
+ `TRUE` para o centro do botão da caixa de combinação na barra de ferramentas. `FALSE` para alinhar o botão da caixa de combinação para a parte superior da barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, os botões da caixa de combinação são alinhados para a parte superior.  
   
-##  <a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
+##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
  Define a ID de recurso de menu de atalho para a caixa de combinação botão da caixa.  
   
 ```  
@@ -1118,7 +1113,7 @@ void SetContextMenuID(UINT uiResID);
  [in] `uiResID`  
  A ID de recurso de menu de atalho.  
   
-##  <a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  Define a altura da caixa de listagem quando ele é removido para baixo.  
   
 ```  
@@ -1132,7 +1127,7 @@ void SetDropDownHeight(int nHeight);
 ### <a name="remarks"></a>Comentários  
  A altura padrão é 150 pixels.  
   
-##  <a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
+##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode  
  Define a aparência de estilo plano dos botões da caixa de combinação no aplicativo.  
   
 ```  
@@ -1141,12 +1136,12 @@ static void SetFlatMode(BOOL bFlat=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bFlat`  
- `TRUE`para uma aparência de estilo plano; Caso contrário, `FALSE`.  
+ `TRUE` para uma aparência de estilo plano; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O estilo de padrão simples para os botões da caixa de combinação é `FALSE`.  
   
-##  <a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
+##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
  Define o estilo especificado para a caixa de combinação botão caixa e redesenha o controle se ele não estiver desabilitado.  
   
 ```  
@@ -1160,7 +1155,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>Comentários  
  Para obter uma lista de estilos de botão da barra de ferramentas, consulte [estilos de controle de barra de ferramentas](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
+##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText  
  Define o texto na caixa de edição da caixa de combinação de botão da caixa.  
   
 ```  

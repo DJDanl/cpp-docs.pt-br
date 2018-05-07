@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -44,7 +39,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  Conjuntos de registros selecionam registros de uma fonte de dados por meio de um driver ODBC ao enviar instruções SQL para o driver. O SQL enviado depende de como você cria e abra sua classe de conjunto de registros.  
   
-##  <a name="_core_your_options_in_selecting_records"></a>As opções de seleção de registros  
+##  <a name="_core_your_options_in_selecting_records"></a> As opções de seleção de registros  
  A tabela a seguir mostra as opções de seleção de registros.  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>Como e quando você pode afetar um conjunto de registros  
@@ -59,7 +54,7 @@ Este tópico se aplica às classes MFC ODBC.
 
 | Chamar **Requery** para repetir a consulta de conjunto de registros com os valores mais recentes na fonte de dados | Especifique novos parâmetros, filtrar ou classificar. Consulte [conjunto de registros: repetindo consulta a um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>Como um conjunto de registros constrói sua instrução SQL  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Como um conjunto de registros constrói sua instrução SQL  
  Quando você chama um objeto de conjunto de registros [abrir](../../mfc/reference/crecordset-class.md#open) função de membro, **abrir** constrói uma instrução SQL usando alguns ou todos os componentes a seguir:  
   
 -   O **lpszSQL** parâmetro passado para **abrir**. Se não **nulo**, esse parâmetro especifica uma cadeia de caracteres SQL personalizada ou parte de um. A estrutura analisa a cadeia de caracteres. Se a cadeia de caracteres for um SQL **selecione** instrução ou um ODBC **chamar** instrução, a estrutura usa a cadeia de caracteres como instrução de SQL do conjunto de registros. Se a cadeia de caracteres não começa com "SELECT" ou "{CALL", a estrutura usa o que é fornecido para construir um SQL **FROM** cláusula.  
@@ -85,7 +80,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  Você pode usar uma combinação dessas técnicas para abrir [tabelas](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) e para construir uma consulta com base em um [junção](../../data/odbc/recordset-performing-a-join-odbc.md) de várias tabelas. Com a personalização adicional, você pode chamar [predefinidos consultas](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (procedimentos armazenados), selecione colunas não é conhecidas em tempo de design de tabela e [associar](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) -los para campos de conjunto de registros ou você podem executar a maioria das outras tarefas de acesso a dados. Tarefas que você não pode realizar Personalizando conjuntos de registros podem ser realizadas por [chamando funções de API de ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) ou diretamente a execução de instruções SQL com [CDatabase::](../../mfc/reference/cdatabase-class.md#executesql).  
   
-##  <a name="_core_customizing_the_selection"></a>Personalizando a seleção  
+##  <a name="_core_customizing_the_selection"></a> Personalizando a seleção  
  Além de fornecer um filtro, uma ordem de classificação ou parâmetros, você pode executar as seguintes ações para personalizar a seleção do seu conjunto de registros:  
   
 -   Passar uma cadeia de caracteres SQL personalizada em **lpszSQL** quando você chama [abrir](../../mfc/reference/crecordset-class.md#open) para o conjunto de registros. Qualquer coisa que você transmitir **lpsqSQL** tem precedência sobre o que o [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) retorna da função de membro.  

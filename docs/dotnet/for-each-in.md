@@ -1,12 +1,9 @@
 ---
 title: para cada um, no | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-each-in"></a>for each, in
 Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está disponível em projetos em C++/CLI e nativos em C++. No entanto, seu uso não é recomendado. Considere o uso de um padrão [com base em intervalo de instrução (C++)](../cpp/range-based-for-statement-cpp.md) em vez disso.  
@@ -65,7 +60,7 @@ Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está
   
  O *instruções* são executadas para cada elemento da matriz ou coleção. Após a iteração ter sido concluída para todos os elementos na coleção, o controle é transferido para a próxima instrução que segue o bloco `for each`.  
   
- `for each`e `in` são [palavras-chave contextuais](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each` e `in` são [palavras-chave contextuais](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Para saber mais:  
   
@@ -124,7 +119,7 @@ Testing
   
  A sintaxe CLR é o mesmo que o **todos os tempos de execução** sintaxe, exceto da seguinte maneira.  
   
- *expressão*  
+ *Expressão*  
  Uma expressão de matriz gerenciada ou coleção. O elemento de coleção deve ser, de modo que o compilador pode convertê-lo de <xref:System.Object> para o *identificador* tipo.  
   
  *expressão* é avaliada como um tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou um tipo que define uma `GetEnumerator` método que retorna um tipo que implementa <xref:System.Collections.IEnumerator> ou declara todos os métodos que são definidos em `IEnumerator`.  

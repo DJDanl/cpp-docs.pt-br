@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCToolBarFontSizeComboBox | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba8dde4142cff3606cc2b5ad1861096637f68c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Classe CMFCToolBarFontSizeComboBox
 Um botão de barra de ferramentas que contém um controle de caixa de combinação que permite que o usuário selecione um tamanho de fonte.  
@@ -84,14 +79,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  Constrói um objeto `CMFCToolBarFontSizeComboBox`.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>  CMFCToolBarFontSizeComboBox::GetTwipSize  
  Recupera o tamanho da fonte, em twips, da caixa de texto de uma caixa de combinação de tamanho de fonte.  
   
 ```  
@@ -101,7 +96,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>Valor de retorno  
  Se o valor de retorno for positivo, é o tamanho da fonte em twips. É -1 se a caixa de texto da caixa de combinação está vazia. É -2 se ocorrer um erro.  
   
-##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>  CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  Preenche uma caixa de combinação de tamanho de fonte com todos os tamanhos válidos da determinada fonte.  
   
 ```  
@@ -115,7 +110,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>Comentários  
  Chamar esta função quando você deseja sincronizar entre a seleção em uma caixa de combinação de fonte e uma caixa de combinação de tamanho de fonte, como um [CMFCToolBarFontComboBox classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
-##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize  
  Arredonda especificada tamanho (em twips) para o tamanho mais próximo em pontos e, em seguida, configura o tamanho selecionado na caixa de combinação para esse valor.  
   
 ```  

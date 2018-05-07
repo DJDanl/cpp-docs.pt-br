@@ -1,12 +1,9 @@
 ---
 title: Dando suporte ao thread livre no provedor | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5cd5ce6b852b490334cbc8d49c6e967efffb3a6e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Dando suporte ao thread livre no provedor
 Todas as classes de provedor OLE DB são thread-safe e entradas do registro estão definidas adequadamente. É uma boa ideia para dar suporte ao thread livre para ajudar a fornecer um alto nível de desempenho em situações de multiusuários. Para ajudar a manter seu provedor de thread-safe, você deve verificar que seu código está bloqueado corretamente. Sempre que você escreve ou armazena dados, você deve bloquear o acesso com seções críticas.  

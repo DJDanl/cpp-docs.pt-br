@@ -1,16 +1,12 @@
 ---
 title: C2400 de erros do compilador por meio de C2499 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>C2400 de erros do compilador por meio de C2499
 
@@ -88,7 +81,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2426](compiler-error-c2426.md)|'*token*': operador inválido em '*contexto*'|
 |[Erro do compilador C2427](compiler-error-c2427.md)|'*classe*': não é possível definir classe neste escopo|
 |[Erro do compilador C2428](compiler-error-c2428.md)|'*operação*': não é permitido em operando do tipo 'bool'|
-|C2429 de erro do compilador|*Contexto* '*contexto*'requer o sinalizador do compilador'*opção*'|
+|[C2429 de erro do compilador](compiler-error-c2429.md)|'*recurso de idioma*'requer o sinalizador do compilador'*opção de compilador*'|
 |[Erro do compilador C2430](compiler-error-c2430.md)|mais de um registro de índice em '*contexto*'|
 |[Erro do compilador C2431](compiler-error-c2431.md)|registro de índice ilegal em '*contexto*'|
 |[Erro do compilador C2432](compiler-error-c2432.md)|referência inválida para dados de 16 bits em '*contexto*'|
@@ -149,7 +142,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2491](compiler-error-c2491.md)|'*identificador*': definição de dllimport *função* não permitido|
 |[Erro do compilador C2492](compiler-error-c2492.md)|'*variável*': dados com duração de armazenamento de thread não podem possuir dll interface|
 |[Erro do compilador C2493](compiler-error-c2493.md)|forma inválida de based|
-|[Erro do compilador C2494](compiler-error-c2494.md)|'*palavra-chave*' não pode ser chamado de dentro de uma expressão de filtro ou &#95; &#95; finalmente/bloco finally|
+|[Erro do compilador C2494](compiler-error-c2494.md)|'*palavra-chave*' não pode ser chamado de dentro de uma expressão de filtro ou &#95; &#95;finalmente/bloco finally|
 |[Erro do compilador C2495](compiler-error-c2495.md)|'*identificador*': '__declspec(noexcept)' só pode ser aplicado a declarações de função ou definições|
 |[Erro do compilador C2496](compiler-error-c2496.md)|'*identificador*': 'selectany' só pode ser aplicado a itens de dados com ligação externa|
 |C2497 de erro do compilador|'*identificador*': 'implementation_key' só pode ser aplicado a declarações de função|

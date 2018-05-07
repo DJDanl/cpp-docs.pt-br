@@ -1,13 +1,10 @@
 ---
 title: Criando uma folha de propriedades sem janela restrita | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4686caf6c414952cd86dfe0c69fcc3be8ee09af9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10dbef813d922bd01a5f9215b6d6e642349d2b75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Criando uma folha de propriedades sem janela restrita
 Normalmente, as folhas de propriedades que você criar serão restritas. Ao usar uma folha de propriedades modal, o usuário deve fechar a folha de propriedades antes de usar qualquer outra parte do aplicativo. Este artigo descreve métodos que você pode usar para criar uma folha de propriedades não modal que permite ao usuário manter a folha de propriedades aberta durante o uso de outras partes do aplicativo.  
