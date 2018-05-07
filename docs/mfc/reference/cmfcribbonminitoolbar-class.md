@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonMiniToolBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a2006423f8e6196f9fac4d8f336ced8b5416f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 Implementa uma barra de ferramentas contextuais pop-up.  
@@ -92,7 +87,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxRibbonMiniToolBar.h  
   
-##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
+##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
  Define a lista de comandos a ser exibido na barra de ferramentas.  
   
 ```  
@@ -116,7 +111,7 @@ void SetCommands(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
+##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
  A Minibarra de ferramentas exibe as coordenadas de tela especificado.  
   
 ```  
@@ -133,9 +128,9 @@ BOOL Show(
  Especifica a posição vertical da barra de ferramentas mini em coordenadas da tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a Minibarra de ferramentas foi exibida com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se a Minibarra de ferramentas foi exibida com êxito; Caso contrário, `FALSE`.  
   
-##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
+##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Exibe a Minibarra de ferramentas junto com um menu de contexto.  
   
 ```  
@@ -160,12 +155,12 @@ BOOL ShowWithContextMenu(
  Identifica a janela que recebe mensagens no menu de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o menu de contexto foi exibido com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o menu de contexto foi exibido com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Use esta função para exibir uma Minibarra de ferramentas que tem um menu de contexto. O menu de contexto é posicionadas 15 pixels abaixo a Minibarra de ferramentas.  
   
-##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +171,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

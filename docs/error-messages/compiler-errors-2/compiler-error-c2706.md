@@ -1,12 +1,9 @@
 ---
 title: C2706 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2706
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2706
 ms.assetid: e18da924-c42d-4b09-8e29-f4e0382d7dc6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04527b1e67a2e25547631186add8ab5c323d1e26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92f64ddab93fb6815e3ff7a98ac39a842042bfeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2706"></a>C2706 de erro do compilador
 EXCEPT inválido sem correspondência \__try (faltando '}' na \__try bloco?)  

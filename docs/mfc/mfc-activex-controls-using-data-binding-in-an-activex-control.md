@@ -1,13 +1,10 @@
 ---
-title: "Controles ActiveX MFC: Usando associação de dados em um controle ActiveX | Microsoft Docs"
-ms.custom: 
+title: 'Controles ActiveX MFC: Usando associação de dados em um controle ActiveX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: usando associação de dados em um controle ActiveX
 Um dos usos mais eficientes dos controles ActiveX é associação de dados, que permite que uma propriedade do controle a ser associado a um campo específico em um banco de dados. Quando um usuário modifica dados nessa propriedade associada, o controle notifica o banco de dados e as solicitações que o campo de registro sejam atualizados. O banco de dados, em seguida, notifica o controle do sucesso ou falha da solicitação.  
   
  Este artigo aborda o lado de controle de sua tarefa. Implementar as interações de associação de dados com o banco de dados é de responsabilidade do contêiner de controle. Como você gerencia as interações do banco de dados em seu contêiner está além do escopo desta documentação. Como preparar o controle de associação de dados é explicado no restante deste artigo.  
   
- ![Diagrama conceitual de um tipo de dados &#45; controle associado](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Diagrama conceitual de um dado&#45;controle acoplado](../mfc/media/vc374v1.gif "vc374v1")  
 Diagrama conceitual de um controle associado a dados  
   
  O `COleControl` classe fornece duas funções de membro que fazem um processo fácil de implementar de associação de dados. A primeira função, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), é usado para solicitar permissão para alterar o valor da propriedade. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), a segunda função, é chamado depois que o valor da propriedade foi alterado com êxito.  
@@ -51,7 +46,7 @@ Diagrama conceitual de um controle associado a dados
   
 -   [Criando um método Get/Set vinculáveis](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Criar uma propriedade de estoque vinculável  
+##  <a name="vchowcreatingbindablestockproperty"></a> Criar uma propriedade de estoque vinculável  
  É possível criar uma propriedade de estoque de associação de dados, embora é mais provável que você queira um [método associável get/set](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ Diagrama conceitual de um controle associado a dados
   
  Agora você pode compilar o projeto, o que registrar o controle. Quando você insere o controle em uma caixa de diálogo, o **campo de dados** e **fonte de dados** propriedades serão adicionadas e agora você pode selecionar uma fonte de dados e o campo a ser exibido no controle.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Criando um método Get/Set vinculáveis  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Criando um método Get/Set vinculáveis  
  Além de uma associação de dados get/set método, você também pode criar um [propriedade de estoque associável](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

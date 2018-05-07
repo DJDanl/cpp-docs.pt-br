@@ -2,36 +2,31 @@
 title: Usando Assemblies verificáveis com SQL Server (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Usando assemblies verificáveis com SQL Server (C++/CLI)
 Procedimentos armazenados estendidos, são empacotados como bibliotecas de vínculo dinâmico (DLLs) fornecem uma maneira de estender a funcionalidade do SQL Server por meio de funções desenvolvidos com o Visual C++. Procedimentos armazenados estendidos são implementados como funções em DLLs. Além das funções, procedimentos armazenados estendidos também podem definir [tipos definidos pelo usuário](../cpp/classes-and-structs-cpp.md) e [funções de agregação](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (como SUM ou AVG).  
   
  Quando um cliente executa um procedimento armazenado estendido, pesquisas de SQL Server para a DLL associada com o procedimento armazenado estendido e carrega a DLL. SQL Server chama o procedimento armazenado estendido solicitado e executa-o em um contexto de segurança especificado. O procedimento armazenado estendido e conjuntos de resultados de passagens e retorna os parâmetros de volta para o servidor.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]fornece extensões para o Transact-SQL (T-SQL) para que você possa instalar assemblies verificáveis no SQL Server. O conjunto de permissões do SQL Server Especifica o contexto de segurança, com os seguintes níveis de segurança:  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] fornece extensões para o Transact-SQL (T-SQL) para que você possa instalar assemblies verificáveis no SQL Server. O conjunto de permissões do SQL Server Especifica o contexto de segurança, com os seguintes níveis de segurança:  
   
 -   Modo irrestrito: executar código em seu próprio risco; código não precisa ser fortemente tipado verificável.  
   

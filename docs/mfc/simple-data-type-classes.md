@@ -1,13 +1,10 @@
 ---
 title: Classes de tipo de dados simples | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simple-data-type-classes"></a>Classes de tipo de dados simples
-As seguintes classes encapsulam coordenadas, cadeias de caracteres e tempo de desenho e informações de data, permitindo conveniente usar sintaxe de C++. Esses objetos são usados amplamente como parâmetros para as funções de membro de classes do Windows na biblioteca de classes. Porque `CPoint`, `CSize`, e `CRect` correspondem do **ponto**, **tamanho**, e `RECT` estruturas, respectivamente, no SDK do Windows, você pode usar esses objetos Sempre que você pode usar essas estruturas de linguagem C de classes C++. As classes fornecem interfaces útil por meio de suas funções de membro. `CStringT`Fornece as cadeias de caracteres dinâmica muito flexível. `CTime`, `COleDateTime`, `CTimeSpan`, e **COleTimeSpan** representar valores de data e hora. Para obter mais informações sobre essas classes, consulte o artigo [data e hora](../atl-mfc-shared/date-and-time.md).  
+As seguintes classes encapsulam coordenadas, cadeias de caracteres e tempo de desenho e informações de data, permitindo conveniente usar sintaxe de C++. Esses objetos são usados amplamente como parâmetros para as funções de membro de classes do Windows na biblioteca de classes. Porque `CPoint`, `CSize`, e `CRect` correspondem do **ponto**, **tamanho**, e `RECT` estruturas, respectivamente, no SDK do Windows, você pode usar esses objetos Sempre que você pode usar essas estruturas de linguagem C de classes C++. As classes fornecem interfaces útil por meio de suas funções de membro. `CStringT` Fornece as cadeias de caracteres dinâmica muito flexível. `CTime`, `COleDateTime`, `CTimeSpan`, e **COleTimeSpan** representar valores de data e hora. Para obter mais informações sobre essas classes, consulte o artigo [data e hora](../atl-mfc-shared/date-and-time.md).  
   
  As classes que começam com "**COle**" são encapsulamentos de tipos de dados fornecidos pelo OLE. Esses tipos de dados podem ser usados em programas Windows independentemente do uso de outros recursos OLE.  
   

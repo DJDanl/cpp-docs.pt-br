@@ -1,13 +1,10 @@
 ---
-title: "Os tipos associados aos objetos de Interface de usuário de mensagem | Microsoft Docs"
-ms.custom: 
+title: Os tipos associados aos objetos de Interface de usuário de mensagem | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.uiobject.msgs
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff4c7aac0c73406503df2f2384249279d3d7f97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a2309556ca6c5204247ccbe916aebe472a1da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Tipos de mensagem associados a objetos de interface do usuário
 A tabela a seguir mostra os tipos de objetos com o qual trabalhar e os tipos de mensagens associadas a eles.  

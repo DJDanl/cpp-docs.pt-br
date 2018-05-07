@@ -1,13 +1,10 @@
 ---
-title: "Inicialização do mecanismo de banco de dados DAO e encerramento | Microsoft Docs"
-ms.custom: 
+title: Inicialização do mecanismo de banco de dados DAO e encerramento | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32dbcb02615f552a2bb26ec047b0b817bb828a95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f28c0c166bcbf13181161d6afce484fe4a45b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicialização e término do mecanismo de banco de dados DAO
 Ao usar objetos DAO MFC, o mecanismo de banco de dados DAO deve primeiro ser inicializado e, em seguida, encerrado antes de seu aplicativo ou a DLL é fechado. Duas funções, `AfxDaoInit` e `AfxDaoTerm`, executar essas tarefas.  
@@ -38,7 +33,7 @@ Ao usar objetos DAO MFC, o mecanismo de banco de dados DAO deve primeiro ser ini
 |[AfxDaoInit](#afxdaoinit)|Inicializa o mecanismo de banco de dados DAO.|  
 |[AfxDaoTerm](#afxdaoterm)|Encerra o mecanismo de banco de dados DAO.|  
   
-##  <a name="afxdaoinit"></a>AfxDaoInit  
+##  <a name="afxdaoinit"></a>  AfxDaoInit  
  Essa função inicializa o mecanismo de banco de dados DAO.  
   
 ```  
@@ -56,7 +51,7 @@ throw(CDaoException*);
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  
   
-##  <a name="afxdaoterm"></a>AfxDaoTerm  
+##  <a name="afxdaoterm"></a>  AfxDaoTerm  
  Essa função encerra o mecanismo de banco de dados DAO.  
   
 ```  

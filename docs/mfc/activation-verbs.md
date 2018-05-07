@@ -1,13 +1,10 @@
 ---
-title: "Ativação: Verbos | Microsoft Docs"
-ms.custom: 
+title: 'Ativação: Verbos | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2a443f4ce65dcc7e9460bd016638aa5069e7e6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c484231eb87144a6546ff2b8b7061a5339820ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activation-verbs"></a>Ativação: verbos
 Este artigo explica o função verbos primários e secundários são reproduzidos em OLE [ativação](../mfc/activation-cpp.md).  
@@ -47,7 +42,7 @@ Este artigo explica o função verbos primários e secundários são reproduzido
  Os verbos que oferece suporte a um aplicativo de servidor são listados no banco de dados de registro do Windows. Se seu aplicativo de servidor é escrito com a biblioteca Microsoft Foundation Class, ele registrará automaticamente todos os verbos quando o servidor é iniciado. Caso contrário, você deve registrá-los durante a fase de inicialização do aplicativo de servidor. Para obter mais informações, consulte o artigo [registro](../mfc/registration.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Ativação](../mfc/activation-cpp.md)   
+ [ativação](../mfc/activation-cpp.md)   
  [Contêineres](../mfc/containers.md)   
  [Servidores](../mfc/servers.md)
 

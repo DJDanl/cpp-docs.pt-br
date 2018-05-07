@@ -1,12 +1,9 @@
 ---
 title: Classe CBrush | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>Classe CBrush
 Encapsula um pincel GDI (interface) do dispositivo de gráficos Windows.  
@@ -98,7 +93,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  Constrói um objeto `CBrush`.  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  Especifica o estilo de hachura do pincel. Ele pode ser qualquer um dos seguintes valores:  
   
-- `HS_BDIAGONAL`Hachura descendente (da esquerda para a direita) em 45 graus  
+- `HS_BDIAGONAL` Hachura descendente (da esquerda para a direita) em 45 graus  
   
-- `HS_CROSS`Hachura horizontal e vertical  
+- `HS_CROSS` Hachura horizontal e vertical  
   
-- `HS_DIAGCROSS`Hachura a 45 graus  
+- `HS_DIAGCROSS` Hachura a 45 graus  
   
-- `HS_FDIAGONAL`Hachura para cima (da esquerda para a direita) em 45 graus  
+- `HS_FDIAGONAL` Hachura para cima (da esquerda para a direita) em 45 graus  
   
-- `HS_HORIZONTAL`Hachura horizontal  
+- `HS_HORIZONTAL` Hachura horizontal  
   
-- `HS_VERTICAL`Hachura vertical  
+- `HS_VERTICAL` Hachura vertical  
   
  `pBitmap`  
  Aponta para um `CBitmap` objeto que especifica um bitmap com a qual o pincel pinta.  
   
 ### <a name="remarks"></a>Comentários  
- `CBrush`tem quatro construtores de sobrecarregado. O construtor sem argumentos constrói um não inicializada `CBrush` objeto deve ser inicializado antes de ser usada.  
+ `CBrush` tem quatro construtores de sobrecarregado. O construtor sem argumentos constrói um não inicializada `CBrush` objeto deve ser inicializado antes de ser usada.  
   
  Se você usar o construtor sem argumentos, você deverá inicializar resultante `CBrush` do objeto com [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), ou [CreateDIBPatternBrush](#createdibpatternbrush). Se você usar um dos construtores que obtém argumentos, em seguida, nenhuma outra inicialização será necessária. Os construtores com argumentos podem lançar uma exceção se forem encontrados erros, enquanto o construtor sem argumentos sempre terá êxito.  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  Inicializa um pincel com um estilo, cor e padrão especificado em um [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estrutura.  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  Inicializa um pincel com o padrão especificado por um bitmap independente de dispositivo (DIB).  
   
 ```  
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  Inicializa um pincel com o padrão de hachurado especificado e a cor.  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  Especifica o estilo de hachura do pincel. Ele pode ser qualquer um dos seguintes valores:  
   
-- `HS_BDIAGONAL`Hachura descendente (da esquerda para a direita) em 45 graus  
+- `HS_BDIAGONAL` Hachura descendente (da esquerda para a direita) em 45 graus  
   
-- `HS_CROSS`Hachura horizontal e vertical  
+- `HS_CROSS` Hachura horizontal e vertical  
   
-- `HS_DIAGCROSS`Hachura a 45 graus  
+- `HS_DIAGCROSS` Hachura a 45 graus  
   
-- `HS_FDIAGONAL`Hachura para cima (da esquerda para a direita) em 45 graus  
+- `HS_FDIAGONAL` Hachura para cima (da esquerda para a direita) em 45 graus  
   
-- `HS_HORIZONTAL`Hachura horizontal  
+- `HS_HORIZONTAL` Hachura horizontal  
   
-- `HS_VERTICAL`Hachura vertical  
+- `HS_VERTICAL` Hachura vertical  
   
  `crColor`  
  Especifica a cor de primeiro plano do pincel como uma cor RGB (a cor das hachuras). Consulte [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) no SDK do Windows para obter mais informações.  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  Inicializa um pincel com um padrão especificado por um bitmap.  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  Inicializa um pincel com uma cor sólida especificado.  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  Inicializa uma cor do pincel.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  Retorna um ponteiro para um `CBrush` quando é fornecido um identificador para uma janela de objeto [HBRUSH](#operator_hbrush) objeto.  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>Parâmetros  
  `hBrush`  
- `HANDLE`para um pincel de Windows GDI.  
+ `HANDLE` para um pincel de Windows GDI.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um `CBrush` objeto se for bem-sucedida; caso contrário **nulo**.  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  Chamar essa função de membro para recuperar o `LOGBRUSH` estrutura.  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
  Use este operador para obter o identificador de Windows GDI anexado do `CBrush` objeto.  
   
 ```  

@@ -1,30 +1,25 @@
 ---
 title: 'Passo a passo: Adicionando um objeto D2D a um projeto MFC | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98c14611bbca828f6264c3fcfa66462c02320432
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7985b36c0eeaa7adf5441a7a6fbb3314bac8353f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Instruções passo a passo: adicionando um objeto D2D a um projeto
 Este passo a passo ensina como adicionar um Direct2D básica (D2D) do objeto para um Visual C++, o projeto de biblioteca do Microsoft Foundation Class (MFC) e, em seguida, compilar o projeto em um aplicativo que imprime "Olá, mundo" em um plano de fundo do gradiente.  

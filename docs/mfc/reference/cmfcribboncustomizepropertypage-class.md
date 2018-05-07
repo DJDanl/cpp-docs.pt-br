@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonCustomizePropertyPage | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizePropertyPage
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad58cb0b062e25a52742eec5491489d3744a9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Classe CMFCRibbonCustomizePropertyPage
 Implementa uma página personalizada para o **personalizar** caixa de diálogo em aplicativos com base na faixa de opções.  
@@ -88,7 +83,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxribboncustomizedialog.h  
   
-##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  Adiciona uma categoria personalizada para o **comandos** caixa de combinação.  
   
 ```  
@@ -108,7 +103,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>Comentários  
  Este método adiciona uma categoria chamada `lpszName` para o **comandos** caixa de combinação. Quando o usuário seleciona a categoria, os comandos especificados em `lstIDS` aparecem na lista de comando.  
   
-##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Constrói um objeto `CMFCRibbonCustomizePropertyPage`.  
   
 ```  
@@ -119,7 +114,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [in] `pRibbonBar`  
  Um ponteiro para um controle de faixa de opções para o qual as opções para personalizar.  
   
-##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
  Calleld pelo sistema quando um usuário clica **Okey** no **personalizar** caixa de diálogo.  
   
 ```  

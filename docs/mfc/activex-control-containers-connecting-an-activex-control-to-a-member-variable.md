@@ -1,13 +1,10 @@
 ---
-title: "Contêineres de controle ActiveX: Conectando um controle ActiveX a uma variável de membro | Microsoft Docs"
-ms.custom: 
+title: 'Contêineres de controle ActiveX: Conectando um controle ActiveX a uma variável de membro | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2248dd68b0ecc7471899552bcb7b0394f3f9f363
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06a2b6a5ab17db7b512f1f44d2eda68169d71645
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contêineres de controle ActiveX: conectando um controle ActiveX a uma variável membro
 É a maneira mais fácil para um controle ActiveX de dentro de seu aplicativo de contêiner de controle de acesso associar o controle ActiveX uma variável de membro da classe de caixa de diálogo que contém o controle.  

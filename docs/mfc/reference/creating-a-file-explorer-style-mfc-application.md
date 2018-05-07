@@ -1,13 +1,10 @@
 ---
 title: Criando um aplicativo MFC no estilo do Explorer arquivo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Criando um aplicativo MFC no estilo de Explorador de Arquivos
 Muitos aplicativos de sistema do Windows usam a interface do usuário (UI) para o Explorador de arquivos. Quando você inicia o Explorador de arquivos, por exemplo, você ver um aplicativo com uma divisão vertical barra dividir a área cliente. À esquerda da área cliente fornece navegação e os recursos de navegação e o lado direito da área cliente mostra detalhes pertinentes à seleção no painel esquerdo. Quando um usuário clica em um item no painel esquerdo, o aplicativo preenche novamente o painel direito. Em um aplicativo MDI, você pode usar comandos no **exibição** menu para alterar a quantidade de detalhes exibidos no painel direito. (Em um SDI ou vários aplicativos de nível superior do documento, você pode alterar os detalhes usando os botões da barra de ferramentas somente.)  

@@ -2,12 +2,9 @@
 title: 'Controles ActiveX MFC: Usando imagens em um controle ActiveX | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LPPICTUREDISP
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27e5ebb58056dfd14417adea211daf2c6ac2ddf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controles ActiveX MFC: usando imagens em um controle ActiveX
 Este artigo descreve o tipo de imagem comuns e como implementá-la em seu controle ActiveX. Os tópicos incluem:  
@@ -40,7 +35,7 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
   
 -   [Adições ao seu projeto de controle](#_core_additions_to_your_control_project)  
   
-##  <a name="_core_overview_of_custom_picture_properties"></a>Visão geral das propriedades da imagem personalizada  
+##  <a name="_core_overview_of_custom_picture_properties"></a> Visão geral das propriedades da imagem personalizada  
  Um tipo de imagem é um de um grupo de tipos comuns a alguns controles ActiveX. O tipo de imagem trata metarquivos, bitmaps e ícones e permite que o usuário especifique uma imagem a ser exibida em um controle ActiveX. Propriedades personalizadas da imagem são implementadas usando um objeto de imagem e funções de Get/Set que permitem o acesso de usuário de controle para a propriedade de imagem. Usuários de controle de acesso a propriedade de imagem personalizada usando o página de propriedades de imagem de estoque.  
   
  Além do tipo de imagem padrão, os tipos de fontes e cores também estão disponíveis. Para obter mais informações sobre como usar o tipo de fonte padrão do seu controle ActiveX, consulte o artigo [controles ActiveX MFC: usando fontes](../mfc/mfc-activex-controls-using-fonts.md).  
@@ -59,7 +54,7 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
   
      Esta página de propriedades é parte de um grupo de páginas de propriedade de estoque disponíveis para controles ActiveX. Para obter mais informações sobre páginas de propriedades do controle ActiveX, consulte o artigo [controles ActiveX MFC: usando páginas de propriedades de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a>Implementando uma propriedade de imagem personalizada em seu controle ActiveX  
+##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementando uma propriedade de imagem personalizada em seu controle ActiveX  
  Quando você tiver concluído as etapas descritas nesta seção, o controle pode exibir imagens escolhidas pelo usuário. O usuário pode alterar a imagem exibida usando uma página de propriedade que mostra a imagem atual e tem um botão de procura que permite que o usuário selecionados imagens diferentes.  
   
  Uma propriedade de imagem personalizada é implementada usando um processo semelhante àquela usada para implementar outras propriedades, a principal diferença é que a propriedade personalizada deve oferecer suporte a um tipo de imagem. Porque o item da propriedade de imagem deve ser desenhado pelo controle ActiveX, um número de adições e modificações deve ser feito para a propriedade antes que ele pode ser totalmente implementado.  
@@ -74,7 +69,7 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
   
      Essas modificações serão feitas para várias funções que são responsáveis pelo desenho do controle ActiveX.  
   
-##  <a name="_core_additions_to_your_control_project"></a>Adições ao seu projeto de controle  
+##  <a name="_core_additions_to_your_control_project"></a> Adições ao seu projeto de controle  
  Para adicionar a ID de página de propriedade para a página de propriedades de imagem padrão, insira a linha a seguir após o `BEGIN_PROPPAGEIDS` macro no arquivo de implementação de controle (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
@@ -126,7 +121,7 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
 > [!NOTE]
 >  Os nomes de classe e a função de controle podem ser diferentes do exemplo acima.  
   
-###  <a name="_core_modifications_to_your_control_project"></a>Modificações ao seu projeto de controle  
+###  <a name="_core_modifications_to_your_control_project"></a> Modificações ao seu projeto de controle  
  Depois de ter feito as inclusões necessárias ao seu projeto de controle, você precisa modificar várias funções que afetam a renderização do controle ActiveX. Essas funções, `OnResetState`, `OnDraw`, e as funções Get/Set de uma propriedade de imagem personalizada, estão localizados no arquivo de implementação de controle. (Observe que, neste exemplo de classe de controle é chamado `CSampleCtrl`, o `CPictureHolder` é chamado de membro de dados `m_pic`, e o nome de propriedade de imagem personalizada é `ControlPicture`.)  
   
  No controle `OnResetState` funcionar, adicione a seguinte linha opcional após a chamada a `COleControl::OnResetState`:  

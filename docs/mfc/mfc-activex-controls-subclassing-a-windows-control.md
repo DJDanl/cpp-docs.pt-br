@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Subclasses de um controle de Windows | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - precreatewindow
 - IsSubclassed
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e41eefdf1c1be2d0e91061e0efce5f5408c1848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95d6109bdc6ae28b748ee0be78e14ab62bba10fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: subclasses de um controle do Windows
 Este artigo descreve o processo de subclasses de um controle comum do Windows para criar um controle ActiveX. Controle subclasses existentes do Windows é uma maneira rápida de desenvolver um controle ActiveX. O novo controle terá a capacidade do controle subclasse do Windows, como pintura e responder a cliques do mouse. Exemplo de controles do ActiveX MFC [botão](../visual-cpp-samples.md) é um exemplo de subclasses de um controle do Windows.  
@@ -53,7 +48,7 @@ Este artigo descreve o processo de subclasses de um controle comum do Windows pa
   
  Consulte o artigo da Base de dados de Conhecimento Q243454 para obter mais informações sobre subclasses de um controle.  
   
-##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Substituindo IsSubclassedControl e PreCreateWindow  
+##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Substituindo IsSubclassedControl e PreCreateWindow  
  Para substituir `PreCreateWindow` e `IsSubclassedControl`, adicione as seguintes linhas de código para o `protected` seção da declaração de classe do controle:  
   
  [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]  
@@ -70,7 +65,7 @@ Este artigo descreve o processo de subclasses de um controle comum do Windows pa
   
  Essa operação adiciona o **BS_CHECKBOX** estilo sinalizador, deixando o sinalizador de estilo padrão (**WS_CHILD**) da classe `COleControl` intactos.  
   
-##  <a name="_core_modifying_the_ondraw_member_function"></a>Modificando a função de membro OnDraw  
+##  <a name="_core_modifying_the_ondraw_member_function"></a> Modificando a função de membro OnDraw  
  Se você desejar que o controle de subclasse para manter a mesma aparência que o controle do Windows correspondente, o `OnDraw` a função de membro para o controle deve conter apenas uma chamada para o `DoSuperclassPaint` a função de membro, como no exemplo a seguir:  
   
  [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]  
@@ -80,12 +75,12 @@ Este artigo descreve o processo de subclasses de um controle comum do Windows pa
 > [!NOTE]
 >  O `DoSuperclassPaint` função membro só funcionará com esses tipos de controle que permitem a um contexto de dispositivo a ser passado como o **wParam** de um `WM_PAINT` mensagem. Isso inclui alguns dos controles padrão do Windows, como **SCROLLBAR** e **botão**e todos os controles comuns. Para controles que não oferecem suporte a esse comportamento, você precisará fornecer seu próprio código para exibir corretamente um controle inativo.  
   
-##  <a name="_core_handling_reflected_window_messages"></a>Manipulando janela mensagens refletidas  
+##  <a name="_core_handling_reflected_window_messages"></a> Manipulando janela mensagens refletidas  
  Controles do Windows geralmente enviam determinadas mensagens de janela para a janela pai. Algumas dessas mensagens, como **WM_COMMAND**, fornecer notificação de uma ação do usuário. Outras, como `WM_CTLCOLOR`, são usadas para obter informações da janela pai. Um controle ActiveX geralmente se comunica com a janela pai por outros meios. As notificações são comunicadas por acionando eventos (enviar notificações de eventos) e informações sobre o contêiner de controle são obtidas acessando propriedades ambiente do contêiner. Como essas técnicas de comunicação existem, contêineres de controle ActiveX não são esperados para processar as mensagens de janela enviadas pelo controle.  
   
  Para impedir que o contêiner receba as mensagens de janela enviadas por um controle de Windows subclasse, `COleControl` cria uma janela extra para servir como o pai do controle. Essa janela extra, chamada "reflector", é criada apenas para um controle ActiveX que subclasses de uma janela de controlam e tem o mesmo tamanho e a posição da janela de controle. A janela reflector intercepta determinadas mensagens de janela e envia-os de volta para o controle. O controle, em seu procedimento de janela pode processar essas mensagens refletidas executando ações apropriadas para um controle ActiveX (por exemplo, disparar um evento). Consulte [IDs de mensagem da janela refletida](../mfc/reflected-window-message-ids.md) para uma lista de janelas interceptadas mensagens e seus correspondente refletidas mensagens.  
   
- Um contêiner de controle ActiveX pode ser criado para executar a reflexão de mensagem em si, eliminando a necessidade de `COleControl` para criar a janela reflector e reduzindo o tempo de execução do controle do Windows subclasse. `COleControl`detecta se o contêiner dá suporte a esse recurso através da verificação de uma propriedade de ambiente MessageReflect com um valor de **TRUE**.  
+ Um contêiner de controle ActiveX pode ser criado para executar a reflexão de mensagem em si, eliminando a necessidade de `COleControl` para criar a janela reflector e reduzindo o tempo de execução do controle do Windows subclasse. `COleControl` detecta se o contêiner dá suporte a esse recurso através da verificação de uma propriedade de ambiente MessageReflect com um valor de **TRUE**.  
   
  Para lidar com uma mensagem da janela refletida, adicione uma entrada para o mapa de mensagens de controle e implementar uma função de manipulador. Como mensagens refletidas não fazem parte do conjunto padrão de mensagens definidas pelo Windows, o modo de exibição de classe não dá suporte adicionando esses manipuladores de mensagens. No entanto, não é difícil adicionar um manipulador manualmente.  
   

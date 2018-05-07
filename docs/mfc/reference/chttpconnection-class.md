@@ -1,12 +1,9 @@
 ---
 title: Classe CHttpConnection | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpconnection-class"></a>Classe CHttpConnection
 Gerencia a conexão a um servidor HTTP.  
@@ -73,7 +68,7 @@ class CHttpConnection : public CInternetConnection
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
  Essa função de membro é chamada para construir um `CHttpConnection` objeto.  
   
 ```  
@@ -129,7 +124,7 @@ CHttpConnection(
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULO** ou ""|**NULO** ou ""|"anônimo"|Nome de email do usuário|  
 |Não- **nulo** cadeia de caracteres|**NULO** ou ""|`pstrUserName`|" "|  
-|**NULO** não **nulo** cadeia de caracteres|**ERRO**|**ERRO**||  
+|**NULO** não **nulo** cadeia de caracteres|**ERROR**|**ERROR**||  
 |Não- **nulo** cadeia de caracteres|Não- **nulo** cadeia de caracteres|`pstrUserName`|`pstrPassword`|  
   
  `dwFlags`  
@@ -138,7 +133,7 @@ CHttpConnection(
 ### <a name="remarks"></a>Comentários  
  Você nunca criar um `CHttpConnection` diretamente. Em vez disso, você cria um objeto chamando [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
  Chame essa função de membro para abrir uma conexão HTTP.  
   
 ```  

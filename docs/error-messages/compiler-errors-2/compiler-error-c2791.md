@@ -1,12 +1,9 @@
 ---
 title: C2791 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2791
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2791
 ms.assetid: 938ad1fb-75d9-4ce2-ad92-83d6249005b5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f3377ae2c8b1de572c9a498a99fae3236274c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65a3d399ed6c7f25b849335328550526ecf7a816
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2791"></a>C2791 de erro do compilador
 Uso inválido de 'super': 'class' não tem nenhuma classe base  

@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Adicionando eventos personalizados | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Controles ActiveX MFC: adicionando eventos personalizados
 Eventos personalizados são diferentes de eventos de estoque não são disparados automaticamente pela classe `COleControl`. Um evento personalizado reconhece uma determinada ação, determinada pelo desenvolvedor do controle, como um evento. As entradas de mapa de evento para eventos personalizados são representadas pelo `EVENT_CUSTOM` macro. A seção a seguir implementa um evento personalizado para um projeto de controle ActiveX que foi criado usando o Assistente de controle ActiveX.  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Adicionando um evento personalizado com o Assistente de eventos  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Adicionando um evento personalizado com o Assistente de eventos  
  O procedimento a seguir adiciona um evento personalizado específico, ClickIn. Você pode usar este procedimento para adicionar outros eventos personalizados. Substitua o nome do evento personalizado e seus parâmetros para o nome do evento ClickIn e parâmetros.  
   
 #### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Para adicionar o evento personalizado ClickIn usando o Assistente para adicionar eventos  
@@ -62,7 +57,7 @@ Eventos personalizados são diferentes de eventos de estoque não são disparado
   
 8.  Clique em **concluir** para criar o evento.  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a>Adicionar Assistente altera o evento para eventos personalizados  
+##  <a name="_core_classwizard_changes_for_custom_events"></a> Adicionar Assistente altera o evento para eventos personalizados  
  Quando você adiciona um evento personalizado, o Assistente para adicionar evento faz alterações para a classe de controle. H. CPP, e. Arquivos IDL. Os exemplos de código a seguir são específicos para o evento ClickIn.  
   
  As seguintes linhas são adicionadas ao cabeçalho (. H) o arquivo de sua classe de controle:  
@@ -83,7 +78,7 @@ Eventos personalizados são diferentes de eventos de estoque não são disparado
   
  Essa linha atribui o evento ClickIn um número específico de ID, obtido da posição do evento na lista de eventos Adicionar Assistente de eventos. A entrada na lista de eventos permite que um contêiner prever o evento. Por exemplo, ele pode fornecer código de manipulador a ser executado quando o evento é acionado.  
   
-##  <a name="_core_calling_fireclickin"></a>Chamar FireClickIn  
+##  <a name="_core_calling_fireclickin"></a> Chamar FireClickIn  
  Agora que você adicionou o evento personalizado ClickIn usando o Assistente para adicionar eventos, você deve decidir quando esse evento é acionado. Você pode fazer isso chamando `FireClickIn` quando ocorre a ação apropriada. Para esta discussão, o controle usa o `InCircle` função dentro de uma `WM_LBUTTONDOWN` manipulador de mensagens para acionar o evento ClickIn quando um usuário clica dentro de uma região circular ou elíptica. O procedimento a seguir adiciona o `WM_LBUTTONDOWN` manipulador.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Para adicionar um manipulador de mensagens com o Assistente para adicionar eventos  
@@ -117,7 +112,7 @@ Eventos personalizados são diferentes de eventos de estoque não são disparado
   
  [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a>Eventos personalizados com nomes de estoque  
+##  <a name="_core_custom_events_with_stock_names"></a> Eventos personalizados com nomes de estoque  
  Você pode criar eventos personalizados com o mesmo nome como eventos de estoque, no entanto, você não pode implementar ambos no mesmo controle. Por exemplo, você talvez queira criar um evento personalizado chamado clique não é acionado quando o evento de ação clique normalmente acionado. Em seguida, você pode acionar o evento de clique a qualquer momento chamando a função de acionamento.  
   
  O procedimento a seguir adiciona uma personalizado, clique em eventos.  

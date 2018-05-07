@@ -1,12 +1,9 @@
 ---
 title: Classe CTooltipManager | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2adb62f107cb50ade529d552ce1735c57f74b171
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78b191766e33d291317ef50a4d5373dc26428577
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctooltipmanager-class"></a>Classe CTooltipManager
 Mantém informações de tempo de execução sobre dicas de ferramenta. O `CTooltipManager` classe é instanciada uma vez por aplicativo.  
@@ -69,7 +64,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxtooltipmanager.h  
   
-##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip  
  Cria um controle de dica de ferramenta.  
   
 ```  
@@ -113,7 +108,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|Uma barra de ferramentas.|CMFCToolBar, CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Uma caixa de ferramentas.|nenhuma.|  
   
-##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
  Exclui um controle de dica de ferramenta.  
   
 ```  
@@ -127,7 +122,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>Comentários  
  Chame esse método para cada [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) que foi criado por [CTooltipManager::CreateToolTip](#createtooltip). O controle pai deve chamar esse método de sua `OnDestroy` manipulador. Isso é necessário para remover a dica de ferramenta do framework. Esse método define `pToolTip` para `NULL` antes de retornar.  
   
-##  <a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
+##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams  
  Personaliza a aparência do controle de dica de ferramenta para os tipos de controle do Windows especificados.  
   
 ```  
@@ -152,14 +147,14 @@ void SetTooltipParams(
   
  Quando você chamar esse método, todos os proprietários existentes de dica de ferramenta a mensagem AFX_WM_UPDATETOOLTIPS e eles devem recriar suas dicas de ferramentas usando [CTooltipManager::CreateToolTip](#createtooltip).  
   
- `nTypes`pode ser qualquer combinação de dica de ferramenta válida tipos [CTooltipManager::CreateToolTip](#createtooltip) usa, ou pode ser AFX_TOOLTIP_TYPE_ALL. Se você passar AFX_TOOLTIP_TYPE_ALL, todos os tipos de dica de ferramenta serão afetados.  
+ `nTypes` pode ser qualquer combinação de dica de ferramenta válida tipos [CTooltipManager::CreateToolTip](#createtooltip) usa, ou pode ser AFX_TOOLTIP_TYPE_ALL. Se você passar AFX_TOOLTIP_TYPE_ALL, todos os tipos de dica de ferramenta serão afetados.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar o `SetTooltipParams` método o `CTooltipManager` classe. Este trecho de código é parte do [desenhar cliente de exemplo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText  
  Define o texto e a descrição de uma dica de ferramenta.  
   
 ```  
@@ -190,7 +185,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>Comentários  
  O valor de `nType` deve ser o mesmo valor que o `nType` parâmetro [CTooltipManager::CreateToolTip](#createtooltip) quando criou a dica de ferramenta.  
   
-##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

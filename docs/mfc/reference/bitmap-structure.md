@@ -1,13 +1,10 @@
 ---
 title: Estrutura BITMAP | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BITMAP
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed782c3e67a55797bfb2d302265924393946962
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmap-structure"></a>Estrutura BITMAP
-O **BITMAP** estrutura define a altura, largura, formato de cor e valores de bit de um bitmap lógico**.**  
+O **BITMAP** estrutura define a altura, largura, formato de cor e valores de bit de um bitmap lógico **.**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +64,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>Comentários  
  Os formatos de bitmap usada atualmente são monocromática e cor. O bitmap monocromático usa um formato de 1 bit, o plano de 1. Cada exame é um múltiplo de 16 bits.  
   
- Verificações são organizadas da seguinte maneira para um bitmap monocromático da altura  *n* :  
+ Verificações são organizadas da seguinte maneira para um bitmap monocromático da altura *n*:  
   
  `Scan 0`  
   

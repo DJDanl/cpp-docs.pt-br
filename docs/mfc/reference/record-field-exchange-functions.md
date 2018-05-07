@@ -1,13 +1,10 @@
 ---
-title: "Registrar funções de troca de campo | Microsoft Docs"
-ms.custom: 
+title: Registrar funções de troca de campo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>Registrar funções de troca de campos
 Este tópico lista os registrar troca de campos (RFX, RFX em massa e DFX) funções usadas para automatizar a transferência de dados entre um objeto recordset e sua fonte de dados e executar outras operações nos dados.  
@@ -128,7 +123,7 @@ Este tópico lista os registrar troca de campos (RFX, RFX em massa e DFX) funç�
 
  =============================================
 
-## <a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a>  RFX_Binary
 Transferências de matrizes de bytes entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_BINARY**, **SQL_VARBINARY**, ou **SQL _ LONGVARBINARY**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -163,7 +158,7 @@ void RFX_Binary(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a>  RFX_Bool
 Transfere dados boolianos entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_BIT**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -191,7 +186,7 @@ void RFX_Bool(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a>  RFX_Byte
 Transferências de único bytes entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_TINYINT**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -219,7 +214,7 @@ void RFX_Byte(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a>  RFX_Date
 Transferências de `CTime` ou **TIMESTAMP_STRUCT** dados entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_DATE**, **SQL_TIME**, ou **SQL_TIMESTAMP**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -264,7 +259,7 @@ void RFX_Date(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a>  RFX_Double
 Transferências de **duplo flutuante** dados entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_DOUBLE**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -292,7 +287,7 @@ void RFX_Double(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_int"></a>RFX_Int
+## <a name="rfx_int"></a>  RFX_Int
 Transfere os dados de número inteiro entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -320,7 +315,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_long"></a>RFX_Long
+## <a name="rfx_long"></a>  RFX_Long
 Transfere dados de inteiro longo entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_INTEGER**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -349,7 +344,7 @@ value );
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
   
-## <a name="rfx_longbinary"></a>RFX_LongBinary
+## <a name="rfx_longbinary"></a>  RFX_LongBinary
 Transferências de dados de objeto binário grande (BLOB) usando a classe [CLongBinary](clongbinary-class.md) entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_LONGVARBINARY**ou **SQL_LONGVARCHAR**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -377,7 +372,7 @@ void RFX_LongBinary(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a>  RFX_Single
 Transferências de dados de ponto flutuante entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_REAL**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -406,7 +401,7 @@ void RFX_Single(
  **Cabeçalho:** afxdb.h  
   
 
-## <a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a>  RFX_Text
 Transferências de `CString` dados entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL _ VARCHAR**, **SQL_DECIMAL**, ou **SQL_NUMERIC**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -438,7 +433,7 @@ void RFX_Text(
  Usado principalmente para parâmetros. Um inteiro que indica o tipo de dados do parâmetro. O tipo é um tipo de dados ODBC do formulário **SQL_XXX**.  
   
  `nScale`  
- Especifica a escala de valores do tipo ODBC **SQL_DECIMAL** ou **SQL_NUMERIC**. `nScale`só é útil ao definir os valores de parâmetro. Para obter mais informações, consulte o tópico "Precisão, escala, comprimento e tamanho de exibição" no Apêndice D do *referência do programador de ODBC SDK*.  
+ Especifica a escala de valores do tipo ODBC **SQL_DECIMAL** ou **SQL_NUMERIC**. `nScale` só é útil ao definir os valores de parâmetro. Para obter mais informações, consulte o tópico "Precisão, escala, comprimento e tamanho de exibição" no Apêndice D do *referência do programador de ODBC SDK*.  
   
 ### <a name="remarks"></a>Comentários  
  Dados na fonte de dados de todos esses tipos são mapeados para e de `CString` no conjunto de registros.  
@@ -468,7 +463,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
  **Cabeçalho:** afxdb.h  
 
 
-## <a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 Transferências de várias linhas de dados byte de uma coluna de uma fonte de dados ODBC em uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -514,7 +509,7 @@ void RFX_Binary_Bulk(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_bulk"></a>  RFX_Bool_Bulk
 Transferências de várias linhas de dados booliano de uma coluna de uma fonte de dados ODBC em uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -556,7 +551,7 @@ void RFX_Bool_Bulk(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_bulk"></a>  RFX_Byte_Bulk
 Transferências de várias linhas de bytes simples de uma coluna de uma fonte de dados ODBC em uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -598,7 +593,7 @@ void RFX_Byte_Bulk(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
   
-## <a name="rfx_date_bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_bulk"></a>  RFX_Date_Bulk
 Transferências de várias linhas de **TIMESTAMP_STRUCT** dados de uma coluna de uma fonte de dados ODBC para uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -640,7 +635,7 @@ void RFX_Date_Bulk(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_double_bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_bulk"></a>  RFX_Double_Bulk
 Transferências de várias linhas de dados de ponto flutuantes de precisão dupla de uma coluna de uma fonte de dados ODBC em uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -682,7 +677,7 @@ void RFX_Double_Bulk(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_int_bulk"></a>RFX_Int_Bulk
+## <a name="rfx_int_bulk"></a>  RFX_Int_Bulk
 Transfere os dados de número inteiro entre os membros de dados do campo de um `CRecordset` objeto e as colunas de um registro na fonte de dados do tipo ODBC **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -710,7 +705,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_long_bulk"></a>RFX_Long_Bulk
+## <a name="rfx_long_bulk"></a>  RFX_Long_Bulk
 Transferências de várias linhas de dados de inteiro longo de uma coluna de uma fonte de dados ODBC em uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -752,7 +747,7 @@ void RFX_Long_Bulk(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="rfx_single_bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_bulk"></a>  RFX_Single_Bulk
 Transferências de várias linhas de dados de ponto flutuante de uma coluna de uma fonte de dados ODBC em uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -795,7 +790,7 @@ void RFX_Single_Bulk(
  **Cabeçalho:** afxdb.h  
   
 
-## <a name="rfx_text_bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 Transferências de várias linhas de dados de caracteres de uma coluna de uma fonte de dados ODBC em uma matriz correspondente em um `CRecordset`-objeto derivado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -856,7 +851,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-## <a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a>  DFX_Binary
 Transferências de matrizes de bytes entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -899,7 +894,7 @@ void AFXAPI DFX_Binary(
  **Cabeçalho:** afxdao.h  
   
 
-## <a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a>  DFX_Bool
 Transfere dados boolianos entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -937,7 +932,7 @@ void AFXAPI DFX_Bool(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-## <a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a>  DFX_Byte
 Transferências de único bytes entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -975,7 +970,7 @@ void AFXAPI DFX_Byte(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-## <a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a>  DFX_Currency
 Transferências de dados de moeda entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -1013,7 +1008,7 @@ void AFXAPI DFX_Currency(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-## <a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a>  DFX_DateTime
 Transfere dados de data e hora entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -1046,7 +1041,7 @@ void AFXAPI DFX_DateTime(
  Os dados são mapeados entre o tipo **DAO_DATE** em DAO e digite [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) no conjunto de registros.  
   
 > [!NOTE]
->  `COleDateTime`substitui [CTime](../../atl-mfc-shared/reference/ctime-class.md) e **TIMESTAMP_STRUCT** para essa finalidade nas classes DAO. `CTime`e **TIMESTAMP_STRUCT** ainda é usado para as classes de acesso de dados com base em ODBC.  
+>  `COleDateTime` substitui [CTime](../../atl-mfc-shared/reference/ctime-class.md) e **TIMESTAMP_STRUCT** para essa finalidade nas classes DAO. `CTime` e **TIMESTAMP_STRUCT** ainda é usado para as classes de acesso de dados com base em ODBC.  
   
 ### <a name="example"></a>Exemplo  
  Consulte [DFX_Text](#dfx_text).  
@@ -1054,7 +1049,7 @@ void AFXAPI DFX_DateTime(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-## <a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a>  DFX_Double
 Transferências de **duplo flutuante** dados entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -1092,7 +1087,7 @@ void AFXAPI DFX_Double(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-## <a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a>  DFX_Long
 Transfere dados de inteiro longo entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -1131,7 +1126,7 @@ void AFXAPI DFX_Long(
  **Cabeçalho:** afxdao.h  
   
 
-## <a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a>  DFX_LongBinary
 **Importante** é recomendável que você use [DFX_Binary](#dfx_binary) em vez dessa função.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -1165,7 +1160,7 @@ void AFXAPI DFX_LongBinary(
 >  Você pode controlar se os dados estão duplos em buffer por padrão, definindo [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
 ### <a name="remarks"></a>Comentários  
- `DFX_LongBinary`é fornecida para compatibilidade com as classes MFC ODBC. O `DFX_LongBinary` função transfere dados objeto binário grande (BLOB) usando a classe `CLongBinary` entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados. Os dados são mapeados entre o tipo **DAO_BYTES** em DAO e digite [CLongBinary](clongbinary-class.md) no conjunto de registros.  
+ `DFX_LongBinary` é fornecida para compatibilidade com as classes MFC ODBC. O `DFX_LongBinary` função transfere dados objeto binário grande (BLOB) usando a classe `CLongBinary` entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados. Os dados são mapeados entre o tipo **DAO_BYTES** em DAO e digite [CLongBinary](clongbinary-class.md) no conjunto de registros.  
   
 ### <a name="example"></a>Exemplo  
  Consulte [DFX_Text](#dfx_text).  
@@ -1173,7 +1168,7 @@ void AFXAPI DFX_LongBinary(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-## <a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a>  DFX_Short
 Transferências de dados de número inteiro entre os membros de dados do campo de curto um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -1206,7 +1201,7 @@ void AFXAPI DFX_Short(
  Os dados são mapeados entre o tipo **DAO_I2** em DAO e digite **curto** no conjunto de registros.  
   
 > [!NOTE]
->  `DFX_Short`é equivalente a [RFX_Int](#rfx_int) para as classes com base em ODBC.  
+>  `DFX_Short` é equivalente a [RFX_Int](#rfx_int) para as classes com base em ODBC.  
   
 ### <a name="example"></a>Exemplo  
  Consulte [DFX_Text](#dfx_text).  
@@ -1215,7 +1210,7 @@ void AFXAPI DFX_Short(
  **Cabeçalho:** afxdao.h  
   
 
-## <a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a>  DFX_Single
 Transferências de dados de ponto flutuante entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -1253,7 +1248,7 @@ void AFXAPI DFX_Single(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
 
-## <a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a>  DFX_Text
 Transferências de `CString` dados entre os membros de dados do campo de um [CDaoRecordset](cdaorecordset-class.md) objeto e as colunas de um registro na fonte de dados.  
   
 ### <a name="syntax"></a>Sintaxe  

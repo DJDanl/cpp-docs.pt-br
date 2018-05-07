@@ -1,13 +1,10 @@
 ---
 title: Aplicativos de Desktop do MFC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MFC
 - mfc
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5f99270afc1f603b8e5e44a23cd422f96558efb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-desktop-applications"></a>Aplicativos para desktop do MFC
 A biblioteca Microsoft Foundation Class (MFC) fornece um wrapper orientada a objeto grande parte do Win32 e APIs COM. Embora ele possa ser usado para criar aplicativos de área de trabalho muito simples, é mais útil quando você precisa desenvolver interfaces de usuário mais complexos com vários controles. Você pode usar o MFC para criar aplicativos com interfaces de usuário de estilo do Office.  

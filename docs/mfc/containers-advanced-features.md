@@ -1,13 +1,10 @@
 ---
-title: "Contêineres: Recursos avançados | Microsoft Docs"
-ms.custom: 
+title: 'Contêineres: Recursos avançados | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-advanced-features"></a>Contêineres: funcionalidades avançadas
 Este artigo descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicativos de contêiner existente. Esses recursos são:  
@@ -40,7 +35,7 @@ Este artigo descreve as etapas necessárias para incorporar recursos avançados 
   
 -   [Um vínculo OLE com um objeto inserido](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container_server_application"></a>Criando um aplicativo de contêiner/servidor  
+##  <a name="_core_creating_a_container_server_application"></a> Criando um aplicativo de contêiner/servidor  
  Um aplicativo de contêiner/servidor é um aplicativo que atua como um recipiente e um servidor. Microsoft Word para Windows é um exemplo disso. Você pode inserir documentos do Word para Windows em outros aplicativos, e você também pode inserir itens em documentos do Word para Windows. O processo para modificar seu aplicativo de contêiner para um contêiner e um servidor completo (você não pode criar um aplicativo de contêiner/miniserver combinação) é semelhante ao processo de criação de um servidor completo.  
   
  O artigo [servidores: Implementando um servidor](../mfc/servers-implementing-a-server.md) relaciona um número de tarefas necessárias para implementar um aplicativo de servidor. Se você converter um aplicativo de contêiner para um aplicativo de contêiner/servidor, em seguida, você precisa executar algumas dessas mesmas tarefas, adicionando o código para o contêiner. O exemplo a seguir lista as coisas importantes a considerar:  
@@ -57,7 +52,7 @@ Este artigo descreve as etapas necessárias para incorporar recursos avançados 
   
  Observe que você não pode inserir um aplicativo MDI em si. Um aplicativo que é um contêiner/servidor não pode ser inserido em si mesmo, a menos que ele é um aplicativo SDI.  
   
-##  <a name="_core_links_to_embedded_objects"></a>Links para objetos inseridos  
+##  <a name="_core_links_to_embedded_objects"></a> Links para objetos inseridos  
  Os Links para recursos de objetos inseridos permite que um usuário criar um documento com um vínculo OLE com um objeto inserido dentro de seu aplicativo de contêiner. Por exemplo, crie um documento em um processador de texto que contém uma planilha incorporada. Se seu aplicativo dá suporte a links para objetos incorporados, ele pode colar um link para a planilha contida no documento do word do processador. Esse recurso permite que seu aplicativo para usar as informações contidas na planilha sem saber em que o processador de textos originalmente acertou.  
   
 #### <a name="to-link-to-embedded-objects-in-your-application"></a>Para vincular a objetos inseridos em seu aplicativo  

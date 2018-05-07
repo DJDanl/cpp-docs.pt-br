@@ -1,12 +1,9 @@
 ---
 title: Classe CToolBarCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CToolBarCtrl
@@ -191,17 +188,15 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 054e3de4daa7d5bd25583286e958c0c9b07c4090
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b280f697a5e743f0f4d802c52894684f047c961
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 Fornece a funcionalidade de controle comum da barra de ferramentas do Windows.  
@@ -317,7 +312,7 @@ class CToolBarCtrl : public CWnd
   
  Um controle comum de barra de ferramentas do Windows é uma janela filho retangular que contém um ou mais botões. Esses botões podem exibir uma imagem de bitmap, uma cadeia de caracteres ou ambos. Quando o usuário escolhe um botão, ele envia uma mensagem de comando para a janela do proprietário da barra de ferramentas. Normalmente, os botões na barra de ferramentas correspondem aos itens de menu do aplicativo. eles fornecem uma maneira mais direta do usuário acessar comandos de um aplicativo.  
   
- `CToolBarCtrl`os objetos contêm várias estruturas de dados internos importante: uma lista de bitmaps de imagem do botão ou uma lista de imagens, uma lista de cadeias de caracteres de rótulo de botão e uma lista de `TBBUTTON` estruturas que associar uma imagem e/ou cadeia de caracteres com a posição, estilo, estado e ID de comando do botão. Cada um dos elementos dessas estruturas de dados é chamada por um índice com base em zero. Antes de usar um `CToolBarCtrl` do objeto, você deve configurar essas estruturas de dados. A lista de cadeias de caracteres só pode ser usada para rótulos de botão; Você não pode recuperar cadeias de caracteres na barra de ferramentas.  
+ `CToolBarCtrl` os objetos contêm várias estruturas de dados internos importante: uma lista de bitmaps de imagem do botão ou uma lista de imagens, uma lista de cadeias de caracteres de rótulo de botão e uma lista de `TBBUTTON` estruturas que associar uma imagem e/ou cadeia de caracteres com a posição, estilo, estado e ID de comando do botão. Cada um dos elementos dessas estruturas de dados é chamada por um índice com base em zero. Antes de usar um `CToolBarCtrl` do objeto, você deve configurar essas estruturas de dados. A lista de cadeias de caracteres só pode ser usada para rótulos de botão; Você não pode recuperar cadeias de caracteres na barra de ferramentas.  
   
  Para usar um `CToolBarCtrl` do objeto, normalmente você seguirá estas etapas:  
   
@@ -362,7 +357,7 @@ class CToolBarCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn.h  
   
-##  <a name="addbitmap"></a>CToolBarCtrl::AddBitmap  
+##  <a name="addbitmap"></a>  CToolBarCtrl::AddBitmap  
  Adiciona uma ou mais imagens do botão à lista de imagens de botão armazenada no controle de barra de ferramentas.  
   
 ```  
@@ -392,7 +387,7 @@ int AddBitmap(
 ### <a name="remarks"></a>Comentários  
  Você pode usar a API do Windows [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467) para mapear as cores antes de adicionar o bitmap na barra de ferramentas. Se você passar um ponteiro para um **CBitMap** do objeto, você deve garantir que o bitmap não será destruído até depois que a barra de ferramentas é destruída.  
   
-##  <a name="addbuttons"></a>CToolBarCtrl::AddButtons  
+##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  Adiciona um ou mais botões a um controle de barra de ferramentas.  
   
 ```  
@@ -441,30 +436,30 @@ BOOL AddButtons(
  **fsState**  
  Sinalizadores de estado do botão. Pode ser uma combinação dos valores listados abaixo:  
   
-- `TBSTATE_CHECKED`O botão tem o **TBSTYLE_CHECKED** de estilo e está sendo pressionada.  
+- `TBSTATE_CHECKED` O botão tem o **TBSTYLE_CHECKED** de estilo e está sendo pressionada.  
   
-- `TBSTATE_ENABLED`O botão aceita entrada do usuário. Um botão que não têm esse estado não aceita entrada de usuário e ficará indisponível.  
+- `TBSTATE_ENABLED` O botão aceita entrada do usuário. Um botão que não têm esse estado não aceita entrada de usuário e ficará indisponível.  
   
-- `TBSTATE_HIDDEN`O botão não estiver visível e não pode receber entrada do usuário.  
+- `TBSTATE_HIDDEN` O botão não estiver visível e não pode receber entrada do usuário.  
   
-- `TBSTATE_INDETERMINATE`O botão ficará indisponível.  
+- `TBSTATE_INDETERMINATE` O botão ficará indisponível.  
   
-- `TBSTATE_PRESSED`O botão está sendo pressionado.  
+- `TBSTATE_PRESSED` O botão está sendo pressionado.  
   
-- `TBSTATE_WRAP`Uma quebra de linha segue o botão. O botão também deve ter o `TBSTATE_ENABLED` estado.  
+- `TBSTATE_WRAP` Uma quebra de linha segue o botão. O botão também deve ter o `TBSTATE_ENABLED` estado.  
   
  **fsStyle**  
  Estilo do botão. Pode ser uma combinação dos valores listados abaixo:  
   
-- `TBSTYLE_BUTTON`Cria um botão de ação padrão.  
+- `TBSTYLE_BUTTON` Cria um botão de ação padrão.  
   
-- `TBSTYLE_CHECK`Cria um botão que alterna entre os estados pressionados e não pressionados cada vez que o usuário clica neles. O botão tem uma cor de plano de fundo diferente quando ele estiver no estado pressionado.  
+- `TBSTYLE_CHECK` Cria um botão que alterna entre os estados pressionados e não pressionados cada vez que o usuário clica neles. O botão tem uma cor de plano de fundo diferente quando ele estiver no estado pressionado.  
   
-- `TBSTYLE_CHECKGROUP`Cria um botão de seleção permanece pressionado até que o outro no grupo é pressionado.  
+- `TBSTYLE_CHECKGROUP` Cria um botão de seleção permanece pressionado até que o outro no grupo é pressionado.  
   
-- `TBSTYLE_GROUP`Cria um botão que permanece pressionado até que o outro no grupo é pressionado.  
+- `TBSTYLE_GROUP` Cria um botão que permanece pressionado até que o outro no grupo é pressionado.  
   
-- `TBSTYLE_SEP`Cria um separador, fornecendo um pequeno intervalo entre grupos de botões. Um botão que possui este estilo não recebe entrada do usuário.  
+- `TBSTYLE_SEP` Cria um separador, fornecendo um pequeno intervalo entre grupos de botões. Um botão que possui este estilo não recebe entrada do usuário.  
   
  `dwData`  
  Dados definidos pelo usuário.  
@@ -474,7 +469,7 @@ BOOL AddButtons(
   
  A imagem e/ou a cadeia de caracteres cujo índice que você fornecer deve ter sido previamente adicionado ao controle de barra de ferramentas lista usando [AddBitmap](#addbitmap), [AddString](#addstring), e/ou [AddStrings](#addstrings).  
   
-##  <a name="addstring"></a>CToolBarCtrl::AddString  
+##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  Adiciona uma nova cadeia de caracteres passada como uma ID de recurso para a lista interna da barra de ferramentas de cadeias de caracteres.  
   
 ```  
@@ -488,7 +483,7 @@ int AddString(UINT nStringID);
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da primeira cadeia novo adicionado se for bem-sucedida; Caso contrário, retornará-1.  
   
-##  <a name="addstrings"></a>CToolBarCtrl::AddStrings  
+##  <a name="addstrings"></a>  CToolBarCtrl::AddStrings  
  Adiciona uma nova cadeia de caracteres ou cadeias de caracteres à lista de cadeias de caracteres disponíveis para um controle de barra de ferramentas.  
   
 ```  
@@ -513,7 +508,7 @@ int AddStrings(LPCTSTR lpszStrings);
   
  Você não deve transmitir um `CString` objeto para esta função porque não é possível ter mais de um caractere null em um `CString`.  
   
-##  <a name="autosize"></a>CToolBarCtrl::AutoSize  
+##  <a name="autosize"></a>  CToolBarCtrl::AutoSize  
  Redimensiona o controle de barra de ferramentas inteira.  
   
 ```  
@@ -523,7 +518,7 @@ void AutoSize();
 ### <a name="remarks"></a>Comentários  
  Você deve chamar esta função quando o tamanho da janela pai for alterado ou quando altera o tamanho da barra de ferramentas (por exemplo, quando você define o tamanho do botão ou bitmap, ou adicionar cadeias de caracteres).  
   
-##  <a name="changebitmap"></a>CToolBarCtrl::ChangeBitmap  
+##  <a name="changebitmap"></a>  CToolBarCtrl::ChangeBitmap  
  Altera o bitmap para um botão no controle de barra de ferramentas atual.  
   
 ```  
@@ -540,7 +535,7 @@ BOOL ChangeBitmap(
 |[in] `iBitmap`|Índice de base zero de uma imagem na lista de imagens do controle de barra de ferramentas atual.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
+ `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  Se esse método for bem-sucedida, o sistema exibe a imagem especificada no botão especificado.  
@@ -552,7 +547,7 @@ BOOL ChangeBitmap(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_3.cpp)]  
   
-##  <a name="checkbutton"></a>CToolBarCtrl::CheckButton  
+##  <a name="checkbutton"></a>  CToolBarCtrl::CheckButton  
  Verifica ou limpa um determinado botão em um controle de barra de ferramentas.  
   
 ```  
@@ -574,7 +569,7 @@ BOOL CheckButton(
 ### <a name="remarks"></a>Comentários  
  Quando um botão foi verificado, ele parece ter sido pressionado. Se você quiser alterar o estado de mais de um botão, considere a possibilidade de chamar [SetState](#setstate) em vez disso.  
   
-##  <a name="commandtoindex"></a>CToolBarCtrl::CommandToIndex  
+##  <a name="commandtoindex"></a>  CToolBarCtrl::CommandToIndex  
  Recupera o índice com base em zero para o botão associado com o identificador de comando especificado.  
   
 ```  
@@ -590,7 +585,7 @@ UINT CommandToIndex(UINT nID) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="create"></a>CToolBarCtrl::Create  
+##  <a name="create"></a>  CToolBarCtrl::Create  
  Cria um controle de barra de ferramentas e a anexa a um `CToolBarCtrl` objeto.  
   
 ```  
@@ -636,7 +631,7 @@ virtual BOOL Create(
   
  O controle de barra de ferramentas define automaticamente o tamanho e a posição da janela de ferramentas. A altura é baseada na altura dos botões na barra de ferramentas. A largura é o mesmo que a largura da área cliente da janela pai. O `CCS_TOP` e `CCS_BOTTOM` estilos determinam se a barra de ferramentas é posicionada ao longo da parte superior ou inferior da área do cliente. Por padrão, uma barra de ferramentas tem o `CCS_TOP` estilo.  
   
-##  <a name="createex"></a>CToolBarCtrl::CreateEx  
+##  <a name="createex"></a>  CToolBarCtrl::CreateEx  
  Cria um controle (uma janela filho) e o associa a `CToolBarCtrl` objeto.  
   
 ```  
@@ -670,7 +665,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**. **CreateEx** cria o controle com os estilos estendidos do Windows especificados pela `dwExStyle`. Conjunto estendido estilos específicos para usar um controle [SetExtendedStyle](#setextendedstyle). Por exemplo, use `CreateEx` para definir esses estilos como **WS_EX_CONTEXTHELP**, mas usar `SetExtendedStyle` para definir esses estilos como **TBSTYLE_EX_DRAWDDARROWS**. Para obter mais informações, consulte os estilos descritos em [estilos de barra de ferramentas estendido](http://msdn.microsoft.com/library/windows/desktop/bb760430) no SDK do Windows.  
   
-##  <a name="ctoolbarctrl"></a>CToolBarCtrl::CToolBarCtrl  
+##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  Constrói um objeto `CToolBarCtrl`.  
   
 ```  
@@ -680,7 +675,7 @@ CToolBarCtrl();
 ### <a name="remarks"></a>Comentários  
  Você deve chamar [criar](#create) para tornar a barra de ferramentas utilizável.  
   
-##  <a name="customize"></a>CToolBarCtrl::Customize  
+##  <a name="customize"></a>  CToolBarCtrl::Customize  
  Exibe a caixa de diálogo Personalizar barra de ferramentas.  
   
 ```  
@@ -692,7 +687,7 @@ void Customize();
   
  Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q241850: PRB: chamada a CToolBarCtrl::Customize não mantém visível a caixa de diálogo Personalizar.  
   
-##  <a name="deletebutton"></a>CToolBarCtrl::DeleteButton  
+##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton  
  Exclui um botão do controle da barra de ferramentas.  
   
 ```  
@@ -708,7 +703,7 @@ BOOL DeleteButton(int nIndex);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="enablebutton"></a>CToolBarCtrl::EnableButton  
+##  <a name="enablebutton"></a>  CToolBarCtrl::EnableButton  
  Habilita ou desabilita o botão especificado em um controle de barra de ferramentas.  
   
 ```  
@@ -730,7 +725,7 @@ BOOL EnableButton(
 ### <a name="remarks"></a>Comentários  
  Quando um botão estiver habilitado, pode ser pressionado e verificada. Se você quiser alterar o estado de mais de um botão, considere a possibilidade de chamar [SetState](#setstate) em vez disso.  
   
-##  <a name="getanchorhighlight"></a>CToolBarCtrl::GetAnchorHighlight  
+##  <a name="getanchorhighlight"></a>  CToolBarCtrl::GetAnchorHighlight  
  Recupera o realce de âncora configuração para uma barra de ferramentas.  
   
 ```  
@@ -743,7 +738,7 @@ BOOL GetAnchorHighlight() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313), conforme descrito no SDK do Windows.  
   
-##  <a name="getbitmap"></a>CToolBarCtrl::GetBitmap  
+##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
  Recupera o índice do bitmap associado a um botão na barra de ferramentas.  
   
 ```  
@@ -760,7 +755,7 @@ int GetBitmap(int nID) const;
 ### <a name="remarks"></a>Comentários  
  Implementa a funcionalidade de [TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) no SDK do Windows.  
   
-##  <a name="getbitmapflags"></a>CToolBarCtrl::GetBitmapFlags  
+##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
  Recupera os sinalizadores de bitmap na barra de ferramentas.  
   
 ```  
@@ -773,7 +768,7 @@ UINT GetBitmapFlags() const;
 ### <a name="remarks"></a>Comentários  
  Você deve chamá-lo depois de criar a barra de ferramentas, mas antes de adicionar bitmaps na barra de ferramentas. O valor de retorno indica se a exibição suporta bitmaps grandes, ou não. Se a exibição dá suporte a bitmaps grandes e se você optar por usá-los, chame [SetBitmapSize](#setbitmapsize) e [SetButtonSize](#setbuttonsize) antes de adicionar o bitmap grande usando [AddBitmap](#addbitmap).  
   
-##  <a name="getbutton"></a>CToolBarCtrl::GetButton  
+##  <a name="getbutton"></a>  CToolBarCtrl::GetButton  
  Recupera informações sobre o botão especificado em um controle de barra de ferramentas.  
   
 ```  
@@ -792,7 +787,7 @@ BOOL GetButton(
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, zero.  
   
-##  <a name="getbuttoncount"></a>CToolBarCtrl::GetButtonCount  
+##  <a name="getbuttoncount"></a>  CToolBarCtrl::GetButtonCount  
  Recupera uma contagem dos botões no momento no controle de barra de ferramentas.  
   
 ```  
@@ -802,7 +797,7 @@ int GetButtonCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  A contagem dos botões.  
   
-##  <a name="getbuttoninfo"></a>CToolBarCtrl::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>  CToolBarCtrl::GetButtonInfo  
  Recupera as informações para um botão na barra de ferramentas.  
   
 ```  
@@ -824,7 +819,7 @@ int GetButtonInfo(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321), conforme descrito no SDK do Windows.  
   
-##  <a name="getbuttonsize"></a>CToolBarCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
  Obtém o tamanho de um botão de barra de ferramentas.  
   
 ```  
@@ -834,7 +829,7 @@ DWORD GetButtonSize() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um `DWORD` valor que contém os valores de largura e altura na LOWORD e HIWORD, respectivamente.  
   
-##  <a name="getbuttontext"></a>CToolBarCtrl::GetButtonText  
+##  <a name="getbuttontext"></a>  CToolBarCtrl::GetButtonText  
  Recupera o texto de exibição de um botão especificado no controle de barra de ferramentas atual.  
   
 ```  
@@ -853,7 +848,7 @@ CString GetButtonText(int idButton) const;
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325) mensagem, que é descrita no SDK do Windows.  
   
-##  <a name="getcolorscheme"></a>CToolBarCtrl::GetColorScheme  
+##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
  Recupera o esquema de cores do controle de barra de ferramentas atual.  
   
 ```  
@@ -867,12 +862,12 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 |[out] `lpColorScheme`|Ponteiro para um [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) estrutura que recebe as informações de esquema de cores. Quando este método retorna, a estrutura descreve a cor de realce e a cor da sombra do controle da barra de ferramentas.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
+ `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327) mensagem, que é descrita no SDK do Windows.  
   
-##  <a name="getdisabledimagelist"></a>CToolBarCtrl::GetDisabledImageList  
+##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
  Recupera a lista de imagens que usa um controle de barra de ferramentas para exibir desabilitado botões.  
   
 ```  
@@ -885,7 +880,7 @@ CImageList* GetDisabledImageList() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329), conforme descrito no SDK do Windows. A implementação do MFC de `GetDisabledImageList` usa um `CImageList` imagens do objeto que contém o botão do controle de barra de ferramentas, em vez de um identificador para uma lista de imagens.  
   
-##  <a name="getdroptarget"></a>CToolBarCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
  Recupera o [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface para um controle de barra de ferramentas.  
   
 ```  
@@ -902,7 +897,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343), conforme descrito no SDK do Windows.  
   
-##  <a name="getextendedstyle"></a>CToolBarCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
  Recupera os estilos estendidos para um controle de barra de ferramentas.  
   
 ```  
@@ -915,7 +910,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331), conforme descrito no SDK do Windows.  
   
-##  <a name="gethotimagelist"></a>CToolBarCtrl::GetHotImageList  
+##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
  Recupera a lista de imagens que usa um controle de barra de ferramentas para exibir os botões "ativos". Um botão de acesso aparece realçado quando o ponteiro do mouse está acima dele.  
   
 ```  
@@ -928,7 +923,7 @@ CImageList* GetHotImageList() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334), conforme descrito no SDK do Windows. Um botão de acesso aparece realçado quando o ponteiro do mouse está acima dele.  
   
-##  <a name="gethotitem"></a>CToolBarCtrl::GetHotItem  
+##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
  Recupera o índice do item ativo em uma barra de ferramentas.  
   
 ```  
@@ -941,7 +936,7 @@ int GetHotItem() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336), conforme descrito no SDK do Windows.  
   
-##  <a name="getimagelist"></a>CToolBarCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
  Recupera a lista de imagens que usa um controle de barra de ferramentas para exibir botões em seu estado padrão.  
   
 ```  
@@ -954,7 +949,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337), conforme descrito no SDK do Windows.  
   
-##  <a name="getinsertmark"></a>CToolBarCtrl::GetInsertMark  
+##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
  Recupera a marca de inserção atual para a barra de ferramentas.  
   
 ```  
@@ -968,7 +963,7 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338), conforme descrito no SDK do Windows.  
   
-##  <a name="getinsertmarkcolor"></a>CToolBarCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
  Recupera a cor usada para desenhar a marca de inserção para a barra de ferramentas.  
   
 ```  
@@ -981,7 +976,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339), conforme descrito no SDK do Windows.  
   
-##  <a name="getitemrect"></a>CToolBarCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
  Recupera o retângulo delimitador de um botão em um controle de barra de ferramentas.  
   
 ```  
@@ -1003,7 +998,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Comentários  
  Essa função não recupera o retângulo delimitador para os botões cujo estado é definido como `TBSTATE_HIDDEN`.  
   
-##  <a name="getmaxsize"></a>CToolBarCtrl::GetMaxSize  
+##  <a name="getmaxsize"></a>  CToolBarCtrl::GetMaxSize  
  Recupera o tamanho total de todos os botões visíveis e separadores na barra de ferramentas.  
   
 ```  
@@ -1020,7 +1015,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341), conforme descrito no SDK do Windows.  
   
-##  <a name="getmaxtextrows"></a>CToolBarCtrl::GetMaxTextRows  
+##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
  Recupera o número máximo de linhas do texto exibido em um botão de barra de ferramentas.  
   
 ```  
@@ -1030,7 +1025,7 @@ int GetMaxTextRows() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número máximo de linhas do texto exibido em um botão de barra de ferramentas.  
   
-##  <a name="getmetrics"></a>CToolBarCtrl::GetMetrics  
+##  <a name="getmetrics"></a>  CToolBarCtrl::GetMetrics  
  Recupera as métricas do `CToolBarCtrl` objeto.  
   
 ```  
@@ -1044,7 +1039,7 @@ void GetMetrics(LPTBMETRICS ptbm) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro emula a funcionalidade do [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342) mensagem, conforme descrito no SDK do Windows.  
   
-##  <a name="getpadding"></a>CToolBarCtrl::GetPadding  
+##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
  Recupera o preenchimento horizontal e vertical do controle de barra de ferramentas atual.  
   
 ```  
@@ -1061,12 +1056,12 @@ BOOL GetPadding(
 |[out] `pnVertPadding`|Um inteiro que recebe o preenchimento vertical do controle da barra de ferramentas, em pixels.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
+ `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344) mensagem, que é descrita no SDK do Windows.  
   
-##  <a name="getpressedimagelist"></a>CToolBarCtrl::GetPressedImageList  
+##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
  Recupera a lista de imagens que usa o controle de barra de ferramentas atual para representar os botões no estado pressionado.  
   
 ```  
@@ -1079,7 +1074,7 @@ CImageList* GetPressedImageList();
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345) mensagem, que é descrita no SDK do Windows.  
   
-##  <a name="getrect"></a>CToolBarCtrl::GetRect  
+##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
  Recupera o retângulo delimitador para um botão de barra de ferramentas especificada.  
   
 ```  
@@ -1101,7 +1096,7 @@ BOOL GetRect(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346), conforme descrito no SDK do Windows.  
   
-##  <a name="getrows"></a>CToolBarCtrl::GetRows  
+##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
  Recupera o número de linhas de botões atualmente exibidos pelo controle da barra de ferramentas.  
   
 ```  
@@ -1114,7 +1109,7 @@ int GetRows() const;
 ### <a name="remarks"></a>Comentários  
  Observe que o número de linhas sempre será uma, a menos que a barra de ferramentas foi criada com o `TBSTYLE_WRAPABLE` estilo.  
   
-##  <a name="getstate"></a>CToolBarCtrl::GetState  
+##  <a name="getstate"></a>  CToolBarCtrl::GetState  
  Recupera informações sobre o estado do botão especificado em um controle de barra de ferramentas, como se ele está habilitado, pressionado ou marcado.  
   
 ```  
@@ -1131,7 +1126,7 @@ int GetState(int nID) const;
 ### <a name="remarks"></a>Comentários  
  Essa função é especialmente útil se você quiser recuperar mais de um dos Estados de botão. Para recuperar apenas um estado, use uma das seguintes funções de membro: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), ou [IsButtonIndeterminate](#isbuttonindeterminate). No entanto, o `GetState` função de membro é a única maneira de detectar a `TBSTATE_WRAP` botão estado.  
   
-##  <a name="getstring"></a>CToolBarCtrl::GetString  
+##  <a name="getstring"></a>  CToolBarCtrl::GetString  
  Recupera uma cadeia de caracteres de barra de ferramentas.  
   
 ```  
@@ -1164,7 +1159,7 @@ int GetString(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349), conforme descrito no SDK do Windows.  
   
-##  <a name="getstyle"></a>CToolBarCtrl::GetStyle  
+##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
  Obtém os estilos atualmente aplicados a um controle de barra de ferramentas.  
   
 ```  
@@ -1174,7 +1169,7 @@ DWORD GetStyle() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um `DWORD` que contém uma combinação de [estilos de controle de barra de ferramentas](http://msdn.microsoft.com/library/windows/desktop/bb760439), conforme descrito no SDK do Windows.  
   
-##  <a name="gettooltips"></a>CToolBarCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  Recupera o identificador do controle de dica de ferramenta, se houver, associado com o controle de barra de ferramentas.  
   
 ```  
@@ -1187,7 +1182,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>Comentários  
  Como o controle de barra de ferramentas normalmente cria e mantém seu próprio controle de dica de ferramenta, a maioria dos programas não precisa chamar essa função.  
   
-##  <a name="hittest"></a>CToolBarCtrl::HitTest  
+##  <a name="hittest"></a>  CToolBarCtrl::HitTest  
  Determina onde se encontra um ponto em um controle de barra de ferramentas.  
   
 ```  
@@ -1206,7 +1201,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360), conforme descrito no SDK do Windows.  
   
-##  <a name="hidebutton"></a>CToolBarCtrl::HideButton  
+##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
  Oculta ou mostra o botão especificado em um controle de barra de ferramentas.  
   
 ```  
@@ -1228,7 +1223,7 @@ BOOL HideButton(
 ### <a name="remarks"></a>Comentários  
  Se você quiser alterar o estado de mais de um botão, considere a possibilidade de chamar [SetState](#setstate) em vez disso.  
   
-##  <a name="indeterminate"></a>CToolBarCtrl::Indeterminate  
+##  <a name="indeterminate"></a>  CToolBarCtrl::Indeterminate  
  Define ou limpa o estado indeterminado do botão especificado em um controle de barra de ferramentas.  
   
 ```  
@@ -1250,7 +1245,7 @@ BOOL Indeterminate(
 ### <a name="remarks"></a>Comentários  
  Indeterminado botões são exibidos esmaecido, como a forma do botão negrito na barra de ferramentas de um processador de texto aparece quando o texto selecionado contém caracteres em negrito e normais. Se você quiser alterar o estado de mais de um botão, considere a possibilidade de chamar [SetState](#setstate) em vez disso.  
   
-##  <a name="insertbutton"></a>CToolBarCtrl::InsertButton  
+##  <a name="insertbutton"></a>  CToolBarCtrl::InsertButton  
  Insere um botão em um controle de barra de ferramentas.  
   
 ```  
@@ -1272,7 +1267,7 @@ BOOL InsertButton(
 ### <a name="remarks"></a>Comentários  
  A imagem e/ou a cadeia de caracteres cujo índice que você fornecer deve ter sido previamente adicionado ao controle de barra de ferramentas lista usando [AddBitmap](#addbitmap), [AddString](#addstring), e/ou [AddStrings](#addstrings).  
   
-##  <a name="insertmarkhittest"></a>CToolBarCtrl::InsertMarkHitTest  
+##  <a name="insertmarkhittest"></a>  CToolBarCtrl::InsertMarkHitTest  
  Recupera as informações de marca de inserção de um ponto em uma barra de ferramentas.  
   
 ```  
@@ -1294,7 +1289,7 @@ BOOL InsertMarkHitTest(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367), conforme descrito no SDK do Windows.  
   
-##  <a name="isbuttonchecked"></a>CToolBarCtrl::IsButtonChecked  
+##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
  Determina se o botão especificado em um controle de barra de ferramentas é verificado.  
   
 ```  
@@ -1311,7 +1306,7 @@ BOOL IsButtonChecked(int nID) const;
 ### <a name="remarks"></a>Comentários  
  Considere a possibilidade de chamar [GetState](#getstate) se você quiser recuperar mais de um estado de botão.  
   
-##  <a name="isbuttonenabled"></a>CToolBarCtrl::IsButtonEnabled  
+##  <a name="isbuttonenabled"></a>  CToolBarCtrl::IsButtonEnabled  
  Determina se o botão especificado em um controle de barra de ferramentas está habilitado.  
   
 ```  
@@ -1328,7 +1323,7 @@ BOOL IsButtonEnabled(int nID) const;
 ### <a name="remarks"></a>Comentários  
  Considere a possibilidade de chamar [GetState](#getstate) se você quiser recuperar mais de um estado de botão.  
   
-##  <a name="isbuttonhidden"></a>CToolBarCtrl::IsButtonHidden  
+##  <a name="isbuttonhidden"></a>  CToolBarCtrl::IsButtonHidden  
  Determina se o botão especificado em um controle de barra de ferramentas está oculta.  
   
 ```  
@@ -1345,7 +1340,7 @@ BOOL IsButtonHidden(int nID) const;
 ### <a name="remarks"></a>Comentários  
  Considere a possibilidade de chamar [GetState](#getstate) se você quiser recuperar mais de um estado de botão.  
   
-##  <a name="isbuttonhighlighted"></a>CToolBarCtrl::IsButtonHighlighted  
+##  <a name="isbuttonhighlighted"></a>  CToolBarCtrl::IsButtonHighlighted  
  Verifica o estado de realce de um botão de barra de ferramentas.  
   
 ```  
@@ -1359,7 +1354,7 @@ BOOL IsButtonHighlighted(int nID) const;
 ### <a name="return-value"></a>Valor de retorno  
  Um inteiro positivo se o botão é realçado, 0 se o botão não é realçado, ou -1 se um erro ocorrerá.  
   
-##  <a name="isbuttonindeterminate"></a>CToolBarCtrl::IsButtonIndeterminate  
+##  <a name="isbuttonindeterminate"></a>  CToolBarCtrl::IsButtonIndeterminate  
  Determina se o botão especificado em um controle de barra de ferramentas é indeterminado.  
   
 ```  
@@ -1376,7 +1371,7 @@ BOOL IsButtonIndeterminate(int nID) const;
 ### <a name="remarks"></a>Comentários  
  Indeterminado botões são exibidos esmaecido, como o botão negrito na barra de ferramentas de um processador do word aparência quando o texto selecionado contém caracteres em negrito e normais. Considere a possibilidade de chamar [GetState](#getstate) se você quiser recuperar mais de um estado de botão.  
   
-##  <a name="isbuttonpressed"></a>CToolBarCtrl::IsButtonPressed  
+##  <a name="isbuttonpressed"></a>  CToolBarCtrl::IsButtonPressed  
  Determina se o botão especificado em um controle de barra de ferramentas é pressionado.  
   
 ```  
@@ -1393,7 +1388,7 @@ BOOL IsButtonPressed(int nID) const;
 ### <a name="remarks"></a>Comentários  
  Considere a possibilidade de chamar [GetState](#getstate) se você quiser recuperar mais de um estado de botão.  
   
-##  <a name="loadimages"></a>CToolBarCtrl::LoadImages  
+##  <a name="loadimages"></a>  CToolBarCtrl::LoadImages  
  Carrega os bitmaps na lista de imagens de um controle barra de ferramentas.  
   
 ```  
@@ -1421,7 +1416,7 @@ void LoadImages(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381), conforme descrito no SDK do Windows.  
   
-##  <a name="mapaccelerator"></a>CToolBarCtrl::MapAccelerator  
+##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
  Um caractere de aceleração é mapeado para um botão de barra de ferramentas.  
   
 ```  
@@ -1443,7 +1438,7 @@ BOOL MapAccelerator(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383), conforme descrito no SDK do Windows.  
   
-##  <a name="markbutton"></a>CToolBarCtrl::MarkButton  
+##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
  Define o estado de realce de um determinado botão em um controle de barra de ferramentas.  
   
 ```  
@@ -1465,7 +1460,7 @@ BOOL MarkButton(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385), conforme descrito no SDK do Windows.  
   
-##  <a name="movebutton"></a>CToolBarCtrl::MoveButton  
+##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
  Move um botão de um índice para outra.  
   
 ```  
@@ -1487,7 +1482,7 @@ BOOL MoveButton(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387), conforme descrito no SDK do Windows.  
   
-##  <a name="pressbutton"></a>CToolBarCtrl::PressButton  
+##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
  Pressionar ou liberar o botão especificado em um controle de barra de ferramentas.  
   
 ```  
@@ -1499,7 +1494,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
  Identificador do botão pressione ou liberar o comando.  
   
  [in] `bPress`  
- `true`Pressione o botão especificado; `false` para liberar o botão especificado. O valor padrão é `true`.  
+ `true` Pressione o botão especificado; `false` para liberar o botão especificado. O valor padrão é `true`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` se o método for bem-sucedido; caso contrário, `false`.  
@@ -1509,7 +1504,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
   
  Esse método envia o [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389) mensagem, que é descrita no SDK do Windows.  
   
-##  <a name="replacebitmap"></a>CToolBarCtrl::ReplaceBitmap  
+##  <a name="replacebitmap"></a>  CToolBarCtrl::ReplaceBitmap  
  Substitui o bitmap existente no controle de barra de ferramentas atual com um novo bitmap.  
   
 ```  
@@ -1523,7 +1518,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 |[in] `pReplaceBitmap`|Ponteiro para um [TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484) estrutura que descreve o bitmap a ser substituído e o novo bitmap.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
+ `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391) mensagem, que é descrita no SDK do Windows.  
@@ -1533,7 +1528,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_4.cpp)]  
   
-##  <a name="restorestate"></a>CToolBarCtrl::RestoreState  
+##  <a name="restorestate"></a>  CToolBarCtrl::RestoreState  
  Restaura o estado do controle da barra de ferramentas do local do registro especificado pelos parâmetros.  
   
 ```  
@@ -1561,7 +1556,7 @@ void RestoreState(
  `lpszValueName`  
  Aponta para uma cadeia de caracteres que contém o nome do valor a ser recuperado. Se um valor com este nome já não estiver presente na chave, a função adiciona a chave.  
   
-##  <a name="savestate"></a>CToolBarCtrl::SaveState  
+##  <a name="savestate"></a>  CToolBarCtrl::SaveState  
  Salva o estado do controle da barra de ferramentas no local do registro especificado pelos parâmetros.  
   
 ```  
@@ -1589,7 +1584,7 @@ void SaveState(
  `lpszValueName`  
  Aponta para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente na chave, a função adiciona a chave.  
   
-##  <a name="setanchorhighlight"></a>CToolBarCtrl::SetAnchorHighlight  
+##  <a name="setanchorhighlight"></a>  CToolBarCtrl::SetAnchorHighlight  
  Define o realce de âncora configuração para uma barra de ferramentas.  
   
 ```  
@@ -1606,7 +1601,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ### <a name="remarks"></a>Comentários  
  Esse método implementa o comportamento da mensagem de Win32 [TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396), conforme descrito no SDK do Windows.  
   
-##  <a name="setbitmapsize"></a>CToolBarCtrl::SetBitmapSize  
+##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
  Define o tamanho das imagens de bitmap reais a ser adicionado a um controle de barra de ferramentas.  
   
 ```  
@@ -1623,7 +1618,7 @@ BOOL SetBitmapSize(CSize size);
 ### <a name="remarks"></a>Comentários  
  Essa função deve ser chamada somente antes de adicionar qualquer bitmaps na barra de ferramentas. Se o aplicativo não definir explicitamente o tamanho do bitmap, o padrão é 16 por 15 pixels.  
   
-##  <a name="setbuttoninfo"></a>CToolBarCtrl::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>  CToolBarCtrl::SetButtonInfo  
  Define as informações de um botão existente em uma barra de ferramentas.  
   
 ```  
@@ -1645,7 +1640,7 @@ BOOL SetButtonInfo(
 ### <a name="remarks"></a>Comentários  
  A função de membro implementa o comportamento da mensagem de Win32 [TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413), conforme descrito no SDK do Windows.  
   
-##  <a name="setbuttonsize"></a>CToolBarCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
  Define o tamanho dos botões no controle de barra de ferramentas.  
   
 ```  
@@ -1665,7 +1660,7 @@ BOOL SetButtonSize(CSize size);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CToolBar::GetToolBarCtrl](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
-##  <a name="setbuttonstructsize"></a>CToolBarCtrl::SetButtonStructSize  
+##  <a name="setbuttonstructsize"></a>  CToolBarCtrl::SetButtonStructSize  
  Especifica o tamanho do `TBBUTTON` estrutura.  
   
 ```  
@@ -1681,7 +1676,7 @@ void SetButtonStructSize(int nSize);
   
  Consulte [CToolBarCtrl::AddButtons](#addbuttons) para obter mais informações sobre o `TBBUTTON` estrutura.  
   
-##  <a name="setbuttonwidth"></a>CToolBarCtrl::SetButtonWidth  
+##  <a name="setbuttonwidth"></a>  CToolBarCtrl::SetButtonWidth  
  Define as larguras mínima e máxima de botão no controle de barra de ferramentas.  
   
 ```  
@@ -1703,7 +1698,7 @@ BOOL SetButtonWidth(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417), conforme descrito no SDK do Windows.  
   
-##  <a name="setcmdid"></a>CToolBarCtrl::SetCmdID  
+##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
  Define o identificador de comando que será enviado para a janela do proprietário, quando é pressionado o botão especificado.  
   
 ```  
@@ -1722,7 +1717,7 @@ BOOL SetCmdID(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna zero se for bem-sucedida; Caso contrário, zero.  
   
-##  <a name="setcolorscheme"></a>CToolBarCtrl::SetColorScheme  
+##  <a name="setcolorscheme"></a>  CToolBarCtrl::SetColorScheme  
  Define o esquema de cores do controle de barra de ferramentas atual.  
   
 ```  
@@ -1745,7 +1740,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_5.cpp)]  
   
-##  <a name="setdisabledimagelist"></a>CToolBarCtrl::SetDisabledImageList  
+##  <a name="setdisabledimagelist"></a>  CToolBarCtrl::SetDisabledImageList  
  Define a lista de imagens que irá usar o controle de barra de ferramentas para exibir desabilitado botões.  
   
 ```  
@@ -1762,7 +1757,7 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423), conforme descrito no SDK do Windows. A implementação do MFC de `SetDisabledImageList` usa um `CImageList` imagens do objeto que contém o botão desabilitado do controle de barra de ferramentas, em vez de um identificador para uma lista de imagens.  
   
-##  <a name="setdrawtextflags"></a>CToolBarCtrl::SetDrawTextFlags  
+##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
  Define os sinalizadores na função Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), que é usado para desenhar o texto no retângulo especificado, formatado de acordo com como os sinalizadores são definidos.  
   
 ```  
@@ -1784,7 +1779,7 @@ DWORD SetDrawTextFlags(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425), conforme descrito no SDK do Windows. Essa função de membro define os sinalizadores na função Win32 `DrawText`, que desenha o texto no retângulo especificado, formatado de acordo com como os sinalizadores são definidos.  
   
-##  <a name="setextendedstyle"></a>CToolBarCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
  Define os estilos estendidos para um controle de barra de ferramentas.  
   
 ```  
@@ -1801,7 +1796,7 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427), conforme descrito no SDK do Windows.  
   
-##  <a name="sethotimagelist"></a>CToolBarCtrl::SetHotImageList  
+##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
  Define a lista de imagens que usará o controle de barra de ferramentas para exibir os botões "ativos".  
   
 ```  
@@ -1820,7 +1815,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
   
  A implementação do MFC de `SetHotImageList` usa um `CImageList` imagens do objeto que contém o botão de acesso do controle de barra de ferramentas, em vez de um identificador para uma lista de imagens. Um botão de acesso aparece realçado quando o ponteiro está acima dele.  
   
-##  <a name="sethotitem"></a>CToolBarCtrl::SetHotItem  
+##  <a name="sethotitem"></a>  CToolBarCtrl::SetHotItem  
  Define o item ativo na barra de ferramentas.  
   
 ```  
@@ -1837,7 +1832,7 @@ int SetHotItem(int nHot);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431), conforme descrito no SDK do Windows.  
   
-##  <a name="setimagelist"></a>CToolBarCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
  Define a lista de imagem usará a barra de ferramentas para exibir os botões que estão em seu estado padrão.  
   
 ```  
@@ -1856,7 +1851,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  A implementação do MFC de `SetImageList` usa um `CImageList` imagens do objeto que contém o botão do controle de barra de ferramentas, em vez de um identificador para uma lista de imagens.  
   
-##  <a name="setindent"></a>CToolBarCtrl::SetIndent  
+##  <a name="setindent"></a>  CToolBarCtrl::SetIndent  
  Define o recuo do primeiro botão em um controle de barra de ferramentas.  
   
 ```  
@@ -1870,7 +1865,7 @@ BOOL SetIndent(int iIndent);
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, zero.  
   
-##  <a name="setinsertmark"></a>CToolBarCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>  CToolBarCtrl::SetInsertMark  
  Define a marca de inserção atual para a barra de ferramentas.  
   
 ```  
@@ -1884,7 +1879,7 @@ void SetInsertMark(TBINSERTMARK* ptbim);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437), conforme descrito no SDK do Windows.  
   
-##  <a name="setinsertmarkcolor"></a>CToolBarCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
  Define a cor usada para desenhar a marca de inserção para a barra de ferramentas.  
   
 ```  
@@ -1901,7 +1896,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439), conforme descrito no SDK do Windows.  
   
-##  <a name="setmaxtextrows"></a>CToolBarCtrl::SetMaxTextRows  
+##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
  Define o número máximo de linhas do texto exibido em um botão de barra de ferramentas.  
   
 ```  
@@ -1915,7 +1910,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, zero.  
   
-##  <a name="setmetrics"></a>CToolBarCtrl::SetMetrics  
+##  <a name="setmetrics"></a>  CToolBarCtrl::SetMetrics  
  Define as métricas do `CToolBarCtrl` objeto.  
   
 ```  
@@ -1929,7 +1924,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro emula a funcionalidade do [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446) mensagem, conforme descrito no SDK do Windows.  
   
-##  <a name="setowner"></a>CToolBarCtrl::SetOwner  
+##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
  Define a janela do proprietário para o controle de barra de ferramentas.  
   
 ```  
@@ -1943,7 +1938,7 @@ void SetOwner(CWnd* pWnd);
 ### <a name="remarks"></a>Comentários  
  A janela do proprietário é a janela que recebe as notificações na barra de ferramentas.  
   
-##  <a name="setpadding"></a>CToolBarCtrl::SetPadding  
+##  <a name="setpadding"></a>  CToolBarCtrl::SetPadding  
  Define o preenchimento horizontal e vertical do controle de barra de ferramentas atual.  
   
 ```  
@@ -1970,7 +1965,7 @@ DWORD SetPadding(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_6.cpp)]  
   
-##  <a name="setpressedimagelist"></a>CToolBarCtrl::SetPressedImageList  
+##  <a name="setpressedimagelist"></a>  CToolBarCtrl::SetPressedImageList  
  Define a lista de imagens que usa o controle de barra de ferramentas atual para representar os botões no estado pressionado.  
   
 ```  
@@ -1997,7 +1992,7 @@ CImagelist* SetPressedImageList(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_7.cpp)]  
   
-##  <a name="setrows"></a>CToolBarCtrl::SetRows  
+##  <a name="setrows"></a>  CToolBarCtrl::SetRows  
  Solicita que o controle de barra de ferramentas para redimensionar automaticamente para o número de linhas solicitado.  
   
 ```  
@@ -2030,7 +2025,7 @@ void SetRows(
   
  Essa função só pode ser chamada para barras de ferramentas que foram criadas com o `TBSTYLE_WRAPABLE` estilo.  
   
-##  <a name="setstate"></a>CToolBarCtrl::SetState  
+##  <a name="setstate"></a>  CToolBarCtrl::SetState  
  Define o estado do botão especificado em um controle de barra de ferramentas.  
   
 ```  
@@ -2052,7 +2047,7 @@ BOOL SetState(
 ### <a name="remarks"></a>Comentários  
  Essa função é especialmente útil se você deseja definir mais de um dos Estados de botão. Para definir apenas um estado, use uma das seguintes funções de membro: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [indeterminado](#indeterminate), ou [PressButton](#pressbutton).  
   
-##  <a name="setstyle"></a>CToolBarCtrl::SetStyle  
+##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle  
  Define os estilos de um controle de barra de ferramentas.  
   
 ```  
@@ -2063,7 +2058,7 @@ void SetStyle(DWORD dwStyle);
  `dwStyle`  
  Um `DWORD` que contém uma combinação de [estilos de controle de barra de ferramentas](http://msdn.microsoft.com/library/windows/desktop/bb760439), conforme descrito no SDK do Windows.  
   
-##  <a name="settooltips"></a>CToolBarCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  Associa um controle de dica de ferramenta com um controle de barra de ferramentas.  
   
 ```  
@@ -2074,7 +2069,7 @@ void SetToolTips(CToolTipCtrl* pTip);
  *pTip*  
  Ponteiro para o [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto.  
   
-##  <a name="setwindowtheme"></a>CToolBarCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>  CToolBarCtrl::SetWindowTheme  
  Define o estilo visual do `CToolBarCtrl` objeto.  
   
 ```  

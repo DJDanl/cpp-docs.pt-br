@@ -1,13 +1,10 @@
 ---
-title: "Clientes de automação | Microsoft Docs"
-ms.custom: 
+title: Clientes de automação | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cfb6aae5c947d1f36019e548c72b22a3304aa12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients"></a>Clientes de automação
 Automação torna possível para o seu aplicativo para manipular objetos implementados em outro aplicativo ou para expor os objetos para que eles podem ser manipulados. Um cliente de automação é um aplicativo que pode manipular objetos expostos que pertencem a outro aplicativo. O aplicativo que expõe objetos é chamado de servidor de automação. O cliente manipula os objetos do aplicativo de servidor acessando as funções e as propriedades desses objetos.  
@@ -47,7 +42,7 @@ Automação torna possível para o seu aplicativo para manipular objetos impleme
  Você, em seguida, especifique o arquivo de biblioteca de tipos que descrevem as propriedades e as funções do objeto do aplicativo de servidor. A caixa de diálogo Adicionar Item lê o arquivo e cria o `COleDispatchDriver`-derivado da classe, com funções de membro que seu aplicativo pode chamar para acessar objetos do aplicativo de servidor em C++ de uma maneira de tipo seguro. Funcionalidade adicional herdado de `COleDispatchDriver` simplifica o processo de chamada do servidor de automação adequado.  
   
 ### <a name="handling-events-in-automation-clients"></a>Manipulação de eventos em clientes de automação  
- Se você desejar tratar eventos no cliente de automação, você precisa adicionar uma interface de coletor. MFC fornece suporte do Assistente para adicionar as interfaces de coletor para controles ActiveX, mas não oferece suporte para outros servidores COM. Para obter informações sobre como adicionar uma interface do coletor em um cliente do MFC para interfaces de origem descrito por servidores COM, consulte como: criar uma Interface do coletor no cliente de COM MFC-Based (181845 KB) em [http://support.microsoft.com/default.aspxscid=kb;en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
+ Se você desejar tratar eventos no cliente de automação, você precisa adicionar uma interface de coletor. MFC fornece suporte do Assistente para adicionar as interfaces de coletor para controles ActiveX, mas não oferece suporte para outros servidores COM. Para obter informações sobre como adicionar uma interface do coletor em um cliente do MFC para interfaces de origem descrito por servidores COM, consulte como: criar uma Interface do coletor no cliente de COM MFC-Based (181845 KB) em [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
   
 ## <a name="see-also"></a>Consulte também  
  [Clientes de automação: Usando bibliotecas de tipo](../mfc/automation-clients-using-type-libraries.md)   

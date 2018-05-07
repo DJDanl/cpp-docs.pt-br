@@ -1,13 +1,10 @@
 ---
-title: "Acessando todos os membros de uma coleção | Microsoft Docs"
-ms.custom: 
+title: Acessando todos os membros de uma coleção | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acessando todos os membros de uma coleção
 As classes de coleção MFC matriz — ambos baseado em modelo e não — usa índices para acessar seus elementos. As classes de coleção MFC lista e mapa — ambos baseado em modelo e não — use um indicador do tipo **posição** para descrever a posição especificada dentro da coleção. Para acessar um ou mais membros dessas coleções, você primeiro inicializar o indicador de posição repetidamente passa essa posição na coleção e peça-lo para retornar o próximo elemento. A coleção não é responsável por manter informações de estado sobre o progresso da iteração. Essa informação é mantida no indicador de posição. Mas, dada uma posição específica, a coleção é responsável por retornar o próximo elemento.  
@@ -47,13 +42,13 @@ As classes de coleção MFC matriz — ambos baseado em modelo e não — usa í
   
 -   [Iteração de um mapa](#_core_to_iterate_a_map)  
   
-### <a name="_core_to_iterate_an_array"></a>Para repetir uma matriz  
+### <a name="_core_to_iterate_an_array"></a> Para repetir uma matriz  
   
 1.  Usar números sequenciais de índice com o `GetAt` função de membro:  
   
      [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]  
   
-     Este exemplo usa uma matriz de ponteiro tipado que contém ponteiros para `CPerson` objetos. A matriz é derivada da classe `CObArray`, um de nontemplate classes predefinidas. `GetAt`Retorna um ponteiro para um `CPerson` objeto. Para classes de coleção do tipo ponteiro — matrizes ou listas — o primeiro parâmetro especifica a classe base; o segundo parâmetro especifica o tipo para armazenar.  
+     Este exemplo usa uma matriz de ponteiro tipado que contém ponteiros para `CPerson` objetos. A matriz é derivada da classe `CObArray`, um de nontemplate classes predefinidas. `GetAt` Retorna um ponteiro para um `CPerson` objeto. Para classes de coleção do tipo ponteiro — matrizes ou listas — o primeiro parâmetro especifica a classe base; o segundo parâmetro especifica o tipo para armazenar.  
   
      O `CTypedPtrArray` classe também sobrecargas de **[]** operador para que você pode usar a sintaxe de subscrito de matriz habitual para acessar elementos de uma matriz. Uma alternativa à instrução no corpo do `for` está acima do loop  
   
@@ -61,15 +56,15 @@ As classes de coleção MFC matriz — ambos baseado em modelo e não — usa í
   
      Este operador existe em **const** e não-**const** versões. O **const** versão, o que é invocado para **const** matrizes, pode aparecer somente no lado direito de uma instrução de atribuição.  
   
-### <a name="_core_to_iterate_a_list"></a>Para repetir uma lista  
+### <a name="_core_to_iterate_a_list"></a> Para repetir uma lista  
   
 1.  Use as funções de membro `GetHeadPosition` e `GetNext` para examinar a lista:  
   
      [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]  
   
-     Este exemplo usa uma lista de tipo de ponteiro para contêm ponteiros para `CPerson` objetos. A declaração de lista é semelhante a uma matriz no procedimento de [para uma matriz de iterar](#_core_to_iterate_an_array) , mas é derivado da classe `CObList`. `GetNext`Retorna um ponteiro para um `CPerson` objeto.  
+     Este exemplo usa uma lista de tipo de ponteiro para contêm ponteiros para `CPerson` objetos. A declaração de lista é semelhante a uma matriz no procedimento de [para uma matriz de iterar](#_core_to_iterate_an_array) , mas é derivado da classe `CObList`. `GetNext` Retorna um ponteiro para um `CPerson` objeto.  
   
-### <a name="_core_to_iterate_a_map"></a>Para fazer a iteração de um mapa  
+### <a name="_core_to_iterate_a_map"></a> Para fazer a iteração de um mapa  
   
 1.  Use `GetStartPosition` para ir para o início do mapa e `GetNextAssoc` repetidamente obter a próxima chave e valor do mapa, conforme mostrado pelo exemplo a seguir:  
   

@@ -1,13 +1,10 @@
 ---
 title: Estrutura CDaoIndexInfo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>Estrutura CDaoIndexInfo
 O `CDaoIndexInfo` estrutura contém informações sobre um objeto de índice definida para os objetos de acesso de dados (DAO).  
@@ -110,9 +105,9 @@ struct CDaoIndexInfo {
   
  Objetos de índice não são representados por uma classe do MFC. Em vez disso, DAO objetos subjacentes objetos MFC classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contém uma coleção de objetos de índice, chamado de coleção de índices. Essas classes fornecem funções de membro para acessar itens individuais de informações de índice, ou você pode acessá-los todos de uma vez com um `CDaoIndexInfo` objeto chamando o `GetIndexInfo` a função de membro do objeto contentor.  
   
- `CDaoIndexInfo`tem um construtor e um destruidor para corretamente aloque e desaloque as informações de campo de índice em `m_pFieldInfos`.  
+ `CDaoIndexInfo` tem um construtor e um destruidor para corretamente aloque e desaloque as informações de campo de índice em `m_pFieldInfos`.  
   
- As informações recuperadas pelo `GetIndexInfo` a função de membro de um objeto tabledef é armazenada em um `CDaoIndexInfo` estrutura. Chamar o `GetIndexInfo` a função de membro do objeto contentor tabledef cuja coleção de índices, o objeto de índice é armazenado. `CDaoIndexInfo`também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoIndexInfo` objeto.  
+ As informações recuperadas pelo `GetIndexInfo` a função de membro de um objeto tabledef é armazenada em um `CDaoIndexInfo` estrutura. Chamar o `GetIndexInfo` a função de membro do objeto contentor tabledef cuja coleção de índices, o objeto de índice é armazenado. `CDaoIndexInfo` também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoIndexInfo` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  

@@ -1,13 +1,10 @@
 ---
 title: Conjunto de registros (ODBC) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c5fc714b9c2ff0e1af679edbc3842b86d201fee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c59de3c5db2e1ec658a09279cb42e2833a4109e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-odbc"></a>Conjunto de registros (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -54,7 +49,7 @@ Este tópico se aplica às classes MFC ODBC.
 > [!NOTE]
 >  Alguns drivers ODBC oferecem suporte a modos de exibição do banco de dados. Um modo de exibição nesse sentido é uma consulta criada originalmente com o SQL `CREATE VIEW` instrução. Os assistentes atualmente não dão suporte a modos de exibição, mas é possível codificar esse suporte.  
   
-##  <a name="_core_recordset_capabilities"></a>Recursos do conjunto de registros  
+##  <a name="_core_recordset_capabilities"></a> Recursos do conjunto de registros  
  Todos os objetos de conjunto de registros compartilham os recursos a seguir:  
   
 -   Se a fonte de dados não é somente leitura, você pode especificar que o conjunto de registros seja [atualizável](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [appendable](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), ou somente leitura. Se o conjunto de registros é atualizável, você poderá escolher pessimista ou otimista [bloqueio](../../data/odbc/recordset-locking-records-odbc.md) fornecidos de métodos, o driver fornece o suporte de bloqueio apropriado. Se a fonte de dados é somente leitura, o conjunto de registros será somente leitura.  
@@ -67,10 +62,10 @@ Este tópico se aplica às classes MFC ODBC.
   
 -   Você pode [parametrizar](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) o conjunto de registros para qualificar a seleção de conjunto de registros em tempo de execução.  
   
-##  <a name="_core_snapshots_and_dynasets"></a>Instantâneos e Dynasets  
+##  <a name="_core_snapshots_and_dynasets"></a> Instantâneos e Dynasets  
  Há dois tipos principais de conjuntos de registros: [instantâneos](../../data/odbc/snapshot.md) e [dynasets](../../data/odbc/dynaset.md). Ambos são suportadas pela classe `CRecordset`. Cada compartilha as características de todos os conjuntos de registros, mas cada um também estende a funcionalidade comum em sua própria maneira especializada. Os instantâneos fornecem uma exibição estática dos dados e são úteis para relatórios e outras situações em que você deseja uma exibição dos dados que existia em um determinado momento. Dynasets são úteis quando você deseja atualizações feitas por outros usuários devem ficar visíveis no conjunto de registros sem a necessidade de repetir a consulta ou atualizar o conjunto de registros. Instantâneos e dynasets pode ser atualizável ou somente leitura. Para refletir registros adicionados ou excluídos por outros usuários, chame [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).  
   
- `CRecordset`também permite que dois outros tipos de conjuntos de registros: conjuntos de registros dinâmicos e conjuntos de registros somente de encaminhamento. Conjuntos de registros dinâmicos são semelhantes para dynasets; No entanto, os conjuntos de registros dinâmicos refletem os registros adicionados ou excluídos sem chamar `CRecordset::Requery`. Por esse motivo, conjuntos de registros dinâmicos são geralmente caros em relação ao tempo de processamento do DBMS e muitos drivers ODBC não oferecem suporte a eles. Por outro lado, os conjuntos de registros somente de encaminhamento fornecem o método mais eficiente de acesso a dados para conjuntos de registros que não precisam de atualizações ou para trás. Por exemplo, você pode usar um conjunto de registros somente de encaminhamento para migrar dados de uma fonte de dados para outra, em que você só precisa mover os dados em uma direção de encaminhamento. Para usar um conjunto de registros somente de encaminhamento, você deve fazer o seguinte:  
+ `CRecordset` também permite que dois outros tipos de conjuntos de registros: conjuntos de registros dinâmicos e conjuntos de registros somente de encaminhamento. Conjuntos de registros dinâmicos são semelhantes para dynasets; No entanto, os conjuntos de registros dinâmicos refletem os registros adicionados ou excluídos sem chamar `CRecordset::Requery`. Por esse motivo, conjuntos de registros dinâmicos são geralmente caros em relação ao tempo de processamento do DBMS e muitos drivers ODBC não oferecem suporte a eles. Por outro lado, os conjuntos de registros somente de encaminhamento fornecem o método mais eficiente de acesso a dados para conjuntos de registros que não precisam de atualizações ou para trás. Por exemplo, você pode usar um conjunto de registros somente de encaminhamento para migrar dados de uma fonte de dados para outra, em que você só precisa mover os dados em uma direção de encaminhamento. Para usar um conjunto de registros somente de encaminhamento, você deve fazer o seguinte:  
   
 -   Passar a opção **CRecordset::forwardOnly** como o `nOpenType` parâmetro o [abrir](../../mfc/reference/crecordset-class.md#open) função de membro.  
   
@@ -79,7 +74,7 @@ Este tópico se aplica às classes MFC ODBC.
     > [!NOTE]
     >  Para obter informações sobre requisitos de driver ODBC para suporte de dynaset, consulte [ODBC](../../data/odbc/odbc-basics.md). Para obter uma lista de drivers ODBC incluídos nesta versão do Visual C++ e para obter informações sobre como obter drivers adicionais, consulte [lista de drivers ODBC](../../data/odbc/odbc-driver-list.md).  
   
-##  <a name="_core_your_recordsets"></a>Conjuntos de registros  
+##  <a name="_core_your_recordsets"></a> Conjuntos de registros  
  Para cada tabela distinta, exibição ou procedimento armazenado que você deseja acessar, você normalmente define uma classe derivada de `CRecordset`. (A exceção é uma junção de banco de dados, um conjunto de registros representa colunas de duas ou mais tabelas.) Quando você derivar uma classe de conjunto de registros, você habilita o mecanismo de troca (RFX) de campos de registro ou o mecanismo de troca (RFX em massa) de campos de registro em massa, que são semelhantes para o mecanismo de troca (DDX) de dados de caixa de diálogo. RFX e RFX em massa simplificam a transferência de dados da fonte de dados em seu conjunto de registros; Além do RFX transfere dados de seu conjunto de registros para a fonte de dados. Para obter mais informações, consulte [troca de campos de registro (RFX)](../../data/odbc/record-field-exchange-rfx.md) e [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
  Um objeto recordset fornece acesso a todos os registros. Rolar os vários registros selecionados usando `CRecordset` funções de membro, como `MoveNext` e `MovePrev`. Ao mesmo tempo, um objeto de conjunto de registros representa apenas um dos registros selecionados, o registro atual. Você pode examinar os campos do registro atual declarando variáveis de membro de classe que correspondem às colunas da tabela ou os registros resultantes da consulta de banco de dados de conjunto de registros. Para obter informações sobre membros de dados do conjunto de registros, consulte [conjunto de registros: arquitetura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).  

@@ -1,12 +1,9 @@
 ---
 title: Erro de Build prj0025 no projeto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0025
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f99a57439e87e1841555c90326072ba1667b6b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 087a5d5af8ed92bdd0446ae87af037acbfd38a95
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0025"></a>Erro de Build PRJ0025 no Projeto
 O arquivo de lote 'file' contém conteúdo Unicode que não pôde ser convertido na página de código ANSI do usuário.  

@@ -1,12 +1,9 @@
 ---
 title: Classe CPalette | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPalette
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486338d579f304a6de1a54674a7711bb6c56f38c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpalette-class"></a>Classe CPalette
 Encapsula uma paleta de cores do Windows.  
@@ -101,7 +96,7 @@ class CPalette : public CGdiObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="animatepalette"></a>CPalette::AnimatePalette  
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
  Substitui as entradas na paleta lógica anexado para o `CPalette` objeto.  
   
 ```  
@@ -126,7 +121,7 @@ void AnimatePalette(
   
  O `AnimatePalette` função apenas mudará de entradas com o **PC_RESERVED** o sinalizador será definido no correspondente **palPaletteEntry** membro o [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estrutura que está associada a `CPalette` objeto. Consulte **LOGPALETTE** no SDK do Windows para obter mais informações sobre essa estrutura.  
   
-##  <a name="cpalette"></a>CPalette::CPalette  
+##  <a name="cpalette"></a>  CPalette::CPalette  
  Constrói um objeto `CPalette`.  
   
 ```  
@@ -136,7 +131,7 @@ CPalette();
 ### <a name="remarks"></a>Comentários  
  O objeto não tem nenhuma paleta anexada até que você chame `CreatePalette` para anexar uma.  
   
-##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
  Cria uma paleta de meio-tom para o contexto de dispositivo.  
   
 ```  
@@ -155,7 +150,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
   
  Consulte o SDK do Windows para obter mais informações `CreateHalftonePalette` e **StretchDIBits**.  
   
-##  <a name="createpalette"></a>CPalette::CreatePalette  
+##  <a name="createpalette"></a>  CPalette::CreatePalette  
  Inicializa um `CPalette` objeto criando uma paleta de cores lógicas do Windows e anexá-lo para o `CPalette` objeto.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="remarks"></a>Comentários  
  Consulte o SDK do Windows para obter mais informações o **LOGPALETTE** estrutura.  
   
-##  <a name="fromhandle"></a>CPalette::FromHandle  
+##  <a name="fromhandle"></a>  CPalette::FromHandle  
  Retorna um ponteiro para um `CPalette` objeto quando é fornecido um identificador para um objeto de paleta do Windows.  
   
 ```  
@@ -189,7 +184,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="remarks"></a>Comentários  
  Se um `CPalette` objeto já não está anexado a paleta do Windows, um temporário `CPalette` objeto é criado e anexado. Este temporário `CPalette` objeto é válido somente até a próxima vez que o aplicativo tem tempo ocioso em seu loop de evento, em que ponto o gráfico temporário todos os objetos serão excluídos. Em outras palavras, o objeto temporário é válido somente durante o processamento da mensagem de uma janela.  
   
-##  <a name="getentrycount"></a>CPalette::GetEntryCount  
+##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
  Chame essa função de membro para recuperar o número de entradas em uma determinada paleta lógica.  
   
 ```  
@@ -199,7 +194,7 @@ int GetEntryCount();
 ### <a name="return-value"></a>Valor de retorno  
  Número de entradas em uma paleta lógica.  
   
-##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
  Retorna o índice da entrada da paleta lógica que mais se aproxima o valor de cor especificado.  
   
 ```  
@@ -213,7 +208,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice de uma entrada em uma paleta lógica. A entrada contém a cor que mais se aproxima a cor especificada.  
   
-##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
  Recupera um intervalo de entradas de paleta em uma paleta lógica.  
   
 ```  
@@ -236,7 +231,7 @@ UINT GetPaletteEntries(
 ### <a name="return-value"></a>Valor de retorno  
  O número de entradas recuperados da paleta lógica; 0 se a função falhou.  
   
-##  <a name="operator_hpalette"></a>CPalette::operator HPALETTE  
+##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE  
  Use este operador para obter o identificador de Windows GDI anexado do `CPalette` objeto.  
   
 ```  
@@ -251,7 +246,7 @@ operator HPALETTE() const;
   
  Para obter mais informações sobre como usar objetos gráficos, consulte o artigo [objetos de gráfico](http://msdn.microsoft.com/library/windows/desktop/dd144962) no SDK do Windows.  
   
-##  <a name="resizepalette"></a>CPalette::ResizePalette  
+##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  Altera o tamanho da paleta lógica anexado para o `CPalette` objeto para o número de entradas especificado pelo `nNumEntries`.  
   
 ```  
@@ -270,7 +265,7 @@ BOOL ResizePalette(UINT nNumEntries);
   
  Para obter mais informações sobre a API do Windows `ResizePalette`, consulte [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) no SDK do Windows.  
   
-##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  Define os sinalizadores e valores de cor RGB em um intervalo de entradas em uma paleta lógica.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "TN065: Suporte de Interface dupla para servidores de automação OLE | Microsoft Docs"
-ms.custom: 
+title: 'TN065: Suporte de Interface dupla para servidores de automação OLE | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: suporte para interface dupla para servidores de automação OLE
 > [!NOTE]
@@ -350,12 +345,12 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
 {  
-    METHOD_PROLOGUE(CAutoClickDoc, DualAClick)  
+    METHOD_PROLOGUE (CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC converte automaticamente de Unicode BSTR para * / / CString Ansi, se necessário...  
-    pThis->m_str = newText;  
+    pEsse -> m_str = TextoNovo;  
     Retorna NOERROR;  
  }  
-    CATCH_ALL_DUAL }  
+    CATCH_ALL_DUAL}  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +360,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e->m_wCode + 0x200));
+ (e -> m_wCode + 0x200));
 
  ```  
   

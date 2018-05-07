@@ -1,13 +1,10 @@
 ---
-title: "Classes de exibição disponíveis no MFC derivadas | Microsoft Docs"
-ms.custom: 
+title: Classes de exibição disponíveis no MFC derivadas | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2426f3e547da6eaab6a4b38bb5199e87c93ef933
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b166e64c57482586e145cecc9e79317eea282b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Classes de exibição derivadas disponíveis no MFC
 A tabela a seguir mostra as classes de exibição do MFC e suas relações uns aos outros. Os recursos de sua classe de exibição dependem de classe MFC de exibição da qual deriva.  

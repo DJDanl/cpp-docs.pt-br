@@ -2,12 +2,9 @@
 title: Contêineres | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7986da0ae1906293e2d107b382e4ee4e41212ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d942dde74c25a40b5110b74f783d41684d1fdbe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers"></a>Contêineres
 Um aplicativo de contêiner é um aplicativo que pode incorporar itens incorporados ou vinculados em seus próprios documentos. Os documentos gerenciados por um aplicativo de contêiner devem ser capazes de armazenar e exibir os componentes do documento composto OLE, bem como os dados criados pelo próprio aplicativo. Um aplicativo de contêiner também deve permitir que os usuários inserir novos itens ou editar itens existentes.  
@@ -46,6 +41,6 @@ Um aplicativo de contêiner é um aplicativo que pode incorporar itens incorpora
 ## <a name="see-also"></a>Consulte também  
  [OLE](../mfc/ole-in-mfc.md)   
  [Servidores](../mfc/servers.md)   
- [Ativação](../mfc/activation-cpp.md)   
+ [ativação](../mfc/activation-cpp.md)   
  [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)
 

@@ -1,13 +1,10 @@
 ---
 title: 'TN031: Barras de controle | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4ea57f77c615ba439f2d07c3926cde5efa0c27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1d5cc113177a9653e709c14f66682959276e7ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn031-control-bars"></a>TN031: barras de controle
 > [!NOTE]
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  Esta anotação descreve as classes da barra de controle no MFC: geral [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)e  **CDockBar**.  
   
-## <a name="_mfcnotes_ccontrolbar"></a>CControlBar 
+## <a name="_mfcnotes_ccontrolbar"></a> CControlBar 
   
  Um **ControlBar** é um `CWnd`-derivado de classe que:  
   
@@ -51,19 +46,19 @@ ms.lasthandoff: 12/21/2017
   
  Barras de controle suportam os estilos adicionais:  
   
-- `CBRS_TOP`(O padrão) fixar a barra de controle na parte superior.  
+- `CBRS_TOP` (O padrão) fixar a barra de controle na parte superior.  
   
-- `CBRS_BOTTOM`Fixe a barra de controle na parte inferior.  
+- `CBRS_BOTTOM` Fixe a barra de controle na parte inferior.  
   
-- `CBRS_NOALIGN`Reposiciona a barra de controle quando o pai for redimensionado.  
+- `CBRS_NOALIGN` Reposiciona a barra de controle quando o pai for redimensionado.  
   
  Classes derivadas de `CControlBar` fornecer implementações mais interessantes:  
   
-- `CStatusBar`Uma barra de status, os itens são painéis da barra de status que contém texto.  
+- `CStatusBar` Uma barra de status, os itens são painéis da barra de status que contém texto.  
   
-- `CToolBar`Uma barra de ferramentas, os itens são alinhados em uma linha de botões de bitmap.  
+- `CToolBar` Uma barra de ferramentas, os itens são alinhados em uma linha de botões de bitmap.  
   
-- `CDialogBar`Um quadro de como a barra de ferramentas que contém o padrão do windows controles (criados a partir de um recurso de modelo de caixa de diálogo).  
+- `CDialogBar` Um quadro de como a barra de ferramentas que contém o padrão do windows controles (criados a partir de um recurso de modelo de caixa de diálogo).  
   
 - **CDockBar** um generalizado de área de encaixe para outros `CControlBar` objetos derivados. As funções de membro específico e variáveis disponíveis nesta classe são provavelmente mudar em versões futuras.  
   
@@ -104,7 +99,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  Privada mensagens do Windows MFC, incluindo **WM_SIZEPARENT**, estão documentados em [24 de observação técnica](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
-## <a name="_mfcnotes_cstatusbar"></a>CStatusBar  
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar  
   
  Uma barra de status é uma barra de controle que tem uma linha de texto de painéis de saída. Há duas maneiras de usar os painéis de saída de texto:  
   
@@ -141,7 +136,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  A barra de status oferece suporte a somente um painel alongado, normalmente o primeiro painel. O tamanho do painel é realmente um tamanho mínimo. Se a barra de status é maior do que o tamanho mínimo de todos os painéis, qualquer largura extra terá ao painel alongado. O aplicativo padrão com uma barra de status tem indicadores alinhado à direita para CAP, NUM e SCRL como o primeiro painel é alongado.  
   
-## <a name="_mfcnotes_ctoolbar"></a>CToolBar  
+## <a name="_mfcnotes_ctoolbar"></a>  CToolBar  
   
  Uma barra de ferramentas é uma barra de controle com uma linha de botões de bitmap que podem incluir separadores. Há suporte para dois estilos de botões: pushbuttons e botões da caixa de seleção. Funcionalidade de grupo de opção pode ser criada com os botões da caixa de seleção e `ON_UPDATE_COMMAND_UI`.  
   
@@ -173,13 +168,13 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
  A personalização APIs podem ser usados para ajustar o botão IDs, estilos, largura de espaçador e qual imagem/glifo é usado para o botão. Por padrão, não é necessário usar essas APIs.  
   
 ## <a name="ccmdui-support-for-ctoolbar"></a>Suporte a CCmdUI CToolBar  
- É a maneira como os botões da barra de ferramentas sempre são atualizadas por meio de `ON_UPDATE_COMMAND_UI` mecanismo. No tempo ocioso, a barra de ferramentas chamará o `ON_UPDATE_COMMAND_UI` manipulador com a ID de comando do botão. `ON_UPDATE_COMMAND_UI`não é chamado para separadores, mas ele é chamado para pushbuttons e botões de caixa de seleção.  
+ É a maneira como os botões da barra de ferramentas sempre são atualizadas por meio de `ON_UPDATE_COMMAND_UI` mecanismo. No tempo ocioso, a barra de ferramentas chamará o `ON_UPDATE_COMMAND_UI` manipulador com a ID de comando do botão. `ON_UPDATE_COMMAND_UI` não é chamado para separadores, mas ele é chamado para pushbuttons e botões de caixa de seleção.  
   
  O `ON_UPDATE_COMMAND_UI` manipulador pode chamar:  
   
 - **Habilitar**: para habilitar ou desabilitar o botão. Isso funciona para pushbuttons e botões de caixa de seleção.  
   
-- `SetCheck`: Para definir o estado de seleção de um botão. Chamar isso para um botão de barra de ferramentas, ela se transformará em um botão de caixa de seleção. `SetCheck`usa um parâmetro que pode ser 0 (não verificado), 1 (marcado) ou 2 (desativada)  
+- `SetCheck`: Para definir o estado de seleção de um botão. Chamar isso para um botão de barra de ferramentas, ela se transformará em um botão de caixa de seleção. `SetCheck` usa um parâmetro que pode ser 0 (não verificado), 1 (marcado) ou 2 (desativada)  
   
 - `SetRadio`: Abreviação para `SetCheck`.  
   
@@ -213,7 +208,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 -   Indeterminado = TBBS_INDETERMINATE  
   
-##  <a name="_mfcnotes_cdialogbar"></a>CDialogBar  
+##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar  
  Uma barra da caixa de diálogo é uma barra de controle que contém controles padrão do Windows. Ele atua como uma caixa de diálogo que contém os controles e dá suporte a tabulação entre eles. Ele também atua como uma caixa de diálogo em que ele usa um modelo de caixa de diálogo para representar a barra.  
   
  Um `CDialogBar` é usado para a barra de ferramentas de visualização de impressão, que contém os controles de botão de pressão padrão.  

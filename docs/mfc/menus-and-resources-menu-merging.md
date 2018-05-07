@@ -1,13 +1,10 @@
 ---
 title: 'Menus e recursos: mesclagem de Menu | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menus e recursos: mescla de menu
 Este artigo detalha as etapas necessárias para aplicativos de documento OLE tratar a edição visual e ativação no local corretamente. Ativação no local representa um desafio para o contêiner e o servidor de aplicativos (componente). O usuário permanece na mesma janela do quadro (dentro do contexto do documento contêiner), mas está realmente executando outro aplicativo (o servidor). Isso exige a coordenação entre os recursos do contêiner e o servidor de aplicativos.  
@@ -40,7 +35,7 @@ Este artigo detalha as etapas necessárias para aplicativos de documento OLE tra
   
 - [Barras de ferramentas e barras de Status](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a>Layouts de menu  
+##  <a name="_core_menu_layouts"></a> Layouts de menu  
  A primeira etapa é coordenar os layouts de menu. Para obter mais informações, consulte o **criação** seção [considerações de programação do Menu](https://msdn.microsoft.com/library/ms647557.aspx) no SDK do Windows.  
   
  Aplicativos de contêiner devem criar um novo menu a ser usado somente quando itens incorporados são ativados em vigor. No mínimo, este menu deve consistir a seguir, na ordem listada:  
@@ -113,14 +108,14 @@ END
   
  Quando um item inserido é ativado em vigor, o framework carrega menu no local. Em seguida, ele solicita que o aplicativo de servidor para seu menu de ativação no local e o insere onde estão os separadores. Isso é como combinam os menus. Obter menus do contêiner para a operação no posicionamento de arquivos e janela e obter menus do servidor para a operação no item.  
   
-##  <a name="_core_toolbars_and_status_bars"></a>Barras de ferramentas e barras de Status  
+##  <a name="_core_toolbars_and_status_bars"></a> Barras de ferramentas e barras de Status  
  Aplicativos de servidor devem criar uma nova barra de ferramentas e armazenar seu bitmap em um arquivo separado. Os aplicativos gerados pelo Assistente de aplicativo armazenam esse bitmap em um arquivo chamado ITOOLBAR. BMP. Nova barra de ferramentas substitui a barra de ferramentas do aplicativo recipiente quando o item do servidor está ativado no local e deve conter os mesmos itens como a barra de ferramentas normal, mas remover ícones que representam os itens nos menus do arquivo e a janela.  
   
  Essa barra de ferramentas é carregada em seu `COleIPFrameWnd`-derivado da classe, criado para você pelo Assistente de aplicativo. A barra de status é tratada pelo aplicativo recipiente. Para obter mais informações sobre a implementação de janelas com moldura no local, consulte [servidores: Implementando um servidor](../mfc/servers-implementing-a-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)   
- [Ativação](../mfc/activation-cpp.md)   
+ [ativação](../mfc/activation-cpp.md)   
  [Servidores](../mfc/servers.md)   
  [Contêineres](../mfc/containers.md)
 

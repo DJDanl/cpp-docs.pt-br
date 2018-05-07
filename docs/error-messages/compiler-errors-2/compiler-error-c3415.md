@@ -1,13 +1,10 @@
 ---
 title: C3415 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3415
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1237db7e705d12115b4bb1ab18d23b516c40d6a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 599e2bb9e46e4a0971fc5a6f528a884da0a93cd9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3415"></a>C3415 de erro do compilador
 várias seções 'section_name' encontradas com atributos diferentes ('value')  
   
  Valores conflitantes foram especificados em [seção](../../preprocessor/section.md) pragmas.  
   
- `value`é a configuração atual para a seção, como especificado em ntimage.h. Por exemplo:  
+ `value` é a configuração atual para a seção, como especificado em ntimage.h. Por exemplo:  
   
 ```  
 // Section contains extended relocations.  

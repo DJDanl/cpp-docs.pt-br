@@ -1,13 +1,10 @@
 ---
-title: "Validação de dados de caixa de diálogo | Microsoft Docs"
-ms.custom: 
+title: Validação de dados de caixa de diálogo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01766dd741ed87d9ac11b8858221a1bd09b0cf31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-validation"></a>Validação dos dados da caixa de diálogo
 Você pode especificar validação além de troca de dados chamando funções DDV, conforme mostrado no exemplo de [troca de dados de caixa de diálogo](../mfc/dialog-data-exchange.md). O `DDV_MaxChars` chamada no exemplo valida que a cadeia de caracteres inserida no controle de caixa de texto não é mais de 20 caracteres. A função DDV normalmente alerta o usuário com uma caixa de mensagem se a validação falha e coloca o foco no controle inválido para que o usuário pode inserir os dados novamente. Uma função DDV para um dado controle deve ser chamada imediatamente após a função DDX para o mesmo controle.  

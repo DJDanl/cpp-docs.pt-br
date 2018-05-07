@@ -1,12 +1,9 @@
 ---
 title: Classe CMultiPageDHtmlDialog | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiPageDHtmlDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f7b2e504738839b965dcdbc9a2a9835250fa8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Classe CMultiPageDHtmlDialog
 Uma caixa de diálogo de Multipágina exibe várias páginas HTML sequencialmente e trata os eventos de cada página.  
@@ -85,7 +80,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdhtml.h  
   
-##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
  Constrói um objeto de caixa de diálogo DHTML (Assistente de estilo) com várias páginas.  
   
 ```  
@@ -119,7 +114,7 @@ CMultiPageDHtmlDialog();
  `nHtmlResID`  
  Contém o número de identificação de um recurso HTML.  
   
-##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
  Destrói um objeto de caixa de diálogo DHTML várias páginas.  
   
 ```  

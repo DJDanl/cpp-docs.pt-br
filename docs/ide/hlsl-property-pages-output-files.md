@@ -1,13 +1,10 @@
 ---
-title: "Páginas de propriedade HLSL: Arquivos de saída | Microsoft Docs"
-ms.custom: 
+title: 'Páginas de propriedade HLSL: Arquivos de saída | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutput
 - VC.Project.FXCompilerTool.ObjectFileOutput
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c5ba1e72-30de-43eb-a15a-5b0ae58e55c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f6ad8889c9a713b3b64284b329c21d5a2cd49e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fd1dc3ba92201567f24aa84ff8dddcd96798b38
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hlsl-property-pages-output-files"></a>Páginas de propriedades HLSL: arquivos de saída
 Para configurar as seguintes propriedades do compilador HLSL (fxc.exe), use seu **arquivos de saída** propriedade. Para obter informações sobre como acessar o **arquivos de saída** página de propriedades na pasta HLSL, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  

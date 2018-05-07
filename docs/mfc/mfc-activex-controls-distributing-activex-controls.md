@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Distribuindo controles ActiveX | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - GetWindowsDirectory
 - GetSystemDirectory
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce6602696f733ca3bac03441a58515c57e0dc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Controles ActiveX MFC: distribuindo controles ActiveX
 Este artigo descreve vários problemas relacionados à redistribuindo controles ActiveX:  
@@ -55,12 +50,12 @@ Este artigo descreve vários problemas relacionados à redistribuindo controles 
   
 -   [Registrando controles](#_core_registering_controls)  
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a>ANSI ou Unicode de controle versões  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI ou Unicode de controle versões  
  Você deve decidir se deseja enviar uma versão ANSI ou Unicode de controle, ou ambos. Essa decisão se baseia em fatores de portabilidade inerentes em conjuntos de caracteres ANSI e Unicode.  
   
  Controles de ANSI, que funcionam em todos os sistemas operacionais de Win32, permitem máximo portabilidade entre os vários sistemas operacionais Win32. Controles de Unicode funcionam no somente o Windows NT (versão 3.51 ou posterior), mas não no Windows 95 ou Windows 98. Se portabilidade for sua preocupação principal, controles de ANSI de remessa. Se os controles serão executado somente no Windows NT, você pode enviar os controles de Unicode. Você também pode optar por enviar ambos e que seu aplicativo a instalar a versão mais apropriada para o sistema operacional do usuário.  
   
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a>Instalando controles ActiveX e DLLs redistribuíveis  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Instalando controles ActiveX e DLLs redistribuíveis  
  O programa de instalação que você forneça aos seus controles ActiveX deve criar um subdiretório especial do diretório do Windows e instale os controles. Arquivos OCX nela.  
   
 > [!NOTE]
@@ -70,7 +65,7 @@ Este artigo descreve vários problemas relacionados à redistribuindo controles 
   
  Como os controles ActiveX podem ser usados apenas em aplicativos de contêiner OLE, não há necessidade de distribuir o conjunto completo de DLLs OLE com os controles. Você pode presumir que o aplicativo de contenção (ou o próprio sistema operacional) tem o OLE DLLs padrão instalado.  
   
-##  <a name="_core_registering_controls"></a>Registrando controles  
+##  <a name="_core_registering_controls"></a> Registrando controles  
  Antes de um controle pode ser usado, entradas apropriadas devem ser criadas para ele no banco de dados de registro do Windows. Alguns contêineres de controle ActiveX fornecem um item de menu para os usuários se registrem novos controles, mas esse recurso pode não estar disponível em todos os contêineres. Portanto, convém o programa de instalação para registrar os controles quando eles são instalados.  
   
  Se preferir, você pode escrever o programa de instalação para registrar o controle diretamente.  

@@ -1,13 +1,10 @@
 ---
 title: Controle de aplicativo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c055f5489c7b85f5f974256709451426b614db47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-control"></a>Controle do aplicativo
 OLE requer controle significativo sobre aplicativos e seus objetos. As DLLs do sistema OLE devem ser capaz de iniciar e libere aplicativos automaticamente, coordenar seus produção e a modificação de objetos e assim por diante. As funções neste tópico atendem a esses requisitos. Além de ser chamados por DLLs do sistema OLE, essas funções, às vezes, devem ser chamadas por aplicativos. 
@@ -46,7 +41,7 @@ OLE requer controle significativo sobre aplicativos e seus objetos. As DLLs do s
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|Implementa a interface de usuário para o *typename* objeto de comando.|  
 
   
-##  <a name="afxolecanexitapp"></a>AfxOleCanExitApp  
+##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp  
  Indica se o aplicativo possa ser encerrado.  
   
 ```   
@@ -65,7 +60,7 @@ BOOL AFXAPI AfxOleCanExitApp();
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho**: afxdisp.h 
 
-##  <a name="afxolegetmessagefilter"></a>AfxOleGetMessageFilter  
+##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
  Recupera o filtro de mensagens do aplicativo atual.  
   
 ```   
@@ -86,7 +81,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho**: afxwin.h 
 
-##  <a name="afxolegetuserctrl"></a>AfxOleGetUserCtrl  
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl  
  Recupera o sinalizador de controle de usuário atual.  
   
 ```   
@@ -102,7 +97,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>AfxOleSetUserCtrl  
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl  
  Define ou limpa o sinalizador de controle de usuário, que é explicado na referência para `AfxOleGetUserCtrl`.  
   
 ```  
@@ -121,7 +116,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>AfxOleLockApp  
+##  <a name="afxolelockapp"></a>  AfxOleLockApp  
  Incrementa a contagem global da estrutura do número de objetos ativos no aplicativo.  
   
 ```   
@@ -141,7 +136,7 @@ void AFXAPI AfxOleLockApp();
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>AfxOleUnlockApp  
+##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp  
  Diminui a contagem da estrutura de objetos ativos no aplicativo.  
   
 ```   
@@ -196,7 +191,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
  [Macros e globais](mfc-macros-and-globals.md)   
  [AfxOleUnlockControl](#afxoleunlockcontrol)
  
-##  <a name="afxoleregisterserverclass"></a>AfxOleRegisterServerClass  
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass  
  Esta função permite que você registre seu servidor no registro do sistema OLE.  
   
 ```   
@@ -226,13 +221,13 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  `nAppType`  
  Um valor obtido o **OLE_APPTYPE** enumeração, especificando o tipo de aplicativo OLE. Os valores possíveis são os seguintes:  
   
-- `OAT_INPLACE_SERVER`Servidor tem uma interface de usuário do servidor completo.  
+- `OAT_INPLACE_SERVER` Servidor tem uma interface de usuário do servidor completo.  
   
-- `OAT_SERVER`Servidor dá suporte apenas a inserção.  
+- `OAT_SERVER` Servidor dá suporte apenas a inserção.  
   
-- `OAT_CONTAINER`Contêiner oferece suporte a links para objetos incorporados.  
+- `OAT_CONTAINER` Contêiner oferece suporte a links para objetos incorporados.  
   
-- `OAT_DISPATCH_OBJECT``IDispatch`-objeto capaz.  
+- `OAT_DISPATCH_OBJECT` `IDispatch`-objeto capaz.  
   
  `rglpszRegister`  
  Matriz de ponteiros para cadeias de caracteres que representa as chaves e valores a serem adicionadas ao registro do sistema OLE se nenhum valor existente para as chaves forem encontrados.  
@@ -261,7 +256,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>AfxOleSetEditMenu  
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu  
  Implementa a interface de usuário para o *typename* objeto de comando.  
   
 ```   
@@ -306,7 +301,7 @@ void AFXAPI AfxOleSetEditMenu(
 ## <a name="see-also"></a>Consulte também  
  [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
 
-## <a name="afxoleunlockcontrol"></a>AfxOleUnlockControl
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 Desbloqueia a fábrica de classe do controle especificado.  
    
 ### <a name="syntax"></a>Sintaxe  

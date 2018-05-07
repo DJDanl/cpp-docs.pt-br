@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCDropDownToolBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolBar
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a2f53fa75d8637445e155043d6a40787402accb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Uma barra de ferramentas é exibida quando o usuário pressiona e mantém um botão de barra de ferramentas de nível superior.  
@@ -112,7 +107,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdropdowntoolbar.h  
   
-##  <a name="allowshowonpanemenu"></a>CMFCDropDownToolBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -123,7 +118,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="loadbitmap"></a>CMFCDropDownToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap  
  Carrega imagens da barra de ferramentas de recursos do aplicativo.  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL LoadBitmap(
  A ID de recurso do bitmap que se refere às imagens de menu comum.  
   
  [in] `bLocked`  
- `TRUE`para bloquear a barra de ferramentas. Caso contrário, `FALSE`.  
+ `TRUE` para bloquear a barra de ferramentas. Caso contrário, `FALSE`.  
   
  [in] `uiDisabledResID`  
  A ID de recurso do bitmap que se refere às imagens da barra de ferramentas desabilitado.  
@@ -163,7 +158,7 @@ virtual BOOL LoadBitmap(
   
  Chamar o `LoadBitmapEx` método carregar imagens adicionais depois de criar a barra de ferramentas.  
   
-##  <a name="loadtoolbar"></a>CMFCDropDownToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar  
 
   
 ```  
@@ -190,7 +185,7 @@ virtual BOOL LoadToolBar(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onlbuttonup"></a>CMFCDropDownToolBar::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp  
 
   
 ```  
@@ -205,7 +200,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onmousemove"></a>CMFCDropDownToolBar::OnMouseMove  
+##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove  
 
   
 ```  
@@ -220,7 +215,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsendcommand"></a>CMFCDropDownToolBar::OnSendCommand  
+##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand  
 
   
 ```  
@@ -234,7 +229,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onupdatecmdui"></a>CMFCDropDownToolBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI  
 
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Criando janelas com moldura de documento | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-document-frame-windows"></a>Criando janelas com moldura de documento
 [Criação de documento/exibição](../mfc/document-view-creation.md) mostra como o [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objeto coordena a criar a janela do quadro, documento e exibição e conectá-los juntos. Três [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumentos para o `CDocTemplate` construtor especifique a janela do quadro, documentos e classes de exibição do modelo de documento cria dinamicamente em resposta aos comandos do usuário, como o novo comando no arquivo menu ou o comando nova janela em um menu janela MDI. O modelo de documento armazena essas informações para uso posterior, quando ele cria uma janela do quadro para um modo de exibição e o documento.  

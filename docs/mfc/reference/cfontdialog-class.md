@@ -1,12 +1,9 @@
 ---
 title: Classe CFontDialog | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontDialog
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab9420ce86785595bb2d172ef32afe89c2845374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontdialog-class"></a>Classe CFontDialog
 Permite que você inserir uma caixa de diálogo de seleção de fonte em seu aplicativo.  
@@ -102,13 +97,13 @@ class CFontDialog : public CCommonDialog
   
  Uma vez um `CFontDialog` objeto foi construído, você pode usar o `m_cf` estrutura para inicializar os valores ou os estados de controles da caixa de diálogo. O [m_cf](#m_cf) estrutura é do tipo [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.  
   
- Após a inicialização de controles da caixa de diálogo objeto, chame o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecione uma fonte. `DoModal`Retorna se o usuário selecionou o Okey ( **IDOK**) ou Cancelar ( **IDCANCEL**) botão.  
+ Após a inicialização de controles da caixa de diálogo objeto, chame o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecione uma fonte. `DoModal` Retorna se o usuário selecionou o Okey ( **IDOK**) ou Cancelar ( **IDCANCEL**) botão.  
   
  Se `DoModal` retorna **IDOK**, você pode usar um dos `CFontDialog`de funções de membro para recuperar as informações de entrada do usuário.  
   
  Você pode usar o Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) função para determinar se ocorreu um erro durante a inicialização da caixa de diálogo e para saber mais sobre o erro. Para obter mais informações sobre essa função, consulte o SDK do Windows.  
   
- `CFontDialog`depende do COMMDLG. Arquivo DLL que é fornecido com o Windows versão 3.1 e posterior.  
+ `CFontDialog` depende do COMMDLG. Arquivo DLL que é fornecido com o Windows versão 3.1 e posterior.  
   
  Para personalizar a caixa de diálogo, derive uma classe de `CFontDialog`, forneça um modelo de caixa de diálogo personalizada e adicionar um mapa de mensagem para processar as mensagens de notificação de controles estendidos. Todas as mensagens não processadas devem ser passadas para a classe base.  
   
@@ -132,7 +127,7 @@ class CFontDialog : public CCommonDialog
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdlgs.h  
   
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
+##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
  Constrói um objeto `CFontDialog`.  
   
 ```  
@@ -150,7 +145,7 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- l`plfInitial`  
+ L `plfInitial`  
  Um ponteiro para um [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura de dados que permite que você defina algumas das características da fonte.  
   
  `charFormat`  
@@ -174,7 +169,7 @@ CFontDialog(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CFontDialog::DoModal  
+##  <a name="domodal"></a>  CFontDialog::DoModal  
  Chame essa função para exibir a caixa de diálogo de fonte comuns do Windows e permitir que o usuário escolha uma fonte.  
   
 ```  
@@ -194,7 +189,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Exemplo  
   Consulte os exemplos de [CFontDialog::CFontDialog](#cfontdialog) e [CFontDialog::GetColor](#getcolor).  
   
-##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
+##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat  
  Recupera a formatação de caracteres da fonte selecionada.  
   
 ```  
@@ -205,7 +200,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
  `cf`  
  Um [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) estrutura que contém informações sobre a formatação de caracteres da fonte selecionada.  
   
-##  <a name="getcolor"></a>CFontDialog::GetColor  
+##  <a name="getcolor"></a>  CFontDialog::GetColor  
  Chame essa função para recuperar a cor da fonte selecionada.  
   
 ```  
@@ -218,7 +213,7 @@ COLORREF GetColor() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
+##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
  Chamar essa função para atribuir as características da fonte selecionada atualmente para os membros de um [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
   
 ```  
@@ -237,7 +232,7 @@ void GetCurrentFont(LPLOGFONT lplf);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="getfacename"></a>CFontDialog::GetFaceName  
+##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
  Chame essa função para recuperar o nome de face da fonte selecionada.  
   
 ```  
@@ -250,7 +245,7 @@ CString GetFaceName() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="getsize"></a>CFontDialog::GetSize  
+##  <a name="getsize"></a>  CFontDialog::GetSize  
  Chame essa função para recuperar o tamanho da fonte selecionada.  
   
 ```  
@@ -263,7 +258,7 @@ int GetSize() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="getstylename"></a>CFontDialog::GetStyleName  
+##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
  Chame essa função para recuperar o nome de estilo da fonte selecionada.  
   
 ```  
@@ -276,7 +271,7 @@ CString GetStyleName() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="getweight"></a>CFontDialog::GetWeight  
+##  <a name="getweight"></a>  CFontDialog::GetWeight  
  Chame essa função para recuperar o peso da fonte selecionada.  
   
 ```  
@@ -292,7 +287,7 @@ int GetWeight() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="isbold"></a>CFontDialog::IsBold  
+##  <a name="isbold"></a>  CFontDialog::IsBold  
  Chame essa função para determinar se a fonte selecionada está em negrito.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL IsBold() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="isitalic"></a>CFontDialog::IsItalic  
+##  <a name="isitalic"></a>  CFontDialog::IsItalic  
  Chame essa função para determinar se a fonte selecionada está em itálico.  
   
 ```  
@@ -318,7 +313,7 @@ BOOL IsItalic() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
+##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
  Chame essa função para determinar se a fonte selecionada é exibida com riscado.  
   
 ```  
@@ -331,7 +326,7 @@ BOOL IsStrikeOut() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="isunderline"></a>CFontDialog::IsUnderline  
+##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
  Chame essa função para determinar se a fonte selecionada é sublinhada.  
   
 ```  
@@ -344,7 +339,7 @@ BOOL IsUnderline() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="m_cf"></a>CFontDialog::m_cf  
+##  <a name="m_cf"></a>  CFontDialog::m_cf  
  Uma estrutura cujos membros armazenam as características do objeto de caixa de diálogo.  
   
 ```  

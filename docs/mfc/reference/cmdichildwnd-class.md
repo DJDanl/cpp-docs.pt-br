@@ -1,12 +1,9 @@
 ---
 title: Classe CMDIChildWnd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIChildWnd
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deca38c7c1fdaf9523e4186b801e5ed25042e46e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 Fornece a funcionalidade de um Windows várias janelas de filho de interface (MDI) do documento, juntamente com os membros para gerenciar a janela.  
@@ -89,7 +84,7 @@ class CMDIChildWnd : public CFrameWnd
   
  Use o **criar** função de membro para passar parâmetros de criação do quadro imediatos como argumentos.  
   
- `LoadFrame`requer menos argumentos que **criar**e em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu. Para ser acessível por `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, **IDR_MAINFRAME**).  
+ `LoadFrame` requer menos argumentos que **criar**e em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu. Para ser acessível por `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, **IDR_MAINFRAME**).  
   
  Quando um `CMDIChildWnd` objeto contém exibições e documentos, elas são criadas indiretamente pelo framework em vez de diretamente pelo programador. O `CDocTemplate` objeto coordena a criação do quadro, a criação de modos de exibição de conteúdo e a conexão dos modos de exibição para o documento apropriado. Os parâmetros do `CDocTemplate` construtor especificar o `CRuntimeClass` das três classes envolvidos (documento, quadro e exibição). Um `CRuntimeClass` objeto é usado pelo framework para criar dinamicamente novos quadros quando especificado pelo usuário (por exemplo, usando o comando novo arquivo ou o comando MDI janela nova).  
   
@@ -119,7 +114,7 @@ class CMDIChildWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
+##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd  
  Chamada para construir um `CMDIChildWnd` objeto.  
   
 ```  
@@ -132,7 +127,7 @@ CMDIChildWnd();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMDIChildWnd::Create](#create).  
   
-##  <a name="create"></a>CMDIChildWnd::Create  
+##  <a name="create"></a>  CMDIChildWnd::Create  
  Chamar essa função de membro para criar uma janela filho MDI do Windows e anexá-lo para o `CMDIChildWnd` objeto.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]  
   
-##  <a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
+##  <a name="getmdiframe"></a>  CMDIChildWnd::GetMDIFrame  
  Chame essa função para retornar o quadro de pai MDI.  
   
 ```  
@@ -200,7 +195,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).  
   
-##  <a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
+##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate  
  Chame essa função de membro para ativar uma janela de filho MDI independentemente da janela do quadro MDI.  
   
 ```  
@@ -213,7 +208,7 @@ void MDIActivate();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).  
   
-##  <a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
+##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy  
  Chame essa função de membro para destruir uma janela de filho MDI.  
   
 ```  
@@ -226,7 +221,7 @@ void MDIDestroy();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]  
   
-##  <a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>  CMDIChildWnd::MDIMaximize  
  Chame essa função de membro para maximizar a uma janela de filho MDI.  
   
 ```  
@@ -239,7 +234,7 @@ void MDIMaximize();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]  
   
-##  <a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
+##  <a name="mdirestore"></a>  CMDIChildWnd::MDIRestore  
  Chame essa função de membro para restaurar uma janela de filho MDI de tamanho minimizado ou maximizado.  
   
 ```  
@@ -249,7 +244,7 @@ void MDIRestore();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]  
   
-##  <a name="sethandles"></a>CMDIChildWnd::SetHandles  
+##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles  
  Define os identificadores de recursos de menu e acelerador.  
   
 ```  

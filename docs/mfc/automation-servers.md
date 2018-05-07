@@ -1,13 +1,10 @@
 ---
-title: "Servidores de automação | Microsoft Docs"
-ms.custom: 
+title: Servidores de automação | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>Servidores de automação
 Automação torna possível para o seu aplicativo para manipular objetos implementados em outro aplicativo ou para expor os objetos para que eles podem ser manipulados. Um servidor de automação é um aplicativo que expõe objetos programáveis (chamados de objetos de automação) para outros aplicativos (chamado [clientes de automação](../mfc/automation-clients.md)). Servidores de automação são chamados de componentes de automação.  
@@ -40,7 +35,7 @@ Automação torna possível para o seu aplicativo para manipular objetos impleme
   
  Expondo a funcionalidade do aplicativo por meio de uma interface comum e bem definida, automação, é possível criar aplicativos em um único geral linguagem de programação como o Microsoft Visual Basic, em vez de macro diferentes, específicos do aplicativo Idiomas.  
   
-##  <a name="_core_support_for_automation_servers"></a>Suporte para servidores de automação  
+##  <a name="_core_support_for_automation_servers"></a> Suporte para servidores de automação  
  Visual C++ e a estrutura MFC fornecem amplo suporte para servidores de automação. Tratam grande parte da sobrecarga envolvida na criação de um servidor de automação, para que você possa concentrar seus esforços na funcionalidade de seu aplicativo.  
   
  Mecanismo de principal do framework para oferecer suporte a automação é o mapa de expedição, um conjunto de macros que expande as declarações e chamadas necessárias expor métodos e propriedades para OLE. Um mapa de expedição típico tem esta aparência:  

@@ -1,13 +1,10 @@
 ---
 title: Controles de lista virtual | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>Controles de lista virtuais
 Um controle de lista virtual é um controle de exibição de lista que tem o **LVS_OWNERDATA** estilo. Esse estilo permite que o controle oferecer suporte a uma contagem de itens até um `DWORD` (somente estende a contagem de item padrão para uma `int`). No entanto, a maior vantagem fornecida por este estilo é a capacidade de ter apenas um subconjunto de itens de dados na memória a qualquer momento. Isso permite que o controle de exibição de lista virtual prestam para uso com grandes bancos de dados de informações, em que os métodos específicos de acesso aos dados já estão em vigor.  
@@ -43,15 +38,15 @@ Um controle de lista virtual é um controle de exibição de lista que tem o **L
   
  No manipulador para o **LVN_GETDISPINFO** mensagem de notificação, você deve verificar o tipo de informação está sendo solicitado. Os valores possíveis são:  
   
--   `LVIF_TEXT`O `pszText` membro deve ser preenchido.  
+-   `LVIF_TEXT` O `pszText` membro deve ser preenchido.  
   
--   `LVIF_IMAGE`O `iImage` membro deve ser preenchido.  
+-   `LVIF_IMAGE` O `iImage` membro deve ser preenchido.  
   
 -   **LVIF_INDENT** o *iIndent* membro deve ser preenchido.  
   
--   `LVIF_PARAM`O *lParam* membro deve ser preenchido. (Não está presente para subitens.)  
+-   `LVIF_PARAM` O *lParam* membro deve ser preenchido. (Não está presente para subitens.)  
   
--   `LVIF_STATE`O *estado* membro deve ser preenchido.  
+-   `LVIF_STATE` O *estado* membro deve ser preenchido.  
   
  Em seguida, você deve fornecer quaisquer informações foi solicitadas a estrutura.  
   

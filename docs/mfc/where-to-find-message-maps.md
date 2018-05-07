@@ -1,13 +1,10 @@
 ---
 title: Onde encontrar mapas de mensagem | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - message classes [MFC], finding
 - message-map macros
 ms.assetid: bf59fbc8-b222-42d3-b5d3-0a79aa3cb923
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fa0b0b31d76c55851d69f4c528f11e7d23ff0d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19dfaec7d97bed560665fce25c2ddf2cc816a483
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-to-find-message-maps"></a>Onde encontrar mapas de mensagens
 Quando você cria um novo aplicativo de esqueleto com o Assistente de aplicativo, o Assistente de aplicativo grava um mapa de mensagem para cada classe de destino do comando que cria para você. Isso inclui o aplicativo derivado, documento, exibição e classes de janela do quadro. Alguns desses mapas de mensagem já tem as entradas fornecidas pelo Assistente de aplicativo para determinadas mensagens e comandos predefinidos, e alguns são apenas espaços reservados para manipuladores que serão adicionados.  

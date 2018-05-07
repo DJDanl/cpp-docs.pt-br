@@ -1,13 +1,10 @@
 ---
 title: Documentos ativos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Documentos ativos
 Documentos ativos estendem a tecnologia de documento composto de OLE. Essas extensões são fornecidas na forma de interfaces adicionais que gerenciar modos de exibição, para que os objetos pode funcionar em contêineres e ainda manter o controle sobre sua exibição e funções de impressão. Esse processo torna possível exibir documentos em quadros externos (como o Microsoft Office Binder ou Microsoft Internet Explorer) e em quadros nativos (como as portas de exibição do produto).  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  Um documento ativo pode criar um ou mais tipos de [exibições](#requirements_for_view_objects) seus dados (por exemplo, normal, de estrutura de tópicos, o layout da página e assim por diante). Modos de exibição atuam como filtros por meio do qual os dados podem ser vistos. Mesmo se o documento tem apenas um tipo de exibição, você pode ainda deseja oferecem suporte a vários modos de exibição como um meio de oferecer suporte a nova funcionalidade de janela (por exemplo, o **nova janela** item o **janela** menu do Office aplicativos).  
   
-##  <a name="requirements_for_active_documents"></a>Requisitos de documentos ativos  
+##  <a name="requirements_for_active_documents"></a> Requisitos de documentos ativos  
  Um documento ativo que pode ser exibido em um contêiner de documento ativo deve:  
   
 -   Usar arquivos de compostos do OLE como seu mecanismo de armazenamento implementando `IPersistStorage`.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  Conhecimento de quando e como usar as interfaces do lado do contêiner está implícita nesses requisitos.  
   
-##  <a name="requirements_for_view_objects"></a>Requisitos para objetos de exibição  
+##  <a name="requirements_for_view_objects"></a> Requisitos para objetos de exibição  
  Um documento ativo pode criar um ou mais modos de exibição de seus dados. Funcionalmente, essas exibições são como portas em um método específico para exibir os dados. Se um documento ativo só dá suporte a uma única exibição, o documento ativo e o único modo de exibição podem ser implementadas usando uma única classe. **IOleDocument::CreateView** retorna o mesmo objeto `IOleDocumentView` ponteiro de interface.  
   
  Para ser representado dentro de um contêiner de documento ativo, um componente de visualização deve suportar **IOleInPlaceObject** e **IOleInPlaceActiveObject** além `IOleDocumentView`:  

@@ -1,13 +1,10 @@
 ---
 title: Mapas de envios | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>Mapas de expedição
 Automação OLE fornece maneiras para chamar os métodos e acessar propriedades em aplicativos. O mecanismo fornecido pelo biblioteca Microsoft Foundation Class para distribuir essas solicitações é o "mapa de expedição", que designa os nomes internos e externos de funções de objetos e propriedades, bem como os tipos de dados das propriedades de si mesmos e do argumentos de função.  
@@ -46,7 +41,7 @@ Automação OLE fornece maneiras para chamar os métodos e acessar propriedades 
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Define uma propriedade de automação OLE que usa nomes e os parâmetros que as funções Get e Set.|  
 |[DISP_DEFVALUE](#disp_defvalue)|Torna o valor padrão de um objeto de uma propriedade existente.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
  Se um `CCmdTarget`-classe derivada em seu programa dá suporte a automação OLE, que a classe deve fornecer um mapa de expedição para expor seus métodos e propriedades.  
   
 ```   
@@ -67,7 +62,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
  Declara a definição de seu mapa de expedição.  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
  Finaliza a definição de seu mapa de expedição.  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
  Define uma função de automação OLE em um mapa de expedição.  
   
 ```   
@@ -169,10 +164,10 @@ DISP_FUNCTION(
 |**VTS_BOOL**|**BOOL**|  
 |**VTS_VARIANT**|**VARIANTE const\***  ou **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**curto\***|  
-|**VTS_PI4**|**Longas\***|  
+|**VTS_PI2**|**short\***|  
+|**VTS_PI4**|**long\***|  
 |**VTS_PR4**|**float\***|  
-|**VTS_PR8**|**duplo\***|  
+|**VTS_PR8**|**Duplo\***|  
 |**VTS_PCY**|**CY\***|  
 |**VTS_PDATE**|**DATA\***|  
 |**VTS_PBSTR**|**BSTR\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
  Define uma propriedade de automação OLE em um mapa de expedição.  
   
 ```   
@@ -233,7 +228,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
  Define uma propriedade de automação OLE e o nome as funções usadas para obter e definir o valor da propriedade em um mapa de expedição.  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
  Define uma propriedade de automação OLE com notificação em um mapa de expedição.  
   
 ```   
@@ -320,7 +315,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
  Define uma propriedade acessada com separado **obter** e `Set` funções de membro.  
   
 ```   
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
  Torna o valor padrão de um objeto de uma propriedade existente.  
   
 ```   

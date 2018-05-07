@@ -1,13 +1,10 @@
 ---
-title: "Especificar configurações do projeto, criar o novo projeto de Assistente de arquivos de código existentes | Microsoft Docs"
-ms.custom: 
+title: Especificar configurações do projeto, criar o novo projeto de Assistente de arquivos de código existentes | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.appsettings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Create New Project From Existing Code Files Wizard, project settings
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf1e8eba11063f7f2e46f836cd2ef84cc70dfe8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Especificar configurações do projeto, Assistente para Criar Novo Projeto de Arquivos de Código Existentes
 Use esta página do Assistente para criar novo projeto de arquivos de código existentes para especificar:  

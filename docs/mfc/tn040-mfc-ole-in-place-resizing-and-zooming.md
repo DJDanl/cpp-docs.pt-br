@@ -1,13 +1,10 @@
 ---
 title: 'TN040: OLE MFC in-loco redimensionamento | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: redimensionamento/zoom in-loco MFC/OLE
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  Para obter um exemplo de zoom corretamente, consulte o exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md). Aumentar o zoom HIERSVR é complicado pelo fato de que ele exibe o texto e texto, em geral, não se adapta de forma linear (dicas de, convenções tipográficas, design larguras e alturas todos complicar a questão). Ainda assim, HIERSVR é uma referência razoável para implementar o zoom corretamente, e então é o Tutorial MFC [RABISCO](../visual-cpp-samples.md) (etapa 7).  
   
- `COleServerDoc::GetZoomFactor`Determina o fator de zoom com base em um número de diferentes métricas disponíveis do contêiner ou da implementação de sua `COleServerItem` e `COleServerDoc` classes. Em resumo, o fator de zoom atual é determinado pela seguinte fórmula:  
+ `COleServerDoc::GetZoomFactor` Determina o fator de zoom com base em um número de diferentes métricas disponíveis do contêiner ou da implementação de sua `COleServerItem` e `COleServerDoc` classes. Em resumo, o fator de zoom atual é determinado pela seguinte fórmula:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  A extensão de CONTÊINER é um pouco mais complexa para ser calculada. Se o contêiner tiver chamado `COleServerItem::OnSetExtent` (com uma chamada para `COleClientItem::SetExtent`), em seguida, a extensão do CONTÊINER é o valor convertido em pixels, com base no número de pixels por polegada lógica. Se o contêiner não chamado SetExtent (que é geralmente o caso), a extensão do CONTÊINER é o tamanho retornado de `COleServerItem::OnGetExtent`. Portanto, se o contêiner não chamado SetExtent, a estrutura pressupõe que se tivesse o contêiner deve ter chamado com 100% da extensão natural (o valor retornado de **COleServerItem::GetExtent**). Indicado de outra forma, a estrutura pressupõe que o contêiner está exibindo 100% (não mais, menos) do item.  
   
- É importante observar que embora `COleServerItem::OnSetExtent` e `COleServerItem::OnGetExtent` tenham nomes semelhantes, eles não manipular o mesmo atributo do item. `OnSetExtent`é chamado para informar o servidor quanto o objeto está visível no contêiner (independentemente do fator de zoom) e `OnGetExtent` é chamado pelo contêiner para determinar o tamanho ideal do objeto.  
+ É importante observar que embora `COleServerItem::OnSetExtent` e `COleServerItem::OnGetExtent` tenham nomes semelhantes, eles não manipular o mesmo atributo do item. `OnSetExtent` é chamado para informar o servidor quanto o objeto está visível no contêiner (independentemente do fator de zoom) e `OnGetExtent` é chamado pelo contêiner para determinar o tamanho ideal do objeto.  
   
  Ao examinar cada uma das APIs envolvidas, você pode obter uma imagem mais nítida:  
   
