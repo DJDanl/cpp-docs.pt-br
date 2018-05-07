@@ -1,13 +1,10 @@
 ---
-title: "Declarando uma variável com base em sua nova classe de controle | Microsoft Docs"
-ms.custom: 
+title: Declarando uma variável com base em sua nova classe de controle | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.control.variable
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa98f815d9f9322c11d4256c13c0c7a42b4ab66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Declarando uma variável com base na nova classe de controle
 Depois de criar uma classe de controle MFC, você pode declarar uma variável com base nele. Para fornecer um contexto para a nova variável, você deve abrir o editor de caixa de diálogo e edite a caixa de diálogo na qual você deseja usar o controle reutilizável. Além disso, a caixa de diálogo já deve ter uma classe associada a ele. Para obter informações sobre como usar o editor de caixa de diálogo, consulte [Editor de caixa de diálogo](../../windows/dialog-editor.md).  

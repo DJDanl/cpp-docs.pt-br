@@ -1,13 +1,10 @@
 ---
 title: Adicionar Assistente de eventos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.event.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Event Wizard [C++]
 ms.assetid: bdd2a7bb-13d5-44d7-abc9-e785ba4e05ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62ecbe7dece323ce5e99fbe32b3b936fe3661362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f92f871f22fb01f3f0f37677c393fcd481c08120
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-event-wizard"></a>Assistente de Adição de Eventos
 Este assistente adiciona um evento para um projeto de controle ActiveX do MFC. Você pode especificar seus próprios eventos, você pode personalizar um evento normalmente estoque ou você pode selecionar em uma lista de eventos de estoque.  

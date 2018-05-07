@@ -1,31 +1,26 @@
 ---
 title: Implementar uma arquitetura de plug-in (C + + CLI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - plug-ins [C++]
 - reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 05c6c2584e39ed145a30c919ed850aac45905a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e001ef88af0727a994c309d45167787d3e6677b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Como implementar uma arquitetura de componente de plug-in usando a reflexão (C++/CLI)
 Os exemplos de código a seguir demonstram o uso da reflexão para implementar uma arquitetura simples de "plug-in". A primeira listagem é o aplicativo e o segundo é o plug-in. O aplicativo é um formulário de documento vários que preenche usando as classes com base em formulário encontradas na DLL do plug-in fornecido como um argumento de linha de comando.  

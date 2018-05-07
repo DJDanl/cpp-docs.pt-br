@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCImagePaintArea | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f4af09ad1da91e3d59f82736ae9b240812069eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimagepaintarea-class"></a>Classe CMFCImagePaintArea
 Fornece a área da imagem que você pode usar para modificar uma imagem em uma caixa de diálogo do editor de imagem.  
@@ -90,7 +85,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afximagepaintarea.h  
   
-##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea  
  Constrói um objeto `CMFCImagePaintArea`.  
   
 ```  
@@ -104,7 +99,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |Parâmetro|Descrição|  
 |[in] `pParentDlg`|Um ponteiro para a caixa de diálogo que é o pai do editor de imagem.|  
   
-##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Recupera o modo de desenho atual.  
   
 ```  
@@ -114,7 +109,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valor que especifica o modo de desenho atual.  
   
-##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
  Define a imagem de bitmap para a área de imagem.  
   
 ```  
@@ -131,7 +126,7 @@ void SetBitmap(CBitmap* pBitmap);
 ### <a name="remarks"></a>Comentários  
  Se `pBitmap` é `NULL`, esse método define o tamanho da área de pintura modificável como zero. Caso contrário, ele define o tamanho da área de pintura pode ser modificado para o tamanho da imagem de bitmap fornecido.  
   
-##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Define a cor de desenho atual.  
   
 ```  
@@ -150,7 +145,7 @@ void SetColor(COLORREF color);
   
  A cor de desenho é usada pela caixa de diálogo do editor de imagem para todos os modos de desenho exceto para `IMAGE_EDIT_MODE_COLOR`. Para obter mais informações sobre modos de desenho, consulte [cmfcimagepaintarea:: Image_edit_mode enumeração](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
-##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  Define o modo de desenho atual.  
   
 ```  

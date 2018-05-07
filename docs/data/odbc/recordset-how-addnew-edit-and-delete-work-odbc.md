@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Como AddNew, editar e excluir trabalham (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: como AddNew, editar e excluir trabalho (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -57,7 +52,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  Como um suplemento, talvez você queira ler [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que descreve a função correspondente de RFX em operações de atualização.  
   
-##  <a name="_core_adding_a_record"></a>Adicionar um registro  
+##  <a name="_core_adding_a_record"></a> Adicionar um registro  
 
  Adicionar um novo registro para um conjunto de registros envolve chamando o conjunto de registros [AddNew](../../mfc/reference/crecordset-class.md#addnew) função de membro, definir os valores campo do registro novo membros de dados e, em seguida, chamar o [atualização](../../mfc/reference/crecordset-class.md#update) função de membro para gravação o registro para a fonte de dados.  
   
@@ -95,7 +90,7 @@ Este tópico se aplica às classes MFC ODBC.
     > [!TIP]
     >  Para detectar quando o valor de alterar membros de dados do conjunto de registros, MFC usa um **PSEUDO_NULL** valor apropriado para cada tipo de dados que você pode armazenar em um conjunto de registros. Se você deve definir explicitamente um campo o **PSEUDO_NULL** valor e o campo já acontece seja marcado como Null, você também deve chamar `SetFieldNull`, passando o endereço do campo no primeiro parâmetro e **FALSE**no segundo parâmetro.  
   
-##  <a name="_core_visibility_of_added_records"></a>Visibilidade de registros adicionados  
+##  <a name="_core_visibility_of_added_records"></a> Visibilidade de registros adicionados  
  Quando um registro adicional é visível para o conjunto de registros? Registros adicionados às vezes aparecem e, às vezes, não são visíveis, dependendo de duas coisas:  
   
 -   O driver que é capaz de.  
@@ -104,7 +99,7 @@ Este tópico se aplica às classes MFC ODBC.
   
  Se o driver ODBC oferece suporte a **:: SQLSetPos** função de API de ODBC MFC usa a função para adicionar registros. Com **:: SQLSetPos**, adicionados registros são visíveis para qualquer conjunto de registros do MFC atualizável. Sem suporte para a função, adicionados registros não são visíveis, e você deve chamar **Requery** para vê-los. Usando **:: SQLSetPos** também é mais eficiente.  
   
-##  <a name="_core_editing_an_existing_record"></a>Edição de um registro existente  
+##  <a name="_core_editing_an_existing_record"></a> Edição de um registro existente  
  Editar um registro existente em um conjunto de registros envolve a rolagem para o registro, chamando o conjunto de registros [editar](../../mfc/reference/crecordset-class.md#edit) função de membro, definir os valores campo do registro novo membros de dados e, em seguida, chamar o [atualizar](../../mfc/reference/crecordset-class.md#update)função de membro para gravar o registro alterado para a fonte de dados.  
   
  Como uma pré-condição para chamar **editar**, o conjunto de registros deve ser atualizável e em um registro. O `CanUpdate` e `IsDeleted` funções de membro permite que você determine essas condições. O registro atual também deve não já ter sido excluído, e deve haver registros no conjunto de registros (ambos `IsBOF` e `IsEOF` retornam 0).  
@@ -140,7 +135,7 @@ Este tópico se aplica às classes MFC ODBC.
     > [!TIP]
     >  Se você chamar `AddNew` ou **editar** depois de ter chamado a qualquer função anteriormente, mas antes de chamar **atualização**, o buffer de edição é atualizado com o registro armazenado, substituindo o registro de novo ou editado no progresso. Esse comportamento fornece uma maneira para anular uma `AddNew` ou **editar** e iniciar uma nova: se você determinar que o registro em andamento está com defeito, simplesmente chamar **editar** ou `AddNew` novamente.  
   
-##  <a name="_core_deleting_a_record"></a>Excluindo um registro  
+##  <a name="_core_deleting_a_record"></a> Excluindo um registro  
  Excluir um registro de um conjunto de registros envolve a rolagem para o registro e chamando o conjunto de registros [excluir](../../mfc/reference/crecordset-class.md#delete) função de membro. Ao contrário de `AddNew` e **editar**, **excluir** não requer uma chamada correspondente para **atualização**.  
   
  Como uma pré-condição para chamar **excluir**, o conjunto de registros deve ser atualizável e ele deve estar em um registro. O `CanUpdate`, `IsBOF`, `IsEOF`, e `IsDeleted` funções de membro permite que você determine essas condições.  

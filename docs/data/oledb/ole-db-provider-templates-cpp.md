@@ -1,12 +1,9 @@
 ---
 title: Modelos de provedor do OLE DB (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 255a61d7cff661406da327de79c6a726ffb60bab
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a331e72433ca25d280d35edfd33a56402675aea9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelos de provedor de banco de dados OLE (C++)
 OLE DB é uma parte importante da estratégia de acesso a dados Universal Microsoft. O design de banco de dados OLE permite acesso a dados de alto desempenho de qualquer fonte de dados. Dados de tabela são visíveis através do OLE DB, independentemente se ela veio de um banco de dados. A flexibilidade lhe oferecem uma enorme quantidade de energia.  

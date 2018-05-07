@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCOutlookBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBar
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257b9157059f20d9023abee092c38ad8c1a57167
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640f634276f87d0a41633354a7dde0ed65a2940
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcoutlookbar-class"></a>Classe CMFCOutlookBar
 Um painel com guias com a aparência visual do **painel de navegação** no Microsoft Outlook 2000 ou Outlook 2003. O `CMFCOutlookBar` objeto contém um [CMFCOutlookBarTabCtrl classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objeto e uma série de guias. As guias podem ser [CMFCOutlookBarPane classe](../../mfc/reference/cmfcoutlookbarpane-class.md) objetos ou `CWnd`-objetos derivados. Para o usuário, a barra do Outlook aparece como uma série de botões e uma área de exibição. Quando o usuário clica em um botão, o painel de botão ou controle correspondente é exibida.  
@@ -190,7 +185,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxoutlookbar.h  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>  CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
  Especifica se um painel com guias vazio pode ser destruído.  
   
 ```  
@@ -198,12 +193,12 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se um painel com guias vazio pode ser destruído; Caso contrário, `FALSE`. A implementação padrão sempre retorna `TRUE`.  
+ `TRUE` Se um painel com guias vazio pode ser destruído; Caso contrário, `FALSE`. A implementação padrão sempre retorna `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
  Se um painel com guias vazio não pode ser destruído, a estrutura oculta em vez disso.  
   
-##  <a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
+##  <a name="canacceptpane"></a>  CMFCOutlookBar::CanAcceptPane  
  Determina se o outro painel pode ser encaixado para o painel da barra do Outlook.  
   
 ```  
@@ -215,7 +210,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
  Um ponteiro para outro painel que está sendo encaixada para esse painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se outro painel pode ser encaixado painel da barra do Outlook; Caso contrário, `FALSE`.  
+ `TRUE` Se outro painel pode ser encaixado painel da barra do Outlook; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Se a barra do Outlook está no modo do Outlook 2003, encaixe não tem suporte, portanto, o valor de retorno é `FALSE`.  
@@ -224,7 +219,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  Caso contrário, esse método se comporta como o método base [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), exceto que, mesmo se encaixe não estiver habilitado, uma barra do Outlook ainda poderá habilitar outra barra do Outlook para ser encaixado sobre ele.  
   
-##  <a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>  CMFCOutlookBar::CanSetCaptionTextToTabName  
  Determina se a legenda para o painel com guias exibirá o mesmo texto como a guia ativa.  
   
 ```  
@@ -232,14 +227,14 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o Outlook barra de legenda da janela é definida automaticamente como o texto da guia ativa. Caso contrário, `FALSE`.  
+ `TRUE` Se o Outlook barra de legenda da janela é definida automaticamente como o texto da guia ativa. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Use [CBaseTabbedPane::EnableSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname) para habilitar ou desabilitar essa funcionalidade.  
   
  No modo do Outlook 2003, essa configuração está sempre habilitada.  
   
-##  <a name="create"></a>CMFCOutlookBar::Create  
+##  <a name="create"></a>  CMFCOutlookBar::Create  
  Cria o controle de barra do Outlook.  
   
 ```  
@@ -289,7 +284,7 @@ virtual BOOL Create(
  [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
   
-##  <a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
+##  <a name="createcustompage"></a>  CMFCOutlookBar::CreateCustomPage  
  Cria uma guia personalizada de barra do Outlook.  
   
 ```  
@@ -321,7 +316,7 @@ CMFCOutlookBarPane* CreateCustomPage(
   
  Use [CMFCOutlookBar::RemoveCustomPage](#removecustompage) excluir páginas personalizadas.  
   
-##  <a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>  CMFCOutlookBar::DoesAllowDynInsertBefore  
  Especifica se um usuário pode encaixar um painel da borda externa da barra do Outlook.  
   
 ```  
@@ -339,7 +334,7 @@ DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;
 > [!NOTE]
 >  Como painéis dinâmicos verifica o status dos painéis estáticos encaixados quando encaixe, você deve encaixar painéis dinâmicos depois estáticos painéis sempre que possível.  
   
-##  <a name="floattab"></a>CMFCOutlookBar::FloatTab  
+##  <a name="floattab"></a>  CMFCOutlookBar::FloatTab  
  Flutua um painel.  
   
 ```  
@@ -361,15 +356,15 @@ virtual BOOL FloatTab(
  Especifica o método a ser usado para fazer a flutuação do painel.  Para obter mais informações, consulte [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
  [in] `bHide`  
- `TRUE`Para ocultar o painel antes flutuante; Caso contrário, `FALSE`. Ao contrário da versão da classe base desse método, esse parâmetro não tem um valor padrão.  
+ `TRUE` Para ocultar o painel antes flutuante; Caso contrário, `FALSE`. Ao contrário da versão da classe base desse método, esse parâmetro não tem um valor padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel flutuante; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel flutuante; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método é como [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) exceto que ele não permite que a última guia restante em um controle de barra do Outlook para float.  
   
-##  <a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
+##  <a name="getbuttonsfont"></a>  CMFCOutlookBar::GetButtonsFont  
  Retorna a fonte do texto na página de guias de botão da barra do Outlook.  
   
 ```  
@@ -382,7 +377,7 @@ CFont* GetButtonsFont() const;
 ### <a name="remarks"></a>Comentários  
  Use esta função para recuperar a fonte usada para exibir o texto nas guias de botão de página do Outlook. Você pode definir a fonte chamando em [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
   
-##  <a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
+##  <a name="gettabarea"></a>  CMFCOutlookBar::GetTabArea  
  Determina o tamanho e a posição das áreas de guia na barra do Outlook.  
   
 ```  
@@ -405,7 +400,7 @@ virtual void GetTabArea(
   
  Substitua este método na classe derivada de `CMFCOutlookBar` para alterar esse comportamento.  
   
-##  <a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
+##  <a name="ismode2003"></a>  CMFCOutlookBar::IsMode2003  
  Especifica se o comportamento da barra do Outlook imita do Microsoft Office Outlook 2003.  
   
 ```  
@@ -418,7 +413,7 @@ BOOL IsMode2003() const;
 ### <a name="remarks"></a>Comentários  
  Você pode habilitar esse modo usando [CMFCOutlookBar::SetMode2003](#setmode2003).  
   
-##  <a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
+##  <a name="onafteranimation"></a>  CMFCOutlookBar::OnAfterAnimation  
  Chamado pelo [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) depois que a guia ativa foi definida usando a animação.  
   
 ```  
@@ -432,7 +427,7 @@ virtual void OnAfterAnimation(int nPage);
 ### <a name="remarks"></a>Comentários  
  O efeito visual de definir a guia ativa depende se você tiver habilitado a animação. Para obter mais informações, consulte [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
   
-##  <a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
+##  <a name="onbeforeanimation"></a>  CMFCOutlookBar::OnBeforeAnimation  
  Chamado pelo [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) antes de uma guia é definida como a guia ativa usando a animação.  
   
 ```  
@@ -448,7 +443,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onscroll"></a>CMFCOutlookBar::OnScroll  
+##  <a name="onscroll"></a>  CMFCOutlookBar::OnScroll  
  Chamado pelo framework se a barra do Outlook é rolar para cima ou para baixo.  
   
 ```  
@@ -457,11 +452,11 @@ virtual void OnScroll(BOOL bDown);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bDown`  
- `TRUE`Se a barra do Outlook está rolando para baixo, ou `FALSE` se ele é rolagem para cima.  
+ `TRUE` Se a barra do Outlook está rolando para baixo, ou `FALSE` se ele é rolagem para cima.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
+##  <a name="removecustompage"></a>  CMFCOutlookBar::RemoveCustomPage  
  Remove uma página de guia de barra personalizada do Outlook.  
   
 ```  
@@ -487,7 +482,7 @@ BOOL RemoveCustomPage(
   
  Use [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) para obter um ponteiro para a janela do Outlook.  
   
-##  <a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
+##  <a name="setbuttonsfont"></a>  CMFCOutlookBar::SetButtonsFont  
  Define a fonte do texto nos botões da barra do Outlook.  
   
 ```  
@@ -506,7 +501,7 @@ void SetButtonsFont(
 ### <a name="remarks"></a>Comentários  
  Use esse método para definir uma fonte para o texto exibido nos botões de página de guia do outlook.  
   
-##  <a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
+##  <a name="setmode2003"></a>  CMFCOutlookBar::SetMode2003  
  Especifica se o comportamento da barra do Outlook imita do Outlook 2003.  
   
 ```  

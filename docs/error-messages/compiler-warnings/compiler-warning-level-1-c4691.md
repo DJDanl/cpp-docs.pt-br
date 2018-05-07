@@ -1,12 +1,9 @@
 ---
-title: "Compilador (nível 1) de aviso C4691 | Microsoft Docs"
-ms.custom: 
+title: Compilador (nível 1) de aviso C4691 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4691
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17673ee3e65d2e0cd0d989c56759b62de38f5fdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dccce2468c83dd7d14596c1c26e19bd13ad1a70
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4691"></a>Compilador C4691 de aviso (nível 1)
 'type': tipo referenciado era esperado no assembly não referenciado 'file', tipo definido na unidade de tradução atual usada  

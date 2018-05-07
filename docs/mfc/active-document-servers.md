@@ -1,13 +1,10 @@
 ---
 title: Servidores de documentos ativos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc207541bda3084db6bc8ab3896f46761587169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-servers"></a>Servidores de documentos ativos
 Servidores de documentos ativos como Word, Excel ou PowerPoint documentos de host de outros tipos de aplicativo chamam documentos ativos. Ao contrário de OLE objetos incorporados (que são exibidos apenas dentro da página de outro documento), documentos ativos fornecem a interface completa e a funcionalidade nativa completa do aplicativo de servidor que cria. Os usuários podem criar documentos usando todo o potencial dos seus aplicativos favoritos (se eles estiverem documento ativo habilitado), ainda pode tratar o projeto resultante como uma única entidade.  
@@ -36,7 +31,7 @@ Servidores de documentos ativos como Word, Excel ou PowerPoint documentos de hos
   
  MFC dá suporte a documentos ativos com o [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) classe derivada de [CCmdTarget](../mfc/reference/ccmdtarget-class.md), e [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), derivada de [ COleServerItem](../mfc/reference/coleserveritem-class.md). Oferece suporte a MFC contêineres de documento ativo com o [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) classe derivada de [COleClientItem](../mfc/reference/coleclientitem-class.md).  
   
- `CDocObjectServer`mapeia as interfaces do documento ativo e inicializa e ativa um documento ativo. MFC também fornece macros para lidar com o roteamento de comando em documentos ativos. Para usar documentos ativos em seu aplicativo, inclua AfxDocOb.h em seu arquivo Stdafx. H.  
+ `CDocObjectServer` mapeia as interfaces do documento ativo e inicializa e ativa um documento ativo. MFC também fornece macros para lidar com o roteamento de comando em documentos ativos. Para usar documentos ativos em seu aplicativo, inclua AfxDocOb.h em seu arquivo Stdafx. H.  
   
  Um servidor MFC regular conecta seu próprio `COleServerItem`-classe derivada. O Assistente de aplicativo MFC gera essa classe para você, se você selecionar o **miniservidor** ou **servidor completo** caixa de seleção para dar suporte a documentos compostos de seu servidor de aplicativos. Se você selecionar também o **server documento ativo** caixa de seleção, o Assistente de aplicativo MFC gera uma classe derivada de `CDocObjectServerItem` em vez disso.  
   

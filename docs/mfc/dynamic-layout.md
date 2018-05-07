@@ -1,27 +1,22 @@
 ---
-title: "Layout dinâmico | Microsoft Docs"
-ms.custom: 
+title: Layout dinâmico | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>Layout dinâmico
 Com MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuário pode redimensionar e você pode controlar a forma que ajusta o layout para a alteração no tamanho. Por exemplo, você pode anexar botões na parte inferior de uma caixa de diálogo para a borda inferior para que eles permanecem sempre na parte inferior. Você também pode configurar determinados controles, como caixas de listagem, editboxes e campos de texto para expandir conforme o usuário expande a caixa de diálogo.  
@@ -46,7 +41,7 @@ Com MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuári
   
      ![Abra a caixa de diálogo no editor de recursos. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  Selecione um controle e na janela Propriedades, defina suas propriedades de layout dinâmico. O **Layout dinâmico** seção na janela de propriedades contém as propriedades **movendo tipo**, **dimensionamento tipo**e, dependendo dos valores selecionados para essas propriedades, propriedades específicas que definem como os controles mover ou alterar o tamanho. **Tipo de movimentação** determina como um controle é movido conforme o tamanho da caixa de diálogo é alterado; **Dimensionamento tipo** determina como um controle é redimensionado conforme o tamanho da caixa de diálogo é alterado. **Mover o tipo** e **dimensionamento tipo** podem ser **Horizontal**, **Vertical**, **ambos**, ou **nenhum** dependendo das dimensões que você deseja alterar dinamicamente. Horizontal é a dimensão de X; Vertical é a direção de Y.  
+2.  Selecione um controle e na janela Propriedades, defina suas propriedades de layout dinâmico. O **Layout dinâmico** seção na janela de propriedades contém as propriedades **movendo tipo**, **dimensionamento tipo**e, dependendo dos valores selecionados para essas propriedades, propriedades específicas que definem como os controles mover ou alterar o tamanho. **Tipo de movimentação** determina como um controle é movido conforme o tamanho da caixa de diálogo é alterado; **Dimensionamento tipo** determina como um controle é redimensionado conforme o tamanho da caixa de diálogo é alterado. **Mover o tipo** e **dimensionamento tipo** podem ser **Horizontal**, **Vertical**, **ambos**, ou **nenhum**dependendo das dimensões que você deseja alterar dinamicamente. Horizontal é a dimensão de X; Vertical é a direção de Y.  
   
 3.  Se você desejar um controle como um botão em um tamanho fixo e permanecem em vigor na parte inferior direita, como é comum para o **Okey** ou **Cancelar** botões, defina o **dimensionamento tipo** para  **Nenhum**e defina o **movendo tipo** para **ambos**. Para o **X movendo** e **Y movendo** valores em **movendo tipo**, conjunto de 100% para fazer com que o controle manter uma distância fixa da parte inferior canto direito.  
   

@@ -1,12 +1,9 @@
 ---
 title: C3666 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3666
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3666
 ms.assetid: 459e51dd-cefb-4346-99b3-644f2d8b65b2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1456f1994e449139baff1ff8a35ab6187b209d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4672cad0f1c0b67b58233c6394e98324a9c32aaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3666"></a>C3666 de erro do compilador
 'construtor': especificador 'palavra-chave' não é permitido em um construtor de substituição  

@@ -1,42 +1,40 @@
 ---
 title: Renomear | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ca06ef5a11d674d35aff7276e14312c456c60e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rename"></a>Renomear
-**O que:** permite renomear identificadores para símbolos de código, como campos, variáveis locais, métodos, namespaces, propriedades e tipos.
+**O quê:** permite renomear identificadores para símbolos de código, como campos, variáveis locais, métodos, namespaces, propriedades e tipos.
 
-**Quando:** você deseja renomear algo a com segurança sem a necessidade de localizar todas as instâncias e copiar/colar o novo nome.  
+**Quando:** você deseja renomear algo com segurança sem a necessidade de localizar todas as instâncias e copiar/colar o novo nome.  
 
-**Motivo:** copiando e colando o novo nome em um projeto inteiro provavelmente resultar em erros.  Essa ferramenta refatoração com precisão executará a ação de renomeação.
+**Por quê:** copiar e colar o novo nome em um projeto inteiro provavelmente resultaria em erros.  Essa ferramenta de refatoração realizará com precisão a ação de renomeação.
 
 **Como:**
 
-1. Realçar ou coloque o cursor do texto dentro do item a ser renomeado:
+1. realce ou coloque o cursor do texto dentro do item a ser renomeado:
 
    ![Código realçado](images/rename_highlight.png)
 
-1. Em seguida, siga um destes procedimentos:
+1. Depois, siga um destes procedimentos:
    * **Teclado**
-     * Pressione **Ctrl + R**, em seguida, **Ctrl + R**.  (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
+     * Pressione **Ctrl+R**, em seguida, **Ctrl+R**.  (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
    * **Mouse**
      * Selecione **Editar > Refatorar > Renomear**.
-     * O código e selecione **Renomear**.
+     * Clique com o botão direito do mouse no código e selecione **Renomear**.
 
 1. No **Renomear** janela pop-up, digite o novo nome para o item selecionado e clique o **visualização** botão.  Alterar o **escopo da pesquisa** se você precisar aumentar ou restringir o escopo de renomeação.
 

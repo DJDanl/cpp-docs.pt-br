@@ -1,13 +1,10 @@
 ---
 title: Assistente de controle ActiveX MFC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.overview
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e562ceb73da2b103360ab9607cecbbe9f1da02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45af43a98244e90f52075817fc9e17a905cbf065
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-control-wizard"></a>Assistente de controle ActiveX MFC
 Um controle ActiveX é um tipo específico de [servidor de automação](../../mfc/automation-servers.md); é um componente reutilizável. O aplicativo que hospeda o controle ActiveX é o [clientes de automação](../../mfc/automation-clients.md) desse controle. Se seu objetivo é criar um componente reutilizável, em seguida, use este assistente para criar o controle. Consulte [controles ActiveX MFC](../../mfc/mfc-activex-controls.md) para obter mais informações.  

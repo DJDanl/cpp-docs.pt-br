@@ -1,12 +1,9 @@
 ---
 title: Classe CPropExchange | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>Classe CPropExchange
 Oferece suporte à implementação de persistência para os controles OLE.  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|Indica se as propriedades estão sendo carregado no controle ou salvo dele.|  
   
 ## <a name="remarks"></a>Comentários  
- `CPropExchange`não tem uma classe base.  
+ `CPropExchange` não tem uma classe base.  
   
  Estabelece o contexto e a direção de um câmbio da propriedade.  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  A estrutura transmite um ponteiro a este `CPropExchange` objeto para o controle `DoPropExchange` função. Se você usou um Assistente para criar os arquivos iniciais para o controle, seu controle `DoPropExchange` chamadas de função `COleControl::DoPropExchange`. A versão da classe base de troca de propriedades de estoque do controle; você modificar a versão do sua classe derivada exchange propriedades que você adicionou ao seu controle.  
   
- `CPropExchange`pode ser usado para serializar as propriedades de um controle ou inicializar propriedades de um controle em caso de carga ou criação de um controle. O `ExchangeProp` e `ExchangeFontProp` funções membro de `CPropExchange` são capazes de armazenar as propriedades para e carregá-los de mídia diferentes.  
+ `CPropExchange` pode ser usado para serializar as propriedades de um controle ou inicializar propriedades de um controle em caso de carga ou criação de um controle. O `ExchangeProp` e `ExchangeFontProp` funções membro de `CPropExchange` são capazes de armazenar as propriedades para e carregá-los de mídia diferentes.  
   
  Para obter mais informações sobre como usar `CPropExchange`, consulte o artigo [controles ActiveX MFC: páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxctl. h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  Serializa uma propriedade que armazena dados de objeto binário grande (BLOB).  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  As funções **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, e **CPropsetPropExchange::ExchangeBlobProp** substituir Essa função virtual pura.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  Troca de uma propriedade de fonte entre uma mídia de armazenamento e o controle.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  As funções **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, e **CPropsetPropExchange::ExchangeFontProp** substituir Essa função virtual pura.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  Troca de uma propriedade entre o controle e um arquivo.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  As funções **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, e **CPropsetPropExchange::ExchangePersistentProp** substituem essa função virtual pura.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  Troca de uma propriedade entre uma mídia de armazenamento e o controle.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  As funções **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, e **CPropsetPropExchange::ExchangeProp** substituição nesse pura função virtual.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  Chamado pelo framework para lidar com a persistência de um número de versão.  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a função foi bem-sucedida. Caso contrário, 0.  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  Chame essa função para recuperar o número de versão do controle.  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Valor de retorno  
  O número de versão do controle.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  Determina se as trocas de propriedade são executadas de modo assíncrono.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Valor de retorno  
  Retornará TRUE se as propriedades são trocados de forma assíncrona, caso contrário, FALSE.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  Chamar esta função para determinar se as propriedades estão sendo carregados para o controle ou salvos dele.  
   
 ```  

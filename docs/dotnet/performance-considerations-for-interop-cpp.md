@@ -1,13 +1,10 @@
 ---
-title: "Considerações sobre desempenho de interoperabilidade (C++) | Microsoft Docs"
-ms.custom: 
+title: Considerações sobre desempenho de interoperabilidade (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25d098ebb52809a36735f71eecedcc4c2a186225
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9223c52e4ef831a9a1ff657db1a0d7859dd6ce6c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considerações sobre desempenho para interop (C++)
 Este tópico fornece diretrizes para reduzir o efeito de transições de interoperabilidade gerenciado/não gerenciado no desempenho de tempo de execução.  

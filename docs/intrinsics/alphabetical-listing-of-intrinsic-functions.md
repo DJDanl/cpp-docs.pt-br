@@ -1,12 +1,9 @@
 ---
-title: "Alfabética listando funções intrínsecas | Microsoft Docs"
-ms.custom: 
+title: Alfabética listando funções intrínsecas | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad46e20a0182923593f20bd8a56269af18772876
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e4418835d29fed1f054888f16b188a8775307d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Lista alfabética de funções intrínsecas
 As seções a seguir descrevem as funções intrínsecas específicas da Microsoft, disponíveis em algumas ou todas as arquiteturas. Outros intrínsecos com suporte são documentados pelos fabricantes de processador, nos arquivos de cabeçalho ou em seus sites. Consulte o [intrínsecos ARM](../intrinsics/arm-intrinsics.md), [x86 intrínsecos](../intrinsics/x86-intrinsics-list.md), e [x64 intrínsecos](../intrinsics/x64-amd64-intrinsics-list.md) seções para obter links para documentação do fabricante. Funções de biblioteca de tempo de execução (CRT) de C que têm intrínsecos implementados para que eles não estão documentadas aqui. Essas funções são documentadas no [referência de biblioteca de tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md).  

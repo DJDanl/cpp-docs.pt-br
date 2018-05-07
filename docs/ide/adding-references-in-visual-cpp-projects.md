@@ -1,13 +1,10 @@
 ---
-title: "Adicionando referências em projetos do Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Adicionando referências em projetos do Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Adicionando referências em projetos do Visual C++
 É muito comum para programas chamar APIs em outros binários, como DLLs, componentes do Windows Runtime, SDKs de extensão, componentes COM e assemblies .NET. A maneira que o programa localizará os outros binários depende do tipo do seu projeto e o tipo do binário.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  Em um projeto de C++ nativo (ATL) o conceito de *referências* só se aplica a outros projetos na solução, incluindo projetos compartilhados, portanto, isso é tudo o que você vê no **Gerenciador de referências**:  
   
- ![Visual C# 43; &#43; Gerenciador de referências &#40; Projetos ATL &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Gerenciador de referências do visual C++ (projetos ATL)")  
+ ![Visual C#&#43; &#43; Gerenciador de referências &#40;projetos ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Gerenciador de referências do Visual C++ (projetos ATL)")  
   
  Em C + + o conceito de referências de projeto CLI ou plataforma Universal do Windows, aplica a mais tipos de binários, além de outros projetos na solução.  Esses são expostos no **Gerenciador de referências**.
   
@@ -120,7 +115,7 @@ ms.lasthandoff: 12/21/2017
  Exibe o token de chave pública que é usado para identificar o assembly referenciado.  
   
  **Nome forte**  
- `true`Se o assembly mencionado tiver um nome forte. Um assembly com nome forte é exclusivamente da versão.  
+ `true` Se o assembly mencionado tiver um nome forte. Um assembly com nome forte é exclusivamente da versão.  
   
  **Versão**  
  Exibe a versão do assembly referenciado.  

@@ -1,27 +1,22 @@
 ---
-title: "Guiada por perfil otimização erros e avisos | Microsoft Docs"
-ms.custom: 
+title: Guiada por perfil otimização erros e avisos | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
 ms.assetid: f67b1011-fb64-4df3-9356-d52c9423ff3f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da1911c291c4d052d380cfd3d63c5b25bda5010
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e467c3ba418bfb0c95a0054e30773301c614f7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Erros e avisos de otimização orientada a perfil
 Esta seção é uma referência aos erros gerados pelas ferramentas de compilação. Para obter ajuda com uma mensagem de erro específica, clique no número de erro na janela de saída a e pressione F1, digite o número do erro no **procure** caixa no índice, ou clique no link apropriado:  

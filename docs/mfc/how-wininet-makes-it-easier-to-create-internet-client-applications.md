@@ -1,13 +1,10 @@
 ---
 title: Como WinInet facilita a criar aplicativos cliente da Internet | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c79404f296df09afb177930897064b8455217d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09a7427374de085de9bd2872c8b1368a6b961b35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Como WinInet facilita a criação de aplicativos clientes da Internet
 As extensões da Internet Win32 ou WinInet, fornecem acesso a protocolos de Internet comuns, incluindo HTTP, FTP e gopher. Usando WinInet, você pode escrever aplicativos de cliente da Internet em um nível mais alto de programação, sem a necessidade de lidar com os detalhes específicos de protocolos de Internet, TCP/IP ou WinSock. WinInet fornece um conjunto consistente de funções para todos os protocolos de três, com uma interface familiar da API do Win32. Essa consistência minimiza as alterações de código que você precisa verificar se o protocolo subjacente for alterado (por exemplo, de FTP para HTTP).  

@@ -1,12 +1,9 @@
 ---
 title: C3200 de erros do compilador por meio de C3299 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 de erros do compilador por meio de C3299
 
@@ -139,9 +134,9 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C3271](compiler-error-c3271.md)|'*campo*': valor inválido '*número*' para o atributo FieldOffset|
 |[Erro do compilador C3272](compiler-error-c3272.md)|'*símbolo*': símbolo requer FieldOffset, porque ele é um membro de classe/struct *type_name* definido com StructLayout(LayoutKind::Explicit)|
 |[Erro do compilador C3273](compiler-error-c3273.md)|'*palavra-chave*': não é permitido no bloco try de C++|
-|[Erro do compilador C3274](compiler-error-c3274.md)|Por fim / &#95; &#95; finalmente sem correspondência, tente|
+|[Erro do compilador C3274](compiler-error-c3274.md)|Por fim /&#95;&#95;finalmente sem correspondência, tente|
 |[Erro do compilador C3275](compiler-error-c3275.md)|'*identificador*': não é possível usar este símbolo sem qualificador|
-|[Erro do compilador C3276](compiler-error-c3276.md)|'*palavra-chave*': salto de finalmente / &#95; &#95; finalmente bloco possui comportamento indefinido durante manipulação de encerramento|
+|[Erro do compilador C3276](compiler-error-c3276.md)|'*palavra-chave*': salto de finalmente /&#95;&#95;finalmente bloco possui comportamento indefinido durante manipulação de encerramento|
 |[Erro do compilador C3277](compiler-error-c3277.md)|não é possível definir um enum não gerenciado '*enumeração*'interna gerenciado'*tipo*'|
 |[Erro do compilador C3278](compiler-error-c3278.md)|direcionar a chamada de interface ou método puro '*função*' falhará em tempo de execução|
 |[Erro do compilador C3279](compiler-error-c3279.md)|especializações parciais e explícitas bem como instanciações explícitas de modelos de classe declaradas no namespace cli não são permitidas|

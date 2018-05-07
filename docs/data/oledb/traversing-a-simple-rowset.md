@@ -1,12 +1,9 @@
 ---
 title: Percorrendo um conjunto de linhas Simple | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7006d10191c3a2df31d3784a95b01f0adad0e202
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>Percorrendo um conjunto de linhas simples
 O exemplo a seguir mostra um acesso de banco de dados rápida e fácil que não envolvem comandos. O seguinte código de cliente, em um projeto de ATL, recupera os registros de uma tabela chamada *artistas* no Microsoft Access de banco de dados usando o provedor Microsoft OLE DB para ODBC. O código cria um [CTable](../../data/oledb/ctable-class.md) objeto de tabela com um acessador com base na classe de registro de usuário `CArtists`. Abre uma conexão, abre uma sessão em que a conexão e abre a tabela na sessão.  

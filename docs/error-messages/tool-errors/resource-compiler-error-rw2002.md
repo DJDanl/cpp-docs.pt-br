@@ -2,11 +2,8 @@
 title: RW2002 de erro do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RW2002
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db322791c3804f387c452b3839260826585a2e30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb42298a7140439e3578281de60075f540b09175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erro RW2002 (compilador de recurso)
 Erro de análise  
@@ -56,7 +51,7 @@ Erro de análise
   
      O **começar** palavra-chave deve seguir imediatamente a **STRINGTABLE** palavra-chave.  
   
-7.  **Não é possível reutilizar a constantes de cadeia de caracteres**  
+7.  **não é possível reutilizar a constantes de cadeia de caracteres**  
   
      Você está usando o mesmo valor duas vezes em um **STRINGTABLE** instrução. Verifique se que você está misturando não sobrepostos valores decimais e hexadecimais. Cada ID em um **STRINGTABLE** devem ser exclusivos. Para máxima eficiência, use constantes contíguos com início em um múltiplo de 16.  
   
@@ -64,7 +59,7 @@ Erro de análise
   
      Um caractere de controle no **ACELERADORES** instrução é inválida. O caractere após o cursor (**^**) deve estar entre A e Z, inclusive.  
   
-9. **Menus vazios não permitidos**  
+9. **menus vazios não permitidos**  
   
      Um **final** palavra-chave aparece antes dos itens de menu são definidos no **MENU** instrução. O compilador de recurso não permite que os menus vazios. Verifique se você não tem qualquer Abrir aspas dentro de **MENU** instrução.  
   
@@ -80,7 +75,7 @@ Erro de análise
   
      O compilador de recurso requer uma vírgula entre o `event` e *idvalue* campos de **ACELERADORES** instrução.  
   
-13. **Nome da classe de controle esperado**  
+13. **nome da classe de controle esperado**  
   
      O `class` campo de um **controle** instrução no **diálogo** instrução deve ser um dos seguintes tipos: botão, caixa de COMBINAÇÃO, editar, caixa de listagem, barra de ROLAGEM, estático, ou definido pelo usuário. Verifique se que a classe está escrita corretamente.  
   
@@ -96,7 +91,7 @@ Erro de análise
   
      Cada **MENUITEM** e **pop-up** instrução deve conter um *texto* campo, que é uma cadeia de caracteres entre aspas duplas que especifica o nome do item de menu ou menu pop-up menu. Um **MENUITEM SEPARADOR** instrução não requer nenhuma cadeia de caracteres entre aspas.  
   
-17. **Esperado um valor numérico de comando**  
+17. **esperado um valor numérico de comando**  
   
      O compilador de recurso estava esperando um numérico *idvalue* campo o **ACELERADORES** instrução. Certifique-se de que você usou um `#define` constante para especificar o valor e que a constante está escrita corretamente.  
   
@@ -108,7 +103,7 @@ Erro de análise
   
      O *pointsize* campo da opção na fonte a **diálogo** instrução deve ser um valor de tamanho de ponto de inteiro.  
   
-20. **Constante de caixa de diálogo numérico esperado**  
+20. **constante de caixa de diálogo numérico esperado**  
   
      Um **diálogo** instrução requer valores inteiros para o *x, y, largura*, e *altura* campos. Certifique-se de que esses valores sejam incluídos após o **diálogo** palavra-chave e que eles não sejam negativos.  
   
@@ -120,7 +115,7 @@ Erro de análise
   
      O compilador de recurso não pôde determinar que tipo de chave está sendo configurado para o acelerador. O `event` campo o **ACELERADORES** instrução pode ser inválida.  
   
-23. **Esperando o número de identificação**  
+23. **esperando o número de identificação**  
   
      Esperado um número para o `id` campo de uma instrução de controle no **diálogo** instrução. Verifique se você tem um número ou `#define` instrução para a ID do controle.  
   
@@ -132,7 +127,7 @@ Erro de análise
   
      O `captiontext` campo da opção de legenda no **diálogo** instrução deve ser uma cadeia de caracteres ASCII entre aspas duplas.  
   
-26. **Arquivo não encontrado: nome de arquivo**  
+26. **arquivo não encontrado: nome de arquivo**  
   
      O arquivo especificado na linha de comando do compilador de recurso não foi encontrado. Verifique se o arquivo foi movido para outro diretório e se o nome do arquivo ou caminho foi digitado corretamente. Arquivos são pesquisados para usar o **incluir** variável de ambiente ou a configuração de Visual Workbench, se disponível.  
   
@@ -148,11 +143,11 @@ Erro de análise
   
      O `type` campo o **ACELERADORES** instrução deve conter o valor de ASCII ou VIRTKEY.  
   
-30. **Caractere de controle inválido**  
+30. **caractere de controle inválido**  
   
      Um caractere de controle no **ACELERADORES** instrução é inválida. Um caractere de controle válido consiste em uma letra, um acento circunflexo (^) a seguir (somente).  
   
-31. **Tipo de controle inválido**  
+31. **tipo de controle inválido**  
   
      Cada instrução de controle em um **diálogo** instrução deve ser um dos seguintes: caixa de seleção, caixa de COMBINAÇÃO, controle, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ícone, LISTBOX, LTEXT, botão de ação, RADIOBUTTON, RTEXT, barra de ROLAGEM. Verifique se essas instruções de controle estão escritas corretamente.  
   
@@ -172,6 +167,6 @@ Erro de análise
   
      O *dados brutos* valores no **RCDATA** instrução deve ser números inteiros ou cadeias de caracteres, cada um separado por uma vírgula. Certifique-se de não deixar uma vírgula ou omitir um sinal de aspas em torno de uma cadeia de caracteres.  
   
-36. **Subtipo de menu desconhecido**  
+36. **subtipo de menu desconhecido**  
   
      O *definição de item* campo o **MENU** só pode conter instrução **MENUITEM** e **pop-up** instruções.

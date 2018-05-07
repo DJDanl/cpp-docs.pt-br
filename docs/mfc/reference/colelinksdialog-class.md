@@ -1,12 +1,9 @@
 ---
 title: Classe COleLinksDialog | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b998cc18ac0c357b57bc841f6db13700b078063
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinksdialog-class"></a>Classe COleLinksDialog
 Usado para a caixa de diálogo Editar Links de OLE.  
@@ -90,7 +85,7 @@ class COleLinksDialog : public COleDialog
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxodlgs.h  
   
-##  <a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>  COleLinksDialog::DoModal  
  Exibe a caixa de diálogo Editar Links de OLE.  
   
 ```  
@@ -109,7 +104,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Comentários  
  Se você quiser inicializar os vários controles de caixa de diálogo definindo membros do [m_el](#m_el) estrutura, você deverá fazer isso antes de chamar `DoModal`, mas depois que o objeto de caixa de diálogo é construído.  
   
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  Constrói um objeto `COleLinksDialog`.  
   
 ```  
@@ -136,7 +131,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>Comentários  
  Essa função só constrói um `COleLinksDialog` objeto. Para exibir a caixa de diálogo, chame o [DoModal](#domodal) função.  
   
-##  <a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>  COleLinksDialog::m_el  
  Estrutura do tipo **OLEUIEDITLINKS** usado para controlar o comportamento da caixa de diálogo Editar Links.  
   
 ```  

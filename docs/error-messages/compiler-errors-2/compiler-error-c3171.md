@@ -1,12 +1,9 @@
 ---
 title: C3171 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3171
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed053e37dfbf5f3c85cf1f8ec44912eca3148315
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ee6ee02511242e2af87024c741a3c97f3f3724d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3171"></a>C3171 de erro do compilador
 'module': não é possível especificar atributos de módulo diferentes em um projeto  

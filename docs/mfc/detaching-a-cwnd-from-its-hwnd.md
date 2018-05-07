@@ -1,13 +1,10 @@
 ---
 title: Desanexando um CWnd de HWND | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CWnd
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - detaching CWnds from HWNDs
 - Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa24e0e9a0d9ee50a0c5c69e280ea7a727ca38b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a776b4ff4799750c89a322379a063030db748eec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Desanexando um CWnd de HWND
 Se você precisar evitar object -`HWND` relação, MFC fornece outra `CWnd` função de membro, [desanexar](../mfc/reference/cwnd-class.md#detach), que desconecta o objeto de janela C++ da janela do Windows. Isso impede que o destruidor destruir a janela do Windows quando o objeto é destruído.  

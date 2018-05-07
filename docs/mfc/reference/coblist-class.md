@@ -1,12 +1,9 @@
 ---
 title: Classe cObList | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcd79377eebbf36ec4dd4688dff8b33c112e451
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coblist-class"></a>Classe cObList
 fSupports ordenados listas de não exclusivo `CObject` ponteiros acessíveis em sequência ou pelo ponteiro de valor.  
@@ -115,7 +110,7 @@ class CObList : public CObject
 |[CObList::SetAt](#setat)|Define o elemento na posição especificada.|  
   
 ## <a name="remarks"></a>Comentários  
- `CObList`listas se comportam como listas duplamente vinculada.  
+ `CObList` listas se comportam como listas duplamente vinculada.  
   
  Uma variável do tipo **posição** é uma chave para a lista. Você pode usar um **posição** variável como um iterador para percorrer uma lista em sequência e um indicador para manter um lugar. Uma posição porém não é o mesmo que um índice.  
   
@@ -142,7 +137,7 @@ class CObList : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcoll.h  
   
-##  <a name="addhead"></a>CObList::AddHead  
+##  <a name="addhead"></a>  CObList::AddHead  
  Adiciona um novo elemento ou a lista de elementos para o início da lista.  
   
 ```  
@@ -183,7 +178,7 @@ void AddHead(CObList* pNewList);
   
  `a CAge at $442A 21`  
   
-##  <a name="addtail"></a>CObList::AddTail  
+##  <a name="addtail"></a>  CObList::AddTail  
  Adiciona um novo elemento ou a lista de elementos para o fim desta lista.  
   
 ```  
@@ -224,7 +219,7 @@ void AddTail(CObList* pNewList);
   
  `a CAge at $4526 40`  
   
-##  <a name="coblist"></a>CObList::CObList  
+##  <a name="coblist"></a>  CObList::CObList  
  Constrói um vazio `CObject` lista de ponteiro.  
   
 ```  
@@ -254,7 +249,7 @@ CObList(INT_PTR nBlockSize = 10);
   
  [!code-cpp[NVC_MFCCollections#92](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
-##  <a name="find"></a>CObList::Find  
+##  <a name="find"></a>  CObList::Find  
  Pesquisa a lista em sequência para localizar o primeiro `CObject` ponteiro correspondente especificado `CObject` ponteiro.  
   
 ```  
@@ -288,7 +283,7 @@ POSITION Find(
   
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CObList::FindIndex  
+##  <a name="findindex"></a>  CObList::FindIndex  
  Usa o valor de `nIndex` como um índice na lista.  
   
 ```  
@@ -303,7 +298,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
  Um **posição** valor que pode ser usado para iteração ou recuperação de ponteiro de objeto; **Nulo** se `nIndex` é muito grande. (A estrutura gera uma asserção se `nIndex` for negativo.)  
   
 ### <a name="remarks"></a>Comentários  
- Iniciar uma verificação sequencial do início da lista, parando o  *n* elemento th.  
+ Iniciar uma verificação sequencial do início da lista, parando o *n*elemento th.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObList::FindIndex`.  
   
@@ -317,7 +312,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
-##  <a name="getat"></a>CObList::GetAt  
+##  <a name="getat"></a>  CObList::GetAt  
  Uma variável do tipo **posição** é uma chave para a lista.  
   
 ```  
@@ -326,14 +321,14 @@ const CObject*& GetAt(POSITION position) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *posição*  
+ *Posição*  
  Um **posição** valor retornado pelo anterior `GetHeadPosition` ou **localizar** chamada de função de membro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Consulte a descrição do valor de retorno para [GetHead](#gethead).  
   
 ### <a name="remarks"></a>Comentários  
- Não é o mesmo que um índice, e você não pode operar em um **posição** valor por conta própria. `GetAt`recupera o `CObject` ponteiro associado com uma posição determinada.  
+ Não é o mesmo que um índice, e você não pode operar em um **posição** valor por conta própria. `GetAt` recupera o `CObject` ponteiro associado com uma posição determinada.  
   
  Você deve garantir que seu **posição** valor representa uma posição válida na lista. Se ele for inválido, declara a versão de depuração da biblioteca Microsoft Foundation Class.  
   
@@ -347,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [FindIndex](#findindex).  
   
-##  <a name="getcount"></a>CObList::GetCount  
+##  <a name="getcount"></a>  CObList::GetCount  
  Obtém o número de elementos nesta lista.  
   
 ```  
@@ -369,7 +364,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
   
-##  <a name="gethead"></a>CObList::GetHead  
+##  <a name="gethead"></a>  CObList::GetHead  
  Obtém o `CObject` ponteiro que representa o elemento principal desta lista.  
   
 ```  
@@ -399,7 +394,7 @@ const CObject*& GetHead() const;
   
  [!code-cpp[NVC_MFCCollections#96](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
-##  <a name="getheadposition"></a>CObList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CObList::GetHeadPosition  
  Obtém a posição do elemento principal desta lista.  
   
 ```  
@@ -421,7 +416,7 @@ POSITION GetHeadPosition() const;
   
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CObList::GetNext  
+##  <a name="getnext"></a>  CObList::GetNext  
  Obtém o elemento de lista, identificado pelo `rPosition`, em seguida, define `rPosition` para o `POSITION` valor da próxima entrada na lista.  
   
 ```  
@@ -466,7 +461,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  `a CAge at $46C0 21`  
   
-##  <a name="getprev"></a>CObList::GetPrev  
+##  <a name="getprev"></a>  CObList::GetPrev  
  Obtém o elemento de lista, identificado pelo `rPosition`, em seguida, define `rPosition` para o `POSITION` valor da entrada anterior na lista.  
   
 ```  
@@ -509,7 +504,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  `a CAge at $421C 40`  
   
-##  <a name="getsize"></a>CObList::GetSize  
+##  <a name="getsize"></a>  CObList::GetSize  
  Retorna o número de elementos da lista.  
   
 ```  
@@ -534,7 +529,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
   
-##  <a name="gettail"></a>CObList::GetTail  
+##  <a name="gettail"></a>  CObList::GetTail  
  Obtém o `CObject` ponteiro que representa o elemento final desta lista.  
   
 ```  
@@ -560,7 +555,7 @@ const CObject*& GetTail() const;
   
  [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
   
-##  <a name="gettailposition"></a>CObList::GetTailPosition  
+##  <a name="gettailposition"></a>  CObList::GetTailPosition  
  Obtém a posição do elemento final desta lista; **Nulo** se a lista está vazia.  
   
 ```  
@@ -582,7 +577,7 @@ POSITION GetTailPosition() const;
   
  [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
-##  <a name="insertafter"></a>CObList::InsertAfter  
+##  <a name="insertafter"></a>  CObList::InsertAfter  
  Adiciona um elemento a essa lista depois do elemento na posição especificada.  
   
 ```  
@@ -592,7 +587,7 @@ POSITION InsertAfter(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *posição*  
+ *Posição*  
  Um **posição** valor retornado pelo anterior `GetNext`, `GetPrev`, ou **localizar** chamada de função de membro.  
   
  `newElement`  
@@ -623,7 +618,7 @@ POSITION InsertAfter(
   
  `a CAge at $4968 21`  
   
-##  <a name="insertbefore"></a>CObList::InsertBefore  
+##  <a name="insertbefore"></a>  CObList::InsertBefore  
  Adiciona um elemento a essa lista antes do elemento na posição especificada.  
   
 ```  
@@ -633,7 +628,7 @@ POSITION InsertBefore(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *posição*  
+ *Posição*  
  Um **posição** valor retornado pelo anterior `GetNext`, `GetPrev`, ou **localizar** chamada de função de membro.  
   
  `newElement`  
@@ -664,7 +659,7 @@ POSITION InsertBefore(
   
  `a CAge at $49E6 21`  
   
-##  <a name="isempty"></a>CObList::IsEmpty  
+##  <a name="isempty"></a>  CObList::IsEmpty  
  Indica se esta lista não contém elementos.  
   
 ```  
@@ -684,7 +679,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [RemoveAll](#removeall).  
   
-##  <a name="removeall"></a>CObList::RemoveAll  
+##  <a name="removeall"></a>  CObList::RemoveAll  
  Remove todos os elementos da lista e libera associado `CObList` memória.  
   
 ```  
@@ -708,7 +703,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CObList::RemoveAt  
+##  <a name="removeat"></a>  CObList::RemoveAt  
  Remove o elemento especificado da lista.  
   
 ```  
@@ -716,7 +711,7 @@ void RemoveAt(POSITION position);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *posição*  
+ *Posição*  
  A posição do elemento a ser removido da lista.  
   
 ### <a name="remarks"></a>Comentários  
@@ -746,7 +741,7 @@ void RemoveAt(POSITION position);
   
  `a CAge at $4B22 21`  
   
-##  <a name="removehead"></a>CObList::RemoveHead  
+##  <a name="removehead"></a>  CObList::RemoveHead  
  Remove o elemento do cabeçalho da lista e retorna um ponteiro para ele.  
   
 ```  
@@ -771,7 +766,7 @@ CObject* RemoveHead();
   
  [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CObList::RemoveTail  
+##  <a name="removetail"></a>  CObList::RemoveTail  
  Remove o elemento do final da lista e retorna um ponteiro para ele.  
   
 ```  
@@ -796,7 +791,7 @@ CObject* RemoveTail();
   
  [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
   
-##  <a name="setat"></a>CObList::SetAt  
+##  <a name="setat"></a>  CObList::SetAt  
  Define o elemento na posição especificada.  
   
 ```  
@@ -813,7 +808,7 @@ void SetAt(
  O `CObject` ponteiro a ser gravado para a lista.  
   
 ### <a name="remarks"></a>Comentários  
- Uma variável do tipo **posição** é uma chave para a lista. Não é o mesmo que um índice, e você não pode operar em um **posição** valor por conta própria. `SetAt`grava o `CObject` ponteiro para a posição especificada na lista.  
+ Uma variável do tipo **posição** é uma chave para a lista. Não é o mesmo que um índice, e você não pode operar em um **posição** valor por conta própria. `SetAt` grava o `CObject` ponteiro para a posição especificada na lista.  
   
  Você deve garantir que seu **posição** valor representa uma posição válida na lista. Se ele for inválido, declara a versão de depuração da biblioteca Microsoft Foundation Class.  
   

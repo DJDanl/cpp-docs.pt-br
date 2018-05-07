@@ -1,29 +1,24 @@
 ---
 title: . Processamento de arquivo XML | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-file-processing"></a>Processamento de arquivo .xml
 O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. Para obter mais informações, consulte [recomendado marcas de comentários de documentação](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo. XML podem usar a cadeia de caracteres de ID para identificar o correspondente do .NET Framework reflexão ou metadados de item ao qual se aplica a documentação.  

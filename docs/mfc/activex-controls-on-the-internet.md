@@ -1,13 +1,10 @@
 ---
 title: Controles ActiveX na Internet | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX na Internet
 Controles ActiveX são a versão atualizada da especificação de controle OLE. Os controles são uma arquitetura principal para o desenvolvimento de componentes de software programável que podem ser usados em uma variedade de diferentes contêineres, incluindo navegadores COM suporte na Internet. Qualquer controle ActiveX pode ser um controle de Internet e pode adicionar sua funcionalidade a um documento ativo ou fazer parte de uma página da Web. Controles em uma página da Web podem se comunicar entre si usando scripts.  
@@ -165,9 +160,9 @@ Controles ActiveX são a versão atualizada da especificação de controle OLE. 
   
  Implementar [monikers assíncronos](../mfc/asynchronous-monikers-on-the-internet.md) usando o `CAsyncMonikerFile` classe. No entanto, os controles ActiveX podem usar o `CDataPathProperty` classe, que é derivado de `CAsyncMonikerFile`, para ajudar a implementar propriedades de controle assíncrono.  
   
- O exemplo ASYNDOWN demonstra como configurar um loop assíncrono usando temporizadores para ler os dados. ASYNDOWN é descrita detalhadamente no artigo da Base de dados de Conhecimento "Como: AsyncDown demonstra assíncrona dados Download" (Q177244) e está disponível para download no Microsoft Download Center. (Para obter mais informações sobre como baixar os arquivos do Microsoft Download Center, consulte o artigo "Como para obter arquivos do on-line serviços de suporte Microsoft" (Q119591) na Base de dados de Conhecimento Microsoft.) Você pode encontrar artigos da Base de dados de conhecimento em [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+ O exemplo ASYNDOWN demonstra como configurar um loop assíncrono usando temporizadores para ler os dados. ASYNDOWN é descrita detalhadamente no artigo da Base de dados de Conhecimento "Como: AsyncDown demonstra assíncrona dados Download" (Q177244) e está disponível para download no Microsoft Download Center. (Para obter mais informações sobre como baixar os arquivos do Microsoft Download Center, consulte o artigo "Como para obter arquivos do on-line serviços de suporte Microsoft" (Q119591) na Base de dados de Conhecimento Microsoft.) Você pode encontrar artigos da Base de dados de conhecimento em [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
- A técnica básica usada em ASYNDOWN é definir um timer **CDataPathProperty::OnDataAvailable** para indicar quando os dados estão disponíveis. Quando a mensagem de timer é recebida, o aplicativo lê em blocos de 128 bytes de dados e preenche um controle de edição. Se os dados não estão disponíveis quando a mensagem de timer é manipulada, o timer está desativado. `OnDataAvailable`ativa o timer se mais dados chegam mais tarde.  
+ A técnica básica usada em ASYNDOWN é definir um timer **CDataPathProperty::OnDataAvailable** para indicar quando os dados estão disponíveis. Quando a mensagem de timer é recebida, o aplicativo lê em blocos de 128 bytes de dados e preenche um controle de edição. Se os dados não estão disponíveis quando a mensagem de timer é manipulada, o timer está desativado. `OnDataAvailable` ativa o timer se mais dados chegam mais tarde.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Exibição de um controle em uma página da Web  
  Aqui está um exemplo de uma marca de objeto e atributos para a inserção de um controle em uma página da Web.  

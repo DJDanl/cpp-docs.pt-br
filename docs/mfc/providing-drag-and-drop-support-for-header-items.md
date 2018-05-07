@@ -1,13 +1,10 @@
 ---
-title: "Dando suporte a arrastar e soltar para itens de cabeçalho | Microsoft Docs"
-ms.custom: 
+title: Dando suporte a arrastar e soltar para itens de cabeçalho | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd1ac2171a13610ee3aeabed12f5348089a57491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50cd19d4828269d0591afd0b46768e9917b96906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Dando suporte a arrastar e soltar para itens de cabeçalho
 Para fornecer suporte a arrastar e soltar para itens de cabeçalho, especifique o `HDS_DRAGDROP` estilo. Suporte a arrastar e soltar para itens de cabeçalho dá ao usuário a capacidade para reordenar os itens de cabeçalho de um controle de cabeçalho. O comportamento padrão fornece uma imagem de arrastar semitransparente do item de cabeçalho que está sendo arrastado e um indicador visual de que a nova posição, se o item de cabeçalho é descartado.  

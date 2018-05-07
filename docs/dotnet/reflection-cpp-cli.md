@@ -1,13 +1,10 @@
 ---
-title: "Reflexão (C + + CLI) | Microsoft Docs"
-ms.custom: 
+title: Reflexão (C + + CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - data types [C++], reflection
 - reflection [C++}
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f5b6e9aa8614248bc0e1215067e495cb4dce702
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-ccli"></a>Reflexão (C++/CLI)
 Reflexão permite que os tipos de dados conhecidos a ser inspecionado em tempo de execução. Reflexão permite a enumeração dos tipos de dados em um determinado assembly e os membros de um determinado tipo de classe ou o valor podem ser descobertos. Isso é verdadeiro independentemente do tipo era conhecido ou referenciado em tempo de compilação. Isso torna a reflexão um recurso útil para desenvolvimento e ferramentas de gerenciamento de código.  

@@ -1,13 +1,10 @@
 ---
 title: 'TN002: Formato de dados do objeto persistente | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: formato de dados do objeto persistente
 Esta anotação descreve as rotinas MFC que oferecem suporte a objetos C++ persistentes e o formato de dados do objeto quando ele é armazenado em um arquivo. Isso se aplica apenas às classes com o [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) e [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macros.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Se o objeto não tiver sido salvo antes, há duas possibilidades a serem considerados: o objeto e o tipo exato (ou seja, classe) do objeto são novos para este contexto de arquivo ou o objeto é de um tipo exato já visto. Para determinar se o tipo foi observado, as consultas de código a `m_pStoreMap` para um [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objeto corresponde a `CRuntimeClass` objeto associado ao objeto que está sendo salvo. Se houver uma correspondência, `WriteObject` insere uma marca que é o bit a bit `OR` de `wOldClassTag` e esse índice. Se o `CRuntimeClass` é novo para este contexto de arquivamento, `WriteObject` atribui um novo PID a classe e o insere no arquivo morto, precedido pelo `wNewClassTag` valor.  
   
- O descritor para essa classe é inserido no arquivo morto usando a `CRuntimeClass::Store` método. `CRuntimeClass::Store`Insere o número de esquema da classe (veja abaixo) e o nome de texto ASCII da classe. Observe que o uso do nome de texto ASCII não garante a exclusividade do arquivo em todos os aplicativos. Portanto, você deve marcar os arquivos de dados para evitar a corrupção. Após a inserção de informações de classe, o arquivo morto coloca o objeto de `m_pStoreMap` e, em seguida, chama o `Serialize` método para inserir dados de classe específica. Colocando o objeto para o `m_pStoreMap` antes de chamar `Serialize` impede que várias cópias do objeto que está sendo salvo no repositório.  
+ O descritor para essa classe é inserido no arquivo morto usando a `CRuntimeClass::Store` método. `CRuntimeClass::Store` Insere o número de esquema da classe (veja abaixo) e o nome de texto ASCII da classe. Observe que o uso do nome de texto ASCII não garante a exclusividade do arquivo em todos os aplicativos. Portanto, você deve marcar os arquivos de dados para evitar a corrupção. Após a inserção de informações de classe, o arquivo morto coloca o objeto de `m_pStoreMap` e, em seguida, chama o `Serialize` método para inserir dados de classe específica. Colocando o objeto para o `m_pStoreMap` antes de chamar `Serialize` impede que várias cópias do objeto que está sendo salvo no repositório.  
   
  Ao retornar para o chamador inicial (geralmente a raiz da rede de objetos), você deve chamar [CArchive::Close](../mfc/reference/carchive-class.md#close). Se você planeja realizar outras [CFile](../mfc/reference/cfile-class.md)operações, você deve chamar o `CArchive` método [liberar](../mfc/reference/carchive-class.md#flush) para evitar a corrupção do arquivo.  
   

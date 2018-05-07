@@ -1,11 +1,8 @@
 ---
 title: Classe Platform::Collections::Vector | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -89,8 +84,8 @@ Se você tentar usar um **vetor** digite um valor de retorno público ou parâme
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Vector::Append](#append)|Insere o item especificado após o último item no Vector atual.|
-|[Vector::Clear](#clear)|Exclui todos os elementos no Vector atual.|
+|[Vector](#append)|Insere o item especificado após o último item no Vector atual.|
+|[Vector](#clear)|Exclui todos os elementos no Vector atual.|
 |[Vector::First](#first)|Retorna um iterador que especifica o primeiro elemento em Vector.|
 |[Vector::GetAt](#getat)|Recupera o elemento de Vector atual que é identificado pelo índice especificado.|
 |[Vector::GetMany](#getmany)|Recupera uma sequência de itens de Vector atual, começando no índice especificado.|
@@ -101,7 +96,7 @@ Se você tentar usar um **vetor** digite um valor de retorno público ou parâme
 |[Vector::RemoveAt](#removeat)|Exclui o elemento identificado pelo índice especificado do Vector atual.|
 |[Vector::RemoveAtEnd](#removeatend)|Exclui o elemento no final do Vector atual.|
 |[Vector::SetAt](#setat)|Atribui o valor especificado ao elemento no Vector atual que é identificado pelo índice especificado.|
-|[Vector::Size](#size)|Retorna o número de elementos no objeto Vector atual.|
+|[Vector:: Size](#size)|Retorna o número de elementos no objeto Vector atual.|
 
 ### <a name="events"></a>Eventos
 

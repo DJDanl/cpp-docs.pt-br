@@ -1,13 +1,10 @@
 ---
-title: "Manifesto de ferramenta propriedades de entrada e saída (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Manifesto de ferramenta propriedades de entrada e saída (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Entrada e saída, a ferramenta, propriedades de configuração de manifesto &lt;Projectname&gt; caixa de diálogo de páginas de propriedades
 Use essa caixa de diálogo para especificar opções de entrada e saídas para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
@@ -62,7 +57,7 @@ Use essa caixa de diálogo para especificar opções de entrada e saídas para [
  Usa o **/makecdfs** opção para especificar que a ferramenta de manifesto irá gerar arquivos de definição de catálogo (arquivos. CDF), que são usados para criar catálogos.  
   
  **Gerar manifesto a partir de ManagedAssembly**  
- Gera um manifesto de um assembly gerenciado. (**- managedassemblyname:***arquivo*).  
+ Gera um manifesto de um assembly gerenciado. (**- managedassemblyname: * arquivo*).  
   
  **Suprimir o elemento de dependência**  
  Usado com o **- managedassembly** opção. Essa marca suprime a geração de elementos de dependência no manifesto final.  

@@ -1,12 +1,9 @@
 ---
 title: Classe CMDITabInfo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b670b26855f5edcfb955d3dd0f8150a999f3a8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmditabinfo-class"></a>Classe CMDITabInfo
 O `CMDITabInfo` classe é usada para passar parâmetros para [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) método. Conjunto de membros dessa classe para controlar o comportamento de MDI grupos com guias.  
@@ -102,7 +97,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxmdiclientareawnd.h  
   
-##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;  
  Especifica se um **fechar** botão é exibido no rótulo da guia ativa.  
   
 ```  
@@ -112,7 +107,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Comentários  
  Se `TRUE`, o rótulo da guia active exibirá um **fechar** botão. O **fechar** botão será removido do canto superior direito da área da guia. Caso contrário, o rótulo da guia ativa não exibirá um **fechar** botão. O **fechar** botão será exibido no canto superior direito da área da guia.  
   
-##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
  Especifica se cada guia MDI tem sua própria cor.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Comentários  
  Se `TRUE`, cada guia terá sua própria cor. O conjunto de cores é gerenciado pela biblioteca do MFC. Caso contrário, as guias são exibidas em branco. O valor padrão é `FALSE`.  
   
-##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Especifica se cada guia exibe um menu pop-up que mostra uma lista de documentos abertos na borda direita da área da guia.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Comentários  
  Se `TRUE`, o windows de cada guia exibe um menu pop-up que mostra uma lista de documentos abertos na borda direita da área de guia; Caso contrário, a janela de guia exibe botões de rolagem na borda direita da área da guia. O valor padrão é `FALSE`.  
   
-##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
  Especifica se o usuário pode trocar as posições das guias arrastando.  
   
 ```  
@@ -142,14 +137,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Comentários  
  Se `TRUE`, o usuário pode alterar as posições de guias arrastando as guias. Caso contrário, o usuário não pode alterar as posições de guias. O valor padrão é `TRUE`.  
   
-##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
  Especifica se cada janela de guia tem um quadro simples.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton  
  Especifica se cada janela de guia exibe uma **fechar** botão.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Comentários  
  Se `TRUE`, cada janela de guia exibe o **fechar** botão no canto direito da guia. Caso contrário, o **fechar** botão não é exibido. O valor padrão é `TRUE`.  
   
-##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
  Especifica se as guias exibem dicas de ferramenta.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Comentários  
  Se `TRUE`, o aplicativo envia uma `AFX_WM_ON_GET_TAB_TOOLTIP` mensagem para o quadro principal. Você pode manipular esta mensagem usando o `ON_REGISTERED_MESSAGE` macro.  
   
-##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
  Especifica se deseja exibir ícones em guias MDI.  
   
 ```  
@@ -179,7 +174,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Comentários  
  Se `TRUE`, ícones são exibidos em cada guia MDI. Caso contrário, os ícones não são exibidos nas guias. O valor padrão é `FALSE`.  
   
-##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
  Especifica o tamanho da borda, em pixels, de cada janela de guia.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Comentários  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) retorna o valor padrão.  
   
-##  <a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>  CMDITabInfo::m_style  
  Especifica o estilo dos rótulos de guia.  
   
 ```  
@@ -217,7 +212,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  Estilo 3D com rótulos de guia round.  
   
-##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
  Especifica se os rótulos de guias estão localizados na parte superior ou inferior da página.  
   
 ```  
@@ -231,7 +226,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP: os rótulos de guias estão localizados na parte superior da página  
   
-##  <a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>  CMDITabInfo::Serialize  
  Lê ou grava este objeto a partir de um arquivo ou para um arquivo.  
   
 ```  

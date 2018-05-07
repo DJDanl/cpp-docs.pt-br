@@ -1,30 +1,25 @@
 ---
 title: Grupos com guias MDI | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9606d28f6e2057072a0c9fc356e3bc7ca7cdc19b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a7cf6420a331d46f2a158c16a30d439f334a46b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdi-tabbed-groups"></a>Grupos com guias MDI
 O recurso de grupos com guias MDI (interface) documento vários permite que vários aplicativos de interface (MDI) do documento exibir uma ou mais janelas com guias (ou grupos do windows com guias, conhecidos como *grupos com guias*) na área do cliente MDI. As janelas tabuladas podem ser alinhadas verticalmente ou horizontalmente. Se um aplicativo hospeda mais de um grupo de guias MDI, os grupos são separados por divisores.  

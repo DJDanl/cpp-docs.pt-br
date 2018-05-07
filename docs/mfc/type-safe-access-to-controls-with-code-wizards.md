@@ -1,13 +1,10 @@
 ---
-title: "Acesso fortemente tipado a controles com assistentes de código | Microsoft Docs"
-ms.custom: 
+title: Acesso fortemente tipado a controles com assistentes de código | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a431061704bf2affa8a343487ff20f8b55b9e6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 025fd280dc6bf0947dae59cf77abe141bc312df8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Acesso fortemente tipado a controles com assistentes de código
 Se você estiver familiarizado com recursos DDX, você pode usar a propriedade de controle no [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) para criar acesso fortemente tipado. Essa abordagem é mais fácil do que a criação de controles sem assistentes de código.  

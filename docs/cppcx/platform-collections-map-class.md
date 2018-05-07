@@ -1,11 +1,8 @@
 ---
 title: Classe Platform::Collections::Map | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -92,12 +87,12 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Map::Clear](#clear)|Remove todos os pares chave-valor do objeto Map atual.|
+|[Map](#clear)|Remove todos os pares chave-valor do objeto Map atual.|
 |[Map::First](#first)|Retorna um iterador que especifica o primeiro elemento no mapa.|
 |[Map::GetView](#getview)|Retorna uma exibição somente leitura do Mapa atual; isto é, um [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Determina se o Map atual contém a chave especificada.|
 |[Map::Insert](#insert)|Adiciona os pares chave-valor especificados ao objeto Map atual.|
-|[Map::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto Map atual.|
+|[Map](#lookup)|Recupera o elemento na chave especificada no objeto Map atual.|
 |[Map::Remove](#remove)|Exclui os pares chave-valor especificados do objeto Map atual.|
 |[Map](#size)|Retorna o número de elementos no objeto Map atual.|
 
@@ -106,7 +101,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 |||
 |-|-|
 |Nome|Descrição|
-|[Map::MapChanged](#mapchanged-event.md) `event`|Ocorre quando o Map é alterado.|
+|[Map:: mapchanged](#mapchanged-event.md) `event`|Ocorre quando o Map é alterado.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

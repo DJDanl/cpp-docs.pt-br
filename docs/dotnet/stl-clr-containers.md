@@ -1,12 +1,9 @@
 ---
-title: "Contêineres STL/CLR | Microsoft Docs"
-ms.custom: 
+title: Contêineres STL/CLR | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce6a2f096e5ee24716fcffd89411ffdf926a59aa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stlclr-containers"></a>Contêineres STL/CLR
 A biblioteca STL/CLR tem os mesmos contêineres que são encontrados na biblioteca C++ padrão, mas ele é executado dentro do ambiente gerenciado do .NET Framework. Se você já estiver familiarizado com a biblioteca padrão C++ STL/CLR é a melhor maneira para continuar a usar as habilidades que você já criou durante a atualização do seu código para o common language runtime (CLR) de destino.  

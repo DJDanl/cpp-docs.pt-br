@@ -1,13 +1,10 @@
 ---
-title: "TN042: Recomendações de desenvolvedor de Driver ODBC | Microsoft Docs"
-ms.custom: 
+title: 'TN042: Recomendações de desenvolvedor de Driver ODBC | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.odbc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6361266ebf2f09b8f34d150de835b25c55720b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35c75f5c5bae3a1b56abe91340de00f373663792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: recomendações do desenvolvedor de driver ODBC
 > [!NOTE]
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  **SQLGetInfo SQL_DATABASE_NAME** será chamado.  
   
 ## <a name="begintrans-committrans-rollback"></a>BeginTrans, CommitTrans e Rollback  
- **SQLSetConnectOption SQL_AUTOCOMMIT** e **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** e **SQL_AUTOCOMMIT** será chamado se transação as solicitações são feitas.  
+ **SQLSetConnectOption SQL_AUTOCOMMIT** e **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** e **SQL_AUTOCOMMIT** será chamado se solicitações de transação são feitas.  
   
 ## <a name="crecordsets"></a>CRecordsets  
  **SQLAllocStmt**, **SQLPrepare**, **SQLExecute** (para **abrir** e **Requery**), **SQLExecDirect**  (para operações de atualização), **SQLFreeStmt** devem ter suporte. **SQLNumResultCols** e **SQLDescribeCol** será chamado nos resultados definido várias vezes.  

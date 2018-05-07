@@ -1,12 +1,9 @@
 ---
-title: "Compilador aviso (nível 1 e 3) C4793 | Microsoft Docs"
-ms.custom: 
+title: Compilador aviso (nível 1 e 3) C4793 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Aviso do compilador (nível 1 e 3) C4793
 'function': função é compilada como código nativo: 'motivo'  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |Mensagem de motivo|Comentários|  
 |--------------------|-------------|  
 |Tipos de dados alinhados não são suportados em código gerenciado|O CLR deve ser capaz de alocar dados conforme necessário, que talvez não seja possível se a dados são alinhados com declarações como [m128](../../cpp/m128.md) ou [alinhar](../../cpp/align-cpp.md).|  
-|Funções que usam ImageBase' não são suportadas em código gerenciado|`__ImageBase`é um símbolo de vinculador especial que normalmente é usado somente pelo código nativo de baixo nível para carregar uma DLL.|  
+|Funções que usam ImageBase' não são suportadas em código gerenciado|`__ImageBase` é um símbolo de vinculador especial que normalmente é usado somente pelo código nativo de baixo nível para carregar uma DLL.|  
 |varargs não oferece suporte a ' / clr' opção de compilador|Funções nativas não é possível chamar funções gerenciadas que têm [listas de argumentos variáveis](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs) porque as funções têm requisitos de layout de pilha diferente. No entanto, se você especificar o `/clr:pure` opção de compilador, argumento variável listas têm suporte porque o assembly pode conter apenas funções gerenciadas. Para obter mais informações, consulte [puro e código verificável (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
 |O CLR de 64 bits não dá suporte a dados declarados com o modificador ptr32|Um ponteiro deve ser do mesmo tamanho de um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [ptr32, \_ptr64](../../cpp/ptr32-ptr64.md).|  
 |O CLR de 32 bits não dá suporte a dados declarados com o modificador ptr64|Um ponteiro deve ser do mesmo tamanho de um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [ptr32, \_ptr64](../../cpp/ptr32-ptr64.md).|  

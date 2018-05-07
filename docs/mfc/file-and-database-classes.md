@@ -1,13 +1,10 @@
 ---
 title: Classes de arquivo e banco de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.file
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd1d2938a75010d20bde26d2d9d5656b1418f3da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 829cbcf659b1fbd6d7aa3899d7d26c4d87096f93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-and-database-classes"></a>Classes de arquivo e banco de dados
 Essas classes permitem que você armazene informações para um banco de dados ou de um arquivo de disco. Há três conjuntos de classes de banco de dados, OLE DB, ODBC e DAO — que fornecem funcionalidade semelhante. O grupo de OLE DB é implementado usando o OLE DB e funciona com os modelos de consumidor OLE DB, o grupo DAO é implementado usando o objeto de acesso de dados e o grupo ODBC é implementado usando conectividade aberta de banco de dados. Há também um conjunto de classes para manipulação de arquivos padrão, fluxos ativos e fluxos HTML.  

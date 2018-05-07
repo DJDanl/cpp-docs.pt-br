@@ -1,12 +1,9 @@
 ---
 title: Estrutura de CCreateContext | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>Estrutura CCreateContext
 A estrutura usa o `CCreateContext` estrutura quando ele cria as janelas de quadro e exibições que estão associadas um documento.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `CCreateContext`é uma estrutura e não tem uma classe base.  
+ `CCreateContext` é uma estrutura e não tem uma classe base.  
   
  Quando você cria uma janela, os valores nessa estrutura fornecem as informações usadas para conectar os componentes de um documento para o modo de exibição de seus dados. Você só precisa usar `CCreateContext` se você está substituindo as partes do processo de criação.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |Membro|Tipo|O que é para|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`da nova exibição para criar.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` da nova exibição para criar.|  
 |`m_pCurrentDoc`|`CDocument*`|O documento existente a ser associado com a nova exibição.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|O modelo de documento associado à criação de uma nova janela de quadro MDI.|  
 |`m_pLastView`|`CView*`|A exibição original no qual são modeladas exibições adicionais, como a criação de modos de exibição de janela separadora ou a criação de um segundo modo de exibição em um documento.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  Todos os ponteiros em `CCreateContext` são opcionais e podem ser `NULL` se não especificado ou desconhecido.  
   
- `CCreateContext`é usado pelas funções de membro listadas em "Consulte também". Consulte as descrições dessas funções para obter informações específicas, se você planeja substituí-los.  
+ `CCreateContext` é usado pelas funções de membro listadas em "Consulte também". Consulte as descrições dessas funções para obter informações específicas, se você planeja substituí-los.  
   
  Aqui estão algumas diretrizes gerais:  
   

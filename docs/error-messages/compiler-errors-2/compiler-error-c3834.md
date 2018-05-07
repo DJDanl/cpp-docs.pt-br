@@ -1,12 +1,9 @@
 ---
 title: C3834 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3834
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3834
 ms.assetid: 059e0dc4-300b-4e74-b6c2-41a57831fe2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e586de68a14044ac2907ebbd086bb7469e53a7d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1259ca2126211d6e91ed230a81959810b6427180
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3834"></a>C3834 de erro do compilador
 conversão explícita inválida para um ponteiro de fixação; Use uma variável local fixada em vez disso  

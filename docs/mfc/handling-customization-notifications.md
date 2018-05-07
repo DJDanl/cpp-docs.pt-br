@@ -2,12 +2,9 @@
 title: Manipulando notificações de personalização | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_CUSTHELP
 - TBN_QUERYINSERT
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-customization-notifications"></a>Manipulando notificações de personalização
 Um controle comum de barra de ferramentas do Windows tem recursos internos de personalização, incluindo uma caixa de diálogo de personalização definidas pelo sistema que permitem ao usuário inserir, excluir ou reorganizar os botões da barra de ferramentas. O aplicativo determina se os recursos de personalização estão disponíveis e que controla a extensão aos quais o usuário pode personalizar a barra de ferramentas.  
@@ -126,7 +121,7 @@ Um controle comum de barra de ferramentas do Windows tem recursos internos de pe
  **idFrom**  
  Identificador do envio da notificação de controle.  
   
- **código**  
+ **Código**  
  Código de notificação. Esse membro pode ser um valor específico para um tipo de controle, como **TBN_BEGINADJUST** ou **TTN_NEEDTEXT**, ou pode ser um dos valores de notificação comum listados abaixo:  
   
 -   **NM_CLICK** o usuário clicou no botão esquerdo do mouse dentro do controle.  
@@ -169,7 +164,7 @@ Um controle comum de barra de ferramentas do Windows tem recursos internos de pe
  Índice do botão associado à notificação.  
   
  **tbButton**  
- `TBBUTTON`estrutura que contém informações sobre o botão da barra de ferramentas associado à notificação.  
+ `TBBUTTON` estrutura que contém informações sobre o botão da barra de ferramentas associado à notificação.  
   
  **cchText**  
  Contagem de caracteres no texto do botão.  

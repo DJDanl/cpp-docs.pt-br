@@ -1,12 +1,9 @@
 ---
 title: Classe CMenuTearOffManager | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMenuTearOffManager
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb1b7acc2f4eb779de49559b5b566e89d518a0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 Gerencia destacável menus. Um menu destacável é um menu na barra de menus. O usuário pode remover um menu destacável da barra de menus, fazendo com que o menu destacável float.  
@@ -93,7 +88,7 @@ class CMenuTearOffManager : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxmenutearoffmanager.h  
   
-##  <a name="build"></a>CMenuTearOffManager::Build  
+##  <a name="build"></a>  CMenuTearOffManager::Build  
 
   
 ```  
@@ -108,7 +103,7 @@ void Build(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager  
+##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager  
  Constrói um [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objeto.  
   
 ```  
@@ -118,7 +113,7 @@ CMenuTearOffManager();
 ### <a name="remarks"></a>Comentários  
  Na maioria dos casos, você não deve criar um `CMenuTearOffManager` manualmente. A estrutura do seu aplicativo cria o `CMenuTearOffManager` objeto quando você chamar [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
-##  <a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
+##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
   
 ```  
@@ -129,7 +124,7 @@ LPCTSTR GetRegPath() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="initialize"></a>CMenuTearOffManager::Initialize  
+##  <a name="initialize"></a>  CMenuTearOffManager::Initialize  
  Inicializa um [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objeto.  
   
 ```  
@@ -155,7 +150,7 @@ BOOL Initialize(
 ### <a name="remarks"></a>Comentários  
  O intervalo de IDs de menu do `uiTearOffMenuFirst` para `uiTearOffMenuLast` deve ser um intervalo contínuo. O intervalo define o número de menus destacáveis que podem aparecer ao mesmo tempo no aplicativo.  
   
-##  <a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
+##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
   
 ```  
@@ -169,7 +164,7 @@ BOOL IsDynamicID(UINT uiID) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="parse"></a>CMenuTearOffManager::Parse  
+##  <a name="parse"></a>  CMenuTearOffManager::Parse  
 
   
 ```  
@@ -183,7 +178,7 @@ UINT Parse(CString& str);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="reset"></a>CMenuTearOffManager::Reset  
+##  <a name="reset"></a>  CMenuTearOffManager::Reset  
 
   
 ```  
@@ -195,7 +190,7 @@ void Reset(HMENU hmenu);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setinuse"></a>CMenuTearOffManager::SetInUse  
+##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse  
 
   
 ```  
@@ -210,7 +205,7 @@ void SetInUse(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
+##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus  
 
   
 ```  

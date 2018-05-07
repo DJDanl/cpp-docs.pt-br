@@ -1,12 +1,9 @@
 ---
 title: Erro fatal C1017 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1017
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28a4b09ef4d62edd97d734e4a3ad64b8a0c2f86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08433109a959b324621e9c837e67cf529d9f6fdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1017"></a>Erro fatal C1017
 expressão constante inteira inválida  
@@ -55,7 +50,7 @@ expressão constante inteira inválida
   
  Porque `CONSTANT_NAME` for avaliada como uma cadeia de caracteres e não um número inteiro, o `#if` diretiva gera um erro fatal C1017.  
   
- Em outros casos, o pré-processador avalia uma constante não definida como zero. Isso pode causar resultados não intencionais, conforme mostrado no exemplo a seguir. `YES`não está definida, portanto, ele será avaliado como zero. A expressão `#if` `CONSTANT_NAME` for avaliada como false e o código a ser usado em `YES` é removido do pré-processador. `NO`também é indefinido (zero), portanto `#elif` `CONSTANT_NAME==NO` for avaliada como true (`0 == 0`), fazendo com que o pré-processador deixar o código o `#elif` parte da instrução — exatamente o oposto do comportamento pretendido.  
+ Em outros casos, o pré-processador avalia uma constante não definida como zero. Isso pode causar resultados não intencionais, conforme mostrado no exemplo a seguir. `YES` não está definida, portanto, ele será avaliado como zero. A expressão `#if` `CONSTANT_NAME` for avaliada como false e o código a ser usado em `YES` é removido do pré-processador. `NO` também é indefinido (zero), portanto `#elif` `CONSTANT_NAME==NO` for avaliada como true (`0 == 0`), fazendo com que o pré-processador deixar o código o `#elif` parte da instrução — exatamente o oposto do comportamento pretendido.  
   
 ```  
 // C1017c.cpp  

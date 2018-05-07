@@ -1,38 +1,33 @@
 ---
-title: "Como: adicionar comandos de controle de formulários do roteamento para o Windows | Microsoft Docs"
-ms.custom: 
+title: 'Como: adicionar comandos de controle de formulários do roteamento para o Windows | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Como adicionar roteamento de comando ao controle dos Windows Forms
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) encaminha os comandos e as mensagens UI do comando de atualização para o controle de usuário para permitir que ele trate comandos MFC (por exemplo, itens de menu do quadro e botões de barra de ferramentas).  
   
  O controle de usuário usa [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) para armazenar uma referência ao objeto de origem de comando no `m_CmdSrc`, conforme mostrado no exemplo a seguir. Para usar `ICommandTarget` você deve adicionar uma referência a mfcmifc80.  
   
- `CWinFormsView`trata de várias das notificações de exibição comuns do MFC, encaminhando-os para o controle de usuário gerenciado. Essas notificações incluem o [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) e [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) métodos.  
+ `CWinFormsView` trata de várias das notificações de exibição comuns do MFC, encaminhando-os para o controle de usuário gerenciado. Essas notificações incluem o [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) e [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) métodos.  
   
  Este tópico pressupõe que você concluiu anteriormente [como: criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [como: criar o controle de usuário e uma exibição MDI Host](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   

@@ -1,13 +1,10 @@
 ---
 title: Criando um objeto CToolBarCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c5e2ee8c0e2239de86252b3d0fb8ec0ab7cc182
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Criando um objeto CToolBarCtrl
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objetos contêm várias estruturas de dados internas, uma lista de bitmaps de imagem do botão, uma lista de cadeias de caracteres de rótulo de botão e uma lista de `TBBUTTON` estruturas — que associar uma imagem e/ou cadeia de caracteres com a posição, o estilo, o estado, e ID de comando do botão. Cada um dos elementos dessas estruturas de dados é chamada por um índice com base em zero. Antes de usar um `CToolBarCtrl` do objeto, você deve configurar essas estruturas de dados. Para obter uma lista das estruturas de dados, consulte [controles de barra de ferramentas](controls-mfc.md) no SDK do Windows. A lista de cadeias de caracteres só pode ser usada para rótulos de botão; Você não pode recuperar cadeias de caracteres na barra de ferramentas.  

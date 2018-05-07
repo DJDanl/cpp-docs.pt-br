@@ -1,13 +1,10 @@
 ---
-title: "Como: atualizar objetos de Interface do usuário | Microsoft Docs"
-ms.custom: 
+title: 'Como: atualizar objetos de Interface do usuário | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e6d13e840c29d3ea9600183fafd9260966a2f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 422be3d80614c526c7e634d22a0930458e4b4e26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-update-user-interface-objects"></a>Como atualizar objetos de interface do usuário
 Normalmente, os itens de menu e botões de barra de ferramentas tem mais de um estado. Por exemplo, um item de menu estará inativa (esmaecido), se ele não está disponível no contexto atual. Itens de menu também podem ser marcada ou desmarcada. Um botão de barra de ferramentas também pode ser desabilitado se não estiver disponível, ou ele pode ser verificado.  

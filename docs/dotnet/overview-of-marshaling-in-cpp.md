@@ -1,12 +1,9 @@
 ---
-title: "Visão geral de Marshaling no C++ | Microsoft Docs"
-ms.custom: 
+title: Visão geral de Marshaling no C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9d910c7d6346d23f094e9359f0e5fe3536ee09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-marshaling-in-c"></a>Visão geral de marshaling no C++
-No modo misto, você às vezes deve empacotar os dados entre os tipos nativos e gerenciados. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]introduziu a biblioteca de marshaling para ajudar você empacotar e converter os dados de uma maneira simple.  
+No modo misto, você às vezes deve empacotar os dados entre os tipos nativos e gerenciados. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] introduziu a biblioteca de marshaling para ajudar você empacotar e converter os dados de uma maneira simple.  
   
  Você pode usar a biblioteca de marshaling com ou sem um [classe marshal_context](../dotnet/marshal-context-class.md). Algumas conversões exigem um contexto. Outras conversões podem ser implementadas usando o [marshal_as](../dotnet/marshal-as.md) função. A tabela a seguir lista as conversões atuais com suporte, se ele requer um contexto e quais arquivos de marshaling que incluem:  
   

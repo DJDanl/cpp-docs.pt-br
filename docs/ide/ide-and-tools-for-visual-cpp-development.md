@@ -1,29 +1,24 @@
 ---
 title: IDE e ferramentas de desenvolvimento do Visual C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6ff3f709e5db16f06569ab3406cfef44cabf11
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 02215cd585bf1644b5b01f779dd8ff46322c9181
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE e ferramentas de desenvolvimento do Visual C++
 
@@ -109,7 +104,7 @@ Você também pode usar o compilador (cl.exe) e muitas outras ferramentas de aut
 
 O Visual Studio inclui uma estrutura de teste de unidade para C++ nativo e C + + CLI. Para obter mais informações, consulte [verificando o código usando testes de unidade](/visualstudio/test/unit-test-your-code) e [testes de unidade de gravação para C/C++ com o Microsoft Unit Testing Framework para C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
 
-## <a name="debug"></a>Depuração
+## <a name="debug"></a>Depurar
 
 Você pode depurar seu programa pressionando **F5** quando a configuração de projeto está definida para depuração. Enquanto a depuração, você pode definir pontos de interrupção, pressionando **F9**, percorrer código pressionando **F10**, exiba os valores de variáveis especificadas ou registros e até mesmo em alguns casos, fazer alterações no código e continuar depuração sem recompilação. Para obter mais informações, consulte [Depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 

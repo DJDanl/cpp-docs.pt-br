@@ -1,13 +1,10 @@
 ---
-title: "Alocando e desalocando a memória da janela | Microsoft Docs"
-ms.custom: 
+title: Alocando e desalocando a memória da janela | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 294de3c4d4ecdfcb31f6e8c227bd8a3c6764268d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1364b4d29e2ccd2c9563359716eba6880df5436
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Alocando e desalocando a memória da janela
 Não use o C++ **excluir** operador destruir uma janela do quadro ou exibição. Em vez disso, chame o `CWnd` função de membro `DestroyWindow`. Janelas com moldura, portanto, devem ser alocadas no heap com operador **novo**. Tenha cuidado ao alocar janelas com moldura no quadro de pilha ou globalmente. Outras janelas devem ser alocadas no quadro de pilha sempre que possível.  

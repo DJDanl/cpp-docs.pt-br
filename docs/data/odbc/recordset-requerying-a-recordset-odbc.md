@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: repetindo consulta a um conjunto de registros (ODBC)
 Este tópico se aplica às classes MFC ODBC.  
@@ -41,16 +36,16 @@ Este tópico se aplica às classes MFC ODBC.
   
 -   Atualize o conjunto de registros com base na alteração de valores de parâmetro.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Colocando o backup do conjunto de registros para data  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Colocando o backup do conjunto de registros para data  
  Frequentemente, você deve repetir o objeto de conjunto de registros para colocá-lo atualizado. Em um ambiente de banco de dados multiusuário, outros usuários podem fazer alterações aos dados durante a vida do seu conjunto de registros. Para obter mais informações sobre quando o conjunto de registros reflete as alterações feitas por outros usuários e quando o conjunto de registros de outros usuários reflete suas alterações, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Repetir a consulta com base em parâmetros de novo  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Repetir a consulta com base em parâmetros de novo  
  Outro frequentes — e igualmente importante — o uso de [Requery](../../mfc/reference/crecordset-class.md#requery) é selecionar um novo conjunto de registros com base nas alterações de valores de parâmetro.  
   
 > [!TIP]
 >  Velocidade de consulta é provavelmente significativamente mais rápida se você chamar **Requery** com alterando os valores de parâmetro que se você chamar **abrir** novamente.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Repetir a consulta Dynasets vs. Instantâneos  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Repetir a consulta Dynasets vs. Instantâneos  
  Porque dynasets destinam-se para apresentar um conjunto de registros com os dados atualizados dinâmicos, você deseja repetir dynasets geralmente se você quiser refletir adições de outros usuários. Instantâneos, por outro lado, são úteis porque você pode contar com segurança em seu conteúdo estático enquanto você preparar relatórios, calcular totais e assim por diante. Ainda assim, às vezes, convém repetir um instantâneo também. Em um ambiente multiusuário, dados de instantâneo podem perder a sincronização com a fonte de dados que outros usuários alterarem o banco de dados.  
   
 #### <a name="to-requery-a-recordset-object"></a>Para repetir a consulta de um objeto de conjunto de registros  

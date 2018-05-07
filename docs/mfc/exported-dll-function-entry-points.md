@@ -1,13 +1,10 @@
 ---
-title: "Exportou os pontos de entrada da função de DLL | Microsoft Docs"
-ms.custom: 
+title: Exportou os pontos de entrada da função de DLL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28ded528d584e98b704b5f2d8e6e0a379a6a11a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exported-dll-function-entry-points"></a>Pontos de entrada da função DLL exportada
 Para funções exportadas de uma DLL, use o [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro para manter o estado global apropriado ao alternar do módulo DLL para a DLL do aplicativo de chamada.  
@@ -42,7 +37,7 @@ Para funções exportadas de uma DLL, use o [AFX_MANAGE_STATE](reference/extensi
   
  Problemas com recursos em DLLs ocorrerá se o `AFX_MANAGE_STATE` macro não é usada. Por padrão, o MFC usa o identificador de recurso do aplicativo principal para carregar o modelo de recurso. Este modelo, na verdade, é armazenado na DLL. A causa raiz é que informações de estado do módulo do MFC não foi alternadas pelo `AFX_MANAGE_STATE` macro. O identificador de recurso é recuperado do estado do módulo do MFC. Não mudar o estado do módulo faz com que o identificador de recurso incorreto ser usado.  
   
- `AFX_MANAGE_STATE`não precisa ser colocado em cada função na DLL. Por exemplo, `InitInstance` pode ser chamado pelo código do aplicativo sem MFC `AFX_MANAGE_STATE` porque MFC automaticamente muda o estado do módulo antes de `InitInstance` e, em seguida, os comutadores novamente após `InitInstance` retorna. O mesmo vale para todos os manipuladores de mapa de mensagem. DLLs normais do MFC realmente tem um procedimento de janela mestre especial que alterna automaticamente o estado do módulo antes de encaminhar uma mensagem.  
+ `AFX_MANAGE_STATE` não precisa ser colocado em cada função na DLL. Por exemplo, `InitInstance` pode ser chamado pelo código do aplicativo sem MFC `AFX_MANAGE_STATE` porque MFC automaticamente muda o estado do módulo antes de `InitInstance` e, em seguida, os comutadores novamente após `InitInstance` retorna. O mesmo vale para todos os manipuladores de mapa de mensagem. DLLs normais do MFC realmente tem um procedimento de janela mestre especial que alterna automaticamente o estado do módulo antes de encaminhar uma mensagem.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciando os dados de estado dos módulos MFC](../mfc/managing-the-state-data-of-mfc-modules.md)

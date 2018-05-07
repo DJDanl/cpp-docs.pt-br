@@ -1,12 +1,9 @@
 ---
 title: C2785 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2785
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2785
 ms.assetid: d8d13360-0d00-4815-8475-b49c7f0dc0f3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9587151175c593e4b1d9d30f45a19ce807c24990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc0ca6235e0fd4bdd22330e807464e96280ae461
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2785"></a>C2785 de erro do compilador
 'declaration1' e 'declaration2' têm tipos diferentes de retorno  

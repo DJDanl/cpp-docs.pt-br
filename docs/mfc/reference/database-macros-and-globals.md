@@ -1,13 +1,10 @@
 ---
 title: Macros e globais de banco de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/AFX_ODBC_CALL
 - AFXDB/AFX_SQL_ASYNC
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f43135678c54ed2f837934c19a8543c86a65fdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcafff20ad79f68f2bb5d4195c38603da63b9d17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-macros-and-globals"></a>Macros e globais de banco de dados
 As macros e globais listados a seguir se aplicam a aplicativos de banco de dados baseado em ODBC. Eles não são usados com aplicativos baseados em DAO.  
@@ -43,7 +38,7 @@ As macros e globais listados a seguir se aplicam a aplicativos de banco de dados
   
 |||  
 |-|-|  
-|[AFX_ODBC_CALL](#afx_odbc_call)|Chama uma função de API de ODBC que retorna `SQL_STILL_EXECUTING`. `AFX_ODBC_CALL`repetidamente chamará a função até que ele não retorna `SQL_STILL_EXECUTING`.|  
+|[AFX_ODBC_CALL](#afx_odbc_call)|Chama uma função de API de ODBC que retorna `SQL_STILL_EXECUTING`. `AFX_ODBC_CALL` repetidamente chamará a função até que ele não retorna `SQL_STILL_EXECUTING`.|  
 |[AFX_SQL_ASYNC](#afx_sql_async)|Chama `AFX_ODBC_CALL`.|  
 |[AFX_SQL_SYNC](#afx_sql_sync)|Chama uma função de API de ODBC que não retornam `SQL_STILL_EXECUTING`.|  
   
@@ -55,7 +50,7 @@ As macros e globais listados a seguir se aplicam a aplicativos de banco de dados
 |[AfxGetHENV](#afxgethenv)|Recupera um identificador para o ambiente de ODBC atualmente em uso pelo MFC. Você pode usar esse identificador em chamadas diretas de ODBC.|  
 
 
-## <a name="afxdbinitmodule"></a>AfxDbInitModule
+## <a name="afxdbinitmodule"></a> AfxDbInitModule
 Banco de dados MFC (ou DAO) suporte de uma DLL MFC regular vinculada dinamicamente ao MFC, adicione uma chamada para essa função em seu MFC DLL regular **CWinApp::InitInstance** DLL de banco de dados de função para inicializar o MFC.  
    
 ### <a name="syntax"></a>Sintaxe    
@@ -64,7 +59,7 @@ void AFXAPI AfxDbInitModule( );
 ```  
    
 ### <a name="remarks"></a>Comentários  
- Verifique se essa chamada ocorre antes de qualquer chamada de classe base ou qualquer código que acessa o banco de dados MFC DLL de adicionada. O banco de dados MFC DLL é uma extensão MFC DLL; em ordem para uma DLL de extensão do MFC para obter conectados com um **CDynLinkLibrary** cadeia, é necessário criar um **CDynLinkLibrary** objeto no contexto de cada módulo que estará usando. `AfxDbInitModule`cria o **CDynLinkLibrary** do objeto no contexto de seu MFC DLL regulares para que ele obtém conectado com o **CDynLinkLibrary** cadeia da DLL MFC regular do objeto.  
+ Verifique se essa chamada ocorre antes de qualquer chamada de classe base ou qualquer código que acessa o banco de dados MFC DLL de adicionada. O banco de dados MFC DLL é uma extensão MFC DLL; em ordem para uma DLL de extensão do MFC para obter conectados com um **CDynLinkLibrary** cadeia, é necessário criar um **CDynLinkLibrary** objeto no contexto de cada módulo que estará usando. `AfxDbInitModule` cria o **CDynLinkLibrary** do objeto no contexto de seu MFC DLL regulares para que ele obtém conectado com o **CDynLinkLibrary** cadeia da DLL MFC regular do objeto.  
    
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** < afxdll_.h >  
@@ -74,7 +69,7 @@ void AFXAPI AfxDbInitModule( );
  
   
 
-##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL  
  Use esta macro para chamar qualquer função de API ODBC que pode retornar `SQL_STILL_EXECUTING`.  
   
 ```  
@@ -86,7 +81,7 @@ AFX_ODBC_CALL(SQLFunc)
  Uma função de API de ODBC. Para obter mais informações sobre funções de API de ODBC, consulte o SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
- `AFX_ODBC_CALL`chama repetidamente a função até que ele não retorna `SQL_STILL_EXECUTING`.  
+ `AFX_ODBC_CALL` chama repetidamente a função até que ele não retorna `SQL_STILL_EXECUTING`.  
   
  Antes de chamar `AFX_ODBC_CALL`, você deve declarar uma variável, `nRetCode`, do tipo **RETCODE**.  
   
@@ -101,7 +96,7 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
 
-##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC  
  A implementação desta macro alterado no MFC 4.2.  
   
 ```   
@@ -116,7 +111,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
  Uma função de API de ODBC. Para obter mais informações sobre funções de API de ODBC, consulte o SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
- `AFX_SQL_ASYNC`simplesmente chama a macro [AFX_ODBC_CALL](#afx_odbc_call) e ignora o `prs` parâmetro. Em versões do MFC antes 4.2, `AFX_SQL_ASYNC` foi usado para chamar funções API ODBC que podem retornar `SQL_STILL_EXECUTING`. Se uma função de API de ODBC retornou `SQL_STILL_EXECUTING`, em seguida, `AFX_SQL_ASYNC` chamaria `prs->OnWaitForDataSource`.  
+ `AFX_SQL_ASYNC` simplesmente chama a macro [AFX_ODBC_CALL](#afx_odbc_call) e ignora o `prs` parâmetro. Em versões do MFC antes 4.2, `AFX_SQL_ASYNC` foi usado para chamar funções API ODBC que podem retornar `SQL_STILL_EXECUTING`. Se uma função de API de ODBC retornou `SQL_STILL_EXECUTING`, em seguida, `AFX_SQL_ASYNC` chamaria `prs->OnWaitForDataSource`.  
   
 > [!NOTE]
 >  As classes MFC ODBC agora usam o processamento síncrono apenas. Para executar uma operação assíncrona, você deve chamar a função de API ODBC **SQLSetConnectOption**. Para obter mais informações, consulte o tópico "Executando funções de forma assíncrona" no SDK do Windows.  
@@ -124,7 +119,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdb.h  
   
-##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC  
  O `AFX_SQL_SYNC` macro simplesmente chama a função `SQLFunc`.  
   
 ```   
@@ -151,7 +146,7 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdb.h  
   
-##  <a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>  AfxGetHENV  
  Você pode usar o identificador retornado em chamadas diretas de ODBC, mas você não deve fechar o identificador ou suponha que o identificador seja ainda válido e disponível após qualquer existente `CDatabase`- ou `CRecordset`-objetos derivados tiverem sido destruídos.  
   
 ```   

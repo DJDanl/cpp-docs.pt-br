@@ -1,13 +1,10 @@
 ---
 title: Abrir projetos de pasta no Visual C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Abrir projetos de pasta no Visual C++
 Visual Studio de 2017 apresenta o recurso "Abrir pasta", que permite que você abrir uma pasta de arquivos de origem e imediatamente para iniciar a codificação com suporte para IntelliSense, pesquisa, refatoração, depuração e assim por diante. Nenhum arquivo. sln ou. vcxproj é carregado; Se necessário, você pode especificar tarefas personalizadas, bem como criar e iniciar parâmetros por meio de arquivos. JSON simples. Abrir a pasta da plataforma, Visual C++ agora pode dar suporte não apenas flexível coleções de arquivos, mas também praticamente qualquer sistema de compilação, incluindo CMake, Ninja, QMake (para projetos Qt), gyp, SCons, Gradle, Buck, verifique e muito mais. 
 
-Para usar a pasta aberta, no menu principal, selecione *arquivo | Abrir | Pasta* ou pressione *Ctrl + Shift + Alt + O*. Imediatamente, o Gerenciador de soluções exibe todos os arquivos na pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação de arquivos para habilitar o IntelliSense, navegação e recursos de refatoração. Como editar, criar, mover ou excluir arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice de IntelliSense. 
+Para usar a pasta aberta, no menu principal, selecione *arquivo | Abrir | Pasta* ou pressione *Ctrl + Shift + Alt + O*. Imediatamente, o Gerenciador de soluções exibe todos os arquivos na pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação dos arquivos para habilitar os recursos de IntelliSense, navegação e refatoração. À medida que você edita, cria, move ou exclui arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice do IntelliSense. 
   
 ## <a name="cmake-projects"></a>Projetos CMake
 CMake é integrado no IDE do Visual Studio como CMake Tools para Visual C++, um componente da carga de trabalho de área de trabalho do C++. Para saber mais, veja [Ferramentas do CMake no Visual C++](cmake-tools-for-visual-cpp.md).
@@ -43,8 +39,8 @@ Você pode personalizar um projeto de abrir a pasta por meio de três arquivos J
 |||
 |-|-|
 |CppProperties.json|Especifica informações de configuração personalizados para navegação. Crie esse arquivo, se necessário, na pasta do projeto raiz.|
-|launch.vs.json|Especifica argumentos de linha de comando. Acessados por meio de **Gerenciador de soluções** item de menu de contexto **depuração e iniciar configurações**.|
-|tasks.vs.json|Especifica opções de compilador e de comandos de compilação personalizada. Acessados por meio de **Solution Explorer** item de menu de contexto **configurar tarefas**.|
+|launch.vs.json|Especifica argumentos de linha de comando. Acessados por meio do item de menu de contexto do **Gerenciador de Soluções**, **Configurações de depuração e de inicialização**.|
+|tasks.vs.json|Especifica opções de compilador e de comandos de compilação personalizada. Acessados por meio do item de menu de contexto do **Gerenciador de Soluções**, **Configurar tarefas**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configurar o IntelliSense com CppProperties.json
 IntelliSense e pesquisa parcialmente o comportamento depende da configuração de compilação ativo, o que define #include caminhos, opções de compilador e outros parâmetros. Por padrão, o Visual Studio fornece configurações Debug e Release. Para alguns projetos, talvez seja necessário criar uma configuração personalizada para IntelliSense e navegação de recursos compreender totalmente o seu código. Para definir uma nova configuração, crie um arquivo chamado CppProperties.json na pasta raiz. Veja um exemplo:
@@ -77,7 +73,7 @@ Uma configuração pode ter qualquer uma das seguintes propriedades:
 |`intelliSenseMode`|o mecanismo IntelliSense a ser usado. Você pode especificar as variantes específicas de arquitetura para MSVC, gcc ou Clang:
 - MSVC-x86 (padrão)
 - msvc-x64
-- msvc-arm
+- MSVC arm
 - windows-clang-x86
 - windows-clang-x64
 - windows-clang-arm
@@ -248,12 +244,12 @@ Você pode criar qualquer número de configurações em CppProperties.json. Cada
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Definir tarefas de tasks.vs.json
-Você pode automatizar a compilação de scripts ou outras operações externas nos arquivos que você tem em seu espaço de trabalho atual ao executá-los como tarefas diretamente no IDE. Você pode configurar uma nova tarefa, clicando duas vezes em um arquivo ou pasta e selecionando **configurar tarefas**. 
+### <a name="define-tasks-with-tasksvsjson"></a>Definir tarefas com tasks.vs.json
+Você pode automatizar os scripts de compilação, ou quaisquer outras operações externas nos arquivos existentes em seu espaço de trabalho atual, executando-os como tarefas diretamente no IDE. Você pode configurar uma nova tarefa clicando com o botão direito em um arquivo ou pasta e selecionando **Configurar Tarefas**. 
 
 ![Abrir pasta configurar tarefas](media/open-folder-config-tasks.png)
 
-Isso cria (ou abrir) o `tasks.vs.json` arquivo na pasta do VS que o Visual Studio cria na pasta do projeto raiz. Você pode definir qualquer tarefa arbitrária neste arquivo e, em seguida, invoca o **Solution Explorer** menu de contexto. O exemplo a seguir mostra um arquivo de tasks.vs.json que define uma única tarefa. `taskName`Define o nome que aparece no menu de contexto. `appliesTo`define quais arquivos o comando pode ser executado em. O `command` propriedade se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). Você também pode fazer referência a variáveis de ambiente que são declarados no CppProperties.json ou CMakeSettings.json. O `args` propriedade especifica a linha de comando a ser invocado. O `${file}` macro recupera o arquivo selecionado em **Gerenciador de soluções**. O exemplo a seguir exibirá o nome do arquivo. cpp selecionado no momento.
+Isso cria (ou abrir) o `tasks.vs.json` arquivo na pasta do VS que o Visual Studio cria na pasta do projeto raiz. Você pode definir qualquer tarefa arbitrária neste arquivo e, em seguida, invoca o **Solution Explorer** menu de contexto. O exemplo a seguir mostra um arquivo de tasks.vs.json que define uma única tarefa. `taskName` Define o nome que aparece no menu de contexto. `appliesTo` define quais arquivos o comando pode ser executado em. O `command` propriedade se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). Você também pode fazer referência a variáveis de ambiente que são declarados no CppProperties.json ou CMakeSettings.json. O `args` propriedade especifica a linha de comando a ser invocado. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo. cpp selecionado no momento.
 
 ```json
 {
@@ -274,16 +270,16 @@ Depois de salvar tasks.vs.json, qualquer arquivo. cpp na pasta de atalho, escolh
 
 
 #### <a name="appliesto"></a>appliesTo
-Você pode criar tarefas para um arquivo ou pasta, especificando seu nome no `appliesTo` campo, por exemplo `"appliesTo" : "hello.cpp"`. As máscaras de arquivo a seguir podem ser usadas como valores:
+Você pode criar tarefas para qualquer arquivo ou pasta especificando seu nome no campo `appliesTo`, por exemplo `"appliesTo" : "hello.cpp"`. As máscaras de arquivo a seguir podem ser usadas como valores:
 |||
 |-|-|
-|`"*"`| tarefa está disponível para todos os arquivos e pastas no espaço de trabalho|
-|`"*/"`| tarefa está disponível para todas as pastas no espaço de trabalho|
+|`"*"`| a tarefa está disponível para todos os arquivos e pastas no espaço de trabalho|
+|`"*/"`| a tarefa está disponível para todas as pastas no espaço de trabalho|
 |`"*.cpp"`| tarefa está disponível para todos os arquivos com a extensão cpp no espaço de trabalho|
 |`"/*.cpp"`| tarefa está disponível para todos os arquivos com a extensão cpp na raiz do espaço de trabalho|
-|`"src/*/"`| tarefa está disponível para todas as subpastas da pasta "src"|
-|`"makefile"`| tarefa está disponível para todos os arquivos de makefile no espaço de trabalho|
-|`"/makefile"`| tarefa está disponível somente para o makefile na raiz do espaço de trabalho|
+|`"src/*/"`| a tarefa está disponível para todas as subpastas da pasta "src"|
+|`"makefile"`| a tarefa está disponível para todos os arquivos makefile no espaço de trabalho|
+|`"/makefile"`| a tarefa está disponível apenas para o makefile na raiz do espaço de trabalho|
 
 #### <a name="output"></a>saída
 Use o `output` propriedade para especificar o executável que será iniciado quando você pressiona **F5**. Por exemplo:
@@ -296,7 +292,7 @@ Use o `output` propriedade para especificar o executável que será iniciado qua
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| Especifica qualquer variável de ambiente (por exemplo, ${env. CAMINHO} ${env.COMSPEC} e assim por diante) que está definido para o prompt de comando do desenvolvedor. Para obter mais informações, consulte [Prompt de comando do desenvolvedor para o Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${env.<VARIABLE>}`| Especifica qualquer variável de ambiente (por exemplo, ${env. CAMINHO} ${env.COMSPEC} e assim por diante) que está definido para o prompt de comando do desenvolvedor. Para saber mais, confira [Prompt de comando do desenvolvedor para Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| o caminho completo para a pasta de trabalho (por exemplo, "C:\sources\hello")|
 |`${file}`| o caminho completo do arquivo ou pasta selecionada para executar essa tarefa (por exemplo, "C:\sources\hello\src\hello.cpp")|
 |`${relativeFile}`| o caminho relativo para o arquivo ou pasta (por exemplo, "src\hello.cpp")|

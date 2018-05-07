@@ -1,12 +1,9 @@
 ---
 title: Ferramentas de vinculador LNK1306 erro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1306
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32b6589fa5e4d7dc02ccb9a6c3157c109725b895
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb340a4c28f94f18e0c4b65bea8749394e002bd3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1306"></a>Erro das Ferramentas de Vinculador LNK1306  
   
 > Função de ponto de entrada DLL não pode ser gerenciada; compilar para nativo  
   
-`DllMain`não podem ser compilados para MSIL; ele deve ser compilado para nativo.  
+`DllMain` não podem ser compilados para MSIL; ele deve ser compilado para nativo.  
   
 Para resolver esse problema,  
   
@@ -41,7 +36,7 @@ Para resolver esse problema,
   
 Para obter mais informações, consulte:  
   
--   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/clr (compilação do Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md)  
   

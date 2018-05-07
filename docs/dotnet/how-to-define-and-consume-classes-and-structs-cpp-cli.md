@@ -1,31 +1,26 @@
 ---
 title: 'Como: definir e consumir Classes e estruturas (C + + CLI) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a0a276854c9f2e27439c2c16e9299d4eaa9243d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8356d96b0193566814c0d52173a03a3a79d08d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Como definir e consumir classes e estruturas (C++/CLI)
 Este artigo mostra como definir e consumir tipos de referência definidos pelo usuário e tipos de valor no C + + CLI.  
@@ -51,7 +46,7 @@ Este artigo mostra como definir e consumir tipos de referência definidos pelo u
   
  [Destruidores e finalizadores](#BKMK_Destructors_and_finalizers)  
   
-##  <a name="BKMK_Object_instantiation"></a>Instanciação do objeto  
+##  <a name="BKMK_Object_instantiation"></a> Instanciação do objeto  
  Tipos de valor e tipos de referência (ref) só podem ser instanciados no heap gerenciado, não na pilha ou no heap nativo.  
   
 ```  
@@ -105,7 +100,7 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Implicitly_abstract_classes"></a>Classes implicitamente abstratas  
+##  <a name="BKMK_Implicitly_abstract_classes"></a> Classes implicitamente abstratas  
  Um *classe abstrata implicitamente* não pode ser instanciado. Uma classe é abstrata implicitamente se o tipo base da classe é uma interface e a classe não implementa todas as funções de membro da interface.  
   
  Se não for possível criar objetos de uma classe que é derivada de uma interface, o motivo pode ser que a classe é abstrata implicitamente. Para obter mais informações sobre classes abstratas, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).  
@@ -132,10 +127,10 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Type_visibility"></a>Visibilidade de tipo  
+##  <a name="BKMK_Type_visibility"></a> Visibilidade de tipo  
  Você pode controlar a visibilidade de tipos common language runtime (CLR) para que, se um assembly for referenciado, os tipos no assembly podem ser visível ou não é visível fora do assembly.  
   
- `public`indica que um tipo é visível para qualquer arquivo de origem que contém um `#using` diretiva para o assembly que contém o tipo.  `private`indica que um tipo não é visível para os arquivos de origem que contêm um `#using` diretiva para o assembly que contém o tipo. No entanto, os tipos privados são visíveis dentro do mesmo assembly. Por padrão, a visibilidade de uma classe é `private`.  
+ `public` indica que um tipo é visível para qualquer arquivo de origem que contém um `#using` diretiva para o assembly que contém o tipo.  `private` indica que um tipo não é visível para os arquivos de origem que contêm um `#using` diretiva para o assembly que contém o tipo. No entanto, os tipos privados são visíveis dentro do mesmo assembly. Por padrão, a visibilidade de uma classe é `private`.  
   
  Por padrão, antes do Visual C++ 2005, tipos nativos tem acessibilidade pública fora do assembly. Habilitar [C4692 de aviso do compilador (nível 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) para ajudá-lo a ver onde os tipos nativos privados são usados incorretamente. Use o [make_public](../preprocessor/make-public.md) pragma para oferecer a acessibilidade pública a um tipo nativo em um arquivo de código fonte que você não pode modificar.  
   
@@ -228,8 +223,8 @@ int main() {
 in Public_Class  
 ```  
   
-##  <a name="BKMK_Member_visibility"></a>Visibilidade de membro  
- Você pode fazer acesso a um membro de uma classe pública de dentro do mesmo assembly diferente de acesso a ela fora do assembly usando pares de especificadores de acesso `public`, `protected`, e`private`  
+##  <a name="BKMK_Member_visibility"></a> Visibilidade de membro  
+ Você pode fazer acesso a um membro de uma classe pública de dentro do mesmo assembly diferente de acesso a ela fora do assembly usando pares de especificadores de acesso `public`, `protected`, e `private`  
   
  Esta tabela resume o efeito dos especificadores de acesso de vários:  
   
@@ -238,7 +233,7 @@ in Public_Class
 |públicos|Membro podem ser acessado dentro e fora do assembly.  Consulte [pública](../cpp/public-cpp.md) para obter mais informações.|  
 |particulares|Membro não está acessível, nem dentro de fora do assembly.  Consulte [privada](../cpp/private-cpp.md) para obter mais informações.|  
 |protegidos|Membro podem ser acessado dentro e fora do assembly, mas apenas para tipos derivados.  Consulte [protegido](../cpp/protected-cpp.md) para obter mais informações.|  
-|interno|Membro é público dentro do assembly, mas privada fora do assembly.  `internal`é uma palavra-chave contextual.  Para obter mais informações, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
+|interno|Membro é público dentro do assembly, mas privada fora do assembly.  `internal` é uma palavra-chave contextual.  Para obter mais informações, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
 |público protegido - ou - protegido público|Membro é público dentro do assembly, mas protegido fora do assembly.|  
 |privado protegido - ou - protegido privado|Membro é protegido dentro do assembly, mas privada fora do assembly.|  
   
@@ -418,7 +413,7 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="BKMK_Public_and_private_native_classes"></a>Classes nativas públicas e privadas  
+##  <a name="BKMK_Public_and_private_native_classes"></a> Classes nativas públicas e privadas  
  Um tipo nativo pode ser referenciado de um tipo gerenciado.  Por exemplo, uma função em um tipo gerenciado pode levar um parâmetro cujo tipo é um struct nativo.  Se o tipo gerenciado e a função públicas em um assembly, em seguida, o tipo nativo deve também ser público.  
   
 ```  
@@ -505,7 +500,7 @@ in static constructor
 11  
 ```  
   
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>Semântica do ponteiro  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a> Semântica do ponteiro  
  Quando você estiver usando o Visual C++ para definir os tipos, o `this` ponteiro em um tipo de referência é do tipo "identificador". O `this` ponteiro em um tipo de valor é do tipo "ponteiro interior".  
   
  Essa semântica diferente de `this` ponteiro pode causar um comportamento inesperado quando um indexador padrão é chamado. O exemplo a seguir mostra a maneira correta de acessar um indexador padrão em um tipo de referência e um tipo de valor.  
@@ -560,7 +555,7 @@ int main() {
 10.89  
 ```  
   
-##  <a name="BKMK_Hide_by_signature_functions"></a>Funções ocultar por assinatura  
+##  <a name="BKMK_Hide_by_signature_functions"></a> Funções ocultar por assinatura  
  Em C++ padrão, uma função em uma classe base é ocultada por uma função que tem o mesmo nome em uma classe derivada, mesmo se a função de classe derivada não tem o mesmo número ou tipo de parâmetros. Isso é conhecido como *ocultar por nome* semântica. Em um tipo de referência, uma função em uma classe base pode somente ser ocultada por uma função em uma classe derivada se o nome e a lista de parâmetros são os mesmos. Isso é conhecido como *ocultar por assinatura* semântica.  
   
  Uma classe é considerada uma classe de ocultar por assinatura quando todas as suas funções são marcadas nos metadados como `hidebysig`. Por padrão, todas as classes que são criados em **/clr** ter `hidebysig` funções. Quando uma classe tem `hidebysig` funções, o compilador não ocultar funções por nome em todas as classes base diretas, mas se o compilador encontra uma classe ocultar por nome em uma cadeia de herança, ele continuará esse comportamento ocultar por nome.  
@@ -670,7 +665,7 @@ Derived::Test4
 97  
 ```  
   
-##  <a name="BKMK_Copy_constructors"></a>Construtores de cópia  
+##  <a name="BKMK_Copy_constructors"></a> Construtores de cópia  
  O padrão C++ diz que um construtor de cópia é chamado quando um objeto é movido, de modo que um objeto é criado e destruído com o mesmo endereço.  
   
  No entanto, quando **/clr** é usado para compilar e uma função que é compilada em chamadas MSIL um nativo de função em que uma classe nativo — ou mais de um — é passado por valor e onde a classe nativa tem um construtor de cópia e/ou destrutor, nenhuma cópia construtor é chamado e o objeto é destruído em um endereço diferente do qual ele foi criado. Isso pode causar problemas se a classe tiver um ponteiro para si próprio, ou se o código para acompanhar objetos pelo endereço.  
@@ -735,7 +730,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378  
 ```  
   
-##  <a name="BKMK_Destructors_and_finalizers"></a>Destruidores e finalizadores  
+##  <a name="BKMK_Destructors_and_finalizers"></a> Destruidores e finalizadores  
  Destruidores em um tipo de referência executam uma determinística limpeza de recursos. Finalizadores limpar os recursos não gerenciados e podem ser chamados de forma determinista, o destruidor ou forma não determinística pelo coletor de lixo. Para obter informações sobre destruidores em C++ padrão, consulte [destruidores](../cpp/destructors-cpp.md).  
   
 ```  

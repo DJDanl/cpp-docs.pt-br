@@ -1,13 +1,10 @@
 ---
-title: "Monikers assíncronos na Internet | Microsoft Docs"
-ms.custom: 
+title: Monikers assíncronos na Internet | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7b6be66c3049c1d82aa549cf362a840fd6f265
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb9828734985c25996e7e2d1a6f390a0b629d998
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Monikers assíncronos na Internet
 Internet requer novas abordagens de design do aplicativo devido a seu acesso de rede lenta. Aplicativos devem executar o acesso de rede de forma assíncrona para evitar atrasando a interface do usuário. A classe do MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) fornece suporte assíncrono para download de arquivos.  
@@ -59,7 +54,7 @@ Internet requer novas abordagens de design do aplicativo devido a seu acesso de 
 ## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>Classes MFC para caminhos de dados em controles ActiveX  
  As classes MFC `CDataPathProperty` e [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) implementar propriedades de controle ActiveX que podem ser carregadas de forma assíncrona. Propriedades assíncronas são carregadas após a inicialização síncrona. Controles ActiveX assíncronos repetidamente invocar um retorno de chamada para indicar a disponibilidade de novos dados durante o processo de exchange propriedade longo.  
   
- `CDataPathProperty`é derivado de `CAsyncMonikerFile`. `CCachedDataPathProperty`é derivado de `CDataPathProperty`. Para implementar propriedades assíncronas em seus controles ActiveX, derive uma classe de `CDataPathProperty` ou `CCachedDataPathProperty`e substituir [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) e outras notificações que você deseja receber.  
+ `CDataPathProperty` é derivado de `CAsyncMonikerFile`. `CCachedDataPathProperty` é derivado de `CDataPathProperty`. Para implementar propriedades assíncronas em seus controles ActiveX, derive uma classe de `CDataPathProperty` ou `CCachedDataPathProperty`e substituir [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) e outras notificações que você deseja receber.  
   
 #### <a name="to-download-a-file-using-asynchronous-monikers"></a>Para baixar um arquivo usando monikers assíncronos  
   

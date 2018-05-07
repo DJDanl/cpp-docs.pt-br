@@ -1,12 +1,9 @@
 ---
 title: Classe CAnimateCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58918a45daa1a6f64c160d79f52503e3a3c61cff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimatectrl-class"></a>Classe CAnimateCtrl
 Fornece a funcionalidade de controle de animação comuns do Windows.  
@@ -112,7 +107,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn.h  
   
-##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
  Constrói um objeto `CAnimateCtrl`.  
   
 ```  
@@ -125,7 +120,7 @@ CAnimateCtrl();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>  CAnimateCtrl::Close  
  Fecha o clipe AVI que foi aberto anteriormente no controle de animação (se houver) e remove da memória.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL Close();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>  CAnimateCtrl::Create  
  Cria um controle de animação e anexa-o para um `CAnimateCtrl` objeto.  
   
 ```  
@@ -183,7 +178,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>  CAnimateCtrl::CreateEx  
  Cria um controle (uma janela filho) e o associa a `CAnimateCtrl` objeto.  
   
 ```  
@@ -217,7 +212,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
   
-##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying  
  Indica se um clipe de vídeo de áudio intercaladas (AVI) estiver em execução.  
   
 ```  
@@ -225,12 +220,12 @@ BOOL IsPlaying() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se um clipe AVI estiver em execução; Caso contrário, `false`.  
+ `true` Se um clipe AVI estiver em execução; Caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) mensagem, que é descrita no SDK do Windows.  
   
-##  <a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>  CAnimateCtrl::Open  
  Chame essa função para abrir um clipe AVI e exibir o primeiro quadro.  
   
 ```  
@@ -262,7 +257,7 @@ BOOL Open(UINT nID);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>  CAnimateCtrl::Play  
  Chame essa função para reproduzir um clipe AVI em um controle de animação.  
   
 ```  
@@ -291,7 +286,7 @@ BOOL Play(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>  CAnimateCtrl::Seek  
  Chame essa função para exibir estaticamente um quadro simples do clipe AVI.  
   
 ```  
@@ -311,7 +306,7 @@ BOOL Seek(UINT nTo);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>  CAnimateCtrl::Stop  
  Chame essa função para interromper a execução de um clipe AVI em um controle de animação.  
   
 ```  

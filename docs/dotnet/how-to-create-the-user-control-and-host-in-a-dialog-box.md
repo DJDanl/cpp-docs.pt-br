@@ -1,31 +1,26 @@
 ---
-title: "Como: criar o controle de usuário e o Host em uma caixa de diálogo | Microsoft Docs"
-ms.custom: 
+title: 'Como: criar o controle de usuário e o Host em uma caixa de diálogo | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20472a80b35318fa4c6d34221a61345de9e40f9e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Como criar o controle de usuário e hospedá-lo em uma caixa de diálogo
 As etapas neste artigo presumem que você está criando uma caixa de diálogo com base em ([classe CDialog](../mfc/reference/cdialog-class.md)) projeto Microsoft Foundation Classes (MFC), mas você também pode adicionar suporte para um controle de formulários do Windows para uma caixa de diálogo MFC existente.  

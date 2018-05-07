@@ -1,13 +1,10 @@
 ---
 title: Aplicativo e Thread oferecem suporte a Classes | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,31 +17,29 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>Classes de aplicativo e suporte de thread
 Cada aplicativo tem apenas um objeto de aplicativo; Esse objeto coordena a outros objetos no programa em execução e é derivado de `CWinApp`.  
   
  A biblioteca Microsoft Foundation Class (MFC) oferece suporte a vários threads de execução dentro de um aplicativo. Todos os aplicativos devem ter pelo menos um thread; o thread usado pelo seu `CWinApp` objeto é esse thread principal.  
   
- `CWinThread`encapsula uma parte dos recursos de threading do sistema operacional. Para fazer uso de vários threads, MFC também fornece sincronização de objetos para fornecer uma interface de C++ para objetos de sincronização do Win32.  
+ `CWinThread` encapsula uma parte dos recursos de threading do sistema operacional. Para fazer uso de vários threads, MFC também fornece sincronização de objetos para fornecer uma interface de C++ para objetos de sincronização do Win32.  
   
 ## <a name="application-and-thread-classes"></a>Classes de aplicativo e Thread  
  [CWinApp](../mfc/reference/cwinapp-class.md)  
  Encapsula o código para inicializar, executar e encerrar o aplicativo. O objeto de aplicativo será derivar dessa classe.  
   
  [CWinThread](../mfc/reference/cwinthread-class.md)  
- A classe base para todos os threads. Usar diretamente ou derivar uma classe de `CWinThread` se o thread realiza funções de interface do usuário. `CWinApp`é derivado de `CWinThread`.  
+ A classe base para todos os threads. Usar diretamente ou derivar uma classe de `CWinThread` se o thread realiza funções de interface do usuário. `CWinApp` é derivado de `CWinThread`.  
   
 ## <a name="synchronization-object-classes"></a>Classes de objeto de sincronização  
  [CSyncObject](../mfc/reference/csyncobject-class.md)  

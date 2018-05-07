@@ -1,29 +1,24 @@
 ---
-title: "Rotinas de troca de dados de caixa de diálogo padrão | Microsoft Docs"
-ms.custom: 
+title: Rotinas de troca de dados de caixa de diálogo padrão | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6c79a96439605bcf9ab670c1f75dda2d50169f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rotinas de troca dos dados da caixa de diálogo padrão
 Este tópico lista as rotinas de exchange (DDX) de dados de caixa de diálogo padrão usadas para controles de caixa de diálogo comuns do MFC.  
@@ -52,7 +47,7 @@ Este tópico lista as rotinas de exchange (DDX) de dados de caixa de diálogo pa
 |[DDX_Slider](#ddx_slider)|Inicializa ou recupera a posição atual da miniatura do controle deslizante.|  
 |[DDX_Text](#ddx_text)|Inicializa ou recupera o valor atual de um controle de edição.|  
   
-##  <a name="ddx_cbindex"></a>DDX_CBIndex  
+##  <a name="ddx_cbindex"></a>  DDX_CBIndex  
  O `DDX_CBIndex` função gerencia a transferência de `int` dados entre um controle de caixa de combinação em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -69,7 +64,7 @@ void AFXAPI DDX_CBIndex(
  `nIDC`  
  A ID de recurso de controle de caixa de combinação associado com a propriedade de controle.  
   
- *índice*  
+ *index*  
  Uma referência a uma variável de membro do objeto de exibição de controle com o qual os dados são trocados, exibição de formulário ou caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -80,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>DDX_CBString  
+##  <a name="ddx_cbstring"></a>  DDX_CBString  
  O `DDX_CBString` função gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de combinação em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `CString` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -111,7 +106,7 @@ void AFXAPI DDX_CBString(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact  
+##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact  
  O `DDX_CBStringExact` função gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de combinação em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `CString` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -142,7 +137,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_check"></a>DDX_Check  
+##  <a name="ddx_check"></a>  DDX_Check  
  O `DDX_Check` função gerencia a transferência de `int` dados entre um controle de caixa de seleção em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -170,7 +165,7 @@ void AFXAPI DDX_Check(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_control"></a>DDX_Control  
+##  <a name="ddx_control"></a>  DDX_Control  
  O `DDX_Control` função subclasses o controle especificado pelo `nIDC`, da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.  
   
 ```  
@@ -198,7 +193,7 @@ void AFXAPI DDX_Control(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl  
+##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl  
  O `DDX_DateTimeCtrl` função gerencia a transferência de dados de data / hora entre um controle de seletor de data e hora ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) em um objeto de exibição de formulário ou uma caixa de diálogo e em um [CTime](../../atl-mfc-shared/reference/ctime-class.md) ou um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) membro de dados do objeto de exibição de formulário ou caixa de diálogo.  
   
 ```  
@@ -241,7 +236,7 @@ void AFXAPI DDX_DateTimeCtrl(
    
 
  
-## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 Cria um controle de .NET correspondência de ID de recurso. do controle  
    
 ### <a name="syntax"></a>Sintaxe  
@@ -263,7 +258,7 @@ void DDX_ManagedControl(
  Uma referência a um [CWinFormsControl classe](cwinformscontrol-class.md) objeto.  
    
 ### <a name="remarks"></a>Comentários  
- `DDX_ManagedControl`chamadas [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) para criar um controle que corresponda a identificação do controle de recurso. Use `DDX_ManagedControl` para criar controles de IDs de recurso no [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Troca de dados, você não precisa usar as funções DDX/DDV com controles de formulários do Windows.  
+ `DDX_ManagedControl` chamadas [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) para criar um controle que corresponda a identificação do controle de recurso. Use `DDX_ManagedControl` para criar controles de IDs de recurso no [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Troca de dados, você não precisa usar as funções DDX/DDV com controles de formulários do Windows.  
   
  Para obter mais informações, consulte [como: fazer o associação de dados do DDX/DDV aos Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
    
@@ -276,7 +271,7 @@ void DDX_ManagedControl(
  
 
   
-##  <a name="ddx_ipaddress"></a>DDX_IPAddress  
+##  <a name="ddx_ipaddress"></a>  DDX_IPAddress  
  O `DDX_IPAddress` função gerencia a transferência de dados entre um controle de endereço IP e um membro de dados do objeto de exibição de controle.  
   
 ```  
@@ -313,7 +308,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>DDX_LBIndex  
+##  <a name="ddx_lbindex"></a>  DDX_LBIndex  
  O `DDX_LBIndex` função gerencia a transferência de `int` dados entre um controle de caixa de listagem na caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -330,7 +325,7 @@ void AFXAPI DDX_LBIndex(
  `nIDC`  
  A ID de recurso da caixa de lista associado com a propriedade de controle.  
   
- *índice*  
+ *index*  
  Uma referência a uma variável de membro do objeto de exibição de controle com o qual os dados são trocados, exibição de formulário ou caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -341,7 +336,7 @@ void AFXAPI DDX_LBIndex(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>DDX_LBString  
+##  <a name="ddx_lbstring"></a>  DDX_LBString  
  O `DDX_LBString` função gerencia a transferência de `CString` dados entre um controle de caixa de listagem na caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `CString` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -374,7 +369,7 @@ void AFXAPI DDX_LBString(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact  
+##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact  
  O `DDX_CBStringExact` função gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de listagem na caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `CString` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -407,7 +402,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl  
+##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl  
  O `DDX_MonthCalCtrl` função gerencia a transferência de dados de data entre um controle de calendário mensal ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) em uma caixa de diálogo, o modo de exibição de formulário, ou objeto de exibição de controle e um [CTime](../../atl-mfc-shared/reference/ctime-class.md) ou um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -444,7 +439,7 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_radio"></a>DDX_Radio  
+##  <a name="ddx_radio"></a>  DDX_Radio  
  O `DDX_Radio` função gerencia a transferência de `int` dados entre um grupo de controle de opção em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle. O valor de `int` membro de dados é determinado de acordo com a qual opção botão dentro do grupo é selecionado.  
   
 ```  
@@ -474,7 +469,7 @@ void AFXAPI DDX_Radio(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_scroll"></a>DDX_Scroll  
+##  <a name="ddx_scroll"></a>  DDX_Scroll  
  O `DDX_Scroll` função gerencia a transferência de `int` dados entre um controle de barra de rolagem em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  
@@ -502,7 +497,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_slider"></a>DDX_Slider  
+##  <a name="ddx_slider"></a>  DDX_Slider  
  O `DDX_Slider` função gerencia a transferência de `int` dados entre um controle deslizante em um modo de exibição de formulário ou uma caixa de diálogo e um `int` membro de dados do objeto de exibição de formulário ou caixa de diálogo.  
   
 ```  
@@ -530,7 +525,7 @@ void AFXAPI DDX_Slider(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdd_.h  
   
-##  <a name="ddx_text"></a>DDX_Text  
+##  <a name="ddx_text"></a>  DDX_Text  
  O `DDX_Text` função gerencia a transferência de `int`, **UINT**, **longo**, `DWORD`, `CString`, **float**, ou  **duplo** dados entre um controle de edição na caixa de diálogo, exibição de formulário ou controle de exibição e um [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Controles ActiveX MFC: Implementação da propriedade de Avançado | Microsoft Docs"
-ms.custom: 
+title: 'Controles ActiveX MFC: Implementação da propriedade de Avançado | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac8b2cb1a9c8de43ecfbd2f4712d19750bb143a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: implementação da propriedade avançada
 Este artigo descreve os tópicos relacionados à implementação de propriedades em um controle ActiveX avançadas:  
@@ -34,7 +29,7 @@ Este artigo descreve os tópicos relacionados à implementação de propriedades
   
 -   [Retornando códigos de erro a partir de uma propriedade](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a>Propriedades somente leitura e somente gravação  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> Propriedades somente leitura e somente gravação  
  O Assistente para adicionar propriedade fornece um método rápido e fácil para implementar propriedades somente leitura ou somente gravação para o controle.  
   
 #### <a name="to-implement-a-read-only-or-write-only-property"></a>Para implementar uma propriedade somente leitura ou somente gravação  
@@ -69,13 +64,13 @@ Este artigo descreve os tópicos relacionados à implementação de propriedades
   
  Este exemplo de código chama `SetNotSupported` se o `m_bReadOnlyMode` é membro de dados **TRUE**. Se **FALSE**, em seguida, a propriedade é definida para o novo valor.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a>Retornando códigos de erro a partir de uma propriedade  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Retornando códigos de erro a partir de uma propriedade  
  Para indicar que ocorreu um erro ao tentar obter ou definir uma propriedade, use o `COleControl::ThrowError` função, o que leva um `SCODE` (código de status) como um parâmetro. Você pode usar um modelo predefinido `SCODE` ou definir seu próprio. Para obter uma lista de predefinidos `SCODE`s e instruções para definir personalizado `SCODE`s, consulte [tratamento de erros no controle ActiveX do seu](../mfc/mfc-activex-controls-advanced-topics.md) nos controles do ActiveX artigo: tópicos avançados.  
   
  Existem funções auxiliares para os mais comuns predefinidos `SCODE`s, como [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), e [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError`deve ser usado apenas como um meio de retornar um erro de dentro Get da propriedade ou Set função ou um método de automação. Esses são os únicos vezes que o manipulador de exceção apropriada será presentes na pilha.  
+>  `ThrowError` deve ser usado apenas como um meio de retornar um erro de dentro Get da propriedade ou Set função ou um método de automação. Esses são os únicos vezes que o manipulador de exceção apropriada será presentes na pilha.  
   
  Para obter mais informações sobre relatórios de exceções em outras áreas do código, consulte [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) e a seção [tratamento de erros no controle ActiveX do seu](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: avançado Tópicos.  
   

@@ -1,13 +1,10 @@
 ---
 title: Adicionar classe de Typelib Assistente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistente para adicionar classe de Typelib
 Use este assistente para adicionar uma classe do MFC de uma biblioteca de tipos disponíveis. O assistente cria uma classe para cada interface que você adicionar a biblioteca de tipos selecionados.  
@@ -58,9 +53,9 @@ Use este assistente para adicionar uma classe do MFC de uma biblioteca de tipos 
 |**<\<**|Remove todas as classes do **classes geradas** lista. Esmaecido se o **classes geradas** lista está vazia.|  
   
  **Classes geradas**  
- Especifica os nomes de classe a ser gerado das interfaces adicionadas usando o  **>**  ou  **>>**  botão. Você pode clicar nessa caixa para selecionar uma classe e, em seguida, use as teclas ou para baixo para rolar a lista, exibindo o nome de cada classe no `Class` caixa e nome de arquivo no **arquivo** caixa que o assistente gera quando você clicar em  **Concluir**. Você pode selecionar apenas uma classe em um momento nesta caixa.  
+ Especifica os nomes de classe a ser gerado das interfaces adicionadas usando o **>** ou **>>** botão. Você pode clicar nessa caixa para selecionar uma classe e, em seguida, use as teclas ou para baixo para rolar a lista, exibindo o nome de cada classe no `Class` caixa e nome de arquivo no **arquivo** caixa que o assistente gera quando você clicar em  **Concluir**. Você pode selecionar apenas uma classe em um momento nesta caixa.  
   
- Você pode remover uma classe selecionando-o na lista e clicando em  **<** . Você não precisa selecionar uma classe na caixa de classes geradas para remover todas as classes; clicando em  **<<** , remova todas as classes de **classes geradas** caixa.  
+ Você pode remover uma classe selecionando-o na lista e clicando em **<**. Você não precisa selecionar uma classe na caixa de classes geradas para remover todas as classes; clicando em **<<**, remova todas as classes de **classes geradas** caixa.  
   
  `Class`  
  Especifica o nome da classe selecionada no **classes geradas** caixa que o assistente adiciona quando você clica em **concluir**. Você pode editar o nome de `Class` caixa.  

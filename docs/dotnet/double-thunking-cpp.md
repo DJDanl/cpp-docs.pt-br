@@ -1,13 +1,10 @@
 ---
-title: "Conversão dupla (C++) | Microsoft Docs"
-ms.custom: 
+title: Conversão dupla (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-thunking-c"></a>Conversão dupla (C++)
 Conversão dupla refere-se a perda de desempenho que você pode experimentar quando uma chamada de função em chamadas um contexto gerenciado um Visual C++ gerenciado função e onde a execução de programa chama o ponto de entrada nativo da função para chamar a função gerenciada. Este tópico discute onde ocorre a conversão dupla e como evitá-lo para melhorar o desempenho.  
@@ -40,7 +35,7 @@ Conversão dupla refere-se a perda de desempenho que você pode experimentar qua
   
  Da mesma forma, se você exportar ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) uma função gerenciada, um ponto de entrada nativo é gerado e qualquer função que importa e chama a função será chamada através do ponto de entrada nativo. Para evitar dupla nessa situação, não use semântica de importação/exportação nativo; simplesmente referencie os metadados por meio de `#using` (consulte [#using diretiva](../preprocessor/hash-using-directive-cpp.md)).  
   
- O compilador foi atualizado para reduzir dupla desnecessários. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo o tipo de retorno) implicitamente será marcada como `__clrcall`. Para obter mais informações sobre a eliminação de conversão dupla, consulte [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ O compilador foi atualizado para reduzir dupla desnecessários. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo o tipo de retorno) implicitamente será marcada como `__clrcall`. Para obter mais informações sobre a eliminação de conversão dupla, consulte [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Exemplo  
   

@@ -1,13 +1,10 @@
 ---
-title: "Classes de caixa de diálogo comuns | Microsoft Docs"
-ms.custom: 
+title: Classes de caixa de diálogo comuns | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1cb8a9bacf7414a5a2fff246d796c94a8a1598d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-dialog-classes"></a>Classes de caixa de diálogo comuns
 Além de classe [CDialog](../mfc/reference/cdialog-class.md), MFC fornece várias classes derivadas de `CDialog` que encapsulam caixas de diálogo usadas com frequência, como mostrado na tabela a seguir. As caixas de diálogo encapsuladas são chamadas de "caixas de diálogo comuns" e são parte da biblioteca de caixa de diálogo comuns do Windows (COMMDLG. DLL). Os recursos de modelo de caixa de diálogo e código para essas classes são fornecidos nas janelas de caixas de diálogo comuns que fazem parte do Windows versão 3.1 e posterior.  

@@ -2,11 +2,8 @@
 title: Classe CDialogEx | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogEx
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogex-class"></a>Classe CDialogEx
 O `CDialogEx` classe especifica a cor do plano de fundo e a imagem de plano de fundo de uma caixa de diálogo.  
@@ -79,7 +74,7 @@ class CDialogEx : public CDialog
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
  Constrói um objeto `CDialogEx`.  
   
 ```  
@@ -110,7 +105,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  Define a cor de plano de fundo da caixa de diálogo.  
   
 ```  
@@ -124,11 +119,11 @@ void SetBackgroundColor(
  Um valor de cor RGB.  
   
  [in] `bRepaint`  
- `TRUE`Para atualizar imediatamente a tela. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+ `TRUE` Para atualizar imediatamente a tela. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  Define a imagem de plano de fundo da caixa de diálogo.  
   
 ```  
@@ -156,10 +151,10 @@ BOOL SetBackgroundImage(
  Uma da `CDialogEx::BackgroundLocation` valores que especificam o local da imagem. Os valores válidos incluem BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. O valor padrão é BACKGR_TILE.  
   
  [in] `bAutoDestroy`  
- `TRUE`para destruir automaticamente a imagem de plano de fundo; Caso contrário, `FALSE`.  
+ `TRUE` para destruir automaticamente a imagem de plano de fundo; Caso contrário, `FALSE`.  
   
  [in] `bRepaint`  
- `TRUE`redesenhar imediatamente a caixa de diálogo; Caso contrário, `FALSE`.  
+ `TRUE` redesenhar imediatamente a caixa de diálogo; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  No segundo método de sobrecarga sintaxe, `TRUE` se o método for bem-sucedida; caso contrário, `FALSE`.  

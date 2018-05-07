@@ -1,13 +1,10 @@
 ---
 title: Arquivos de dica | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>Arquivos de dica
 Um *arquivo de dica* Ajuda do Visual Studio identificadores do Visual C++, como os nomes de funções e macros de interpretar do ambiente de desenvolvimento integrado (IDE). Quando você abre um projeto de Visual C++, o IDE *análise sistema* analisa o código em cada arquivo de origem no projeto e reúne informações sobre cada identificador. Em seguida, o IDE usa essas informações para dar suporte a recursos como o **exibição de classe** navegador e o **barra de navegação**.  
@@ -107,13 +102,13 @@ STDMETHOD(myMethod)(int parameter1);
   
 |Sintaxe|Significado|  
 |------------|-------------|  
-|`#define`*nome dica* *cadeia de caracteres de substituição*<br /><br /> `#define`*nome dica* `(` *parâmetro*,... `)` *cadeia de caracteres de substituição*|Uma diretiva de pré-processador que define uma nova dica ou redefine uma dica existente. Após a diretiva de pré-processador substitui cada ocorrência de *nome dica* no código-fonte com *cadeia de caracteres de substituição*.<br /><br /> O segundo formulário de sintaxe define uma dica de função. Se ocorrer uma dica de função no código-fonte, o pré-processador primeiro substitui cada ocorrência de *parâmetro* na *cadeia de caracteres de substituição* com o argumento correspondente no código-fonte e, em seguida, substitui o *nome dica* com *cadeia de caracteres de substituição*.|  
+|`#define` *nome de dica* *cadeia de caracteres de substituição*<br /><br /> `#define` *nome de dica* `(` *parâmetro*,... `)` *cadeia de caracteres de substituição*|Uma diretiva de pré-processador que define uma nova dica ou redefine uma dica existente. Após a diretiva de pré-processador substitui cada ocorrência de *nome dica* no código-fonte com *cadeia de caracteres de substituição*.<br /><br /> O segundo formulário de sintaxe define uma dica de função. Se ocorrer uma dica de função no código-fonte, o pré-processador primeiro substitui cada ocorrência de *parâmetro* na *cadeia de caracteres de substituição* com o argumento correspondente no código-fonte e, em seguida, substitui o *nome dica* com *cadeia de caracteres de substituição*.|  
 |`@<`|Um determinado arquivo de dica *cadeia de caracteres de substituição* que indica o início de um conjunto de elementos do mapa.|  
 |`@=`|Um determinado arquivo de dica *cadeia de caracteres de substituição* que indica um elemento do mapa intermediário. Um mapa pode ter vários elementos do mapa.|  
 |`@>`|Um determinado arquivo de dica *cadeia de caracteres de substituição* que indica o final de um conjunto de elementos do mapa.|  
-|`#undef`*nome de dica*|A diretiva de pré-processador que exclui uma dica existente. O nome da dica é fornecido pelo *nome dica* identificador.|  
-|`//`*comentário*|Um comentário de linha única.|  
-|`/*`*comentário*`*/`|Um comentário de várias linhas.|  
+|`#undef` *nome de dica*|A diretiva de pré-processador que exclui uma dica existente. O nome da dica é fornecido pelo *nome dica* identificador.|  
+|`//` *Comentário*|Um comentário de linha única.|  
+|`/*` *comment* `*/`|Um comentário de várias linhas.|  
   
 ## <a name="what-macros-require-a-hint"></a>O que Macros exigem uma dica?  
  Certos tipos de macros podem interferir com o sistema de análise. Esta seção descreve os tipos de macros que podem causar um problema e o tipo de dica, que você pode criar para resolver o problema.  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  A ilustração a seguir mostra alguns dos diretórios físicos em um projeto do Visual C++. Arquivos de dica estão no `vcpackages`, `Debug`, `A1`, e `A2` diretórios.  
   
 ### <a name="hint-file-directories"></a>Diretórios de arquivos de dica  
- ![Comuns e projeto &#45; diretórios de arquivos de dica específica. ] (../ide/media/hintfile.png "HintFile")  
+ ![Comuns e projeto&#45;diretórios de arquivos de dica específica. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>Diretórios e o conteúdo do arquivo de dica  
  A lista a seguir mostra os diretórios neste projeto que contêm arquivos de dica e o conteúdo desses arquivos de dica. Apenas algumas das muitas dicas no `vcpackages` arquivo de dica de diretório são listados.  

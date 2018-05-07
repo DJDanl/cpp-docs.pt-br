@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonGallery | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonGallery
@@ -87,17 +84,15 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb4772f685a38db39c946a5e6f4e77df87998a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 Galerias de faixa de opções de estilo do Office 2007 implementa.  
@@ -178,7 +173,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxRibbonPaletteGallery.h  
   
-##  <a name="addgroup"></a>CMFCRibbonGallery::AddGroup  
+##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup  
  Adiciona um novo grupo na Galeria.  
   
 ```  
@@ -217,7 +212,7 @@ void AddGroup(
 ### <a name="remarks"></a>Comentários  
  Você pode dividir os itens em uma galeria da faixa de opções em vários grupos por chamar esse método. Cada grupo pode ter uma legenda.  
   
-##  <a name="addsubitem"></a>CMFCRibbonGallery::AddSubItem  
+##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem  
  Adiciona um novo item de menu no menu suspenso.  
   
 ```  
@@ -235,7 +230,7 @@ void AddSubItem(
  Especifica o índice de base zero de um local onde inserir o item.  
   
  [in] `bOnTop`  
- `TRUE`para especificar que o item deve ser inserido antes da Galeria da faixa de opções; Caso contrário, `FALSE`.  
+ `TRUE` para especificar que o item deve ser inserido antes da Galeria da faixa de opções; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Você pode combinar galerias de pop-up com itens de menu pop-up ao chamar esse método. Itens de menu podem ser colocados antes ou depois da Galeria.  
@@ -245,7 +240,7 @@ void AddSubItem(
 > [!NOTE]
 >  O parâmetro `nIndex` Especifica o índice de inserção na parte superior da galeria e na parte inferior da Galeria. Por exemplo, se você precisa inserir um item para uma posição antes da galeria, defina `nIndex` como 1 e `bOnTop` para `TRUE`. Da mesma forma, se você precisa inserir um item para uma posição abaixo a Galeria, defina `nIndex` como 1 e `bOnTop` para `FALSE`.  
   
-##  <a name="clear"></a>CMFCRibbonGallery::Clear  
+##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  Limpa o conteúdo da Galeria.  
   
 ```  
@@ -255,7 +250,7 @@ virtual void Clear();
 ### <a name="remarks"></a>Comentários  
  Chame esse método para remover todo o conteúdo da Galeria da faixa de opções. Isso deve ser feito antes de anexar uma nova Galeria da faixa de opções ou o conjunto de grupos na Galeria da faixa de opções.  
   
-##  <a name="cmfcribbongallery"></a>CMFCRibbonGallery::CMFCRibbonGallery  
+##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery  
  Cria e inicializa um [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) objeto.  
   
 ```  
@@ -319,7 +314,7 @@ CMFCRibbonGallery (
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="enablemenuresize"></a>CMFCRibbonGallery::EnableMenuResize  
+##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize  
  Habilita ou desabilita o redimensionamento do painel do menu.  
   
 ```  
@@ -330,15 +325,15 @@ void EnableMenuResize(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para habilitar o redimensionamento de menu; Caso contrário, `FALSE`.  
+ `TRUE` Para habilitar o redimensionamento de menu; Caso contrário, `FALSE`.  
   
  [in] `bVertcalOnly`  
- `TRUE`para especificar que a Galeria pode ser redimensionada apenas verticalmente; `FALSE` especificar que a Galeria pode ser redimensionada tanto vertical e horizontalmente.  
+ `TRUE` para especificar que a Galeria pode ser redimensionada apenas verticalmente; `FALSE` especificar que a Galeria pode ser redimensionada tanto vertical e horizontalmente.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para habilitar ou desabilitar o redimensionamento de galeria da faixa de opções. Quando redimensionamento estiver habilitado, a Galeria da faixa de opções exibe uma garra que um usuário pode usar para redimensioná-la.  
   
-##  <a name="enablemenusidebar"></a>CMFCRibbonGallery::EnableMenuSideBar  
+##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar  
  Habilita ou desabilita a barra lateral à esquerda do menu pop-up.  
   
 ```  
@@ -347,12 +342,12 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`para especificar que a barra lateral é habilitada; Caso contrário, `FALSE`.  
+ `TRUE` para especificar que a barra lateral é habilitada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Chame este método para habilitar ou desabilitar a barra lateral de estilo do Office XP no lado esquerdo do menu.  
   
-##  <a name="getcompactsize"></a>CMFCRibbonGallery::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize  
 
   
 ```  
@@ -366,7 +361,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonGallery::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown  
 
   
 ```  
@@ -377,7 +372,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getgroupname"></a>CMFCRibbonGallery::GetGroupName  
+##  <a name="getgroupname"></a>  CMFCRibbonGallery::GetGroupName  
  Retorna o nome do grupo que está localizado no índice especificado.  
   
 ```  
@@ -393,7 +388,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getgroupoffset"></a>CMFCRibbonGallery::GetGroupOffset  
+##  <a name="getgroupoffset"></a>  CMFCRibbonGallery::GetGroupOffset  
 
   
 ```  
@@ -404,7 +399,7 @@ virtual int GetGroupOffset() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="geticonsinrow"></a>CMFCRibbonGallery::GetIconsInRow  
+##  <a name="geticonsinrow"></a>  CMFCRibbonGallery::GetIconsInRow  
  Retorna o número de itens em uma linha da Galeria da faixa de opções.  
   
 ```  
@@ -416,7 +411,7 @@ int GetIconsInRow() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getitemtooltip"></a>CMFCRibbonGallery::GetItemToolTip  
+##  <a name="getitemtooltip"></a>  CMFCRibbonGallery::GetItemToolTip  
  Retorna o texto de dica de ferramenta que está associado um item da Galeria.  
   
 ```  
@@ -432,7 +427,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getlastselecteditem"></a>CMFCRibbonGallery::GetLastSelectedItem  
+##  <a name="getlastselecteditem"></a>  CMFCRibbonGallery::GetLastSelectedItem  
  Retorna o índice do último item na Galeria da faixa de opções que o usuário selecionado.  
   
 ```  
@@ -448,7 +443,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getpaletteid"></a>CMFCRibbonGallery::GetPaletteID  
+##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID  
  Retorna a ID de comando da paleta atual.  
   
 ```  
@@ -460,7 +455,7 @@ int GetPaletteID() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getregularsize"></a>CMFCRibbonGallery::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize  
 
   
 ```  
@@ -474,7 +469,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getselecteditem"></a>CMFCRibbonGallery::GetSelectedItem  
+##  <a name="getselecteditem"></a>  CMFCRibbonGallery::GetSelectedItem  
 
   
 ```  
@@ -485,7 +480,7 @@ int GetSelectedItem() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hasmenu"></a>CMFCRibbonGallery::HasMenu  
+##  <a name="hasmenu"></a>  CMFCRibbonGallery::HasMenu  
 
   
 ```  
@@ -496,7 +491,7 @@ virtual BOOL HasMenu() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isbuttonmode"></a>CMFCRibbonGallery::IsButtonMode  
+##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode  
  Especifica se a paleta está contida em um botão de galeria.  
   
 ```  
@@ -504,11 +499,11 @@ BOOL IsButtonMode() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a paleta é exibida como um botão de menu suspenso. `FALSE` se a paleta é exibida diretamente na faixa de opções.  
+ `TRUE` Se a paleta é exibida como um botão de menu suspenso. `FALSE` se a paleta é exibida diretamente na faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ismenuresizeenabled"></a>CMFCRibbonGallery::IsMenuResizeEnabled  
+##  <a name="ismenuresizeenabled"></a>  CMFCRibbonGallery::IsMenuResizeEnabled  
  Especifica se o redimensionamento de menu está habilitado.  
   
 ```  
@@ -516,11 +511,11 @@ BOOL IsMenuResizeEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se tiver sido habilitado o redimensionamento de menu; Caso contrário, `FALSE`.  
+ `TRUE` Se tiver sido habilitado o redimensionamento de menu; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ismenuresizevertical"></a>CMFCRibbonGallery::IsMenuResizeVertical  
+##  <a name="ismenuresizevertical"></a>  CMFCRibbonGallery::IsMenuResizeVertical  
 
   
 ```  
@@ -531,7 +526,7 @@ BOOL IsMenuResizeVertical() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ismenusidebar"></a>CMFCRibbonGallery::IsMenuSideBar  
+##  <a name="ismenusidebar"></a>  CMFCRibbonGallery::IsMenuSideBar  
  Especifica se a barra lateral está habilitada ou desabilitada.  
   
 ```  
@@ -539,11 +534,11 @@ BOOL IsMenuSideBar() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra lateral de estilo do Office XP é desenhada no lado esquerdo do menu pop-up; Caso contrário, `FALSE`.  
+ `TRUE` Se a barra lateral de estilo do Office XP é desenhada no lado esquerdo do menu pop-up; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonGallery::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>  CMFCRibbonGallery::OnAfterChangeRect  
 
   
 ```  
@@ -555,7 +550,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondraw"></a>CMFCRibbonGallery::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw  
 
   
 ```  
@@ -567,7 +562,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondrawpaletteicon"></a>CMFCRibbonGallery::OnDrawPaletteIcon  
+##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon  
  Chamado pelo framework quando um ícone de galeria é desenhado.  
   
 ```  
@@ -598,7 +593,7 @@ virtual void OnDrawPaletteIcon(
 ### <a name="remarks"></a>Comentários  
  Você pode substituir esse método em uma classe derivada para personalizar a aparência de uma galeria da faixa de opções.  
   
-##  <a name="onenable"></a>CMFCRibbonGallery::OnEnable  
+##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable  
 
   
 ```  
@@ -610,7 +605,7 @@ virtual void OnEnable(BOOL bEnable);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonGallery::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged  
 
   
 ```  
@@ -622,7 +617,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="redrawicons"></a>CMFCRibbonGallery::RedrawIcons  
+##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons  
  Redesenha a Galeria.  
   
 ```  
@@ -632,7 +627,7 @@ void RedrawIcons();
 ### <a name="remarks"></a>Comentários  
  Chame essa função para redesenhar a Galeria. Você deve chamar esse método se você tiver alterado o conteúdo da galeria no tempo de execução.  
   
-##  <a name="removeitemtooltips"></a>CMFCRibbonGallery::RemoveItemToolTips  
+##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips  
  Remove as dicas de ferramentas de todos os itens da Galeria.  
   
 ```  
@@ -641,7 +636,7 @@ void RemoveItemToolTips();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="selectitem"></a>CMFCRibbonGallery::SelectItem  
+##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem  
 
   
 ```  
@@ -653,7 +648,7 @@ void SelectItem(int nItemIndex);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setaccdata"></a>CMFCRibbonGallery::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonGallery::SetACCData  
  Popula especificado `CAccessibilityData` objeto usando dados de acessibilidade da Galeria da faixa de opções.  
   
 ```  
@@ -674,7 +669,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>Comentários  
  `TRUE` se o método for bem-sucedido; caso contrário, `FALSE`.  
   
-##  <a name="setbuttonmode"></a>CMFCRibbonGallery::SetButtonMode  
+##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode  
  Determina se deve exibir a Galeria de faixa de opções, como um botão suspenso ou como uma paleta diretamente na faixa de opções.  
   
 ```  
@@ -683,11 +678,11 @@ void SetButtonMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bSet`  
- `TRUE`Para exibir a Galeria da faixa de opções como um botão de menu suspenso. `FALSE` para exibir o conteúdo da Galeria da faixa de opções diretamente na faixa de opções.  
+ `TRUE` Para exibir a Galeria da faixa de opções como um botão de menu suspenso. `FALSE` para exibir o conteúdo da Galeria da faixa de opções diretamente na faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setgroupname"></a>CMFCRibbonGallery::SetGroupName  
+##  <a name="setgroupname"></a>  CMFCRibbonGallery::SetGroupName  
  Define o nome de um grupo.  
   
 ```  
@@ -706,7 +701,7 @@ void SetGroupName(
 ### <a name="remarks"></a>Comentários  
  O grupo cujo nome está sendo alterado deverá ter sido adicionado usando o [CMFCRibbonGallery::AddGroup](#addgroup) método.  
   
-##  <a name="seticonsinrow"></a>CMFCRibbonGallery::SetIconsInRow  
+##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow  
  Especifica o número de itens por linha na Galeria.  
   
 ```  
@@ -720,7 +715,7 @@ void SetIconsInRow(int nIconsInRow);
 ### <a name="remarks"></a>Comentários  
  Use esse método para especificar a largura da Galeria da faixa de opções.  
   
-##  <a name="setitemtooltip"></a>CMFCRibbonGallery::SetItemToolTip  
+##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip  
  Define o texto de dica de ferramenta para um item da Galeria.  
   
 ```  
@@ -738,7 +733,7 @@ void SetItemToolTip(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setpalette"></a>CMFCRibbonGallery::SetPalette  
+##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette  
  Anexa uma paleta em uma galeria da faixa de opções.  
   
 ```  
@@ -762,7 +757,7 @@ void SetPalette(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setpaletteid"></a>CMFCRibbonGallery::SetPaletteID  
+##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
  Define a ID de comando que é enviada no **WM_COMMAND** mensagem quando um usuário seleciona um item da Galeria.  
   
 ```  

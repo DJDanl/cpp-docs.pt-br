@@ -1,13 +1,10 @@
 ---
 title: Barras de controle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3550043e5b85247d4188c830873099c6ea9831a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bars"></a>Barras de controle
 "Barra de controle" é o nome geral para barras de ferramentas, barras de status e barras da caixa de diálogo. Classes MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, e **CReBar** deriva da classe [CControlBar](../mfc/reference/ccontrolbar-class.md), que implementa a funcionalidade comum.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
  Execute as breves apresentações para os tipos de barra de controle. Para obter mais informações, consulte os links abaixo.  
   
 ## <a name="control-bars"></a>Barras de controle  
- Barras de controle aumentam muito a usabilidade do programa, proporcionando rápida, ações de comando em uma única etapa. Classe `CControlBar` fornece a funcionalidade comum de todas as barras de ferramentas, barras de status e barras da caixa de diálogo. `CControlBar`fornece a funcionalidade para posicionar a barra de controle em sua janela do quadro pai. Como uma barra de controle normalmente é uma janela filho de uma janela do quadro pai, é um "irmão" para o modo de exibição do cliente ou o cliente MDI da janela do quadro. Um objeto de barra de controle usa informações sobre o retângulo do cliente da sua janela pai para se posicionar. Em seguida, ele altera o retângulo de janela de cliente restantes do pai para que a exibição de cliente ou a janela do cliente MDI preenche o restante da janela do cliente.  
+ Barras de controle aumentam muito a usabilidade do programa, proporcionando rápida, ações de comando em uma única etapa. Classe `CControlBar` fornece a funcionalidade comum de todas as barras de ferramentas, barras de status e barras da caixa de diálogo. `CControlBar` fornece a funcionalidade para posicionar a barra de controle em sua janela do quadro pai. Como uma barra de controle normalmente é uma janela filho de uma janela do quadro pai, é um "irmão" para o modo de exibição do cliente ou o cliente MDI da janela do quadro. Um objeto de barra de controle usa informações sobre o retângulo do cliente da sua janela pai para se posicionar. Em seguida, ele altera o retângulo de janela de cliente restantes do pai para que a exibição de cliente ou a janela do cliente MDI preenche o restante da janela do cliente.  
   
 > [!NOTE]
 >  Se um botão na barra de controle não tem um **comando** ou **UPDATE_COMMAND_UI** manipulador, a estrutura automaticamente desativa o botão.  

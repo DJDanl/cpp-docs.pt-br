@@ -1,13 +1,10 @@
 ---
 title: Classes de janela derivadas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eddc6c59190856d09eae75c6f4314c902740092f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-window-classes"></a>Classes de janela derivadas
 Você pode criar janelas diretamente do [CWnd](../mfc/reference/cwnd-class.md), ou derivar novas classes de janela de `CWnd`. Isso é como você normalmente cria seu próprio personalizada do windows. No entanto, a maioria dos windows usados em um programa do framework são criadas de uma da `CWnd`-classes de janela com moldura fornecidos pelo MFC derivadas.  
@@ -54,7 +49,7 @@ Você pode criar janelas diretamente do [CWnd](../mfc/reference/cwnd-class.md), 
  *Caixas de diálogo*  
  Caixas de diálogo são criadas usando o `CWnd`-classe derivada [CDialog](../mfc/reference/cdialog-class.md).  
   
- *Formulários*  
+ *formulários*  
  Modos de exibição de formulário com base nos recursos de modelo de caixa de diálogo, como caixas de diálogo, são criados usando classes [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), ou [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
   
  *Controles*  

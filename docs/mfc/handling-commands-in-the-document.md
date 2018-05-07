@@ -1,13 +1,10 @@
 ---
 title: Manipulando comandos no documento | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - command handling [MFC], commands in documents
 - documents [MFC], handling messages in
 ms.assetid: c7375584-27af-4275-b2fd-afea476785d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d27698d573e1dee539f93ab88015285648fa77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c20ff02b2d72f1dfa6afab5a0d547b46aa55b18c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-commands-in-the-document"></a>Manipulando comandos no documento
 A classe de documento também pode lidar com determinados comandos gerados pelos itens de menu, botões da barra de ferramentas ou teclas de aceleração. Por padrão, **CDocument** manipula o salvamento e salvar como comandos no menu Arquivo, usando a serialização. Outros comandos que afetam os dados também podem ser tratados por funções de membro do documento. Por exemplo, no programa rabisco, classe `CScribDoc` fornece um manipulador para o comando Editar Limpar tudo, que exclui todos os dados atualmente armazenados no documento. Documentos podem ter mapas de mensagem, mas ao contrário de modos de exibição, os documentos não podem tratar mensagens padrão do Windows — somente **WM_COMMAND** mensagens ou "comandos".  

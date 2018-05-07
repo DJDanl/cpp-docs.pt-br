@@ -1,12 +1,9 @@
 ---
 title: C2752 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2752
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2752
 ms.assetid: ae42b3ec-84a9-4e9d-8d59-3d208132d0b2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1372cac795bd6df83a92fe7c14980f618085176c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ff4ee5060f0fa3cfd657daf9e05759e64b15bd2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2752"></a>C2752 de erro do compilador
 'template': mais de uma especialização parcial corresponde à lista de argumento de modelo  

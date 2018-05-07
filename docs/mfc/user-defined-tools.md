@@ -1,29 +1,24 @@
 ---
-title: "Ferramentas definidas pelo usuário | Microsoft Docs"
-ms.custom: 
+title: Ferramentas definidas pelo usuário | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0751a2cb3f78730ec948d737dc99b85c2e735
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-tools"></a>Ferramentas definidas pelo usuário
 MFC oferece suporte a ferramentas definidas pelo usuário. Uma ferramenta definida pelo usuário é um comando especial que executa um programa externo, especificado pelo usuário. Você pode usar o processo de personalização para gerenciar ferramentas definidas pelo usuário. No entanto, você não pode usar esse processo se o objeto de aplicativo não é derivado de [CWinAppEx classe](../mfc/reference/cwinappex-class.md). Para obter mais informações sobre personalização, consulte [personalização para MFC](../mfc/customization-for-mfc.md).  

@@ -1,27 +1,22 @@
 ---
-title: "Compilador (nível 4) de aviso C4437 | Microsoft Docs"
-ms.custom: 
+title: Compilador (nível 4) de aviso C4437 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50534ca7e25b18d32d37a9120e478f78ea56daf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 748ba39d9c22a4071307b8df075eab233f3cfbb1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Compilador C4437 de aviso (nível 4)
 dynamic_cast da base virtual 'class1' para 'class2' pode falhar em alguns contextos Compile com /vd2 ou defina class2 com vtordisp (2) #pragma em vigor  

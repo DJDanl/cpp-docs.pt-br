@@ -1,12 +1,9 @@
 ---
 title: Classe CConstantTransition | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConstantTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafd1276b8d4476f5021b3d83a84a1884d78870d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconstanttransition-class"></a>Classe CConstantTransition
 Encapsula uma transição de constante.  
@@ -75,7 +70,7 @@ class CConstantTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxanimationcontroller.h  
   
-##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
  Constrói um objeto de transição e inicializa sua duração.  
   
 ```  
@@ -86,7 +81,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  `duration`  
  A duração da transição.  
   
-##  <a name="create"></a>CConstantTransition::Create  
+##  <a name="create"></a>  CConstantTransition::Create  
  Chama a biblioteca de transição para criar o objeto de transição encapsulados COM.  
   
 ```  
@@ -102,7 +97,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a transição será criada com êxito; Caso contrário, FALSE.  
   
-##  <a name="m_duration"></a>CConstantTransition::m_duration  
+##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  A duração da transição.  
   
 ```  

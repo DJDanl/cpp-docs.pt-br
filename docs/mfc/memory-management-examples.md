@@ -1,13 +1,10 @@
 ---
-title: "Gerenciamento de memória: Exemplos | Microsoft Docs"
-ms.custom: 
+title: 'Gerenciamento de memória: Exemplos | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc937e64a09ecedb127524de384d48860da5764f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-examples"></a>Gerenciamento de memória: exemplos
 Este artigo descreve como o MFC executa alocações de quadro e as alocações de heap para cada um dos três tipos típicos de alocações de memória:  
@@ -49,7 +44,7 @@ Este artigo descreve como o MFC executa alocações de quadro e as alocações d
   
 -   [Um objeto](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a>Alocação de uma matriz de Bytes  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Alocação de uma matriz de Bytes  
   
 #### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Para alocar uma matriz de bytes no quadro  
   
@@ -69,7 +64,7 @@ Este artigo descreve como o MFC executa alocações de quadro e as alocações d
   
      [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a>Alocação de uma estrutura de dados  
+##  <a name="_core_allocation_of_a_data_structure"></a> Alocação de uma estrutura de dados  
   
 #### <a name="to-allocate-a-data-structure-on-the-frame"></a>Para alocar uma estrutura de dados no quadro  
   
@@ -85,7 +80,7 @@ Este artigo descreve como o MFC executa alocações de quadro e as alocações d
   
      [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a>Alocação de um objeto  
+##  <a name="_core_allocation_of_an_object"></a> Alocação de um objeto  
   
 #### <a name="to-allocate-an-object-on-the-frame"></a>Para alocar um objeto no quadro  
   

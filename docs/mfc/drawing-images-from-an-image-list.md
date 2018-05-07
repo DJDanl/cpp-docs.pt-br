@@ -1,13 +1,10 @@
 ---
 title: Desenhando imagens a partir de uma lista de imagens | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-images-from-an-image-list"></a>Desenhando imagens a partir de uma lista de imagens
 Para desenhar uma imagem, use o [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) função de membro. Você especificará um ponteiro para um objeto de contexto de dispositivo, o índice da imagem para desenhar o local no contexto do dispositivo no qual desenhar a imagem e um conjunto de sinalizadores para indicar o estilo de desenho.  
@@ -41,7 +36,7 @@ Para desenhar uma imagem, use o [CImageList::Draw](../mfc/reference/cimagelist-c
   
  Uma imagem nonmasked é copiada para o contexto de dispositivo de destino usando o **SRCCOPY** operação de varredura. As cores da imagem aparecem as mesmas, independentemente da cor de plano de fundo do contexto do dispositivo. Os estilos de desenho especificados em **desenhar** também não têm nenhum efeito sobre a aparência de uma imagem nonmasked.  
   
- Além de função de membro Draw, outra função, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), estende a capacidade de processar uma imagem. `DrawIndirect`usa, como um parâmetro, uma [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) estrutura. Essa estrutura pode ser usada para personalizar a renderização da imagem atual, incluindo o uso de códigos de operação (ROP) de varredura. Para obter mais informações sobre códigos ROP, consulte [códigos de operação de varredura](http://msdn.microsoft.com/library/windows/desktop/dd162892) e [Bitmaps como pincéis](http://msdn.microsoft.com/library/windows/desktop/dd183378) no SDK do Windows.  
+ Além de função de membro Draw, outra função, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), estende a capacidade de processar uma imagem. `DrawIndirect` usa, como um parâmetro, uma [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) estrutura. Essa estrutura pode ser usada para personalizar a renderização da imagem atual, incluindo o uso de códigos de operação (ROP) de varredura. Para obter mais informações sobre códigos ROP, consulte [códigos de operação de varredura](http://msdn.microsoft.com/library/windows/desktop/dd162892) e [Bitmaps como pincéis](http://msdn.microsoft.com/library/windows/desktop/dd183378) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CImageList](../mfc/using-cimagelist.md)   

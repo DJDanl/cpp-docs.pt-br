@@ -1,13 +1,10 @@
 ---
-title: "Formatação de caractere em controles de edição avançada | Microsoft Docs"
-ms.custom: 
+title: Formatação de caractere em controles de edição avançada | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bb2cda113a56276ad54edb5ccdb6c9d430ed06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c02165635e8715c1fcac28b9fbee72612b72c1f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formatação de caractere em controles de edição avançada
 Você pode usar funções de membro do controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para formatar caracteres e para recuperar informações de formatação. Para caracteres, você pode especificar o tipo de fonte, tamanho, cor e efeitos como negrito, itálico e protegidos.  
   
- Você pode aplicar formatação de caractere usando o [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) e [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) funções de membro. Para determinar o caractere atual de formatação para o texto selecionado, use o [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) função de membro. O [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) com essas funções de membro, a estrutura é usada para especificar atributos de caractere. Um dos membros importantes do **CHARFORMAT** é **dwMask**. Em `SetSelectionCharFormat` e `SetWordCharFormat`, **dwMask** Especifica quais atributos de caractere serão definidos pela chamada de função. `GetSelectionCharFormat`informa os atributos do primeiro caractere da seleção; **dwMask** Especifica os atributos que estão consistentes em toda a seleção.  
+ Você pode aplicar formatação de caractere usando o [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) e [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) funções de membro. Para determinar o caractere atual de formatação para o texto selecionado, use o [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) função de membro. O [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) com essas funções de membro, a estrutura é usada para especificar atributos de caractere. Um dos membros importantes do **CHARFORMAT** é **dwMask**. Em `SetSelectionCharFormat` e `SetWordCharFormat`, **dwMask** Especifica quais atributos de caractere serão definidos pela chamada de função. `GetSelectionCharFormat` informa os atributos do primeiro caractere da seleção; **dwMask** Especifica os atributos que estão consistentes em toda a seleção.  
   
  Você pode também obter e definir a "padrão formatação de caractere," qual é a formatação aplicada a todos os caracteres inseridos posteriormente. Por exemplo, se um aplicativo define a formatação em negrito de padrão de caracteres e o usuário, em seguida, digita um caractere, o caractere está em negrito. Para obter e definir a formatação de caractere padrão, use o [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) e [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) funções de membro.  
   

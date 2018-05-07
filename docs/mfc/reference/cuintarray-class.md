@@ -1,12 +1,9 @@
 ---
 title: Classe CUIntArray | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>Classe CUIntArray
 Oferece suporte a matrizes de inteiros sem sinal.  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>Comentários  
  Um inteiro sem sinal, ou **UINT**, difere de palavras e doublewords em que o tamanho físico de um **UINT** pode mudar dependendo do ambiente operacional de destino. Um **UINT** é o mesmo tamanho que um doubleword.  
   
- `CUIntArray`incorpora o [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro para dar suporte ao acesso de tipo de tempo de execução e despejo para um [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto. Se você precisar de um despejo de elementos individuais inteiro sem sinal, você deve definir a profundidade do contexto de despejo para 1 ou superior. Matrizes de inteiro não assinado não podem ser serializados.  
+ `CUIntArray` incorpora o [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro para dar suporte ao acesso de tipo de tempo de execução e despejo para um [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto. Se você precisar de um despejo de elementos individuais inteiro sem sinal, você deve definir a profundidade do contexto de despejo para 1 ou superior. Matrizes de inteiro não assinado não podem ser serializados.  
   
 > [!NOTE]
 >  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  

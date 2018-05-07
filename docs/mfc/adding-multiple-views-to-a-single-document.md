@@ -1,13 +1,10 @@
 ---
-title: "Adicionando várias exibições a um único documento | Microsoft Docs"
-ms.custom: 
+title: Adicionando várias exibições a um único documento | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b30ac7b4c8910e92d14274f1224c25e7f74d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Adicionando várias exibições a um único documento
 Em um aplicativo de interface de documento único (SDI) criado com a biblioteca Microsoft Foundation Class (MFC), cada tipo de documento está associado um tipo de exibição única. Em alguns casos, é desejável ter a capacidade de alternar o modo de exibição atual de um documento com um novo modo de exibição.  
@@ -52,9 +47,9 @@ Em um aplicativo de interface de documento único (SDI) criado com a biblioteca 
   
 -   O nome do `CWinApp`-objeto derivado é `CMyWinApp`, e `CMyWinApp` é declarado e definidos no MYWINAPP. H e MYWINAPP. CPP.  
   
--   `CNewView`é o nome do novo `CView`-derivados do objeto, e `CNewView` é declarado e definido na nova exibição. H e nova exibição. CPP.  
+-   `CNewView` é o nome do novo `CView`-derivados do objeto, e `CNewView` é declarado e definido na nova exibição. H e nova exibição. CPP.  
   
-##  <a name="vcconmodifyexistingapplicationa1"></a>Modificar a classe do aplicativo existente  
+##  <a name="vcconmodifyexistingapplicationa1"></a> Modificar a classe do aplicativo existente  
  Para o aplicativo alternar entre modos de exibição, você precisa modificar a classe do aplicativo Adicionando variáveis de membro para armazenar os modos de exibição e um método para alterá-los.  
   
  Adicione o seguinte código para a declaração de `CMyWinApp` em MYWINAPP. H:  
@@ -71,7 +66,7 @@ Em um aplicativo de interface de documento único (SDI) criado com a biblioteca 
   
  Salve suas alterações e continuar para a próxima etapa.  
   
-##  <a name="vcconnewviewclassa2"></a>Criar e modificar a nova classe de exibição  
+##  <a name="vcconnewviewclassa2"></a> Criar e modificar a nova classe de exibição  
  Criando a nova classe de exibição fica mais fácil por meio de **nova classe** comando disponível no modo de exibição de classe. O único requisito para essa classe é que deriva de `CView`. Adicione essa nova classe para o aplicativo. Para obter informações específicas sobre como adicionar uma nova classe ao projeto, consulte [adicionando uma classe](../ide/adding-a-class-visual-cpp.md).  
   
  Depois de adicionar a classe ao projeto, você precisa alterar a acessibilidade de alguns membros de classe de exibição.  
@@ -80,7 +75,7 @@ Em um aplicativo de interface de documento único (SDI) criado com a biblioteca 
   
  Salve suas alterações e continuar para a próxima etapa.  
   
-##  <a name="vcconattachnewviewa3"></a>Criar e anexar o novo modo de exibição  
+##  <a name="vcconattachnewviewa3"></a> Criar e anexar o novo modo de exibição  
  Para criar e anexar o novo modo de exibição, você precisa modificar o `InitInstance` função da classe do aplicativo. A modificação adiciona um novo código que cria um novo objeto de exibição e, em seguida, inicializa os dois `m_pOldView` e `m_pNewView` com os dois objetos de exibição existentes.  
   
  Como o novo modo de exibição é criado dentro de `InitInstance` função, as exibições novas e existentes persistem pelo tempo de vida do aplicativo. No entanto, o aplicativo poderia ser tão facilmente criar a nova exibição dinamicamente.  
@@ -91,7 +86,7 @@ Em um aplicativo de interface de documento único (SDI) criado com a biblioteca 
   
  Salve suas alterações e continuar para a próxima etapa.  
   
-##  <a name="vcconswitchingfunctiona4"></a>Implementar a função de comutação  
+##  <a name="vcconswitchingfunctiona4"></a> Implementar a função de comutação  
  Na etapa anterior, você adicionou o código que são criados e inicializados um novo objeto de exibição. A última parte principal é implementar o método de comutação, `SwitchView`.  
   
  No final do arquivo de implementação para a sua classe de aplicativo (MYWINAPP. CPP), adicione a definição de método a seguir:  
@@ -100,7 +95,7 @@ Em um aplicativo de interface de documento único (SDI) criado com a biblioteca 
   
  Salve suas alterações e continuar para a próxima etapa.  
   
-##  <a name="vcconswitchingtheviewa5"></a>Adicionar suporte para alternar o modo de exibição  
+##  <a name="vcconswitchingtheviewa5"></a> Adicionar suporte para alternar o modo de exibição  
  A etapa final envolve a adição de código que chama o `SwitchView` método quando o aplicativo precisa para alternar entre modos de exibição. Isso pode ser feito de várias maneiras: por adicionar um novo item de menu para o usuário escolha ou alternar os modos de exibição internamente quando determinadas condições forem atendidas.  
   
  Para obter mais informações sobre como adicionar novos itens de menu e as funções de manipulador de comando, consulte [manipuladores para comandos e notificações de controle](../mfc/handlers-for-commands-and-control-notifications.md).  

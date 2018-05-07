@@ -1,12 +1,9 @@
 ---
 title: Classe CBasePane | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBasePane
@@ -175,17 +172,15 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c077f18fb9536e615685455e7bfc6fd896c0cc81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cbd24042e7f309a28cea5e72b6a134f3205e541
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 Classe base para todos os painéis no MFC.  
@@ -211,7 +206,7 @@ class CBasePane : public CWnd
 |----------|-----------------|  
 |`CBasePane::accHitTest`|Chamado pelo framework para recuperar o elemento filho ou objeto filho em um determinado ponto na tela. (Substitui [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
 |`CBasePane::accLocation`|Chamado pelo framework para recuperar o local da tela atual para o objeto especificado. (Substitui [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
-|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane`Não use esse método.|  
+|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` Não use esse método.|  
 |`CBasePane::accSelect`|Chamado pelo framework para modificar a seleção ou mover o foco do teclado do objeto especificado. (Substitui [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|  
 |[CBasePane::AddPane](#addpane)|Adiciona um painel no Gerenciador de encaixe.|  
 |[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Redireciona uma chamada para o Gerenciador de encaixe para ajustar o layout de encaixe.|  
@@ -292,11 +287,11 @@ class CBasePane : public CWnd
 |[CBasePane::OnMovePaneDivider](#onmovepanedivider)|Esse método não é usado atualmente.|  
 |[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Chamado pelo framework quando ele cria um menu que tem uma lista de painéis.|  
 |[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Chamado pelo framework quando um painel é removido de sua janela do quadro mini pai.|  
-|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane`Não use esse método.|  
+|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` Não use esse método.|  
 |`CBasePane::OnUpdateCmdUI`|Usado internamente.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Retorna o painel que contém o ponto especificado.|  
 |`CBasePane::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens de janela antes de serem distribuídos para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane`Não use esse método.|  
+|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` Não use esse método.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Cancela o registro de um painel e remove-o da lista no Gerenciador de encaixe.|  
 |[CBasePane::SaveState](#savestate)|Salva o estado do painel no registro.|  
 |[CBasePane::SelectDefaultFont](#selectdefaultfont)|Seleciona a fonte padrão para um determinado contexto de dispositivo.|  
@@ -327,15 +322,15 @@ class CBasePane : public CWnd
   
 -   Quando você cria um painel, você pode aplicar vários novos estilos:  
   
-    - `AFX_CBRS_FLOAT`faz com que o valor de float de painel.  
+    - `AFX_CBRS_FLOAT` faz com que o valor de float de painel.  
   
-    - `AFX_CBRS_AUTOHIDE`permite oculta automaticamente modo.  
+    - `AFX_CBRS_AUTOHIDE` Permite oculta automaticamente modo.  
   
-    - `AFX_CBRS_CLOSE`permite que o painel a ser fechado (oculto).  
+    - `AFX_CBRS_CLOSE` permite que o painel a ser fechado (oculto).  
   
      Esses são os sinalizadores que você pode combinar com uma operação OR bit a bit.  
   
- `CBasePane`implementa os seguintes métodos de boolianos virtuais para refletir esses sinalizadores: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Você pode substituí-los em classes derivadas para personalizar seu comportamento.  
+ `CBasePane` implementa os seguintes métodos de boolianos virtuais para refletir esses sinalizadores: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Você pode substituí-los em classes derivadas para personalizar seu comportamento.  
   
 -   Você pode personalizar o comportamento de encaixe, substituindo [CBasePane::CanAcceptPane](#canacceptpane). Tem seu painel de retorno `FALSE` deste método para impedir que o outro painel encaixe a ele.  
   
@@ -368,8 +363,8 @@ class CBasePane : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxbasepane.h  
   
-##  <a name="accnotifyobjectfocusevent"></a>CBasePane::AccNotifyObjectFocusEvent  
- `CBasePane`Não use esse método.  
+##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent  
+ `CBasePane` Não use esse método.  
   
 ```  
 virtual void AccNotifyObjectFocusEvent(int);
@@ -379,7 +374,7 @@ virtual void AccNotifyObjectFocusEvent(int);
  [in] `int`  
  Não usado.  
   
-##  <a name="addpane"></a>CBasePane::AddPane  
+##  <a name="addpane"></a>  CBasePane::AddPane  
  Adiciona um painel no Gerenciador de encaixe.  
   
 ```  
@@ -395,7 +390,7 @@ void AddPane(CBasePane* pBar);
   
  Para obter mais informações, consulte [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) e [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).  
   
-##  <a name="adjustdockinglayout"></a>CBasePane::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout  
  Redireciona uma chamada para o Gerenciador de encaixe para ajustar o layout de encaixe.  
   
 ```  
@@ -411,7 +406,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
   
  Para obter mais informações, consulte [CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)  
   
-##  <a name="adjustlayout"></a>CBasePane::AdjustLayout  
+##  <a name="adjustlayout"></a>  CBasePane::AdjustLayout  
  Chamado pelo framework para ajustar o layout interno de um painel.  
   
 ```  
@@ -421,7 +416,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método quando tiver um painel ajustar seu layout interno. A implementação base não fará nada.  
   
-##  <a name="calcfixedlayout"></a>CBasePane::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CBasePane::CalcFixedLayout  
  Calcula o tamanho horizontal de uma barra de controle.  
   
 ```  
@@ -443,7 +438,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Comentários  
  Consulte a seção comentários [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
   
-##  <a name="canacceptpane"></a>CBasePane::CanAcceptPane  
+##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane  
  Determina se o outro painel pode ser encaixado para o painel.  
   
 ```  
@@ -455,7 +450,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
  Um ponteiro para encaixar o painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se outro painel pode ser aceita; Caso contrário, `FALSE`.  
+ `TRUE` Se outro painel pode ser aceita; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método antes de ele encaixa painel especificado por `pBar` para o painel atual.  
@@ -464,7 +459,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  A implementação padrão retorna `FALSE`.  
   
-##  <a name="canautohide"></a>CBasePane::CanAutoHide  
+##  <a name="canautohide"></a>  CBasePane::CanAutoHide  
  Determina se o painel oferece suporte ao modo de ocultar automaticamente.  
   
 ```  
@@ -472,7 +467,7 @@ virtual BOOL CanAutoHide() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se esse painel oferece suporte ao modo de ocultar automaticamente; Caso contrário, `FALSE`.  
+ `TRUE` Se esse painel oferece suporte ao modo de ocultar automaticamente; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esta função para determinar se o painel oferece suporte ao modo de ocultar automaticamente.  
@@ -481,7 +476,7 @@ virtual BOOL CanAutoHide() const;
   
  A implementação padrão verifica o `AFX_CBRS_AUTOHIDE` sinalizador. Substitua este método em uma classe derivada para personalizar esse comportamento.  
   
-##  <a name="canbeattached"></a>CBasePane::CanBeAttached  
+##  <a name="canbeattached"></a>  CBasePane::CanBeAttached  
  Determina se o painel pode ser encaixado outra janela do painel ou quadro.  
   
 ```  
@@ -489,12 +484,12 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode ser encaixado outra janela do painel ou quadro; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel pode ser encaixado outra janela do painel ou quadro; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão retorna `FALSE`. Substitua este método em uma classe derivada para habilitar ou desabilitar a capacidade de encaixe sem chamar [CBasePane::EnableDocking](#enabledocking).  
   
-##  <a name="canbeclosed"></a>CBasePane::CanBeClosed  
+##  <a name="canbeclosed"></a>  CBasePane::CanBeClosed  
  Determina se o painel pode ser fechado.  
   
 ```  
@@ -502,7 +497,7 @@ virtual BOOL CanBeClosed() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode ser fechado; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel pode ser fechado; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método para determinar se o painel pode ser fechado. Se o método retornar `TRUE`, um **fechar** botão é adicionado à barra de título do painel ou, se o painel estiver flutuando, a barra de título da janela de miniquadros do painel.  
@@ -511,7 +506,7 @@ virtual BOOL CanBeClosed() const;
   
  A implementação padrão verifica o `AFX_CBRS_CLOSE` sinalizador.  
   
-##  <a name="canbedocked"></a>CBasePane::CanBeDocked  
+##  <a name="canbedocked"></a>  CBasePane::CanBeDocked  
  Determina se o painel pode ser encaixado para outro painel.  
   
 ```  
@@ -523,7 +518,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
  Um ponteiro para outro painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se esse painel pode ser encaixado para outro painel; Caso contrário, `FALSE`.  
+ `TRUE` Se esse painel pode ser encaixado para outro painel; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método antes de ele encaixa painel especificado por `pDockBar` para o painel atual.  
@@ -532,7 +527,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
   
  A implementação padrão retorna `FALSE`.  
   
-##  <a name="canberesized"></a>CBasePane::CanBeResized  
+##  <a name="canberesized"></a>  CBasePane::CanBeResized  
  Determina se o painel pode ser redimensionado.  
   
 ```  
@@ -540,12 +535,12 @@ virtual BOOL CanBeResized() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode ser redimensionado; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel pode ser redimensionado; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Este método verifica a `AFX_CBRS_RESIZE` sinalizador, que é especificada por padrão em `CBasePane::OnCreate`. Se este sinalizador não for especificado, o Gerenciador de encaixe sinaliza o internamente como estático, em vez de encaixe do painel.  
   
-##  <a name="canbetabbeddocument"></a>CBasePane::CanBeTabbedDocument  
+##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument  
  Especifica se o painel pode ser convertido em um documento com guias MDI.  
   
 ```  
@@ -553,12 +548,12 @@ virtual BOOL CanBeTabbedDocument() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode ser convertido em um documento com guias. Caso contrário, `FALSE`. `CBasePane::CanBeTabbedDocument` sempre retorna `FALSE`.  
+ `TRUE` Se o painel pode ser convertido em um documento com guias. Caso contrário, `FALSE`. `CBasePane::CanBeTabbedDocument` sempre retorna `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Somente os objetos de determinadas `CBasePane`-derivados tipos, como o [CDockablePane classe](../../mfc/reference/cdockablepane-class.md), pode ser convertido em documentos com guias.  
   
-##  <a name="canfloat"></a>CBasePane::CanFloat  
+##  <a name="canfloat"></a>  CBasePane::CanFloat  
  Determina se o painel pode flutuar.  
   
 ```  
@@ -566,7 +561,7 @@ virtual BOOL CanFloat() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode flutuar; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel pode flutuar; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método para determinar se o painel pode flutuar.  
@@ -578,7 +573,7 @@ virtual BOOL CanFloat() const;
   
  A implementação padrão verifica o `AFX_CBRS_FLOAT` estilo.  
   
-##  <a name="canfocus"></a>CBasePane::CanFocus  
+##  <a name="canfocus"></a>  CBasePane::CanFocus  
  Especifica se o painel pode receber foco.  
   
 ```  
@@ -586,14 +581,14 @@ virtual BOOL CanFocus() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode receber foco. Caso contrário, `FALSE`.  
+ `TRUE` Se o painel pode receber foco. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para controlar o foco. Por exemplo, como barras de ferramentas não podem receber o foco, esse método retorna `FALSE` quando ela é chamada em objetos de barra de ferramentas.  
   
  A estrutura tenta definir o foco de entrada quando um painel estiver encaixado ou flutuante.  
   
-##  <a name="copystate"></a>CBasePane::CopyState  
+##  <a name="copystate"></a>  CBasePane::CopyState  
  Copia o estado de um determinado painel.  
   
 ```  
@@ -607,7 +602,7 @@ virtual void CopyState(CBasePane* pOrgBar);
 ### <a name="remarks"></a>Comentários  
  Esse método copia o estado de `pOrgBar` para esse painel.  
   
-##  <a name="createdefaultminiframe"></a>CBasePane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe  
  Se o painel pode float, esse método cria uma janela do quadro simplificado para ele.  
   
 ```  
@@ -626,7 +621,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
  A implementação padrão retorna `NULL`.  
   
-##  <a name="createex"></a>CBasePane::CreateEx  
+##  <a name="createex"></a>  CBasePane::CreateEx  
  Cria o painel de controle.  
   
 ```  
@@ -668,10 +663,10 @@ virtual BOOL CreateEx(
  Sinalizadores de estilo para painéis.  
   
  [in] `pContext`  
- Um ponteiro para`CcreateContext`  
+ Um ponteiro para `CcreateContext`  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel for criado com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel for criado com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Cria uma janela da classe `lpszClassName`. Se você especificar `WS_CAPTION`, esse método limpa o `WS_CAPTION` bit de estilo e conjuntos de `CBasePane::m_bHasCaption` para `TRUE`, porque a biblioteca não oferece suporte a painéis com legendas.  
@@ -692,7 +687,7 @@ virtual BOOL CreateEx(
   
  Para usar os novos estilos, especifique-os no `dwControlBarStyle`.  
   
-##  <a name="dockpane"></a>CBasePane::DockPane  
+##  <a name="dockpane"></a>  CBasePane::DockPane  
  Encaixa um painel para outro painel, ou para uma janela do quadro.  
   
 ```  
@@ -713,14 +708,14 @@ virtual BOOL DockPane(
  Especifica o método de encaixe.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de controle foi encaixada com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se a barra de controle foi encaixada com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Chamar essa função para ancorar um painel para outro painel ou uma barra de encaixe ( [CDockSite classe](../../mfc/reference/cdocksite-class.md)) que é especificado pela `pDockBar`, ou para um quadro principal se `pDockBar` é `NULL`.  
   
- `dockMethod`Especifica como o painel está encaixado. Consulte [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obter uma lista de valores possíveis.  
+ `dockMethod` Especifica como o painel está encaixado. Consulte [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obter uma lista de valores possíveis.  
   
-##  <a name="dockpaneusingrtti"></a>CBasePane::DockPaneUsingRTTI  
+##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI  
  Encaixa painel usando as informações de tipo de tempo de execução.  
   
 ```  
@@ -731,7 +726,7 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
  [in] `bUseDockSite`  
  Se `TRUE`, encaixe para o site de encaixe. Se `FALSE`, encaixar o quadro do pai.  
   
-##  <a name="docktoframewindow"></a>CBasePane::DockToFrameWindow  
+##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  Encaixa um painel encaixável a um quadro.  
   
 ```  
@@ -764,12 +759,12 @@ virtual BOOL DockToFrameWindow(
  Se `TRUE` e há outros painéis encaixáveis no lado especificado por `dwAlignment`, o painel estiver encaixado fora os painéis, a borda do quadro pai mais próximo. Se `FALSE`, o painel está encaixado aproximando-se para o centro da área do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método teve êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o método teve êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método falhar se um divisor de painel ( [CPaneDivider classe](../../mfc/reference/cpanedivider-class.md)) não pode ser criado. Caso contrário, ele sempre retornará `TRUE`.  
   
-##  <a name="doesallowdyninsertbefore"></a>CBasePane::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore  
  Determina se outro painel pode ser inserido dinamicamente entre esse painel e o quadro do pai.  
   
 ```  
@@ -777,7 +772,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se um usuário pode inserir outro painel; Caso contrário, `FALSE`.  
+ `TRUE` Se um usuário pode inserir outro painel; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método para determinar se um usuário pode inserir dinamicamente um painel antes deste painel.  
@@ -788,7 +783,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
  A implementação padrão retorna `TRUE`.  
   
-##  <a name="dopaint"></a>CBasePane::DoPaint  
+##  <a name="dopaint"></a>  CBasePane::DoPaint  
  Preenche o plano de fundo do painel.  
   
 ```  
@@ -802,7 +797,7 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="remarks"></a>Comentários  
  A implementação padrão chama o Gerenciador de visual atual para preencher o plano de fundo ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
   
-##  <a name="enabledocking"></a>CBasePane::EnableDocking  
+##  <a name="enabledocking"></a>  CBasePane::EnableDocking  
  Permite que se encaixe do painel para o quadro principal.  
   
 ```  
@@ -816,11 +811,11 @@ virtual void EnableDocking(DWORD dwAlignment);
 ### <a name="remarks"></a>Comentários  
  Chame este método para habilitar o alinhamento de encaixe para o quadro principal. Você pode passar uma combinação de `CBRS_ALIGN_` sinalizadores (para obter mais informações, consulte [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
- `EnableDocking`Define o sinalizador interno `CBasePane::m_dwEnabledAlignment` e o framework verifica esse sinalizador quando um painel está encaixado.  
+ `EnableDocking` Define o sinalizador interno `CBasePane::m_dwEnabledAlignment` e o framework verifica esse sinalizador quando um painel está encaixado.  
   
  Chamar [CBasePane::GetEnabledAlignment](#getenabledalignment) para determinar o alinhamento de encaixe de um painel.  
   
-##  <a name="enablegripper"></a>CBasePane::EnableGripper  
+##  <a name="enablegripper"></a>  CBasePane::EnableGripper  
  Habilita ou desabilita a garra. Se a garra estiver habilitada, o usuário pode arrastar para reposicionar o painel.  
   
 ```  
@@ -829,12 +824,12 @@ virtual void EnableGripper(BOOL bEnable);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para habilitar a garra; `FALSE` para desabilitá-lo.  
+ `TRUE` Para habilitar a garra; `FALSE` para desabilitá-lo.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura usa esse método para habilitar uma garra em vez de usar o `WS_CAPTION` estilo.  
   
-##  <a name="floatpane"></a>CBasePane::FloatPane  
+##  <a name="floatpane"></a>  CBasePane::FloatPane  
  Flutua o painel.  
   
 ```  
@@ -855,12 +850,12 @@ virtual BOOL FloatPane(
  Especifica se o painel flutuante é visível ( `TRUE`) ou oculto ( `FALSE`).  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel foi flutuante com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel foi flutuante com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para flutuar um painel na tela posição especificada pelo `rectFloat`.  
   
-##  <a name="get_acchelptopic"></a>CBasePane::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic  
  O framework chama esse método para recuperar o caminho completo do `WinHelp` arquivo que está associado ao objeto especificado e o identificador do tópico apropriado no arquivo.  
   
 ```  
@@ -881,12 +876,12 @@ virtual HRESULT get_accHelpTopic(
  Identifica o `Help` tópico do arquivo que está associado ao objeto especificado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `CBasePane`não é implementam este método. Portanto, `CBasePane::get_accHelpTopic` sempre retorna `S_FALSE`.  
+ `CBasePane` não é implementam este método. Portanto, `CBasePane::get_accHelpTopic` sempre retorna `S_FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função é parte do suporte acessibilidade ativa do MFC. Substitua essa função em uma classe derivada para fornecer informações de ajuda sobre o objeto.  
   
-##  <a name="get_accselection"></a>CBasePane::get_accSelection  
+##  <a name="get_accselection"></a>  CBasePane::get_accSelection  
  O framework chama esse método para recuperar o filho selecionado deste objeto.  
   
 ```  
@@ -898,12 +893,12 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
  Recebe informações que identificam o filho selecionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `CBasePane`não é implementam este método. Se `pvarChildren` for `NULL`, esse método retornará `E_INVALIDARG`. Do contrário, esse método retorna `DISP_E_MEMBERNOTFOUND`.  
+ `CBasePane` não é implementam este método. Se `pvarChildren` for `NULL`, esse método retornará `E_INVALIDARG`. Do contrário, esse método retorna `DISP_E_MEMBERNOTFOUND`.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função é parte do suporte acessibilidade ativa do MFC. Substitua essa função em uma classe derivada, se você tiver elementos de interface do usuário não está em janelas diferentes controles ActiveX sem janelas.  
   
-##  <a name="getcaptionheight"></a>CBasePane::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CBasePane::GetCaptionHeight  
  Retorna a altura da legenda.  
   
 ```  
@@ -913,7 +908,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="return-value"></a>Valor de retorno  
  A altura da legenda.  
   
-##  <a name="getcontrolbarstyle"></a>CBasePane::GetControlBarStyle  
+##  <a name="getcontrolbarstyle"></a>  CBasePane::GetControlBarStyle  
  Retorna o estilo de barra de controle.  
   
 ```  
@@ -933,7 +928,7 @@ virtual DWORD GetControlBarStyle() const
 |`AFX_CBRS_RESIZE`|Habilita o redimensionamento da barra de controle. Quando esse sinalizador é definido, a barra de controle pode ser colocada em um painel encaixável.|  
 |`AFX_CBRS_CLOSE`|Permite ocultar a barra de controle.|  
   
-##  <a name="getcurrentalignment"></a>CBasePane::GetCurrentAlignment  
+##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment  
  Retorna o alinhamento do painel atual.  
   
 ```  
@@ -950,7 +945,7 @@ virtual DWORD GetCurrentAlignment() const;
 |`CBRS_ALIGN_TOP`|Alinhamento superior.|  
 |`CBRS_ALIGN_BOTTOM`|Alinhamento da parte inferior.|  
   
-##  <a name="getdockingmode"></a>CBasePane::GetDockingMode  
+##  <a name="getdockingmode"></a>  CBasePane::GetDockingMode  
  Retorna o modo de encaixe atual para o painel.  
   
 ```  
@@ -967,7 +962,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
  Definindo `m_dockMode` ou substituindo `GetDockingMode` você pode controlar o modo de encaixe para cada painel.  
   
-##  <a name="getdocksiteframewnd"></a>CBasePane::GetDockSiteFrameWnd  
+##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd  
  Retorna um ponteiro para o [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto onde o painel está encaixado.  
   
 ```  
@@ -980,7 +975,7 @@ virtual CWnd* GetDockSiteFrameWnd() const;
 ### <a name="remarks"></a>Comentários  
  Chame este método para recuperar um ponteiro para o site de encaixe do painel. O site de encaixe pode ser uma janela do quadro principal se o painel estiver encaixado o quadro principal ou uma janela do minise quadro o painel é flutuante.  
   
-##  <a name="getenabledalignment"></a>CBasePane::GetEnabledAlignment  
+##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment  
  Retorna os estilos CBRS_ALIGN_ que são aplicados ao painel.  
   
 ```  
@@ -1003,7 +998,7 @@ virtual DWORD GetEnabledAlignment() const;
   
  Habilitar o alinhamento de encaixe usando [CBasePane::EnableDocking](#enabledocking).  
   
-##  <a name="getmfcstyle"></a>CBasePane::GetMFCStyle  
+##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle  
  Retorna os estilos de painel que são específicos para MFC.  
   
 ```  
@@ -1013,7 +1008,7 @@ virtual DWORD GetMFCStyle() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma combinação de estilos de painel (AFX_CBRS_) específicas da biblioteca.  
   
-##  <a name="getpaneicon"></a>CBasePane::GetPaneIcon  
+##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon  
  Retorna um identificador para o ícone do painel.  
   
 ```  
@@ -1030,7 +1025,7 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ### <a name="remarks"></a>Comentários  
  A implementação padrão chama [CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon).  
   
-##  <a name="getpanerow"></a>CBasePane::GetPaneRow  
+##  <a name="getpanerow"></a>  CBasePane::GetPaneRow  
  Retorna um ponteiro para o [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto onde o painel está encaixado.  
   
 ```  
@@ -1043,7 +1038,7 @@ CDockingPanesRow* GetPaneRow();
 ### <a name="remarks"></a>Comentários  
  Chame esse método para acessar a linha em que um painel está encaixado. Por exemplo, para organizar os painéis em uma linha específica, chamada `GetPaneRow` e, em seguida, chame [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).  
   
-##  <a name="getpanestyle"></a>CBasePane::GetPaneStyle  
+##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle  
  Retorna o estilo de painel.  
   
 ```  
@@ -1053,7 +1048,7 @@ virtual DWORD GetPaneStyle() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma combinação de estilos de barra de controle (incluindo estilos CBRS_) que foi definido pelo [CBasePane::SetPaneStyle](#setpanestyle) método no momento da criação.  
   
-##  <a name="getparentdocksite"></a>CBasePane::GetParentDockSite  
+##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite  
  Retorna um ponteiro para o site de encaixe do pai.  
   
 ```  
@@ -1063,7 +1058,7 @@ virtual CDockSite* GetParentDockSite() const;
 ### <a name="return-value"></a>Valor de retorno  
  O local de encaixe do pai.  
   
-##  <a name="getparentminiframe"></a>CBasePane::GetParentMiniFrame  
+##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame  
  Retorna um ponteiro para a janela do minipai quadro.  
   
 ```  
@@ -1082,7 +1077,7 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
   
  Use `GetParentMiniFrame` para determinar se o painel é flutuante.  
   
-##  <a name="getparenttabbedpane"></a>CBasePane::GetParentTabbedPane  
+##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane  
  Retorna um ponteiro para o painel com guias do pai.  
   
 ```  
@@ -1092,7 +1087,7 @@ CBaseTabbedPane* GetParentTabbedPane() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o painel com guias pai se ele existir. Caso contrário, `NULL`.  
   
-##  <a name="getparenttabwnd"></a>CBasePane::GetParentTabWnd  
+##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd  
  Retorna um ponteiro para a janela pai que está dentro de uma guia.  
   
 ```  
@@ -1109,7 +1104,7 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ### <a name="remarks"></a>Comentários  
  Use esta função para recuperar um ponteiro para a janela com guias do pai. Às vezes, não é suficiente chamar `GetParent`, pois um painel pode estar dentro de um wrapper de encaixe ( [CDockablePaneAdapter classe](../../mfc/reference/cdockablepaneadapter-class.md)) ou dentro de um adaptador de painel ( [CDockablePaneAdapter classe](../../mfc/reference/cdockablepaneadapter-class.md)). Usando `GetParentTabWnd` você poderá recuperar um ponteiro válido nesses casos (supondo que o pai é uma janela com guias).  
   
-##  <a name="getrecentvisiblestate"></a>CBasePane::GetRecentVisibleState  
+##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState  
  O framework chama este método quando um painel é restaurado a partir de um arquivo morto.  
   
 ```  
@@ -1119,7 +1114,7 @@ virtual BOOL GetRecentVisibleState() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um `BOOL` que especifica o estado de visibilidade recente. Se `TRUE`, o painel foi visível quando serializada e deve ser visível quando restaurado. Se `FALSE`, o painel foi oculto quando serializada e deve ser ocultado quando restaurado.  
   
-##  <a name="hideinprintpreviewmode"></a>CBasePane::HideInPrintPreviewMode  
+##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode  
  Especifica se o painel está oculto na visualização de impressão.  
   
 ```  
@@ -1127,12 +1122,12 @@ virtual BOOL HideInPrintPreviewMode() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel não for exibido na visualização da impressão. Caso contrário, `FALSE`.  
+ `TRUE` Se o painel não for exibido na visualização da impressão. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Painéis de base não são mostradas na visualização de impressão. Portanto, esse método sempre retornará `TRUE`.  
   
-##  <a name="insertpane"></a>CBasePane::InsertPane  
+##  <a name="insertpane"></a>  CBasePane::InsertPane  
  Registra o painel especificado com o Gerenciador de encaixe.  
   
 ```  
@@ -1153,9 +1148,9 @@ BOOL InsertPane(
  Se `TRUE`, `pControlBar` é inserida depois `pTarget`. Se `FALSE`, `pControlBar` é inserida antes `pTarget`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método for bem-sucedido, `FALSE` caso contrário.  
+ `TRUE` Se o método for bem-sucedido, `FALSE` caso contrário.  
   
-##  <a name="isaccessibilitycompatible"></a>CBasePane::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>  CBasePane::IsAccessibilityCompatible  
  Especifica se o painel oferece suporte a acessibilidade ativa.  
   
 ```  
@@ -1163,9 +1158,9 @@ virtual BOOL IsAccessibilityCompatible();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel oferece suporte a acessibilidade ativa; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel oferece suporte a acessibilidade ativa; Caso contrário, `FALSE`.  
   
-##  <a name="isautohidemode"></a>CBasePane::IsAutoHideMode  
+##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode  
  Determina se um painel está no modo de ocultar automaticamente.  
   
 ```  
@@ -1173,12 +1168,12 @@ virtual BOOL IsAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel estiver no modo de ocultar automaticamente; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel estiver no modo de ocultar automaticamente; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Painéis de base não é possível ocultar automaticamente. Esse método sempre retorna `FALSE`.  
   
-##  <a name="isdialogcontrol"></a>CBasePane::IsDialogControl  
+##  <a name="isdialogcontrol"></a>  CBasePane::IsDialogControl  
  Especifica se o painel é um controle de caixa de diálogo.  
   
 ```  
@@ -1186,12 +1181,12 @@ BOOL IsDialogControl() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel é um controle de caixa de diálogo; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel é um controle de caixa de diálogo; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura usa esse método para garantir a consistência de layout para todos os painéis.  
   
-##  <a name="isdocked"></a>CBasePane::IsDocked  
+##  <a name="isdocked"></a>  CBasePane::IsDocked  
  Determina se o painel está encaixado.  
   
 ```  
@@ -1199,9 +1194,9 @@ virtual BOOL IsDocked() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o pai do painel não é um miniou quadro se o painel estiver flutuando em um quadro simplificado com outro painel; Caso contrário, `FALSE`.  
+ `TRUE` Se o pai do painel não é um miniou quadro se o painel estiver flutuando em um quadro simplificado com outro painel; Caso contrário, `FALSE`.  
   
-##  <a name="isfloating"></a>CBasePane::IsFloating  
+##  <a name="isfloating"></a>  CBasePane::IsFloating  
  Determina se o painel é flutuante.  
   
 ```  
@@ -1209,12 +1204,12 @@ virtual BOOL IsFloating() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel estiver flutuando; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel estiver flutuando; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método retorna o valor contrário [CBasePane::IsDocked](#isdocked).  
   
-##  <a name="ishorizontal"></a>CBasePane::IsHorizontal  
+##  <a name="ishorizontal"></a>  CBasePane::IsHorizontal  
  Determina se o painel está encaixado na horizontal.  
   
 ```  
@@ -1222,12 +1217,12 @@ virtual BOOL IsHorizontal() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel está encaixado horizontalmente; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel está encaixado horizontalmente; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão verifica o alinhamento de encaixe atual para `CBRS_ORIENT_HORZ`.  
   
-##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane::IsInFloatingMultiPaneFrameWnd  
+##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd  
  Especifica se o painel estiver em uma janela do quadro de vários painéis ( [CMultiPaneFrameWnd classe](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
@@ -1235,12 +1230,12 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel estiver em uma janela do quadro de vários painéis; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel estiver em uma janela do quadro de vários painéis; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Somente os painéis encaixáveis podem flutuar em uma janela do quadro de vários painéis. Portanto, `CBasePane::IsInFloatingMultiPaneFrameWnd` sempre retorna `FALSE`.  
   
-##  <a name="ismditabbed"></a>CBasePane::IsMDITabbed  
+##  <a name="ismditabbed"></a>  CBasePane::IsMDITabbed  
  Determina se o painel foi adicionado a uma janela de filho MDI como um documento com guias.  
   
 ```  
@@ -1248,9 +1243,9 @@ virtual BOOL IsMDITabbed() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel foi adicionado a uma janela de filho MDI como um documento com guias. Caso contrário, `FALSE`.  
+ `TRUE` Se o painel foi adicionado a uma janela de filho MDI como um documento com guias. Caso contrário, `FALSE`.  
   
-##  <a name="ispanevisible"></a>CBasePane::IsPaneVisible  
+##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible  
  Especifica se o `WS_VISIBLE` sinalizador é definido para o painel.  
   
 ```  
@@ -1258,12 +1253,12 @@ BOOL IsPaneVisible() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se `WS_VISIBLE` estiver definida; caso contrário, `FALSE`.  
+ `TRUE` Se `WS_VISIBLE` estiver definida; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Use [CBasePane::IsVisible](#isvisible) para determinar a visibilidade do painel.  
   
-##  <a name="ispointneardocksite"></a>CBasePane::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CBasePane::IsPointNearDockSite  
  Determina se um ponto especificado é o local de encaixe próximo.  
   
 ```  
@@ -1278,18 +1273,18 @@ BOOL IsPointNearDockSite(
  O ponto especificado.  
   
  [out] `dwBarAlignment`  
- Especifica que o ponto está próximo de borda. Os valores possíveis são `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, e`CBRS_ALIGN_BOTTOM`  
+ Especifica que o ponto está próximo de borda. Os valores possíveis são `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, e `CBRS_ALIGN_BOTTOM`  
   
  [out] `bOuterEdge`  
- `TRUE`Se o ponto está próximo a borda externa do site do encaixe; `FALSE` caso contrário.  
+ `TRUE` Se o ponto está próximo a borda externa do site do encaixe; `FALSE` caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o ponto está próximo do site de encaixe; Caso contrário, `FALSE`.  
+ `TRUE` Se o ponto está próximo do site de encaixe; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O ponto é o local de encaixe próximo quando ele está dentro da sensibilidade definida no Gerenciador de encaixe. A sensibilidade de padrão é 15 pixels.  
   
-##  <a name="isresizable"></a>CBasePane::IsResizable  
+##  <a name="isresizable"></a>  CBasePane::IsResizable  
  Determina se o painel pode ser redimensionado.  
   
 ```  
@@ -1297,14 +1292,14 @@ virtual BOOL IsResizable() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode ser redimensionado pelo usuário; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel pode ser redimensionado pelo usuário; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Painéis de [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) pode ser redimensionado.  
   
  A barra de status ( [CMFCStatusBar classe](../../mfc/reference/cmfcstatusbar-class.md)) e a barra de encaixe ( [CDockSite classe](../../mfc/reference/cdocksite-class.md)) não pode ser redimensionado.  
   
-##  <a name="isrestoredfromregistry"></a>CBasePane::IsRestoredFromRegistry  
+##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry  
  Determina se o painel é restaurado a partir do registro.  
   
 ```  
@@ -1312,9 +1307,9 @@ virtual BOOL IsRestoredFromRegistry() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel é restaurado a partir do registro. Caso contrário, `FALSE`.  
+ `TRUE` Se o painel é restaurado a partir do registro. Caso contrário, `FALSE`.  
   
-##  <a name="istabbed"></a>CBasePane::IsTabbed  
+##  <a name="istabbed"></a>  CBasePane::IsTabbed  
  Determina se o painel foi inserido no controle de guia de uma janela com guias.  
   
 ```  
@@ -1322,12 +1317,12 @@ virtual BOOL IsTabbed() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de controle é inserida em uma guia de uma janela com guias; Caso contrário, `FALSE`.  
+ `TRUE` Se a barra de controle é inserida em uma guia de uma janela com guias; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método recupera um ponteiro para o pai imediato e determina se a classe de tempo de execução do pai é [CMFCBaseTabCtrl classe](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
-##  <a name="isvisible"></a>CBasePane::IsVisible  
+##  <a name="isvisible"></a>  CBasePane::IsVisible  
  Determina se o painel estiver visível.  
   
 ```  
@@ -1335,14 +1330,14 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel estiver visível; Caso contrário, `FALSE`.  
+ `TRUE` Se o painel estiver visível; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para determinar a visibilidade de um painel. Não use `::IsWindowVisible`.  
   
  Se o painel não será tabulado (consulte [CBasePane::IsTabbed](#istabbed)), esse método verifica o `WS_VISIBLE` estilo. Se o painel está com guias, este método verifica a visibilidade da janela com guias do pai. Se a janela pai estiver visível, a função verifica a visibilidade do painel Guia usando [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).  
   
-##  <a name="loadstate"></a>CBasePane::LoadState  
+##  <a name="loadstate"></a>  CBasePane::LoadState  
  Carrega o estado do painel do registro.  
   
 ```  
@@ -1363,12 +1358,12 @@ virtual BOOL LoadState(
  ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o estado do painel foi carregado com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o estado do painel foi carregado com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método para carregar o estado do painel do registro. Substituí-la em uma classe derivada para carregar informações adicionais, salvas por [CBasePane::SaveState](#savestate).  
   
-##  <a name="movewindow"></a>CBasePane::MoveWindow  
+##  <a name="movewindow"></a>  CBasePane::MoveWindow  
  Move o painel.  
   
 ```  
@@ -1394,7 +1389,7 @@ virtual HDWP MoveWindow(
 ### <a name="remarks"></a>Comentários  
  Se você passar `NULL` como o `hdwp` parâmetro, esse método Move a janela normalmente. Se você passar um identificador, esse método executa uma movimentação de janela adiada. Você pode obter um identificador chamando [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) ou ao armazenar o valor de retorno de uma chamada anterior para esse método.  
   
-##  <a name="onafterchangeparent"></a>CBasePane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  Chamado pelo framework depois das alterações do pai do painel.  
   
 ```  
@@ -1410,7 +1405,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
   
  A implementação padrão não fará nada.  
   
-##  <a name="onbeforechangeparent"></a>CBasePane::OnBeforeChangeParent  
+##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent  
  Chamado pelo framework antes do painel altera sua janela pai.  
   
 ```  
@@ -1431,7 +1426,7 @@ virtual void OnBeforeChangeParent(
   
  A implementação padrão não fará nada.  
   
-##  <a name="ondrawcaption"></a>CBasePane::OnDrawCaption  
+##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption  
  O framework chama este método quando a legenda é desenhada.  
   
 ```  
@@ -1441,7 +1436,7 @@ virtual void OnDrawCaption();
 ### <a name="remarks"></a>Comentários  
  Esse método não tem nenhuma funcionalidade para o `CBasePane` classe.  
   
-##  <a name="onmovepanedivider"></a>CBasePane::OnMovePaneDivider  
+##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider  
  Esse método não é usado atualmente.  
   
 ```  
@@ -1452,7 +1447,7 @@ virtual void OnMovePaneDivider(CPaneDivider*);
  [in] `CPaneDivider*`  
  Não usado.  
   
-##  <a name="onpanecontextmenu"></a>CBasePane::OnPaneContextMenu  
+##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu  
  Chamado pelo framework quando ele cria um menu que tem uma lista de painéis.  
   
 ```  
@@ -1469,11 +1464,11 @@ virtual void OnPaneContextMenu(
  Especifica o local do menu de atalho.  
   
 ### <a name="remarks"></a>Comentários  
- `OnPaneContextMenu`chama o Gerenciador de encaixe, que mantém a lista de painéis que pertencem à janela do quadro atual. Este método adiciona os nomes dos painéis a um menu de atalho e o exibe. Os comandos no menu mostram ou ocultar painéis individuais.  
+ `OnPaneContextMenu` chama o Gerenciador de encaixe, que mantém a lista de painéis que pertencem à janela do quadro atual. Este método adiciona os nomes dos painéis a um menu de atalho e o exibe. Os comandos no menu mostram ou ocultar painéis individuais.  
   
  Substitua este método para personalizar esse comportamento.  
   
-##  <a name="onremovefromminiframe"></a>CBasePane::OnRemoveFromMiniFrame  
+##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame  
  Chamado pelo framework quando um painel é removido de sua janela do quadro mini pai.  
   
 ```  
@@ -1489,8 +1484,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
   
  A implementação padrão não fará nada.  
   
-##  <a name="onsetaccdata"></a>CBasePane::OnSetAccData  
- `CBasePane`Não use esse método.  
+##  <a name="onsetaccdata"></a>  CBasePane::OnSetAccData  
+ `CBasePane` Não use esse método.  
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
@@ -1505,7 +1500,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="panefrompoint"></a>CBasePane::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CBasePane::PaneFromPoint  
  Retorna o painel que contém o ponto especificado.  
   
 ```  
@@ -1524,7 +1519,7 @@ CBasePane* PaneFromPoint(
  Aumente a área de pesquisa, esse valor. Um painel atenderá aos critérios de pesquisa se determinado ponto estiver na área de trabalho maior.  
   
  [in] `bExactBar`  
- `TRUE`para ignorar o `nSensitivity` parâmetro; caso contrário, `FALSE`.  
+ `TRUE` para ignorar o `nSensitivity` parâmetro; caso contrário, `FALSE`.  
   
  [in] `pRTCBarType`  
  Se não for `NULL`, o método pesquisa somente os painéis do tipo especificado.  
@@ -1532,14 +1527,14 @@ CBasePane* PaneFromPoint(
 ### <a name="return-value"></a>Valor de retorno  
  O `CBasePane`-derivados do objeto que contém o ponto específico, ou `NULL` se nenhum painel foi encontrado.  
   
-##  <a name="recalclayout"></a>CBasePane::RecalcLayout  
- `CBasePane`Não use esse método.  
+##  <a name="recalclayout"></a>  CBasePane::RecalcLayout  
+ `CBasePane` Não use esse método.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-##  <a name="removepanefromdockmanager"></a>CBasePane::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager  
  Cancela o registro de um painel e remove-o da lista no Gerenciador de encaixe.  
   
 ```  
@@ -1567,7 +1562,7 @@ void RemovePaneFromDockManager(
  [in] `pBarReplacement`  
  Um ponteiro para um painel que substitui o painel removido.  
   
-##  <a name="savestate"></a>CBasePane::SaveState  
+##  <a name="savestate"></a>  CBasePane::SaveState  
  Salva o estado do painel no registro.  
   
 ```  
@@ -1588,12 +1583,12 @@ virtual BOOL SaveState(
  ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o estado salvo com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o estado salvo com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama este método quando ele salva o estado do painel no registro. Substituir `SaveState` em uma classe derivada para armazenar informações adicionais.  
   
-##  <a name="selectdefaultfont"></a>CBasePane::SelectDefaultFont  
+##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont  
  Seleciona a fonte padrão para um determinado contexto de dispositivo.  
   
 ```  
@@ -1607,7 +1602,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o padrão [classe CFont](../../mfc/reference/cfont-class.md) objeto.  
   
-##  <a name="setcontrolbarstyle"></a>CBasePane::SetControlBarStyle  
+##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle  
  Define o estilo de barra de controle.  
   
 ```  
@@ -1625,7 +1620,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 |`AFX_CBRS_RESIZE`|Habilita o redimensionamento da barra de controle. Quando esse sinalizador é definido, a barra de controle pode ser colocada em um painel encaixável.|  
 |`AFX_CBRS_CLOSE`|Permite ocultar a barra de controle.|  
   
-##  <a name="setdockingmode"></a>CBasePane::SetDockingMode  
+##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode  
  Define o modo de encaixe do painel.  
   
 ```  
@@ -1643,7 +1638,7 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
   
  Inicialmente, o modo de encaixe está definido globalmente por [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Você pode definir o modo de encaixe para cada painel individualmente usando o `SetDockingMode` método.  
   
-##  <a name="setpanealignment"></a>CBasePane::SetPaneAlignment  
+##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment  
  Define o alinhamento para o painel.  
   
 ```  
@@ -1666,7 +1661,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 |`CBRS_ALIGN_TOP`|Alinhamento superior.|  
 |`CBRS_ALIGN_BOTTOM`|Alinhamento da parte inferior.|  
   
-##  <a name="setpanestyle"></a>CBasePane::SetPaneStyle  
+##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle  
  Define o estilo do painel.  
   
 ```  
@@ -1682,7 +1677,7 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
   
  `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`  
   
-##  <a name="setwindowpos"></a>CBasePane::SetWindowPos  
+##  <a name="setwindowpos"></a>  CBasePane::SetWindowPos  
  Altera o tamanho, posição e a ordem Z de um painel.  
   
 ```  
@@ -1724,7 +1719,7 @@ virtual HDWP SetWindowPos(
 ### <a name="remarks"></a>Comentários  
  Se `pWndInsertAfter` é `NULL`, este método chama [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Se `pWndInsertAfter` é não - `NULL`, este método chama `DeferWindowPos`.  
   
-##  <a name="showpane"></a>CBasePane::ShowPane  
+##  <a name="showpane"></a>  CBasePane::ShowPane  
  Mostra ou oculta o painel.  
   
 ```  
@@ -1749,7 +1744,7 @@ virtual void ShowPane(
   
  Use [CBasePane::IsVisible](#isvisible) para determinar a visibilidade atual de um painel.  
   
-##  <a name="stretchpane"></a>CBasePane::StretchPane  
+##  <a name="stretchpane"></a>  CBasePane::StretchPane  
  Expande um painel vertical ou horizontalmente.  
   
 ```  
@@ -1768,7 +1763,7 @@ virtual CSize StretchPane(
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho do painel ampliado.  
   
-##  <a name="undockpane"></a>CBasePane::UndockPane  
+##  <a name="undockpane"></a>  CBasePane::UndockPane  
  Remove o painel do local de encaixe, controle deslizante do padrão ou janela do quadro mini onde ela estiver encaixada.  
   
 ```  

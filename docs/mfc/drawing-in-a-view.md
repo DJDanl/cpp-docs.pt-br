@@ -1,13 +1,10 @@
 ---
-title: "Desenhando uma exibição | Microsoft Docs"
-ms.custom: 
+title: Desenhando uma exibição | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc716800c35aa922f7912f586d6e5b8429593615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-in-a-view"></a>Desenhando uma exibição
 Desenhando quase todos em seu aplicativo ocorre no modo de exibição `OnDraw` função de membro, você deve substituir em sua classe de exibição. (A exceção é mouse desenho, discutido em [Interpretando entrada por meio de uma exibição de usuário](../mfc/interpreting-user-input-through-a-view.md).) O `OnDraw` substituir:  
@@ -39,9 +34,9 @@ Desenhando quase todos em seu aplicativo ocorre no modo de exibição `OnDraw` f
   
 2.  Exibe os dados chamando funções de membro de um objeto de contexto de dispositivo que passa a estrutura para `OnDraw`.  
   
- Quando dados do documento é alterado de alguma forma, o modo de exibição deve ser redesenhado para refletir as alterações. Normalmente, isso ocorre quando o usuário faz uma alteração por meio de uma exibição no documento. Nesse caso, o modo de exibição chama o documento [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) a função de membro para notificar todos os modos de exibição no documento para atualizar a si mesmo. `UpdateAllViews`chama cada exibição [OnUpdate](../mfc/reference/cview-class.md#onupdate) função de membro. A implementação padrão de `OnUpdate` invalida a área de cliente inteiro do modo de exibição. Você pode substituí-la para invalidar apenas essas regiões da área do cliente que são mapeados para as partes de modificação do documento.  
+ Quando dados do documento é alterado de alguma forma, o modo de exibição deve ser redesenhado para refletir as alterações. Normalmente, isso ocorre quando o usuário faz uma alteração por meio de uma exibição no documento. Nesse caso, o modo de exibição chama o documento [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) a função de membro para notificar todos os modos de exibição no documento para atualizar a si mesmo. `UpdateAllViews` chama cada exibição [OnUpdate](../mfc/reference/cview-class.md#onupdate) função de membro. A implementação padrão de `OnUpdate` invalida a área de cliente inteiro do modo de exibição. Você pode substituí-la para invalidar apenas essas regiões da área do cliente que são mapeados para as partes de modificação do documento.  
   
- O `UpdateAllViews` função de membro de classe **CDocument** e `OnUpdate` função de membro de classe `CView` permitem que você transmite informações que descrevem quais partes do documento foram modificadas. Esse mecanismo de "dica" permite limitar a área que deve redesenhar a exibição. `OnUpdate`leva dois argumentos de "dica". A primeira, `lHint`, do tipo **LPARAM**, permite que você transmitir os dados que desejar, enquanto o segundo, `pHint`, do tipo `CObject`*, permite que você transmitir um ponteiro para qualquer objeto derivado de `CObject`.  
+ O `UpdateAllViews` função de membro de classe **CDocument** e `OnUpdate` função de membro de classe `CView` permitem que você transmite informações que descrevem quais partes do documento foram modificadas. Esse mecanismo de "dica" permite limitar a área que deve redesenhar a exibição. `OnUpdate` leva dois argumentos de "dica". A primeira, `lHint`, do tipo **LPARAM**, permite que você transmitir os dados que desejar, enquanto o segundo, `pHint`, do tipo `CObject`*, permite que você transmitir um ponteiro para qualquer objeto derivado de `CObject`.  
   
  Quando uma exibição se torna inválida, o Windows envia a ele um `WM_PAINT` mensagem. O modo de exibição [OnPaint](../mfc/reference/cwnd-class.md#onpaint) função do manipulador responde à mensagem com a criação de um objeto de contexto de dispositivo da classe [CPaintDC](../mfc/reference/cpaintdc-class.md) e chama o modo de exibição `OnDraw` função de membro. Normalmente não é necessário gravar um substituindo `OnPaint` função do manipulador.  
   

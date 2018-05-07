@@ -1,12 +1,9 @@
 ---
 title: C2645 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2645
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2645
 ms.assetid: 6609c2fa-c3b2-4a6b-8e8d-58fb52f67175
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f17e574d27ea9771091231626ed24e247322bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0330f9f678da58648c2fd445f7a291b02c167a89
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2645"></a>C2645 de erro do compilador
 Nenhum nome qualificado a ponteiro para membro (encontrado ':: *')  

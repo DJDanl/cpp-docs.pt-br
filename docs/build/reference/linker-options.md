@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>Opções do vinculador
 
@@ -116,6 +116,7 @@ Você pode usar o [comentário](../../preprocessor/comment-c-cpp.md) pragma espe
 |[/ PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Usa um local alternativo para salvar um arquivo PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Cria um arquivo de PDB (banco de dados do programa) sem símbolos particulares.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Especifica um arquivo .pgd para otimizações guiadas por perfil.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleto** cria uma compilação PGO instrumentado thread-safe.|
 |[OU O PERFIL](../../build/reference/profile-performance-tools-profiler.md)|Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferramentas de desempenho.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Define a soma de verificação no cabeçalho .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Especifica que a imagem conterá uma tabela de manipuladores de exceção segura.|
@@ -127,6 +128,7 @@ Você pode usar o [comentário](../../preprocessor/comment-c-cpp.md) pragma espe
 |[/ TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Especifica a ID de recurso da biblioteca de tipos gerada pelo vinculador.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Especifica o nome do arquivo .tlb e outros arquivos de saída MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Cria um aplicativo projetado especialmente para ser executado no Terminal Server.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Dados de treinamento de otimização usa guiadas por perfil para criar uma imagem otimizada.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Imprime mensagens de andamento do vinculador.|
 |[/VERSION](../../build/reference/version-version-information.md)|Atribui um número de versão.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Inclui todos os arquivos de objeto de bibliotecas estáticas especificados.|

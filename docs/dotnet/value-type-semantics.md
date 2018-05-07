@@ -1,13 +1,10 @@
 ---
-title: "Semântica de tipo de valor | Microsoft Docs"
-ms.custom: 
+title: Semântica de tipo de valor | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>Semântica do tipo de valor
 Semântica de tipo de valor foram alterados desde das extensões gerenciadas para C++ para Visual C++.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>Chamando métodos virtuais herdados  
- `Form (1)`é o objeto de valor canônico e ele é razoavelmente bem compreendido, exceto quando alguém tenta chamar um método virtual herdado como `ToString()`. Por exemplo:  
+ `Form (1)` é o objeto de valor canônico e ele é razoavelmente bem compreendido, exceto quando alguém tenta chamar um método virtual herdado como `ToString()`. Por exemplo:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  Gostaríamos de encapsular uma pequena classe nativo em um tipo de valor em vez de um tipo de referência para evitar uma alocação de heap duplo: o heap nativo para manter o tipo nativo e o heap de CLR para manter o wrapper gerenciado. Quebra automática de uma classe nativa dentro de um tipo de valor permite que você evite o heap gerenciado, mas não oferece nenhuma forma para automatizar a recuperação da memória heap nativo. Tipos de referência são o tipo de gerenciado for praticável de acordo somente dentro do qual quebrar classes nativas não trivial.  
   
 ## <a name="interior-pointers"></a>Ponteiros internos  
- `Form (2)`e `Form (3)` acima pode abordar praticamente qualquer coisa no mundo ou a próxima (ou seja, qualquer conteúdo gerenciado ou nativo). Assim, por exemplo, todos os itens a seguir é permitidas em extensões gerenciadas:  
+ `Form (2)` e `Form (3)` acima pode abordar praticamente qualquer coisa no mundo ou a próxima (ou seja, qualquer conteúdo gerenciado ou nativo). Assim, por exemplo, todos os itens a seguir é permitidas em extensões gerenciadas:  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`e `Form (3)` das extensões gerenciadas do mapa em `interior_ptr<V>`. `Form (4)`é um identificador de rastreamento. Ele aborda o objeto inteiro tiver sido demarcado no heap gerenciado. Ele é convertido em nova sintaxe em uma `V^`,  
+ `Form (2)` e `Form (3)` das extensões gerenciadas do mapa em `interior_ptr<V>`. `Form (4)` é um identificador de rastreamento. Ele aborda o objeto inteiro tiver sido demarcado no heap gerenciado. Ele é convertido em nova sintaxe em uma `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

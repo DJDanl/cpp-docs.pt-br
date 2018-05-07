@@ -1,13 +1,10 @@
 ---
 title: Registro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>Registro
 Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta uma lista de tipos de objeto para escolher. OLE obtém essa lista do banco de dados de registro do sistema, que contém as informações fornecidas por todos os aplicativos de servidor. Quando um servidor registrado, as entradas que ele coloca o banco de dados do sistema registration (registro) descrevem cada tipo de objeto que fornece, extensões de arquivo e o caminho para si mesmo, entre outras informações.  
@@ -41,7 +36,7 @@ Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta 
   
  Para obter informações detalhadas sobre o banco de dados de registro do sistema e o formato dos arquivos. reg usados para atualizá-lo, consulte o *referência do programador de OLE*.  
   
-##  <a name="_core_server_installation"></a>Instalação do servidor  
+##  <a name="_core_server_installation"></a> Instalação do servidor  
  Quando você instala o aplicativo de servidor, ele deve registrar todos os tipos de itens OLE que ele suporta. Você também pode ter o servidor de atualizar o banco de dados de registro do sistema toda vez que ele é executado como um aplicativo autônomo. Isso mantém o banco de dados de registro atualizado se o arquivo executável do servidor é movido.  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta 
   
  RegEdit mescla o conteúdo do arquivo de texto. reg o banco de dados de registro. Para verificar se o banco de dados ou para repará-lo, use o editor do registro. Tome cuidado para evitar a exclusão de entradas OLE essenciais.  
   
-##  <a name="_core_server_initialization"></a>Inicialização do servidor  
+##  <a name="_core_server_initialization"></a> Inicialização do servidor  
  Quando você cria um aplicativo de servidor com o Assistente de aplicativo, o assistente for concluído todas as tarefas de inicialização para você automaticamente. Esta seção descreve o que você deve fazer se você escrever um aplicativo de servidor manualmente.  
   
  Quando um aplicativo de servidor é iniciado por um aplicativo de contêiner, as DLLs do sistema OLE adicionar a opção "/ incorporação" à linha de comando do servidor. O comportamento de um aplicativo servidor difere dependendo se foi iniciado por um contêiner, portanto, a primeira coisa que um aplicativo deve fazer quando ele inicia a execução é verificar o "/ incorporação" ou "-incorporando" opção na linha de comando. Se essa opção existir, carregar um conjunto diferente de recursos que mostram o servidor como um ativo no local ou totalmente abrir. Para obter mais informações, consulte [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md).  

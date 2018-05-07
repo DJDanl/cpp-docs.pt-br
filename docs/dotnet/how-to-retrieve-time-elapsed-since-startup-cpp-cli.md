@@ -1,13 +1,10 @@
 ---
-title: "Como: recuperar tempo decorrido desde a inicialização (C + + CLI) | Microsoft Docs"
-ms.custom: 
+title: 'Como: recuperar tempo decorrido desde a inicialização (C + + CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - tick counts
 - startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bebd086d24c741f0c5287e8a7fd0de6b535dfc6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Como recuperar tempo decorrido desde a inicialização (C++/CLI)
 O exemplo de código a seguir demonstra como determinar a contagem em escala, ou número de milissegundos decorridos desde o Windows foi iniciado. Esse valor é armazenado no <xref:System.Environment.TickCount%2A?displayProperty=fullName> membro e, como ele é um valor de 32 bits, redefine para zero aproximadamente a cada 24.9 dias.  

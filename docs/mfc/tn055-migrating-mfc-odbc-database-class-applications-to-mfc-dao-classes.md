@@ -1,13 +1,10 @@
 ---
 title: 'TN055: Migrando aplicativos de classe de banco de dados ODBC MFC para Classes DAO MFC | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,23 +20,21 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrando aplicativos de classe de banco de dados ODBC MFC para classes DAO MFC
 > [!NOTE]
 >  Os assistentes e o ambiente do Visual C++ não dão suporte DAO (embora as classes DAO estão incluídas e você ainda pode usá-los). A Microsoft recomenda que você use [modelos OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar DAO na manutenção de aplicativos existentes.  
   
- **Visão Geral**  
+ **Visão geral**  
   
  Em muitas situações pode ser desejável para migrar aplicativos que usam as classes de banco de dados ODBC do MFC para classes de banco de dados DAO do MFC. Essa observação técnica detalhará a maioria das diferenças entre as classes MFC ODBC e DAO. Com as diferenças em mente, ele não deve ser muito difícil migrar aplicativos das classes ODBC para as classes MFC, se desejado.  
   
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-com base)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-com base)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*O `RFX_Date` função baseia-se em `CTime` e **TIMESTAMP_STRUCT**.  
+ \*    O `RFX_Date` função baseia-se em `CTime` e **TIMESTAMP_STRUCT**.  
   
  As principais alterações na funcionalidade que podem afetar seu aplicativo exigir alterações de nome simples mais de estão listadas abaixo.  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   A classe de exceção foi alterada. **CDBExceptions** são geradas nas classes ODBC e **CDaoExceptions** nas classes DAO.  
   
--   `RFX_Date`usa `CTime` e **TIMESTAMP_STRUCT** objetos ao **DFX_Date** usa `COleDateTime`. O `COleDateTime` é praticamente idêntica à `CTime`, mas se baseia em um OLE de 8 bytes **data** em vez de 4 bytes `time_t` para que ele pode conter uma variedade maior de dados.  
+-   `RFX_Date` usa `CTime` e **TIMESTAMP_STRUCT** objetos ao **DFX_Date** usa `COleDateTime`. O `COleDateTime` é praticamente idêntica à `CTime`, mas se baseia em um OLE de 8 bytes **data** em vez de 4 bytes `time_t` para que ele pode conter uma variedade maior de dados.  
   
     > [!NOTE]
     >  DAO (`CDaoRecordset`) os instantâneos são somente leitura ao ODBC (`CRecordset`) podem ser atualizável, dependendo do driver e o uso da biblioteca de cursores ODBC. Se você estiver usando a biblioteca de cursores, `CRecordset` instantâneos são atualizáveis. Se você estiver usando qualquer um dos drivers da Microsoft 3.0 de pacote de Driver área de trabalho sem a biblioteca de cursores ODBC, o `CRecordset` instantâneos são somente leitura. Se você estiver usando outro driver, verifique a documentação do driver para ver se instantâneos (**STATIC_CURSORS**) são somente leitura.  

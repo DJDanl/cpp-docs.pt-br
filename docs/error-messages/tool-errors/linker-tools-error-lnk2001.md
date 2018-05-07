@@ -1,12 +1,9 @@
 ---
 title: Ferramentas de vinculador LNK2001 erro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erro das Ferramentas de Vinculador LNK2001
 símbolo externo não resolvido "*símbolo*"  
@@ -76,7 +71,7 @@ Esse erro pode ocorrer se você vincular as bibliotecas de modo de versão ao cr
   
 Esse erro pode ocorrer se o código se refere a um símbolo de uma versão de uma biblioteca, mas você fornecer uma versão diferente da biblioteca para o vinculador. Em geral, você não pode misturar arquivos de objeto ou bibliotecas que são criadas para diferentes versões do compilador. As bibliotecas que são enviados em uma nova versão podem conter símbolos que não podem ser encontrados nas bibliotecas do incluídos com versões anteriores e vice-versa. Para corrigir esse problema, crie todos os arquivos de objeto e bibliotecas com a mesma versão do compilador antes de vinculá-los juntos.  
   
--  As ferramentas de &#124; Opções &#124; Projetos &#124; Caixa de diálogo diretórios VC + +, sob a seleção de arquivos de biblioteca, permite que você altere a ordem de pesquisa de biblioteca. A pasta de vinculador na caixa de diálogo páginas de propriedades do projeto também pode conter caminhos que podem estar desatualizados.  
+-  As ferramentas &#124; opções &#124; projetos &#124; caixa de diálogo diretórios VC + +, sob a seleção de arquivos de biblioteca, permite que você altere a ordem de pesquisa de biblioteca. A pasta de vinculador na caixa de diálogo páginas de propriedades do projeto também pode conter caminhos que podem estar desatualizados.  
   
 -  Esse problema pode aparecer quando um novo SDK está instalado (talvez em um local diferente), e a ordem de pesquisa não é atualizada para apontar para o novo local. Normalmente, você deve colocar o caminho para o novo SDK incluem e lib diretórios na frente do local do Visual C++ padrão. Além disso, um projeto que contém os caminhos inseridos ainda pode apontar para antigos caminhos que são válidos, mas atualizadas para a nova funcionalidade adicionada pela nova versão que está instalada em um local diferente.  
   

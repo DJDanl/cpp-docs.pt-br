@@ -1,12 +1,9 @@
 ---
 title: Classe CMetaFileDC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>Classe CMetaFileDC
 Implementa um metarquivo do Windows, que contém uma sequência de comandos de interface (GDI) do dispositivo de gráficos que você pode reproduzir para criar uma imagem desejada ou texto.  
@@ -90,7 +85,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  Fecha o contexto de dispositivo de metarquivo e cria um identificador de metarquivo do Windows que pode ser usado para executar o metarquivo usando o [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) função de membro.  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  Excluir o metarquivo após usá chamando o Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) função.  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Fecha um contexto de dispositivo de metarquivo avançado e retorna um identificador que identifica um metarquivo aprimorado de formato.  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  Quando o aplicativo não precisa mais o identificador de metarquivo aprimorado, ele deve liberar o manipulador chamando o Win32 **DeleteEnhMetaFile** função.  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  Construir um `CMetaFileDC` objeto em duas etapas.  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Comentários  
  Primeiro, chame `CMetaFileDC`, em seguida, chame **criar**, que cria o contexto de dispositivo do Windows metafile e anexa-o para o `CMetaFileDC` objeto.  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  Construir um `CMetaFileDC` objeto em duas etapas.  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Comentários  
  Primeiro, chame o construtor `CMetaFileDC`, em seguida, chame **criar**, que cria o contexto de dispositivo do Windows metafile e anexa-o para o `CMetaFileDC` objeto.  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  Cria um contexto de dispositivo para um metarquivo aprimorado de formato.  
   
 ```  

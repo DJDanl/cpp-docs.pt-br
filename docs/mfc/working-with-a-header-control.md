@@ -1,30 +1,25 @@
 ---
-title: "Trabalhando com um controle de cabeçalho | Microsoft Docs"
-ms.custom: 
+title: Trabalhando com um controle de cabeçalho | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - header controls [MFC], working with
 - header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de7ef22d66befda28c6a374e8fb39f6b24a1dd62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 226b69c9521016a2d5abbbdb7225cbbec972db3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-a-header-control"></a>Trabalhando com um controle de cabeçalho
 A maneira fácil de usar um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) em conjunto com um controle de lista; consulte [usando CListCtrl](../mfc/using-clistctrl.md) posterior da família neste tópico. Você também pode usar um controle de cabeçalho por si só. Chamadas MFC **InitCommonControls** para você. As tarefas principais são da seguinte maneira:  

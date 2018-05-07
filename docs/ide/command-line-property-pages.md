@@ -1,13 +1,10 @@
 ---
-title: "Páginas de propriedades de linha de comando | Microsoft Docs"
-ms.custom: 
+title: Páginas de propriedades de linha de comando | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.project.AdditionalOptionsPage
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Command Line property pages
 ms.assetid: e1721b6c-8b39-4b44-a41e-69b5bb470cc9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6c2958c1f6cd5954efb9c8166c151cf2a8cc29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-property-pages"></a>Páginas de propriedades Linha de Comando
 A maioria das pastas de página de propriedade contêm uma **linha de comando** página de propriedades. Esta página exibe as propriedades que são definidas na pasta. O **linha de comando** propriedade página também contém um **opções adicionais** caixa onde você pode especificar propriedades que são válidas para a ferramenta, mas para os quais há nenhuma propriedade na pasta.  

@@ -1,12 +1,9 @@
 ---
 title: Classe CLinearTransition | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLinearTransition
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7379c49ef54a86d68e5b9f47a35437befc53d8d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clineartransition-class"></a>Classe CLinearTransition
 Encapsula uma transição linear.  
@@ -78,7 +73,7 @@ class CLinearTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxanimationcontroller.h  
   
-##  <a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
  Constrói um objeto de transição linear e a inicializa com duração e o valor final.  
   
 ```  
@@ -94,7 +89,7 @@ CLinearTransition(
  `dblFinalValue`  
  O valor da variável de animação no final da transição.  
   
-##  <a name="create"></a>CLinearTransition::Create  
+##  <a name="create"></a>  CLinearTransition::Create  
  Chama a biblioteca de transição para criar o objeto de transição encapsulados COM.  
   
 ```  
@@ -110,14 +105,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a transição será criada com êxito; Caso contrário, FALSE.  
   
-##  <a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
  O valor da variável de animação no final da transição.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_duration"></a>CLinearTransition::m_duration  
+##  <a name="m_duration"></a>  CLinearTransition::m_duration  
  A duração da transição.  
   
 ```  
