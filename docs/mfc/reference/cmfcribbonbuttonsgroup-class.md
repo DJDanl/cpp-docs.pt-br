@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonButtonsGroup | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45851ea66e324f57cb7df3daaa99eb8a1b8b9311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Classe CMFCRibbonButtonsGroup
 O `CMFCRibbonButtonsGroup` classe permite que você agrupar um conjunto de botões de faixa de opções em um. Todos os botões do grupo são diretamente adjacentes uns aos outros horizontalmente e entre em uma borda.  
@@ -102,7 +97,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxribbonbuttonsgroup.h  
   
-##  <a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton  
+##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton  
  Adiciona um botão a um grupo.  
   
 ```  
@@ -113,7 +108,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
  [in] `pButton`  
  Um ponteiro para um botão Adicionar.  
   
-##  <a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons  
+##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Adiciona uma lista de botões a um grupo.  
   
 ```  
@@ -125,7 +120,7 @@ void AddButtons(
  [in] `lstButtons`  
  Uma lista de ponteiros para os botões que você deseja adicionar.  
   
-##  <a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
+##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Constrói um objeto `CMFCRibbonButtonsGroup`.  
   
 ```  
@@ -141,7 +136,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton  
+##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton  
  Retorna um ponteiro para o botão que está localizado em um índice especificado.  
   
 ```  
@@ -153,11 +148,11 @@ CMFCRibbonBaseElement* GetButton(int i) const;
  Um índice com base em zero de um botão para retornar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o botão que está localizado no índice especificado. `NULL`Se o índice especificado está fora do intervalo.  
+ Um ponteiro para o botão que está localizado no índice especificado. `NULL` Se o índice especificado está fora do intervalo.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount  
  Retorna o número de botões do grupo.  
   
 ```  
@@ -167,7 +162,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de botões do grupo.  
   
-##  <a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize  
  Recupera o tamanho da imagem de origem do protegido `CMFCToolBarImages` membro `m_Images`.  
   
 ```  
@@ -179,7 +174,7 @@ const CSize GetImageSize() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize  
  Recupera o tamanho máximo possível do elemento de grupo da faixa de opções.  
   
 ```  
@@ -194,7 +189,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages  
+##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages  
  Relatórios se o `CMFCRibbonButtonsGroup` objeto contém imagens da barra de ferramentas.  
   
 ```  
@@ -206,7 +201,7 @@ BOOL HasImages() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage  
  Desenha a imagem apropriada para um botão especificado, dependendo se o botão é normal, realçado ou desativado.  
   
 ```  
@@ -232,7 +227,7 @@ virtual void OnDrawImage(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll  
  Remove todos os botões do `CMFCRibbonButtonsGroup` objeto.  
   
 ```  
@@ -241,7 +236,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages  
+##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages  
  Atribui imagens para o grupo de botões de faixa de opções.  
   
 ```  
@@ -267,7 +262,7 @@ void SetImages(
 > [!NOTE]
 >  Imagens hot são as imagens que são exibidas quando o usuário passar o mouse sobre o botão. Imagens desabilitadas são imagens que são exibidas quando o botão está desabilitado.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory  
+##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory  
  Define o pai `CMFCRibbonCategory` do `CMFCRibbonButtonsGroup` objeto e todos os botões dentro dele.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CScrollView | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollView
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 Um [CView](../../mfc/reference/cview-class.md) com recursos de rolagem.  
@@ -130,7 +125,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
  Chame essa função de membro para determinar se o modo de exibição de rolagem tem barras horizontais e verticais.  
   
 ```  
@@ -146,7 +141,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  Indica que o aplicativo tem uma barra de rolagem vertical.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
  Constrói um objeto `CScrollView`.  
   
 ```  
@@ -156,7 +151,7 @@ CScrollView();
 ### <a name="remarks"></a>Comentários  
  Você deve chamar `SetScrollSizes` ou `SetScaleToFitSize` antes da rolagem exibição é utilizável.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
  Chamar `FillOutsideRect` para preencher a área de exibição que aparece fora da área de rolagem.  
   
 ```  
@@ -178,7 +173,7 @@ void FillOutsideRect(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
  Chamar `GetDeviceScrollPosition` quando você precisar de posições atuais de horizontais e verticais das caixas de rolagem nas barras de rolagem.  
   
 ```  
@@ -191,10 +186,10 @@ CPoint GetDeviceScrollPosition() const;
 ### <a name="remarks"></a>Comentários  
  Esse par de coordenadas corresponde ao local do documento para que tenha sido rolado o canto superior esquerdo da exibição. Isso é útil para a compensação de posições de dispositivo de mouse para as posições de dispositivo de exibição da rolagem.  
   
- `GetDeviceScrollPosition`Retorna valores em unidades de dispositivo. Se você quiser que as unidades lógicas, use `GetScrollPosition` em vez disso.  
+ `GetDeviceScrollPosition` Retorna valores em unidades de dispositivo. Se você quiser que as unidades lógicas, use `GetScrollPosition` em vez disso.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`Obtém o modo de mapeamento atual, o tamanho total e os tamanhos de linha e página do modo de exibição rolável.  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` Obtém o modo de mapeamento atual, o tamanho total e os tamanhos de linha e página do modo de exibição rolável.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -220,7 +215,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>Comentários  
  Tamanhos são em unidades de dispositivo. Essa função de membro raramente é chamada.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
  Chamar `GetScrollPosition` quando você precisar de posições atuais de horizontais e verticais das caixas de rolagem nas barras de rolagem.  
   
 ```  
@@ -233,9 +228,9 @@ CPoint GetScrollPosition() const;
 ### <a name="remarks"></a>Comentários  
  Esse par de coordenadas corresponde ao local do documento para que tenha sido rolado o canto superior esquerdo da exibição.  
   
- `GetScrollPosition`Retorna valores em unidades lógicas. Se você quiser que as unidades de dispositivo, use `GetDeviceScrollPosition` em vez disso.  
+ `GetScrollPosition` Retorna valores em unidades lógicas. Se você quiser que as unidades de dispositivo, use `GetDeviceScrollPosition` em vez disso.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
  Chamar `GetTotalSize` para recuperar os tamanhos atuais horizontais e verticais da exibição da rolagem.  
   
 ```  
@@ -245,7 +240,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho total da exibição da rolagem em unidades lógicas. O tamanho horizontal está no **cx** membro o `CSize` valor de retorno. O tamanho vertical está no **cy** membro.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
  Chamar `ResizeParentToFit` para permitir que o tamanho do modo de exibição determinam o tamanho da sua janela do quadro.  
   
 ```  
@@ -259,11 +254,11 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="remarks"></a>Comentários  
  Isso é recomendado apenas para modos de exibição em janelas de quadro filho MDI. Use `ResizeParentToFit` no `OnInitialUpdate` função do manipulador de derivada `CScrollView` classe. Para obter um exemplo dessa função de membro, consulte [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`pressupõe-se de que o tamanho da janela de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `ResizeParentToFit` é chamado, você obterá uma declaração. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `ResizeParentToFit`:  
+ `ResizeParentToFit` pressupõe-se de que o tamanho da janela de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `ResizeParentToFit` é chamado, você obterá uma declaração. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
  Chamar `ScrollToPosition` rolar para um determinado ponto no modo de exibição.  
   
 ```  
@@ -277,7 +272,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>Comentários  
  O modo de exibição será ser rolado para que esse ponto está no canto superior esquerdo da janela. Essa função de membro não deve ser chamada se o modo de exibição é dimensionado para ajustar.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
  Chamar `SetScaleToFitSize` quando você deseja dimensionar o tamanho do visor para o tamanho da janela atual automaticamente.  
   
 ```  
@@ -293,13 +288,13 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  Normalmente você vai fazer a chamada para `SetScaleToFitSize` em sua substituição do modo de exibição `OnInitialUpdate` função de membro. Se você não quiser que o dimensionamento automático, chame o `SetScrollSizes` função de membro em vez disso.  
   
- `SetScaleToFitSize`pode ser usado para implementar uma operação "Zoom para ajustar". Use `SetScrollSizes` para reinicializar a rolagem.  
+ `SetScaleToFitSize` pode ser usado para implementar uma operação "Zoom para ajustar". Use `SetScrollSizes` para reinicializar a rolagem.  
   
- `SetScaleToFitSize`pressupõe-se de que o tamanho da janela de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `SetScaleToFitSize` é chamado, você obterá uma declaração. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `SetScaleToFitSize`:  
+ `SetScaleToFitSize` pressupõe-se de que o tamanho da janela de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `SetScaleToFitSize` é chamado, você obterá uma declaração. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
  Chamar `SetScrollSizes` quando a exibição está prestes a ser atualizado.  
   
 ```  

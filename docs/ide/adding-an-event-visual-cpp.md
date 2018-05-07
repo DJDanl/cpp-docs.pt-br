@@ -1,13 +1,10 @@
 ---
 title: Adicionando um evento (Visual C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [C++], adding events
 - events [C++], ActiveX controls
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2fea0b9a514e51db556e256f9ff17329cf4ad5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 657053f33a83d67e79bea13ab87da21156bde94c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-event-visual-c"></a>Adicionando um evento (Visual C++)
 De modo de exibição de classe, você pode adicionar um evento usando o [Adicionar Assistente de eventos](../ide/add-event-wizard.md) somente para a classe de controle em sua [controle ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md) projeto. Se você quiser adicionar um evento para outro tipo de projeto, use o **eventos** no botão de [janela propriedades](/visualstudio/ide/reference/properties-window).  

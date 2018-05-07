@@ -1,13 +1,10 @@
 ---
 title: 'Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 Este passo a passo demonstra como modificar um aplicativo MFC existente para usar a interface do usuário da faixa de opções. Visual Studio oferece suporte a faixa de opções do Office 2007 e Windows 7 clip faixa de opções. Para obter mais informações sobre a interface do usuário da faixa de opções, consulte [faixas de opções](http://go.microsoft.com/fwlink/p/?linkid=129233) no site do MSDN.  
@@ -40,7 +35,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
  [Exemplos do Visual C++](../visual-cpp-samples.md)  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Esta parte do passo a passo tem as seguintes seções:  
   
 - [Substituindo as Classes Base](#replaceclass)  
@@ -55,7 +50,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
 - [Definir a aparência do aplicativo](#setlook)  
   
-##  <a name="replaceclass"></a>Substituindo as Classes Base  
+##  <a name="replaceclass"></a> Substituindo as Classes Base  
  Para converter um aplicativo que oferece suporte a um menu para um aplicativo que oferece suporte a uma faixa de opções, o aplicativo, a janela do quadro e a classes da barra de ferramentas deve ser derivado de classes base atualizados. (Recomendamos que você não modificar o exemplo de rabisco original; em vez disso, limpe o projeto rabisco, copiá-lo para outro diretório e, em seguida, modifique a cópia.)  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Para substituir as classes base do aplicativo de rabisco  
@@ -101,11 +96,11 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
 8.  No arquivo mainfrm.cpp:  
   
-    1.  Substituir `m_wndToolBar.SetBarStyle` com`m_wndToolBar.SetPaneStyle`  
+    1.  Substituir `m_wndToolBar.SetBarStyle` com `m_wndToolBar.SetPaneStyle`  
   
-    2.  Substituir `m_wndToolBar.GetBarStyle` com`m_wndToolBar.GetPaneStyle`  
+    2.  Substituir `m_wndToolBar.GetBarStyle` com `m_wndToolBar.GetPaneStyle`  
   
-    3.  Substituir `DockControlBar(&m_wndToolBar)` com`DockPane(&m_wndToolBar)`  
+    3.  Substituir `DockControlBar(&m_wndToolBar)` com `DockPane(&m_wndToolBar)`  
   
 9. No arquivo ipframe.cpp, comente as três linhas de código a seguir.  
   
@@ -130,7 +125,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
  [[Seções](#top)]  
   
-##  <a name="addbitmap"></a>Adicionando Bitmaps para o projeto  
+##  <a name="addbitmap"></a> Adicionando Bitmaps para o projeto  
  As quatro etapas deste passo a passo exigem recursos do bitmap. Você pode obter bitmaps apropriado de várias maneiras:  
   
 -   Use o [editores de recursos](../windows/resource-editors.md) para seus próprios bitmaps de estoque. Ou use os editores de recursos para montar os bitmaps de imagens PNG rede portátil incluídas com [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Essas imagens são no `VS2008ImageLibrary` directory.  
@@ -175,7 +170,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
  [[Seções](#top)]  
   
-##  <a name="addribbon"></a>Adicionar um recurso de faixa de opções ao projeto  
+##  <a name="addribbon"></a> Adicionar um recurso de faixa de opções ao projeto  
  Quando você converte um aplicativo que usa um aplicativo que usa uma faixa de opções de menus, você não precisa remover ou desabilitar os menus existentes. Em vez disso, crie um recurso de faixa de opções, adicionar botões de faixa de opções e, em seguida, associar os novos botões com os itens de menu existente. Embora os menus não estiverem visíveis, as mensagens da barra de faixa de opções são roteadas através de menus. Além disso, os atalhos do menu continuam a trabalhar.  
   
  Uma faixa de opções consiste no botão do aplicativo, que é o botão grande no lado superior esquerdo da faixa de opções, e uma ou mais guias de categoria. Cada guia categoria contém um ou mais painéis que atuam como contêineres para controles e botões da faixa de opções. O procedimento a seguir mostra como criar um recurso de faixa de opções e, em seguida, personalizar o botão do aplicativo.  
@@ -226,7 +221,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
  [[Seções](#top)]  
   
-##  <a name="createinstance"></a>Criar uma instância da barra de faixa de opções  
+##  <a name="createinstance"></a> Criar uma instância da barra de faixa de opções  
  As etapas a seguir mostram como criar uma instância da barra de faixa de opções quando seu aplicativo é iniciado. Para adicionar uma barra de faixa de opções para um aplicativo, declare a barra da faixa de opções no arquivo mainfrm.h. Em seguida, no arquivo mainfrm.cpp, escreva código para carregar o recurso de faixa de opções.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Para criar uma instância da barra de faixa de opções  
@@ -250,7 +245,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
  [[Seções](#top)]  
   
-##  <a name="addcategory"></a>Personalizando o recurso de faixa de opções  
+##  <a name="addcategory"></a> Personalizando o recurso de faixa de opções  
  Agora que você criou o botão do aplicativo, você pode adicionar elementos à faixa de opções.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
  [[Seções](#top)]  
   
-##  <a name="setlook"></a>Definir a aparência do aplicativo  
+##  <a name="setlook"></a> Definir a aparência do aplicativo  
  Um *manager visual* é um objeto global que controla todos os desenhos de um aplicativo. Como o aplicativo de rabisco original usa o estilo de interface do usuário de usuário do Office 2000, o aplicativo pode parecer antigo. Você pode redefinir o aplicativo para usar o Gerenciador de visual do Office 2007 para que ele é semelhante a um aplicativo do Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>Para definir a aparência do aplicativo  

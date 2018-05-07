@@ -1,12 +1,9 @@
 ---
 title: Classe CScrollBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollBar
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d458fe5f7bcaf25fc5bb0685bb382a72d44d183
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollbar-class"></a>Classe CScrollBar
 Fornece a funcionalidade de um controle de barra de rolagem do Windows.  
@@ -109,7 +104,7 @@ class CScrollBar : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>  CScrollBar::Create  
  Cria a barra de rolagem do Windows e a anexa ao `CScrollBar` objeto.  
   
 ```  
@@ -152,7 +147,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
  Constrói um objeto `CScrollBar`.  
   
 ```  
@@ -165,7 +160,7 @@ CScrollBar();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
  Habilita ou desabilita uma ou ambas as setas de uma barra de rolagem.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
  Recupera as informações que o **SCROLLBARINFO** estrutura mantém sobre uma barra de rolagem.  
   
 ```  
@@ -207,7 +202,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro emula a funcionalidade do [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) mensagem, conforme descrito no SDK do Windows.  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Recupera as informações que o `SCROLLINFO` estrutura mantém sobre uma barra de rolagem.  
   
 ```  
@@ -227,16 +222,16 @@ BOOL GetScrollInfo(
  Se a mensagem recuperada quaisquer valores, o retorno é **TRUE**. Caso contrário, ele será **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- `GetScrollInfo`permite que aplicativos usem as posições de rolagem de 32 bits.  
+ `GetScrollInfo` permite que aplicativos usem as posições de rolagem de 32 bits.  
   
  O [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estrutura contém informações sobre uma barra, incluindo o mínimo e máximo rolagem posições, o tamanho da página e a posição da caixa de rolagem (a miniatura) de rolagem. Consulte o `SCROLLINFO` tópico estrutura no SDK do Windows para obter mais informações sobre como alterar os padrões de estrutura.  
   
- O Windows MFC mensagem manipuladores que indicam a posição da barra de rolagem, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), forneça apenas de 16 bits de dados de posição. `GetScrollInfo`e `SetScrollInfo` fornecem 32 bits de dados de posição da barra de rolagem. Assim, um aplicativo pode chamar `GetScrollInfo` durante o processamento de um `CWnd::OnHScroll` ou `CWnd::OnVScroll` para obter dados de posição de barra de rolagem de 32 bits.  
+ O Windows MFC mensagem manipuladores que indicam a posição da barra de rolagem, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), forneça apenas de 16 bits de dados de posição. `GetScrollInfo` e `SetScrollInfo` fornecem 32 bits de dados de posição da barra de rolagem. Assim, um aplicativo pode chamar `GetScrollInfo` durante o processamento de um `CWnd::OnHScroll` ou `CWnd::OnVScroll` para obter dados de posição de barra de rolagem de 32 bits.  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
  Recupera o posição da barra de rolagem de rolagem no máximo.  
   
 ```  
@@ -249,7 +244,7 @@ int GetScrollLimit();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
  Recupera a posição atual de uma caixa de rolagem.  
   
 ```  
@@ -265,7 +260,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
  Copia as posições de barra de rolagem mínimo e máximo atual para a barra de rolagem fornecido para os locais especificados por `lpMinPos` e `lpMaxPos`.  
   
 ```  
@@ -287,7 +282,7 @@ void GetScrollRange(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
  Define as informações que o `SCROLLINFO` estrutura mantém sobre uma barra de rolagem.  
   
 ```  
@@ -314,7 +309,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
  Define a posição atual de uma caixa de rolagem especificado por `nPos` e, se especificado, redesenha a barra de rolagem para refletir a nova posição.  
   
 ```  
@@ -339,7 +334,7 @@ int SetScrollPos(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
  Define valores de posição de mínimo e máximo para a barra de rolagem determinado.  
   
 ```  
@@ -371,7 +366,7 @@ void SetScrollRange(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
  Mostra ou oculta uma barra de rolagem.  
   
 ```  

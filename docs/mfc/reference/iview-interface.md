@@ -1,12 +1,9 @@
 ---
 title: Interface IView | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - IView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4266d8f5ec564dac67d7167c6c9bab4768a0276
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a06243af3de7a2f4b32aa9a9ae492dfe3b2d3b64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iview-interface"></a>Interface IView
 Implementa vários métodos que [CWinFormsView](../../mfc/reference/cwinformsview-class.md) usa para enviar notificações de exibição para um controle gerenciado.  
@@ -53,9 +48,9 @@ interface class IView
 |[IView::OnUpdate](#onupdate)|Chamado pelo MFC depois que o documento do modo de exibição foi modificado; Essa função permite que o modo de exibição atualizar sua exibição para refletir as modificações.|  
   
 ## <a name="remarks"></a>Comentários  
- `IView`implementa vários métodos que `CWinFormsView` usa para encaminhar as notificações de exibição comuns para um controle gerenciado hospedado. Esses são [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) e [OnActivateView](#onactivateview).  
+ `IView` implementa vários métodos que `CWinFormsView` usa para encaminhar as notificações de exibição comuns para um controle gerenciado hospedado. Esses são [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) e [OnActivateView](#onactivateview).  
   
- `IView`é semelhante a [CView](../../mfc/reference/cview-class.md), mas é usado somente com os modos de exibição gerenciados e controles.  
+ `IView` é semelhante a [CView](../../mfc/reference/cview-class.md), mas é usado somente com os modos de exibição gerenciados e controles.  
   
  Para obter mais informações sobre como usar formulários do Windows, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
@@ -63,7 +58,7 @@ interface class IView
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: afxwinforms.h (definido no assembly atlmfc\lib\mfcmifc80.dll)  
 
-## <a name="onactivateview"></a>IView::OnActivateView  
+## <a name="onactivateview"></a> IView::OnActivateView  
 Chamado pelo MFC quando uma exibição é ativada ou desativada.
 ```
 void OnActivateView(bool activate);
@@ -72,13 +67,13 @@ void OnActivateView(bool activate);
 `activate`  
 Indica se o modo de exibição está sendo ativada ou desativada.  
 
-## <a name="oninitialupdate"></a>IView::OnInitialUpdate
+## <a name="oninitialupdate"></a> IView::OnInitialUpdate
 Chamado pelo framework depois que a exibição é anexado ao documento pela primeira vez, mas antes do modo de exibição é exibido inicialmente.
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a>IView::OnUpdate 
+## <a name="onupdate"></a> IView::OnUpdate 
 Chamado pelo MFC depois que o documento do modo de exibição foi modificado.  
 ```
 void OnUpdate();

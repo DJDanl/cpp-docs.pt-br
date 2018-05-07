@@ -1,13 +1,10 @@
 ---
 title: 'TN014: Controles personalizados | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn014-custom-controls"></a>TN014: controles personalizados
 Esta anotação descreve o suporte do MFC para controles personalizados e desenho automaticamente. Ele também descreve subclassificação dinâmica e descreve a relação entre [CWnd](../mfc/reference/cwnd-class.md) objetos e `HWND`s.  
@@ -128,15 +123,15 @@ Esta anotação descreve o suporte do MFC para controles personalizados e desenh
   
  Há três maneiras comuns que eles estão relacionados:  
   
-- `CWnd`cria o `HWND`. Você pode modificar o comportamento em uma classe derivada, criando uma classe derivada de `CWnd`. O `HWND` é criado quando o aplicativo chama [CWnd::Create](../mfc/reference/cwnd-class.md#create).  
+- `CWnd` cria o `HWND`. Você pode modificar o comportamento em uma classe derivada, criando uma classe derivada de `CWnd`. O `HWND` é criado quando o aplicativo chama [CWnd::Create](../mfc/reference/cwnd-class.md#create).  
   
 -   A aplicativo anexa uma `CWnd` um existente `HWND`. O comportamento da janela existente não é modificado. Este é um caso de delegação e é possibilitado chamando [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias um existente `HWND` para um `CWnd` objeto.  
   
-- `CWnd`é anexado a um existente `HWND` e você pode modificar o comportamento em uma classe derivada. Isso é chamado dinâmico subclasses porque nós estamos alterando o comportamento e, portanto, a classe, de um objeto em tempo de execução do Windows.  
+- `CWnd` é anexado a um existente `HWND` e você pode modificar o comportamento em uma classe derivada. Isso é chamado dinâmico subclasses porque nós estamos alterando o comportamento e, portanto, a classe, de um objeto em tempo de execução do Windows.  
   
  Você pode obter subclassificação dinâmica usando os métodos [CWnd::SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) e[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).  
   
- Ambas as rotinas de anexar um `CWnd` objeto um existente `HWND`. `SubclassWindow`usa o `HWND` diretamente. `SubclassDlgItem`é uma função auxiliar que usa uma ID de controle e a janela pai. `SubclassDlgItem`foi projetado para anexar objetos C++ para controles de caixa de diálogo criados de um modelo de caixa de diálogo.  
+ Ambas as rotinas de anexar um `CWnd` objeto um existente `HWND`. `SubclassWindow` usa o `HWND` diretamente. `SubclassDlgItem` é uma função auxiliar que usa uma ID de controle e a janela pai. `SubclassDlgItem` foi projetado para anexar objetos C++ para controles de caixa de diálogo criados de um modelo de caixa de diálogo.  
   
  Consulte o [CTRLTEST](../visual-cpp-samples.md) exemplo para examinar vários exemplos de quando usar `SubclassWindow` e `SubclassDlgItem`.  
   

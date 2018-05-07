@@ -1,13 +1,10 @@
 ---
 title: Trabalhando com o controle de barra de ferramentas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>Trabalhando com o controle da barra de ferramentas
 Este artigo explica como é possível acessar o [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto subjacente um [CToolBar](../mfc/reference/ctoolbar-class.md) para maior controle sobre as barras de ferramentas. Este é um tópico avançado.  
@@ -37,7 +32,7 @@ Este artigo explica como é possível acessar o [CToolBarCtrl](../mfc/reference/
   
 1.  Chamar [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl`Retorna uma referência a um [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto. Você pode usar a referência para chamar funções de membro da classe de controle de barra de ferramentas.  
+ `GetToolBarCtrl` Retorna uma referência a um [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto. Você pode usar a referência para chamar funções de membro da classe de controle de barra de ferramentas.  
   
 > [!CAUTION]
 >  Ao chamar `CToolBarCtrl` **obter** funções é seguro, tenha cuidado se você chamar o **definir** funções. Este é um tópico avançado. Normalmente, você não deve precisa acessar o controle de barra de ferramentas subjacente.  

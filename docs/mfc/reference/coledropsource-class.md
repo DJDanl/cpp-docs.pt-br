@@ -1,12 +1,9 @@
 ---
 title: Classe COleDropSource | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>Classe COleDropSource
 Permite que os dados ser arrastado para um destino de soltar.  
@@ -79,14 +74,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  Constrói um objeto `COleDropSource`.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  Chamado pelo framework depois de chamar [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  O efeito que você deseja exibir para o usuário, que geralmente indica o que aconteceria se uma queda ocorreu neste ponto com os dados selecionados. Normalmente, este é o valor retornado pela chamada mais recente para [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Pode ser uma ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE`Um descarte não será permitido.  
+- `DROPEFFECT_NONE` Um descarte não será permitido.  
   
-- `DROPEFFECT_COPY`Uma operação de cópia deve ser executada.  
+- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
   
-- `DROPEFFECT_MOVE`Uma operação de movimentação deve ser executada.  
+- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
   
-- `DROPEFFECT_LINK`Um link de dados descartados para os dados originais seja estabelecido.  
+- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL`Uma operação de arrastar rolagem está prestes a ocorrer ou está ocorrendo no destino.  
+- `DROPEFFECT_SCROLL` Uma operação de arrastar rolagem está prestes a ocorrer ou está ocorrendo no destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna **DRAGDROP_S_USEDEFAULTCURSORS** se arrastando estiver em andamento, **NOERROR** se não for.  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Para obter mais informações, consulte [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), e [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) no SDK do Windows.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Chamado pelo framework quando ocorre um evento que pode começar uma operação de arrastar, como pressionar o botão esquerdo do mouse.  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Comentários  
  Substitua essa função se você quiser modificar o modo como o processo de arrastar é iniciado. A implementação padrão de captura o mouse e permanece em modo de arraste até que o usuário clica no botão esquerdo ou direito do mouse ou atinge ESC, momento em que ele libera o mouse.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  Depois de arrastar iniciada, essa função é chamada repetidamente pela estrutura até que a operação de arrastar seja cancelada ou concluída.  
   
 ```  

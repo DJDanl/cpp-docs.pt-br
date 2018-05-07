@@ -1,13 +1,10 @@
 ---
-title: "OLE arrastar e soltar dados Classes de transferência | Microsoft Docs"
-ms.custom: 
+title: OLE arrastar e soltar dados Classes de transferência | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - data transfer [MFC], OLE
 - data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e8c5a54184bcf6450bf39b39a6b90d7865c09d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d55d6d171f490631afe17a605f50607fb55f070b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Classes de transferência para arrastar e soltar dados OLE
 Essas classes são usadas nas transferências de dados OLE. Permitem que os dados a serem transferidos entre aplicativos usando a área de transferência ou por meio de arrastar e soltar.  
@@ -38,13 +33,13 @@ Essas classes são usadas nas transferências de dados OLE. Permitem que os dado
  Controla a operação de arrastar e soltar do início ao fim. Essa classe determina quando a operação de arrastar inicia e quando ele termina. Ele também exibe comentários de cursor durante a operação de arrastar e soltar.  
   
  [COleDataSource](../mfc/reference/coledatasource-class.md)  
- Usado quando um aplicativo fornece dados para uma transferência de dados. `COleDataSource`pode ser exibido como um objeto de área de transferência e orientada a objeto.  
+ Usado quando um aplicativo fornece dados para uma transferência de dados. `COleDataSource` pode ser exibido como um objeto de área de transferência e orientada a objeto.  
   
  [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
  Representa o destino de uma operação de arrastar e soltar. Um `COleDropTarget` objeto corresponde a uma janela na tela. Determina se deve aceitar os dados solto nele e implementa a operação de remoção real.  
   
  [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Usado como o lado do destinatário para `COleDataSource`. `COleDataObject`objetos fornecem acesso aos dados armazenados por um `COleDataSource` objeto.  
+ Usado como o lado do destinatário para `COleDataSource`. `COleDataObject` objetos fornecem acesso aos dados armazenados por um `COleDataSource` objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../mfc/class-library-overview.md)

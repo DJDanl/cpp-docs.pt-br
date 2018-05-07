@@ -1,13 +1,10 @@
 ---
 title: CMake projetos em Visual C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake projetos em Visual C++
 
@@ -174,7 +170,7 @@ Por padrão, o Visual Studio fornece seis CMake as configurações padrão ("dep
 
 JSON IntelliSense ajuda a editar o arquivo CMakeSettings.json:
 
-   ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
+   ![IntelliSense JSON CMake](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
 O exemplo a seguir mostra uma configuração de exemplo, você pode usar como ponto de partida para criar seus próprios em CMakeSettings.json:
 
@@ -198,9 +194,9 @@ O exemplo a seguir mostra uma configuração de exemplo, você pode usar como po
 
 
     - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
+    - "Visual Studio 2015 14"
+    - "Visual Studio 2015 14 ARM"
+    - "Visual Studio 2015 14 Win64"
     - "Visual Studio 15 2017"
     - "Visual Studio 15 2017 ARM"
     - "Visual Studio 15 2017 Win64"
@@ -242,7 +238,7 @@ usage: ninja [options] [targets...]
 | -versão  | versão de impressão ninja ("1.7.1")|
 |   -C DIR   | Alterar para DIR antes de fazer mais nada|
 |   -f arquivo  | Especifique o arquivo de entrada de compilação (default=build.ninja)|
-|   -j N     | executar trabalhos N em paralelo (padrão = 14, derivada de CPUs disponíveis)|
+|   N -j     | executar trabalhos N em paralelo (padrão = 14, derivada de CPUs disponíveis)|
 |   -k N     | prossiga até N trabalhos falharem (padrão = 1)|
 |   -l N     | não inicie novos trabalhos se a média de carga é maior que N|
 |   -n      | Seque executar (não execute comandos mas atue como tiveram êxito)|

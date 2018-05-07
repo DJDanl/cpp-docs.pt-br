@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Localizando um controle ActiveX | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controles MFC ActiveX: localizando um controle ActiveX
 Este artigo descreve procedimentos para localização de interfaces de controle ActiveX.  
@@ -52,7 +47,7 @@ Este artigo descreve procedimentos para localização de interfaces de controle 
   
  O restante deste artigo descreve duas estratégias de localizações. A primeira estratégia [localiza a interface de programação do controle](#_core_localizing_your_control.92.s_programmability_interface) (nomes de propriedades, métodos e eventos). A segunda estratégia [localiza a interface do usuário do controle](#_core_localizing_the_control.92.s_user_interface), usando a propriedade identificador de ambiente do contêiner. Para ver uma demonstração de localização de controle, consulte o exemplo de controles ActiveX MFC [LOCALIZE](../visual-cpp-samples.md).  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>Localizando a Interface de programação do controle  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localizando a Interface de programação do controle  
  Ao localizar a interface de programação do controle (a interface usada por programadores que criam aplicativos que usam o controle), você deve criar uma versão modificada do controle. IDL arquivo (um script para criar a biblioteca de tipos de controle) para cada idioma que você pretende dar suporte. Este é o único local em que você precisa localizar os nomes de propriedade do controle.  
   
  Quando você desenvolve um controle localizado, inclua a ID de localidade como um atributo no nível da biblioteca de tipo. Por exemplo, se você quiser fornecer uma biblioteca de tipos com nomes de propriedade localizada francês, faça uma cópia de seu exemplo. IDL do arquivo e chame-SAMPLEFR. IDL. Adicionar um atributo de ID de localidade para o arquivo (a ID de localidade para francês é 0x040c), semelhante à seguinte:  
@@ -89,7 +84,7 @@ Este artigo descreve procedimentos para localização de interfaces de controle 
   
  Quando o controle é registrado, o `AfxOleRegisterTypeLib` função procura automaticamente especificado. Arquivos TLB no mesmo diretório que o controle e o registra no banco de dados de registro do Windows. Se o. Arquivos TLB não for encontrado, a função não tem nenhum efeito.  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>Localizando a Interface do usuário do controle  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Localizando a Interface do usuário do controle  
  Para localizar a interface do usuário do controle, coloque todos os recursos de usuário visível do controle (como páginas de propriedade e mensagens de erro) em DLLs de recurso específico do idioma. Em seguida, você pode usar propriedade LocaleID de ambiente do contêiner para selecionar a DLL apropriada para a localidade do usuário.  
   
  O exemplo de código a seguir demonstra uma abordagem para localizar e carregar a DLL de recurso para uma localidade específica. Essa função de membro, chamada `GetLocalizedResourceHandle` para este exemplo, pode ser uma função de membro da classe do controle ActiveX:  

@@ -1,12 +1,9 @@
 ---
-title: "Compilador (nível 4) do aviso C4242 | Microsoft Docs"
-ms.custom: 
+title: Compilador (nível 4) do aviso C4242 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4242
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4242
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee4a165ae59bd21491fdecfc8c25d18477d7c36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: befe02b363c17a670d3b33632ffa50ed8a7cb1f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4242"></a>Compilador (nível 4) do aviso C4242
 'Identificador': conversão de 'type1' em 'type2', possível perda de dados  

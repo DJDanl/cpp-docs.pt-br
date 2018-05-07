@@ -1,13 +1,10 @@
 ---
 title: Assistente de manipulador de eventos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.eventhandler.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Event Handler Wizard [C++]
 ms.assetid: af8e1835-94b1-4d9a-b353-c519e011d3a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccb80add8a98b9251a7ccbb5c85bf98b610a22e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-handler-wizard"></a>Assistente de Manipulador de Eventos
 Este assistente adiciona um manipulador de eventos para um controle de caixa de diálogo para a classe de sua escolha. Se você adicionar um manipulador de eventos do [janela propriedades](/visualstudio/ide/reference/properties-window), você pode adicioná-lo somente para a classe que implementa a caixa de diálogo. Consulte [adicionar manipuladores de eventos para controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md) para obter mais informações.  

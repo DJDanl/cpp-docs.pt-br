@@ -1,12 +1,9 @@
 ---
 title: Classe CD2DPathGeometry | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DPathGeometry
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9142b268c5f09a88883d048c35287966d9ef8aab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a3afe8efa5730c3ef0f4448b1c548724b56b7cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dpathgeometry-class"></a>Classe CD2DPathGeometry
 Um wrapper para ID2D1PathGeometry.  
@@ -95,7 +90,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxrendertarget.h  
   
-##  <a name="attach"></a>CD2DPathGeometry::Attach  
+##  <a name="attach"></a>  CD2DPathGeometry::Attach  
  Conexões existentes de interface de recurso para o objeto  
   
 ```  
@@ -106,7 +101,7 @@ void Attach(ID2D1PathGeometry* pResource);
  `pResource`  
  Interface de recurso existente. Não pode ser NULL  
   
-##  <a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
+##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
  Constrói um objeto CD2DPathGeometry.  
   
 ```  
@@ -122,7 +117,7 @@ CD2DPathGeometry(
  `bAutoDestroy`  
  Indica se o objeto será destruído pelo proprietário (pParentTarget).  
   
-##  <a name="create"></a>CD2DPathGeometry::Create  
+##  <a name="create"></a>  CD2DPathGeometry::Create  
  Cria um CD2DPathGeometry.  
   
 ```  
@@ -136,14 +131,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um código de erro HRESULT.  
   
-##  <a name="destroy"></a>CD2DPathGeometry::Destroy  
+##  <a name="destroy"></a>  CD2DPathGeometry::Destroy  
  Destrói um objeto CD2DPathGeometry.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DPathGeometry::Detach  
+##  <a name="detach"></a>  CD2DPathGeometry::Detach  
  Desanexa a interface do recurso do objeto  
   
 ```  
@@ -153,7 +148,7 @@ ID2D1PathGeometry* Detach();
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para a interface de recursos separado.  
   
-##  <a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
+##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount  
  Recupera o número de valores no caminho da geometria.  
   
 ```  
@@ -163,7 +158,7 @@ int GetFigureCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de valores no caminho da geometria.  
   
-##  <a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
+##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount  
  Recupera o número de segmentos no caminho da geometria.  
   
 ```  
@@ -173,14 +168,14 @@ int GetSegmentCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de segmentos no caminho da geometria.  
   
-##  <a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
+##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry  
  Um ponteiro para um ID2D1PathGeometry.  
   
 ```  
 ID2D1PathGeometry* m_pPathGeometry;  
 ```  
   
-##  <a name="open"></a>CD2DPathGeometry::Open  
+##  <a name="open"></a>  CD2DPathGeometry::Open  
  Recupera o coletor de geometria que é usado para popular a geometria de caminho com valores e segmentos.  
   
 ```  
@@ -190,7 +185,7 @@ ID2D1GeometrySink* Open();
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o ID2D1GeometrySink é usado para popular a geometria de caminho com valores e segmentos.  
   
-##  <a name="stream"></a>CD2DPathGeometry::Stream  
+##  <a name="stream"></a>  CD2DPathGeometry::Stream  
  Copia o conteúdo de geometria de caminho para o ID2D1GeometrySink especificado.  
   
 ```  

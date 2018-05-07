@@ -1,12 +1,9 @@
 ---
 title: C2688 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2688
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b398ec1102ff5d5c795e6734e65564d11cd0ce3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd2ebb16acfbc5c7d540e877baab909a950c7f55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2688"></a>C2688 de erro do compilador
 'C2::fgrv': retornos covariantes com múltiplas heranças ou herança virtual não tem suportada para funções varargs  

@@ -1,12 +1,9 @@
 ---
 title: Classe CBaseTransition | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBaseTransition
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a925de05d301d213d67bb699af47d0453478ffc2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 Representa uma transição básica.  
@@ -128,14 +123,14 @@ class CBaseTransition : public CObject;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxanimationcontroller.h  
   
-##  <a name="_dtorcbasetransition"></a>CBaseTransition:: ~ CBaseTransition  
+##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition  
  O destruidor. Chamado quando um objeto de transição está sendo destruído.  
   
 ```  
 virtual ~CBaseTransition();
 ```  
   
-##  <a name="addtostoryboard"></a>CBaseTransition::AddToStoryboard  
+##  <a name="addtostoryboard"></a>  CBaseTransition::AddToStoryboard  
  Adiciona uma transição para um storyboard.  
   
 ```  
@@ -152,7 +147,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>Comentários  
  Aplica-se a transição para a variável relacionada no storyboard. Se esta for a primeira transição aplicada a essa variável neste storyboard, a transição começa no início do storyboard. Caso contrário, a transição é acrescentada com a transição mais recentemente adicionada à variável.  
   
-##  <a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes  
+##  <a name="addtostoryboardatkeyframes"></a>  CBaseTransition::AddToStoryboardAtKeyframes  
  Adiciona uma transição para um storyboard.  
   
 ```  
@@ -169,14 +164,14 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>Comentários  
  Aplica-se a transição para a variável relacionada no storyboard. Se o quadro-chave de início foi especificado, a transição começa em que o quadro-chave. Se o quadro-chave end foi especificado, a transição começa no quadro-chave inicial e e parar no quadro-chave end. Se a transição foi criada com um parâmetro de duração especificado, essa duração é substituída com a duração de tempo entre os quadros-chave inicial e final. Se nenhum quadro-chave for especificado, a transição é acrescentada com a transição mais recentemente adicionada à variável.  
   
-##  <a name="cbasetransition"></a>CBaseTransition::CBaseTransition  
+##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition  
  Constrói um objeto transtion base.  
   
 ```  
 CBaseTransition();
 ```  
   
-##  <a name="clear"></a>CBaseTransition::Clear  
+##  <a name="clear"></a>  CBaseTransition::Clear  
  Versões encapsulado objeto IUIAnimationTransition COM.  
   
 ```  
@@ -186,7 +181,7 @@ void Clear();
 ### <a name="remarks"></a>Comentários  
  Esse método deve ser chamado do método de criação de uma classe derivada para evitar a perda de interface IUITransition.  
   
-##  <a name="create"></a>CBaseTransition::Create  
+##  <a name="create"></a>  CBaseTransition::Create  
  Cria uma transição de COM.  
   
 ```  
@@ -208,7 +203,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentários  
  Isso é uma função virtual pura que deve ser substituída em uma classe derivada. Ele é chamado pelo framework para instanciar o objeto de transição COM subjacente.  
   
-##  <a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe  
+##  <a name="getendkeyframe"></a>  CBaseTransition::GetEndKeyframe  
  Retorna iniciar quadro-chave.  
   
 ```  
@@ -221,7 +216,7 @@ CBaseKeyFrame* GetEndKeyframe();
 ### <a name="remarks"></a>Comentários  
  Esse método pode ser usado para acessar um objeto de quadro-chave que foi configurado anteriormente pelo SetKeyframes. Ele é chamado pelo código de nível superior quando transições que estão sendo adicionadas ao storyboard.  
   
-##  <a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable  
+##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable  
  Retorna um ponteiro para a variável relacionado.  
   
 ```  
@@ -234,7 +229,7 @@ CAnimationVariable* GetRelatedVariable();
 ### <a name="remarks"></a>Comentários  
  Este é um acessador a variável de animação relacionados.  
   
-##  <a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe  
+##  <a name="getstartkeyframe"></a>  CBaseTransition::GetStartKeyframe  
  Retorna iniciar quadro-chave.  
   
 ```  
@@ -247,7 +242,7 @@ CBaseKeyFrame* GetStartKeyframe();
 ### <a name="remarks"></a>Comentários  
  Esse método pode ser usado para acessar um objeto de quadro-chave que foi configurado anteriormente pelo SetKeyframes. Ele é chamado pelo código de nível superior quando transições que estão sendo adicionadas ao storyboard.  
   
-##  <a name="gettransition"></a>CBaseTransition::GetTransition  
+##  <a name="gettransition"></a>  CBaseTransition::GetTransition  
  Retorna um ponteiro para objeto de transição de COM subjacentes.  
   
 ```  
@@ -271,7 +266,7 @@ IUIAnimationTransition* GetTransition();
 ### <a name="remarks"></a>Comentários  
  Esse método retorna um ponteiro para objeto de transição COM subjacente e cria se necessário.  
   
-##  <a name="gettype"></a>CBaseTransition::GetType  
+##  <a name="gettype"></a>  CBaseTransition::GetType  
  Retorna o tipo de transição.  
   
 ```  
@@ -284,7 +279,7 @@ TRANSITION_TYPE GetType() const;
 ### <a name="remarks"></a>Comentários  
  Esse método pode ser usado para identificar um objeto de transição por seu tipo. O tipo é definido em um construtor em uma classe derivada.  
   
-##  <a name="isadded"></a>CBaseTransition::IsAdded  
+##  <a name="isadded"></a>  CBaseTransition::IsAdded  
  Informa se uma transição foi adicionada a um storyboard.  
   
 ```  
@@ -297,49 +292,49 @@ BOOL IsAdded();
 ### <a name="remarks"></a>Comentários  
  Este sinalizador é definido internamente quando o código de nível superior adiciona faz a transição para o storyboard.  
   
-##  <a name="m_badded"></a>CBaseTransition::m_bAdded  
+##  <a name="m_badded"></a>  CBaseTransition::m_bAdded  
  Especifica se uma transição foi adicionada a um storyboard.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_pendkeyframe"></a>CBaseTransition::m_pEndKeyframe  
+##  <a name="m_pendkeyframe"></a>  CBaseTransition::m_pEndKeyframe  
  Armazena um ponteiro para o quadro-chave que especifica o fim da transição.  
   
 ```  
 CBaseKeyFrame* m_pEndKeyframe;  
 ```  
   
-##  <a name="m_prelatedvariable"></a>CBaseTransition::m_pRelatedVariable  
+##  <a name="m_prelatedvariable"></a>  CBaseTransition::m_pRelatedVariable  
  Um ponteiro para uma variável de animação, que é animado com a transição armazenada em m_transition.  
   
 ```  
 CAnimationVariable* m_pRelatedVariable;  
 ```  
   
-##  <a name="m_pstartkeyframe"></a>CBaseTransition::m_pStartKeyframe  
+##  <a name="m_pstartkeyframe"></a>  CBaseTransition::m_pStartKeyframe  
  Armazena um ponteiro para o quadro-chave que especifica o início da transição.  
   
 ```  
 CBaseKeyFrame* m_pStartKeyframe;  
 ```  
   
-##  <a name="m_transition"></a>CBaseTransition::m_transition  
+##  <a name="m_transition"></a>  CBaseTransition::m_transition  
  Armazena um ponteiro para IUIAnimationTransition. NULL se um objeto de transição COM não foi criado.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransition> m_transition;  
 ```  
   
-##  <a name="m_type"></a>CBaseTransition::m_type  
+##  <a name="m_type"></a>  CBaseTransition::m_type  
  Armazena o tipo de transição.  
   
 ```  
 TRANSITION_TYPE m_type;  
 ```  
   
-##  <a name="setkeyframes"></a>CBaseTransition::SetKeyframes  
+##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes  
  Define os quadros-chave para proporcionar uma transição.  
   
 ```  
@@ -358,7 +353,7 @@ void SetKeyframes(
 ### <a name="remarks"></a>Comentários  
  Esse método informa a transição para iniciar depois de quadro-chave especificado e, opcionalmente, se pendentes não for NULL, terminar antes do quadro-chave especificado. Se a transição foi criada com um parâmetro de duração especificado, essa duração é substituída com a duração de tempo entre os quadros-chave inicial e final.  
   
-##  <a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable  
+##  <a name="setrelatedvariable"></a>  CBaseTransition::SetRelatedVariable  
  Estabelece uma relação entre a variável de animação e transição.  
   
 ```  
@@ -372,7 +367,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ### <a name="remarks"></a>Comentários  
  Estabelece uma relação entre a variável de animação e transição. Uma transição pode ser aplicada somente a uma variável.  
   
-##  <a name="transition_type_enumeration"></a>Enumeração CBaseTransition::TRANSITION_TYPE  
+##  <a name="transition_type_enumeration"></a>  Enumeração CBaseTransition::TRANSITION_TYPE  
  Define os tipos de transição atualmente suportados pela implementação da API do Windows animação MFC.  
   
 ```  

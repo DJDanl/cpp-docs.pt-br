@@ -1,13 +1,10 @@
 ---
 title: Estilos de caixa de listagem | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LBS_STANDARD
 - LBS_NODATA
@@ -46,17 +43,15 @@ helpviewer_keywords:
 - LBS_NOINTEGRALHEIGHT constant [MFC]
 - LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f52734e26d1965811aded67bc1e1dde6a2c28bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90441984aa8212212c3a9d4ea99cfb5b36127a03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-box-styles"></a>Estilos de caixa de listagem
 -   **LBS_DISABLENOSCROLL** a caixa de listagem mostra uma desabilitado barra de rolagem vertical quando a caixa de listagem não contém itens suficientes para rolar. Sem esse estilo, a barra de rolagem é ocultada quando a caixa de listagem contém itens suficientes.  

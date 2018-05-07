@@ -1,30 +1,25 @@
 ---
-title: "Usando controles em árvore | Microsoft Docs"
-ms.custom: 
+title: Usando controles em árvore | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3b7e0348cb21aa4338293f7cc1119e380f92dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-tree-controls"></a>Usando controles de árvore
 Um uso típico de um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) segue o padrão abaixo:  
@@ -33,7 +28,7 @@ Um uso típico de um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl
   
 -   Se você desejar que o controle de árvore para usar imagens, defina uma lista de imagens chamando [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Você também pode alterar o recuo chamando [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). É um bom momento para fazer isso em [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (para controles em caixas de diálogo) ou [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (para modos de exibição).  
   
--   Colocar dados no controle chamando o `CTreeCtrl`do [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) função uma vez para cada item de dados. `InsertItem`Retorna um identificador para o item que você pode usar para se referir a ele mais tarde, por exemplo, ao adicionar itens filhos. É um bom momento para inicializar os dados em `OnInitDialog` (para controles em caixas de diálogo) ou `OnInitialUpdate` (para modos de exibição).  
+-   Colocar dados no controle chamando o `CTreeCtrl`do [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) função uma vez para cada item de dados. `InsertItem` Retorna um identificador para o item que você pode usar para se referir a ele mais tarde, por exemplo, ao adicionar itens filhos. É um bom momento para inicializar os dados em `OnInitDialog` (para controles em caixas de diálogo) ou `OnInitialUpdate` (para modos de exibição).  
   
 -   Como o usuário interage com o controle, ele envia várias mensagens de notificação. Você pode especificar uma função para lidar com cada uma das mensagens que você deseja manipular adicionando um **ON_NOTIFY_REFLECT** macro no mapa de mensagem da janela de controle ou adicionando um `ON_NOTIFY` macro ao mapa de mensagem da janela de seu pai. Consulte [mensagens de notificação de controle de árvore](../mfc/tree-control-notification-messages.md) mais adiante neste tópico para obter uma lista de notificações possíveis.  
   

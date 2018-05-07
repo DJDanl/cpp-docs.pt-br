@@ -1,30 +1,25 @@
 ---
 title: Controles rebar e bandas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - rebar controls [MFC], working with bands in
 - bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6426a25746858ed5bd7c0d8ef70575e029453bae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rebar-controls-and-bands"></a>Controles rebar e bandas
 A principal finalidade de um controle rebar é atuar como um contêiner para janelas filho, controles de caixa de diálogo comuns, menus, barras de ferramentas e assim por diante. Essa contenção é suportada pelo conceito de "banda". Cada faixa rebar pode conter qualquer combinação de uma barra dupla, um bitmap, um rótulo de texto e uma janela filho.  

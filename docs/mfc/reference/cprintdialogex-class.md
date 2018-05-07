@@ -1,12 +1,9 @@
 ---
 title: Classe CPrintDialogEx | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 Encapsula os serviços fornecidos por folha de propriedades de impressão do Windows.  
@@ -214,7 +209,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Comentários  
  Cria um contexto de dispositivo de impressora (DC) a partir de [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) e [DEVNAMES](../../mfc/reference/devnames-structure.md) estruturas.  
   
- `GetDefaults`Não exibir a folha de propriedades de impressão. Em vez disso, ele define o **hDevNames** e **hDevMode** membros de [m_pdex](#m_pdex) para identificadores para o [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) e [DEVNAMES ](../../mfc/reference/devnames-structure.md) estruturas que são inicializadas para a impressora padrão do sistema. Ambos **hDevNames** e **hDevMode** deve ser NULL, ou `GetDefaults` falhar.  
+ `GetDefaults` Não exibir a folha de propriedades de impressão. Em vez disso, ele define o **hDevNames** e **hDevMode** membros de [m_pdex](#m_pdex) para identificadores para o [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) e [DEVNAMES ](../../mfc/reference/devnames-structure.md) estruturas que são inicializadas para a impressora padrão do sistema. Ambos **hDevNames** e **hDevMode** deve ser NULL, ou `GetDefaults` falhar.  
   
  Se o **PD_RETURNDC** sinalizador for definido, essa função não retornará apenas **hDevNames** e **hDevMode** (localizado em **m_pdex.hDevNames** e **m_pdex.hDevMode**) para o chamador, mas também retornará uma impressora DC em **m_pdex.hDC**. É responsabilidade do chamador para excluir a impressora DC e chamar o Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) função em identificadores quando tiver terminado com o `CPrintDialogEx` objeto.  
   

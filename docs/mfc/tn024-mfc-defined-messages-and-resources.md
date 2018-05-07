@@ -1,13 +1,10 @@
 ---
 title: 'TN024: Mensagens definidas pelo MFC e recursos | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: mensagens e recursos definidos pelo MFC
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- Esta mensagem é enviada por `COleResizeBar` para sua janela do proprietário (via `GetOwner`) quando o usuário o redimensiona a barra de redimensionamento com as alças de redimensionamento. `COleIPFrameWnd`responde a essa mensagem tentativa reposicionar a janela do quadro, como o usuário solicitou.  
+ Esta mensagem é enviada por `COleResizeBar` para sua janela do proprietário (via `GetOwner`) quando o usuário o redimensiona a barra de redimensionamento com as alças de redimensionamento. `COleIPFrameWnd` responde a essa mensagem tentativa reposicionar a janela do quadro, como o usuário solicitou.  
   
  O novo retângulo fornecido nas coordenadas do cliente em relação a janela do quadro que contém a barra de redimensionamento é indicado pelo lParam.  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|É um dos seguintes valores:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|Não usado (0)|  
   
- O valor de retorno deve ser diferente de zero se **FS_SYNCACTIVE** é definido e sincroniza a janela sua ativação com o quadro do pai. `CMiniFrameWnd`Retorna diferente de zero quando o estilo é definido como **MFS_SYNCACTIVE.**  
+ O valor de retorno deve ser diferente de zero se **FS_SYNCACTIVE** é definido e sincroniza a janela sua ativação com o quadro do pai. `CMiniFrameWnd` Retorna diferente de zero quando o estilo é definido como **MFS_SYNCACTIVE.**  
   
  Para obter mais informações, consulte a implementação de `CMiniFrameWnd`.  
   

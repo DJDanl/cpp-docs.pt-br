@@ -1,13 +1,10 @@
 ---
 title: Suporte a MAPI no MFC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6cc1670559354628127729724300399d5f003ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5d6498d1ecb20b47070cb26bf1a9d732340e266
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapi-support-in-mfc"></a>Suporte a MAPI no MFC
 MFC fornece suporte para um subconjunto da Microsoft programa Interface MAPI (Messaging Application) na classe **CDocument**. Especificamente, **CDocument** tem funções de membro que determinam se o suporte de correio está presente no computador do usuário final e, nesse caso, habilite um comando Enviar email cuja ID de comando padrão é **ID_FILE_SEND_MAIL**. A função de manipulador do MFC para este comando permite que o usuário enviar um documento por email.  

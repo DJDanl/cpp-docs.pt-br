@@ -1,13 +1,10 @@
 ---
 title: Estrutura WINDOWPLACEMENT | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPLACEMENT
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e73065cdf20d68b1da4ba77d1ad555e2bf95e937
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowplacement-structure"></a>Estrutura WINDOWPLACEMENT
-O `WINDOWPLACEMENT` estrutura contém informações sobre o posicionamento de uma janela na tela**.**  
+O `WINDOWPLACEMENT` estrutura contém informações sobre o posicionamento de uma janela na tela **.**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,12 +40,12 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
   
 #### <a name="parameters"></a>Parâmetros  
  *length*  
- Especifica o tamanho, em bytes, da estrutura de**.**  
+ Especifica o tamanho, em bytes, da estrutura de **.**  
   
  `flags`  
  Especifica sinalizadores que controlam a posição da janela minimizada e o método pelo qual a janela é restaurada. Esse membro pode ser um ou ambos os sinalizadores a seguir:  
   
-- **WPF_SETMINPOSITION** Especifica que as posições x e y da janela minimizada podem ser especificadas**.** Esse sinalizador deve ser especificado se as coordenadas são definidas no **ptMinPosition** membro.  
+- **WPF_SETMINPOSITION** Especifica que as posições x e y da janela minimizada podem ser especificadas **.** Esse sinalizador deve ser especificado se as coordenadas são definidas no **ptMinPosition** membro.  
   
 - **WPF_RESTORETOMAXIMIZED** Especifica que a janela restaurada será ser maximizada, independentemente se ele foi maximizado antes que ele foi minimizado. Essa configuração é válida apenas na próxima vez em que a janela é restaurada. Ele não altera o comportamento de restauração padrão. Esse sinalizador é válido somente quando o **SW_SHOWMINIMIZED** valor for especificado para o **showCmd** membro.  
   

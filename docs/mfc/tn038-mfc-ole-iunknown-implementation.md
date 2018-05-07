@@ -1,13 +1,10 @@
 ---
-title: "TN038: Implementação de IUnknown MFC OLE | Microsoft Docs"
-ms.custom: 
+title: 'TN038: Implementação de IUnknown MFC OLE | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementação de IUnknown MFC/OLE
 > [!NOTE]
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  Para obter mais informações sobre a agregação, consulte o [agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) tópico.  
   
- Suporte ao mapa de interface do MFC está enraizada na `CCmdTarget` classe. `CCmdTarget`"*tem um*" referência contagem, bem como todas as funções de membros associadas a [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementação (por exemplo é a contagem de referência em `CCmdTarget`). Para criar uma classe que dá suporte a OLE COM, você derivar uma classe de `CCmdTarget` e usar várias macros, bem como funções de membro `CCmdTarget` para implementar as interfaces desejadas. Implementação do MFC usa classes aninhadas para definir cada implementação de interface muito semelhante ao exemplo anterior. Isso é facilitado com uma implementação padrão de IUnknown, bem como um número de macros que eliminam a parte do código repetitivo.  
+ Suporte ao mapa de interface do MFC está enraizada na `CCmdTarget` classe. `CCmdTarget` "*tem um*" referência contagem, bem como todas as funções de membros associadas a [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementação (por exemplo é a contagem de referência em `CCmdTarget`). Para criar uma classe que dá suporte a OLE COM, você derivar uma classe de `CCmdTarget` e usar várias macros, bem como funções de membro `CCmdTarget` para implementar as interfaces desejadas. Implementação do MFC usa classes aninhadas para definir cada implementação de interface muito semelhante ao exemplo anterior. Isso é facilitado com uma implementação padrão de IUnknown, bem como um número de macros que eliminam a parte do código repetitivo.  
   
 ## <a name="interface-map-basics"></a>Noções básicas de mapa de interface  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  Use o `METHOD_PROLOGUE` macro para acessar o pai, `CCmdTarget`-objeto derivado.  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) pode delegar para o `CCmdTarget` implementação dessas funções (`ExternalAddRef`, `ExternalRelease`, e `ExternalQueryInterface` ).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) pode delegar para o `CCmdTarget` implementação dessas funções (`ExternalAddRef`, `ExternalRelease`, e `ExternalQueryInterface`).  
   
  O exemplo CPrintEditObj acima pode ser implementado da seguinte maneira:  
   
@@ -474,7 +469,7 @@ BEGIN_INTERFACE_MAP(CAggrExample,
 END_INTERFACE_MAP()  
 ```  
   
- A variável m_lpAggrInner é inicializada no construtor para NULL. A estrutura ignora uma variável de membro na implementação do padrão de NULL [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). `OnCreateAggregates`é um bom lugar para criar os objetos de agregação. Você precisa chamar explicitamente se você estiver criando o objeto fora a implementação do MFC de `COleObjectFactory`. O motivo para criar agregações em `CCmdTarget::OnCreateAggregates` , bem como o uso de `CCmdTarget::GetControllingUnknown` ficará aparente quando criar objetos agregáveis é discutido.  
+ A variável m_lpAggrInner é inicializada no construtor para NULL. A estrutura ignora uma variável de membro na implementação do padrão de NULL [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). `OnCreateAggregates` é um bom lugar para criar os objetos de agregação. Você precisa chamar explicitamente se você estiver criando o objeto fora a implementação do MFC de `COleObjectFactory`. O motivo para criar agregações em `CCmdTarget::OnCreateAggregates` , bem como o uso de `CCmdTarget::GetControllingUnknown` ficará aparente quando criar objetos agregáveis é discutido.  
   
  Essa técnica lhe dará o objeto de todas as interfaces que o objeto de agregação dá suporte a mais de suas interfaces nativo. Se você desejar somente um subconjunto das interfaces que oferece suporte a agregação, você pode substituir `CCmdTarget::GetInterfaceHook`. Isso permite hookability nível muito baixo, semelhante ao [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). Normalmente, você deseja que todas as interfaces que oferece suporte a agregação.  
   

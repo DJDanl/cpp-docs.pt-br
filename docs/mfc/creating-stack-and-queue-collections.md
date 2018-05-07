@@ -1,13 +1,10 @@
 ---
-title: "Criando coleções de pilhas e filas | Microsoft Docs"
-ms.custom: 
+title: Criando coleções de pilhas e filas | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-stack-and-queue-collections"></a>Criando coleções de pilhas e filas
 Este artigo explica como criar outras estruturas de dados, como [pilhas](#_core_stacks) e [filas](#_core_queues), lista de classes do MFC. Os exemplos usam classes derivadas de `CList`, mas você pode usar `CList` diretamente, a menos que você precisa adicionar funcionalidade.  
   
-##  <a name="_core_stacks"></a>Pilhas  
+##  <a name="_core_stacks"></a> Pilhas  
  Como a coleção de lista padrão tem um cabeçalho e uma final, é fácil criar uma coleção de lista derivada que imita o comportamento de uma pilha de último a entrar, primeiro a sair. Uma pilha é como uma pilha de bandejas em uma lanchonete. Como bandejas são adicionadas para a pilha, que entram na parte superior da pilha. Bandeja do último adicionada será o primeiro a ser removido. As funções de membro de coleção lista `AddHead` e `RemoveHead` podem ser usados para adicionar e remover elementos especificamente do início da lista; assim, mais recentemente adicionado elemento é o primeiro a ser removido.  
   
 #### <a name="to-create-a-stack-collection"></a>Para criar uma coleção de pilha  
@@ -48,7 +43,7 @@ Este artigo explica como criar outras estruturas de dados, como [pilhas](#_core_
   
  Observe que essa abordagem expõe subjacente `CObList` classe. O usuário pode chamar qualquer `CObList` função de membro, se ele faz sentido para uma pilha ou não.  
   
-##  <a name="_core_queues"></a>Filas  
+##  <a name="_core_queues"></a> Filas  
  Como a coleção de lista padrão tem um cabeçalho e uma final, também é fácil criar uma coleção de lista derivada que imita o comportamento de uma fila primeiro a entrar, primeiro a sair. Uma fila é como uma linha de pessoas em uma lanchonete. A primeira pessoa na linha é o primeiro a ser servido. À medida que mais pessoas, eles vá até o final da linha para aguardar sua vez. As funções de membro de coleção lista `AddTail` e `RemoveHead` podem ser usados para adicionar e remover elementos especificamente do início ou final da lista; assim, mais recentemente adicionado elemento é sempre a última a ser removido.  
   
 #### <a name="to-create-a-queue-collection"></a>Para criar uma coleção de fila  

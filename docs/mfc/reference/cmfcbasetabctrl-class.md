@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCBaseTabCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCBaseTabCtrl
@@ -247,17 +244,15 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd8f70ffd2568f509b8b12be2167579c4ec4475
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65160e196b202abd1393555a5ada001d76292e13
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbasetabctrl-class"></a>Classe CMFCBaseTabCtrl
 Implementa a funcionalidade básica de janelas com guias.  
@@ -430,7 +425,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxbasetabctrl.h  
   
-##  <a name="addicon"></a>CMFCBaseTabCtrl::AddIcon  
+##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon  
  Adiciona um ícone para a lista de ícones no protegido `CMap m_mapAddedIcons` membro.  
   
 ```  
@@ -448,7 +443,7 @@ void AddIcon(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="addtab"></a>CMFCBaseTabCtrl::AddTab  
+##  <a name="addtab"></a>  CMFCBaseTabCtrl::AddTab  
  Adiciona uma nova guia para o controle de tabulação.  
   
 ```  
@@ -485,7 +480,7 @@ virtual void AddTab(
 ### <a name="remarks"></a>Comentários  
  Se `pTabWnd` aponta para um objeto que não é derivado do [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) e se `bDetachable` é `TRUE`, o framework cria automaticamente um wrapper para o `pTabWnd` objeto. O wrapper torna o `pTabWnd` destacáveis do objeto. Por padrão, o wrapper é uma instância do [CDockablePaneAdapter classe](../../mfc/reference/cdockablepaneadapter-class.md). Se a funcionalidade oferecida pelo wrapper padrão for inaceitável, use o [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) método para especificar um wrapper diferente.  
   
-##  <a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl::ApplyRestoredTabInfo  
+##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
 
   
 ```  
@@ -497,7 +492,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow  
+##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow  
 
   
 ```  
@@ -509,7 +504,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="calcrectedit"></a>CMFCBaseTabCtrl::CalcRectEdit  
+##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit  
 
   
 ```  
@@ -521,7 +516,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cleanup"></a>CMFCBaseTabCtrl::CleanUp  
+##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp  
 
   
 ```  
@@ -530,7 +525,7 @@ virtual void CleanUp();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="clearimagelist"></a>CMFCBaseTabCtrl::ClearImageList  
+##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList  
 
   
 ```  
@@ -539,7 +534,7 @@ virtual void ClearImageList();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="createwrapper"></a>CMFCBaseTabCtrl::CreateWrapper  
+##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper  
  Cria um wrapper para uma janela do quadro que deriva o [classe CWnd](../../mfc/reference/cwnd-class.md) , mas não é derivado do [CDockablePane classe](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -569,7 +564,7 @@ virtual CWnd* CreateWrapper(
   
  Se `pWndToWrap` é derivado de `CDockablePane`, esse método não criará um wrapper. Em vez disso, ele falhará e retornará `pWndToWrap`.  
   
-##  <a name="detachtab"></a>CMFCBaseTabCtrl::DetachTab  
+##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
  O framework chama esse método para desanexar uma guia do controle guia.  
   
 ```  
@@ -595,7 +590,7 @@ virtual BOOL DetachTab(
 ### <a name="remarks"></a>Comentários  
  Se a guia especificada pelo `nTabNum` é não-externos, essa função falhará e retornará `FALSE`.  
   
-##  <a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive  
+##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
 
   
 ```  
@@ -607,7 +602,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="enableautocolor"></a>CMFCBaseTabCtrl::EnableAutoColor  
+##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor  
  Controla se a estrutura usa as cores de plano de fundo automática quando uma guia de desenho.  
   
 ```  
@@ -623,7 +618,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
   
  Por padrão, as cores automática são determinadas pelas cores definidas de biblioteca. Você pode fornecer um conjunto personalizado de cores chamando [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="enablecustomtooltips"></a>CMFCBaseTabCtrl::EnableCustomToolTips  
+##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips  
  Permite que as dicas de ferramenta personalizadas para o controle de guia.  
   
 ```  
@@ -640,7 +635,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Comentários  
  Se as dicas de ferramenta personalizadas estiverem habilitadas, o controle da guia envia o `AFX_WM_ON_GET_TAB_TOOLTIP` mensagem para o quadro principal. Se você deseja oferecer suporte a dicas de ferramentas personalizadas em seu aplicativo, a janela do quadro principal deve lidar com esse método e forneça o texto de dica de ferramenta personalizada. Para obter mais informações sobre como fornecer o texto de dica de ferramenta personalizada, consulte [CMFCTabToolTipInfo estrutura](../../mfc/reference/cmfctabtooltipinfo-structure.md).  
   
-##  <a name="enableinplaceedit"></a>CMFCBaseTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit  
  Permite direcionar a edição dos rótulos de guia do usuário.  
   
 ```  
@@ -654,11 +649,11 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ### <a name="remarks"></a>Comentários  
  Por padrão, a edição direta dos rótulos de guia é desabilitado para controles de guia.  
   
- Você pode habilitar a edição direta para um subconjunto das guias no controle guia. Para fazer isso, substitua o método `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab`deve retornar um valor diferente de zero para todas as guias que oferecem suporte a edição direta dos rótulos da guia.  
+ Você pode habilitar a edição direta para um subconjunto das guias no controle guia. Para fazer isso, substitua o método `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab` deve retornar um valor diferente de zero para todas as guias que oferecem suporte a edição direta dos rótulos da guia.  
   
  No `CMFCBaseTabCtrl Class`, esse método é uma função virtual pura e não tem nenhuma implementação. Se você derivar uma classe de `CMFCBaseTabCtrl`, você deve implementar essa função.  
   
-##  <a name="enabletabdetach"></a>CMFCBaseTabCtrl::EnableTabDetach  
+##  <a name="enabletabdetach"></a>  CMFCBaseTabCtrl::EnableTabDetach  
  Permite que as guias destacáveis.  
   
 ```  
@@ -677,7 +672,7 @@ virtual BOOL EnableTabDetach(
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` caso bem-sucedido; caso contrário, `FALSE`.  
   
-##  <a name="enabletabswap"></a>CMFCBaseTabCtrl::EnableTabSwap  
+##  <a name="enabletabswap"></a>  CMFCBaseTabCtrl::EnableTabSwap  
  Permite que o usuário altere a ordem de tabulação usando um mouse.  
   
 ```  
@@ -691,7 +686,7 @@ void EnableTabSwap(BOOL bEnable);
 ### <a name="remarks"></a>Comentários  
  Quando a troca de guia é habilitada, o usuário pode arrastar uma guia e alterar sua posição relativa no controle guia.  
   
-##  <a name="ensurevisible"></a>CMFCBaseTabCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible  
  Rola guias até a guia especificada é visível.  
   
 ```  
@@ -710,7 +705,7 @@ virtual BOOL EnsureVisible(int iTab);
   
  Por padrão, esse método não tem suporte a `CMFCBaseTabCtrl Class`. Você deve implementar essa função em uma classe personalizada derivada de `CMFCBaseTabCtrl` se controle guia personalizado oferece suporte à rolagem de guia. Há suporte para esse método de [CMFCTabCtrl classe](../../mfc/reference/cmfctabctrl-class.md).  
   
-##  <a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode  
+##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode  
 
   
 ```  
@@ -719,7 +714,7 @@ void EnterDragMode();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="findtargetwnd"></a>CMFCBaseTabCtrl::FindTargetWnd  
+##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd  
  Identifica o painel que contém um ponto especificado.  
   
 ```  
@@ -736,7 +731,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ### <a name="remarks"></a>Comentários  
  No `CMFCBaseTabCtrl` classe, esse método é uma função virtual pura: você deve implementá-la se você derivar uma classe de `CMFCBaseTabCtrl`.  
   
-##  <a name="firechangeactivetab"></a>CMFCBaseTabCtrl::FireChangeActiveTab  
+##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab  
 
   
 ```  
@@ -748,7 +743,7 @@ virtual void FireChangeActiveTab(int nNewTab);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="firechangingactivetab"></a>CMFCBaseTabCtrl::FireChangingActiveTab  
+##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab  
 
   
 ```  
@@ -762,7 +757,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getactivetab"></a>CMFCBaseTabCtrl::GetActiveTab  
+##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab  
  Recupera o índice da guia ativa no momento.  
   
 ```  
@@ -772,7 +767,7 @@ virtual int GetActiveTab() const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da guia ativa. -1 se não houver nenhum guia ativa.  
   
-##  <a name="getactivetabcolor"></a>CMFCBaseTabCtrl::GetActiveTabColor  
+##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor  
  Recupera a cor de plano de fundo da guia ativa no momento.  
   
 ```  
@@ -785,7 +780,7 @@ virtual COLORREF GetActiveTabColor() const;
 ### <a name="remarks"></a>Comentários  
  Por padrão, a cor de plano de fundo da guia ativa é `COLOR_WINDOW`. Você pode alterar a cor de plano de fundo para a guia ativa por meio do método [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
   
-##  <a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl::GetActiveTabTextColor  
+##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor  
  Recupera a cor do texto para a guia ativa.  
   
 ```  
@@ -798,7 +793,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ### <a name="remarks"></a>Comentários  
  Por padrão, a cor do texto para as guias ativos é `COLOR_WINDOWTEXT`. Você pode alterar a cor do texto com o método [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
   
-##  <a name="getactivewnd"></a>CMFCBaseTabCtrl::GetActiveWnd  
+##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd  
  Recupera um ponteiro para a janela de guia ativa no momento.  
   
 ```  
@@ -808,7 +803,7 @@ virtual CWnd* GetActiveWnd() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para uma janela.  
   
-##  <a name="getautocolors"></a>CMFCBaseTabCtrl::GetAutoColors  
+##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors  
  Recupera a matriz de cores usada para coloração automática.  
   
 ```  
@@ -821,7 +816,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ### <a name="remarks"></a>Comentários  
  Por padrão, o framework inicializa a matriz de cores definido de biblioteca. Você pode fornecer um conjunto personalizado de cores, chamando o método [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="getfirstvisibletab"></a>CMFCBaseTabCtrl::GetFirstVisibleTab  
+##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab  
  Recupera um ponteiro para a primeira guia visível.  
   
 ```  
@@ -848,7 +843,7 @@ virtual CWnd* GetFirstVisibleTab(
   
  Se `iStartFrom` é maior que ou igual ao número de guias no controle guia, `GetFirstVisibleTab` automaticamente falhar.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl::GetFirstVisibleTabNum  
+##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
 
   
 ```  
@@ -859,7 +854,7 @@ virtual int GetFirstVisibleTabNum() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gethighlightedtab"></a>CMFCBaseTabCtrl::GetHighlightedTab  
+##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab  
  Recupera o índice da guia realçado.  
   
 ```  
@@ -869,7 +864,7 @@ int GetHighlightedTab() const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da guia realçado.  
   
-##  <a name="getimagelist"></a>CMFCBaseTabCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList  
 
   
 ```  
@@ -880,7 +875,7 @@ virtual const CImageList* GetImageList() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getimagesize"></a>CMFCBaseTabCtrl::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize  
 
   
 ```  
@@ -891,7 +886,7 @@ virtual CSize GetImageSize() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getlastvisibletab"></a>CMFCBaseTabCtrl::GetLastVisibleTab  
+##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab  
 
   
 ```  
@@ -905,7 +900,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getlocation"></a>CMFCBaseTabCtrl::GetLocation  
+##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation  
  Recupera o local da parte da área da guia do controle guia.  
   
 ```  
@@ -918,7 +913,7 @@ Location GetLocation() const;
 ### <a name="remarks"></a>Comentários  
  Guia possíveis valores de local de área são `LOCATION_BOTTOM` e `LOCATION_TOP`.  
   
-##  <a name="getmaxwindowsize"></a>CMFCBaseTabCtrl::GetMaxWindowSize  
+##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize  
 
   
 ```  
@@ -929,7 +924,7 @@ virtual CSize GetMaxWindowSize() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettabarea"></a>CMFCBaseTabCtrl::GetTabArea  
+##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea  
  Recupera o tamanho e a posição da área da guia do controle guia.  
   
 ```  
@@ -940,17 +935,17 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `rectTabAreaTop`  
- Uma referência a um objeto `CRect`. `GetTabArea`usa esse objeto para armazenar o tamanho e a posição da área da guia superior.  
+ Uma referência a um objeto `CRect`. `GetTabArea` usa esse objeto para armazenar o tamanho e a posição da área da guia superior.  
   
  [in] `rectTabAreaBottom`  
- Uma referência a um objeto `CRect`. `GetTabArea`usa esse objeto para armazenar o tamanho e a posição da área de guias inferior.  
+ Uma referência a um objeto `CRect`. `GetTabArea` usa esse objeto para armazenar o tamanho e a posição da área de guias inferior.  
   
 ### <a name="remarks"></a>Comentários  
  Depois de `GetTabArea` retorna, o `CRect` parameters contém o tamanho e a posição da área da guia nas coordenadas do cliente do controle guia. Se não houver nenhuma área da guia na parte superior ou inferior do controle guia, `rectTabAreaTop` ou `rectTabAreaBottom` estão vazios.  
   
  No `CMFCBaseTabCtrl Class`, esse método é uma função virtual pura e não tem nenhuma implementação. Se você derivar uma classe de `CMFCBaseTabCtrl`, você precisa implementar essa função.  
   
-##  <a name="gettabbkcolor"></a>CMFCBaseTabCtrl::GetTabBkColor  
+##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor  
  Recupera a cor de plano de fundo da guia especificada.  
   
 ```  
@@ -964,7 +959,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ### <a name="return-value"></a>Valor de retorno  
  Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que indica a cor do plano de fundo da guia especificada; -1 se `iTab` está fora do intervalo.  
   
-##  <a name="gettabbordersize"></a>CMFCBaseTabCtrl::GetTabBorderSize  
+##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Recupera o tamanho das bordas da guia no controle guia.  
   
 ```  
@@ -977,7 +972,7 @@ virtual int GetTabBorderSize() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho padrão para a borda da guia é três pixels. Você pode alterar esse tamanho de borda com o método [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize).  
   
-##  <a name="gettabbyid"></a>CMFCBaseTabCtrl::GetTabByID  
+##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID  
  Recupera o índice de uma guia com base em uma ID de guia.  
   
 ```  
@@ -994,7 +989,7 @@ virtual int GetTabByID(int id) const;
 ### <a name="remarks"></a>Comentários  
  Na guia IDs são atribuídos automaticamente quando as guias são adicionadas a um controle guia.  
   
-##  <a name="gettabclosebutton"></a>CMFCBaseTabCtrl::GetTabCloseButton  
+##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton  
 
   
 ```  
@@ -1005,7 +1000,7 @@ CRect GetTabCloseButton() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettabfromhwnd"></a>CMFCBaseTabCtrl::GetTabFromHwnd  
+##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd  
  Recupera o índice da guia que contém o objeto HWND especificado.  
   
 ```  
@@ -1019,7 +1014,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da guia se bem-sucedido; -1 se a guia não contém `hwnd`.  
   
-##  <a name="gettabfrompoint"></a>CMFCBaseTabCtrl::GetTabFromPoint  
+##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
  Recupera a guia que contém um ponto específico.  
   
 ```  
@@ -1033,7 +1028,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice da guia que contém `pt`; -1 se a guia não contém `pt`.  
   
-##  <a name="gettabfullwidth"></a>CMFCBaseTabCtrl::GetTabFullWidth  
+##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
 
   
 ```  
@@ -1047,7 +1042,7 @@ virtual int GetTabFullWidth(int iTab) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettabhicon"></a>CMFCBaseTabCtrl::GetTabHicon  
+##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon  
  Retorna o HICON associado com a guia especificada.  
   
 ```  
@@ -1061,7 +1056,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ### <a name="return-value"></a>Valor de retorno  
  O HICON associado com um rótulo de guia se bem-sucedido; `NULL` se não houver nenhum HICON ou se o método falhar.  
   
-##  <a name="gettabicon"></a>CMFCBaseTabCtrl::GetTabIcon  
+##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon  
  Recupera o ícone associado com a guia especificada.  
   
 ```  
@@ -1078,7 +1073,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ### <a name="remarks"></a>Comentários  
  O [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto armazena os ícones em interno [CImageList](../../mfc/reference/cimagelist-class.md) objeto.  
   
-##  <a name="gettabid"></a>CMFCBaseTabCtrl::GetTabID  
+##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID  
  Recupera a ID de uma guia especificada pelo índice do guia.  
   
 ```  
@@ -1092,7 +1087,7 @@ int GetTabID(int iTab) const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma ID de guia ou -1 se `iTab` está fora do intervalo.  
   
-##  <a name="gettablabel"></a>CMFCBaseTabCtrl::GetTabLabel  
+##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
  Recupera o texto do rótulo da guia.  
   
 ```  
@@ -1109,14 +1104,14 @@ virtual BOOL GetTabLabel(
  Uma referência a um objeto `CString`. Esse método armazena o rótulo da guia nesse parâmetro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se for bem-sucedida; `FALSE` caso contrário.  
+ `TRUE` Se for bem-sucedida; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método falhar se o índice `iTab` é inválido.  
   
  Definir o rótulo de uma guia ao criar a guia usando [CMFCBaseTabCtrl::AddTab](#addtab). Você também pode alterar o rótulo após a criação com o método [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
-##  <a name="gettabrect"></a>CMFCBaseTabCtrl::GetTabRect  
+##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect  
  Recupera o tamanho e a posição da guia especificada.  
   
 ```  
@@ -1133,9 +1128,9 @@ virtual BOOL GetTabRect(
  Uma referência a um objeto `CRect`. Esse método armazena o tamanho e a posição da guia nesse parâmetro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se for bem-sucedida; `FALSE` se o índice de tabulação é inválido.  
+ `TRUE` Se for bem-sucedida; `FALSE` se o índice de tabulação é inválido.  
   
-##  <a name="gettabsheight"></a>CMFCBaseTabCtrl::GetTabsHeight  
+##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight  
 
   
 ```  
@@ -1146,7 +1141,7 @@ virtual int GetTabsHeight() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettabsnum"></a>CMFCBaseTabCtrl::GetTabsNum  
+##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum  
  Recupera o número de guias no controle guia.  
   
 ```  
@@ -1156,7 +1151,7 @@ virtual int GetTabsNum() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de guias no controle guia.  
   
-##  <a name="gettabsrect"></a>CMFCBaseTabCtrl::GetTabsRect  
+##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect  
 
   
 ```  
@@ -1168,7 +1163,7 @@ virtual void GetTabsRect(CRect& rect) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettabtextcolor"></a>CMFCBaseTabCtrl::GetTabTextColor  
+##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor  
  Recupera a cor do texto da guia especificada.  
   
 ```  
@@ -1182,7 +1177,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ### <a name="return-value"></a>Valor de retorno  
  Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor do texto da guia especificada; -1 se `iTab` está fora do intervalo.  
   
-##  <a name="gettabwnd"></a>CMFCBaseTabCtrl::GetTabWnd  
+##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Retorna o ponteiro para o painel que reside na guia especificada.  
   
 ```  
@@ -1194,14 +1189,14 @@ virtual CWnd* GetTabWnd(int iTab) const;
  O índice de base zero de uma guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto que reside na guia que `iTab` especifica. `NULL`Se `iTab` é inválido.  
+ Um ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto que reside na guia que `iTab` especifica. `NULL` Se `iTab` é inválido.  
   
 ### <a name="remarks"></a>Comentários  
  O objeto retornado é o que o aplicativo é adicionado quando chamado em [CMFCBaseTabCtrl::AddTab](#addtab) ou [CMFCBaseTabCtrl::InsertTab](#inserttab).  
   
  Se o objeto em uma guia tem um wrapper, esse método retornará o wrapper para o objeto. Para obter mais informações sobre wrappers, consulte [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). Se você quiser acessar um ponteiro para o objeto direto sem o wrapper, use o método [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).  
   
-##  <a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl::GetTabWndNoWrapper  
+##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper  
  Retorna um ponteiro para o controle que reside em uma guia, mesmo se o controle tiver um wrapper.  
   
 ```  
@@ -1216,11 +1211,11 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
  Um ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto que reside na guia especificada. `NULL` se `iTab` é inválido.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método retorna um ponteiro direto para o `CWnd` do objeto que você adicionou usando qualquer método de [CMFCBaseTabCtrl::AddTab](#addtab) ou [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper`recupera um ponteiro para adicionado `CWnd`, mesmo que a estrutura adicionada a um wrapper para o objeto. Para obter mais informações sobre wrappers e [CMFCBaseTabCtrl classe](../../mfc/reference/cmfcbasetabctrl-class.md), consulte [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
+ Esse método retorna um ponteiro direto para o `CWnd` do objeto que você adicionou usando qualquer método de [CMFCBaseTabCtrl::AddTab](#addtab) ou [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper` recupera um ponteiro para adicionado `CWnd`, mesmo que a estrutura adicionada a um wrapper para o objeto. Para obter mais informações sobre wrappers e [CMFCBaseTabCtrl classe](../../mfc/reference/cmfcbasetabctrl-class.md), consulte [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
   
  Use o método [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) se você não deseja ignorar a classe de invólucro.  
   
-##  <a name="gettooltipctrl"></a>CMFCBaseTabCtrl::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl  
  Recupera uma referência ao contorl a dica de ferramenta.  
   
 ```  
@@ -1230,7 +1225,7 @@ CToolTipCtrl& GetToolTipCtrl() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência para o controle de dica de ferramenta.  
   
-##  <a name="getvisibletabsnum"></a>CMFCBaseTabCtrl::GetVisibleTabsNum  
+##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum  
  Recupera o número de guias visíveis no momento.  
   
 ```  
@@ -1240,7 +1235,7 @@ virtual int GetVisibleTabsNum() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de guias visíveis.  
   
-##  <a name="hasimage"></a>CMFCBaseTabCtrl::HasImage  
+##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage  
 
   
 ```  
@@ -1254,7 +1249,7 @@ virtual BOOL HasImage(int iTab) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hidesingletab"></a>CMFCBaseTabCtrl::HideSingleTab  
+##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab  
  Define a opção para ocultar as guias do controle guia quando há uma guia visível.  
   
 ```  
@@ -1268,7 +1263,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ### <a name="remarks"></a>Comentários  
  Quando seu aplicativo está configurado para ocultar guias único, a estrutura automaticamente exibe as guias quando uma segunda guia é adicionada ao controle guia.  
   
-##  <a name="inserttab"></a>CMFCBaseTabCtrl::InsertTab  
+##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab  
  Insere uma guia no controle guia.  
   
 ```  
@@ -1310,7 +1305,7 @@ virtual void InsertTab(
 ### <a name="remarks"></a>Comentários  
  Se o objeto indicado por `pNewWnd` não é derivado do [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) e se o `bDetachable` parâmetro é `TRUE`, o framework cria um wrapper especial para a nova guia. Por padrão, o wrapper é uma instância do [CDockablePaneAdapter classe](../../mfc/reference/cdockablepaneadapter-class.md). Use o [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) método para criar uma classe wrapper diferentes. Qualquer classe de invólucro personalizada deve ser derivado de `CDockablePaneAdapter`.  
   
-##  <a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab  
+##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
 
   
 ```  
@@ -1322,7 +1317,7 @@ void InvalidateTab(int iTab);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl::IsActiveTabCloseButton  
+##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton  
 
   
 ```  
@@ -1333,7 +1328,7 @@ virtual BOOL IsActiveTabCloseButton() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isautocolor"></a>CMFCBaseTabCtrl::IsAutoColor  
+##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor  
  Determina se o controle da guia está no modo de autocolor.  
   
 ```  
@@ -1341,12 +1336,12 @@ BOOL IsAutoColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o controle da guia estiver no modo de autocolor; `FALSE` caso contrário.  
+ `TRUE` Se o controle da guia estiver no modo de autocolor; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Você pode habilitar ou desabilitar o modo de autocolor usando o [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) método.  
   
-##  <a name="isautodestroywindow"></a>CMFCBaseTabCtrl::IsAutoDestroyWindow  
+##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow  
 
   
 ```  
@@ -1357,7 +1352,7 @@ BOOL IsAutoDestroyWindow() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="iscolored"></a>CMFCBaseTabCtrl::IsColored  
+##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored  
 
   
 ```  
@@ -1368,7 +1363,7 @@ virtual BOOL IsColored() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isdialogcontrol"></a>CMFCBaseTabCtrl::IsDialogControl  
+##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl  
 
   
 ```  
@@ -1379,7 +1374,7 @@ BOOL IsDialogControl() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isdrawnoprefix"></a>CMFCBaseTabCtrl::IsDrawNoPrefix  
+##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix  
 
   
 ```  
@@ -1390,7 +1385,7 @@ BOOL IsDrawNoPrefix() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isflatframe"></a>CMFCBaseTabCtrl::IsFlatFrame  
+##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame  
  Indica se o quadro do controle guia é renderizado em um estilo simples ou em um estilo 3D.  
   
 ```  
@@ -1398,14 +1393,14 @@ virtual BOOL IsFlatFrame() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o quadro do controle guia é processado em um estilo simples; `FALSE` se o quadro é processado em um estilo 3D.  
+ `TRUE` Se o quadro do controle guia é processado em um estilo simples; `FALSE` se o quadro é processado em um estilo 3D.  
   
 ### <a name="remarks"></a>Comentários  
  Use [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) para alterar o estilo do quadro do controle guia.  
   
  Controles de guia que usam o estilo do Outlook não podem ser renderizados com quadros simples. Isso inclui o [CMFCOutlookBarTabCtrl classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md) e todas as classes derivadas da classe.  
   
-##  <a name="isflattab"></a>CMFCBaseTabCtrl::IsFlatTab  
+##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab  
 
   
 ```  
@@ -1416,7 +1411,7 @@ virtual BOOL IsFlatTab() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ishidesingletab"></a>CMFCBaseTabCtrl::IsHideSingleTab  
+##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab  
  Determina se o controle da guia oculta o rótulo da guia, se houver apenas uma guia.  
   
 ```  
@@ -1424,12 +1419,12 @@ virtual BOOL IsHideSingleTab() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o controle da guia oculta o rótulo da guia quando ele tem uma guia. Caso contrário, `FALSE`.  
+ `TRUE` Se o controle da guia oculta o rótulo da guia quando ele tem uma guia. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Use o método [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) para habilitar a ocultar o rótulo da guia quando há apenas uma guia.  
   
-##  <a name="isiconadded"></a>CMFCBaseTabCtrl::IsIconAdded  
+##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded  
 
   
 ```  
@@ -1446,7 +1441,7 @@ BOOL IsIconAdded(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isinplaceedit"></a>CMFCBaseTabCtrl::IsInPlaceEdit  
+##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit  
  Indica se o controle da guia está configurado para permitir que o usuário modifique dinamicamente os rótulos de guia.  
   
 ```  
@@ -1459,7 +1454,7 @@ virtual BOOL IsInPlaceEdit() const;
 ### <a name="remarks"></a>Comentários  
  Você pode habilitar ou desabilitar edição no local, chamando o método [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).  
   
-##  <a name="isleftrightrounded"></a>CMFCBaseTabCtrl::IsLeftRightRounded  
+##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded  
 
   
 ```  
@@ -1470,7 +1465,7 @@ virtual BOOL IsLeftRightRounded() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ismditab"></a>CMFCBaseTabCtrl::IsMDITab  
+##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab  
 
   
 ```  
@@ -1481,7 +1476,7 @@ BOOL IsMDITab() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isonenotestyle"></a>CMFCBaseTabCtrl::IsOneNoteStyle  
+##  <a name="isonenotestyle"></a>  CMFCBaseTabCtrl::IsOneNoteStyle  
  Determina se as guias são exibidas no estilo do OneNote do Microsoft.  
   
 ```  
@@ -1489,14 +1484,14 @@ virtual BOOL IsOneNoteStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se as guias são exibidas no estilo do Microsoft OneNote. Caso contrário, `FALSE`.  
+ `TRUE` Se as guias são exibidas no estilo do Microsoft OneNote. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Chame o método [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) para habilitar o estilo do Microsoft OneNote. Você também pode habilitar esse estilo quando você cria uma instância de [CMFCTabCtrl classe](../../mfc/reference/cmfctabctrl-class.md): basta passar o estilo STYLE_3D_ONENOTE para o método [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create).  
   
  Por padrão, o estilo de Microsoft OneNote não é suportado em uma classe personalizada derivada do `CMFCBaseTabCtrl Class`. No entanto, é compatível com o `CMFCTabCtrl` classe.  
   
-##  <a name="isptintabarea"></a>CMFCBaseTabCtrl::IsPtInTabArea  
+##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea  
  Determina se um ponto está dentro da área de guia.  
   
 ```  
@@ -1513,7 +1508,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ### <a name="remarks"></a>Comentários  
  No `CMFCBaseTabCtrl Class`, esse método é uma função virtual pura e não tem nenhuma implementação. Se você derivar uma classe de `CMFCBaseTabCtrl`, você precisa implementar essa função.  
   
-##  <a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
+##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
 
   
 ```  
@@ -1524,7 +1519,7 @@ BOOL IsTabCloseButtonHighlighted() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl::IsTabCloseButtonPressed  
+##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed  
 
   
 ```  
@@ -1535,7 +1530,7 @@ BOOL IsTabCloseButtonPressed() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="istabdetachable"></a>CMFCBaseTabCtrl::IsTabDetachable  
+##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable  
  Determina se uma guia é removível.  
   
 ```  
@@ -1547,12 +1542,12 @@ virtual BOOL IsTabDetachable(int iTab) const;
  O índice baseado em zero da guia para verificar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a guia é destacáveis; `FALSE` caso contrário.  
+ `TRUE` Se a guia é destacáveis; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para tornar uma guia destacáveis, use o método [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).  
   
-##  <a name="istabicononly"></a>CMFCBaseTabCtrl::IsTabIconOnly  
+##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly  
  Determina se uma etiqueta de guia contém apenas os ícones e nenhum texto.  
   
 ```  
@@ -1564,12 +1559,12 @@ virtual BOOL IsTabIconOnly(int iTab) const;
  O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se um rótulo da guia tem apenas ícones; `FALSE` caso contrário.  
+ `TRUE` Se um rótulo da guia tem apenas ícones; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para definir as guias no seu aplicativo para exibir apenas os ícones, chame o método [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).  
   
-##  <a name="istabswapenabled"></a>CMFCBaseTabCtrl::IsTabSwapEnabled  
+##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled  
  Determina se o controle da guia permite que o usuário altere as posições de guia usando o mouse.  
   
 ```  
@@ -1582,7 +1577,7 @@ BOOL IsTabSwapEnabled() const;
 ### <a name="remarks"></a>Comentários  
  Por padrão, os usuários não é possível alterar a ordem das guias em um controle guia. Use o [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap) método para habilitar essa funcionalidade.  
   
-##  <a name="istabvisible"></a>CMFCBaseTabCtrl::IsTabVisible  
+##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible  
  Indica se a guia especificada está visível.  
   
 ```  
@@ -1596,7 +1591,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a guia especificada estiver visível; Caso contrário, 0.  
   
-##  <a name="isvs2005style"></a>CMFCBaseTabCtrl::IsVS2005Style  
+##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style  
 
   
 ```  
@@ -1607,8 +1602,8 @@ virtual BOOL IsVS2005Style() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
- `m_bActivateTabOnRightClick`Determina se são guias em foco quando o usuário clica em uma etiqueta de guia usando o botão direito do mouse.  
+##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
+ `m_bActivateTabOnRightClick` Determina se são guias em foco quando o usuário clica em uma etiqueta de guia usando o botão direito do mouse.  
   
 ```  
 BOOL m_bActivateTabOnRightClick;  
@@ -1617,8 +1612,8 @@ BOOL m_bActivateTabOnRightClick;
 ### <a name="remarks"></a>Comentários  
  O valor padrão para este membro de dados é `FALSE`.  
   
-##  <a name="m_bautodestroywindow"></a>CMFCBaseTabCtrl::m_bAutoDestroyWindow  
- `m_bAutoDestroyWindow`Determina se o framework destrói automaticamente os objetos nas guias quando as guias são removidas.  
+##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow  
+ `m_bAutoDestroyWindow` Determina se o framework destrói automaticamente os objetos nas guias quando as guias são removidas.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
@@ -1627,7 +1622,7 @@ BOOL m_bAutoDestroyWindow;
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse membro é `FALSE`.  
   
-##  <a name="movetab"></a>CMFCBaseTabCtrl::MoveTab  
+##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab  
 
   
 ```  
@@ -1642,7 +1637,7 @@ virtual void MoveTab(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onchangetabs"></a>CMFCBaseTabCtrl::OnChangeTabs  
+##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs  
  O framework chama esse método quando o número de guias em uma guia de controle de alterações.  
   
 ```  
@@ -1652,7 +1647,7 @@ virtual void OnChangeTabs();
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada. Substitua este método para executar código personalizado quando o número de guias na guia controle de alterações.  
   
-##  <a name="ondrop"></a>CMFCBaseTabCtrl::OnDrop  
+##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop  
 
   
 ```  
@@ -1671,7 +1666,7 @@ virtual BOOL OnDrop(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondragover"></a>CMFCBaseTabCtrl::OnDragOver  
+##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver  
 
   
 ```  
@@ -1690,7 +1685,7 @@ virtual DROPEFFECT OnDragOver(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondragleave"></a>CMFCBaseTabCtrl::OnDragLeave  
+##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave  
 
   
 ```  
@@ -1699,7 +1694,7 @@ virtual void OnDragLeave();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondragenter"></a>CMFCBaseTabCtrl::OnDragEnter  
+##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter  
 
   
 ```  
@@ -1718,7 +1713,7 @@ virtual DROPEFFECT OnDragEnter(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onrenametab"></a>CMFCBaseTabCtrl::OnRenameTab  
+##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab  
 
   
 ```  
@@ -1733,7 +1728,7 @@ virtual BOOL OnRenameTab(int, CString&);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="pretranslatemessage"></a>CMFCBaseTabCtrl::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage  
 
   
 ```  
@@ -1747,7 +1742,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="recalclayout"></a>CMFCBaseTabCtrl::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout  
  Recalcula o layout interno do controle guia.  
   
 ```  
@@ -1757,7 +1752,7 @@ virtual void RecalcLayout() = 0;
 ### <a name="remarks"></a>Comentários  
  No `CMFCBaseTabCtrl Class`, esse método é uma função virtual pura. Se você derivar uma classe de `CMFCBaseTabCtrl`, você precisa implementar essa função.  
   
-##  <a name="removealltabs"></a>CMFCBaseTabCtrl::RemoveAllTabs  
+##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs  
  Remove todas as guias do controle guia.  
   
 ```  
@@ -1767,7 +1762,7 @@ virtual void RemoveAllTabs();
 ### <a name="remarks"></a>Comentários  
  Se [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) é `TRUE`, a estrutura exclui todos os a [CWnd](../../mfc/reference/cwnd-class.md) objetos conectadas às guias de removido.  
   
-##  <a name="removetab"></a>CMFCBaseTabCtrl::RemoveTab  
+##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab  
  Remove uma guia do controle guia.  
   
 ```  
@@ -1784,12 +1779,12 @@ virtual BOOL RemoveTab(
  Um parâmetro booleano que especifica se a recalcula o layout da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método remove a guia com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o método remove a guia com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Se [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) é `TRUE`, `RemoveTab` destrói o [CWnd](../../mfc/reference/cwnd-class.md) objeto associado com a guia especificada.  
   
-##  <a name="renametab"></a>CMFCBaseTabCtrl::RenameTab  
+##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab  
 
   
 ```  
@@ -1800,14 +1795,14 @@ virtual BOOL RenameTab();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="resetimagelist"></a>CMFCBaseTabCtrl::ResetImageList  
+##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList  
  Redefine a lista de imagens para uma instância do [CMFCBaseTabCtrl classe](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ```  
 void ResetImageList();
 ```  
   
-##  <a name="serialize"></a>CMFCBaseTabCtrl::Serialize  
+##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize  
 
   
 ```  
@@ -1819,7 +1814,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setactivetab"></a>CMFCBaseTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>  CMFCBaseTabCtrl::SetActiveTab  
  Ativa a guia especificada.  
   
 ```  
@@ -1836,7 +1831,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ### <a name="remarks"></a>Comentários  
  No `CMFCBaseTabCtrl Class`, esse método é uma função virtual pura. Se você derivar uma classe de `CMFCBaseTabCtrl`, você precisa implementar essa função.  
   
-##  <a name="setactivetabcolor"></a>CMFCBaseTabCtrl::SetActiveTabColor  
+##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor  
  Define a cor de plano de fundo para a guia ativa.  
   
 ```  
@@ -1850,7 +1845,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ### <a name="remarks"></a>Comentários  
  A estrutura obtém a cor de fundo padrão para as guias ativas da [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)método.  
   
-##  <a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl::SetActiveTabTextColor  
+##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Define a cor do texto para as guias ativos.  
   
 ```  
@@ -1864,7 +1859,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ### <a name="remarks"></a>Comentários  
  Por padrão, o framework obtém a cor do texto de [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Substituir essa cor padrão usando o `SetActiveTabTextColor` método.  
   
-##  <a name="setautocolors"></a>CMFCBaseTabCtrl::SetAutoColors  
+##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Define as cores do controle de guia que usa a estrutura no modo de cor automática.  
   
 ```  
@@ -1880,7 +1875,7 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
   
  Para habilitar o modo autocolor, use o [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) método.  
   
-##  <a name="setdockingbarwrapperrtc"></a>CMFCBaseTabCtrl::SetDockingBarWrapperRTC  
+##  <a name="setdockingbarwrapperrtc"></a>  CMFCBaseTabCtrl::SetDockingBarWrapperRTC  
  Define a classe de invólucro que é usada para todos os objetos que não derivam de [CDockablePane classe](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -1892,9 +1887,9 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
  As informações de classe de tempo de execução para a nova classe de invólucro.  
   
 ### <a name="remarks"></a>Comentários  
- Adicionar guias a um controle guia usando os métodos [CMFCBaseTabCtrl::AddTab](#addtab) e [CMFCBaseTabCtrl::InsertTab](#inserttab). Quando você adiciona uma guia, todos os controles de guia devem ser encaixável. Todos os objetos que não seja derivados de `CDockablePane` devem ser encapsuladas. `AddTab`e `InsertTab` criar um wrapper para esses objetos. A classe de wrapper padrão é o [CDockablePaneAdapter classe](../../mfc/reference/cdockablepaneadapter-class.md). O método `SetDockingBarWrapperRTC` permite que você altere a classe é usada como uma classe wrapper. A classe de invólucro que você fornecer deve ser derivada de `CDockablePaneAdapter`.  
+ Adicionar guias a um controle guia usando os métodos [CMFCBaseTabCtrl::AddTab](#addtab) e [CMFCBaseTabCtrl::InsertTab](#inserttab). Quando você adiciona uma guia, todos os controles de guia devem ser encaixável. Todos os objetos que não seja derivados de `CDockablePane` devem ser encapsuladas. `AddTab` e `InsertTab` criar um wrapper para esses objetos. A classe de wrapper padrão é o [CDockablePaneAdapter classe](../../mfc/reference/cdockablepaneadapter-class.md). O método `SetDockingBarWrapperRTC` permite que você altere a classe é usada como uma classe wrapper. A classe de invólucro que você fornecer deve ser derivada de `CDockablePaneAdapter`.  
   
-##  <a name="setdrawnoprefix"></a>CMFCBaseTabCtrl::SetDrawNoPrefix  
+##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix  
  Habilita e desabilita o processamento de caracteres de prefixo em rótulos de guia.  
   
 ```  
@@ -1905,15 +1900,15 @@ void SetDrawNoPrefix(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bNoPrefix`  
- `TRUE`Se você quiser processar caracteres de prefixo. Caso contrário, `FALSE`.  
+ `TRUE` Se você quiser processar caracteres de prefixo. Caso contrário, `FALSE`.  
   
  [in] `bRedraw`  
- `TRUE`Se você quiser redesenhar a janela com guias. Caso contrário, `FALSE`.  
+ `TRUE` Se você quiser redesenhar a janela com guias. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Um caractere de prefixo é um caractere mnemônico é precedido por um e comercial (&).  
   
-##  <a name="setimagelist"></a>CMFCBaseTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList  
  Define a lista de imagem de ícone para o controle de guia.  
   
 ```  
@@ -1927,7 +1922,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `uiID`  
- Uma ID de recurso de bitmap. `SetImageList`carrega a lista de imagens deste recurso.  
+ Uma ID de recurso de bitmap. `SetImageList` carrega a lista de imagens deste recurso.  
   
  [in] `cx`  
  A largura de cada imagem em pixels.  
@@ -1944,11 +1939,11 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="remarks"></a>Comentários  
  As imagens da lista de imagem do ícone são exibidas juntamente com os rótulos para a guia. Para exibir um ícone, você deve especificar seu índice quando você chamar [CMFCBaseTabCtrl::AddTab](#addtab).  
   
- `SetImageList`falhará se o controle de guia foi criado com um estilo simples. Ele também falhará se a estrutura não é possível carregar a imagem indicada pelo `uiID`.  
+ `SetImageList` falhará se o controle de guia foi criado com um estilo simples. Ele também falhará se a estrutura não é possível carregar a imagem indicada pelo `uiID`.  
   
  Esse método recalcula a altura do guia de acordo com os tamanhos de imagem e texto.  
   
-##  <a name="setlocation"></a>CMFCBaseTabCtrl::SetLocation  
+##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation  
 
   
 ```  
@@ -1960,7 +1955,7 @@ virtual void SetLocation(Location location);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="settabbkcolor"></a>CMFCBaseTabCtrl::SetTabBkColor  
+##  <a name="settabbkcolor"></a>  CMFCBaseTabCtrl::SetTabBkColor  
  Define a cor de plano de fundo da guia especificada.  
   
 ```  
@@ -1977,9 +1972,9 @@ virtual BOOL SetTabBkColor(
  A cor a ser definido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se for bem-sucedida; `FALSE` caso contrário.  
+ `TRUE` Se for bem-sucedida; `FALSE` caso contrário.  
   
-##  <a name="settabbordersize"></a>CMFCBaseTabCtrl::SetTabBorderSize  
+##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize  
  Define um novo tamanho de borda do controle guia.  
   
 ```  
@@ -1995,7 +1990,7 @@ virtual void SetTabBorderSize(
  [in] `bRepaint`  
  Um parâmetro booliano que indica se a estrutura redesenha o controle.  
   
-##  <a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon  
+##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
  Define o ícone para um rótulo da guia.  
   
 ```  
@@ -2014,7 +2009,7 @@ virtual BOOL SetTabHicon(
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` caso bem-sucedido; caso contrário, `FALSE`.  
   
-##  <a name="settabicon"></a>CMFCBaseTabCtrl::SetTabIcon  
+##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon  
  Define o ícone para um guia.  
   
 ```  
@@ -2033,7 +2028,7 @@ virtual BOOL SetTabIcon(
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` caso bem-sucedido; caso contrário, `FALSE`.  
   
-##  <a name="settabicononly"></a>CMFCBaseTabCtrl::SetTabIconOnly  
+##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly  
  Permite exibir somente um ícone (e nenhum rótulo de texto) em uma guia específica.  
   
 ```  
@@ -2059,7 +2054,7 @@ virtual BOOL SetTabIconOnly(
 ### <a name="remarks"></a>Comentários  
  Por padrão, um controle guia exibe o rótulo de ícone e o texto para cada guia.  
   
-##  <a name="settablabel"></a>CMFCBaseTabCtrl::SetTabLabel  
+##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel  
  Define o texto para um rótulo da guia.  
   
 ```  
@@ -2078,7 +2073,7 @@ virtual BOOL SetTabLabel(
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
-##  <a name="settabsheight"></a>CMFCBaseTabCtrl::SetTabsHeight  
+##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight  
 
   
 ```  
@@ -2087,7 +2082,7 @@ virtual void SetTabsHeight();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="settabsorder"></a>CMFCBaseTabCtrl::SetTabsOrder  
+##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder  
  Organiza as guias na ordem especificada.  
   
 ```  
@@ -2099,12 +2094,12 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
  Uma matriz de índices com base em zero que define a nova ordem de tabulação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se for bem-sucedida; `FAIL` caso contrário.  
+ `TRUE` Se for bem-sucedida; `FAIL` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  O tamanho do `arOrder` matriz deve ser igual ao número de guias no controle guia.  
   
-##  <a name="settabtextcolor"></a>CMFCBaseTabCtrl::SetTabTextColor  
+##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
  Define a cor do texto para uma guia específico.  
   
 ```  
@@ -2123,7 +2118,7 @@ virtual BOOL SetTabTextColor(
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
-##  <a name="showtab"></a>CMFCBaseTabCtrl::ShowTab  
+##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab  
  Mostra ou oculta a guia especificada.  
   
 ```  
@@ -2153,7 +2148,7 @@ virtual BOOL ShowTab(
 ### <a name="remarks"></a>Comentários  
  O parâmetro `bActivate` só se aplica se `bShow` é `TRUE`. Se `bActivate` é `TRUE` e se `ShowTab` for bem-sucedida, `ShowTab` enviará a mensagem AFX_WM_CHANGE_ACTIVE_TAB para o pai da janela de guia.  
   
-##  <a name="startrenametab"></a>CMFCBaseTabCtrl::StartRenameTab  
+##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
 
   
 ```  
@@ -2167,7 +2162,7 @@ virtual BOOL StartRenameTab(int iTab);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="swaptabs"></a>CMFCBaseTabCtrl::SwapTabs  
+##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs  
 
   
 ```  

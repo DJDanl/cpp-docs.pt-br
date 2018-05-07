@@ -1,12 +1,9 @@
 ---
 title: Classe CToolTipCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CToolTipCtrl
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67a9ccb25216c6f7546d9d906f91cfe5102bc4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de230a82adaaafc149d2ed5a762977205c798b03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctooltipctrl-class"></a>Classe CToolTipCtrl
 Encapsula a funcionalidade de um "controle dica de ferramenta," uma pequena janela pop-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo.  
@@ -150,7 +145,7 @@ class CToolTipCtrl : public CWnd
 ## <a name="remarks"></a>Comentários  
  Uma ferramenta de"" é qualquer uma janela, como uma janela filho ou controle ou uma área retangular definido pelo aplicativo dentro da área cliente da janela. Uma dica de ferramenta está oculto na maioria das vezes, que aparecem somente quando o usuário coloca o cursor em uma ferramenta e deixa-lo para aproximadamente metade de segundo. A dica de ferramenta é exibida próximo ao cursor e desaparece quando o usuário clica em um botão do mouse ou mover o cursor para fora a ferramenta.  
   
- `CToolTipCtrl`fornece a funcionalidade para controlar o tempo inicial e a duração da dica de ferramenta, a largura da margem ao redor do texto da dica de ferramenta, a largura da janela de dica de ferramenta em si e a cor de plano de fundo e texto da dica de ferramenta. Um controle de dica de ferramenta único pode fornecer informações para mais de uma ferramenta.  
+ `CToolTipCtrl` fornece a funcionalidade para controlar o tempo inicial e a duração da dica de ferramenta, a largura da margem ao redor do texto da dica de ferramenta, a largura da janela de dica de ferramenta em si e a cor de plano de fundo e texto da dica de ferramenta. Um controle de dica de ferramenta único pode fornecer informações para mais de uma ferramenta.  
   
  O `CToolTipCtrl` classe fornece a funcionalidade de controle de dica de ferramenta comuns do Windows. Esse controle (e, portanto, o `CToolTipCtrl` classe) está disponível apenas para programas que executam versões do Windows 95/98 e Windows NT 3.51 e posterior.  
   
@@ -170,7 +165,7 @@ class CToolTipCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn.h  
   
-##  <a name="activate"></a>CToolTipCtrl::Activate  
+##  <a name="activate"></a>  CToolTipCtrl::Activate  
  Chame essa função para ativar ou desativar um controle de dica de ferramenta.  
   
 ```  
@@ -189,7 +184,7 @@ void Activate(BOOL bActivate);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="addtool"></a>CToolTipCtrl::AddTool  
+##  <a name="addtool"></a>  CToolTipCtrl::AddTool  
  Registra uma ferramenta com o controle de dica de ferramenta.  
   
 ```  
@@ -237,7 +232,7 @@ BOOL AddTool(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="adjustrect"></a>CToolTipCtrl::AdjustRect  
+##  <a name="adjustrect"></a>  CToolTipCtrl::AdjustRect  
  Converte entre texto um controle de dica de ferramenta de exibição retângulo e retângulo sua janela.  
   
 ```  
@@ -261,7 +256,7 @@ BOOL AdjustRect(
   
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_ADJUSTRECT](http://msdn.microsoft.com/library/windows/desktop/bb760352), conforme descrito no SDK do Windows.  
   
-##  <a name="create"></a>CToolTipCtrl::Create  
+##  <a name="create"></a>  CToolTipCtrl::Create  
  Cria um controle de dica de ferramenta e a anexa a um `CToolTipCtrl` objeto.  
   
 ```  
@@ -295,7 +290,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="createex"></a>CToolTipCtrl::CreateEx  
+##  <a name="createex"></a>  CToolTipCtrl::CreateEx  
  Cria um controle (uma janela filho) e associá-lo com o `CToolTipCtrl` objeto.  
   
 ```  
@@ -321,7 +316,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Use `CreateEx` em vez de **criar** para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
   
-##  <a name="ctooltipctrl"></a>CToolTipCtrl::CToolTipCtrl  
+##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl  
  Constrói um objeto `CToolTipCtrl`.  
   
 ```  
@@ -334,7 +329,7 @@ CToolTipCtrl();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
-##  <a name="deltool"></a>CToolTipCtrl::DelTool  
+##  <a name="deltool"></a>  CToolTipCtrl::DelTool  
  Remove a ferramenta especificada por `pWnd` e `nIDTool` da coleção de ferramentas com suporte por um controle de dica de ferramenta.  
   
 ```  
@@ -350,7 +345,7 @@ void DelTool(
  `nIDTool`  
  ID da ferramenta.  
   
-##  <a name="getbubblesize"></a>CToolTipCtrl::GetBubbleSize  
+##  <a name="getbubblesize"></a>  CToolTipCtrl::GetBubbleSize  
  Recupera o tamanho da dica de ferramenta.  
   
 ```  
@@ -367,7 +362,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_GETBUBBLESIZE](http://msdn.microsoft.com/library/windows/desktop/bb760387), conforme descrito no SDK do Windows.  
   
-##  <a name="getcurrenttool"></a>CToolTipCtrl::GetCurrentTool  
+##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool  
  Recupera informações, como o tamanho, a posição e o texto da janela de dica de ferramenta exibido pelo controle de dica de ferramenta atual.  
   
 ```  
@@ -381,7 +376,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 |[out] `lpToolInfo`|Ponteiro para um [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura que recebe informações sobre a janela de dica de ferramenta atual.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true`Se as informações são recuperadas com êxito; Caso contrário,`false.`  
+ `true` Se as informações são recuperadas com êxito; Caso contrário, `false.`  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TTM_GETCURRENTTOOL](http://msdn.microsoft.com/library/windows/desktop/bb760389) mensagem, que é descrita no SDK do Windows.  
@@ -391,7 +386,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]  
   
-##  <a name="getdelaytime"></a>CToolTipCtrl::GetDelayTime  
+##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime  
  Recupera a versão inicial, pop-up e reshow durações definidas atualmente para um controle de dica de ferramenta.  
   
 ```  
@@ -402,11 +397,11 @@ int GetDelayTime(DWORD dwDuration) const;
  `dwDuration`  
  Sinalizador que especifica o valor de duração serão recuperados. Esse parâmetro pode ser um dos seguintes valores:  
   
-- `TTDT_AUTOPOP`Recupere o período de tempo que a janela de dica de ferramenta permanece visível se o ponteiro estiver parado dentro do retângulo delimitador da ferramenta.  
+- `TTDT_AUTOPOP` Recupere o período de tempo que a janela de dica de ferramenta permanece visível se o ponteiro estiver parado dentro do retângulo delimitador da ferramenta.  
   
-- `TTDT_INITIAL`Recupere o período de tempo que o ponteiro deve permanecer parado dentro do retângulo delimitador da ferramenta antes que a janela de dica de ferramenta seja exibida.  
+- `TTDT_INITIAL` Recupere o período de tempo que o ponteiro deve permanecer parado dentro do retângulo delimitador da ferramenta antes que a janela de dica de ferramenta seja exibida.  
   
-- `TTDT_RESHOW`Recupere o período de tempo que leva para janelas de dica de ferramenta subsequentes sejam exibidas quando o ponteiro se move de uma ferramenta para outra.  
+- `TTDT_RESHOW` Recupere o período de tempo que leva para janelas de dica de ferramenta subsequentes sejam exibidas quando o ponteiro se move de uma ferramenta para outra.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O tempo de atraso especificado, em milissegundos  
@@ -414,7 +409,7 @@ int GetDelayTime(DWORD dwDuration) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_GETDELAYTIME](http://msdn.microsoft.com/library/windows/desktop/bb760390), conforme descrito no SDK do Windows.  
   
-##  <a name="getmargin"></a>CToolTipCtrl::GetMargin  
+##  <a name="getmargin"></a>  CToolTipCtrl::GetMargin  
  Recupera o superior, esquerdo, inferior e direita margens definidas para uma janela de dica de ferramenta.  
   
 ```  
@@ -429,13 +424,13 @@ void GetMargin(LPRECT lprc) const;
 |------------|--------------------|  
 |**top**|Distância entre a borda superior e a parte superior do texto de dica de ferramenta, em pixels.|  
 |**left**|Distância entre a borda esquerda e a extremidade esquerda do texto da dica, em pixels.|  
-|**inferior**|Distância entre a borda inferior e a parte inferior do texto da dica, em pixels.|  
+|**Inferior**|Distância entre a borda inferior e a parte inferior do texto da dica, em pixels.|  
 |**right**|Distância entre a borda direita e a extremidade direita do texto da dica, em pixels.|  
   
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391), conforme descrito no SDK do Windows.  
   
-##  <a name="getmaxtipwidth"></a>CToolTipCtrl::GetMaxTipWidth  
+##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth  
  Recupera a largura máxima para uma janela de dica de ferramenta.  
   
 ```  
@@ -448,7 +443,7 @@ int GetMaxTipWidth() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_GETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760392), conforme descrito no SDK do Windows.  
   
-##  <a name="gettext"></a>CToolTipCtrl::GetText  
+##  <a name="gettext"></a>  CToolTipCtrl::GetText  
  Recupera o texto que mantém um controle de dica de ferramenta para uma ferramenta.  
   
 ```  
@@ -471,7 +466,7 @@ void GetText(
 ### <a name="remarks"></a>Comentários  
  O `pWnd` e `nIDTool` parâmetros identificam a ferramenta. Se essa ferramenta tenha sido previamente registrada com o controle de dica de ferramenta por meio de uma chamada anterior a **CToolTipCtrl::AddTool**, o objeto referenciado pelo `str` parâmetro recebe o texto da ferramenta.  
   
-##  <a name="gettipbkcolor"></a>CToolTipCtrl::GetTipBkColor  
+##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor  
  Recupera a cor de plano de fundo em uma janela de dica de ferramenta.  
   
 ```  
@@ -484,7 +479,7 @@ COLORREF GetTipBkColor() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_GETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760394), conforme descrito no SDK do Windows.  
   
-##  <a name="gettiptextcolor"></a>CToolTipCtrl::GetTipTextColor  
+##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor  
  Recupera a cor do texto em uma janela de dica de ferramenta.  
   
 ```  
@@ -497,7 +492,7 @@ COLORREF GetTipTextColor() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_GETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760395), conforme descrito no SDK do Windows.  
   
-##  <a name="gettitle"></a>CToolTipCtrl::GetTitle  
+##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle  
  Recupera o título do controle de dica de ferramenta atual.  
   
 ```  
@@ -513,7 +508,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) mensagem, que é descrita no SDK do Windows.  
   
-##  <a name="gettoolcount"></a>CToolTipCtrl::GetToolCount  
+##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount  
  Recupera uma contagem das ferramentas registrado com o controle de dica de ferramenta.  
   
 ```  
@@ -523,7 +518,7 @@ int GetToolCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma contagem de ferramentas registrado com o controle de dica de ferramenta.  
   
-##  <a name="gettoolinfo"></a>CToolTipCtrl::GetToolInfo  
+##  <a name="gettoolinfo"></a>  CToolTipCtrl::GetToolInfo  
  Recupera as informações sobre uma ferramenta que mantém um controle de dica de ferramenta.  
   
 ```  
@@ -549,7 +544,7 @@ BOOL GetToolInfo(
 ### <a name="remarks"></a>Comentários  
  O **hwnd** e **uId** membros o [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura referenciada por *CToolInfo* identificar a ferramenta. Se essa ferramenta tiver sido registrada com o controle de dica de ferramenta por meio de uma chamada anterior a `AddTool`, o `TOOLINFO` estrutura é preenchida com informações sobre a ferramenta.  
   
-##  <a name="hittest"></a>CToolTipCtrl::HitTest  
+##  <a name="hittest"></a>  CToolTipCtrl::HitTest  
  Testa um ponto para determinar se ele está dentro do retângulo delimitador da ferramenta de determinada e, nesse caso, recuperar informações sobre a ferramenta.  
   
 ```  
@@ -596,7 +591,7 @@ BOOL HitTest(
  **TI**  
  Informações sobre a ferramenta. Para obter mais informações sobre o `TOOLINFO` estrutura, consulte [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
-##  <a name="pop"></a>CToolTipCtrl::Pop  
+##  <a name="pop"></a>  CToolTipCtrl::Pop  
  Remove uma janela de dica de ferramenta exibido da exibição.  
   
 ```  
@@ -606,7 +601,7 @@ void Pop();
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_POP](http://msdn.microsoft.com/library/windows/desktop/bb760401), conforme descrito no SDK do Windows.  
   
-##  <a name="popup"></a>CToolTipCtrl::Popup  
+##  <a name="popup"></a>  CToolTipCtrl::Popup  
  Faz com que o controle de dica de ferramenta atual para exibir nas coordenadas da última mensagem do mouse.  
   
 ```  
@@ -621,7 +616,7 @@ void Popup();
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]  
   
-##  <a name="relayevent"></a>CToolTipCtrl::RelayEvent  
+##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent  
  Transmite uma mensagem do mouse em um controle de dica de ferramenta para processamento.  
   
 ```  
@@ -644,7 +639,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime  
+##  <a name="setdelaytime"></a>  CToolTipCtrl::SetDelayTime  
  Define o tempo de atraso para um controle de dica de ferramenta.  
   
 ```  
@@ -669,7 +664,7 @@ void SetDelayTime(
 ### <a name="remarks"></a>Comentários  
  O tempo de atraso é o período de tempo que o cursor deve permanecer em uma ferramenta antes que a janela de dica de ferramenta é exibida. O tempo de atraso padrão é 500 milissegundos.  
   
-##  <a name="setmargin"></a>CToolTipCtrl::SetMargin  
+##  <a name="setmargin"></a>  CToolTipCtrl::SetMargin  
  Define a parte superior, esquerda, inferior e direita as margens para uma janela de dica de ferramenta.  
   
 ```  
@@ -683,7 +678,7 @@ void SetMargin(LPRECT lprc);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_SETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760406), conforme descrito no SDK do Windows.  
   
-##  <a name="setmaxtipwidth"></a>CToolTipCtrl::SetMaxTipWidth  
+##  <a name="setmaxtipwidth"></a>  CToolTipCtrl::SetMaxTipWidth  
  Define a largura máxima para uma janela de dica de ferramenta.  
   
 ```  
@@ -700,7 +695,7 @@ int SetMaxTipWidth(int iWidth);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_SETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760408), conforme descrito no SDK do Windows.  
   
-##  <a name="settipbkcolor"></a>CToolTipCtrl::SetTipBkColor  
+##  <a name="settipbkcolor"></a>  CToolTipCtrl::SetTipBkColor  
  Define a cor de plano de fundo em uma janela de dica de ferramenta.  
   
 ```  
@@ -714,7 +709,7 @@ void SetTipBkColor(COLORREF clr);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_SETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760411), conforme descrito no SDK do Windows.  
   
-##  <a name="settiptextcolor"></a>CToolTipCtrl::SetTipTextColor  
+##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor  
  Define a cor do texto em uma janela de dica de ferramenta.  
   
 ```  
@@ -728,7 +723,7 @@ void SetTipTextColor(COLORREF clr);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_SETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760413), conforme descrito no SDK do Windows.  
   
-##  <a name="settitle"></a>CToolTipCtrl::SetTitle  
+##  <a name="settitle"></a>  CToolTipCtrl::SetTitle  
  Adiciona uma cadeia de caracteres de título e o ícone padrão para uma dica de ferramenta.  
   
 ```  
@@ -750,7 +745,7 @@ BOOL SetTitle(
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414), conforme descrito no SDK do Windows.  
   
-##  <a name="settoolinfo"></a>CToolTipCtrl::SetToolInfo  
+##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo  
  Define as informações que mantém uma dica de ferramenta para uma ferramenta.  
   
 ```  
@@ -761,7 +756,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
  `lpToolInfo`  
  Um ponteiro para um [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura que especifica as informações para definir.  
   
-##  <a name="settoolrect"></a>CToolTipCtrl::SetToolRect  
+##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect  
  Define um novo retângulo delimitador para uma ferramenta.  
   
 ```  
@@ -781,7 +776,7 @@ void SetToolRect(
  `lpRect`  
  Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura especificando o novo retângulo delimitador.  
   
-##  <a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme  
  Define o estilo visual da janela de dica de ferramenta.  
   
 ```  
@@ -798,14 +793,14 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro emula a funcionalidade do [TTM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb760418) mensagem, conforme descrito no SDK do Windows.  
   
-##  <a name="update"></a>CToolTipCtrl::Update  
+##  <a name="update"></a>  CToolTipCtrl::Update  
  Força a ferramenta atual seja redesenhado.  
   
 ```  
 void Update();
 ```  
   
-##  <a name="updatetiptext"></a>CToolTipCtrl::UpdateTipText  
+##  <a name="updatetiptext"></a>  CToolTipCtrl::UpdateTipText  
  Atualiza o texto de dica de ferramenta para ferramentas deste controle.  
   
 ```  

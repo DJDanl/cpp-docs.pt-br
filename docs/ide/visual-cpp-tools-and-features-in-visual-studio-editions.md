@@ -1,10 +1,10 @@
 ---
-title: "Ferramentas do Visual C++ e recursos em edições do Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Ferramentas do Visual C++ e recursos em edições do Visual Studio | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,15 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bab6eda1c5c0d2d852d3a678f588f0539495001
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Ferramentas do Visual C++ e recursos em edições do Visual Studio
 
@@ -135,7 +133,7 @@ As tabelas a seguir mostram os recursos do Visual C++ que estão disponíveis no
 |Designer de dados|||X|X|
 |Editor de recurso nativo (arquivos. rc)|||X|X|
 |Editores de recursos|X|X|X|X|
-|Editor de modelo|X||X|X|
+|Editor de modelos|X||X|X|
 |Designer de sombreador|X||X|X|
 
 ## <a name="data-features"></a>Recursos de dados

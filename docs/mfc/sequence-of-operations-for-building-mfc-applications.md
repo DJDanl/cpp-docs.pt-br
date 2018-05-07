@@ -1,29 +1,24 @@
 ---
-title: "Sequência de operações para criação de aplicativos MFC | Microsoft Docs"
-ms.custom: 
+title: Sequência de operações para criação de aplicativos MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sequência de operações para compilar aplicativos MFC
 A tabela a seguir explica a sequência geral, que normalmente você pode seguir à medida que desenvolve seu aplicativo do MFC.  
@@ -50,7 +45,7 @@ A tabela a seguir explica a sequência geral, que normalmente você pode seguir 
 |Adicione a rolagem.|Se você precisar dar suporte a rolagem, derive a classe de exibição ou classes de [CScrollView](../mfc/reference/cscrollview-class.md).|O modo de exibição automaticamente adiciona barras de rolagem quando a janela de exibição se tornar muito pequena.|  
 |Crie modos de exibição de formulário.|Se você deseja basear as exibições em recursos de modelo de caixa de diálogo, derive a classe de exibição ou classes de [CFormView](../mfc/reference/cformview-class.md).|A exibição usa o recurso de modelo de caixa de diálogo para exibir controles. O usuário pode usar tab de controle para controle no modo de exibição.|  
 |Crie formulários de banco de dados.|Se você quiser que um aplicativo de acesso a dados baseado em formulário, derive sua classe de exibição da [CRecordView](../mfc/reference/crecordview-class.md) (para programação de ODBC).|O modo de exibição funciona como um modo de exibição de formulário, mas seus controles estão conectados aos campos de um [CRecordset](../mfc/reference/crecordset-class.md) objeto que representa uma tabela de banco de dados. MFC move dados entre os controles e o conjunto de registros para você.|  
-|Crie um texto simple editor.|Se desejar que a exibição para ser um editor de texto simples, derive sua classe de exibição ou classes de [CEditView](../mfc/reference/ceditview-class.md) ou [CRichEditView](../mfc/reference/cricheditview-class.md).|O modo de exibição fornece a edição de funções, suporte a área de transferência e arquivo de entrada/saída. `CRichEditView`Fornece um estilo de texto.|  
+|Crie um texto simple editor.|Se desejar que a exibição para ser um editor de texto simples, derive sua classe de exibição ou classes de [CEditView](../mfc/reference/ceditview-class.md) ou [CRichEditView](../mfc/reference/cricheditview-class.md).|O modo de exibição fornece a edição de funções, suporte a área de transferência e arquivo de entrada/saída. `CRichEditView` Fornece um estilo de texto.|  
 |Adicione janelas separadoras.|Se você deseja dar suporte a divisão de janela, adicione um [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) de objeto para a janela do quadro SDI ou janela filho MDI e associá-lo na janela de [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) função de membro.|A estrutura fornece controles divisor caixa ao lado de barras de rolagem e gerencia dividindo a exibição em vários painéis. Se o usuário dividir uma janela, o framework cria e anexa os objetos de exibição adicionais ao documento.|  
 |Criar, testar e depurar seu aplicativo.|Use os recursos do Visual C++ para criar, testar e depurar seu aplicativo.|Visual C++ permite ajustar a compilação, link e outras opções. Ele também permite que você procure sua estrutura de classe e de código de origem.|  
   

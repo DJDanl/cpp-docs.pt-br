@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonBar
@@ -197,17 +194,15 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ea33fbd2f9517734c2dcb15fd434e8ddcc36b41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 O `CMFCRibbonBar` classe implementa uma barra de faixa de opções semelhante àquela usada no Office 2007.  
@@ -349,7 +344,7 @@ class CMFCRibbonBar : public CPane
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxribbonbar.h  
   
-##  <a name="activatecontextcategory"></a>CMFCRibbonBar::ActivateContextCategory  
+##  <a name="activatecontextcategory"></a>  CMFCRibbonBar::ActivateContextCategory  
  Ativa uma categoria de contexto já está visível.  
   
 ```  
@@ -361,9 +356,9 @@ BOOL ActivateContextCategory(UINT uiContextID);
  A ID da categoria de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se uma categoria de contexto com `uiContextID` for encontrado e ativado; caso contrário `FALSE`.  
+ `TRUE` Se uma categoria de contexto com `uiContextID` for encontrado e ativado; caso contrário `FALSE`.  
   
-##  <a name="addcategory"></a>CMFCRibbonBar::AddCategory  
+##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  Cria e inicializa uma nova categoria de faixa de opções para a barra da faixa de opções.  
   
 ```  
@@ -412,7 +407,7 @@ CMFCRibbonCategory* AddCategory(
   
  [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]  
   
-##  <a name="addcontextcategory"></a>CMFCRibbonBar::AddContextCategory  
+##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory  
  Cria e inicializa uma nova categoria de contexto para a barra da faixa de opções.  
   
 ```  
@@ -482,7 +477,7 @@ CMFCRibbonCategory* AddContextCategory(
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="addmaincategory"></a>CMFCRibbonBar::AddMainCategory  
+##  <a name="addmaincategory"></a>  CMFCRibbonBar::AddMainCategory  
  Cria uma nova categoria principal da faixa de opções para a barra da faixa de opções.  
   
 ```  
@@ -523,7 +518,7 @@ CMFCRibbonMainPanel* AddMainCategory(
   
  [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]  
   
-##  <a name="addprintpreviewcategory"></a>CMFCRibbonBar::AddPrintPreviewCategory  
+##  <a name="addprintpreviewcategory"></a>  CMFCRibbonBar::AddPrintPreviewCategory  
  Cria uma categoria de visualização de impressão na barra de faixa de opções.  
   
 ```  
@@ -536,7 +531,7 @@ CMFCRibbonCategory* AddPrintPreviewCategory();
 ### <a name="remarks"></a>Comentários  
  Esse método cria uma categoria de faixa de opções e os controles que ele precisa para fornecer uma visualização de impressão.  
   
-##  <a name="addqatonlycategory"></a>CMFCRibbonBar::AddQATOnlyCategory  
+##  <a name="addqatonlycategory"></a>  CMFCRibbonBar::AddQATOnlyCategory  
  Cria uma categoria de faixa de opções de barra de ferramentas de acesso rápido.  
   
 ```  
@@ -563,7 +558,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ### <a name="remarks"></a>Comentários  
  A categoria de faixa de opções de barra de ferramentas de acesso rápido só é usada na caixa de diálogo de personalização da barra de ferramentas de acesso rápido.  
   
-##  <a name="addtotabs"></a>CMFCRibbonBar::AddToTabs  
+##  <a name="addtotabs"></a>  CMFCRibbonBar::AddToTabs  
  Adiciona o elemento de faixa de opções especificadas para a linha de guias da barra de faixa de opções.  
   
 ```  
@@ -577,7 +572,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ### <a name="remarks"></a>Comentários  
  O elemento de faixa de opções é posicionado antes de quaisquer botões do sistema.  
   
-##  <a name="cmfcribbonbar"></a>CMFCRibbonBar::CMFCRibbonBar  
+##  <a name="cmfcribbonbar"></a>  CMFCRibbonBar::CMFCRibbonBar  
  Cria e inicializa um [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) objeto.  
   
 ```  
@@ -586,11 +581,11 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bReplaceFrameCaption`  
- `TRUE`para a barra da faixa de opções substituir a legenda da janela do quadro principal. `FALSE` para localizar a barra de faixa de opções sob a legenda da janela do quadro principal.  
+ `TRUE` para a barra da faixa de opções substituir a legenda da janela do quadro principal. `FALSE` para localizar a barra de faixa de opções sob a legenda da janela do quadro principal.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="create"></a>CMFCRibbonBar::Create  
+##  <a name="create"></a>  CMFCRibbonBar::Create  
  Cria uma janela para a barra da faixa de opções.  
   
 ```  
@@ -611,7 +606,7 @@ BOOL Create(
  ID da nova janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a janela foi criada; Caso contrário, `FALSE`.  
+ `TRUE` Se a janela foi criada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -620,7 +615,7 @@ BOOL Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]  
   
-##  <a name="createex"></a>CMFCRibbonBar::CreateEx  
+##  <a name="createex"></a>  CMFCRibbonBar::CreateEx  
  Cria uma janela para a barra da faixa de opções.  
   
 ```  
@@ -645,11 +640,11 @@ BOOL CreateEx(
  ID da nova janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a janela foi criada; Caso contrário, `FALSE`.  
+ `TRUE` Se a janela foi criada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::DeactivateKeyboardFocus  
+##  <a name="deactivatekeyboardfocus"></a>  CMFCRibbonBar::DeactivateKeyboardFocus  
  Fecha todos os controles de keytip na barra de faixa de opções.  
   
 ```  
@@ -658,11 +653,11 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bSetFocus`  
- `TRUE`Para definir o foco para a janela pai da barra de faixa de opções.  
+ `TRUE` Para definir o foco para a janela pai da barra de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="drawmenuimage"></a>CMFCRibbonBar::DrawMenuImage  
+##  <a name="drawmenuimage"></a>  CMFCRibbonBar::DrawMenuImage  
  Desenha a imagem de um botão de menu.  
   
 ```  
@@ -683,11 +678,11 @@ BOOL DrawMenuImage(
  O retângulo de exibição para um botão de menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a imagem foi desenhada; Caso contrário, `FALSE`.  
+ `TRUE` Se a imagem foi desenhada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="dwmcompositionchanged"></a>CMFCRibbonBar::DWMCompositionChanged  
+##  <a name="dwmcompositionchanged"></a>  CMFCRibbonBar::DWMCompositionChanged  
  Ajusta a exibição da barra de faixa de opções quando a composição do Desktop Window Manager (DWM) está habilitada ou desabilitada.  
   
 ```  
@@ -696,7 +691,7 @@ virtual void DWMCompositionChanged();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="enablekeytips"></a>CMFCRibbonBar::EnableKeyTips  
+##  <a name="enablekeytips"></a>  CMFCRibbonBar::EnableKeyTips  
  Habilita ou desabilita o recurso keytip para a barra da faixa de opções.  
   
 ```  
@@ -705,12 +700,12 @@ void EnableKeyTips(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para habilitar o recurso de dicas de tecla; `FALSE` para desabilitar o recurso de dicas de tecla.  
+ `TRUE` Para habilitar o recurso de dicas de tecla; `FALSE` para desabilitar o recurso de dicas de tecla.  
   
 ### <a name="remarks"></a>Comentários  
  Quando você habilita esse recurso, as dicas de tecla são exibidas quando o usuário pressiona o botão ALT ou F10. Quando o usuário pressiona a tecla ALT, dicas de tecla são exibidas com um atraso de 200 milissegundos. Esse atraso permite que os atalhos para ser executado para que a tecla ALT pressionada não interfere em outros combinações que incluem a tecla ALT.  
   
-##  <a name="enableprintpreview"></a>CMFCRibbonBar::EnablePrintPreview  
+##  <a name="enableprintpreview"></a>  CMFCRibbonBar::EnablePrintPreview  
  Habilita ou desabilita o **Visualizar impressão** recurso.  
   
 ```  
@@ -719,14 +714,14 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para habilitar o **Visualizar impressão** recurso; `FALSE` para desabilitar o **Visualizar impressão** recurso.  
+ `TRUE` Para habilitar o **Visualizar impressão** recurso; `FALSE` para desabilitar o **Visualizar impressão** recurso.  
   
 ### <a name="remarks"></a>Comentários  
  Se `bEnable` é `FALSE` e existe uma categoria de visualização de impressão, ele será excluído.  
   
  Por padrão o **Visualizar impressão** está ativado.  
   
-##  <a name="enabletooltips"></a>CMFCRibbonBar::EnableToolTips  
+##  <a name="enabletooltips"></a>  CMFCRibbonBar::EnableToolTips  
  Habilita ou desabilita as dicas de ferramenta e descrições de dica de ferramenta opcional na barra de faixa de opções.  
   
 ```  
@@ -737,15 +732,15 @@ void EnableToolTips(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para ativar dicas de ferramenta na barra de faixa de opções; `FALSE` para desabilitar as dicas de ferramenta na barra de faixa de opções.  
+ `TRUE` Para ativar dicas de ferramenta na barra de faixa de opções; `FALSE` para desabilitar as dicas de ferramenta na barra de faixa de opções.  
   
  [in] `bEnableDescr`  
- `TRUE`Para habilitar as descrições de dica de ferramenta na dica de ferramenta; `FALSE` para desabilitar as descrições de dica de ferramenta na dica de ferramenta.  
+ `TRUE` Para habilitar as descrições de dica de ferramenta na dica de ferramenta; `FALSE` para desabilitar as descrições de dica de ferramenta na dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
  O `bEnable` parâmetro determina se as dicas de ferramenta são exibidas quando o mouse passa sobre um elemento de faixa de opções. O `bEnableDescr` parâmetro determina se o texto descritivo adicional aparece com o texto de dica de ferramenta.  
   
-##  <a name="findbydata"></a>CMFCRibbonBar::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  Recupera um ponteiro para um elemento de faixa de opções, se os dados especificados e visibilidade.  
   
 ```  
@@ -759,7 +754,7 @@ CMFCRibbonBaseElement* FindByData(
  Os dados associados a um elemento de faixa de opções.  
   
  [in] `bVisibleOnly`  
- `TRUE`para pesquisar elementos de faixa de opções visíveis. `FALSE` para pesquisar todos os elementos da faixa de opções.  
+ `TRUE` para pesquisar elementos de faixa de opções visíveis. `FALSE` para pesquisar todos os elementos da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um elemento de faixa de opções, se os dados especificados e visibilidade; Caso contrário, `NULL`.  
@@ -767,7 +762,7 @@ CMFCRibbonBaseElement* FindByData(
 ### <a name="remarks"></a>Comentários  
  Um elemento de faixa de opções é qualquer controle que você pode adicionar a faixa de opções, como um controle deslizante de faixa de opções, um botão de faixa de opções ou uma categoria de faixa de opções.  
   
-##  <a name="findbyid"></a>CMFCRibbonBar::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonBar::FindByID  
  Recupera um ponteiro para o elemento de faixa de opções que tem os valores de ID e a pesquisa do comando especificado.  
   
 ```  
@@ -782,10 +777,10 @@ CMFCRibbonBaseElement* FindByID(
  ID de comando para um elemento de faixa de opções.  
   
  [in] `bVisibleOnly`  
- `TRUE`para pesquisar elementos de faixa de opções visíveis. `FALSE` para pesquisar todos os elementos da faixa de opções.  
+ `TRUE` para pesquisar elementos de faixa de opções visíveis. `FALSE` para pesquisar todos os elementos da faixa de opções.  
   
  [in] `bExcludeQAT`  
- `TRUE`Para excluir os elementos da barra de ferramentas de acesso rápido de pesquisa; Caso contrário, `FALSE`.  
+ `TRUE` Para excluir os elementos da barra de ferramentas de acesso rápido de pesquisa; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um elemento de faixa de opções, se ele tiver os valores de ID e a pesquisa de comando especificado. Caso contrário, `NULL`.  
@@ -795,7 +790,7 @@ CMFCRibbonBaseElement* FindByID(
   
  Em geral, pode haver mais de um elemento de faixa de opções que tem a mesma ID de comando. Se você quiser obter ponteiros para todos os elementos da faixa de opções que usam uma ID de comando especificado, use o [CMFCRibbonBar::GetElementsByID](#getelementsbyid) método.  
   
-##  <a name="findcategoryindexbydata"></a>CMFCRibbonBar::FindCategoryIndexByData  
+##  <a name="findcategoryindexbydata"></a>  CMFCRibbonBar::FindCategoryIndexByData  
  Recupera o índice da categoria de faixa de opções que contém os dados especificados.  
   
 ```  
@@ -809,7 +804,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice de base zero de uma categoria de faixa de opções, se o método teve êxito; Caso contrário, retornará-1.  
   
-##  <a name="forcerecalclayout"></a>CMFCRibbonBar::ForceRecalcLayout  
+##  <a name="forcerecalclayout"></a>  CMFCRibbonBar::ForceRecalcLayout  
  Ajusta o layout de todos os itens na barra de faixa de opções e janela pai e redesenha a janela inteira.  
   
 ```  
@@ -818,7 +813,7 @@ void ForceRecalcLayout();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getactivecategory"></a>CMFCRibbonBar::GetActiveCategory  
+##  <a name="getactivecategory"></a>  CMFCRibbonBar::GetActiveCategory  
  Recupera um ponteiro para a categoria de faixa de opções ativa.  
   
 ```  
@@ -833,7 +828,7 @@ CMFCRibbonCategory* GetActiveCategory() const;
   
  A categoria principal será exibida quando o usuário pressiona o botão do aplicativo e não pode ser a categoria ativa.  
   
-##  <a name="getapplicationbutton"></a>CMFCRibbonBar::GetApplicationButton  
+##  <a name="getapplicationbutton"></a>  CMFCRibbonBar::GetApplicationButton  
  Recupera um ponteiro para o botão do aplicativo.  
   
 ```  
@@ -843,7 +838,7 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o botão do aplicativo; ou `NULL` se o botão não tiver sido definido.  
   
-##  <a name="getcaptionheight"></a>CMFCRibbonBar::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CMFCRibbonBar::GetCaptionHeight  
  Recupera a altura da área de legenda para a barra da faixa de opções.  
   
 ```  
@@ -855,7 +850,7 @@ int GetCaptionHeight() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcategory"></a>CMFCRibbonBar::GetCategory  
+##  <a name="getcategory"></a>  CMFCRibbonBar::GetCategory  
  Recupera um ponteiro para a categoria de faixa de opções no índice especificado.  
   
 ```  
@@ -869,7 +864,7 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a categoria de faixa de opções no índice especificado; Caso contrário, `NULL` se `nIndex` estava fora do intervalo.  
   
-##  <a name="getcategorycount"></a>CMFCRibbonBar::GetCategoryCount  
+##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  Recupera o número de categorias de faixa de opções na barra de faixa de opções.  
   
 ```  
@@ -879,7 +874,7 @@ int GetCategoryCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de categorias de faixa de opções na barra de faixa de opções.  
   
-##  <a name="getcategoryheight"></a>CMFCRibbonBar::GetCategoryHeight  
+##  <a name="getcategoryheight"></a>  CMFCRibbonBar::GetCategoryHeight  
  Recupera a altura da categoria.  
   
 ```  
@@ -892,7 +887,7 @@ int GetCategoryHeight() const;
 ### <a name="remarks"></a>Comentários  
  A altura de categoria inclui a altura da guia categoria.  
   
-##  <a name="getcategoryindex"></a>CMFCRibbonBar::GetCategoryIndex  
+##  <a name="getcategoryindex"></a>  CMFCRibbonBar::GetCategoryIndex  
  Recupera o índice da categoria especificada da faixa de opções.  
   
 ```  
@@ -906,7 +901,7 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice de base zero de uma categoria de faixa de opções especificada pelo `pCategory`; ou -1 se a categoria de faixa de opções não for encontrada.  
   
-##  <a name="getcontextname"></a>CMFCRibbonBar::GetContextName  
+##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  Recupera o nome da legenda de categoria do contexto especificado por uma ID de contexto.  
   
 ```  
@@ -923,9 +918,9 @@ BOOL GetContextName(
  O nome de uma legenda de categoria de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método teve êxito; Caso contrário, `FALSE` se `uiContextID` era zero ou a legenda da categoria de contexto não foi encontrada.  
+ `TRUE` Se o método teve êxito; Caso contrário, `FALSE` se `uiContextID` era zero ou a legenda da categoria de contexto não foi encontrada.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBar::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  Recupera o elemento de faixa de opções está suspensa no momento.  
   
 ```  
@@ -937,7 +932,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBar::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBar::GetElementsByID  
  Recupera uma matriz de ponteiros para todos os elementos de faixa de opções que têm uma ID de comando específico.  
   
 ```  
@@ -956,7 +951,7 @@ void GetElementsByID(
 ### <a name="remarks"></a>Comentários  
  Vários elementos de faixa de opções podem ter a mesma ID de comando porque alguns elementos de faixa de opções podem ser copiados para a barra de ferramentas de acesso rápido.  
   
-##  <a name="gethideflags"></a>CMFCRibbonBar::GetHideFlags  
+##  <a name="gethideflags"></a>  CMFCRibbonBar::GetHideFlags  
  Recupera os sinalizadores que indicam a quantidade da barra de faixa de opções está visível.  
   
 ```  
@@ -975,7 +970,7 @@ DWORD GetHideFlags() const;
  `AFX_RIBBONBAR_HIDE_ALL`  
  A largura da barra de faixa de opções é menor do que a largura mínima e é completamente oculta.  
   
-##  <a name="getitemidslist"></a>CMFCRibbonBar::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonBar::GetItemIDsList  
  Recupera as IDs de comando para a coleção especificada de elementos de faixa de opções na barra de faixa de opções.  
   
 ```  
@@ -988,11 +983,11 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
  A lista de IDs de comando para elementos de faixa de opções que estão contidos na barra de faixa de opções.  
   
  [in] `bHiddenOnly`  
- `TRUE`Para excluir os elementos de faixa de opções que são exibidos; `FALSE` para incluir todos os elementos da faixa de opções na barra de faixa de opções.  
+ `TRUE` Para excluir os elementos de faixa de opções que são exibidos; `FALSE` para incluir todos os elementos da faixa de opções na barra de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar::GetKeyboardNavigationLevel  
+##  <a name="getkeyboardnavigationlevel"></a>  CMFCRibbonBar::GetKeyboardNavigationLevel  
  Recupera o nível de navegação atual que o usuário pressiona as dicas de tecla que estão contidas na barra de faixa de opções.  
   
 ```  
@@ -1013,7 +1008,7 @@ int GetKeyboardNavigationLevel() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar::GetKeyboardNavLevelCurrent  
+##  <a name="getkeyboardnavlevelcurrent"></a>  CMFCRibbonBar::GetKeyboardNavLevelCurrent  
  Recupera o objeto de navegação de teclado atual na barra de faixa de opções.  
   
 ```  
@@ -1026,7 +1021,7 @@ CObject* GetKeyboardNavLevelCurrent() const;
 ### <a name="remarks"></a>Comentários  
  O objeto que está exibindo dicas de tecla é o objeto de navegação do teclado atual.  
   
-##  <a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar::GetKeyboardNavLevelParent  
+##  <a name="getkeyboardnavlevelparent"></a>  CMFCRibbonBar::GetKeyboardNavLevelParent  
  Recupera o objeto pai de navegação de teclado na barra de faixa de opções.  
   
 ```  
@@ -1039,7 +1034,7 @@ CObject* GetKeyboardNavLevelParent() const;
 ### <a name="remarks"></a>Comentários  
  Quando o usuário pressiona um keytip na barra de faixa de opções, o objeto de navegação de teclado atual se torna o objeto de navegação de teclado do pai.  
   
-##  <a name="getmaincategory"></a>CMFCRibbonBar::GetMainCategory  
+##  <a name="getmaincategory"></a>  CMFCRibbonBar::GetMainCategory  
  Recupera um ponteiro para a categoria principal da faixa de opções.  
   
 ```  
@@ -1052,7 +1047,7 @@ CMFCRibbonCategory* GetMainCategory() const;
 ### <a name="remarks"></a>Comentários  
  A categoria principal da faixa de opções contém o painel principal da faixa de opções.  
   
-##  <a name="getqatcommandslocation"></a>CMFCRibbonBar::GetQATCommandsLocation  
+##  <a name="getqatcommandslocation"></a>  CMFCRibbonBar::GetQATCommandsLocation  
  Recupera o retângulo de exibição para a seção de comandos da barra de ferramentas de acesso rápido.  
   
 ```  
@@ -1065,7 +1060,7 @@ CRect GetQATCommandsLocation() const;
 ### <a name="remarks"></a>Comentários  
  A seção de comandos do retângulo de exibição não inclui o botão de personalização.  
   
-##  <a name="getqatdroppeddown"></a>CMFCRibbonBar::GetQATDroppedDown  
+##  <a name="getqatdroppeddown"></a>  CMFCRibbonBar::GetQATDroppedDown  
  Recupera um ponteiro para o elemento de faixa de opções na barra de acesso rápido com o menu pop-up aberto.  
   
 ```  
@@ -1077,7 +1072,7 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getquickaccesscommands"></a>CMFCRibbonBar::GetQuickAccessCommands  
+##  <a name="getquickaccesscommands"></a>  CMFCRibbonBar::GetQuickAccessCommands  
  Recupera uma lista de IDs de comando para os elementos da faixa de opções na barra de ferramentas de acesso rápido.  
   
 ```  
@@ -1091,7 +1086,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ### <a name="remarks"></a>Comentários  
  A lista não contém elementos da faixa de opções de separadores de controle.  
   
-##  <a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar::GetQuickAccessToolbarLocation  
+##  <a name="getquickaccesstoolbarlocation"></a>  CMFCRibbonBar::GetQuickAccessToolbarLocation  
  Recupera o retângulo de exibição da barra de ferramentas de acesso rápido.  
   
 ```  
@@ -1103,7 +1098,7 @@ CRect GetQuickAccessToolbarLocation() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettabtrancateratio"></a>CMFCRibbonBar::GetTabTrancateRatio  
+##  <a name="gettabtrancateratio"></a>  CMFCRibbonBar::GetTabTrancateRatio  
  Recupera a redução de tamanho percentual na largura da exibição das guias de categoria.  
   
 ```  
@@ -1116,7 +1111,7 @@ int GetTabTrancateRatio() const;
 ### <a name="remarks"></a>Comentários  
  Guias de categoria são reduzidos quando não há suficiente largura na barra de faixa de opções.  
   
-##  <a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
+##  <a name="gettooltipfixedwidthlargeimage"></a>  CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
  Recupera o tamanho grande de largura de dica de ferramenta para a barra da faixa de opções.  
   
 ```  
@@ -1129,7 +1124,7 @@ int GetTooltipFixedWidthLargeImage() const;
 ### <a name="remarks"></a>Comentários  
  Se o tamanho grande de largura de dica de ferramenta for 0, a largura varia.  
   
-##  <a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar::GetTooltipFixedWidthRegular  
+##  <a name="gettooltipfixedwidthregular"></a>  CMFCRibbonBar::GetTooltipFixedWidthRegular  
  Recupera o tamanho normal da largura de dica de ferramenta para a barra da faixa de opções.  
   
 ```  
@@ -1142,7 +1137,7 @@ int GetTooltipFixedWidthRegular() const;
 ### <a name="remarks"></a>Comentários  
  Se o tamanho normal de largura de dica de ferramenta é 0, a largura varia.  
   
-##  <a name="getvisiblecategorycount"></a>CMFCRibbonBar::GetVisibleCategoryCount  
+##  <a name="getvisiblecategorycount"></a>  CMFCRibbonBar::GetVisibleCategoryCount  
  Recupera o número de categorias visíveis na barra de faixa de opções.  
   
 ```  
@@ -1154,7 +1149,7 @@ int GetVisibleCategoryCount() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hideallcontextcategories"></a>CMFCRibbonBar::HideAllContextCategories  
+##  <a name="hideallcontextcategories"></a>  CMFCRibbonBar::HideAllContextCategories  
  Oculta todas as categorias de contexto na barra de faixa de opções.  
   
 ```  
@@ -1162,12 +1157,12 @@ BOOL HideAllContextCategories();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a categoria de pelo menos um contexto foi ocultada; Caso contrário, `FALSE`.  
+ `TRUE` Se a categoria de pelo menos um contexto foi ocultada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Se uma categoria de contexto estiver ativa, a categoria ativa é redefinida para a primeira categoria visível na lista de categorias.  
   
-##  <a name="hidekeytips"></a>CMFCRibbonBar::HideKeyTips  
+##  <a name="hidekeytips"></a>  CMFCRibbonBar::HideKeyTips  
  Oculta todas as dicas de tecla na barra de faixa de opções.  
   
 ```  
@@ -1176,7 +1171,7 @@ void HideKeyTips();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hittest"></a>CMFCRibbonBar::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonBar::HitTest  
  Recupera um ponteiro para o elemento de faixa de opções especificado pelo local do ponto.  
   
 ```  
@@ -1191,10 +1186,10 @@ virtual CMFCRibbonBaseElement* HitTest(
  Local do ponto em coordenadas de barra de faixa de opções.  
   
  [in] `bCheckActiveCategory`  
- `TRUE`para pesquisar a categoria ativa; `FALSE` não para pesquisar a categoria ativa.  
+ `TRUE` para pesquisar a categoria ativa; `FALSE` não para pesquisar a categoria ativa.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`Para testar a legenda do painel de faixa de opções com o ponto de localizado em. `FALSE` não para testar a legenda do painel de faixa de opções com o ponto de localizados nele. Consulte a seção Comentários para obter mais informações.  
+ `TRUE` Para testar a legenda do painel de faixa de opções com o ponto de localizado em. `FALSE` não para testar a legenda do painel de faixa de opções com o ponto de localizados nele. Consulte a seção Comentários para obter mais informações.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o elemento de faixa de opções, localizado no ponto especificado; Caso contrário, `NULL` se o ponto não estiver localizado em um elemento de faixa de opções.  
@@ -1202,7 +1197,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 ### <a name="remarks"></a>Comentários  
  A legenda do painel de faixa de opções com o ponto de localizados nele não é testada, a menos que o `bCheckActiveCategory` parâmetro é `TRUE`.  
   
-##  <a name="iskeytipenabled"></a>CMFCRibbonBar::IsKeyTipEnabled  
+##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  Indica se o recurso de dicas de tecla está habilitado.  
   
 ```  
@@ -1210,9 +1205,9 @@ BOOL IsKeyTipEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o recurso de dicas de tecla estiver habilitado; Caso contrário, `FALSE`.  
+ `TRUE` Se o recurso de dicas de tecla estiver habilitado; Caso contrário, `FALSE`.  
   
-##  <a name="ismainribbonbar"></a>CMFCRibbonBar::IsMainRibbonBar  
+##  <a name="ismainribbonbar"></a>  CMFCRibbonBar::IsMainRibbonBar  
  Indica se a barra de faixa de opções é a barra de faixa de opções primário.  
   
 ```  
@@ -1225,7 +1220,7 @@ virtual BOOL IsMainRibbonBar() const;
 ### <a name="remarks"></a>Comentários  
  Por padrão este método sempre retorna `TRUE`. Substitua este método para indicar se a barra de faixa de opções é a barra de faixa de opções primário.  
   
-##  <a name="isprintpreviewenabled"></a>CMFCRibbonBar::IsPrintPreviewEnabled  
+##  <a name="isprintpreviewenabled"></a>  CMFCRibbonBar::IsPrintPreviewEnabled  
  Indica se o **Visualizar impressão** está ativado.  
   
 ```  
@@ -1233,9 +1228,9 @@ BOOL IsPrintPreviewEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o **Visualizar impressão** recurso estiver habilitado; caso contrário `FALSE`.  
+ `TRUE` Se o **Visualizar impressão** recurso estiver habilitado; caso contrário `FALSE`.  
   
-##  <a name="isqatempty"></a>CMFCRibbonBar::IsQATEmpty  
+##  <a name="isqatempty"></a>  CMFCRibbonBar::IsQATEmpty  
  Indica se a barra de ferramentas de acesso rápido contém botões de comando.  
   
 ```  
@@ -1243,11 +1238,11 @@ BOOL IsQATEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de ferramentas de acesso rápido contém botões de comando; Caso contrário, `FALSE`.  
+ `TRUE` Se a barra de ferramentas de acesso rápido contém botões de comando; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isquickaccesstoolbarontop"></a>CMFCRibbonBar::IsQuickAccessToolbarOnTop  
+##  <a name="isquickaccesstoolbarontop"></a>  CMFCRibbonBar::IsQuickAccessToolbarOnTop  
  Indica se a barra de ferramentas de acesso rápido está localizada acima ou abaixo da barra de faixa de opções.  
   
 ```  
@@ -1255,9 +1250,9 @@ BOOL IsQuickAccessToolbarOnTop() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de ferramentas de acesso rápido estiver localizada na barra de faixa de opções. `FALSE` se a barra de ferramentas de acesso rápido estiver localizada sob a barra de faixa de opções.  
+ `TRUE` Se a barra de ferramentas de acesso rápido estiver localizada na barra de faixa de opções. `FALSE` se a barra de ferramentas de acesso rápido estiver localizada sob a barra de faixa de opções.  
   
-##  <a name="isreplaceframecaption"></a>CMFCRibbonBar::IsReplaceFrameCaption  
+##  <a name="isreplaceframecaption"></a>  CMFCRibbonBar::IsReplaceFrameCaption  
  Indica se a barra de faixa de opções substitui ou está sob a legenda da janela do quadro principal.  
   
 ```  
@@ -1265,9 +1260,9 @@ BOOL IsReplaceFrameCaption() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de faixa de opções substitui a legenda da janela do quadro principal. `FALSE` se a barra de faixa de opções está sob a legenda da janela do quadro principal.  
+ `TRUE` Se a barra de faixa de opções substitui a legenda da janela do quadro principal. `FALSE` se a barra de faixa de opções está sob a legenda da janela do quadro principal.  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBar::IsShowGroupBorder  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBar::IsShowGroupBorder  
  Indica se os grupos de botões localizados na barra de faixa de opções exibem uma borda de grupo.  
   
 ```  
@@ -1284,7 +1279,7 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ### <a name="remarks"></a>Comentários  
  Por padrão este método sempre retorna `FALSE`. Substitua este método para indicar se os grupos de botões localizados na barra de faixa de opções exibem uma borda de grupo.  
   
-##  <a name="istooltipdescrenabled"></a>CMFCRibbonBar::IsToolTipDescrEnabled  
+##  <a name="istooltipdescrenabled"></a>  CMFCRibbonBar::IsToolTipDescrEnabled  
  Indica se a dica de ferramenta descrições estão habilitadas.  
   
 ```  
@@ -1292,12 +1287,12 @@ BOOL IsToolTipDescrEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a dica de ferramenta descrições estão habilitadas; `FALSE` se descrições de dica de ferramenta estão desabilitadas.  
+ `TRUE` Se a dica de ferramenta descrições estão habilitadas; `FALSE` se descrições de dica de ferramenta estão desabilitadas.  
   
 ### <a name="remarks"></a>Comentários  
  Descrições de dica de ferramenta são adicional texto descritivo exibido com o texto de dica de ferramenta.  
   
-##  <a name="istooltipenabled"></a>CMFCRibbonBar::IsToolTipEnabled  
+##  <a name="istooltipenabled"></a>  CMFCRibbonBar::IsToolTipEnabled  
  Indica se dicas de ferramenta estão habilitadas ou desabilitadas para a barra da faixa de opções.  
   
 ```  
@@ -1305,9 +1300,9 @@ BOOL IsToolTipEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se as dicas de ferramentas estiverem habilitadas; `FALSE` se tooltips serão desabilitadas.  
+ `TRUE` Se as dicas de ferramentas estiverem habilitadas; `FALSE` se tooltips serão desabilitadas.  
   
-##  <a name="istransparentcaption"></a>CMFCRibbonBar::IsTransparentCaption  
+##  <a name="istransparentcaption"></a>  CMFCRibbonBar::IsTransparentCaption  
  Indica se a exibição está definida para o esquema de cores do Windows Aero.  
   
 ```  
@@ -1315,11 +1310,11 @@ BOOL IsTransparentCaption() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o esquema de cores é o Windows Aero; Caso contrário, `FALSE`.  
+ `TRUE` Se o esquema de cores é o Windows Aero; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onclickbutton"></a>CMFCRibbonBar::OnClickButton  
+##  <a name="onclickbutton"></a>  CMFCRibbonBar::OnClickButton  
  Esse método é mantido para compatibilidade com aplicativos existentes e não deve ser usado para o desenvolvimento de novo.  
   
 ```  
@@ -1337,7 +1332,7 @@ virtual void OnClickButton(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextMenu  
+##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu  
 
   
 ```  
@@ -1352,7 +1347,7 @@ virtual void OnEditContextMenu(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBar::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBar::OnRTLChanged  
  Chamado pelo framework quando altera a direção do layout.  
   
 ```  
@@ -1361,12 +1356,12 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bIsRTL`  
- `TRUE`Se o layout é da direita para esquerda; `FALSE` se o layout é esquerda para a direita.  
+ `TRUE` Se o layout é da direita para esquerda; `FALSE` se o layout é esquerda para a direita.  
   
 ### <a name="remarks"></a>Comentários  
  Este método ajusta o layout de todos os controles da barra de faixa de opções para a nova direção do layout.  
   
-##  <a name="onsetaccdata"></a>CMFCRibbonBar::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCRibbonBar::OnSetAccData  
  Esse método é a estrutura interno e não se destina a ser chamado no código do usuário.  
   
 ```  
@@ -1374,7 +1369,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- Longas`lVal`  
+ Longas `lVal`  
  O índice do objeto acessível.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1382,7 +1377,7 @@ BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnShowRibbonContextMenu  
+##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu  
 
   
 ```  
@@ -1403,7 +1398,7 @@ virtual BOOL OnShowRibbonContextMenu(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onshowribbonqatmenu"></a>CMFCRibbonBar::OnShowRibbonQATMenu  
+##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu  
 
   
 ```  
@@ -1424,7 +1419,7 @@ virtual BOOL OnShowRibbonQATMenu(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsyskeydown"></a>CMFCRibbonBar::OnSysKeyDown  
+##  <a name="onsyskeydown"></a>  CMFCRibbonBar::OnSysKeyDown  
  Chamado pelo framework quando o usuário pressiona a tecla F10 ou mantém pressionada a tecla ALT e, em seguida, pressionar outra chave.  
   
 ```  
@@ -1445,11 +1440,11 @@ BOOL OnSysKeyDown(
  Sinalizadores de estado do teclado quando a tecla foi pressionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o evento de pressionamento de tecla foi processado; Caso contrário, `FALSE`.  
+ `TRUE` Se o evento de pressionamento de tecla foi processado; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsyskeyup"></a>CMFCRibbonBar::OnSysKeyUp  
+##  <a name="onsyskeyup"></a>  CMFCRibbonBar::OnSysKeyUp  
  Chamado pelo framework quando o usuário libera a tecla F10, a tecla ALT ou uma chave que foi pressionada quando a tecla ALT foi pressionada.  
   
 ```  
@@ -1470,11 +1465,11 @@ BOOL OnSysKeyUp(
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o evento de pressionamento de tecla foi processado; Caso contrário, `FALSE`.  
+ `TRUE` Se o evento de pressionamento de tecla foi processado; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="poptooltip"></a>CMFCRibbonBar::PopTooltip  
+##  <a name="poptooltip"></a>  CMFCRibbonBar::PopTooltip  
  Remove uma dica de ferramenta da exibição.  
   
 ```  
@@ -1483,7 +1478,7 @@ void PopTooltip();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="pretranslatemessage"></a>CMFCRibbonBar::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCRibbonBar::PreTranslateMessage  
  Determina se a mensagem especificada é processada pela barra da faixa de opções.  
   
 ```  
@@ -1495,11 +1490,11 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
  Ponteiro para uma mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a mensagem foi processada pela barra da faixa de opções; Caso contrário, `FALSE`.  
+ `TRUE` Se a mensagem foi processada pela barra da faixa de opções; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="recalclayout"></a>CMFCRibbonBar::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonBar::RecalcLayout  
  Ajusta o layout de todos os controles da barra de faixa de opções.  
   
 ```  
@@ -1509,7 +1504,7 @@ virtual void RecalcLayout();
 ### <a name="remarks"></a>Comentários  
  Depois do ajuste de layout, a exibição da barra de faixa de opções é atualizada.  
   
-##  <a name="removeallcategories"></a>CMFCRibbonBar::RemoveAllCategories  
+##  <a name="removeallcategories"></a>  CMFCRibbonBar::RemoveAllCategories  
  Exclui todas as categorias de faixa de opções na barra de faixa de opções.  
   
 ```  
@@ -1519,7 +1514,7 @@ void RemoveAllCategories();
 ### <a name="remarks"></a>Comentários  
  Este método exclui todas as categorias de faixa de opções da memória e da lista de categorias.  
   
-##  <a name="removeallfromtabs"></a>CMFCRibbonBar::RemoveAllFromTabs  
+##  <a name="removeallfromtabs"></a>  CMFCRibbonBar::RemoveAllFromTabs  
  Remove todos os elementos da faixa de opções da área da guia.  
   
 ```  
@@ -1529,7 +1524,7 @@ void RemoveAllFromTabs();
 ### <a name="remarks"></a>Comentários  
  Use essa função se desejar remover todos os elementos que você adicionou para a área da guia usando [CMFCRibbonBar::AddToTabs](#addtotabs) método.  
   
-##  <a name="removecategory"></a>CMFCRibbonBar::RemoveCategory  
+##  <a name="removecategory"></a>  CMFCRibbonBar::RemoveCategory  
  Exclui a categoria especificada da faixa de opções na barra de faixa de opções.  
   
 ```  
@@ -1541,12 +1536,12 @@ BOOL RemoveCategory(int nIndex);
  O índice de base zero de uma categoria na lista de categorias de faixa de opções que está contida na barra de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a categoria de faixa de opções especificado foi excluída; Caso contrário, `FALSE`.  
+ `TRUE` Se a categoria de faixa de opções especificado foi excluída; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A categoria de faixa de opções especificado é excluída da memória e da lista de categorias.  
   
-##  <a name="setactivecategory"></a>CMFCRibbonBar::SetActiveCategory  
+##  <a name="setactivecategory"></a>  CMFCRibbonBar::SetActiveCategory  
  Define a categoria de faixa de opções especificada como a categoria de ativa.  
   
 ```  
@@ -1560,17 +1555,17 @@ BOOL SetActiveCategory(
  Uma categoria de faixa de opções que está contida na barra de faixa de opções.  
   
  [in] `bForceRestore`  
- `TRUE`para maximizar a barra da faixa de opções se ele é minimizado. `FALSE` para exibir a categoria ativa em uma janela pop-up, se a barra de faixa de opções é minimizada.  
+ `TRUE` para maximizar a barra da faixa de opções se ele é minimizado. `FALSE` para exibir a categoria ativa em uma janela pop-up, se a barra de faixa de opções é minimizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a categoria especificada foi definida como a categoria de ativa; Caso contrário, `FALSE`.  
+ `TRUE` Se a categoria especificada foi definida como a categoria de ativa; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A categoria principal da faixa de opções não pode ser a categoria ativa.  
   
  Se a categoria especificada pelo `pCategory` não é exibido, ele não pode ser definido como a categoria de ativa.  
   
-##  <a name="setactivemdichild"></a>CMFCRibbonBar::SetActiveMDIChild  
+##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  Associa os botões de sistema na barra de faixa de opções que pertencem a uma janela filho de interface de documentos múltiplos (MDI) para a janela de filho MDI especificada.  
   
 ```  
@@ -1583,7 +1578,7 @@ void SetActiveMDIChild(CWnd* pWnd);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setapplicationbutton"></a>CMFCRibbonBar::SetApplicationButton  
+##  <a name="setapplicationbutton"></a>  CMFCRibbonBar::SetApplicationButton  
  Atribui um botão de faixa de opções do aplicativo para a barra de faixa de opções.  
   
 ```  
@@ -1607,7 +1602,7 @@ void SetApplicationButton(
   
  [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]  
   
-##  <a name="setelementkeys"></a>CMFCRibbonBar::SetElementKeys  
+##  <a name="setelementkeys"></a>  CMFCRibbonBar::SetElementKeys  
  Define as dicas de tecla para todos os elementos da faixa de opções com a ID de comando especificado.  
   
 ```  
@@ -1628,12 +1623,12 @@ BOOL SetElementKeys(
  Keytip do menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se as dicas de tecla do elemento de pelo menos uma faixa de opções forem definidas; Caso contrário, `FALSE`.  
+ `TRUE` Se as dicas de tecla do elemento de pelo menos uma faixa de opções forem definidas; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O menu opcional keytip é para elementos de faixa de opções com um botão de divisão que abre um menu pop-up.  
   
-##  <a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar::SetKeyboardNavigationLevel  
+##  <a name="setkeyboardnavigationlevel"></a>  CMFCRibbonBar::SetKeyboardNavigationLevel  
  Define o nível de navegação de teclado que o usuário pressiona as dicas de tecla que estão contidas na barra de faixa de opções.  
   
 ```  
@@ -1647,12 +1642,12 @@ void SetKeyboardNavigationLevel(
  Ponteiro para o objeto de navegação do teclado atual.  
   
  [in] `bSetFocus`  
- `TRUE`Para definir o foco do teclado para a barra de faixa de opções.  
+ `TRUE` Para definir o foco do teclado para a barra de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
  Navegação de teclado da barra de faixa de opções é iniciado quando o usuário pressiona a tecla ALT ou F10. O usuário seleciona o próximo nível de navegação pressionando um keytip na barra de faixa de opções. O usuário pode retornar para o nível de navegação anterior pressionando a tecla ESC.  
   
-##  <a name="setmaximizemode"></a>CMFCRibbonBar::SetMaximizeMode  
+##  <a name="setmaximizemode"></a>  CMFCRibbonBar::SetMaximizeMode  
  Ajusta a faixa de opções barra quando o tamanho da janela de uma janela filho de interface de documentos múltiplos (MDI) entra ou sai do estado maximizado.  
   
 ```  
@@ -1663,7 +1658,7 @@ void SetMaximizeMode(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bMax`  
- `TRUE`Para exibir os botões de sistema para uma janela de filho MDI na barra de faixa de opções; `FALSE` para remover os botões de sistema para uma janela de filho MDI da barra de faixa de opções.  
+ `TRUE` Para exibir os botões de sistema para uma janela de filho MDI na barra de faixa de opções; `FALSE` para remover os botões de sistema para uma janela de filho MDI da barra de faixa de opções.  
   
  [in] `pWnd`  
  Ponteiro para a janela do quadro principal para a barra da faixa de opções.  
@@ -1671,7 +1666,7 @@ void SetMaximizeMode(
 ### <a name="remarks"></a>Comentários  
  A barra de faixa de opções exibe botões de sistema para uma janela de filho MDI na linha da guia quando um filho MDI é maximizada.  
   
-##  <a name="setquickaccesscommands"></a>CMFCRibbonBar::SetQuickAccessCommands  
+##  <a name="setquickaccesscommands"></a>  CMFCRibbonBar::SetQuickAccessCommands  
  Adiciona um ou mais elementos de faixa de opções na barra de ferramentas de acesso rápido.  
   
 ```  
@@ -1685,14 +1680,14 @@ void SetQuickAccessCommands(
  A lista de comandos a serem colocados na barra de ferramentas de acesso rápido.  
   
  [in] `bRecalcLayout`  
- `TRUE`Se deseja redesenhar a faixa de opções depois de adicionar os elementos da faixa de opções; `FALSE` caso contrário.  
+ `TRUE` Se deseja redesenhar a faixa de opções depois de adicionar os elementos da faixa de opções; `FALSE` caso contrário.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar o `SetQuickAccessCommands` método o `CMFCRibbonBar` classe.  
   
  [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]  
   
-##  <a name="setquickaccessdefaultstate"></a>CMFCRibbonBar::SetQuickAccessDefaultState  
+##  <a name="setquickaccessdefaultstate"></a>  CMFCRibbonBar::SetQuickAccessDefaultState  
  Define a barra de ferramentas de acesso rápido para o estado padrão.  
   
 ```  
@@ -1711,7 +1706,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
   
  [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]  
   
-##  <a name="setquickaccesstoolbarontop"></a>CMFCRibbonBar::SetQuickAccessToolbarOnTop  
+##  <a name="setquickaccesstoolbarontop"></a>  CMFCRibbonBar::SetQuickAccessToolbarOnTop  
  Posiciona a barra de ferramentas de acesso rápido acima ou abaixo da barra da faixa de opções.  
   
 ```  
@@ -1720,9 +1715,9 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bOnTop`  
- `TRUE`para posicionar a barra de ferramentas de acesso rápido acima da barra de faixa de opções; `FALSE` para posicionar a barra de ferramentas de acesso rápido abaixo da barra da faixa de opções.  
+ `TRUE` para posicionar a barra de ferramentas de acesso rápido acima da barra de faixa de opções; `FALSE` para posicionar a barra de ferramentas de acesso rápido abaixo da barra da faixa de opções.  
   
-##  <a name="settooltipfixedwidth"></a>CMFCRibbonBar::SetTooltipFixedWidth  
+##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  Define os tamanhos regulares e grandes de larguras fixas para de barra de faixa de opções de dica de ferramenta.  
   
 ```  
@@ -1741,7 +1736,7 @@ void SetTooltipFixedWidth(
 ### <a name="remarks"></a>Comentários  
  Definição de um parâmetro como 0 faz com que a largura correspondente variar.  
   
-##  <a name="showcategory"></a>CMFCRibbonBar::ShowCategory  
+##  <a name="showcategory"></a>  CMFCRibbonBar::ShowCategory  
  Mostra ou oculta a categoria especificada da faixa de opções.  
   
 ```  
@@ -1757,7 +1752,7 @@ void ShowCategory(
  [in] `bShow`  
  Se `TRUE`, mostra a categoria de faixa de opções; caso contrário, ocultar a categoria de faixa de opções.  
   
-##  <a name="showcontextcategories"></a>CMFCRibbonBar::ShowContextCategories  
+##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  Mostra ou oculta as categorias de contexto com a ID especificada.  
   
 ```  
@@ -1773,7 +1768,7 @@ void ShowContextCategories(
  [in] `bShow`  
  Se `TRUE`, mostra as categorias que têm a ID especificada; caso contrário, ocultar as categorias que têm a ID especificada.  
   
-##  <a name="showkeytips"></a>CMFCRibbonBar::ShowKeyTips  
+##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  Mostra dicas de tecla para cada elemento de faixa de opções na barra de faixa de opções.  
   
 ```  
@@ -1782,7 +1777,7 @@ void ShowKeyTips();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="togglemimimizestate"></a>CMFCRibbonBar::ToggleMimimizeState  
+##  <a name="togglemimimizestate"></a>  CMFCRibbonBar::ToggleMimimizeState  
  Alterna entre os estados maximizadas e minimizados na barra de faixa de opções.  
   
 ```  
@@ -1794,7 +1789,7 @@ void ToggleMimimizeState();
   
  No estado minimizado, o controle de faixa de opções está oculto e somente as guias são exibidas. Quando o usuário clica em uma guia, o controle de faixa de opções é exibido como uma janela pop-up. A janela será fechada quando o usuário clica fora ou executa um comando.  
   
-##  <a name="translatechar"></a>CMFCRibbonBar::TranslateChar  
+##  <a name="translatechar"></a>  CMFCRibbonBar::TranslateChar  
  Determina se o código de caractere de pressionamento de tecla especificado é processado pela barra da faixa de opções.  
   
 ```  
@@ -1806,12 +1801,12 @@ virtual BOOL TranslateChar(UINT nChar);
  Um código de caractere de pressionamento de tecla do usuário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o código de caractere foi processado pela barra da faixa de opções; Caso contrário, `FALSE`.  
+ `TRUE` Se o código de caractere foi processado pela barra da faixa de opções; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  O recurso de dicas de tecla permite aos usuários navegar a barra da faixa de opções usando o teclado.  
   
-##  <a name="getfocused"></a>CMFCRibbonBar::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonBar::GetFocused  
  Retorna um elemento focalizado atualmente.  
   
 ```  
@@ -1823,7 +1818,7 @@ virtual CMFCRibbonBaseElement* GetFocused();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="iswindows7look"></a>CMFCRibbonBar::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonBar::IsWindows7Look  
  Indica se a faixa de opções tem Windows 7 Pesquisar (botão pequeno aplicativo retangular).  
   
 ```  
@@ -1831,11 +1826,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a faixa de opções com o Windows 7 pesquisar; Caso contrário, `FALSE`.  
+ `TRUE` Se a faixa de opções com o Windows 7 pesquisar; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="loadfromresource"></a>CMFCRibbonBar::LoadFromResource  
+##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource  
  Sobrecarregado. Carrega uma barra de faixa de opções de recursos do aplicativo.  
   
 ```  
@@ -1865,11 +1860,11 @@ virtual BOOL LoadFromResource(
  Especifica a ID de recurso (na forma de cadeia de caracteres) com informações da barra da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a carga for bem-sucedida; Caso contrário, `FALSE`.  
+ `TRUE` Se a carga for bem-sucedida; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="savetoxmlbuffer"></a>CMFCRibbonBar::SaveToXMLBuffer  
+##  <a name="savetoxmlbuffer"></a>  CMFCRibbonBar::SaveToXMLBuffer  
  Salva a barra da faixa de opções para um buffer.  
   
 ```  
@@ -1885,7 +1880,7 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="savetoxmlfile"></a>CMFCRibbonBar::SaveToXMLFile  
+##  <a name="savetoxmlfile"></a>  CMFCRibbonBar::SaveToXMLFile  
  Salva a barra da faixa de opções para um arquivo XML.  
   
 ```  
@@ -1901,7 +1896,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setwindows7look"></a>CMFCRibbonBar::SetWindows7Look  
+##  <a name="setwindows7look"></a>  CMFCRibbonBar::SetWindows7Look  
  Habilita ou desabilita a aparência do Windows 7 (botão pequeno aplicativo retangular) para a faixa de opções.  
   
 ```  
@@ -1912,10 +1907,10 @@ void SetWindows7Look(
   
 ### <a name="parameters"></a>Parâmetros  
  `bWindows7Look`  
- `TRUE`Define a aparência do Windows 7; `FALSE` caso contrário.  
+ `TRUE` Define a aparência do Windows 7; `FALSE` caso contrário.  
   
  `bRecalc`  
- `TRUE`recalcula o layout de faixa de opções; `FALSE` caso contrário.  
+ `TRUE` recalcula o layout de faixa de opções; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
   

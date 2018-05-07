@@ -1,13 +1,10 @@
 ---
-title: "Como o Framework chama o código | Microsoft Docs"
-ms.custom: 
+title: Como o Framework chama o código | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83eeb1c7fd3032ae33c213f17522b171bdb46e55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-framework-calls-your-code"></a>Como o Framework chama o código
 É fundamental compreender a relação entre seu código-fonte e o código do Framework do MFC. Quando seu aplicativo é executado, a maioria do fluxo de controle reside no código do framework. A estrutura gerencia o loop de mensagem que obtém as mensagens do Windows que o usuário escolhe comandos e edita dados em uma exibição. Eventos que a estrutura pode manipular por si só não confiam no seu código em todos os. Por exemplo, o framework sabe como fechar janelas e como sair do aplicativo em resposta aos comandos do usuário. Como ele trata essas tarefas, a estrutura usa manipuladores de mensagens e funções virtuais do C++ para lhe dar oportunidades para responder a esses eventos também. Seu código é não no controle, no entanto; a estrutura é.  

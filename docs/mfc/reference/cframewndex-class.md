@@ -1,12 +1,9 @@
 ---
-title: "Classe CWinAppEx é | Microsoft Docs"
-ms.custom: 
+title: Classe CWinAppEx é | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFrameWndEx
@@ -187,17 +184,15 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b968985c598dafe2ed96295c7388d650dc18c636
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e806d622e79fe57039b85dc77860b07b956ece1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cframewndex-class"></a>Classe CWinAppEx é
 Implementa a funcionalidade de uma janela única interface de documento (SDI) sobrepostas ou janela do quadro de janela pop-up e fornece membros para gerenciar a janela. Ele estende o [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -322,7 +317,7 @@ class CFrameWndEx : public CFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxframewndex.h  
   
-##  <a name="activeitemrecalclayout"></a>CFrameWndEx::ActiveItemRecalcLayout  
+##  <a name="activeitemrecalclayout"></a>  CFrameWndEx::ActiveItemRecalcLayout  
  Ajusta o layout do item de cliente OLE e área do cliente do quadro.  
   
 ```  
@@ -331,7 +326,7 @@ void ActiveItemRecalcLayout();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="addpane"></a>CFrameWndEx::AddPane  
+##  <a name="addpane"></a>  CFrameWndEx::AddPane  
  Registra uma barra de controle com o Gerenciador de encaixe.  
   
 ```  
@@ -345,12 +340,12 @@ BOOL AddPane(
  Um painel da barra de controle para registrar.  
   
  [in] `bTail`  
- `TRUE`Se você deseja adicionar o painel da barra de controle para o final da lista; `FALSE` caso contrário.  
+ `TRUE` Se você deseja adicionar o painel da barra de controle para o final da lista; `FALSE` caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de controle foi registrada com êxito; `FALSE` caso contrário.  
+ `TRUE` Se a barra de controle foi registrada com êxito; `FALSE` caso contrário.  
   
-##  <a name="adjustdockinglayout"></a>CFrameWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CFrameWndEx::AdjustDockingLayout  
  Recalcula o layout de todos os painéis que está encaixada na janela do quadro.  
   
 ```  
@@ -364,7 +359,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="remarks"></a>Comentários  
  A estrutura hdwp é inicializada, o [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) método.  
   
-##  <a name="delayupdateframemenu"></a>CFrameWndEx::DelayUpdateFrameMenu  
+##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Define o menu do quadro e, em seguida, atualiza-la quando o processamento do comando estiver ocioso.  
   
 ```  
@@ -377,7 +372,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="dockpane"></a>CFrameWndEx::DockPane  
+##  <a name="dockpane"></a>  CFrameWndEx::DockPane  
  Encaixa painel especificado para a janela do quadro.  
   
 ```  
@@ -408,7 +403,7 @@ void DockPane(
   
 -   AFX_IDW_DOCKBAR_RIGHT  
   
-##  <a name="dockpaneleftof"></a>CFrameWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CFrameWndEx::DockPaneLeftOf  
  Encaixa painel especificado à esquerda do outro painel.  
   
 ```  
@@ -425,12 +420,12 @@ BOOL DockPaneLeftOf(
  Um ponteiro para o painel à esquerda do que encaixar o painel especificado pelo `pBar`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se `pBar` está encaixado com êxito. `FALSE`Caso contrário.  
+ `TRUE` Se `pBar` está encaixado com êxito. `FALSE` Caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  O método usa a barra de ferramentas especificada pelo `pBar` parâmetro e módulos de ancoragem especificado por ele no lado esquerdo da barra de ferramentas por `pLeftOf` parâmetro.  
   
-##  <a name="enableautohidepanes"></a>CFrameWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  CFrameWndEx::EnableAutoHidePanes  
  Permite oculta automaticamente modo para o painel quando ela estiver encaixada para o lado especificado da janela do quadro principal.  
   
 ```  
@@ -442,10 +437,10 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
  Especifica o lado da janela do quadro principal ao qual se encaixar o painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se uma barra de painel está encaixado com êxito ao lado de janela do quadro especificado por `dwDockStyle`, `FALSE` caso contrário.  
+ `TRUE` Se uma barra de painel está encaixado com êxito ao lado de janela do quadro especificado por `dwDockStyle`, `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
- `dwDockStyle`pode ter um dos seguintes valores:  
+ `dwDockStyle` Pode ter um dos seguintes valores:  
   
 -   CBRS_ALIGN_TOP: permite que a barra de controle para ser encaixado à parte superior da área cliente de uma janela do quadro.  
   
@@ -455,7 +450,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 -   CBRS_ALIGN_RIGHT: permite que a barra de controle encaixado à direita da área cliente de uma janela do quadro.  
   
-##  <a name="enabledocking"></a>CFrameWndEx::EnableDocking  
+##  <a name="enabledocking"></a>  CFrameWndEx::EnableDocking  
  Habilita o encaixe dos painéis da janela do quadro.  
   
 ```  
@@ -467,7 +462,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
  Especifica o lado da janela do quadro principal onde encaixa a barra do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se uma barra de painel pode ser encaixado com êxito no lado especificado. `FALSE`Caso contrário.  
+ `TRUE` Se uma barra de painel pode ser encaixado com êxito no lado especificado. `FALSE` Caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  O `dwDockStyle` parâmetro pode ter um dos seguintes valores:  
@@ -480,7 +475,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
 -   CBRS_ALIGN_RIGHT  
   
-##  <a name="enablefullscreenmainmenu"></a>CFrameWndEx::EnableFullScreenMainMenu  
+##  <a name="enablefullscreenmainmenu"></a>  CFrameWndEx::EnableFullScreenMainMenu  
  Mostra ou oculta o menu principal em um modo de tela inteira.  
   
 ```  
@@ -489,9 +484,9 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnableMenu`  
- `TRUE`para mostrar o menu principal em um modo de tela inteira, `FALSE` caso contrário.  
+ `TRUE` para mostrar o menu principal em um modo de tela inteira, `FALSE` caso contrário.  
   
-##  <a name="enablefullscreenmode"></a>CFrameWndEx::EnableFullScreenMode  
+##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
  Habilita o modo de tela inteira para a janela do quadro.  
   
 ```  
@@ -509,7 +504,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
   
  Se você quiser manter o menu principal na tela, chame [CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
   
-##  <a name="enableloaddockstate"></a>CFrameWndEx::EnableLoadDockState  
+##  <a name="enableloaddockstate"></a>  CFrameWndEx::EnableLoadDockState  
  Habilita ou desabilita o carregamento do estado de encaixe.  
   
 ```  
@@ -518,9 +513,9 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para habilitar o carregamento do estado do encaixe, `FALSE` para desabilitar o carregamento do estado de encaixe.  
+ `TRUE` Para habilitar o carregamento do estado do encaixe, `FALSE` para desabilitar o carregamento do estado de encaixe.  
   
-##  <a name="enablepanemenu"></a>CFrameWndEx::EnablePaneMenu  
+##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
  Habilita ou desabilita a manipulação automática de menu do painel.  
   
 ```  
@@ -535,7 +530,7 @@ void EnablePaneMenu(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bEnable`  
- `TRUE`Para habilitar a manipulação automática de controle barra de menus pop-up; `FALSE` para desabilitar a manipulação automática de controle barra de menus pop-up.  
+ `TRUE` Para habilitar a manipulação automática de controle barra de menus pop-up; `FALSE` para desabilitar a manipulação automática de controle barra de menus pop-up.  
   
  [in] `uiCustomizeCmd`  
  A ID de comando do **personalizar** item de menu.  
@@ -552,7 +547,7 @@ void EnablePaneMenu(
  [in] `bViewMenuShowsToolbarsOnly`  
  Se `TRUE`, no menu da barra de controle exibe a lista de apenas as barras de ferramentas. Se `FALSE`, o menu exibe a lista de barras de ferramentas e barras de encaixe.  
   
-##  <a name="getactivepopup"></a>CFrameWndEx::GetActivePopup  
+##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
  Retorna um ponteiro para o menu pop-up exibido no momento.  
   
 ```  
@@ -562,7 +557,7 @@ CMFCPopupMenu* GetActivePopup() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o menu pop-up exibido no momento; Caso contrário, `NULL`.  
   
-##  <a name="getdefaultresid"></a>CFrameWndEx::GetDefaultResId  
+##  <a name="getdefaultresid"></a>  CFrameWndEx::GetDefaultResId  
  Retorna a ID de recurso que você especificou quando a estrutura carregado a janela do quadro.  
   
 ```  
@@ -572,7 +567,7 @@ UINT GetDefaultResId() const;
 ### <a name="return-value"></a>Valor de retorno  
  O valor de ID de recurso que o usuário especificado quando o framework carregada a janela do quadro. Zero se a janela do quadro não tem uma barra de menus.  
   
-##  <a name="getdockingmanager"></a>CFrameWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CFrameWndEx::GetDockingManager  
  Recupera o [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) objeto para a janela do quadro.  
   
 ```  
@@ -585,7 +580,7 @@ CDockingManager* GetDockingManager();
 ### <a name="remarks"></a>Comentários  
  A janela do quadro cria e usa um [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) objeto para gerenciar o encaixe de janela filho.  
   
-##  <a name="getmenubar"></a>CFrameWndEx::GetMenuBar  
+##  <a name="getmenubar"></a>  CFrameWndEx::GetMenuBar  
  Retorna um ponteiro para o objeto de barra de menu anexado para a janela do quadro.  
   
 ```  
@@ -595,7 +590,7 @@ const CMFCMenuBar* GetMenuBar() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o objeto de barra de menu anexado para a janela do quadro.  
   
-##  <a name="getpane"></a>CFrameWndEx::GetPane  
+##  <a name="getpane"></a>  CFrameWndEx::GetPane  
  Retorna um ponteiro para o painel que tem a ID especificada.  
   
 ```  
@@ -607,9 +602,9 @@ CBasePane* GetPane(UINT nID);
  A ID do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o painel que tem a ID especificada. `NULL`Se esse painel não existe.  
+ Um ponteiro para o painel que tem a ID especificada. `NULL` Se esse painel não existe.  
   
-##  <a name="getribbonbar"></a>CFrameWndEx::GetRibbonBar  
+##  <a name="getribbonbar"></a>  CFrameWndEx::GetRibbonBar  
  Recupera o controle de barra de faixa de opções para o quadro.  
   
 ```  
@@ -621,7 +616,7 @@ CMFCRibbonBar* GetRibbonBar();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettearoffbars"></a>CFrameWndEx::GetTearOffBars  
+##  <a name="gettearoffbars"></a>  CFrameWndEx::GetTearOffBars  
  Retorna uma lista de objetos do painel que estão em um estado destacável.  
   
 ```  
@@ -631,7 +626,7 @@ const CObList& GetTearOffBars() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a `CObList` objeto que contém uma coleção de ponteiros para os objetos do painel que estão em um estado destacável.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CFrameWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CFrameWndEx::GetToolbarButtonToolTipText  
  Chamado pelo framework quando o aplicativo exibe a dica de ferramenta para um botão de barra de ferramentas.  
   
 ```  
@@ -648,12 +643,12 @@ virtual BOOL GetToolbarButtonToolTipText(
  O texto de dica de ferramenta a ser exibida para o botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a dica de ferramenta foi exibida. `FALSE`Caso contrário.  
+ `TRUE` Se a dica de ferramenta foi exibida. `FALSE` Caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada. Substitua este método se você deseja exibir a dica de ferramenta do botão de barra de ferramentas.  
   
-##  <a name="insertpane"></a>CFrameWndEx::InsertPane  
+##  <a name="insertpane"></a>  CFrameWndEx::InsertPane  
  Insere um painel em uma lista de barras de controle e a registra com o Gerenciador de encaixe.  
   
 ```  
@@ -671,15 +666,15 @@ BOOL InsertPane(
  Um ponteiro para uma barra antes ou após o qual o painel de controle.  
   
  `bAfter`  
- `TRUE`Se você desejar inserir `pControlBar` depois `pTarget`, `FALSE` caso contrário.  
+ `TRUE` Se você desejar inserir `pControlBar` depois `pTarget`, `FALSE` caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de controle com êxito foi inserida e registrada, `FALSE` caso contrário.  
+ `TRUE` Se a barra de controle com êxito foi inserida e registrada, `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Você deve registrar cada barra de controle usando o [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) para ajudar no layout de encaixe.  
   
-##  <a name="isfullscreen"></a>CFrameWndEx::IsFullScreen  
+##  <a name="isfullscreen"></a>  CFrameWndEx::IsFullScreen  
  Determina se a janela do quadro está no modo de tela inteira.  
   
 ```  
@@ -687,12 +682,12 @@ BOOL IsFullScreen() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a janela do quadro está no modo de tela inteira. Caso contrário, `FALSE`.  
+ `TRUE` Se a janela do quadro está no modo de tela inteira. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Você pode definir o modo de tela inteira, chamando o [CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) método.  
   
-##  <a name="ismenubaravailable"></a>CFrameWndEx::IsMenuBarAvailable  
+##  <a name="ismenubaravailable"></a>  CFrameWndEx::IsMenuBarAvailable  
  Determina se o ponteiro para o objeto de barra de menu é válido.  
   
 ```  
@@ -700,9 +695,9 @@ BOOL IsMenuBarAvailable() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a janela do quadro tem uma barra de menus; Caso contrário, `FALSE`.  
+ `TRUE` Se a janela do quadro tem uma barra de menus; Caso contrário, `FALSE`.  
   
-##  <a name="ispointneardocksite"></a>CFrameWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CFrameWndEx::IsPointNearDockSite  
  Determina se o ponto está localizado em uma zona de alinhamento.  
   
 ```  
@@ -720,10 +715,10 @@ BOOL IsPointNearDockSite(
  Em que o ponto seja alinhado. Consulte a tabela na seção comentários para os valores possíveis.  
   
  [out] `bOuterEdge`  
- `TRUE`Se o ponto está localizado próximo da borda do quadro; `FALSE` se o ponto está localizado em uma área do cliente.  
+ `TRUE` Se o ponto está localizado próximo da borda do quadro; `FALSE` se o ponto está localizado em uma área do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o ponto está localizado em uma zona de alinhamento. Caso contrário, `FALSE`.  
+ `TRUE` Se o ponto está localizado em uma zona de alinhamento. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A tabela a seguir lista os possíveis valores para o `dwBarAlignment` parâmetro.  
@@ -740,7 +735,7 @@ BOOL IsPointNearDockSite(
  `CBRS_ALIGN_LEFT`  
  Alinhado à esquerda.  
   
-##  <a name="isprintpreview"></a>CFrameWndEx::IsPrintPreview  
+##  <a name="isprintpreview"></a>  CFrameWndEx::IsPrintPreview  
  Determina se a janela do quadro está no modo de visualização de impressão.  
   
 ```  
@@ -748,11 +743,11 @@ BOOL IsPrintPreview();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a janela do quadro está no modo de visualização de impressão; Caso contrário, `FALSE`.  
+ `TRUE` Se a janela do quadro está no modo de visualização de impressão; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="loadframe"></a>CFrameWndEx::LoadFrame  
+##  <a name="loadframe"></a>  CFrameWndEx::LoadFrame  
  Este método é chamado após a construção para criar a janela do quadro e carregar seus recursos.  
   
 ```  
@@ -781,7 +776,7 @@ virtual BOOL LoadFrame(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="negotiateborderspace"></a>CFrameWndEx::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>  CFrameWndEx::NegotiateBorderSpace  
  Negociação de borda do cliente do OLE implementa.  
   
 ```  
@@ -798,7 +793,7 @@ virtual BOOL NegotiateBorderSpace(
  Dimensões da borda.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o layout deve ser recalculado; Caso contrário, `FALSE`.  
+ `TRUE` Se o layout deve ser recalculado; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A tabela a seguir lista os possíveis valores para o `nBorderCmd` parâmetro.  
@@ -812,7 +807,7 @@ virtual BOOL NegotiateBorderSpace(
  `borderSet`  
  Defina o espaço de cliente OLE.  
   
-##  <a name="onactivate"></a>CFrameWndEx::OnActivate  
+##  <a name="onactivate"></a>  CFrameWndEx::OnActivate  
  O framework chama esse método quando a entrada do usuário é alternada para ou do quadro.  
   
 ```  
@@ -830,7 +825,7 @@ afx_msg void OnActivate(
  Ponteiro para uma outra janela que está alternando a entrada do usuário atual.  
   
  [in] `bMinimized`  
- O estado minimizado do quadro. `TRUE`Se o quadro é minimizado. Caso contrário, `FALSE`.  
+ O estado minimizado do quadro. `TRUE` Se o quadro é minimizado. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A tabela a seguir lista os possíveis valores para o `nState` parâmetro.  
@@ -844,7 +839,7 @@ afx_msg void OnActivate(
  `WA_INACTIVE`  
  O quadro não está selecionado.  
   
-##  <a name="onactivateapp"></a>CFrameWndEx::OnActivateApp  
+##  <a name="onactivateapp"></a>  CFrameWndEx::OnActivateApp  
  Chamado pelo framework quando o aplicativo é marcado ou desmarcado.  
   
 ```  
@@ -855,14 +850,14 @@ afx_msg void OnActivateApp(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bActive`  
- `TRUE`Se o aplicativo está selecionado. `FALSE` se o aplicativo não estiver selecionado.  
+ `TRUE` Se o aplicativo está selecionado. `FALSE` se o aplicativo não estiver selecionado.  
   
  [in] `dwThreadID`  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onchangevisualmanager"></a>CFrameWndEx::OnChangeVisualManager  
+##  <a name="onchangevisualmanager"></a>  CFrameWndEx::OnChangeVisualManager  
  Chamado pelo framework quando uma alteração ao quadro requer uma alteração para o Gerenciador de visual.  
   
 ```  
@@ -883,7 +878,7 @@ afx_msg LRESULT OnChangeVisualManager(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onclose"></a>CFrameWndEx::OnClose  
+##  <a name="onclose"></a>  CFrameWndEx::OnClose  
  O framework chama esse método para fechar o quadro.  
   
 ```  
@@ -893,7 +888,7 @@ afx_msg void OnClose();
 ### <a name="remarks"></a>Comentários  
  Se o quadro estiver no modo de visualização de impressão, ele envia uma mensagem do Windows para fechar a visualização da impressão. Caso contrário, se o quadro hospeda um cliente OLE, o cliente está desativado.  
   
-##  <a name="onclosedockingpane"></a>CFrameWndEx::OnCloseDockingPane  
+##  <a name="onclosedockingpane"></a>  CFrameWndEx::OnCloseDockingPane  
  Chamado pelo framework quando o usuário clica o **fechar** botão em um painel.  
   
 ```  
@@ -901,12 +896,12 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de encaixe pode ser fechada. `FALSE`Caso contrário  
+ `TRUE` Se a barra de encaixe pode ser fechada. `FALSE` Caso contrário  
   
 ### <a name="remarks"></a>Comentários  
  Implementar o padrão não fará nada. Substitua este método se você desejar tratar ocultação da barra de encaixe.  
   
-##  <a name="oncloseminiframe"></a>CFrameWndEx::OnCloseMiniFrame  
+##  <a name="oncloseminiframe"></a>  CFrameWndEx::OnCloseMiniFrame  
  Chamado pelo framework quando o usuário clica o **fechar** botão em uma janela do quadro mini flutuante.  
   
 ```  
@@ -914,12 +909,12 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se uma janela do quadro mini flutuante pode ser fechada. `FALSE`Caso contrário.  
+ `TRUE` Se uma janela do quadro mini flutuante pode ser fechada. `FALSE` Caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão não fará nada. Substitua este método se você quiser processar ocultação de uma janela do quadro mini flutuante.  
   
-##  <a name="onclosepopupmenu"></a>CFrameWndEx::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>  CFrameWndEx::OnClosePopupMenu  
  Chamado pelo framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.  
   
 ```  
@@ -933,7 +928,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="remarks"></a>Comentários  
  A estrutura envia uma mensagem WM_DESTROY quando ele está prestes a fechar a janela. Substitua este método se você desejar tratar notificações de `CMFCPopupMenu` objetos que pertencem à janela do quadro quando um `CMFCPopupMenu` objeto está processando uma `WM_DESTROY` mensagem enviada pelo framework quando a janela está sendo fechada.  
   
-##  <a name="oncmdmsg"></a>CFrameWndEx::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CFrameWndEx::OnCmdMsg  
  O comando expede mensagens.  
   
 ```  
@@ -958,11 +953,11 @@ virtual BOOL OnCmdMsg(
  Ponteiro para uma estrutura do manipulador de comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a mensagem de comando foi tratada; Caso contrário, `FALSE`.  
+ `TRUE` Se a mensagem de comando foi tratada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="oncontexthelp"></a>CFrameWndEx::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CFrameWndEx::OnContextHelp  
  Chamado pelo framework para exibir a Ajuda relacionados ao contexto.  
   
 ```  
@@ -971,7 +966,7 @@ afx_msg void OnContextHelp();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="oncreate"></a>CFrameWndEx::OnCreate  
+##  <a name="oncreate"></a>  CFrameWndEx::OnCreate  
  Chamado pelo framework depois que o quadro for criado.  
   
 ```  
@@ -987,7 +982,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondestroy"></a>CFrameWndEx::OnDestroy  
+##  <a name="ondestroy"></a>  CFrameWndEx::OnDestroy  
  Chamado pelo framework quando o quadro é destruído.  
   
 ```  
@@ -997,7 +992,7 @@ afx_msg void OnDestroy();
 ### <a name="remarks"></a>Comentários  
  A tabela de Aceleradores e todas as janelas são destruídas.  
   
-##  <a name="ondrawmenuimage"></a>CFrameWndEx::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CFrameWndEx::OnDrawMenuImage  
  Chamado pelo framework quando o aplicativo desenha a imagem associada a um item de menu.  
   
 ```  
@@ -1018,12 +1013,12 @@ virtual BOOL OnDrawMenuImage(
  Um ponteiro para um `Rect` estrutura que especifica a posição da tela e o tamanho da imagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a estrutura processa com êxito a imagem; `FALSE` caso contrário.  
+ `TRUE` Se a estrutura processa com êxito a imagem; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método se você quiser personalizar a renderização de imagem para os itens de menu que pertencem a barra de menus pertencente a `CFrameWndEx` objeto derivado.  
   
-##  <a name="ondrawmenulogo"></a>CFrameWndEx::OnDrawMenuLogo  
+##  <a name="ondrawmenulogo"></a>  CFrameWndEx::OnDrawMenuLogo  
  Chamado pelo framework quando um `CMFCPopupMenu` objeto processa uma mensagem WM_PAINT.  
   
 ```  
@@ -1046,7 +1041,7 @@ virtual void OnDrawMenuLogo(
 ### <a name="remarks"></a>Comentários  
  Substituir essa função se desejar exibir um logotipo no menu pop-up que pertence à barra de menus pertencente a `CFrameWndEx` objeto derivado.  
   
-##  <a name="ondwmcompositionchanged"></a>CFrameWndEx::OnDWMCompositionChanged  
+##  <a name="ondwmcompositionchanged"></a>  CFrameWndEx::OnDWMCompositionChanged  
  Chamado pelo framework quando a composição do Desktop Window Manager (DWM) foi habilitada ou desabilitada.  
   
 ```  
@@ -1067,7 +1062,7 @@ afx_msg LRESULT OnDWMCompositionChanged(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onexitsizemove"></a>CFrameWndEx::OnExitSizeMove  
+##  <a name="onexitsizemove"></a>  CFrameWndEx::OnExitSizeMove  
  Chamado pelo framework quando o quadro para mover ou redimensionar.  
   
 ```  
@@ -1088,7 +1083,7 @@ LRESULT OnExitSizeMove(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ongetminmaxinfo"></a>CFrameWndEx::OnGetMinMaxInfo  
+##  <a name="ongetminmaxinfo"></a>  CFrameWndEx::OnGetMinMaxInfo  
  Chamado pelo framework quando o quadro é redimensionado para definir limites de dimensão da janela.  
   
 ```  
@@ -1101,7 +1096,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onidleupdatecmdui"></a>CFrameWndEx::OnIdleUpdateCmdUI  
+##  <a name="onidleupdatecmdui"></a>  CFrameWndEx::OnIdleUpdateCmdUI  
  Chamado pelo framework para atualizar a exibição de quadro quando o processamento do comando está ocioso.  
   
 ```  
@@ -1122,7 +1117,7 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onlbuttondown"></a>CFrameWndEx::OnLButtonDown  
+##  <a name="onlbuttondown"></a>  CFrameWndEx::OnLButtonDown  
  O framework chama esse método quando o usuário pressiona o botão esquerdo do mouse.  
   
 ```  
@@ -1140,7 +1135,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onlbuttonup"></a>CFrameWndEx::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CFrameWndEx::OnLButtonUp  
  O framework chama esse método quando o usuário libera o botão esquerdo do mouse.  
   
 ```  
@@ -1158,7 +1153,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onmenubuttontoolhittest"></a>CFrameWndEx::OnMenuButtonToolHitTest  
+##  <a name="onmenubuttontoolhittest"></a>  CFrameWndEx::OnMenuButtonToolHitTest  
  Chamado pelo framework quando um `CMFCToolBarButton` objeto processos um `WM_NCHITTEST` mensagem.  
   
 ```  
@@ -1175,12 +1170,12 @@ virtual BOOL OnMenuButtonToolHitTest(
  Um ponteiro para uma estrutura de informações da ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o aplicativo preenche o `pTI` parâmetro. `FALSE`Caso contrário.  
+ `TRUE` Se o aplicativo preenche o `pTI` parâmetro. `FALSE` Caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método se desejar fornecer um informações de dica de ferramenta sobre um item de menu específico.  
   
-##  <a name="onmenuchar"></a>CFrameWndEx::OnMenuChar  
+##  <a name="onmenuchar"></a>  CFrameWndEx::OnMenuChar  
  Chamado pelo framework quando um menu é exibido e o usuário pressiona uma tecla que não corresponde a um comando.  
   
 ```  
@@ -1214,7 +1209,7 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onmousemove"></a>CFrameWndEx::OnMouseMove  
+##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  O framework chama este método quando o ponteiro se move.  
   
 ```  
@@ -1232,7 +1227,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onmoveminiframe"></a>CFrameWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  CFrameWndEx::OnMoveMiniFrame  
  Chamado pelo framework quando um painel de janela é movida.  
   
 ```  
@@ -1244,11 +1239,11 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
  Ponteiro para o [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md) janela do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a janela do painel não foi encaixada; `FALSE` se a janela do painel foi encaixada.  
+ `TRUE` Se a janela do painel não foi encaixada; `FALSE` se a janela do painel foi encaixada.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onncactivate"></a>CFrameWndEx::OnNcActivate  
+##  <a name="onncactivate"></a>  CFrameWndEx::OnNcActivate  
  Chamado pelo framework quando a área não cliente do quadro deve ser redesenhada para indicar uma alteração no estado ativo.  
   
 ```  
@@ -1257,14 +1252,14 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bActive`  
- `TRUE`Para desenhar o quadro ativo; `FALSE` para desenhar o quadro inativo.  
+ `TRUE` Para desenhar o quadro ativo; `FALSE` para desenhar o quadro inativo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero para continuar com o processamento padrão; 0 para impedir que a área do cliente não está sendo desativado.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onnccalcsize"></a>CFrameWndEx::OnNcCalcSize  
+##  <a name="onnccalcsize"></a>  CFrameWndEx::OnNcCalcSize  
  Chamado pelo framework quando o tamanho e a posição da área do cliente devem ser calculadas.  
   
 ```  
@@ -1275,14 +1270,14 @@ afx_msg void OnNcCalcSize(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bCalcValidRects`  
- `TRUE`Quando o aplicativo deve especificar uma área de cliente válido; Caso contrário, `FALSE`.  
+ `TRUE` Quando o aplicativo deve especificar uma área de cliente válido; Caso contrário, `FALSE`.  
   
  [in] `lpncsp`  
  Ponteiro para um `NCCALCSIZE_PARAMS` estrutura que contém as alterações de dimensão do quadro.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onnchittest"></a>CFrameWndEx::OnNcHitTest  
+##  <a name="onnchittest"></a>  CFrameWndEx::OnNcHitTest  
  Chamado pelo framework quando o ponteiro se move ou quando um botão do mouse é pressionado ou liberado.  
   
 ```  
@@ -1298,7 +1293,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onncmousemove"></a>CFrameWndEx::OnNcMouseMove  
+##  <a name="onncmousemove"></a>  CFrameWndEx::OnNcMouseMove  
  Chamado pelo framework quando o ponteiro se move em uma área não cliente.  
   
 ```  
@@ -1316,7 +1311,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onncpaint"></a>CFrameWndEx::OnNcPaint  
+##  <a name="onncpaint"></a>  CFrameWndEx::OnNcPaint  
  Chamado pelo framework quando a área do cliente não deve ser pintada.  
   
 ```  
@@ -1325,7 +1320,7 @@ afx_msg void OnNcPaint();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onpanecheck"></a>CFrameWndEx::OnPaneCheck  
+##  <a name="onpanecheck"></a>  CFrameWndEx::OnPaneCheck  
  Chamado pelo framework para controlar a visibilidade de um painel.  
   
 ```  
@@ -1337,11 +1332,11 @@ afx_msg BOOL OnPaneCheck(UINT nID);
  ID de controle de um painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o comando foi tratado; `FALSE` para continuar com o processamento do comando.  
+ `TRUE` Se o comando foi tratado; `FALSE` para continuar com o processamento do comando.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onpostpreviewframe"></a>CFrameWndEx::OnPostPreviewFrame  
+##  <a name="onpostpreviewframe"></a>  CFrameWndEx::OnPostPreviewFrame  
  Chamado pelo framework quando o usuário altera o modo de visualização de impressão.  
   
 ```  
@@ -1355,14 +1350,14 @@ afx_msg LRESULT OnPostPreviewFrame(
  Este parâmetro não é usado.  
   
  [in] `lParam`  
- `TRUE`Quando o quadro estiver no modo de visualização de impressão; `FALSE` quando o modo de visualização de impressão está desativado.  
+ `TRUE` Quando o quadro estiver no modo de visualização de impressão; `FALSE` quando o modo de visualização de impressão está desativado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 0.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onpowerbroadcast"></a>CFrameWndEx::OnPowerBroadcast  
+##  <a name="onpowerbroadcast"></a>  CFrameWndEx::OnPowerBroadcast  
  Chamado pelo framework quando ocorre um evento de gerenciamento de energia.  
   
 ```  
@@ -1383,7 +1378,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsetmenu"></a>CFrameWndEx::OnSetMenu  
+##  <a name="onsetmenu"></a>  CFrameWndEx::OnSetMenu  
  Chamado pelo framework para substituir o menu de janela do quadro.  
   
 ```  
@@ -1405,13 +1400,13 @@ BOOL OnSetMenu(HMENU hmenu);
  Identificador para o novo menu de janela do quadro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `LRESULT`é o resultado de chamar o procedimento de janela padrão.  
+ `LRESULT` é o resultado de chamar o procedimento de janela padrão.  
   
- `BOOL`é `TRUE` se o evento foi tratada; caso contrário, `FALSE`.  
+ `BOOL` é `TRUE` se o evento foi tratada; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsetpreviewmode"></a>CFrameWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>  CFrameWndEx::OnSetPreviewMode  
  Chamado pelo framework para definir o modo de visualização de impressão para o quadro.  
   
 ```  
@@ -1422,14 +1417,14 @@ virtual void OnSetPreviewMode(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bPreview`  
- `TRUE`Para habilitar a visualização da impressão. `FALSE` para desabilitar a visualização de impressão.  
+ `TRUE` Para habilitar a visualização da impressão. `FALSE` para desabilitar a visualização de impressão.  
   
  [in] `pState`  
  Ponteiro para um `CPrintPreviewState` estrutura de estado do quadro.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsettext"></a>CFrameWndEx::OnSetText  
+##  <a name="onsettext"></a>  CFrameWndEx::OnSetText  
  Chamado pelo framework para definir o texto de uma janela.  
   
 ```  
@@ -1450,7 +1445,7 @@ afx_msg LRESULT OnSetText(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onshowcustomizepane"></a>CFrameWndEx::OnShowCustomizePane  
+##  <a name="onshowcustomizepane"></a>  CFrameWndEx::OnShowCustomizePane  
  Chamado pelo framework quando ele for exibido um `QuickCustomizePane`.  
   
 ```  
@@ -1472,7 +1467,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="remarks"></a>Comentários  
  Personalizar o rápido menu é um menu pop-up que aparece quando você clica em botão de personalizar a barra de ferramentas  
   
-##  <a name="onshowpanes"></a>CFrameWndEx::OnShowPanes  
+##  <a name="onshowpanes"></a>  CFrameWndEx::OnShowPanes  
  Chamado pelo framework para mostrar ou ocultar painéis.  
   
 ```  
@@ -1481,7 +1476,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bShow`  
- `TRUE`Se o aplicativo mostra os painéis; `FALSE` caso contrário.  
+ `TRUE` Se o aplicativo mostra os painéis; `FALSE` caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método sempre retornam `FALSE`.  
@@ -1493,7 +1488,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
  Substitua este método em uma classe derivada para executar código personalizado quando o framework mostra ou oculta os painéis.  
   
-##  <a name="onshowpopupmenu"></a>CFrameWndEx::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>  CFrameWndEx::OnShowPopupMenu  
  Chamado pelo framework quando ele for exibido um menu pop-up.  
   
 ```  
@@ -1505,12 +1500,12 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
  Um ponteiro para um menu pop-up.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o menu pop-up estiver visível; Caso contrário, `FALSE`.  
+ `TRUE` Se o menu pop-up estiver visível; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para executar código personalizado quando o framework exibe um menu pop-up. Por exemplo, substitua este método para alterar a cor de plano de fundo dos comandos em um menu pop-up.  
   
-##  <a name="onsize"></a>CFrameWndEx::OnSize  
+##  <a name="onsize"></a>  CFrameWndEx::OnSize  
  Chamado pelo framework depois das alterações de tamanho do quadro.  
   
 ```  
@@ -1532,7 +1527,7 @@ afx_msg void OnSize(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsizing"></a>CFrameWndEx::OnSizing  
+##  <a name="onsizing"></a>  CFrameWndEx::OnSizing  
  Chamado pelo framework quando o usuário o redimensiona o quadro.  
   
 ```  
@@ -1550,7 +1545,7 @@ afx_msg void OnSizing(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onsyscolorchange"></a>CFrameWndEx::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>  CFrameWndEx::OnSysColorChange  
  Chamado pelo framework quando alterar as cores do sistema.  
   
 ```  
@@ -1559,7 +1554,7 @@ void OnSysColorChange();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ontearoffmenu"></a>CFrameWndEx::OnTearOffMenu  
+##  <a name="ontearoffmenu"></a>  CFrameWndEx::OnTearOffMenu  
  Chamado pelo framework quando o aplicativo exibe um menu que tem uma barra destacável.  
   
 ```  
@@ -1576,14 +1571,14 @@ virtual BOOL OnTearOffMenu(
  Um ponteiro para uma barra destacável.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o menu pop-up com barra destacável está ativado. Caso contrário, `FALSE`.  
+ `TRUE` Se o menu pop-up com barra destacável está ativado. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para executar código personalizado quando o framework exibe uma barra de controle.  
   
  A implementação padrão não faz nada e retorna `TRUE`.  
   
-##  <a name="ontoolbarcontextmenu"></a>CFrameWndEx::OnToolbarContextMenu  
+##  <a name="ontoolbarcontextmenu"></a>  CFrameWndEx::OnToolbarContextMenu  
  Chamado pelo framework para criar um menu pop-up da barra de ferramentas.  
   
 ```  
@@ -1604,7 +1599,7 @@ afx_msg LRESULT OnToolbarContextMenu(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ontoolbarcreatenew"></a>CFrameWndEx::OnToolbarCreateNew  
+##  <a name="ontoolbarcreatenew"></a>  CFrameWndEx::OnToolbarCreateNew  
  O framework chama esse método para criar uma nova barra de ferramentas.  
   
 ```  
@@ -1625,7 +1620,7 @@ afx_msg LRESULT OnToolbarCreateNew(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ontoolbardelete"></a>CFrameWndEx::OnToolbarDelete  
+##  <a name="ontoolbardelete"></a>  CFrameWndEx::OnToolbarDelete  
  Chamado pelo framework quando uma barra de ferramentas é excluída.  
   
 ```  
@@ -1642,11 +1637,11 @@ afx_msg LRESULT OnToolbarDelete(
  Ponteiro para uma barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a barra de ferramentas foi excluída; Caso contrário, `FALSE`.  
+ `TRUE` Se a barra de ferramentas foi excluída; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onupdateframemenu"></a>CFrameWndEx::OnUpdateFrameMenu  
+##  <a name="onupdateframemenu"></a>  CFrameWndEx::OnUpdateFrameMenu  
  Chamado pelo framework para definir o menu do quadro.  
   
 ```  
@@ -1659,7 +1654,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onupdateframetitle"></a>CFrameWndEx::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>  CFrameWndEx::OnUpdateFrameTitle  
  O framework chama esse método para atualizar a barra de título da janela do quadro.  
   
 ```  
@@ -1668,11 +1663,11 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bAddToTitle`  
- `TRUE`Para adicionar o título do documento ativo para a barra de título da janela de quadro; Caso contrário`FALSE.`  
+ `TRUE` Para adicionar o título do documento ativo para a barra de título da janela de quadro; Caso contrário `FALSE.`  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onupdatepanemenu"></a>CFrameWndEx::OnUpdatePaneMenu  
+##  <a name="onupdatepanemenu"></a>  CFrameWndEx::OnUpdatePaneMenu  
  Chamado pelo framework para atualizar o menu do painel.  
   
 ```  
@@ -1685,7 +1680,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onwindowposchanged"></a>CFrameWndEx::OnWindowPosChanged  
+##  <a name="onwindowposchanged"></a>  CFrameWndEx::OnWindowPosChanged  
  Chamado pelo framework quando o tamanho do quadro, a posição ou a ordem z é alterado devido a uma chamada para um método de gerenciamento de janela.  
   
 ```  
@@ -1698,7 +1693,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="panefrompoint"></a>CFrameWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CFrameWndEx::PaneFromPoint  
  Pesquisa cada painel para o ponto.  
   
 ```  
@@ -1723,7 +1718,7 @@ CBasePane* PaneFromPoint(
  Expanda o retângulo delimitador de cada barra de controle por esse valor durante a pesquisa de ponto.  
   
  [in] `bExactBar`  
- `TRUE`para ignorar o `nSensitivity` parâmetro; caso contrário, `FALSE`.  
+ `TRUE` para ignorar o `nSensitivity` parâmetro; caso contrário, `FALSE`.  
   
  [in] `pRTCBarType`  
  Se não for `NULL`, o método procura somente as barras de controle do tipo especificado.  
@@ -1739,7 +1734,7 @@ CBasePane* PaneFromPoint(
   
  Use `nSensitivity` para aumentar o tamanho da área de pesquisa. Use `pRTCBarType` para restringir os tipos de barras de controle que o método de pesquisa.  
   
-##  <a name="pretranslatemessage"></a>CFrameWndEx::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CFrameWndEx::PreTranslateMessage  
  Trata mensagens de janela específico antes de serem distribuídos.  
   
 ```  
@@ -1755,7 +1750,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="recalclayout"></a>CFrameWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>  CFrameWndEx::RecalcLayout  
  Ajusta o layout do quadro e janelas filho.  
   
 ```  
@@ -1769,7 +1764,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Comentários  
  Este método é chamado quando o tamanho da janela do quadro foi alterado ou quando as barras de controle são exibidas ou ocultas.  
   
-##  <a name="removepanefromdockmanager"></a>CFrameWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CFrameWndEx::RemovePaneFromDockManager  
  Cancela o registro de um painel e a remove do Gerenciador de encaixe.  
   
 ```  
@@ -1786,13 +1781,13 @@ void RemovePaneFromDockManager(
  Um ponteiro para o painel da barra de controle para remover.  
   
  [in] `bDestroy`  
- `TRUE`destruir a barra de controle depois de remover. `FALSE` caso contrário.  
+ `TRUE` destruir a barra de controle depois de remover. `FALSE` caso contrário.  
   
  [in] `bAdjustLayout`  
- `TRUE`Para ajustar o layout de encaixe; `FALSE` caso contrário.  
+ `TRUE` Para ajustar o layout de encaixe; `FALSE` caso contrário.  
   
  [in] `bAutoHide`  
- `TRUE`Se a barra de controle está no modo de ocultar automaticamente; `FALSE` caso contrário.  
+ `TRUE` Se a barra de controle está no modo de ocultar automaticamente; `FALSE` caso contrário.  
   
  [in] `pBarReplacement`  
  Um ponteiro para um painel que substitui o painel removido.  
@@ -1802,7 +1797,7 @@ void RemovePaneFromDockManager(
   
  O [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) manipula o layout das barras de controle. Você deve registrar cada barra de controle com o Gerenciador de encaixe usando o [CFrameWndEx::AddPane](#addpane) método ou o [CFrameWndEx::InsertPane](#insertpane) método.  
   
-##  <a name="setdockstate"></a>CFrameWndEx::SetDockState  
+##  <a name="setdockstate"></a>  CFrameWndEx::SetDockState  
  Restaura o layout de encaixe para o estado de encaixe armazenado no registro.  
   
 ```  
@@ -1813,7 +1808,7 @@ void SetDockState(const CDockState& state);
  `state`  
  O estado de encaixe. Este parâmetro é ignorado.  
   
-##  <a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame  
+##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame  
  Define a janela do quadro de visualização de impressão.  
   
 ```  
@@ -1826,7 +1821,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setuptoolbarmenu"></a>CFrameWndEx::SetupToolbarMenu  
+##  <a name="setuptoolbarmenu"></a>  CFrameWndEx::SetupToolbarMenu  
  Inserções de comandos definidos pelo usuário em um menu da barra de ferramentas.  
   
 ```  
@@ -1849,14 +1844,14 @@ void SetupToolbarMenu(
 ### <a name="remarks"></a>Comentários  
  O framework armazena comandos definidos pelo usuário em uma lista. Use `uiViewUserToolbarCmdFirst` e `uiViewUserToolbarCmdList` para especificar os índices de comandos para inserir.  
   
-##  <a name="showfullscreen"></a>CFrameWndEx::ShowFullScreen  
+##  <a name="showfullscreen"></a>  CFrameWndEx::ShowFullScreen  
  Alterna o quadro principal entre o modo de tela inteira e o modo normal.  
   
 ```  
 void ShowFullScreen();
 ```  
   
-##  <a name="showpane"></a>CFrameWndEx::ShowPane  
+##  <a name="showpane"></a>  CFrameWndEx::ShowPane  
  Mostra ou oculta o painel especificado.  
   
 ```  
@@ -1880,7 +1875,7 @@ void ShowPane(
  [in] `bActivate`  
  Se `TRUE`, ativar a barra de controle. Caso contrário, exibe a barra de controle em um estado inativo.  
   
-##  <a name="updatecaption"></a>CFrameWndEx::UpdateCaption  
+##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
  Chamado pelo framework para atualizar a legenda do quadro de janela.  
   
 ```  
@@ -1889,7 +1884,7 @@ void UpdateCaption();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="winhelp"></a>CFrameWndEx::WinHelp  
+##  <a name="winhelp"></a>  CFrameWndEx::WinHelp  
  Invoca o aplicativo WinHelp ou contexto relacionadas a Ajuda.  
   
 ```  

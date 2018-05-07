@@ -1,13 +1,10 @@
 ---
 title: Documentos ativos na Internet | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - application wizards [MFC]
 - active documents [MFC], using application wizards
 ms.assetid: a46bd8a0-e27a-4116-b1bf-dacdb7ae78d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents-on-the-internet"></a>Documentos ativos na Internet
 Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os documentos ativos podem ser várias páginas e são exibidos em toda a área cliente. Eles não negociação de menu tradicionais e podem ser editados no local, bem como em uma janela aberta no aplicativo do servidor. Em vez de exibir como um pequeno retângulo circundado por uma borda tracejada, documentos ativos são quadro completo e ativo sempre no local.  

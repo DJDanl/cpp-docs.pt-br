@@ -2,12 +2,9 @@
 title: Estrutura CDaoFieldInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>Estrutura CDaoFieldInfo
 O `CDaoFieldInfo` estrutura contém informações sobre um objeto de campo definido para objetos de acesso de dados (DAO).  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary** binário longo (objeto OLE); talvez você queira usar a classe do MFC [CByteArray](../../mfc/reference/cbytearray-class.md) em vez da classe `CLongBinary` como `CByteArray` é mais avançada e fácil de usar.  
   
-- **dbMemo** memorando; consulte classe do MFC`CString`  
+- **dbMemo** memorando; consulte classe do MFC `CString`  
   
 - **dbGUID** um identificador global exclusivo/universalmente identificador exclusivo usado com chamadas de procedimento remoto. Para obter mais informações, consulte o tópico "Propriedade do tipo" na Ajuda do DAO.  
   
@@ -159,7 +154,7 @@ struct CDaoFieldInfo
   
  Além de seu uso para examinar as propriedades do objeto, você também pode usar `CDaoFieldInfo` para construir um parâmetro de entrada para a criação de novos campos em um tabledef. Opções mais simples estão disponíveis para essa tarefa, mas se você quiser um controle mais preciso, você pode usar a versão do [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) que leva um `CDaoFieldInfo` parâmetro.  
   
- As informações recuperadas pelo `GetFieldInfo` função de membro (da classe que contém o campo) é armazenada em um `CDaoFieldInfo` estrutura. Chamar o `GetFieldInfo` a função de membro do objeto contentor cuja coleção de campos do objeto de campo é armazenado. `CDaoFieldInfo`também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoFieldInfo` objeto.  
+ As informações recuperadas pelo `GetFieldInfo` função de membro (da classe que contém o campo) é armazenada em um `CDaoFieldInfo` estrutura. Chamar o `GetFieldInfo` a função de membro do objeto contentor cuja coleção de campos do objeto de campo é armazenado. `CDaoFieldInfo` também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoFieldInfo` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  

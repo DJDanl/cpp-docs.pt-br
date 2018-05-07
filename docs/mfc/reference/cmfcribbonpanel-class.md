@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonPanel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonPanel
@@ -123,17 +120,15 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8c91cdd7b793195e0afb05acfe3fc33694fdb60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d7a1af8887a1c07aefd3fc3593b0aae6222e51a4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 Implementa um painel que contém um conjunto de elementos de faixa de opções. Quando o painel é desenhado, ele exibe quantos elementos possível, dado o tamanho do painel.  
@@ -231,7 +226,7 @@ class CMFCRibbonPanel : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxRibbonPanel.h  
   
-##  <a name="add"></a>CMFCRibbonPanel::Add  
+##  <a name="add"></a>  CMFCRibbonPanel::Add  
  Anexa o elemento de faixa de opções especificadas para a matriz de elementos de faixa de opções que está contida no painel de faixa de opções.  
   
 ```  
@@ -244,7 +239,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="addseparator"></a>CMFCRibbonPanel::AddSeparator  
+##  <a name="addseparator"></a>  CMFCRibbonPanel::AddSeparator  
  Adiciona um separador no painel de faixa de opções.  
   
 ```  
@@ -254,7 +249,7 @@ virtual void AddSeparator();
 ### <a name="remarks"></a>Comentários  
  Chame este método para adicionar um separador no painel de faixa de opções. O separador será adicionado ao lado do elemento de faixa de opções que foi adicionado com a chamada anterior [CMFCRibbonPanel::Add](#add). Para inserir um separador na posição especificada, chame [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
   
-##  <a name="addtoolbar"></a>CMFCRibbonPanel::AddToolBar  
+##  <a name="addtoolbar"></a>  CMFCRibbonPanel::AddToolBar  
  Adiciona uma barra de ferramentas do painel de faixa de opções.  
   
 ```  
@@ -284,7 +279,7 @@ UINT uiDisabledResID = 0);
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre as barras de ferramentas, imagens hot, frios imagens e imagens desabilitadas, consulte [CMFCToolBar classe](../../mfc/reference/cmfctoolbar-class.md).  
   
-##  <a name="cmfcribbonpanel"></a>CMFCRibbonPanel::CMFCRibbonPanel  
+##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel  
  Cria e inicializa um [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) objeto.  
   
 ```  
@@ -305,7 +300,7 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
  [in] `pPaletteButton`  
  Ponteiro para uma galeria da faixa de opções do painel de faixa de opções.  
   
-##  <a name="findbydata"></a>CMFCRibbonPanel::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Recupera o elemento de faixa de opções que está associado com os dados especificados.  
   
 ```  
@@ -321,7 +316,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="findbyid"></a>CMFCRibbonPanel::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonPanel::FindByID  
  Recupera o elemento de faixa de opções é identificado pela ID de comando especificado.  
   
 ```  
@@ -335,7 +330,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ### <a name="return-value"></a>Valor de retorno  
  O elemento de faixa de opções que é identificado pela ID de comando especificado; Caso contrário, `NULL` se nenhum elemento de faixa de opções é identificado com a ID de comando especificado.  
   
-##  <a name="getcaptionheight"></a>CMFCRibbonPanel::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CMFCRibbonPanel::GetCaptionHeight  
  Recupera a altura de uma legenda para o painel de faixa de opções.  
   
 ```  
@@ -347,7 +342,7 @@ int GetCaptionHeight() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcount"></a>CMFCRibbonPanel::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonPanel::GetCount  
  Recupera o número de elementos de faixa de opções que estão contidos no painel de faixa de opções.  
   
 ```  
@@ -357,7 +352,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de elementos de faixa de opções que estão contidos no painel de faixa de opções.  
   
-##  <a name="getdata"></a>CMFCRibbonPanel::GetData  
+##  <a name="getdata"></a>  CMFCRibbonPanel::GetData  
  Retorna os dados definidos pelo usuário associados com o painel.  
   
 ```  
@@ -367,7 +362,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>Valor de retorno  
  Os dados definidos pelo usuário associados com o painel.  
   
-##  <a name="getdefaultbutton"></a>CMFCRibbonPanel::GetDefaultButton  
+##  <a name="getdefaultbutton"></a>  CMFCRibbonPanel::GetDefaultButton  
  Recupera o botão padrão para o painel de faixa de opções.  
   
 ```  
@@ -380,7 +375,7 @@ CMFCRibbonButton& GetDefaultButton();
 ### <a name="remarks"></a>Comentários  
  O botão padrão é exibido quando um painel de faixa de opções tem espaço suficiente para exibir seus elementos de faixa de opções.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonPanel::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonPanel::GetDroppedDown  
  Recupera um ponteiro para um elemento de faixa de opções, se o menu pop-up está aberto.  
   
 ```  
@@ -393,7 +388,7 @@ CMFCRibbonBaseElement* GetDroppedDown() const;
 ### <a name="remarks"></a>Comentários  
  Somente os elementos de faixa de opções que estão contidos no painel de faixa de opções são testados.  
   
-##  <a name="getelement"></a>CMFCRibbonPanel::GetElement  
+##  <a name="getelement"></a>  CMFCRibbonPanel::GetElement  
  Retorna o elemento de faixa de opções, localizado em um índice especificado.  
   
 ```  
@@ -407,7 +402,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro válido para o elemento de faixa de opções base localizado na posição `nIndex` no painel de faixa de opções, ou `NULL` se não houver nenhum elemento no índice especificado.  
   
-##  <a name="getelements"></a>CMFCRibbonPanel::GetElements  
+##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
  Recupera todos os elementos de faixa de opções que estão contidos no painel de faixa de opções.  
   
 ```  
@@ -420,7 +415,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonPanel::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonPanel::GetElementsByID  
  Adiciona os elementos de faixa de opções que têm a ID de comando especificada na matriz especificada.  
   
 ```  
@@ -439,7 +434,7 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ### <a name="remarks"></a>Comentários  
  Somente os elementos de faixa de opções que estão contidos no painel de faixa de opções são testados.  
   
-##  <a name="gethighlighted"></a>CMFCRibbonPanel::GetHighlighted  
+##  <a name="gethighlighted"></a>  CMFCRibbonPanel::GetHighlighted  
  Recupera o elemento de faixa de opções que está realçado no painel de faixa de opções.  
   
 ```  
@@ -451,7 +446,7 @@ CMFCRibbonBaseElement* GetHighlighted() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getindex"></a>CMFCRibbonPanel::GetIndex  
+##  <a name="getindex"></a>  CMFCRibbonPanel::GetIndex  
  Recupera o índice de base zero do elemento de faixa de opções especificado da matriz de elementos de faixa de opções que estão contidos no painel de faixa de opções.  
   
 ```  
@@ -467,7 +462,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getitemidslist"></a>CMFCRibbonPanel::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonPanel::GetItemIDsList  
  Recupera as IDs de comando para todos os elementos de faixa de opções no painel de faixa de opções.  
   
 ```  
@@ -480,7 +475,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getname"></a>CMFCRibbonPanel::GetName  
+##  <a name="getname"></a>  CMFCRibbonPanel::GetName  
  Recupera o nome do painel de faixa de opções.  
   
 ```  
@@ -492,7 +487,7 @@ LPCTSTR GetName() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton  
 
   
 ```  
@@ -503,7 +498,7 @@ CMFCRibbonBaseElement* GetParentButton() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getparentcategory"></a>CMFCRibbonPanel::GetParentCategory  
+##  <a name="getparentcategory"></a>  CMFCRibbonPanel::GetParentCategory  
  Retorna a categoria pai do painel de faixa de opções.  
   
 ```  
@@ -513,7 +508,7 @@ CMFCRibbonCategory* GetParentCategory() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a categoria de faixa de opções que contém este painel de faixa de opções.  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar  
 
   
 ```  
@@ -524,7 +519,7 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getpreferedmenulocation"></a>CMFCRibbonPanel::GetPreferedMenuLocation  
+##  <a name="getpreferedmenulocation"></a>  CMFCRibbonPanel::GetPreferedMenuLocation  
  Recupera o retângulo de exibição preferencial do menu pop-up do painel de faixa de opções.  
   
 ```  
@@ -541,7 +536,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ### <a name="remarks"></a>Comentários  
  Esse método sempre retorna `FALSE`. Substitua este método para recuperar o retângulo de exibição preferencial do menu pop-up do painel de faixa de opções.  
   
-##  <a name="getpressed"></a>CMFCRibbonPanel::GetPressed  
+##  <a name="getpressed"></a>  CMFCRibbonPanel::GetPressed  
  Recupera um ponteiro para um elemento de faixa de opções no painel de faixa de opções, se o usuário a pressionar no momento.  
   
 ```  
@@ -553,7 +548,7 @@ CMFCRibbonBaseElement* GetPressed() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getrect"></a>CMFCRibbonPanel::GetRect  
+##  <a name="getrect"></a>  CMFCRibbonPanel::GetRect  
  Recupera o retângulo de exibição do painel de faixa de opções.  
   
 ```  
@@ -565,7 +560,7 @@ const CRect& GetRect() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="haselement"></a>CMFCRibbonPanel::HasElement  
+##  <a name="haselement"></a>  CMFCRibbonPanel::HasElement  
  Indica se o painel de faixa de opções contém o elemento de faixa de opções especificadas.  
   
 ```  
@@ -577,11 +572,11 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
  Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel de faixa de opções contém o elemento de faixa de opções especificadas. Caso contrário, `FALSE`.  
+ `TRUE` Se o painel de faixa de opções contém o elemento de faixa de opções especificadas. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="highlight"></a>CMFCRibbonPanel::Highlight  
+##  <a name="highlight"></a>  CMFCRibbonPanel::Highlight  
  Define a cor de realce para o painel de faixa de opções selecionada e para o elemento de faixa de opções especificadas pelo ponto.  
   
 ```  
@@ -592,14 +587,14 @@ CPoint point);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bHighlight`  
- `TRUE`Realce o painel de faixa de opções; `FALSE` para realce o painel de faixa de opções.  
+ `TRUE` Realce o painel de faixa de opções; `FALSE` para realce o painel de faixa de opções.  
   
  [in] `point`  
  As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hittest"></a>CMFCRibbonPanel::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonPanel::HitTest  
  Recupera um elemento de faixa de opções, se o ponto especificado está localizado dentro dele.  
   
 ```  
@@ -613,7 +608,7 @@ BOOL bCheckPanelCaption = FALSE);
  As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`Para testar a legenda do painel de faixa de opções; Caso contrário, `FALSE`.  
+ `TRUE` Para testar a legenda do painel de faixa de opções; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para um elemento de faixa de opções, se o ponto especificado está localizado em. Caso contrário, `NULL`.  
@@ -621,7 +616,7 @@ BOOL bCheckPanelCaption = FALSE);
 ### <a name="remarks"></a>Comentários  
  Somente os elementos de faixa de opções que estão contidos no painel de faixa de opções são testados.  
   
-##  <a name="hittestex"></a>CMFCRibbonPanel::HitTestEx  
+##  <a name="hittestex"></a>  CMFCRibbonPanel::HitTestEx  
  Recupera o índice de base zero do elemento de faixa de opções que tem o ponto especificado localizado nele.  
   
 ```  
@@ -638,7 +633,7 @@ virtual int HitTestEx(CPoint point) const;
 ### <a name="remarks"></a>Comentários  
  Somente os elementos de faixa de opções que estão contidos no painel de faixa de opções são testados.  
   
-##  <a name="insert"></a>CMFCRibbonPanel::Insert  
+##  <a name="insert"></a>  CMFCRibbonPanel::Insert  
  Insere o elemento de faixa de opções especificadas na posição especificada na matriz de elementos de faixa de opções que está contida no painel de faixa de opções.  
   
 ```  
@@ -655,12 +650,12 @@ int nIndex);
  Valor com base em zero, variando de -1 para o número de elementos de faixa de opções que estão contidos na matriz.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o elemento de faixa de opções foram inserido com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o elemento de faixa de opções foram inserido com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Se o valor de `nIndex` é -1, ou se `nIndex` é igual ao número de elementos de faixa de opções na matriz, o elemento de faixa de opções especificada é adicionado ao final da matriz. Se o valor de `nIndex` está fora do intervalo, o método irá falhar.  
   
-##  <a name="insertseparator"></a>CMFCRibbonPanel::InsertSeparator  
+##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
  Insere um separador na posição determinada.  
   
 ```  
@@ -672,12 +667,12 @@ virtual BOOL InsertSeparator(int nIndex);
  Especifica o índice de base zero onde o separador é inserido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o separador foi inserido com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o separador foi inserido com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para inserir um separador na posição especificada pelo `nIndex`. Para inserir um separador ao lado do elemento de faixa de opções adicionado mais recentemente, chame [CMFCRibbonPanel::AddSeparator](#addseparator).  
   
-##  <a name="iscentercolumnvert"></a>CMFCRibbonPanel::IsCenterColumnVert  
+##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
  Indica se as posições verticais dos elementos da faixa de opções são centralizadas em seu retângulo de exibição.  
   
 ```  
@@ -685,9 +680,9 @@ BOOL IsCenterColumnVert() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o vertical posiciona de elementos da faixa de opções estão centralizados na sua retângulo de exibição; Caso contrário, `FALSE`.  
+ `TRUE` Se o vertical posiciona de elementos da faixa de opções estão centralizados na sua retângulo de exibição; Caso contrário, `FALSE`.  
   
-##  <a name="iscollapsed"></a>CMFCRibbonPanel::IsCollapsed  
+##  <a name="iscollapsed"></a>  CMFCRibbonPanel::IsCollapsed  
  Indica se o tamanho de exibição do painel de faixa de opções é minimizado na direção horizontal.  
   
 ```  
@@ -695,12 +690,12 @@ BOOL IsCollapsed() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o tamanho de exibição do painel de faixa de opções é minimizado na direção horizontal; Caso contrário, `FALSE`.  
+ `TRUE` Se o tamanho de exibição do painel de faixa de opções é minimizado na direção horizontal; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Quando um painel de faixa de opções é recolhido, ele exibe apenas o botão padrão, seu nome e uma seta suspensa.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonPanel::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCRibbonPanel::IsHighlighted  
  Indica se a exibição do painel de faixa de opções é realçada.  
   
 ```  
@@ -708,12 +703,12 @@ BOOL IsHighlighted() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a exibição do painel de faixa de opções é realçada; Caso contrário, `FALSE`.  
+ `TRUE` Se a exibição do painel de faixa de opções é realçada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A exibição de um painel de faixa de opções é realçada quando o ponteiro está sobre ele.  
   
-##  <a name="isjustifycolumns"></a>CMFCRibbonPanel::IsJustifyColumns  
+##  <a name="isjustifycolumns"></a>  CMFCRibbonPanel::IsJustifyColumns  
  Indica se as dimensões da exibição de elementos de faixa de opções que estão na mesma coluna no painel de faixa de opções são definidas com a mesma largura.  
   
 ```  
@@ -721,9 +716,9 @@ BOOL IsJustifyColumns() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se as dimensões da exibição de elementos de faixa de opções que estão na mesma coluna no painel de faixa de opções são definidas com a mesma largura; Caso contrário, `FALSE`.  
+ `TRUE` Se as dimensões da exibição de elementos de faixa de opções que estão na mesma coluna no painel de faixa de opções são definidas com a mesma largura; Caso contrário, `FALSE`.  
   
-##  <a name="ismainpanel"></a>CMFCRibbonPanel::IsMainPanel  
+##  <a name="ismainpanel"></a>  CMFCRibbonPanel::IsMainPanel  
  Indica se o painel de faixa de opções é o painel principal da faixa de opções.  
   
 ```  
@@ -738,7 +733,7 @@ virtual BOOL IsMainPanel() const;
   
  O painel principal da faixa de opções é exibido quando o usuário seleciona o botão do aplicativo.  
   
-##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
+##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode  
 
   
 ```  
@@ -749,7 +744,7 @@ BOOL IsMenuMode() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey  
 
   
 ```  
@@ -763,7 +758,7 @@ virtual BOOL OnKey(UINT nChar);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="recalcwidths"></a>CMFCRibbonPanel::RecalcWidths  
+##  <a name="recalcwidths"></a>  CMFCRibbonPanel::RecalcWidths  
  Recalcula a largura de cada configuração de layout de exibição do painel de faixa de opções.  
   
 ```  
@@ -782,7 +777,7 @@ int nHeight);
 ### <a name="remarks"></a>Comentários  
  Um painel de faixa de opções altera sua configuração de layout, como as alterações de largura disponível.  
   
-##  <a name="remove"></a>CMFCRibbonPanel::Remove  
+##  <a name="remove"></a>  CMFCRibbonPanel::Remove  
  Remove e, opcionalmente, exclui um elemento localizado no índice especificado.  
   
 ```  
@@ -796,15 +791,15 @@ BOOL bDelete = TRUE);
  Especifica o índice de base zero do elemento que é removido do painel de faixa de opções.  
   
  [in] `bDelete`  
- `TRUE`Para excluir o elemento que está sendo removido; Caso contrário, `FALSE`.  
+ `TRUE` Para excluir o elemento que está sendo removido; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o elemento foi removido e excluído (se `bDelete` é `TRUE`); `FALSE` se o elemento não foi removido ou se não houver nenhum elemento de faixa de opções localizado em `nIndex`.  
+ `TRUE` Se o elemento foi removido e excluído (se `bDelete` é `TRUE`); `FALSE` se o elemento não foi removido ou se não houver nenhum elemento de faixa de opções localizado em `nIndex`.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para remover um elemento do painel de faixa de opções.  
   
-##  <a name="removeall"></a>CMFCRibbonPanel::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonPanel::RemoveAll  
  Exclui todos os elementos da faixa de opções do painel de faixa de opções.  
   
 ```  
@@ -814,7 +809,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Comentários  
  Todos os elementos da faixa de opções são excluídos do painel de faixa de opções e destruídos.  
   
-##  <a name="replace"></a>CMFCRibbonPanel::Replace  
+##  <a name="replace"></a>  CMFCRibbonPanel::Replace  
  Substitui um elemento com o outro com base em seu valor de índice.  
   
 ```  
@@ -827,16 +822,16 @@ CMFCRibbonBaseElement* pElem);
  [in] `nIndex`  
  Especifica o índice de base zero do elemento a ser substituído.  
   
- [in] [out]`pElem`  
+ [in] [out] `pElem`  
  Um ponteiro válido para o elemento que substitui o elemento original.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o elemento de faixa de opções original foi substituído com êxito pelo novo elemento de faixa de opções; `FALSE` se o elemento de faixa de opções não foi substituído ou se não houver nenhum elemento no índice especificado.  
+ `TRUE` Se o elemento de faixa de opções original foi substituído com êxito pelo novo elemento de faixa de opções; `FALSE` se o elemento de faixa de opções não foi substituído ou se não houver nenhum elemento no índice especificado.  
   
 ### <a name="remarks"></a>Comentários  
  Para substituir um elemento de faixa de opções por ID de comando, execute [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
   
-##  <a name="replacebyid"></a>CMFCRibbonPanel::ReplaceByID  
+##  <a name="replacebyid"></a>  CMFCRibbonPanel::ReplaceByID  
  Substitui um elemento com o outro com base em uma ID de comando especificado.  
   
 ```  
@@ -849,16 +844,16 @@ CMFCRibbonBaseElement* pElem);
  [in] `uiCmdID`  
  Especifica a ID do elemento de comando para substituir.  
   
- [in] [out]`pElem`  
+ [in] [out] `pElem`  
  Um ponteiro válido para o elemento que irá substituir o elemento original.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o elemento de faixa de opções original foi substituído com êxito pelo novo elemento de faixa de opções; `FALSE` se o elemento de faixa de opções não foi substituído ou se, na verdade, não existe nenhum elemento com a ID de comando especificado.  
+ `TRUE` Se o elemento de faixa de opções original foi substituído com êxito pelo novo elemento de faixa de opções; `FALSE` se o elemento de faixa de opções não foi substituído ou se, na verdade, não existe nenhum elemento com a ID de comando especificado.  
   
 ### <a name="remarks"></a>Comentários  
  Para substituir um elemento de faixa de opções com base na posição, chame [CMFCRibbonPanel::Replace](#replace).  
   
-##  <a name="setcentercolumnvert"></a>CMFCRibbonPanel::SetCenterColumnVert  
+##  <a name="setcentercolumnvert"></a>  CMFCRibbonPanel::SetCenterColumnVert  
  Habilita ou desabilita a centralização das posições verticais dos elementos de faixa de opções em seu retângulo de exibição.  
   
 ```  
@@ -867,11 +862,11 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bSet`  
- `TRUE`para centralizar as posições verticais dos elementos de faixa de opções em seu retângulo de exibição; `FALSE` para desabilitar esse recurso.  
+ `TRUE` para centralizar as posições verticais dos elementos de faixa de opções em seu retângulo de exibição; `FALSE` para desabilitar esse recurso.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setdata"></a>CMFCRibbonPanel::SetData  
+##  <a name="setdata"></a>  CMFCRibbonPanel::SetData  
  Associa dados definidos pelo usuário com o painel de faixa de opções.  
   
 ```  
@@ -885,7 +880,7 @@ void SetData(DWORD_PTR dwData);
 ### <a name="remarks"></a>Comentários  
  Chame este método para associar os dados definidos pelo usuário com o painel de faixa de opções.  
   
-##  <a name="setelementmenu"></a>CMFCRibbonPanel::SetElementMenu  
+##  <a name="setelementmenu"></a>  CMFCRibbonPanel::SetElementMenu  
  Atribui um menu pop-up para o elemento que tem a ID de comando especificada.  
   
 ```  
@@ -911,21 +906,21 @@ BOOL bRightAlign = FALSE);
  Especifica o identificador para o menu do Windows para adicionar ao painel de faixa de opções.  
   
  [in] `bIsDefautCommand`  
- `TRUE`para especificar que o comando associado ao elemento de faixa de opções deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu só é aberto quando o usuário clica na seta ao lado do elemento de faixa de opções. `FALSE`para especificar que o comando associado ao elemento de faixa de opções não deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu pop-up será exibida, independentemente de onde o usuário clica no elemento.  
+ `TRUE` para especificar que o comando associado ao elemento de faixa de opções deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu só é aberto quando o usuário clica na seta ao lado do elemento de faixa de opções. `FALSE` para especificar que o comando associado ao elemento de faixa de opções não deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu pop-up será exibida, independentemente de onde o usuário clica no elemento.  
   
  [in] `bRightAlign`  
- `TRUE`para especificar que o menu pop-up é alinhado à direita; Caso contrário, `FALSE`.  
+ `TRUE` para especificar que o menu pop-up é alinhado à direita; Caso contrário, `FALSE`.  
   
  [in] `uiMenuResID`  
  Especifica a ID de recurso do menu para adicionar ao painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o menu tiver sido atribuído para o elemento de faixa de opções. Caso contrário, `FALSE`.  
+ `TRUE` Se o menu tiver sido atribuído para o elemento de faixa de opções. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para atribuir um menu pop-up para o elemento de faixa de opções que tem a ID de comando especificada.  
   
-##  <a name="setelementrtc"></a>CMFCRibbonPanel::SetElementRTC  
+##  <a name="setelementrtc"></a>  CMFCRibbonPanel::SetElementRTC  
  Adiciona o elemento de faixa de opções for especificado, as informações de classe de tempo de execução fornecida para o painel de faixa de opções.  
   
 ```  
@@ -938,7 +933,7 @@ CRuntimeClass* pRTC);
  [in] `nIndex`  
  Especifica o índice de base zero do elemento de faixa de opções para adicionar.  
   
- [in] [out]`pRTC`  
+ [in] [out] `pRTC`  
  Um ponteiro para as informações de classe de tempo de execução para o elemento de faixa de opções é adicionada ao painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -947,7 +942,7 @@ CRuntimeClass* pRTC);
 ### <a name="remarks"></a>Comentários  
  Se você deseja adicionar um elemento personalizado (por exemplo, um botão de cor) para o painel de faixa de opções, você deve especificar informações de classe de tempo de execução do elemento personalizado. A faixa de opções armazena essa informação, cria o elemento personalizado e substitui um elemento existente que está localizado (identificadas por) a ID de comando especificado. A faixa de opções, em seguida, retorna um ponteiro para o elemento recém-criado.  
   
-##  <a name="setelementrtcbyid"></a>CMFCRibbonPanel::SetElementRTCByID  
+##  <a name="setelementrtcbyid"></a>  CMFCRibbonPanel::SetElementRTCByID  
  Adiciona um elemento de faixa de opções for especificado, as informações de classe de tempo de execução fornecida para o painel de faixa de opções.  
   
 ```  
@@ -960,7 +955,7 @@ CRuntimeClass* pRTC);
  [in] `uiCmdID`  
  Especifica a ID do elemento de faixa de opções de comando para adicionar.  
   
- [in] [out]`pRTC`  
+ [in] [out] `pRTC`  
  Um ponteiro para as informações de classe de tempo de execução associados ao elemento de faixa de opções é adicionado ao painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -995,7 +990,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));  
 ```  
   
-##  <a name="setjustifycolumns"></a>CMFCRibbonPanel::SetJustifyColumns  
+##  <a name="setjustifycolumns"></a>  CMFCRibbonPanel::SetJustifyColumns  
  Habilita ou desabilita o ajuste da largura de elementos de faixa de opções na mesma coluna.  
   
 ```  
@@ -1004,12 +999,12 @@ void SetJustifyColumns(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bSet`  
- `TRUE`Para ajustar a largura dos elementos da faixa de opções na mesma coluna para a largura do maior elemento de faixa de opções da coluna; `FALSE` para desabilitar esse ajuste de largura.  
+ `TRUE` Para ajustar a largura dos elementos da faixa de opções na mesma coluna para a largura do maior elemento de faixa de opções da coluna; `FALSE` para desabilitar esse ajuste de largura.  
   
 ### <a name="remarks"></a>Comentários  
  Quando esse recurso está habilitado em um painel de faixa de opções, as larguras de elementos de faixa de opções na mesma coluna são ajustadas para a largura do maior elemento de faixa de opções na mesma coluna.  
   
-##  <a name="setkeys"></a>CMFCRibbonPanel::SetKeys  
+##  <a name="setkeys"></a>  CMFCRibbonPanel::SetKeys  
  Define o keytip para o botão padrão do painel de faixa de opções.  
   
 ```  
@@ -1023,7 +1018,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ### <a name="remarks"></a>Comentários  
  O botão padrão é exibido quando um painel de faixa de opções tem espaço suficiente para exibir seus elementos de faixa de opções.  
   
-##  <a name="showpopup"></a>CMFCRibbonPanel::ShowPopup  
+##  <a name="showpopup"></a>  CMFCRibbonPanel::ShowPopup  
  Cria e exibe um menu pop-up para o painel de faixa de opções.  
   
 ```  
@@ -1040,7 +1035,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ### <a name="remarks"></a>Comentários  
  O menu pop-up para o painel de faixa de opções só está disponível quando a exibição do painel de faixa de opções é recolhida.  
   
-##  <a name="setfocused"></a>CMFCRibbonPanel::SetFocused  
+##  <a name="setfocused"></a>  CMFCRibbonPanel::SetFocused  
  Define o foco para o elemento especificado da faixa de opções.  
   
 ```  
@@ -1053,7 +1048,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="makegalleryitemvisible"></a>CMFCRibbonPanel::MakeGalleryItemVisible  
+##  <a name="makegalleryitemvisible"></a>  CMFCRibbonPanel::MakeGalleryItemVisible  
  Rola a Galeria para tornar visível o elemento especificado da faixa de opções.  
   
 ```  
@@ -1066,7 +1061,7 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="iswindows7look"></a>CMFCRibbonPanel::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonPanel::IsWindows7Look  
  Indica se a faixa de opções do pai tem Windows 7 Pesquisar (botão pequeno aplicativo retangular).  
   
 ```  
@@ -1074,11 +1069,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a faixa de opções do pai com o Windows 7 pesquisar; Caso contrário, `FALSE`.  
+ `TRUE` Se a faixa de opções do pai com o Windows 7 pesquisar; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonPanel::GetVisibleElements  
+##  <a name="getvisibleelements"></a>  CMFCRibbonPanel::GetVisibleElements  
  Recupera uma matriz de elementos visíveis.  
   
 ```  
@@ -1093,7 +1088,7 @@ CMFCRibbonBaseElement*>& arElements);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getgalleryrect"></a>CMFCRibbonPanel::GetGalleryRect  
+##  <a name="getgalleryrect"></a>  CMFCRibbonPanel::GetGalleryRect  
  Retorna um retângulo delimitador de um elemento de galeria.  
   
 ```  
@@ -1105,7 +1100,7 @@ CRect GetGalleryRect();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getfocused"></a>CMFCRibbonPanel::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonPanel::GetFocused  
  Retorna um elemento focalizado atualmente.  
   
 ```  

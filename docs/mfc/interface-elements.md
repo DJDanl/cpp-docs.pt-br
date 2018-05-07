@@ -1,30 +1,25 @@
 ---
 title: Elementos da interface | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>Elementos da interface
 Este documento descreve os elementos de interface que foram introduzidos no [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 e também descreve as diferenças com a versão anterior da biblioteca.  
@@ -49,7 +44,7 @@ Este documento descreve os elementos de interface que foram introduzidos no [!IN
  O site de encaixe (ou a janela do quadro principal) possui todos os painéis e janelas com moldura simplificado em um aplicativo. O local de encaixe contém um [CDockingManager](../mfc/reference/cdockingmanager-class.md) membro. Este membro mantém uma lista de todos os painéis que pertencem ao site de encaixe. A lista é ordenada de forma que os painéis criados nas bordas externas do site encaixe são posicionados no início da lista. Quando a estrutura redesenha o site de encaixe, ele faz um loop sobre essa lista e ajusta o layout de cada painel para incluir o retângulo delimitador atual do site de encaixe. Você pode chamar `AdjustDockingLayout` ou `RecalcLayout` quando você precisa ajustar o layout de encaixe, e o framework redireciona essa chamada para o Gerenciador de encaixe.  
   
 ## <a name="dock-bars"></a>Barras de encaixe  
- Cada janela do quadro principal pode posicionar *encaixar barras* ao longo de suas bordas. Uma barra de encaixe é um painel que pertence a um [CDockSite classe](../mfc/reference/cdocksite-class.md). Barras de encaixe podem aceitar objetos derivados de [CPane](../mfc/reference/cpane-class.md), como barras de ferramentas. Para criar barras de encaixe quando a janela do quadro principal é inicializada, chame `EnableDocking`. Para habilitar as barras de ocultar automaticamente, chame `EnableAutoHideBars`. `EnableAutoHideBars`cria [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objetos e posiciona-os ao lado de cada barra de encaixe.  
+ Cada janela do quadro principal pode posicionar *encaixar barras* ao longo de suas bordas. Uma barra de encaixe é um painel que pertence a um [CDockSite classe](../mfc/reference/cdocksite-class.md). Barras de encaixe podem aceitar objetos derivados de [CPane](../mfc/reference/cpane-class.md), como barras de ferramentas. Para criar barras de encaixe quando a janela do quadro principal é inicializada, chame `EnableDocking`. Para habilitar as barras de ocultar automaticamente, chame `EnableAutoHideBars`. `EnableAutoHideBars` cria [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objetos e posiciona-os ao lado de cada barra de encaixe.  
   
  Cada barra de encaixe é dividida em linhas de encaixe. Linhas de encaixe são representadas pelo [CDockingPanesRow classe](../mfc/reference/cdockingpanesrow-class.md). Cada linha de encaixe contém uma lista das barras de ferramentas. Se um usuário encaixa uma barra de ferramentas ou move a barra de ferramentas de uma linha para outro dentro da mesma barra de encaixe, o framework cria uma nova linha e redimensiona a barra de encaixe adequadamente, ou ele posiciona a barra de ferramentas em uma linha existente.  
   
@@ -66,7 +61,7 @@ Este documento descreve os elementos de interface que foram introduzidos no [!IN
  Por padrão, cada `CDockablePane` suporta o recurso de ocultar automaticamente. Quando um usuário clica no botão de pin na legenda do `CDockablePane`, a estrutura alterna o painel para o modo de ocultar automaticamente. Para lidar com o clique, o framework cria um [CMFCAutoHideBar classe](../mfc/reference/cmfcautohidebar-class.md) e um [CMFCAutoHideButton classe](../mfc/reference/cmfcautohidebutton-class.md) associados a `CMFCAutoHideBar` objeto. A estrutura coloca o novo `CMFCAutoHideBar` no [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). A estrutura também anexa o `CMFCAutoHideButton` na barra de ferramentas. O [CDockingManager classe](../mfc/reference/cdockingmanager-class.md) mantém o `CDockablePane`.  
   
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>Barras de controle com guias e barras do Outlook  
- O [CMFCBaseTabCtrl classe](../mfc/reference/cmfcbasetabctrl-class.md) implementa a funcionalidade básica de uma janela com guias com guias destacáveis. Para usar um `CMFCBaseTabCtrl` de objeto, inicializar um [CBaseTabbedPane classe](../mfc/reference/cbasetabbedpane-class.md) em seu aplicativo. `CBaseTabbedPane`é derivado de `CDockablePane` e mantém um ponteiro para um `CMFCBaseTabCtrl` objeto. O `CBaseTabbedPane` permite que os usuários Encaixar e redimensionar as barras de controle com guias. Use [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) criar dinamicamente as barras de controle que estão encaixadas e com guias.  
+ O [CMFCBaseTabCtrl classe](../mfc/reference/cmfcbasetabctrl-class.md) implementa a funcionalidade básica de uma janela com guias com guias destacáveis. Para usar um `CMFCBaseTabCtrl` de objeto, inicializar um [CBaseTabbedPane classe](../mfc/reference/cbasetabbedpane-class.md) em seu aplicativo. `CBaseTabbedPane` é derivado de `CDockablePane` e mantém um ponteiro para um `CMFCBaseTabCtrl` objeto. O `CBaseTabbedPane` permite que os usuários Encaixar e redimensionar as barras de controle com guias. Use [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) criar dinamicamente as barras de controle que estão encaixadas e com guias.  
   
  O controle de barra do Outlook também se baseia nas barras com guias. O [CMFCOutlookBar classe](../mfc/reference/cmfcoutlookbar-class.md) é derivado de `CBaseTabbedPane`. Para obter mais informações sobre como usar a barra do Outlook, consulte [CMFCOutlookBar classe](../mfc/reference/cmfcoutlookbar-class.md).  
   

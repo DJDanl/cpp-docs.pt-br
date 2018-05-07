@@ -1,12 +1,9 @@
 ---
 title: Classe CD2DPointF | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DPointF
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b369be53d14af49eb112026089226214f0d7d73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a6439a25072975d28b98e4c6d88c3a1de8703d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dpointf-class"></a>Classe CD2DPointF
 Um wrapper para `D2D1_POINT_2F`.  
@@ -60,7 +55,7 @@ class CD2DPointF : public D2D1_POINT_2F;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxrendertarget.h  
   
-##  <a name="cd2dpointf"></a>CD2DPointF::CD2DPointF  
+##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF  
  Constrói um objeto CD2DPointF do objeto CPoint.  
   
 ```  
@@ -80,7 +75,7 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
  `fY`  
  origem Y  
   
-##  <a name="operator_cpoint"></a>CD2DPointF::Operator CPoint  
+##  <a name="operator_cpoint"></a>  CD2DPointF::Operator CPoint  
  Converte CD2DPointF CPoint objeto.  
   
 ```  

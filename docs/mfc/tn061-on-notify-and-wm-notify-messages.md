@@ -1,13 +1,10 @@
 ---
 title: 'TN061: Mensagens ON_NOTIFY e WM_NOTIFY | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: mensagens ON_NOTIFY e WM_NOTIFY
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|Controle perdeu o foco de entrada|  
 |**NM_OUTOFMEMORY**|Controle não foi possível concluir uma operação porque não havia memória suficiente disponível|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: Manipulação de mensagens WM_NOTIFY em aplicativos MFC  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Manipulação de mensagens WM_NOTIFY em aplicativos MFC  
  A função `CWnd::OnNotify` manipula mensagens de notificação. Sua implementação padrão verifica o mapa de mensagem para manipuladores de notificação chamar. Em geral, você não substituir `OnNotify`. Em vez disso, você pode fornece uma função de manipulador e adicionar uma entrada de mapa de mensagem para esse manipulador para o mapa de mensagem da classe da janela do proprietário.  
   
  ClassWizard, por meio da folha de propriedades ClassWizard, pode criar o `ON_NOTIFY` entrada de mapa de mensagem e fornecer uma função de manipulador de esqueleto. Para obter mais informações sobre como usar ClassWizard para facilitar essa tarefa, consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md).  
@@ -138,7 +133,7 @@ pNotifyStruct  , LRESULT* result);
  `pNotifyStruct`  
  Um ponteiro para a estrutura de notificação, conforme descrito na seção acima.  
   
- *resultado*  
+ *Resultado*  
  Um ponteiro para o código de resultado que você vai definir antes de retornar.  
   
 ## <a name="example"></a>Exemplo  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  Observe que ClassWizard fornece um indicador do tipo correto automaticamente. Você pode acessar a estrutura de notificação por meio de um `pNMHDR` ou `pLVKeyDow`.  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  Se você precisar processar o mesmo **WM_NOTIFY** mensagem para um conjunto de controles, você pode usar **ON_NOTIFY_RANGE** em vez de `ON_NOTIFY`. Por exemplo, você pode ter um conjunto de botões para o qual você deseja executar a mesma ação para uma determinada mensagem de notificação.  
   
  Quando você usa **ON_NOTIFY_RANGE**, especifique um intervalo contíguo de identificadores de filho para manipular a mensagem de notificação especificando o início e término identificadores filho do intervalo.  
@@ -220,10 +215,10 @@ pNotifyStruct  ,
  `pNotifyStruct`  
  Um ponteiro para a estrutura de notificação, conforme descrito acima.  
   
- *resultado*  
+ *Resultado*  
  Um ponteiro para o código de resultado que você vai definir antes de retornar.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE  
  Se você quiser mais de um objeto na notificação de roteamento para lidar com uma mensagem, você pode usar **ON_NOTIFY_EX** (ou **ON_NOTIFY_EX_RANGE**) em vez de `ON_NOTIFY` (ou **ON_NOTIFY_RANGE** ). A única diferença entre o **EX** versão e a versão regular é chamado de função de membro para o **EX** versão retorna um **BOOL** que indica se ou não processamento de mensagens deve continuar. Retornando **FALSE** por essa função permite que você processe a mesma mensagem em mais de um objeto.  
   
  Não processa ClassWizard **ON_NOTIFY_EX** ou **ON_NOTIFY_EX_RANGE**; se você quiser usar um deles, você precisa editar o mapa de mensagem por conta própria.  

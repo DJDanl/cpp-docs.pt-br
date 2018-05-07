@@ -1,13 +1,10 @@
 ---
 title: Exibir Classes (Windows) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Classes de exibição (Windows)
-`CView`e suas classes derivadas são janelas filho que representam a área cliente de uma janela do quadro. Modos de exibição mostram dados e aceitam entrada de um documento.  
+`CView` e suas classes derivadas são janelas filho que representam a área cliente de uma janela do quadro. Modos de exibição mostram dados e aceitam entrada de um documento.  
   
  Uma classe de exibição está associada uma classe de documento e uma classe de janela do quadro usando um objeto de modelo de documento.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Uma exibição que contém um controle de árvore do Windows (consulte [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Um controle de árvore exibe uma lista hierárquica de ícones e rótulos organizados de maneira semelhante ao painel esquerdo do Explorador de arquivos.  
   
 ## <a name="related-classes"></a>Classes relacionadas  
- `CSplitterWnd`permite que você tenha vários modos de exibição em uma janela do quadro. `CPrintDialog`e `CPrintInfo` suporte para o recurso de impressão e visualização de impressão dos modos de exibição. `CRichEditDoc`e `CRichEditCntrItem` são usados com `CRichEditView` para implementar recursos de contêiner OLE.  
+ `CSplitterWnd` permite que você tenha vários modos de exibição em uma janela do quadro. `CPrintDialog` e `CPrintInfo` suporte para o recurso de impressão e visualização de impressão dos modos de exibição. `CRichEditDoc` e `CRichEditCntrItem` são usados com `CRichEditView` para implementar recursos de contêiner OLE.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Uma janela que o usuário pode ser dividida em vários painéis. Esses painéis podem ser redimensionáveis pelo usuário ou tamanho fixo.  

@@ -1,12 +1,9 @@
 ---
-title: "Compilador (nível 1) de aviso C4730 | Microsoft Docs"
-ms.custom: 
+title: Compilador (nível 1) de aviso C4730 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4730
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334c53b030097dc822451b0e555a51c90e70d904
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 467d9fd04e2fef78d480fc4db1417b6e4c8d5641
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Aviso C4730 (compilador) (nível 1)
 'main': misturar m64 e expressões podem resultar em código incorreto de ponto flutuante  

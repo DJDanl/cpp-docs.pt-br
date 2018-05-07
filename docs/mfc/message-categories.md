@@ -1,13 +1,10 @@
 ---
 title: Categorias de mensagem | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3bc617c0f3a9915c7ae0314b0e3889ecc561f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d0e4710c74c12bf62cd19df6a053aea9ac35eaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-categories"></a>Categorias de mensagem
 Que tipos de mensagens escrever manipuladores para há três categorias principais:  
@@ -48,10 +43,10 @@ Que tipos de mensagens escrever manipuladores para há três categorias principa
   
      Isso inclui **WM_COMMAND** mensagens de notificação de objetos de interface do usuário: menus, botões da barra de ferramentas e teclas de aceleração. A estrutura processa comandos de forma diferente de outras mensagens, e podem ser tratados por mais tipos de objetos, conforme explicado em [destinos de comando](../mfc/command-targets.md).  
   
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a>Mensagens do Windows e mensagens de notificação de controle  
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Mensagens do Windows e mensagens de notificação de controle  
  Mensagens em categorias 1 e 2 — mensagens do Windows e notificações de controle — são manipuladas pelo windows: objetos das classes derivam da classe `CWnd`. Isso inclui `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, e suas próprias classes derivadas dessas classes base. Esses objetos encapsulam um `HWND`, um identificador para uma janela do Windows.  
   
-##  <a name="_core_command_messages"></a>Mensagens de comando  
+##  <a name="_core_command_messages"></a> Mensagens de comando  
  Mensagens na categoria 3 – comandos — podem ser tratados por uma variedade maior de objetos: documentos, modelos de documento e o próprio objeto de aplicativo além de janelas e exibições. Quando um comando afeta diretamente um objeto específico, faz sentido ter esse objeto lidar com o comando. Por exemplo, o comando Abrir no menu arquivo é logicamente associado com o aplicativo: o aplicativo abre um documento especificado ao receber o comando. Portanto, o manipulador para o comando Abrir é uma função de membro de classe do aplicativo. Para obter mais informações sobre comandos e como eles são roteados para objetos, consulte [como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md).  
   
 ## <a name="see-also"></a>Consulte também  

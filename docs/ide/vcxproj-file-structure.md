@@ -1,29 +1,24 @@
 ---
 title: estrutura do arquivo. vcxproj e .props | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>estrutura do arquivo. vcxproj e .props
 
@@ -100,7 +95,7 @@ As seções a seguir descrevem a finalidade de cada um desses elementos e por qu
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`é o nó raiz. Especifica a versão de MSBuild para usar e também o destino padrão a ser executado quando esse arquivo é passado para MSBuild.exe.
+`Project` é o nó raiz. Especifica a versão de MSBuild para usar e também o destino padrão a ser executado quando esse arquivo é passado para MSBuild.exe.
 
 ### <a name="projectconfigurations-itemgroup-element"></a>Elemento ProjectConfigurations ItemGroup
 
@@ -108,7 +103,7 @@ As seções a seguir descrevem a finalidade de cada um desses elementos e por qu
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`contém a descrição da configuração de projeto. Os exemplos são Debug | Win32, versão | Win32, Debug | ARM e assim por diante. Muitas configurações de projeto são específicas para uma determinada configuração. Por exemplo, você provavelmente desejará definir propriedades de otimização para um build de versão, mas não uma compilação de depuração.
+`ProjectConfigurations` contém a descrição da configuração de projeto. Os exemplos são Debug | Win32, versão | Win32, Debug | ARM e assim por diante. Muitas configurações de projeto são específicas para uma determinada configuração. Por exemplo, você provavelmente desejará definir propriedades de otimização para um build de versão, mas não uma compilação de depuração.
 
 O `ProjectConfigurations` grupo de item não é usado no momento da compilação. IDE do Visual Studio requer a fim de carregar o projeto. Este grupo de itens pode ser movido para um arquivo .props e importado para o arquivo. vcxproj. No entanto, nesse caso, se você precisar adicionar ou remover as configurações, você deve editar manualmente o arquivo .props; Você não pode usar o IDE.
 
@@ -125,14 +120,14 @@ O trecho a seguir mostra uma configuração de projeto. Neste exemplo ' Depurar 
 
 O IDE espera encontrar uma configuração de projeto para qualquer combinação de valores de configuração e plataforma usada em todos os itens de ProjectConfiguration. Geralmente, isso significa que um projeto pode ter configurações de projeto sem sentido para atender a esse requisito. Por exemplo, se um projeto tem essas configurações:
 
-- Debug|Win32
-- Retail|Win32
+- Depurar | Win32
+- Varejo | Win32
 - Otimização de 32 bits especial | Win32
 
 em seguida, ela também deve ter essas configurações, mesmo que "Otimização especial de 32 bits" não tem sentida para x64:
 
-- Debug|x64
-- Retail|x64
+- Depurar | x64
+- Varejo | x64
 - Otimização de 32 bits especial | x64
 
 Você pode desabilitar a compilação e implantar comandos para qualquer configuração no **Gerenciador de configuração**.
@@ -143,7 +138,7 @@ Você pode desabilitar a compilação e implantar comandos para qualquer configu
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`contém configurações de nível de projeto como ProjectGuid, RootNamespace e ApplicationType / ApplicationTypeRevision. Os dois últimos geralmente definem o sistema operacional de destino. Um projeto só pode direcionar um sistema operacional devido ao fato de que as referências e itens de projeto não podem ter condições no momento. Essas propriedades são geralmente não substituídas em outro lugar no arquivo de projeto. Esse grupo não é dependente de configuração e, portanto, normalmente apenas um grupo de Globals existe no arquivo de projeto.
+`Globals` contém configurações de nível de projeto como ProjectGuid, RootNamespace e ApplicationType / ApplicationTypeRevision. Os dois últimos geralmente definem o sistema operacional de destino. Um projeto só pode direcionar um sistema operacional devido ao fato de que as referências e itens de projeto não podem ter condições no momento. Essas propriedades são geralmente não substituídas em outro lugar no arquivo de projeto. Esse grupo não é dependente de configuração e, portanto, normalmente apenas um grupo de Globals existe no arquivo de projeto.
 
 ### <a name="microsoftcppdefaultprops-import-element"></a>Elemento Microsoft.Cpp.default.props Import
 
@@ -191,7 +186,7 @@ O `PropertySheets` grupo contém as importações de folhas de propriedade do us
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`contém propriedades criar variáveis que são usadas para personalizar o processo de compilação. Por exemplo, você pode definir uma macro de usuário para definir o caminho de saída personalizado como $(CustomOutputPath) e usá-lo para definir outras variáveis. Este grupo de propriedades armazena essas propriedades. Observe que no Visual Studio, esse grupo não é populado no arquivo de projeto porque o Visual C++ não dá suporte para macros do usuário para configurações. Macros do usuário têm suporte em folhas de propriedades.
+`UserMacros` contém propriedades criar variáveis que são usadas para personalizar o processo de compilação. Por exemplo, você pode definir uma macro de usuário para definir o caminho de saída personalizado como $(CustomOutputPath) e usá-lo para definir outras variáveis. Este grupo de propriedades armazena essas propriedades. Observe que no Visual Studio, esse grupo não é populado no arquivo de projeto porque o Visual C++ não dá suporte para macros do usuário para configurações. Macros do usuário têm suporte em folhas de propriedades.
 
 ### <a name="per-configuration-propertygroup-elements"></a>Elementos de PropertyGroup por configuração
 

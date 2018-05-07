@@ -1,13 +1,10 @@
 ---
-title: "Usando listas de imagens em um controle de caixa de combinação estendido | Microsoft Docs"
-ms.custom: 
+title: Usando listas de imagens em um controle de caixa de combinação estendido | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac69e7d0dbe1748a409b107579c747b7f9a4a7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c9a701871631fead48c22b1ffb2cbc3c386b960
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Usando listas de imagens em um controle de caixa de combinação estendido
 O principal recurso de controles de caixa de combinação estendido é a capacidade de associar imagens a partir de uma lista de imagens a itens individuais em um controle de caixa de combinação. Cada item é capaz de exibir três diferentes imagens: uma para seu estado selecionado, um para seu estado não selecionado e um terceiro para uma imagem de sobreposição.  

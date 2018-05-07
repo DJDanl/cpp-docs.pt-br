@@ -1,12 +1,9 @@
 ---
 title: Classe CUserTool | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUserTool
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38600b2e6eac6ad181baf1263d9e4d10295732b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
 Uma ferramenta de usuário é um item de menu que executa um aplicativo externo. O **ferramentas** guia o **personalizar** caixa de diálogo ( [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite que o usuário para adicionar ferramentas de usuário e para especificar o nome, o comando, argumentos, e diretório inicial para cada ferramenta de usuário.  
@@ -105,7 +100,7 @@ class CUserTool : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxusertool.h  
   
-##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CopyIconToClipboard();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
+##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon  
  Desenha o ícone de ferramenta do usuário no Centro de um retângulo especificado.  
   
 ```  
@@ -132,7 +127,7 @@ void DrawToolIcon(
  [in] `rectImage`  
  Especifica as coordenadas da área para exibir o ícone.  
   
-##  <a name="getcommand"></a>CUserTool::GetCommand  
+##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Retorna uma cadeia de caracteres que contém o texto do comando associado com a ferramenta de usuário.  
   
 ```  
@@ -142,7 +137,7 @@ const CString& GetCommand() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a `CString` objeto que contém o texto do comando associado com a ferramenta de usuário.  
   
-##  <a name="getcommandid"></a>CUserTool::GetCommandId  
+##  <a name="getcommandid"></a>  CUserTool::GetCommandId  
  Retorna a ID de comando da ferramenta de usuário.  
   
 ```  
@@ -152,7 +147,7 @@ UINT GetCommandId() const;
 ### <a name="return-value"></a>Valor de retorno  
  A ID de comando da ferramenta de usuário.  
   
-##  <a name="invoke"></a>CUserTool::Invoke  
+##  <a name="invoke"></a>  CUserTool::Invoke  
  Executa o comando associado com a ferramenta de usuário.  
   
 ```  
@@ -165,7 +160,7 @@ virtual BOOL Invoke();
 ### <a name="remarks"></a>Comentários  
  Chamadas [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) para executar um comando associado com a ferramenta de usuário. A função falhará se o comando está vazio ou se [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) falhar.  
   
-##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
+##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Carrega o ícone padrão para uma ferramenta de usuário.  
   
 ```  
@@ -180,7 +175,7 @@ virtual HICON LoadDefaultIcon();
   
  Substitua este método para fornecer seu próprio ícone padrão da ferramenta.  
   
-##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
+##  <a name="m_strarguments"></a>  CUserTool::m_strArguments  
  Os argumentos de linha de comando para a ferramenta do usuário.  
   
 ```  
@@ -190,7 +185,7 @@ CString m_strArguments;
 ### <a name="remarks"></a>Comentários  
  Essa cadeia de caracteres é passada para a ferramenta quando você chamar [CUserTool::Invoke](#invoke) ou quando um usuário clica o comando associado a essa ferramenta.  
   
-##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
+##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
  Especifica o diretório inicial para a ferramenta do usuário.  
   
 ```  
@@ -200,14 +195,14 @@ CString m_strInitialDirectory;
 ### <a name="remarks"></a>Comentários  
  Essa variável Especifica o diretório inicial que a ferramenta é executada quando você chamar [CUserTool::Invoke](#invoke) ou quando um usuário clica o comando associado a essa ferramenta.  
   
-##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
+##  <a name="m_strlabel"></a>  CUserTool::m_strLabel  
  O rótulo que é exibido no item de menu para a ferramenta.  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>  CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -219,7 +214,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setcommand"></a>CUserTool::SetCommand  
+##  <a name="setcommand"></a>  CUserTool::SetCommand  
  Define o aplicativo que executa a ferramenta de usuário.  
   
 ```  
@@ -233,7 +228,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="remarks"></a>Comentários  
  Chame este método para definir um novo aplicativo que executa a ferramenta de usuário. O método destrói o ícone antigo e carrega um novo ícone de determinado aplicativo. Se ele não é possível carregar um ícone do aplicativo, ele carrega o ícone padrão para uma ferramenta do usuário chamando [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
   
-##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
+##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
  Carrega o ícone para a ferramenta de usuário do aplicativo que usa a ferramenta.  
   
 ```  

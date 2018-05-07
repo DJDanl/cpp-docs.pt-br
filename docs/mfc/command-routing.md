@@ -1,13 +1,10 @@
 ---
 title: Roteamento de comando | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>Roteamento de comando
 Sua responsabilidade em trabalhar com os comandos é limitada a fazer conexões de mapa de mensagem entre os comandos e suas funções de manipulador, uma tarefa para a qual você pode usar a janela Propriedades. Você também deve gravar a maioria dos manipuladores de comandos.  
@@ -44,11 +39,11 @@ Sua responsabilidade em trabalhar com os comandos é limitada a fazer conexões 
   
  Como esse mecanismo de roteamento comparadas para que o manipulador faz em resposta a um comando é cara, o custo de roteamento é baixo. Tenha em mente que a estrutura gera comandos somente quando o usuário interage com um objeto de interface do usuário.  
   
-### <a name="_core_standard_command_route"></a>Padrão de rota de comando  
+### <a name="_core_standard_command_route"></a> Padrão de rota de comando  
   
 |Quando um objeto desse tipo recebe um comando. . .|Ele oferece a mesmo e outros objetos de destino do comando a oportunidade de lidar com o comando nesta ordem:|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|Janela de quadro MDI (`CMDIFrameWnd`)|1.  Ativo`CMDIChildWnd`<br />2.  Essa janela do quadro<br />3.  Aplicativo (`CWinApp` objeto)|  
+|Janela de quadro MDI (`CMDIFrameWnd`)|1.  Ativo `CMDIChildWnd`<br />2.  Essa janela do quadro<br />3.  Aplicativo (`CWinApp` objeto)|  
 |Janela do quadro de documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Modo de exibição ativo<br />2.  Essa janela do quadro<br />3.  Aplicativo (`CWinApp` objeto)|  
 |Exibir|1.  Este modo de exibição<br />2.  Documento anexado ao modo de exibição|  
 |Documento|1.  Este documento<br />2.  Modelo de documento anexado ao documento|  

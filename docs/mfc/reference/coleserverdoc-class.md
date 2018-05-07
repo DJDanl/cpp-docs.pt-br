@@ -1,12 +1,9 @@
 ---
 title: Classe COleServerDoc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleServerDoc
@@ -91,17 +88,15 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b3b8d4c3f25e1c443d5fbcaeddb7b587216d69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a636b07b73da6ded6fb1646b7efa30b4685e55ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleserverdoc-class"></a>Classe COleServerDoc
 A classe base para documentos de servidor OLE.  
@@ -170,7 +165,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 ## <a name="remarks"></a>Comentários  
  Um documento do servidor pode conter [COleServerItem](../../mfc/reference/coleserveritem-class.md) objetos que representam a interface de servidor com itens incorporados ou vinculados. Quando um aplicativo de servidor é iniciado por um contêiner para editar um item inserido, o item será carregado como seu próprio documento do servidor. o `COleServerDoc` objeto contém apenas um `COleServerItem` objeto, consistindo em todo o documento. Quando um aplicativo de servidor é iniciado por um contêiner para editar um item vinculado, um documento existente é carregado do disco. uma parte do conteúdo do documento é realçada para indicar que o item vinculado.  
   
- `COleServerDoc`objetos também podem conter itens de [COleClientItem](../../mfc/reference/coleclientitem-class.md) classe. Isso permite que você crie aplicativos de servidor do contêiner. A estrutura fornece funções para armazenar corretamente o `COleClientItem` itens durante a manutenção de `COleServerItem` objetos.  
+ `COleServerDoc` objetos também podem conter itens de [COleClientItem](../../mfc/reference/coleclientitem-class.md) classe. Isso permite que você crie aplicativos de servidor do contêiner. A estrutura fornece funções para armazenar corretamente o `COleClientItem` itens durante a manutenção de `COleServerItem` objetos.  
   
  Se o aplicativo de servidor não dá suporte a links, um documento de servidor sempre conterá apenas um item de servidor, que representa o objeto inteiro inserido como um documento. Se o aplicativo de servidor dá suporte a links, ele deve criar um item de servidor sempre que uma seleção é copiada para a área de transferência.  
   
@@ -198,7 +193,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxole.h  
   
-##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject  
+##  <a name="activatedocobject"></a>  COleServerDoc::ActivateDocObject  
  Ativa o documento DocObject associado.  
   
 ```  
@@ -208,7 +203,7 @@ void ActivateDocObject();
 ### <a name="remarks"></a>Comentários  
  Por padrão, `COleServerDoc` não oferece suporte a documentos ativos (também conhecidos como DocObjects). Para habilitar esse suporte, consulte [GetDocObjectServer](#getdocobjectserver) e classe [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).  
   
-##  <a name="activateinplace"></a>COleServerDoc::ActivateInPlace  
+##  <a name="activateinplace"></a>  COleServerDoc::ActivateInPlace  
  Ativa o item para edição no local.  
   
 ```  
@@ -223,7 +218,7 @@ BOOL ActivateInPlace();
   
  Essa função é chamada pela implementação padrão de [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Chame essa função se seu aplicativo dá suporte a outro verbo para ativação no local (como Play).  
   
-##  <a name="coleserverdoc"></a>COleServerDoc::COleServerDoc  
+##  <a name="coleserverdoc"></a>  COleServerDoc::COleServerDoc  
  Constrói uma `COleServerDoc` objeto sem uma conexão com a DLLs do sistema OLE.  
   
 ```  
@@ -233,7 +228,7 @@ COleServerDoc();
 ### <a name="remarks"></a>Comentários  
  Você deve chamar [COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register) para abrir as comunicações com OLE. Se você estiver usando [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) em seu aplicativo, `COleLinkingDoc::Register` é chamado pelo `COleLinkingDoc`da implementação de `OnNewDocument`, `OnOpenDocument`, e `OnSaveDocument`.  
   
-##  <a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame  
+##  <a name="createinplaceframe"></a>  COleServerDoc::CreateInPlaceFrame  
  O framework chama esta função para criar uma janela do quadro para edição no local.  
   
 ```  
@@ -252,7 +247,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
   
  Isso é uma avançada substituível.  
   
-##  <a name="deactivateandundo"></a>COleServerDoc::DeactivateAndUndo  
+##  <a name="deactivateandundo"></a>  COleServerDoc::DeactivateAndUndo  
  Chame essa função se desfazer do seu aplicativo dá suporte a e o usuário escolhe desfazer após ativar um item, mas antes de editá-lo.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL DeactivateAndUndo();
 ### <a name="remarks"></a>Comentários  
  Se o aplicativo de contêiner é gravado usando a biblioteca Microsoft Foundation Class, chamar essa função faz com que [COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) para ser chamado, que desativa a interface do usuário do servidor.  
   
-##  <a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame  
+##  <a name="destroyinplaceframe"></a>  COleServerDoc::DestroyInPlaceFrame  
  O framework chama esta função para destruir uma janela do quadro no local e retornar o servidor de janela de documento do aplicativo para seu estado antes de ativação no local.  
   
 ```  
@@ -279,7 +274,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ### <a name="remarks"></a>Comentários  
  Isso é uma avançada substituível.  
   
-##  <a name="discardundostate"></a>COleServerDoc::DiscardUndoState  
+##  <a name="discardundostate"></a>  COleServerDoc::DiscardUndoState  
  Se o usuário executa uma operação de edição que não pode ser desfeita, chame essa função para forçar o aplicativo de contêiner para descartar suas informações de estado de desfazer.  
   
 ```  
@@ -292,7 +287,7 @@ BOOL DiscardUndoState();
 ### <a name="remarks"></a>Comentários  
  Esta função é fornecida para que os servidores que oferecem suporte a desfazer podem liberar recursos caso contrário, poderia ser consumidos por informações de estado de desfazer que não podem ser usadas.  
   
-##  <a name="getclientsite"></a>COleServerDoc::GetClientSite  
+##  <a name="getclientsite"></a>  COleServerDoc::GetClientSite  
  Recupera um ponteiro para o subjacente `IOleClientSite` interface.  
   
 ```  
@@ -302,7 +297,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ### <a name="return-value"></a>Valor de retorno  
  Recupera um ponteiro para o subjacente [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) interface.  
   
-##  <a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer  
+##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  Substituir essa função para criar um novo `CDocObjectServer` item e retornar um ponteiro para ele.  
   
 ```  
@@ -323,7 +318,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
   
  [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
   
-##  <a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem  
+##  <a name="getembeddeditem"></a>  COleServerDoc::GetEmbeddedItem  
  Chame essa função para obter um ponteiro para um item que representa o documento inteiro.  
   
 ```  
@@ -336,7 +331,7 @@ COleServerItem* GetEmbeddedItem();
 ### <a name="remarks"></a>Comentários  
  Ele chama [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), uma função virtual com nenhuma implementação padrão.  
   
-##  <a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect  
+##  <a name="getitemcliprect"></a>  COleServerDoc::GetItemClipRect  
  Chamar o `GetItemClipRect` a função de membro para obter as coordenadas do retângulo de recorte do item que está sendo editado no local.  
   
 ```  
@@ -352,7 +347,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
   
  Desenho não deve ocorrer fora do retângulo de recorte. Geralmente, o desenho é automaticamente restrito. Use esta função para determinar se o usuário foi rolado fora da parte visível do documento. Nesse caso, rolar o documento do contêiner conforme necessário por meio de uma chamada para [ScrollContainerBy](#scrollcontainerby).  
   
-##  <a name="getitemposition"></a>COleServerDoc::GetItemPosition  
+##  <a name="getitemposition"></a>  COleServerDoc::GetItemPosition  
  Chamar o `GetItemPosition` a função de membro para obter as coordenadas do item que está sendo editado no local.  
   
 ```  
@@ -368,7 +363,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
   
  A posição do item pode ser comparada com o retângulo de recorte atual para determinar a extensão à qual o item está visível (ou não visível) na tela.  
   
-##  <a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor  
+##  <a name="getzoomfactor"></a>  COleServerDoc::GetZoomFactor  
  O `GetZoomFactor` função membro determina o "fator de zoom" de um item que foi ativado para edição no local.  
   
 ```  
@@ -396,7 +391,7 @@ BOOL GetZoomFactor(
   
  A função define os dois primeiros argumentos para o numerador e o denominador da "fator de zoom." do item Se o item não está sendo editado no local, a função define esses argumentos como um valor padrão de 100% (ou 1:1) e retorna zero. Para obter mais informações, consulte 40 Observação técnica, [redimensionamento do MFC/OLE no local e ampliar](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
   
-##  <a name="isdocobject"></a>COleServerDoc::IsDocObject  
+##  <a name="isdocobject"></a>  COleServerDoc::IsDocObject  
  Determina se o documento é um DocObject.  
   
 ```  
@@ -406,7 +401,7 @@ BOOL IsDocObject() const;
 ### <a name="return-value"></a>Valor de retorno  
  **TRUE** se o documento é um DocObject; caso contrário, **FALSE**.  
   
-##  <a name="isembedded"></a>COleServerDoc::IsEmbedded  
+##  <a name="isembedded"></a>  COleServerDoc::IsEmbedded  
  Chamar o `IsEmbedded` a função de membro para determinar se o documento representa um objeto inserido em um contêiner.  
   
 ```  
@@ -419,7 +414,7 @@ BOOL IsEmbedded() const;
 ### <a name="remarks"></a>Comentários  
  Um documento carregado de um arquivo não é inserido, embora ele pode ser manipulado por um aplicativo de contêiner como um link. Um documento que é inserido em um documento de contêiner é considerado a ser inserido.  
   
-##  <a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive  
+##  <a name="isinplaceactive"></a>  COleServerDoc::IsInPlaceActive  
  Chamar o `IsInPlaceActive` a função de membro para determinar se o item está no estado ativo no local.  
   
 ```  
@@ -429,7 +424,7 @@ BOOL IsInPlaceActive() const;
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o `COleServerDoc` objeto estiver ativa no local; caso contrário, 0.  
   
-##  <a name="notifychanged"></a>COleServerDoc::NotifyChanged  
+##  <a name="notifychanged"></a>  COleServerDoc::NotifyChanged  
  Chame essa função para notificar todos os itens vinculados conectados para o documento que o documento foi alterado.  
   
 ```  
@@ -442,7 +437,7 @@ void NotifyChanged();
 > [!NOTE]
 >  Essa função é incluída para compatibilidade com 1 OLE. Novos aplicativos devem usar [UpdateAllItems](#updateallitems).  
   
-##  <a name="notifyclosed"></a>COleServerDoc::NotifyClosed  
+##  <a name="notifyclosed"></a>  COleServerDoc::NotifyClosed  
  Chame essa função para notificar os contêineres que o documento foi fechado.  
   
 ```  
@@ -452,7 +447,7 @@ void NotifyClosed();
 ### <a name="remarks"></a>Comentários  
  Quando o usuário escolhe o comando Fechar no menu Arquivo, `NotifyClosed` é chamado pelo `COleServerDoc`da implementação do [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) função de membro. Em aplicativos de contêiner gravados com a biblioteca Microsoft Foundation Class de [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) função de membro `COleClientItem` é chamado.  
   
-##  <a name="notifyrename"></a>COleServerDoc::NotifyRename  
+##  <a name="notifyrename"></a>  COleServerDoc::NotifyRename  
  Chame essa função depois que o usuário renomeia o documento do servidor.  
   
 ```  
@@ -466,7 +461,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ### <a name="remarks"></a>Comentários  
  Quando o usuário escolhe o comando Salvar como no menu Arquivo, `NotifyRename` é chamado pelo `COleServerDoc`da implementação do [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) função de membro. Essa função notifica o sistema OLE DLLs, que por sua vez notificar os contêineres. Em aplicativos de contêiner gravados com a biblioteca Microsoft Foundation Class de [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) função de membro `COleClientItem` é chamado.  
   
-##  <a name="notifysaved"></a>COleServerDoc::NotifySaved  
+##  <a name="notifysaved"></a>  COleServerDoc::NotifySaved  
  Chame essa função depois que o usuário salva o documento do servidor.  
   
 ```  
@@ -476,7 +471,7 @@ void NotifySaved();
 ### <a name="remarks"></a>Comentários  
  Quando o usuário escolhe o comando Salvar no menu Arquivo, `NotifySaved` é chamado pelo `COleServerDoc`da implementação de [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). Essa função notifica o sistema OLE DLLs, que por sua vez notificar os contêineres. Em aplicativos de contêiner gravados com a biblioteca Microsoft Foundation Class de [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) função de membro `COleClientItem` é chamado.  
   
-##  <a name="onclose"></a>COleServerDoc::OnClose  
+##  <a name="onclose"></a>  COleServerDoc::OnClose  
  Chamado pelo framework quando um contêiner solicita que o documento do servidor ser fechado.  
   
 ```  
@@ -487,18 +482,18 @@ virtual void OnClose(OLECLOSE dwCloseOption);
  `dwCloseOption`  
  Um valor de enumeração `OLECLOSE`. Esse parâmetro pode ter um dos seguintes valores:  
   
-- `OLECLOSE_SAVEIFDIRTY`O arquivo é salvo se ele tiver sido modificado.  
+- `OLECLOSE_SAVEIFDIRTY` O arquivo é salvo se ele tiver sido modificado.  
   
-- `OLECLOSE_NOSAVE`O arquivo seja fechado sem ser salvado.  
+- `OLECLOSE_NOSAVE` O arquivo seja fechado sem ser salvado.  
   
-- `OLECLOSE_PROMPTSAVE`Se o arquivo tiver sido modificado, o usuário é solicitado sobre salvá-lo.  
+- `OLECLOSE_PROMPTSAVE` Se o arquivo tiver sido modificado, o usuário é solicitado sobre salvá-lo.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão chama `CDocument::OnCloseDocument`.  
   
  Para obter mais informações e valores adicionais, consulte [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) no SDK do Windows.  
   
-##  <a name="ondeactivate"></a>COleServerDoc::OnDeactivate  
+##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  Chamado pelo framework quando o usuário desativa um item inserido ou vinculado que está ativo no momento no local.  
   
 ```  
@@ -512,7 +507,7 @@ virtual void OnDeactivate();
   
  Para obter mais informações, consulte o artigo [ativação](../../mfc/activation-cpp.md)...  
   
-##  <a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI  
+##  <a name="ondeactivateui"></a>  COleServerDoc::OnDeactivateUI  
  Chamado quando o usuário desativa um item que foi ativado no local.  
   
 ```  
@@ -528,7 +523,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
   
  Sempre define a estrutura `bUndoable` para **FALSE**. Se o servidor dá suporte à recuperação e há uma operação que pode ser desfeita, chamar a implementação de classe base com `bUndoable` definida como **TRUE**.  
   
-##  <a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
  O framework chama esta função para ativar ou desativar uma janela de documento para edição no local.  
   
 ```  
@@ -544,7 +539,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
   
  Para obter mais informações, consulte o artigo [ativação](../../mfc/activation-cpp.md)...  
   
-##  <a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd  
+##  <a name="onexecolecmd"></a>  COleServerDoc::OnExecOleCmd  
  O framework chama esta função para executar um comando especificado ou exibir a Ajuda para o comando.  
   
 ```  
@@ -588,14 +583,14 @@ virtual HRESULT OnExecOleCmd(
 |**E_UNEXPECTED**|Ocorreu um erro inesperado|  
 |**E_FAIL**|Erro|  
 |**E_NOTIMPL**|Indica o MFC em si deve tentar converter e o comando de expedição|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`é não - **nulo** , mas não especifica um grupo de comando reconhecido|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`não é reconhecido como um comando válido do grupo`pguidCmdGroup`|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` é não - **nulo** , mas não especifica um grupo de comando reconhecido|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` não é reconhecido como um comando válido do grupo `pguidCmdGroup`|  
 |**OLECMDERR_DISABLED**|O comando identificado por `nCmdID` está desabilitado e não pode ser executado|  
 |**OLECMDERR_NOHELP**|Chamador frequentes para obter ajuda sobre o comando identificado por `nCmdID` , mas nenhuma ajuda está disponível|  
 |**OLECMDERR_CANCELED**|O usuário cancelou a execução|  
   
 ### <a name="remarks"></a>Comentários  
- `COleCmdUI`pode ser usado para habilitar, atualizar e definir outras propriedades de DocObject comandos de interface de usuário. Depois que os comandos são inicializados, você pode executá-los com `OnExecOleCmd`.  
+ `COleCmdUI` pode ser usado para habilitar, atualizar e definir outras propriedades de DocObject comandos de interface de usuário. Depois que os comandos são inicializados, você pode executá-los com `OnExecOleCmd`.  
   
  O framework chama a função antes de tentar converter e enviar um comando de documento OLE. Você não precisa substituir essa função para lidar com comandos de documento OLE padrão, mas você deve fornecer uma substituição para esta função para lidar com seus próprios comandos personalizados ou manipular os comandos que aceitam parâmetros ou retornam resultados.  
   
@@ -605,7 +600,7 @@ virtual HRESULT OnExecOleCmd(
   
  A implementação de classe base desta função orientará a **OLE_COMMAND_MAP** estruturas associadas ao destino do comando e tente enviar o comando para um manipulador apropriado. A implementação da classe base funciona somente com comandos que não aceita argumentos ou valores de retorno. Se você precisa lidar com os comandos que aceitam argumentos ou valores de retorno, você deve substituir esta função e trabalhar com o `pvarargIn` e `pvarargOut` parâmetros por conta própria.  
   
-##  <a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
  O framework chama esta função quando a janela do quadro do aplicativo de contêiner é ativada ou desativada.  
   
 ```  
@@ -621,7 +616,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
   
  Para obter mais informações, consulte o artigo [ativação](../../mfc/activation-cpp.md)...  
   
-##  <a name="ongetembeddeditem"></a>COleServerDoc::OnGetEmbeddedItem  
+##  <a name="ongetembeddeditem"></a>  COleServerDoc::OnGetEmbeddedItem  
  Chamado pelo framework quando um aplicativo de contêiner chama o aplicativo de servidor para criar ou editar um item inserido.  
   
 ```  
@@ -634,7 +629,7 @@ virtual COleServerItem* OnGetEmbeddedItem() = 0;
 ### <a name="remarks"></a>Comentários  
  Não há nenhuma implementação padrão. Você deve substituir essa função para retornar um item que representa o documento inteiro. Esse valor de retorno deve ser um objeto de um `COleServerItem`-classe derivada.  
   
-##  <a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo  
+##  <a name="onreactivateandundo"></a>  COleServerDoc::OnReactivateAndUndo  
  O framework chama esta função quando o usuário escolhe desfazer as alterações feitas em um item que foi ativado no local, alterado e subsequentemente desativado.  
   
 ```  
@@ -649,7 +644,7 @@ virtual BOOL OnReactivateAndUndo();
   
  Substitua essa função se seu aplicativo suporta desfazer. Geralmente você deve executar a operação de desfazer e ative o item chamando `ActivateInPlace`. Se o aplicativo de contêiner é escrito com a biblioteca Microsoft Foundation Class, chamando `COleClientItem::ReactivateAndUndo` faz com que essa função seja chamada.  
   
-##  <a name="onresizeborder"></a>COleServerDoc::OnResizeBorder  
+##  <a name="onresizeborder"></a>  COleServerDoc::OnResizeBorder  
  O framework chama essa função quando as janelas de quadro do aplicativo recipiente alterar tamanho.  
   
 ```  
@@ -676,7 +671,7 @@ virtual void OnResizeBorder(
   
  Isso é uma avançada substituível.  
   
-##  <a name="onsethostnames"></a>COleServerDoc::OnSetHostNames  
+##  <a name="onsethostnames"></a>  COleServerDoc::OnSetHostNames  
  Chamado pelo framework quando o contêiner define ou altera os nomes de host para este documento.  
   
 ```  
@@ -697,7 +692,7 @@ virtual void OnSetHostNames(
   
  Se seu aplicativo define os títulos por meio de um mecanismo diferente, substitua essa função.  
   
-##  <a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects  
+##  <a name="onsetitemrects"></a>  COleServerDoc::OnSetItemRects  
  O framework chama esta função para posicionar a janela de quadro de edição no local da janela do quadro do aplicativo de contêiner.  
   
 ```  
@@ -718,7 +713,7 @@ virtual void OnSetItemRects(
   
  Esta função geralmente é chamada em resposta a um `RequestPositionChange` chamar, embora ele pode ser chamado a qualquer momento pelo contêiner para solicitar uma alteração de posição do item no local.  
   
-##  <a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars  
+##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
  O framework chama esta função para mostrar ou ocultar as barras de controle do aplicativo de servidor associadas a janela do quadro identificada por `pFrameWnd`.  
   
 ```  
@@ -737,7 +732,7 @@ virtual void OnShowControlBars(
 ### <a name="remarks"></a>Comentários  
  A implementação padrão enumera todas as barras de controle pertencentes a essa janela do quadro e oculta ou mostra-los.  
   
-##  <a name="onshowdocument"></a>COleServerDoc::OnShowDocument  
+##  <a name="onshowdocument"></a>  COleServerDoc::OnShowDocument  
  O framework chama o `OnShowDocument` funcionar quando o documento do servidor deve ser ocultado ou exibido.  
   
 ```  
@@ -751,7 +746,7 @@ virtual void OnShowDocument(BOOL bShow);
 ### <a name="remarks"></a>Comentários  
  Se `bShow` é **TRUE**, a implementação padrão ativa o aplicativo de servidor, se necessário e faz com que o aplicativo de contêiner rolar a janela para que o item está visível. Se `bShow` é **FALSE**, a implementação padrão desativa o item por meio de uma chamada para `OnDeactivate`, destrói ou oculta todas as janelas de quadro que foram criadas para o documento, exceto o primeiro. Se nenhum documento visível permanecer, a implementação padrão oculta o aplicativo do servidor.  
   
-##  <a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument  
+##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
  Chamado pelo framework quando salvar um documento que é um item inserido em um documento composto.  
   
 ```  
@@ -764,7 +759,7 @@ virtual BOOL OnUpdateDocument();
 ### <a name="remarks"></a>Comentários  
  A implementação padrão chama o [COleServerDoc::NotifySaved](#notifysaved) e [COleServerDoc::SaveEmbedding](#saveembedding) funções de membro e, então, marca o documento como limpas. Substitua essa função se você deseja executar especiais de processamento ao atualizar um item inserido.  
   
-##  <a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange  
+##  <a name="requestpositionchange"></a>  COleServerDoc::RequestPositionChange  
  Chame essa função de membro para que o aplicativo de contêiner de alterar a posição do item.  
   
 ```  
@@ -778,7 +773,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ### <a name="remarks"></a>Comentários  
  Esta função geralmente é chamada (em conjunto com `UpdateAllItems`) quando os dados em um item ativo no local foi alterado. Após essa chamada, o contêiner pode ou não pode executar a alteração chamando `OnSetItemRects`. A posição resultante pode ser diferente do solicitado.  
   
-##  <a name="saveembedding"></a>COleServerDoc::SaveEmbedding  
+##  <a name="saveembedding"></a>  COleServerDoc::SaveEmbedding  
  Chame essa função para informar o aplicativo de contêiner para salvar o objeto inserido.  
   
 ```  
@@ -788,7 +783,7 @@ void SaveEmbedding();
 ### <a name="remarks"></a>Comentários  
  Essa função é chamada automaticamente do `OnUpdateDocument`. Observe que essa função faz com que o item a ser atualizado no disco, por isso geralmente é chamado como resultado de uma ação do usuário específico.  
   
-##  <a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy  
+##  <a name="scrollcontainerby"></a>  COleServerDoc::ScrollContainerBy  
  Chamar o `ScrollContainerBy` função de membro para rolar o documento de contêiner, a quantidade, em pixels, indicada por `sizeScroll`.  
   
 ```  
@@ -805,7 +800,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ### <a name="remarks"></a>Comentários  
  Valores positivos indicam rolando para baixo e para a direita; valores negativos indicam a rolagem para cima e para a esquerda.  
   
-##  <a name="updateallitems"></a>COleServerDoc::UpdateAllItems  
+##  <a name="updateallitems"></a>  COleServerDoc::UpdateAllItems  
  Chame essa função para notificar todos os itens vinculados conectados para o documento que o documento foi alterado.  
   
 ```  
@@ -829,13 +824,13 @@ void UpdateAllItems(
  `nDrawAspect`  
  Determina como o item deve ser desenhada. Este é um valor da `DVASPECT` enumeração. Esse parâmetro pode ter um dos seguintes valores:  
   
-- `DVASPECT_CONTENT`Item é representado de forma que ele pode ser exibido como um objeto incorporado dentro do seu contêiner.  
+- `DVASPECT_CONTENT` Item é representado de forma que ele pode ser exibido como um objeto incorporado dentro do seu contêiner.  
   
-- `DVASPECT_THUMBNAIL`Item será renderizado em uma representação de "miniatura" para que ela possa ser exibida em uma ferramenta de navegação.  
+- `DVASPECT_THUMBNAIL` Item será renderizado em uma representação de "miniatura" para que ela possa ser exibida em uma ferramenta de navegação.  
   
-- `DVASPECT_ICON`Item é representado por um ícone.  
+- `DVASPECT_ICON` Item é representado por um ícone.  
   
-- `DVASPECT_DOCPRINT`Item é representado como se ele seja impresso usando o comando Imprimir do menu arquivo.  
+- `DVASPECT_DOCPRINT` Item é representado como se ele seja impresso usando o comando Imprimir do menu arquivo.  
   
 ### <a name="remarks"></a>Comentários  
  Normalmente, você chamar esta função depois que o usuário altera o documento do servidor. Se um item OLE é vinculado ao documento com um link automático, o item é atualizado para refletir as alterações. Em aplicativos de contêiner gravados com a biblioteca Microsoft Foundation Class de [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) função de membro `COleClientItem` é chamado.  

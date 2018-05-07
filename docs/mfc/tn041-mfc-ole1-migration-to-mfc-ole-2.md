@@ -1,13 +1,10 @@
 ---
-title: "Tn041: migração MFC-OLE1 para MFC-OLE 2 | Microsoft Docs"
-ms.custom: 
+title: 'Tn041: migração MFC-OLE1 para MFC-OLE 2 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migração de MFC/OLE1 para MFC/OLE 2
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>Adicionando "Edição Visual"  
  Um dos recursos mais interessantes de OLE é ativação no local (ou "Edição Visual"). Esse recurso permite que o aplicativo de servidor assumir partes da interface de usuário do contêiner fornecido uma interface de edição mais consistente para o usuário. Para implementar a ativação no local OCLIENT, alguns recursos especiais precisam ser adicionados, bem como um código adicional. Esses recursos e o código normalmente são fornecidas pelo AppWizard — na verdade, grande parte do código aqui foi emprestado diretamente a partir de um novo aplicativo de AppWizard com suporte "Contêiner".  
   
- Em primeiro lugar, é necessário adicionar um recurso de menu a ser usado quando há um item que está ativo no local. Você pode criar esse recurso de menu adicionais no Visual C++, copiando o recurso IDR_OCLITYPE e remoção de todos, exceto os arquivo e a janela pop-ups. Duas barras de separação são inseridas entre os arquivo e janela pop-ups para indicar a separação de grupos (deve se parecer com: arquivo &#124; &#124; Janela). Para obter mais informações sobre o que significam esses separadores e como os menus do contêiner e de servidor são mesclados consulte "Menus e recursos: mesclagem de Menu" *OLE 2 Classes*.  
+ Em primeiro lugar, é necessário adicionar um recurso de menu a ser usado quando há um item que está ativo no local. Você pode criar esse recurso de menu adicionais no Visual C++, copiando o recurso IDR_OCLITYPE e remoção de todos, exceto os arquivo e a janela pop-ups. Duas barras de separação são inseridas entre os arquivo e janela pop-ups para indicar a separação de grupos (deve se parecer com: arquivo &#124; &#124; janela). Para obter mais informações sobre o que significam esses separadores e como os menus do contêiner e de servidor são mesclados consulte "Menus e recursos: mesclagem de Menu" *OLE 2 Classes*.  
   
  Uma vez que esses menus criados, você precisa informar o framework sobre eles. Isso é feito chamando `CDocTemplate::SetContainerInfo` para o modelo de documento antes de adicioná-lo à lista de modelo de documento no seu InitInstance. O novo código para registrar o modelo de documento tem esta aparência:  
   
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`não suporta o sinalizador 'bIncludeNative'. Os dados nativos (os dados gravados pela função de serialização do item de servidor) sempre são copiados para remover o primeiro parâmetro. Além disso, `CopyToClipboard` lançará uma exceção quando ocorre um erro em vez de retornar FALSE. Altere o código de CServerView::OnEditCopy da seguinte maneira:  
+ `COleServerItem::CopyToClipboard` não suporta o sinalizador 'bIncludeNative'. Os dados nativos (os dados gravados pela função de serialização do item de servidor) sempre são copiados para remover o primeiro parâmetro. Além disso, `CopyToClipboard` lançará uma exceção quando ocorre um erro em vez de retornar FALSE. Altere o código de CServerView::OnEditCopy da seguinte maneira:  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -710,7 +705,7 @@ void CServerView::OnEditCopy()
   
 -   Você precisa informar o framework sobre esses recursos especiais e classes.  
   
- O recurso de menu é fácil de criar. Execute o Visual C++, copie o recurso de menu IDR_HIERSVRTYPE para um recurso de menu chamado IDR_HIERSVRTYPE_SRVR_IP. Modifique o menu para que somente as edição e a Ajuda do menu pop-ups estão à esquerda. Adicionar dois separadores ao menu entre menus editar e ajuda (deve se parecer com: Editar &#124; &#124; Ajuda). Para obter mais informações sobre o que significam esses separadores e como os menus do contêiner e de servidor são mesclados, consulte "Menus e recursos: mesclagem de Menu" *OLE 2 Classes*.  
+ O recurso de menu é fácil de criar. Execute o Visual C++, copie o recurso de menu IDR_HIERSVRTYPE para um recurso de menu chamado IDR_HIERSVRTYPE_SRVR_IP. Modifique o menu para que somente as edição e a Ajuda do menu pop-ups estão à esquerda. Adicionar dois separadores ao menu entre menus editar e ajuda (deve se parecer com: editar &#124; &#124; ajuda). Para obter mais informações sobre o que significam esses separadores e como os menus do contêiner e de servidor são mesclados, consulte "Menus e recursos: mesclagem de Menu" *OLE 2 Classes*.  
   
  O bitmap da barra de ferramentas do subconjunto pode ser criado facilmente, copiando um de um aplicativo AppWizard gerado atualizado com uma opção "Servidor" marcada. Este bitmap pode ser importado para o Visual C++. Certifique-se de dar a um ID de IDR_HIERSVRTYPE_SRVR_IP o bitmap.  
   
@@ -750,7 +745,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   Rolar a janela de contêiner, como a seleção é alterada.  
   
- O exemplo de HIERSVR MFC 3.0 também usa um design ligeiramente diferente para os itens do servidor. Isso ajuda a conservar a memória e torna os links mais flexível. Com a versão 2.0 do HIERSVR cada nó na árvore de *é um* `COleServerItem`. `COleServerItem`executa um pouco mais sobrecarga do que é estritamente necessária para cada um de nós, mas um `COleServerItem` é necessária para cada link ativo. Mas a maior parte do tempo, há muito poucos links ativos a qualquer momento. Para tornar isso o mais eficiente, HIERSVR nesta versão do MFC separa o nó a partir de `COleServerItem`. Ele tem dois CServerNode um e um **CServerItem** classe. O **CServerItem** (derivado de `COleServerItem`) é criado somente quando necessário. Quando o contêiner (ou contêineres) parar de usar esse link específico para esse nó em particular, o objeto de CServerItem associado a CServerNode será excluído. Esse design é mais flexível e mais eficientes. Sua flexibilidade vem em ao lidar com vários links de seleção. Nenhuma dessas duas versões do HIERSVR suporte para seleção múltipla, mas seria muito mais fácil para adicionar (e para dar suporte a links para essas seleções) com a versão 3.0 do MFC de HIERSVR, desde que o `COleServerItem` é separada dos dados nativos.  
+ O exemplo de HIERSVR MFC 3.0 também usa um design ligeiramente diferente para os itens do servidor. Isso ajuda a conservar a memória e torna os links mais flexível. Com a versão 2.0 do HIERSVR cada nó na árvore de *é um* `COleServerItem`. `COleServerItem` executa um pouco mais sobrecarga do que é estritamente necessária para cada um de nós, mas um `COleServerItem` é necessária para cada link ativo. Mas a maior parte do tempo, há muito poucos links ativos a qualquer momento. Para tornar isso o mais eficiente, HIERSVR nesta versão do MFC separa o nó a partir de `COleServerItem`. Ele tem dois CServerNode um e um **CServerItem** classe. O **CServerItem** (derivado de `COleServerItem`) é criado somente quando necessário. Quando o contêiner (ou contêineres) parar de usar esse link específico para esse nó em particular, o objeto de CServerItem associado a CServerNode será excluído. Esse design é mais flexível e mais eficientes. Sua flexibilidade vem em ao lidar com vários links de seleção. Nenhuma dessas duas versões do HIERSVR suporte para seleção múltipla, mas seria muito mais fácil para adicionar (e para dar suporte a links para essas seleções) com a versão 3.0 do MFC de HIERSVR, desde que o `COleServerItem` é separada dos dados nativos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Observações técnicas por número](../mfc/technical-notes-by-number.md)   

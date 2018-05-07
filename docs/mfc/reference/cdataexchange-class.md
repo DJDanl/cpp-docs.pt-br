@@ -1,12 +1,9 @@
 ---
 title: Classe CDataExchange | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDataExchange
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e56df3ec4604a02ba9cf1075152a11eefe7e28f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdataexchange-class"></a>Classe CDataExchange
 Dá suporte a troca de dados de caixa de diálogo (DDX) e as rotinas de validação (DDV) de dados de caixa de diálogo usadas pelo Microsoft Foundation classes.  
@@ -75,7 +70,7 @@ class CDataExchange
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|A caixa de diálogo ou janela onde os dados do exchange é feita.|  
   
 ## <a name="remarks"></a>Comentários  
- `CDataExchange`não tem uma classe base.  
+ `CDataExchange` não tem uma classe base.  
   
  Use essa classe se você estiver escrevendo rotinas de troca de dados para tipos de dados personalizados ou controles, ou se você estiver escrevendo suas próprias rotinas de validação de dados. Para obter mais informações sobre como escrever suas próprias rotinas DDX e DDV, consulte [26 de observação técnica](../../mfc/tn026-ddx-and-ddv-routines.md). Para obter uma visão geral de DDX e DDV, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md) e [caixas de diálogo](../../mfc/dialog-boxes.md).  
   
@@ -87,7 +82,7 @@ class CDataExchange
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
+##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange  
  Chamar essa função de membro para construir um `CDataExchange` objeto.  
   
 ```  
@@ -109,7 +104,7 @@ CDataExchange(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="fail"></a>CDataExchange::Fail  
+##  <a name="fail"></a>  CDataExchange::Fail  
  O framework chama esta função de membro quando uma operação de validação (DDV) de dados de caixa de diálogo falha.  
   
 ```  
@@ -123,7 +118,7 @@ void Fail();
   
  Para obter mais informações sobre como escrever suas próprias rotinas DDX e DDV, consulte [26 de observação técnica](../../mfc/tn026-ddx-and-ddv-routines.md). Para obter uma visão geral de DDX e DDV, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md) e [tópicos da caixa de diálogo](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
+##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate  
  Esse sinalizador indica a direção de uma operação de troca (DDX) de dados de caixa de diálogo.  
   
 ```  
@@ -137,7 +132,7 @@ BOOL m_bSaveAndValidate;
   
  Para obter mais informações sobre como escrever suas próprias rotinas DDX e DDV, consulte [26 de observação técnica](../../mfc/tn026-ddx-and-ddv-routines.md). Para obter uma visão geral de DDX e DDV, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md) e [tópicos da caixa de diálogo](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
+##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd  
  Contém um ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto para o qual caixa de diálogo (DDX) de troca de dados ou de validação (DDV) está em andamento.  
   
 ```  
@@ -149,7 +144,7 @@ CWnd* m_pDlgWnd;
   
  Para obter mais informações sobre como escrever suas próprias rotinas DDX e DDV, consulte [26 de observação técnica](../../mfc/tn026-ddx-and-ddv-routines.md). Para obter uma visão geral de DDX e DDV, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md) e [tópicos da caixa de diálogo](../../mfc/dialog-boxes.md).  
   
-##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
+##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl  
  O framework chama esta função de membro para preparar o controle especificado para a troca de dados de caixa de diálogo (DDX) e validação (DDV).  
   
 ```  
@@ -172,7 +167,7 @@ HWND PrepareCtrl(int nIDC);
   
  Para obter mais informações sobre como escrever suas próprias rotinas DDX e DDV, consulte [26 de observação técnica](../../mfc/tn026-ddx-and-ddv-routines.md). Para obter uma visão geral de DDX e DDV, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md) e [tópicos da caixa de diálogo](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
+##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl  
  O framework chama esta função de membro para preparar o controle de edição especificada para a troca de dados de caixa de diálogo (DDX) e validação (DDV).  
   
 ```  
@@ -195,7 +190,7 @@ HWND PrepareEditCtrl(int nIDC);
   
  Para obter mais informações sobre como escrever suas próprias rotinas DDX e DDV, consulte [26 de observação técnica](../../mfc/tn026-ddx-and-ddv-routines.md). Para obter uma visão geral de DDX e DDV, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md) e [tópicos da caixa de diálogo](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
+##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl  
  O framework chama esta função de membro para preparar o controle OLE especificado para troca de dados de caixa de diálogo (DDX) e validação (DDV).  
   
 ```  

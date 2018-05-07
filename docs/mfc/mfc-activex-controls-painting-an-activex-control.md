@@ -1,30 +1,25 @@
 ---
 title: 'Controles ActiveX MFC: Pintando um controle ActiveX | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: pintando um controle ActiveX
 Este artigo descreve o processo de pintura do controle ActiveX e como você pode alterar o código para otimizar o processo. (Consulte [otimizando o desenho de controle](../mfc/optimizing-control-drawing.md) para técnicas sobre como otimizar o desenho não tem controles individualmente restaurem objetos GDI selecionados anteriormente. Depois que todos os controles foi emitidos, o contêiner pode restaurar automaticamente os objetos originais.)  
@@ -39,7 +34,7 @@ Este artigo descreve o processo de pintura do controle ActiveX e como você pode
   
 -   [Como desenhar seu controle usando metarquivos](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>O processo de pintura de um controle ActiveX  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> O processo de pintura de um controle ActiveX  
  Quando controles ActiveX são inicialmente exibidos ou são redesenhados, elas seguirão um processo de pintura semelhante a outros aplicativos desenvolvidos usando MFC, com uma diferença importante: os controles ActiveX podem estar em um ativo ou em um estado inativo.  
   
  Um controle ativo é representado em um contêiner de controle ActiveX por uma janela filho. Como outras janelas, ele é responsável por pintura em si quando um `WM_PAINT` mensagem é recebida. A classe base do controle, [COleControl](../mfc/reference/colecontrol-class.md), manipula esta mensagem no seu `OnPaint` função. Esta implementação padrão chama o `OnDraw` função do seu controle.  
@@ -62,14 +57,14 @@ Este artigo descreve o processo de pintura do controle ActiveX e como você pode
 > [!NOTE]
 >  Quando pintando um controle, você não deve fazer suposições sobre o estado do contexto do dispositivo que é passado como o *pdc* parâmetro para o `OnDraw` função. Ocasionalmente, o contexto de dispositivo é fornecido pelo aplicativo de contêiner e não serão necessariamente inicializado para o estado padrão. Em particular, selecione explicitamente canetas, pincéis, cores, fontes e outros recursos que depende de seu código de desenho.  
   
-##  <a name="_core_optimizing_your_paint_code"></a>Otimizando o código de pintura  
+##  <a name="_core_optimizing_your_paint_code"></a> Otimizando o código de pintura  
  Depois que o controle é pintura em si com êxito, a próxima etapa é otimizar o `OnDraw` função.  
   
  A implementação padrão de controle ActiveX pintura pinta a área do controle inteiro. Isso é suficiente para controles simples, mas em muitos casos redesenho controle seria mais rápido se apenas a parte que é necessário atualizar foi pintada novamente, em vez de todo o controle.  
   
  O `OnDraw` função fornece um método fácil de otimização passando `rcInvalid`, a área retangular do controle precisa ser redesenhada. Use esta área, geralmente menor do que a área de controle inteiro, para acelerar o processo de pintura.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>Pintura seu controle usando metarquivos  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Pintura seu controle usando metarquivos  
  Na maioria dos casos o `pdc` parâmetro para o `OnDraw` função aponta para um contexto de dispositivo de tela (DC). No entanto, ao imprimir imagens do controle ou durante uma sessão de visualização de impressão, o controlador de domínio recebida para a renderização é um tipo especial chamado "metarquivo DC". Ao contrário de uma tela de controlador de domínio, que trata as solicitações enviadas a ele imediatamente, um controlador de domínio de metarquivo armazena as solicitações a serem reproduzidas mais tarde. Alguns aplicativos de contêiner também podem optar por processar a imagem de controle usando um controlador de domínio no modo de design de metarquivo.  
   
  Metarquivo desenho solicitações pode ser feito pelo contêiner por meio de duas funções de interface: **IViewObject::Draw** (essa função também pode ser chamada para desenhar não-metarquivo) e **IDataObject::**. Quando um controlador de domínio é passado como um dos parâmetros de metarquivo, a estrutura MFC faz uma chamada para [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Como esta é uma função membro virtual, substitua essa função na classe de controle para fazer qualquer processamento especial. As chamadas do comportamento padrão `COleControl::OnDraw`.  
@@ -80,11 +75,11 @@ Este artigo descreve o processo de pintura do controle ActiveX e como você pode
   
 |Arco|BibBlt|Corda|  
 |---------|------------|-----------|  
-|**Elipse**|**Escape**|`ExcludeClipRect`|  
+|**Ellipse**|**Escape**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**Polígono**|`Polyline`|  
+|`Pie`|**polígono**|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  

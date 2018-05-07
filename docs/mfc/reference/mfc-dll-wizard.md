@@ -1,13 +1,10 @@
 ---
 title: Assistente de DLL MFC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.overview
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d02d6e6f598d6d18a6e17e9a99a3190a836dc780
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-dll-wizard"></a>Assistente de DLL MFC
 Quando você usar o Assistente de DLL do MFC para criar um projeto de DLL MFC, você obtém um aplicativo de início do trabalho com funcionalidade interna que, quando compilado, implementar os recursos básicos de um [DLL](../../build/dlls-in-visual-cpp.md). O programa de início do MFC inclui arquivos de origem (. cpp) C++, arquivos de recurso (. rc) e um arquivo de projeto (. vcxproj). O código gerado nesses arquivos de início é baseado em MFC. Para obter mais informações, consulte os detalhes do arquivo Leiame. txt que é gerado para o seu projeto no Visual Studio, e [Classes e funções geradas pelo Assistente de DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

@@ -1,13 +1,10 @@
 ---
-title: "Controle de cabeçalho e lista | Microsoft Docs"
-ms.custom: 
+title: Controle de cabeçalho e lista | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213d2eeec7628c54d68bbd8f636ae85d90e7e8de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a84386781bf28edb9223f608fa7a64040eb68379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="header-control-and-list-control"></a>Controle de cabeçalho e de lista
 Na maioria dos casos, você usará o controle de cabeçalho que é inserido em uma [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView](../mfc/reference/clistview-class.md) objeto. No entanto, há casos em que um objeto de controle de cabeçalho separado é desejável, como a manipulação de dados, organizados em colunas ou linhas, em uma [CView](../mfc/reference/cview-class.md)-objeto derivado. Nesses casos, é necessário ter maior controle sobre a aparência e o comportamento padrão de um controle de cabeçalho incorporado.  

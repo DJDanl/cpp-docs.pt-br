@@ -1,13 +1,10 @@
 ---
-title: "Como: fazer uma coleção fortemente tipada | Microsoft Docs"
-ms.custom: 
+title: 'Como: fazer uma coleção fortemente tipada | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74cb81ecc6b935c87384a8a0a315e35b4adbc465
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Como fazer uma coleção fortemente tipada
 Este artigo explica como criar coleções fortemente tipadas para seus próprios tipos de dados. Os tópicos incluem:  
@@ -42,7 +37,7 @@ Este artigo explica como criar coleções fortemente tipadas para seus próprios
   
  A biblioteca Microsoft Foundation Class fornece coleções fortemente tipadas predefinidas com base em modelos do C++. Como são modelos, essas classes ajudam a fornecer a segurança de tipo e a facilidade de uso sem a conversão de tipo e outro trabalho extra envolvidos no uso de uma classe nontemplate para essa finalidade. O exemplo MFC [COLETAR](../visual-cpp-samples.md) demonstra o uso de classes de coleção com base em modelo em um aplicativo MFC. Em geral, use essas classes sempre que você escrever novo código de coleções.  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a>Usando Classes com base no modelo de segurança de tipo  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Usando Classes com base no modelo de segurança de tipo  
   
 #### <a name="to-use-template-based-classes"></a>Para usar classes com base no modelo  
   
@@ -58,10 +53,10 @@ Este artigo explica como criar coleções fortemente tipadas para seus próprios
   
  Este exemplo mostra a declaração de uma lista de números inteiros. O primeiro parâmetro na etapa 1 é o tipo de dados armazenados como elementos da lista. O segundo parâmetro especifica como os dados são passados para e retornadas de funções de membro da classe de coleção, como **adicionar** e `GetAt`.  
   
-##  <a name="_core_implementing_helper_functions"></a>Implementando funções auxiliares  
+##  <a name="_core_implementing_helper_functions"></a> Implementando funções auxiliares  
  As classes de coleção com base em modelo `CArray`, `CList`, e `CMap` usar cinco funções de auxiliar global que você pode personalizar conforme necessário para sua classe derivada de coleção. Para obter informações sobre essas funções de auxiliar, consulte [auxiliares da classe de coleção](../mfc/reference/collection-class-helpers.md) no *referência MFC*. Implementação da função de serialização é necessária para a maioria dos usos das classes de coleção com base em modelo.  
   
-###  <a name="_core_serializing_elements"></a>Serializando elementos  
+###  <a name="_core_serializing_elements"></a> Serializando elementos  
  O `CArray`, `CList`, e `CMap` classes chamada `SerializeElements` para armazenar elementos de coleção ou lê-los de um arquivo.  
   
  A implementação padrão da `SerializeElements` função auxiliar não uma gravação de bit a bit dos objetos para o arquivamento ou de leitura do arquivo morto para os objetos, dependendo se os objetos estão sendo armazenados em um bit a bit ou recuperada do arquivo morto. Substituir `SerializeElements` se essa ação não é apropriada.  
@@ -72,7 +67,7 @@ Este artigo explica como criar coleções fortemente tipadas para seus próprios
   
  Os operadores de inserção sobrecarregado para `CArchive` chamar `CObject::Serialize` (ou uma substituição dessa função) para cada **CPerson** objeto.  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a>Usando Classes de coleção de Nontemplate  
+##  <a name="_core_using_nontemplate_collection_classes"></a> Usando Classes de coleção de Nontemplate  
  MFC também oferece suporte as classes de coleção introduzidas com a versão 1.0 do MFC. Essas classes não são baseadas em modelos. Eles podem ser usados para conter dados dos tipos suportados `CObject*`, **UINT**, `DWORD`, e `CString`. Você pode usar essas coleções predefinidas (como `CObList`) para armazenar coleções de qualquer objeto derivado de `CObject`. MFC também fornece outras coleções predefinidas para conter tipos primitivos como **UINT** e ponteiros de void (`void`*). Em geral, no entanto, geralmente é útil definir suas próprias coleções fortemente tipadas para armazenar objetos de uma classe mais específica e seus derivados. Observe que não fazer isso com as classes de coleção com base em modelos mais trabalho do que usar as classes de modelo.  
   
  Há duas maneiras de criar coleções fortemente tipadas com as coleções de nontemplate:  

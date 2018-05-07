@@ -1,12 +1,9 @@
 ---
 title: Classe CPrintDialog | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 Encapsula os serviços fornecidos pela caixa de diálogo comuns do Windows para impressão.  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  Se você não fornecer seus próprios identificadores em `m_pd` para o **hDevMode** e **hDevNames** membros, certifique-se de chamar a função do Windows **GlobalFree** para esses identificadores Quando você terminar com a caixa de diálogo. Ao usar a implementação da configuração de impressão do framework fornecida pelo `CWinApp::OnFilePrintSetup`, você não precisa liberar essas alças. Os identificadores são mantidos por `CWinApp` e são liberadas de `CWinApp`do destruidor. Só é necessário liberar essas alças ao usar `CPrintDialog` autônomo.  
   
- Depois de inicializar os controles de caixa de diálogo, chamar o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecionar opções de impressão. `DoModal`Retorna se o usuário selecionou o Okey ( **IDOK**) ou Cancelar ( **IDCANCEL**) botão.  
+ Depois de inicializar os controles de caixa de diálogo, chamar o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecionar opções de impressão. `DoModal` Retorna se o usuário selecionou o Okey ( **IDOK**) ou Cancelar ( **IDCANCEL**) botão.  
   
  Se `DoModal` retorna **IDOK**, você pode usar um dos `CPrintDialog`de funções de membro para recuperar as informações de entrada do usuário.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Você pode usar o Windows **CommDlgExtendedError** função para determinar se ocorreu um erro durante a inicialização da caixa de diálogo e para saber mais sobre o erro. Para obter mais informações sobre essa função, consulte o SDK do Windows.  
   
- `CPrintDialog`depende do COMMDLG. Arquivo DLL que é fornecido com o Windows versão 3.1 e posterior.  
+ `CPrintDialog` depende do COMMDLG. Arquivo DLL que é fornecido com o Windows versão 3.1 e posterior.  
   
  Para personalizar a caixa de diálogo, derive uma classe de `CPrintDialog`, forneça um modelo de caixa de diálogo personalizada e adicionar um mapa de mensagem para processar as mensagens de notificação de controles estendidos. Todas as mensagens não processadas devem ser passadas para a classe base. Personalizando a função de gancho não é necessária.  
   

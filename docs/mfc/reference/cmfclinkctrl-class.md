@@ -2,11 +2,8 @@
 title: Classe CMFCLinkCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc83e5abf09102af8f27b1ee73fc78ed162b9335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
 O `CMFCLinkCtrl` classe exibe um botão como um hiperlink e invoca o destino do link quando o botão é clicado.  
@@ -85,7 +80,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
  Chamado pelo framework antes do retângulo de foco do botão é desenhado.  
   
 ```  
@@ -104,7 +99,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>Comentários  
  Substitua este método quando quiser usar seu próprio código para desenhar o retângulo de foco do botão.  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  Exibe uma URL especificada como o texto do botão.  
   
 ```  
@@ -117,7 +112,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
  Define o protocolo implícita (por exemplo, "http:") da URL.  
   
 ```  
@@ -131,7 +126,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>Comentários  
  Use esse método para definir o prefixo de URL. O prefixo não é exibido na face do botão, mas você pode usá-lo para navegar até o destino da URL.  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
  Redimensiona um botão para conter o texto do botão ou o bitmap.  
   
 ```  
@@ -142,10 +137,10 @@ virtual CSize SizeToContent(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `bVCenter`  
- `TRUE`para centralizar o texto do botão e bitmap verticalmente entre as partes superior e inferior do controle link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
+ `TRUE` para centralizar o texto do botão e bitmap verticalmente entre as partes superior e inferior do controle link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
   
  [in] `bHCenter`  
- `TRUE`para centralizar o texto do botão e bitmap horizontalmente entre os lados esquerdo e direito de controle de link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
+ `TRUE` para centralizar o texto do botão e bitmap horizontalmente entre os lados esquerdo e direito de controle de link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contém o novo tamanho do controle de link.  

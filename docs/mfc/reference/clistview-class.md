@@ -1,12 +1,9 @@
 ---
 title: Classe CListView | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CListView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9d90df0ac3d91f58c1e9592e65ce84ac900f6e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clistview-class"></a>Classe CListView
 Simplifica o uso do controle de lista e de [CListCtrl](../../mfc/reference/clistctrl-class.md), a classe que encapsula a funcionalidade de controle de lista, com a arquitetura do modo de exibição de documentos do MFC.  
@@ -81,14 +76,14 @@ class CListView : public CCtrlView
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcview.h  
   
-##  <a name="clistview"></a>CListView::CListView  
+##  <a name="clistview"></a>  CListView::CListView  
  Constrói um objeto `CListView`.  
   
 ```  
 CListView();
 ```  
   
-##  <a name="getlistctrl"></a>CListView::GetListCtrl  
+##  <a name="getlistctrl"></a>  CListView::GetListCtrl  
  Chame essa função de membro para obter uma referência para o controle de lista associado com o modo de exibição.  
   
 ```  
@@ -101,7 +96,7 @@ CListCtrl& GetListCtrl() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
-##  <a name="removeimagelist"></a>CListView::RemoveImageList  
+##  <a name="removeimagelist"></a>  CListView::RemoveImageList  
  Remove a lista de imagem especificado da exibição de lista.  
   
 ```  

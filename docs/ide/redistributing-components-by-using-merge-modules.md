@@ -1,30 +1,25 @@
 ---
-title: "Redistribuindo componentes usando módulos de mesclagem | Microsoft Docs"
-ms.custom: 
+title: Redistribuindo componentes usando módulos de mesclagem | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - merge modules, using
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093c732563844b14a3f99662150d4db9b2fac1fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redistribuindo componentes usando módulos de mesclagem
 O Visual Studio inclui [Mesclar módulos](http://msdn.microsoft.com/library/aa367434) para cada componente do Visual C++ está licenciado para ser redistribuído com um aplicativo. Quando um módulo de mesclagem é compilado em um arquivo de instalação do Windows Installer, ele permite a implantação de DLLs específicas para computadores que tenham uma plataforma específica. No arquivo de instalação, especifique que os módulos de mesclagem são pré-requisitos para seu aplicativo. Quando o Visual Studio está instalado, os módulos de mesclagem são instalados em \Program Comuns\Merge módulos\\. (Somente sem depuração versões de DLLs do Visual C++ podem ser redistribuídas.) Para obter mais informações e um link para uma lista de módulos de mesclagem que estão licenciados para redistribuição, consulte [arquivos de redistribuição do Visual C++](../ide/redistributing-visual-cpp-files.md).  

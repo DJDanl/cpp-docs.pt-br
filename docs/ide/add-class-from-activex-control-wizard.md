@@ -1,13 +1,10 @@
 ---
 title: Adicionar classe de Assistente de controle ActiveX | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Assistente para Adicionar Classe de Controle ActiveX
 Use este assistente para adicionar uma classe do MFC a partir de um controle ActiveX disponível. O assistente cria uma classe para cada interface que você adicionar a partir do controle ActiveX selecionado.  
@@ -60,9 +55,9 @@ Use este assistente para adicionar uma classe do MFC a partir de um controle Act
 |**<\<**|Remove todas as classes do **classes geradas** lista. Disponível se o **classes geradas** lista está vazia.|  
   
  **Classes geradas**  
- Especifica os nomes de classe a ser gerado das interfaces adicionadas usando o  **>**  ou  **>>**  botão. Você pode clicar nessa caixa para selecionar uma classe e, em seguida, use as teclas ou para baixo para rolar a lista, exibindo o nome de cada classe no `Class` caixa e nome de arquivo no **. h arquivo** caixa que o assistente gera quando você clicar em  **Concluir**. Você pode selecionar apenas uma classe em um momento nesta caixa.  
+ Especifica os nomes de classe a ser gerado das interfaces adicionadas usando o **>** ou **>>** botão. Você pode clicar nessa caixa para selecionar uma classe e, em seguida, use as teclas ou para baixo para rolar a lista, exibindo o nome de cada classe no `Class` caixa e nome de arquivo no **. h arquivo** caixa que o assistente gera quando você clicar em  **Concluir**. Você pode selecionar apenas uma classe em um momento nesta caixa.  
   
- Você pode remover uma classe selecionando-o na lista e clicando em  **<** . Não é necessário selecionar uma classe no **classes geradas** caixa para remover todas as classes; clicando  **<<** , remova todas as classes a **classes geradas** caixa.  
+ Você pode remover uma classe selecionando-o na lista e clicando em **<**. Não é necessário selecionar uma classe no **classes geradas** caixa para remover todas as classes; clicando **<<**, remova todas as classes a **classes geradas** caixa.  
   
  `Class`  
  Especifica o nome da classe selecionada no **classes geradas** caixa que o assistente adiciona quando você clica em **concluir**. Você pode editar o nome de `Class` caixa.  

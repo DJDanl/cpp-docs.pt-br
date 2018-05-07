@@ -1,12 +1,9 @@
 ---
 title: Classe CDialogBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>Classe CDialogBar
 Fornece a funcionalidade de uma caixa de diálogo sem janela restrita do Windows em uma barra de controle.  
@@ -78,14 +73,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  Constrói um objeto `CDialogBar`.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  Carrega o modelo de recurso de caixa de diálogo especificado por `lpszTemplateName` ou `nIDTemplate`, cria a janela da caixa de diálogo da barra, define seu estilo e associa-o com o `CDialogBar` objeto.  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  O estilo de barra de ferramentas. Estilos de barra de ferramentas adicionais com suporte são:  
   
-- `CBRS_TOP`Barra de controle está na parte superior da janela do quadro.  
+- `CBRS_TOP` Barra de controle está na parte superior da janela do quadro.  
   
-- `CBRS_BOTTOM`Barra de controle está na parte inferior da janela do quadro.  
+- `CBRS_BOTTOM` Barra de controle está na parte inferior da janela do quadro.  
   
-- `CBRS_NOALIGN`Barra de controle é reposicionado de forma não quando o pai for redimensionado.  
+- `CBRS_NOALIGN` Barra de controle é reposicionado de forma não quando o pai for redimensionado.  
   
-- `CBRS_TOOLTIPS`Barra de controle exibe dicas de ferramenta.  
+- `CBRS_TOOLTIPS` Barra de controle exibe dicas de ferramenta.  
   
 - **CBRS_SIZE_DYNAMIC** barra de controle é dinâmica.  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** barra de controle é flutuante.  
   
-- `CBRS_FLYBY`Barra de status exibe informações sobre o botão.  
+- `CBRS_FLYBY` Barra de status exibe informações sobre o botão.  
   
 - **CBRS_HIDE_INPLACE** barra de controle não será exibida para o usuário.  
   

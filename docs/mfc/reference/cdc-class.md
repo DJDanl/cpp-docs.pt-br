@@ -2,11 +2,8 @@
 title: Classe CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>Classe CDC
 Define uma classe de objetos de contexto de dispositivo.  
@@ -478,7 +473,7 @@ class CDC : public CObject
 |[CDC::EndDoc](#enddoc)|Termina um trabalho de impressão iniciado pela `StartDoc` função de membro.|  
 |[CDC::EndPage](#endpage)|Informar o driver de dispositivo que uma página está terminando.|  
 |[CDC::EndPath](#endpath)|Fecha um colchete de caminho e seleciona o caminho definido pelo suporte para o contexto de dispositivo.|  
-|[CDC::EnumObjects](#enumobjects)|Enumera as canetas e pincéis disponível em um contexto de dispositivo.|  
+|[CDC:: enumobjects](#enumobjects)|Enumera as canetas e pincéis disponível em um contexto de dispositivo.|  
 |[CDC::Escape](#escape)|Permite que aplicativos acessem os recursos que não estão diretamente disponíveis de um determinado dispositivo através de GDI. Também permite o acesso a funções de escape do Windows. Chamadas de escape feitas por um aplicativo são convertidas e enviadas para o driver de dispositivo.|  
 |[CDC::ExcludeClipRect](#excludecliprect)|Cria uma nova região de recorte consiste da região de recorte existente menos o retângulo especificado.|  
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Excluindo uma região atualizada na janela de uma região de recorte, impede que desenho nas áreas inválidos de uma janela.|  
@@ -806,7 +801,7 @@ BOOL AlphaBlend(
  `nSrcHeight`  
  Especifica a altura, em unidades lógicas, do retângulo de origem.  
   
- *blend*  
+ *Blend*  
  Especifica um [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1911,7 +1906,7 @@ BOOL EndPath();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CDC::BeginPath](#beginpath).  
   
-##  <a name="enumobjects"></a>  CDC::EnumObjects  
+##  <a name="enumobjects"></a>  CDC:: enumobjects  
  Enumera as canetas e pincéis disponível em um contexto de dispositivo.  
   
 ```  
@@ -5710,7 +5705,7 @@ int SetStretchBltMode(int nStretchMode);
 |-----------|-----------------|  
 |**BLACKONWHITE**|Executa uma operação booliana e usando os valores de cor para os pixels eliminados e existentes. Se o bitmap é um bitmap monocromático, esse modo preserva pixels pretos às custas brancos.|  
 |**COLORONCOLOR**|Exclui os pixels. Esse modo exclui eliminadas todas as linhas de pixels sem tentar preservar suas informações.|  
-|**HALFTONE**|Mapas de pixels a partir do retângulo de origem em blocos de pixels do retângulo de destino. A cor média sobre o bloco de destino de pixels aproxima a cor dos pixels de origem.|  
+|**MEIO-TOM**|Mapas de pixels a partir do retângulo de origem em blocos de pixels do retângulo de destino. A cor média sobre o bloco de destino de pixels aproxima a cor dos pixels de origem.|  
 ||Depois de definir o **meio tom** ampliar modo, um aplicativo deve chamar a função Win32 [SetBrushOrgEx](http://msdn.microsoft.com/library/windows/desktop/dd162967) para definir a origem do pincel. Se ela não conseguir fazer isso, ocorre desalinhamento de pincel.|  
 |**STRETCH_ANDSCANS**|**Windows 95/98**: igual a **BLACKONWHITE**|  
 |**STRETCH_DELETESCANS**|**Windows 95/98**: igual a **COLORONCOLOR**|  

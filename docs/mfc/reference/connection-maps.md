@@ -1,13 +1,10 @@
 ---
-title: "Mapas de Conexão | Microsoft Docs"
-ms.custom: 
+title: Mapas de Conexão | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>Mapas de conexão
 Controles OLE são capazes de expor interfaces para outros aplicativos. Essas interfaces só permitem acesso de um contêiner em que o controle. Se um controle OLE quer acessar interfaces externas de outros objetos OLE, um ponto de conexão deve ser estabelecido. Esse ponto de conexão permite que um controle de acesso para mapas de expedição externo, como mapas de evento ou funções de notificação de saída.  
@@ -55,7 +50,7 @@ Controles OLE são capazes de expor interfaces para outros aplicativos. Essas in
 |[AfxConnectionAdvise](#afxconnectionadvise)|Estabelece uma conexão entre uma origem e um coletor.|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|Interrompe uma conexão entre uma origem e um coletor.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
  Use o `BEGIN_CONNECTION_PART` macro para começar a definição de pontos de conexão adicionais além os pontos de conexão de notificação de evento e propriedade.  
   
 ```   
@@ -75,7 +70,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
  Termina a declaração do seu ponto de conexão.  
   
 ```   
@@ -89,7 +84,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
  Use entre o `BEGIN_CONNECTION_PART` e `END_CONNECTION_PART` macros para definir uma ID de interface para um ponto de conexão tem suportada de controle OLE.  
   
 ```   
@@ -110,7 +105,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
  Cada `COleControl`-classe derivada em seu programa pode fornecer um mapa de conexão para especificar pontos de conexão adicionais que dá suporte a seu controle.  
   
 ```   
@@ -123,7 +118,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
  Cada `COleControl`-classe derivada em seu programa pode fornecer um mapa de conexão para especificar pontos de conexão que o controle oferecerá suporte.  
   
 ```   
@@ -143,7 +138,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
  Finaliza a definição de seu mapa de conexão.  
   
 ```   
@@ -153,7 +148,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>  CONNECTION_PART  
  Um ponto de conexão para o seu controle OLE é mapeado para uma ID de interface específica.  
   
 ```   
@@ -180,7 +175,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
  Chamar essa função para estabelecer uma conexão entre uma fonte, especificado por `pUnkSrc`e um coletor, especificado pelo `pUnkSink`.  
   
 ```   
@@ -217,7 +212,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxctl. h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
  Chamar essa função para desconectar uma conexão entre uma fonte, especificado por `pUnkSrc`e um coletor, especificado pelo `pUnkSink`.  
   
 ```   

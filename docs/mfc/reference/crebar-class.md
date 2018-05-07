@@ -1,12 +1,9 @@
 ---
 title: Classe CReBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CReBar
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd32c4df0465426d99ca6246648520d160f382e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crebar-class"></a>Classe CReBar
 Uma barra de controle que fornece informações de estado para controles rebar, persistência e layout.  
@@ -79,7 +74,7 @@ class CReBar : public CControlBar
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxext.h  
   
-##  <a name="addbar"></a>CReBar::AddBar  
+##  <a name="addbar"></a>  CReBar::AddBar  
  Chame essa função de membro para adicionar uma faixa rebar.  
   
 ```  
@@ -123,7 +118,7 @@ BOOL AddBar(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="create"></a>CReBar::Create  
+##  <a name="create"></a>  CReBar::Create  
  Chame essa função de membro para criar um rebar.  
   
 ```  
@@ -153,7 +148,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CReBar::AddBar](#addbar).  
   
-##  <a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl  
  Essa função de membro permite acesso direto ao controle comum subjacente.  
   
 ```  

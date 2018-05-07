@@ -1,13 +1,10 @@
 ---
 title: 'TN017: Destruindo objetos de janela | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.objects
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d9aa4cabaafd4eebc3a0fb0b0023a82d446d74a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6bba255403d31e7a1fa03febb0c760d20cdc81c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: destruindo objetos de janela
 Esta anotação descreve o uso do [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) método. Use este método se você deseja fazer alocação personalizada de `CWnd`-objetos derivados. Esta anotação também explica por que você deve usar [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) destruir um objeto C++ do Windows em vez do `delete` operador.  
@@ -49,7 +44,7 @@ Esta anotação descreve o uso do [CWnd::PostNcDestroy](../mfc/reference/cwnd-cl
  O segundo caso, o uso do `delete` operador em objetos do Windows, devem ser raros. A seguir estão alguns casos em que usar `delete` é a opção correta.  
   
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Limpeza automática com CWnd::PostNcDestroy  
- Quando o sistema destruir uma janela do Windows, a última mensagem de Windows enviada para a janela é `WM_NCDESTROY`. O padrão `CWnd` manipulador para essa mensagem é [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy`desanexará o `HWND` de C++ de objeto e chamar a função virtual `PostNcDestroy`. Algumas classes substituem essa função para excluir o objeto de C++.  
+ Quando o sistema destruir uma janela do Windows, a última mensagem de Windows enviada para a janela é `WM_NCDESTROY`. O padrão `CWnd` manipulador para essa mensagem é [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` desanexará o `HWND` de C++ de objeto e chamar a função virtual `PostNcDestroy`. Algumas classes substituem essa função para excluir o objeto de C++.  
   
  A implementação padrão de `CWnd::PostNcDestroy` não faz nada, que é apropriado para os objetos de janela que estão alocados no quadro de pilha ou inseridos em outros objetos. Isso não é adequado para objetos de janela que são projetados para ser alocado no heap sem qualquer outro objeto. Em outras palavras, não é apropriado para os objetos de janela que não são inseridos em outros objetos C++.  
   

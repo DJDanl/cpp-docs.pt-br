@@ -1,13 +1,10 @@
 ---
-title: "O que é um objeto CArchive | Microsoft Docs"
-ms.custom: 
+title: O que é um objeto CArchive | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CArchive class [MFC], about CArchive class [MFC]
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9b0c3e24094deb0d4fd4ac20d673d9ffafca6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55b97843a8aeb2599d2bdf34458b362fc5899368
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-is-a-carchive-object"></a>O que é um objeto CArchive
 Um `CArchive` objeto fornece um mecanismo de buffer de tipo seguro para gravar ou ler objetos serializáveis para ou de um `CFile` objeto. Geralmente o `CFile` objeto representa um arquivo de disco; no entanto, ele também pode ser um arquivo de memória (`CSharedFile` objeto), talvez que representa a área de transferência.  

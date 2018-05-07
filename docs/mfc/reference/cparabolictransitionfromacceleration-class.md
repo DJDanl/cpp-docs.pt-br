@@ -1,12 +1,9 @@
 ---
 title: Classe CParabolicTransitionFromAcceleration | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CParabolicTransitionFromAcceleration
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219d8e153501334a3de02aa12153e05a4345b215
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Classe CParabolicTransitionFromAcceleration
 Encapsula uma transição de aceleração parabólico.  
@@ -81,7 +76,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxanimationcontroller.h  
   
-##  <a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
+##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
  Constrói uma transição de aceleração parabólico e a inicializa com parâmetros especificados.  
   
 ```  
@@ -101,7 +96,7 @@ CParabolicTransitionFromAcceleration(
  `dblAcceleration`  
  A aceleração de variável de animação durante a transição.  
   
-##  <a name="create"></a>CParabolicTransitionFromAcceleration::Create  
+##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
  Chama a biblioteca de transição para criar o objeto de transição encapsulados COM.  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a transição será criada com êxito; Caso contrário, FALSE.  
   
-##  <a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration  
+##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
  A aceleração de variável de animação durante a transição.  
   
 ```  
 DOUBLE m_dblAcceleration;  
 ```  
   
-##  <a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue  
  O valor da variável de animação no final da transição.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
  A velocidade da variável de animação no final da transição.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CMenu | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMenu
@@ -93,17 +90,15 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64682066a93618c8646973c76df395883dddf053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmenu-class"></a>Classe CMenu
 Um encapsulamento do Windows `HMENU`.  
@@ -193,7 +188,7 @@ class CMenu : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>  CMenu::AppendMenu  
  Acrescenta um novo item ao final de um menu.  
   
 ```  
@@ -242,7 +237,7 @@ BOOL AppendMenu(
   
 - **MF_DISABLED** desabilita o item de menu para que ele não pode ser selecionado, mas não esmaecer a ele.  
   
-- `MF_ENABLED`Permite que o item de menu para que ele pode ser selecionado e restaurá-lo do seu estado esmaecido.  
+- `MF_ENABLED` Permite que o item de menu para que ele pode ser selecionado e restaurá-lo do seu estado esmaecido.  
   
 - **MF_GRAYED** desabilita o item de menu para que ele não pode ser selecionado e solicitará a ele.  
   
@@ -250,7 +245,7 @@ BOOL AppendMenu(
   
 - **MF_MENUBREAK** coloca o item em uma nova linha nos menus estáticos ou em uma nova coluna nos menus pop-up. Nenhuma linha divisória é colocada entre as colunas.  
   
-- `MF_OWNERDRAW`Especifica que o item é um item de desenho proprietário. Quando o menu é exibido pela primeira vez, a janela que possui o menu recebe um `WM_MEASUREITEM` mensagem, que recupera a altura e largura do item de menu. O `WM_DRAWITEM` mensagem é aquela enviada sempre que o proprietário deve atualizar a aparência visual do item de menu. Essa opção não é válida para um item de menu de nível superior.  
+- `MF_OWNERDRAW` Especifica que o item é um item de desenho proprietário. Quando o menu é exibido pela primeira vez, a janela que possui o menu recebe um `WM_MEASUREITEM` mensagem, que recupera a altura e largura do item de menu. O `WM_DRAWITEM` mensagem é aquela enviada sempre que o proprietário deve atualizar a aparência visual do item de menu. Essa opção não é válida para um item de menu de nível superior.  
   
 - **MF_POPUP** Especifica que o item de menu tem um menu pop-up associado a ele. O parâmetro de ID Especifica um identificador para um menu pop-up que deve ser associado ao item. Isso é usado para adicionar um menu pop-up de nível superior ou um menu pop-up hierárquico para um item de menu pop-up.  
   
@@ -273,7 +268,7 @@ BOOL AppendMenu(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>  CMenu::Attach  
  Anexa um menu do Windows existente para um `CMenu` objeto.  
   
 ```  
@@ -295,7 +290,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem  
  Adiciona as marcas de seleção para ou remove marcas de seleção de itens de menu no menu pop-up.  
   
 ```  
@@ -330,7 +325,7 @@ UINT CheckMenuItem(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::GetMenuState](#getmenustate).  
   
-##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem  
  Verifica se um item de menu especificado e o torna um item de rádio.  
   
 ```  
@@ -368,7 +363,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range).  
   
-##  <a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>  CMenu::CMenu  
  Cria um menu vazio e anexa-o para um `CMenu` objeto.  
   
 ```  
@@ -388,7 +383,7 @@ CMenu();
   
 - [Anexar](#attach)  
   
-##  <a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>  CMenu::CreateMenu  
  Cria um menu e anexa-o para o `CMenu` objeto.  
   
 ```  
@@ -408,7 +403,7 @@ BOOL CreateMenu();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu  
  Cria um menu pop-up e anexa-o para o `CMenu` objeto.  
   
 ```  
@@ -428,7 +423,7 @@ BOOL CreatePopupMenu();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="deletemenu"></a>CMenu::DeleteMenu  
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu  
  Exclui um item de menu.  
   
 ```  
@@ -460,7 +455,7 @@ BOOL DeleteMenu(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap  
  Chamado automaticamente pelo `CWinApp` manipulador de tempo ocioso, exclui qualquer temporário `CMenu` objetos criados pelo [FromHandle](#fromhandle) função de membro.  
   
 ```  
@@ -468,12 +463,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `DeleteTempMap`desanexa o objeto de menu do Windows anexado a um temporário `CMenu` objeto antes de excluir o `CMenu` objeto.  
+ `DeleteTempMap` desanexa o objeto de menu do Windows anexado a um temporário `CMenu` objeto antes de excluir o `CMenu` objeto.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="destroymenu"></a>CMenu::DestroyMenu  
+##  <a name="destroymenu"></a>  CMenu::DestroyMenu  
  Destrói o menu e os recursos do Windows que foram usados.  
   
 ```  
@@ -489,7 +484,7 @@ BOOL DestroyMenu();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>  CMenu::Detach  
  Desanexa um menu do Windows de um `CMenu` de objeto e retorna o identificador.  
   
 ```  
@@ -505,7 +500,7 @@ HMENU Detach();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>  CMenu::DrawItem  
  Chamado pelo framework quando um aspecto visual das alterações de um menu desenhados pelo proprietário.  
   
 ```  
@@ -526,7 +521,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem  
  Habilita, desabilita ou solicitará um item de menu.  
   
 ```  
@@ -548,7 +543,7 @@ UINT EnableMenuItem(
   
 - **MF_DISABLED** desabilita o item de menu para que ele não pode ser selecionado, mas não esmaecer a ele.  
   
-- `MF_ENABLED`Permite que o item de menu para que ele pode ser selecionado e restaurá-lo do seu estado esmaecido.  
+- `MF_ENABLED` Permite que o item de menu para que ele pode ser selecionado e restaurá-lo do seu estado esmaecido.  
   
 - **MF_GRAYED** desabilita o item de menu para que ele não pode ser selecionado e solicitará a ele.  
   
@@ -565,7 +560,7 @@ UINT EnableMenuItem(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>  CMenu::FromHandle  
  Retorna um ponteiro para um `CMenu` objeto recebe um identificador do Windows para um menu.  
   
 ```  
@@ -587,7 +582,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem  
  Determina o item de menu padrão no menu especificado.  
   
 ```  
@@ -617,7 +612,7 @@ UINT GetDefaultItem(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId  
  Recupera a Ajuda de contexto ID associada `CMenu`.  
   
 ```  
@@ -630,7 +625,7 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo  
  Recupera informações de um menu.  
   
 ```  
@@ -647,7 +642,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>Comentários  
  Chame essa função para recuperar informações sobre o menu.  
   
-##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount  
  Determina o número de itens em um menu pop-up ou de nível superior.  
   
 ```  
@@ -660,7 +655,7 @@ UINT GetMenuItemCount() const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
  Obtém o identificador do item de menu de um item de menu localizado na posição definida por `nPos`.  
   
 ```  
@@ -677,7 +672,7 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo  
  Recupera informações sobre um item de menu.  
   
 ```  
@@ -706,7 +701,7 @@ BOOL GetMenuItemInfo(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>  CMenu::GetMenuState  
  Retorna o status do item de menu especificado ou o número de itens em um menu pop-up.  
   
 ```  
@@ -733,7 +728,7 @@ UINT GetMenuState(
   
 - **MF_DISABLED** desabilita o item de menu para que ele não pode ser selecionado, mas não esmaecer a ele.  
   
-- `MF_ENABLED`Permite que o item de menu para que ele pode ser selecionado e restaurá-lo do seu estado esmaecido. Observe que o valor dessa constante é 0; um aplicativo não deve testar contra 0 para Falha ao usar esse valor.  
+- `MF_ENABLED` Permite que o item de menu para que ele pode ser selecionado e restaurá-lo do seu estado esmaecido. Observe que o valor dessa constante é 0; um aplicativo não deve testar contra 0 para Falha ao usar esse valor.  
   
 - **MF_GRAYED** desabilita o item de menu para que ele não pode ser selecionado e solicitará a ele.  
   
@@ -748,7 +743,7 @@ UINT GetMenuState(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>  CMenu::GetMenuString  
  Copia o rótulo do item de menu especificado para o buffer especificado.  
   
 ```  
@@ -794,7 +789,7 @@ int GetMenuString(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu  
  Retorna o `HMENU` encapsulado por este `CMenu` objeto, ou um **nulo** `CMenu` ponteiro.  
   
 ```  
@@ -804,7 +799,7 @@ HMENU GetSafeHmenu() const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>  CMenu::GetSubMenu  
  Recupera o `CMenu` objeto de um menu pop-up.  
   
 ```  
@@ -821,7 +816,7 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::TrackPopupMenu](#trackpopupmenu).  
   
-##  <a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>  CMenu::InsertMenu  
  Insere um novo item de menu na posição especificada pelo `nPosition` e outros itens de menu.  
   
 ```  
@@ -855,7 +850,7 @@ BOOL InsertMenu(
  Especifica a ID de comando do novo item de menu ou, se `nFlags` é definido como **MF_POPUP**, o identificador de menu ( `HMENU`) do menu pop-up. O `nIDNewItem` parâmetro é ignorado (não necessárias) se `nFlags` é definido como **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- Especifica o conteúdo do novo item de menu. `nFlags`pode ser usado para interpretar `lpszNewItem` das seguintes maneiras:  
+ Especifica o conteúdo do novo item de menu. `nFlags` pode ser usado para interpretar `lpszNewItem` das seguintes maneiras:  
   
 |nFlags|Interpretação de lpszNewItem|  
 |------------|-----------------------------------|  
@@ -881,7 +876,7 @@ BOOL InsertMenu(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem  
  Insere um novo item de menu na posição especificada em um menu.  
   
 ```  
@@ -904,7 +899,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>Comentários  
  Essa função encapsula [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), descrito no SDK do Windows.  
   
-##  <a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  Carrega um recurso de menu do arquivo executável do aplicativo e anexa-o para o `CMenu` objeto.  
   
 ```  
@@ -928,7 +923,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect  
  Carrega um recurso de um modelo de menu na memória e anexa-o para o `CMenu` objeto.  
   
 ```  
@@ -956,7 +951,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>  CMenu::m_hMenu  
  Especifica o `HMENU` anexado de identificador do menu do Windows para o `CMenu` objeto.  
   
 ```  
@@ -966,7 +961,7 @@ HMENU m_hMenu;
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>  CMenu::MeasureItem  
  Chamado pelo framework quando um menu com o estilo de desenho proprietário é criado.  
   
 ```  
@@ -987,7 +982,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
  Altera um item de menu existente na posição especificada pelo `nPosition`.  
   
 ```  
@@ -1045,7 +1040,7 @@ BOOL ModifyMenu(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
+##  <a name="operator_hmenu"></a>  CMenu::operator HMENU  
  Use este operador para recuperar o identificador do `CMenu` objeto.  
   
 ```  
@@ -1058,7 +1053,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>Comentários  
  Você pode usar o identificador para chamar diretamente as APIs do Windows.  
   
-##  <a name="operator_neq"></a>CMenu::operator! =  
+##  <a name="operator_neq"></a>  CMenu::operator! =  
  Determina se dois menus logicamente não são iguais.  
   
 ```  
@@ -1072,7 +1067,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>Comentários  
  Testa se um objeto de menu à esquerda não é igual a um objeto de menu no lado direito.  
   
-##  <a name="operator_eq_eq"></a>CMenu::operator = =  
+##  <a name="operator_eq_eq"></a>  CMenu::operator = =  
  Determina se dois menus são logicamente iguais.  
   
 ```  
@@ -1086,7 +1081,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>Comentários  
  Testa se um objeto de menu no lado esquerdo for igual (em termos do `HMENU` valor) para um objeto de menu no lado direito.  
   
-##  <a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>  CMenu::RemoveMenu  
  Exclui um item de menu com um menu pop-up associado no menu.  
   
 ```  
@@ -1118,7 +1113,7 @@ BOOL RemoveMenu(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem  
  Define o item de menu padrão para o menu especificado.  
   
 ```  
@@ -1143,7 +1138,7 @@ BOOL SetDefaultItem(
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId  
  Associa uma ID de ajuda de contexto com `CMenu`.  
   
 ```  
@@ -1163,7 +1158,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo  
  Define informações de um menu.  
   
 ```  
@@ -1180,7 +1175,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>Comentários  
  Chame essa função para definir informações específicas sobre o menu.  
   
-##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps  
  Associa os bitmaps especificados com um item de menu.  
   
 ```  
@@ -1226,7 +1221,7 @@ BOOL SetMenuItemBitmaps(
   
  [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo  
  Altera as informações sobre um item de menu.  
   
 ```  
@@ -1249,7 +1244,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>Comentários  
  Essa função encapsula [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), descrito no SDK do Windows.  
   
-##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  Exibe um menu pop-up flutuante no local especificado e controla a seleção de itens no menu pop-up.  
   
 ```  
@@ -1286,7 +1281,7 @@ BOOL TrackPopupMenu(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx  
  Exibe um menu pop-up flutuante no local especificado e controla a seleção de itens no menu pop-up.  
   
 ```  

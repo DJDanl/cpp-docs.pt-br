@@ -1,12 +1,9 @@
 ---
 title: Classe COleDropTarget | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fecdedc84f4fd93cbd9efe5e525c1771c5eb1c7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
 Fornece o mecanismo de comunicação entre uma janela e das bibliotecas OLE.  
@@ -92,7 +87,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
  Constrói um objeto da classe `COleDropTarget`.  
   
 ```  
@@ -102,7 +97,7 @@ COleDropTarget();
 ### <a name="remarks"></a>Comentários  
  Chamar [registrar](#register) para associar o objeto uma janela.  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
  Chamado pelo framework quando o cursor é arrastado primeiro na janela.  
   
 ```  
@@ -129,22 +124,22 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>Valor de retorno  
  O efeito que ocorreria se foram tentada uma queda no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE`Um descarte não será permitido.  
+- `DROPEFFECT_NONE` Um descarte não será permitido.  
   
-- `DROPEFFECT_COPY`Uma operação de cópia deve ser executada.  
+- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
   
-- `DROPEFFECT_MOVE`Uma operação de movimentação deve ser executada.  
+- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
   
-- `DROPEFFECT_LINK`Um link de dados descartados para os dados originais seja estabelecido.  
+- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL`Uma operação de arrastar rolagem está prestes a ocorrer ou está ocorrendo no destino.  
+- `DROPEFFECT_SCROLL` Uma operação de arrastar rolagem está prestes a ocorrer ou está ocorrendo no destino.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua essa função para permitir operações de soltar ocorra na janela. A implementação padrão chama [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), que retorna apenas `DROPEFFECT_NONE` por padrão.  
   
  Para obter mais informações, consulte [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) no SDK do Windows.  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  Chamado pelo framework quando o cursor sai a janela enquanto uma operação de arrastar estiver em vigor.  
   
 ```  
@@ -160,7 +155,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  Para obter mais informações, consulte [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) no SDK do Windows.  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  Chamado pelo framework quando o cursor é arrastado sobre a janela.  
   
 ```  
@@ -187,15 +182,15 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>Valor de retorno  
  O efeito que ocorreria se foram tentada uma queda no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE`Um descarte não será permitido.  
+- `DROPEFFECT_NONE` Um descarte não será permitido.  
   
-- `DROPEFFECT_COPY`Uma operação de cópia deve ser executada.  
+- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
   
-- `DROPEFFECT_MOVE`Uma operação de movimentação deve ser executada.  
+- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
   
-- `DROPEFFECT_LINK`Um link de dados descartados para os dados originais seja estabelecido.  
+- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL`Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
+- `DROPEFFECT_SCROLL` Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função deve ser substituída para permitir operações de soltar ocorra na janela. A implementação padrão Esta função chama [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), que retorna `DROPEFFECT_NONE` por padrão. Como essa função é chamada com frequência durante uma operação de arrastar e soltar, ele deve ser otimizado tanto quanto possível.  
@@ -205,7 +200,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
  Chamado pelo framework antes de chamar [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) para determinar se `point` está em uma região de rolagem.  
   
 ```  
@@ -228,20 +223,20 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>Valor de retorno  
  O efeito que ocorreria se foram tentada uma queda no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE`Um descarte não será permitido.  
+- `DROPEFFECT_NONE` Um descarte não será permitido.  
   
-- `DROPEFFECT_COPY`Uma operação de cópia deve ser executada.  
+- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
   
-- `DROPEFFECT_MOVE`Uma operação de movimentação deve ser executada.  
+- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
   
-- `DROPEFFECT_LINK`Um link de dados descartados para os dados originais seja estabelecido.  
+- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL`Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
+- `DROPEFFECT_SCROLL` Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua essa função quando desejar fornecer um comportamento especial para esse evento. A implementação padrão Esta função chama [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), que retorna `DROPEFFECT_NONE` e rolar a janela quando o cursor é arrastado para a região de rolagem padrão dentro da borda da janela.  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  Chamado pelo framework quando uma operação de soltar está ocorrer.  
   
 ```  
@@ -262,11 +257,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  O efeito que o usuário escolheu para a operação de remoção. Pode ser uma ou mais das seguintes opções:  
   
-- `DROPEFFECT_COPY`Uma operação de cópia deve ser executada.  
+- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
   
-- `DROPEFFECT_MOVE`Uma operação de movimentação deve ser executada.  
+- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
   
-- `DROPEFFECT_LINK`Um link de dados descartados para os dados originais seja estabelecido.  
+- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
   
  `point`  
  Contém o local do cursor, em pixels, em relação à tela.  
@@ -281,7 +276,7 @@ virtual BOOL OnDrop(
   
  Para obter mais informações, consulte [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) no SDK do Windows.  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  Chamado pelo framework quando uma operação de soltar está ocorrer.  
   
 ```  
@@ -319,19 +314,19 @@ virtual DROPEFFECT OnDropEx(
   
  Efeitos de soltar descrevem a ação associada a uma operação de soltar. Consulte a seguinte lista de soltar efeitos:  
   
-- `DROPEFFECT_NONE`Um descarte não será permitido.  
+- `DROPEFFECT_NONE` Um descarte não será permitido.  
   
-- `DROPEFFECT_COPY`Uma operação de cópia deve ser executada.  
+- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
   
-- `DROPEFFECT_MOVE`Uma operação de movimentação deve ser executada.  
+- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
   
-- `DROPEFFECT_LINK`Um link de dados descartados para os dados originais seja estabelecido.  
+- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL`Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
+- `DROPEFFECT_SCROLL` Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
   
  Para obter mais informações, consulte [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) no SDK do Windows.  
   
-##  <a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>  COleDropTarget::Register  
  Chame essa função para registrar sua janela com DLLs OLE como um destino válido.  
   
 ```  
@@ -350,7 +345,7 @@ BOOL Register(CWnd* pWnd);
   
  Para obter mais informações, consulte [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) no SDK do Windows.  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
  Chamar essa função antes de destruir qualquer janela que foi registrada como um destino de soltar por meio de uma chamada para [registrar](#register) para removê-lo da lista de destinos de soltar.  
   
 ```  

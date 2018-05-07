@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCReBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCReBar
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 118c792b1b732fa1e8b024bb6b80da5ea0e7aa31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
 Um `CMFCReBar` objeto é uma barra de controle que fornece informações de estado para controles rebar, persistência e layout.  
@@ -95,7 +90,7 @@ class CMFCReBar : public CPane
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxRebar.h  
   
-##  <a name="addbar"></a>CMFCReBar::AddBar  
+##  <a name="addbar"></a>  CMFCReBar::AddBar  
  Adiciona uma faixa para um rebar.  
   
 ```  
@@ -114,13 +109,13 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out]`pBar`  
+ [in] [out] `pBar`  
  Um ponteiro para a janela filho que devem ser inseridos em rebar. O objeto referenciado deve ter o **WS_CHILD** estilo da janela.  
   
  [in] `pszText`  
  Especifica o texto a ser exibido em rebar. O texto não é parte da janela filho. Em vez disso, ele é exibido o rebar em si.  
   
- [in] [out]`pbmp`  
+ [in] [out] `pbmp`  
  Especifica o bitmap a ser exibido no plano de fundo rebar.  
   
  [in] `dwStyle`  
@@ -133,9 +128,9 @@ BOOL AddBar(
  Representa a cor de plano de fundo do rebar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a faixa foi adicionada com êxito para o rebar; Caso contrário, `FALSE`.  
+ `TRUE` Se a faixa foi adicionada com êxito para o rebar; Caso contrário, `FALSE`.  
   
-##  <a name="create"></a>CMFCReBar::Create  
+##  <a name="create"></a>  CMFCReBar::Create  
  Cria um controle rebar e anexa-o para o [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) objeto.  
   
 ```  
@@ -147,7 +142,7 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out]`pParentWnd`  
+ [in] [out] `pParentWnd`  
  Um ponteiro para a janela pai deste controle rebar.  
   
  [in] `dwCtrlStyle`  
@@ -160,11 +155,11 @@ BOOL Create(
  ID de janela filho. do rebar  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o rebar foi criado com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se o rebar foi criado com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl  
  Fornece acesso direto a `CReBarCtrl` controle base comum para `CMFCReBar` objetos.  
   
 ```  
@@ -177,7 +172,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="remarks"></a>Comentários  
  Chame este método para aproveitar a funcionalidade de controle comum do Windows rebar quando Personalizando seu rebar.  
   
-##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
 
   
 ```  
@@ -194,7 +189,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="canfloat"></a>CMFCReBar::CanFloat  
+##  <a name="canfloat"></a>  CMFCReBar::CanFloat  
 
   
 ```  
@@ -205,7 +200,7 @@ virtual BOOL CanFloat() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="enabledocking"></a>CMFCReBar::EnableDocking  
+##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking  
 
   
 ```  
@@ -217,7 +212,7 @@ void EnableDocking(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
+##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize  
 
   
 ```  
@@ -228,7 +223,7 @@ UINT GetReBarBandInfoSize() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu  
 
   
 ```  
@@ -242,7 +237,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
+##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest  
 
   
 ```  
@@ -259,7 +254,7 @@ virtual INT_PTR OnToolHitTest(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI  
 
   
 ```  
@@ -274,7 +269,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
+##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment  
 
   
 ```  

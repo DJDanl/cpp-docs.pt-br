@@ -1,37 +1,32 @@
 ---
-title: "Área de transferência: Copiando e colando dados | Microsoft Docs"
-ms.custom: 
+title: 'Área de transferência: Copiando e colando dados | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Área de Transferência: copiando e colando dados
 Este tópico descreve o trabalho mínimo necessário para implementar a copiar e colar da área de transferência no seu aplicativo OLE. É recomendável que você leia o [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) tópicos antes de continuar.  
   
  Antes de implementar a copiar e colar, primeiro você deve fornecer funções para lidar com as opções de copiar, recortar e colar no menu Editar.  
   
-##  <a name="_core_copying_or_cutting_data"></a>Copiar ou dados de recorte  
+##  <a name="_core_copying_or_cutting_data"></a> Copiar ou dados de recorte  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Para copiar dados para a área de transferência  
   
@@ -47,7 +42,7 @@ Este tópico descreve o trabalho mínimo necessário para implementar a copiar e
   
  Para ver um exemplo dessa sequência, consulte o **OnEditCut** e **OnEditCopy** programas de exemplo de funções de MFC OLE [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Observe que esses exemplos mantenham um ponteiro para os dados selecionados no momento, portanto, etapa 1 já está concluída.  
   
-##  <a name="_core_pasting_data"></a>Colando dados  
+##  <a name="_core_pasting_data"></a> Colando dados  
  Colando dados é mais complicado do que copiá-lo porque você precisa escolher o formato a ser usado em colando os dados em seu aplicativo.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Para colar os dados da área de transferência  

@@ -1,12 +1,9 @@
 ---
 title: Classe CCachedDataPathProperty | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb62a905d092a347103ea98fcd323e3778ed458
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccacheddatapathproperty-class"></a>Classe CCachedDataPathProperty
 Implementa uma OLE propriedade transferido de forma assíncrona e armazenados em cache em um arquivo de memória de controle.  
@@ -52,7 +47,7 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`objeto no qual os dados em cache.|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` objeto no qual os dados em cache.|  
   
 ## <a name="remarks"></a>Comentários  
  Um arquivo de memória é armazenado na RAM e não no disco e é útil para transferências rápida temporárias.  
@@ -85,7 +80,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxctl. h  
   
-##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
  Constrói um objeto `CCachedDataPathProperty`.  
   
 ```  
@@ -102,12 +97,12 @@ CCachedDataPathProperty(
  Um ponteiro para o objeto de controle ActiveX a ser associado este `CCachedDataPathProperty` objeto.  
   
  `lpszPath`  
- O caminho, o que pode ser absoluta ou relativa, usado para criar um moniker assíncrona que faz referência a localização absoluta real da propriedade. `CCachedDataPathProperty`usa URLs, nomes de arquivos não. Se você quiser um `CCachedDataPathProperty` de objeto para um arquivo, preceda file:// para o caminho.  
+ O caminho, o que pode ser absoluta ou relativa, usado para criar um moniker assíncrona que faz referência a localização absoluta real da propriedade. `CCachedDataPathProperty` usa URLs, nomes de arquivos não. Se você quiser um `CCachedDataPathProperty` de objeto para um arquivo, preceda file:// para o caminho.  
   
 ### <a name="remarks"></a>Comentários  
  O `COleControl` objeto apontada pelo `pControl` é usado pelo [abrir](../../mfc/reference/cdatapathproperty-class.md#open) e recuperados pelas classes derivadas. Se `pControl` é **nulo**, o controle usado com **abrir** deve ser definido com [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Se `lpszPath` é **nulo**, você pode passar o caminho por meio de **abrir** ou defini-lo com [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Contém o nome da classe do arquivo de memória na qual os dados em cache.  
   
 ```  

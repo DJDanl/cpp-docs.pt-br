@@ -1,13 +1,10 @@
 ---
-title: "TN071: Implementação de IOleCommandTarget MFC | Microsoft Docs"
-ms.custom: 
+title: 'TN071: Implementação de IOleCommandTarget MFC | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f97774036c42fa0f681a65e0a335f944daf09c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21745762fb6f6eb1eb324013db12207c4b3b81d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: implementação de IOleCommandTarget MFC
 > [!NOTE]
@@ -34,11 +29,11 @@ ms.lasthandoff: 12/21/2017
   
  O `IOleCommandTarget` interface permite que objetos e seus contêineres para enviar comandos ao outro. Por exemplo, barras de ferramentas de um objeto podem conter botões para comandos como **impressão**, **Visualizar impressão**, **salvar**, `New`, e **Zoom**. Se tal objeto foram inseridos em um contêiner que dá suporte a `IOleCommandTarget`, o objeto pode habilitar seus botões e encaminhar os comandos para o contêiner de processamento quando o usuário clicou-los. Se quiser que um contêiner do objeto incorporado para imprimir em si, ele pode fazer essa solicitação enviando um comando por meio de `IOleCommandTarget` interface do objeto inserido.  
   
- `IOleCommandTarget`é uma interface de automação em que ele é usado por um cliente para chamar métodos em um servidor. No entanto, usar `IOleCommandTarget` salva a sobrecarga de chamadas por meio de interfaces de automação porque os programadores não precisam usar geralmente caros `Invoke` método `IDispatch`.  
+ `IOleCommandTarget` é uma interface de automação em que ele é usado por um cliente para chamar métodos em um servidor. No entanto, usar `IOleCommandTarget` salva a sobrecarga de chamadas por meio de interfaces de automação porque os programadores não precisam usar geralmente caros `Invoke` método `IDispatch`.  
   
  Em MFC, o `IOleCommandTarget` interface é usada pelos servidores do documento ativo para permitir que os contêineres de documento ativo enviar comandos ao servidor. A classe de servidor do documento ativo, `CDocObjectServerItem`, usa mapas de interface MFC (consulte [TN038: implementação de IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) para implementar o `IOleCommandTarget` interface.  
   
- `IOleCommandTarget`também é implementado no **COleFrameHook** classe. **COleFrameHook** é uma classe do MFC não documentada que implementa a funcionalidade de janela do quadro de in-loco edição contêineres. **COleFrameHook** também usa mapas de interface do MFC para implementar o `IOleCommandTarget` interface. **COleFrameHook**da implementação de `IOleCommandTarget` encaminha comandos OLE para `COleDocObjectItem`-derivado contêineres de documento ativo. Isso permite que qualquer contêiner de documento ativo do MFC receber mensagens de servidores independentes documento ativo.  
+ `IOleCommandTarget` também é implementado no **COleFrameHook** classe. **COleFrameHook** é uma classe do MFC não documentada que implementa a funcionalidade de janela do quadro de in-loco edição contêineres. **COleFrameHook** também usa mapas de interface do MFC para implementar o `IOleCommandTarget` interface. **COleFrameHook**da implementação de `IOleCommandTarget` encaminha comandos OLE para `COleDocObjectItem`-derivado contêineres de documento ativo. Isso permite que qualquer contêiner de documento ativo do MFC receber mensagens de servidores independentes documento ativo.  
   
 ## <a name="mfc-ole-command-maps"></a>Mapas de comando OLE do MFC  
  Os desenvolvedores MFC podem tirar proveito de `IOleCommandTarget` usando OLE do MFC mapas de comando. Mapas de comando do OLE são como mapas de mensagem porque eles podem ser usados para mapear comandos OLE para funções de membro da classe que contém o mapa de comando. Para executar esse trabalho, colocar as macros na estrutura do comando para especificar o grupo de comando OLE da ID de comando, o comando OLE e o comando que você deseja manipular o [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem que será enviada quando o comando OLE é recebido. MFC também oferece inúmeras macros predefinidas para comandos OLE padrão. Para obter uma lista de OLE padrão comandos que foram originalmente projetados para usar com aplicativos do Microsoft Office, consulte a enumeração OLECMDID, que é definida em docobj.h.  

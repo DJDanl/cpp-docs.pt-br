@@ -1,12 +1,9 @@
 ---
 title: Classe CLinearTransitionFromSpeed | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLinearTransitionFromSpeed
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ae7d972c97bdf2d94596004baa71462de7532c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clineartransitionfromspeed-class"></a>Classe CLinearTransitionFromSpeed
 Encapsula uma transição de velocidade linear.  
@@ -78,7 +73,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxanimationcontroller.h  
   
-##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
+##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
  Constrói um objeto de transição de velocidade linear e a inicializa com velocidade e o valor final.  
   
 ```  
@@ -94,7 +89,7 @@ CLinearTransitionFromSpeed(
  `dblFinalValue`  
  O valor da variável de animação no final da transição.  
   
-##  <a name="create"></a>CLinearTransitionFromSpeed::Create  
+##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
  Chama a biblioteca de transição para criar o objeto de transição encapsulados COM.  
   
 ```  
@@ -110,14 +105,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a transição será criada com êxito; Caso contrário, FALSE.  
   
-##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue  
  O valor da variável de animação no final da transição.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
+##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed  
  O valor absoluto da velocidade da variável.  
   
 ```  

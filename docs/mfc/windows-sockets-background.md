@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Plano de fundo | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: tela de fundo
 Este artigo explica a natureza e a finalidade de soquetes do Windows. O artigo também:  
@@ -62,7 +57,7 @@ Este artigo explica a natureza e a finalidade de soquetes do Windows. O artigo t
 > [!TIP]
 >  Como soquetes usam o conjunto de protocolos de Internet, eles são a rota preferencial para aplicativos que oferecem suporte a comunicações de Internet "estrada informações".  
   
-##  <a name="_core_definition_of_a_socket"></a>Definição de um soquete  
+##  <a name="_core_definition_of_a_socket"></a> Definição de um soquete  
  Um soquete é um ponto de extremidade de comunicação — um objeto por meio do qual um aplicativo de Windows Sockets envia ou recebe os pacotes de dados em uma rede. Um soquete tem um tipo e está associado um processo em execução, e pode ter um nome. Atualmente, soquetes geralmente trocam dados apenas com outros soquetes no mesmo "comunicação domínio," que usa o conjunto de protocolos de Internet.  
   
  Os dois tipos de soquetes são bidirecional; eles são fluxos de dados que podem ser comunicados simultaneamente em ambas as direções (full duplex).  
@@ -84,12 +79,12 @@ Este artigo explica a natureza e a finalidade de soquetes do Windows. O artigo t
   
  Para obter informações sobre esses tipos e que tipo de soquete para usar em que situações, consulte [Windows Sockets: soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md) e [Windows Sockets: soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md).  
   
-##  <a name="_core_the_socket_data_type"></a>O tipo de dados do soquete  
+##  <a name="_core_the_socket_data_type"></a> O tipo de dados do soquete  
  Cada objeto de soquete MFC encapsula um identificador para um objeto do Windows Sockets. O tipo de dados desse identificador é **soquete**. Um **soquete** identificador é análogo ao `HWND` para uma janela. Classes de soquete MFC fornecem operações no identificador do encapsulado.  
   
  O **soquete** tipo de dados é descrito detalhadamente no SDK do Windows. Consulte "Tipo de dados do soquete e valores de erro" em soquetes do Windows.  
   
-##  <a name="_core_uses_for_sockets"></a>Usos de soquetes  
+##  <a name="_core_uses_for_sockets"></a> Usos de soquetes  
  Soquetes são altamente úteis em contextos de comunicações de pelo menos três:  
   
 -   Modelos de cliente/servidor.  

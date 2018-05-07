@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Sequência de operações | Microsoft Docs"
-ms.custom: 
+title: 'Windows Sockets: Sequência de operações | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70765d94b0104cf905130ce043c2b0e35b26a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93fe2221e25951a53340d5da97f7d5c48ce477cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: sequência de operações
 Este artigo ilustra, lado a lado, a sequência de operações para um soquete de servidor e um soquete do cliente. Como usam os soquetes `CArchive` objetos, eles são necessariamente [soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md).  

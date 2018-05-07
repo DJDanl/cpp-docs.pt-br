@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCFontComboBox | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe CMFCFontComboBox
 O `CMFCFontComboBox` classe cria um controle de caixa de combinação que contém uma lista de fontes.  
@@ -90,7 +85,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  Constrói um objeto `CMFCFontComboBox`.  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  Recupera informações sobre a fonte selecionada no momento.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  Indica a fonte a ser usado para desenhar os rótulos de itens na caixa de combinação de fonte atual para a estrutura.  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Comentários  
  Definir esse membro como `TRUE` para direcionar a estrutura para usar a mesma fonte para desenhar cada rótulo de item. Definir esse membro como `FALSE` para direcionar o framework para desenhar cada rótulo de item com a fonte cujo nome é o mesmo que o rótulo. O valor padrão desse membro é `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  Seleciona a fonte que corresponde aos critérios especificados na caixa de combinação de fonte.  
   
 ```  
@@ -146,7 +141,7 @@ BOOL SelectFont(
  Especifica um conjunto de caracteres. O valor padrão é DEFAULT_CHARSET. Para obter mais informações, consulte o `lfCharSet` membro o [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o objeto de descrição da fonte especificada ou o nome e o conjunto de caracteres; corresponde a um item na caixa de combinação de fonte Caso contrário, `FALSE`.  
+ `TRUE` Se o objeto de descrição da fonte especificada ou o nome e o conjunto de caracteres; corresponde a um item na caixa de combinação de fonte Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para selecionar e role até o item na caixa de combinação de fonte que corresponde à fonte especificada.  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  Inicializa a lista de itens na caixa de combinação de fonte.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL Setup(
  Especifica a densidade de fonte e família. O valor padrão é DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a caixa de combinação de fonte foi inicializada com êxito; Caso contrário, `FALSE`.  
+ `TRUE` Se a caixa de combinação de fonte foi inicializada com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método inicializa a caixa de combinação de fonte ao enumerar as fontes instaladas atualmente que correspondem aos parâmetros especificados e inserir os nomes de fonte na caixa de combinação de fonte.  

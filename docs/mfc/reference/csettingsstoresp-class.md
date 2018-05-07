@@ -1,12 +1,9 @@
 ---
 title: Classe CSettingsStoreSP | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstoresp-class"></a>Classe CSettingsStoreSP
 O `CSettingsStoreSP` classe é uma classe auxiliar que você pode usar para criar instâncias de [CSettingsStore classe](../../mfc/reference/csettingsstore-class.md).  
@@ -77,12 +72,12 @@ class CSettingsStoreSP
   
  Sempre que a estrutura geralmente acessaria o registro, ele agora dinamicamente uma instância de sua classe personalizada e usá-lo para ler ou gravar dados.  
   
- `CSettingsStoreSP::SetRuntimeClass`usa uma variável estática global. Portanto, apenas um repositório personalizado está disponível por vez.  
+ `CSettingsStoreSP::SetRuntimeClass` usa uma variável estática global. Portanto, apenas um repositório personalizado está disponível por vez.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
  Cria uma nova instância de um objeto que é derivado de [CSettingsStore classe](../../mfc/reference/csettingsstore-class.md).  
   
 ```  
@@ -113,7 +108,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
  Constrói um [CSettingsStoreSP classe](../../mfc/reference/csettingsstoresp-class.md) objeto.  
   
 ```  
@@ -127,7 +122,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>Comentários  
  O `CSettingsStoreSP` objeto armazena os dados de `dwUserData` na variável de membro protegido `m_dwUserData`.  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Define a classe de tempo de execução. O método [CSettingsStoreSP::Create](#create) usa a classe de tempo de execução para determinar que tipo de objeto a ser criado.  
   
 ```  
@@ -139,7 +134,7 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
  Um ponteiro para as informações de classe de tempo de execução para uma classe derivada do [CSettingsStore classe](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se for bem-sucedida; `FALSE` se a classe identificado por `pRTI` não é derivado de `CSettingsStore`.  
+ `TRUE` Se for bem-sucedida; `FALSE` se a classe identificado por `pRTI` não é derivado de `CSettingsStore`.  
   
 ### <a name="remarks"></a>Comentários  
  Você pode usar o [CSettingsStoreSP classe](../../mfc/reference/csettingsstoresp-class.md) para derivar as classes de `CSettingsStore`. Use o método `SetRuntimeClass` se você deseja criar objetos de uma classe personalizada que é derivada de `CSettingsStore`.  

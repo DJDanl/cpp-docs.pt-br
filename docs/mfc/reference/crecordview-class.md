@@ -1,12 +1,9 @@
 ---
 title: Classe CRecordView | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecordView
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ffc45e73a2e56acf17bd1a7107e599967b3279b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecordview-class"></a>Classe CRecordView
 Uma exibição que mostra os registros do banco de dados em controles.  
@@ -71,7 +66,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 |[CRecordView::OnMove](#onmove)|Se o registro atual foi alterada, atualiza-la na fonte de dados, move para o registro especificado (próximo, anterior, primeiro ou último).|  
   
 ## <a name="remarks"></a>Comentários  
- A exibição é um modo de exibição de formulário conectado diretamente a um `CRecordset` objeto. A exibição é criada a partir de um recurso de modelo de caixa de diálogo e exibe os campos do `CRecordset` objeto nos controles do modelo de caixa de diálogo. O `CRecordView` objeto usa a troca de dados de caixa de diálogo (DDX) e troca de campos de registro (RFX) para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de registros. `CRecordView`também fornece uma implementação padrão para mover para a primeira, próximo, anterior ou o último registro e uma interface para atualizar o registro no momento no modo de exibição.  
+ A exibição é um modo de exibição de formulário conectado diretamente a um `CRecordset` objeto. A exibição é criada a partir de um recurso de modelo de caixa de diálogo e exibe os campos do `CRecordset` objeto nos controles do modelo de caixa de diálogo. O `CRecordView` objeto usa a troca de dados de caixa de diálogo (DDX) e troca de campos de registro (RFX) para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de registros. `CRecordView` também fornece uma implementação padrão para mover para a primeira, próximo, anterior ou o último registro e uma interface para atualizar o registro no momento no modo de exibição.  
   
 > [!NOTE]
 >  Se você estiver trabalhando com as classes de objetos de acesso de dados (DAO) em vez de classes de conectividade de banco de dados aberto (ODBC), use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: programação do banco de dados](../../data/data-access-programming-mfc-atl.md).  
@@ -82,7 +77,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
   
  Para obter informações sobre a implementação do padrão para a movimentação de um registro para o registro, consulte `IsOnFirstRecord` e `IsOnLastRecord` e o artigo [usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).  
   
- `CRecordView`Controla de posição do usuário no conjunto de registros para que o modo de exibição de registro possa atualizar a interface do usuário. Quando o usuário move para o fim do conjunto de registros, o modo de exibição de registro desabilita os objetos de interface do usuário — como itens de menu ou botões da barra de ferramentas — para mover adicional na mesma direção.  
+ `CRecordView` Controla de posição do usuário no conjunto de registros para que o modo de exibição de registro possa atualizar a interface do usuário. Quando o usuário move para o fim do conjunto de registros, o modo de exibição de registro desabilita os objetos de interface do usuário — como itens de menu ou botões da barra de ferramentas — para mover adicional na mesma direção.  
   
  Para obter mais informações sobre como declarar e usar suas classes de conjunto de registros e a exibição de registro, consulte "Projetando e criando uma exibição de registro" no artigo [exibições de registro](../../data/record-views-mfc-data-access.md). Para obter mais informações sobre como as exibições de registro de trabalho e como usá-los, consulte o artigo [usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -104,7 +99,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
   
-##  <a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>  CRecordView::CRecordView  
  Quando você cria um objeto de um tipo derivado de `CRecordView`, chame qualquer formulário de construtor para inicializar o objeto de exibição e identificar o recurso de caixa de diálogo na qual a exibição é baseada.  
   
 ```  
@@ -133,7 +128,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CRecordView::IsOnFirstRecord  
  Chame essa função de membro para determinar se o registro atual é o primeiro registro no objeto recordset associado a este modo de exibição do registro.  
   
 ```  
@@ -148,7 +143,7 @@ BOOL IsOnFirstRecord();
   
  Se o usuário move para o primeiro registro, o framework desativa quaisquer objetos de interface de usuário para mover para o primeiro ou o registro anterior.  
   
-##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CRecordView::IsOnLastRecord  
  Chame essa função de membro para determinar se o registro atual é o último registro no objeto recordset associado a este modo de exibição do registro.  
   
 ```  
@@ -162,9 +157,9 @@ BOOL IsOnLastRecord();
  Essa função é útil para escrever suas próprias implementações do padrão manipuladores de atualização de comando que grava ClassWizard para dar suporte a uma interface do usuário para a movimentação de um registro para outro.  
   
 > [!CAUTION]
->  O resultado dessa função é confiável, exceto que o modo de exibição não pode detectar o final do conjunto de registros até que o usuário passou para ele. O usuário deve mover além do último registro antes que a exibição de registro pode dizer que ele deve desabilitar quaisquer objetos de interface do usuário para mover para o próximo ou o último registro. Se o usuário ultrapassar o último registro e, em seguida, volta para o último registro (ou antes dele), o modo de exibição de registro pode controlar a posição do usuário no conjunto de registros e desabilitar os objetos de interface de usuário corretamente. `IsOnLastRecord`também é confiável após uma chamada para a função de implementação **OnRecordLast**, que trata o `ID_RECORD_LAST` comando, ou `CRecordset::MoveLast`.  
+>  O resultado dessa função é confiável, exceto que o modo de exibição não pode detectar o final do conjunto de registros até que o usuário passou para ele. O usuário deve mover além do último registro antes que a exibição de registro pode dizer que ele deve desabilitar quaisquer objetos de interface do usuário para mover para o próximo ou o último registro. Se o usuário ultrapassar o último registro e, em seguida, volta para o último registro (ou antes dele), o modo de exibição de registro pode controlar a posição do usuário no conjunto de registros e desabilitar os objetos de interface de usuário corretamente. `IsOnLastRecord` também é confiável após uma chamada para a função de implementação **OnRecordLast**, que trata o `ID_RECORD_LAST` comando, ou `CRecordset::MoveLast`.  
   
-##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Retorna um ponteiro para o `CRecordset`-derivados do objeto associado à exibição de registro.  
   
 ```  
@@ -179,7 +174,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  Para obter mais informações e exemplos, consulte o artigo [exibições de registro: usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>  CRecordView::OnMove  
  Chame essa função de membro para mover para um registro diferente no conjunto de registros e exibir seus campos dos controles de exibição de registro.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Um dos seguintes valores de ID de comando padrão:  
   
-- `ID_RECORD_FIRST`Mover para o primeiro registro no conjunto de registros.  
+- `ID_RECORD_FIRST` Mover para o primeiro registro no conjunto de registros.  
   
-- `ID_RECORD_LAST`Mova para o último registro no conjunto de registros.  
+- `ID_RECORD_LAST` Mova para o último registro no conjunto de registros.  
   
-- `ID_RECORD_NEXT`Mover para o próximo registro no conjunto de registros.  
+- `ID_RECORD_NEXT` Mover para o próximo registro no conjunto de registros.  
   
-- `ID_RECORD_PREV`Mover para o registro anterior no conjunto de registros.  
+- `ID_RECORD_PREV` Mover para o registro anterior no conjunto de registros.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a movimentação foi bem-sucedida; Caso contrário, 0 se a solicitação de movimentação foi negada.  

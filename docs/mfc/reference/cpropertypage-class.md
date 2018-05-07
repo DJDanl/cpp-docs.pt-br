@@ -1,12 +1,9 @@
 ---
 title: Classe CPropertyPage | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropertyPage
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42a0ba40797312a2108a288fecdea55c6873f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropertypage-class"></a>Classe CPropertyPage
 Representa as páginas individuais de uma folha de propriedades, também conhecido como uma caixa de diálogo de guia.  
@@ -125,7 +120,7 @@ class CPropertyPage : public CDialog
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdlgs.h  
   
-##  <a name="canceltoclose"></a>CPropertyPage::CancelToClose  
+##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose  
  Depois que uma alteração irrecuperável foi feita para os dados em uma página de uma folha de propriedades modal, chame essa função.  
   
 ```  
@@ -140,7 +135,7 @@ void CancelToClose();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertyPage::QuerySiblings](#querysiblings).  
   
-##  <a name="construct"></a>CPropertyPage::Construct  
+##  <a name="construct"></a>  CPropertyPage::Construct  
  Chamar essa função de membro para construir um `CPropertyPage` objeto.  
   
 ```  
@@ -200,7 +195,7 @@ void Construct(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
   
-##  <a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
+##  <a name="cpropertypage"></a>  CPropertyPage::CPropertyPage  
  Constrói um objeto `CPropertyPage`.  
   
 ```  
@@ -266,7 +261,7 @@ CPropertyPage(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
-##  <a name="getpsp"></a>CPropertyPage::GetPSP  
+##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
  Recupera o Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) estrutura associada a `CPropertyPage` objeto.  
   
 ```  
@@ -278,8 +273,8 @@ PROPSHEETPAGE& GetPSP();
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência para o **PROPSHEETPAGE** estrutura.  
   
-##  <a name="m_psp"></a>CPropertyPage::m_psp  
- `m_psp`é uma estrutura cujos membros armazenam as características de [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
+##  <a name="m_psp"></a>  CPropertyPage::m_psp  
+ `m_psp` é uma estrutura cujos membros armazenam as características de [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -293,7 +288,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
-##  <a name="onapply"></a>CPropertyPage::OnApply  
+##  <a name="onapply"></a>  CPropertyPage::OnApply  
  Essa função de membro é chamada pelo framework quando o usuário escolhe o Okey ou o botão Aplicar agora.  
   
 ```  
@@ -315,7 +310,7 @@ virtual BOOL OnApply();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertyPage::OnOK](#onok).  
   
-##  <a name="oncancel"></a>CPropertyPage::OnCancel  
+##  <a name="oncancel"></a>  CPropertyPage::OnCancel  
  Essa função de membro é chamada pelo framework quando o botão Cancelar está selecionado.  
   
 ```  
@@ -328,7 +323,7 @@ virtual void OnCancel();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
-##  <a name="onkillactive"></a>CPropertyPage::OnKillActive  
+##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive  
  Essa função de membro é chamada pelo framework quando a página não é mais a página ativa.  
   
 ```  
@@ -348,7 +343,7 @@ virtual BOOL OnKillActive();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
-##  <a name="onok"></a>CPropertyPage::OnOK  
+##  <a name="onok"></a>  CPropertyPage::OnOK  
  Essa função de membro é chamada pelo framework quando o usuário escolhe o Okey ou o botão Aplicar agora imediatamente após o framework chama [OnKillActive](#onkillactive).  
   
 ```  
@@ -365,7 +360,7 @@ virtual void OnOK();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
   
-##  <a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CPropertyPage::OnQueryCancel  
  Essa função de membro é chamada pelo framework quando o usuário clica no botão Cancelar e antes de cancelar a ação for realizada.  
   
 ```  
@@ -383,7 +378,7 @@ virtual BOOL OnQueryCancel();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
-##  <a name="onreset"></a>CPropertyPage::OnReset  
+##  <a name="onreset"></a>  CPropertyPage::OnReset  
  Essa função de membro é chamada pelo framework quando o usuário escolhe o botão Cancelar.  
   
 ```  
@@ -400,7 +395,7 @@ virtual void OnReset();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertyPage::OnCancel](#oncancel).  
   
-##  <a name="onsetactive"></a>CPropertyPage::OnSetActive  
+##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive  
  Essa função de membro é chamada pelo framework quando a página é escolhida pelo usuário e torna-se a página ativa.  
   
 ```  
@@ -418,7 +413,7 @@ virtual BOOL OnSetActive();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).  
   
-##  <a name="onwizardback"></a>CPropertyPage::OnWizardBack  
+##  <a name="onwizardback"></a>  CPropertyPage::OnWizardBack  
  Essa função de membro é chamada pelo framework quando o usuário clica no botão Voltar em um assistente.  
   
 ```  
@@ -436,7 +431,7 @@ virtual LRESULT OnWizardBack();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
-##  <a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CPropertyPage::OnWizardFinish  
  Essa função de membro é chamada pelo framework quando o usuário clica no botão Concluir em um assistente.  
   
 ```  
@@ -464,7 +459,7 @@ virtual BOOL OnWizardFinish();
   
  [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]  
   
-##  <a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
+##  <a name="onwizardnext"></a>  CPropertyPage::OnWizardNext  
  Essa função de membro é chamada pelo framework quando o usuário clica no botão Avançar em um assistente.  
   
 ```  
@@ -482,7 +477,7 @@ virtual LRESULT OnWizardNext();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
-##  <a name="querysiblings"></a>CPropertyPage::QuerySiblings  
+##  <a name="querysiblings"></a>  CPropertyPage::QuerySiblings  
  Chame essa função de membro para encaminhar uma mensagem para cada página na folha de propriedades.  
   
 ```  
@@ -511,7 +506,7 @@ LRESULT QuerySiblings(
   
  [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]  
   
-##  <a name="setmodified"></a>CPropertyPage::SetModified  
+##  <a name="setmodified"></a>  CPropertyPage::SetModified  
  Chame essa função de membro para habilitar ou desabilitar o botão Aplicar Agora, com base em se as configurações na página de propriedade devem ser aplicadas ao objeto apropriado externo.  
   
 ```  

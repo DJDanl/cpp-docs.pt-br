@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCPropertyGridColorProperty | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c807343c29fca74168167ef5d784e056b350fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Classe CMFCPropertyGridColorProperty
 O `CMFCPropertyGridColorProperty` classe oferece suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de cor.  
@@ -94,7 +89,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  Constrói um objeto `CMFCPropertyGridColorProperty`.  
   
 ```  
@@ -122,7 +117,7 @@ CMFCPropertyGridColorProperty(
  [in] `dwData`  
  Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
   
-##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Permite que o *automáticas* botão na caixa de diálogo de seleção de cor. (O botão automático padrão é rotulado **automática**.)  
   
 ```  
@@ -140,11 +135,11 @@ void EnableAutomaticButton(
  O valor de cor RGB da cor automático (padrão).  
   
  [in] `bEnable`  
- `TRUE`Para habilitar o botão automático; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+ `TRUE` Para habilitar o botão automático; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton  
  Permite que o *outros* botão na caixa de diálogo de seleção de cor. (O padrão é rotulado outro botão **mais cores**.)  
   
 ```  
@@ -159,14 +154,14 @@ void EnableOtherButton(
  O texto do rótulo do botão outros.  
   
  [in] `bAltColorDlg`  
- `TRUE`Para exibir o `CMFCColorDialog` caixa de diálogo. `FALSE` para exibir a caixa de diálogo de seleção de cores padrão. O valor padrão é `TRUE`.  
+ `TRUE` Para exibir o `CMFCColorDialog` caixa de diálogo. `FALSE` para exibir a caixa de diálogo de seleção de cores padrão. O valor padrão é `TRUE`.  
   
  [in] `bEnable`  
- `TRUE`Para exibir o botão; Caso contrário, `FALSE`.  O valor padrão é `TRUE`.  
+ `TRUE` Para exibir o botão; Caso contrário, `FALSE`.  O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor  
  Obtém a cor atual da propriedade.  
   
 ```  
@@ -178,7 +173,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor  
  Define uma cor nova para a propriedade.  
   
 ```  
@@ -191,7 +186,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber  
  Especifica o número de colunas na grade de propriedade de cor atual.  
   
 ```  
@@ -205,7 +200,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ### <a name="remarks"></a>Comentários  
  Esse método define o valor da `m_nColumnsNumber` protegido membro de dados.  
   
-##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue  
  Define o valor original de uma propriedade editável.  
   
 ```  

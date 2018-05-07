@@ -1,12 +1,9 @@
 ---
 title: Classe CRecordset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecordset
@@ -139,17 +136,15 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2375739fe4d8442d4ecb7a1514641d45de4a8be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 683f1d612a57e4f6e2d8661af17faa73f725d3d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 Representa um conjunto de registros selecionados de uma fonte de dados.  
@@ -232,9 +227,9 @@ class CRecordset : public CObject
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CRecordset::m_hstmt](#m_hstmt)|Contém o identificador de instrução ODBC para o conjunto de registros. Digite `HSTMT`.|  
-|[CRecordset::m_nFields](#m_nfields)|Contém o número de membros de dados de campo no conjunto de registros. Digite `UINT`.|  
-|[CRecordset::m_nParams](#m_nparams)|Contém o número de membros de dados de parâmetro do conjunto de registros. Digite `UINT`.|  
+|[CRecordset::m_hstmt](#m_hstmt)|Contém o identificador de instrução ODBC para o conjunto de registros. Digite `HSTMT` no terminal integrado.|  
+|[CRecordset::m_nFields](#m_nfields)|Contém o número de membros de dados de campo no conjunto de registros. Digite `UINT` no terminal integrado.|  
+|[CRecordset::m_nParams](#m_nparams)|Contém o número de membros de dados de parâmetro do conjunto de registros. Digite `UINT` no terminal integrado.|  
 |[CRecordset::m_pDatabase](#m_pdatabase)|Contém um ponteiro para o `CDatabase` objeto por meio do qual o conjunto de registros é conectado a uma fonte de dados.|  
 |[CRecordset::m_strFilter](#m_strfilter)|Contém uma `CString` que especifica uma linguagem SQL (Structured Query) `WHERE` cláusula. Usado como um filtro para selecionar somente os registros que atendem a certos critérios.|  
 |[CRecordset::m_strSort](#m_strsort)|Contém uma `CString` que especifica um SQL `ORDER BY` cláusula. Usado para controlar como os registros são classificados.|  
@@ -271,7 +266,7 @@ class CRecordset : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb.h  
   
-##  <a name="addnew"></a>CRecordset::AddNew  
+##  <a name="addnew"></a>  CRecordset::AddNew  
  Prepara para adicionar um novo registro à tabela.  
   
 ```  
@@ -284,7 +279,7 @@ virtual void AddNew();
 > [!NOTE]
 >  Se você tiver implementado a busca de linhas em massa, você não pode chamar `AddNew`. Isso resultará em uma declaração com falha. Embora a classe `CRecordset` não fornece um mecanismo para atualizar linhas em massa de dados, você pode escrever suas próprias funções usando a função de API ODBC **SQLSetPos**. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `AddNew`Prepara um registro de novo e vazio usando membros de dados de campo do conjunto de registros. Depois de chamar `AddNew`, defina os valores que você deseja em membros de dados de campo do conjunto de registros. (Você não precisa chamar o [editar](#edit) a função de membro para essa finalidade; use **editar** somente para os registros existentes.) Quando você chama subsequentemente **atualização**, alterado os valores nos membros de dados de campo são salvos na fonte de dados.  
+ `AddNew` Prepara um registro de novo e vazio usando membros de dados de campo do conjunto de registros. Depois de chamar `AddNew`, defina os valores que você deseja em membros de dados de campo do conjunto de registros. (Você não precisa chamar o [editar](#edit) a função de membro para essa finalidade; use **editar** somente para os registros existentes.) Quando você chama subsequentemente **atualização**, alterado os valores nos membros de dados de campo são salvos na fonte de dados.  
   
 > [!CAUTION]
 >  Se você rolar para um novo registro antes de chamar **atualização**, o novo registro é perdido, e nenhum aviso é fornecido.  
@@ -301,7 +296,7 @@ virtual void AddNew();
 ### <a name="example"></a>Exemplo  
  Consulte o artigo [transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="canappend"></a>CRecordset::CanAppend  
+##  <a name="canappend"></a>  CRecordset::CanAppend  
  Determina se o conjunto de registros aberto anteriormente permite adicionar novos registros.  
   
 ```  
@@ -309,9 +304,9 @@ BOOL CanAppend() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o conjunto de registros permite adicionar novos registros. Caso contrário, 0. `CanAppend`retornará 0 se você abriu o conjunto de registros como somente leitura.  
+ Diferente de zero se o conjunto de registros permite adicionar novos registros. Caso contrário, 0. `CanAppend` retornará 0 se você abriu o conjunto de registros como somente leitura.  
   
-##  <a name="canbookmark"></a>CRecordset::CanBookmark  
+##  <a name="canbookmark"></a>  CRecordset::CanBookmark  
  Determina se o conjunto de registros permite marcar registros usando indicadores.  
   
 ```  
@@ -322,14 +317,14 @@ BOOL CanBookmark() const;
  Diferente de zero se o conjunto de registros dá suporte a indicadores; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função é independente do **CRecordset::useBookmarks** opção o `dwOptions` parâmetro do [abrir](#open) função de membro. `CanBookmark`Indica se o driver ODBC específico e o cursor tipo indicadores de suporte. **CRecordset::useBookmarks** indica se indicadores estarão disponíveis, desde que eles têm suporte.  
+ Essa função é independente do **CRecordset::useBookmarks** opção o `dwOptions` parâmetro do [abrir](#open) função de membro. `CanBookmark` Indica se o driver ODBC específico e o cursor tipo indicadores de suporte. **CRecordset::useBookmarks** indica se indicadores estarão disponíveis, desde que eles têm suporte.  
   
 > [!NOTE]
 >  Não há suporte para indicadores em conjuntos de registros somente de encaminhamento.  
   
  Para obter mais informações sobre indicadores e navegação do conjunto de registros, consulte os artigos [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) e [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cancel"></a>CRecordset::Cancel  
+##  <a name="cancel"></a>  CRecordset::Cancel  
  Solicitações que a fonte de dados cancelar uma operação assíncrona em andamento ou um processo de um thread de segundo.  
   
 ```  
@@ -339,7 +334,7 @@ void Cancel();
 ### <a name="remarks"></a>Comentários  
  Observe que as classes MFC ODBC não usam o processamento assíncrono; para executar uma operação assíncrona, você deve chamar diretamente a função de API ODBC **SQLSetConnectOption**. Para obter mais informações, consulte o tópico "Executando funções de forma assíncrona" o *guia do programador de ODBC SDK*.  
   
-##  <a name="cancelupdate"></a>CRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>  CRecordset::CancelUpdate  
  Cancela quaisquer atualizações, causado por um [editar](#edit) ou [AddNew](#addnew) operação, antes de [atualização](#update) é chamado.  
   
 ```  
@@ -355,7 +350,7 @@ void CancelUpdate();
   
  Para obter mais informações sobre a atualização de dados, consulte o artigo [conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  
   
-##  <a name="canrestart"></a>CRecordset::CanRestart  
+##  <a name="canrestart"></a>  CRecordset::CanRestart  
  Determina se o conjunto de registros permite reiniciar sua consulta (para atualizar seus registros) ao chamar o **Requery** função de membro.  
   
 ```  
@@ -365,7 +360,7 @@ BOOL CanRestart() const;
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se é permitida a repetição da consulta. Caso contrário, 0.  
   
-##  <a name="canscroll"></a>CRecordset::CanScroll  
+##  <a name="canscroll"></a>  CRecordset::CanScroll  
  Determina se o conjunto de registros permite rolagem.  
   
 ```  
@@ -378,7 +373,7 @@ BOOL CanScroll() const;
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre a rolagem, consulte o artigo [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cantransact"></a>CRecordset::CanTransact  
+##  <a name="cantransact"></a>  CRecordset::CanTransact  
  Determina se o conjunto de registros permite transações.  
   
 ```  
@@ -391,7 +386,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte o artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CRecordset::CanUpdate  
+##  <a name="canupdate"></a>  CRecordset::CanUpdate  
  Determina se o conjunto de registros pode ser atualizado.  
   
 ```  
@@ -404,7 +399,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>Comentários  
  Um conjunto de registros pode ser somente leitura se a fonte de dados é somente leitura ou se você tiver especificado **CRecordset::readOnly** no `dwOptions` parâmetro quando você abrir o conjunto de registros.  
   
-##  <a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
+##  <a name="checkrowseterror"></a>  CRecordset::CheckRowsetError  
  Chamado para manipular erros gerados durante a busca de registro.  
   
 ```  
@@ -418,7 +413,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro virtual manipula erros que ocorrem quando registros são encontrados, e é útil durante a busca de linhas em massa. Você pode querer substituindo `CheckRowsetError` para implementar seu próprio tratamento de erros.  
   
- `CheckRowsetError`é chamado automaticamente em uma operação de navegação do cursor, como **abrir**, **Requery**, ou qualquer **mover** operação. O valor de retorno da função de API de ODBC é passado **SQLExtendedFetch**. A tabela a seguir lista os possíveis valores para o `nRetCode` parâmetro.  
+ `CheckRowsetError` é chamado automaticamente em uma operação de navegação do cursor, como **abrir**, **Requery**, ou qualquer **mover** operação. O valor de retorno da função de API de ODBC é passado **SQLExtendedFetch**. A tabela a seguir lista os possíveis valores para o `nRetCode` parâmetro.  
   
 |nRetCode|Descrição|  
 |--------------|-----------------|  
@@ -431,7 +426,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
   
  Para obter mais informações sobre **SQLError**, consulte o SDK do Windows. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="close"></a>CRecordset::Close  
+##  <a name="close"></a>  CRecordset::Close  
  Fecha o conjunto de registros.  
   
 ```  
@@ -446,7 +441,7 @@ virtual void Close();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
   
-##  <a name="crecordset"></a>CRecordset::CRecordset  
+##  <a name="crecordset"></a>  CRecordset::CRecordset  
  Constrói um objeto `CRecordset`.  
   
 ```  
@@ -468,7 +463,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 ### <a name="example"></a>Exemplo  
  Para obter mais informações, consulte o artigo [conjunto de registros: declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
-##  <a name="delete"></a>CRecordset::Delete  
+##  <a name="delete"></a>  CRecordset::Delete  
  Exclui o registro atual.  
   
 ```  
@@ -491,7 +486,7 @@ virtual void Delete();
   
  [!code-cpp[NVC_MFCDatabase#18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
   
-##  <a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
+##  <a name="dobulkfieldexchange"></a>  CRecordset::DoBulkFieldExchange  
  Chamado para trocar linhas em massa de dados da fonte de dados para o conjunto de registros. Implementa em massa registrar troca de campos (RFX em massa).  
   
 ```  
@@ -503,12 +498,12 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
  Um ponteiro para um [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objeto. A estrutura serão já configurou esse objeto para especificar um contexto para a operação de troca de campos.  
   
 ### <a name="remarks"></a>Comentários  
- Quando a busca de linhas em massa é implementada, o framework chama esta função de membro para transferir automaticamente os dados da fonte de dados para seu objeto de conjunto de registros. `DoBulkFieldExchange`também associa os membros de dados de parâmetro, se houver, aos espaços reservados de parâmetros na cadeia de instrução SQL para a seleção do conjunto de registros.  
+ Quando a busca de linhas em massa é implementada, o framework chama esta função de membro para transferir automaticamente os dados da fonte de dados para seu objeto de conjunto de registros. `DoBulkFieldExchange` também associa os membros de dados de parâmetro, se houver, aos espaços reservados de parâmetros na cadeia de instrução SQL para a seleção do conjunto de registros.  
   
  Se não for implementado busca de linhas em massa, o framework chama [DoFieldExchange](#dofieldexchange). Para implementar a busca de linhas em massa, você deve especificar o `CRecordset::useMultiRowFetch` opção do `dwOptions` parâmetro o [abrir](#open) função de membro.  
   
 > [!NOTE]
-> `DoBulkFieldExchange`está disponível apenas se você estiver usando uma classe derivada de `CRecordset`. Se você tiver criado um objeto recordset diretamente do `CRecordset`, você deve chamar o [GetFieldValue](#getfieldvalue) função de membro para recuperar dados.  
+> `DoBulkFieldExchange` está disponível apenas se você estiver usando uma classe derivada de `CRecordset`. Se você tiver criado um objeto recordset diretamente do `CRecordset`, você deve chamar o [GetFieldValue](#getfieldvalue) função de membro para recuperar dados.  
   
  Troca de campos de registro em massa (RFX em massa) é semelhante a troca de campos de registro (RFX). Automaticamente, os dados são transferidos da fonte de dados para o objeto de conjunto de registros. No entanto, você não pode chamar `AddNew`, **editar**, **excluir**, ou **atualização** para transferir as alterações de volta para a fonte de dados. Classe `CRecordset` atualmente não fornece um mecanismo para atualizar linhas em massa de dados; no entanto, você pode escrever suas próprias funções usando a função de API ODBC **SQLSetPos**.  
   
@@ -516,7 +511,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
   
  Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Para obter informações relacionadas, consulte o artigo [troca de campos de registro (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="dofieldexchange"></a>CRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>  CRecordset::DoFieldExchange  
  Chamado para trocar dados (em ambas as direções) entre os membros de dados do campo do conjunto de registros e o registro correspondente na fonte de dados. Implementa registra troca de campos (RFX).  
   
 ```  
@@ -528,12 +523,12 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
  Um ponteiro para um [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objeto. A estrutura serão já configurou esse objeto para especificar um contexto para a operação de troca de campos.  
   
 ### <a name="remarks"></a>Comentários  
- Quando a busca de linhas em massa não é implementada, o framework chama esta função de membro para automaticamente trocar dados entre os membros de dados do campo de seu objeto de conjunto de registros e as colunas correspondentes do registro atual na fonte de dados. `DoFieldExchange`também associa os membros de dados de parâmetro, se houver, aos espaços reservados de parâmetros na cadeia de instrução SQL para a seleção do conjunto de registros.  
+ Quando a busca de linhas em massa não é implementada, o framework chama esta função de membro para automaticamente trocar dados entre os membros de dados do campo de seu objeto de conjunto de registros e as colunas correspondentes do registro atual na fonte de dados. `DoFieldExchange` também associa os membros de dados de parâmetro, se houver, aos espaços reservados de parâmetros na cadeia de instrução SQL para a seleção do conjunto de registros.  
   
  Se a busca de linhas em massa é implementada, o framework chama [DoBulkFieldExchange](#dobulkfieldexchange). Para implementar a busca de linhas em massa, você deve especificar o `CRecordset::useMultiRowFetch` opção do `dwOptions` parâmetro o [abrir](#open) função de membro.  
   
 > [!NOTE]
-> `DoFieldExchange`está disponível apenas se você estiver usando uma classe derivada de `CRecordset`. Se você tiver criado um objeto recordset diretamente do `CRecordset`, você deve chamar o [GetFieldValue](#getfieldvalue) função de membro para recuperar dados.  
+> `DoFieldExchange` está disponível apenas se você estiver usando uma classe derivada de `CRecordset`. Se você tiver criado um objeto recordset diretamente do `CRecordset`, você deve chamar o [GetFieldValue](#getfieldvalue) função de membro para recuperar dados.  
   
  A troca de dados de campo, chamados de troca de campos de registro (RFX), funciona em ambas as direções: de membros de dados de campo do objeto de conjunto de registros para os campos do registro na fonte de dados e de registro na fonte de dados para o objeto de conjunto de registros.  
   
@@ -547,7 +542,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
   
  Para obter mais exemplos e detalhes sobre `DoFieldExchange`, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Para obter informações gerais sobre RFX, consulte o artigo [troca de campos do registro](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="edit"></a>CRecordset::Edit  
+##  <a name="edit"></a>  CRecordset::Edit  
  Permite que as alterações no registro atual.  
   
 ```  
@@ -575,7 +570,7 @@ virtual void Edit();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
   
-##  <a name="flushresultset"></a>CRecordset::FlushResultSet  
+##  <a name="flushresultset"></a>  CRecordset::FlushResultSet  
  Recupera o próximo conjunto de resultados de uma consulta predefinida (procedimento armazenado), se houver vários conjuntos de resultados.  
   
 ```  
@@ -590,7 +585,7 @@ BOOL FlushResultSet();
   
  Se uma consulta predefinida usa um parâmetro de saída ou parâmetros de entrada/saída, você deve chamar `FlushResultSet` até ele retornar `FALSE` (o valor 0), para obter esses valores de parâmetro.  
   
- `FlushResultSet`chama a função de API ODBC `SQLMoreResults`. Se `SQLMoreResults` retorna `SQL_ERROR` ou `SQL_INVALID_HANDLE`, em seguida, `FlushResultSet` lançará uma exceção. Para obter mais informações sobre `SQLMoreResults`, consulte o SDK do Windows.  
+ `FlushResultSet` chama a função de API ODBC `SQLMoreResults`. Se `SQLMoreResults` retorna `SQL_ERROR` ou `SQL_INVALID_HANDLE`, em seguida, `FlushResultSet` lançará uma exceção. Para obter mais informações sobre `SQLMoreResults`, consulte o SDK do Windows.  
   
  O procedimento armazenado deve ter associado à campos se você deseja chamar `FlushResultSet`.  
   
@@ -601,7 +596,7 @@ BOOL FlushResultSet();
   
  [!code-cpp[NVC_MFCDatabase#22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
   
-##  <a name="getbookmark"></a>CRecordset::GetBookmark  
+##  <a name="getbookmark"></a>  CRecordset::GetBookmark  
  Obtém o valor de indicador para o registro atual.  
   
 ```  
@@ -618,14 +613,14 @@ void GetBookmark(CDBVariant& varBookmark);
 > [!NOTE]
 >  Se os indicadores são sem suporte ou não está disponível, chamar `GetBookmark` resultará em uma exceção sendo lançada. Não há suporte para indicadores em conjuntos de registros somente de encaminhamento.  
   
- `GetBookmark`atribui o valor do indicador para o registro atual para um `CDBVariant` objeto. Para retornar a esse registro a qualquer momento depois de mover para um registro diferente, chame [SetBookmark](#setbookmark) com a correspondente `CDBVariant` objeto.  
+ `GetBookmark` atribui o valor do indicador para o registro atual para um `CDBVariant` objeto. Para retornar a esse registro a qualquer momento depois de mover para um registro diferente, chame [SetBookmark](#setbookmark) com a correspondente `CDBVariant` objeto.  
   
 > [!NOTE]
 >  Depois de determinadas operações de conjunto de registros, indicadores podem não ser mais válidos. Por exemplo, se você chamar `GetBookmark` seguido por **Requery**, você não poderá retornar para o registro com `SetBookmark`. Chamar [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) para verificar se você pode chamar com segurança `SetBookmark`.  
   
  Para obter mais informações sobre indicadores e navegação do conjunto de registros, consulte os artigos [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) e [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="getdefaultconnect"></a>CRecordset::GetDefaultConnect  
+##  <a name="getdefaultconnect"></a>  CRecordset::GetDefaultConnect  
  Chamado para obter a cadeia de caracteres de conexão padrão.  
   
 ```  
@@ -638,7 +633,7 @@ virtual CString GetDefaultConnect();
 ### <a name="remarks"></a>Comentários  
  O framework chama esta função de membro para obter a cadeia de caracteres de conexão padrão para a fonte de dados no qual o conjunto de registros se baseia. ClassWizard implementa essa função para você, identificando a mesma fonte de dados que você use ClassWizard para obter informações sobre tabelas e colunas. Você provavelmente achará conveniente contam com esta conexão padrão ao desenvolver seu aplicativo. Mas a conexão padrão pode não ser apropriado para os usuários do seu aplicativo. Se esse for o caso, você deve reimplementar nessa função, descartando a versão do ClassWizard. Para obter mais informações sobre cadeias de caracteres de conexão, consulte o artigo [fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-##  <a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>  CRecordset::GetDefaultSQL  
  Chamado para obter a cadeia de caracteres padrão SQL para executar.  
   
 ```  
@@ -660,7 +655,7 @@ virtual CString GetDefaultSQL();
 > [!CAUTION]
 >  O nome da tabela estará vazio se o framework não pôde identificar um nome de tabela, se vários nomes de tabela foram fornecidos, ou se um **chamar** instrução não pôde ser interpretada. Observe que ao usar um **chamar** instrução, você não deve inserir um espaço em branco entre a chave e o **chamar** palavra-chave, nem você deve inserir um espaço em branco antes do par de chaves ou antes de  **Selecione** palavra-chave em um **selecione** instrução.  
   
-##  <a name="getfieldvalue"></a>CRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>  CRecordset::GetFieldValue  
  Recupera dados do campo no registro atual.  
   
 ```  
@@ -726,7 +721,7 @@ void GetFieldValue(
 > [!NOTE]
 >  Se você declarar um objeto de conjunto de registros sem derivando de `CRecordset`, não tem a biblioteca de cursores ODBC carregado. A biblioteca de cursores requer que o conjunto de registros tem pelo menos uma coluna associada. No entanto, quando você usa `CRecordset` diretamente, nenhuma das colunas estão associadas. As funções de membro [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) e [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) controlar se a biblioteca de cursores será carregada.  
   
- `GetFieldValue`chama a função de API ODBC **SQLGetData**. Se o driver gera o valor **SQL_NO_TOTAL** para o comprimento real do valor do campo, `GetFieldValue` lança uma exceção. Para obter mais informações sobre **SQLGetData**, consulte o SDK do Windows.  
+ `GetFieldValue` chama a função de API ODBC **SQLGetData**. Se o driver gera o valor **SQL_NO_TOTAL** para o comprimento real do valor do campo, `GetFieldValue` lança uma exceção. Para obter mais informações sobre **SQLGetData**, consulte o SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O código de exemplo a seguir ilustra chamadas para `GetFieldValue` para um objeto recordset declarado diretamente do `CRecordset`.  
@@ -738,7 +733,7 @@ void GetFieldValue(
   
  Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
+##  <a name="getodbcfieldcount"></a>  CRecordset::GetODBCFieldCount  
  Recupera o número total de campos em seu objeto de conjunto de registros.  
   
 ```  
@@ -751,7 +746,7 @@ short GetODBCFieldCount() const;
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre como criar conjuntos de registros, consulte o artigo [conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
+##  <a name="getodbcfieldinfo"></a>  CRecordset::GetODBCFieldInfo  
  Obtém informações sobre os campos no conjunto de registros.  
   
 ```  
@@ -782,7 +777,7 @@ void GetODBCFieldInfo(
   
  Para obter mais informações sobre como criar conjuntos de registros, consulte o artigo [conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getrecordcount"></a>CRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>  CRecordset::GetRecordCount  
  Determina o tamanho do conjunto de registros.  
   
 ```  
@@ -797,7 +792,7 @@ long GetRecordCount() const;
 > [!CAUTION]
 >  Contagem de registro é mantida como uma "alta marca d'água," o registro de número mais alto ainda Vista que o usuário move todos os registros. O número total de registros é conhecido apenas depois que o usuário foi movido para fora do último registro. Por motivos de desempenho, a contagem não é atualizada quando você chamar `MoveLast`. Para contar os registros, chame `MoveNext` repetidamente até `IsEOF` retorna zero. Adicionar um registro por meio de **CRecordset:AddNew** e **atualização** aumenta a contagem; excluindo um registro por meio de `CRecordset::Delete` diminui a contagem.  
   
-##  <a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
+##  <a name="getrowsetsize"></a>  CRecordset::GetRowsetSize  
  Obtém a configuração atual para o número de linhas que você deseja recuperar durante uma busca fornecida.  
   
 ```  
@@ -814,7 +809,7 @@ DWORD GetRowsetSize() const;
   
  Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
+##  <a name="getrowsfetched"></a>  CRecordset::GetRowsFetched  
  Determina quantos registros foram realmente recuperados após uma busca.  
   
 ```  
@@ -834,7 +829,7 @@ DWORD GetRowsFetched() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
   
-##  <a name="getrowstatus"></a>CRecordset::GetRowStatus  
+##  <a name="getrowstatus"></a>  CRecordset::GetRowStatus  
  Obtém o status de uma linha no conjunto de linhas atual.  
   
 ```  
@@ -849,7 +844,7 @@ WORD GetRowStatus(WORD wRow) const;
  Um valor de status para a linha. Para obter detalhes, consulte Observações.  
   
 ### <a name="remarks"></a>Comentários  
- `GetRowStatus`Retorna um valor que indica a qualquer alteração no status para a linha desde a última recuperados da fonte de dados, ou que nenhuma linha correspondente ao `wRow` foi encontrado. A tabela a seguir lista os possíveis valores de retorno.  
+ `GetRowStatus` Retorna um valor que indica a qualquer alteração no status para a linha desde a última recuperados da fonte de dados, ou que nenhuma linha correspondente ao `wRow` foi encontrado. A tabela a seguir lista os possíveis valores de retorno.  
   
 |Valor de status|Descrição|  
 |------------------|-----------------|  
@@ -862,7 +857,7 @@ WORD GetRowStatus(WORD wRow) const;
   
  Para obter mais informações, consulte a função de API ODBC **SQLExtendedFetch** no SDK do Windows.  
   
-##  <a name="getstatus"></a>CRecordset::GetStatus  
+##  <a name="getstatus"></a>  CRecordset::GetStatus  
  Determina o índice do registro atual no conjunto de registros e se o último registro foi visto.  
   
 ```  
@@ -874,7 +869,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
  Uma referência a um **CRecordsetStatus** objeto. Consulte a seção Comentários para obter mais informações.  
   
 ### <a name="remarks"></a>Comentários  
- `CRecordset`tenta controlar o índice, mas em algumas circunstâncias isso talvez não seja possível. Consulte [GetRecordCount](#getrecordcount) para obter uma explicação.  
+ `CRecordset` tenta controlar o índice, mas em algumas circunstâncias isso talvez não seja possível. Consulte [GetRecordCount](#getrecordcount) para obter uma explicação.  
   
  O **CRecordsetStatus** estrutura tem a seguinte forma:  
   
@@ -894,7 +889,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
 - **m_bRecordCountFinal** Nonzero se o número total de registros no conjunto de registros foi determinado. Geralmente isso deve ser feito desde o início do conjunto de registros e chamando `MoveNext` até `IsEOF` retorna zero. Se este membro for zero, o registro de contagem como retornado por `GetRecordCount`, se não -1, é somente uma contagem de "marca d'água de alta" dos registros.  
   
-##  <a name="getsql"></a>CRecordset::GetSQL  
+##  <a name="getsql"></a>  CRecordset::GetSQL  
  Chame essa função de membro para obter a instrução SQL que foi usada para selecionar registros do conjunto de registros quando ele foi aberto.  
   
 ```  
@@ -912,7 +907,7 @@ const CString& GetSQL() const;
 > [!NOTE]
 >  Chamar essa função de membro somente depois de chamar [abrir](#open).  
   
-##  <a name="gettablename"></a>CRecordset::GetTableName  
+##  <a name="gettablename"></a>  CRecordset::GetTableName  
  Obtém o nome da tabela SQL, no qual a consulta do conjunto de registros se baseia.  
   
 ```  
@@ -923,12 +918,12 @@ const CString& GetTableName() const;
  Um **const** referência a um `CString` que contém a tabela de nome, se o conjunto de registros com base em uma tabela; Caso contrário, uma cadeia de caracteres vazia.  
   
 ### <a name="remarks"></a>Comentários  
- `GetTableName`só é válido se o conjunto de registros é baseado em uma tabela, não uma junção de várias tabelas ou uma consulta predefinida (procedimento armazenado). O nome é somente leitura.  
+ `GetTableName` só é válido se o conjunto de registros é baseado em uma tabela, não uma junção de várias tabelas ou uma consulta predefinida (procedimento armazenado). O nome é somente leitura.  
   
 > [!NOTE]
 >  Chamar essa função de membro somente depois de chamar [abrir](#open).  
   
-##  <a name="isbof"></a>CRecordset::IsBOF  
+##  <a name="isbof"></a>  CRecordset::IsBOF  
  Retorna zero se o conjunto de registros tiver sido posicionado antes do primeiro registro. Não há nenhum registro atual.  
   
 ```  
@@ -948,7 +943,7 @@ BOOL IsBOF() const;
   
  [!code-cpp[NVC_MFCDatabase#25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
   
-##  <a name="isdeleted"></a>CRecordset::IsDeleted  
+##  <a name="isdeleted"></a>  CRecordset::IsDeleted  
  Determina se o registro atual foi excluído.  
   
 ```  
@@ -968,7 +963,7 @@ BOOL IsDeleted() const;
 > [!NOTE]
 >  Se você tiver implementado a busca de linhas em massa, você não deve chamar `IsDeleted`. Em vez disso, chame o [GetRowStatus](#getrowstatus) função de membro. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="iseof"></a>CRecordset::IsEOF  
+##  <a name="iseof"></a>  CRecordset::IsEOF  
  Retorna zero se o conjunto de registros tiver sido posicionado após o último registro. Não há nenhum registro atual.  
   
 ```  
@@ -986,7 +981,7 @@ BOOL IsEOF() const;
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [IsBOF](#isbof).  
   
-##  <a name="isfielddirty"></a>CRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>  CRecordset::IsFieldDirty  
  Determina se o membro de dados do campo especificado foi alterado desde a [editar](#edit) ou [AddNew](#addnew) foi chamado.  
   
 ```  
@@ -1008,11 +1003,11 @@ BOOL IsFieldDirty(void* pv);
   
  Chamando `IsFieldDirty` redefinirá os efeitos das anteriores chamadas para [SetFieldDirty](#setfielddirty) desde que o status incorreto do campo é avaliado novamente. No `AddNew` caso, se o valor do campo atual difere do valor pseudo nulo, o campo status é definido sujo. No **editar** caso, se o valor do campo for diferente do valor armazenado em cache, o status do campo será definido sujo.  
   
- `IsFieldDirty`é implementado por meio de [DoFieldExchange](#dofieldexchange).  
+ `IsFieldDirty` é implementado por meio de [DoFieldExchange](#dofieldexchange).  
   
  Para obter mais informações sobre o sinalizador sujo, consulte o artigo [conjunto de registros: como conjuntos de registros selecionar registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
-##  <a name="isfieldnull"></a>CRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>  CRecordset::IsFieldNull  
  Retorna zero se o campo especificado no registro atual é Null (não tem valor).  
   
 ```  
@@ -1032,9 +1027,9 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  Essa função de membro não é aplicável em conjuntos de registros que estão usando a busca de linhas em massa. Se você tiver implementado busca de linhas em massa, em seguida, `IsFieldNull` sempre retornará **FALSE** e resultará em uma declaração com falha. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `IsFieldNull`é implementado por meio de [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNull` é implementado por meio de [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>  CRecordset::IsFieldNullable  
  Retorna zero se o campo especificado no registro atual pode ser definido como Null (não ter nenhum valor).  
   
 ```  
@@ -1065,9 +1060,9 @@ BOOL IsFieldNullable(void* pv);
   
  Isso significa que você não pode definir todos os **param** campos **nulo**, como faria com **outputColumn** campos.  
   
- `IsFieldNullable`é implementado por meio de [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNullable` é implementado por meio de [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isopen"></a>CRecordset::IsOpen  
+##  <a name="isopen"></a>  CRecordset::IsOpen  
  Determina se o conjunto de registros já está aberto.  
   
 ```  
@@ -1077,7 +1072,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o objeto de conjunto de registros [abrir](#open) ou [Requery](#requery) função membro anteriormente foi chamada e o conjunto de registros não foi fechado; caso contrário, 0.  
   
-##  <a name="m_hstmt"></a>CRecordset::m_hstmt  
+##  <a name="m_hstmt"></a>  CRecordset::m_hstmt  
  Contém um identificador para a estrutura de dados de instrução ODBC, do tipo **HSTMT**, associado com o conjunto de registros.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1088,7 +1083,7 @@ BOOL IsOpen() const;
   
  Normalmente você não precisa acessar o **HSTMT** diretamente, mas pode ser necessário para a execução direta de instruções SQL. O `ExecuteSQL` função de membro de classe `CDatabase` fornece um exemplo de uso **m_hstmt**.  
   
-##  <a name="m_nfields"></a>CRecordset::m_nFields  
+##  <a name="m_nfields"></a>  CRecordset::m_nFields  
  Contém o número de membros de dados do campo na classe de conjunto de registros; ou seja, o número de colunas selecionadas, o conjunto de registros da fonte de dados.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1106,7 +1101,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Exemplo  
  Consulte o artigo [registrar troca de campos: usando RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="m_nparams"></a>CRecordset::m_nParams  
+##  <a name="m_nparams"></a>  CRecordset::m_nParams  
  Contém o número de membros de dados de parâmetro na classe de conjunto de registros; ou seja, o número de parâmetros passados com a consulta do conjunto de registros.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1120,7 +1115,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Exemplo  
   Consulte os artigos [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) e [registrar troca de campos: usando RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CRecordset::m_pDatabase  
  Contém um ponteiro para o `CDatabase` objeto por meio do qual o conjunto de registros é conectado a uma fonte de dados.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1128,7 +1123,7 @@ BOOL IsOpen() const;
   
  Normalmente você não diretamente precisará usar o ponteiro armazenado em **m_pDatabase**. Se você escrever suas próprias extensões para `CRecordset`, no entanto, você talvez precise usar o ponteiro. Por exemplo, talvez seja necessário o ponteiro se você gerar seu próprio `CDBException`s. Ou talvez seja necessário se você precisar fazer algo com o mesmo `CDatabase` objeto, como transações, definindo tempos limite, em execução ou chamar o `ExecuteSQL` função de membro de classe `CDatabase` para executar instruções SQL diretamente.  
   
-##  <a name="m_strfilter"></a>CRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>  CRecordset::m_strFilter  
  Depois de construir o objeto de conjunto de registros, mas antes de chamar seus **abrir** membro de função, use este membro de dados para armazenar um `CString` contendo um SQL **onde** cláusula.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1145,7 +1140,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
   
-##  <a name="m_strsort"></a>CRecordset::m_strSort  
+##  <a name="m_strsort"></a>  CRecordset::m_strSort  
  Depois de construir o objeto de conjunto de registros, mas antes de chamar seus **abrir** membro de função, use este membro de dados para armazenar um `CString` contendo um SQL **ORDER BY** cláusula.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1162,7 +1157,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#31](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
   
-##  <a name="move"></a>CRecordset::Move  
+##  <a name="move"></a>  CRecordset::Move  
  Move o ponteiro de registro atual no conjunto de registros, Avançar ou recuar.  
   
 ```  
@@ -1192,7 +1187,7 @@ virtual void Move(
   
 |wFetchType|Conjunto de linhas busca|Função de membro equivalente|  
 |----------------|--------------------|--------------------------------|  
-|`SQL_FETCH_RELATIVE`(o valor padrão)|A partir do conjunto de linhas `nRows` linhas da primeira linha no conjunto de linhas atual.||  
+|`SQL_FETCH_RELATIVE` (o valor padrão)|A partir do conjunto de linhas `nRows` linhas da primeira linha no conjunto de linhas atual.||  
 |`SQL_FETCH_NEXT`|O próximo conjunto de linhas; `nRows` será ignorado.|[MoveNext](#movenext)|  
 |`SQL_FETCH_PRIOR`|O conjunto de linhas anterior; `nRows` será ignorado.|[MovePrev](#moveprev)|  
 |`SQL_FETCH_FIRST`|O primeiro conjunto de linhas no conjunto de registros; `nRows` será ignorado.|[MoveFirst](#movefirst)|  
@@ -1217,7 +1212,7 @@ virtual void Move(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
   
-##  <a name="movefirst"></a>CRecordset::MoveFirst  
+##  <a name="movefirst"></a>  CRecordset::MoveFirst  
  Torna o primeiro registro no conjunto de linhas primeiro o registro atual.  
   
 ```  
@@ -1246,7 +1241,7 @@ void MoveFirst();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [IsBOF](#isbof).  
   
-##  <a name="movelast"></a>CRecordset::MoveLast  
+##  <a name="movelast"></a>  CRecordset::MoveLast  
  Torna o primeiro registro no último conjunto de linhas completo o registro atual.  
   
 ```  
@@ -1273,7 +1268,7 @@ void MoveLast();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [IsBOF](#isbof).  
   
-##  <a name="movenext"></a>CRecordset::MoveNext  
+##  <a name="movenext"></a>  CRecordset::MoveNext  
  Torna o primeiro registro no conjunto de linhas próximo registro atual.  
   
 ```  
@@ -1300,7 +1295,7 @@ void MoveNext();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [IsBOF](#isbof).  
   
-##  <a name="moveprev"></a>CRecordset::MovePrev  
+##  <a name="moveprev"></a>  CRecordset::MovePrev  
  Torna o primeiro registro no conjunto de linhas anterior ao registro atual.  
   
 ```  
@@ -1330,7 +1325,7 @@ void MovePrev();
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [IsBOF](#isbof).  
   
-##  <a name="onsetoptions"></a>CRecordset::OnSetOptions  
+##  <a name="onsetoptions"></a>  CRecordset::OnSetOptions  
  Chamado para definir as opções (usadas na seleção) para a instrução ODBC.  
   
 ```  
@@ -1342,13 +1337,13 @@ virtual void OnSetOptions(HSTMT hstmt);
  O **HSTMT** da instrução ODBC cujas opções devem ser definidas.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar `OnSetOptions` definir opções (usadas na seleção) para a instrução ODBC. O framework chama esta função de membro para definir as opções iniciais para o conjunto de registros. `OnSetOptions`Determina o suporte da fonte de dados para cursores roláveis e simultaneidade do cursor e define as opções do conjunto de registros adequadamente. (Enquanto `OnSetOptions` é usada para operações de seleção, `OnSetUpdateOptions` é usada para operações de atualização.)  
+ Chamar `OnSetOptions` definir opções (usadas na seleção) para a instrução ODBC. O framework chama esta função de membro para definir as opções iniciais para o conjunto de registros. `OnSetOptions` Determina o suporte da fonte de dados para cursores roláveis e simultaneidade do cursor e define as opções do conjunto de registros adequadamente. (Enquanto `OnSetOptions` é usada para operações de seleção, `OnSetUpdateOptions` é usada para operações de atualização.)  
   
  Substituir `OnSetOptions` para definir opções específicas para o driver ou a fonte de dados. Por exemplo, se sua fonte de dados dá suporte à abertura de acesso exclusivo, você pode substituir `OnSetOptions` para aproveitar essa capacidade.  
   
  Para obter mais informações sobre cursores, consulte o artigo [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
+##  <a name="onsetupdateoptions"></a>  CRecordset::OnSetUpdateOptions  
  Chamado para definir as opções (usadas na atualização) para a instrução ODBC.  
   
 ```  
@@ -1366,7 +1361,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
   
  Para obter mais informações sobre cursores, consulte o artigo [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="open"></a>CRecordset::Open  
+##  <a name="open"></a>  CRecordset::Open  
  Abre o conjunto de registros por recuperar a tabela ou executar a consulta que representa o conjunto de registros.  
   
 ```  
@@ -1422,7 +1417,7 @@ virtual BOOL Open(
   
 - **CRecordset::optimizeBulkAdd** usar uma instrução SQL preparada para otimizar a adição de vários registros ao mesmo tempo. Aplica-se apenas se você não estiver usando a função de API ODBC **SQLSetPos** para atualizar o conjunto de registros. A primeira atualização determina quais campos são sujos. Essa opção é mutuamente exclusiva com `CRecordset::useMultiRowFetch`.  
   
-- `CRecordset::useMultiRowFetch`Implemente a busca de linhas em massa para permitir várias linhas a serem recuperados em uma operação de busca único. Esse é um recurso avançado projetado para melhorar o desempenho. Entretanto, a troca de campos de registro em massa não tem suporte por ClassWizard. Essa opção é mutuamente exclusiva com **CRecordset::optimizeBulkAdd**. Observe que, se você especificar `CRecordset::useMultiRowFetch`, em seguida, a opção **CRecordset::noDirtyFieldCheck** será ativado automaticamente (buffer duplo não estarão disponível); em conjuntos de registros de somente avanço, a opção  **CRecordset::useExtendedFetch** será ativado automaticamente. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+- `CRecordset::useMultiRowFetch` Implemente a busca de linhas em massa para permitir várias linhas a serem recuperados em uma operação de busca único. Esse é um recurso avançado projetado para melhorar o desempenho. Entretanto, a troca de campos de registro em massa não tem suporte por ClassWizard. Essa opção é mutuamente exclusiva com **CRecordset::optimizeBulkAdd**. Observe que, se você especificar `CRecordset::useMultiRowFetch`, em seguida, a opção **CRecordset::noDirtyFieldCheck** será ativado automaticamente (buffer duplo não estarão disponível); em conjuntos de registros de somente avanço, a opção  **CRecordset::useExtendedFetch** será ativado automaticamente. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 - **CRecordset::skipDeletedRecords** ignore todos os registros excluídos ao navegar pelo conjunto de registros. Isso reduzirá o desempenho em determinados buscas relativos. Essa opção não é válida em conjuntos de registros somente de encaminhamento. Se você chamar [mover](#move) com o `nRows` parâmetro definido como 0 e o **CRecordset::skipDeletedRecords** opção set, **mover** declarará. Observe que **CRecordset::skipDeletedRecords** é semelhante a *remessa do driver*, que significa que as linhas excluídas é removidas do conjunto de registros. No entanto, se o driver de pacotes de registros, em seguida, ele ignorará somente os registros que você excluir; ele não vai ignorar a registros excluídos por outros usuários enquanto o conjunto de registros é aberto. **CRecordset::skipDeletedRecords** ignorará as linhas excluídas por outros usuários.  
   
@@ -1474,7 +1469,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCDatabase#16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
   
-##  <a name="refreshrowset"></a>CRecordset::RefreshRowset  
+##  <a name="refreshrowset"></a>  CRecordset::RefreshRowset  
  Atualiza os dados e o status de uma linha no conjunto de linhas atual.  
   
 ```  
@@ -1495,17 +1490,17 @@ void RefreshRowset(
   
  Para usar `RefreshRowset`, tenha implementado busca de linhas em massa, especificando o **CRecordset::useMulitRowFetch** opção o [abrir](#open) função de membro.  
   
- `RefreshRowset`chama a função de API ODBC **SQLSetPos**. O `wLockType` parâmetro especifica o estado de bloqueio de linha após **SQLSetPos** foi executado. A tabela a seguir descreve os valores possíveis para `wLockType`.  
+ `RefreshRowset` chama a função de API ODBC **SQLSetPos**. O `wLockType` parâmetro especifica o estado de bloqueio de linha após **SQLSetPos** foi executado. A tabela a seguir descreve os valores possíveis para `wLockType`.  
   
 |wLockType|Descrição|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(o valor padrão)|A driver ou fonte de dados garante que a linha é o mesmo estado bloqueado ou desbloqueado antes `RefreshRowset` foi chamado.|  
+|`SQL_LOCK_NO_CHANGE` (o valor padrão)|A driver ou fonte de dados garante que a linha é o mesmo estado bloqueado ou desbloqueado antes `RefreshRowset` foi chamado.|  
 |`SQL_LOCK_EXCLUSIVE`|A driver ou fonte de dados bloqueia a linha exclusivamente. Nem todas as fontes de dados oferecem suporte a esse tipo de bloqueio.|  
 |`SQL_LOCK_UNLOCK`|A fonte de dados ou driver desbloqueia a linha. Nem todas as fontes de dados oferecem suporte a esse tipo de bloqueio.|  
   
  Para obter mais informações sobre **SQLSetPos**, consulte o SDK do Windows. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="requery"></a>CRecordset::Requery  
+##  <a name="requery"></a>  CRecordset::Requery  
  Recria (atualizações) um conjunto de registros.  
   
 ```  
@@ -1522,7 +1517,7 @@ virtual BOOL Requery();
   
  Para um dynaset ou um instantâneo, chame **Requery** sempre que quiser para recriar o conjunto de registros usando um novo filtro ou classificação ou novos valores de parâmetro. Definir a nova propriedade filtrar ou classificar por atribuir novos valores para **m_strFilter** e `m_strSort` antes de chamar **Requery**. Definir novos parâmetros ao atribuir novos valores para membros de dados de parâmetro antes de chamar **Requery**. Se as cadeias de caracteres de filtro e de classificação forem alteradas, você pode reutilizar a consulta, o que melhora o desempenho.  
   
- Se a tentativa de recriar o conjunto de registros falhar, o conjunto de registros é fechado. Antes de chamar **Requery**, você pode determinar se o conjunto de registros pode ser novamente consultado chamando o `CanRestart` função de membro. `CanRestart`não garante que **Requery** terá êxito.  
+ Se a tentativa de recriar o conjunto de registros falhar, o conjunto de registros é fechado. Antes de chamar **Requery**, você pode determinar se o conjunto de registros pode ser novamente consultado chamando o `CanRestart` função de membro. `CanRestart` não garante que **Requery** terá êxito.  
   
 > [!CAUTION]
 >  Chamar **Requery** somente depois de ter chamado [abrir](#open).  
@@ -1532,7 +1527,7 @@ virtual BOOL Requery();
   
  [!code-cpp[NVC_MFCDatabase#29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
   
-##  <a name="setabsoluteposition"></a>CRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CRecordset::SetAbsolutePosition  
  Posiciona o conjunto de registros no registro correspondente para o número do registro especificado.  
   
 ```  
@@ -1544,7 +1539,7 @@ void SetAbsolutePosition(long nRows);
  A com base em uma posição ordinal para o registro atual no conjunto de registros.  
   
 ### <a name="remarks"></a>Comentários  
- `SetAbsolutePosition`Move o ponteiro do registro atual com base nessa posição ordinal.  
+ `SetAbsolutePosition` Move o ponteiro do registro atual com base nessa posição ordinal.  
   
 > [!NOTE]
 >  Essa função de membro não é válida em conjuntos de registros somente de encaminhamento.  
@@ -1558,7 +1553,7 @@ void SetAbsolutePosition(long nRows);
   
  Para obter mais informações sobre a navegação do conjunto de registros e indicadores, consulte os artigos [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="setbookmark"></a>CRecordset::SetBookmark  
+##  <a name="setbookmark"></a>  CRecordset::SetBookmark  
  Posiciona o conjunto de registros no registro que contém o indicador especificado.  
   
 ```  
@@ -1582,7 +1577,7 @@ void SetBookmark(const CDBVariant& varBookmark);
   
  Para obter mais informações sobre indicadores e navegação do conjunto de registros, consulte os artigos [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) e [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="setfielddirty"></a>CRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>  CRecordset::SetFieldDirty  
  Sinalizadores de um membro de dados do campo do conjunto de registros como alterado ou inalterado.  
   
 ```  
@@ -1619,7 +1614,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
   
  Isso significa que você não pode definir todos os **param** campos **nulo**, como faria com **outputColumn** campos.  
   
-##  <a name="setfieldnull"></a>CRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>  CRecordset::SetFieldNull  
  Sinalizadores de um membro de dados do campo do conjunto de registros como Null (especificamente com nenhum valor) ou não nulo.  
   
 ```  
@@ -1659,9 +1654,9 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 > [!NOTE]
 >  Ao definir parâmetros para Null, uma chamada para `SetFieldNull` antes do conjunto de registros é aberta resulta em uma declaração. Nesse caso, chamar [SetParamNull](#setparamnull).  
   
- `SetFieldNull`é implementado por meio de [DoFieldExchange](#dofieldexchange).  
+ `SetFieldNull` é implementado por meio de [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="setlockingmode"></a>CRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>  CRecordset::SetLockingMode  
  Define o modo de bloqueio "otimista" bloqueio (o padrão) ou "pessimista". Determina como os registros estão bloqueados para atualizações.  
   
 ```  
@@ -1679,7 +1674,7 @@ void SetLockingMode(UINT nMode);
 ### <a name="remarks"></a>Comentários  
  Chame essa função de membro, se você precisar especificar qual das duas estratégias de proteção de registro está usando o conjunto de registros para atualizações. Por padrão, o modo de bloqueio de um conjunto de registros é **otimista**. Você pode alterá-la para um mais cuidado **pessimista** a estratégia de bloqueio. Chamar `SetLockingMode` depois de criar e abrir o objeto de conjunto de registros, mas antes de chamar **editar**.  
   
-##  <a name="setparamnull"></a>CRecordset::SetParamNull  
+##  <a name="setparamnull"></a>  CRecordset::SetParamNull  
  Um parâmetro de sinalizadores como Null (especificamente com nenhum valor) ou não nulo.  
   
 ```  
@@ -1698,9 +1693,9 @@ void SetParamNull(
 ### <a name="remarks"></a>Comentários  
  Ao contrário de [SetFieldNull](#setfieldnull), você pode chamar `SetParamNull` antes de abrir o conjunto de registros.  
   
- `SetParamNull`normalmente é usado com consultas predefinidas (procedimentos armazenados).  
+ `SetParamNull` normalmente é usado com consultas predefinidas (procedimentos armazenados).  
   
-##  <a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
+##  <a name="setrowsetcursorposition"></a>  CRecordset::SetRowsetCursorPosition  
  Move o cursor para uma linha no conjunto de linhas atual.  
   
 ```  
@@ -1719,17 +1714,17 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
   
  Para usar `SetRowsetCursorPosition`, tenha implementado busca de linhas em massa, especificando o `CRecordset::useMultiRowFetch` opção do `dwOptions` parâmetro no [abrir](#open) função de membro.  
   
- `SetRowsetCursorPosition`chama a função de API ODBC **SQLSetPos**. O `wLockType` parâmetro especifica o estado de bloqueio de linha após **SQLSetPos** foi executado. A tabela a seguir descreve os valores possíveis para `wLockType`.  
+ `SetRowsetCursorPosition` chama a função de API ODBC **SQLSetPos**. O `wLockType` parâmetro especifica o estado de bloqueio de linha após **SQLSetPos** foi executado. A tabela a seguir descreve os valores possíveis para `wLockType`.  
   
 |wLockType|Descrição|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(o valor padrão)|A driver ou fonte de dados garante que a linha é o mesmo estado bloqueado ou desbloqueado antes `SetRowsetCursorPosition` foi chamado.|  
+|`SQL_LOCK_NO_CHANGE` (o valor padrão)|A driver ou fonte de dados garante que a linha é o mesmo estado bloqueado ou desbloqueado antes `SetRowsetCursorPosition` foi chamado.|  
 |`SQL_LOCK_EXCLUSIVE`|A driver ou fonte de dados bloqueia a linha exclusivamente. Nem todas as fontes de dados oferecem suporte a esse tipo de bloqueio.|  
 |`SQL_LOCK_UNLOCK`|A fonte de dados ou driver desbloqueia a linha. Nem todas as fontes de dados oferecem suporte a esse tipo de bloqueio.|  
   
  Para obter mais informações sobre **SQLSetPos**, consulte o SDK do Windows. Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
+##  <a name="setrowsetsize"></a>  CRecordset::SetRowsetSize  
  Especifica o número de registros que você deseja recuperar durante uma busca.  
   
 ```  
@@ -1755,7 +1750,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
   
  Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="update"></a>CRecordset::Update  
+##  <a name="update"></a>  CRecordset::Update  
  Conclui uma `AddNew` ou **editar** operação salvando os dados novos ou editados na fonte de dados.  
   
 ```  

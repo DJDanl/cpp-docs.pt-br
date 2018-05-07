@@ -1,13 +1,10 @@
 ---
-title: "Exceções: Exceções de banco de dados | Microsoft Docs"
-ms.custom: 
+title: 'Exceções: Exceções de banco de dados | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>Exceções: exceções de banco de dados
 Este artigo explica como manipular exceções de banco de dados. A maioria do material neste artigo se aplica se você estiver trabalhando com as classes MFC para conectividade aberta de banco de dados (ODBC) ou as classes MFC para objetos de acesso de dados (DAO). Específica a um ou outro modelo de material é marcado explicitamente. Os tópicos incluem:  
@@ -39,7 +34,7 @@ Este artigo explica como manipular exceções de banco de dados. A maioria do ma
   
 -   [Um exemplo de manipulação de exceção de banco de dados](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>Abordagens para tratamento de exceção  
+##  <a name="_core_approaches_to_exception_handling"></a> Abordagens para tratamento de exceção  
  A abordagem é o mesmo se você estiver trabalhando com DAO ou ODBC.  
   
  Você sempre deve escrever manipuladores de exceção para lidar com condições excepcionais.  
@@ -62,7 +57,7 @@ Este artigo explica como manipular exceções de banco de dados. A maioria do ma
   
  Informações adicionais sobre erros, o tipo de objeto de erro DAO e a coleção de erros DAO DAO estão disponíveis na classe [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>Um exemplo de manipulação de exceção de banco de dados  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> Um exemplo de manipulação de exceção de banco de dados  
  O exemplo a seguir tenta construir um [CRecordset](../mfc/reference/crecordset-class.md)-derivados do objeto no heap com o **novo** operador e, em seguida, abra o conjunto de registros (para uma fonte de dados ODBC). Para obter um exemplo semelhante para as classes DAO, consulte "DAO exceção exemplo" abaixo.  
   
 ### <a name="odbc-exception-example"></a>Exemplo de exceção de ODBC  

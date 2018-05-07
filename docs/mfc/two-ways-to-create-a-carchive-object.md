@@ -1,13 +1,10 @@
 ---
 title: Duas maneiras de criar um objeto CArchive | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Duas maneiras de criar um objeto CArchive
 Há duas maneiras de criar um `CArchive` objeto:  
@@ -41,7 +36,7 @@ Há duas maneiras de criar um `CArchive` objeto:
   
 -   [Criação explícita de um objeto CArchive](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Criação implícita de um objeto CArchive por meio da estrutura  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Criação implícita de um objeto CArchive por meio da estrutura  
  É a maneira mais comum e mais fácil permitir que a estrutura de criar um `CArchive` objeto para o documento em nome de salvar, salvar como e abrir comandos no menu arquivo.  
   
  Aqui está o que faz o framework quando o usuário do seu aplicativo emite o comando Salvar como no menu Arquivo:  
@@ -58,7 +53,7 @@ Há duas maneiras de criar um `CArchive` objeto:
   
  Portanto, se você permitir que a estrutura de criar o `CArchive` do objeto para o documento, você precisa fazer é implementar o documento `Serialize` função gravações e leituras de e para o arquivo morto. Você também precisa implementar `Serialize` para qualquer `CObject`-objetos derivados que o documento `Serialize` função sucessivamente serializa direta ou indiretamente.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Criação explícita de um objeto CArchive  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Criação explícita de um objeto CArchive  
  Além de serialização de um documento por meio da estrutura, há outras ocasiões, é necessário um `CArchive` objeto. Por exemplo, você talvez queira serializar dados para e da área de transferência, representado por um `CSharedFile` objeto. Ou, você talvez queira usar uma interface do usuário para salvar um arquivo que é diferente da oferecida pela estrutura. Nesse caso, você pode criar explicitamente uma `CArchive` objeto. Você fazer isso da mesma maneira que faz a estrutura, usando o procedimento a seguir.  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>Para criar explicitamente um objeto CArchive  

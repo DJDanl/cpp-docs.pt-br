@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCListCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770a1cec528355d6f7be7800ba1f77f2394bef79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclistctrl-class"></a>Classe CMFCListCtrl
 O `CMFCListCtrl` classe estende a funcionalidade do [classe CListCtrl](../../mfc/reference/clistctrl-class.md) classe, dando suporte a funcionalidade de controle de cabeçalho avançadas do [CMFCHeaderCtrl classe](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -77,7 +72,7 @@ class CMFCListCtrl : public CListCtrl
 |[CMFCListCtrl::Sort](#sort)|Classifica o controle de lista.|  
   
 ## <a name="remarks"></a>Comentários  
- `CMFCListCtrl`oferece dois aprimoramentos [classe CListCtrl](../../mfc/reference/clistctrl-class.md) classe. Primeiro, indica que a coluna de classificação é uma opção disponível desenhando automaticamente uma direção de classificação no cabeçalho. Em segundo lugar, ele oferece suporte a dados de classificação em várias colunas ao mesmo tempo.  
+ `CMFCListCtrl` oferece dois aprimoramentos [classe CListCtrl](../../mfc/reference/clistctrl-class.md) classe. Primeiro, indica que a coluna de classificação é uma opção disponível desenhando automaticamente uma direção de classificação no cabeçalho. Em segundo lugar, ele oferece suporte a dados de classificação em várias colunas ao mesmo tempo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar vários métodos no `CMFCListCtrl` classe. O exemplo mostra como criar um controle de lista, colunas de inserção, inserir itens, definir o texto de um item e definir a fonte do controle de lista. Este trecho de código é parte do [exemplo de demonstração do Visual Studio](../../visual-cpp-samples.md).  
@@ -99,7 +94,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxlistctrl.h  
   
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
+##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
  Marca as colunas classificadas com uma cor de plano de fundo diferentes.  
   
 ```  
@@ -116,9 +111,9 @@ void EnableMarkSortedColumn(
  Um parâmetro booliano que determina se deve redesenhar o controle imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
- `EnableMarkSortedColumn`usa o método `CDrawingManager::PixelAlpha` calcular a cor a ser usado para colunas de classificados. A cor escolhida baseia-se a cor de plano de fundo regulares.  
+ `EnableMarkSortedColumn` usa o método `CDrawingManager::PixelAlpha` calcular a cor a ser usado para colunas de classificados. A cor escolhida baseia-se a cor de plano de fundo regulares.  
   
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>  CMFCListCtrl::EnableMultipleSort  
  Permite que as linhas de dados na lista de controle de classificação por várias colunas.  
   
 ```  
@@ -132,7 +127,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Comentários  
  Quando você ativar a classificação com base em várias colunas, as colunas têm uma hierarquia. As linhas de dados serão classificadas primeiro pela coluna principal. Quaisquer valores equivalentes, em seguida, são classificados por cada coluna subsequente com base na prioridade.  
   
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl  
  Retorna uma referência ao controle de cabeçalho.  
   
 ```  
@@ -145,7 +140,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="remarks"></a>Comentários  
  O controle de cabeçalho para um controle de lista é a janela que contém os títulos de colunas. Geralmente é posicionado diretamente acima das colunas.  
   
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort  
  Verifica se o controle de lista atualmente suporta classificação em várias colunas.  
   
 ```  
@@ -153,12 +148,12 @@ BOOL IsMultipleSort() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o controle de lista dá suporte a vários classificação; `FALSE` caso contrário.  
+ `TRUE` Se o controle de lista dá suporte a vários classificação; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Quando um [CMFCListCtrl classe](../../mfc/reference/cmfclistctrl-class.md) dá suporte à classificação de várias, o usuário pode classificar os dados no controle de lista por várias colunas. Para habilitar a classificação de várias, chame [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
   
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>  CMFCListCtrl::OnCompareItems  
  O framework chama este método quando ele se compara dois itens.  
   
 ```  
@@ -184,7 +179,7 @@ virtual int OnCompareItems(
 ### <a name="remarks"></a>Comentários  
  A implementação padrão sempre retorna 0. Você deve substituir essa função para fornecer um algoritmo de classificação.  
   
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
+##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor  
  O framework chama este método quando ele deve determinar a cor de plano de fundo de uma célula individual.  
   
 ```  
@@ -206,7 +201,7 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="remarks"></a>Comentários  
  A implementação padrão de `OnGetCellBkColor` não usa os parâmetros de entrada fornecidos e em vez disso, simplesmente chama `GetBkColor`. Portanto, por padrão, o controle de toda a lista terá a mesma cor de plano de fundo. Você pode substituir `OnGetCellBkColor` em uma classe derivada para marcar células individuais com uma cor de plano de fundo separada.  
   
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
+##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont  
  O framework chama este método quando ele obtém a fonte de uma célula individual.  
   
 ```  
@@ -232,7 +227,7 @@ virtual HFONT OnGetCellFont(
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método retorna `NULL`. Todas as células em um controle de lista tem a mesma fonte. Substitua este método para fornecer diferentes fontes de células diferentes.  
   
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
+##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor  
  O framework chama este método quando ele deve determinar a cor do texto de uma célula individual.  
   
 ```  
@@ -254,7 +249,7 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="remarks"></a>Comentários  
  Por padrão, este método chama `GetTextColor` independentemente de parâmetros de entrada. O controle de toda a lista terá a mesma cor do texto. Você pode substituir `OnGetCellTextColor` em uma classe derivada para marcar células individuais com uma cor de texto separado.  
   
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn  
  Remove uma coluna de classificação da lista de colunas classificadas.  
   
 ```  
@@ -268,7 +263,7 @@ void RemoveSortColumn(int iColumn);
 ### <a name="remarks"></a>Comentários  
  Este método Remove uma coluna de classificação do controle de cabeçalho. Ele chama [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
   
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>  CMFCListCtrl::SetSortColumn  
  Define a coluna classificada atual e a ordem de classificação.  
   
 ```  
@@ -280,7 +275,7 @@ void SetSortColumn(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `iColumn`  
- A coluna para classificar.  
+ A coluna a ser classificada.  
   
  [in] `bAscending`  
  Um booliano que especifica a ordem de classificação.  
@@ -291,7 +286,7 @@ void SetSortColumn(
 ### <a name="remarks"></a>Comentários  
  Esse método passa os parâmetros de entrada para o controle de cabeçalho usando o método [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
   
-##  <a name="sort"></a>CMFCListCtrl::Sort  
+##  <a name="sort"></a>  CMFCListCtrl::Sort  
  Classifica o controle de lista.  
   
 ```  
@@ -303,7 +298,7 @@ virtual void Sort(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] `iColumn`  
- A coluna para classificar.  
+ A coluna a ser classificada.  
   
  [in] `bAscending`  
  Um booliano que especifica a ordem de classificação.  

@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCBaseToolBar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCBaseToolBar
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c57a09465a342a74e69d199d725ec64e7c60ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbasetoolbar-class"></a>Classe CMFCBaseToolBar
 Classe base para as barras de ferramentas.  
@@ -76,7 +71,7 @@ class CMFCBaseToolBar : public CPane
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxbasetoolbar.h  
   
-##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
+##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
  Retorna o modo de encaixe.  
   
 ```  
@@ -86,7 +81,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>Valor de retorno  
  O modo de encaixe.  
   
-##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
+##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
  Retorna o tamanho mínimo de uma barra de ferramentas.  
   
 ```  
@@ -97,7 +92,7 @@ virtual void GetMinSize(CSize& size) const;
  [out] `size`  
  O tamanho mínimo de uma barra de ferramentas.  
   
-##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
  Chamado pelo framework depois das alterações do pai do painel.  
   
 ```  

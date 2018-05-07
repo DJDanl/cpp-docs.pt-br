@@ -1,12 +1,9 @@
 ---
 title: Classe CInternetException | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8caa275af4469d45672125677d960b71212fe3de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetexception-class"></a>Classe CInternetException
 Representa uma condição de exceção relacionada a uma operação de Internet.  
@@ -72,7 +67,7 @@ class CInternetException : public CException
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxinet.h  
   
-##  <a name="cinternetexception"></a>CInternetException::CInternetException  
+##  <a name="cinternetexception"></a>  CInternetException::CInternetException  
  Essa função de membro é chamada quando um `CInternetException` objeto é criado.  
   
 ```  
@@ -86,7 +81,7 @@ CInternetException(DWORD dwError);
 ### <a name="remarks"></a>Comentários  
  Para gerar um CInternetException, chame a função global MFC [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
-##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
+##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext  
  O valor de contexto associado com a operação de Internet relacionada.  
   
 ```  
@@ -94,9 +89,9 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O identificador de contexto é especificado originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado pelo MFC para [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes derivadas. Você pode substituir esse padrão e atribuir um `dwContext` parâmetro um valor de sua escolha. `dwContext`está associado a qualquer operação do objeto especificado. `dwContext`identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ O identificador de contexto é especificado originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado pelo MFC para [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes derivadas. Você pode substituir esse padrão e atribuir um `dwContext` parâmetro um valor de sua escolha. `dwContext` está associado a qualquer operação do objeto especificado. `dwContext` identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
-##  <a name="m_dwerror"></a>CInternetException::m_dwError  
+##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  O erro que causou a exceção.  
   
 ```  

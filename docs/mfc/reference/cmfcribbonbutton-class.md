@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonButton | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonButton
@@ -123,17 +120,15 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219d305b382d80e4015578b16531158c0f8d643d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 O `CMFCRibbonButton` classe implementa botões que você pode posicionar em elementos da barra de faixa de opções, como painéis, as barras de ferramentas de acesso rápido e menus pop-up.  
@@ -255,7 +250,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxribbonbutton.h  
   
-##  <a name="addsubitem"></a>CMFCRibbonButton::AddSubItem  
+##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem  
  Adiciona um item de menu ao menu pop-up que está associado com o botão.  
   
 ```  
@@ -271,7 +266,7 @@ void AddSubItem(
  [in] `nIndex`  
  Especifica o índice no qual adicionar o elemento para a matriz de itens de menu do botão. -1 para adicionar o elemento no final da matriz de itens de menu.  
   
-##  <a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
   
 ```  
@@ -282,7 +277,7 @@ virtual BOOL CanBeStretched();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes  
+##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes  
 
   
 ```  
@@ -291,7 +286,7 @@ virtual void CleanUpSizes();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu  
+##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu  
 
   
 ```  
@@ -300,7 +295,7 @@ virtual void ClosePopupMenu();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton  
+##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton  
  Constrói um objeto de botão de faixa de opções.  
   
 ```  
@@ -342,7 +337,7 @@ CMFCRibbonButton(
   
  [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
   
-##  <a name="drawbottomtext"></a>CMFCRibbonButton::DrawBottomText  
+##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText  
 
   
 ```  
@@ -359,7 +354,7 @@ CSize DrawBottomText(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="drawimage"></a>CMFCRibbonButton::DrawImage  
+##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage  
 
   
 ```  
@@ -376,7 +371,7 @@ virtual void DrawImage(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText  
+##  <a name="drawribbontext"></a>  CMFCRibbonButton::DrawRibbonText  
 
   
 ```  
@@ -399,7 +394,7 @@ virtual int DrawRibbonText(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID  
+##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID  
  Retorna o índice de um item de menu pop-up que é associado à ID de comando especificado.  
   
 ```  
@@ -413,7 +408,7 @@ int FindSubItemIndexByID(UINT uiID) const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice de base zero do item sub que está associado com o `uiID`. -1 se não houver nenhum item tal sub.  
   
-##  <a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect  
+##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
   
 ```  
@@ -424,7 +419,7 @@ CRect GetCommandRect() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonButton::GetCompactSize  
 
   
 ```  
@@ -438,7 +433,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="geticon"></a>CMFCRibbonButton::GetIcon  
+##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon  
 
   
 ```  
@@ -452,7 +447,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getimageindex"></a>CMFCRibbonButton::GetImageIndex  
+##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex  
  Retorna o índice da imagem que está associado com o botão.  
   
 ```  
@@ -466,7 +461,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ### <a name="return-value"></a>Valor de retorno  
  O índice da imagem do botão na lista de imagens associado.  
   
-##  <a name="getimagesize"></a>CMFCRibbonButton::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize  
 
   
 ```  
@@ -480,7 +475,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize  
 
   
 ```  
@@ -494,7 +489,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getmenu"></a>CMFCRibbonButton::GetMenu  
+##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu  
  Retorna um identificador para um menu do Windows que é atribuído ao botão da faixa de opções.  
   
 ```  
@@ -504,7 +499,7 @@ HMENU GetMenu() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador para um menu do Windows atribuído ao botão; `NULL` se não há nenhum menu atribuído.  
   
-##  <a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect  
+##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
 
   
 ```  
@@ -515,7 +510,7 @@ CRect GetMenuRect() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize  
 
   
 ```  
@@ -529,7 +524,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="getsubitems"></a>CMFCRibbonButton::GetSubItems  
+##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems  
 
   
 ```  
@@ -540,7 +535,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight  
+##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight  
 
   
 ```  
@@ -551,7 +546,7 @@ int GetTextRowHeight() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText  
+##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText  
 
   
 ```  
@@ -562,7 +557,7 @@ virtual CString GetToolTipText() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode  
+##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode  
 
   
 ```  
@@ -573,7 +568,7 @@ virtual BOOL HasCompactMode() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode  
+##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode  
 
   
 ```  
@@ -584,7 +579,7 @@ virtual BOOL HasIntermediateMode() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode  
+##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode  
 
   
 ```  
@@ -595,7 +590,7 @@ virtual BOOL HasLargeMode() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="hasmenu"></a>CMFCRibbonButton::HasMenu  
+##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu  
 
   
 ```  
@@ -606,7 +601,7 @@ virtual BOOL HasMenu() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder  
+##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder  
 
   
 ```  
@@ -617,7 +612,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage  
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage  
 
   
 ```  
@@ -628,7 +623,7 @@ virtual BOOL IsAlwaysLargeImage() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton  
+##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton  
 
   
 ```  
@@ -639,7 +634,7 @@ virtual BOOL IsApplicationButton() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted  
+##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted  
 
   
 ```  
@@ -650,7 +645,7 @@ virtual BOOL IsCommandAreaHighlighted() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand  
+##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand  
  Especifica se o comando padrão para um botão de faixa de opções está habilitado.  
   
 ```  
@@ -658,9 +653,9 @@ BOOL IsDefaultCommand() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se você tiver habilitado o comando padrão para um botão de faixa de opções. `FALSE` caso contrário.  
+ `TRUE` Se você tiver habilitado o comando padrão para um botão de faixa de opções. `FALSE` caso contrário.  
   
-##  <a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton  
+##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
   
 ```  
@@ -671,7 +666,7 @@ virtual BOOL IsDefaultPanelButton() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage  
 
   
 ```  
@@ -682,7 +677,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage  
+##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage  
 
   
 ```  
@@ -693,7 +688,7 @@ BOOL IsLargeImage() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted  
+##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted  
 
   
 ```  
@@ -704,7 +699,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom  
+##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom  
 
   
 ```  
@@ -715,7 +710,7 @@ BOOL IsMenuOnBottom() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook  
+##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook  
 
   
 ```  
@@ -726,7 +721,7 @@ virtual BOOL IsPopupDefaultMenuLook() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu  
+##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu  
  Especifica se o menu é alinhado à direita.  
   
 ```  
@@ -734,9 +729,9 @@ BOOL IsRightAlignMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o menu está alinhado à direita; Caso contrário, `FALSE`.  
+ `TRUE` Se o menu está alinhado à direita; Caso contrário, `FALSE`.  
   
-##  <a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText  
+##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
 
   
 ```  
@@ -747,7 +742,7 @@ BOOL IsSingleLineText() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize  
+##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize  
 
   
 ```  
@@ -759,7 +754,7 @@ virtual void OnCalcTextSize(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onclick"></a>CMFCRibbonButton::OnClick  
+##  <a name="onclick"></a>  CMFCRibbonButton::OnClick  
  Chamado pelo framework quando o usuário clica no botão.  
   
 ```  
@@ -773,7 +768,7 @@ virtual void OnClick(CPoint point);
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada, se você desejar tratar esse evento.  
   
-##  <a name="ondraw"></a>CMFCRibbonButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonButton::OnDraw  
 
   
 ```  
@@ -785,7 +780,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder  
 
   
 ```  
@@ -797,7 +792,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground  
 
   
 ```  
@@ -811,14 +806,14 @@ virtual COLORREF OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems  
+##  <a name="removeallsubitems"></a>  CMFCRibbonButton::RemoveAllSubItems  
  Remove todos os itens de menu no menu pop-up.  
   
 ```  
 void RemoveAllSubItems();
 ```  
   
-##  <a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem  
+##  <a name="removesubitem"></a>  CMFCRibbonButton::RemoveSubItem  
  Remove um item de menu no menu pop-up.  
   
 ```  
@@ -830,9 +825,9 @@ BOOL RemoveSubItem(int nIndex);
  Especifica o índice de base zero do item de menu que você deseja remover.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o item especificado foi removido com êxito; Caso contrário, `FALSE` se `nIndex` for negativo ou excede o número de itens de menu no menu pop-up.  
+ `TRUE` Se o item especificado foi removido com êxito; Caso contrário, `FALSE` se `nIndex` for negativo ou excede o número de itens de menu no menu pop-up.  
   
-##  <a name="setaccdata"></a>CMFCRibbonButton::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
  Define os dados de acessibilidade para o botão de faixa de opções.  
   
 ```  
@@ -853,7 +848,7 @@ virtual BOOL SetACCData(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage  
+##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage  
  Especifica se o botão exibe um grande ou uma imagem em miniatura quando o usuário o botão é recolhido.  
   
 ```  
@@ -864,7 +859,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
  [in] `bSet`  
  Se `TRUE`, no botão exibe uma imagem grande. Caso contrário, o botão exibe uma imagem em miniatura.  
   
-##  <a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand  
+##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Permite que o comando padrão para o botão de faixa de opções.  
   
 ```  
@@ -876,9 +871,9 @@ void SetDefaultCommand(BOOL bSet=TRUE);
  Se `TRUE`, o botão pode executar o comando padrão. Se `FALSE`, o botão não é possível executar o comando padrão.  
   
 ### <a name="remarks"></a>Comentários  
- `bSet`é relevante apenas quando o botão tem um menu. Se `bSet` é `TRUE`, no botão pode executar o comando padrão e o menu pop-up atribuído será exibida somente quando um usuário clica na seta na borda direita do botão. Caso contrário, o botão não é possível executar o comando padrão e o menu pop-up será exibida, independentemente de qual área do botão o usuário clica.  
+ `bSet` é relevante apenas quando o botão tem um menu. Se `bSet` é `TRUE`, no botão pode executar o comando padrão e o menu pop-up atribuído será exibida somente quando um usuário clica na seta na borda direita do botão. Caso contrário, o botão não é possível executar o comando padrão e o menu pop-up será exibida, independentemente de qual área do botão o usuário clica.  
   
-##  <a name="setdescription"></a>CMFCRibbonButton::SetDescription  
+##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
   
 ```  
@@ -890,7 +885,7 @@ virtual void SetDescription(LPCTSTR lpszText);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex  
+##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex  
  Atribui um índice para a imagem do botão.  
   
 ```  
@@ -906,7 +901,7 @@ void SetImageIndex(
  [in] `bLargeImage`  
  Se `TRUE`, o índice especificado refere-se à lista de imagens grandes. Caso contrário, o índice refere-se à lista de imagens pequenas.  
   
-##  <a name="setmenu"></a>CMFCRibbonButton::SetMenu  
+##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Atribui um menu pop-up para o botão de faixa de opções.  
   
 ```  
@@ -937,7 +932,7 @@ void SetMenu(
 ### <a name="remarks"></a>Comentários  
  Quando o aplicativo atribui o menu para o botão, o botão exibe uma seta do lado direito. Se `bIsDefaultCommand` é `TRUE`, o menu é exibido apenas quando o usuário clica na seta. Se o usuário clica no botão, o comando padrão é executado. Se `bIsDefaultCommand` é `FALSE`, o menu é exibido clicando em qualquer lugar no botão.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory  
+##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
   
 ```  
@@ -949,7 +944,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu  
+##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu  
  Alinha o menu pop-up para a borda do botão.  
   
 ```  
@@ -960,7 +955,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
  [in] `bSet`  
  Se `TRUE`, o menu está alinhado à direita. Caso contrário, o menu está alinhado à esquerda  
   
-##  <a name="settext"></a>CMFCRibbonButton::SetText  
+##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 
   
 ```  

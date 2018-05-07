@@ -1,12 +1,9 @@
 ---
 title: Classe CMiniFrameWnd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
 Representa uma janela do quadro de meia altura geralmente Vista em torno de flutuando barras de ferramentas.  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Constrói um `CMiniFrameWnd` do objeto, mas não criar a janela.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Comentários  
  Para criar a janela, chame [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Cria a janela do mini-quadro Windows e anexa-o para o `CMiniFrameWnd` objeto.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** desabilita o acesso ao menu do sistema e o menu de controle e converte-os em parte da legenda (barra de título).  
   
- Consulte [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos valores de estilo de janela possíveis. É a combinação de típica usada para janelas de mini-quadro **WS_POPUP &#124; WS_CAPTION &#124; WS_SYSMENU**.  
+ Consulte [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos valores de estilo de janela possíveis. É a combinação de típica usada para janelas de mini-quadro **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
  Um `RECT` estrutura especificando as dimensões desejadas da janela.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentários  
  **Criar** inicializa o nome da classe da janela e o nome da janela e registra os valores padrão para seu estilo e pai.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Cria um objeto `CMiniFrameWnd`.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- O `CreateEx` parâmetros especificam o **WNDCLASS**, estilo de janela e posição inicial (opcionalmente) e o tamanho da janela. `CreateEx`também especifica a janela pai (se houver) e ID.  
+ O `CreateEx` parâmetros especificam o **WNDCLASS**, estilo de janela e posição inicial (opcionalmente) e o tamanho da janela. `CreateEx` também especifica a janela pai (se houver) e ID.  
   
  Quando `CreateEx` executa o Windows envia o [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), e [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) mensagens na janela.  
   
  Para estender a manipulação de mensagem padrão, derive uma classe de `CMiniFrameWnd`, adicione um mapa de mensagem para a nova classe e fornecer funções de membro para as mensagens acima. Substituir `OnCreate`, por exemplo, para executar inicialização necessária para uma nova classe.  
   
- Substituir mais **na***mensagem* adicionar mais funcionalidade a sua classe derivada de manipuladores de mensagens.  
+ Substituir mais **em * mensagem* adicionar mais funcionalidade a sua classe derivada de manipuladores de mensagens.  
   
  Se o **WS_VISIBLE** estilo for fornecido, o Windows envia a janela de todas as mensagens necessárias para ativar e mostrar a janela. Se o estilo da janela especifica uma barra de título, o título da janela apontada pelo `lpszWindowName` parâmetro é exibido na barra de título.  
   

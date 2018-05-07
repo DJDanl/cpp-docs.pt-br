@@ -1,29 +1,24 @@
 ---
 title: 'Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 2) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Instruções passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) deste passo a passo mostrada como adicionar uma faixa de opções do Office Fluent para clássica Rabisco aplicativo. Esta parte mostra como adicionar painéis de faixa de opções e os controles que os usuários podem usar em vez de menus e comandos.  
@@ -31,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="prerequisites"></a>Pré-requisitos  
  [Exemplos do Visual C++](../visual-cpp-samples.md)  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Esta parte do passo a passo tem as seguintes seções:  
   
 - [Adicionando novos painéis a faixa de opções](#addnewpanel)  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Inicializando canetas e preferências para salvar](#initpensave)  
   
-##  <a name="addnewpanel"></a>Adicionando novos painéis a faixa de opções  
+##  <a name="addnewpanel"></a> Adicionando novos painéis a faixa de opções  
  Estas etapas mostram como adicionar um **exibição** painel que contém duas caixas de seleção que controlam a visibilidade da barra de ferramentas e barra de status, e também um **janela** painel que contém uma divisão orientação vertical botão que controla a criação e a organização das janelas de interface de documentos múltiplos (MDI).  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Para adicionar um painel de exibição e o painel de janela para a barra de faixa de opções  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Seções](#top)]  
   
-##  <a name="addhelppanel"></a>Adicionar um painel de ajuda para a faixa de opções  
+##  <a name="addhelppanel"></a> Adicionar um painel de ajuda para a faixa de opções  
  Agora, você pode atribuir dois itens de menu que são definidos no aplicativo de rabisco para botões da faixa de opções que são nomeados **tópicos da Ajuda** e **sobre Rabisco**. Os botões são adicionados a um novo painel chamado **ajuda**.  
   
 #### <a name="to-add-a-help-panel"></a>Para adicionar um painel de ajuda  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Seções](#top)]  
   
-##  <a name="addpenpanel"></a>Adicionando um painel de caneta a faixa de opções  
+##  <a name="addpenpanel"></a> Adicionando um painel de caneta a faixa de opções  
  Agora, adicione um painel para exibir botões que controlam a espessura e a cor da caneta. Este painel contém uma caixa de seleção que alterna entre canetas espessas e dinâmico. Sua funcionalidade é semelhante do **linha espessa** item de menu do aplicativo de rabisco.  
   
  O aplicativo de rabisco original permite que o usuário selecione larguras de caneta na caixa de diálogo que aparece quando o usuário clica **larguras de caneta** no menu. Como a barra de faixa de opções tem bastante espaço para novos controles, você pode substituir a caixa de diálogo usando duas caixas de combinação na faixa de opções. Uma caixa de combinação ajusta a largura da caneta fina e caixa de combinação ajusta a largura da caneta espessa.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Seções](#top)]  
   
-##  <a name="addcolorbutton"></a>Adicionar um botão de cor para o painel de caneta  
+##  <a name="addcolorbutton"></a> Adicionar um botão de cor para o painel de caneta  
  Em seguida, adicione um [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) objeto que permite que o usuário Rabisco cor.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Para adicionar um botão de cor para o painel de caneta  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Seções](#top)]  
   
-##  <a name="addcolormember"></a>Adicionando um membro de cor para a classe de documento  
- Como o aplicativo de rabisco original não têm canetas de cor, você deve escrever uma implementação para eles. Para armazenar a cor da caneta do documento, adicionar um novo membro para a classe de documento`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Adicionando um membro de cor para a classe de documento  
+ Como o aplicativo de rabisco original não têm canetas de cor, você deve escrever uma implementação para eles. Para armazenar a cor da caneta do documento, adicionar um novo membro para a classe de documento `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Para adicionar um membro de cor para a classe de documento  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Seções](#top)]  
   
-##  <a name="initpensave"></a>Inicializando canetas e preferências para salvar  
+##  <a name="initpensave"></a> Inicializando canetas e preferências para salvar  
  Em seguida, inicialize a cor e a largura das canetas. Por fim, salve e carregue uma cor de desenho de um arquivo.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Controles da barra de faixa de opções de inicialização  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Adicione o seguinte código ao scribdoc.cpp, no `CScribbleDoc::InitDocument` método, após o `m_sizeDoc = CSize(200,200)` instrução.  
   
- ```*/ / Redefinição da interface do usuário para seus valores iniciais CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
+ ``` *Redefinir a faixa de opções da interface do usuário para seus valores iniciais CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)); * / / Definir ColorButton para preto  
     pColorBtn -> SetColor (RGB (0, 0, 0)).

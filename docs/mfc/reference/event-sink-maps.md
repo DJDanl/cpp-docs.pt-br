@@ -1,13 +1,10 @@
 ---
 title: Mapas do coletor de eventos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309474220f081a0eca67d0f83ead21c59eb649e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-sink-maps"></a>Mapas de coleta de evento
 Quando um controle OLE inserido dispara um evento, o contêiner do controle recebe o evento usando um mecanismo chamado um "mapa coletor de evento," fornecido pelo MFC. Este mapa de coletor de evento designa funções de manipulador para cada evento específico, bem como os parâmetros dos eventos. Para obter mais informações sobre mapas de coleta de eventos, consulte o artigo [contêineres de controle ActiveX](../../mfc/activex-control-containers.md).  
@@ -44,7 +39,7 @@ Quando um controle OLE inserido dispara um evento, o contêiner do controle rece
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Define um manipulador para tratar notificações de propriedade de um conjunto de controles OLE.|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Recebe notificações de propriedade enviadas pelo controle antes que elas são manipuladas pelo contêiner do controle.|  
   
-##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
+##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
  Começa a definição de seu mapa de coletor de eventos.  
   
 ```   
@@ -66,7 +61,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
+##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
  Um contêiner OLE pode fornecer um mapa de coletor de eventos para especificar os eventos que o contêiner será notificado.  
   
 ```   
@@ -81,7 +76,7 @@ DECLARE_EVENTSINK_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxwin.h  
   
-##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
+##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
  Finaliza a definição de seu mapa de coletor de eventos.  
   
 ```   
@@ -91,7 +86,7 @@ END_EVENTSINK_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="on_event"></a>ON_EVENT  
+##  <a name="on_event"></a>  ON_EVENT  
  Use o `ON_EVENT` macro para definir uma função de manipulador de eventos para um evento acionado por um controle OLE.  
   
 ```   
@@ -126,7 +121,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="on_event_range"></a>ON_EVENT_RANGE  
+##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
  Use o `ON_EVENT_RANGE` macro para definir uma função de manipulador de eventos para um evento acionado por qualquer outro controle OLE com uma ID de controle dentro de um intervalo de IDs contíguos.  
   
 ```   
@@ -173,7 +168,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
+##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
  O `ON_EVENT_REFLECT` macro, quando usada no evento mapa coletor da classe de invólucro de um controle OLE, recebe eventos disparados pelo controle antes que elas são manipuladas pelo contêiner do controle.  
   
 ```   
@@ -207,7 +202,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
+##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
  Use o `ON_PROPNOTIFY` macro para definir uma entrada de mapa do coletor de eventos para lidar com notificações de propriedade de um controle OLE.  
   
 ```   
@@ -240,7 +235,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
   
  Para obter uma lista de **VTS_** constantes, consulte [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
+##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
  Use o `ON_PROPNOTIFY_RANGE` macro para definir uma entrada de mapa do coletor de eventos para lidar com notificações de propriedade do controle OLE com uma ID de controle dentro de um intervalo de IDs contíguos.  
   
 ```  
@@ -271,7 +266,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
   
-##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
+##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
  O `ON_PROPNOTIFY_REFLECT` macro, quando usada no evento mapa coletor da classe de invólucro de um controle OLE, recebe notificações de propriedade enviadas pelo controle antes que elas são manipuladas pelo contêiner do controle.  
   
 ```  

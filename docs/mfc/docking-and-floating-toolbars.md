@@ -1,13 +1,10 @@
 ---
 title: Encaixando e flutuando barras de ferramentas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CBRS_SIZE_DYNAMIC
 - CBRS_SIZE_FIXED
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6646fa33c0a78e8194faa5d511e107febca6d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docking-and-floating-toolbars"></a>Encaixando e flutuando barras de ferramentas
 A biblioteca Microsoft Foundation Class suporta encaixáveis barras de ferramentas. Uma barra de ferramentas encaixável pode ser anexada ou encaixada, para qualquer lado da sua janela pai, ou pode ser desanexado, ou flutuante, em sua própria janela do quadro simplificado. Este artigo explica como usar as barras de ferramentas encaixáveis em seus aplicativos.  
@@ -65,27 +60,27 @@ A biblioteca Microsoft Foundation Class suporta encaixáveis barras de ferrament
   
  Consulte o exemplo de MFC geral [DOCKTOOL](../visual-cpp-samples.md) para obter exemplos.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a>Ativar encaixe em uma janela com moldura  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Ativar encaixe em uma janela com moldura  
  Para encaixar barras de ferramentas em uma janela do quadro, a janela do quadro (ou o destino) deve ser habilitado para permitir encaixe. Isso é feito usando o [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) função, que usa uma `DWORD` parâmetro que é um conjunto de estilo de bits que indica qual lado da janela do quadro aceita de encaixe. Se uma barra de ferramentas está prestes a ser encaixado e houver vários lados que ele poderia ser encaixado, os lados indicado no parâmetro passado para `EnableDocking` são usados na seguinte ordem: superior, inferior, esquerda, direita. Se você deseja ser capaz de controle de encaixe barras em qualquer lugar, transmitir `CBRS_ALIGN_ANY` para `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a>Ativar encaixe de uma barra de ferramentas  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> Ativar encaixe de uma barra de ferramentas  
  Depois de preparar o destino de encaixe, você deve preparar a barra de ferramentas (ou origem) de maneira semelhante. Chamar [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) para cada barra de ferramentas que você deseja encaixar, especificar o destino lados que deve encaixar a barra de ferramentas. Se nenhum dos lados especificados na chamada para `CControlBar::EnableDocking` corresponde os lados habilitados para a janela do quadro de encaixe, não é possível encaixar a barra de ferramentas — ela flutua. Quando tiver sido flutuante, ela permanece uma barra de ferramentas flutuante, não é possível encaixar a janela do quadro.  
   
  Se o efeito desejado é uma barra de ferramentas flutuante permanentemente, chame `EnableDocking` com um parâmetro de 0. Em seguida, chame [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). A barra de ferramentas permanece flutuante, permanentemente, não é possível encaixar em qualquer lugar.  
   
-##  <a name="_core_docking_the_toolbar"></a>Encaixe a barra de ferramentas  
+##  <a name="_core_docking_the_toolbar"></a> Encaixe a barra de ferramentas  
  A estrutura chama [CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) quando o usuário tenta descartar a barra de ferramentas em um lado da janela do quadro que permite o encaixe.  
   
  Além disso, você pode chamar essa função a qualquer momento para encaixar a janela do quadro barras de controle. Normalmente, isso é feito durante a inicialização. Mais de uma barra de ferramentas pode ser encaixada em um lado específico da janela do quadro.  
   
-##  <a name="_core_floating_the_toolbar"></a>A barra de ferramentas flutuante  
+##  <a name="_core_floating_the_toolbar"></a> A barra de ferramentas flutuante  
  Desanexar uma encaixável barra de ferramentas da janela do quadro é chamado da barra de ferramentas flutuante. Chamar [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) para fazer isso. Especifique um estilo de alinhamento que determina se a barra de ferramentas flutuante é horizontal ou vertical, barra de ferramentas para ser flutuante e o ponto em que ele deve ser colocado.  
   
  O framework chama esta função quando um usuário arrasta uma barra de ferramentas desativar seu local encaixado e descarta-o em um local onde o encaixe não está habilitado. Isso pode estar em qualquer lugar dentro ou fora da janela do quadro. Assim como acontece com `DockControlBar`, você também pode chamar essa função durante a inicialização.  
   
  A implementação do MFC de barras de ferramentas encaixáveis não oferece alguns dos recursos estendidos encontrados em alguns aplicativos que dão suporte a encaixáveis barras de ferramentas. Recursos como barras de ferramentas personalizadas não são fornecidos.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a>Redimensionar dinamicamente a barra de ferramentas  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Redimensionar dinamicamente a barra de ferramentas  
  A partir do Visual C++ versão 4.0, você pode tornar possível para os usuários do seu aplicativo para redimensionar as barras de ferramentas flutuantes dinamicamente. Normalmente, uma barra de ferramentas tem uma forma longa, linear, exibida horizontalmente. Mas você pode alterar a orientação da barra de ferramentas e forma. Por exemplo, quando o usuário encaixa uma barra de ferramentas em um dos lados verticais da janela do quadro, a forma é alterado para um layout vertical. Também é possível alterar a barra de ferramentas em um retângulo com várias linhas de botões.  
   
  Você pode:  
@@ -106,7 +101,7 @@ A biblioteca Microsoft Foundation Class suporta encaixáveis barras de ferrament
   
  Você também pode usar [CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) para retornar a um estado e o estilo dos botões em barras de ferramentas. Estilo do botão determina como o botão é exibido e como ele responde à entrada do usuário; o estado informa se o botão estiver em um estado encapsulado.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>Posições de quebra automática de configuração para uma barra de ferramentas com estilo  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Posições de quebra automática de configuração para uma barra de ferramentas com estilo  
  Para uma barra de ferramentas com o tamanho fixo de estilo, designe a barra de ferramentas índices do botão em que a barra de ferramentas será quebrada. O código a seguir mostra como fazer isso na janela do quadro principal `OnCreate` substituir:  
   
  [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  

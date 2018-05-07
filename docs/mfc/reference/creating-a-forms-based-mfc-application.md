@@ -1,13 +1,10 @@
 ---
-title: "Criando um aplicativo MFC com base em formulários | Microsoft Docs"
-ms.custom: 
+title: Criando um aplicativo MFC com base em formulários | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcforms.project
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Criando um aplicativo MFC com base em formulários
 Um formulário é uma caixa de diálogo com os controles que permitem que um usuário acesse e possivelmente de alteração de dados. Você talvez queira desenvolver um aplicativo no qual o usuário seleciona em uma seleção de formulários. Normalmente, um aplicativo baseado em formulários permite que os formulários de acesso do usuário por clique **novo** do **arquivo** menu. Um aplicativo baseado em caixa de diálogo, que não oferecem aos usuários acesso a um **novo** opção o **arquivo** menu, também é considerado um aplicativo baseado em formulários.  

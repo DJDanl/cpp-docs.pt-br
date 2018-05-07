@@ -1,12 +1,9 @@
 ---
 title: Classe CEdit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>Classe CEdit
 Fornece a funcionalidade de um controle de edição do Windows.  
@@ -193,7 +188,7 @@ class CEdit : public CWnd
   
  Cada entrada de mapa de mensagem assume o seguinte formato:  
   
- **On _**notificação **(** *id, memberFxn *)**  
+ **On _** notificação **(** *id, memberFxn *)**  
   
  onde `id` Especifica a ID de janela filho do controle de edição, enviando a notificação, e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.  
   
@@ -364,9 +359,9 @@ virtual BOOL Create(
   
  Aplicar o seguinte [estilos de janela](styles-used-by-mfc.md#window-styles) para um controle de edição.  
   
-- **WS_CHILD** Always  
+- **Estilo** sempre  
   
-- **WS_VISIBLE** Usually  
+- **WS_VISIBLE** normalmente  
   
 - **WS_DISABLED** raramente  
   
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  Quando o `SetPasswordChar` é chamada de função de membro, `CEdit` redesenhará todos os caracteres visíveis usando o caractere especificado por *ch*.  
   
- Se o controle de edição for criado com o [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) estilo, o caractere de senha padrão é definido como um asterisco (  **\*** ). Este estilo é removido se `SetPasswordChar` é chamado com *ch* definido como 0.  
+ Se o controle de edição for criado com o [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) estilo, o caractere de senha padrão é definido como um asterisco ( **\***). Este estilo é removido se `SetPasswordChar` é chamado com *ch* definido como 0.  
   
  Para obter mais informações, consulte [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) no SDK do Windows.  
   

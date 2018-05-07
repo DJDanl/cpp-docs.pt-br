@@ -1,12 +1,9 @@
 ---
 title: Classe CMultiLock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiLock
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc3c391c624351b2835e1ec497d78bc191eb1fe7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5c5424018c3863ce64435bcc09d2d539560285e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultilock-class"></a>Classe CMultiLock
 Representa o mecanismo de controle de acesso usado para controlar o acesso a recursos em um programa multi-threaded.  
@@ -61,7 +56,7 @@ class CMultiLock
 |[CMultiLock::Unlock](#unlock)|Libera todos os objetos corporativos de sincronização.|  
   
 ## <a name="remarks"></a>Comentários  
- `CMultiLock`não tem uma classe base.  
+ `CMultiLock` não tem uma classe base.  
   
  Para usar as classes de sincronização [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), e [CEvent](../../mfc/reference/cevent-class.md), você pode criar um **CMultiLock** ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objeto aguardar e liberar o objeto de sincronização. Use **CMultiLock** quando há vários objetos que você pode usar em um determinado momento. Use `CSingleLock` quando você só precisa esperar em um objeto por vez.  
   
@@ -77,7 +72,7 @@ class CMultiLock
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxmt.h  
   
-##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>  CMultiLock::CMultiLock  
  Constrói um **CMultiLock** objeto.  
   
 ```  
@@ -100,7 +95,7 @@ CMultiLock(
 ### <a name="remarks"></a>Comentários  
  Essa função é chamada depois de criar a matriz de objetos de sincronização a ser aguardado. Ele geralmente é chamado de thread que precisa esperar por um dos objetos de sincronização se torne disponível.  
   
-##  <a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>  CMultiLock::IsLocked  
  Determina se o objeto especificado é não sinalizado (não disponível).  
   
 ```  
@@ -114,7 +109,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o objeto especificado estiver bloqueado; Caso contrário, 0.  
   
-##  <a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>  CMultiLock::Lock  
  Chamar essa função para obter acesso a um ou mais dos recursos controlados pelos objetos de sincronização fornecidos para o **CMultiLock** construtor.  
   
 ```  
@@ -158,7 +153,7 @@ DWORD Lock(
   
  Se `Lock` não é capaz de retornar imediatamente, ela aguardará para não mais do que o número de milissegundos especificado no *dwTimeOut* parâmetro antes de retornar. Se *dwTimeOut* é **infinito**, `Lock` não retornará até que o acesso a um objeto é obtido ou uma condição especificada no `dwWakeMask` foi atendida. Caso contrário, se `Lock` foi capaz de adquirir um objeto de sincronização, ele retornará com êxito; se não, ela retornará falha.  
   
-##  <a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>  CMultiLock::Unlock  
  Libera o objeto de sincronização de propriedade `CMultiLock`.  
   
 ```  
@@ -183,7 +178,7 @@ BOOL Unlock(
 ### <a name="remarks"></a>Comentários  
  Essa função é chamada `CMultiLock`do destruidor.  
   
- O primeiro formulário da `Unlock` tenta desbloquear o objeto de sincronização gerenciado pelo `CMultiLock`. A segunda forma de `Unlock` tenta desbloquear o `CSemaphore` objetos possuídos por `CMultiLock`. Se `CMultiLock` não possuir nenhum bloqueado `CSemaphore` do objeto, a função retorna **FALSE**; caso contrário, ele retorna **TRUE**. `lCount`e `lpPrevCount` são exatamente o mesmo que os parâmetros de [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). A segunda forma de `Unlock` é raramente aplicável a multilock situações.  
+ O primeiro formulário da `Unlock` tenta desbloquear o objeto de sincronização gerenciado pelo `CMultiLock`. A segunda forma de `Unlock` tenta desbloquear o `CSemaphore` objetos possuídos por `CMultiLock`. Se `CMultiLock` não possuir nenhum bloqueado `CSemaphore` do objeto, a função retorna **FALSE**; caso contrário, ele retorna **TRUE**. `lCount` e `lpPrevCount` são exatamente o mesmo que os parâmetros de [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). A segunda forma de `Unlock` é raramente aplicável a multilock situações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

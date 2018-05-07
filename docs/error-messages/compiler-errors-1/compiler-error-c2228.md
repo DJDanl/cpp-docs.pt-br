@@ -1,13 +1,10 @@
 ---
 title: C2228 de erro do compilador | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2228
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2228
 ms.assetid: 901cadb1-ce90-4ae0-a360-547a9ba2ca18
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d2f16e67f67ac00fa17f6b60f70af53ae7345df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 969f622877c60bdc340dedf8a2416ac56b2ad0e0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2228"></a>C2228 de erro do compilador
 esquerda de '.identifier' deve ter uma classe/struct/união  
@@ -53,6 +48,6 @@ int main() {
   
  Você também verá esse erro se você usar uma sintaxe incorreta ao usar extensões gerenciadas. Enquanto em outros idiomas do Visual Studio, você pode usar o operador ponto para acessar um membro de uma classe gerenciada, um ponteiro para o objeto em C++ significa que você deve usar o operador para acessar o membro ->:  
   
- Errado:`String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
+ Errado: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
   
- Certo:`String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
+ Certo: `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`

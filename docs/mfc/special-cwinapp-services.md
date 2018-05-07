@@ -1,13 +1,10 @@
 ---
-title: "Serviços CWinApp especiais | Microsoft Docs"
-ms.custom: 
+title: Serviços CWinApp especiais | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
@@ -39,27 +36,25 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-cwinapp-services"></a>Serviços CWinApp especiais
 Além de executar o loop de mensagem e fornecendo uma oportunidade para inicializar o aplicativo e limpar depois dele, [CWinApp](../mfc/reference/cwinapp-class.md) fornece vários outros serviços.  
   
-##  <a name="_core_shell_registration"></a>Registro de shell  
+##  <a name="_core_shell_registration"></a> Registro de shell  
  Por padrão, o Assistente de aplicativo MFC torna possível para o usuário abrir arquivos de dados que seu aplicativo foi criado, clique duas vezes no Explorador de arquivos ou no Gerenciador de arquivos. Se seu aplicativo é um aplicativo MDI e você especificar uma extensão para os arquivos de seu aplicativo cria, o Assistente de aplicativo MFC adiciona chamadas para o [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) e [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)funções membro de [CWinApp](../mfc/reference/cwinapp-class.md) para o `InitInstance` substituição que ele grava para você.  
   
- `RegisterShellFileTypes`Registra tipos de documento do aplicativo com o Explorador de arquivos ou no Gerenciador de arquivos. A função adiciona entradas para o banco de dados de registro que o Windows mantém. As entradas de registrar cada tipo de documento, associar uma extensão de arquivo com o tipo de arquivo, especifique uma linha de comando para abrir o aplicativo e especificar um comando de intercâmbio (DDE) de dados dinâmicos para abrir um documento desse tipo.  
+ `RegisterShellFileTypes` Registra tipos de documento do aplicativo com o Explorador de arquivos ou no Gerenciador de arquivos. A função adiciona entradas para o banco de dados de registro que o Windows mantém. As entradas de registrar cada tipo de documento, associar uma extensão de arquivo com o tipo de arquivo, especifique uma linha de comando para abrir o aplicativo e especificar um comando de intercâmbio (DDE) de dados dinâmicos para abrir um documento desse tipo.  
   
- `EnableShellOpen`conclui o processo, permitindo que o seu aplicativo receber comandos DDE do Explorador de arquivos ou o Gerenciador de arquivos para abrir o arquivo escolhido pelo usuário.  
+ `EnableShellOpen` conclui o processo, permitindo que o seu aplicativo receber comandos DDE do Explorador de arquivos ou o Gerenciador de arquivos para abrir o arquivo escolhido pelo usuário.  
   
  Esse suporte de registro automático em `CWinApp` elimina a necessidade de enviar um arquivo. reg com o seu aplicativo ou para fazer o trabalho de instalação especial.  
   
@@ -71,7 +66,7 @@ Além de executar o loop de mensagem e fornecendo uma oportunidade para iniciali
   
  Se você não suprima o plano de fundo GDI+ thread, DDE comandos podem ser emitidos prematuramente ao aplicativo antes de criar a janela principal. Os comandos DDE emitidos pelo shell podem ser prematuramente anulados, resultando em mensagens de erro.  
   
-##  <a name="_core_file_manager_drag_and_drop"></a>Gerenciador de arquivos de arrastar e soltar  
+##  <a name="_core_file_manager_drag_and_drop"></a> Gerenciador de arquivos de arrastar e soltar  
  Arquivos podem ser arrastados da janela de exibição de arquivo no Gerenciador de arquivos ou no Explorador de arquivos em uma janela no seu aplicativo. Você pode, por exemplo, permitir que um ou mais arquivos para ser arrastado para a janela principal do aplicativo MDI, onde o aplicativo pode recuperar os nomes de arquivo e abra janelas de filho MDI para esses arquivos.  
   
  Para permitir arquivo arrastar e soltar em seu aplicativo, o Assistente de aplicativo MFC grava uma chamada para o [CWnd](../mfc/reference/cwnd-class.md) função de membro [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) da janela do quadro principal no seu `InitInstance`. Se você não quiser implementar o recurso de arrastar e soltar, você pode remover essa chamada.  
@@ -79,7 +74,7 @@ Além de executar o loop de mensagem e fornecendo uma oportunidade para iniciali
 > [!NOTE]
 >  Você também pode implementar os recursos de arrastar e soltar mais gerais, arrastando os dados entre ou dentro de documentos — com OLE. Para obter informações, consulte o artigo [arrastar e soltar (OLE)](../mfc/drag-and-drop-ole.md).  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Controlando o máximo de documentos usados recentemente  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Controlando o máximo de documentos usados recentemente  
  Como o usuário abre e fecha os arquivos, o objeto de aplicativo controla de quatro arquivos usados mais recentemente. Os nomes desses arquivos são adicionados ao menu Arquivo e atualizados quando elas forem alteradas. O framework armazena esses nomes de arquivo no registro ou no arquivo. ini, com o mesmo nome do seu projeto e lê-los a partir do arquivo quando o aplicativo é iniciado. O `InitInstance` substituir que o Assistente de aplicativo MFC cria para você inclui uma chamada para o [CWinApp](../mfc/reference/cwinapp-class.md) função de membro [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), que carrega as informações do registro ou. ini arquivo, incluindo mais recentemente usados nomes de arquivo.  
   
  Essas entradas são armazenadas da seguinte maneira:  

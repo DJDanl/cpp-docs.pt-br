@@ -2,12 +2,9 @@
 title: Estrutura CDaoRelationInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoRelationInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 047b81ebaa903d2b9bdddcf6c606d1e9fe649482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorelationinfo-structure"></a>Estrutura CDaoRelationInfo
 O `CDaoRelationInfo` estrutura contém informações sobre uma relação definida entre os campos de duas tabelas em um [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto.  
@@ -85,7 +80,7 @@ struct CDaoRelationInfo
   
  Objetos de relação não são representados por uma classe do MFC. Em vez disso, o objeto DAO subjacente de um objeto MFC a `CDaoDatabase` classe mantém uma coleção de objetos de relação: `CDaoDatabase` fornece funções de membro para acessar alguns itens individuais de informações de relação, ou você podem acessá-los todos de uma vez com um `CDaoRelationInfo` objeto chamando o `GetRelationInfo` a função de membro do objeto de banco de dados que contêm.  
   
- As informações recuperadas pelo [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) função de membro é armazenada em um `CDaoRelationInfo` estrutura. `CDaoRelationInfo`também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoRelationInfo` objeto.  
+ As informações recuperadas pelo [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) função de membro é armazenada em um `CDaoRelationInfo` estrutura. `CDaoRelationInfo` também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoRelationInfo` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  

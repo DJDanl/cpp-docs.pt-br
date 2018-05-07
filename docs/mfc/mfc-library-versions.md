@@ -1,13 +1,10 @@
 ---
-title: "Versões de biblioteca MFC | Microsoft Docs"
-ms.custom: 
+title: Versões de biblioteca MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - libraries [MFC], versions
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-library-versions"></a>Versões de biblioteca MFC
 
@@ -129,14 +125,14 @@ As DLLs MFC ter *versão* números que indicam a compatibilidade binária. Use M
 
 |DLL|Descrição|
 |---------|-----------------|
-|MFC*version*.DLL|Versão de DLL MFC, ANSI ou MBCS de versão|
-|MFC*version*U.DLL|DLL do MFC, versão de Unicode|
-|MFC*version*D.DLL|Versão de DLL MFC, ANSI ou MBCS de depuração|
-|MFC*version*UD.DLL|DLL do MFC, versão de depuração de Unicode|
+|MFC*versão*. DLL|Versão de DLL MFC, ANSI ou MBCS de versão|
+|MFC*versão*U.DLL|DLL do MFC, versão de Unicode|
+|MFC*versão*D.DLL|Versão de DLL MFC, ANSI ou MBCS de depuração|
+|MFC*versão*UD. DLL|DLL do MFC, versão de depuração de Unicode|
 |MFCM*version*.DLL|DLL do MFC com controles de formulários do Windows, versão ANSI ou MBCS versão|
-|MFCM*version*U.DLL|DLL do MFC com controles de formulários do Windows, versão de Unicode|
+|MFCM*versão*U.DLL|DLL do MFC com controles de formulários do Windows, versão de Unicode|
 |MFCM*version*D.DLL|DLL do MFC com controles de formulários do Windows, versão ANSI ou MBCS de depuração|
-|MFCM*version*UD.DLL|DLL do MFC com controles de formulários do Windows, versão de depuração de Unicode|
+|MFCM*versão*UD. DLL|DLL do MFC com controles de formulários do Windows, versão de depuração de Unicode|
 
 As bibliotecas de importação necessárias para criar aplicativos ou extensão de MFC que usam essas DLLs compartilhadas têm o mesmo nome de base como a DLL, mas têm uma extensão de nome de arquivo. lib. Quando você usa os arquivos DLL compartilhados, uma pequena biblioteca estática ainda deve ser vinculada ao seu código; Essa biblioteca é chamada MFCS*versão*. lib de {U} {D}.
 

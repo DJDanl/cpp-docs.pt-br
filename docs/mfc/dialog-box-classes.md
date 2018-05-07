@@ -1,13 +1,10 @@
 ---
-title: "Classes de caixa de diálogo | Microsoft Docs"
-ms.custom: 
+title: Classes de caixa de diálogo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>Classes da caixa de diálogo
 Classe `CDialog` e suas classes derivadas encapsulam funcionalidades de caixa de diálogo. Como uma caixa de diálogo é um tipo especial de janela, `CDialog` é derivado de `CWnd`. Derivar suas classes de caixa de diálogo de `CDialog` ou use uma das classes de caixa de diálogo comum para as caixas de diálogo padrão, como abrir ou salvar um arquivo, impressão, selecionando uma fonte ou a cor, iniciando uma operação de pesquisa e substituição, ou executando vários relacionadas a OLE operações.  
@@ -71,7 +66,7 @@ Classe `CDialog` e suas classes derivadas encapsulam funcionalidades de caixa de
  OLE adiciona várias caixas de diálogo comuns para Windows. Essas classes encapsulam as caixas de diálogo comuns OLE.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Usado pelo framework para conter implementações comuns para todas as caixas de diálogo OLE. Todas as classes de caixa de diálogo na categoria de interface do usuário são derivadas desta classe base. `COleDialog`não pode ser usada diretamente.  
+ Usado pelo framework para conter implementações comuns para todas as caixas de diálogo OLE. Todas as classes de caixa de diálogo na categoria de interface do usuário são derivadas desta classe base. `COleDialog` não pode ser usada diretamente.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Exibe a caixa de diálogo Inserir objeto, a interface de usuário padrão para inserir novos OLE vinculados ou incorporados itens.  

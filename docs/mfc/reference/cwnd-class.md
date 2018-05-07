@@ -2,11 +2,8 @@
 title: Classe CWnd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 Fornece a funcionalidade básica de todas as classes de janela a biblioteca Microsoft Foundation Class.  
@@ -1270,13 +1265,13 @@ class CWnd : public CCmdTarget
 |[CWnd::ResizeDynamicLayout](#resizedynamiclayout)|Chamado pelo framework quando o tamanho da janela muda para ajustar o layout de janelas filho, se o layout dinâmico está habilitado para a janela.|  
 |[CWnd::WindowProc](#windowproc)|Fornece um procedimento de janela para um `CWnd`. O padrão distribui mensagens pelo mapa de mensagens.|  
   
-### <a name="public-operators"></a>Operadores Públicos  
+### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CWnd::operator HWND](#operator_hwnd)|Chamada para obter um identificador para uma janela.|  
-|[CWnd::operator !=](#operator_neq)|Determina se uma janela não é o mesmo que a janela cujo identificador é [m_hWnd](#m_hwnd).|  
-|[CWnd::operator ==](#operator_eq_eq)|Determina se uma janela é o mesmo que a janela cujo identificador é [m_hWnd](#m_hwnd).|  
+|[CWnd::operator! =](#operator_neq)|Determina se uma janela não é o mesmo que a janela cujo identificador é [m_hWnd](#m_hwnd).|  
+|[CWnd::operator = =](#operator_eq_eq)|Determina se uma janela é o mesmo que a janela cujo identificador é [m_hWnd](#m_hwnd).|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -2316,7 +2311,7 @@ int DlgDirList(
   
 - **DDL_ARCHIVE** arquivos.  
   
-- **DDL_POSTMSGS LB_DIR** flag. Se o **LB_DIR** sinalizador é definido, o Windows coloca as mensagens geradas pelo `DlgDirList` na fila do aplicativo; caso contrário, elas são enviadas diretamente para o procedimento da caixa de diálogo.  
+- **DDL_POSTMSGS LB_DIR** sinalizador. Se o **LB_DIR** sinalizador é definido, o Windows coloca as mensagens geradas pelo `DlgDirList` na fila do aplicativo; caso contrário, elas são enviadas diretamente para o procedimento da caixa de diálogo.  
   
 - **DDL_DRIVES** unidades. Se o **DDL_DRIVES** sinalizador for definido, o **DDL_EXCLUSIVE** sinalizador é definido automaticamente. Portanto, para criar uma listagem de diretório que inclui discos e arquivos, você deve chamar `DlgDirList` duas vezes: uma vez com o **DDL_DRIVES** sinalizador conjunto e uma vez com os sinalizadores para o restante da lista.  
   
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- Neste exemplo, `drive` é uma letra de unidade `directory` é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um caractere curinga. Os caracteres curinga são um ponto de interrogação (*), que significa que corresponde a qualquer caractere e um asterisco (  **\*** ), que significa que corresponde a qualquer número de caracteres.  
+ Neste exemplo, `drive` é uma letra de unidade `directory` é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um caractere curinga. Os caracteres curinga são um ponto de interrogação (*), que significa que corresponde a qualquer caractere e um asterisco ( **\***), que significa que corresponde a qualquer número de caracteres.  
   
  Se você especificar uma cadeia de caracteres de comprimento de 0 para `lpPathSpec`, ou se você especificar um nome de diretório, mas não têm nenhuma especificação de arquivo, a cadeia de caracteres será alterada para "*.\*".  
   
@@ -2379,7 +2374,7 @@ int DlgDirListComboBox(
   
 - **DDL_ARCHIVE** arquivos.  
   
-- **DDL_POSTMSGS CB_DIR** flag. Se o **CB_DIR** sinalizador é definido, o Windows coloca as mensagens geradas pelo `DlgDirListComboBox` na fila do aplicativo; caso contrário, elas são enviadas diretamente para o procedimento da caixa de diálogo.  
+- **DDL_POSTMSGS CB_DIR** sinalizador. Se o **CB_DIR** sinalizador é definido, o Windows coloca as mensagens geradas pelo `DlgDirListComboBox` na fila do aplicativo; caso contrário, elas são enviadas diretamente para o procedimento da caixa de diálogo.  
   
 - **DDL_DRIVES** unidades. Se o **DDL_DRIVES** sinalizador for definido, o **DDL_EXCLUSIVE** sinalizador é definido automaticamente. Portanto, para criar uma listagem de diretório que inclui discos e arquivos, você deve chamar `DlgDirListComboBox` duas vezes: uma vez com o **DDL_DRIVES** sinalizador conjunto e uma vez com os sinalizadores para o restante da lista.  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- Neste exemplo, `drive` é uma letra de unidade `directory` é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um caractere curinga. Os caracteres curinga são um ponto de interrogação (*), que significa que corresponde a qualquer caractere e um asterisco (  **\*** ), que corresponde a qualquer número de caracteres.  
+ Neste exemplo, `drive` é uma letra de unidade `directory` é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um caractere curinga. Os caracteres curinga são um ponto de interrogação (*), que significa que corresponde a qualquer caractere e um asterisco ( **\***), que corresponde a qualquer número de caracteres.  
   
  Se você especificar uma cadeia de caracteres de comprimento zero para `lpPathSpec`, o diretório atual será usado e `lpPathSpec` não serão modificados. Se você especificar um nome de diretório, mas não têm nenhuma especificação de arquivo, a cadeia de caracteres será alterada para "*".  
   
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![Parar &#40; x &#41; ícone](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, e **MB_ICONERROR**|  
+|![Parar &#40;x&#41; ícone](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, e **MB_ICONERROR**|  
 |![Ajuda &#40; &#41; ícone](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
 |![Importante &#40; &#33; &#41; ícone](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION** e **MB_ICONWARNING**|  
-|![Informações &#40; i &#41; ícone](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** e **MB_ICONINFORMATION**|  
+|![Informações &#40;&#41; ícone](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** e **MB_ICONINFORMATION**|  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -7853,7 +7848,7 @@ afx_msg UINT OnNotifyFormat(
   
 ### <a name="return-value"></a>Valor de retorno  
   
-|Valor de retorno|Significado|  
+|Valor retornado|Significado|  
 |------------------|-------------|  
 |`NFR_ANSI`|Estruturas ANSI devem ser usadas em **WM_NOTIFY** mensagens enviadas pelo controle.|  
 |`NFR_UNICODE`|Estruturas de Unicode devem ser usadas em **WM_NOTIFY** mensagens enviadas pelo controle.|  
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **HWndChild (UINT)** identificador para uma janela filho  
   
-- `uFlags` &#124; = **TTF_IDISHWND** identificador da ferramenta  
+- `uFlags` &#124;= **TTF_IDISHWND** identificador da ferramenta  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK** ponteiro para a cadeia de caracteres que deve ser exibido na janela especificada  
   
@@ -9390,7 +9385,7 @@ BOOL OpenClipboard();
 operator HWND() const;  
 ```  
   
-##  <a name="operator_neq"></a>  CWnd::operator !=  
+##  <a name="operator_neq"></a>  CWnd::operator! =  
  Compara dois `CWnd` objetos para determinar se eles não têm o mesmo [m_hWnd](#m_hwnd).  
   
 ```  
@@ -9404,7 +9399,7 @@ BOOL operator!=(const CWnd& wnd) const;
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se igual; Caso contrário, 0.  
   
-##  <a name="operator_eq_eq"></a>  CWnd::operator ==  
+##  <a name="operator_eq_eq"></a>  CWnd::operator = =  
  Compara dois `CWnd` objetos para determinar se eles têm o mesmo [m_hWnd](#m_hwnd).  
   
 ```  

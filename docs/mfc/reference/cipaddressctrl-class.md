@@ -1,12 +1,9 @@
 ---
 title: Classe CIPAddressCtrl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c775f314cc70da1b662ca9b9c5f0a2e68eb2bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 Fornece a funcionalidade de controle de endereço IP comuns do Windows.  
@@ -94,14 +89,14 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
  Cria um objeto `CIPAddressCtrl`.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
  Limpa o conteúdo do controle de endereço IP.  
   
 ```  
@@ -111,7 +106,7 @@ void ClearAddress();
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), conforme descrito no SDK do Windows.  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
  Cria um controle de endereço IP e a anexa a um `CIPAddressCtrl` objeto.  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL Create(
   
  Se desejar usar estilos de windows estendida com o controle, chame [CreateEx](#createex) em vez de **criar**.  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Chamar essa função para criar um controle (uma janela filho) e associá-lo com o `CIPAddressCtrl` objeto.  
   
 ```  
@@ -181,7 +176,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
  Recupera os valores de endereço para todos os quatro campos no controle de endereço IP.  
   
 ```  
@@ -223,7 +218,7 @@ int GetAddress(DWORD& dwAddress);
 |2|8 a 15|  
 |3|0 a 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
  Determina se o controle de endereço IP de todos os campos estão vazios.  
   
 ```  
@@ -236,7 +231,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), conforme descrito no SDK do Windows.  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  Define os valores de endereço para todos os quatro campos no controle de endereço IP.  
   
 ```  
@@ -275,7 +270,7 @@ void SetAddress(DWORD dwAddress);
 |2|8 a 15|  
 |3|0 a 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
  Define o foco do teclado para o campo especificado no controle de endereço IP.  
   
 ```  
@@ -289,7 +284,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), conforme descrito no SDK do Windows.  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  Define o intervalo no campo especificado no controle de endereço IP.  
   
 ```  
