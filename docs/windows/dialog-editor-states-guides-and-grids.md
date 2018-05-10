@@ -1,30 +1,25 @@
 ---
-title: "Estados do Editor de caixa de diálogo (guias e grades) | Microsoft Docs"
-ms.custom: 
+title: Estados do Editor de caixa de diálogo (guias e grades) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Dialog editor, guides and margins
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 608137d29d71740f8c145e560a7f1516af75a43a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efce034d681fc13d59020619af4731e36cd30674
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>Estados do Editor de Caixa de Diálogo (guias e grades)
 Você pode organizar controles em caixas de diálogo com o editor de caixa de diálogo em um dos três estados:  

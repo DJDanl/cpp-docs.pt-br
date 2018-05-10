@@ -1,12 +1,9 @@
 ---
 title: Classe ScheduleGroup | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ScheduleGroup
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 Representa uma abstração para um grupo de agendamento. Organizam os grupos de agendamento de um conjunto de trabalho relacionados que se beneficia de ser agendado próximas temporariamente, por outra tarefa em execução no mesmo grupo antes de passar para outro grupo ou espacialmente, executando vários itens dentro do mesmo grupo no mesmo Nó NUMA ou soquete físico.  
@@ -47,7 +42,7 @@ class ScheduleGroup;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[~ScheduleGroup Destructor](#dtor)||  
+|[~ Destruidor ScheduleGroup](#dtor)||  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -126,7 +121,7 @@ virtual unsigned int Release() = 0;
   
  Um grupo de agendamento está associado uma instância específica do Agendador. Certifique-se de que todas as referências para o grupo de agendamento são liberadas antes de todas as referências para o Agendador são lançadas, porque o último pode resultar no Agendador de destruição. Fazendo resulta em um comportamento indefinido.  
   
-##  <a name="dtor"></a> ~ScheduleGroup 
+##  <a name="dtor"></a> ~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();

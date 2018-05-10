@@ -1,38 +1,33 @@
 ---
-title: "Atributos de parâmetro | Microsoft Docs"
-ms.custom: 
+title: Atributos de parâmetro | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9856cec61b48c8cdfaf6b4e9acfe8137d8edae0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2bd1f0d395375b09a192a68c8a60ea3a367115c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="parameter-attributes"></a>Atributos de parâmetro
 Os atributos a seguir se aplicam aos parâmetros de um método em uma classe ou interface.  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|[personalizado](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
+|[custom](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
 |[defaultvalue](../windows/defaultvalue.md)|Permite a especificação de um valor padrão para um parâmetro opcional com tipo.|  
 |[first_is](../windows/first-is.md)|Especifica o índice do primeiro elemento de matriz a ser transmitido.|  
 |[iid_is](../windows/iid-is.md)|Especifica o índice do primeiro elemento de matriz a ser transmitido.|  
@@ -42,9 +37,9 @@ Os atributos a seguir se aplicam aos parâmetros de um método em uma classe ou 
 |[lcid](../windows/lcid.md)|Permite que você passar um identificador de localidade para uma função.|  
 |[length_is](../windows/length-is.md)|Especifica o número de elementos de matriz a ser transmitido.|  
 |[max_is](../windows/max-is.md)|Designa o valor máximo para um índice de matriz válida.|  
-|[opcional](../windows/optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|  
+|[Opcional](../windows/optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|  
 |[out](../windows/out-cpp.md)|Identifica os parâmetros de ponteiro retornados do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|  
-|[intervalo](../windows/range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|  
+|[range](../windows/range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|  
 |[ref](../windows/ref-cpp.md)|Identifica um ponteiro de referência.|  
 |[retval](../windows/retval.md)|Designa o parâmetro que recebe o valor de retorno do membro.|  
 |[satype](../windows/satype.md)|Especifica o tipo de dados de **SAFEARRAY** estrutura.|  

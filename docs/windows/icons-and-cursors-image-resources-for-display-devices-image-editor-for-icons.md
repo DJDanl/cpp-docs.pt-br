@@ -1,13 +1,10 @@
 ---
-title: "Ícones e cursores: recursos de imagem para exibir dispositivos (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: 'Ícones e cursores: recursos de imagem para exibir dispositivos (Editor de imagens para ícones) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ed2e99c3a08b473dcc786ed47bc088b8fd8a4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ícones e cursores: recursos de imagem para exibir dispositivos (editor de imagens para ícones)
 Ícones e cursores são recursos gráficos que podem conter várias imagens em tamanhos diferentes e esquemas para diferentes tipos de dispositivos de vídeo de cores. Além disso, um cursor tem um "ponto de acesso", o local em que o Windows usa para controlar sua posição. Ícones e cursores são criados e editados usando o editor de imagem, conforme são bitmaps e outras imagens.  
@@ -86,6 +81,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)   
- [Ícones](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
+ [ícones](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Cursores](http://msdn.microsoft.com/library/windows/desktop/ms646970)
 

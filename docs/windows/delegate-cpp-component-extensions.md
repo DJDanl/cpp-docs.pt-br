@@ -1,13 +1,10 @@
 ---
-title: "delegado (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: delegado (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="delegate--c-component-extensions"></a>delegado (Extensões de Componentes C++)
 Declara um tipo que representa um ponteiro de função.  
@@ -36,7 +31,7 @@ Declara um tipo que representa um ponteiro de função.
  O tempo de execução do Windows e o common language runtime suportam a delegados.  
   
 ### <a name="remarks"></a>Comentários  
- `delegate`é uma palavra-chave contextual. Para obter mais informações, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `delegate` é uma palavra-chave contextual. Para obter mais informações, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Para detectar no tempo de compilação se um tipo for um representante, use o `__is_delegate()` característica de tipo. Para obter mais informações, consulte [suporte para características do tipo de compilador](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
@@ -60,13 +55,13 @@ delegate-type-identifier
  *access*  
  (opcional) A acessibilidade de delegado, que pode ser `public` (o padrão) ou `private`. O protótipo de função também pode ser qualificado com o `const` ou `volatile` palavras-chave.  
   
- *tipo de retorno*  
+ *Tipo de retorno*  
  O tipo de retorno do protótipo de função.  
   
  *Identificador de tipo de representante*  
  O nome do tipo delegado declarado.  
   
- *parâmetros*  
+ *Parâmetros*  
  (Opcional) Os tipos e os identificadores de protótipo de função.  
   
 ### <a name="remarks"></a>Comentários  

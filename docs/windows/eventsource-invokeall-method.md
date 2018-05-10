@@ -1,12 +1,9 @@
 ---
-title: "Método: Invokeall | Microsoft Docs"
-ms.custom: 
+title: 'Método: Invokeall | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource::InvokeAll
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45835b6929ae73559c427d374430b64e7ff21a61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventsourceinvokeall-method"></a>Método EventSource::InvokeAll
 Chama cada manipulador de eventos associado atual [EventSource](../windows/eventsource-class.md) usando os argumentos e tipos de argumento especificados do objeto.  
@@ -251,7 +246,7 @@ void InvokeAll(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** event.h  
   
- **Namespace:** Microsoft:: wrl
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Consulte também
  [Classe EventSource](../windows/eventsource-class.md)

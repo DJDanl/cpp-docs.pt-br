@@ -1,28 +1,23 @@
 ---
 title: APIs WRL por categoria de chave | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>APIs de chave WRL por categoria
 As tabelas a seguir listam os principais produtos de classes, estruturas, funções e macros biblioteca de modelos C++ do Windows Runtime. As construções em auxiliar namespaces e classes são omitidas. Essas listas aumentar a documentação da API, que é organizada por namespace.  
@@ -36,7 +31,7 @@ As tabelas a seguir listam os principais produtos de classes, estruturas, funç�
 |[Classe ClassFactory](../windows/classfactory-class.md)|Implementa a funcionalidade básica do `IClassFactory` interface.|  
 |[Classe ComPtr](../windows/comptr-class.md)|Cria um *ponteiro inteligente* tipo que representa a interface especificada pelo parâmetro de modelo. ComPtr automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.|  
 |[Classe Event (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)|Representa um evento.|  
-|[Classe EventSource](../windows/eventsource-class.md)|Representa um evento. `EventSource`funções de membro, adicionar, removem e invocar os manipuladores de eventos.|  
+|[Classe EventSource](../windows/eventsource-class.md)|Representa um evento. `EventSource` funções de membro, adicionar, removem e invocar os manipuladores de eventos.|  
 |[Classe FtmBase](../windows/ftmbase-class.md)|Representa um objeto de empacotamento de segmentação livre.|  
 |[Classe HandleT](../windows/handlet-class.md)|Representa um identificador para um objeto.|  
 |[Classe HString](../windows/hstring-class.md)|Fornece suporte para manipulação de identificadores HSTRING.|  

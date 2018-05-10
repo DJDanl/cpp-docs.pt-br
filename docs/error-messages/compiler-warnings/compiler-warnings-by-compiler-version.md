@@ -1,13 +1,10 @@
 ---
-title: "Avisos do compilador pela versão do compilador | Microsoft Docs"
-ms.custom: 
+title: Avisos do compilador pela versão do compilador | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - cl.exe compiler, setting warning options
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avisos do compilador pela versão do compilador
 
@@ -37,13 +33,13 @@ Essas versões do compilador introduziu novos avisos:
 | Visual C++ 2005 | 14.00.50727.762 |
 | Visual C++ 2008 | 15.00.21022.08 |
 | Visual C++ 2010 | 16.00.40219.01 |
-| Visual C++ 2012 | 17.00.51106.1 |
+| O Visual C++ 2012 | 17.00.51106.1 |
 | Visual C++ 2013 | 18.00.21005.1 |
-| Visual C++ 2015 RTM | 19.00.23026.0 |
+| RTM de 2015 do Visual C++ | 19.00.23026.0 |
 | Visual C++ 2015 atualização 1 | 19.00.23506.0 |
 | Visual C++ 2015 atualização 2 | 19.00.23918.0 |
 | Visual C++ 2015 atualização 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.24903.0 |
+| RTM de 2017 do Visual C++ | 19.10.24903.0 |
 | Visual C++ 2017 versão 15.1 | 19.10.25017.0 |
 | Versão 15,3 2017 de Visual C++ | 19.11.25506.0 |
 | Versão 15,5 2017 de Visual C++ | 19.12.25827.0 |
@@ -549,7 +545,7 @@ C4531|Tratamento de exceções C++ não disponível no Windows CE. Use o tratame
 C4532|'*descrição*': salto de *finalmente* bloco possui comportamento indefinido durante manipulação de encerramento
 C4533|inicialização de '*declaração*' é ignorada por ' goto *declaração*'
 C4534|'*declaração*' não será um construtor padrão para *classe* '*tipo*' devido ao argumento padrão
-C4535|calling _set_se_translator() requires /EHa
+C4535|chamada _set_se_translator() requer /EHa
 C4536|'*descrição*': nome de tipo excede o limite de metadados de '*número*' caracteres
 C4537|'*declaração*': '.' aplicado a tipo não UDT
 C4542|Ignorando a geração do arquivo de texto injetado mesclado, não é possível gravar *tipo* arquivo: '*filename*': *erro*

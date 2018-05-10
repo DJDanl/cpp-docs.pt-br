@@ -2,27 +2,22 @@
 title: 'Como: ativar e usar um componente de tempo de execução do Windows com WRL | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: 50c37438bf3a840f57119245b845d0b94f1873db
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Como ativar e usar um componente de Windows Runtime  com WRL
 Este documento mostra como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para inicializar o tempo de execução do Windows e como ativar e usar um componente de tempo de execução do Windows.  

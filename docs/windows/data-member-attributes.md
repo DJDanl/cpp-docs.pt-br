@@ -1,13 +1,10 @@
 ---
 title: Atributos de membro de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 954a0448f160ba6d19eb4f48d44b0b7e0a718f17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 490f8f20a6e1fcee476a6bbeb18ec6f6164389fc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="data-member-attributes"></a>Atributos de membro de dados
 Os atributos a seguir se aplicam aos membros de dados em uma classe, coclass ou interface.  
@@ -42,7 +37,7 @@ Os atributos a seguir se aplicam aos membros de dados em uma classe, coclass ou 
 |[defaultbind](../windows/defaultbind.md)|Indica a única propriedade associável que melhor representa o objeto.|  
 |[displaybind](../windows/displaybind.md)|Indica uma propriedade que deve ser exibida para o usuário como associável.|  
 |[id](../windows/id.md)|Especifica um DISPID para uma função de membro (uma propriedade ou um método, em uma interface ou dispinterface).|  
-|[intervalo](../windows/range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|  
+|[range](../windows/range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|  
 |[rdx](../windows/rdx.md)|Cria uma chave do registro ou modifica uma chave do registro existente.|  
 |[readonly](../windows/readonly-cpp.md)|Impede a atribuição a um membro de dados.|  
 |[requestedit](../windows/requestedit.md)|Indica que a propriedade oferece suporte a **OnRequestEdit** notificação.|  

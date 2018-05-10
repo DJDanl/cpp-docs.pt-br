@@ -1,13 +1,10 @@
 ---
-title: "Alterando o fator de ampliação (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: Alterando o fator de ampliação (Editor de imagens para ícones) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - magnification, Image editor
 - Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1192219bce3fa51177f14ae1345740d0ab53a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d7cb78eb93a5817656b6d576a7ee5f88b7aa9e9c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Alterando o fator de ampliação (editor de imagens para ícones)
 Por padrão, o editor de imagem exibe o modo de exibição no painel esquerdo no tamanho real e o modo de exibição no painel à direita no tamanho real de 6 horas. O fator de ampliação (visto na barra de status na parte inferior do espaço de trabalho) é a razão entre o tamanho real da imagem e o tamanho exibido. O fator de padrão é 6 e o intervalo é de 1 a 10.  

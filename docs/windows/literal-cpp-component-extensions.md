@@ -1,13 +1,10 @@
 ---
-title: "literal (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: literal (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="literal-c-component-extensions"></a>literal (Extensões de Componentes C++)
 Uma variável (membro de dados) é marcada como `literal` em uma **/clr** compilação é o equivalente nativo um `static const` variável.  
@@ -56,7 +51,7 @@ Uma variável (membro de dados) é marcada como `literal` em uma **/clr** compil
   
  Para obter mais informações, consulte [estático](../cpp/storage-classes-cpp.md) e [const](../cpp/const-cpp.md).  
   
- `literal`é uma palavra-chave contextual. Consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
+ `literal` é uma palavra-chave contextual. Consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra que uma `literal` variável implica `static`.  

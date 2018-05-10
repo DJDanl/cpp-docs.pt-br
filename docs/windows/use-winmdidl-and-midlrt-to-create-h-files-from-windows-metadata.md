@@ -1,28 +1,23 @@
 ---
 title: 'Como: usar winmdidl.exe e midlrt.exe para criar arquivos. h de metadados do windows | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Como usar winmdidl.exe e midlrt.exe para criar arquivos .h a partir de metadados do Windows
 Winmdidl.exe e midlrt.exe habilitar a interação COM nível entre o código C++ nativo e componentes de tempo de execução do Windows. Winmdidl.exe o utiliza como entrada um arquivo. winmd que contém metadados para um componente de tempo de execução do Windows e produz um arquivo IDL. Midlrt.exe converte o arquivo IDL em arquivos de cabeçalho que pode consumir o código C++. Execute as ferramentas na linha de comando.  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Exibe o tempo de execução total na saída do console.  
   
  /outdir:\<dir >  
- Especifica um diretório de saída. Se o caminho contiver espaços, use aspas. O diretório de saída padrão é  *\<drive >*: \Users\\*\<nome de usuário >*\AppData\Local\VirtualStore\Program arquivos (x86) \Microsoft Visual Studio 12.0\\.  
+ Especifica um diretório de saída. Se o caminho contiver espaços, use aspas. O diretório de saída padrão é  *\<drive >*: \Users\\*\<nome de usuário >* \AppData\Local\VirtualStore\Program arquivos (x86) \Microsoft Visual Studio 12.0\\.  
   
  `/banner:<file>`  
  Especifica um arquivo que contém o texto personalizado precede a mensagem de direitos autorais padrão e o número da versão winmdidl na parte superior do arquivo. idl gerado. Se o caminho contiver espaços, use aspas.  

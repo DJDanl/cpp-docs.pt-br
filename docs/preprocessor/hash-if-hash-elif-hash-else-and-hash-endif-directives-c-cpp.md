@@ -1,12 +1,9 @@
 ---
 title: '#Se, #elif, #else e # #endif (C/C++) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Diretivas #if, #elif, #else e #endif (C/C++)
 A política `#if`, com as políticas `#elif`, `#else` e `#endif`, controla a compilação de partes de um arquivo de origem. Se a expressão escrita (após `#if`) tiver um valor diferente de zero, o grupo de linhas imediatamente após a política `#if` será mantido na unidade de tradução.  
@@ -88,7 +83,7 @@ A política `#if`, com as políticas `#elif`, `#else` e `#endif`, controla a com
   
  O pré-processador processa selecionado *texto* e passa para o compilador. Se *texto* contém diretivas de pré-processador, a realiza essas diretivas de pré-processador. Somente os blocos de texto selecionados pelo pré-processador são compilados.  
   
- O pré-processador seleciona um único *texto* item avaliando a expressão de constante após cada `#if` ou `#elif` diretiva até encontrar uma expressão de constante true (diferente de zero). Ele seleciona todo o texto (incluindo outros começando com as diretivas de pré-processador  **#** ) até seu associado `#elif`, `#else`, ou `#endif`.  
+ O pré-processador seleciona um único *texto* item avaliando a expressão de constante após cada `#if` ou `#elif` diretiva até encontrar uma expressão de constante true (diferente de zero). Ele seleciona todo o texto (incluindo outros começando com as diretivas de pré-processador **#**) até seu associado `#elif`, `#else`, ou `#endif`.  
   
  Se todas as ocorrências de *expressão constante* são false, ou se nenhum `#elif` diretivas aparecem, o pré-processador seleciona o bloco de texto após o `#else` cláusula. Se o `#else` cláusula for omitida e todas as instâncias de *expressão constante* no `#if` bloco são false, nenhum bloco de texto é selecionado.  
   

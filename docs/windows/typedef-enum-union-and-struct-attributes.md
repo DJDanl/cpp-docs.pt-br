@@ -1,13 +1,10 @@
 ---
 title: TypeDef, Enum, Union e Struct atributos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atributos Typedef, Enum, Union e Struct
 Os atributos a seguir se aplicam ao [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [struct](../cpp/struct-cpp.md), e [enum](../cpp/enumerations-cpp.md) palavras-chave C++.  
@@ -38,7 +33,7 @@ Os atributos a seguir se aplicam ao [typedef](http://msdn.microsoft.com/en-us/cc
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|Usado com o [switch_type](../windows/switch-type.md) atributo em uma **união**.|  
-|[personalizado](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
+|[custom](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
 |[export](../windows/export.md)|Faz com que uma estrutura de dados a serem colocados no arquivo. idl.|  
 |[first_is](../windows/first-is.md)|Especifica o índice do primeiro elemento de matriz a ser transmitido.|  
 |[helpcontext](../windows/helpcontext.md)|Especifica uma ID de contexto que permite que usuários exibir informações sobre este elemento no arquivo de Ajuda.|  
@@ -57,16 +52,16 @@ Os atributos a seguir se aplicam ao [typedef](http://msdn.microsoft.com/en-us/cc
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|[personalizado](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
+|[custom](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
 |[export](../windows/export.md)|Faz com que uma estrutura de dados a serem colocados no arquivo. idl.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Especifica a ID exclusiva de uma classe ou interface.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Especifica a ID exclusiva de uma classe ou interface.|  
 |[v1_enum](../windows/v1-enum.md)|Direciona-se de que o tipo enumerado especificado ser transmitidas como uma entidade de 32 bits, em vez do padrão de 16 bits.|  
   
 ### <a name="union"></a>union  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|[personalizado](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
+|[custom](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
 |[export](../windows/export.md)|Faz com que uma estrutura de dados a serem colocados no arquivo. idl.|  
 |[first_is](../windows/first-is.md)|Especifica o índice do primeiro elemento de matriz a ser transmitido.|  
 |[last_is](../windows/last-is.md)|Especifica o índice do último elemento de matriz a ser transmitido.|  
@@ -74,7 +69,7 @@ Os atributos a seguir se aplicam ao [typedef](http://msdn.microsoft.com/en-us/cc
 |[max_is](../windows/max-is.md)|Designa o valor máximo para um índice de matriz válida.|  
 |[size_is](../windows/size-is.md)|Especifica o tamanho da memória alocada para ponteiros de tamanhos, tamanho ponteiros para ponteiros de tamanhos e único ou matrizes multidimensionais.|  
 |[unique](../windows/unique-cpp.md)|Especifica um ponteiro exclusivo.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Especifica a ID exclusiva de uma classe ou interface.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Especifica a ID exclusiva de uma classe ou interface.|  
   
 ### <a name="nonencapsulated-union"></a>União nonencapsulated  
   
@@ -93,7 +88,7 @@ Os atributos a seguir se aplicam ao [typedef](http://msdn.microsoft.com/en-us/cc
 |[coclass](../windows/coclass.md)|Cria um controle ActiveX.|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|Adiciona uma entrada de interface para um mapa de COM.|  
 |[control](../windows/control.md)|Especifica que o tipo definido pelo usuário é um controle.|  
-|[personalizado](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
+|[custom](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
 |[db_column](../windows/db-column.md)|Associa uma coluna especificada para o conjunto de linhas.|  
 |[db_command](../windows/db-command.md)|Cria um comando OLE DB.|  
 |[db_param](../windows/db-param.md)|Associa a variável de membro especificado com um parâmetro de entrada ou saído e delimita a variável.|  
@@ -112,10 +107,10 @@ Os atributos a seguir se aplicam ao [typedef](http://msdn.microsoft.com/en-us/cc
 |[max_is](../windows/max-is.md)|Designa o valor máximo para um índice de matriz válida.|  
 |[requires_category](../windows/requires-category.md)|Especifica as categorias de componente necessário da classe de destino.|  
 |[size_is](../windows/size-is.md)|Especifica o tamanho da memória alocada para ponteiros de tamanhos, tamanho ponteiros para ponteiros de tamanhos e único ou matrizes multidimensionais.|  
-|[código-fonte](../windows/source-cpp.md)|Em uma classe, especifica as interfaces de origem do objeto COM para pontos de conexão. Uma propriedade ou método, indica que o membro retorna um objeto ou uma VARIANTE é uma origem de eventos.|  
+|[Código-fonte](../windows/source-cpp.md)|Em uma classe, especifica as interfaces de origem do objeto COM para pontos de conexão. Uma propriedade ou método, indica que o membro retorna um objeto ou uma VARIANTE é uma origem de eventos.|  
 |[Threading](../windows/threading-cpp.md)|Especifica o modelo de threading para um objeto COM.|  
 |[unique](../windows/unique-cpp.md)|Especifica um ponteiro exclusivo.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Especifica a ID exclusiva de uma classe ou interface.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Especifica a ID exclusiva de uma classe ou interface.|  
 |[version](../windows/version-cpp.md)|Identifica uma versão específica entre várias versões de uma classe.|  
 |[vi_progid](../windows/vi-progid.md)|Especifica uma forma independente de versão de ProgID.|  
   

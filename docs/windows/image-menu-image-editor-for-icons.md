@@ -1,13 +1,10 @@
 ---
-title: "Imagem do Menu (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: Imagem do Menu (Editor de imagens para ícones) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bfeeda8d358bf3144cd5c3168686561b3586581
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu Imagem (editor de imagens para ícones)
 Menu imagem, que aparece apenas quando o editor de imagens está ativo, tem comandos para edição de imagens, gerenciar paletas de cores e definir opções de janela de Editor de imagem. Além disso, os comandos para o uso de imagens de dispositivo estão disponíveis ao trabalhar com ícones e cursores.  

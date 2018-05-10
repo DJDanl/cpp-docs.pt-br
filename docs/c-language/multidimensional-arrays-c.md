@@ -1,13 +1,10 @@
 ---
 title: Matrizes multidimensionais (C) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-arrays-c"></a>Matrizes multidimensionais (C)
 Uma expressão subscrita também pode ter vários subscritos, como segue:  
@@ -40,7 +35,7 @@ expression3
 ]...  
 ```  
   
- As expressões subscritas são associadas da esquerda para a direita. A expressão de subscrito mais à esquerda, * expression1***[***expression2 ***]**, é avaliado primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (**\***) é aplicado depois que a última expressão subscrita é avaliada, a menos que o valor do ponteiro final trate de um tipo de matriz (veja os exemplos abaixo).  
+ As expressões subscritas são associadas da esquerda para a direita. A expressão subscrita mais à esquerda, *expression1 ***[*** expression2***]**, é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (**\***) é aplicado depois que a última expressão subscrita é avaliada, a menos que o valor do ponteiro final trate de um tipo de matriz (veja os exemplos abaixo).  
   
  As expressões com vários subscritos referem-se aos elementos de "matrizes multidimensionais". Uma matriz multidimensional é uma matriz cujos elementos são matrizes. Por exemplo, o primeiro elemento de uma matriz tridimensional é uma matriz com duas dimensões.  
   

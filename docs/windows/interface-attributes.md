@@ -1,31 +1,26 @@
 ---
 title: Atributos de interface | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ff84939b3211633e199066e1a38da2e91efb1c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-attributes"></a>Atributos de interface
 Os atributos a seguir se aplicam ao [interface (ou interface)](../cpp/interface.md) palavra-chave do C++.  
@@ -33,7 +28,7 @@ Os atributos a seguir se aplicam ao [interface (ou interface)](../cpp/interface.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |[async_uuid](../windows/async-uuid.md)|Especifica o UUID que instrui o compilador MIDL para definir versões síncronas e assíncronas de uma interface COM.|  
-|[personalizado](../windows/custom-cpp.md)|Permite que você definir seus próprios atributos.|  
+|[custom](../windows/custom-cpp.md)|Permite que você definir seus próprios atributos.|  
 |[dispinterface](../windows/dispinterface.md)|Coloca uma interface no arquivo. idl como uma interface de expedição.|  
 |[dual](../windows/dual.md)|Coloca uma interface no arquivo. idl como uma interface dupla.|  
 |[export](../windows/export.md)|Faz com que uma estrutura de dados a serem colocados no arquivo. idl.|  
@@ -52,7 +47,7 @@ Os atributos a seguir se aplicam ao [interface (ou interface)](../cpp/interface.
 |[pointer_default](../windows/pointer-default.md)|Especifica o atributo de ponteiro padrão para todos os ponteiros exceto ponteiros de nível superior que aparecem em listas de parâmetros.|  
 |[ptr](../windows/ptr.md)|Designa um ponteiro como um ponteiro completo.|  
 |[restricted](../windows/restricted.md)|Designa quais membros da biblioteca não podem ser chamados arbitrariamente.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Fornece a ID exclusiva para a biblioteca|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Fornece a ID exclusiva para a biblioteca|  
   
  Você deve observar estas regras para definir uma interface:  
   

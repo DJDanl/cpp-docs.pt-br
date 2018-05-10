@@ -1,28 +1,23 @@
 ---
-title: "classe de enum (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: classe de enum (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876cab344f1177000f63740ca6c33bc1db1afefe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="enum-class--c-component-extensions"></a>classe enum (Extensões de Componentes C++)
 Declara uma enumeração no escopo do namespace, que é um tipo definido pelo usuário que consiste em um conjunto de constantes nomeadas chamado enumeradores.  
@@ -103,7 +98,7 @@ accessenum structname [:type] { enumerator-list } var;
  O nome da enumeração.  Enumerações gerenciadas anônimas não são permitidas.  
   
  `type` (opcional)  
- O tipo subjacente do *identificadores*.  Isso pode ser qualquer tipo de escalar, como versões assinados ou não assinados de int, curto ou longo.  `bool`ou `char` também é permitido.  
+ O tipo subjacente do *identificadores*.  Isso pode ser qualquer tipo de escalar, como versões assinados ou não assinados de int, curto ou longo.  `bool` ou `char` também é permitido.  
   
  `var` (opcional)  
  O nome de uma variável do tipo de enumeração.  

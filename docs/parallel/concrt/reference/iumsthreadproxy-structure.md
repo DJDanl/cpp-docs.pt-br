@@ -1,12 +1,9 @@
 ---
 title: Estrutura IUMSThreadProxy | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>Estrutura IUMSThreadProxy
 Uma abstração para um thread de execução. Se você quiser que o Agendador para receber os threads do modo de usuário agendáveis (UMS), defina o valor para o elemento de diretiva do Agendador `SchedulerKind` para `UmsThreadDefault`e implementar o `IUMSScheduler` interface. Threads UMS são apenas com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.  
@@ -74,7 +69,7 @@ virtual int EnterCriticalRegion() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  A nova profundidade da região crítica. Regiões críticas são reentrantes.  
   
-##  <a name="enterhypercriticalregion"></a>  IUMSThreadProxy::EnterHyperCriticalRegion Method  
+##  <a name="enterhypercriticalregion"></a>  Método: Enterhypercriticalregion  
  Chamado para inserir uma região hyper crítica. Quando dentro de uma região hyper crítica, o Agendador não observará bloqueio de operações que ocorrem durante a região. Isso significa que o Agendador não será ser reinserido para bloqueio de chamadas de função, tentativas de aquisição de bloqueio, o bloco, falhas de página, thread suspensões, chamadas de procedimento assíncrono do kernel (APCs) e assim por diante, para um UMS thread.  
   
 ```
@@ -97,7 +92,7 @@ virtual int ExitCriticalRegion() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  A nova profundidade da região crítica. Regiões críticas são reentrantes.  
   
-##  <a name="exithypercriticalregion"></a>  IUMSThreadProxy::ExitHyperCriticalRegion Method  
+##  <a name="exithypercriticalregion"></a>  Método: Exithypercriticalregion  
  Chamado para sair de uma região hyper crítica.  
   
 ```

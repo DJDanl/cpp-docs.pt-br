@@ -1,13 +1,10 @@
 ---
-title: "módulo (C++) | Microsoft Docs"
-ms.custom: 
+title: módulo (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>module (C++)
 Define o bloco de biblioteca no arquivo. idl.  
@@ -128,15 +123,15 @@ Define o bloco de biblioteca no arquivo. idl.
   
      [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) é usada como a classe base e a entrada DLL padrão pontos necessários para um servidor COM. Esses pontos de entrada são [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368), e [ DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).  
   
--   `type` = **exe**  
+-   `type` = **Exe**  
   
      [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) é usada como a classe base e o ponto de entrada executável padrão [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
   
--   `type` = **serviço**  
+-   `type` = **Serviço**  
   
      [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) é usada como a classe base e o ponto de entrada executável padrão [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
   
--   `type` = **não especificado**  
+-   `type` = **Não especificado**  
   
      Desabilita a injeção de código de ATL relacionada ao atributo de módulo.  
   
@@ -193,8 +188,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
  [Atributos autônomos](../windows/stand-alone-attributes.md)   
  [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
  [usesgetlasterror](../windows/usesgetlasterror.md)   
- [biblioteca](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
+ [Biblioteca](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
  [HelpContext](../windows/helpcontext.md)   
  [HelpString](../windows/helpstring.md)   
- [arquivo de ajuda](../windows/helpfile.md)   
+ [Arquivo de ajuda](../windows/helpfile.md)   
  [version](../windows/version-cpp.md)   

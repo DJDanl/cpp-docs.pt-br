@@ -1,13 +1,10 @@
 ---
 title: coclass | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.coclass
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bcae762c603f05ce11eae5d14eb2e182c666797
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="coclass"></a>coclass
 Cria um objeto COM, que pode implementar uma interface COM.  
@@ -68,7 +63,7 @@ Cria um objeto COM, que pode implementar uma interface COM.
   
  O **coclass** atributo também disponibiliza as seguintes funções por meio de código injetado ou, no caso de `GetObjectCLSID`, como um método estático na classe base `CComCoClass`:  
   
--   `UpdateRegistry`registra as fábricas de classe da classe de destino.  
+-   `UpdateRegistry` registra as fábricas de classe da classe de destino.  
   
 -   `GetObjectCLSID`, que está relacionado ao registro, também pode ser usado para obter o CLSID da classe de destino.  
   
@@ -147,7 +142,7 @@ public:
   
 |||  
 |-|-|  
-|**Aplica-se a**|**classe**,`struct`|  
+|**Aplica-se a**|**class**, `struct`|  
 |**Repetível**|Não|  
 |**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  

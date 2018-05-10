@@ -1,13 +1,10 @@
 ---
-title: "Extensões de componentes para plataformas de tempo de execução | Microsoft Docs"
-ms.custom: 
+title: Extensões de componentes para plataformas de tempo de execução | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Extensões de componente para plataformas de tempo de execução
 Visual C++ fornece extensões de linguagem para ajudar você programe em plataformas de tempo de execução. Usando C + + CX, você pode programar aplicativos de plataforma Universal do Windows e componentes que são compilados para código nativo. Embora você possa criar aplicativos de plataforma Universal do Windows por programação diretamente em interfaces COM tempo de execução do Windows, usando C + + CX, você pode trabalhar com construtores, exceções e outras linguagens de programação de C++ moderno. Para habilitar a programação de C++ em um ambiente de execução gerenciado na plataforma .NET, você pode usar C + + CLI.  
@@ -86,7 +81,7 @@ Visual C++ fornece extensões de linguagem para ajudar você programe em platafo
 |`gcnew`|Não|Aloca tipos no heap coletado como lixo. Usar em vez de `new` e `delete`.|[gcnew novo ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`ref new`|Sim|Aloca um tipo de tempo de execução do Windows. Usar em vez de `new` e `delete`.|[gcnew novo ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|Sim|Indica que um membro só pode ser inicializado na declaração ou em um construtor estático.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
-|`literal`|Sim|Cria uma variável de literal.|[literal](../windows/literal-cpp-component-extensions.md)|  
+|`literal`|Sim|Cria uma variável de literal.|[Literal](../windows/literal-cpp-component-extensions.md)|  
 |`nullptr`|Não|Indica que um identificador ou ponteiro não faz referência a um objeto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Construções de modelo  
@@ -116,7 +111,7 @@ Visual C++ fornece extensões de linguagem para ajudar você programe em platafo
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Tempo de execução do Windows e CLR) Habilita o uso de palavras-chave como identificadores.|  
 |[Listas de argumentos variáveis (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Tempo de execução do Windows e CLR) Permite que uma função que tenha um número variável de argumentos.|  
 |[Equivalentes do .NET Framework aos tipos nativos do C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Lista os tipos CLR que são usados no lugar de tipos integrais do C++.|  
-|[AppDomain](../cpp/appdomain.md) `__declspec` modificador|`__declspec`modificador que exige a existem de variáveis globais e estáticos por appdomain.|  
+|[AppDomain](../cpp/appdomain.md) `__declspec` modificador|`__declspec` modificador que exige a existem de variáveis globais e estáticos por appdomain.|  
 |[Conversões do estilo C com /clr (C + + CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Descreve como conversões do estilo C são interpretados.|  
 |[clrcall](../cpp/clrcall.md) convenção de chamada|Indica a convenção de chamada CLR compatível.|  
 |`__cplusplus_cli`|[Macros predefinidas](../preprocessor/predefined-macros.md)|  
@@ -127,7 +122,7 @@ Visual C++ fornece extensões de linguagem para ajudar você programe em platafo
 |[Conversão boxing](../windows/boxing-cpp-component-extensions.md)|Demonstra as condições em quais valores de tipos são demarcados.|  
 |[Suporte de compilador de traços de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|Discute como detectar características de tipos em tempo de compilação.|  
 |[gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) pragmas|Demonstra como gerenciadas e funções podem coexistir no mesmo módulo.|  
-|[processo](../cpp/process.md) `__declspec` modificador|`__declspec`modificador que exige a existem de variáveis globais e estáticos por processo.|  
+|[processo](../cpp/process.md) `__declspec` modificador|`__declspec` modificador que exige a existem de variáveis globais e estáticos por processo.|  
 |[Reflexão (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Demonstra a versão CLR de informações de tipo de tempo de execução.|  
 |[Cadeia de caracteres](../windows/string-cpp-component-extensions.md)|Discute a conversão de compilador de literais de cadeia de caracteres para <xref:System.String>.|  
 |[Encaminhamento de tipo (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Permite a movimentação de um tipo em um assembly de envio para outro conjunto para que o código do cliente não precisa ser recompilado.|  

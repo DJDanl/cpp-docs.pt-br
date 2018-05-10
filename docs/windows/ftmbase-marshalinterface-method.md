@@ -1,12 +1,9 @@
 ---
-title: "Método Ftmbase: | Microsoft Docs"
-ms.custom: 
+title: 'Método Ftmbase: | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase::MarshalInterface
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MarshalInterface method
 ms.assetid: fc8421b4-06e4-4925-b908-c285fe4790d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9df1e5d7559b434c1af0f1feff3b73b8141a8865
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ftmbasemarshalinterface-method"></a>Método FtmBase::MarshalInterface
 Grava em um fluxo de dados necessários para inicializar um objeto de proxy em algum processo do cliente.  
@@ -83,7 +78,7 @@ STDMETHODIMP MarshalInterface(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ftm.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe FtmBase](../windows/ftmbase-class.md)

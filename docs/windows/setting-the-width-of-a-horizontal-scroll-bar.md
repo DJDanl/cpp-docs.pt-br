@@ -1,13 +1,10 @@
 ---
 title: Definindo a largura de uma barra de rolagem Horizontal | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars, width
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7aeabed9eaa164a0c19fd6b425f36e68059a548d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34545a01c01146992c7d88ecabec1a29a7b438f2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Definindo a largura de uma barra de rolagem horizontal
 Quando você adiciona uma caixa de listagem com uma barra de rolagem horizontal para uma caixa de diálogo usando classes MFC, a barra de rolagem não aparecerão automaticamente em seu aplicativo.  

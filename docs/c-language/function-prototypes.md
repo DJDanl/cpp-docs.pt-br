@@ -1,13 +1,10 @@
 ---
-title: "Protótipos de função | Microsoft Docs"
-ms.custom: 
+title: Protótipos de função | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>Protótipos de função
 Uma declaração de função precede a definição de função e especifica o nome, o tipo de retorno, a classe de armazenamento e os outros atributos de uma função. Para ser um protótipo, a declaração de função também deve estabelecer os tipos e identificadores dos argumentos da função.  
   
 ## <a name="syntax"></a>Sintaxe  
  `declaration`:  
- *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list* opt **;**  
   
  /\* *attribute-seq* opt é específico da Microsoft */  
   
@@ -61,7 +56,7 @@ Uma declaração de função precede a definição de função e especifica o no
  *direct-declarator*: /\* Um declarador de função \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)**  /* Declarador de novo estilo \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* Declarador de estilo obsoleto \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* Declarador de estilo obsoleto \*/  
   
  O protótipo tem o mesmo formato que a definição de função, exceto que é ele é encerrado por um ponto-e-vírgula imediatamente depois do parêntese de fechamento e, portanto, não tem corpo. Em ambos os casos, o tipo de retorno deve concordar com o tipo de retorno especificado na definição de função.  
   

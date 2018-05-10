@@ -1,13 +1,10 @@
 ---
-title: "evento (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: evento (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>evento (Extensões de Componentes C++)
 O `event` palavra-chave declara um *evento*, que é uma notificação para assinantes registrados (*manipuladores de eventos*) que algo interessante ocorreu.  
@@ -53,7 +48,7 @@ modifiereventdelegate^ event_name
   
  **Parâmetros**  
   
- *modificador*  
+ *Modificador*  
  Um modificador que pode ser usado na declaração de evento ou um método de acessador de evento.  Os valores possíveis são `static` e `virtual`.  
   
  *delegate*  
@@ -65,7 +60,7 @@ modifiereventdelegate^ event_name
  *RETURN_VALUE*  
  O valor de retorno do método de acessador de evento.  Para que seja verificável, o tipo de retorno deve ser `void`.  
   
- *parâmetros*  
+ *Parâmetros*  
  (opcional) Parâmetros para o `raise` método, que corresponda à assinatura do *delegar* parâmetro.  
   
  **Comentários**  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  Você pode usar `operators+=` e `operator-=` para adicionar e remover um evento manipulador ou chamada de `add()` e `remove()` métodos explicitamente.  
   
- `event`é uma palavra-chave contextual; consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
+ `event` é uma palavra-chave contextual; consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
   
@@ -115,7 +110,7 @@ modifiereventdelegate^ event_name
   
  **Parâmetros**  
   
- *modificador*  
+ *Modificador*  
  Um modificador que pode ser usado na declaração de evento ou um método de acessador de evento.  Os valores possíveis são `static` e `virtual`.  
   
  *delegate*  
@@ -127,7 +122,7 @@ modifiereventdelegate^ event_name
  *RETURN_VALUE*  
  O valor de retorno do método de acessador de evento.  Para que seja verificável, o tipo de retorno deve ser `void`.  
   
- *parâmetros*  
+ *Parâmetros*  
  (opcional) Parâmetros para o `raise` método, que corresponda à assinatura do *delegar* parâmetro.  
   
  **Comentários**  

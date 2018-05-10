@@ -1,12 +1,9 @@
 ---
-title: "Método Simpleclassfactory: | Microsoft Docs"
-ms.custom: 
+title: 'Método Simpleclassfactory: | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory::CreateInstance
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateInstance method
 ms.assetid: 17b7947a-2608-49d9-b730-fef76501c9bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68778eb1b5421cfcf22261d8b1c1efd99bc32c50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>Método SimpleClassFactory::CreateInstance
 
@@ -61,13 +56,13 @@ S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.
 
 ## <a name="remarks"></a>Comentários
 
-Se &#95; &#95; WRL_STRICT #95; &#95; é definido, um erro de asserção é emitido se a classe base especificada no parâmetro de modelo de classe não é derivada de [RuntimeClass](../windows/runtimeclass-class.md), ou não está configurado com o ClassicCom ou WinRtClassicComMix [RuntimeClassType ](../windows/runtimeclasstype-enumeration.md) valor de enumeração.
+Se &#95; &#95;WRL_STRICT&#95; &#95; é definido, um erro de asserção é emitido se a classe base especificada no parâmetro de modelo de classe não é derivada de [RuntimeClass](../windows/runtimeclass-class.md), ou não está configurado com o ClassicCom ou WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeração.
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** module.h
 
-**Namespace:** Microsoft:: wrl
+**Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Consulte também
 

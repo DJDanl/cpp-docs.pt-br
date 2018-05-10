@@ -1,28 +1,23 @@
 ---
-title: "Como: criar um componente COM clássico com WRL | Microsoft Docs"
-ms.custom: 
+title: 'Como: criar um componente COM clássico com WRL | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Como criar um componente COM clássico com WRL
 Você pode usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para criar componentes básicos do COM clássico para uso em aplicativos de área de trabalho, além de usá-lo para aplicativos do Windows UWP (plataforma Universal). Para a criação de componentes COM, a biblioteca de modelos do Windows em tempo de execução C++ podem exigir menos código do que o ATL. Para obter informações sobre o subconjunto COM a biblioteca de modelos de C++ do Windows Runtime oferece suporte, consulte [biblioteca de modelo em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  

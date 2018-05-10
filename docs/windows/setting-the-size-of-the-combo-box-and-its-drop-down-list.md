@@ -1,13 +1,10 @@
 ---
-title: "Definindo o tamanho da caixa de combinação e sua lista suspensa | Microsoft Docs"
-ms.custom: 
+title: Definindo o tamanho da caixa de combinação e sua lista suspensa | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8cac985a4cc723e2e0b5db9812e29b8b9632f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Definindo o tamanho da caixa de combinação e a lista suspensa
 Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa de combinação. Você também pode especificar o tamanho da caixa de listagem suspensa.  
@@ -52,7 +47,7 @@ Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa
   
 2.  Use a alça de dimensionamento inferior para alterar o tamanho inicial da área de lista suspensa.  
   
-     ![Caixa de combinação &#45; dimensionamento caixa em um projeto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
+     ![Caixa de combinação&#45;dimensionamento caixa em um projeto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
 3.  Clique na seta suspensa novamente para fechar a parte da lista suspensa da caixa de combinação.  
   

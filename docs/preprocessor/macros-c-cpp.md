@@ -1,12 +1,9 @@
 ---
 title: Macros (C/C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
-Pré-processamento expande macros em todas as linhas que não são diretivas de pré-processador (linhas que não têm um  **#**  como o primeiro caractere que não esteja em branco) e em partes de algumas diretivas que não são ignoradas como parte de um compilação condicional. As políticas de “compilação condicional” permitem que você suprima a compilação de partes de um arquivo de origem testando uma expressão constante ou um identificador para determinar quais blocos de texto passam no compilador e que são removidos do arquivo de origem durante o pré-processamento.  
+Pré-processamento expande macros em todas as linhas que não são diretivas de pré-processador (linhas que não têm um **#** como o primeiro caractere que não esteja em branco) e em partes de algumas diretivas que não são ignoradas como parte de um compilação condicional. As políticas de “compilação condicional” permitem que você suprima a compilação de partes de um arquivo de origem testando uma expressão constante ou um identificador para determinar quais blocos de texto passam no compilador e que são removidos do arquivo de origem durante o pré-processamento.  
   
  A política `#define` normalmente é usada para associar identificadores significativos a constantes, palavras-chave e instruções ou expressões de uso geral. Os identificadores que representam constantes às vezes são chamados de “constantes simbólicas” ou “constantes de manifesto”. Os identificadores que representam instruções ou expressões são chamados de “macros”. Nesta documentação de pré-processador, somente o termo “macro” é usado.  
   

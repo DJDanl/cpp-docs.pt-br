@@ -1,12 +1,9 @@
 ---
-title: "Método Ftmbase: | Microsoft Docs"
-ms.custom: 
+title: 'Método Ftmbase: | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetMarshalSizeMax method
 ms.assetid: b416b1bf-c73e-45d5-abb8-04921c1a0c94
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d68889531c270db190f861eb20a34783b88987f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>Método FtmBase::GetMarshalSizeMax
 Obter o limite superior no número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.  
@@ -73,7 +68,7 @@ STDMETHODIMP GetMarshalSizeMax(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ftm.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe FtmBase](../windows/ftmbase-class.md)

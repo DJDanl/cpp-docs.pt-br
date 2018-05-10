@@ -1,13 +1,10 @@
 ---
-title: "Criando um pincel personalizado (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: Criando um pincel personalizado (Editor de imagens para ícones) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 750881aa-6f47-4de9-8ca6-a7a12afc6383
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f376053635708372c09a37aa0810e4305db60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a879850c00957568065150b6c6fc1c801c049fa2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Criando um pincel personalizado (editor de imagens para ícones)
 Um pincel personalizado é uma parte retangular de uma imagem que você escolher e usar como pincéis predefinidos do editor de imagem. Todas as operações que você pode executar em uma seleção, você pode executar em um pincel personalizado também.  

@@ -1,12 +1,9 @@
 ---
-title: "Método Chaininterfaces: | Microsoft Docs"
-ms.custom: 
+title: 'Método Chaininterfaces: | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::ChainInterfaces::Verify
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Verify method
 ms.assetid: c591e130-8686-4130-ba69-1aaedc250038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d34d117091fd8807dfefda074e510910bf059560
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="chaininterfacesverify-method"></a>Método ChainInterfaces::Verify
 Verifica se cada interface definidos pelos parâmetros de modelo `I0` por meio de `I9` herda de IUnknown e/ou IInspectable que `I0` herda de `I1` por meio de `I9`.  
@@ -46,7 +41,7 @@ WRL_NOTHROW __forceinline static void Verify();
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Estrutura ChainInterfaces](../windows/chaininterfaces-structure.md)

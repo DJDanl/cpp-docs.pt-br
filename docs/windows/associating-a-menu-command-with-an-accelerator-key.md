@@ -1,13 +1,10 @@
 ---
 title: Associando um comando de Menu com uma tecla aceleradora | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - commands, associating menu commands with accelerator keys
 - menu commands, associating with keyboard shortcuts
 ms.assetid: ad2de43f-b20a-4c9f-bda8-0420179da48c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 79a16cf8d67fb7a6a45043c28455a7ed22f90ffa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4f1aa4b80aec2e7c16485c08d2505695b21f4d5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Associando um comando Menu a uma tecla de aceleração
 Geralmente há horários em que um comando de menu e uma combinação de teclado para emitir o mesmo comando do programa. Você pode fazer isso usando o editor de Menu para atribuir o mesmo identificador de recurso para o comando de menu e uma entrada na tabela de Aceleradores do seu aplicativo. Você edita o [legenda](../windows/menu-command-properties.md) do comando de menu para mostrar o nome da chave do acelerador.  

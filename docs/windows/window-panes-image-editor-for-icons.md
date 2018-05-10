@@ -1,13 +1,10 @@
 ---
-title: "Painéis de janela (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: Painéis de janela (Editor de imagens para ícones) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - graphics editor [C++]
 - Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b28d49d698f5bc39d8a3915c635c28ecca4193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e899729e70db089c1c55f00aa9c4196a22c67060
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Painéis Janela (editor de imagens para ícones)
 A janela do Editor de imagem exibe uma imagem em dois painéis separados por uma barra de divisão. Um modo de exibição é o tamanho real e a outra é ampliada (o fator de ampliação padrão é 6). Os modos de exibição nesses dois painéis são atualizados automaticamente: as alterações feitas em um painel são mostradas imediatamente no outro. Os dois painéis tornam mais fácil para você trabalhar em uma exibição ampliada da imagem, na qual você pode distinguir pixels individuais e, ao mesmo tempo, observar o efeito de seu trabalho no modo de exibição de tamanho real da imagem.  

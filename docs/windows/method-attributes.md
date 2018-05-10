@@ -1,31 +1,26 @@
 ---
-title: "Atributos de método | Microsoft Docs"
-ms.custom: 
+title: Atributos de método | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>Atributos de método
 Os atributos a seguir se aplicam a métodos em uma classe, coclass ou interface.  
@@ -34,7 +29,7 @@ Os atributos a seguir se aplicam a métodos em uma classe, coclass ou interface.
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|Indica que a propriedade dá suporte à associação de dados.|  
 |[call_as](../windows/call-as.md)|Permite que uma função nonremotable a ser mapeada para uma função remota.|  
-|[personalizado](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
+|[custom](../windows/custom-cpp.md)|Permite que você defina seu próprio atributo.|  
 |[db_column](../windows/db-column.md)|Associa uma coluna especificada para o conjunto de linhas.|  
 |[db_command](../windows/db-command.md)|Cria um comando OLE DB.|  
 |[db_param](../windows/db-param.md)|Associa a variável de membro especificado com um parâmetro de entrada ou saído e delimita a variável.|  
@@ -58,11 +53,11 @@ Os atributos a seguir se aplicam a métodos em uma classe, coclass ou interface.
 |[propput](../windows/propput.md)|Especifica uma função de configuração de propriedade.|  
 |[propputref](../windows/propputref.md)|Especifica uma função de configuração de propriedade que usa uma referência em vez de um valor.|  
 |[ptr](../windows/ptr.md)|Designa um ponteiro como um ponteiro completo.|  
-|[intervalo](../windows/range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|  
+|[range](../windows/range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|  
 |[requestedit](../windows/requestedit.md)|Indica que a propriedade oferece suporte a **OnRequestEdit** notificação.|  
 |[restricted](../windows/restricted.md)|Especifica que um membro de um módulo, interface ou dispinterface não pode ser chamado arbitrariamente.|  
 |[satype](../windows/satype.md)|Especifica o tipo de dados de **SAFEARRAY** estrutura.|  
-|[código-fonte](../windows/source-cpp.md)|Especifica as interfaces de origem do controle para pontos de conexão em uma classe. Em uma propriedade ou método, o **fonte** atributo indica que o membro retorna um objeto ou uma VARIANTE é uma origem de eventos.|  
+|[Código-fonte](../windows/source-cpp.md)|Especifica as interfaces de origem do controle para pontos de conexão em uma classe. Em uma propriedade ou método, o **fonte** atributo indica que o membro retorna um objeto ou uma VARIANTE é uma origem de eventos.|  
 |[synchronize](../windows/synchronize.md)|Sincroniza o acesso para o método de destino.|  
 |[vararg](../windows/vararg.md)|Especifica que a função tem um número variável de argumentos.|  
   

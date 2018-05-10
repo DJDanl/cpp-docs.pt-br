@@ -1,13 +1,10 @@
 ---
-title: "Especificação de largura scanf | Microsoft Docs"
-ms.custom: 
+title: Especificação de largura scanf | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>Especificação de largura scanf Width
 Essas informações se aplicam à interpretação de cadeias de caracteres de formato na família de funções `scanf`, incluindo as versões protegidas, como `scanf_s`. Essas funções geralmente pressupõem que o fluxo de entrada é dividido em uma sequência de tokens. Os tokens são separados por espaços em branco (espaço, tabulação ou nova linha) ou, no caso de tipos numéricos, pelo final natural de um tipo de dados numéricos, conforme indicado pelo primeiro caractere que não pode ser convertido em texto numérico. No entanto, a especificação de largura pode ser usada para fazer com que a análise da entrada pare antes do final natural de um token.  
@@ -94,7 +89,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  Observe que **%[a-z]** e **%[z-a]** são interpretados como equivalentes a **%[abcde...z]**. Essa é uma extensão de função `scanf` comum, mas observe que o padrão ANSI não a exige.  
   
 ## <a name="reading-unterminated-strings"></a>Leitura de cadeias de caracteres não finalizadas  
- Para armazenar uma cadeia de caracteres sem armazenar um caractere nulo de terminação (“\0”), use a especificação `%`*n***c**, em que *n* é um inteiro decimal. Nesse caso, o caractere de tipo **c** indica que o argumento é um ponteiro para uma matriz de caracteres. Os próximos caracteres *n* são lidos do fluxo de entrada para o local especificado e nenhum caractere nulo (“\0”) é acrescentado. Se *n* não for especificado, o valor padrão será 1.  
+ Para armazenar uma cadeia de caracteres sem armazenar um caractere nulo de terminação ('\0'), use a especificação `%`*n***c**, em que *n* é um inteiro decimal. Nesse caso, o caractere de tipo **c** indica que o argumento é um ponteiro para uma matriz de caracteres. Os próximos caracteres *n* são lidos do fluxo de entrada para o local especificado e nenhum caractere nulo ('\0') é anexado. Se *n* não for especificado, o valor padrão será 1.  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>Quando scanf interrompe a leitura de um campo  
  A função `scanf` examina cada campo de entrada, caractere por caractere. Ela pode parar de ler determinado campo de entrada antes de alcançar um caractere de espaço por vários motivos:  

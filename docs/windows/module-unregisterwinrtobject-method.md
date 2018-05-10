@@ -1,12 +1,9 @@
 ---
-title: "Método: unregisterwinrtobject | Microsoft Docs"
-ms.custom: 
+title: 'Método: unregisterwinrtobject | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::UnregisterWinRTObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - UnregisterWinRTObject method
 ms.assetid: 32334aa7-2293-40d2-9a89-4b02e2e31f3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f91da0305a1b3cfb783be0d2dfa40cfaf226104
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aab0ec29dbda428a1173d57e2671f1e4b609e085
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Método Module::UnregisterWinRTObject
 Cancela o registro de um ou mais objetos de tempo de execução do Windows para que outros aplicativos não podem se conectar a eles.  
@@ -50,7 +45,7 @@ virtual HRESULT UnregisterWinRTObject(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  
   
- **Namespace:** Microsoft:: wrl
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Consulte também
  [Classe Module](../windows/module-class.md)

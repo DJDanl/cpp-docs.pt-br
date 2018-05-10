@@ -1,13 +1,10 @@
 ---
-title: "Passo a passo: Criando um programa padrão do C++ (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Passo a passo: Criando um programa padrão do C++ (C++) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vcfirstapp
 - vccreatefirst
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Passo a passo: Criando um programa padrão do C++ (C++)
 Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do Visual Studio para criar programas C++ padrão. Seguindo as etapas neste passo a passo, você pode criar um projeto, adicione um novo arquivo ao projeto, modifique o arquivo para adicionar o código C++ e, em seguida, compilar e executar o programa usando [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -53,7 +48,7 @@ Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do V
   
      Por padrão, a solução que contém o projeto tem o mesmo nome que o projeto, mas você pode digitar um nome diferente. Você também pode digitar um local diferente para o projeto.  
   
-     Clique em **Okey** para criar o projeto.  
+     Clique em **OK** para criar o projeto.  
   
 4.  No **Assistente de aplicativo Win32**, clique em **próximo**, selecione **projeto vazio**e, em seguida, clique em **concluir**.  
   

@@ -1,30 +1,25 @@
 ---
-title: "Alterar a fonte do texto em uma imagem (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: Alterar a fonte do texto em uma imagem (Editor de imagens para ícones) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - fonts, changing on an image
 ms.assetid: b8849d40-d401-4e06-808f-e615cb2bee3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07dc7d7fd74ad9d4b0229ffef7cf4e96a4ea44b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3ddef7e52866d5e25c3b9f5e5c580062f73e1b3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Alterando a fonte de texto em uma imagem (editor de imagens para ícones)
 O procedimento a seguir é um exemplo de como:  
@@ -59,5 +54,5 @@ O procedimento a seguir é um exemplo de como:
   
 ## <a name="see-also"></a>Consulte também  
  [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Barra de ferramentas](../windows/toolbar-image-editor-for-icons.md)
+ [Toolbar](../windows/toolbar-image-editor-for-icons.md)
 

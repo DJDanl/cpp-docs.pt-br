@@ -1,13 +1,10 @@
 ---
-title: "Como: abrir um arquivo de Script de recurso fora de um projeto (autônomo) | Microsoft Docs"
-ms.custom: 
+title: 'Como: abrir um arquivo de Script de recurso fora de um projeto (autônomo) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resource script files, viewing resources
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dd3bb3996fca1fd2c73ff98e7f391d27911ad15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87dd0cb1e54b6e74c9c4f4fd7d9baff6461ad470
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Como abrir o arquivo de script do recurso fora de um projeto (autônomo)
 Você pode exibir recursos em um arquivo. rc sem ter que abrir um projeto. O arquivo. RC será aberto em uma janela de documento em vez de abertura no [exibição recursos](../windows/resource-view-window.md) janela (como quando o arquivo está aberto em um projeto).  

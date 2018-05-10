@@ -1,12 +1,9 @@
 ---
 title: Classe RuntimeClass | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>Classe RuntimeClass
 Representa uma classe WinRT ou COM que herda as interfaces especificadas e fornece o tempo de execução do Windows especificado, COM clássico e suporte de referência fraca.  
@@ -48,7 +43,7 @@ Parâmetro opcional. Uma combinação de um ou mais [RuntimeClassType](../window
 A lista de interfaces de objeto implementa além IUnknown, IInspectable ou outras interfaces controlados por [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Ele também pode listar outras classes de derivar de Microsoft::WRL::FtmBase especialmente para tornar o objeto agile e fazer com que ele implementa IMarshal.
   
 ## <a name="members"></a>Membros  
-`RuntimeClassInitialize`Uma função que inicializa o objeto se a função de modelo MakeAndInitialize é usada para construir o objeto. Retorna S_OK se o objeto foi inicializado com êxito, ou um código de erro COM se a falha na inicialização. O código de erro COM é propagado como o valor de retorno de MakeAndInitialize. Observe que o método RuntimeClassInitialize não é chamado se a função de modelo de marca é usada para construir o objeto.
+`RuntimeClassInitialize` Uma função que inicializa o objeto se a função de modelo MakeAndInitialize é usada para construir o objeto. Retorna S_OK se o objeto foi inicializado com êxito, ou um código de erro COM se a falha na inicialização. O código de erro COM é propagado como o valor de retorno de MakeAndInitialize. Observe que o método RuntimeClassInitialize não é chamado se a função de modelo de marca é usada para construir o objeto.
 
 ### <a name="public-constructors"></a>Construtores públicos  
   
@@ -63,7 +58,7 @@ Este é um detalhe de implementação.
 ## <a name="requirements"></a>Requisitos  
 **Cabeçalho:** implements.h  
   
-**Namespace:** Microsoft:: wrl  
+**Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
 [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

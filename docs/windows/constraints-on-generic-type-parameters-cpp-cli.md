@@ -1,13 +1,10 @@
 ---
-title: "Restrições em tipo genérico parâmetros (C + + CLI) | Microsoft Docs"
-ms.custom: 
+title: Restrições em tipo genérico parâmetros (C + + CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - where
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restrições em parâmetros de tipo genérico (C++/CLI)
 Em declarações de método ou tipo genérico, você pode qualificar um parâmetro de tipo com restrições. Uma restrição é um requisito que devem satisfazer os tipos usados como argumentos de tipo. Por exemplo, uma restrição pode ser que o argumento de tipo deve implementar uma determinada interface ou herdar de uma classe específica.  

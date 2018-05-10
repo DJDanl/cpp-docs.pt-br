@@ -1,13 +1,10 @@
 ---
-title: "Conceitos de programação de atribuído | Microsoft Docs"
-ms.custom: 
+title: Conceitos de programação de atribuído | Microsoft Docs
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++]
 - programming [C++], attributed programming
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6498659865ae3cad536cdc8e446c04cdd731a67e
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 8ba7084ea10cc502eea0e0e0f62709467750a99d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributed-programming-concepts"></a>Conceitos de programação atribuídos
 Visual C++ inclui uma variedade de material para ajudá-lo a usar os atributos em seus programas. Atributos, um novo recurso no Visual C++, são projetados para simplificar a programação COM e desenvolvimento de tempo de execução de linguagem comum do .NET Framework. Quando você incluir atributos nos arquivos de origem, o compilador funciona com bibliotecas de vínculo dinâmico (DLL) para inserir código ou modificar o código nos arquivos de objeto gerado do provedor. Há atributos que auxiliam na criação de arquivos. idl, interfaces, bibliotecas de tipo e outros elementos de COM. No ambiente de desenvolvimento integrado (IDE), os atributos têm suporte dos assistentes e pela janela Propriedades.  

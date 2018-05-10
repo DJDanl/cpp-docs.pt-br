@@ -1,31 +1,26 @@
 ---
-title: "Cadeia de caracteres (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: Cadeia de caracteres (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="string--c-component-extensions"></a>Cadeia de caracteres (Extensões de Componentes C++)
 O suporte de compilador do Visual C++ *cadeias de caracteres*, que são objetos que representam o texto como uma cadeia de caracteres. Visual C++ dá suporte a variáveis de cadeia de caracteres, cujo valor é implícita, e literais, cujo valor é uma cadeia de caracteres entre aspas explícita.  
@@ -291,4 +286,4 @@ System.String
 ## <a name="see-also"></a>Consulte também  
  [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)   
  [Cadeia de caracteres e literais de caracteres](../cpp/string-and-character-literals-cpp.md)   
- [/CLR (common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (compilação do Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

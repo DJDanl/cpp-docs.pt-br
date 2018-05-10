@@ -1,13 +1,10 @@
 ---
-title: "Editando recursos gráficos (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: Editando recursos gráficos (Editor de imagens para ícones) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ffdc026c53a9f26e68d9f0e8626ebb03fac6ffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Editando recursos gráficos (editor de imagens para ícones)
 Recursos gráficos são as imagens que você definir para seu aplicativo. Você pode desenhar à mão livre ou desenhar usando formas. Você pode selecionar partes de uma imagem para edição, invertendo ou redimensionar, ou você pode criar um pincel personalizado de uma parte selecionada de uma imagem e desenhar com esse pincel. Você pode definir as propriedades da imagem, salvar imagens em formatos diferentes e converter imagens de um formato para outro.  

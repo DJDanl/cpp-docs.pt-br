@@ -1,13 +1,10 @@
 ---
 title: _environ, _wenviron | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - environ
 - wenviron
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 277f8a853a5262d524016630f52bfcbfc8a8b18b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 A variável `_environ` é um ponteiro para uma matriz de ponteiros para as sequências de caracteres multibyte que constituem o ambiente do processo. Essa variável global foi preterida em favor das versões funcionais mais seguras [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) e [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), que devem ser usadas no lugar da variável global. `_environ` é declarado em Stdlib.h.  

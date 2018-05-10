@@ -1,27 +1,22 @@
 ---
 title: 2.4.1 constructo for | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 Constructo for
 O **para** diretiva identifica uma construção de compartilhamento de trabalho iterativa que especifica que as iterações do loop associado serão executadas em paralelo. As iterações do **para** loop são distribuídas entre os threads que já existem na equipe executando a construção paralela à qual ela está associada. A sintaxe do **para** construção é o seguinte:  
@@ -32,13 +27,13 @@ O **para** diretiva identifica uma construção de compartilhamento de trabalho 
   
  A cláusula é um dos seguintes:  
   
- **privada (** *lista variável* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *lista variável* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **lastprivate (** *lista variável* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **redução (** *operador* **:** *lista variável***)**  
+ **redução (** *operador* **:** *variável-lista *)**  
   
  **ordenados**  
   
@@ -48,7 +43,7 @@ O **para** diretiva identifica uma construção de compartilhamento de trabalho 
   
  O **para** diretiva impõe restrições na estrutura do **para** loop. Especificamente, o correspondente **para** loop deve ter a forma canônica:  
   
- **para (** *expr init* **;** *var operações lógicas b*; *incr expr***)**  
+ **para (** *expr init* **;** *var operações lógicas b*; *incr-expr *)**  
   
  *Init-expr*  
  Um dos seguintes:  
@@ -60,11 +55,11 @@ O **para** diretiva identifica uma construção de compartilhamento de trabalho 
  *expr incrementais*  
  Um dos seguintes:  
   
- ++*var*  
+ ++*Var*  
   
  *var* ++  
   
- -- *var*  
+ -- *Var*  
   
  *var* --  
   
@@ -103,9 +98,9 @@ O **para** diretiva identifica uma construção de compartilhamento de trabalho 
   
 |||  
 |-|-|  
-|static|Quando **agenda (estático,** *chunk_size***)** for especificado, iterações são divididas em partes de um tamanho especificado por *chunk_size*. As partes são atribuídas estaticamente a threads da equipe em um modo round robin na ordem o número de threads. Quando nenhum *chunk_size* for especificado, o espaço de iteração é dividido em partes que são aproximadamente iguais em tamanho, com uma parte atribuída a cada thread.|  
-|dinâmica|Quando **agenda (dinâmico,** *chunk_size***)** for especificado, as iterações são divididas em uma série de blocos, cada uma contendo *chunk_size* iterações. Cada bloco é atribuído a um thread que está esperando por uma atribuição. O thread executa o bloco de iterações e, em seguida, aguarda sua atribuição de Avançar, até que nenhum partes permanecem para serem atribuídos. Observe que a última parte a ser atribuído pode ter um número menor de iterações. Quando nenhum *chunk_size* for especificado, o padrão é 1.|  
-|interativa|Quando **agenda (interativa,** *chunk_size***)** for especificado, as iterações são atribuídas a threads em partes com tamanhos de redução. Quando um thread conclui sua parte atribuído de iterações, ela é atribuída dinamicamente outra parte, até nenhuma permanece. Para uma *chunk_size* de 1, o tamanho de cada bloco é aproximadamente o número de iterações não atribuídos, dividido pelo número de threads. Esses tamanhos aproximadamente diminuem exponencialmente como 1. Para uma *chunk_size* com valor *k* maior que 1, os tamanhos de aproximadamente diminui exponencialmente a *k*, exceto que o último bloco pode ter menos de  *k* iterações. Quando nenhum *chunk_size* for especificado, o padrão é 1.|  
+|static|Quando **agenda (estático,** *chunk_size *)** for especificado, iterações são divididas em partes de um tamanho especificado por *chunk_size*. As partes são atribuídas estaticamente a threads da equipe em um modo round robin na ordem o número de threads. Quando nenhum *chunk_size* for especificado, o espaço de iteração é dividido em partes que são aproximadamente iguais em tamanho, com uma parte atribuída a cada thread.|  
+|dinâmica|Quando **agenda (dinâmico,** *chunk_size *)** for especificado, as iterações são divididas em uma série de blocos, cada uma contendo *chunk_size* iterações. Cada bloco é atribuído a um thread que está esperando por uma atribuição. O thread executa o bloco de iterações e, em seguida, aguarda sua atribuição de Avançar, até que nenhum partes permanecem para serem atribuídos. Observe que a última parte a ser atribuído pode ter um número menor de iterações. Quando nenhum *chunk_size* for especificado, o padrão é 1.|  
+|interativa|Quando **agenda (interativa,** *chunk_size *)** for especificado, as iterações são atribuídas a threads em partes com tamanhos de redução. Quando um thread conclui sua parte atribuído de iterações, ela é atribuída dinamicamente outra parte, até nenhuma permanece. Para uma *chunk_size* de 1, o tamanho de cada bloco é aproximadamente o número de iterações não atribuídos, dividido pelo número de threads. Esses tamanhos aproximadamente diminuem exponencialmente como 1. Para uma *chunk_size* com valor *k* maior que 1, os tamanhos de aproximadamente diminui exponencialmente a *k*, exceto que o último bloco pode ter menos de  *k* iterações. Quando nenhum *chunk_size* for especificado, o padrão é 1.|  
 |tempo de execução|Quando **Schedule (Runtime)** for especificado, a decisão sobre planejamento é adiada até o tempo de execução. A agenda *tipo* e tamanho das partes pode ser escolhido em tempo de execução, definindo a variável de ambiente **OMP_SCHEDULE**. Se essa variável de ambiente não for definida, a agenda resultante é definido pela implementação. Quando **Schedule (Runtime)** for especificado, *chunk_size* não deve ser especificado.|  
   
  Na ausência de um definido explicitamente **agenda** cláusula, o padrão **agenda** é definido pela implementação.  

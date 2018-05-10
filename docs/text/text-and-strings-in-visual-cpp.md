@@ -1,13 +1,10 @@
 ---
 title: Texto e cadeias de caracteres no Visual C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texto e cadeias de caracteres no Visual C++
 Um aspecto importante do desenvolvimento de aplicativos para mercados internacionais é a representação adequada de conjuntos de caracteres locais. O conjunto de caracteres ASCII define caracteres no intervalo 0x00 para 0x7F. Há outros conjuntos de caracteres, principalmente europeu, que definem os caracteres dentro do intervalo 0x00 para 0x7F idêntico ao conjunto de caracteres ASCII e também definir um caractere estendido definido de 0x80 a 0xFF. Assim, um conjunto de 8 bits, o caractere de byte único (SBCS) é suficiente para representar o conjunto de caracteres ASCII, bem como os conjuntos de caracteres para vários idiomas europeus. No entanto, alguns conjuntos de caracteres não europeus, como Kanji japonês, incluem muitos mais caracteres do que um esquema de codificação de byte único pode representar e, portanto, requerem o conjunto de caracteres multibyte (MBCS) codificação.  

@@ -1,13 +1,10 @@
 ---
-title: "Caixa de diálogo de fonte de ferramenta de texto (Editor de imagens para ícones) | Microsoft Docs"
-ms.custom: 
+title: Caixa de diálogo de fonte de ferramenta de texto (Editor de imagens para ícones) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - fonts, changing on an image
 - text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f5df3215f2d3487b919c2c89215dab17d288d4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa7f1a88627cc3547e6d6f4028de4abef73bf181
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Caixa de diálogo Fonte da Ferramenta de Texto (editor de imagens para ícones)
 Especifica as configurações de fonte, quando você usar o [caixa de diálogo Ferramenta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md) do [Editor de imagem](../windows/image-editor-for-icons.md).  

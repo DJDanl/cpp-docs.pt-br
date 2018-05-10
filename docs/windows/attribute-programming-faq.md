@@ -1,13 +1,10 @@
 ---
-title: "Perguntas Frequentes de programação do atributo | Microsoft Docs"
-ms.custom: 
+title: Perguntas Frequentes de programação do atributo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>Perguntas frequentes de programação do atributo
 Este tópico responde a perguntas frequentes a seguir:  
@@ -49,7 +44,7 @@ Este tópico responde a perguntas frequentes a seguir:
   
 -   [Pode usar atributos em uma classe derivada de uma classe que também usa atributos?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>O que é um HRESULT?  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> O que é um HRESULT?  
  Um `HRESULT` é um tipo de dados simples que geralmente é usado como um valor de retorno por atributos e ATL em geral. A tabela a seguir descreve os vários valores. Mais valores contidos no arquivo de cabeçalho Winerror. h.  
   
 |Nome|Descrição|Valor|  
@@ -66,7 +61,7 @@ Este tópico responde a perguntas frequentes a seguir:
 |E_FAIL|Falha não especificada|0x80004005|  
 |E_ACCESSDENIED|Geral erro de acesso negado|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Quando é necessário especificar o nome do parâmetro para um atributo?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Quando é necessário especificar o nome do parâmetro para um atributo?  
  Na maioria dos casos, se o atributo tem um único parâmetro, esse parâmetro é chamado. Esse nome não é necessário ao inserir o atributo no seu código. Por exemplo, o seguinte uso do [agregável](../windows/aggregatable.md) atributo:  
   
 ```  
@@ -100,10 +95,10 @@ class CMyClass
 |[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[código-fonte](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[Código-fonte](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>Pode usar comentários em um bloco de atributo?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Pode usar comentários em um bloco de atributo?  
  Você pode usar comentários de linha única e de várias linhas em um bloco de atributo. No entanto, você não pode usar o estilo de comentário entre parênteses, mantendo os parâmetros para um atributo.  
   
  É permitido o seguinte:  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Como os atributos interagem com herança?  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Como os atributos interagem com herança?  
  Você pode herdar classes atribuídos e unattributed de outras classes, que podem se atribuído, ou não. O resultado de derivar de uma classe atribuída é igual a derivação de classe depois que o provedor de atributo transformou seu código. Atributos não são transmitidos para derivado classes por meio da herança de C++. Um provedor de atributo apenas transforma código perto seus atributos.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Como usar atributos em um projeto ATL nonattributed?  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Como usar atributos em um projeto ATL nonattributed?  
  Você pode ter um projeto ATL nonattributed, que tem um arquivo. idl, e talvez você queira começar a adicionar objetos atribuídos. Nesse caso, use o Assistente para Adicionar classe de fornecer o código.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Como usar um arquivo. idl em um projeto atribuído?  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Como usar um arquivo. idl em um projeto atribuído?  
  Você pode ter um arquivo. IDL que você deseja usar em seu projeto ATL atribuído. Nesse caso, você usaria o [importidl](../windows/importidl.md) atributo, compile o arquivo IDL para um arquivo. h (consulte o [páginas de propriedade MIDL](../ide/midl-property-pages.md) na caixa de diálogo páginas de propriedades do projeto) e, em seguida, inclua o arquivo. h em seu projeto .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>Posso modificar o código que é injetado por um atributo?  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Posso modificar o código que é injetado por um atributo?  
  Alguns atributos injetar código no seu projeto. Você pode ver o código injetado usando o [/Fx](../build/reference/fx-merge-injected-code.md) opção de compilador. Também é possível copiar o código do arquivo injetado e colá-lo em seu código-fonte. Isso permite que você modifique o comportamento do atributo. No entanto, você precisará modificar outras partes do seu código.  
   
  O exemplo a seguir é o resultado de copiar o código injetado em um arquivo de código de origem:  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Como eu declaro encaminhar uma interface atribuída?  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Como eu declaro encaminhar uma interface atribuída?  
  Se você pretende fazer uma declaração de encaminhamento de uma interface atribuída, você deve aplicar os mesmos atributos para a declaração de encaminhamento que você aplicar a declaração da interface real. Você também deve aplicar o [exportar](../windows/export.md) a declaração de encaminhamento de atributo.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Pode usar atributos em uma classe derivada de uma classe que também usa atributos?  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Pode usar atributos em uma classe derivada de uma classe que também usa atributos?  
  Não, não há suporte para usando atributos em uma classe derivada de uma classe que também usa atributos.  
   
 ## <a name="see-also"></a>Consulte também  

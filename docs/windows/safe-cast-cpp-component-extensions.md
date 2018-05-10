@@ -1,13 +1,10 @@
 ---
-title: "Safe_cast (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: Safe_cast (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (Extensões de Componentes C++)
 O `safe_cast` operação retorna a expressão especificada como o tipo especificado, se for bem-sucedido; caso contrário, lança `InvalidCastException`.  
@@ -52,7 +47,7 @@ expression
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- `safe_cast`permite que você altere o tipo de uma expressão especificada. Em situações onde você totalmente espera uma variável ou parâmetro ser conversível para um determinado tipo, você pode usar safe_cast sem um bloco try-catch para detectar erros de programação durante o desenvolvimento. Para obter mais informações, consulte [conversão (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+ `safe_cast` permite que você altere o tipo de uma expressão especificada. Em situações onde você totalmente espera uma variável ou parâmetro ser conversível para um determinado tipo, você pode usar safe_cast sem um bloco try-catch para detectar erros de programação durante o desenvolvimento. Para obter mais informações, consulte [conversão (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -69,11 +64,11 @@ expression
  *id do tipo*  
  O tipo para converter *expressão* para. Um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
- *expressão*  
+ *Expressão*  
  Uma expressão que é avaliada como um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
 ### <a name="remarks"></a>Comentários  
- `safe_cast`gera `InvalidCastException` se ele não é possível converter *expressão* para o tipo especificado pelo *id do tipo*. Para capturar `InvalidCastException`, especifique o [/EH (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md) opção de compilador e use uma instrução try/catch.  
+ `safe_cast` gera `InvalidCastException` se ele não é possível converter *expressão* para o tipo especificado pelo *id do tipo*. Para capturar `InvalidCastException`, especifique o [/EH (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md) opção de compilador e use uma instrução try/catch.  
   
 ### <a name="requirements"></a>Requisitos  
  Opção do compilador: **/ZW**  
@@ -116,7 +111,7 @@ Caught expected exception: InvalidCastException
 ```  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- `safe_cast`permite que você altere o tipo de uma expressão e gerar código MSIL verificável.  
+ `safe_cast` permite que você altere o tipo de uma expressão e gerar código MSIL verificável.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -133,7 +128,7 @@ expression
  *id do tipo*  
  Um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
- *expressão*  
+ *Expressão*  
  Uma expressão que é avaliada como um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência de rastreamento para um tipo de valor ou referência.  
   
 ### <a name="remarks"></a>Comentários  
@@ -145,9 +140,9 @@ expression
   
  Para obter mais informações sobre conversões, consulte [operadores de conversão](../cpp/casting-operators.md).  
   
- `safe_cast`não se aplica uma **const_cast** (eliminar **const**).  
+ `safe_cast` não se aplica uma **const_cast** (eliminar **const**).  
   
- `safe_cast`está no namespace cli.  Consulte [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para obter mais informações.  
+ `safe_cast` está no namespace cli.  Consulte [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para obter mais informações.  
   
  Para obter mais informações sobre **safe_cas**t, consulte:  
   

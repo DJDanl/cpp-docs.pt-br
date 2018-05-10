@@ -1,13 +1,10 @@
 ---
-title: "Suporte de compilador de traços de tipo (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: Suporte de compilador de traços de tipo (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
 - __has_trivial_destructor
@@ -69,18 +66,16 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Suporte para Compilador de Traços de Tipo (Extensões de Componentes C++)
 O oferece suporte ao compilador *digite características*, que indicam várias características de um tipo em tempo de compilação.  
@@ -287,7 +282,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
      Retorna VERDADEIRO se o tipo tem um destruidor virtual.  
   
-     `__has_virtual_destructor`também funciona em tipos de plataforma e qualquer destruidor definido pelo usuário em um tipo de plataforma é um destruidor virtual.  
+     `__has_virtual_destructor` também funciona em tipos de plataforma e qualquer destruidor definido pelo usuário em um tipo de plataforma é um destruidor virtual.  
   
     ```  
   
@@ -308,7 +303,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
      Retorna VERDADEIRO se o tipo for um tipo abstrato. Para obter mais informações sobre tipos abstratos nativo, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract`também funciona para os tipos de plataforma. Uma interface com pelo menos um membro é um tipo abstrato, assim como um tipo de referência pelo menos um membro abstrato. Para obter mais informações sobre os tipos de plataforma abstrato, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` também funciona para os tipos de plataforma. Uma interface com pelo menos um membro é um tipo abstrato, assim como um tipo de referência pelo menos um membro abstrato. Para obter mais informações sobre os tipos de plataforma abstrato, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -329,7 +324,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
      Retorna VERDADEIRO se o primeiro tipo é uma classe base do segundo tipo de se ambos os tipos são os mesmos.  
   
-     `__is_base_of`também funciona em tipos de plataforma. Por exemplo, ele retornará true se o primeiro tipo é um [classe de interface](../windows/interface-class-cpp-component-extensions.md) e o segundo tipo implementa a interface.  
+     `__is_base_of` também funciona em tipos de plataforma. Por exemplo, ele retornará true se o primeiro tipo é um [classe de interface](../windows/interface-class-cpp-component-extensions.md) e o segundo tipo implementa a interface.  
   
     ```  
   
@@ -459,7 +454,7 @@ O oferece suporte ao compilador *digite características*, que indicam várias c
   
      Retorna VERDADEIRO se o tipo é uma classe ou uma união com nenhum construtor ou os membros não estáticos particulares ou protegidos, não classes base e nenhuma função virtual. Consulte o C++ padrão, seções 8.5.1/1, 9/4 e 3.9 a 10 para obter mais informações sobre compartimentos.  
   
-     `__is_pod`retornará falso sobre tipos fundamentais.  
+     `__is_pod` retornará falso sobre tipos fundamentais.  
   
     ```  
   

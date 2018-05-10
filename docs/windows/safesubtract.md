@@ -1,13 +1,10 @@
 ---
 title: SafeSubtract | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeSubtract
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b94d84e6a348b68258fc1b57c2e0ad9ad30e36d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safesubtract"></a>SafeSubtract
 Subtrai dois números de forma que protege contra estouro.  
@@ -53,7 +48,7 @@ inline bool SafeSubtract (
  O parâmetro onde `SafeSubtract` armazena o resultado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true`Se nenhum erro ocorrer; `false` se ocorrer um erro.  
+ `true` Se nenhum erro ocorrer; `false` se ocorrer um erro.  
   
 ## <a name="remarks"></a>Comentários  
  Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de subtração único sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  

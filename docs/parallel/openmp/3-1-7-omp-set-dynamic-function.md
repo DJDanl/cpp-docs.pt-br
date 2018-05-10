@@ -1,27 +1,22 @@
 ---
-title: "3.1.7 função omp_set_dynamic | Microsoft Docs"
-ms.custom: 
+title: 3.1.7 função omp_set_dynamic | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1fba961b-b82c-4a1e-ab0f-e4be826e50ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cdd627dd01697fa3d3718a2dc769f4017630a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d1e22a1eb9aff32bfaf07350daf1cb397e18eb3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="317-ompsetdynamic-function"></a>3.1.7 função omp_set_dynamic
 O **omp_set_dynamic** função ativa ou desativa o ajuste dinâmico do número de threads disponíveis para execução de regiões paralelas. O formato é o seguinte:  

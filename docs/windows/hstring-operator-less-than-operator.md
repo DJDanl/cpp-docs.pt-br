@@ -1,30 +1,25 @@
 ---
 title: 'Hstring:: Operator&lt; operador | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::operator<
 dev_langs:
 - C++
 ms.assetid: 48a051cb-4609-42be-b48c-d35fc99d1eab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cbb21e34255d5350702d949792656bdf0a849a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8fae7195f048cd680be513bd54b635e2e1e9bbf7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringoperatorlt-operator"></a>Hstring:: Operator&lt; operador
 Indica se o primeiro parâmetro é menor do que o segundo parâmetro.  
@@ -40,13 +35,13 @@ inline bool operator<(
   
 #### <a name="parameters"></a>Parâmetros  
  `lhs`  
- O primeiro parâmetro para comparar. `lhs`pode ser uma referência a um HString.  
+ O primeiro parâmetro para comparar. `lhs` pode ser uma referência a um HString.  
   
  `rhs`  
- O segundo parâmetro para comparar. `rhs`pode ser uma referência a um HString.  
+ O segundo parâmetro para comparar. `rhs` pode ser uma referência a um HString.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true`Se o `lhs` parâmetro é menor do que o `rhs` parâmetro; caso contrário, `false`.  
+ `true` Se o `lhs` parâmetro é menor do que o `rhs` parâmetro; caso contrário, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** corewrappers.h  

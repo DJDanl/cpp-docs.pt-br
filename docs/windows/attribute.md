@@ -1,13 +1,10 @@
 ---
 title: atributo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.attribute
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42ea9049fdd97691bd139599705856baa8acfee1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute"></a>Atributo
 Permite que você crie um atributo personalizado.  
@@ -149,7 +144,7 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute`é um alias para <xref:System.AttributeUsageAttribute?displayProperty=fullName> (não AttributeAttribute; essa é uma exceção à regra de nomenclatura de atributo).  
+ `attribute` é um alias para <xref:System.AttributeUsageAttribute?displayProperty=fullName> (não AttributeAttribute; essa é uma exceção à regra de nomenclatura de atributo).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -157,7 +152,7 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 |||  
 |-|-|  
-|**Aplica-se a**|`ref`**classe**, **estrutura ref**|  
+|**Aplica-se a**|`ref` **classe**, **estrutura ref**|  
 |**Repetível**|Não|  
 |**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  

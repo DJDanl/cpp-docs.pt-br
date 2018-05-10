@@ -1,13 +1,10 @@
 ---
 title: Modificando a grade de Layout | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - layout grid in Dialog Editor
 - grids, changing size
 ms.assetid: ec31f595-7542-485b-806f-efbaeccc1b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21cfecebe141ea99ff7d0160e74446475efe4df5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f73b1b2e2982d02fae1de67d4e5e2947f728f02
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modifying-the-layout-grid"></a>Modificando a grade de layout
 Quando você está colocando ou Organizando controles em uma caixa de diálogo, você pode usar a grade de layout para um posicionamento mais preciso. Quando a grade é ativada, controles parecem "Ajustar à" as linhas pontilhadas da grade como se magnetizada. Você pode ativar e desativar o esse recurso de "Ajustar à grade" e alterar o tamanho das células de grade de layout.  

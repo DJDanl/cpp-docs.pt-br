@@ -1,5 +1,5 @@
 ---
-title: "Os avisos do compilador são desativados por padrão | Microsoft Docs"
+title: Os avisos do compilador são desativados por padrão | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology:
 - cpp-tools
@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador são desativados por padrão
 

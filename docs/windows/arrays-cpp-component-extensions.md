@@ -1,13 +1,10 @@
 ---
-title: "Matrizes (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: Matrizes (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>Matrizes (Extensões de Componentes C++)
 O `Platform::Array<T>` tipo no C + + CX, ou o `array` palavra-chave em C + + CLI, declara uma matriz de um tipo especificado e o valor inicial.  
@@ -70,7 +65,7 @@ O `Platform::Array<T>` tipo no C + + CX, ou o `array` palavra-chave em C + + CLI
  `array-type`  
  O tipo de variável de matriz. Os tipos válidos são classes de Windows Runtime e tipos fundamentais, classes ref e estruturas, classes de valor e structs e ponteiros nativos (`type*`).  
   
- `rank`[opcional]  
+ `rank` [opcional]  
  O número de dimensões da matriz. Deve ser 1.  
   
  `identifier`  
@@ -79,7 +74,7 @@ O `Platform::Array<T>` tipo no C + + CX, ou o `array` palavra-chave em C + + CLI
  `initialization-type`  
  O tipo de valores que inicializar a matriz. Normalmente, `array-type` e `initialization-type` são do mesmo tipo. No entanto, os tipos podem ser diferentes se houver uma conversão de `initialization-type` para `array-type`— por exemplo, se `initialization-type` é derivado de `array-type`.  
   
- `initialization-list`[opcional]  
+ `initialization-list` [opcional]  
  Uma lista delimitada por vírgulas de valores de chaves que inicializar os elementos da matriz. Por exemplo, se `rank-size-list` foram `(3)`, que declara uma matriz unidimensional de 3 elementos, `initialization list` poderia ser `{1,2,3}`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  O tipo de variável de matriz. Os tipos válidos são classes de Windows Runtime e tipos fundamentais, classes e estruturas, classes de valor e estruturas ref, ponteiros nativos (`type*`) e tipos nativos do POD (plain dados antigos).  
   
- `rank`[opcional]  
+ `rank` [opcional]  
  O número de dimensões da matriz. O padrão é 1. o máximo é 32. Cada dimensão da matriz é uma matriz.  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  Uma lista delimitada por vírgulas de tamanho de cada dimensão da matriz. Como alternativa, se o `initialization-list` parâmetro for especificado, o compilador pode deduzir o tamanho de cada dimensão e `rank-size-list` pode ser omitido. 
   
- `initialization-list`[opcional]  
+ `initialization-list` [opcional]  
  Uma lista delimitada por vírgulas de valores de chaves que inicializar os elementos da matriz. Ou uma lista delimitada por vírgulas de aninhados *lista de inicialização* itens que inicializar os elementos em uma matriz multidimensional.  
   
  Por exemplo, se `rank-size-list` foram `(3)`, que declara uma matriz unidimensional de 3 elementos, `initialization list` poderia ser `{1,2,3}`. Se `rank-size-list` foram `(3,2,4)`, que declara uma matriz tridimensional de 3 elementos na primeira dimensão, 2 elementos na segunda e 4 elementos no terceiro, `initialization-list` poderia ser `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>Comentários  
   
- `array`está no [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) namespace.  
+ `array` está no [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) namespace.  
   
  Como o C++ padrão, os índices de uma matriz são baseadas em zero, e uma matriz é subscrito usando colchetes ([]). Ao contrário de C++ padrão, os índices de uma matriz multidimensional são especificados em uma lista de índices para cada dimensão em vez de um conjunto de operadores de colchete ([]) para cada dimensão. Por exemplo, *identificador*[*index1*, *index2*] em vez de *identificador*[*index1*] [ *index2*].  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe Choice | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>Classe choice
 Um `choice` bloco de mensagens é um bloco de várias fonte, destino único que representa uma interação com um conjunto de fontes de fluxo de controle. O bloco de opção esperará por qualquer uma das várias fontes para produzir uma mensagem e propagará o índice da origem que gerou a mensagem.  
@@ -69,7 +64,7 @@ class choice: public ISource<size_t>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[choice](#ctor)|Sobrecarregado. Constrói um `choice` bloco de mensagens.|  
+|[Escolha](#ctor)|Sobrecarregado. Constrói um `choice` bloco de mensagens.|  
 |[~ Destruidor choice](#dtor)|Destrói a `choice` bloco de mensagens.|  
   
 ### <a name="public-methods"></a>Métodos públicos  

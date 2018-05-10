@@ -1,30 +1,25 @@
 ---
-title: "Consumindo genéricos (C + + CLI) | Microsoft Docs"
-ms.custom: 
+title: Consumindo genéricos (C + + CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f5a767995ce0484552d96429573e0b355820207
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="consuming-generics-ccli"></a>Consumindo genéricos (C++/CLI)
 Genéricos criados em uma linguagem .NET podem ser usados em outras linguagens .NET. Ao contrário de modelos, um genérico em um assembly compilado ainda permanece genérico. Assim, um pode criar uma instância de tipo genérico em um assembly diferente e até mesmo em um idioma diferente do assembly no qual o tipo genérico foi definido.  

@@ -1,13 +1,10 @@
 ---
 title: vi_progid | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.vi_progid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7581a4a10d9f101526aeb1a17ba7e26c4646b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687a8a70d7f0a5381160a6515c80f6940cc0a434
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="viprogid"></a>vi_progid
 Especifica uma forma independente de versão de ProgID.  
@@ -64,7 +59,7 @@ Especifica uma forma independente de versão de ProgID.
   
 |||  
 |-|-|  
-|**Aplica-se a**|**classe**,`struct`|  
+|**Aplica-se a**|**class**, `struct`|  
 |**Repetível**|Não|  
 |**Atributos necessários.**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  

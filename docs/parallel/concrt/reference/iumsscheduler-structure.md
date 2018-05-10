@@ -1,12 +1,9 @@
 ---
 title: Estrutura IUMSScheduler | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSScheduler
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 489978a97d42439e5560a75e429c38be10c18c29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsscheduler-structure"></a>Estrutura IUMSScheduler
 Uma interface para uma abstração de um agendador de trabalho que deseja Gerenciador de recursos do tempo de execução de simultaneidade entregá-threads do modo de usuário agendáveis (UMS). O Gerenciador de recursos usa essa interface para se comunicar com os agendadores do thread UMS. A interface `IUMSScheduler` herda da interface `IScheduler`.  
@@ -44,7 +39,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Atribui um `IUMSCompletionList` interface para um agendador de thread UMS.|  
+|[: Setcompletionlist](#setcompletionlist)|Atribui um `IUMSCompletionList` interface para um agendador de thread UMS.|  
   
 ## <a name="remarks"></a>Comentários  
  Se você estiver implementando um agendador personalizado que se comunica com o Gerenciador de recursos, e você desejar threads UMS a serem passadas para o Agendador em vez de threads de Win32 comuns, você deve fornecer uma implementação de `IUMSScheduler` interface. Além disso, você deve definir o valor de política para a chave de política do Agendador `SchedulerKind` ser `UmsThreadDefault`. Se a política especifica o thread UMS o `IScheduler` interface que é passado como um parâmetro para o [: Registerscheduler](iresourcemanager-structure.md#registerscheduler) método deve ser um `IUMSScheduler` interface.  

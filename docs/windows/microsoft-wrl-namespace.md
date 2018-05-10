@@ -1,12 +1,9 @@
 ---
 title: 'Namespace Microsoft:: wrl | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrl-namespace"></a>Namespace Microsoft::WRL
 Define os tipos fundamentais que compõem a biblioteca de modelos do Windows em tempo de execução C++.  
@@ -61,7 +56,7 @@ namespace Microsoft::WRL;
 |[Classe ClassFactory](../windows/classfactory-class.md)|Implementa a funcionalidade básica do `IClassFactory` interface.|  
 |[Classe ComPtr](../windows/comptr-class.md)|Cria um *ponteiro inteligente* tipo que representa a interface especificada pelo parâmetro de modelo. ComPtr automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.|  
 |[Classe DeferrableEventArgs](../windows/deferrableeventargs-class.md)|Uma classe de modelo usada para os tipos de argumento do evento para adiamentos.|  
-|[Classe EventSource](../windows/eventsource-class.md)|Representa um evento. `EventSource`funções de membro, adicionar, removem e invocar os manipuladores de eventos.|  
+|[Classe EventSource](../windows/eventsource-class.md)|Representa um evento. `EventSource` funções de membro, adicionar, removem e invocar os manipuladores de eventos.|  
 |[Classe FtmBase](../windows/ftmbase-class.md)|Representa um objeto de empacotamento de segmentação livre.|  
 |[Classe Module](../windows/module-class.md)|Representa uma coleção de objetos relacionados.|  
 |[Classe RuntimeClass](../windows/runtimeclass-class.md)|Representa uma classe instanciada que herda o número especificado de interfaces e fornece o tempo de execução do Windows especificado, COM clássico e suporte de referência fraca.|  
@@ -100,7 +95,7 @@ namespace Microsoft::WRL;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

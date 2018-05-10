@@ -1,30 +1,25 @@
 ---
 title: Referência de atributos C++ | Microsoft Docs
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e371a89a42481f72d3523d8f21852f3f79d19fc7
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="c-attributes-reference"></a>Referência de atributos C++
 A Microsoft define um conjunto de atributos que simplificam a programação COM e desenvolvimento de tempo de execução de linguagem comum do .NET Framework. Quando você incluir atributos nos arquivos de origem, o compilador funciona com provedor DLLs para inserir código ou modificar o código nos arquivos de objeto gerado.  

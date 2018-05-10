@@ -1,13 +1,10 @@
 ---
 title: db_source | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_source
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18c4a4af3f8df4e3af5f6aae8f6643db553c7373
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b826e5d630b52062892001c26efda01b5c7293f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbsource"></a>db_source
 Cria uma conexão com uma fonte de dados.  
@@ -53,20 +48,20 @@ Cria uma conexão com uma fonte de dados.
  Identifica a variável que receberá o `HRESULT` deste comando de banco de dados. Se a variável não existir, ele será automaticamente introduzido pelo atributo.  
   
 ## <a name="remarks"></a>Comentários  
- `db_source`cria um [CDataSource](../data/oledb/cdatasource-class.md) e um [CSession](../data/oledb/csession-class.md) objeto, que juntas representam uma conexão com uma fonte de dados do consumidor OLE DB.  
+ `db_source` cria um [CDataSource](../data/oledb/cdatasource-class.md) e um [CSession](../data/oledb/csession-class.md) objeto, que juntas representam uma conexão com uma fonte de dados do consumidor OLE DB.  
   
  Quando você usa `db_source` em uma classe, o `CSession` objeto se torna um membro da classe.  
   
  Quando você usa `db_source` em um método, o código injetado será executado no escopo do método e o `CSession` será criado como uma variável local.  
   
- `db_source`Adiciona as propriedades da fonte de dados para uma classe ou dentro de um método. Ele é usado em conjunto com **db_command** (que usa o `db_source` *nome* parâmetro como seu `source_name` parâmetro).  
+ `db_source` Adiciona as propriedades da fonte de dados para uma classe ou dentro de um método. Ele é usado em conjunto com **db_command** (que usa o `db_source` *nome* parâmetro como seu `source_name` parâmetro).  
   
  Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador irá renomear a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome atribuído a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivado de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as classes.  
   
  Para obter um exemplo desse atributo usado em um aplicativo, consulte os exemplos de [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) e [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo chama `db_source` em uma classe para criar uma conexão à fonte de dados `ds` usando o banco de dados Northwind. `ds`é um identificador para a fonte de dados, que pode ser usado internamente para o `CMyCommand` classe.  
+ Este exemplo chama `db_source` em uma classe para criar uma conexão à fonte de dados `ds` usando o banco de dados Northwind. `ds` é um identificador para a fonte de dados, que pode ser usado internamente para o `CMyCommand` classe.  
   
 ```  
 // db_source_1.cpp  

@@ -1,30 +1,25 @@
 ---
 title: 'Comptrref:: Operator! = operador | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef::operator!=
 dev_langs:
 - C++
 ms.assetid: ab3093cc-6fbd-4039-890a-6df1cde992b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a9c9572ece0f60971449f2e1b519ec662f9867f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefoperator-operator"></a>Operador ComPtrRef::operator!=
 Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
@@ -78,7 +73,7 @@ bool operator!=(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   

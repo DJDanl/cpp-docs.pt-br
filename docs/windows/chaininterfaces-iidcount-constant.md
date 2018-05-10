@@ -1,12 +1,9 @@
 ---
 title: 'Constante chaininterfaces:: Iidcount | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::ChainInterfaces::IidCount
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IidCount constant
 ms.assetid: d4a90aa0-513c-4e99-b978-e12149734936
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a1336bb5b8b43e833325c304a4d870220a40b84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Constante ChainInterfaces::IidCount
 O número total de IDs contidos nas interfaces de especificados pelos parâmetros de modelo de interface `I0` por meio de `I9`.  
@@ -46,7 +41,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** implements.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Estrutura ChainInterfaces](../windows/chaininterfaces-structure.md)

@@ -1,13 +1,10 @@
 ---
-title: "Página de propriedade geral (projeto) | Microsoft Docs"
-ms.custom: 
+title: Página de propriedade geral (projeto) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -36,14 +33,13 @@ helpviewer_keywords:
 - Unicode, creating C++ build configuration
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-property-page-project"></a>Página de propriedade geral (projeto)
 
@@ -69,7 +65,7 @@ Para direcionar o Windows 7 ou Windows Vista, use o valor **8.1**, pois o SDK do
 
 Você pode instalar o conjunto de ferramentas de plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, consulte [configurando programas para o Windows XP](../build/configuring-programs-for-windows-xp.md). Para obter mais informações sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-**Min de plataforma de destino. Versão  
+**Min de plataforma de destino. Versão**  
 Especifica a versão mais antiga da plataforma que o projeto pode ser executada em. Essa propriedade será exibida somente se o tipo de projeto dá suporte a ele, como em projetos universais do Windows. Se seu aplicativo pode tirar proveito dos recursos em uma versão mais recente do SDK do Windows, mas ainda pode executar em versões anteriores sem esses recursos, talvez com alguma perda de funcionalidade, em seguida, o valor dessas propriedades pode ser diferente. Se assim, seu código deve verificar a versão da plataforma ele esteja em execução em tempo de execução e não tente usar os recursos que não estão disponíveis na versão mais antiga de plataforma.
 
 Observe que o Visual C++ não impõe essa opção. Ele está incluído para manter a consistência com outras linguagens, como c# e JavaScript e como um guia para qualquer pessoa que usa seu projeto. Visual C++ não irá gerar um erro se você usar um recurso que não está disponível na versão mínima.

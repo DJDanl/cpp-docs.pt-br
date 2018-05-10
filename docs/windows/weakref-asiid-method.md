@@ -1,12 +1,9 @@
 ---
-title: "Método: Asiid | Microsoft Docs"
-ms.custom: 
+title: 'Método: Asiid | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef::AsIID
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - AsIID method
 ms.assetid: 94e87309-32da-4dbb-8233-e77313a1f448
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fdefa73ac14e807c5e4100fd81e1d931f4bf6e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69108681b181d0b2fce20f9e30a009b6b93c2180
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="weakrefasiid-method"></a>Método WeakRef::AsIID
 Define o parâmetro de ponteiro ComPtr especificado para representar a ID de interface especificado.  
@@ -65,7 +60,7 @@ HRESULT AsIID(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe WeakRef](../windows/weakref-class.md)

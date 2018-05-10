@@ -1,30 +1,25 @@
 ---
-title: "Atributo destinos (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: Atributo destinos (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Destinos de Atributos (Extensões de Componentes C++)
 Especificadores de uso de atributo permitem que você especifique os destinos de atributos.  Cada atributo é definido para aplicar a determinados elementos de linguagem. Por exemplo, um atributo pode ser definido para aplicar apenas às classes e estruturas.  A lista a seguir mostra os elementos sintáticos possíveis no qual um atributo personalizado pode ser usado. Combinações desses valores (usando lógica ou) pode ser usado.  
@@ -33,7 +28,7 @@ Especificadores de uso de atributo permitem que você especifique os destinos de
   
  A seguir está uma lista dos destinos de atributo válido:  
   
--   `All`(aplica-se a todas as compilações)  
+-   `All` (aplica-se a todas as compilações)  
   
     ```  
   
@@ -45,7 +40,7 @@ Especificadores de uso de atributo permitem que você especifique os destinos de
   
     ```  
   
--   `Assembly`(aplica-se a um assembly como um todo)  
+-   `Assembly` (aplica-se a um assembly como um todo)  
   
     ```  
   
@@ -57,7 +52,7 @@ Especificadores de uso de atributo permitem que você especifique os destinos de
   
     ```  
   
--   `Module`(aplica-se a um módulo como um todo)  
+-   `Module` (aplica-se a um módulo como um todo)  
   
     ```  
   

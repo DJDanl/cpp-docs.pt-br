@@ -1,13 +1,10 @@
 ---
-title: "Editor de caixa de diálogo | Microsoft Docs"
-ms.custom: 
+title: Editor de caixa de diálogo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - Dialog editor
 - dialog boxes, editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor"></a>Editor de Caixa de Diálogo
-O editor de caixa de diálogo permite criar ou editar os recursos da caixa de diálogo. Para abrir o editor de caixa de diálogo clicando duas vezes no arquivo. rc da caixa de diálogo na janela de exibição de recurso (**exibição &#124; Modo de exibição de recursos**). Observe que o modo de exibição de recurso não está disponível em edições Express.  
+O editor de caixa de diálogo permite criar ou editar os recursos da caixa de diálogo. Para abrir o editor de caixa de diálogo clicando duas vezes no arquivo. rc da caixa de diálogo na janela de exibição de recurso (**exibição &#124; exibição recursos**). Observe que o modo de exibição de recurso não está disponível em edições Express.  
   
  Uma das primeiras etapas para fazer uma caixa de diálogo Novo (ou o modelo de caixa de diálogo) é adicionando controles a caixa de diálogo. No editor de caixa de diálogo, você pode organizar controles para se ajustar a um determinado tamanho, forma ou alinhamento, ou você pode movê-los em torno de trabalhar dentro da caixa de diálogo. Também é fácil de excluir um controle.  
   

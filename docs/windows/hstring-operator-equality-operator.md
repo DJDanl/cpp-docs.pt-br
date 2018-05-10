@@ -1,30 +1,25 @@
 ---
 title: 'Hstring:: Operator = = operador | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::operator==
 dev_langs:
 - C++
 ms.assetid: 77ff4c1a-e62a-4256-bf9d-0f017137c630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db6c449a7ceb4799feb4740c11385875a6309ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5386636a348fdf7162e9b6d63f0e6dbc109bd655
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringoperator-operator"></a>Operador HString::Operator==
 Indica se os dois parâmetros são iguais.  
@@ -56,7 +51,7 @@ inline bool operator==(
   
 #### <a name="parameters"></a>Parâmetros  
  `lhs`  
- O primeiro parâmetro para comparar. `lhs`pode ser um objeto HString ou HStringReference ou um identificador HSTRING.  
+ O primeiro parâmetro para comparar. `lhs` pode ser um objeto HString ou HStringReference ou um identificador HSTRING.  
   
  `rhs`  
  O segundo parâmetro para comparar.`rhs` pode ser um objeto HString ou HStringReference ou um identificador HSTRING.  

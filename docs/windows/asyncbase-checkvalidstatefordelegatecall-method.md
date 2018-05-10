@@ -1,12 +1,9 @@
 ---
-title: "Método: Checkvalidstatefordelegatecall | Microsoft Docs"
-ms.custom: 
+title: 'Método: Checkvalidstatefordelegatecall | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - async/Microsoft::WRL::AsyncBase::CheckValidStateForDelegateCall
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CheckValidStateForDelegateCall method
 ms.assetid: d997ebe7-2378-4e74-a379-f0f85e6922f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c1a461712eb34fb8a113423c8ee18874aaf2d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>Método AsyncBase::CheckValidStateForDelegateCall
 Testa se o delegado propriedades podem ser modificadas no estado atual assíncrono.  
@@ -43,7 +38,7 @@ inline HRESULT CheckValidStateForDelegateCall();
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  
   
- **Namespace:** Microsoft:: wrl  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe AsyncBase](../windows/asyncbase-class.md)

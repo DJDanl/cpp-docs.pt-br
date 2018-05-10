@@ -1,13 +1,10 @@
 ---
 title: Suporte para Unicode | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - Unicode [C++], installing support
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde7674d30d84385eb1f94f42056a82bfaac99fe
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b9d5a435339e366d70749d64e5aae9264fe12b1f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-unicode"></a>Suporte para Unicode
 
@@ -35,7 +31,7 @@ Unicode é uma especificação para dar suporte a todos os conjuntos de caracter
 
 Um caractere largo é um código de caractere multilíngue de 2 bytes. Dezenas de milhares de caracteres, que consiste em quase todos os caracteres usados na computação moderna em todo o mundo, incluindo símbolos técnicos e caracteres especiais de publicação, podem ser representadas de acordo com a especificação Unicode como um todo o único caractere codificado por usando UTF-16. Caracteres que não podem ser representados em apenas um caractere largo podem ser representados em um par de Unicode usando o recurso de par de substitutos de Unicode. Como quase todos os caracteres de uso comum é representada em UTF-16 em um caractere largo único de 16 bits, usar caracteres largos simplifica a programação com conjuntos de caracteres internacionais. Caracteres largos codificados usando UTF-16LE (little endian) são o formato de caractere nativo do Windows.
 
-Uma cadeia de caracteres largos é representada como uma matriz `wchar_t[]` e é indicada por um ponteiro `wchar_t*`. Qualquer caractere ASCII pode ser representado como um caractere largo usando a letra L como prefixo do caractere. Por exemplo, '\0' está a terminação ampla (16 bits) **nulo** caracteres. Da mesma forma, qualquer literal da cadeia de caracteres ASCII pode ser representado como literal da cadeia de caracteres larga usando a letra L como prefixo do literal ASCII (L"Hello").
+Uma cadeia de caracteres largos é representada como uma matriz `wchar_t[]` e é indicada por um ponteiro `wchar_t*`. Qualquer caractere ASCII pode ser representado como um caractere largo usando a letra L como prefixo do caractere. Por exemplo, L'\0' é o caractere largo de terminação **NULL** (16 bits). Da mesma forma, qualquer literal da cadeia de caracteres ASCII pode ser representado como literal da cadeia de caracteres larga usando a letra L como prefixo do literal ASCII (L"Hello").
 
 Em geral, caracteres largos ocupam mais espaço na memória do que caracteres multibyte, mas eles são mais rápidos de processar. Além disso, somente um local pode ser representado por vez em uma codificação multibyte, enquanto o conjunto de todos os caracteres no mundo são representados simultaneamente, a representação Unicode.
 
@@ -46,8 +42,8 @@ A estrutura de MFC é completamente habilitada para Unicode, e o MFC realiza a a
 |Tipo de dados não portátil|Substituído por este macro|
 |-----------------------------|----------------------------|
 |`char`, `wchar_t`|`_TCHAR`|
-|`char*`, `LPSTR` (Tipo de dados de Win32),`LPWSTR`|`LPTSTR`|
-|`const char*`, `LPCSTR` (Tipo de dados de Win32),`LPCWSTR`|`LPCTSTR`|
+|`char*`, `LPSTR` (Tipo de dados de Win32), `LPWSTR`|`LPTSTR`|
+|`const char*`, `LPCSTR` (Tipo de dados de Win32), `LPCWSTR`|`LPCTSTR`|
 
 Classe `CString` usa `_TCHAR` como base e fornece construtores e operadores de conversões fácil. A maioria das operações com cadeias para Unicode pode ser gravada com a mesma lógica usada para lidar com o conjunto de caracteres ANSI do Windows, exceto pelo fato de que a unidade básica de operação é um caractere de 16 bits, ao invés de um byte de 8 bits. Diferente de trabalhar com conjuntos de caractere multibyte, você não precisa (e não deve) tratar um caractere Unicode como se ele fosse dois bytes distintos. No entanto,, você precisa lidar com a possibilidade de um único caractere representado por um par substituto de caracteres largos. Em geral, não escreva código que pressupõe que o comprimento de uma cadeia de caracteres é o mesmo que o número de caracteres, se estreita ou grande, o que ele contém.
 

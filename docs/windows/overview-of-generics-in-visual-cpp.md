@@ -1,13 +1,10 @@
 ---
-title: "Visão geral de genéricos no Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Visão geral de genéricos no Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visão geral de genéricos no Visual C++
 Genéricos são parametrizados tipos com suporte pelo common language runtime. Um tipo parametrizado é um tipo que é definido com um parâmetro de tipo desconhecido que é especificado quando a classe genérica é usada.  
@@ -77,7 +72,7 @@ Genéricos são parametrizados tipos com suporte pelo common language runtime. U
  Uma restrição é uma restrição sobre os tipos que podem ser usados como um parâmetro de tipo. Por exemplo, uma determinada classe genérica pode aceitar somente as classes que herdam de uma classe especificada ou implementar uma interface especificada. Para obter mais informações, consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="reference-types-and-value-types"></a>Tipos de referência e tipos de valor  
- Tipos de identificadores e tipos de valor podem ser usados como argumentos de tipo. Na definição genérica, no qual tipo pode ser usado, a sintaxe é a que tipos de referência. Por exemplo, o  **->**  operador é usado para acessar membros de tipo do parâmetro de tipo, se o tipo usado eventualmente é um tipo de referência ou um tipo de valor ou não. Quando um tipo de valor é usado como o argumento de tipo, o tempo de execução gera o código que usa os tipos de valor diretamente sem conversão boxing de tipos de valor.  
+ Tipos de identificadores e tipos de valor podem ser usados como argumentos de tipo. Na definição genérica, no qual tipo pode ser usado, a sintaxe é a que tipos de referência. Por exemplo, o **->** operador é usado para acessar membros de tipo do parâmetro de tipo, se o tipo usado eventualmente é um tipo de referência ou um tipo de valor ou não. Quando um tipo de valor é usado como o argumento de tipo, o tempo de execução gera o código que usa os tipos de valor diretamente sem conversão boxing de tipos de valor.  
   
  Ao usar um tipo de referência como um argumento de tipo genérico, use a sintaxe de identificador. Ao usar um tipo de valor como um argumento de tipo genérico, use o nome do tipo diretamente.  
   
