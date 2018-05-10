@@ -1,13 +1,10 @@
 ---
 title: Cancelamento no PPL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelamento no PPL
 Este documento explica a função de cancelamento na biblioteca de padrões paralelos (PPL), como cancelar o trabalho paralelo e como determinar quando o trabalho paralelo foi cancelado.  
@@ -53,7 +48,7 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
 
 
   
-##  <a name="top"></a>Neste documento  
+##  <a name="top"></a> Neste documento  
   
 - [Árvores de trabalho paralelos](#trees)  
   
@@ -69,7 +64,7 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
   
 - [Quando não usar o cancelamento](#when)  
   
-##  <a name="trees"></a>Árvores de trabalho paralelos  
+##  <a name="trees"></a> Árvores de trabalho paralelos  
  PPL usa grupos de tarefas e tarefas para gerenciar tarefas refinadas e cálculos. Você pode aninhar grupos de tarefas para o formulário *árvores* de trabalho paralelo. A ilustração a seguir mostra uma árvore de trabalho paralelos. Nesta ilustração, `tg1` e `tg2` representar grupos de tarefas; `t1`, `t2`, `t3`, `t4`, e `t5` representar o trabalho que executam os grupos de tarefas.  
   
  ![Uma árvore de trabalho paralelas](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
@@ -82,20 +77,20 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
   
  [[Superior](#top)]  
   
-##  <a name="tasks"></a>Cancelando tarefas paralelas  
+##  <a name="tasks"></a> Cancelando tarefas paralelas  
 
  Há várias maneiras de cancelar o trabalho paralelo. O modo preferido é usar um token de cancelamento. Grupos de tarefas também suporte a [concurrency::task_group::cancel](reference/task-group-class.md#cancel) método e o [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) método. A forma final é lançar uma exceção no corpo de uma função de trabalho da tarefa. Não importa qual método de sua escolha, entenda o cancelamento não ocorre imediatamente. Embora novos trabalhos não foi iniciado se uma tarefa ou um grupo de tarefas é cancelado, trabalho ativo deve verificar e responder ao cancelamento.  
 
   
  Para obter mais exemplos que Cancelar tarefas paralelas, consulte [passo a passo: conectando usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [como: cancelamento de uso para parar um loop paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), e [como: Use Tratamento de exceções para quebra de um loop paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
-###  <a name="tokens"></a>Usando um Token de cancelamento para cancelar o trabalho paralelo  
+###  <a name="tokens"></a> Usando um Token de cancelamento para cancelar o trabalho paralelo  
  O `task`, `task_group`, e `structured_task_group` classes de suporte ao cancelamento com o uso de tokens de cancelamento. PPL define o [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) e [Concurrency](../../parallel/concrt/reference/cancellation-token-class.md) classes para essa finalidade. Quando você usa um token de cancelamento para cancelar o trabalho, o tempo de execução não inicia um novo trabalho assina esse token. Um trabalho que já está ativo pode usar o [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) a função de membro para monitorar o token de cancelamento e parar quando possível.  
   
 
  Para iniciar o cancelamento, chame o [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) método. Responder ao cancelamento das seguintes maneiras:  
   
--   Para `task` objetos, use o [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) função. `cancel_current_task`Cancela a tarefa atual e qualquer um de seus continuações baseada em valor. (Não cancelará o cancelamento *token* que está associado com a tarefa ou seus continuações.)  
+-   Para `task` objetos, use o [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) função. `cancel_current_task` Cancela a tarefa atual e qualquer um de seus continuações baseada em valor. (Não cancelará o cancelamento *token* que está associado com a tarefa ou seus continuações.)  
   
 -   Para grupos de tarefas e os algoritmos paralelos, use o [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) função para detectar o cancelamento e retornar logo do corpo da tarefa quando esta função retorna `true`. (Não chame `cancel_current_task` de um grupo de tarefas.)  
 
@@ -154,7 +149,7 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Tokens de Cancelamento e Composição da Tarefa  
 
- O [concurrency:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx" when_all](reference/concurrency-namespace-functions.md#when_all) e [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funções podem ajudá-lo a compor várias tarefas para implementar os padrões comuns. Esta seção descreve como funcionam essas funções com tokens de cancelamento.  
+ O [concurrency:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all](reference/concurrency-namespace-functions.md#when_all) e [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funções podem ajudá-lo a compor várias tarefas para implementar os padrões comuns. Esta seção descreve como funcionam essas funções com tokens de cancelamento.  
   
  Quando você fornecer um token de cancelamento como o `when_all` e `when_any` de função, que a função cancela somente quando esse token de cancelamento é cancelado ou quando um participante termina em um estado de cancelamento de tarefas ou gera uma exceção.  
   
@@ -164,7 +159,7 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
   
  [[Superior](#top)]  
   
-###  <a name="cancel"></a>Usando o método para Cancelar trabalho paralelos de cancelamento  
+###  <a name="cancel"></a> Usando o método para Cancelar trabalho paralelos de cancelamento  
 
  O [concurrency::task_group::cancel](reference/task-group-class.md#cancel) e [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) métodos definir um grupo de tarefas para o estado cancelado. Depois de chamar `cancel`, o grupo de tarefas não iniciar tarefas futuras. O `cancel` métodos podem ser chamados por várias tarefas filho. Faz com que uma tarefa cancelada a [concurrency::task_group::wait](reference/task-group-class.md#wait) e [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait) métodos para retornar [concurrency::canceled](reference/concurrency-namespace-enums.md#task_group_status).  
 
@@ -200,7 +195,7 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
   
  [[Superior](#top)]  
   
-###  <a name="exceptions"></a>Usando exceções para cancelar o trabalho paralelo  
+###  <a name="exceptions"></a> Usando exceções para cancelar o trabalho paralelo  
  O uso de tokens de cancelamento e a `cancel` método são mais eficientes do que no cancelamento de uma árvore de trabalho paralelos de tratamento de exceção. Tokens de cancelamento e a `cancel` método Cancelar uma tarefa e quaisquer tarefas filho de uma maneira de cima para baixo. Por outro lado, a manipulação de exceção funciona de forma ascendente e deve cancelar a cada grupo de tarefas filho independentemente como a exceção for propagada para cima. O tópico [tratamento de exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) explica como o tempo de execução de simultaneidade usa exceções para comunicar erros. No entanto, nem todas as exceções indicam um erro. Por exemplo, um algoritmo de pesquisa pode cancelar a tarefa associada ao encontrar o resultado. No entanto, conforme mencionado anteriormente, manipulação de exceção é menos eficiente do que usando o `cancel` método para cancelar o trabalho paralelo.  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ Este documento explica a função de cancelamento na biblioteca de padrões para
   
  [[Superior](#top)]  
   
-##  <a name="algorithms"></a>Cancelando algoritmos paralelos  
+##  <a name="algorithms"></a> Cancelando algoritmos paralelos  
  Paralelo algoritmos no PPL, por exemplo, `parallel_for`, criar grupos de tarefas. Portanto, você pode usar muitas das mesmas técnicas para cancelar um algoritmo em paralelo.  
   
  Os exemplos a seguir ilustram várias maneiras de cancelar um algoritmo em paralelo.  
@@ -258,7 +253,7 @@ Caught 50
   
  [[Superior](#top)]  
   
-##  <a name="when"></a>Quando não usar o cancelamento  
+##  <a name="when"></a> Quando não usar o cancelamento  
  O uso de cancelamento é apropriado quando cada membro de um grupo de tarefas relacionadas pode sair de maneira oportuna. No entanto, existem alguns cenários onde cancelamento pode não ser apropriado para seu aplicativo. Por exemplo, como o cancelamento da tarefa é cooperativo, o conjunto geral de tarefas não cancelará se qualquer tarefa individual está bloqueada. Por exemplo, se uma tarefa ainda não foi iniciado, mas ele desbloqueia outra tarefa ativa, ele não será iniciado se o grupo de tarefas é cancelado. Isso pode causar um deadlock ocorre no seu aplicativo. Um segundo exemplo de onde o uso de cancelamento pode não ser apropriado é quando uma tarefa é cancelada, mas sua tarefa filho executa uma operação importante, como a liberação de um recurso. Porque o conjunto geral de tarefas é cancelado quando a tarefa pai é cancelada, a operação não será executado. Para obter um exemplo que ilustra esse ponto, consulte o [compreender como cancelamento e destruição de tratamento afetam o objeto de exceção](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) seção práticas recomendadas no tópico da biblioteca de padrões paralelos.  
   
  [[Superior](#top)]  

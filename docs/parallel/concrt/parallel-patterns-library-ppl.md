@@ -1,29 +1,24 @@
 ---
-title: "Paralelo a biblioteca de padrões (PPL) | Microsoft Docs"
-ms.custom: 
+title: Paralelo a biblioteca de padrões (PPL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7263d764014fa3532c3234bd4c7a0d4f1ff8d3c3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteca de padrões paralelos (PPL)
 A biblioteca de padrões paralelos (PPL) fornece um modelo de programação imperativo que promova a escalabilidade e a facilidade de uso para o desenvolvimento de aplicativos simultâneos. PPL tem como base os componentes de gerenciamento de recursos e agendamento de tempo de execução de simultaneidade. Ele gera o nível de abstração entre o código do aplicativo e o mecanismo subjacente de threading, fornecendo algoritmos genéricos fortemente tipadas e contêineres que atuam em dados em paralelo. PPL permite desenvolver aplicativos que podem ser expandidos fornecendo alternativas para estado compartilhado.  

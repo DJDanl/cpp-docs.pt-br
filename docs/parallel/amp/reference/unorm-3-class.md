@@ -1,12 +1,9 @@
 ---
 title: Classe unorm_3 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_zy
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aeded2e1d503ae26091d53a0cd12e75648e4254
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b93fbce07aa50e9b0a9f01ec762690ce21b78c02
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm3-class"></a>Classe unorm_3
 Representa um vetor curto de três números normais não assinados.  

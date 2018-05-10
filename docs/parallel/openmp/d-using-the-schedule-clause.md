@@ -1,27 +1,22 @@
 ---
-title: "D. Usando a cláusula de agenda | Microsoft Docs"
-ms.custom: 
+title: D. Usando a cláusula de agenda | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Usando a cláusula de agenda
 Uma região parallel tem pelo menos uma barreira, seu final e pode ter barreiras adicionais nele. Em cada barreira, os outros membros da equipe devem aguardar o último segmento chegar. Para minimizar esse tempo de espera, o trabalho compartilhado deve ser distribuído para que todos os threads chegam a barreira em aproximadamente ao mesmo tempo. Se alguns dos que compartilhou o trabalho está contido no **para** constrói, o `schedule` cláusula pode ser usada para essa finalidade.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Como **dinâmico**, o **interativa** agendar garante que nenhum thread aguarda a barreira mais do que o que leva a outro thread execute sua iteração final ou final *k* iterações se um tamanho de bloco de *k* for especificado. Entre esse tipo de agenda, o **interativa** agenda é caracterizada pela propriedade que ela requer as menor número sincronizações. Para o tamanho da parte *k*, atribuirá uma implementação típica *p = ceiling(n/p)* definido de iterações para o primeiro thread disponível,  *n*  como o maior de *n-q* e *p\*k*e repita até que todas as iterações são atribuídas.  
+ Como **dinâmico**, o **interativa** agendar garante que nenhum thread aguarda a barreira mais do que o que leva a outro thread execute sua iteração final ou final *k* iterações se um tamanho de bloco de *k* for especificado. Entre esse tipo de agenda, o **interativa** agenda é caracterizada pela propriedade que ela requer as menor número sincronizações. Para o tamanho da parte *k*, atribuirá uma implementação típica *p = ceiling(n/p)* definido de iterações para o primeiro thread disponível, *n* como o maior de *n-q* e *p\*k*e repita até que todas as iterações são atribuídas.  
   
  Quando a opção da agenda ideal não é mais clara que esses exemplos, o **tempo de execução** agenda é conveniente para a experimentar com diferentes agendamentos e tamanhos de bloco sem a necessidade de modificar e recompilar o programa. Ele também pode ser útil quando a programação ideal depende (de alguma forma previsível) os dados de entrada aos quais o programa é aplicado.  
   

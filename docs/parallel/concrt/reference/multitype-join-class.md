@@ -1,12 +1,9 @@
 ---
 title: Classe multitype_join | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multitype_join
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multitypejoin-class"></a>Classe multitype_join
 Um `multitype_join` bloco de mensagens é um bloco de mensagens várias fonte, destino único que juntos combina mensagens de tipos diferentes de cada uma das suas fontes e oferece uma tupla das mensagens combinadas para seus destinos.  
@@ -211,7 +206,7 @@ multitype_join(
   
  Construção de movimentação não é executada em um bloqueio, o que significa que ele esteja o usuário para certificar-se de que não existem leve tarefas em andamento no momento da movimentação. Caso contrário, vários corridas podem ocorrer, resultando em estado inconsistente ou exceções.  
   
-##  <a name="dtor"></a> ~multitype_join 
+##  <a name="dtor"></a> ~ multitype_join 
 
  Destrói a `multitype_join` bloco de mensagens.  
   

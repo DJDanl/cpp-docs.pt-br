@@ -1,13 +1,10 @@
 ---
-title: "Como: usar parallel_invoke para escrever uma rotina de classificação paralela | Microsoft Docs"
-ms.custom: 
+title: 'Como: usar parallel_invoke para escrever uma rotina de classificação paralela | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Como usar parallel_invoke para escrever uma rotina de classificação em paralelo
 Este documento descreve como usar o [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo para melhorar o desempenho do algoritmo de classificação bitonic. O algoritmo de classificação bitonic forma recursiva divide a sequência de entrada em menores classificadas partições. O algoritmo de classificação bitonic pode ser executados em paralelo porque cada operação de partição é independente de todas as outras operações.  
@@ -37,21 +32,21 @@ Este documento descreve como usar o [parallel_invoke](../../parallel/concrt/para
 > [!NOTE]
 >  Este exemplo usa uma rotina de classificação paralelo para fins ilustrativos. Você também pode usar os algoritmos de classificação internos que fornece a PPL: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), e [concurrency::parallel_ radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Para obter mais informações, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este documento descreve as seguintes tarefas:  
   
 - [Execução de classificação Bitonic em série](#serial)  
   
 - [Usar parallel_invoke para executar a classificação de Bitonic em paralelo](#parallel)  
   
-##  <a name="serial"></a>Execução de classificação Bitonic em série  
+##  <a name="serial"></a> Execução de classificação Bitonic em série  
  O exemplo a seguir mostra a versão serial do algoritmo de classificação bitonic. O `bitonic_sort` função divide a sequência em duas partições, classifica essas partições em direções opostas e, em seguida, mescla os resultados. Esta função chama a mesmo recursivamente duas vezes para classificar cada partição.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[Superior](#top)]  
   
-##  <a name="parallel"></a>Usar parallel_invoke para executar a classificação de Bitonic em paralelo  
+##  <a name="parallel"></a> Usar parallel_invoke para executar a classificação de Bitonic em paralelo  
  Esta seção descreve como usar o `parallel_invoke` algoritmo para realizar o algoritmo de classificação bitonic em paralelo.  
   
 ### <a name="procedures"></a>Procedimentos  

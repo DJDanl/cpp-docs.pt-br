@@ -1,12 +1,9 @@
 ---
 title: Classe CurrentScheduler | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
 Representa uma abstração para o Agendador atual associado ao contexto da chamada.  
@@ -75,7 +70,7 @@ class CurrentScheduler;
   
  **Namespace:** simultaneidade  
   
-##  <a name="create">Criar</a> 
+##  <a name="create"></a> Criar 
 
  Cria um novo Agendador cujo comportamento é descrito pelo `_Policy` parâmetro e a anexa ao contexto de chamada. O Agendador recém-criado se tornará o Agendador atual para o contexto da chamada.  
   
@@ -135,7 +130,7 @@ static void __cdecl Detach();
   
  Chamar esse método em um contexto que é interno e gerenciado por um agendador ou um contexto que foi anexado com um método diferente do [Scheduler](scheduler-class.md#attach) ou [Currentscheduler](#create) métodos, resultará em um [improper_scheduler_detach](improper-scheduler-detach-class.md) exceção sendo lançada.  
   
-##  <a name="get"></a> Get 
+##  <a name="get"></a> Obter 
 
  Retorna um ponteiro para o Agendador associado ao contexto de chamada, também conhecido como o Agendador atual.  
   

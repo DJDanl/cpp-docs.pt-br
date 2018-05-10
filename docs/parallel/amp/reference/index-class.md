@@ -1,12 +1,9 @@
 ---
 title: Classe index | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/index
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="index-class"></a>Classe index
 Define uma *N*-dimensional índice pographics cpp amp.md.  
@@ -84,7 +79,7 @@ class index;
  **Namespace:** Simultaneidade  
 
 
-## <a name="index_ctor">Construtor de índice</a>
+## <a name="index_ctor"></a> Construtor de índice
 Inicializa uma nova instância da classe de índice.
 
 ```  
@@ -141,7 +136,7 @@ index operator--(
 ### <a name="return-values"></a>Valores de retorno
 Para o operador de prefixo, o objeto de índice (* isso). Para o operador de sufixo, um novo objeto de índice.
 
-## <a name="operator_mod_eq"></a>  operator(mod)=   
+## <a name="operator_mod_eq"></a>  Operator(MOD) =   
 Calcula o módulo (restante) de cada elemento no objeto de índice quando esse elemento é dividido pelo número especificado.
 
 ```  
@@ -153,7 +148,7 @@ index<_Rank>& operator%=(
 _Rhs o número de dividir por para localizar o módulo.
 O objeto de índice do valor de retorno.
 
-## <a name="operator_star_eq"></a>  operator*=   
+## <a name="operator_star_eq"></a>  operador * =   
 Multiplica cada elemento no objeto de índice pelo número especificado.
 ```
 index<_Rank>& operator*=(
@@ -164,7 +159,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Parâmetros
 _Rhs o número para multiplicar.
 
-## <a name="operator_div_eq"></a>  operator/= 
+## <a name="operator_div_eq"></a>  operador / = 
 Divide cada elemento no objeto de índice pelo número especificado.
 
 ```
@@ -204,7 +199,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  operator++   
+## <a name="operator_add_add"></a>  operador + +   
 Incrementa a cada elemento do objeto index.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -216,7 +211,7 @@ index<_Rank> operator++(
 ### <a name="return-value"></a>Valor de retorno
 Para o operador de prefixo, o objeto de índice (* isso). Para o operador de sufixo, um novo objeto de índice.
 
-## <a name="operator_add_eq"></a>  operator+=   
+## <a name="operator_add_eq"></a>  + operador =   
 Adiciona o número especificado para cada elemento do objeto index.
 ```  
 index<_Rank>& operator+=(

@@ -2,9 +2,6 @@
 title: 'Funções de namespace Concurrency:: fast_math | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
@@ -53,17 +50,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9bd20e2e1d88564c7e688e1e0c9c2392f1f4f2ac
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Funções de namespace Concurrency:: fast_math
 ||||  
@@ -589,7 +584,7 @@ inline int isinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um valor diferente de zero se e somente se o argumento tem um valor infinito  
   
-##  <a name="isnan"></a>  isnan  
+##  <a name="isnan"></a>  isNaN  
  Determina se o argumento é uma NaN  
   
 ```  
@@ -620,7 +615,7 @@ inline float ldexp(
  Expoente de inteiro  
   
 ### <a name="return-value"></a>Valor de retorno  
- Returns _X * 2^_Exp  
+ Retorna x * 2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>  ldexpf  
  Calcula um número real da mantissa e expoente  
@@ -639,7 +634,7 @@ inline float ldexpf(
  Expoente de inteiro  
   
 ### <a name="return-value"></a>Valor de retorno  
- Returns _X * 2^_Exp  
+ Retorna x * 2 ^ _Exp  
   
 ##  <a name="log"></a>  log  
  Calcula o logaritmo de base e do argumento  
@@ -798,7 +793,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="round"></a>  round  
+##  <a name="round"></a>  Arredondar  
  Arredonda x para o inteiro mais próximo  
   
 ```  

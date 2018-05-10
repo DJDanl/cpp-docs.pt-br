@@ -43,11 +43,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89363e49b2f8a1691ee897c6acae6b4f67f5b9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 ## <a name="syntax"></a>Sintaxe  
@@ -73,15 +73,15 @@ Todos os operadores de atribuição na tabela a seguir, exceto o = e & & = opera
 |--------------|-------------|  
 |**=**|Armazena o valor do segundo operando no objeto especificado pelo primeiro operando (atribuição simples).|  
 |**\*=**|Multiplica o valor do primeiro operando pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
-|`/=`|Divide o valor do primeiro operando pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
-|`%=`|Obtém o módulo do primeiro operando especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
-|`+=`|Soma o valor do segundo operando ao valor do primeiro operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
+|**/=**|Divide o valor do primeiro operando pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
+|**%=**|Obtém o módulo do primeiro operando especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
+|**+=**|Soma o valor do segundo operando ao valor do primeiro operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |**-=**|Subtrai o valor do segundo operando do valor do primeiro operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |**<\<=**|Alterna o valor do primeiro operando à esquerda do número de bits especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |**>>=**|Alterna o valor do primeiro operando à direita do número de bits especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |**&=**|Obtém o bit a bit AND do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
-|`^=`|Obtém o bit a bit exclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
-|`&#124;=`|Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
+|**^=**|Obtém o bit a bit exclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
+|**\|=**|Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
 |**&&=**| Mova o operador de atribuição (para tipos de classe somente). Se o segundo operando é um rvalue mover seus recursos para o primeiro operando (sem copiá-los). Consulte [construtores de mover e mova operadores de atribuição](move-constructors-and-move-assignment-operators-cpp.md) para obter mais informações.|
   
  **Palavras-chave do operador**  
@@ -91,8 +91,8 @@ Todos os operadores de atribuição na tabela a seguir, exceto o = e & & = opera
 |Operador|Equivalente|  
 |--------------|----------------|  
 |**&=**|`and_eq`|  
-|`&#124;=`|`or_eq`|  
-|`^=`|`xor_eq`|  
+|**\|=**|`or_eq`|  
+|**^=**|`xor_eq`|  
   
  Há duas maneiras para acessar essas palavras-chave de operador em seus programas: incluem o arquivo de cabeçalho `iso646.h`, ou de compilação com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador (desabilitar extensões de linguagem).  
   

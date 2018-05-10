@@ -1,30 +1,25 @@
 ---
-title: "Passo a passo: Removendo trabalho de um Thread de Interface do usuário | Microsoft Docs"
-ms.custom: 
+title: 'Passo a passo: Removendo trabalho de um Thread de Interface do usuário | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Instruções passo a passo: removendo trabalho de um thread de interface de usuário
 Este documento demonstra como usar o tempo de execução de simultaneidade para mover o trabalho realizado pelo thread de interface do usuário (IU) em um aplicativo do Microsoft Foundation Classes (MFC) para um thread de trabalho. Este documento também demonstra como melhorar o desempenho de uma operação demorada de desenho.  
@@ -46,7 +41,7 @@ Este documento demonstra como usar o tempo de execução de simultaneidade para 
   
  Também é recomendável que você entender os conceitos básicos do desenvolvimento de aplicativos MFC e [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] antes de começar este passo a passo. Para obter mais informações sobre MFC, consulte [aplicativos de Desktop do MFC](../../mfc/mfc-desktop-applications.md). Para obter mais informações sobre [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)], consulte [GDI+](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este passo a passo contém as seguintes seções:  
   
 -   [Criando o aplicativo do MFC](#application)  
@@ -59,14 +54,14 @@ Este documento demonstra como usar o tempo de execução de simultaneidade para 
   
 -   [Adicionando suporte para cancelamento](#cancellation)  
   
-##  <a name="application"></a>Criando o aplicativo do MFC  
+##  <a name="application"></a> Criando o aplicativo do MFC  
  Esta seção descreve como criar o aplicativo básico do MFC.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Para criar um aplicativo MFC do Visual C++  
   
 1.  No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.  
   
-2.  No **novo projeto** na caixa de **modelos instalados** painel, selecione **Visual C++**e, em seguida, no **modelos** painel, selecione **Aplicativo MFC**. Digite um nome para o projeto, por exemplo, `Mandelbrot`e, em seguida, clique em **Okey** para exibir o **Assistente de aplicativo MFC**.  
+2.  No **novo projeto** na caixa de **modelos instalados** painel, selecione **Visual C++** e, em seguida, no **modelos** painel, selecione **Aplicativo MFC**. Digite um nome para o projeto, por exemplo, `Mandelbrot`e, em seguida, clique em **Okey** para exibir o **Assistente de aplicativo MFC**.  
   
 3.  No **tipo de aplicativo** painel, selecione **único documento**. Certifique-se de que o **suporte para a arquitetura de documento/exibição** caixa de seleção é desmarcada.  
   
@@ -74,7 +69,7 @@ Este documento demonstra como usar o tempo de execução de simultaneidade para 
   
      Verifique se que o aplicativo foi criado com êxito ao criar e executá-lo. Para criar o aplicativo, no **criar** menu, clique em **compilar solução**. Se o aplicativo foi criado com êxito, execute o aplicativo clicando **iniciar depuração** no **depurar** menu.  
   
-##  <a name="serial"></a>Implementando a versão Serial do aplicativo Mandelbrot  
+##  <a name="serial"></a> Implementando a versão Serial do aplicativo Mandelbrot  
  Esta seção descreve como desenhar o fractal Mandelbrot. Esta versão desenha o fractal Mandelbrot para um [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [Bitmap](https://msdn.microsoft.com/library/ms534420.aspx) de objeto e, em seguida, copia o conteúdo desse bitmap para a janela do cliente.  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Para implementar a versão serial do aplicativo Mandelbrot  
@@ -123,7 +118,7 @@ Este documento demonstra como usar o tempo de execução de simultaneidade para 
   
  [[Superior](#top)]  
   
-##  <a name="removing-work"></a>Removendo o trabalho do Thread da interface do usuário  
+##  <a name="removing-work"></a> Removendo o trabalho do Thread da interface do usuário  
  Esta seção mostra como remover o trabalho de desenho do thread da interface do usuário no aplicativo Mandelbrot. Ao mover o trabalho de desenho do thread da interface do usuário para um thread de trabalho, o thread de interface do usuário pode processar mensagens, como o thread de trabalho gera a imagem em segundo plano.  
   
  O tempo de execução de simultaneidade fornece três maneiras de executar tarefas: [grupos de tarefas](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [agentes assíncronos](../../parallel/concrt/asynchronous-agents.md), e [tarefas leves](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Embora você possa usar qualquer um desses mecanismos para remover o trabalho do thread da interface do usuário, este exemplo usa um [concurrency::task_group](reference/task-group-class.md) porque a grupos de tarefas oferece suporte ao cancelamento. Posteriormente, este passo a passo usa cancelamento para reduzir a quantidade de trabalho que é executada quando a janela do cliente é redimensionada e para executar a limpeza quando a janela é destruída.  
@@ -162,7 +157,7 @@ Este documento demonstra como usar o tempo de execução de simultaneidade para 
   
  [[Superior](#top)]  
   
-##  <a name="performance"></a>Melhorando o desempenho de desenho  
+##  <a name="performance"></a> Melhorando o desempenho de desenho  
 
  A geração do fractal Mandelbrot é uma boa candidata para paralelização porque o cálculo de cada pixel é independente de todos os outros cálculos. Para colocar em paralelo, o procedimento de desenho, converter externa `for` loop no `CChildView::DrawMandelbrot` método para uma chamada para o [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo, da seguinte maneira.  
 
@@ -173,7 +168,7 @@ Este documento demonstra como usar o tempo de execução de simultaneidade para 
   
  [[Superior](#top)]  
   
-##  <a name="cancellation"></a>Adicionando suporte para cancelamento  
+##  <a name="cancellation"></a> Adicionando suporte para cancelamento  
  Esta seção descreve como tratar o redimensionamento de janela e como cancelar quaisquer tarefas de desenho ativas quando a janela é destruída.  
   
  O documento [cancelamento no PPL](cancellation-in-the-ppl.md) explica como funciona o cancelamento no tempo de execução. Cancelamento for cooperativo; Portanto, ele não ocorre imediatamente. Para interromper uma tarefa cancelada, o tempo de execução lança uma exceção interna durante uma chamada subsequente da tarefa no tempo de execução. A seção anterior mostra como usar o `parallel_for` algoritmo para melhorar o desempenho da tarefa desenho. A chamada para `parallel_for` permite que o tempo de execução interromper a tarefa e, portanto, permite o cancelamento de trabalho.  

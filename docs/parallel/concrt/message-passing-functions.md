@@ -1,36 +1,31 @@
 ---
-title: "Funções de transmissão de mensagens | Microsoft Docs"
-ms.custom: 
+title: Funções de transmissão de mensagens | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>Funções de transmissão de mensagem
 A biblioteca de agentes assíncrona fornece várias funções que permitem que você passar mensagens entre componentes.  
   
  Essas funções de transmissão de mensagens são usadas com os vários tipos de bloco de mensagens. Para obter mais informações sobre os tipos de bloco de mensagens que são definidos pelo tempo de execução de simultaneidade, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este tópico descreve as funções de transmissão de mensagens a seguir:  
   
 -   [envio e asend](#send)  
@@ -39,7 +34,7 @@ A biblioteca de agentes assíncrona fornece várias funções que permitem que v
   
 -   [Exemplos](#examples)  
   
-##  <a name="send"></a>envio e asend  
+##  <a name="send"></a> envio e asend  
 
  O [concurrency::send](reference/concurrency-namespace-functions.md#send) função envia uma mensagem para o destino especificado modo síncrono e o [concurrency::asend](reference/concurrency-namespace-functions.md#asend) função envia uma mensagem para o destino especificado assincronamente. Tanto o `send` e `asend` funções Aguarde até que o destino indica que ele eventualmente aceitar ou recusar a mensagem.  
   
@@ -49,7 +44,7 @@ A biblioteca de agentes assíncrona fornece várias funções que permitem que v
   
  [[Superior](#top)]  
   
-##  <a name="receive"></a>receber e try_receive  
+##  <a name="receive"></a> receber e try_receive  
 
  O [concurrency::receive](reference/concurrency-namespace-functions.md#receive) e [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) funções leem dados de uma origem específica. O `receive` função aguarda os dados fiquem disponíveis, enquanto o `try_receive` função retorna imediatamente.  
   

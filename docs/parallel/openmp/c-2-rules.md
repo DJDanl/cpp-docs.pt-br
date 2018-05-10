@@ -1,32 +1,27 @@
 ---
 title: C. 2 regras | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Regras
 A notação é descrita na seção 6.1 C padrão. Este apêndice gramática mostra as extensões a gramática da linguagem de base para as diretivas OpenMP C e C++.  
   
- **/\*em C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* em C++ (ISO/IEC 14882:1998) \*/**  
   
  *instrução seq*:  
   
@@ -38,7 +33,7 @@ A notação é descrita na seção 6.1 C padrão. Este apêndice gramática most
   
  *diretiva de openmp seq de instrução*  
   
- **/\*no C90 (ISO/IEC 9899:1990)\*/**  
+ **/\* no C90 (ISO/IEC 9899:1990) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ A notação é descrita na seção 6.1 C padrão. Este apêndice gramática most
   
  *diretiva de openmp lista de instruções*  
   
- **/\*no C99 (ISO/IEC 9899:1999)\*/**  
+ **/\* no C99 (ISO/IEC 9899:1999) \*/**  
   
  *Bloquear item*:  
   
@@ -62,7 +57,7 @@ A notação é descrita na seção 6.1 C padrão. Este apêndice gramática most
   
  *statement*:  
   
- **/\*instruções padrão\*/**  
+ **/\* instruções padrão \*/**  
   
  *construção de OpenMP*  
   
@@ -150,7 +145,7 @@ A notação é descrita na seção 6.1 C padrão. Este apêndice gramática most
   
  **interativa**  
   
- **tempo de execução**  
+ **Tempo de execução**  
   
  *construção de seções*:  
   
@@ -274,7 +269,7 @@ A notação é descrita na seção 6.1 C padrão. Este apêndice gramática most
   
  *declaração*:  
   
- **/\*declarações padrão\*/**  
+ **/\* declarações padrão \*/**  
   
  *diretiva threadprivate*  
   
@@ -304,9 +299,9 @@ A notação é descrita na seção 6.1 C padrão. Este apêndice gramática most
   
  *operador de Reduction*:  
   
- *Um dos*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Um dos*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*em C\*/**  
+ **/\* em C \*/**  
   
  *lista de variável*:  
   
@@ -314,7 +309,7 @@ A notação é descrita na seção 6.1 C padrão. Este apêndice gramática most
   
  *lista de variável* **,** *identificador*  
   
- **/\*em C++\*/**  
+ **/\* em C++ \*/**  
   
  *lista de variável*:  
   

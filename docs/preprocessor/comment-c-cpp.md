@@ -1,12 +1,9 @@
 ---
-title: "comentário (C/C++) | Microsoft Docs"
-ms.custom: 
+title: comentário (C/C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 30683bb76ce674becb81321607bc95fefdb78ac1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 Coloca um registro de comentário em um arquivo de objeto ou executável.  
@@ -44,7 +39,7 @@ Coloca um registro de comentário em um arquivo de objeto ou executável.
 ## <a name="remarks"></a>Comentários  
  O *tipo de comentário* é um dos identificadores predefinidos, descritos abaixo, que especifica o tipo de registro de comentário. O `commentstring` opcional é um literal de cadeia de caracteres que fornece informações adicionais sobre alguns tipos de comentário. Porque `commentstring` é uma cadeia de caracteres literal, ele obedece a todas as regras para literais de cadeia de caracteres em relação a caracteres de escape, as aspas internas (**"**) e concatenação.  
   
- **compiler**  
+ **Compilador**  
  Coloque o nome e o número da versão do compilador no arquivo de objeto. Esse registro de comentário é ignorado pelo vinculador. Se você fornecer um parâmetro `commentstring` para esse tipo de registro, o compilador gerará um aviso.  
   
  **exestr**  
@@ -76,9 +71,9 @@ Coloca um registro de comentário em um arquivo de objeto ou executável.
   
 -   [/MERGE](../build/reference/merge-combine-sections.md)  
   
--   [/SECTION](../build/reference/section-specify-section-attributes.md)  
+-   [/ SEÇÃO](../build/reference/section-specify-section-attributes.md)  
   
- **user**  
+ **Usuário**  
  Coloca um comentário geral no arquivo de objeto. O parâmetro `commentstring` contém o texto do comentário. Esse registro de comentário é ignorado pelo vinculador.  
   
  O seguinte pragma faz com que o vinculador procure pela biblioteca EMAPI.LIB na vinculação. O vinculador procura primeiro no diretório de trabalho atual e depois no caminho especificado na variável de ambiente LIB.  

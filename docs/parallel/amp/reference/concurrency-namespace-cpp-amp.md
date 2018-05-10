@@ -1,12 +1,9 @@
 ---
 title: Namespace de simultaneidade (C++ AMP) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Namespace Concurrency (C++ AMP)
 Fornece classes e funções que aceleram a execução de código C++ no hardware paralelo de dados. Para obter mais informações, consulte [visão geral do C++ AMP](../cpp-amp-overview.md)  
@@ -72,8 +67,8 @@ namespace Concurrency;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[access_type Enumeration](concurrency-namespace-enums-amp.md#access_type)|Especifica o tipo de acesso de dados.|  
-|[queuing_mode Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Especifica os modos de enfileiramento de mensagens que têm suporte para o acelerador.|  
+|[Enumeração access_type](concurrency-namespace-enums-amp.md#access_type)|Especifica o tipo de acesso de dados.|  
+|[Enumeração queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)|Especifica os modos de enfileiramento de mensagens que têm suporte para o acelerador.|  
   
 ### <a name="operators"></a>Operadores  
   
@@ -117,8 +112,8 @@ namespace Concurrency;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|O número máximo de buffers permitido por DirectX.|  
-|[MODULENAME_MAX_LENGTH Constant](concurrency-namespace-constants-amp.md#modulename_max_length)|Armazena o comprimento máximo do nome do módulo. Esse valor deve ser o mesmo no compilador e o tempo de execução.|  
+|[Constante HLSL_MAX_NUM_BUFFERS](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|O número máximo de buffers permitido por DirectX.|  
+|[Constante MODULENAME_MAX_LENGTH](concurrency-namespace-constants-amp.md#modulename_max_length)|Armazena o comprimento máximo do nome do módulo. Esse valor deve ser o mesmo no compilador e o tempo de execução.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** amp.h  

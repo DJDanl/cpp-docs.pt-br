@@ -1,10 +1,7 @@
 ---
-title: "Enumerações de namespace de simultaneidade (AMP) | Microsoft Docs"
-ms.custom: 
+title: Enumerações de namespace de simultaneidade (AMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::access_type
@@ -12,24 +9,22 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17378a34698cc80d356983898e0023b76877140
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumerações de namespace de simultaneidade (AMP)
 |||  
 |-|-|  
-|[access_type Enumeration](#access_type)|[queuing_mode Enumeration](#queuing_mode)|  
+|[Enumeração access_type](#access_type)|[Enumeração queuing_mode](#queuing_mode)|  
   
-##  <a name="access_type"></a>  access_type Enumeration  
+##  <a name="access_type"></a>  Enumeração access_type  
  Tipo de enumeração usado para indicar vários tipos de acesso a dados.  
   
 ```  
@@ -46,7 +41,7 @@ enum access_type;
 |`access_type_write`|Compartilhado. A alocação está acessível do Accelerator e é legível e gravável na CPU.|  
 
   
-##  <a name="queuing_mode"></a>  queuing_mode Enumeration  
+##  <a name="queuing_mode"></a>  Enumeração queuing_mode  
  Especifica os modos de enfileiramento de mensagens que têm suporte para o acelerador.  
   
 ```  

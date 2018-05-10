@@ -1,27 +1,22 @@
 ---
 title: Usar bloqueios A.16 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db55a8e562e0b1ae72038128a035d2cdabcd3e86
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a16---using-locks"></a>A.16   Usando bloqueios
 No exemplo a seguir (para [seção 3.2](../../parallel/openmp/3-2-lock-functions.md) na página 41) Observe que o argumento para as funções de bloqueio deve ter tipo `omp_lock_t`, e que não é necessário para liberar.  As funções de bloqueio fazer com que os threads de ficar ocioso enquanto aguarda a entrada para a primeira seção crítica, mas para executar outras tarefas enquanto aguarda a entrada para o segundo.  O `omp_set_lock` blocos de função, mas o `omp_test_lock` função não, permitindo que o trabalho em skip() deve ser feito.  

@@ -1,37 +1,32 @@
 ---
-title: "Instrução composta (C) | Microsoft Docs"
-ms.custom: 
+title: Instrução composta (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9422e3229aa5e800859f50e1ca058e32a4120074
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e25bef33e374d7e0dbf97a337cb58146b05bd093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compound-statement-c"></a>Instrução composta (C)
 Uma instrução composta (também chamada de “bloco”) aparece geralmente como o corpo de uma outra instrução, como a instrução **if**. [Declarações e tipos](../c-language/declarations-and-types.md) descreve o formato e o significado das declarações que podem aparecer no cabeçalho de uma instrução composta.  
   
 ## <a name="syntax"></a>Sintaxe  
  *compound-statement*:  
- **{**  *declaration-list* opt*statement-list*opt**}**  
+ **{**  *declaration-list* opt*statement-list*opt **}**  
   
  *declaration-list*:  
  *declaration*  

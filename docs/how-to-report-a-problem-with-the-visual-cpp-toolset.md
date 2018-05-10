@@ -2,21 +2,19 @@
 title: Como relatar um problema com o conjunto de ferramentas do Visual C++ | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Como relatar um problema com o Conjunto de Ferramentas do Visual C++
 
@@ -108,7 +106,7 @@ Uma reprodução é um exemplo de código-fonte completo e independente que demo
 
 Uma boa reprodução é:
 
-- **Mínima.** As reproduções devem ter o menor tamanho possível enquanto ainda demonstram exatamente o problema encontrado. Elas não precisam ser complexas ou realistas, só precisam mostrar um código compatível com a implementação Padrão ou documentada do compilador ou, em caso de ausência de um diagnóstico, o código não compatível. As reproduções simples e objetivas, contendo apenas o código necessário para demonstrar o problema, são as melhores. Se você puder eliminar ou simplificar o código de modo que ele permaneça compatível e deixe o problema inalterado, faça isso. Não é necessário incluir contra-exemplos de códigos que funcionam. 
+- **Mínima.** As reproduções devem ter o menor tamanho possível enquanto ainda demonstram exatamente o problema encontrado. Elas não precisam ser complexas ou realistas, só precisam mostrar um código compatível com a implementação Padrão ou documentada do compilador ou, em caso de ausência de um diagnóstico, o código não compatível. As reproduções simples e objetivas, contendo apenas o código necessário para demonstrar o problema, são as melhores. Se você puder eliminar ou simplificar o código de modo que ele permaneça compatível e deixe o problema inalterado, faça isso. Não é necessário incluir contra-exemplos de códigos que funcionam.
 
 - **Independente.** As reproduções devem evitar dependências desnecessárias. Se você puder reproduzir o problema sem bibliotecas de terceiros, faça isso. Se puder reproduzir o problema sem nenhum código de biblioteca além de instruções de saída simples (por exemplo, `puts("this shouldn't compile");`, `std::cout << value;` e `printf("%d\n", value);` são adequados), faça isso. O ideal é que o exemplo possa ser condensado em um único arquivo de código-fonte, sem referência a nenhum cabeçalho de usuário. Reduzir a quantidade de código que precisamos considerar como um possível colaborador para o problema é extremamente útil para nós.
 
@@ -116,13 +114,13 @@ Uma boa reprodução é:
 
 - **Comparadas com outros compiladores**, se for relevante. As reproduções que envolvem código C++ portátil devem verificar o comportamento em relação a outros compiladores se possível. Em última instância, o Padrão determina a correção do programa e nenhum compilador é perfeito, mas quando o Clang e o GCC aceitam seu código sem um diagnóstico e o MSVC não, é provável que você tenha encontrado um bug em nosso compilador. (Outras possibilidades incluem diferenças de comportamento entre o Unix e o Windows, níveis diferentes de implementação dos padrões de C++ e assim por diante.) Por outro lado, se todos os compiladores rejeitam seu código, é provável que o código esteja incorreto. Ver mensagens de erro diferentes pode ajudá-lo a diagnosticar o problema por conta própria.
 
-   Você pode encontrar listas de compiladores online nos quais pode testar seu código em [Compiladores C++ Online](https://isocpp.org/blog/2013/01/online-c-compilers) no site do ISO C++ ou nesta [Lista de Compiladores C++ Online](https://arnemertz.github.io/online-compilers/) no GitHub. Alguns exemplos específicos incluem [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/). 
+   Você pode encontrar listas de compiladores online nos quais pode testar seu código em [Compiladores C++ Online](https://isocpp.org/blog/2013/01/online-c-compilers) no site do ISO C++ ou nesta [Lista de Compiladores C++ Online](https://arnemertz.github.io/online-compilers/) no GitHub. Alguns exemplos específicos incluem [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Os sites de compiladores online não são afiliados à Microsoft. Muitos sites de compilador online são executados como projetos pessoais e alguns deles podem não estar disponíveis quando você ler isto. No entanto, uma pesquisa deve localizar outros que possam ser usados.
 
 Problemas no compilador, no vinculador e em bibliotecas tendem a ter aspectos particulares. O tipo de problema encontrado determinará o tipo de reprodução que você deverá incluir em seu relatório. Sem uma reprodução apropriada, não temos nada para investigar. Estes são alguns dos tipos de problemas que você pode ver, bem como instruções para gerar os tipos de reproduções que devem ser usadas para relatar cada tipo.
- 
+
 #### <a name="frontend-parser-crash"></a>Falha de front-end (analisador)
 
 As falhas de front-end ocorrem durante a fase de análise do compilador. Normalmente, o compilador emitirá o [Erro Fatal C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e referenciará o arquivo de código-fonte e número de linha em que o erro ocorreu, geralmente ele mencionará um arquivo msc1.cpp, mas você pode ignorar esse detalhe.

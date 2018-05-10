@@ -1,12 +1,9 @@
 ---
-title: "extensão de classe (C++ AMP) | Microsoft Docs"
-ms.custom: 
+title: extensão de classe (C++ AMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
 Representa um vetor de *N* valores inteiros que especificam os limites de um *N*-dimensional espaço que tem uma origem de 0. Os valores do vetor são ordenados do mais significativos para menos significativo.  
@@ -64,9 +59,9 @@ class extent;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[contains](#contains)|Verifica se o especificado `extent` objeto tiver a classificação especificada.|  
+|[Contém](#contains)|Verifica se o especificado `extent` objeto tiver a classificação especificada.|  
 |[size](#size)|Retorna o tamanho total linear da extensão (em unidades de elementos).|  
-|[tile](#tile)|Produz um `tiled_extent` especificado de objeto com as extensões de bloco fornecido por dimensões.|  
+|[lado a lado](#tile)|Produz um `tiled_extent` especificado de objeto com as extensões de bloco fornecido por dimensões.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   

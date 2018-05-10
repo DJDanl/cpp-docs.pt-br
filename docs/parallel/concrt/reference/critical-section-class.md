@@ -1,12 +1,9 @@
 ---
 title: Classe CRITICAL_SECTION | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>Classe critical_section
 Um mutex não reentrante que reconhece explicitamente o tempo de execução de simultaneidade.  
@@ -63,7 +58,7 @@ class critical_section;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Constrói uma nova seção crítica.|  
-|[~critical_section Destructor](#dtor)|Destrói uma seção crítica.|  
+|[~ critical_section destruidor](#dtor)|Destrói uma seção crítica.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -132,7 +127,7 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>Comentários  
  Um `critical_section` objeto não está associado um identificador nativo específico de plataforma para o sistema operacional Windows. O método simplesmente retorna uma referência ao objeto em si.  
   
-##  <a name="critical_section__scoped_lock_class">Classe de CRITICAL_SECTION</a>  
+##  <a name="critical_section__scoped_lock_class"></a>  Classe de CRITICAL_SECTION  
  Um wrapper RAII seguro de exceção para um `critical_section` objeto.  
   
 ```

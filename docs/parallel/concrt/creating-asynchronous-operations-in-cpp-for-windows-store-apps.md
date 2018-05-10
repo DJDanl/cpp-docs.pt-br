@@ -1,30 +1,25 @@
 ---
-title: "Criando operações assíncronas em C++ para aplicativos UWP | Microsoft Docs"
-ms.custom: 
+title: Criando operações assíncronas em C++ para aplicativos UWP | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 Este documento descreve alguns dos principais pontos para ter em mente quando você usar a classe de tarefa para gerar operações assíncronas com base em Windows ThreadPool em um aplicativo de UWP Universal do Windows Runtime ().  
@@ -58,7 +53,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
   
 -   [Exemplo: Controlando a execução em um aplicativo de tempo de execução do Windows com C++ e XAML](#example-app)  
   
-##  <a name="create-async">Criando operações assíncronas</a>  
+##  <a name="create-async"></a> Criando operações assíncronas  
  Você pode usar o modelo de tarefa e continuação em biblioteca de padrões paralelos (PPL) para definir as tarefas em segundo plano, bem como tarefas adicionais que são executados quando a tarefa anterior é concluída. Essa funcionalidade é fornecida pelo [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) classe. Para obter mais informações sobre esse modelo e o `task` de classe, consulte [paralelismo de tarefa](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  O tempo de execução do Windows é uma interface de programação que você pode usar para criar aplicativos da UWP que são executados somente em um ambiente de sistema operacional especial. Esses aplicativos usam funções autorizadas, tipos de dados e dispositivos e são distribuídos da Microsoft Store. O tempo de execução do Windows é representado pelo *Interface binária de aplicativo* (ABI). A ABI é um contrato binário subjacente que torna as APIs do Windows Runtime disponíveis para linguagens de programação como Visual C++.  
@@ -74,7 +69,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
  [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Representa uma operação assíncrona que retorna um resultado.  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  Representa uma operação assíncrona que retorna um resultado e relatórios de progresso.  
   
  A noção de um *ação* significa que a tarefa assíncrona não produz um valor (pense em uma função que retorna `void`). A noção de um *operação* significa que a tarefa assíncrona produzir um valor. A noção de *andamento* significa que a tarefa pode relatar mensagens de andamento ao chamador. JavaScript, o .NET Framework e Visual C++ fornece sua própria maneira de criar instâncias dessas interfaces para uso pelo limite da ABI. Para Visual C++, PPL fornece o [Concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) função. Esta função cria uma operação que representa a conclusão de uma tarefa ou ação assíncrona do tempo de execução do Windows. O `create_async` função usa uma função de trabalho (normalmente uma expressão lambda), cria internamente uma `task` objeto e encapsula a tarefa em uma das quatro interfaces de tempo de execução do Windows assíncronas.  
@@ -142,7 +137,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
   
  Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando C++ no exemplo do Bing Maps Trip Optimizer](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) e [operações assíncronas do Windows 8 em C++ com PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
-##  <a name="exethread">Controlando o Thread de execução</a>  
+##  <a name="exethread"></a> Controlando o Thread de execução  
  O tempo de execução do Windows usa o modelo de threading COM. Nesse modelo, os objetos são hospedados em apartments diferentes, dependendo de como eles tratam sua sincronização. Objetos de thread-safe são hospedados no multi-threaded apartment (MTA). Objetos que devem ser acessados por um único thread são hospedados em um single-threaded apartment (STA).  
   
  Em um aplicativo que tenha uma interface de usuário, o thread ASTA (aplicativo STA) é responsável por bombeamento de mensagens de janela e é o único thread no processo que pode atualizar os controles de interface do usuário hospedado STA. Isso tem duas consequências. Primeiro, para permitir que o aplicativo continue responsivo, todas as operações de e/s e de uso intensivo de CPU não devem ser executar no thread de ASTA. Em segundo lugar, os resultados que vêm de threads em segundo plano devem ser empacotados para ASTA para atualizar a interface do usuário. Em um aplicativo C++ UWP, `MainPage` e executam todas as outras páginas de XAML no ATSA. Portanto, o continuações de tarefas que são declaradas no ASTA são executadas existe por padrão, para que você possa atualizar controles diretamente no corpo de continuação. No entanto, se você aninha uma tarefa em outra tarefa, qualquer continuações nessa tarefa aninhada executar no MTA. Portanto, você precisa considerar a possibilidade de especificar explicitamente em que contexto esses continuações executado.  
@@ -168,7 +163,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
 
 >  Não chame [concurrency::task::wait](reference/task-class.md#wait) no corpo de uma continuação compatível com o STA. Caso contrário, o tempo de execução gera [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) porque esse método bloqueia o thread atual e pode fazer com que o aplicativo pare de responder. No entanto, você pode chamar o [concurrency::task::get](reference/task-class.md#get) método para receber o resultado da tarefa antecedente em uma continuação de tarefas.  
   
-##  <a name="example-app">Exemplo: Controlando a execução em um aplicativo de tempo de execução do Windows com C++ e XAML</a>  
+##  <a name="example-app"></a> Exemplo: Controlando a execução em um aplicativo de tempo de execução do Windows com C++ e XAML  
  Considere um aplicativo XAML do C++ que lê um arquivo no disco, localiza as palavras mais comuns no arquivo e, em seguida, mostra os resultados na interface de usuário. Para criar esse aplicativo, iniciar, no Visual Studio, criando uma **(Universal do Windows) do aplicativo em branco** do projeto e nomeá-lo `CommonWords`. Em seu manifesto de aplicativo, especifique o **biblioteca de documentos** capacidade de permitir que o aplicativo acessar a pasta de documentos. Também adicione o tipo de arquivo de texto (. txt) para a seção de declarações do manifesto do aplicativo. Para obter mais informações sobre os recursos do aplicativo e declarações, consulte [pacotes de aplicativos e implantação](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Atualização de `Grid` elemento em MainPage. XAML para incluir um `ProgressRing` elemento e um `TextBlock` elemento. O `ProgressRing` indica que a operação está em andamento e o `TextBlock` mostra os resultados da computação.  

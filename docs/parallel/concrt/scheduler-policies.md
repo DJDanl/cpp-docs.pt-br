@@ -1,29 +1,24 @@
 ---
-title: "Políticas de Agendador | Microsoft Docs"
-ms.custom: 
+title: Políticas de Agendador | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Políticas de agendador
 Este documento descreve a função de políticas de Agendador no tempo de execução de simultaneidade. Um *política Agendador* controla a estratégia que o Agendador usa quando ele gerencia as tarefas. Por exemplo, considere um aplicativo que exige algumas tarefas para executar em `THREAD_PRIORITY_NORMAL` e outras tarefas para executar em `THREAD_PRIORITY_HIGHEST`.  Você pode criar duas instâncias do Agendador: um que especifica o `ContextPriority` política a ser `THREAD_PRIORITY_NORMAL` e outra que especifica a mesma diretiva para ser `THREAD_PRIORITY_HIGHEST`.  
@@ -43,12 +38,12 @@ Este documento descreve a função de políticas de Agendador no tempo de execu�
   
 |Chave de política|Descrição|Valor padrão|  
 |----------------|-----------------|-------------------|  
-|`SchedulerKind`|Um [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valor que especifica o tipo de threads a ser usado para agendar tarefas.|`ThreadScheduler`(use threads normais). Este é o único valor válido para essa chave.|  
+|`SchedulerKind`|Um [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valor que especifica o tipo de threads a ser usado para agendar tarefas.|`ThreadScheduler` (use threads normais). Este é o único valor válido para essa chave.|  
 |`MaxConcurrency`|Um `unsigned int` valor que especifica o número máximo de recursos de simultaneidade que usa o Agendador.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
 |`MinConcurrency`|Um `unsigned int` valor que especifica o número mínimo de recursos de simultaneidade que usa o Agendador.|`1`|  
 |`TargetOversubscriptionFactor`|Um `unsigned int` valor que especifica quantos threads para alocar a cada recurso de processamento.|`1`|  
 |`LocalContextCacheSize`|Um `unsigned int` valor que especifica o número máximo de contextos que podem ser armazenados em cache na fila local de cada processador virtual.|`8`|  
-|`ContextStackSize`|Um `unsigned int` valor que especifica o tamanho da pilha, em quilobytes, para reservar para cada contexto.|`0`(use o tamanho da pilha padrão)|  
+|`ContextStackSize`|Um `unsigned int` valor que especifica o tamanho da pilha, em quilobytes, para reservar para cada contexto.|`0` (use o tamanho da pilha padrão)|  
 |`ContextPriority`|Um `int` valor que especifica a prioridade de thread de cada contexto. Isso pode ser qualquer valor que você pode passar para [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) ou `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`| Um [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) valor que especifica o algoritmo de programação para usar. |`EnhanceScheduleGroupLocality`|  

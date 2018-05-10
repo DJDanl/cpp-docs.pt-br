@@ -1,12 +1,9 @@
 ---
 title: Classe JOIN | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - join
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a37b6d3dce5d41578999aa54c8dff2dd2271fe9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="join-class"></a>Classe join
 Um `join` bloco de mensagens é um destino de único, várias fontes, ordenada `propagator_block` juntos, que combina as mensagens do tipo `T` de cada uma das suas fontes.  
@@ -63,7 +58,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 |Nome|Descrição|  
 |----------|-----------------|  
 |[join](#ctor)|Sobrecarregado. Constrói um `join` bloco de mensagens.|  
-|[~join Destructor](#dtor)|Destrói a `join` bloco.|  
+|[~ join destruidor](#dtor)|Destrói a `join` bloco.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
@@ -130,7 +125,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Comentários  
  Semelhante ao `accept`, mas sempre é precedido por uma chamada para `reserve`.  
   
-##  <a name="ctor"></a> join 
+##  <a name="ctor"></a> Junção 
 
  Constrói um `join` bloco de mensagens.  
   

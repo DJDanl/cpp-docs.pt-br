@@ -1,12 +1,9 @@
 ---
 title: Classe reader_writer_lock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>Classe reader_writer_lock
 Um bloqueio de leitor-gravador baseadas em fila do gravador de preferência com local apenas girando. O bloqueio concede primeiro - primeiro acesso (PEPS) para gravadores e impede leitores sob uma carga contínua de gravadores.  
@@ -131,7 +126,7 @@ reader_writer_lock();
 ### <a name="remarks"></a>Comentários  
  É esperado que o bloqueio não é mantido quando o destruidor é executado. Ainda que permite o bloqueio de gravador do leitor para destruct com o bloqueio mantido resultados em um comportamento indefinido.  
   
-##  <a name="scoped_lock_class">Classe de reader_writer_lock</a>  
+##  <a name="scoped_lock_class"></a>  Classe de reader_writer_lock  
  Um wrapper RAII exceção seguro que pode ser usado para adquirir `reader_writer_lock` bloquear objetos como um gravador.  
   
 ```
@@ -158,7 +153,7 @@ Destrói um `reader_writer_lock` de objeto e libera o bloqueio fornecido no cons
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class">Classe de reader_writer_lock</a>  
+##  <a name="scoped_lock_read_class"></a>  Classe de reader_writer_lock  
  Um wrapper RAII exceção seguro que pode ser usado para adquirir `reader_writer_lock` bloquear objetos como um leitor.  
   
 ```

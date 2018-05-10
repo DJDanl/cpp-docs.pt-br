@@ -1,27 +1,22 @@
 ---
 title: R. Exemplos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6b47d8b27dff31640f59b5185f0a09d5778f8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c67c29bbded76f4ef44337e557b58b6bad828947
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a-examples"></a>R. Exemplos
 A seguir estão exemplos das construções definidos neste documento. Observe que uma declaração de uma diretiva a seguir é composta somente quando necessário, e uma instrução compostas não é recuada em relação a uma diretiva anterior.

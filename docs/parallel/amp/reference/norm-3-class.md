@@ -1,12 +1,9 @@
 ---
 title: Classe norm_3 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::get_z
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b697dec751cade2accb262c59b23983ac75d4205
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm3-class"></a>Classe norm_3
 Representa um vetor curto de três números normais.  
@@ -201,7 +196,7 @@ class norm_3;
 |norm_3::xz||  
 |norm_3::xzy||  
 |norm_3::y||  
-|norm_3::yx||  
+|norm_3::YX||  
 |norm_3::yxz||  
 |norm_3::yz||  
 |norm_3::yzx||  
@@ -219,7 +214,7 @@ class norm_3;
   
  **Namespace:** Concurrency:: Graphics  
 
-## <a name="ctor">Construtor norm_3</a>
+## <a name="ctor"></a> Construtor norm_3
 Padrão construtor inicializa todos os elementos com 0.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -283,7 +278,7 @@ explicit inline norm_3(
  `_Other`  
  O objeto usado para inicializar.  
   
-## <a name="a-namesize-size-constant"></a><a name="size">tamanho constante
+## <a name="a-namesize-size-constant"></a><a name="size"> tamanho constante
 ### <a name="syntax"></a>Sintaxe  
   
 ```  

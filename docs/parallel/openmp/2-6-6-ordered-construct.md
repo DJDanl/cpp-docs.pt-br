@@ -1,27 +1,22 @@
 ---
 title: 2.6.6 constructo ordered | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 5b3c1ba5-cfb8-4b05-865b-f446ae1c9f7c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a9d756cd068df9345034e26a4f152d3ac19fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa66d9fb8a0a9af2fc33497690bfe67a3ea5d717
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Constructo ordered
 O seguinte bloco estruturado um **ordenados** diretiva é executada na ordem iterações seriam executadas em um loop sequencial. A sintaxe do **ordenados** diretiva é da seguinte maneira:  

@@ -1,12 +1,9 @@
 ---
 title: Classe simple_partitioner | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - simple_partitioner
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc4b4b92e3ad6324b3f25862c81892fde8f2c1f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef53ed9fa69dc77c93b90f9f24fa8628d589b07
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="simplepartitioner-class"></a>Classe simple_partitioner
 O `simple_partitioner` classe representa um particionamento estático do intervalo iterado pelo `parallel_for`. O particionador divide o intervalo em partes, de modo que cada parte tem pelo menos o número de iterações especificado pelo tamanho do bloco.  

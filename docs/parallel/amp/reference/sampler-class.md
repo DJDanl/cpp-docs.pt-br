@@ -1,12 +1,9 @@
 ---
 title: Classe de amostra | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - sampler
@@ -21,17 +18,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa9b68d2369ff2a0ade4bb4cb122b2481d3cd4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4f9788b62385f7c6f5eb82e3fbc69d63d3120cc2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sampler-class"></a>Classe de amostra
 A classe de amostra agrega informações de configuração de amostragem a ser usado para amostragem de textura.  

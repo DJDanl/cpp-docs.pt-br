@@ -1,13 +1,10 @@
 ---
-title: "Multithread: Como usar as Classes de sincronização | Microsoft Docs"
-ms.custom: 
+title: 'Multithread: Como usar as Classes de sincronização | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49b0737a794216c4899b280bc049a1cdc0fe0948
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithread: como usar as classes de sincronização
 Sincronizar o acesso a recursos entre threads é um problema comum ao escrever aplicativos multithread. Ter dois ou mais threads simultaneamente os mesmos dados podem levar a resultados indesejáveis e imprevisíveis de acesso. Por exemplo, um thread pode ser atualizar o conteúdo de uma estrutura enquanto outro thread está lendo o conteúdo da mesma estrutura. Ele é desconhecido que recebe o thread de leitura de dados: os dados antigos, os dados gravados recentemente ou possivelmente uma mistura de ambos. MFC fornece uma série de sincronização e classes de acesso de sincronização para ajudar a resolver esse problema. Este tópico explica as classes disponíveis e como usá-las para criar classes thread-safe em um aplicativo multithread típico.  
@@ -43,7 +38,7 @@ Sincronizar o acesso a recursos entre threads é um problema comum ao escrever a
   
  Este aplicativo de exemplo usa os três tipos de classes de sincronização. Porque ele permite até três contas a ser examinado por vez, ele usa [CSemaphore](../mfc/reference/csemaphore-class.md) para limitar o acesso a três objetos de exibição. Quando uma tentativa de exibir uma quarta conta ocorre, o aplicativo em espera até que um dos três primeiros windows fecha ou falhar. Quando uma conta é atualizada, o aplicativo usa [CCriticalSection](../mfc/reference/ccriticalsection-class.md) para garantir que apenas uma conta é atualizada a cada vez. Depois que a atualização for bem-sucedida, ela sinaliza [CEvent](../mfc/reference/cevent-class.md), que libera um thread que espera para o evento deve ser sinalizado. Esse thread envia os novos dados para o arquivamento de dados.  
   
-##  <a name="_mfc_designing_a_thread.2d.safe_class"></a>Criando uma classe Thread-Safe  
+##  <a name="_mfc_designing_a_thread.2d.safe_class"></a> Criando uma classe Thread-Safe  
  Para tornar uma classe totalmente thread-safe, adicione primeiro a classe de sincronização adequadas para as classes compartilhadas como um membro de dados. No exemplo anterior de gerenciamento de conta, um **CSemaphore** membro de dados deve ser adicionado para a classe de exibição, uma `CCriticalSection` membro de dados deve ser adicionado à classe de lista vinculada e um `CEvent` membro de dados deve ser adicionado aos dados classe de armazenamento.  
   
  Em seguida, adicione chamadas de sincronização para todas as funções de membro que modificam os dados na classe ou acessam um recurso controlado. Cada função, você deve criar um [CSingleLock](../mfc/reference/csinglelock-class.md) ou [CMultiLock](../mfc/reference/cmultilock-class.md) do objeto e chame esse objeto `Lock` função. Quando o objeto de bloqueio sai do escopo e é destruído, chama o destruidor do objeto `Unlock` para você, liberando o recurso. Obviamente, você pode chamar `Unlock` diretamente se desejar.  

@@ -1,30 +1,25 @@
 ---
 title: 'Passo a passo: Criando um agente de fluxo de dados | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Instruções passo a passo: criando um agente de fluxo de dados
 Este documento demonstra como criar aplicativos baseados em agente que se baseiam no fluxo de dados, em vez de fluxo de controle.  
@@ -42,7 +37,7 @@ Este documento demonstra como criar aplicativos baseados em agente que se baseia
   
 - [Como usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este passo a passo contém as seguintes seções:  
   
 - [Criando um agente básica do fluxo de controle](#control-flow)  
@@ -51,7 +46,7 @@ Este documento demonstra como criar aplicativos baseados em agente que se baseia
   
 - [Criando um agente de log de mensagens](#logging)  
   
-##  <a name="control-flow"></a>Criando um agente básica do fluxo de controle  
+##  <a name="control-flow"></a> Criando um agente básica do fluxo de controle  
  Considere o seguinte exemplo define o `control_flow_agent` classe. O `control_flow_agent` classe atua em três buffers de mensagem: um buffer de entrada e dois buffers de saída. O `run` método lerá o buffer de mensagem de origem em um loop e usa uma instrução condicional para direcionar o fluxo de execução do programa. O agente incrementa um contador para diferente de zero, os valores negativos e incrementa o contador de outro para valores positivos diferente de zero. Depois que o agente recebe o valor de Sentinela de zero, ele envia os valores dos contadores aos buffers de mensagem de saída. O `negatives` e `positives` métodos permitem que o aplicativo leia as contagens de valores negativos e positivos do agente.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ Este documento demonstra como criar aplicativos baseados em agente que se baseia
   
  [[Superior](#top)]  
   
-##  <a name="dataflow"></a>Criando um agente de fluxo de dados básicos  
+##  <a name="dataflow"></a> Criando um agente de fluxo de dados básicos  
  Esta seção mostra como converter o `control_flow_agent` classe para usar o modelo de fluxo de dados para executar a mesma tarefa.  
   
  O agente de fluxo de dados funciona com a criação de uma rede de buffers de mensagens, cada uma delas atende à finalidade específica. Certos blocos de mensagens de usam uma função de filtro para aceitar ou rejeitar uma mensagem com base em sua carga. Uma função de filtro garante que um bloco de mensagem recebe somente determinados valores.  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[Superior](#top)]  
   
-##  <a name="logging"></a>Criando um agente de log de mensagens  
+##  <a name="logging"></a> Criando um agente de log de mensagens  
  A exemplo a seguir mostra o `log_agent` classe, que é semelhante a `dataflow_agent` classe. O `log_agent` classe implementa um agente de log assíncrono que grava log de mensagens para um arquivo e o console. O `log_agent` classe permite que o aplicativo categorizar as mensagens como informação, aviso ou erro. Ele também permite que o aplicativo especificar se cada categoria de log é gravada em um arquivo, o console ou ambos. Este exemplo grava todas as mensagens de log para um arquivo e somente mensagens de erro no console.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

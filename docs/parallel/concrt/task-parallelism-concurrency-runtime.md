@@ -1,13 +1,10 @@
 ---
-title: "Tarefa de paralelismo (tempo de execução de simultaneidade) | Microsoft Docs"
-ms.custom: 
+title: Tarefa de paralelismo (tempo de execução de simultaneidade) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d4f2a1f1a5bd0b4a8ca68f3aa47f6890a11efa11
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Paralelismo de tarefa (tempo de execução de simultaneidade)
 No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho que executa um trabalho específico e normalmente é executado em paralelo com outras tarefas. Uma tarefa pode ser decomposta em tarefas mais refinadas adicionais que são organizadas em uma *grupo tarefas*.  
@@ -84,7 +79,7 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
   
 - [Programação robusta](#robust)  
   
-##  <a name="lambdas">Usando expressões Lambda</a>  
+##  <a name="lambdas"></a> Usando expressões Lambda  
  Devido a sua sintaxe sucinta, expressões lambda são uma maneira comum de definir o trabalho que é executado por tarefas e grupos de tarefas. Aqui estão algumas dicas de uso:  
   
 -   Porque normalmente executar tarefas em threads em segundo plano, lembre-se do tempo de vida de objeto quando você captura variáveis em expressões lambda. Quando você captura uma variável pelo valor, é feita uma cópia da variável no corpo lambda. Quando você captura por referência, não é feita uma cópia. Portanto, certifique-se de que o tempo de vida de qualquer variável capturada por referência sobrevivem a tarefa que utiliza.  
@@ -101,7 +96,7 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
   
  Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md).  
   
-##  <a name="task-class">A classe de tarefa</a>  
+##  <a name="task-class"></a> A classe de tarefa  
  Você pode usar o [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) classe para compor tarefas em um conjunto de operações dependentes. Esse modelo de composição há suporte para a noção de *continuações*. Um código de ativa de continuação a ser executado quando o anterior, ou *antecessor*, concluir a tarefa. O resultado da tarefa antecedente é passado como entrada para as tarefas de continuação de uma ou mais. Quando uma tarefa antecedente for concluído, as tarefas de continuação que estão esperando nele são agendadas para execução. Cada tarefa de continuação recebe uma cópia do resultado da tarefa antecedente. Por sua vez, as tarefas de continuação também podem ser tarefas antecedente para outros continuações, criando assim uma cadeia de tarefas. As continuações ajudam a criar cadeias de comprimento arbitrário de tarefas que têm dependências específicas entre eles. Além disso, uma tarefa pode participar antes de uma lista de tarefas é iniciado de cancelamento ou de forma cooperativa enquanto ele está em execução. Para obter mais informações sobre esse modelo de cancelamento, consulte [cancelamento no PPL](cancellation-in-the-ppl.md).  
   
  `task` é uma classe de modelo. O parâmetro de tipo `T` é o tipo de resultado que é produzido pela tarefa. Esse tipo pode ser `void` se a tarefa não retornar um valor. `T` não é possível usar o `const` modificador.  
@@ -129,7 +124,7 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
 > [!TIP]
 >  Para obter detalhes sobre o que são específicas para tarefas em aplicativos UWP, consulte [programação assíncrona em C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) e [criando a operações assíncronas em C++ para aplicativos UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
-##  <a name="continuations">Tarefas de continuação</a>  
+##  <a name="continuations"></a> Tarefas de continuação  
  Na programação assíncrona, é muito comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, isso é feito usando os métodos de retorno de chamada. O tempo de execução de simultaneidade, a mesma funcionalidade é fornecida por *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona é invocado por outra tarefa, que é conhecida como o *antecessor*, quando o antecessor é concluída. Usando continuações, você pode:  
   
 -   Passe dados da antecessora para a continuação.  
@@ -169,14 +164,14 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
 > [!IMPORTANT]
 >  Quando uma continuação de uma tarefa retorna uma tarefa aninhada de tipo `N`, a tarefa resultante tem o tipo `N`, não `task<N>`e termina quando a tarefa aninhada é concluída. Em outras palavras, a continuação executa o desencapsulamento da tarefa aninhada.  
   
-##  <a name="value-versus-task">Com base em valor Versus continuações baseado em tarefa</a>  
+##  <a name="value-versus-task"></a> Com base em valor Versus continuações baseado em tarefa  
  Dado um `task` objeto cujo tipo de retorno é `T`, você pode fornecer um valor do tipo `T` ou `task<T>` para suas tarefas de continuação. Uma continuação que usa o tipo `T` é conhecido como um *continuação de acordo com o valor*. Uma continuação de acordo com o valor é agendada para execução quando a tarefa antecedente for concluída sem erros e não for cancelada. Uma continuação que usa o tipo `task<T>` como seu parâmetro é conhecido como um *baseado em tarefa de continuação*. Uma continuação de tarefas sempre é agendada para execução quando a tarefa antecedente for concluída, mesmo quando a tarefa antecedente foi cancelada ou gera uma exceção. Em seguida, você pode chamar `task::get` para obter o resultado da tarefa antecedente. Se a tarefa antecedente foi cancelada, `task::get` lança [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Se a tarefa antecedente lançou uma exceção, `task::get` relança essa exceção. Uma continuação de tarefas não é marcada como cancelada quando sua tarefa antecedente é cancelada.  
   
-##  <a name="composing-tasks">Composição de tarefas</a>  
+##  <a name="composing-tasks"></a> Composição de tarefas  
  Esta seção descreve o [when_all](reference/concurrency-namespace-functions.md#when_all) e [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funções, que podem ajudá-lo a compõem várias tarefas para implementar os padrões comuns.  
 
   
-###  <a name="when-all">A função when_all</a>  
+###  <a name="when-all"></a> A função when_all  
  O `when_all` função produz uma tarefa que é concluída depois de concluir um conjunto de tarefas. Essa função retorna um std::[vetor](../../standard-library/vector-class.md) objeto que contém o resultado de cada tarefa no conjunto. O seguinte exemplo básico usa `when_all` para criar uma tarefa que representa a conclusão das três outras tarefas.  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -225,7 +220,7 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
 > `when_all` é uma função sem bloqueio que produz um `task` como resultado. Ao contrário de [Task:: wait](reference/task-class.md#wait), é seguro chamar essa função em um aplicativo UWP no thread de ASTA (aplicativo STA).  
 
   
-###  <a name="when-any">A função when_any</a>  
+###  <a name="when-any"></a> A função when_any  
  O `when_any` função produz uma tarefa que conclui quando a primeira tarefa em um conjunto de tarefas é concluída. Essa função retorna um [STD](../../standard-library/pair-structure.md) objeto que contém o resultado da tarefa concluída e o índice da tarefa no conjunto.  
   
  O `when_any` função é especialmente útil nas seguintes situações:  
@@ -254,7 +249,7 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
 > [!TIP]
 >  Assim como acontece com `when_all`, `when_any` é desbloqueado e é seguro chamar em um aplicativo UWP no thread de ASTA.  
   
-##  <a name="delayed-tasks">Execução da tarefa atrasada</a>  
+##  <a name="delayed-tasks"></a> Execução da tarefa atrasada  
  Às vezes, é necessário para atrasar a execução de uma tarefa até que uma condição é atendida ou iniciar uma tarefa em resposta a um evento externo. Por exemplo, em programação assíncrona, você talvez precise iniciar uma tarefa em resposta a um evento de conclusão de e/s.  
   
  Duas maneiras de fazer isso são para usar uma continuação ou para iniciar uma tarefa e aguardar um evento dentro da função de trabalho da tarefa. No entanto, há casos em que não é possível usar uma dessas técnicas. Por exemplo, para criar uma continuação, você deve ter a tarefa antecedente. No entanto, se você não tem a tarefa antecedente, você pode criar um *evento de conclusão de tarefa* e encadear mais tarde esse evento de conclusão da tarefa antecedente quando estiverem disponível. Além disso, como uma tarefa espera também bloqueia um thread, você pode usar eventos de conclusão de tarefas para executar o trabalho quando uma operação assíncrona é concluída e, assim, liberar um thread.  
@@ -263,7 +258,7 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
   
  Para obter um exemplo que usa `task_completion_event` para implementar uma tarefa que seja concluída após um atraso, consulte [como: criar uma tarefa que é concluída após um atraso](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).  
   
-##  <a name="task-groups">Grupos de tarefas</a>  
+##  <a name="task-groups"></a> Grupos de tarefas  
  Um *grupo tarefas* organiza uma coleção de tarefas. Grupos de tarefas por push tarefas em uma fila de roubo de trabalho. O Agendador remove tarefas dessa fila e executa-los nos recursos de computação disponíveis. Depois de adicionar tarefas a um grupo de tarefas, você pode esperar para todas as tarefas concluir ou Cancelar tarefas que ainda não foram iniciados.  
   
  PPL usa o [concurrency::task_group](reference/task-group-class.md) e [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classes para representar grupos de tarefas e o [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) classe para representar as tarefas que são executados nesses grupos. O `task_handle` classe encapsula o código que executa o trabalho. Como o `task` classe, a função de trabalho vem na forma de uma função lambda, o ponteiro de função ou o objeto de função. Você normalmente não precisa trabalhar com `task_handle` objetos diretamente. Em vez disso, você passa a funções de trabalho para um grupo de tarefas, e o grupo de tarefas cria e gerencia o `task_handle` objetos.  
@@ -280,7 +275,7 @@ No tempo de execução de simultaneidade, um *tarefa* é uma unidade de trabalho
   
  O tempo de execução também fornece um modelo de tratamento de exceção que permite que você lançar uma exceção de uma tarefa e tratar essa exceção quando você esperar que o grupo de tarefas associada a conclusão. Para obter mais informações sobre esse modelo de tratamento de exceção, consulte [tratamento de exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
-##  <a name="comparing-groups">Comparando task_group para structured_task_group</a>  
+##  <a name="comparing-groups"></a> Comparando task_group para structured_task_group  
  Embora, recomendamos que você use `task_group` ou `parallel_invoke` em vez do `structured_task_group` classe, há casos em que você deseja usar `structured_task_group`, por exemplo, quando você escreve um algoritmo parallel que executa um número variável de tarefas ou exige suporte para cancelamento. Esta seção explica as diferenças entre o `task_group` e `structured_task_group` classes.  
   
  O `task_group` classe é thread-safe. Portanto, você pode adicionar tarefas para um `task_group` de objeto de vários threads e aguardar ou cancelar uma `task_group` objeto a partir de vários threads. A construção e a destruição de um `structured_task_group` objeto deve ocorrer no mesmo escopo léxico. Além disso, todas as operações em um `structured_task_group` objeto deve ocorrer no mesmo thread. A exceção a essa regra é o [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) e [concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling) métodos. Uma tarefa filho pode chamar esses métodos para cancelar o grupo de tarefas do pai ou verificar o cancelamento a qualquer momento.  
@@ -316,7 +311,7 @@ Message from task: 42
   
  Para concluir exemplos que mostram como usar o `parallel_invoke` algoritmo, consulte [como: usar parallel_invoke para escrever uma rotina de classificação paralela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [como: usar parallel_invoke para executar operações em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Para obter um exemplo completo que usa o `task_group` classe para implementar futuros assíncronos, consulte [passo a passo: Implementando futuros](../../parallel/concrt/walkthrough-implementing-futures.md).  
   
-##  <a name="robust">Programação robusta</a>  
+##  <a name="robust"></a> Programação robusta  
  Certifique-se de que você compreenda a função de cancelamento e tratamento de exceção quando você usa tarefas, grupos de tarefas e os algoritmos paralelos. Por exemplo, em uma árvore de trabalho paralela, uma tarefa que é cancelada impede tarefas filho em execução. Isso pode causar problemas se uma das tarefas filho executa uma operação que é importante para seu aplicativo, como a liberação de um recurso. Além disso, se uma tarefa filho lança uma exceção, essa exceção pode propagar através de um destruidor de objeto e causar um comportamento indefinido em seu aplicativo. Para obter um exemplo que ilustra esses pontos, consulte o [compreender como cancelamento e destruição de tratamento afetam o objeto de exceção](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) seção práticas recomendadas no documento de biblioteca de padrões paralelos. Para obter mais informações sobre o cancelamento e modelos de manipulação de exceção no PPL, consulte [cancelamento](../../parallel/concrt/cancellation-in-the-ppl.md) e [tratamento de exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
 ## <a name="related-topics"></a>Tópicos relacionados  

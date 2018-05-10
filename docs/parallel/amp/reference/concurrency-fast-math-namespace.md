@@ -1,29 +1,24 @@
 ---
 title: 'Namespace Concurrency:: fast_math | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math
 dev_langs:
 - C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c6f990cdcc4dab0a3526d338333183a0f5e889
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 04a9cd3d604b18e42202bccb287cce7c7416b51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyfastmath-namespace"></a>Namespace Concurrency::fast_math
 Funções no `fast_math` namespace tem menos precisão, suporte apenas de precisão única (`float`) e chame os intrínsecos do DirectX. Há duas versões de cada função, por exemplo `cos` e `cosf`. Ambas as versões levar e retornar um `float`, mas cada chama o DirectX mesmo intrínseco.  

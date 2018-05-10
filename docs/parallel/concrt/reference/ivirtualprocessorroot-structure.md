@@ -1,12 +1,9 @@
 ---
-title: IVirtualProcessorRoot Structure | Microsoft Docs
-ms.custom: 
+title: Estrutura IVirtualProcessorRoot | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9620ee391b525356bfdb50b00d7e76c03b480815
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Estrutura IVirtualProcessorRoot
 Uma abstração para um thread de hardware no qual um proxy do thread pode executar.  
@@ -67,7 +62,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **Namespace:** simultaneidade  
   
-##  <a name="activate"></a>  IVirtualProcessorRoot::Activate Method  
+##  <a name="activate"></a>  Método Ivirtualprocessorroot:  
  Faz com que o proxy de thread associado à interface de contexto de execução `pContext` para iniciar a execução na raiz desse processador virtual.  
   
 ```
@@ -93,7 +88,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  O ato de ativação de uma raiz de processador virtual aumenta o nível de assinatura do thread de hardware subjacentes por um. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="deactivate"></a>  IVirtualProcessorRoot::Deactivate Method  
+##  <a name="deactivate"></a>  Método Ivirtualprocessorroot:  
  Faz com que o proxy de thread em execução no momento na raiz desse processador virtual pare de expedir o contexto de execução. O proxy de thread continuará em execução em uma chamada para o `Activate` método.  
   
 ```
@@ -120,7 +115,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  O ato de desativar uma raiz de processador virtual diminui o nível de assinatura do thread hardware subjacente. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="ensurealltasksvisible"></a>  IVirtualProcessorRoot::EnsureAllTasksVisible Method  
+##  <a name="ensurealltasksvisible"></a>  Método: Ensurealltasksvisible  
  Faz com que os dados armazenados na hierarquia de memória processadores individuais se tornarão visíveis para todos os processadores no sistema. Isso garante que um limite de memória completa foi executado em todos os processadores antes do método retorna.  
   
 ```
@@ -140,7 +135,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_operation` será gerada se a raiz do processador virtual nunca foi ativada, ou o argumento `pContext` não representa o contexto de execução mais recente foi enviado pela raiz desse processador virtual.  
   
-##  <a name="getid"></a>  IVirtualProcessorRoot::GetId Method  
+##  <a name="getid"></a>  Método Ivirtualprocessorroot:  
  Retorna um identificador exclusivo para a raiz do processador virtual.  
   
 ```

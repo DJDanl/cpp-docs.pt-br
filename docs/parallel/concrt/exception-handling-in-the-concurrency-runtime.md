@@ -1,13 +1,10 @@
 ---
-title: "Tratamento de exceção no tempo de execução de simultaneidade | Microsoft Docs"
-ms.custom: 
+title: Tratamento de exceção no tempo de execução de simultaneidade | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Tratamento de exceções no tempo de execução de simultaneidade
 O tempo de execução de simultaneidade usa C++ tratamento de exceções para comunicar-se a vários tipos de erros. Esses erros incluem o uso inválido do tempo de execução, erros de tempo de execução, como Falha ao adquirir um recurso e erros que ocorrem nas funções de trabalho que você fornecer para grupos de tarefas e tarefas. Quando uma tarefa ou um grupo de tarefas gerará uma exceção, o tempo de execução contém essa exceção e empacota o contexto que aguarda a tarefa ou o grupo de tarefas para concluir. Para componentes, como tarefas leves e agentes, o tempo de execução não gerencia exceções para você. Nesses casos, você deve implementar seu próprio mecanismo de tratamento de exceção. Este tópico descreve como o tempo de execução trata exceções lançadas por tarefas, grupos de tarefas, tarefas leves e agentes assíncronos e como responder a exceções em seus aplicativos.  
@@ -47,7 +42,7 @@ O tempo de execução de simultaneidade usa C++ tratamento de exceções para co
   
 -   O tempo de execução não gerencia exceções para tarefas leves e agentes.  
   
-##  <a name="top"></a>Neste documento  
+##  <a name="top"></a> Neste documento  
   
 - [Tarefas e continuações](#tasks)  
   
@@ -63,7 +58,7 @@ O tempo de execução de simultaneidade usa C++ tratamento de exceções para co
   
 - [Agentes assíncronos](#agents)  
   
-##  <a name="tasks"></a>Tarefas e continuações  
+##  <a name="tasks"></a> Tarefas e continuações  
  Esta seção descreve como o tempo de execução trata exceções geradas por [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) objetos e seus continuações. Para obter mais informações sobre o modelo de tarefa e continuação, consulte [paralelismo de tarefa](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Quando você gera uma exceção no corpo de uma função de trabalho que você passa para um `task` do objeto, o tempo de execução armazena essa exceção e empacota o contexto que chama [concurrency::task::get](reference/task-class.md#get) ou [concurrency:: Task:: wait](reference/task-class.md#wait). O documento [paralelismo de tarefas](../../parallel/concrt/task-parallelism-concurrency-runtime.md) descreve baseado em tarefa versus continuações baseada em valor, mas ao resumir, uma continuação de acordo com o valor usa um parâmetro de tipo `T` e uma continuação de tarefas usa um parâmetro de tipo `task<T>`. Se uma tarefa que gera continuações baseada em valor de um ou mais desses continuações não são agendadas para execução. O exemplo a seguir ilustra esse comportamento:  
@@ -97,7 +92,7 @@ O tempo de execução de simultaneidade usa C++ tratamento de exceções para co
   
  [[Superior](#top)]  
   
-##  <a name="task_groups"></a>Grupos de tarefas e os algoritmos paralelos  
+##  <a name="task_groups"></a> Grupos de tarefas e os algoritmos paralelos  
 
  Esta seção descreve como o tempo de execução trata exceções geradas por grupos de tarefas. Esta seção também se aplica a algoritmos paralelos, como [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), porque esses algoritmos de compilação em grupos de tarefas.  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[Superior](#top)]  
   
-##  <a name="runtime"></a>Exceções geradas pelo tempo de execução  
+##  <a name="runtime"></a> Exceções geradas pelo tempo de execução  
  Uma exceção pode resultar de uma chamada para o tempo de execução. A maioria dos tipos de exceção, exceto para [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md) e [concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), indicar um erro de programação. Esses erros são geralmente irrecuperáveis e, portanto, devem não ser detectados ou tratados pelo código do aplicativo. Sugerimos que você somente catch ou manipular erros irrecuperáveis no código do aplicativo quando você precisa diagnosticar erros de programação. No entanto, entender os tipos de exceção que são definidos pelo tempo de execução pode ajudar a diagnosticar erros de programação.  
   
  A mecanismo de tratamento de exceção é o mesmo para exceções geradas pelo tempo de execução como exceções geradas pelas funções de trabalho. Por exemplo, o [concurrency::receive](reference/concurrency-namespace-functions.md#receive) função lança `operation_timed_out` quando ele não receber uma mensagem no período de tempo especificado. Se `receive` lança uma exceção em uma função de trabalho que você passa para um grupo de tarefas, o tempo de execução armazena essa exceção e empacota o contexto que chama `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait`, ou `structured_task_group::run_and_wait`.  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[Superior](#top)]  
   
-##  <a name="multiple"></a>Várias exceções  
+##  <a name="multiple"></a> Várias exceções  
  Se um algoritmo em paralelo ou tarefa recebe várias exceções, o tempo de execução realiza marshaling de apenas uma das exceções para o contexto de chamada. O tempo de execução não garante que ele realiza marshaling de exceção.  
   
  O exemplo a seguir usa o `parallel_for` algoritmo para imprimir os números no console. Gera uma exceção se o valor de entrada é menor que um valor mínimo ou maior que um valor máximo. Neste exemplo, várias funções de trabalho pode gerar uma exceção.  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[Superior](#top)]  
   
-##  <a name="cancellation"></a>Cancelamento  
+##  <a name="cancellation"></a> Cancelamento  
  Nem todas as exceções indicam um erro. Por exemplo, um algoritmo de pesquisa pode usar tratamento de exceções para interromper a tarefa associada ao encontrar o resultado. Para obter mais informações sobre como usar mecanismos de cancelamento em seu código, consulte [cancelamento no PPL](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
  [[Superior](#top)]  
   
-##  <a name="lwts"></a>Tarefas leves  
+##  <a name="lwts"></a> Tarefas leves  
  Uma tarefa simples é uma tarefa que você agendar diretamente de um [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) objeto. Tarefas leves carregam menos sobrecarga do que as tarefas comuns. No entanto, o tempo de execução não capturar exceções geradas por tarefas leves. Em vez disso, a exceção é capturada pelo manipulador de exceção sem tratamento, o que, por padrão, encerra o processo. Portanto, use um mecanismo de tratamento de erros apropriado em seu aplicativo. Para obter mais informações sobre tarefas leves, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
  [[Superior](#top)]  
   
-##  <a name="agents"></a>Agentes assíncronos  
+##  <a name="agents"></a> Agentes assíncronos  
  Assim como tarefas simples, o tempo de execução não gerencia as exceções geradas por agentes assíncronos.  
   
  O exemplo a seguir mostra uma maneira de lidar com exceções em uma classe que deriva de [concurrency::agent](../../parallel/concrt/reference/agent-class.md). Este exemplo define o `points_agent` classe. O `points_agent::run` método leituras `point` objetos do buffer de mensagem e imprime no console. O `run` método lançará uma exceção se receber uma `NULL` ponteiro.  

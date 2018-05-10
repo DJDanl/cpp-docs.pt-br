@@ -1,38 +1,33 @@
 ---
-title: "Paralelo ferramentas de diagnóstico (tempo de execução de simultaneidade) | Microsoft Docs"
-ms.custom: 
+title: Paralelo ferramentas de diagnóstico (tempo de execução de simultaneidade) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a7c6aa769faaacd128bb51a422227230fa4a851
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1cd3ce4c86332719e299c11fee3ffbee8b41c14f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Ferramentas de diagnóstico em paralelo (Tempo de Execução de Simultaneidade)
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]fornece amplo suporte para depuração e criação de perfil de aplicativos multithread.  
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] fornece suporte extensivo para depuração e criação de perfil de aplicativos multithreaded.  
   
 ## <a name="debugging"></a>Depuração  
  O depurador do Visual Studio inclui a **pilhas paralelas** janela, **tarefas paralelas** janela, e **inspeção paralela** janela. Para obter mais informações, consulte [passo a passo: depurando um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) e [como: usar a janela Inspeção paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window).  
   
 ## <a name="profiling"></a>Criação de perfil  
- As ferramentas de criação de perfil fornecem três modos de exibição de dados que exibem informações gráficas e tabulares numéricas sobre como um aplicativo multithread interage com ele mesmo e com outros programas. Os modos de exibição permitem identificar rapidamente as áreas de interesse e navegar de pontos no gráfico exibe chamar pilhas, chamar o código-fonte e sites. Para obter mais informações, consulte [Visualizador de simultaneidade](/visualstudio/profiling/concurrency-visualizer).  
+ As ferramentas de criação de perfil fornecem três modos de exibição de dados que exibem informações gráficas e tabulares numéricas sobre como um aplicativo multithread interage com ele mesmo e com outros programas. Os modos de exibição permitem identificar rapidamente as áreas de interesse e navegar de pontos no gráfico exibe chamar pilhas, chamar o código-fonte e sites. Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Rastreamento de eventos  
  O tempo de execução de simultaneidade usa [de rastreamento de eventos do Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) para notificar as ferramentas de instrumentação, como criadores de perfil, quando vários eventos ocorrem. Esses eventos incluem quando um agendador está ativado ou desativado, quando um contexto começa, termina, bloquear, desbloqueia ou gera e quando um algoritmo paralelo começa ou termina.  

@@ -1,10 +1,7 @@
 ---
-title: "enumerações de namespace de simultaneidade | Microsoft Docs"
-ms.custom: 
+title: enumerações de namespace de simultaneidade | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>enumerações de namespace de simultaneidade
 ||||  
@@ -62,7 +57,7 @@ enum agent_status;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h
 
-##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
+##  <a name="agents_eventtype"></a>  Enumeração Agents_EventType  
  Os tipos de eventos que podem ser rastreados usando a funcionalidade de rastreamento oferecida pela biblioteca de agentes  
   
 ```
@@ -129,7 +124,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h
 
-##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
+##  <a name="criticalregiontype"></a>  Enumeração CriticalRegionType  
  O tipo de um contexto está dentro de região crítica.  
   
 ```
@@ -158,7 +153,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|O Agendador não coleta informações sobre o andamento. Rebalanceamento é feito com base apenas em nível de assinatura do thread hardware subjacente. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](IExecutionResource-structure.md).<br /><br /> Esse valor é reservado para uso pelo tempo de execução.|  
 |`ProgressFeedbackEnabled`|O Agendador reúne informações sobre o andamento e passa para o Gerenciador de recursos. O Gerenciador de recursos utilizará essas informações estatísticas para reequilibrar recursos em nome do Agendador além do nível de assinatura do thread hardware subjacente. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](IExecutionResource-structure.md).|  
-##  <a name="join_type"></a>  join_type Enumeration  
+##  <a name="join_type"></a>  Enumeração join_type  
  O tipo de um `join` bloco de mensagens.  
   
 ```
@@ -174,7 +169,7 @@ enum join_type;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** agents.h  
 
-##  <a name="message_status"></a>  message_status Enumeration  
+##  <a name="message_status"></a>  Enumeração message_status  
  As respostas válidas para uma oferta de uma `message` objeto para um bloco.  
   
 ```
@@ -192,7 +187,7 @@ enum message_status;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** agents.h  
 
-##  <a name="policyelementkey"></a>  PolicyElementKey Enumeration  
+##  <a name="policyelementkey"></a>  Enumeração PolicyElementKey  
  Chaves de política que descreve aspectos do comportamento do Agendador. Cada elemento de política é descrito por um par chave-valor. Para obter mais informações sobre políticas de agendador e seu impacto em agendadores, consulte [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -234,7 +229,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
+##  <a name="schedulingprotocoltype"></a>  Enumeração SchedulingProtocolType  
  Usado pelo `SchedulingProtocol` política para descrever qual algoritmo agendamento será utilizado para o Agendador. Para obter mais informações sobre políticas de Agendador disponíveis, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -250,7 +245,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h  
  
-##  <a name="switchingproxystate"></a>  SwitchingProxyState Enumeration  
+##  <a name="switchingproxystate"></a>  Enumeração SwitchingProxyState  
  Usado para indicar o estado de que um proxy de thread está no, quando ela está executando uma alternância de contexto cooperativo para proxy de um thread diferente.  
   
 ```
@@ -286,7 +281,7 @@ enum task_group_status;
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>  WinRTInitializationType Enumeration  
+##  <a name="winrtinitializationtype"></a>  Enumeração WinRTInitializationType  
  Usado pelo `WinRTInitialization` política para descrever se e como o tempo de execução do Windows será inicializado em threads de Agendador para um aplicativo que é executado em sistemas operacionais com a versão Windows 8 ou superior. Para obter mais informações sobre políticas de Agendador disponíveis, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```

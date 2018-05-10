@@ -1,27 +1,22 @@
 ---
-title: "B. Stubs para funções de biblioteca em tempo de execução | Microsoft Docs"
-ms.custom: 
+title: B. Stubs para funções de biblioteca em tempo de execução | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1207f943560fdc6a22c62a9a8deafa213400f172
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs para funções de biblioteca em tempo de execução
 Esta seção fornece stubs para as funções de biblioteca de tempo de execução definidas no OpenMP C e C++ API. Os stubs são fornecidos para habilitar a portabilidade para plataformas que não dão suporte a OpenMP C e C++ API. Nessas plataformas, OpenMP programas devem ser vinculados a uma biblioteca que contém essas funções de stub. As funções de stub assumem que as diretivas no programa OpenMP são ignoradas. Assim, eles emularem semântica serial.  

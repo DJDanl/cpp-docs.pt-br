@@ -1,37 +1,32 @@
 ---
 title: 'Passo a passo: Criando uma rede de processamento de imagem | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Instruções passo a passo: criando uma rede de processamento de imagem
 Este documento demonstra como criar uma rede de blocos de mensagens assíncronas que executam o processamento de imagem.  
   
- A rede determina quais operações a serem executadas em uma imagem com base em suas características. Este exemplo usa o *fluxo de dados* modelo para imagens de rota por meio da rede. No modelo de fluxo de dados, componentes independentes de um programa se comunicar uns com os outros enviando mensagens. Quando um componente recebe uma mensagem, ele pode executar alguma ação e, em seguida, passe o resultado dessa ação para outro componente. Compare isso com o *fluxo de controle* modelo, em que um aplicativo usa estruturas de controle, por exemplo, instruções condicionais, loops e assim por diante, para controlar a ordem das operações em um programa.  
+ A rede determina quais operações a serem executadas em uma imagem com base em suas características. Este exemplo usa o *fluxo de dados* modelo para imagens de rota por meio da rede. No modelo de fluxo de dados, componentes independentes de um programa se comunicam uns com os outros enviando mensagens. Quando um componente recebe uma mensagem, ele pode executar alguma ação e, em seguida, passe o resultado dessa ação para outro componente. Compare isso com o *fluxo de controle* modelo, em que um aplicativo usa estruturas de controle, por exemplo, instruções condicionais, loops e assim por diante, para controlar a ordem das operações em um programa.  
   
- Uma rede com base no fluxo de dados cria um *pipeline* de tarefas. Cada estágio do pipeline executa simultaneamente a parte da tarefa geral. Uma analogia para isso é uma linha de montagem para fabricação automóvel. Como cada veículo passa por meio da linha de assembly, uma estação monta o quadro, outro instala o mecanismo e assim por diante. Habilitando vários veículos ser montadas simultaneamente, a linha de assembly fornece melhor taxa de transferência que montar veículos completos um por vez.  
+ Uma rede com base no fluxo de dados cria um *pipeline* de tarefas. Cada estágio do pipeline executa simultaneamente a parte da tarefa geral. Como analogia, podemos usar uma linha de montagem de automóveis. Como cada veículo passa por meio da linha de assembly, uma estação monta o quadro, outro instala o mecanismo e assim por diante. Habilitando vários veículos ser montadas simultaneamente, a linha de assembly fornece melhor taxa de transferência que montar veículos completos um por vez.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Leia os documentos a seguir antes de iniciar esta explicação passo a passo:  
@@ -44,7 +39,7 @@ Este documento demonstra como criar uma rede de blocos de mensagens assíncronas
   
  Também é recomendável que você compreenda as Noções básicas de [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] antes de começar este passo a passo.  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este passo a passo contém as seguintes seções:  
   
 -   [Definindo a funcionalidade de processamento de imagem](#functionality)  
@@ -53,7 +48,7 @@ Este documento demonstra como criar uma rede de blocos de mensagens assíncronas
   
 -   [O exemplo completo](#complete)  
   
-##  <a name="functionality"></a>Definindo a funcionalidade de processamento de imagem  
+##  <a name="functionality"></a> Definindo a funcionalidade de processamento de imagem  
  Esta seção mostra as funções de suporte que usa a rede de processamento de imagem para trabalhar com imagens que são lidas do disco.  
   
  As funções a seguir, `GetRGB` e `MakeColor`, extrair e combinar os componentes individuais de determinada cor, respectivamente.  
@@ -80,7 +75,7 @@ Este documento demonstra como criar uma rede de blocos de mensagens assíncronas
   
  [[Superior](#top)]  
   
-##  <a name="network"></a>Criar a rede de processamento de imagem  
+##  <a name="network"></a> Criar a rede de processamento de imagem  
  Esta seção descreve como criar uma rede de blocos de mensagens assíncronas que executam o processamento de imagem em cada [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] imagem (. jpg) em um determinado diretório. A rede realiza as seguintes operações de processamento de imagem:  
   
 1.  Para qualquer imagem que foi criada por Tom, converta em escala de cinza.  
@@ -135,7 +130,7 @@ Este documento demonstra como criar uma rede de blocos de mensagens assíncronas
 |`colormask`|Um `transformer` objeto que remove os componentes de cor verde e azul de imagens que tenham vermelho como a cor dominante.|  
 |`darken`|Um `transformer` objeto escurece imagens que tenham vermelho como a cor dominante.|  
 |`sepiatone`|Um `transformer` objeto que se aplica a coloração sépia para imagens que não são criadas por Tom e não são predominantemente vermelho.|  
-|`save_bitmap`|Um `transformer` objeto que salva o processado `image` no disco como um bitmap. `save_bitmap`recupera o nome de arquivo original do `map` do objeto e altera sua extensão de nome de arquivo para. bmp.|  
+|`save_bitmap`|Um `transformer` objeto que salva o processado `image` no disco como um bitmap. `save_bitmap` recupera o nome de arquivo original do `map` do objeto e altera sua extensão de nome de arquivo para. bmp.|  
 |`delete_bitmap`|Um `transformer` objeto que libera a memória para as imagens.|  
 |`decrement`|Um [concurrency::call](../../parallel/concrt/reference/call-class.md) objeto que atua como o nó terminal na rede. Ele diminui a `countdown_event` objeto para sinalizar para o aplicativo principal que uma imagem foi processada.|  
   
@@ -155,7 +150,7 @@ Este documento demonstra como criar uma rede de blocos de mensagens assíncronas
   
  [[Superior](#top)]  
   
-##  <a name="complete"></a>O exemplo completo  
+##  <a name="complete"></a> O exemplo completo  
  O código a seguir mostra um exemplo completo. O `wmain` função gerencia o [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] biblioteca e chamadas a `ProcessImages` função para processar o [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] arquivos no `Sample Pictures` diretório.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ Este documento demonstra como criar uma rede de blocos de mensagens assíncronas
   
  ![Exemplo de saída para o exemplo](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`é criado por Tom Alphin e, portanto, é convertido em escala de cinza. `Chrysanthemum`, `Desert`, `Koala`, e `Tulips` têm vermelho como a cor dominante e, portanto, os componentes de cor verde e azul removidos e são escurecidos. `Hydrangeas`, `Jellyfish`, e `Penguins` correspondem aos critérios padrão e, portanto, sépia toned.  
+ `Lighthouse` é criado por Tom Alphin e, portanto, é convertido em escala de cinza. `Chrysanthemum`, `Desert`, `Koala`, e `Tulips` têm vermelho como a cor dominante e, portanto, os componentes de cor verde e azul removidos e são escurecidos. `Hydrangeas`, `Jellyfish`, e `Penguins` correspondem aos critérios padrão e, portanto, sépia toned.  
   
  [[Superior](#top)]  
   

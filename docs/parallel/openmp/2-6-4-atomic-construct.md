@@ -1,27 +1,22 @@
 ---
 title: 2.6.4 constructo atomic | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629fff5b0bef507b775fbe1b5bfabadd50b790be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Constructo atomic
 O `atomic` diretiva garante que um local de memória específica é atualizado atomicamente, em vez de expô-lo para a possibilidade de várias simultâneas de gravação de threads. A sintaxe da `atomic` diretiva é da seguinte maneira:  
@@ -48,7 +43,7 @@ O `atomic` diretiva garante que um local de memória específica é atualizado a
   
 -   *Expr* é uma expressão com um tipo escalar, e ele não faz referência o objeto designado pelo *x*.  
   
--   `binop`não é um operador sobrecarregado e é um dos +, *, -, /, &, ^, &#124; <\<, ou >>.  
+-   `binop` não é um operador sobrecarregado e é um dos +, *, -, /, &, ^, &#124;, <\<, ou >>.  
   
  Embora seja definido pela implementação se uma implementação substitui todos os `atomic` diretivas com **crítico** diretivas que têm o mesmo exclusivo *nome*, o `atomic` diretiva permite melhor otimização. Instruções de hardware geralmente estão disponíveis que pode executar a atualização atômica com a menor sobrecarga.  
   

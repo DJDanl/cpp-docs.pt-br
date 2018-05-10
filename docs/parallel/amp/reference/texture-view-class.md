@@ -1,12 +1,9 @@
 ---
 title: Classe texture_view | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>Classe texture_view
 Fornece acesso de leitura e gravação com uma textura. `texture_view` só pode ser usado para ler texturas cujo tipo de valor é `int`, `unsigned int`, ou `float` com bpse de 32 bits do padrão. Para ler os outros formatos de textura, use `texture_view<const value_type, _Rank>`.  
@@ -382,7 +377,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  O valor do elemento indexado por `_Index`.  
   
-##  <a name="operator_call"></a> operator() 
+##  <a name="operator_call"></a> Operator) 
 
  Retorna o valor do elemento de índice.  
   

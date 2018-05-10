@@ -1,12 +1,9 @@
 ---
 title: Classe network_link_registry | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - network_link_registry
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
 O `network_link_registry` gerencia a classe base abstrata os links entre blocos de origem e destino.  
@@ -64,7 +59,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|Quando substituído em uma classe derivada, adiciona um link para o `network_link_registry` objeto.|  
 |[begin](#begin)|Quando substituído em uma classe derivada, retorna um iterador para o primeiro elemento no `network_link_registry` objeto.|  
-|[contains](#contains)|Quando substituído em uma classe derivada, procura o `network_link_registry` objeto para um bloco especificado.|  
+|[Contém](#contains)|Quando substituído em uma classe derivada, procura o `network_link_registry` objeto para um bloco especificado.|  
 |[count](#count)|Quando substituído em uma classe derivada, retorna o número de itens de `network_link_registry` objeto.|  
 |[remove](#remove)|Quando substituído em uma classe derivada, remove um bloco especificado a partir de `network_link_registry` objeto.|  
   

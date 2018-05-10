@@ -1,13 +1,10 @@
 ---
 title: Sobrecargas de modelo seguras | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ad08738ea2c8c748ac642c5ea15f4b0a257da9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f1a4731ef2e11f87538bc87d8aa8670c174f0dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-template-overloads"></a>Sobrecargas de modelo seguras
 A Microsoft preteriu muitas funções CRT (biblioteca de tempo de execução C) em favor de versões com segurança aprimorada. Por exemplo, `strcpy_s` é o substituto mais seguro de `strcpy`. As funções preteridas são as origens comuns de bugs de segurança, pois não impedem operações que podem substituir a memória. Por padrão, o compilador gerará um aviso de substituição quando você usar uma dessas funções. A CRT fornece sobrecargas de modelo do C++ para essas funções para ajudar a facilitar a transição para as variantes mais seguras.  

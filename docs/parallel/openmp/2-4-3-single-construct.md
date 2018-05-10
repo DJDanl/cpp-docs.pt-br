@@ -1,27 +1,22 @@
 ---
-title: "2.4.3 único construção | Microsoft Docs"
-ms.custom: 
+title: 2.4.3 único construção | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 15c180cd-e462-4b41-bf8c-cb8b1afb1a9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72dc551986f149bda668c438ac5f51d01d530c51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db3f9ca834fb3f35c95732698fd02e16f31b4225
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="243-single-construct"></a>2.4.3 Construto single
 O **único** diretiva identifica uma construção que especifica que o bloco estruturado associado é executado por um thread na equipe (não necessariamente o thread principal). A sintaxe do **único** diretiva é da seguinte maneira:  
@@ -32,9 +27,9 @@ O **único** diretiva identifica uma construção que especifica que o bloco est
   
  A cláusula é um dos seguintes:  
   
- **privada (** *lista variável* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *lista variável* **)**  
+ **firstprivate(** *variable-list* **)**  
   
  **copyprivate (** *lista variável* **)**  
   

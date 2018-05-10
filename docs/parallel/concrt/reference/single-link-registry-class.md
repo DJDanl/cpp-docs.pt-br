@@ -1,12 +1,9 @@
 ---
 title: Classe single_link_registry | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - single_link_registry
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74167dcc03754c7f25d83058ec814798d40931a2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3220156d201a4dcb7edb6281298d3f248f38fc83
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="singlelinkregistry-class"></a>Classe single_link_registry
 O `single_link_registry` objeto é um `network_link_registry` que gerencia apenas um único bloco de origem ou de destino.  
@@ -63,7 +58,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|Adiciona um link para o `single_link_registry` objeto. (Substitui [network_link_registry:: Add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Retorna um iterador para o primeiro elemento no `single_link_registry` objeto. (Substitui [network_link_registry:: Begin](network-link-registry-class.md#begin).)|  
-|[contains](#contains)|Pesquisas de `single_link_registry` objeto para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
+|[Contém](#contains)|Pesquisas de `single_link_registry` objeto para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Conta o número de itens de `single_link_registry` objeto. (Substitui [network_link_registry:: Count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Remove um link entre a `single_link_registry` objeto. (Substitui [network_link_registry:: remove](network-link-registry-class.md#remove).)|  
   
@@ -155,7 +150,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```  
   
-##  <a name="dtor"></a> ~single_link_registry 
+##  <a name="dtor"></a> ~ single_link_registry 
 
  Destrói a `single_link_registry` objeto.  
   

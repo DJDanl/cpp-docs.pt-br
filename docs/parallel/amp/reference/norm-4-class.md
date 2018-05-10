@@ -1,12 +1,9 @@
 ---
 title: Classe norm_4 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm4-class"></a>Classe norm_4
 Representa um vetor curto de quatro números normais.  
@@ -457,12 +452,12 @@ class norm_4;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|norm_4::operator-||  
+|norm_4::Operator-||  
 |norm_4::operator--||  
-|norm_4::operator*=||  
-|norm_4::operator/=||  
-|norm_4::operator++||  
-|norm_4::operator+=||  
+|norm_4::Operator * =||  
+|norm_4::Operator / =||  
+|norm_4::Operator + +||  
+|+ norm_4::Operator =||  
 |norm_4::operator=||  
 |norm_4::operator-=||  
   
@@ -482,7 +477,7 @@ class norm_4;
 |norm_4::abgr||  
 |norm_4::abr||  
 |norm_4::abrg||  
-|norm_4::ag||  
+|norm_4::AG||  
 |norm_4::agb||  
 |norm_4::agbr||  
 |norm_4::agr||  
@@ -525,7 +520,7 @@ class norm_4;
 |norm_4::grb||  
 |norm_4::grba||  
 |norm_4::r||  
-|norm_4::ra||  
+|norm_4::RA||  
 |norm_4::rab||  
 |norm_4::rabg||  
 |norm_4::rag||  
@@ -535,13 +530,13 @@ class norm_4;
 |norm_4::rbag||  
 |norm_4::rbg||  
 |norm_4::rbga||  
-|norm_4::rg||  
+|norm_4::RG||  
 |norm_4::rga||  
 |norm_4::rgab||  
-|norm_4::rgb||  
-|norm_4::rgba||  
+|norm_4::RGB||  
+|norm_4::RGBA||  
 |norm_4::w||  
-|norm_4::wx||  
+|norm_4::WX||  
 |norm_4::wxy||  
 |norm_4::wxyz||  
 |norm_4::wxz||  
@@ -549,7 +544,7 @@ class norm_4;
 |norm_4::wy||  
 |norm_4::wyx||  
 |norm_4::wyxz||  
-|norm_4::wyz||  
+|norm_4::WYZ||  
 |norm_4::wyzx||  
 |norm_4::wz||  
 |norm_4::wzx||  
@@ -578,12 +573,12 @@ class norm_4;
 |norm_4::ywxz||  
 |norm_4::ywz||  
 |norm_4::ywzx||  
-|norm_4::yx||  
+|norm_4::YX||  
 |norm_4::yxw||  
 |norm_4::yxwz||  
 |norm_4::yxz||  
 |norm_4::yxzw||  
-|norm_4::yz||  
+|norm_4::YZ||  
 |norm_4::yzw||  
 |norm_4::yzwx||  
 |norm_4::yzx||  

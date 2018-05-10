@@ -1,29 +1,24 @@
 ---
-title: "Instâncias de Agendador | Microsoft Docs"
-ms.custom: 
+title: Instâncias de Agendador | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>Instâncias de agendador
 Este documento descreve a função de instâncias de Agendador em tempo de execução de simultaneidade e como usar o [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) e [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classes para criar e gerenciar instâncias de Agendador. Instâncias de Agendador são úteis quando você deseja associar políticas de agendamento explícitas com tipos específicos de cargas de trabalho. Por exemplo, você pode criar uma instância de Agendador para executar algumas tarefas em uma prioridade de thread com privilégios elevados e use o agendador padrão para executar outras tarefas com a prioridade normal de threads.  
@@ -31,7 +26,7 @@ Este documento descreve a função de instâncias de Agendador em tempo de execu
 > [!TIP]
 >  O tempo de execução de simultaneidade fornece um agendador padrão e, portanto, não é necessário criá-lo em seu aplicativo. Como o Agendador de tarefas Ajuda a ajustar o desempenho de seus aplicativos, é recomendável que você inicie com o [biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) ou [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) se você estiver novo no tempo de execução de simultaneidade.  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
   
 -   [O Agendador e Classes de CurrentScheduler](#classes)  
   
@@ -43,7 +38,7 @@ Este documento descreve a função de instâncias de Agendador em tempo de execu
   
 -   [Exemplo](#example)  
   
-##  <a name="classes"></a>O Agendador e Classes de CurrentScheduler  
+##  <a name="classes"></a> O Agendador e Classes de CurrentScheduler  
  O Agendador de tarefas permite que os aplicativos usam uma ou mais *instâncias de Agendador* para agendar o trabalho. O [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) classe representa uma instância de agendador e encapsula a funcionalidade que está relacionada ao agendamento de tarefas.  
   
  Um thread que está anexado a um agendador é conhecido como um *contexto de execução*, ou apenas *contexto*. Um agendador pode estar ativo no contexto atual a qualquer momento. O Agendador active também é conhecido como o *Agendador atual*. O tempo de execução de simultaneidade usa o [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classe para fornecer acesso para o Agendador atual. O Agendador atual para um contexto pode ser diferente do Agendador atual para outro contexto. O tempo de execução não fornece uma representação de nível de processo do Agendador atual.  
@@ -54,7 +49,7 @@ Este documento descreve a função de instâncias de Agendador em tempo de execu
   
  [[Superior](#top)]  
   
-##  <a name="creating"></a>Criando uma instância de Agendador  
+##  <a name="creating"></a> Criando uma instância de Agendador  
  Esses três maneiras para criar um `Scheduler` objeto:  
   
 -   Se o Agendador não existir, o tempo de execução cria um agendador padrão para você quando você usar a funcionalidade de tempo de execução, por exemplo, um algoritmo paralelo, para executar o trabalho. O agendador padrão torna-se o Agendador atual para o contexto que inicia o trabalho em paralelo.  
@@ -69,7 +64,7 @@ Este documento descreve a função de instâncias de Agendador em tempo de execu
   
  [[Superior](#top)]  
   
-##  <a name="managing"></a>Gerenciar o tempo de vida de uma instância de Agendador  
+##  <a name="managing"></a> Gerenciar o tempo de vida de uma instância de Agendador  
  O tempo de execução usa um mecanismo de contagem de referência para controlar o tempo de vida de `Scheduler` objetos.  
   
 
@@ -98,7 +93,7 @@ Este documento descreve a função de instâncias de Agendador em tempo de execu
   
  [[Superior](#top)]  
   
-##  <a name="features"></a>Métodos e recursos  
+##  <a name="features"></a> Métodos e recursos  
  Esta seção resume os métodos importantes do `CurrentScheduler` e `Scheduler` classes.  
   
  Imagine a `CurrentScheduler` classe como um auxiliar para a criação de um agendador para uso no contexto atual. O `Scheduler` classe permite que você controle um agendador que pertence a outro contexto.  

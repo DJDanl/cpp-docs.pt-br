@@ -1,12 +1,9 @@
 ---
 title: Classe task_handle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_handle
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
 O `task_handle` classe representa um item de trabalho paralelas individual. Ele encapsula as instruções e os dados necessários para executar um trabalho.  
@@ -77,7 +72,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **Namespace:** simultaneidade  
   
-##  <a name="task_handle__operator_call"></a> operator() 
+##  <a name="task_handle__operator_call"></a> Operator) 
 
  O operador de chamada de função que invoca o tempo de execução para executar o trabalho do identificador de tarefa.  
   
@@ -102,7 +97,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Comentários  
  O tempo de execução cria uma cópia da função de trabalho que você passa para o construtor. Portanto, qualquer alteração de estado que ocorrem em uma função do objeto que você passar para um `task_handle` objeto não aparecerá na sua cópia do objeto de função.  
   
-##  <a name="dtor"></a> ~task_handle 
+##  <a name="dtor"></a> ~ task_handle 
 
  Destrói a `task_handle` objeto.  
   

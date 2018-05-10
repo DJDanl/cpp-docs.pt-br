@@ -2,11 +2,8 @@
 title: Classe tiled_extent | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 Um `tiled_extent` objeto é um `extent` objeto de um a três dimensões que subdivide o espaço de extensão em uma, duas ou blocos tridimensionais.  
@@ -84,7 +79,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.|  
 |[pad](#pad)|Retorna um novo `tiled_extent` objeto com extensões ajustada a ser divisível por dimensões lado a lado.|  
-|[truncate](#truncate)|Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.|  
+|[Truncar](#truncate)|Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -164,7 +159,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valor de retorno  
  O novo `tiled_extent` objeto, por valor. 
-## <a name="truncate"> </a>  truncate   
+## <a name="truncate"> </a>  Truncar   
 Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.  
   
 ### <a name="syntax"></a>Sintaxe  

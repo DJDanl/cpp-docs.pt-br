@@ -2,11 +2,8 @@
 title: tarefa de classe (tempo de execução de simultaneidade) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (Tempo de Execução de Simultaneidade)
 A classe `task` da Biblioteca de Padrões Paralelos (PPL). O objeto `task` representa o trabalho que pode ser executado de forma assíncrona e simultaneamente com outras tarefas e o trabalho paralelo produzido por algoritmos paralelos no Tempo de execução de simultaneidade. Produz um resultado de tipo `_ResultType` após uma conclusão bem-sucedida. Tarefas do tipo `task<void>` não produzem resultados. Uma tarefa pode ser aguardada e cancelada independentemente de outras tarefas. Também podem ser composta com outras tarefas usando continuações ( `then`) e a associação ( `when_all`) e a opção ( `when_any`) padrões.  
@@ -69,7 +64,7 @@ class task;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[task](#ctor)|Sobrecarregado. Constrói um objeto `task`.|  
+|[Tarefa](#ctor)|Sobrecarregado. Constrói um objeto `task`.|  
   
 ### <a name="public-methods"></a>Métodos Públicos  
   
@@ -79,7 +74,7 @@ class task;
 |[is_apartment_aware](#is_apartment_aware)|Determina se a tarefa desvincula uma interface de Tempo de execução do Windows `IAsyncInfo` ou se é descendente de tal tarefa.|  
 |[is_done](#is_done)|Determina se a tarefa foi concluída.|  
 |[scheduler](#scheduler)|Retorna o agendador para essa tarefa|  
-|[then](#then)|Sobrecarregado. Adiciona uma tarefa de continuação para essa tarefa.|  
+|[em seguida](#then)|Sobrecarregado. Adiciona uma tarefa de continuação para essa tarefa.|  
 |[wait](#wait)|Aguarda que essa tarefa alcance um estado terminal. É possível para `wait` executar a tarefa em linha, se todas as dependências de tarefas forem atendidas, e ela ainda não tiver sido escolhida para execução por um trabalho em segundo plano.|  
   
 ### <a name="public-operators"></a>Operadores Públicos  
@@ -101,7 +96,7 @@ class task;
   
  **Namespace:** simultaneidade  
   
-##  <a name="get"></a> get 
+##  <a name="get"></a> Obter 
 
  Retorna o resultado produzido por essa tarefa. Se a tarefa não estiver em um estado terminal, uma chamada para `get` irá aguardar a conclusão da tarefa. Este método não retorna um valor quando chamado em uma tarefa com um `result_type` de `void`.  
   
@@ -144,7 +139,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Comentários  
  A função retornará true se a tarefa é concluída ou cancelada (com ou sem exceção do usuário).  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> operador! = 
 
  Determina se dois objetos `task` representam tarefas internas diferentes.  
   
@@ -160,7 +155,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se os objetos se referir a diferentes tarefas subjacentes, e `false` caso contrário.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> operador = 
 
  Substitui o conteúdo de um objeto `task` por outro.  
   
@@ -179,7 +174,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Comentários  
  Como `task` comporta-se como um ponteiro inteligente, depois de uma atribuição de cópia, isso `task` objetos representa a mesma tarefa real como `_Other` does.  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> operador = = 
 
  Determina se dois objetos `task` representam a mesma tarefa interna.  
   

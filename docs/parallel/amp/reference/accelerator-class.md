@@ -1,12 +1,9 @@
 ---
 title: Classe Accelerator | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 Um acelerador é um recurso de hardware que é otimizado para a computação paralela de dados. Um acelerador pode ser um dispositivo conectado a um barramento PCIe (como uma GPU) ou pode ser um conjunto de instruções estendido na CPU principal.  
@@ -77,7 +72,7 @@ class accelerator;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Acelerador de construtor](#ctor)|Inicializa uma nova instância da classe `accelerator`.|  
-|[~accelerator Destructor](#ctor)|Destrói a `accelerator` objeto.|  
+|[~ accelerator destruidor](#ctor)|Destrói a `accelerator` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   

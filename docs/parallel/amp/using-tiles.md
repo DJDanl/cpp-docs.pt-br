@@ -1,32 +1,27 @@
 ---
 title: Usando blocos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>Usando blocos
 Você pode usar o lado a lado para maximizar a aceleração de seu aplicativo. Lado a lado divide threads em subconjuntos retangulares iguais ou *blocos*. Se você usar um tamanho de bloco apropriado e o algoritmo lado a lado, você pode obter aceleração ainda mais a partir do código C++ AMP. Os componentes básicos de lado a lado são:  
   
-- `tile_static`variáveis. O principal benefício de lado a lado é o ganho de desempenho de `tile_static` acesso. Acesso a dados em `tile_static` memória pode ser significativamente mais rápida do que o acesso a dados no espaço global (`array` ou `array_view` objetos). Uma instância de um `tile_static` variável é criada para cada bloco e todos os threads no bloco tem acesso à variável. Em um típico algoritmo lado a lado, os dados são copiados para `tile_static` memória uma vez da memória global e, em seguida, acessada muitas vezes a partir de `tile_static` memória.  
+- `tile_static` Variáveis. O principal benefício de lado a lado é o ganho de desempenho de `tile_static` acesso. Acesso a dados em `tile_static` memória pode ser significativamente mais rápida do que o acesso a dados no espaço global (`array` ou `array_view` objetos). Uma instância de um `tile_static` variável é criada para cada bloco e todos os threads no bloco tem acesso à variável. Em um típico algoritmo lado a lado, os dados são copiados para `tile_static` memória uma vez da memória global e, em seguida, acessada muitas vezes a partir de `tile_static` memória.  
   
 - [tile_barrier:: wait método](reference/tile-barrier-class.md#wait). Uma chamada para `tile_barrier::wait` suspende a execução do thread atual até que todos os segmentos no mesmo bloco alcance a chamada para `tile_barrier::wait`. Você não pode garantir a ordem em que os threads são executados no, só que nenhum thread no bloco será executado após a chamada para `tile_barrier::wait` até que todos os threads atingiu a chamada. Isso significa que, usando o `tile_barrier::wait` método, você pode executar tarefas em um bloco por bloco, em vez de uma base por segmento. Um algoritmo típico lado a lado tiver o código para inicializar o `tile_static` memória para o bloco inteiro seguido por uma chamada para `tile_barrer::wait`. Código que segue `tile_barrier::wait` contém cálculos que exigem acesso a todos os `tile_static` valores.  
 
@@ -40,7 +35,7 @@ Você pode usar o lado a lado para maximizar a aceleração de seu aplicativo. L
 ## <a name="example-of-global-tile-and-local-indices"></a>Exemplo de Global, lado a lado e índices Local  
  O diagrama a seguir representa uma matriz de 8 x 9 de dados que são organizados em blocos de 3 x 2.  
   
- ![8 &#45; por &#45; 9 matriz dividida em 2 &#45; &#45; 3 blocos](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;por&#45;matriz 9 dividida em 2&#45;por&#45;3 blocos](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  O exemplo a seguir exibe o bloco global, e índices locais desta matriz lado a lado. Um `array_view` objeto é criado por meio de elementos do tipo `Description`. O `Description` contém global, lado a lado e os índices de locais do elemento na matriz. O código na chamada para `parallel_for_each` define os valores de global, lado a lado e índices de locais de cada elemento. A saída exibe os valores de `Description` estruturas.  
   

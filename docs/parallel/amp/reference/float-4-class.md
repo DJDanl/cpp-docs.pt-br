@@ -1,12 +1,9 @@
 ---
 title: Classe float_4 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="float4-class"></a>Classe float_4
 Representa um vetor curto de quatro flutuações.  
@@ -459,10 +454,10 @@ class float_4;
 |----------|-----------------|  
 |float_4::operator-||  
 |float_4::operator--||  
-|float_4::operator*=||  
-|float_4::operator/=||  
-|float_4::operator++||  
-|float_4::operator+=||  
+|float_4::Operator * =||  
+|float_4::Operator / =||  
+|float_4::Operator + +||  
+|+ float_4::Operator =||  
 |float_4::operator=||  
 |float_4::operator-=||  
   
@@ -541,7 +536,7 @@ class float_4;
 |float_4::rgb||  
 |float_4::rgba||  
 |float_4::w||  
-|float_4::wx||  
+|float_4::WX||  
 |float_4::wxy||  
 |float_4::wxyz||  
 |float_4::wxz||  
@@ -549,7 +544,7 @@ class float_4;
 |float_4::wy||  
 |float_4::wyx||  
 |float_4::wyxz||  
-|float_4::wyz||  
+|float_4::WYZ||  
 |float_4::wyzx||  
 |float_4::wz||  
 |float_4::wzx||  
@@ -583,7 +578,7 @@ class float_4;
 |float_4::yxwz||  
 |float_4::yxz||  
 |float_4::yxzw||  
-|float_4::yz||  
+|float_4::YZ||  
 |float_4::yzw||  
 |float_4::yzwx||  
 |float_4::yzx||  

@@ -1,12 +1,9 @@
 ---
 title: Classe multi_link_registry | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multi_link_registry
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multilinkregistry-class"></a>Classe multi_link_registry
 O `multi_link_registry` objeto é um `network_link_registry` que gerencia vários blocos de origem ou de vários blocos de destino.  
@@ -56,7 +51,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[multi_link_registry](#ctor)|Constrói um objeto `multi_link_registry`.|  
-|[~multi_link_registry Destructor](#dtor)|Destrói a `multi_link_registry` objeto.|  
+|[~ multi_link_registry destruidor](#dtor)|Destrói a `multi_link_registry` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -64,7 +59,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|Adiciona um link para o `multi_link_registry` objeto. (Substitui [network_link_registry:: Add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Retorna um iterador para o primeiro elemento no `multi_link_registry` objeto. (Substitui [network_link_registry:: Begin](network-link-registry-class.md#begin).)|  
-|[contains](#contains)|Pesquisas de `multi_link_registry` objeto para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
+|[Contém](#contains)|Pesquisas de `multi_link_registry` objeto para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Conta o número de itens de `multi_link_registry` objeto. (Substitui [network_link_registry:: Count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Remove um link entre a `multi_link_registry` objeto. (Substitui [network_link_registry:: remove](network-link-registry-class.md#remove).)|  
 |[set_bound](#set_bound)|Define um limite superior no número de links de `multi_link_registry` objeto pode conter.|  
@@ -142,7 +137,7 @@ virtual size_t count();
 multi_link_registry();
 ```  
   
-##  <a name="dtor"></a> ~multi_link_registry 
+##  <a name="dtor"></a> ~ multi_link_registry 
 
  Destrói a `multi_link_registry` objeto.  
   

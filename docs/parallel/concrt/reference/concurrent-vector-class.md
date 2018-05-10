@@ -1,12 +1,9 @@
 ---
 title: Classe concurrent_vector | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_vector
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e120e072fb3f56788cbf39fbbc3887f5c816f4ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 O `concurrent_vector` classe é uma classe de contêiner de sequência que permite acesso aleatório para qualquer elemento. Habilita a simultaneidade-safe acrescentar, acesso de elemento, acesso de iterador e operações de passagem do iterador.  
@@ -353,7 +348,7 @@ concurrent_vector(_InputIterator _Begin,
   
  O construtor de último especifica valores fornecidos pelo intervalo iterador [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a> ~concurrent_vector 
+##  <a name="dtor"></a> ~ concurrent_vector 
 
  Apaga todos os elementos e destrói esse vetor simultânea.  
   
@@ -639,7 +634,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho retornado é garantido para incluir todos os elementos adicionados por chamadas para a função `push_back`, ou aumentar as operações concluídas antes de chamar esse método. No entanto, ele também pode incluir elementos que estão alocados, mas ainda estão em construção por chamadas simultâneas para qualquer um dos métodos de crescimento.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Swap 
 
  Troca o conteúdo dos dois vetores simultâneas. Este método não é seguro de simultaneidade.  
   

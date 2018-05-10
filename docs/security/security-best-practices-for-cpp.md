@@ -1,13 +1,10 @@
 ---
-title: "Práticas recomendadas de segurança para C++ | Microsoft Docs"
-ms.custom: 
+title: Práticas recomendadas de segurança para C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-best-practices-for-c"></a>Práticas recomendadas de segurança para C++
 Este artigo contém informações sobre ferramentas e práticas de segurança. Elas não tornam os aplicativos imunes a ataques, mas diminuem a probabilidade de ataques bem-sucedidos.  
@@ -35,22 +30,22 @@ Este artigo contém informações sobre ferramentas e práticas de segurança. E
 ## <a name="visual-c-security-features"></a>Recursos de segurança do Visual C++  
  Estes recursos de segurança foram incorporados ao vinculador e ao compilador do Visual C++:  
   
- [/Guard (habilitar o controle de fluxo de proteção)](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard (habilitar proteção de fluxo de controle)](../build/reference/guard-enable-control-flow-guard.md)  
  Faz com que o compilador analisar o fluxo de controle para destinos de chamada indireta em tempo de compilação e, em seguida, inserir o código para verificar se os destinos em tempo de execução.  
   
  [/GS (verificação de segurança do buffer)](../build/reference/gs-buffer-security-check.md)  
  Instrui o compilador a inserir o código de detecção de saturação em funções que estão em risco de serem exploradas. Quando uma saturação é detectada, a execução é interrompida. Por padrão, esta opção está ativada.  
   
- [/SafeSEH (a imagem tem manipuladores de exceção seguros)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH (a imagem tem manipuladores de exceção seguros)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  Instrui o vinculador a incluir na imagem de saída uma tabela que contém o endereço de cada manipulador de exceção. Em tempo de execução, o sistema operacional usa essa tabela para garantir que apenas os manipuladores de exceção legítimos sejam executados. Isso ajuda a impedir a execução de manipuladores de exceção introduzidos por um ataque mal-intencionado em tempo de execução. Por padrão, essa opção é desativada.  
   
  [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (compatível com prevenção de execução de dados)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  Estas opções de compilador e vinculador habilitam a compatibilidade de DEP (Prevenção de Execução de Dados). A DEP protege a CPU contra a execução de páginas sem código.  
   
- [/Analyze (análise de código)](../build/reference/analyze-code-analysis.md)  
+ [/analyze (análise de código)](../build/reference/analyze-code-analysis.md)  
  Essa opção do compilador ativa a análise de código que relata problemas potenciais de segurança, como excesso de buffer, memória não inicializada, remoção de referência do ponteiro nulo e vazamentos de memória. Por padrão, essa opção é desativada. Para obter mais informações, consulte [análise de código para visão geral do C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
- [/DYNAMICBASE (aleatória de layout do espaço de endereço de uso)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE (usar randomização do layout do espaço de endereço)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  Essa opção do vinculador habilita a criação de uma imagem executável que pode ser carregada em locais diferentes na memória no início da execução. Essa opção também torna o local da pilha na memória muito menos previsível.  
   
 ## <a name="security-enhanced-crt"></a>CRT de segurança aprimorada  

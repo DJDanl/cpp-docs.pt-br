@@ -1,27 +1,22 @@
 ---
 title: Usando C++ AMP em aplicativos UWP | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Usando C++ AMP em aplicativos UWP
 Você pode usar C++ AMP (C++ Accelerated Massive Parallelism) em seu aplicativo do Windows UWP (plataforma Universal) para executar cálculos na GPU (unidade de processamento gráfico) ou outros Aceleradores computacionais. No entanto, C++ AMP não fornece APIs para trabalhar diretamente com os tipos de tempo de execução do Windows e o tempo de execução do Windows não fornece um wrapper para C++ AMP. Quando você usa os tipos de tempo de execução do Windows em seu código, incluindo aqueles que você criou por conta própria — você deve convertê-los em tipos compatíveis com C++ AMP.  

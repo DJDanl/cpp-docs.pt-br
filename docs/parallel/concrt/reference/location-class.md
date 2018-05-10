@@ -1,12 +1,9 @@
 ---
 title: Classe Location | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - location
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="location-class"></a>Classe location
 Uma abstração de um local físico em hardware.  
@@ -46,7 +41,7 @@ class location;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[location](#ctor)|Sobrecarregado. Constrói um objeto `location`.|  
+|[local](#ctor)|Sobrecarregado. Constrói um objeto `location`.|  
 |[~ local destruidor](#dtor)|Destrói um objeto `location`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  

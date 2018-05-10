@@ -1,13 +1,10 @@
 ---
-title: "Especificadores de classe de armazenamento para declarações de nível externo | Microsoft Docs"
-ms.custom: 
+title: Especificadores de classe de armazenamento para declarações de nível externo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfdae4791b89ffd78661a983fdc8c1beec77edea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Especificadores de classe de armazenamento para declarações de nível externo
 As variáveis externas são variáveis no escopo de arquivo. São definidas fora de qualquer função, e estão potencialmente disponíveis para muitas funções. As funções só podem ser definidas no nível externo e, consequentemente, não podem ser aninhadas. Por padrão, todas as referências a variáveis externas e a funções do mesmo nome são referências ao mesmo objeto, o que significa que elas possuem “vinculação externa”. (Você pode usar a palavra-chave de **static** para substituir isso. Consulte as informações nesta seção para obter mais detalhes sobre **static**.)  

@@ -2,9 +2,6 @@
 title: funções de namespace de simultaneidade | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,17 +37,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-functions"></a>funções de namespace de simultaneidade
 ||||  
@@ -1527,7 +1522,7 @@ bool try_receive(
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [funções de transmissão de mensagens](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="wait"></a>  wait  
+##  <a name="wait"></a>  Aguarde  
  Pausa o contexto atual para um período de tempo especificado.  
   
 ```

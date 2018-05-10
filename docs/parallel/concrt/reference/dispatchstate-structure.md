@@ -1,12 +1,9 @@
 ---
 title: Estrutura DispatchState | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - DispatchState
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76deac0daa3a8bce2880b2cc9afda0faae263558
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 89d3b62248d305e6acebdc8a03b7ef48c2910b28
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dispatchstate-structure"></a>Estrutura DispatchState
 O `DispatchState` estrutura é usada para transferir o estado para o `IExecutionContext::Dispatch` método. Ele descreve as circunstâncias em que o `Dispatch` método é chamado em um `IExecutionContext` interface.  
@@ -72,21 +67,21 @@ struct DispatchState;
 DispatchState();
 ```  
   
-##  <a name="m_dispatchstatesize"></a>  DispatchState::m_dispatchStateSize Data Member  
+##  <a name="m_dispatchstatesize"></a>  Membro de dados dispatchstate:: M_dispatchstatesize  
  Tamanho dessa estrutura, que é usado para controle de versão.  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  DispatchState::m_fIsPreviousContextAsynchronouslyBlocked Data Member  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  Membro de dados dispatchstate:: M_fispreviouscontextasynchronouslyblocked  
  Informa se esse contexto tiver inserido o `Dispatch` método porque o contexto anterior assincronamente bloqueada. Isso é usado somente no contexto de programação UMS e é definido como o valor `0` para todos os outros contextos de execução.  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="m_reserved"></a>  DispatchState::m_reserved Data Member  
+##  <a name="m_reserved"></a>  Membro de dados dispatchstate:: M_reserved  
  Bits reservados para informações futuras passando.  
   
 ```

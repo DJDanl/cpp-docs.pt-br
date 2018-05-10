@@ -1,12 +1,9 @@
 ---
-title: for (OpenMP) | Microsoft Docs
-ms.custom: 
+title: para (OpenMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - for
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab923dd43dfb29a458d12f57eb1ceefdb5539daf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="for-openmp"></a>for (OpenMP)
 Faz com que o trabalho feito um loop dentro de uma região parallel podem ser divididas entre threads.  
@@ -55,7 +50,7 @@ Faz com que o trabalho feito um loop dentro de uma região parallel podem ser di
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [ordered](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   

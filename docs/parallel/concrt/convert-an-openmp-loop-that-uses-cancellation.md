@@ -1,30 +1,25 @@
 ---
-title: "Como: converter um Loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade | Microsoft Docs"
-ms.custom: 
+title: 'Como: converter um Loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dae22a46d6570d7ef7abbdfc08cb2c6d76d0c08
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Como converter um loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade
 Alguns loops paralelos não exigem que todas as iterações ser executado. Por exemplo, um algoritmo que procura um valor possa ser encerrado depois que o valor for encontrado. OpenMP não fornece um mecanismo para interromper um loop paralelo. No entanto, você pode usar um valor booliano ou o sinalizador para permitir uma iteração do loop para indicar que a solução foi encontrada. O tempo de execução de simultaneidade fornece a funcionalidade que permite que uma tarefa cancelar a outras tarefas que ainda não foram iniciados.  

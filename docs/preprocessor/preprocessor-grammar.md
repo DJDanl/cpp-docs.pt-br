@@ -1,12 +1,9 @@
 ---
-title: "Gramática do pré-processador | Microsoft Docs"
-ms.custom: 
+title: Gramática do pré-processador | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>Gramática do pré-processador
 **#define**  *identifier* *token-string*opt  
   
- *#* **define**  *identifier*[**(** *identifier*opt**,** *...* **,** *identifier*opt **)**] *token-string*opt  
+ *#* **definir***identificador*[**(** *identificador*aceitação **,** *...*  **,** *identificador*aceitação **)**] *cadeia de caracteres de token*aceitar    
   
  **defined(**  *identifier* **)**  
   
@@ -38,11 +33,11 @@ ms.lasthandoff: 02/23/2018
   
  `#include` **"***path-spec***"**  
   
- `#include` **\<***path-spec***>**  
+ `#include` **\<***especificação de caminho***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"**opt  
+ **#line**  *digit-sequence*  **"** *filename* **"** opt  
   
- *#* **undef**  *identifier*  
+ *#* **undef***identificador*   
   
  **#error**  *token-string*  
   
@@ -78,7 +73,7 @@ ms.lasthandoff: 02/23/2018
  *linha endif* :  
  `#endif`  
   
- *digit-sequence* :  
+ *sequência de dígitos* :  
  *digit*  
   
  *digit-sequence digit*  
@@ -103,10 +98,10 @@ ms.lasthandoff: 02/23/2018
  *nome de arquivo* :  
  Nome de arquivo válido do sistema operacional  
   
- *path-spec* :  
+ *especificação de caminho* :  
  Caminho de arquivo válido  
   
- *text* :  
+ *texto* :  
  Qualquer sequência de texto  
   
 > [!NOTE]

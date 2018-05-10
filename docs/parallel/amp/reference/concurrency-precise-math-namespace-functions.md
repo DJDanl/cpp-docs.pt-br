@@ -1,10 +1,7 @@
 ---
-title: "Funções de namespace Concurrency:: precise_math | Microsoft Docs"
-ms.custom: 
+title: 'Funções de namespace Concurrency:: precise_math | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funções de namespace Concurrency:: precise_math
 ||||  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parâmetros  
  `exponent`  
- O termo exponencial  *n*  da expressão matemática `e` <sup> n </sup>, onde `e` é a base do logaritmo natural.  
+ O termo exponencial *n* da expressão matemática `e` <sup>n</sup>, onde `e` é a base do logaritmo natural.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a exponencial de base e do argumento, menos 1  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parâmetros  
  `exponent`  
- O termo exponencial  *n*  da expressão matemática `e` <sup> n </sup>, onde `e` é a base do logaritmo natural.  
+ O termo exponencial *n* da expressão matemática `e` <sup>n</sup>, onde `e` é a base do logaritmo natural.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a exponencial de base e do argumento, menos 1  
@@ -928,7 +923,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a base do argumento  
 
-## <a name="a-namefma-fma"></a><a name="fma"> fma  
+## <a name="a-namefma-fma"></a><a name="fma"> FMA  
 Calcula o produto dos argumentos especificados primeiro e o segundo, em seguida, adiciona o terceiro argumento especificado para o resultado; a computação inteira é executada como uma única operação.
 ```
 inline float fma(
@@ -1076,7 +1071,7 @@ inline double fmod(
  O segundo argumento de ponto flutuante.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O restante do `_X` dividido por `_Y`; ou seja, o valor de `_X`  -  `_Y`  *n* , onde  *n*  é um inteiro, de modo que a magnitude do `_X`  -  `_Y`  *n*  é menor que a magnitude do `_Y`.  
+ O restante do `_X` dividido por `_Y`; ou seja, o valor de `_X`  -  `_Y` *n*, onde *n* é um inteiro, de modo que a magnitude do `_X`  -  `_Y` *n* é menor que a magnitude do `_Y`.  
   
 ##  <a name="fmodf"></a>  fmodf  
  Calcula o restante do primeiro argumento especificado dividido pelo segundo argumento especificado.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  O segundo argumento de ponto flutuante.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O restante do `_X` dividido por `_Y`; ou seja, o valor de `_X`  -  `_Y`  *n* , onde  *n*  é um inteiro, de modo que a magnitude do `_X`  -  `_Y`  *n*  é menor que a magnitude do `_Y`.  
+ O restante do `_X` dividido por `_Y`; ou seja, o valor de `_X`  -  `_Y` *n*, onde *n* é um inteiro, de modo que a magnitude do `_X`  -  `_Y` *n* é menor que a magnitude do `_Y`.  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  Classifica o valor do argumento como normal infinito, NaN, e subnormal, zero  
@@ -1265,7 +1260,7 @@ inline int isinf(double _X) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um valor diferente de zero se e somente se o argumento tem um valor infinito  
   
-##  <a name="isnan"></a>  isnan  
+##  <a name="isnan"></a>  isNaN  
  Determina se o argumento é uma NaN  
   
 ```  
@@ -1998,7 +1993,7 @@ inline double scalb(
  Valor de ponto flutuante  
   
 ### <a name="return-value"></a>Valor de retorno  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Retorna x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbf"></a>  scalbf  
  Multiplica x por FLT_RADIX para o y power  
@@ -2017,7 +2012,7 @@ inline float scalbf(
  Valor de ponto flutuante  
   
 ### <a name="return-value"></a>Valor de retorno  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Retorna x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbn"></a>  scalbn  
  Multiplica x por FLT_RADIX para o y power  
@@ -2041,7 +2036,7 @@ inline double scalbn(
  Valor inteiro  
   
 ### <a name="return-value"></a>Valor de retorno  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Retorna x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbnf"></a>  scalbnf  
  Multiplica x por FLT_RADIX para o y power  
@@ -2060,7 +2055,7 @@ inline float scalbnf(
  Valor inteiro  
   
 ### <a name="return-value"></a>Valor de retorno  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Retorna x * (FLT_RADIX ^ y)  
   
 ##  <a name="signbit"></a>  signbit  
  Determina se o sinal de x é negativo  

@@ -1,12 +1,9 @@
 ---
 title: Classe agente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>Classe agente
 Uma classe deve ser usado como uma classe base para todos os agentes independentes. Ele é usado para ocultar o estado dos outros agentes e interagir com a transmissão de mensagens.  
@@ -61,7 +56,7 @@ class agent;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[cancel](#cancel)|Move um agente do `agent_created` ou `agent_runnable` estados de `agent_canceled` estado.|  
-|[Início](#start)|Move um agente a `agent_created` estado para o `agent_runnable` de estado e agenda sua execução.|  
+|[start](#start)|Move um agente a `agent_created` estado para o `agent_runnable` de estado e agenda sua execução.|  
 |[status](#status)|Uma fonte síncrona de informações de status do agente.|  
 |[status_port](#status_port)|Uma fonte assíncrona de informações de status do agente.|  
 |[wait](#wait)|Aguarda até que um agente concluir a tarefa.|  
@@ -72,7 +67,7 @@ class agent;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[done](#done)|Move um agente para o `agent_done` estado, indicando que o agente foi concluída.|  
+|[Feito](#done)|Move um agente para o `agent_done` estado, indicando que o agente foi concluída.|  
 |[run](#run)|Representa a tarefa principal de um agente. `run` deve ser substituído em uma classe derivada e especifica que o agente deve fazer depois que ele foi iniciado.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -166,7 +161,7 @@ bool start();
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se o agente foi iniciado corretamente, `false` caso contrário. Um agente que foi cancelado não pode ser iniciado.  
   
-##  <a name="status"></a> status 
+##  <a name="status"></a> Status 
 
  Uma fonte síncrona de informações de status do agente.  
   

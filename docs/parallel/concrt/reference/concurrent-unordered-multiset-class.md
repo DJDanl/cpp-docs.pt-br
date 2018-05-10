@@ -1,12 +1,9 @@
 ---
 title: Classe concurrent_unordered_multiset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multiset
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48b73be3a16fd42da097ed402588df988415c8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb187e49302f9d885c8810636f1ed638257675
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Classe concurrent_unordered_multiset
 O `concurrent_unordered_multiset` classe é um contêiner de simultaneidade-safe que controla uma sequência de comprimento variável de elementos do tipo K. A sequência é representada de forma que permite a simultaneidade safe acrescentar, acesso de elemento, acesso de iterador e operações de passagem de iterador.  
@@ -503,7 +498,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentários  
  Na presença de inserções simultâneas, o número de elementos no contêiner simultâneo pode alterar imediatamente após chamar essa função, antes do valor de retorno é ler.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Swap 
 
  Alterna o conteúdo de dois `concurrent_unordered_multiset` objetos. Este método não é seguro de simultaneidade.  
   

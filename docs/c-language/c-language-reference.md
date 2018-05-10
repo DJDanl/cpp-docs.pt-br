@@ -1,13 +1,10 @@
 ---
-title: "Referência da Linguagem C++ | Microsoft Docs"
-ms.custom: 
+title: Referência da Linguagem C++ | Microsoft Docs
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: language-reference
 f1_keywords:
 - c
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Visual C, language reference
 - language reference, C
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5eb419c01cb3699ad90ab9fbf98a5f9ec282bb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df262ab37c8b7e565a947819c2340c310711fa0c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>Referência da linguagem C
 A *referência da linguagem C* descreve a linguagem de programação C como implementada em Microsoft C. A organização do manual baseia-se no padrão ANSI C (às vezes conhecido como C89) com material adicional sobre as extensões da Microsoft para o padrão ANSI C.  

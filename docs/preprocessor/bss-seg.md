@@ -1,12 +1,9 @@
 ---
 title: bss_seg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.bss_seg
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c253cd24bd8246469532cd283e97be4b21f46d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bssseg"></a>bss_seg
 Especifica o segmento em que as variáveis não inicializadas são armazenadas no arquivo .obj.  
@@ -55,7 +50,7 @@ Especifica o segmento em que as variáveis não inicializadas são armazenadas n
   
  *identificador* permite que vários registros deve ser exibido com um único **pop** comando.  
   
- *"segment-name"*(optional)  
+ *"nome do segmento"*(opcional)  
  O nome de um segmento. Quando usado com **pop**, a pilha é exibida e *nome de segmento* se torna o nome de segmento ativo.  
   
  *"classe de segmento"* (opcional)  

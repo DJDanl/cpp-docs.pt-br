@@ -1,12 +1,9 @@
 ---
 title: Classe tiled_index | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornece um índice em uma [tiled_extent](tiled-extent-class.md) objeto. Essa classe tem propriedades para acessar elementos relativo à origem do bloco local e relativo à origem global. Para obter mais informações sobre os espaços de lado a lado, consulte [usando blocos](../../../parallel/amp/using-tiles.md).  
@@ -98,7 +93,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[barreira constante](#tiled_index__barrier)|Armazena um [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no bloco atual de threads.|  
 |||  
-|[global Constant](#tiled_index__global)|Armazena um [índice](index-class.md) objeto do índice de classificação 1, 2 ou 3 que representa global em um [grade](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
+|[Constante global](#tiled_index__global)|Armazena um [índice](index-class.md) objeto do índice de classificação 1, 2 ou 3 que representa global em um [grade](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
 |[Constante local](#tiled_index__local)|Armazena um `index` o objeto de índice de classificação 1, 2 ou 3 que representa o relativo no bloco atual de um [tiled_extent](tiled-extent-class.md) objeto.|  
 |[Constante de classificação](#tiled_index__rank)|Armazena a classificação do `tiled_index` objeto.|  
 |[Constante Tile](#tiled_index__tile)|Armazena um `index` objeto de classificação 1, 2 ou 3 que representa as coordenadas do bloco atual de um `tiled_extent` objeto.|  
@@ -126,7 +121,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Namespace:** Simultaneidade  
 
 
-## <a name="tiled_index__ctor">Construtor de tiled_index</a>  
+## <a name="tiled_index__ctor"></a>  Construtor de tiled_index  
 Inicializa uma nova instância da classe `tiled_index`.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -210,7 +205,7 @@ Armazena um [índice](index-class.md) o objeto de índice de classificação 1, 
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>  rank   
+## <a name="tiled_index__rank"></a>  Classificação   
 Armazena a classificação do `tiled_index` objeto.  
   
 ## <a name="syntax"></a>Sintaxe  

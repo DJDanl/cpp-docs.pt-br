@@ -9,17 +9,16 @@ ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: gerenciador de pacotes de C++ para Windows
 
@@ -31,7 +30,7 @@ Com um único comando, você pode baixar fontes e compilar uma biblioteca. O pr�
 
 ## <a name="sources-not-binaries"></a>Fontes não binárias
 
-Para bibliotecas no catálogo do público, o vcpkg baixa fontes em vez de binários[1]. Ele compila essas fontes usando o Visual Studio 2017 ou o Visual Studio 2015 se o 2017 não estiver instalado. No C++, é muito importante que todas bibliotecas que você usar sejam compiladas com o mesmo compilador e com a mesma versão de compilador que o código de aplicativo que vincula-se a ela. Ao usar o vcpkg, você elimina ou, pelo menos, reduz bastante o potencial de binários não correspondentes e os problemas que eles podem causar. Em equipes que são padronizadas com uma versão específica do compilador Visual C++, um membro da equipe pode usar o vcpkg para baixar fontes e compilar um conjunto de binários e, em seguida, usar o comando de exportação para compactar os binários e os cabeçalhos para outros membros da equipe. Para obter mais informações, confira abaixo a Exportação de binários compilados e cabeçalhos. 
+Para bibliotecas no catálogo do público, o vcpkg baixa fontes em vez de binários[1]. Ele compila essas fontes usando o Visual Studio 2017 ou o Visual Studio 2015 se o 2017 não estiver instalado. No C++, é muito importante que todas bibliotecas que você usar sejam compiladas com o mesmo compilador e com a mesma versão de compilador que o código de aplicativo que vincula-se a ela. Ao usar o vcpkg, você elimina ou, pelo menos, reduz bastante o potencial de binários não correspondentes e os problemas que eles podem causar. Em equipes que são padronizadas com uma versão específica do compilador Visual C++, um membro da equipe pode usar o vcpkg para baixar fontes e compilar um conjunto de binários e, em seguida, usar o comando de exportação para compactar os binários e os cabeçalhos para outros membros da equipe. Para obter mais informações, confira abaixo a Exportação de binários compilados e cabeçalhos.
 
 Se você criar um clone de vcpkg com bibliotecas particulares na coleção de portas, você poderá adicionar uma porta que baixa os cabeçalhos e os binários pré-criados e grave um arquivo portfile.cmake que simplesmente copia esses arquivos para o local desejado.
 
@@ -86,6 +85,7 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Listar as bibliotecas já instaladas
+
 Depois de instalar algumas bibliotecas, você pode usar **vcpkg list** para ver o que você tem:
 
 ```cmd
@@ -113,61 +113,63 @@ Agora você pode #incluir cabeçalhos simplesmente digitando a pasta/cabeçalho 
 
 Se você precisar usar uma versão específica de uma biblioteca que é diferente da versão em sua instância vcpkg ativa, siga estas etapas:
 
-1. Faça uma cópia nova do vcpkg 
+1. Faça uma cópia nova do vcpkg
 1. Modifique o portfile para a biblioteca para obter a versão necessária
 1. Execute **vcpkg install \<library>**.
 1. Use **vcpkg integrate project** para criar um pacote NuGet que faz referência a essa biblioteca com base em cada projeto.
 
 ## <a name="export-compiled-binaries-and-headers"></a>Exportar binários compilados e cabeçalhos
 
-Exigir que todos os membros de uma equipe baixem e compilem bibliotecas poderá ser ineficiente. Um único membro da equipe pode realizar esse trabalho e, em seguida, usar **vcpkg export** para criar um arquivo zip dos binários e dos cabeçalhos, que podem ser facilmente compartilhados com outros membros da equipe. 
+Exigir que todos os membros de uma equipe baixem e compilem bibliotecas poderá ser ineficiente. Um único membro da equipe pode realizar esse trabalho e, em seguida, usar **vcpkg export** para criar um arquivo zip dos binários e dos cabeçalhos, que podem ser facilmente compartilhados com outros membros da equipe.
 
 ## <a name="updateupgrade-installed-libraries"></a>Atualizar bibliotecas instaladas
 
 O catálogo público é mantido atualizado com as versões mais recentes das bibliotecas. Para determinar qual das suas bibliotecas locais está desatualizada, use **vcpkg update**. Quando estiver pronto para atualizar sua coleção de portas para a versão mais recente do catálogo público, execute o comando **vcpkg upgrade** para baixar automaticamente e recriar uma ou todas as bibliotecas instaladas que estão desatualizadas.
 
-Por padrão, o comando **upgrade** apenas lista as bibliotecas que estão desatualizadas, ele não as atualiza. Para executar a atualização, use a opção **--no-dry-run**. 
+Por padrão, o comando **upgrade** apenas lista as bibliotecas que estão desatualizadas, ele não as atualiza. Para executar a atualização, use a opção **--no-dry-run**.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Opções de atualização
 
-- **--no-dry-run** Executar a atualização, quando não especificado, o comando apenas lista os pacotes desatualizados. 
-- **--keep-going**  Continuar a instalar pacotes, mesmo se um falhar. 
-- **--triplet \<t>** Definir o tripleto padrão para pacotes não qualificados. 
-- **--vcpkg-root \<path>**  Especificar o diretório vcpkg a ser usado em vez do diretório atual ou do diretório da ferramenta. 
+- **--no-dry-run** Executar a atualização, quando não especificado, o comando apenas lista os pacotes desatualizados.
+- **--keep-going**  Continuar a instalar pacotes, mesmo se um falhar.
+- **--triplet \<t>** Definir o tripleto padrão para pacotes não qualificados.
+- **--vcpkg-root \<path>**  Especificar o diretório vcpkg a ser usado em vez do diretório atual ou do diretório da ferramenta.
 
 ### <a name="upgrade-example"></a>Exemplo de atualização
 
 ### <a name="per-project"></a>Por projeto
+
 Se você precisar usar uma versão específica de uma biblioteca que é diferente da versão em sua instância vcpkg ativa, siga estas etapas:
 
-1. Faça uma cópia nova do vcpkg 
+1. Faça uma cópia nova do vcpkg
 1. Modifique o portfile para a biblioteca para obter a versão necessária
 1. Execute **vcpkg install \<library>**.
 1. Use **vcpkg integrate project** para criar um pacote NuGet que faz referência a essa biblioteca com base em cada projeto.
 
-
 ## <a name="export-compiled-binaries-and-headers"></a>Exportar binários compilados e cabeçalhos
-Exigir que todos os membros de uma equipe baixem e compilem bibliotecas poderá ser ineficiente. Um único membro da equipe pode realizar esse trabalho e, em seguida, usar **vcpkg export** para criar um arquivo zip dos binários e dos cabeçalhos, que podem ser facilmente compartilhados com outros membros da equipe. 
+
+Exigir que todos os membros de uma equipe baixem e compilem bibliotecas poderá ser ineficiente. Um único membro da equipe pode realizar esse trabalho e, em seguida, usar **vcpkg export** para criar um arquivo zip dos binários e dos cabeçalhos, que podem ser facilmente compartilhados com outros membros da equipe.
 
 ## <a name="updateupgrade-installed-libraries"></a>Atualizar bibliotecas instaladas
+
 O catálogo público é mantido atualizado com as versões mais recentes das bibliotecas. Para determinar qual das suas bibliotecas locais está desatualizada, use **vcpkg update**. Quando estiver pronto para atualizar sua coleção de portas para a versão mais recente do catálogo público, execute o comando **vcpkg upgrade** para baixar automaticamente e recriar uma ou todas as bibliotecas instaladas que estão desatualizadas.
 
-Por padrão, o comando **upgrade** apenas lista as bibliotecas que estão desatualizadas, ele não as atualiza. Para executar a atualização, use a opção **--no-dry-run**. 
+Por padrão, o comando **upgrade** apenas lista as bibliotecas que estão desatualizadas, ele não as atualiza. Para executar a atualização, use a opção **--no-dry-run**.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Opções de atualização
 
-- **--no-dry-run** Executar a atualização, quando não especificado, o comando apenas lista os pacotes desatualizados. 
-- **--keep-going**  Continuar a instalar pacotes, mesmo se um falhar. 
-- **--triplet \<t>** Definir o tripleto padrão para pacotes não qualificados. 
-- **--vcpkg-root \<path>**  Especificar o diretório vcpkg a ser usado em vez do diretório atual ou do diretório da ferramenta. 
+- **--no-dry-run** Executar a atualização, quando não especificado, o comando apenas lista os pacotes desatualizados.
+- **--keep-going**  Continuar a instalar pacotes, mesmo se um falhar.
+- **--triplet \<t>** Definir o tripleto padrão para pacotes não qualificados.
+- **--vcpkg-root \<path>**  Especificar o diretório vcpkg a ser usado em vez do diretório atual ou do diretório da ferramenta.
 
 ### <a name="upgrade-example"></a>Exemplo de atualização
 
@@ -187,24 +189,30 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Contribuir com novas bibliotecas
+
 Você pode incluir todas as biblioteca que quiser em sua coleção de portas particulares. Para sugerir uma nova biblioteca para o catálogo público, abra um problema na [página de problemas do vcpkg do GitHub](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Remover uma biblioteca
+
 Digite **vcpkg remove** para remover uma biblioteca instalada. Se houver outras bibliotecas que dependem dela, você deverá executar novamente o comando com **--recurse**, o que fará com que todas as bibliotecas dependentes sejam removidas.
 
 ## <a name="customize-vcpkg"></a>Personalizar o vcpkg
-Você pode modificar seu clone do vcpkg da maneira que desejar. Você pode criar vários clones de vcpkg e modificar os portfiles em cada um para obter versões específicas de bibliotecas ou especificar parâmetros de linha de comando. Por exemplo, em uma empresa, um grupo de desenvolvedores pode estar trabalhando em um software que tenha um conjunto de dependências e outro grupo pode ter outro conjunto de dependências. Você pode configurar dois clones de vcpkg e modificar cada um para baixar as versões das bibliotecas e as opções de compilação, etc., de acordo com suas necessidades. 
+
+Você pode modificar seu clone do vcpkg da maneira que desejar. Você pode criar vários clones de vcpkg e modificar os portfiles em cada um para obter versões específicas de bibliotecas ou especificar parâmetros de linha de comando. Por exemplo, em uma empresa, um grupo de desenvolvedores pode estar trabalhando em um software que tenha um conjunto de dependências e outro grupo pode ter outro conjunto de dependências. Você pode configurar dois clones de vcpkg e modificar cada um para baixar as versões das bibliotecas e as opções de compilação, etc., de acordo com suas necessidades.
 
 ## <a name="uninstall-vcpkg"></a>Desinstalar o vcpkg
-Basta excluir o diretório. 
+
+Basta excluir o diretório.
 
 ## <a name="send-feedback-about-vcpkg"></a>Enviar comentários sobre o vcpkg
+
 Use o comando **--survey** para enviar comentários para a Microsoft sobre o vcpkg, incluindo relatórios de bug e sugestões de recursos.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>A hierarquia de pasta do vcpkg
-Todas as funcionalidades e os dados do vcpkg são autocontidos em uma única hierarquia de diretórios, chamada de uma "instância". Não há configurações de Registro ou variáveis de ambiente. Você pode ter qualquer quantidade de instâncias de vcpkg em um computador e elas não interferem umas nas outras. 
 
-O conteúdo de uma instância de vcpkg é: 
+Todas as funcionalidades e os dados do vcpkg são autocontidos em uma única hierarquia de diretórios, chamada de uma "instância". Não há configurações de Registro ou variáveis de ambiente. Você pode ter qualquer quantidade de instâncias de vcpkg em um computador e elas não interferem umas nas outras.
+
+O conteúdo de uma instância de vcpkg é:
 
 - buildtrees – contém subpastas de fontes das quais cada biblioteca é compilada
 - documentos – documentação e exemplos
@@ -240,7 +248,8 @@ O conteúdo de uma instância de vcpkg é:
 |**vcpkg version**|Exibir informações de versão|
 |**vcpkg contact**|Exibir informações de contato para enviar comentários|
 
-### <a name="options"></a>Opções:
+### <a name="options"></a>Opções
+
 |Opção|Descrição|
 |---------|---------|
 |**--triplet \<t>**|Especificar o tripleto da arquitetura de destino. (padrão: `%VCPKG_DEFAULT_TRIPLET%`, veja também **vcpkg help triplet**)|

@@ -1,30 +1,25 @@
 ---
 title: 'Passo a passo: Criando um aplicativo com base em agente | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Instruções passo a passo: criando um aplicativo com base no agente
 Este tópico descreve como criar um aplicativo básico com base em agente. Neste passo a passo, você pode criar um agente que lê dados de um arquivo de texto de forma assíncrona. O aplicativo usa o algoritmo de soma de verificação Adler-32 para calcular a soma de verificação do conteúdo do arquivo.  
@@ -40,16 +35,16 @@ Este tópico descreve como criar um aplicativo básico com base em agente. Neste
   
 - [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este passo a passo demonstra como executar as seguintes tarefas:  
   
-- [Criando o aplicativo de Console](#createapplication)  
+- [Criar o Aplicativo de Console](#createapplication)  
   
 - [Criando a classe file_reader](#createagentclass)  
   
 - [Usando a classe file_reader no aplicativo](#useagentclass)  
   
-##  <a name="createapplication"></a>Criando o aplicativo de Console  
+##  <a name="createapplication"></a> Criando o aplicativo de Console  
  Esta seção mostra como criar um aplicativo de console do Visual C++ que referencia os arquivos de cabeçalho que usará o programa.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Para criar um aplicativo Visual C++ usando o Assistente do Aplicativo de Console Win32  
@@ -70,7 +65,7 @@ Este tópico descreve como criar um aplicativo básico com base em agente. Neste
   
  [[Superior](#top)]  
   
-##  <a name="createagentclass"></a>Criando a classe file_reader  
+##  <a name="createagentclass"></a> Criando a classe file_reader  
  Esta seção mostra como criar o `file_reader` classe. O tempo de execução agenda para executar o trabalho em seu próprio contexto de cada agente. Portanto, você pode criar um agente que executa o trabalho de forma síncrona, mas interage com outros componentes de forma assíncrona. O `file_reader` classe lê dados de um determinado arquivo de entrada e envia dados de arquivo para um componente de destino fornecido.  
   
 #### <a name="to-create-the-filereader-class"></a>Para criar a classe file_reader  
@@ -120,7 +115,7 @@ O `run` método abre o arquivo e lê dados dela. O `run` método usa o tratament
   
  [[Superior](#top)]  
   
-##  <a name="useagentclass"></a>Usando a classe file_reader no aplicativo  
+##  <a name="useagentclass"></a> Usando a classe file_reader no aplicativo  
  Esta seção mostra como usar o `file_reader` classe para ler o conteúdo de um arquivo de texto. Ele também mostra como criar um [concurrency::call](../../parallel/concrt/reference/call-class.md) objeto que recebe esses dados de arquivo e calcula a soma de verificação seu Adler-32.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>Para usar a classe file_reader no aplicativo  

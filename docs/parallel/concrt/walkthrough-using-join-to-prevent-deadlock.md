@@ -1,13 +1,10 @@
 ---
 title: 'Passo a passo: Usando join para evitar Deadlock | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Instruções passo a passo: usando join para Evitar Deadlock
-Este tópico usa o problema filósofos restaurantes para ilustrar como usar o [concurrency::join](../../parallel/concrt/reference/join-class.md) classe para evitar deadlock em seu aplicativo. Em um aplicativo de software, *deadlock* ocorre quando dois ou mais processos cada mantenha um recurso e mutuamente Aguarde até que outro processo liberar algum outro recurso.  
+Este tópico usa o problema filósofos restaurantes para ilustrar como usar o [concurrency::join](../../parallel/concrt/reference/join-class.md) classe para evitar deadlock em seu aplicativo. Em um aplicativo de software, o *deadlock* ocorre quando cada um dos dois ou mais processos mantiver um recurso e mutuamente aguardar até que outro processo libere algum outro recurso.  
   
  O problema de filósofos restaurantes é um exemplo específico do conjunto geral de problemas que podem ocorrer quando um conjunto de recursos é compartilhado entre vários processos simultâneos.  
   
@@ -46,7 +41,7 @@ Este tópico usa o problema filósofos restaurantes para ilustrar como usar o [c
   
 - [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
  Este passo a passo contém as seguintes seções:  
   
 - [O problema filósofos restaurantes](#problem)  
@@ -55,7 +50,7 @@ Este tópico usa o problema filósofos restaurantes para ilustrar como usar o [c
   
 - [Usando join para evitar Deadlock](#solution)  
   
-##  <a name="problem"></a>O problema filósofos restaurantes  
+##  <a name="problem"></a> O problema filósofos restaurantes  
  O problema filósofos restaurantes ilustra como o deadlock ocorre em um aplicativo. Esse problema, cinco filósofos sentar-se em uma tabela de turno. Cada filósofo alterna entre pensando e destruidores. Cada filósofo deve compartilhar um chopstick com o vizinho à esquerda e outro chopstick com o vizinho à direita. A ilustração a seguir mostra esse layout.  
   
  ![O problema de filósofos as refeições](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ Este tópico usa o problema filósofos restaurantes para ilustrar como usar o [c
   
  [[Superior](#top)]  
   
-##  <a name="deadlock"></a>Uma implementação simples  
+##  <a name="deadlock"></a> Uma implementação simples  
  O exemplo a seguir mostra uma implementação simples do problema filósofos restaurantes. O `philosopher` classe que deriva de [concurrency::agent](../../parallel/concrt/reference/agent-class.md), permite que cada um deles agir de forma independente. O exemplo usa uma matriz compartilhada de [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) objetos para fornecer a cada `philosopher` acesso exclusivo a um par de Pauzinhos japoneses do objeto.  
   
  Para relacionar a implementação para ilustração, a `philosopher` classe representa um filósofo. Um `int` variável representa cada chopstick. O `critical_section` objetos servem como proprietários, no qual os Pauzinhos japoneses rest. O `run` método simula a vida útil do filósofo. O `think` método simula o ato de pensar e `eat` método simula o ato de alimentação.  
@@ -87,7 +82,7 @@ Este tópico usa o problema filósofos restaurantes para ilustrar como usar o [c
   
  [[Superior](#top)]  
   
-##  <a name="solution"></a>Usando join para evitar Deadlock  
+##  <a name="solution"></a> Usando join para evitar Deadlock  
  Esta seção mostra como usar funções de transmissão de mensagens e buffers de mensagens para eliminar a chance de deadlock.  
   
  Para relacionar neste exemplo para o anterior, o `philosopher` classe substitui cada `critical_section` objeto usando um [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objeto e um `join` objeto. O `join` objeto serve como um arbitrador que fornece os Pauzinhos japoneses o filósofo.  

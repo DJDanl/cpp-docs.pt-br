@@ -1,29 +1,24 @@
 ---
 title: Paralelo algoritmos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-algorithms"></a>Algoritmos paralelos
 A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o trabalho simultaneamente em conjuntos de dados. Esses algoritmos são semelhantes aos fornecidos pela biblioteca C++ padrão.  
@@ -32,7 +27,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
  Os algoritmos paralelos são compostos de funcionalidade existente no tempo de execução de simultaneidade. Por exemplo, o [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo usa um [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objeto para executar as iterações do loop paralelo. O `parallel_for` partições de algoritmo funcionam de maneira ideal, dada o número de recursos de computação disponíveis.  
 
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
   
 - [O algoritmo parallel_for](#parallel_for)  
   
@@ -54,7 +49,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
     - [Escolhendo um algoritmo de classificação](#choose_sort)  
   
-##  <a name="parallel_for"></a>O algoritmo parallel_for  
+##  <a name="parallel_for"></a> O algoritmo parallel_for  
 
  O [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo executa repetidamente a mesma tarefa em paralelo. Cada uma dessas tarefas é parametrizada por um valor de iteração. Esse algoritmo é útil quando você tem um corpo do loop que não compartilhe recursos entre iterações do loop.  
   
@@ -96,7 +91,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
  [[Superior](#top)]  
   
-##  <a name="parallel_for_each"></a>O algoritmo parallel_for_each  
+##  <a name="parallel_for_each"></a> O algoritmo parallel_for_each  
 
  O [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo executa as tarefas em um contêiner iterativo, como as fornecidas pela biblioteca padrão C++, em paralelo. Ele usa a mesma lógica de particionamento que o `parallel_for` usa o algoritmo.  
   
@@ -121,7 +116,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
  [[Superior](#top)]  
   
-##  <a name="parallel_invoke"></a>O algoritmo parallel_invoke  
+##  <a name="parallel_invoke"></a> O algoritmo parallel_invoke  
 
  O [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo executa um conjunto de tarefas em paralelo. Ele não retorna até que cada tarefa seja concluída. Esse algoritmo é útil quando você tem várias tarefas independentes que você deseja executar ao mesmo tempo.  
   
@@ -144,14 +139,14 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
  [[Superior](#top)]  
   
-##  <a name="parallel_transform_reduce"></a>Os algoritmos parallel_transform e parallel_reduce  
+##  <a name="parallel_transform_reduce"></a> Os algoritmos parallel_transform e parallel_reduce  
 
  O [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) e [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmos são versões paralelas dos algoritmos de biblioteca padrão C++ [std::transform](../../standard-library/algorithm-functions.md#transform)e [std::accumulate](../../standard-library/numeric-functions.md#accumulate), respectivamente. As versões de tempo de execução de simultaneidade se comportam como as versões da biblioteca padrão C++, exceto que a ordem de operação não é determinada como elas são executadas em paralelo. Use esses algoritmos quando você trabalha com um conjunto que é grande o suficiente para obter benefícios de desempenho e escalabilidade do que está sendo processada em paralelo.  
   
 > [!IMPORTANT]
 >  O `parallel_transform` e `parallel_reduce` algoritmos dão suporte apenas acesso aleatório, bidirecionais e encaminhar iteradores porque esses iteradores geram endereços de memória estável. Além disso, esses iteradores devem produzir não`const` valores l.  
   
-###  <a name="parallel_transform"></a>O algoritmo parallel_transform  
+###  <a name="parallel_transform"></a> O algoritmo parallel_transform  
  Você pode usar o `parallel transform` algoritmo para realizar muitas operações de paralelização de dados. Por exemplo, você pode:  
   
 -   Ajustar o brilho de uma imagem e executar outras operações de processamento de imagem.  
@@ -174,7 +169,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
 > [!IMPORTANT]
 >  O iterador fornecidas para a saída de `parallel_transform` devem sobrepor completamente o iterador de entrada ou não se sobrepõem. O comportamento desse algoritmo é não especificado se os iteradores de entrada e saídos se sobrepõem parcialmente.  
   
-###  <a name="parallel_reduce"></a>O algoritmo parallel_reduce  
+###  <a name="parallel_reduce"></a> O algoritmo parallel_reduce  
  O `parallel_reduce` algoritmo é útil quando você tem uma sequência de operações que satisfazem a propriedade associativa. (Esse algoritmo não requer a propriedade comutativa.) Aqui estão algumas das operações que podem ser executadas com `parallel_reduce`:  
   
 -   Multiplique sequências de matrizes para produzir uma matriz.  
@@ -191,7 +186,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
  Em muitos casos, você pode pensar `parallel_reduce` como um atalho para o uso do `parallel_for_each` algoritmo junto com o [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe.  
   
-###  <a name="map_reduce_example"></a>Exemplo: Executar mapeamento e redução em paralelo  
+###  <a name="map_reduce_example"></a> Exemplo: Executar mapeamento e redução em paralelo  
 
  Um *mapa* operação se aplica a uma função para cada valor em uma sequência. Um *reduzir* operação combina os elementos de uma sequência em um valor. Você pode usar a biblioteca padrão C++ [std::transform](../../standard-library/algorithm-functions.md#transform) e [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funções para executar o mapa e reduzir as operações. No entanto, para muitos problemas, você pode usar o `parallel_transform` algoritmo para realizar a operação de mapa em paralelo e o `parallel_reduce` algoritmo executar a operação de redução em paralelo.  
 
@@ -204,7 +199,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
  [[Superior](#top)]  
   
-##  <a name="partitions"></a>Trabalho de particionamento  
+##  <a name="partitions"></a> Trabalho de particionamento  
  Para paralelizar a uma operação em uma fonte de dados, uma etapa essencial é *partição* a fonte em várias seções que podem ser acessadas simultaneamente por vários threads. Um particionador Especifica como um algoritmo em paralelo deve particionar intervalos entre threads. Conforme explicado anteriormente neste documento, PPL usa um mecanismo que cria uma carga de trabalho inicial e, em seguida, usa um algoritmo e roubo de saldo essas partições quando as cargas de trabalho estão faltando um intervalo de roubo de trabalho de particionamento de padrão. Por exemplo, quando uma iteração de loop é concluído em um intervalo de iterações, o tempo de execução redistribui o trabalho de outros threads para esse thread. No entanto, para alguns cenários, convém especificar um mecanismo de particionamento diferente que é mais adequado para o seu problema.  
   
  O `parallel_for`, `parallel_for_each`, e `parallel_transform` algoritmos fornecem versões sobrecarregadas que usam um parâmetro adicional, `_Partitioner`. Esse parâmetro define o tipo de particionador que divide o trabalho. Aqui estão os tipos de particionadores PPL define:  
@@ -235,11 +230,11 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
 > [!CAUTION]
 >  Tenha cuidado ao modificar o código existente que se baseia na semântica de bloqueio cooperativa usar `static_partitioner` ou `affinity_partitioner`. Esses tipos de particionador não usam balanceamento de carga ou roubo de intervalo e, portanto, é podem alterar o comportamento do seu aplicativo.  
   
- A melhor maneira de determinar se deve usar um particionador em qualquer determinado cenário é testá-las e medir o tempo de operações sejam concluídas em cargas de representante e configurações do computador. Por exemplo, particionamento estático pode fornecer aumento de velocidade significativo em um computador com vários núcleo que tem apenas alguns núcleos, mas pode resultar em lentidão em computadores que têm relativamente muitos núcleos.  
+ A melhor maneira de determinar se deve usar um particionador em qualquer determinado cenário é testá-las e medir o tempo de operações sejam concluídas em cargas de representante e configurações do computador. Por exemplo, o particionamento estático pode fornecer um aumento de velocidade significativo em um computador com vários núcleos que tenha apenas alguns núcleos, mas pode resultar em lentidão em computadores que têm relativamente muitos núcleos.  
   
  [[Superior](#top)]  
   
-##  <a name="parallel_sorting"></a>Classificando paralela  
+##  <a name="parallel_sorting"></a> Classificando paralela  
 
  PPL fornece três algoritmos de classificação: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), e [concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Esses algoritmos de classificação são úteis quando você tem um conjunto de dados que podem se beneficiar sejam classificados em paralelo. Em particular, a classificação em paralelo é útil quando você tiver um grande conjunto de dados ou quando você usa uma operação de comparação de computação dispendiosa para classificar os dados. Cada um desses algoritmos classifica elementos em vigor.  
 
@@ -287,7 +282,7 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
  A função de hash deve retornar um tipo integral ([std::is_integral::value](../../standard-library/is-integral-class.md) devem ser `true`). Esse tipo integral deve ser conversível para o tipo `size_t`.  
   
-###  <a name="choose_sort"></a>Escolhendo um algoritmo de classificação  
+###  <a name="choose_sort"></a> Escolhendo um algoritmo de classificação  
  Em muitos casos, `parallel_sort` fornece o melhor equilíbrio entre desempenho de memória e velocidade. No entanto, como você aumentar o tamanho do seu conjunto de dados, o número de processadores disponíveis ou a complexidade de sua função de comparação, `parallel_buffered_sort` ou `parallel_radixsort` podem executar melhor. A melhor maneira de determinar qual algoritmo de classificação a ser usado em qualquer determinado cenário é testá-las e medir quanto tempo demora para classificar dados típicos em configurações do computador representativo. Lembre-se as diretrizes a seguir quando você escolher uma estratégia de classificação.  
   
 -   O tamanho do seu conjunto de dados. Neste documento, uma *pequeno* conjunto de dados contém menos de 1.000 elementos, um *médio* conjunto de dados contém entre 10.000 e 100.000 elementos e um *grande* conjunto de dados contém mais de 100.000 elementos.  
@@ -302,11 +297,11 @@ A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o traba
   
  Não pode ser útil para classificar um pequeno conjunto de dados em paralelo, mesmo quando você tiver um grande número de recursos de computação disponíveis ou sua função comparar ou a função de hash realiza uma quantidade relativamente grande de trabalho. Você pode usar [std:: Sort](../../standard-library/algorithm-functions.md#sort) função classificar pequenos conjuntos de dados. (`parallel_sort` e `parallel_buffered_sort` chamar `sort` quando você especificar um tamanho de bloco que é maior do que o conjunto de dados; no entanto, `parallel_buffered_sort` precisa alocar espaço (n), o que pode levar mais tempo devido a alocação de memória ou de contenção de bloqueio.)  
   
- Se você precisa conservar a memória ou o alocador de memória está sujeito a contenção de bloqueio, use `parallel_sort` para classificar um conjunto de dados de médio porte. `parallel_sort`não requer a nenhum espaço adicional; os outros algoritmos requerem espaço (n).  
+ Se você precisa conservar a memória ou o alocador de memória está sujeito a contenção de bloqueio, use `parallel_sort` para classificar um conjunto de dados de médio porte. `parallel_sort` não requer a nenhum espaço adicional; os outros algoritmos requerem espaço (n).  
   
- Use `parallel_buffered_sort` para classificar os conjuntos de dados de médio porte e quando seu aplicativo atende o requisito de espaço adicional (n). `parallel_buffered_sort`pode ser especialmente útil quando você tiver um grande número de recursos de computação ou uma função comparar caro ou função de hash.  
+ Use `parallel_buffered_sort` para classificar os conjuntos de dados de médio porte e quando seu aplicativo atende o requisito de espaço adicional (n). `parallel_buffered_sort` pode ser especialmente útil quando você tiver um grande número de recursos de computação ou uma função comparar caro ou função de hash.  
   
- Use `parallel_radixsort` para classificar grandes conjuntos de dados e quando seu aplicativo atende o requisito de espaço adicional (n). `parallel_radixsort`pode ser especialmente útil quando a operação de comparação equivalente é mais cara ou quando as duas operações são caras.  
+ Use `parallel_radixsort` para classificar grandes conjuntos de dados e quando seu aplicativo atende o requisito de espaço adicional (n). `parallel_radixsort` pode ser especialmente útil quando a operação de comparação equivalente é mais cara ou quando as duas operações são caras.  
   
 > [!CAUTION]
 >  Implementar uma função de hash bom requer que você sabe o intervalo de conjunto de dados e como cada elemento do conjunto de dados é transformado em um valor sem sinal correspondente. Como a operação de hash funciona em valores sem sinal, considere uma estratégia de classificação diferente se valores de hash não assinados não podem ser gerados.  

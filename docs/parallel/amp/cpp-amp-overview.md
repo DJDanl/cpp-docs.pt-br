@@ -1,13 +1,10 @@
 ---
-title: "Visão geral do C++ AMP | Microsoft Docs"
-ms.custom: 
+title: Visão geral do C++ AMP | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f8de31ab9009a84c04e594837a0c4fbf30758fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) acelera a execução de código C++, tirando proveito do hardware paralelo de dados, como uma unidade de processamento de gráficos (GPU) em uma placa gráfica distinta. Usando C++ AMP, você pode codificar os algoritmos de dados multidimensionais para que a execução pode ser acelerada por meio de paralelismo no hardware heterogêneo. O modelo de programação do C++ AMP inclui matrizes multidimensionais, indexação, transferência de memória, agrupamento lado a lado e uma biblioteca de funções matemáticas. Você pode usar extensões de linguagem do C++ AMP para controlar como os dados são movidos da CPU para a GPU e de volta, de forma que você pode melhorar o desempenho.  
   
 ## <a name="system-requirements"></a>Requisitos de sistema  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], ou [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] ou [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   11.0 de nível de recurso do DirectX 11 ou hardware mais recente  
   

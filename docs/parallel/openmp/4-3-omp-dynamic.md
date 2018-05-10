@@ -1,27 +1,22 @@
 ---
 title: 4.3 OMP_DYNAMIC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a15edefb-1f85-4f06-a427-beb3cfc4434f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 103067b28990854fb6522c19f4349a9607d65bab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f376fe639d9bca58b6e2bd55fd081b88921a7342
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 O **OMP_DYNAMIC** variável de ambiente ativa ou desativa o ajuste dinâmico do número de threads disponíveis para execução de regiões paralelas, a menos que o ajuste dinâmico é habilitado ou desabilitado chamando o explicitamente**omp_set_dynamic** rotina de biblioteca. O valor deve ser **TRUE** ou **FALSE**.  

@@ -1,29 +1,24 @@
 ---
-title: "Comparando o tempo de execução de simultaneidade com outros modelos de simultaneidade | Microsoft Docs"
-ms.custom: 
+title: Comparando o tempo de execução de simultaneidade com outros modelos de simultaneidade | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
 Este documento descreve as diferenças entre os recursos e modelos de programação de tempo de execução de simultaneidade e outras tecnologias. Compreendendo como as vantagens do tempo de execução de simultaneidade em comparação com os benefícios de outros modelos de programação, você pode selecionar a tecnologia que melhor satisfaz os requisitos de seus aplicativos.  
@@ -32,7 +27,7 @@ Este documento descreve as diferenças entre os recursos e modelos de programaç
   
  Você pode usar os recursos e benefícios de produtividade de tempo de execução de simultaneidade para complementar o aplicativo existente que usa outro modelo de simultaneidade. O tempo de execução de simultaneidade não garante o balanceamento de carga quando vários agendadores de tarefa disputam os mesmos recursos de computação. No entanto, quando as cargas de trabalho não se sobrepõem, esse efeito é mínimo.  
   
-##  <a name="top"></a>Seções  
+##  <a name="top"></a> Seções  
   
 -   [Comparando o agendamento preventivo para agendamento cooperativo](#models)  
   
@@ -40,11 +35,11 @@ Este documento descreve as diferenças entre os recursos e modelos de programaç
   
 -   [Comparando o tempo de execução de simultaneidade para OpenMP](#openmp)  
   
-##  <a name="models"></a>Comparando o agendamento preventivo para agendamento cooperativo  
+##  <a name="models"></a> Comparando o agendamento preventivo para agendamento cooperativo  
  O modelo preemptivo e cooperativo agendamento modelos são duas maneiras de habilitar várias tarefas compartilhem recursos de computação, por exemplo, processadores ou segmentos de hardware.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Agendamento preventivo e cooperativo  
- *Agendamento preventivo* é um mecanismo baseado em prioridade, round-robin que oferece cada tarefa de acesso exclusivo a um recurso de computação para um determinado período de tempo e, em seguida, alterna para outra tarefa. Agendamento preventivo é comum em sistemas operacionais de multitarefa como o Windows*. Agendando cooperativo* é um mecanismo que fornece cada tarefa de acesso exclusivo a um recurso de computação até que a tarefa seja concluída ou até que a tarefa gera seu acesso ao recurso. O tempo de execução de simultaneidade usa agendamento cooperativo junto com o Agendador preemptivo do sistema operacional para obter o máximo uso dos recursos de processamento.  
+ *Agendamento preventivo* é um mecanismo baseado em prioridade, round-robin que oferece cada tarefa de acesso exclusivo a um recurso de computação para um determinado período de tempo e, em seguida, alterna para outra tarefa. Agendamento preventivo é comum em sistemas operacionais de multitarefa como o Windows *. Agendando cooperativo* é um mecanismo que fornece cada tarefa de acesso exclusivo a um recurso de computação até que a tarefa seja concluída ou até que a tarefa gera seu acesso ao recurso. O tempo de execução de simultaneidade usa agendamento cooperativo junto com o Agendador preemptivo do sistema operacional para obter o máximo uso dos recursos de processamento.  
   
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Diferenças entre os agendadores preemptivo e cooperativos  
  Buscam de agendadores preventivos fornecer vários threads igual acesso a recursos para garantir que cada thread faz o progresso de computação. Em computadores que têm muitos recursos de computação, garantindo o acesso razoável se torna menos problemático; No entanto, garantir o uso eficiente dos recursos se torna mais problemático.  
@@ -59,7 +54,7 @@ Este documento descreve as diferenças entre os recursos e modelos de programaç
   
  [[Superior](#top)]  
   
-##  <a name="winapi"></a>Comparando o tempo de execução de simultaneidade para a API do Windows  
+##  <a name="winapi"></a> Comparando o tempo de execução de simultaneidade para a API do Windows  
  Interface de programação de aplicativo Microsoft Windows, que é normalmente conhecido como a API do Windows (e anteriormente conhecido como Win32), fornece um modelo de programação que permite a simultaneidade em seus aplicativos. O tempo de execução de simultaneidade é baseado na API do Windows para fornecer modelos adicionais de programação que não estão disponíveis no sistema operacional subjacente.  
   
  O tempo de execução de simultaneidade desenvolve o modelo de thread de API do Windows para executar o trabalho paralelo. Ele também usa o gerenciamento de memória de API do Windows e os mecanismos de armazenamento local de thread. No Windows 7 e Windows Server 2008 R2, ele usa o suporte da API do Windows para computadores que têm mais de 64 threads de hardware e usuário agendáveis threads. O tempo de execução de simultaneidade estende o modelo de API do Windows, fornecendo um agendador de tarefas cooperativo e um algoritmo de roubo de trabalho para maximizar o uso de recursos de computação e permitindo que várias instâncias simultâneas do Agendador.  
@@ -85,7 +80,7 @@ Este documento descreve as diferenças entre os recursos e modelos de programaç
   
  [[Superior](#top)]  
   
-##  <a name="openmp"></a>Comparando o tempo de execução de simultaneidade para OpenMP  
+##  <a name="openmp"></a> Comparando o tempo de execução de simultaneidade para OpenMP  
  O tempo de execução de simultaneidade permite uma variedade de modelos de programação. Esses modelos podem se sobrepor ou complementar os modelos de outras bibliotecas. Esta seção compara o tempo de execução de simultaneidade para [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).  
   
  O modelo de programação OpenMP é definido por um padrão aberto e tem associações bem definidas para as linguagens de programação Fortran e C/C++. Versões de OpenMP 2.0 e 2.5 são apropriadas para os algoritmos paralelos que estão iterativos; ou seja, eles executam a iteração paralela em uma matriz de dados. OpenMP é mais eficiente quando o grau de paralelismo é predeterminado e corresponde os recursos disponíveis no sistema. O modelo de OpenMP é um especialmente adequado para a computação de alto desempenho, em que grandes problemas computacionais são distribuídos entre os recursos de processamento de um único computador. Nesse cenário, o ambiente de hardware é conhecido e o desenvolvedor pode esperar tenham acesso exclusivo aos recursos de computação quando o algoritmo é executado.  

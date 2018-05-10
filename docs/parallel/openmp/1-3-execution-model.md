@@ -1,27 +1,22 @@
 ---
-title: "1.3 modelo de execução | Microsoft Docs"
-ms.custom: 
+title: 1.3 modelo de execução | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0acdd7a5d9f2dcb58850254281b5c18fd0d1123c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="13-execution-model"></a>1.3 Modelo de execução
 OpenMP usa o modelo de associação de bifurcação de execução paralela. Embora esse modelo de associação de bifurcação pode ser útil para solucionar vários problemas, um pouco sob medida para aplicativos grandes baseada em conjunto. OpenMP destina-se aos programas de suporte que serão executados corretamente ambos como programas de paralelo (vários threads de execução e uma biblioteca de suporte OpenMP completa) e programas sequenciais (diretivas ignoradas e uma biblioteca de stubs OpenMP simple). No entanto, é possível e permissão para desenvolver um programa que não funcionam corretamente quando executadas sequencialmente. Além disso, diferentes graus de paralelismo podem causar resultados numéricos diferentes devido a alterações na associação de operações numéricas. Por exemplo, uma redução de adição serial pode ter um padrão diferente das associações de adição de uma redução em paralela. Essas associações diferentes podem alterar os resultados da adição de ponto flutuante.  

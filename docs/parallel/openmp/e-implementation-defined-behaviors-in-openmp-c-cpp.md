@@ -1,27 +1,22 @@
 ---
-title: "E. OpenMP C/C++ de comportamentos definidos na implementação | Microsoft Docs"
-ms.custom: 
+title: E. OpenMP C/C++ de comportamentos definidos na implementação | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598964ec6a12ac4c357efc04df78bfbe3af798a5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Comportamentos definidos na implementação OpenMP C/C++
 Este apêndice resume os comportamentos que são descritos como "definido pela implementação" nessa API.  Cada comportamento é referência cruzado a sua descrição na especificação do principal.  
@@ -65,14 +60,14 @@ Este apêndice resume os comportamentos que são descritos como "definido pela i
   
      No Visual C++, o número de threads é determinado pelo sistema operacional.  
   
--   `OMP_SCHEDULE`variável de ambiente: O valor padrão para essa variável de ambiente é definido por implementação (consulte [seção 4.1](../../parallel/openmp/4-1-omp-schedule.md) na página 48).  
+-   `OMP_SCHEDULE` variável de ambiente: O valor padrão para essa variável de ambiente é definido por implementação (consulte [seção 4.1](../../parallel/openmp/4-1-omp-schedule.md) na página 48).  
   
      No Visual C++, o tipo de agenda é `static` com nenhum tamanho do bloco.  
   
--   `OMP_NUM_THREADS`variável de ambiente: se nenhum valor for especificado para o `OMP_NUM_THREADS` variável de ambiente, ou se o valor especificado não é um inteiro positivo, ou se o valor for maior que o número máximo de threads que o sistema oferece suporte, é o número de threads a ser usado definido por implementação (consulte [seção 4.2](../../parallel/openmp/4-2-omp-num-threads.md) na página 48).  
+-   `OMP_NUM_THREADS` variável de ambiente: se nenhum valor for especificado para o `OMP_NUM_THREADS` variável de ambiente, ou se o valor especificado não é um inteiro positivo, ou se o valor for maior que o número máximo de threads que o sistema oferece suporte, é o número de threads a ser usado definido por implementação (consulte [seção 4.2](../../parallel/openmp/4-2-omp-num-threads.md) na página 48).  
   
      No Visual C++, se o valor especificado for zero ou menos, o número de threads é igual ao número de processadores.  Se o valor for maior que 64, o número de threads é 64.  
   
--   `OMP_DYNAMIC`variável de ambiente: O valor padrão é definido por implementação (consulte [seção 4.3](../../parallel/openmp/4-3-omp-dynamic.md) na página 49).  
+-   `OMP_DYNAMIC` variável de ambiente: O valor padrão é definido por implementação (consulte [seção 4.3](../../parallel/openmp/4-3-omp-dynamic.md) na página 49).  
   
      No Visual C++, o padrão é `FALSE`.

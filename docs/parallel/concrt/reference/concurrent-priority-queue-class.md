@@ -1,12 +1,9 @@
 ---
 title: Classe concurrent_priority_queue | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 O `concurrent_priority_queue` classe é um contêiner que permite que vários threads para itens simultaneamente por push e pop. Itens são disparados em ordem de prioridade, onde a prioridade é determinada por um functor fornecido como um argumento de modelo.  
@@ -248,7 +243,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho retornado é garantido para incluir todos os elementos adicionados por chamadas para a função `push`. No entanto, ele pode não refletir resultados de operações simultâneas pendentes.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Swap 
 
  Alterna o conteúdo de duas filas simultâneas de prioridade. Este método não é seguro de simultaneidade.  
   

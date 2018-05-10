@@ -1,13 +1,10 @@
 ---
-title: "Pontuação e caracteres especiais | Microsoft Docs"
-ms.custom: 
+title: Pontuação e caracteres especiais | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - '# preprocessor operator'
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3516f6968773f8aa866a4f2929c2c184e6ddb95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e2605326b19b9708ab4328080f3397b6b92a828
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="punctuation-and-special-characters"></a>Pontuação e caracteres especiais
 A pontuação e caracteres especiais no conjunto de caracteres do C têm vários usos, desde a organização do texto do programa até a definição das tarefas que o compilador ou o programa compilado executa. Eles não especificam uma operação a ser executada. Alguns símbolos de pontuação também são operadores (consulte [Operadores](../c-language/c-operators.md)). O compilador determina o uso do contexto.  

@@ -1,13 +1,10 @@
 ---
 title: Cadeias de caracteres de idioma | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92ad129a5703f509cfd9543497cceffae3a6e7b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-strings"></a>Cadeias de caracteres de idioma
 As funções `setlocale` e `_create_locale` podem usar os idiomas dão suporte pela API NLS do Windows em sistemas operacionais que não usam a página de código Unicode. Para obter uma lista dos idiomas que tem suporte pela versão do sistema operacional, consulte [Referência da API National Language Support (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). A cadeia de caracteres de idioma pode ser qualquer um dos valores nas colunas **Idioma** e **Abreviação do nome do idioma** da lista de idiomas com suporte. Para obter informações adicionais de suporte de idioma por versão do sistema operacional, veja [Apêndice A: Comportamento de produto](http://msdn.microsoft.com/goglobal/bb896001.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows.   
@@ -34,9 +29,9 @@ A implementação da biblioteca em tempo de execução C também dá suporte a e
   
 |Cadeia de caracteres de idioma|Nome da Localidade Equivalente|  
 |---------------------|----------------------------|  
-|american|pt-BR|  
-|american english|pt-BR|  
-|american-english|pt-BR|  
+|american|en-US|  
+|american english|en-US|  
+|american-english|en-US|  
 |australian|en-AU|  
 |belgian|nl-BE|  
 |canadian|en-CA|  
@@ -48,7 +43,7 @@ A implementação da biblioteca em tempo de execução C também dá suporte a e
 |chinese-singapore|zh-SG|  
 |chinese-traditional|zh-TW|  
 |dutch-belgian|nl-BE|  
-|english-american|pt-BR|  
+|english-american|en-US|  
 |english-aus|en-AU|  
 |english-belize|en-BZ|  
 |english-can|en-CA|  
@@ -59,8 +54,8 @@ A implementação da biblioteca em tempo de execução C também dá suporte a e
 |english-south africa|en-ZA|  
 |english-trinidad y tobago|en-TT|  
 |english-uk|en-GB|  
-|english-us|pt-BR|  
-|english-usa|pt-BR|  
+|english-us|en-US|  
+|english-usa|en-US|  
 |french-belgian|fr-BE|  
 |french-canadian|fr-CA|  
 |french-luxembourg|fr-LU|  
@@ -97,8 +92,8 @@ A implementação da biblioteca em tempo de execução C também dá suporte a e
 |swedish-finland|sv-FI|  
 |swiss|de-CH|  
 |uk|en-GB|  
-|us|pt-BR|  
-|usa|pt-BR|  
+|us|en-US|  
+|usa|en-US|  
   
 ## <a name="see-also"></a>Consulte também  
  [Nomes de localidade, idiomas e cadeias de caracteres de país/região](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   

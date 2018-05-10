@@ -1,12 +1,9 @@
 ---
 title: 'Namespace Concurrency:: Direct3D | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Namespace Concurrency::direct3d
 O `direct3d` namespace fornece funções que oferecem suporte à interoperabilidade D3D. Ele permite o uso contínuo do D3D recursos de computação no código de AMP, bem como permitir o uso de recursos criados em AMP D3D código, sem criar cópias redundantes de intermediárias. Pode acelerar as seções de computação intensiva de seus aplicativos DirectX usando C++ AMP e usar a API do D3D dados produzidos de cálculos AMP incrementalmente.  
@@ -74,7 +69,7 @@ namespace direct3d;
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Sobrecarregado. Executa uma operação aritmética multiplicar ou adicionar em três argumentos: x * y + z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crie uma matriz de um ponteiro de interface de buffer D3D.|  
 |[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Gera um valor aleatório usando o algoritmo de ruído Perlin|  
-|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x de graus em radianos|  
+|[radianos](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x de graus em radianos|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcula um recíproco rápido, aproximado do argumento|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte a ordem dos bits em x|  
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Coloca x dentro do intervalo de 0 a 1|  

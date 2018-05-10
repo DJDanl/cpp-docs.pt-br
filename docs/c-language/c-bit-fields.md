@@ -1,30 +1,25 @@
 ---
 title: Campos de bit C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Campos de bit C
 Além dos declaradores para membros de uma estrutura ou união, um declarador de estrutura também pode ser um número especificado de bits, chamado de “campo de bits”. O comprimento é definido fora do declarador do nome de campo por dois pontos. Um campo de bits é interpretado como um tipo integral.  
@@ -33,7 +28,7 @@ Além dos declaradores para membros de uma estrutura ou união, um declarador de
  *struct-declarator*:  
  *declarator*  
   
- *type-specifier declarator* opt**:** *constant-expression*  
+ *type-specifier declarator* opt **:** *constant-expression*  
   
  A *constant-expression* especifica a largura do campo em bits. O *type-specifier* do `declarator` deve ser `unsigned int`, **signed int** ou `int`, e a *constant-expression* deve ser um valor inteiro não negativo. Se o valor for zero, a declaração não tem nenhum `declarator`. As matrizes de campos de bits, os ponteiros para campos de bits, e as funções que retornam campos de bits não são permitidas. O `declarator` opcional nomeia o campo de bits. Os campos de bits só podem ser declarados como parte de uma estrutura. O operador address-of (**&**) não pode ser aplicado aos componentes do campo de bits.  
   

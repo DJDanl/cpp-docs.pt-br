@@ -1,12 +1,9 @@
 ---
 title: Classe array_view | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>Classe array_view
 Representa uma exibição de N-dimensional sobre os dados mantidos em outro contêiner.  
@@ -92,7 +87,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_extent](#get_extent)|Retorna o objeto de extensão do objeto array_view.|  
 |[get_ref](#get_ref)|Retorna uma referência ao elemento indexada.|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|Retorna o [accelerator_view](accelerator-view-class.md) onde a fonte de dados do `array_view` está localizado.|  
-|[refresh](#refresh)|Notifica o `array_view` objeto sua memória associada foi modificada fora do `array_view` interface. Uma chamada para este método processa todas as informações armazenadas em cache obsoleto.|  
+|[Atualização](#refresh)|Notifica o `array_view` objeto sua memória associada foi modificada fora do `array_view` interface. Uma chamada para este método processa todas as informações armazenadas em cache obsoleto.|  
 |[reinterpret_as](#reinterpret_as)|Retorna uma matriz unidimensional que contém todos os elementos de `array_view` objeto.|  
 |[seção](#section)|Retorna a subseção do `array_view` objeto que é a origem especificada e, opcionalmente, que tem a extensão especificada.|  
 |[synchronize](#synchronize)|Sincroniza todas as modificações feitas para o `array_view` objeto para seus dados de origem.|  
@@ -410,7 +405,7 @@ void copy_to(
  `_Dest`  
  O objeto a ser copiado para.  
   
-##  <a name="data"></a> data 
+##  <a name="data"></a> Dados 
 
  Retorna um ponteiro para os dados brutos do `array_view`.  
   
@@ -481,7 +476,7 @@ accelerator_view get_source_accelerator_view() const;
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="operator_call"></a> operator() 
+##  <a name="operator_call"></a> Operator) 
 
  Retorna o valor do elemento que é especificado pelo parâmetro ou parâmetros.  
   

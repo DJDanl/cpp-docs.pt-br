@@ -1,12 +1,9 @@
 ---
 title: Estrutura IThreadProxy | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IThreadProxy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbf59302a73374f08f1c226c1e7e56202654dcfb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ithreadproxy-structure"></a>Estrutura IThreadProxy
 Uma abstração para um thread de execução. Dependendo do `SchedulerType` chave da diretiva do Agendador que você criar o Gerenciador de recursos será conceder a você um proxy de thread que é apoiado por um thread de Win32 regular ou um thread (UMS) agendáveis do modo de usuário. Threads UMS são com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.  
@@ -124,7 +119,7 @@ virtual void SwitchTo(
   
  `SwitchTo` deve ser chamado no `IThreadProxy` interface que representa o thread atualmente em execução ou os resultados serão indefinidos. A função gera `invalid_argument` se o parâmetro `pContext` é definido como `NULL`.  
   
-##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
+##  <a name="yieldtosystem"></a>  Método: Yieldtosystem  
  Faz com que o thread de chamada conceda a execução para outro thread que está pronto para ser executado no processador atual. O sistema operacional seleciona o próximo segmento a ser executado.  
   
 ```

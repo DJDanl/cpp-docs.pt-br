@@ -1,27 +1,22 @@
 ---
 title: 2.6.3 diretiva barrier | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4485a3d7-533f-4fec-8128-a131bec7fa16
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c64787d9c6cc2dd0809f75f8f9db9819174d0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68df92207feb45a77055098cdb1227a68b04bcab
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="263-barrier-directive"></a>2.6.3 Diretiva barrier
 O **barreira** diretiva sincroniza todos os threads em uma equipe. Quando encontrada, cada thread na equipe aguarda até que todos os outros tem atingido esse ponto. A sintaxe do **barreira** diretiva é da seguinte maneira:  

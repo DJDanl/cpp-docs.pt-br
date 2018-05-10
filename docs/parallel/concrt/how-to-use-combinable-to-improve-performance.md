@@ -1,30 +1,25 @@
 ---
-title: "Como: usar Combinável para melhorar o desempenho | Microsoft Docs"
-ms.custom: 
+title: 'Como: usar Combinável para melhorar o desempenho | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - combinable class, example
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea28bd31812449e34bb481d316070f8f21aaede
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3185ee9f7546e6927197d2e3452ea4cf86f9ab5c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Como usar combinável para melhorar o desempenho
 Este exemplo mostra como usar o [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe para calcular a soma dos números em uma [std:: array](../../standard-library/array-class-stl.md) objeto são primos. O `combinable` classe melhora o desempenho, eliminando o estado compartilhado.  

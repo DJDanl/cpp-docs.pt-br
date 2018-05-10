@@ -1,27 +1,22 @@
 ---
 title: 'Guia de portabilidade: Scribble do MFC | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fe0ae0580be4ab062e3ff7ee0cedfb42e201272d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: rabisco do MFC
 Este tópico é o primeiro de vários tópicos que apresentam o procedimento de atualização para projetos do Visual C++ que foram criados em versões anteriores do Visual Studio para Visual Studio 2017. Estes tópicos apresentam o processo de atualização por exemplos, começando com um projeto muito simples e passando para outros um pouco mais complexos. Neste tópico, trabalhamos pelo processo de atualização para um projeto específico, o Scribble do MFC. Ele é adequado como uma introdução básica sobre o processo de atualização para projetos do C++.  

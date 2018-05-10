@@ -1,12 +1,9 @@
 ---
 title: Classe structured_task_group | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - structured_task_group
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cca5d20b89df97e27529d656e9a6553fd8a1820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="structuredtaskgroup-class"></a>Classe structured_task_group
 O `structured_task_group` classe representa uma coleção altamente estruturada de trabalho paralelos. É possível enfileirar tarefas individuais em paralelo para uma `structured_task_group` usando `task_handle` objetos e aguarde até que elas sejam concluídas ou cancele o grupo de tarefas antes de eles terminarem de executar, que anulará as tarefas que não começaram a execução.  
@@ -191,7 +186,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Comentários  
  O construtor que usa um token de cancelamento cria um `structured_task_group` que será cancelada quando a fonte associada ao token é cancelada. Também fornecer um token de cancelamento explícita isola a esse grupo de tarefas estruturadas da participação em um cancelamento implícita de um grupo pai com um token diferente ou não.  
   
-##  <a name="dtor"></a> ~structured_task_group 
+##  <a name="dtor"></a> ~ structured_task_group 
 
  Destrói um objeto `structured_task_group`. Você deve chamar o `wait` ou `run_and_wait` método no objeto antes de executar o destruidor, a menos que o destruidor está em execução como resultado de pilha desenrolamento devido a uma exceção.  
   

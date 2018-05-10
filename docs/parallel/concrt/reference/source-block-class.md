@@ -1,12 +1,9 @@
 ---
 title: Classe source_block | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>Classe source_block
 O `source_block` classe é uma classe base abstrata para blocos de código-fonte. A classe fornece funcionalidade de gerenciamento de link básicas como comuns bem como verificações de erro.  

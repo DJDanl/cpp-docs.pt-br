@@ -1,27 +1,22 @@
 ---
-title: "Cláusulas OpenMP | Microsoft Docs"
-ms.custom: 
+title: Cláusulas OpenMP | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a63dacb8da2b7c4b1c7264cfccc6d2839db1b8b1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7abe5a637a2a32c696f19f5ab9988f1be361f647
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-clauses"></a>Cláusulas OpenMP
 Fornece links para cláusulas usadas na API do OpenMP.  
@@ -38,7 +33,7 @@ Fornece links para cláusulas usadas na API do OpenMP.
 |[lastprivate](../../../parallel/openmp/reference/lastprivate.md)|Especifica que a versão do contexto delimitador da variável é definida igual à versão particular de qualquer thread que executa a iteração final (construção de loop) ou a última seção (#pragma seções).|  
 |[nowait](../../../parallel/openmp/reference/nowait.md)|Substitui a barreira implícita em uma diretiva.|  
 |[num_threads](../../../parallel/openmp/reference/num-threads.md)|Define o número de segmentos em uma equipe de thread.|  
-|[ordered](../../../parallel/openmp/reference/ordered-openmp-clauses.md)|Necessário em um paralelo [para](../../../parallel/openmp/reference/for-openmp.md) instrução se um [ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md) diretiva é usada no loop.|  
+|[ordenados](../../../parallel/openmp/reference/ordered-openmp-clauses.md)|Necessário em um paralelo [para](../../../parallel/openmp/reference/for-openmp.md) instrução se um [ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md) diretiva é usada no loop.|  
 |[private](../../../parallel/openmp/reference/private-openmp.md)|Especifica que cada thread deve ter sua própria instância de uma variável.|  
 |[reduction](../../../parallel/openmp/reference/reduction.md)|Especifica que uma ou mais variáveis que são particulares a cada thread são o assunto de uma operação de redução no final da região de dados paralelo.|  
 |[schedule](../../../parallel/openmp/reference/schedule.md)|Aplica-se para o [para](../../../parallel/openmp/reference/for-openmp.md) diretiva.|  

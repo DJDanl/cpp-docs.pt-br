@@ -1,13 +1,10 @@
 ---
 title: Escrevendo um programa Win32 multithread | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Escrevendo um programa Win32 multithread
 Quando você escreve um programa com vários threads, é preciso coordenar seu comportamento e [usar os recursos do programa](#_core_sharing_common_resources_between_threads). Você também deve certificar-se que cada thread receba [sua própria pilha](#_core_thread_stacks).  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>Compartilhando recursos comuns entre Threads  
+##  <a name="_core_sharing_common_resources_between_threads"></a> Compartilhando recursos comuns entre Threads  
   
 > [!NOTE]
 >  Para obter uma discussão semelhante do ponto de vista do MFC, consulte [Multithreading: dicas de programação](../parallel/multithreading-programming-tips.md) e [Multithreading: quando usar as Classes de sincronização](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>Pilhas de thread  
+##  <a name="_core_thread_stacks"></a> Pilhas de thread  
  Todo espaço de pilha padrão do aplicativo está alocada para o primeiro thread de execução, o que é conhecido como o thread 1. Como resultado, você deve especificar a quantidade de memória a ser alocada para uma pilha separada para cada thread adicional seu programa necessita. O sistema operacional aloca espaço de pilha adicionais para o thread, se necessário, mas você deve especificar um valor padrão.  
   
  O primeiro argumento do `_beginthread` chamada é um ponteiro para o **BounceProc** função, que executa os threads. O segundo argumento especifica o tamanho da pilha padrão para o thread. O último argumento é um número de ID que é passado para **BounceProc**. **BounceProc** usa o número de identificação para propagar o gerador de número aleatório e para selecionar o atributo de cor do thread e exibir caracteres.  

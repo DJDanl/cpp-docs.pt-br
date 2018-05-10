@@ -1,13 +1,10 @@
 ---
-title: "Corpo da Função | Microsoft Docs"
-ms.custom: 
+title: Corpo da Função | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c85ecf0752ff34bf5b61e42309360f2bc4d448
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: d6a566c1120f0a89a985895393fae5a79690bfa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-body"></a>Corpo da função
 Um “corpo da função” é uma instrução composta que contém as instruções que especificam o que a função faz.  
@@ -38,7 +33,7 @@ Um “corpo da função” é uma instrução composta que contém as instruçõ
  /\* *attribute-seq* é específico da Microsoft */  
   
  *compound-statement*: /\* O corpo da função \*/  
- **{**  *declaration-list* opt*statement-list* opt**}**  
+ **{**  *declaration-list* opt*statement-list* opt **}**  
   
  Variáveis declaradas em um corpo da função, “variáveis locais”, têm a classe de armazenamento **auto**, a menos que especificado o contrário. Quando a função for chamada, o armazenamento é criado para as variáveis locais e as inicializações de local são executadas. O controle de execução passa para a primeira instrução em *instrução composta* e continua até que uma instrução `return` seja executada ou o final do corpo da função seja encontrado. O controle então retorna para o ponto no qual a função foi chamada.  
   
