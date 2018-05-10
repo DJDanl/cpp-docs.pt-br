@@ -1,13 +1,10 @@
 ---
-title: "propriedade (extensões de componentes C++) | Microsoft Docs"
-ms.custom: 
+title: propriedade (extensões de componentes C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - property_cpp
 - property
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9d310043a2693eaef254256385becc0bcc7d501
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b763131fe91e2df2385f2c06bcba8bc759d695a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="property--c-component-extensions"></a>propriedade (Extensões de Componentes C++)
 Declara um *propriedade*, que é uma função de membro que se comporta e é acessada como um membro de dados ou um elemento de matriz.  
@@ -121,13 +116,13 @@ modifier property type default[index];
   
  **Parâmetros**  
   
- *modificador*  
+ *Modificador*  
  Um modificador que pode ser usado em uma declaração de propriedade ou um método acessador get/set. Os valores possíveis são `static` e `virtual`.  
   
  *type*  
  O tipo do valor que é representado pela propriedade.  
   
- *Property_Name*  
+ *property_name*  
  Parâmetros para o método raise; deve corresponder à assinatura do delegado.  
   
  *index_list*  
@@ -169,7 +164,7 @@ modifier property type default[index];
   
  Acessibilidade diferente é permitida para os métodos acessadores em um bloco de propriedade.  Ou seja, o método de conjunto pode ser público e o método get pode ser particular.  No entanto, é um erro para um método de acessador para ter uma acessibilidade menos restritiva do que está na declaração da propriedade.  
   
- `property`é uma palavra-chave contextual.  Para obter mais informações, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `property` é uma palavra-chave contextual.  Para obter mais informações, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
   
 ### <a name="requirements"></a>Requisitos  

@@ -1,12 +1,10 @@
 ---
-title: "Passo a passo: Criar um aplicativo de área de trabalho do Windows tradicional (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Passo a passo: Criar um aplicativo de área de trabalho do Windows tradicional (C++) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo de área de trabalho do Windows tradicional (C++)
 
@@ -74,11 +71,11 @@ Siga estas etapas para criar seu primeiro projeto de área de trabalho do Window
 
 O projeto é criado e seu arquivo de origem é aberto no editor. Para continuar, vá para [criar o código](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a>Para criar um projeto de área de trabalho do Windows no Visual Studio 2017 RTM
+### <a id="create-in-vs2017-rtm"></a> Para criar um projeto de área de trabalho do Windows no Visual Studio 2017 RTM
 
 1. No menu **Arquivo**, escolha **Novo** e, em seguida, clique em **Projeto**.
 
-1. No **novo projeto** caixa de diálogo, no painel esquerdo, expanda **instalado**, **modelos**, **Visual C++**e, em seguida, selecione **Win32**. No painel central, selecione **projeto Win32**.
+1. No **novo projeto** caixa de diálogo, no painel esquerdo, expanda **instalado**, **modelos**, **Visual C++** e, em seguida, selecione **Win32**. No painel central, selecione **projeto Win32**.
 
    No **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Escolha **OK**.
 
@@ -108,7 +105,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
 
 ### <a name="to-start-a-windows-desktop-application"></a>Para iniciar um aplicativo de área de trabalho do Windows
 
-1. Assim como cada C aplicativo e o aplicativo C++ devem ter uma `main` funciona como ponto de partida, cada Windows aplicativo de área de trabalho deve ter um `WinMain` função. `WinMain`tem a seguinte sintaxe.
+1. Assim como cada C aplicativo e o aplicativo C++ devem ter uma `main` funciona como ponto de partida, cada Windows aplicativo de área de trabalho deve ter um `WinMain` função. `WinMain` tem a seguinte sintaxe.
 
    ```cpp
    int CALLBACK WinMain(
@@ -131,7 +128,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    #include <tchar.h>
    ```
 
-1. Além de `WinMain` função, todos os aplicativos de área de trabalho do Windows também devem ter uma função de procedimento de janela. Essa função é geralmente nomeada `WndProc` , mas você poderá nomeá-lo como desejar. `WndProc`tem a seguinte sintaxe.
+1. Além de `WinMain` função, todos os aplicativos de área de trabalho do Windows também devem ter uma função de procedimento de janela. Essa função é geralmente nomeada `WndProc` , mas você poderá nomeá-lo como desejar. `WndProc` tem a seguinte sintaxe.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -369,7 +366,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    }
    ```
 
-   `HDC`Esse código é um identificador para um contexto de dispositivo, que é uma estrutura de dados que o Windows usa para habilitar seu aplicativo para se comunicar com o subsistema de gráficos. O `BeginPaint` e `EndPaint` funções Certifique-se de que seu aplicativo se comporta como um bom cidadão e não usa o contexto de dispositivo por mais tempo do que o necessário. Isso ajuda a garantir que o subsistema de elementos gráficos está disponível para uso por outros aplicativos.
+   `HDC` Esse código é um identificador para um contexto de dispositivo, que é uma estrutura de dados que o Windows usa para habilitar seu aplicativo para se comunicar com o subsistema de gráficos. O `BeginPaint` e `EndPaint` funções Certifique-se de que seu aplicativo se comporta como um bom cidadão e não usa o contexto de dispositivo por mais tempo do que o necessário. Isso ajuda a garantir que o subsistema de elementos gráficos está disponível para uso por outros aplicativos.
 
 1. Um aplicativo normalmente manipula muitas outras mensagens, por exemplo, [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) quando uma janela é criada, e [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) quando a janela for fechada. O código a seguir mostra um arquivo mas concluir `WndProc` função.
 

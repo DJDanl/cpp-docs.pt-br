@@ -1,31 +1,26 @@
 ---
-title: "Passo a passo: Criando e usando uma biblioteca estática (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Passo a passo: Criando e usando uma biblioteca estática (C++) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Instruções passo a passo: criando e usando uma biblioteca estática (C++)
 Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) para uso com aplicativos do C++. Usando uma biblioteca estática é uma ótima maneira de reutilizar o código. Em vez de implementar novamente as rotinas mesmo em cada aplicativo que exige a funcionalidade, você grava uma vez em uma biblioteca estática e, em seguida, referenciá-lo dos aplicativos. Código vinculado a partir de uma biblioteca estática se torna parte do seu aplicativo, você não precisa instalar outro arquivo para usar o código.  
@@ -45,13 +40,13 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
 ## <a name="prerequisites"></a>Pré-requisitos  
  Noções básicas sobre os conceitos básicos da linguagem C++.  
   
-##  <a name="BKMK_CreateLibProject"></a>Criando um projeto de biblioteca estática  
+##  <a name="BKMK_CreateLibProject"></a> Criando um projeto de biblioteca estática  
   
 #### <a name="to-create-a-static-library-project"></a>Para criar um projeto de biblioteca estática  
   
 1.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
   
-2.  No painel esquerdo do **novo projeto** caixa de diálogo caixa, expanda **instalado**, **modelos**, **Visual C++**e, em seguida, selecione  **Win32**.  
+2.  No painel esquerdo do **novo projeto** caixa de diálogo caixa, expanda **instalado**, **modelos**, **Visual C++** e, em seguida, selecione  **Win32**.  
   
 3.  No painel central, selecione **aplicativo do Console Win32**.  
   
@@ -65,7 +60,7 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
   
 8.  Escolha o **concluir** botão para criar o projeto.  
   
-##  <a name="BKMK_AddClassToLib"></a>Adicionando uma classe para a biblioteca estática  
+##  <a name="BKMK_AddClassToLib"></a> Adicionando uma classe para a biblioteca estática  
   
 #### <a name="to-add-a-class-to-the-static-library"></a>Para adicionar uma classe para a biblioteca estática  
   
@@ -86,7 +81,7 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
     > [!NOTE]
     >  Quando você compila na linha de comando do Visual Studio, você deve criar o programa em duas etapas. Primeiro, execute **cl /c /EHsc MathFuncsLib.cpp** para compilar o código e criar um arquivo de objeto que é nomeado **MathFuncsLib.obj**. (O **cl** comando invoca o compilador, Cl.exe e o **/c** opção especifica compilar sem vinculação. Para obter mais informações, consulte [/c (compilar sem vinculação)](../build/reference/c-compile-without-linking.md).) Em seguida, executar **lib MathFuncsLib.obj** para vincular o código e criar a biblioteca estática **MathFuncsLib.lib**. (O **lib** comando chama o Gerenciador de biblioteca, Lib.exe. Para obter mais informações, consulte [referência LIB](../build/reference/lib-reference.md).)  
   
-##  <a name="BKMK_CreateAppToRefTheLib"></a>Criando um aplicativo de console C++ que faz referência à biblioteca estática  
+##  <a name="BKMK_CreateAppToRefTheLib"></a> Criando um aplicativo de console C++ que faz referência à biblioteca estática  
   
 #### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Para criar um aplicativo de console C++ que faz referência à biblioteca estática  
   
@@ -106,7 +101,7 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
   
 8.  Escolha o **concluir** botão para criar o projeto.  
   
-##  <a name="BKMK_UseLibInApp"></a>Usando a funcionalidade da biblioteca estática no aplicativo  
+##  <a name="BKMK_UseLibInApp"></a> Usando a funcionalidade da biblioteca estática no aplicativo  
   
 #### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Para usar a funcionalidade da biblioteca estática no aplicativo  
   
@@ -126,7 +121,7 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
   
 6.  Criar o executável escolhendo **criar**, **compilar solução** na barra de menus.  
   
-##  <a name="BKMK_RunApp"></a>Executando o aplicativo  
+##  <a name="BKMK_RunApp"></a> Executando o aplicativo  
   
 #### <a name="to-run-the-app"></a>Para executar o aplicativo  
   
