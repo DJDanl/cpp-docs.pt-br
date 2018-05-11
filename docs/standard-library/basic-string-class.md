@@ -126,11 +126,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202dd5334e2eb0f133b40198840287af83acee8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32cd9dc76954b7b4dc5d38081ed39bc42511ab0e
+ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -207,7 +207,7 @@ class basic_string;
 |[front](#front)|Retorna uma referência ao primeiro elemento em uma cadeia de caracteres.|
 |[get_allocator](#get_allocator)|Retorna uma cópia do objeto `allocator` usado para construir a cadeia.|
 |[insert](#insert)|Insere um elemento ou um número de elementos ou um intervalo de elementos na cadeia de caracteres na posição especificada.|
-|[length](#length)|Retorna o número de elementos em uma cadeia de caracteres.|
+|[Comprimento](#length)|Retorna o número de elementos em uma cadeia de caracteres.|
 |[max_size](#max_size)|Retorna o número máximo de caracteres que uma cadeia de caracteres pode conter.|
 |[pop_back](#pop_back)|Apaga o último elemento da cadeia de caracteres.|
 |[push_back](#push_back)|Adiciona um elemento ao final de uma cadeia de caracteres.|
@@ -469,7 +469,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 `ptr` Um ponteiro para os caracteres da cadeia de C para serem atribuídos como a cadeia de caracteres de destino.
 
-`count` O número de caracteres a ser acrescentada, no máximo, de cadeia de caracteres de origem.
+`count` O número de caracteres a ser atribuído, de cadeia de caracteres de origem.
 
 `str` A cadeia de caracteres de origem cujos caracteres estão para serem atribuídos como a cadeia de caracteres de destino.
 
