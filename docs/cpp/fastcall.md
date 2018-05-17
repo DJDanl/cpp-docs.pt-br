@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Seção específica da Microsoft**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |Ordem de passagem de argumentos|Os dois primeiros argumentos de DWORD ou menores encontrados na lista de argumentos da esquerda para a direita são passados em registros de ECX e de EDX; todos os outros argumentos são passados na pilha da direita para a esquerda.|  
 |Responsabilidade de manutenção de pilha|A função de chamada retira os argumentos da pilha.|  
-|Convenção de decoração de nome|O sinal arroba (@) antecede os nomes; um sinal de arroba seguido pelo número de bytes (em decimais) na lista de parâmetros é acrescentado como sufixo aos nomes.|  
+|Convenção de decoração de nome|Sinal de arroba (\@) é antecedido pelos nomes; um arroba seguido pelo número de bytes (em decimal) no parâmetro de lista é o sufixo para nomes.|  
 |Convenção de conversão de maiúsculas/minúsculas|Nenhuma conversão de maiúsculas/minúsculas é realizada.|  
   
 > [!NOTE]
