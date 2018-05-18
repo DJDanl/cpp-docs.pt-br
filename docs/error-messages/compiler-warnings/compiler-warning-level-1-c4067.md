@@ -16,42 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eccec985e6a9e652f18c6513542942351ff6efc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-warning-level-1-c4067"></a>Compilador C4067 de aviso (nível 1)
-tokens inesperados após diretiva de pré-processador - esperado um newline  
-  
- O compilador encontrada e ignorada caracteres extras após uma diretiva de pré-processador. Esse aviso é exibido apenas sob compatibilidade ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-```  
-// C4067a.cpp  
-// compile with: /DX /Za /W1  
-#pragma warning(default:4067)  
-#if defined(X)  
-#else  
-#endif v   // C4067  
-int main()  
-{  
-}  
-```  
-  
-### <a name="to-resolve-this-warning-try-the-following"></a>Para resolver este aviso, tente o seguinte:  
-  
-1.  Compilar com **/Ze**.  
-  
-2.  Use delimitadores de comentário:  
-  
-```  
-// C4067b.cpp  
-// compile with: /DX /Za /W1  
-#if defined(X)  
-#else  
-#endif  
-int main()  
-{  
-}  
+
+> tokens inesperados após diretiva de pré-processador - esperado um newline
+
+## <a name="remarks"></a>Comentários
+
+O compilador encontrada e ignorada caracteres extras após uma diretiva de pré-processador. Isso pode ser causado por qualquer caractere inesperado, embora uma causa comum é um ponto e vírgula perdido após a diretiva. Comentários não causam esse aviso. O **/Za** habilita a opção de compilador esse aviso para diretivas de pré-processador mais que a configuração padrão.
+
+## <a name="example"></a>Exemplo
+
+```cpp
+// C4067a.cpp
+// compile with: cl /EHsc /DX /W1 /Za C4067a.cpp
+#include <iostream>
+#include <string> s     // C4067
+#if defined(X);         // C4067
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif;                 // C4067 only under /Za
+int main()
+{
+    std::cout << s << std::endl;
+}
+```
+
+Para resolver este aviso, exclua os caracteres isolados ou movê-los em um bloco de comentário. Determinados avisos C4067 podem ser desabilitados, removendo o **/Za** opção de compilador.
+
+```cpp
+// C4067b.cpp
+// compile with: cl /EHsc /DX /W1 C4067b.cpp
+#include <iostream>
+#include <string>
+#if defined(X)
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif
+int main()
+{
+    std::cout << s << std::endl;
+}
 ```
