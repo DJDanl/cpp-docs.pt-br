@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee9df0b137655fe66e68c189de756f15233a94d
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="worker-archetype"></a>Trabalho arquétipo
 Classes de acordo com o *trabalho* arquétipo fornecer o código para processar os itens de trabalho em fila em um pool de threads.  
@@ -118,7 +118,6 @@ void Terminate(void* pvParam) throw();
  Um parâmetro personalizado compreendido pela classe de trabalho. Também é passado para `WorkerArchetype::Initialize` e `WorkerArchetype::Execute`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquétipos](../../atl/reference/atl-archetypes.md)   
  [Conceitos](../../atl/active-template-library-atl-concepts.md)   
  [Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)
 

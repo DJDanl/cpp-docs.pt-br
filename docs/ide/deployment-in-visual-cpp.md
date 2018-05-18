@@ -1,7 +1,7 @@
 ---
 title: Implantação em Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Implantação no Visual C++
 
 Instalação do seu aplicativo em um computador diferente do computador de desenvolvimento é conhecida como *implantação*. Quando você implanta um aplicativo Visual C++ para outro computador, você deve instalar o aplicativo e os arquivos de biblioteca depende. O Visual Studio permite três maneiras de implantar as bibliotecas do Visual C++ junto com seu aplicativo: *implantação central*, *implantação local*, e *vinculação estática*. Implantação central coloca os arquivos de biblioteca no diretório do Windows, onde o serviço Windows Update pode atualizá-los automaticamente. Implantação local coloca os arquivos de biblioteca no mesmo diretório do seu aplicativo. Você deve reimplantar todas as bibliotecas implantadas localmente para atualizá-los. Vinculação estática associa o código de biblioteca em seu aplicativo. Você deve recompilar e reimplantar o aplicativo para tirar proveito de todas as atualizações para as bibliotecas quando você usa a vinculação estática.
+
+No Visual Studio 2015, a biblioteca de tempo de execução do Microsoft C foi Refatorada em componentes de biblioteca local específico da versão e uma nova biblioteca de tempo de execução C Universal que agora faz parte do Windows. Para obter detalhes sobre a implantação do CRT Universal, consulte [implantação Universal CRT](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Implantação central
 
@@ -59,4 +61,5 @@ A ordem de carregamento das bibliotecas do Visual C++ é dependente do sistema. 
 
 ## <a name="see-also"></a>Consulte também
 
-[Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Implantação do Universal CRT](universal-crt-deployment.md)

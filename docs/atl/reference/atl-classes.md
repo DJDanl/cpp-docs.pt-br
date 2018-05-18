@@ -1,7 +1,7 @@
 ---
-title: Classes ATL | Microsoft Docs
+title: ATL classes e estruturas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>Classes da ATL
-A biblioteca de modelo ativa (ATL) inclui as classes a seguir. Para localizar uma classe específica por categoria, consulte o [visão geral da classe ATL](../../atl/atl-class-overview.md).  
+# <a name="atl-classes-and-structs"></a>Estruturas e classes da ATL
+A biblioteca de modelo ativa (ATL) inclui as seguintes classes e estruturas. Para localizar uma classe específica por categoria, consulte o [visão geral da classe ATL](../../atl/atl-class-overview.md).  
   
-|Classe|Descrição|Arquivo de cabeçalho|  
+|Classe / struct|Descrição|Arquivo de cabeçalho|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Contém informações usadas para renderização para vários destinos, como uma impressora, metarquivo ou controle ActiveX.|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Contém dados de instância de classe no código de janelas em ATL.|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|Usado por qualquer projeto que usa ATL.|atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|Usado pelo relacionados COM o código em ATL.| atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|Contém informações sobre o tipo usado para descrever um método ou propriedade em um dispinterface.|atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|Contém os dados usados por cada módulo ATL.|atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|Usado pelo código de janelas em ATL.|atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX` e `CT2AEX`e o typedef **CA2A**.|Atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Essa classe é usada por macros de conversão de cadeia de caracteres `CA2CTEX` e `CT2CAEX`e o typedef **CA2CA**.|Atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e o typedef **CA2W**.|Atlconv.h|  
@@ -224,7 +231,6 @@ A biblioteca de modelo ativa (ATL) inclui as classes a seguir. Para localizar um
  [Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)   
  [Funções](../../atl/reference/atl-functions.md)   
  [Variáveis globais](../../atl/reference/atl-global-variables.md)   
- [Estruturas](../../atl/reference/atl-structures.md)   
  [Definições de tipo](../../atl/reference/atl-typedefs.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
 

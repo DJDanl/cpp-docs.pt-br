@@ -16,28 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c4725dd357854db504272e5b8b9d88641b143d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3dd23069f389d0a02e10d26edb7ee4fd3c373cb
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-error-c2482"></a>C2482 de erro do compilador
 
->'*identificador*': inicialização dinâmica de dados 'thread' não permitidos
+>'*identificador*': inicialização dinâmica de dados 'thread' não é permitidas no código gerenciado/WinRT
 
-Essa mensagem de erro é obsoleta no Visual Studio 2015 e versões posteriores. Nas versões anteriores, as variáveis declaradas usando o `thread` atributo não pode ser inicializado com uma expressão que requer avaliação do tempo de execução. Uma expressão estática é necessário para inicializar `thread` dados.
+## <a name="remarks"></a>Comentários
+
+No gerenciados ou WinRT code, as variáveis declaradas usando o [__declspec(thread)](../../cpp/thread.md) atributo de modificador de classe de armazenamento ou o [thread_local](../../cpp/storage-classes-cpp.md#thread_local) especificador de classe de armazenamento não pode ser inicializado com uma expressão Isso requer avaliação em tempo de execução. Uma expressão estática é necessário para inicializar `__declspec(thread)` ou `thread_local` dados nesses ambientes de tempo de execução.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C2482 no Visual Studio 2013 e anteriores:
+O exemplo a seguir gera C2482 gerenciadas (**/clr**) e em WinRT (**/ZW**) código:
 
 ```cpp
 // C2482.cpp
-// compile with: /c
+// For managed example, compile with: cl /EHsc /c /clr C2482.cpp
+// For WinRT example, compile with: cl /EHsc /c /ZW C2482.cpp
 #define Thread __declspec( thread )
-Thread int tls_i = tls_i;   // C2482
+Thread int tls_i1 = tls_i1;   // C2482
 
 int j = j;   // OK in C++; C error
-Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
+
+Para corrigir esse problema, inicialize o armazenamento local de thread, usando uma constante, **constexpr**, ou uma expressão estática. Execute qualquer inicialização específicas de thread separadamente.
