@@ -1,6 +1,6 @@
 ---
 title: Como relatar um problema com o conjunto de ferramentas do Visual C++ | Microsoft Docs
-ms.date: 1/11/2018
+ms.date: 5/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,27 +10,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
+ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Como relatar um problema com o Conjunto de Ferramentas do Visual C++
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Como relatar um problema com o conjunto de ferramentas ou a documentação do Visual C++
 
-Se você encontrar problemas com o compilador, com o vinculador ou com outras ferramentas ou bibliotecas do Microsoft Visual C++, queremos saber sobre eles.
+Se você encontrar problemas com o compilador, com o vinculador ou com outras ferramentas ou bibliotecas do Microsoft Visual C++, queremos saber sobre eles. Se o problema está em nossa documentação, gostaríamos de saber sobre isso também.
+
+## <a name="how-to-report-a-c-documentation-issue"></a>Como relatar um problema na documentação do C++
+
+Usamos os problemas do GitHub para acompanhar os problemas relatados em nossa documentação. Agora você pode criar problemas do GitHub diretamente de uma página de conteúdo, o que permite interagir de forma muito mais sofisticada com escritores e equipes de produto. Se você encontrar um problema com um documento, um exemplo de código inválido, uma explicação confusa, uma omissão crítica ou até mesmo um erro de digitação, fale conosco – é fácil. Role até a parte inferior da página e selecione **Entre para fornecer comentários sobre a documentação**. Você precisará criar uma conta do GitHub caso ainda não tenha uma, mas depois de fazer isso, poderá ver todos os nossos problemas de documentação, seu status e receber notificações quando as alterações forem feitas para o problema relatado. Para obter mais informações, confira [Em breve, um novo sistema de comentários em docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
+
+Quando você cria um problema de documentação no GitHub usando o botão de comentários sobre a documentação, o problema é preenchido automaticamente com algumas informações sobre a página na qual você criou o problema, de modo que saibamos onde está o problema. Não edite essas informações. Acrescente apenas os detalhes sobre o que está incorreto e, se desejar, uma correção sugerida. [Nossa documentação é um software livre](https://github.com/MicrosoftDocs/cpp-docs/) e, portanto, se você deseja realmente fazer uma correção e propô-la por conta própria, faça isso. Para obter mais informações sobre como você pode contribuir com nossa documentação, confira nosso [Guia de colaboração](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) no GitHub.
+
+## <a name="how-to-report-a-c-product-issue"></a>Como relatar um problema de produto do C++
 
 A melhor maneira de nos informar sobre um problema é enviar um relatório incluindo uma descrição do problema encontrado, detalhes sobre como você está compilando seu programa e uma *reprodução*, um caso de teste completo que possamos usar para reproduzir o problema em nossos computadores. Essas informações nos permitem verificar rapidamente se o problema está em seu código e não em seu ambiente local, determinar se ele afeta outras versões do compilador e diagnosticar a causa.
 
-Neste documento, você poderá ler sobre
-
-- [Como preparar seu relatório](#how-to-prepare-your-report) e o que o torna um bom relatório.
-
-- [Como gerar uma reprodução](#how-to-generate-a-repro) e diferentes tipos de reproduções.
-
-- [Maneiras de enviar o relatório](#ways-to-send-your-report) e o que as torna diferentes.
-
-Os relatórios são importantes para nós e para outros desenvolvedores como você. Obrigado por nos ajudar a melhorar o Visual C++!
+Nas seções abaixo, você lerá sobre o que é considerado um bom relatório, como gerar uma reprodução para o tipo de problema encontrado e como enviar seu relatório para a equipe de produto. Os relatórios são importantes para nós e para outros desenvolvedores como você. Obrigado por nos ajudar a melhorar o Visual C++!
 
 ## <a name="how-to-prepare-your-report"></a>Como preparar seu relatório
 
@@ -291,7 +291,7 @@ Crie sua reprodução como um projeto do IDE mínimo e empacote-o compactando to
 
 ## <a name="ways-to-send-your-report"></a>Maneiras de enviar o relatório
 
-Há várias maneiras de enviar seu relatório para nós. Você pode usar a ferramenta interna [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) do Visual Studio ou as páginas da [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/). Também é possível enviar um email com o relatório, mas os primeiros dois métodos são preferenciais. A escolha depende de como você deseja interagir com os engenheiros que investigarão o relatório e se você deseja acompanhar o progresso ou compartilhar o relatório com a comunidade.
+Há várias maneiras de enviar seu relatório para nós. Você pode usar a ferramenta interna [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) do Visual Studio ou as páginas da [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/). Também acesse diretamente as nossas páginas da Comunidade de Desenvolvedores escolhendo o botão **Comentários sobre o produto** na parte inferior desta página. Também é possível enviar um email com o relatório, mas os primeiros dois métodos são preferenciais. A escolha depende de como você deseja interagir com os engenheiros que investigarão o relatório e se você deseja acompanhar o progresso ou compartilhar o relatório com a comunidade.
 
 > [!NOTE]
 > Independentemente de como você enviar seu relatório, a Microsoft respeita sua privacidade. Para obter informações sobre como tratamos os dados que você nos envia, consulte a [Política de privacidade da família de produtos do Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
@@ -334,4 +334,4 @@ Source code and repro steps:
 ```
 
 > [!TIP]
-> Para outros tipos de problemas que podem ocorrer no Visual Studio que não estão relacionados ao conjunto de ferramentas (por exemplo, problemas da interface do usuário, funcionalidade do IDE interrompida ou falhas gerais), a ferramenta Relatar um Problema pode ser uma opção especialmente boa devido aos seus recursos de captura de tela e sua capacidade de registrar ações da interface do usuário que levam ao problema encontrado. Você jamais deve informar esses outros tipos de erros enviando um email para compilercrash@microsoft.com.
+> Para outros tipos de problemas que podem ocorrer no Visual Studio não relacionados ao conjunto de ferramentas (por exemplo, problemas da interface do usuário, funcionalidade do IDE interrompida ou falhas gerais), a **ferramenta Relatar um Problema** pode ser uma opção especialmente boa devido às suas funcionalidades de captura de tela e sua capacidade de registrar ações da interface do usuário que levam ao problema encontrado. Esses tipos de erros também podem ser relatados no site [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/). Você jamais deve informar esses outros tipos de erros enviando um email para compilercrash@microsoft.com.

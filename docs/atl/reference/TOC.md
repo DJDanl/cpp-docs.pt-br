@@ -1,3 +1,4 @@
+
 # [Classes e structs da ATL](atl-classes.md)
 ## [Estrutura _ATL_BASE_MODULE70](atl-base-module70-structure.md)
 ## [Estrutura _ATL_COM_MODULE70](atl-com-module70-structure.md)
@@ -204,6 +205,7 @@
 ## [Interface IWorkerThreadClient](iworkerthreadclient-interface.md)
 ## [Classe Win32ThreadTraits](win32threadtraits-class.md)
 ## [Arquétipo de trabalhador](worker-archetype.md)
+# [ATL_URL_SCHEME](atl-url-scheme-enum.md)
 # [Funções da ATL](atl-functions.md)
 ## [Funções de utilitário de HTTP da ATL](atl-http-utility-functions.md)
 ## [Funções de codificação de texto da ATL](atl-text-encoding-functions.md)
@@ -242,7 +244,9 @@
 ## [Macros de conversão de cadeia de caracteres](string-conversion-macros.md)
 ## [Macros de classe de janela](window-class-macros.md)
 ## [Macros de mensagens do Windows](windows-messages-macros.md)
+# [Operadores ATL](atl-operators.md)
 # [Variáveis globais da ATL](atl-global-variables.md)
+# [Typedefs ATL](atl-typedefs.md)
 # [Assistentes e caixas de diálogo do ATL](atl-wizards-and-dialog-boxes.md)
 ## [Configurações do aplicativo, Assistente de projeto da ATL](application-settings-atl-project-wizard.md)
 ## [Assistente do componente Active Server Page da ATL, ASP](asp-atl-active-server-page-component-wizard.md)

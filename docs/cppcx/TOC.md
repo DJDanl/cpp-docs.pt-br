@@ -75,6 +75,7 @@
 #### [Classe Platform::String](platform-string-class.md)
 #### [Classe Platform::StringReference](platform-stringreference-class.md)
 #### [Classe Platform::Type](platform-type-class.md)
+#### [Operador Platform::Type^](operator-type-hat.md)
 #### [Enumeração Platform::TypeCode](platform-typecode-enumeration.md)
 #### [Classe de valor Platform::UIntPtr](platform-uintptr-value-class.md)
 #### [Classe Platform::ValueType](platform-valuetype-class.md)
@@ -113,4 +114,5 @@
 #### [Função begin](begin-function.md)
 #### [Função end](end-function.md)
 #### [Função to_vector](to-vector-function.md)
+### [Operador Windows::UI::Xaml::Interop::TypeName](operator-windows-ui-xaml-interop-typename.md)
 ## [As funções de CRT não têm suporte em aplicativos da Plataforma Universal do Windows](crt-functions-not-supported-in-universal-windows-platform-apps.md)
