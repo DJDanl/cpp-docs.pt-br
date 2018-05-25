@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ Após a transformação, uma chamada para **strcmp** com as duas cadeias de cara
 
 **wcsxfrm** é uma versão de caractere largo de **strxfrm**; os argumentos de cadeia de caracteres de **wcsxfrm** são ponteiros de caractere largo. Para **wcsxfrm**, após a transformação de cadeia de caracteres, uma chamada para **wcscmp** com as duas cadeias de caracteres transformadas produz resultados idênticos aos de uma chamada para **wcscoll** aplicada para o originais duas cadeias de caracteres. **wcsxfrm** e **strxfrm** se comportam de forma idêntica caso contrário. **wcsxfrm** usa a localidade atual para o seu comportamento dependem da localidade; **wcsxfrm_l** usa a localidade passada em vez da localidade atual.
 
-Essas funções validam seus parâmetros. Se *strSource* é um ponteiro nulo, ou *strDest* é um ponteiro NULL (a menos que contagem será zero), ou se *contagem* é maior do que **INT_MAX**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar **INT_MAX**.
+Essas funções validam seus parâmetros. Se *strSource* é um ponteiro nulo, ou *strDest* é um **nulo** ponteiro (a menos que contagem será zero), ou se *contagem* é maior do que **INT_MAX**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

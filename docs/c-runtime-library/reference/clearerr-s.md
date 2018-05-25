@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ Ponteiro para **arquivo** estrutura
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se for bem-sucedida; **EINVAL** se *fluxo* é NULL.
+Zero se for bem-sucedida; **EINVAL** se *fluxo* é **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
 O **clearerr_s** função redefine o indicador de erro e o indicador de fim de arquivo para *fluxo*. Indicadores de erro não são limpos automaticamente; Quando o indicador de erro para um fluxo especificado estiver definido, as operações no fluxo continuar retornar um valor de erro até **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [retroceder](rewind.md) é chamado.
 
-Se *fluxo* for NULL, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Se *fluxo* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>Estrutura atomic
 
@@ -63,7 +63,7 @@ struct atomic;
 
 O tipo *Ty* devem ser *facilmente copiado*. Ou seja, usando [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) copiar seus bytes deve produzir um válido *Ty* objeto compara igual ao objeto original. O [compare_exchange_weak](#compare_exchange_weak) e [compare_exchange_strong](#compare_exchange_strong) uso de funções de membro [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) para determinar se dois *Ty* valores são iguais. Essas funções não usará um *Ty*-definido **operador = =**. As funções de membro de **atômico** usar **memcpy** para copiar valores do tipo *Ty*.
 
-Uma especialização parcial, * * atômico\<Ty * > * *, existe para todos os tipos de ponteiro. A especialização permite a adição de um deslocamento para o valor do ponteiro gerenciado ou subtração de um deslocamento dele. Operações aritméticas têm um argumento de tipo **ptrdiff_t** e ajuste que o argumento de acordo com o tamanho de *Ty* para ser consistente com o endereço comum aritmético.
+Uma especialização parcial, **atômico\<Ty \* >** , existe para todos os tipos de ponteiro. A especialização permite a adição de um deslocamento para o valor do ponteiro gerenciado ou subtração de um deslocamento dele. Operações aritméticas têm um argumento de tipo **ptrdiff_t** e ajuste que o argumento de acordo com o tamanho de *Ty* para ser consistente com o endereço comum aritmético.
 
 Existe uma especialização de cada tipo integral exceto **bool**. Cada especialização fornece um rico conjunto de métodos para operações aritméticas e lógicas atômicas.
 

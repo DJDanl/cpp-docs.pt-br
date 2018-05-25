@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +89,22 @@ Endereço inicial de uma rotina que inicia a execução de um novo thread. Para 
 Tamanho da pila para um novo thread ou 0.
 
 *arglist*<br/>
-Lista de argumentos a ser apresentada a um novo thread ou NULL.
+Lista de argumentos a serem passados para um novo thread, ou **nulo**.
 
 *Segurança*<br/>
-Ponteiro para uma estrutura [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) que determina se o identificador retornado pode ser herdado por processos filhos. Se *segurança* for NULL, o identificador não pode ser herdado. Deve ser NULL para aplicativos Windows 95.
+Ponteiro para uma estrutura [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) que determina se o identificador retornado pode ser herdado por processos filhos. Se *segurança* é **nulo**, o identificador não pode ser herdado. Deve ser **nulo** para aplicativos do Windows 95.
 
 *initflag*<br/>
 Sinalizadores que controlam o estado inicial de um novo thread. Definir *initflag* para 0 para ser executado imediatamente ou **CREATE_SUSPENDED** para criar o thread em um estado suspenso; use [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) para executar o thread. Definir *initflag* para **STACK_SIZE_PARAM_IS_A_RESERVATION** sinalizador para usar *stack_size* como o tamanho da pilha em bytes de reserva inicial; se esse sinalizador é não especificado, *stack_size* Especifica o tamanho de confirmação.
 
 *thrdaddr*<br/>
-Aponta para uma variável de 32 bits que recebe o identificador de thread. Se o valor for NULL, esse parâmetro não é usado.
+Aponta para uma variável de 32 bits que recebe o identificador de thread. Se for **nulo**, ele não é usado.
 
 ## <a name="return-value"></a>Valor de retorno
 
 Se for bem-sucedido, cada uma dessas funções retorna um identificador para o thread recém-criada; No entanto, se o thread recém-criado será encerrado muito rapidamente, **beginthread** podem não retornar um identificador válido. Confira a discussão na sessão Observações. Em um erro, **beginthread** retorna-1 L, e **errno** é definido como **EAGAIN** se houver muitos threads, como **EINVAL** se o argumento for inválido ou o tamanho da pilha está incorreto, ou **EACCES** se há recursos suficientes (por exemplo, memória). Em um erro, **beginthreadex** retorna 0, e **errno** e **doserrno** são definidos.
 
-Se *start_address* for NULL, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1.
+Se *start_address* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -137,7 +137,7 @@ Você pode chamar [endthread](endthread-endthreadex.md) ou **endthreadex** expli
 
 O sistema operacional trata a alocação da pilha quando qualquer **beginthread** ou **beginthreadex** é chamado; você não precisa passar o endereço da pilha de thread a uma dessas funções. Além disso, o *stack_size* argumento pode ser 0, nesse caso o sistema operacional usa o mesmo valor como a pilha especificada para o thread principal.
 
-*arglist* é um parâmetro a ser passado para o thread recém-criado. Geralmente, trata-se do endereço de um item de dados, como uma cadeia de caracteres. *arglist* pode ser NULL se não for necessária, mas **beginthread** e **beginthreadex** deve ser fornecido um valor para passar para o novo thread. Todos os threads são encerrados se chamadas de qualquer thread [anular](abort.md), **sair**, **exit**, ou **ExitProcess**.
+*arglist* é um parâmetro a ser passado para o thread recém-criado. Geralmente, trata-se do endereço de um item de dados, como uma cadeia de caracteres. *arglist* pode ser **nulo** se não for necessária, mas **beginthread** e **beginthreadex** deve ser fornecido um valor para passar para o novo thread. Todos os threads são encerrados se chamadas de qualquer thread [anular](abort.md), **sair**, **exit**, ou **ExitProcess**.
 
 A localidade do thread novo é inicializada, usando as informações de localidade ' por processo global atual. Se a localidade por thread é ativada por uma chamada para [configthreadlocale](configthreadlocale.md) (globalmente ou para novos threads somente), o thread pode alterar sua localidade independentemente de outros threads chamando **setlocale** ou **wsetlocale**. Threads que não tem o sinalizador de localidade por thread definido podem afetar as informações de localidade em todos os outros threads que também não tem o sinalizador de localidade por thread definido, bem como todos os threads recém-criado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

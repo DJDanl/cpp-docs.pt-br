@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ Tamanho solicitado do bloco de memória (em bytes).
 Tipo de bloco de memória solicitado: **client_block** ou **normal_block**.
 
 *filename*<br/>
-Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou NULL.
+Ponteiro para o nome do arquivo de origem que a operação de alocação solicitada ou **nulo**.
 
 *linenumber*<br/>
-Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou NULL.
+Número no arquivo de origem em que a operação de alocação foi solicitada da linha ou **nulo**.
 
 O *filename* e *linenumber* parâmetros estão disponíveis somente quando **malloc_dbg** foi chamado explicitamente ou [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md)constante de pré-processador foi definido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Mediante a conclusão bem-sucedida, essa função retorna um ponteiro para a parte do usuário do bloco de memória alocado, chama a nova função do manipulador ou retorna NULL. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [malloc](malloc.md).
+Após a conclusão bem-sucedida, essa função retorna um ponteiro para a parte de usuário do bloco de memória alocada, chama a nova função de manipulador ou retorna **nulo**. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [malloc](malloc.md).
 
 ## <a name="remarks"></a>Comentários
 

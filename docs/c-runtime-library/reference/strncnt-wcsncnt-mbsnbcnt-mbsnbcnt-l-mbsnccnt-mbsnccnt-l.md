@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -126,9 +126,9 @@ Localidade a usar.
 
 **_mbsnbcnt** e **_mbsnbcnt_l** contar o número de bytes encontrada na primeira *contagem* de caracteres multibyte da *str*. **_mbsnbcnt** e **_mbsnbcnt_l** substituir **mtob** e deve ser usado no lugar de **mtob**.
 
-**mbsnccnt** e **mbsnccnt_l** contar o número de caracteres encontrada na primeira *contagem* de bytes de *str*. Se **mbsnccnt** e **mbsnccnt_l** encontrar um valor nulo no segundo byte de um caractere de byte duplo, o primeiro byte também é considerado como NULL e não está incluído no valor de contagem retornada. **mbsnccnt** e **mbsnccnt_l** substituir **btom** e deve ser usado no lugar de **btom**.
+**mbsnccnt** e **mbsnccnt_l** contar o número de caracteres encontrada na primeira *contagem* de bytes de *str*. Se **mbsnccnt** e **mbsnccnt_l** encontrar um caractere nulo no segundo byte de um caractere de byte duplo, o primeiro byte também é considerado ser nulo e não está incluído no valor de contagem retornada. **mbsnccnt** e **mbsnccnt_l** substituir **btom** e deve ser usado no lugar de **btom**.
 
-Se *str* é um ponteiro nulo ou está *contagem* for 0, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md), **errno** é definido como **EINVAL**, e a função retornará 0.
+Se *str* é um **nulo** ponteiro ou *contagem* for 0, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md), **errno** é definido como **EINVAL**, e a função retornará 0.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

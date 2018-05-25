@@ -1,7 +1,7 @@
 ---
 title: Diretrizes para desenvolvedores de C++ para canais de lado especulativo execução | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 05/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -18,25 +18,29 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a7e7ddb51f07f7fe6be1da017d8feae9cc4919e
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 515e2223e67d86da12488d9880a1a0a258fc4bdf
+ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Diretrizes para desenvolvedores de C++ para especulativo canais do lado de execução
 
 Este artigo contém orientações para desenvolvedores para ajudá-lo a identificar e atenuar vulnerabilidades de hardware de canal execução especulativa lado no software de C++. Essas vulnerabilidades podem divulgar informações confidenciais entre limites de confiança e podem afetar o software que é executado em processadores que suportam especulativa, fora de ordem de execução de instruções. Essa classe de vulnerabilidades primeiro descrito em janeiro de 2018 e informações adicionais e diretrizes que podem ser encontradas em [comunicado de segurança da Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
 
-As diretrizes fornecidas por este artigo está relacionada à classe de vulnerabilidades representado por CVE-2017-5753, também conhecido como variante Spectre 1. Essa classe de vulnerabilidade de hardware está relacionado a canais de lado que podem surgir devido à execução especulativa que ocorre como resultado misprediction uma ramificação condicional. O compilador do Visual C++ no Visual Studio de 2017 (começando com a versão 15.5.5) inclui suporte para o `/Qspectre` switch fornece uma redução do tempo de compilação para um conjunto limitado de vulneráveis padrões de codificação relacionados ao CVE-2017-5753. A documentação para o [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) sinalizador fornece mais informações sobre seus efeitos e uso. 
+As diretrizes fornecidas por este artigo está relacionada às classes de vulnerabilidades representadas por:
+
+1. CVE-2017-5753, também conhecido como variante Spectre 1. Essa classe de vulnerabilidade de hardware está relacionado a canais de lado que podem surgir devido à execução especulativa que ocorre como resultado misprediction uma ramificação condicional. O compilador do Visual C++ no Visual Studio de 2017 (começando com a versão 15.5.5) inclui suporte para o `/Qspectre` switch que fornece uma redução do tempo de compilação para um conjunto limitado de padrões de codificação vulneráveis relacionadas ao CVE-2017-5753. A documentação para o [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) sinalizador fornece mais informações sobre seus efeitos e uso.
+
+2. CVE-2018-3639, também conhecido como [especulativo repositório Bypass (SSB)](https://aka.ms/sescsrdssb). Essa classe de vulnerabilidade de hardware está relacionado a canais de lado que podem surgir devido à execução especulativa carga à frente de um repositório dependente como resultado de uma misprediction de acesso de memória.
 
 Uma introdução acessível a vulnerabilidades de canal do lado de execução especulativa pode ser encontrada na apresentação intitulada [o caso de Spectre e sobrecarga](https://www.youtube.com/watch?v=_4O0zMW-Zu4) por uma das equipes de pesquisa que esses problemas descobertos.
 
 ## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>Quais são as vulnerabilidades do hardware especulativo execução lado canal?
 
-CPUs modernas fornecem níveis mais altos de desempenho, fazendo uso de especulativo e fora de ordem de execução de instruções. Por exemplo, isso geralmente é feito pela prevendo o destino de ramificações (condicional e indrect) que permite que a CPU começar a forma especulativa executando as instruções no destino de branch previstas, evitando uma pausa até que o destino de ramificação real é resolvido. Se a CPU mais tarde descobre que ocorreu uma misprediction, todos os estados de máquina que foi computado forma especulativa serão descartados. Isso garante que não há nenhum arquitetonicamente visíveis efeitos da especulação previstas incorretamente.
+CPUs modernas fornecem níveis mais altos de desempenho, fazendo uso de especulativo e fora de ordem de execução de instruções. Por exemplo, isso geralmente é feito pela prevendo o destino de ramificações (condicionais e indiretos) que permite que a CPU começar a forma especulativa executando as instruções no destino ramificação previsto, evitando uma pausa até que o destino de ramificação real é resolvido. Se a CPU mais tarde descobre que ocorreu uma misprediction, todos os estados de máquina que foi computado forma especulativa serão descartados. Isso garante que não há nenhum arquitetonicamente visíveis efeitos da especulação previstas incorretamente.
 
-Durante a execução especulativa não afeta o estado de visibilidade architecturaly, ele pode deixar residuais rastreamentos em estado não-arquitetura, como os vários caches que são usados pela CPU. É esses rastreamentos residuais de execução especulativa que pode dar origem às vulnerabilidades do canal do lado. Para entender isso melhor, considere o seguinte fragmento de código que fornece um exemplo de CVE-2017-5753 (ignorar verificar limites):
+Durante a execução especulativa não afeta o estado de visibilidade em termos de arquitetura, ele pode deixar residuais rastreamentos em estado não-arquitetura, como os vários caches que são usados pela CPU. É esses rastreamentos residuais de execução especulativa que pode dar origem às vulnerabilidades do canal do lado. Para entender isso melhor, considere o seguinte fragmento de código que fornece um exemplo de CVE-2017-5753 (ignorar verificar limites):
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -50,7 +54,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-Neste exemplo, `ReadByte` é fornecido um buffer, um tamanho de buffer e um índice em buffer. O parâmetro de índice, conforme especificado por `untrusted_index`, é fornecido por um menor contexto privilegiado, como um processo não administrativas. Se `untrusted_index` é menor que `buffer_size`, em seguida, o caractere no índice é lido de `buffer` e usado para índices em uma região compartilhada de memória referenciada por `shared_buffer`.
+Neste exemplo, `ReadByte` é fornecido um buffer, um tamanho de buffer e um índice em buffer. O parâmetro de índice, conforme especificado por `untrusted_index`, é fornecido por um menor contexto privilegiado, como um processo não administrativas. Se `untrusted_index` é menor que `buffer_size`, em seguida, o caractere no índice é lido de `buffer` e usado para índices em uma região compartilhada de memória referenciada por `shared_buffer`. 
 
 De uma perspectiva arquitetônica, esta sequência de código é perfeitamente segura, é garantido que `untrusted_index` sempre será menor que `buffer_size`. No entanto, na presença de execução especulativa, é possível que a CPU mispredict a ramificação condicional e executar o corpo do se instrução mesmo quando `untrusted_index` é maior que ou igual a `buffer_size`. Consequentemente, a CPU forma especulativa pode ler um byte fora dos limites do `buffer` (que pode ser um segredo) e, em seguida, pode usar esse valor de byte para o endereço de uma carga subsequente por meio de computação `shared_buffer`. 
 
@@ -68,16 +72,16 @@ As etapas acima fornecem um exemplo de como usar uma técnica conhecida como lim
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Os cenários de software podem ser afetados?
 
-Desenvolvimento de software seguro usando um processo semelhante a [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) normalmente exige que os desenvolvedores identificam os limites de confiança que existem em seu aplicativo. Existe um limite de confiança em lugares onde um aplicativo pode interagir com os dados fornecidos por um contexto menos confiável, como um processo de modo de usuário não administrativo no caso de um driver de dispositivo de modo kernel ou de outro processo no sistema. A nova classe de vulnerabilidades que envolvem canais do lado de execução especulativa é relevante para muitos os limites de confiança em modelos de segurança de software existente que isolar o código e os dados em um dispositivo.
+Desenvolvimento de software seguro usando um processo semelhante a [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) normalmente exige que os desenvolvedores identificam os limites de confiança que existem em seu aplicativo. Existe um limite de confiança em lugares onde um aplicativo pode interagir com os dados fornecidos por um contexto menos confiável, como um processo de modo de usuário não administrativo no caso de um driver de dispositivo de modo kernel ou de outro processo no sistema. A nova classe de vulnerabilidades que envolvem canais do lado de execução especulativa é relevante para muitos os limites de confiança em modelos de segurança de software existente que isolar o código e os dados em um dispositivo. 
 
 A tabela a seguir fornece um resumo dos modelos de segurança de software em que os desenvolvedores podem precisar se preocupar com essas vulnerabilidades ocorrendo:
 
 |Limite de confiança|Descrição|
 |----------------|----------------|
-|Limite de máquina virtual|Aplicativos que isolar cargas de trabalho em máquinas virtuais separadas que recebem dados não confiáveis de outra máquina virtual podem estar em risco.|
-|Limite de kernel|Um driver de dispositivo de modo kernel que recebe dados não confiáveis de um processo de modo de usuário não administrativo pode estar em risco.|
+|Limite de máquina virtual|Aplicativos que isolar cargas de trabalho em máquinas virtuais separadas que recebem dados não confiáveis de outra máquina virtual podem estar em risco.| 
+|Limite de kernel|Um driver de dispositivo de modo kernel que recebe dados não confiáveis de um processo de modo de usuário não administrativo pode estar em risco.| 
 |Limite de processo|Um aplicativo que recebe dados não confiáveis de outro processo em execução no sistema local, como por meio de um Remote Procedure Call (RPC), memória compartilhada ou outros comunicação entre processos (IPC) mecanismos podem estar em risco.|
-|Limite de enclave|Um aplicativo que é executada em um enclave seguro (por exemplo, Intel SGX) que recebe confiável para dados de fora do enclave podem estar em risco.|
+|Limite de enclave|Um aplicativo que é executada em um enclave seguro (por exemplo, Intel SGX) que recebe dados não confiáveis de fora de enclave pode estar em risco.|
 |Limite de linguagem|Um aplicativo que interpreta ou just-in-(JIT) compila e executa código não confiável, escrito em uma linguagem de alto nível pode estar em risco.|
 
 Aplicativos que têm a superfície de ataque exposto a qualquer um dos itens acima limites devem examinar o código na superfície de ataque para identificar e eliminar instâncias possíveis vulnerabilidades de canal do lado de execução especulativa de confiança. Observe que os limites de confiança expostos para superfícies de ataque remoto, como protocolos de rede remota, não foram demonstrados corre risco às vulnerabilidades de canal do lado de execução especulativa.
@@ -90,11 +94,11 @@ Em geral, misprediction de ramificação relacionadas a condicional execução e
 
 Para cada exemplo, um comentário com a frase "ESPECULAÇÃO BARREIRA" é inserido em que um desenvolvedor poderia introduzir uma barreira como uma mitigação. Isso é discutido mais detalhadamente na seção sobre atenuações.
 
-### <a name="speculative-out-of-bounds-load"></a>Carregar especulativo fora dos limites
+## <a name="speculative-out-of-bounds-load"></a>Carregar especulativo fora dos limites
 
 Esta categoria de padrões de codificação envolve um misprediction ramificação condicional que leva a um especulativo fora dos limites acesso à memória.
 
-#### <a name="array-out-of-bounds-load-feeding-a-load"></a>Alimentação de uma carga de carga de matriz fora dos limites
+### <a name="array-out-of-bounds-load-feeding-a-load"></a>Alimentação de uma carga de carga de matriz fora dos limites
 
 Esse padrão de codificação é o padrão de codificação vulnerável originalmente descrito para CVE-2017-5753 (ignorar verificar limites). A seção de plano de fundo deste artigo explica esse padrão em detalhes.
 
@@ -126,7 +130,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 }
 ```
 
-#### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Matriz fora dos limites de carga alimenta um branch indireto
+### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Matriz fora dos limites de carga alimenta um branch indireto
 
 Esse padrão de codificação envolve o caso em que um misprediction ramificação condicional pode levar a um fora dos limites acesso a uma matriz de ponteiros de função que, em seguida, leva a uma ramificação indireta para o destino endereço que foi lido fora dos limites. O trecho a seguir fornece um exemplo que demonstra isso. 
 
@@ -149,9 +153,13 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 Como no caso de uma matriz fora dos limites de carga alimentar outra carga, essa condição também pode surgir em conjunto com um loop que excede sua condição de terminação devido a um misprediction.
 
-### <a name="speculative-type-confusion"></a>Confusão tipo especulativo
+## <a name="speculative-type-confusion"></a>Confusão tipo especulativo
 
-Esta categoria de padrões de codificação envolve misprediction uma ramificação condicional que leva a uma confusão tipo especulativo. Os padrões de codificação nesta seção fará referência ao código de exemplo abaixo.
+Esta categoria lida com os padrões que podem gerar confusão um tipo especulativo de codificação. Isso ocorre quando a memória é acessada por meio de um tipo incorreto ao longo de um caminho não arquitetura durante a execução especulativa. Misprediction ramificação condicional e loja especulativo bypass potencialmente podem gerar confusão um tipo especulativo. 
+
+Para ignorar repositório especulativo, isso pode ocorrer em cenários onde um compilador reutiliza um local de pilha para variáveis de vários tipos. Isso ocorre porque o repositório de arquitetura de uma variável do tipo `A` pode ser ignorado, permitindo que a carga do tipo `A` para executar de forma especulativa antes que a variável é atribuída. Se a variável armazenada anteriormente é de um tipo diferente, isso pode criar as condições de confusão um tipo especulativo.
+
+Para misprediction ramificação condicional, o trecho de código a seguir será usado para descrever condições diferentes que pode dar a confusão tipo especulativo crescendo para.
 
 ```cpp
 enum TypeName {
@@ -203,13 +211,71 @@ unsigned char ProcessType(CBaseType *obj)
 }
 ```
 
-#### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Confusão tipo especulativo levando a uma carga fora dos limites
+### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Confusão tipo especulativo levando a uma carga fora dos limites
 
-Esse padrão de codificação envolve o caso em que uma confusão tipo especulativo pode resultar em um fora dos limites ou acesso confundido por tipo de campo em que o valor carregado feeds de um endereço de carregamento subsequente. Isso é semelhante ao padrão de codificação fora dos limites de matriz, mas manifestado por meio de uma alternativa a sequência de codificação, como mostrado acima. Neste exemplo, um ataque contexto pode fazer com que o contexto da vítima para executar `ProcessType` várias vezes com um objeto do tipo `CType1` (`type` campo é igual a `Type1`). Isso terá o efeito de treinamento a ramificação condicional para o primeiro `if` instrução não prever obtido. O contexto de ataque pode fazer com que o contexto da vítima para executar `ProcessType` com um objeto do tipo `CType2`. Isso pode resultar em uma confusão tipo especulativo se ramificar a condicional para o primeiro `if` instrução previsões incorretas e executa o corpo do `if` instrução, portanto, a conversão de um objeto do tipo `CType2` para `CType1`. Como `CType2` é menor do que `CType1`, o acesso de memória para `CType1::field2` resultará em um especulativo fora dos limites carregará de dados que podem ser segredos. Esse valor é usado em uma carga de `shard_buffer` que pode criar um efeito colateral observável, assim como acontece com a matriz fora dos limites exemplo descrito anteriormente.
+Esse padrão de codificação envolve o caso em que uma confusão tipo especulativo pode resultar em um fora dos limites ou acesso confundido por tipo de campo em que o valor carregado feeds de um endereço de carregamento subsequente. Isso é semelhante ao padrão de codificação fora dos limites de matriz, mas manifestado por meio de uma alternativa a sequência de codificação, como mostrado acima. Neste exemplo, um ataque contexto pode fazer com que o contexto da vítima para executar `ProcessType` várias vezes com um objeto do tipo `CType1` (`type` campo é igual a `Type1`). Isso terá o efeito de treinamento a ramificação condicional para o primeiro `if` instrução não prever obtido. O contexto de ataque pode fazer com que o contexto da vítima para executar `ProcessType` com um objeto do tipo `CType2`. Isso pode resultar em uma confusão tipo especulativo se ramificar a condicional para o primeiro `if` instrução previsões incorretas e executa o corpo do `if` instrução, portanto, a conversão de um objeto do tipo `CType2` para `CType1`. Como `CType2` é menor do que `CType1`, o acesso de memória para `CType1::field2` resultará em um especulativo fora dos limites carregará de dados que podem ser segredos. Esse valor é usado em uma carga de `shared_buffer` que pode criar um efeito colateral observável, assim como acontece com a matriz fora dos limites exemplo descrito anteriormente.
 
-#### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Confusão tipo especulativo levando a uma ramificação indireta
+### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Confusão tipo especulativo levando a uma ramificação indireta
 
-Essa codificação padrões envolve o caso em que uma confusão tipo especulativo pode resultar em uma ramificação indireta unsafe durante a execução especulativa. Neste exemplo, um ataque contexto pode fazer com que o contexto da vítima para executar `ProcessType` várias vezes com um objeto do tipo `CType2` (`type` campo é igual a `Type2`). Isso terá o efeito de treinamento a ramificação condicional para o primeiro `if` instrução a ser executada e o `else if` instrução, a não ser executada. O contexto de ataque pode fazer com que o contexto da vítima para executar `ProcessType` com um objeto do tipo `CType1`. Isso pode resultar em uma confusão tipo especulativo se ramificar a condicional para o primeiro `if` prevê a instrução executada e o `else if` assim prevê a instrução não é feito, executando o corpo do `else if` e conversão de um objeto do tipo `CType1` para `CType2`. Como o `CType2::dispatch_routine` campo se sobrepõe a `char` matriz `CType1::field1`, isso pode resultar em uma ramificação indireta especulativa com um destino de ramificação não intencionais. Se o contexto de ataque pode controlar os valores de byte no `CType1::field1` matriz, podem ser capaz de controlar o endereço de destino de ramificação.
+Esse padrão de codificação envolve o caso em que uma confusão tipo especulativo pode resultar em uma ramificação indireta unsafe durante a execução especulativa. Neste exemplo, um ataque contexto pode fazer com que o contexto da vítima para executar `ProcessType` várias vezes com um objeto do tipo `CType2` (`type` campo é igual a `Type2`). Isso terá o efeito de treinamento a ramificação condicional para o primeiro `if` instrução a ser executada e o `else if` instrução, a não ser executada. O contexto de ataque pode fazer com que o contexto da vítima para executar `ProcessType` com um objeto do tipo `CType1`. Isso pode resultar em uma confusão tipo especulativo se ramificar a condicional para o primeiro `if` prevê a instrução executada e o `else if` assim prevê a instrução não é feito, executando o corpo do `else if` e conversão de um objeto do tipo `CType1` para `CType2`. Como o `CType2::dispatch_routine` campo se sobrepõe a `char` matriz `CType1::field1`, isso pode resultar em uma ramificação indireta especulativa com um destino de ramificação não intencionais. Se o contexto de ataque pode controlar os valores de byte no `CType1::field1` matriz, podem ser capaz de controlar o endereço de destino de ramificação.
+
+## <a name="speculative-uninitialized-use"></a>Uso não inicializado especulativo
+
+Esta categoria de padrões de codificação envolve cenários em que a execução especulativa pode acessar a memória não inicializada e usá-lo para um carregamento subsequente ou ramificação indireta de feed. Por esses padrões de codificação explorável, um invasor precisa ser capaz de controlar ou influenciar significativamente o conteúdo da memória que é usado sem que está sendo inicializado pelo que está sendo usado no contexto.
+
+### <a name="speculative-uninitialized-use-leading-to-an-out-of-bounds-load"></a>Especulativo uso não inicializado, levando a uma carga fora dos limites
+
+Um uso não inicializado especulativo pode levar a uma carga fora dos limites usando um valor controlado pelo invasor. No exemplo a seguir, o valor de `index` recebe `trusted_index` em todos os caminhos arquitetônicos e `trusted_index` deve para ser menor ou igual a `buffer_size`. No entanto, dependendo do código produzido pelo compilador, é possível que um repositório especulativo bypass pode ocorrer que permite que a carga de `buffer[index]` e expressões dependentes para executar à frente a atribuição ao `index`. Se isso ocorrer, um valor não inicializado para `index` será usado como o deslocamento em `buffer` que permite que um invasor ler as informações confidenciais fora dos limites e transmitir isso por meio de um canal do lado por meio de carga dependente de `shared_buffer` .
+
+```cpp
+// A pointer to a shared memory region of size 1MB (256 * 4096)
+unsigned char *shared_buffer;
+
+void InitializeIndex(unsigned int trusted_index, unsigned int *index) {
+    *index = trusted_index;
+}
+
+unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned int trusted_index) {
+    unsigned int index;
+
+    InitializeIndex(trusted_index, &index); // not inlined
+
+    // SPECULATION BARRIER
+    unsigned char value = buffer[index];
+    return shared_buffer[value * 4096];
+}
+```
+
+### <a name="speculative-uninitialized-use-leading-to-an-indirect-branch"></a>Uso de não inicializado especulativo levando a uma ramificação indireta
+
+Um uso não inicializado especulativo pode levar a uma ramificação indireta em que o destino de ramificação é controlado por um invasor. No exemplo a seguir, `routine` é atribuído a `DefaultMessageRoutine1` ou `DefaultMessageRoutine` dependendo do valor de `mode`. No caminho de arquitetura, isso resultará em `routine` sendo inicializado sempre à frente da ramificação indireta. No entanto, dependendo do código produzido pelo compilador, ignorar um repositório especulativo pode ocorrer que permite a ramificação indireta por meio de `routine` para ser executado de forma especulativa à frente a atribuição ao `routine`. Se isso ocorrer, um invasor pode ser capaz de executar de forma especulativa de um endereço arbitrário, supondo que o invasor pode influenciar ou controlar o valor não inicializado de `routine`.
+
+```cpp
+#define MAX_MESSAGE_ID 16
+
+typedef void (*MESSAGE_ROUTINE)(unsigned char *buffer, unsigned int buffer_size);
+
+const MESSAGE_ROUTINE DispatchTable[MAX_MESSAGE_ID];
+extern unsigned int mode;
+
+void InitializeRoutine(MESSAGE_ROUTINE *routine) {
+    if (mode == 1) {
+        *routine = &DefaultMessageRoutine1;
+    }
+    else {
+        *routine = &DefaultMessageRoutine;
+    }
+}
+
+void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, unsigned int buffer_size) {
+    MESSAGE_ROUTINE routine;
+
+    InitializeRoutine(&routine); // not inlined
+
+    // SPECULATION BARRIER
+    routine(buffer, buffer_size);
+}
+```
 
 ## <a name="mitigation-options"></a>Opções de atenuação
 
@@ -219,12 +285,11 @@ Vulnerabilidades de canal do lado de execução especulativa podem ser minimizad
 
 Um *barreira especulação* podem ser inseridos manualmente por um desenvolvedor para impedir a execução continue em um caminho não arquitetura especulativa. Por exemplo, um desenvolvedor pode inserir uma barreira especulação antes de um padrão de codificação perigosa no corpo de um bloco condicional, no início do bloco (após a ramificação condicional) ou antes da primeira carga for um problema. Isso impedirá um misprediction ramificação condicional da execução do código perigoso em um caminho não arquitetura serializando a execução. A sequência de barreira especulação difere pela arquitetura de hardware, conforme descrito pela tabela a seguir:
 
-|Arquitetura|Barreira especulação|
-|----------------|----------------|
-|x86/x64|_mm_lfence()|
-|ARM|não disponível no momento|
-|ARM64|não disponível no momento|
-
+|Arquitetura|Barreira de especulação intrínseca para CVE-2017-5753|Barreira de especulação intrínseca para CVE-2018-3639|
+|----------------|----------------|----------------|
+|x86/x64|_mm_lfence()|_mm_lfence()|
+|ARM|não disponível no momento|__dsb(0)|
+|ARM64|não disponível no momento|__dsb(0)|
 
 Por exemplo, o padrão de código a seguir pode ser reduzido usando o `_mm_lfence` intrínseco conforme mostrado abaixo.
 
@@ -245,12 +310,30 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 O compilador do Visual C++ no Visual Studio de 2017 (começando com a versão 15.5.5) inclui suporte para o `/Qspectre` switch que inserirá automaticamente uma barreira especulação para um conjunto limitado de padrões de codificação vulneráveis relacionadas ao CVE-2017-5753. A documentação para o [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) sinalizador fornece mais informações sobre seus efeitos e uso. É importante observar que esse sinalizador não abrange todos os padrões de codificação vulneráveis e como tal, os desenvolvedores não devem confiar nele como uma mitigação abrangente para esta classe de vulnerabilidades.
 
-### <a name="removing-sensitive-information-from-memory"></a>Remover informações confidenciais da memória
+## <a name="masking-array-indices"></a>Índices de matriz de mascaramento
+
+Em casos onde um especulativo fora dos limites de carga podem ocorrer, o índice de matriz pode ser altamente limitado no caminho não arquitetura e arquitetura adicionando lógica explicitamente o índice de matriz de limite. Por exemplo, se uma matriz pode ser alocada para um tamanho que está alinhado a uma potência de dois, em seguida, uma máscara simple pode ser apresentada. Isso é ilustrado no exemplo abaixo onde ele é presumido que `buffer_size` está alinhado a uma potência de dois. Isso assegura que `untrusted_index` é sempre menor que `buffer_size`, mesmo que ocorra um misprediction ramificação condicional e `untrusted_index` foi transmitido com um valor maior que ou igual a `buffer_size`.
+
+Observe que o mascaramento de índice executado aqui pode estar sujeito aos repositório especulativo bypass dependendo do código gerado pelo compilador.
+
+```cpp
+// A pointer to a shared memory region of size 1MB (256 * 4096)
+unsigned char *shared_buffer;
+
+unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned int untrusted_index) {
+    if (untrusted_index < buffer_size) {
+        untrusted_index &= (buffer_size - 1);
+        unsigned char value = buffer[untrusted_index];
+        return shared_buffer[value * 4096];
+    }
+}
+```
+
+## <a name="removing-sensitive-information-from-memory"></a>Remover informações confidenciais da memória
 
 Outra técnica que pode ser usada para atenuar vulnerabilidades de canal do lado de execução especulativa é remover informações confidenciais da memória. Os desenvolvedores de software podem procurar oportunidades para refatorar o seu aplicativo, de modo que as informações confidenciais não estão acessíveis durante a execução especulativa. Isso pode ser feito pela refatoração o design de um aplicativo para isolar as informações confidenciais em processos separados. Por exemplo, um aplicativo de navegador da web pode tentar isolar os dados associados a cada origem web em processos separados, impedindo que um processo de ser capaz de acessar dados entre origens por meio da execução especulativa.
 
 ## <a name="see-also"></a>Consulte também
 
 [Orientações para atenuar as vulnerabilidades de canal lateral de execução especulativa](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
-
-[Redução de vulnerabilidades de hardware execução especulativa lado canal](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)
+[redução de vulnerabilidades de hardware execução especulativa lado canal](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

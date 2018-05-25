@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Em plataformas ARM, o **control87** e **controlfp** funções se aplicam ao registro FPSCR. Em x64 arquiteturas, apenas a palavra de controle SSE2 é armazenado no MXCSR registro é afetado. X86 plataformas, **control87** e **controlfp** afetam as palavras de controle para o x87 e SSE2, se presente. A função **__control87_2** habilita o x87 e unidades de ponto flutuantes SSE2 seja controlado juntos ou separadamente. Se você quiser afetar as unidades, passar os endereços dos dois inteiros para **x86_cw** e **sse2_cw**. Se desejar afetar apenas uma unidade, passe um endereço para esse parâmetro, mas passe 0 (NULL) para o outro. Se 0 for passado para um desses parâmetros, a função não terá efeito sobre essa unidade de ponto flutuante. Essa funcionalidade poderá ser útil em situações em que parte do código usa a unidade de ponto flutuante x87 e outra parte do código usa a unidade de ponto flutuante SSE2. Se você usar **__control87_2** em uma parte de um programa e definir valores diferentes para as palavras controle de ponto flutuante e, em seguida, usar **control87** ou **controlfp** para obter mais manipular a palavra de controle, em seguida, **control87** e **controlfp** pode ser não é possível retornar uma palavra de controle único para representar o estado de ambas as unidades de ponto flutuantes. Nesse caso, defina essas funções a **EM_AMBIGUOUS** sinalizador no valor de número inteiro retornado para indicar que há uma inconsistência entre as palavras de controle. Esse é um aviso indicando que a palavra de controle retornada poderá não representar o estado de ambas as palavras de controle de ponto flutuante com precisão.
+Em plataformas ARM, o **control87** e **controlfp** funções se aplicam ao registro FPSCR. Em x64 arquiteturas, apenas a palavra de controle SSE2 é armazenado no MXCSR registro é afetado. X86 plataformas, **control87** e **controlfp** afetam as palavras de controle para o x87 e SSE2, se presente. A função **__control87_2** habilita o x87 e unidades de ponto flutuantes SSE2 seja controlado juntos ou separadamente. Se você quiser afetar as unidades, passar os endereços dos dois inteiros para **x86_cw** e **sse2_cw**. Se você quiser afetar uma unidade, passar um endereço para esse parâmetro, mas foi aprovado em 0 (**nulo**) para os outros. Se 0 for passado para um desses parâmetros, a função não terá efeito sobre essa unidade de ponto flutuante. Essa funcionalidade poderá ser útil em situações em que parte do código usa a unidade de ponto flutuante x87 e outra parte do código usa a unidade de ponto flutuante SSE2. Se você usar **__control87_2** em uma parte de um programa e definir valores diferentes para as palavras controle de ponto flutuante e, em seguida, usar **control87** ou **controlfp** para obter mais manipular a palavra de controle, em seguida, **control87** e **controlfp** pode ser não é possível retornar uma palavra de controle único para representar o estado de ambas as unidades de ponto flutuantes. Nesse caso, defina essas funções a **EM_AMBIGUOUS** sinalizador no valor de número inteiro retornado para indicar que há uma inconsistência entre as palavras de controle. Esse é um aviso indicando que a palavra de controle retornada poderá não representar o estado de ambas as palavras de controle de ponto flutuante com precisão.
 
 O ARM e x64 arquiteturas, alterando o modo de infinito ou a precisão de ponto flutuante não são suportadas. Se a máscara de controle de precisão é usada em x64 plataforma, a função gera uma asserção e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
 

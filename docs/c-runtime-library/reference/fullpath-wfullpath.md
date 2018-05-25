@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parâmetros
 
 *absPath*<br/>
-Ponteiro para um buffer contendo o nome de caminho absoluto ou completo ou NULL.
+Ponteiro para um buffer que contém o nome de caminho absoluto ou completo, ou **nulo**.
 
 *relPath*<br/>
 Nome de caminho relativo.
@@ -82,7 +82,7 @@ Cada uma dessas funções retorna um ponteiro para um buffer que contém o nome 
 
 ## <a name="remarks"></a>Comentários
 
-O **FullPath** função expande o nome de caminho relativo no *relPath* de caminho totalmente qualificado ou absoluto e armazena esse nome no *absPath*. Se *absPath* for NULL, **malloc** é usada para alocar um buffer de tamanho suficiente para conter o nome de caminho. É responsabilidade do chamador liberar esse buffer. Um nome de caminho relativo especifica um caminho para outro local do local atual (como o diretório de trabalho atual: "."). Um nome de caminho absoluto é a expansão de um nome de caminho relativo que indica o caminho inteiro necessário para alcançar o local desejado da raiz do sistema de arquivos. Ao contrário de **makepath**, **FullPath** pode ser usado para obter o nome de caminho absoluto para caminhos relativos (*relPath*) que incluem ". /"ou"... / "em seus nomes.
+O **FullPath** função expande o nome de caminho relativo no *relPath* de caminho totalmente qualificado ou absoluto e armazena esse nome no *absPath*. Se *absPath* é **nulo**, **malloc** é usada para alocar um buffer de tamanho suficiente para conter o nome de caminho. É responsabilidade do chamador liberar esse buffer. Um nome de caminho relativo especifica um caminho para outro local do local atual (como o diretório de trabalho atual: "."). Um nome de caminho absoluto é a expansão de um nome de caminho relativo que indica o caminho inteiro necessário para alcançar o local desejado da raiz do sistema de arquivos. Ao contrário de **makepath**, **FullPath** pode ser usado para obter o nome de caminho absoluto para caminhos relativos (*relPath*) que incluem ". /"ou"... / "em seus nomes.
 
 Por exemplo, para usar rotinas de tempo de execução de C, o aplicativo deve incluir os arquivos de cabeçalho que contêm as declarações para as rotinas. Cada instrução include do arquivo de cabeçalho faz referência ao local do arquivo de forma relativa (do diretório de trabalho do aplicativo):
 

@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341ffb176a82845ec515e2ab2ff9a6d19b7773ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a6b987faa30439f0f374838fe7fcd4d942b8cc7
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -83,7 +83,7 @@ Essas funções, se tiverem êxito, retornarão um descritor de arquivo para o a
 |**EMFILE**|Nenhum outro descritor de arquivo disponível.|
 |**ENOENT**|Não foi possível encontrar o arquivo especificado.|
 
-Se *filename* for NULL, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1.
+Se *filename* é **nulo**, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

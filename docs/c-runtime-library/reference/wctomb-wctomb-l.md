@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e756ea23e32ffc9b164ccbe1a68b9fc987fe7b59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -72,7 +72,7 @@ Um caractere largo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se **wctomb** converte o caractere largo para um caractere multibyte, ele retorna o número de bytes (que nunca é maior que **MB_CUR_MAX**) em que o caractere largo. Se *wchar* é o caractere null de caractere largo (L '\0'), **wctomb** retorna 1. Se o ponteiro de destino *mbchar* for NULL, **wctomb** retorna 0. Se a conversão não for possível na localidade atual, **wctomb** retorna -1 e **errno** é definido como **EILSEQ**.
+Se **wctomb** converte o caractere largo para um caractere multibyte, ele retorna o número de bytes (que nunca é maior que **MB_CUR_MAX**) em que o caractere largo. Se *wchar* é o caractere null de caractere largo (L '\0'), **wctomb** retorna 1. Se o ponteiro de destino *mbchar* é **nulo**, **wctomb** retorna 0. Se a conversão não for possível na localidade atual, **wctomb** retorna -1 e **errno** é definido como **EILSEQ**.
 
 ## <a name="remarks"></a>Comentários
 

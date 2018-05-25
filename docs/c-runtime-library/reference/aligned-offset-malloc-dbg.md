@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b0838f75e8fa95d19ed3abfe13b014157a217
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -66,10 +66,10 @@ O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.
 O deslocamento na alocação de memória para forçar o alinhamento.
 
 *filename*<br/>
-Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou NULL.
+Ponteiro para o nome do arquivo de origem que a operação de alocação solicitada ou **nulo**.
 
 *linenumber*<br/>
-Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou NULL.
+Número no arquivo de origem em que a operação de alocação foi solicitada da linha ou **nulo**.
 
 ## <a name="return-value"></a>Valor de retorno
 

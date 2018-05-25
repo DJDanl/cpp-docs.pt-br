@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c97f46a66a26f107061676dba313b068e9aebf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7af5cce0b17747beb8c136f75489025d741f864a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -55,7 +55,7 @@ Ponteiro para uma função que você grava para substituir o **inesperado** fun�
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a função de encerramento anterior registrado por **_set_unexpected** para que a função anterior pode ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor retornado poderá ser usado para restaurar o comportamento padrão; esse valor pode ser NULL.
+Retorna um ponteiro para a função de encerramento anterior registrado por **_set_unexpected** para que a função anterior pode ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
 
 ## <a name="remarks"></a>Comentários
 

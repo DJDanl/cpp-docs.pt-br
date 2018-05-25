@@ -41,11 +41,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e4a4791092b93d04b06432a5294a11200ed879
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
@@ -77,10 +77,10 @@ Cadeia de caracteres de origem com terminação nula.
 Tipo de bloco de memória solicitado: **client_block** ou **normal_block**.
 
 *filename*<br/>
-Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou NULL.
+Ponteiro para o nome do arquivo de origem que a operação de alocação solicitada ou **nulo**.
 
 *linenumber*<br/>
-Número da linha no arquivo de origem em que a operação de alocação foi solicitada ou NULL.
+Linha número no arquivo de origem em que a operação de alocação foi solicitada ou **nulo**.
 
 ## <a name="return-value"></a>Valor de retorno
 

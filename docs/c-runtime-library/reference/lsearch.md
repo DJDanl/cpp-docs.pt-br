@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cfcb5b3182b4d8a30c6bee65bc6efd3199fd3c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -87,7 +87,7 @@ O **lsearch** função executa uma pesquisa linear para o valor *chave* em uma m
 
 O *comparar* argumento é um ponteiro para uma rotina fornecido pelo usuário que compara dois elementos de matriz e retorna um valor que especifica sua relação. **lsearch** chama o *comparar* rotina um ou mais vezes durante a pesquisa, passando os ponteiros para os dois elementos de matriz em cada chamada. *Comparar* deve comparar os elementos e retornar um diferente de zero (ou seja, os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
 
-Essa função valida seus parâmetros. Se *comparar*, *chave* ou *número* é **nulo**, ou se *base* é NULL e **número*  é diferente de zero, ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**.
+Essa função valida seus parâmetros. Se *comparar*, *chave* ou *número* é **nulo**, ou se *base* é **NULL**e *número* é diferente de zero, ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**.
 
 ## <a name="requirements"></a>Requisitos
 

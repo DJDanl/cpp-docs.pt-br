@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -120,7 +120,7 @@ Na inicialização do programa, o equivalente da instrução a seguir é executa
 
 `setlocale( LC_ALL, "C" );`
 
-O *localidade* argumento pode assumir um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres do idioma e o código de país/região, uma página de código, ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto disponível de nomes de localidade, idiomas, códigos de país/região e páginas de código inclui tudo o que é suportado pela API NLS do Windows, exceto as páginas de código que exigem mais de dois bytes por caractere, como UTF-7 e UTF-8. Se você fornecer um valor de página de código UTF-7 ou UTF-8, **setlocale** falhará, retornando nulo. O conjunto de nomes de localidades com suporte **setlocale** são descritos na [nomes de localidades, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte **setlocale** são listadas na [cadeias de caracteres do idioma](../../c-runtime-library/language-strings.md) e [cadeias de caracteres de país/região](../../c-runtime-library/country-region-strings.md). Recomendamos o formato do nome da localidade para o desempenho e a capacidade de manutenção de cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento. As cadeias de caracteres de nome da localidade são menos prováveis de ser alteradas por uma atualização do sistema operacional do que o formato de idioma e país/região.
+O *localidade* argumento pode assumir um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres do idioma e o código de país/região, uma página de código, ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto disponível de nomes de localidade, idiomas, códigos de país/região e páginas de código inclui tudo o que é suportado pela API NLS do Windows, exceto as páginas de código que exigem mais de dois bytes por caractere, como UTF-7 e UTF-8. Se você fornecer um valor de página de código UTF-7 ou UTF-8, **setlocale** falhará, retornando **nulo**. O conjunto de nomes de localidades com suporte **setlocale** são descritos na [nomes de localidades, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte **setlocale** são listadas na [cadeias de caracteres do idioma](../../c-runtime-library/language-strings.md) e [cadeias de caracteres de país/região](../../c-runtime-library/country-region-strings.md). Recomendamos o formato do nome da localidade para o desempenho e a capacidade de manutenção de cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento. As cadeias de caracteres de nome da localidade são menos prováveis de ser alteradas por uma atualização do sistema operacional do que o formato de idioma e país/região.
 
 Um ponteiro nulo é passado como o *localidade* argumento informa **setlocale** de consulta em vez de para definir o ambiente internacional. Se o *localidade* argumento é um ponteiro nulo, a configuração de localidade atual do programa não é alterada. Em vez disso, **setlocale** retorna um ponteiro para a cadeia de caracteres que está associada com o *categoria* da localidade atual do thread. Se o *categoria* argumento é **LC_ALL**, a função retorna uma cadeia de caracteres que indica a configuração atual de cada categoria, separada por ponto e vírgula. Por exemplo, a sequência de chamadas
 

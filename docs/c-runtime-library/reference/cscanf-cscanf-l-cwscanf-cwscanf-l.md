@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ O número de campos que foram convertidos e atribuídos com êxito. O valor reto
 
 O **cscanf** função lê dados diretamente do console para os locais de fornecido pelo *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo na *formato*. Os controles de formato a interpretação da entrada de campos e tem o mesmo formulário e funcionar como o *formato* parâmetro para o [scanf](scanf-scanf-l-wscanf-wscanf-l.md) função. Enquanto **cscanf** normalmente exibe o caractere de entrada, ele não faça isso se a última chamada **ungetch**.
 
-Essa função valida seus parâmetros. Se o formato for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **EOF**.
+Essa função valida seus parâmetros. Se o formato é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **EOF**.
 
 As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 

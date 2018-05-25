@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ Se qualquer uma das condições de erro acima ocorrer, o manipulador de parâmet
 
 O **wctomb_s** função converte seu *wchar* argumento para o caractere de multibyte correspondente e armazena o resultado em *mbchar*. Você pode chamar a função de qualquer ponto, em qualquer programa.
 
-Se **wctomb_s** converte o caractere largo para um caractere multibyte, ele coloca o número de bytes (que nunca é maior que **MB_CUR_MAX**) no ampla de caracteres para o inteiro apontada por *pRetValue*. Se *wchar* é o caractere null de caractere largo (L '\0'), **wctomb_s** preenche *pRetValue* com 1. Se o ponteiro de destino *mbchar* for NULL, **wctomb_s** coloca 0 em *pRetValue*. Se a conversão não for possível na localidade atual, **wctomb_s** coloca -1 em *pRetValue*.
+Se **wctomb_s** converte o caractere largo para um caractere multibyte, ele coloca o número de bytes (que nunca é maior que **MB_CUR_MAX**) no ampla de caracteres para o inteiro apontada por *pRetValue*. Se *wchar* é o caractere null de caractere largo (L '\0'), **wctomb_s** preenche *pRetValue* com 1. Se o ponteiro de destino *mbchar* é **nulo**, **wctomb_s** coloca 0 em *pRetValue*. Se a conversão não for possível na localidade atual, **wctomb_s** coloca -1 em *pRetValue*.
 
 **wctomb_s** usa a localidade atual para obter informações dependem da localidade; **wctomb_s_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

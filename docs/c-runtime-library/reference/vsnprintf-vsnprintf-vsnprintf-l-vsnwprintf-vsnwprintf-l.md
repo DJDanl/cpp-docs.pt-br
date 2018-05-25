@@ -62,11 +62,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e394984d742ee565296a452cf553e09f37b0aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -173,7 +173,7 @@ Ambos **vsnprintf** e **vsnwprintf** funções retornam o número de caracteres 
 
 O valor retornado por todas essas funções não inclui o nulo de terminação, quer seja gravado um ou não. Quando *contagem* for zero, o valor retornado é o número de caracteres, as funções escreve, não incluindo nenhum null de terminação. Você pode usar esse resultado para alocar espaço suficiente no buffer para a cadeia de caracteres e seu nulo de terminação e, em seguida, chamar a função novamente para preencher o buffer.
 
-Se *formato* é **nulo**, ou se *buffer* é NULL e *contagem* não é igual a zero, essas funções invocar o manipulador de parâmetro inválido conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+Se *formato* é **nulo**, ou se *buffer* é **nulo** e *contagem* não é igual a zero, essas funções invocar o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 

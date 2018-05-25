@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -106,7 +106,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de caracteres em *str*, excluindo o terminal **nulo**. Nenhum valor de retorno é reservado para indicar um erro, com exceção de **mbstrlen** e **mbstrlen_l**, que retornam `((size_t)(-1))` se a cadeia de caracteres contém um caractere de multibyte inválido.
+Cada uma dessas funções retorna o número de caracteres em *str*, excluindo o terminal nulo. Nenhum valor de retorno é reservado para indicar um erro, com exceção de **mbstrlen** e **mbstrlen_l**, que retornam `((size_t)(-1))` se a cadeia de caracteres contém um caractere de multibyte inválido.
 
 ## <a name="remarks"></a>Comentários
 

@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se **wcstombs** com êxito converte a cadeia de caracteres multibyte, retorna o número de bytes gravados na cadeia de caracteres multibyte de saída, exceto o encerramento do **nulo** (se houver). Se o *mbstr* argumento é **nulo**, **wcstombs** retorna o tamanho necessário em bytes da cadeia de caracteres de destino. Se **wcstombs** encontra um caractere largo não é possível converter um caractere multibyte, retornará -1 convertido no tipo **size_t** e define **errno** para **EILSEQ** .
+Se **wcstombs** com êxito converte a cadeia de caracteres multibyte, retorna o número de bytes gravados na cadeia de caracteres multibyte de saída, exceto o nulo de terminação (se houver). Se o *mbstr* argumento é **nulo**, **wcstombs** retorna o tamanho necessário em bytes da cadeia de caracteres de destino. Se **wcstombs** encontra um caractere largo não é possível converter um caractere multibyte, retornará -1 convertido no tipo **size_t** e define **errno** para **EILSEQ** .
 
 ## <a name="remarks"></a>Comentários
 
-O **wcstombs** função converte a cadeia de caracteres largos apontada pelo *wcstr* para o correspondente multibyte caracteres e armazena os resultados no *mbstr* matriz. O *contagem* parâmetro indica o número máximo de bytes que podem ser armazenados na cadeia de caracteres multibyte saída (ou seja, o tamanho de *mbstr*). Em geral, a quantidade de bytes necessária ao converter uma cadeia de caracteres largos não é conhecida. Alguns caracteres largos exigem apenas um byte na cadeia de caracteres saída; outros exigem dois. Se houver dois bytes na cadeia de caracteres multibyte saída para cada caractere largo na cadeia de entrada (incluindo o caractere largo **nulo**), o resultado é garantido para caber.
+O **wcstombs** função converte a cadeia de caracteres largos apontada pelo *wcstr* para o correspondente multibyte caracteres e armazena os resultados no *mbstr* matriz. O *contagem* parâmetro indica o número máximo de bytes que podem ser armazenados na cadeia de caracteres multibyte saída (ou seja, o tamanho de *mbstr*). Em geral, a quantidade de bytes necessária ao converter uma cadeia de caracteres largos não é conhecida. Alguns caracteres largos exigem apenas um byte na cadeia de caracteres saída; outros exigem dois. Se houver dois bytes na cadeia de caracteres multibyte saída para cada caractere largo na cadeia de entrada (incluindo o nulo de caractere largo), o resultado é garantido para caber.
 
 Se **wcstombs** encontra o caractere null de caractere largo (L '\0') antes ou quando *contagem* ocorrer, ele converte em um 0 de 8 bits e paradas. Assim, a cadeia de caracteres multibyte em *mbstr* é terminada em nulo apenas se **wcstombs** encontra um caractere null de caractere largo durante a conversão. Se as sequências apontada pelo *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcstombs** é indefinido.
 

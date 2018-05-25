@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiler-error-c3533"></a>C3533 de erro do compilador
 'type': um parâmetro não pode ter um tipo que contém 'auto'  
@@ -32,21 +32,21 @@ ms.lasthandoff: 05/04/2018
 1.  Remover o `auto` palavra-chave da declaração de parâmetro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir produz C3535 porque ele declara um parâmetro de função com o `auto` palavra-chave e ele é compilado com **/ZC: auto**.  
+ O exemplo a seguir produz C3533 porque ele declara um parâmetro de função com o `auto` palavra-chave e ele é compilado com **/ZC: auto**.  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir produz C3535 porque ele declara um parâmetro de modelo com o `auto` palavra-chave e ele é compilado com **/ZC: auto**.  
+ O exemplo a seguir produz C3533 no modo C + + 14 porque ele declara um parâmetro de modelo com o `auto` palavra-chave e ele é compilado com **/ZC: auto**. (Em C++ 17, esta é uma definição válida de um modelo de classe com um parâmetro único modelo sem tipo cujo tipo é deduzido.)
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

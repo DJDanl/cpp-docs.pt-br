@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -116,7 +116,7 @@ Cada uma dessas funções retorna um valor que indica a relação de *string1* p
 |0|*string1* idêntico ao *string2*|
 |> 0|*string1* maior *string2*|
 
-Cada uma dessas funções retorna **_NLSCMPERROR** em um erro. Para usar **_NLSCMPERROR**, incluir a cadeia de caracteres. H ou MBSTRING. H. **wcscoll** pode falhar se *string1* ou *string2* é nulo ou contém códigos de caractere largo fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcscoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcscoll**, defina **errno** como 0 e, em seguida, verifique **errno** depois de chamar **wcscoll**.
+Cada uma dessas funções retorna **_NLSCMPERROR** em um erro. Para usar **_NLSCMPERROR**, incluir a cadeia de caracteres. H ou MBSTRING. H. **wcscoll** pode falhar se *string1* ou *string2* é **nulo** ou contém códigos de caractere largo fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcscoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcscoll**, defina **errno** como 0 e, em seguida, verifique **errno** depois de chamar **wcscoll**.
 
 ## <a name="remarks"></a>Comentários
 

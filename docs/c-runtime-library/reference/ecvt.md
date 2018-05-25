@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ Sinal do número convertido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ecvt** retorna um ponteiro para a cadeia de caracteres de dois dígitos. NULL se ocorreu um erro.
+**ecvt** retorna um ponteiro para a cadeia de caracteres de dois dígitos. **Nulo** se ocorreu um erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -85,7 +85,7 @@ A diferença entre **ecvt** e **fcvt** está na interpretação de *contagem* pa
 
 **ecvt** e **fcvt** usar um único buffer estaticamente alocado para a conversão. Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior.
 
-Essa função valida seus parâmetros. Se *dez* ou *sinal* for NULL, ou *contagem* for 0, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e NULL será retornado.
+Essa função valida seus parâmetros. Se *dez* ou *sinal* é **nulo**, ou *contagem* for 0, o manipulador de parâmetro inválido é invocado, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e **nulo** é retornado.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e49c65a642dcee3e0f04fb5000a390fccae98ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="filename-macros"></a>Macros de nome de arquivo
 Macros de nome de arquivo são predefinidas como nomes de arquivo especificado na dependência (nome de arquivo completo não especificações no disco). Essas macros não precisam ser colocados entre parênteses quando invocado; Especifique apenas um $ conforme mostrado.  
@@ -29,8 +29,8 @@ Macros de nome de arquivo são predefinidas como nomes de arquivo especificado n
 |-----------|-------------|  
 |**$@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado.|  
 |**$$@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado. Válido apenas como um dependente em uma dependência.|  
-|**$\***|Nome do destino atual de base e o caminho menos extensão de arquivo.|  
-|**$\*\***|Todos os dependentes do destino atual.|  
+|**$&#42;**|Nome do destino atual de base e o caminho menos extensão de arquivo.|  
+|**$&#42;&#42;**|Todos os dependentes do destino atual.|  
 |**$?**|Todos os dependentes com um carimbo de hora posterior que o destino atual.|  
 |**$<**|Arquivo dependente com um carimbo de hora posterior que o destino atual. Válido somente em comandos em regras de inferência.|  
   

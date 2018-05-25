@@ -28,11 +28,11 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5e491b9dc5035435fce16b704d28a71a1b0644de
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12840a7b48be897573e2041aa06fc7fdc8d15297
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ltiomanipgt-functions"></a>Funções &lt;iomanip&gt;
 
@@ -125,7 +125,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="remarks"></a>Comentários
 
-O manipulador retorna um objeto que, quando inserido no fluxo `str`, se comporta como `formatted output function`. A função de saída chama a função membro `put` para a faceta de localidade `time_put` associada a `str`. A função de saída usa `_Tptr` para indicar a estrutura de tempo e `_Fmt` para indicar o início de uma cadeia de caracteres de formato terminada em NUL. Se for bem-sucedida, a chamada insere texto literal da cadeia de caracteres de formato e valores convertidos da estrutura de hora. O manipulador, então, retorna `str`.
+O manipulador retorna um objeto que, quando inserido no fluxo `str`, se comporta como `formatted output function`. A função de saída chama a função membro `put` para a faceta de localidade `time_put` associada a `str`. Usa a função de saída `_Tptr` para indicar a estrutura de tempo e `_Fmt` para indicar o início de uma cadeia de caracteres de formato terminada em nulo. Se for bem-sucedida, a chamada insere texto literal da cadeia de caracteres de formato e valores convertidos da estrutura de hora. O manipulador, então, retorna `str`.
 
 ## <a name="quoted"></a>  quoted
 

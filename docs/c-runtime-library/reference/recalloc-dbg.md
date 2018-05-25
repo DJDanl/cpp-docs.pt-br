@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8ce4941dcad2a9b02b853640076b71a97f68cbe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de6adddc4e7d95f3212c80666816d4855897388
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -81,7 +81,7 @@ O *filename* e *linenumber* parâmetros estão disponíveis somente quando **rec
 
 ## <a name="return-value"></a>Valor de retorno
 
-Após a conclusão bem-sucedida, essa função retorna um ponteiro para a parte do usuário do bloco de memória realocado, chama a nova função do manipulador ou retorna NULL. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [_recalloc](recalloc.md).
+Após a conclusão bem-sucedida, essa função retorna um ponteiro à parte do usuário do bloco de memória realocada, chama a nova função de manipulador ou retorna **nulo**. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [_recalloc](recalloc.md).
 
 ## <a name="remarks"></a>Comentários
 

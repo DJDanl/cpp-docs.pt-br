@@ -75,11 +75,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fff41a079d64f5416942dcb1fb3c9395b73e5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -150,7 +150,7 @@ O **strnset** função define, no máximo, o primeiro *contagem* caracteres de *
 
 **wcsnset** e **mbsnset** são versões de caracteres largos e caracteres multibyte **strnset**. O valor de retorno e argumentos de cadeia de caracteres **wcsnset** são caracteres largos cadeias de caracteres; desses **mbsnset** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
-**mbsnset** valida seus parâmetros; se *str* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, **mbsnset** retorna NULL e define **errno** para **EINVAL**. **strnset** e **wcsnset** não validar seus parâmetros.
+**mbsnset** valida seus parâmetros; se *str* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, **mbsnset** retorna **nulo** e define **errno** para **EINVAL**. **strnset** e **wcsnset** não validar seus parâmetros.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

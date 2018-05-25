@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a176aa258f805a516bf36c982ba63e531a74478
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7154f6de192ee6b681ed0419126f3d4b682abb8c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 
@@ -58,7 +58,7 @@ Um número entre zero e um a menos do que o valor retornado por **_RTC_NumErrors
 
 ## <a name="return-value"></a>Valor de retorno
 
-Uma cadeia de caracteres que contém uma breve descrição de um dos tipos de erro detectados pelo sistema de verificação de erro em tempo de execução. Se o erro é menor que zero ou maior que ou igual ao valor retornado por [RTC_NumErrors](rtc-numerrors.md), **RTC_GetErrDesc** retorna NULL.
+Uma cadeia de caracteres que contém uma breve descrição de um dos tipos de erro detectados pelo sistema de verificação de erro em tempo de execução. Se o erro é menor que zero ou maior que ou igual ao valor retornado por [RTC_NumErrors](rtc-numerrors.md), **RTC_GetErrDesc** retorna **nulo**.
 
 ## <a name="requirements"></a>Requisitos
 

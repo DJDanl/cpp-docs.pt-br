@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ Ponteiro para o número da linha no arquivo de origem ou **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtismemoryblock** função verifica se um bloco de memória especificado está localizado na pilha de local do aplicativo e se ele tem um identificador de tipo de bloco válido. Essa função também pode ser usada para obter o número de ordem de alocação do objeto e o nome do arquivo de origem/número de linha em que a alocação de bloco de memória foi originalmente solicitada. Passando valores não nulos para a *requestNumber*, *filename*, ou *linenumber* causas parâmetros **crtismemoryblock** para definir Esses parâmetros para os valores no bloco de memória de depuração cabeçalho, se ele encontrar o bloco na pilha de local. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtismemoryblock** são removidos durante o pré-processamento.
+O **crtismemoryblock** função verifica se um bloco de memória especificado está localizado na pilha de local do aplicativo e se ele tem um identificador de tipo de bloco válido. Essa função também pode ser usada para obter o número de ordem de alocação do objeto e o nome do arquivo de origem/número de linha em que a alocação de bloco de memória foi originalmente solicitada. Passando não**nulo** valores para o *requestNumber*, *filename*, ou *linenumber* causas parâmetros **_ CrtIsMemoryBlock** para definir esses parâmetros para os valores no cabeçalho de depuração do bloco de memória, se ele encontrar o bloco na pilha de local. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtismemoryblock** são removidos durante o pré-processamento.
 
 Se **crtismemoryblock** falhar, ele retorna **FALSE** e os parâmetros de saída são inicializados para valores padrão: *requestNumber* e **lineNumber**  são definidos como 0 e *filename* é definido como **nulo**.
 

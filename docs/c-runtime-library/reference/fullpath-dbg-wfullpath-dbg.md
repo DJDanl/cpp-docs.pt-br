@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ Cada função retorna um ponteiro para um buffer que contém o nome de caminho a
 
 ## <a name="remarks"></a>Comentários
 
-O **fullpath_dbg** e **wfullpath_dbg** funções são idênticas aos **FullPath** e **wfullpath** exceto que, quando **Debug** é definida, essas funções usam a versão de depuração **malloc**, **malloc_dbg**para alocar memória se NULL for passado como o primeiro parâmetro. Para obter informações sobre os recursos de depuração **malloc_dbg**, consulte [malloc_dbg](malloc-dbg.md).
+O **fullpath_dbg** e **wfullpath_dbg** funções são idênticas aos **FullPath** e **wfullpath** exceto que, quando **Debug** é definida, essas funções usam a versão de depuração **malloc**, **malloc_dbg**para alocar memória se **nulo** é passado como o primeiro parâmetro. Para obter informações sobre os recursos de depuração **malloc_dbg**, consulte [malloc_dbg](malloc-dbg.md).
 
 Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir o **crtdbg_map_alloc** sinalizador. Quando **crtdbg_map_alloc** é definida, chamadas para **FullPath** e **wfullpath** são remapeados para **fullpath_dbg** e **wfullpath_dbg**, respectivamente, com o *blockType* definida como **normal_block**. Assim, você não precisa chamar essas funções explicitamente, a menos que você deseja marcar os blocos de heap como **client_block**. Para obter mais informações, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).
 

@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +118,11 @@ O número de caracteres gravados, ou -1 se ocorreu um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **sprintf_p** função formata e armazena uma série de caracteres e valores em *buffer*. Cada argumento o *argument_list* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação para funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Um **nulo** caractere é acrescentado depois do último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre **sprintf_p** e **sprintf_s** é que **sprintf_p** oferece suporte a parâmetros de posição, que permite especificar a ordem em que os argumentos são usado na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+O **sprintf_p** função formata e armazena uma série de caracteres e valores em *buffer*. Cada argumento o *argument_list* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação para funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre **sprintf_p** e **sprintf_s** é que **sprintf_p** oferece suporte a parâmetros de posição, que permite especificar a ordem em que os argumentos são usado na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **swprintf_p** é uma versão de caractere largo de **sprintf_p**; os argumentos de ponteiro para **swprintf_p** são cadeias de caracteres do caractere largo. Detecção de erros de codificação **swprintf_p** pode ser diferente no **sprintf_p**. **swprintf_p** e **fwprintf_p** tenham comportamento idêntico, exceto que **swprintf_p** grava a saída para uma cadeia de caracteres em vez de um destino de tipo **arquivo**, e **swprintf_p** requer o *contagem* parâmetro para especificar o número máximo de caracteres a serem gravados. As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-**sprintf_p** retorna o número de bytes armazenados em *buffer*, sem considerar o encerramento do **nulo** caracteres. **swprintf_p** retorna o número de caracteres largos armazenados em *buffer*, sem considerar o encerramento do **nulo** caracteres largos. Se *buffer* ou *formato* é um ponteiro nulo, ou se a cadeia de caracteres de formato contém caracteres inválidos de formatação, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+**sprintf_p** retorna o número de bytes armazenados em *buffer*, sem contar o caractere null de terminação. **swprintf_p** retorna o número de caracteres largos armazenados em *buffer*, sem contar o caractere largo nulo de terminação. Se *buffer* ou *formato* é um ponteiro nulo, ou se a cadeia de caracteres de formato contém caracteres inválidos de formatação, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

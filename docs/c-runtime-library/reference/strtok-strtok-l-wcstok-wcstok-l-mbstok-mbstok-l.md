@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -103,7 +103,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para o próximo token encontrado no *strToken*. Elas retornam **nulo** quando não há mais tokens forem encontrados. Cada chamada modifica *strToken* substituindo um **nulo** caracteres para o primeiro delimitador que ocorre após o token retornado.
+Retorna um ponteiro para o próximo token encontrado no *strToken*. Elas retornam **nulo** quando não há mais tokens forem encontrados. Cada chamada modifica *strToken* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
 
 ## <a name="remarks"></a>Comentários
 

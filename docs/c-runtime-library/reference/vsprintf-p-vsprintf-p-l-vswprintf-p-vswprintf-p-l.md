@@ -50,11 +50,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f04031bd0d21ab0a4520820d433016497072e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -123,7 +123,7 @@ Essas funções diferem do **vsprintf_s** e **vswprintf_s** apenas se eles ofere
 
 As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-Se o *buffer* ou *formato* parâmetros são ponteiros NULL, se a contagem for zero, ou se a cadeia de caracteres de formato contém caracteres inválidos de formatação, o manipulador de parâmetro inválido é invocado, conforme descrito em [ Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retornam -1, as funções e defina **errno** para **EINVAL**.
+Se o *buffer* ou *formato* parâmetros são **nulo** ponteiros, se a contagem for zero, ou se a cadeia de caracteres de formato contém formatação inválida caracteres, o parâmetro inválido manipulador é chamado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retornam -1, as funções e defina **errno** para **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

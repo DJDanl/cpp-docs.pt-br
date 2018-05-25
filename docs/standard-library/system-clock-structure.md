@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>Estrutura system_clock
 
@@ -42,8 +42,6 @@ Um *tipo de relógio* é usado para obter a hora atual como UTC. O tipo incorpor
 Um relógio será *monotônico* se o valor retornado por uma primeira chamada a `now()` for sempre menor ou igual ao valor retornado por uma chamada posterior a `now()`.
 
 Um relógio será *estável* se ele for *monotônico* e se o tempo entre os tiques do relógio for constante.
-
-Nessa implementação, um `system_clock` é sinônimo de um `high_resolution_clock`.
 
 ## <a name="members"></a>Membros
 
