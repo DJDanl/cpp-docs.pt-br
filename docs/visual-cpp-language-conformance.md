@@ -11,11 +11,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 722b1dadbdd5e1855ea8d8cc163de705f3e2cbcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70fc4705b6e150978812563fcde9e0f4d6b3cea1
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="visual-c-language-conformance"></a>Conformidade com a linguagem Visual C++
 
@@ -32,8 +32,8 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |----|---|
 |__Principais recursos da linguagem C++03/11__|__Com suporte__|
 |&nbsp;&nbsp;O restante|VS 2015 <sup>[A](#note_A)</sup>|
-|&nbsp;&nbsp;Pesquisa de nome de duas fases|Parcial <sup>[B](#note_B)</sup>|
-|&nbsp;&nbsp;[N2634 Expressão SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|Parcial <sup>[C](#note_C)</sup>|
+|&nbsp;&nbsp;Pesquisa de nome de duas fases|VS 2017 15.7 <sup>[B](#note_B)</sup>|
+|&nbsp;&nbsp;[N2634 Expressão SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 Pré-processador C99](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Parcial <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 Tipos inteiros estendidos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|N/A <sup>[E](#note_E)</sup>|
 |__Principais recursos da linguagem C++14__|__Com suporte__|
@@ -80,16 +80,34 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |&nbsp;&nbsp;[P0386R2 Variáveis embutidas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0522R0 Fazendo a correspondência de parâmetros de modelo do modelo com argumentos compatíveis](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0036R0 Removendo algumas dobras unárias vazias](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4261 Corrigindo conversões de qualificação](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|Não|
-|&nbsp;&nbsp;[P0017R1 Inicialização de agregação estendida](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|Não|
-|&nbsp;&nbsp;[P0091R3 Dedução de argumento de modelo para modelos de classe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 Problemas de dedução de argumento de modelo de classe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|Não|
-|&nbsp;&nbsp;[P0127R2 Declarando parâmetros de modelo sem tipo com automático](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|Não|
-|&nbsp;&nbsp;[P0135R1 Garantia de elisão de cópia](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|Não <sup>[H](#note_H)</sup>|
-|&nbsp;&nbsp;[P0136R1 Reescrevendo construtores de herança](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|Não|
-|&nbsp;&nbsp;[P0145R3 Refinando a ordem de avaliação de expressão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 Ordem de avaliação de argumentos de função](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|Não|
-|&nbsp;&nbsp;[P0195R2 Expansões de pacote em declarações using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|Não|
-|&nbsp;&nbsp;[P0283R2 Ignorando atributos não reconhecidos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|Não|
-|&nbsp;&nbsp;[P0702R1 Corrigindo dedução de argumento de modelo de classe para construtores de lista de inicializadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|Não|
+|&nbsp;&nbsp;[N4261 Corrigindo conversões de qualificação](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|VS 2017 15.7  <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0017R1 Inicialização de agregação estendida](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|VS 2017 15.7  <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0091R3 Dedução de argumento de modelo para modelos de classe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 Problemas de dedução de argumento de modelo de classe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0127R2 Declarando parâmetros de modelo sem tipo com automático](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0135R1 Garantia de elisão de cópia](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6<sup>[H](#note_H)</sup>|
+|&nbsp;&nbsp;[P0136R1 Reescrevendo construtores de herança](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0137R1 std::launder](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0137r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0145R3 Refinando a ordem de avaliação de expressão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 Ordem de avaliação de argumentos de função](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0195R2 Expansões de pacote em declarações using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0283R2 Ignorando atributos não reconhecidos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0702R1 Corrigindo dedução de argumento de modelo de classe para construtores de lista de inicializadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+
+  
+  
+|Área de recursos| |
+|----|---|
+|__Principais recursos da linguagem C++17 (relatórios de defeito)__|__Com suporte__|
+|&nbsp;&nbsp;[P0702R1 Corrigindo dedução de argumento de modelo de classe para construtores de lista de inicializadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0588R1 Simplificar captura de lambda implícita](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Não|
+|&nbsp;&nbsp;[CWG 1581: quando as funções de membro constexpr são definidas?](https://wg21.cmeerw.net/cwg/issue1581)|Não|
+|&nbsp;&nbsp;[P0962R1 Relaxar as regras de localização do ponto de personalização de associações estruturadas](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|Não|
+|&nbsp;&nbsp;[P0962R2 Relaxar as regras de localização do ponto de personalização do loop range-for](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Não|
+|&nbsp;&nbsp;[P0969R0 Permitir associações estruturadas para membros acessíveis](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|Não|
+
+  
+  
+|Área de recursos| |
+|----|---|
 |__Principais recursos da linguagem C++20__|__Com suporte__|
 |&nbsp;&nbsp;[P0306R4 Adição de &#95;&#95;VA_OPT&#95;&#95; para omissão e exclusão de vírgulas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|Não|
 |&nbsp;&nbsp;[P0329R4 Inicialização designada](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Não|
@@ -105,25 +123,46 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |Área de recursos| |
 |---|---|
 |__Recursos da Biblioteca Padrão C++20__|__Com suporte__|
+|&nbsp;&nbsp; [P0777R1 Evitar decaimento desnecessário](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Não|
 |&nbsp;&nbsp;[P0674R1 make_shared() para matrizes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Não|
+|&nbsp;&nbsp;[P0858R0 Requisitos de iterador constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0809R0 Comparar contêineres desordenados](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp; [P0020R3 atomic\<float>, atomic\<double>, atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|Não|
+|&nbsp;&nbsp; [P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br />&nbsp;&nbsp; [P0753R2 Manipuladores osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|Não|
+|&nbsp;&nbsp; [P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|Não|
+|&nbsp;&nbsp; [P0202R3 constexpr para \<algorithm> e exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Não|
+|&nbsp;&nbsp; [P0355R7 \<chrono> Calendários e fusos horários](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Não|
+|&nbsp;&nbsp; [P0415R1 constexpr para \<complex> (novamente)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Não|
+|&nbsp;&nbsp; [P0439R0 classe de enumeração memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Não|
+|&nbsp;&nbsp; [P0457R2 starts_with()/ends_with() para basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|Não|
+|&nbsp;&nbsp; [P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|Não|
+|&nbsp;&nbsp; [P0551R3 Não especializa modelos de função std!](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0551r3.pdf)|Não|
+|&nbsp;&nbsp; [P0600R1 \[\[nodiscard\]\] para o STL, parte 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|Não|
+|&nbsp;&nbsp; [P0616R0 Usar move() em \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|Não|
+|&nbsp;&nbsp; [P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Não|
+|&nbsp;&nbsp; [P0718R2 atomic\<shared_ptr\<T>>, atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|Não|
+|&nbsp;&nbsp; [P0754R2 \<version>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|Não|
+|&nbsp;&nbsp; [P0767R1 Reprovar is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Não|
+|&nbsp;&nbsp; [P0768R1 Suporte à biblioteca para o operador de comparação espaçonave \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Não|
+|&nbsp;&nbsp; [P0966R1 string::reserve() não deve reduzir](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|Não|
 |__Recursos da Biblioteca Padrão C++17__|__Com suporte__|
-|&nbsp;&nbsp;[P0433R2 Integração da dedução de modelo para modelos de classe na Biblioteca Padrão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 Como melhorar a integração da dedução de argumento de modelo de classe na Biblioteca Padrão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|Não|
-|&nbsp;&nbsp;[P0426R1 constexpr para char_traits](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|Não|
-|&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|Não|
-|&nbsp;&nbsp;[P0220R1 Conceitos básicos da biblioteca V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|Parcial <sup>[J](#note_J)</sup>|
-|&nbsp;&nbsp;[P0067R5 Conversões de cadeia de caracteres elementar](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|Não|
-|&nbsp;&nbsp;[N4562 Conceitos básicos de biblioteca: \<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 Excluindo a atribuição polymorphic_allocator](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|Não|
-|&nbsp;&nbsp;[P0024R2 Algoritmos paralelos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 Renomeando políticas de execução paralela](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 Algoritmos paralelos devem conter terminate() para exceções](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 Unificar algoritmos paralelos \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|Não|
-|&nbsp;&nbsp;[P0226R1 Funções matemáticas especiais](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|Não|
-|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 Caminhos relativos para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 Cache de entrada de diretório para sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[P0392R0 Dando suporte a string_view em caminhos do sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 Suporte a sistemas de arquivos não POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 Resolução de comentários NB para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|Não <sup>[K](#note_K)</sup>|
+|&nbsp;&nbsp;[P0433R2 Integração da dedução de modelo para modelos de classe na Biblioteca Padrão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 Como melhorar a integração da dedução de argumento de modelo de classe na Biblioteca Padrão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0426R1 constexpr para char_traits](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0220R1 Conceitos básicos da biblioteca V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6 <sup>[J](#note_J)</sup>|
+|&nbsp;&nbsp;[P0067R5 Conversões de cadeia de caracteres elementar](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|VS 2017 15.7 <sup>[charconv](#note_charconv)</sup>|
+|&nbsp;&nbsp;[N4562 Conceitos básicos de biblioteca: \<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 Excluindo a atribuição polymorphic_allocator](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|VS 2017 15.6|
+|&nbsp;&nbsp;[P0024R2 Algoritmos paralelos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 Renomeando políticas de execução paralela](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 Algoritmos paralelos devem conter terminate() para exceções](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 Unificar algoritmos paralelos \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0226R1 Funções matemáticas especiais](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 Caminhos relativos para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 Cache de entrada de diretório para sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[P0392R0 Dando suporte a string_view em caminhos do sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 Suporte a sistemas de arquivos não POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 Resolução de comentários NB para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
 |&nbsp;&nbsp;[P0003R5 Removendo Especificações de Exceção Dinâmica](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 Correções para not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0033R1 Reescrevendo enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0033R1 Reescrevendo enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0083R3 Unindo mapas e conjuntos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br />&nbsp;&nbsp;[P0508R0 Esclarecendo insert_return_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0174R2 Preterindo partes residuais da biblioteca](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0302R1 Removendo o suporte ao alocador em std::function](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>, shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 Corrigindo shared_ptr para matrizes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>, shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 Corrigindo shared_ptr para matrizes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0521R0 Preterindo shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 Variáveis embutidas para a Biblioteca Padrão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Substituição de \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -148,7 +187,7 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |&nbsp;&nbsp;[P0604R0 Como alterar is\_callable/result\_of para invoke\_result, is\_invocable, is\_nothrow\_invocable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0604r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4562 Conceitos básicos de biblioteca: \<algorithm> sample()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#alg.random.sample)|VS 2017|
 |&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<any>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#any)|VS 2017|
-|&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017|
+|&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017 |
 |&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<string_view>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#string.view)|VS 2017|
 |&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<tuple> apply()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#tuple)|VS 2017|
 |&nbsp;&nbsp;[P0032R3 Interface homogênea de variant/any/optional](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0032r3.pdf)|VS 2017|
@@ -228,30 +267,48 @@ __VS 2015.2__ e __VS 2015.3__ indicam os recursos com suporte no Visual Studio 2
 __VS 2017__ indica os recursos com suporte no Visual Studio 2017 RTM.  
 __VS 2017 15.3__ indica os recursos com suporte no Visual Studio 2017 versão 15.3.  
 __VS 2017 15.5__ indica os recursos com suporte no Visual Studio 2017 versão 15.5.
+__VS 2017 15.7__ indica os recursos com suporte no Visual Studio 2017 versão 15.7.
 
 ### <a name="notes"></a>Observações
 
-<a name="note_A"></a>__A__ Isso ignora as especificações de exceção dinâmica do C++03, que foram preteridas no C++11. Não há nenhum plano para implementá-las, na expectativa de que elas serão removidas de um futuro Padrão do C++.  
-<a name="note_B"></a>__B__ O suporte para pesquisa de nome em duas fases do compilador foi aprimorado, mas permanece incompleto.  
-<a name="note_C"></a>__C__ O suporte do compilador à Expressão SFINAE era suficiente para a Biblioteca Padrão desde o Visual Studio 2015 Atualização 2, mas permanece incompleto.  
-<a name="note_D"></a>__D__ O suporte do compilador às regras do Pré-processador C99 está incompleto no Visual Studio 2017. Há suporte para macros variadic, mas existem diversos bugs no comportamento do pré-processador.  
+<a name="note_A"></a>__A__ No modo /std:c++14, especificações de exceções dinâmicas permanecem não implementadas, e throw() ainda é tratado como um sinônimo para \_\_declspec(nothrow). No C++17, as especificações de exceções dinâmicas foram, em grande parte, removidas por P0003R5, deixando um vestígio: throw() foi preterido e é necessário para se comportar como um sinônimo para noexcept. No modo /std:c++17, agora o MSVC está em conformidade com o padrão, fornecendo a throw() o mesmo comportamento de noexcept, ou seja, a imposição por meio de encerramento.
+A opção do compilador Zc:noexceptTypes- solicita nosso antigo comportamento de \_\_declspec(nothrow). É provável que throw() seja removido em C++20. Para ajudar com a migração do código em resposta a essas alterações no padrão e nossa implementação, novos avisos do compilador para problemas de especificação de exceção foram adicionados em **/std:c++17** e **/permissive-**.  
+<a name="note_B"></a>__B__ Com suporte no modo /permissive- no Visual Studio 2017 versão 15.7. Veja [Suporte à pesquisa de nome em duas fases chega ao MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) para obter mais informações.  
+<a name="note_C"></a>__C__ O suporte do compilador à Expressão SFINAE era suficiente para a Biblioteca Padrão desde o Visual Studio 2015 Atualização 2. Suporte no Visual Studio 2017 15.7, independentemente da configuração do modo /permissive-. Alguns bugs permanecem para ser corrigidos. A solução alternativa "tipo de marca exclusivo" não é mais necessária, e removemos essa solução alternativa da nossa implementação do STL.  
+<a name="note_D"></a>__D__ O suporte do compilador às regras do Pré-processador C99 está incompleto no Visual Studio 2017. Há suporte para macros variadic, mas existem diversos bugs no comportamento do pré-processador.  Estamos revisando o pré-processador e enviaremos experimentalmente essas alterações com o modo **/ permissive-** em breve.  
 <a name="note_E"></a>__E__ Isso está marcado como Não Aplicável, pois os compiladores são permitidos, mas não obrigatórios, para dar suporte a tipos inteiros estendidos.  Como GCC e Clang, decidimos não dar suporte a eles.  
 <a name="note_F"></a>__F__ Da mesma forma, isso é marcado como Não Aplicável, pois os compiladores são permitidos, mas não obrigatórios, para implementar essa otimização.  
 <a name="note_G"></a>__G__ Com suporte em [/std:c++14](./build/reference/std-specify-language-standard-version.md) com um aviso suprimível.  
-<a name="note_H"></a>__H__ Esse recurso estava disponível na visualização do Visual Studio 2017 versão 15.3, mas, como foram encontrados erros, ele foi removido da versão.  
 <a name="note_J"></a>__J__ Recursos que não foram concluídos no Visual Studio 2015 são divididos em outro lugar na tabela.  
-<a name="note_K"></a>__K__ O Filesystem TS é implementado em \<experimental/filesystem> e \<filesystem> por razões históricas, mas sua implementação deve ser corrigida antes que o namespace seja movido. Até que isso seja concluído, o recurso é marcado como ainda não implementado.  
-<a name="note_L"></a>__L__ Compatível com um compilador intrínseco. Esse intrínseco ainda não está disponível em Clang. O recurso está disponível, mas ainda não está habilitado no Intellisense.   
-<a name="note_14"></a>__14__ Esses recursos do C++17 estarão sempre habilitados, mesmo quando [/std:c++14](./build/reference/std-specify-language-standard-version.md) (o padrão) estiver especificado. Isso ocorre porque o recurso foi implementado antes da introdução das opções **/std** ou porque a implementação condicional era complexa de maneira indesejável.  
+<a name="note_K"></a>__K__ Essa é uma implementação completamente nova, incompatível com a versão std::experimental anterior, que precisava de suporte a symlink, correções de bugs e alterações no comportamento padrão exigido. Atualmente, a inclusão de \<filesystem> fornece o novo std::filesystem e o std::experimental::filesystem anterior, e a inclusão de \<experimental/filesystem> fornece somente a implementação antiga experimental. A implementação experimental será REMOVIDA na próxima versão ABI recente das bibliotecas.  
+<a name="note_L"></a>__L__ Compatível com um compilador intrínseco.   
+<a name="note_14"></a>__14__ Esses recursos do C++17/20 estarão sempre habilitados, mesmo quando [/std:c++14](build/reference/std-specify-language-standard-version.md) (o padrão) estiver especificado. Isso ocorre porque o recurso foi implementado antes da introdução das opções **/std** ou porque a implementação condicional era complexa de maneira indesejável.  
 <a name="note_17"></a>__17__ Esses recursos estão habilitados pela opção do compilador [/std:c++17](./build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](./build/reference/std-specify-language-standard-version.md)).  
 <a name="note_byte"></a>__byte__ `std::byte` é habilitado por [/std:c++17](./build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](./build/reference/std-specify-language-standard-version.md)), mas, como ele pode entrar em conflito com os cabeçalhos do SDK do Windows em alguns casos, ele tem uma macro de recusa refinada. Ele pode ser desabilitado, definindo `_HAS_STD_BYTE` como `0`.  
 <a name="note_C11"></a>__C11__ O Universal CRT implementou as partes da Biblioteca Padrão do C11 que são exigidas pelo C++17, com exceção de especificadores de conversão alternativa de E/S do C99 `strftime()`, modo exclusivo do C11 `fopen()` e C11 `aligned_alloc()`. O segundo é improvável de ser implementado, porque C11 especificou `aligned_alloc()` de forma que seja incompatível com a implementação da Microsoft do `free()`, ou seja, que `free()` deve ser capaz de lidar com alocações altamente alinhadas.  
-<a name="note_rem"></a>__rem__ Recursos removidos quando a opção do compilador [/std:c++17](./build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) for especificada. Esses recursos têm macros de opt-ou: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` e `_HAS_UNEXPECTED`.
-  
+<a name="note_rem"></a>__rem__ Recursos removidos quando a opção do compilador [/std:c++17](./build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) for especificada. Esses recursos têm macros de opt-ou: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` e `_HAS_UNEXPECTED`.  
+<a name="note_charconv"></a>__charconv__  from_chars() e to_chars() estão disponíveis para inteiros. Atualmente, estamos trabalhando em from_chars() de ponto flutuante, a ser seguido por to_chars() de ponto flutuante.  
+<a name ="note_parallel"></a> __parallel__ Biblioteca de algoritmos paralelos do C++17 concluída. Observe que isso não significa que cada algoritmo é paralelizado em todos os casos; os algoritmos mais importantes foram paralelizados, e assinaturas de política de execução são fornecidas mesmo se os algoritmos não foram paralelizados. O cabeçalho interno central da nossa implementação STL, yvals.h, contém as seguintes "notas de algoritmos paralelos": o C++ permite que uma implementação implemente os algoritmos paralelos como chamadas para os algoritmos de série.   Essa implementação paraleliza várias chamadas de algoritmo comum, mas não todas.  
+
+Os seguintes algoritmos são paralelizados:
+
+- adjacent_difference, adjacent_find, all_of, any_of, count, count_if, equal, exclusive_scan, find, find_end, find_first_of, find_if, for_each, for_each_n, inclusive_scan, mismatch, none_of, reduce, remove, remove_if, search, search_n, sort, stable_sort, transform, transform_exclusive_scan, transform_inclusive_scan, transform_reduce.
+
+Os seguintes itens não estão paralelizados no momento:
+
+- Nenhuma melhoria aparente no desempenho de paralelismo em hardware de destino; todos os algoritmos que simplesmente copiam ou permutam elementos sem nenhuma ramificação são tipicamente limitados por largura de banda de memória:
+  - copy, copy_backward, copy_n, fill, fill_n, move, move_backward, remove, remove_if, replace, replace_if, reverse, reverse_copy, rotate, rotate_copy, swap_ranges
+- Há confusão sobre requisitos de paralelismo de usuário. Provavelmente na categoria acima mesmo assim:
+  - generate, generate_n
+- Paralelismo efetivo com suspeita de não ser viável:
+  - partial_sort, partial_sort_copy
+- Ainda não avaliado; o paralelismo pode ser implementado em uma versão futura e acredita-se que seja benéfico:
+  - copy_if, includes, inplace_merge, is_heap, is_heap_until, is_partitioned, is_sorted, is_sorted_until, lexicographical_compare, max_element, merge, min_element, minmax_element, nth_element, partition_copy, remove_copy, remove_copy_if, replace_copy, replace_copy_if, set_difference, set_intersection, set_symmetric_difference, set_union, stable_partition, unique, unique_copy
+
 ## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](cpp/cpp-language-reference.md)  
-[Biblioteca padrão C++](standard-library/cpp-standard-library-reference.md)   
+[Biblioteca Padrão do C++](standard-library/cpp-standard-library-reference.md)  
 [Aprimoramentos de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md)  
 [Novidades do Visual C++ no Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)  
 [Histórico de alterações de 2003 a 2015 do Visual C++](porting/visual-cpp-change-history-2003-2015.md)  

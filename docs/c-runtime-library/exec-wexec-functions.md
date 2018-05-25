@@ -63,11 +63,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef98749c094165cb7cdff9f20370a55dfdaaa3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="exec-wexec-functions"></a>Funções _exec, _wexec
 Cada função desta família carrega e executa um novo processo:  
@@ -120,9 +120,9 @@ Cada função desta família carrega e executa um novo processo:
   
  As chamadas `_execl`, `_execle`, `_execlp` e `_execlpe` costumam ser usadas quando o número de parâmetros é conhecido de antemão. O parâmetro `arg0` costuma ser um ponteiro para `cmdname`. Os parâmetros de `arg1` até `argn` apontam para as cadeias de caracteres que formam a nova lista de parâmetros. Um ponteiro nulo deve seguir `argn` para marcar o final da lista de parâmetros.  
   
- As chamadas `_execv`, `_execve`, `_execvp` e `_execvpe` são úteis quando o número de parâmetros para o novo processo é variável. Os ponteiros para os parâmetros são passados como uma matriz, `argv`. O parâmetro `argv`[0] costuma ser um ponteiro para `cmdname`. Os parâmetros de `argv`[1] até `argv`[`n`] apontam para as cadeias de caracteres que formam a nova lista de parâmetros. O parâmetro `argv`[`n`+1] deve ser um ponteiro `NULL` para marcar o final da lista de parâmetros.  
+ As chamadas `_execv`, `_execve`, `_execvp` e `_execvpe` são úteis quando o número de parâmetros para o novo processo é variável. Os ponteiros para os parâmetros são passados como uma matriz, `argv`. O parâmetro `argv`[0] costuma ser um ponteiro para `cmdname`. Os parâmetros de `argv`[1] até `argv`[`n`] apontam para as cadeias de caracteres que formam a nova lista de parâmetros. O parâmetro `argv`[`n`+1] deve ser um ponteiro **NULL** para marcar o final da lista de parâmetros.  
   
- Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo. Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada. Chamadas `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente para o novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`. `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que o `value` não está entre aspas duplas.) O elemento final da matriz `envp` deve ser `NULL`. Quando o próprio `envp` é `NULL`, o novo processo herda as configurações de ambiente do processo de chamada.  
+ Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo. Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada. Chamadas `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente para o novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`. `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que o `value` não está entre aspas duplas.) O elemento final da matriz `envp` deve ser **NULL**. Quando o próprio `envp` é **NULL**, o novo processo herda as configurações de ambiente do processo de chamada.  
   
  Um programa executado com uma das funções `_exec` é sempre carregado na memória como se o campo de alocação máximo no cabeçalho do arquivo .exe do programa estivesse definido com o valor padrão de 0xFFFFH.  
   

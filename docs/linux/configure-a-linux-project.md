@@ -1,7 +1,9 @@
 ---
 title: Configurar um projeto do C++ Linux no Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 Este tópico descreve como configurar um projeto do Visual Studio Linux. Para obter mais informações sobre projetos do CMake Linux, consulte [Configurar um projeto do CMake Linux ](cmake-linux-project.md).
@@ -40,8 +42,10 @@ Para alterar as configurações relacionadas ao computador Linux remoto, defina 
 > [!NOTE]
 > Para alterar os compiladores padrão C e C++ ou o Vinculador e o Arquivador usados para compilar o projeto, use as entradas apropriadas nas seções **C/C++ > Geral** e **Vinculador > Geral**.  Isso pode ser definido para usar uma determinada versão de GCC ou até mesmo o compilador Clang, por exemplo.
 
-## <a name="vc-directories"></a>Diretórios VC++
-Por padrão, o Visual Studio não inclui os arquivos de inclusão de nível de sistema do computador Linux.  Por exemplo, os itens no diretório **/usr/incluem** não estão presentes no Visual Studio.  Para obter suporte [IntelliSense](/visualstudio/ide/using-intellisense) completo, será necessário copiar esses arquivos para algum local em seu computador de desenvolvimento e apontar o Visual Studio para esse local.  Uma opção é usar scp (Cópia Segura) para copiar os arquivos.  No Windows 10, é possível usar [Bash no Windows](https://msdn.microsoft.com/commandline/wsl/about) para executar o scp.  Para versões anteriores do Windows, seria possível usar algo como [PSCP (Cópia segura PuTTY)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+## <a name="include-directories-and-intellisense-support"></a>Diretórios de inclusão e suporte do IntelliSense
+
+**Visual Studio 2017 versão 15.6 e anterior:** por padrão, o Visual Studio não inclui os arquivos de inclusão de nível de sistema do computador Linux.  Por exemplo, os itens no diretório **/usr/incluem** não estão presentes no Visual Studio.
+Para obter suporte [IntelliSense](/visualstudio/ide/using-intellisense) completo, será necessário copiar esses arquivos para algum local em seu computador de desenvolvimento e apontar o Visual Studio para esse local.  Uma opção é usar scp (Cópia Segura) para copiar os arquivos.  No Windows 10, é possível usar [Bash no Windows](https://msdn.microsoft.com/commandline/wsl/about) para executar o scp.  Para versões anteriores do Windows, seria possível usar algo como [PSCP (Cópia segura PuTTY)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 É possível copiar os arquivos usando um comando semelhante ao seguinte:
 
@@ -52,6 +56,8 @@ Por padrão, o Visual Studio não inclui os arquivos de inclusão de nível de s
 Quando os arquivos forem copiados, use o item **Diretórios VC ++** item nas Propriedades do projeto para informar ao Visual Studio onde encontrar os arquivos de inclusão adicionais que acabaram de ser copiados.
 
 ![Diretórios VC++](media/settings_directories.png)
+
+**Visual Studio 2017 versão 15.7 e posterior:** veja [Gerenciar cabeçalhos remotos para IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Copiar fontes
 Durante a criação, os arquivos de origem em seu computador de desenvolvimento são copiados para o computador Linux e compilados lá.  Por padrão, todas as fontes no projeto do Visual Studio são copiadas para os locais definidos nas configurações acima.  No entanto, outras fontes também podem ser adicionadas à lista ou copiar fontes pode ser totalmente desativado, que é o padrão para um projeto Makefile.
@@ -68,6 +74,20 @@ Durante a criação, os arquivos de origem em seu computador de desenvolvimento 
 Como toda o build está acontecendo em um computador remoto, vários outros eventos de build foram adicionados à seção Eventos de Build nas Propriedades do Projeto.  Eles são os **Evento de pré-build remoto**, **Evento de pré-link remoto** e **Evento de pós-build remoto**, que ocorrerão no computador remoto antes ou após as etapas individuais no processo.
 
 ![Compilar Eventos](media/settings_buildevents.png)
+
+## <a name="remote_intellisense"></a> IntelliSense para cabeçalhos remotos (Visual Studio 2017 versão 15.7 e posterior)
+
+Quando você adiciona uma nova conexão no **Gerenciador de Conexões**, o Visual Studio detecta automaticamente os diretórios de inclusão para o compilador no sistema remoto. Visual Studio compacta e copia os arquivos para um diretório no seu computador local do Windows. Depois disso, sempre que você usar essa conexão em um projeto do Visual Studio ou CMake, os cabeçalhos nesses diretórios serão usados para fornecer IntelliSense.
+
+Essa funcionalidade depende de o computador Linux ter zip instalado. Você pode instalar o zip usando este comando apt-get:
+
+```cmd
+apt install zip
+```
+
+Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Plataforma Cruzada > Gerenciador de Conexões > Gerenciador dos Cabeçalhos Remotos IntelliSense**. Para atualizar o cache do cabeçalho depois de fazer alterações no computador Linux, selecione a conexão remota e, em seguida, selecione **Atualizar**. Selecione **Excluir** para remover os cabeçalhos sem excluir a conexão em si. Selecione **Explorar** para abrir o diretório local no **Explorador de Arquivos**. Trate essa pasta como somente leitura. Para baixar os cabeçalhos para uma conexão existente criada antes da versão 15.3, selecione a conexão e selecione **Baixar**.
+
+![Cabeçalho remoto IntelliSense](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Consulte também
 [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)  

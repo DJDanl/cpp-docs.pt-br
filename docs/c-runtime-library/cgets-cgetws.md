@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Obtém uma cadeia de caracteres do console. Estão disponíveis versões mais seguras dessas funções; consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  Local de armazenamento de dados.  
   
 ## <a name="return-value"></a>Valor retornado  
- `_cgets` e `_cgetws` retornam um ponteiro para o início da cadeia de caracteres, em `buffer[2]`. Se `buffer` for `NULL`, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, elas retornarão `NULL` e definirão `errno` como `EINVAL`.  
+ `_cgets` e `_cgetws` retornam um ponteiro para o início da cadeia de caracteres, em `buffer[2]`. Se `buffer` for **NULL**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, elas retornarão **NULL** e definirão `errno` como `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
  Essas funções leem uma cadeia de caracteres do console e armazenam a cadeia de caracteres e seu comprimento no local apontado por `buffer`. O parâmetro `buffer` deve ser um ponteiro para uma matriz de caracteres. O primeiro elemento da matriz, `buffer[0]`, deve conter o tamanho máximo (em caracteres) da cadeia de caracteres a ser lida. A matriz deve conter elementos suficientes para conter a cadeia de caracteres, um caractere nulo de terminação ('\0') e 2 bytes adicionais. A função lê caracteres até uma combinação de CR-LF (retorno de carro – alimentação de linha) ou o número especificado de caracteres ser lido. A cadeia de caracteres é armazenada começando em `buffer[2]`. Se a função ler CR-LF, ela armazenará o caractere nulo ('\0'). A função então armazena o tamanho real da cadeia de caracteres no segundo elemento de matriz, `buffer[1]`.  

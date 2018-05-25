@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12bdb89a038ccd420748c1b855f21e1b9e4d93a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Mapeia uma cadeia de caracteres para outra, executando a transformação dependente de localidade especificada. Essa função também pode ser usada para gerar uma chave de classificação para a cadeia de caracteres de entrada.  
@@ -59,7 +59,7 @@ int __crtLCMapStringW(
  Ponteiro para uma cadeia de caracteres de origem que a função mapeia ou usa para geração de chave de classificação. Esse parâmetro é considerado uma cadeia de caracteres Unicode.  
   
  `cchSrc`  
- Tamanho, em caracteres, da cadeia de caracteres apontada pelo parâmetro `lpSrcStr`. Essa contagem pode incluir ou não o terminador NULO.  
+ Tamanho, em caracteres, da cadeia de caracteres apontada pelo parâmetro `lpSrcStr`. Essa contagem pode incluir ou não o terminador nulo.  
   
  Um valor `cchSrc` de -1 especifica que a cadeia de caracteres apontada por `lpSrcStr` é terminada em nulo. Se esse for o caso, e essa função estiver sendo usada no modo de mapeamento de cadeia de caracteres, a função calcula o comprimento da cadeia de caracteres e termina em nulo a cadeia de caracteres mapeada armazenada em `*lpDestStr`.  
   
@@ -70,9 +70,9 @@ int __crtLCMapStringW(
  Tamanho, em caracteres, do buffer apontado por `lpDestStr`.  
   
 ## <a name="return-value"></a>Valor retornado  
- Se o valor de `cchDest` for diferente de zero, o número de caracteres, ou bytes, se `LCMAP_SORTKEY` for especificado, gravados no buffer indica êxito. Essa contagem inclui espaço para um terminador NULO.  
+ Se o valor de `cchDest` for diferente de zero, o número de caracteres, ou bytes, se `LCMAP_SORTKEY` for especificado, gravados no buffer indica êxito. Essa contagem inclui espaço para um terminador nulo.  
   
- Se o valor de `cchDest` for zero, o tamanho do buffer em caracteres, ou bytes, se `LCMAP_SORTKEY` for especificado, necessário para receber a cadeia de caracteres ou chave de classificação traduzida indica êxito. Esse tamanho inclui espaço para um terminador NULO.  
+ Se o valor de `cchDest` for zero, o tamanho do buffer em caracteres, ou bytes, se `LCMAP_SORTKEY` for especificado, necessário para receber a cadeia de caracteres ou chave de classificação traduzida indica êxito. Esse tamanho inclui espaço para um terminador nulo.  
   
  Zero indica uma falha. Para obter outras informações sobre o erro, chame a função `GetLastError`.  
   

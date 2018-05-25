@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>Validação do parâmetro
-A maioria das funções de CRT com segurança aprimorada e muitas das funções preexistentes validam seus parâmetros. Isso pode incluir verificar se há ponteiros nulos, verificar se os inteiros estão dentro de um dado alcance ou verificar se os valores de enumeração são válidos. Quando um parâmetro inválido é encontrado, o manipulador de parâmetro inválido é executado.  
+A maioria das funções de CRT com segurança aprimorada e muitas das funções preexistentes validam seus parâmetros. Isso pode incluir verificar se há ponteiros **NULL**, verificar se os inteiros estão dentro de um dado alcance ou verificar se os valores de enumeração são válidos. Quando um parâmetro inválido é encontrado, o manipulador de parâmetro inválido é executado.  
   
 ## <a name="invalid-parameter-handler-routine"></a>Rotina do manipulador de parâmetro inválido  
  Quando uma função da Biblioteca de Tempo de Execução C detecta um parâmetro inválido, ela captura algumas informações sobre o erro e chama uma macro que encapsula uma função de expedição de manipulador de parâmetro inválido, um dentre [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md), [_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md) ou [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md). A função de expedição chamada depende se o código é, respectivamente, um build de depuração, um build comercial ou se o erro não é considerado recuperável. 

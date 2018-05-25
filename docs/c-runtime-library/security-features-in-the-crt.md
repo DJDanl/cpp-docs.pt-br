@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>funcionalidades de segurança no CRT
 Muitas funções de CRT antigas têm versões mais recentes e mais seguras. Se houver uma função de segurança, a versão mais antiga e menos segura estará marcada como preterida, e a nova versão terá o sufixo `_s` ("seguro").  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. Os parâmetros passados para as funções de CRT são validados nas funções seguras e em muitas versões preexistentes das funções. Essas validações incluem:  
   
-    -   Procurar por valores `NULL` passados para as funções.  
+    -   Procurar por valores **NULL** passados para as funções.  
   
     -   Verificar a validade dos valores enumerados.  
   

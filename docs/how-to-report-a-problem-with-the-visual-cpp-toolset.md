@@ -10,23 +10,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
-ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
+ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
+ms.sourcegitcommit: 06b1f7bde6b3f8bed0f3db91d14e2d974444c1e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/20/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Como relatar um problema com o conjunto de ferramentas ou a documentação do Visual C++
 
 Se você encontrar problemas com o compilador, com o vinculador ou com outras ferramentas ou bibliotecas do Microsoft Visual C++, queremos saber sobre eles. Se o problema está em nossa documentação, gostaríamos de saber sobre isso também.
 
-## <a name="how-to-report-a-c-documentation-issue"></a>Como relatar um problema na documentação do C++
-
-Usamos os problemas do GitHub para acompanhar os problemas relatados em nossa documentação. Agora você pode criar problemas do GitHub diretamente de uma página de conteúdo, o que permite interagir de forma muito mais sofisticada com escritores e equipes de produto. Se você encontrar um problema com um documento, um exemplo de código inválido, uma explicação confusa, uma omissão crítica ou até mesmo um erro de digitação, fale conosco – é fácil. Role até a parte inferior da página e selecione **Entre para fornecer comentários sobre a documentação**. Você precisará criar uma conta do GitHub caso ainda não tenha uma, mas depois de fazer isso, poderá ver todos os nossos problemas de documentação, seu status e receber notificações quando as alterações forem feitas para o problema relatado. Para obter mais informações, confira [Em breve, um novo sistema de comentários em docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
-
-Quando você cria um problema de documentação no GitHub usando o botão de comentários sobre a documentação, o problema é preenchido automaticamente com algumas informações sobre a página na qual você criou o problema, de modo que saibamos onde está o problema. Não edite essas informações. Acrescente apenas os detalhes sobre o que está incorreto e, se desejar, uma correção sugerida. [Nossa documentação é um software livre](https://github.com/MicrosoftDocs/cpp-docs/) e, portanto, se você deseja realmente fazer uma correção e propô-la por conta própria, faça isso. Para obter mais informações sobre como você pode contribuir com nossa documentação, confira nosso [Guia de colaboração](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) no GitHub.
-
-## <a name="how-to-report-a-c-product-issue"></a>Como relatar um problema de produto do C++
+## <a name="how-to-report-a-c-toolset-issue"></a>Como relatar um problema de conjunto de ferramentas do C++
 
 A melhor maneira de nos informar sobre um problema é enviar um relatório incluindo uma descrição do problema encontrado, detalhes sobre como você está compilando seu programa e uma *reprodução*, um caso de teste completo que possamos usar para reproduzir o problema em nossos computadores. Essas informações nos permitem verificar rapidamente se o problema está em seu código e não em seu ambiente local, determinar se ele afeta outras versões do compilador e diagnosticar a causa.
 
@@ -56,16 +50,25 @@ Precisamos de informações de versão completas da arquitetura de destino e do 
 
 1. Abra o **Prompt de Comando do Desenvolvedor** correspondente à arquitetura de versão e à configuração do Visual Studio usada para compilar o projeto. Por exemplo, se você compila usando o Visual Studio de 2017 em x64 para destinos x64, escolha **Prompt de Comando de Ferramentas Nativas do x64 para VS 2017**. Para obter mais informações, consulte [Atalhos de prompt de comando do desenvolvedor](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. Na janela do console de prompt de comando do desenvolvedor, insira o comando **cl**.
+1. Na janela do console de prompt de comando do desenvolvedor, insira o comando **cl /Bv**.
 
 A saída deverá ser parecida com esta:
 
 ```Output
-C:\Users\username\Source>cl
-Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
+C:\Users\username\Source>cl /Bv
+Microsoft (R) C/C++ Optimizing Compiler Version 19.14.26428.1 for x86
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-usage: cl [ option... ] filename... [ /link linkoption... ]
+Compiler Passes:
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\cl.exe:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1xx.dll:      Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c2.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\link.exe:      Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\mspdb140.dll:  Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\1033\clui.dll: Version 19.14.26428.1
+
+cl : Command line error D8003 : missing source filename
 ```
 
 Copie e cole toda a saída em seu relatório.
@@ -90,11 +93,11 @@ Copie e cole toda a linha de comando em seu relatório.
 
 Precisamos de uma descrição detalhada do problema que você encontrou para que possamos verificar se vemos o mesmo efeito em nossos computadores. Isso algumas vezes também é útil para sabermos o que você estava tentando realizar e o que esperava que aconteceria.
 
-Forneça as mensagens de erro exatas emitidas pelo conjunto de ferramentas ou o comportamento de tempo de execução exato que você vir. Precisamos dessas informações para confirmar se reproduzimos o problema corretamente. Inclua toda a saída do compilador, não apenas a última mensagem de erro. Precisamos ver tudo o que levou ao problema relatado. Se você puder duplicar o problema usando o compilador de linha de comando, essa saída do compilador será preferida. O IDE e outros sistemas de compilação podem filtrar as mensagens de erro que você vê ou podem capturar somente a primeira linha de uma mensagem de erro.
+Forneça as **mensagens de erro exatas** emitidas pelo conjunto de ferramentas ou o comportamento de tempo de execução exato que você vir. Precisamos dessas informações para confirmar se reproduzimos o problema corretamente. Inclua **toda** a saída do compilador, não apenas a última mensagem de erro. Precisamos ver tudo o que levou ao problema relatado. Se você puder duplicar o problema usando o compilador de linha de comando, essa saída do compilador será preferida. O IDE e outros sistemas de compilação podem filtrar as mensagens de erro que você vê ou podem capturar somente a primeira linha de uma mensagem de erro.
 
 Se o problema é que o compilador aceita código inválido e não gera um diagnóstico, registre isso em seu relatório.
 
-Para relatar um problema de comportamento de tempo de execução, inclua uma cópia exata do que o programa imprime e o que você espera ver. Idealmente, isso está inserido na saída da instrução em si, por exemplo, `printf("This should be 5: %d\n", actual_result);`. Se o programa falhar ou travar, mencione isso também.
+Para relatar um problema de comportamento de tempo de execução, inclua uma **cópia exata** do que o programa imprime e o que você espera ver. Idealmente, isso está inserido na saída da instrução em si, por exemplo, `printf("This should be 5: %d\n", actual_result);`. Se o programa falhar ou travar, mencione isso também.
 
 Adicione outros detalhes que puderem nos ajudar a diagnosticar o problema, como soluções alternativas que você possa ter encontrado. Evite repetir informações encontradas em outro lugar no relatório.
 
@@ -247,15 +250,75 @@ Uma *reprodução pré-processada* é um único arquivo de origem que demonstra 
 
 1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **cl/P** *argumentos* *nomedoarquivo.cpp*, em que *argumentos* é a lista de argumentos capturados acima e *nomedoarquivo.cpp* é o nome do arquivo de origem da reprodução. Esse comando replica a linha de comando usada para a reprodução, mas interrompe a compilação após a fase de pré-processamento e gera o código-fonte pré-processado para *nomedoarquivo*.i.
 
+Se você estiver pré-processando o arquivo de código de origem do C++/CX, ou estiver usando o recurso de módulos do C++, algumas etapas adicionais serão necessárias. Para obter mais informações, veja as seguintes abaixo.
+
 Após ter gerado o arquivo pré-processado, é recomendável certificar-se de que o problema ainda é reproduzido usando o arquivo pré-processado.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Para confirmar que o erro ainda é reproduzido com o arquivo pré-processado
 
-1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **cl** *argumentos* **/TP** *nomedoarquivo*** .i** para instruir o cl.exe a compilar o arquivo pré-processado como um arquivo de origem do C++, em que *argumentos* é a lista de argumentos capturados acima, mas com qualquer argumento **/D** e **/I** removido (porque eles já foram incluídos no arquivo pré-processado), e em que *nomedoarquivo***.i** é o nome de seu arquivo pré-processado.
+1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **cl** *argumentos* **/TP** *nomedoarquivo*.i para instruir o cl.exe a compilar o arquivo pré-processado como um arquivo de origem do C++, em que *argumentos* é a lista de argumentos capturados acima, mas com qualquer argumento **/D** e **/I** removido (porque eles já foram incluídos no arquivo pré-processado), e em que *nomedoarquivo* é o nome de seu arquivo pré-processado.
 
 1. Confirme que o problema é reproduzido.
 
 Por fim, anexe a reprodução pré-processada *nomedoarquivo*.i ao seu relatório.
+
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Reproduções de código do C++/CXWinRT/UWP pré-processadas
+
+Se você estiver usando C++/CX para criar o executável, algumas etapas adicionais serão necessárias para criar e validar uma reprodução pré-processada.
+
+#### <a name="to-preprocess-ccx-source-code"></a>Para pré-processar um código-fonte C++/CX
+
+1. Crie um arquivo de origem pré-processado conforme descrito no arquivo [Para pré-processar um arquivo de código-fonte](#to-preprocess-a-source-code-file).
+
+1. Pesquise o arquivo _nomedoarquivo_.i gerado para diretivas **#using**.
+
+1. Faça uma lista de todos os arquivos referenciados. Omita todos os arquivos Windows\*.winmd, platform.winmd e mscorlib.dll.
+
+Para se preparar para validar que o arquivo pré-processado ainda reproduz o problema,
+
+1. Crie um diretório para o arquivo pré-processado e copie-o para o novo diretório.
+
+1. Copie os arquivos .winmd da lista **#using** para o novo diretório.
+
+1. Crie um arquivo vccorlib.h vazio no novo diretório.
+
+1. Edite o arquivo pré-processado para remover todas as diretivas **#using** para mscorlib.dll.
+
+1. Edite o arquivo pré-processado para alterar qualquer caminho absoluto para apenas os nomes de arquivo vazio para os arquivos .winmd copiados.
+
+Confirme que o arquivo pré-processado ainda reproduz o problema, conforme acima.
+
+### <a name="preprocessed-c-modules-repros"></a>Reproduções de módulos do C++ pré-processadas
+
+Se você estiver usando o recurso de módulos do compilador C++, algumas etapas diferentes serão necessárias para criar e validar uma reprodução pré-processada.
+
+#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>Para pré-processar um arquivo de código-fonte que usa um módulo
+
+1. Capture os argumentos de linha de comando usados para criar sua reprodução, conforme descrito em [Para relatar o conteúdo da linha de comando](#to-report-the-contents-of-the-command-line).
+
+1. Abra o **Prompt de Comando do Desenvolvedor** correspondente à arquitetura de versão e à configuração do Visual Studio usada para compilar o projeto.
+
+1. Mude para o diretório que contém seu projeto de reprodução.
+
+1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **cl/P** *argumentos* *nomedoarquivo.cpp*, em que *argumentos* é a lista de argumentos capturados acima e *nomedoarquivo.cpp* é o nome do arquivo de origem que consome o módulo.
+
+1. Altere para o diretório que contém o projeto de reprodução que criou a interface do módulo (a saída .ifc).
+
+1. Capture os argumentos de linha de comando usados para criar sua interface de módulo.
+
+1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **cl /P** *argumentos* *nomedomódulo.ixx*, em que *argumentos* é a lista de argumentos capturados acima e *nomedomódulo.ixx* é o nome do arquivo que cria a interface do módulo.
+
+Após ter gerado os arquivos pré-processados, é recomendável certificar-se de que o problema ainda é reproduzido usando o arquivo pré-processado.
+
+#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Para confirmar que o erro ainda é reproduzido com o arquivo pré-processado
+
+1. Na janela do console de prompt de comando do desenvolvedor, volte para o diretório que contém seu projeto de reprodução.
+
+1. Digite o comando **cl** *argumentos* **/TP** *nomedoarquivo*.i como acima, para compilar o arquivo pré-processado como se fosse um arquivo de origem do C++.
+
+1. Confirme que o problema ainda é reproduzido pelo arquivo pré-processado.
+
+Finalmente, anexe os arquivos de reprodução pré-processados (*nomedoarquivo*.i e *nomedomódulo*.i) junto com a saída de .ifc ao seu relatório.
 
 ### <a name="link-repros"></a>Reproduções de vinculação
 
@@ -291,10 +354,10 @@ Crie sua reprodução como um projeto do IDE mínimo e empacote-o compactando to
 
 ## <a name="ways-to-send-your-report"></a>Maneiras de enviar o relatório
 
-Há várias maneiras de enviar seu relatório para nós. Você pode usar a ferramenta interna [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) do Visual Studio ou as páginas da [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/). Também acesse diretamente as nossas páginas da Comunidade de Desenvolvedores escolhendo o botão **Comentários sobre o produto** na parte inferior desta página. Também é possível enviar um email com o relatório, mas os primeiros dois métodos são preferenciais. A escolha depende de como você deseja interagir com os engenheiros que investigarão o relatório e se você deseja acompanhar o progresso ou compartilhar o relatório com a comunidade.
+Há várias boas maneiras de enviar seu relatório para nós. Você pode usar a ferramenta interna [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) do Visual Studio ou as páginas da [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/). Também acesse diretamente as nossas páginas da Comunidade de Desenvolvedores escolhendo o botão **Comentários sobre o produto** na parte inferior desta página. A escolha depende se você deseja usar as ferramentas incorporadas ao IDE para capturar telas e organizar seu relatório para publicar nas páginas da comunidade de desenvolvedores ou se você prefere usar o site diretamente.
 
 > [!NOTE]
-> Independentemente de como você enviar seu relatório, a Microsoft respeita sua privacidade. Para obter informações sobre como tratamos os dados que você nos envia, consulte a [Política de privacidade da família de produtos do Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
+> Independentemente de como você enviar seu relatório, a Microsoft respeita sua privacidade. A Microsoft está comprometida com a conformidade com todas as leis e regulamentos de privacidade de dados. Para obter informações sobre como tratamos os dados que você nos envia, consulte a [Política de privacidade da família de produtos do Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
 
 ### <a name="use-the-report-a-problem-tool"></a>Usar a ferramenta Relatar um Problema
 
@@ -312,26 +375,34 @@ Na faixa próxima à parte superior de cada página da Comunidade de Desenvolved
 
 Se o problema não tiver sido relatado anteriormente, escolha o botão **Relatar um problema** ao lado da caixa de pesquisa na página da Comunidade de Desenvolvedores. Talvez seja preciso entrar na conta do Visual Studio e concordar em permitir acesso do aplicativo da Comunidade de Desenvolvedores ao seu perfil. Depois de entrar, você irá diretamente a uma página em que será possível relatar o problema. Você poderá incluir o código de reprodução e a linha de comando, capturas de tela, links para discussões relacionadas e qualquer outra informação que achar relevante e útil.
 
-### <a name="send-an-email"></a>Enviar um email
-
-O email é outra maneira de enviar o relatório diretamente para a equipe do Visual C++. Você pode entrar em contato conosco em [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com). Use esse método somente se as outras duas opções não estiverem disponíveis, uma vez que o email não é tão atentamente verificado quanto os problemas relatados para a Comunidade de Desenvolvedores usando a ferramenta **Relatar um Problema** ou as páginas da Web. Além disso, os comentários e as soluções não são visíveis para outros usuários do Visual Studio.
-
-Se optar por enviar o relatório por email, você poderá usar o modelo a seguir como o corpo da mensagem de email. Não se esqueça de anexar o código-fonte ou outros arquivos se você não estiver incluindo essas informações no corpo do email.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
 > [!TIP]
-> Para outros tipos de problemas que podem ocorrer no Visual Studio não relacionados ao conjunto de ferramentas (por exemplo, problemas da interface do usuário, funcionalidade do IDE interrompida ou falhas gerais), a **ferramenta Relatar um Problema** pode ser uma opção especialmente boa devido às suas funcionalidades de captura de tela e sua capacidade de registrar ações da interface do usuário que levam ao problema encontrado. Esses tipos de erros também podem ser relatados no site [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/). Você jamais deve informar esses outros tipos de erros enviando um email para compilercrash@microsoft.com.
+> Para outros tipos de problemas que podem ocorrer no Visual Studio não relacionados ao conjunto de ferramentas (por exemplo, problemas da interface do usuário, funcionalidade do IDE interrompida ou falhas gerais), a **ferramenta Relatar um Problema** pode ser uma opção especialmente boa devido às suas funcionalidades de captura de tela e sua capacidade de registrar ações da interface do usuário que levam ao problema encontrado. Esses tipos de erros também podem ser relatados no site [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/).
+
+### <a name="reports-and-privacy"></a>Relatórios e privacidade
+
+Por padrão, **todas as informações em relatórios e quaisquer comentários e respostas são publicamente visíveis**. Normalmente, isso é uma vantagem, pois permite que toda a comunidade veja os problemas, as soluções e alternativas encontradas por outros usuários. No entanto, se você está preocupado em tornar seus dados ou a sua identidade pública, por motivos de propriedade intelectual ou de privacidade, há opções.
+
+Se você está preocupado com a revelação da sua identidade, [crie uma conta da Microsoft](https://signup.live.com/) que não divulgue todos os detalhes sobre você. Use essa conta para criar seu relatório. 
+
+**Não coloque algo que você deseja manter particular no título ou no conteúdo do relatório inicial, que é público.** Em vez disso, observe que você enviará detalhes em particular em um comentário separado. Para ter certeza de que o relatório será direcionado às pessoas certas, inclua **cppcompiler** na lista de tópicos do seu relatório de problemas. Depois de criar o relatório de problemas, é possível especificar quem pode ver suas respostas e anexos.
+
+#### <a name="to-create-a-problem-report-for-private-information"></a>Para criar um relatório de problemas para informações particulares
+
+1. No relatório que você criou, escolha **Adicionar comentário** para criar sua descrição privada do problema.
+
+1. no editor de resposta, use o controle de lista suspensa abaixo dos botões **Enviar** e **Cancelar** para especificar o público-alvo para a sua resposta. Somente as pessoas que você especificar podem ver essas respostas privadas e imagens, links ou código que você incluir. Escolha **Visível por moderadores e o cartaz original** para limitar a visibilidade aos funcionários da Microsoft e a você mesmo.
+
+1. Adicione a descrição e quaisquer outras informações, imagens e anexos de arquivo necessários para a reprodução. Escolha o botão **Enviar** para enviar essas informações em particular.
+
+   Observe que há um limite de 2 GB em arquivos anexados e um máximo de 10 arquivos. Para uploads maiores, solicite uma URL de upload no seu comentário particular.
+
+Quaisquer respostas sob esse comentário têm a mesma visibilidade restrita que você especificou. Isso é verdadeiro mesmo se o controle de lista suspensa em respostas não mostra o status de visibilidade restrito corretamente.
+
+Para manter sua privacidade e ocultar suas informações confidenciais da exibição pública, tenha o cuidado de manter todas as interações com a Microsoft para respostas neste comentário restrito. Respostas a outros comentários podem gerar a divulgação acidental de informações confidenciais.
+
+## <a name="how-to-report-a-c-documentation-issue"></a>Como relatar um problema na documentação do C++
+
+Usamos os problemas do GitHub para acompanhar os problemas relatados em nossa documentação. Agora você pode criar problemas do GitHub diretamente de uma página de conteúdo, o que permite interagir de forma muito mais sofisticada com escritores e equipes de produto. Se você encontrar um problema com um documento, um exemplo de código inválido, uma explicação confusa, uma omissão crítica ou até mesmo um erro de digitação, fale conosco – é fácil. Role até a parte inferior da página e selecione **Entre para fornecer comentários sobre a documentação**. Você precisará criar uma conta do GitHub caso ainda não tenha uma, mas depois de fazer isso, poderá ver todos os nossos problemas de documentação, seu status e receber notificações quando as alterações forem feitas para o problema relatado. Para obter mais informações, confira [Em breve, um novo sistema de comentários em docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
+
+Quando você cria um problema de documentação no GitHub usando o botão de comentários sobre a documentação, o problema é preenchido automaticamente com algumas informações sobre a página na qual você criou o problema, de modo que saibamos onde está o problema. Não edite essas informações. Acrescente apenas os detalhes sobre o que está incorreto e, se desejar, uma correção sugerida. [Nossa documentação é um software livre](https://github.com/MicrosoftDocs/cpp-docs/) e, portanto, se você deseja realmente fazer uma correção e propô-la por conta própria, faça isso. Para obter mais informações sobre como você pode contribuir com nossa documentação, confira nosso [Guia de colaboração](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) no GitHub.
+

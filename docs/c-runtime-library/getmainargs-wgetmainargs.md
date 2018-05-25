@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e162c6b16e9ce9d0ea6763f5fb4c75d7975dc7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
 Invoca a análise de linha de comando e copia os argumentos para `main()` através dos ponteiros passados.  
@@ -63,10 +63,10 @@ _startupinfo * _StartInfo);
  Um inteiro que contém o número de argumentos que se seguem em `argv`. O parâmetro `argc` é sempre maior ou igual a 1.  
   
  `_Argv`  
- Uma matriz de cadeias de caracteres terminadas em nulo que representam argumentos de linha de comando inseridos pelo usuário do programa. Por convenção, `argv[0]` é o comando com o qual o programa é invocado, argv[1] é o primeiro argumento de linha de comando e assim por diante, até argv[argc], que sempre é NULL. O primeiro argumento de linha de comando sempre é `argv[1]` e o último é `argv[argc - 1]`.  
+ Uma matriz de cadeias de caracteres terminadas em nulo que representam argumentos de linha de comando inseridos pelo usuário do programa. Por convenção, `argv[0]` é o comando com o qual o programa é invocado, argv[1] é o primeiro argumento de linha de comando e assim por diante, até argv[argc], que sempre é **NULL**. O primeiro argumento de linha de comando sempre é `argv[1]` e o último é `argv[argc - 1]`.  
   
  `_Env`  
- Uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Essa matriz é encerrada por uma entrada NULL.  
+ Uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Essa matriz é encerrada por uma entrada **NULL**.  
   
  `_DoWildCard`  
  Um inteiro que, se definido como 1, expande os curingas nos argumentos de linha de comando ou, se definido como 0, não faz nada.  
