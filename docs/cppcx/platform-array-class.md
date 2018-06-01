@@ -17,11 +17,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704666"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 Representa uma matriz unidimensional modificável, que pode ser recebida e transmitida pela interface binária de aplicativo (ABI).  
@@ -62,7 +63,7 @@ private ref class Array<TArg, 1> :
   
  O sistema de tipos do tempo de execução do Windows não oferece suporte para o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.  
   
- Essa classe é definida no cabeçalho vccorlib.h, que é incluído automaticamente pelo compilador. Ela é visível no Intellisense mas não no Pesquisador de Objetos porque não é um tipo público definido em platform.winmd.  
+ Essa classe é definida no cabeçalho vccorlib.h, que é incluído automaticamente pelo compilador. É visível no IntelliSense mas não no Pesquisador de objetos porque não é um tipo público definido em Platform. winmd.  
   
 ### <a name="requirements"></a>Requisitos  
  Opção do compilador: **/ZW**  

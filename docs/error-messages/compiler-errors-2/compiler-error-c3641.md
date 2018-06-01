@@ -16,23 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496ff73822dcc1c886fbd2020f8ec6b8a5a9a2f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704939"
 ---
 # <a name="compiler-error-c3641"></a>C3641 de erro do compilador
-'function': inválido de convenção de chamada 'calling_convention' para a função compilada com /clr: pure ou /CLR: safe  
-  
- As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
-  
- Somente [clrcall](../../cpp/clrcall.md) convenção de chamada é permitida com [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- O exemplo a seguir gera C3641:  
-  
-```  
-// C3641.cpp  
-// compile with: /clr:pure /c  
-void __cdecl f() {}   // C3641  
+
+> '*função*': inválido de convenção de chamada 'calling_convention' para a função compilada com /clr: pure ou /CLR: safe
+
+## <a name="remarks"></a>Comentários
+
+O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+Somente [clrcall](../../cpp/clrcall.md) convenção de chamada é permitida com [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3641:
+
+```cpp
+// C3641.cpp
+// compile with: /clr:pure /c
+void __cdecl f() {}   // C3641
 ```

@@ -1,6 +1,6 @@
 ---
 title: C4800 de avisos do compilador por meio de C5999 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704744"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de avisos do compilador por meio de C5999
 
@@ -242,10 +243,10 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |C5035 de aviso do compilador|o uso de recurso '*recurso*' faz com que a função *função* a ser compilado como código do convidado|
 |Aviso do compilador (nível 1) C5036|conversão de ponteiro de função varargs ao compilar com /hybrid:x86arm64 '*type1*'para'*type2*'|
 |Aviso do compilador (erro) C5037|'*função de membro*': uma definição de fora de linha de um membro de um modelo de classe não pode ter argumentos padrão|
-|[C5038 de aviso do compilador](c5038.md)|membro de dados '*membro1*'serão inicializados após o membro de dados'*membro2*'|
-|C5039 de aviso do compilador|'*função*': ponteiro ou referência para gerar potencialmente função passado para função de extern do C em - EHc. Um comportamento indefinido pode ocorrer se essa função lança uma exceção.|
-|C5040 de aviso do compilador|especificações de exceções dinâmicas são válidas somente no C++ 14 e versões anteriores; Tratando como noexcept(false)|
-|C5041 de aviso do compilador|'*definição*': definição de fora de linha para o membro de dados estáticos constexpr não é necessário e está preterida no C++ 17|
-|C5042 de aviso do compilador|'*declaração*': declarações de função no escopo de bloco não podem ser especificado 'inline' em C++ padrão, remova o especificador 'inline'|
-|C5043 de aviso do compilador|'*especificação*': especificação de exceção não corresponde à declaração anterior|
-|C5044 de aviso do compilador|Um argumento para a opção de linha de comando *opção* aponta para um caminho '*caminho*' que não existe|
+|[Aviso do compilador (nível 4) C5038](c5038.md)|membro de dados '*membro1*'serão inicializados após o membro de dados'*membro2*'|
+|Aviso do compilador (nível 4) C5039|'*função*': ponteiro ou referência para gerar potencialmente função passado para função de extern do C em - EHc. Um comportamento indefinido pode ocorrer se essa função lança uma exceção.|
+|Aviso do compilador (nível 3) C5040|especificações de exceções dinâmicas são válidas somente no C++ 14 e versões anteriores; Tratando como noexcept(false)|
+|Aviso do compilador (nível 1) C5041|'*definição*': definição de fora de linha para o membro de dados estáticos constexpr não é necessário e está preterida no C++ 17|
+|Aviso do compilador (nível 3) C5042|'*declaração*': declarações de função no escopo de bloco não podem ser especificado 'inline' em C++ padrão, remova o especificador 'inline'|
+|Aviso do compilador (nível 2) C5043|'*especificação*': especificação de exceção não corresponde à declaração anterior|
+|Aviso do compilador (nível 4) C5044|Um argumento para a opção de linha de comando *opção* aponta para um caminho '*caminho*' que não existe|

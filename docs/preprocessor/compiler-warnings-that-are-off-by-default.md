@@ -1,6 +1,6 @@
 ---
 title: Os avisos do compilador são desativados por padrão | Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 05/30/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,31 +14,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705560"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador são desativados por padrão
 
-O compilador inclui advertências que são desativadas por padrão, porque a maioria dos desenvolvedores não deseja vê-los. Em alguns casos, eles representam uma opção de estilo, ou são linguagens comuns no código anterior ou tirar proveito de uma extensão da Microsoft para o idioma. Em outros casos, elas indicam uma área onde os programadores muitas vezes fazem pressuposições incorretas, o que podem resultar em comportamento inesperado ou indefinido. Alguns destes avisos podem ser muito ruído em cabeçalhos de biblioteca.
+O compilador inclui advertências que são desativadas por padrão, porque a maioria dos desenvolvedores não deseja vê-los. Em alguns casos, eles representam uma opção de estilo, ou são linguagens comuns no código anterior ou tirar proveito de uma extensão da Microsoft para o idioma. Em outros casos, elas indicam uma área onde os programadores muitas vezes fazem pressuposições incorretas, o que podem resultar em comportamento inesperado ou indefinido. Alguns destes avisos podem ser muito ruído em cabeçalhos de biblioteca. As bibliotecas de tempo de execução do C e as bibliotecas padrão do C++ são destinadas para não emitir nenhum aviso somente no nível de aviso [/W4](../build/reference/compiler-option-warning-level.md).
 
-Você pode habilitar esses avisos, usando uma das seguintes opções:
+## <a name="enable-warnings-that-are-off-by-default"></a>Habilitar os avisos que são desativados por padrão
 
-- **Aviso #pragma (padrão:** *warning_number* **)**  
+Você pode habilitar avisos que são normalmente desativados por padrão, usando uma das seguintes opções:
+
+- **Aviso #pragma (padrão:** *warning_number* **)**
+
    O aviso especificado (*warning_number*) está habilitado no nível padrão. A documentação para o aviso contém o nível padrão do aviso.
 
-- **Aviso de #pragma (** *warning_level* **:** *warning_number* **)**  
+- **Aviso de #pragma (** *warning_level* **:** *warning_number* **)**
+
    O aviso especificado (*warning_number*) está habilitado no nível especificado (*warning_level*).
 
-- [/Wall](../build/reference/compiler-option-warning-level.md)  
+- [/Wall](../build/reference/compiler-option-warning-level.md)
+
    **/ Parede** habilita todos os avisos que são desativados por padrão. Se você usar essa opção, você pode desativar avisos individuais usando o [/wd](../build/reference/compiler-option-warning-level.md) opção.
 
-- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   Isso permite que o aviso *nnnn* no nível *l*.
+- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-Os seguintes avisos são desativados por padrão.
+   Isso permite que o aviso *nnnn* no nível *L*.
+
+## <a name="warnings-that-are-off-by-default"></a>Avisos que são desativados por padrão
+
+Os seguintes avisos estão desativados por padrão no Visual Studio 2015 e versões posteriores:
 
 |||
 |-|-|
@@ -64,11 +73,12 @@ Os seguintes avisos são desativados por padrão.
 |[C4371](../error-messages/compiler-warnings/c4371.md) (nível 3)|'*classname*': layout da classe pode ter sido alterado de uma versão anterior do compilador devido a melhor empacotamento do membro '*membro*'|
 |C4388 (nível 4)|incompatibilidade de signed/unsigned|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (nível 2)|'*função*': assinatura de função contém tipo '*tipo*'; Objetos C++ são seguros para passar entre código puro e código misto ou nativo|
-|C4426 (nível 1)|os sinalizadores de otimização alterados após incluir o cabeçalho, pode ser devido a #pragma optimize()|
+|C4426 (nível 1)|os sinalizadores de otimização alterados após incluir o cabeçalho, pode ser devido a #pragma optimize() <sup>14,1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (nível 4)|'*class1*': layout de objeto em /vd2 será alterado devido à base virtual '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (nível 4)|dynamic_cast da base virtual '*class1*'para'*class2*' pode falhar em alguns contextos|
 |C4444 (nível 3)|top level '__unaligned' não é implementado nesse contexto|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (nível 4)|caminho de inclusão relativo contém '... '|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (nível 4)|declaração de encaminhamento de uma enumeração sem escopo deve ter um tipo subjacente (int assumido)  <sup> /Perm.</sup>|
 |C4472 (nível 1)|'*identificador*' é um enum nativo: adicionar um especificador de acesso (pública/privada) para declarar um enum gerenciado|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (nível 4)|'*função*': função inline não referenciada foi removida|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (nível 4)|nome do tipo: nome de tipo excede o limite de metadados de '*limite*' caracteres|
@@ -81,13 +91,16 @@ Os seguintes avisos são desativados por padrão.
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (nível 3)|'__assume' contém o efeito '*efeito*'|
 |[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (nível 4)|Informativo: semântica catch(...) alterada desde o Visual C++ 7.1; exceções estruturadas (SEH) não são mais capturadas|
 |C4574 (nível 4)|'*identificador*'está definido como ' 0': você pretendia usar ' #if *identificador*'?|
+|C4577 (nível 1)|'noexcept' usado com nenhum especificado; o modo de manipulação de exceção não é garantia de terminação na exceção. Especifique /EHsc|
 |C4582 (nível 4)|'*tipo*': construtor não é chamado implicitamente|
 |C4583 (nível 4)|'*tipo*': destrutor não está chamado implicitamente|
 |C4587 (nível 1)|'*anonymous_structure*': alteração de comportamento: construtor é não mais implicitamente chamado|
 |C4588 (nível 1)|'*anonymous_structure*': alteração de comportamento: destruidor é não mais implicitamente chamado|
-|C4598 (níveis 1 e 3)|' #include "*cabeçalho*"': número de cabeçalho *número* no cabeçalho pré-compilado não coincide com a compilação atual da posição|
-|C4599 (nível 3)|'*opção* *caminho*': o número de argumento de linha de comando *número* não coincide com cabeçalho pré-compilado|
+|C4596 (nível 4)|'*identificador*': nome qualificado inválido na declaração de membro <sup>14,3</sup>  <sup> /Perm.</sup>|
+|C4598 (níveis 1 e 3)|' #include "*cabeçalho*"': número de cabeçalho *número* no cabeçalho pré-compilado não coincide com a compilação atual da posição <sup>14,3</sup>|
+|C4599 (nível 3)|'*opção* *caminho*': o número de argumento de linha de comando *número* não coincide com cabeçalho pré-compilado <sup>14,3</sup>|
 |C4605 (nível 1)|' /D*macro*' especificado na linha de comando atual, mas não foi especificado quando o cabeçalho pré-compilado foi criado|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (nível 3)|'*union_member*'já foi inicializada por outro membro de união na lista de inicializador'*union_member*'  <sup> /Perm.</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (nível 3)|Aviso #pragma: há um número de aviso '*número*'|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (nível 4)|'derived class': construtor padrão não pôde ser gerado porque o construtor padrão de uma classe base está inacessível|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (nível 4)|'derived class': construtor de cópia não pôde ser gerado porque o construtor de cópia de uma classe base está inacessível|
@@ -95,7 +108,7 @@ Os seguintes avisos são desativados por padrão.
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (nível 1)|dígrafos não suportados com -Ze. Sequência de caracteres '*dígrafo*'não é interpretada como token alternativo para'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (nível 3)|'*instância*': construção de objeto static local não é thread-safe|
 |C4647 (nível 3)|alteração de comportamento: is_pod (*tipo*) tem um valor diferente em versões anteriores|
-|C4654 (nível 4)|Incluir código colocado antes de cabeçalho pré-compilado linha será ignorada. Adicione código ao cabeçalho pré-compilado.|
+|C4654 (nível 4)|Incluir código colocado antes de cabeçalho pré-compilado linha será ignorada. Adicione código ao cabeçalho pré-compilado. <sup>14,1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (nível 4)|'*símbolo*'não está definido como uma macro de pré-processador, substituindo por '0' para'*diretivas*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (nível 4)|'*símbolo*': nenhum atributo de parâmetro direcional especificado, padronizando para [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (nível 3)|'*tipo definido pelo usuário*': possível alteração em comportamento, alteração no UDT retornar a convenção de chamada|
@@ -107,6 +120,7 @@ Os seguintes avisos são desativados por padrão.
 |C4767 (nível 4)|nome da seção '*símbolo*' tem mais de 8 caracteres e será truncado pelo vinculador|
 |C4768 (nível 3)|atributos de declspec antes de especificação de vinculação são ignorados|
 |C4774 (nível 4)|'*cadeia de caracteres*': formato de cadeia de caracteres esperada no argumento *número* não é uma cadeia de caracteres literal|
+|C4777 (nível 4)|'*função*': cadeia de caracteres de formato '*cadeia de caracteres*'exige um argumento do tipo'*type1*', mas o argumento variadic *número* tem o tipo '*type2*'|
 |C4786 (nível 3)|'*símbolo*': nome do objeto foi truncado para '*número*' caracteres nas informações de depuração|
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (nível 4)|'*bytes*'bytes de preenchimento adicionados após a construção'*member_name*'|
 |C4826 (nível 2)|Conversão de '*type1*'para'*type2*' possui sinal estendido. Isso pode causar comportamento inesperado em tempo de execução.|
@@ -131,18 +145,22 @@ Os seguintes avisos são desativados por padrão.
 |C5026 (nível 1 e nível 4)|'*tipo*': construtor de movimento foi implicitamente definido como excluído|
 |C5027 (nível 1 e nível 4)|'*tipo*': mover o operador de atribuição foi implicitamente definido como excluído|
 |C5029 (nível 4)|extensão não padrão usada: atributos de alinhamento no C++ se aplicam a variáveis, membros de dados e somente os tipos de marcas|
-|C5031 (nível 4)|Warning (POP) #pragma: provável incompatibilidade, estado de aviso enviado em outro arquivo mostrado|
-|C5032 (nível 4)|detectado Warning (push) #pragma com nenhuma Warning (POP) #pragma correspondente|
-|C5035|o uso de recurso '*recurso*' faz com que a função *função* a ser compilado como código do convidado|
-|C5036 (nível 1)|conversão de ponteiro de função varargs ao compilar com /hybrid:x86arm64 '*type1*'para'*type2*'|
-|[C5038](../error-messages/compiler-warnings/c5038.md)|membro de dados '*membro1*'serão inicializados após o membro de dados'*membro2*'|
+|C5031 (nível 4)|Warning (POP) #pragma: provável incompatibilidade, estado de aviso enviado em outro arquivo mostrado <sup>14,1</sup>|
+|C5032 (nível 4)|detectado Warning (push) com nenhum correspondente Warning (POP) #pragma #pragma <sup>14,1</sup>|
+|C5034|o uso de intrínseco '*intrínseco*' faz com que a função *função* a ser compilado como código do convidado <sup>15,3</sup>|
+|C5035|o uso de recurso '*recurso*' faz com que a função *função* a ser compilado como código do convidado <sup>15,3</sup>|
+|C5036 (nível 1)|conversão de ponteiro de função varargs ao compilar com /hybrid:x86arm64 '*type1*'para'*type2*' <sup>15,3</sup>|
+|[C5038](../error-messages/compiler-warnings/c5038.md) (nível 4)|membro de dados '*membro1*'serão inicializados após o membro de dados'*membro2*' <sup>15,3</sup>|
+|C5039 (nível 4)|'*função*': ponteiro ou referência para gerar potencialmente função passado para função de extern do C em - EHc. Um comportamento indefinido pode ocorrer se essa função lança uma exceção. <sup>15,5</sup>|
+|C5042 (nível 3)|'*função*': declarações de função no escopo de bloco não podem ser especificado 'inline' em C++ padrão, remova o especificador 'inline' <sup>15,5</sup>|
 
-Esses avisos são desativados, a menos que o [/ permissivo-](../build/reference/permissive-standards-conformance.md) é definir a opção de compilador:
+<sup>14,1</sup> esse aviso está disponível a partir do Visual Studio 2015 atualização 1.<br>
+<sup>14,3</sup> esse aviso está disponível no Visual Studio 2015 atualização 3.<br>
+<sup>15.3</sup> esse aviso está disponível no Visual Studio 2017 versão 15,3.<br>
+<sup>15,5</sup> esse aviso está disponível no Visual Studio 2017 versão 15,5.<br>
+<sup>Perm</sup> esse aviso é desativado, a menos que o [/ permissivo-](../build/reference/permissive-standards-conformance.md) opção de compilador está definida.
 
-|||
-|-|-|
-|[C4471 (nível 4)](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md)|uma declaração de encaminhamento de uma enumeração sem escopo deve ter um tipo subjacente (int assumido)|
-|[C4608 (nível 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|'*union_member*'já foi inicializada por outro membro de união na lista de inicializador'*union_member*'|
+## <a name="warnings-off-by-default-in-earlier-versions"></a>Avisos desativado por padrão em versões anteriores
 
 Esses avisos foram desativado por padrão em versões do compilador antes do Visual Studio 2015:
 
@@ -153,7 +171,7 @@ Esses avisos foram desativado por padrão em versões do compilador antes do Vis
 |[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) (nível 1)|'*operação*': conversão de '*type1*'para'*type2*' de tamanho maior|
 |[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) (nível 1)|'*operador*': zero estendendo '*type1*'para'*type2*' de tamanho maior|
 
-Esses avisos foram desativado por padrão em versões do compilador antes do Visual Studio 2012:
+Esse aviso foi desativado por padrão em versões do compilador antes do Visual Studio 2012:
 
 |||
 |-|-|

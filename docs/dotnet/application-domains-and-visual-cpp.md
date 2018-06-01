@@ -19,22 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ddb60b3fad6c230677e2098dd89a723198bea8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704328"
 ---
-# <a name="application-domains-and-visual-c"></a>Domínios de aplicativo e Visual C++
-Se você tiver um `__clrcall` função virtual, o vtable será por domínio de aplicativo (appdomain). Se você criar um objeto em um appdomain, você só pode chamar a função virtual de dentro do appdomain. No modo misto (**/clr**) será necessário por processo vtables se seu tipo não tiver nenhuma `__clrcall` funções virtuais. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
-  
- Para saber mais, veja  
-  
--   [appdomain](../cpp/appdomain.md)  
-  
--   [__clrcall](../cpp/clrcall.md)  
-  
--   [process](../cpp/process.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)
+# <a name="application-domains-and-visual-c"></a>Domínios do aplicativo e do Visual C++
+
+Se você tiver um `__clrcall` função virtual, o vtable será por domínio de aplicativo (appdomain). Se você criar um objeto em um appdomain, você só pode chamar a função virtual de dentro do appdomain. No modo misto (**/clr**) por processo vtables será necessário se seu tipo não tiver nenhuma `__clrcall` funções virtuais. O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+Para obter mais informações, consulte:
+
+- [appdomain](../cpp/appdomain.md)
+
+- [__clrcall](../cpp/clrcall.md)
+
+- [process](../cpp/process.md)
+
+## <a name="see-also"></a>Consulte também
+
+- [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)

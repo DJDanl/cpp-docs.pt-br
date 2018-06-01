@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1b970454af8ab692aea949d437e4c1cce4e0cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d22a34f44fb2c97fe341cb313d7917a35506cdd
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704978"
 ---
 # <a name="fatal-error-c1210"></a>Erro fatal C1210
-/CLR: pure e /CLR: safe não são suportados pela versão do tempo de execução instalada  
-  
- As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
-  
- C1210 ocorre quando você tiver um compilador para a versão atual, mas um tempo de execução de linguagem comum de uma versão anterior.  
-  
- Algumas funcionalidades do compilador não podem funcionar em uma versão anterior do tempo de execução.  
-  
- Para resolver C1210 instalar a versão de tempo de execução de linguagem comum que é destinada para uso com o compilador.
+
+> /CLR: pure e /CLR: safe não são suportados pela versão do tempo de execução instalada
+
+O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+C1210 ocorre quando você tiver um compilador para a versão atual, mas um tempo de execução de linguagem comum de uma versão anterior.
+
+Algumas funcionalidades do compilador não podem funcionar em uma versão anterior do tempo de execução.
+
+Para resolver C1210 instalar a versão de tempo de execução de linguagem comum que é destinada para uso com o compilador.

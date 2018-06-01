@@ -16,42 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f05916be060b9712f6ba1b1955b37da538afe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b993aaaee0e50eacf47ce594b4c5efa47f83dd18
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705069"
 ---
 # <a name="compiler-error-c3278"></a>C3278 de erro do compilador
-a chamada direta de interface ou método puro 'method' falhará em tempo de execução  
-  
- Foi feita uma chamada para um método de interface ou um método puro, que não é permitido.  
-  
- O exemplo a seguir gera C3278:  
-  
-```  
-// C3278_2.cpp  
-// compile with: /clr  
-using namespace System;  
-interface class I  
-{  
-   void vmf();  
-};  
-  
-public ref class C: public I  
-{  
-public:  
-   void vmf()  
-   {  
-      Console::WriteLine( "In C::vmf()" );  
-      I::vmf(); // C3278  
-   }  
-  
-};  
-  
-int main()  
-{  
-   C^ pC = gcnew C;  
-   pC->vmf();  
-}  
+
+> direcionar a chamada de interface ou método puro '*método*' falhará em tempo de execução
+
+## <a name="remarks"></a>Comentários
+
+Foi feita uma chamada para um método de interface ou um método puro, que não é permitido.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3278:
+
+```cpp
+// C3278_2.cpp
+// compile with: /clr
+using namespace System;
+interface class I
+{
+   void vmf();
+};
+
+public ref class C: public I
+{
+public:
+   void vmf()
+   {
+      Console::WriteLine( "In C::vmf()" );
+      I::vmf(); // C3278
+   }
+
+};
+
+int main()
+{
+   C^ pC = gcnew C;
+   pC->vmf();
+}
 ```

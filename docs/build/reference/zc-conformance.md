@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704835"
 ---
 # <a name="zc-conformance"></a>/Zc (conformidade)
 
@@ -43,6 +44,7 @@ Estes são os `/Zc` opções do compilador:
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Habilitar C++ 17 excesso alinhados alocação dinâmica (em por padrão em C++ 17).|
 |[auto\[-\]](zc-auto-deduce-variable-type.md)|Impor o novo significado Standard C++ para `auto` (em por padrão).|
+|[cplusplus\[-\]](zc-cplusplus.md)|Habilitar o **cplusplus** macro para relatar o padrão com suporte (desativado por padrão).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Habilitar vínculo externo para `constexpr` variáveis (desativado por padrão).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Impor Standard C++ `for` regras de escopo (em por padrão).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Habilitar implícita `noexcept` em funções requeridas (em por padrão).|

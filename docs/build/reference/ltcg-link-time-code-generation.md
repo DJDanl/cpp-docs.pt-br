@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703727"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (geração de código do tempo de vinculação)
 
@@ -141,7 +142,7 @@ Se uma função é chamada por meio de um ponteiro de função, ou se uma funç�
 
 Os módulos que são compilados usando [/GL](../../build/reference/gl-whole-program-optimization.md) e [/clr](../../build/reference/clr-common-language-runtime-compilation.md) pode ser usado como entrada para o vinculador quando **/LTCG** for especificado.
 
-- **/LTCG** pode aceitar arquivos de objeto nativo e arquivos de objeto nativo/gerenciado misto (compilados usando **/clr**). As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.
+- **/LTCG** pode aceitar arquivos de objeto nativo e arquivos de objeto nativo/gerenciado misto (compilados usando **/clr**). O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
 
 - **/LTCG:PGI** não aceita módulos nativos compilados usando **/GL** e **/clr**
 
@@ -161,5 +162,5 @@ Você também pode aplicar **/LTCG** para compilações específicas, escolhendo
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)<br/>
+- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
+- [Opções do vinculador](../../build/reference/linker-options.md)

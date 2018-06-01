@@ -16,29 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6557e913f2bd34fda9d435d44020697a925af4e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d4224d9090f3ace43f61a10c599fafa78d21600
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705274"
 ---
 # <a name="compiler-error-c2441"></a>C2441 de erro do compilador
-'variável': um símbolo declarado com __declspec(process) deve ser const em /clr: pure modo  
-  
- As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
-  
- Por padrão, as variáveis são por domínio de aplicativo em **/clr: pure**. Marcado como uma variável `__declspec(process)` em **/clr: pure** é propensa a erros se modificado em um domínio do aplicativo e de leitura em outro.  
-  
- Portanto, o compilador aplica por processo ser variáveis `const` em **/clr: puro**, tornando-os de leitura apenas em todos os domínios de aplicativo.  
-  
- Para obter mais informações, consulte [processo](../../cpp/process.md) e [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2441.  
-  
-```  
-// C2441.cpp  
-// compile with: /clr:pure /c  
-__declspec(process) int i;   // C2441  
-__declspec(process) const int j = 0;   // OK  
+
+> '*variável*': um símbolo declarado com __declspec(process) deve ser const em /clr: pure modo
+
+## <a name="remarks"></a>Comentários
+
+O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+Por padrão, as variáveis são por domínio de aplicativo em **/clr: pure**. Marcado como uma variável `__declspec(process)` em **/clr: pure** é propensa a erros se modificado em um domínio do aplicativo e de leitura em outro.
+
+Portanto, o compilador aplica por processo ser variáveis `const` em **/clr: puro**, tornando-os de leitura apenas em todos os domínios de aplicativo.
+
+Para obter mais informações, consulte [processo](../../cpp/process.md) e [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2441.
+
+```cpp
+// C2441.cpp
+// compile with: /clr:pure /c
+__declspec(process) int i;   // C2441
+__declspec(process) const int j = 0;   // OK
 ```

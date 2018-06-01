@@ -16,29 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf9f32a4a1b1e43cb4bd69c754e3ae3a98bff3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0be4a565dd251da77174c401c23b8ed8bfc531b0
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703933"
 ---
 # <a name="compiler-warning-c4936"></a>C4936 de aviso do compilador
-Este declspec é suportado apenas quando compilado com /clr ou /clr: pure  
-  
- O **/clr: pure** opção de compilador foi preterida no Visual Studio 2015.  
-  
- Um `__declspec` modificador foi usado, mas que `__declspec` modificador só é válido quando compilado com uma da [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opções.  
-  
- Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md) e [processo](../../cpp/process.md).  
-  
- C4936 sempre é emitido como um erro.  Você pode desabilitar C4936 com o [aviso](../../preprocessor/warning.md) pragma.  
-  
- O exemplo a seguir gera C4936:  
-  
-```  
-// C4936.cpp  
-// compile with: /c  
-// #pragma warning (disable : 4936)  
-__declspec(process) int i;   // C4936  
-__declspec(appdomain) int j;   // C4936  
+
+> Este declspec é suportado apenas quando compilado com /clr ou /clr: pure
+
+## <a name="remarks"></a>Comentários
+
+O **/clr: pure** opção de compilador foi preterida no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+Um `__declspec` modificador foi usado, mas que `__declspec` modificador só é válido quando compilado com uma da [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opções.
+
+Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md) e [processo](../../cpp/process.md).
+
+C4936 sempre é emitido como um erro.  Você pode desabilitar C4936 com o [aviso](../../preprocessor/warning.md) pragma.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4936:
+
+```cpp
+// C4936.cpp
+// compile with: /c
+// #pragma warning (disable : 4936)
+__declspec(process) int i;   // C4936
+__declspec(appdomain) int j;   // C4936
 ```

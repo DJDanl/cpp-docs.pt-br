@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704653"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -141,7 +142,7 @@ O sistema operacional trata a alocação da pilha quando qualquer **beginthread*
 
 A localidade do thread novo é inicializada, usando as informações de localidade ' por processo global atual. Se a localidade por thread é ativada por uma chamada para [configthreadlocale](configthreadlocale.md) (globalmente ou para novos threads somente), o thread pode alterar sua localidade independentemente de outros threads chamando **setlocale** ou **wsetlocale**. Threads que não tem o sinalizador de localidade por thread definido podem afetar as informações de localidade em todos os outros threads que também não tem o sinalizador de localidade por thread definido, bem como todos os threads recém-criado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Código misto e puro, **beginthread** e **beginthreadex** cada uma tem duas sobrecargas. Um recebe um ponteiro de função de convenção de chamada nativa e o outro usa um **clrcall** ponteiro de função. A primeira sobrecarga não é à prova de domínio do aplicativo e nunca será. Se estiver gravando códigos combinados ou puros, você deve garantir que o novo thread insira o domínio de aplicativo certo antes de acessar os recursos gerenciados. Você pode fazer isso, por exemplo, usando a [função call_in_appdomain](../../dotnet/call-in-appdomain-function.md). A segunda sobrecarga é o aplicativo de segurança de domínio; o thread recém-criado sempre terminarão no domínio de aplicativo do chamador do **beginthread** ou **beginthreadex**.
+Para **/clr** código, **beginthread** e **beginthreadex** cada uma tem duas sobrecargas. Um recebe um ponteiro de função de convenção de chamada nativa e o outro usa um **clrcall** ponteiro de função. A primeira sobrecarga não é à prova de domínio do aplicativo e nunca será. Se você estiver escrevendo **/clr** recursos gerenciados do código, você deve garantir que o novo thread entra antes que ele acesse o domínio de aplicativo correto. Você pode fazer isso, por exemplo, usando a [função call_in_appdomain](../../dotnet/call-in-appdomain-function.md). A segunda sobrecarga é o aplicativo de segurança de domínio; o thread recém-criado sempre terminarão no domínio de aplicativo do chamador do **beginthread** ou **beginthreadex**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>Consulte também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

@@ -22,58 +22,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fafb1e7be45cd4b48ce51e787b6338dd0f7324
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704809"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
-## <a name="microsoft-specific"></a>Específico da Microsoft  
- `__ptr32` representa um ponteiro nativo em um sistema de 32 bits, enquanto `__ptr64` representa um ponteiro nativo em um sistema de 64 bits.  
-  
- O exemplo a seguir mostra como declarar cada um desses tipos de ponteiro:  
-  
-```  
-int * __ptr32 p32;  
-int * __ptr64 p64;  
-```  
-  
- Em um sistema de 32 bits, um ponteiro declarado com `__ptr64` é truncado em um ponteiro de 32 bits. Em um sistema de 64 bits, um ponteiro declarado com `__ptr32` é imposto a um ponteiro de 64 bits.  
-  
+
+**Seção específica da Microsoft**
+
+`__ptr32` representa um ponteiro nativo em um sistema de 32 bits, enquanto `__ptr64` representa um ponteiro nativo em um sistema de 64 bits.
+
+O exemplo a seguir mostra como declarar cada um desses tipos de ponteiro:
+
+```cpp
+int * __ptr32 p32;
+int * __ptr64 p64;
+```
+
+ Em um sistema de 32 bits, um ponteiro declarado com `__ptr64` é truncado em um ponteiro de 32 bits. Em um sistema de 64 bits, um ponteiro declarado com `__ptr32` é imposto a um ponteiro de 64 bits.
+
 > [!NOTE]
->  Não é possível usar `__ptr32` ou `__ptr64` ao compilar com **/clr: pure**. Caso contrário, o `Compiler Error C2472` será gerado. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como declarar e alocar ponteiros com as palavras-chave `__ptr32` e `__ptr64`.  
-  
-```  
-#include <cstdlib>  
-#include <iostream>  
-  
-int main()  
-{  
-    using namespace std;  
-  
-    int * __ptr32 p32;  
-    int * __ptr64 p64;  
-  
-    p32 = (int * __ptr32)malloc(4);  
-    *p32 = 32;  
-    cout << *p32 << endl;  
-  
-    p64 = (int * __ptr64)malloc(4);  
-    *p64 = 64;  
-    cout << *p64 << endl;  
-}  
-```  
-  
-```Output  
-32  
-64  
-```  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Tipos fundamentais](../cpp/fundamental-types-cpp.md)
+> Não é possível usar `__ptr32` ou `__ptr64` ao compilar com **/clr: pure**. Caso contrário, será gerado C2472 de erro do compilador. O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir mostra como declarar e alocar ponteiros com as palavras-chave `__ptr32` e `__ptr64`.
+
+```cpp
+#include <cstdlib>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    int * __ptr32 p32;
+    int * __ptr64 p64;
+
+    p32 = (int * __ptr32)malloc(4);
+    *p32 = 32;
+    cout << *p32 << endl;
+
+    p64 = (int * __ptr64)malloc(4);
+    *p64 = 64;
+    cout << *p64 << endl;
+}
+```
+
+```Output
+32
+64
+```
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+- [Tipos fundamentais](../cpp/fundamental-types-cpp.md)

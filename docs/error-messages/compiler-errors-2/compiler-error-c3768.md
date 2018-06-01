@@ -16,33 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3634ecf3eb1417095cce144706838113b5ad2a0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704952"
 ---
 # <a name="compiler-error-c3768"></a>C3768 de erro do compilador
-não é possível obter o endereço de uma função virtual vararg em código gerenciado puro  
-  
- O **/clr: pure** opção de compilador foi preterida no Visual Studio 2015.  
-  
- Ao compilar com `/clr:pure`, você não pode obter o endereço de uma máquina virtual `vararg` função.  
-  
-## <a name="example"></a>Exemplo  
 
- O exemplo a seguir gera C3768:  
-  
-```  
-// C3768.cpp  
-// compile with: /clr:pure  
-struct A  
-{  
-   virtual void f(...);  
-};  
-  
-int main()  
-{  
-   &(A::f);   // C3768  
-}  
+> não é possível obter o endereço de uma função virtual vararg em código gerenciado puro
+
+## <a name="remarks"></a>Comentários
+
+O **/clr: pure** opção de compilador foi preterida no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+Ao compilar com **/clr: pure**, você não pode obter o endereço de uma máquina virtual `vararg` função.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3768:
+
+```cpp
+// C3768.cpp
+// compile with: /clr:pure
+struct A
+{
+   virtual void f(...);
+};
+
+int main()
+{
+   &(A::f);   // C3768
+}
 ```

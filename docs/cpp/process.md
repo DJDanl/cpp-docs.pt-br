@@ -17,24 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa1ba2676ebbd04d1fc1a59d210d69efeab6658
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b36ec42447aa076d0623707951f82b7b9c95d563
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704900"
 ---
 # <a name="process"></a>process
-Especifica que o processo de aplicativo gerenciado deve ter uma única cópia de uma determinada variável global, variável de membro estática ou variável local estática compartilhada por todos os domínios de aplicativo no processo. Isso foi principalmente a ser usado ao compilar com **/clr: pure**, que foi substituído e será removido em uma versão futura do compilador. Ao compilar com **/clr**, variáveis globais e estáticos são por processo por padrão (não precisa usar `__declspec(process)`.  
-  
- Somente uma variável global, uma variável de membro estática ou uma variável local estática de tipo nativo podem ser marcadas com `__declspec(process)`.  
-  
-  
- `process` só é válido durante a compilação com [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
-  
- Se quiser que cada domínio de aplicativo tenha sua própria cópia de uma variável global, use [appdomain](../cpp/appdomain.md).  
-  
- Consulte [domínios do aplicativo e do Visual C++](../dotnet/application-domains-and-visual-cpp.md) para obter mais informações.  
-  
-## <a name="see-also"></a>Consulte também  
- [__declspec](../cpp/declspec.md)   
- [Palavras-chave](../cpp/keywords-cpp.md)
+
+Especifica que o processo de aplicativo gerenciado deve ter uma única cópia de uma determinada variável global, variável de membro estática ou variável local estática compartilhada por todos os domínios de aplicativo no processo. Isso foi principalmente a ser usado ao compilar com **/clr: pure**, que é preterido no Visual Studio de 2017 e sem suporte no Visual Studio de 2017. Ao compilar com **/clr**, variáveis globais e estáticos são por processo por padrão e não precisa usar `__declspec(process)`.
+
+Somente uma variável global, uma variável de membro estática ou uma variável local estática de tipo nativo podem ser marcadas com `__declspec(process)`.
+
+`process` só é válido durante a compilação com [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+
+Se quiser que cada domínio de aplicativo tenha sua própria cópia de uma variável global, use [appdomain](../cpp/appdomain.md).
+
+Consulte [domínios do aplicativo e do Visual C++](../dotnet/application-domains-and-visual-cpp.md) para obter mais informações.
+
+## <a name="see-also"></a>Consulte também
+
+- [__declspec](../cpp/declspec.md)
+- [Palavras-chave](../cpp/keywords-cpp.md)

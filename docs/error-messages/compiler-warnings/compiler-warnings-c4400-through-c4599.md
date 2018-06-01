@@ -1,6 +1,6 @@
 ---
 title: C4400 de avisos do compilador por meio de C4599 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704679"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de avisos do compilador por meio de C4599
 
@@ -319,7 +320,8 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 4) C4574|'*Identificador*'está definido como ' 0': você pretendia usar 'Identificador #if'?|
 |Aviso do compilador (nível 1) C4575|vectorcall' incompatível com o ' / clr' opção: convertendo para stdcall'|
 |Aviso do compilador (nível 1, erro) C4576|um tipo entre parênteses seguido por uma lista de inicializadores é uma sintaxe de conversão de tipo explícito não padrão|
-|Aviso do compilador (nível 1, erro) C4578|'abs': conversão de '*type1*'para'*type2*', possível perda de dados (você pretendia chamar '*função*' ou #include <cmath>?)|
+|Aviso do compilador (nível 1, Off) C4577|'noexcept' usado com nenhum especificado; o modo de manipulação de exceção não é garantia de terminação na exceção. Especifique /EHsc|
+|Aviso do compilador (nível 1, erro) C4578|'abs': conversão de '*type1*'para'*type2*', possível perda de dados (você pretendia chamar '*função*' ou #include \<cmath >?)|
 |[Aviso do compilador (nível 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] é preterido; em vez disso, especifique System::Attribute ou Platform:: Metadata como uma classe base|
 |[Aviso do compilador (nível 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportamento preterido: ' "*cadeia de caracteres*"' substituído por '*cadeia de caracteres*' para processar atributo|
 |Aviso do compilador (nível 4) C4582|'*tipo*': construtor não é chamado implicitamente|

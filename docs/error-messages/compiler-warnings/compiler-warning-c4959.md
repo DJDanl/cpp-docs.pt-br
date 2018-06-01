@@ -16,35 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e995f90741ac4421622bb891f01deb92aebab283
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2819664fa94ca777339156dc9a31da17b991c6da
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705158"
 ---
 # <a name="compiler-warning-c4959"></a>C4959 de aviso do compilador
-não é possível definir 'type' struct não gerenciado em /CLR: safe porque o acesso aos seus membros produz código não verificável  
-  
- Acesso a um membro de um tipo não gerenciado produzirá uma imagem não verificado (peverify.exe).  
-  
- Para obter mais informações, consulte [puro e código verificável (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
-  
- Esse aviso é emitido como um erro e pode ser desabilitado com o [aviso](../../preprocessor/warning.md) pragma ou [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.  
-  
- O exemplo a seguir gera C4959:  
-  
-```  
-// C4959.cpp  
-// compile with: /clr:safe  
-  
-// Uncomment the following line to resolve.  
-// #pragma warning( disable : 4959 )  
-struct X {  
-   int data;  
-};  
-  
-int main() {  
-   X x;  
-   x.data = 10;   // C4959  
-}  
+
+> não é possível definir a estrutura não gerenciada '*tipo*' em /CLR: safe porque o acesso aos seus membros produz código não verificável
+
+## <a name="remarks"></a>Comentários
+
+Acesso a um membro de um tipo não gerenciado produzirá uma imagem não verificado (peverify.exe).
+
+Para obter mais informações, consulte [puro e código verificável (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+
+O **/CLR: safe** opção de compilador foi preterida no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+Esse aviso é emitido como um erro e pode ser desabilitado com o [aviso](../../preprocessor/warning.md) pragma ou [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4959:
+
+```cpp
+// C4959.cpp
+// compile with: /clr:safe
+
+// Uncomment the following line to resolve.
+// #pragma warning( disable : 4959 )
+struct X {
+   int data;
+};
+
+int main() {
+   X x;
+   x.data = 10;   // C4959
+}
 ```

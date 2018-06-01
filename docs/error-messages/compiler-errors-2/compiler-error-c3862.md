@@ -16,27 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b0a344eaafedc2f7c0eb60141e3a07fd86c6af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b21e457feb6d090e4abaf531293987eb3504457
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704965"
 ---
 # <a name="compiler-error-c3862"></a>C3862 de erro do compilador
-'function': não é possível compilar uma função não gerenciada com /clr: pure ou /CLR: safe  
-  
- As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
-  
- Uma compilação com **/clr: pure** ou **/CLR: safe** produzirá uma imagem do MSIL somente, uma imagem com nenhuma o código nativo (não gerenciado).  Portanto, você não pode usar o `unmanaged` pragma em um **/clr: pure** ou **/CLR: safe** compilação.  
-  
- Para obter mais informações, consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) e [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3862:  
-  
-```  
-// C3862.cpp  
-// compile with: /clr:pure /c  
-#pragma unmanaged  
-void f() {}   // C3862  
+
+> '*função*': não é possível compilar uma função não gerenciada com /clr: pure ou /CLR: safe
+
+## <a name="remarks"></a>Comentários
+
+O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+
+Uma compilação com **/clr: pure** ou **/CLR: safe** produzirá uma imagem do MSIL somente, uma imagem com nenhuma o código nativo (não gerenciado).  Portanto, você não pode usar o `unmanaged` pragma em um **/clr: pure** ou **/CLR: safe** compilação.
+
+Para obter mais informações, consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) e [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3862:
+
+```cpp
+// C3862.cpp
+// compile with: /clr:pure /c
+#pragma unmanaged
+void f() {}   // C3862
 ```
