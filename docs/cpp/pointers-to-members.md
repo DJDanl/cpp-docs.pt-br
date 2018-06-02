@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686845"
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 As declarações dos ponteiros para os membros são casos especiais de declarações do ponteiro.  Elas são declaradas usando a seguinte sequência:  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que tem o tipo **char\***. O tipo de `pwCaption` é `char * Window::*`. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.  
+ No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que tem o tipo **char\***. O tipo de `pwCaption` é `char * Window::* `. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
