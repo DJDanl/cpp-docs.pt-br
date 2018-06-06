@@ -20,7 +20,7 @@ ms.openlocfilehash: 29afe066fb86d0dd99216a63c057046ec76de55b
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704315"
 ---
 # <a name="compiler-warning-level-1-c4382"></a>Compilador C4382 de aviso (nível 1)

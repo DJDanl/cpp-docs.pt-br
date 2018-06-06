@@ -1,7 +1,7 @@
 ---
 title: x64 (amd64) lista de intrínsecos | Microsoft Docs
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 06/01/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9412d7f0d464c6d8b795214cba900f1ae24ab27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76fc614bae4e94ddfd0c2245971315be5f7e5ddf
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753689"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Lista de intrínsecos x64 (amd64)
 
@@ -31,13 +32,13 @@ Para obter informações sobre intrínsecos individuais, consulte estes recursos
 
 - [Guia de intrínsecos Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Use a caixa de pesquisa para localizar intrínsecos específicos.
 
-- [Manuais de desenvolvedor de Software de x64 e IA-32 arquiteturas Intel](https://software.intel.com/articles/intel-sdm)
+- [Manuais de desenvolvedor de Software de x64 e IA-32 arquiteturas Intel](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Extensões de referência de programação do conjunto de instruções de arquitetura da Intel](https://software.intel.com/en-us/isa-extensions)
+- [Extensões de referência de programação do conjunto de instruções de arquitetura da Intel](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
-- [Intel AVX](https://www.intel.com/content/www/us/en/architecture-and-technology/avx-512-overview.html)
+- [Introdução ao Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [Guias do desenvolvedor AMD, manuais e documentos ISA](https://developer.amd.com/resources/developer-guides-manuals/)
+- [Guias do desenvolvedor AMD, manuais e documentos ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
 A tabela a seguir lista os intrínsecos disponíveis em x64 processadores. A coluna Tecnologia lista suporte com conjunto de instruções necessárias. Use o [__cpuid](../intrinsics/cpuid-cpuidex.md) intrínseco para determinar o conjunto de instruções de suporte em tempo de execução. Se duas entradas em uma linha, eles representam pontos de entrada diferentes para o mesmo intrínseco. Um [1] indica que o intrínseco só está disponível em processadores AMD. Um [2] indica que o intrínseco só está disponível em processadores AMD. [3] indica que o protótipo é uma macro. O cabeçalho necessário para o protótipo de função é listado na coluna de cabeçalho. O cabeçalho de intrin.h inclui immintrin.h e ammintrin.h para manter a simplicidade.
 
